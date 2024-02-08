@@ -1,0 +1,24 @@
+<Weblab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2024-02-06T21:52:49.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "long_instructions": "# Debug Me!\r\n\r\nOh no! Mya was making a page on the Earth's Ecosystems but she can't quite get the images in the right place! Please help her debug the code so that her page matches the one in the image to the right!\r\n\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add the `flex-grow` property to the first container and set the child elements grow based on the content inside the container. _See above description to remember what that value should be._\r\n2. Add the `flex-grow` property to the second container and set the child elements take an equal portion of the parent container. _See above description to remember what the value should be._\r\n\r\n**In the HTML file:**\r\n1. Add some more text to **one** of the paragraph in the **\"grow0\"** container to see the item sizes adjusting based on the content!\r\n   * _This is the default for all Flex items._\r\n\r\n<br>\r\n\r\n\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\r\n\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n    <!-- parent container with 3 child paragraph tags -->\\n    <div class=\\\"grow0\\\">\\n      <p>child</p>\\n      <p>child</p>\\n      <p>child</p>\\n    </div>\\n    \\n    <!-- parent container with 3 child paragraph tags -->\\n    <div class=\\\"grow1\\\">\\n      <p>child</p>\\n      <p>child</p>\\n      <p>child</p>\\n    </div>\\n\\n\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* ADD CODE HERE to have the \\\"grow0\\\" child paragraph elements grow based on the content inside it */ \\n.grow0 > p {\\n\\n}\\n\\n\\n/* ADD CODE HERE to have the \\\"grow1\\\" child paragraphelements take an equal portion of the parent element */\\n.grow1 > p {\\n\\n}\\n\\n\\n/* styled parent containers */\\n.grow0, .grow1 {\\n  background: #b691d6;\\n  display: flex;\\n  padding: 5px;\\n  margin: 10px;\\n}\\n\\n/* styled paragraphs */\\np {\\n  background-color: aliceblue;\\n  margin: 5px;\\n  padding: 5px;\\n  text-align: center;\\n  font-size: 20px;\\n  border-style: solid;\\n  font-family: sans-serif; \\n\\n}/* ADD CODE HERE to have the \\\"grow0\\\" child paragraph elements grow based on the content inside it */ \\n.grow0 > p {\\n\\n}\\n\\n\\n/* ADD CODE HERE to have the \\\"grow1\\\" child paragraphelements take an equal portion of the parent element */\\n.grow1 > p {\\n\\n}\\n\\n\\n/* styled parent containers */\\n.grow0, .grow1 {\\n  background: #b691d6;\\n  display: flex;\\n  padding: 5px;\\n  margin: 10px;\\n}\\n\\n/* styled paragraphs */\\np {\\n  background-color: aliceblue;\\n  margin: 5px;\\n  padding: 5px;\\n  text-align: center;\\n  font-size: 20px;\\n  border-style: solid;\\n  font-family: sans-serif; \\n\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "true",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Debug Me!",
+    "bubble_choice_description": "Help Mya fix her code!"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-06T21:52:49.149+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13 practice_1\\\"\"],\"cloned_from\":\"CSD U2L13 practice_1\"},{\"changed_at\":\"2024-02-06 21:55:05 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab>
