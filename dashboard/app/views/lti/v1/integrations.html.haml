@@ -7,7 +7,7 @@
     .span10
       %p= t('lti.integration.form_instructions')
       %p
-        != I18n.t('lti.integration.form_instructions_2', lti_install_instructions: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System', markdown: true)
+        != I18n.t('lti.integration.form_instructions_2', install_instructions: SharedConstants::LMS_LINKS.INSTALL_INSTRUCTIONS, markdown: true)
     = form_with(url: :lti_v1_integrations, method: :post, class: "lti-integration-form") do |f|
       .row
         .span8
@@ -35,11 +35,11 @@
             .row
               .span10
                 %p
-                  != I18n.t('lti.integration.form_instructions_3', lms_guides: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org', contact_us: 'https://code.org/contact', markdown: true)
+                  != I18n.t('lti.integration.form_instructions_3', lms_guides: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org', contact_us: SharedConstants::EMAIL_LINKS.CONTACT_US_URL, markdown: true)
 
             %button.lti-btn-purple= t('lti.integration.register')
 
   .row
     .span10
       %em
-        != I18n.t('lti.integration.privacy_policy', privacy_policy: 'https://code.org/privacy', markdown: true)
+        != I18n.t('lti.integration.privacy_policy', privacy_policy: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, markdown: true)
