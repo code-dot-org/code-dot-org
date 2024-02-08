@@ -3,7 +3,7 @@ import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Checkbox Dropdown',
+  title: 'DesignSystem/Checkbox Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
   component: CheckboxDropdown,
 } as Meta;
 
