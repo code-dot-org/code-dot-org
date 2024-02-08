@@ -17,7 +17,7 @@ This folder contains the code for Lab2, which is our set of shared components an
 
 ## Supported level types
 
-Currently, the follow level types are built for Lab2:
-- [music](../music/)
-- [panels](../panels/)
-- [standalone_video](../standaloneVideo)
+Currently, the follow level apps are built for Lab2:
+- [Music](../music/)
+- [Panels](../panels/)
+- [StandaloneVideo](../standaloneVideo)

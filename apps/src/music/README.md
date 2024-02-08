@@ -1,23 +1,23 @@
-# Music (Lab2)
+# Music Lab
 
-This is the client-side code for `Music Lab`, as instantiated by a `music` level.
+This is the client-side code for **Music Lab**, as instantiated by a `music` level using [Lab2](../lab2/).
 
 Music Lab is a powerful lab for creating music using code.  It includes the following features:
-- Uses Blockly for editing user code
-- The user code generates a timeline of audio events, which is rendered
-- Uses WebAudio to play back the audio events
-- The rendered timeline of audio events reflects code changes instantly
-- Code can be changed while audio is playing
-- Support for user triggered code
-- Support for user-created functions on the main Blockly workspace
+- Uses Google Blockly for editing user code.
+- The user code generates a timeline of audio events, which is rendered.
+- Uses WebAudio to play back the audio events.
+- The rendered timeline of audio events reflects code changes instantly.
+- Code can be changed while audio is playing.
+- Support for user triggered code.
+- Support for user-created functions on the main Blockly workspace.
 - A comprehensive programming model that supports playing sounds together or sequentially, in a fully composable fashion.
 - UI features that allow students to understand connections between code and output:
-  - audio events that highlight when the associated code block is clicked
-  - code blocks that highlight when an associated audio event is clicked
+  - audio events that highlight when the associated code block is clicked.
+  - code blocks that highlight when an associated audio event is clicked.
 - Custom blockly field implementations for specialized blocks:
   - The `play` block opens a sound library explorer.
-  - The `play drum` block opens a drum pattern editor, and has a custom rendering of the drum pattern in the block itself.
-  - The `play tune` block opens a note editor, and has a custom rendering of the note pattern in the block itself.
+  - The `play drums` block opens a drum pattern editor, and has a custom rendering of the drum pattern in the block itself.
+  - The `play notes` block opens a note editor, and has a custom rendering of the note pattern in the block itself.
 
 It is also the first lab to use the new [Lab2](/../lab2/) framework, and showcases some features and components unique to that framework, when used in a level progression:
 
