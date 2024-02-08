@@ -86,7 +86,7 @@
       %span= I18n.t("#{loc_prefix}signin")
       .signin_callout_wrapper
 -# rubocop:disable CustomCops/DashboardDbUsage
-= render inline: File.read(deploy_dir('shared/haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: current_user.nil?, create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
+= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: current_user.nil?, create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
 -# rubocop:enable CustomCops/DashboardDbUsage
 
 :javascript
