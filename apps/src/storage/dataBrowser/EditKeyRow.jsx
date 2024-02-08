@@ -7,6 +7,8 @@ import {castValue, displayableValue, editableValue} from './dataUtils';
 import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import msg from '@cdo/locale';
+import {loadDataForView} from './loadDataForView';
+import {storageBackend, isDatablockStorage} from '../storage';
 
 const INITIAL_STATE = {
   isDeleting: false,
