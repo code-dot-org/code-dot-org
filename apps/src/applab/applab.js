@@ -52,7 +52,7 @@ import {
   setLibraryManifest,
   updateTableList,
 } from '../storage/redux/data';
-import {loadDataForView} from './load-data-for-view';
+import {loadDataForView} from '../storage/dataBrowser/loadDataForView';
 import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,

@@ -1,5 +1,5 @@
-import {getStore} from '../redux';
-import {DataView} from '../storage/constants';
+import {getStore} from '../../redux';
+import {DataView} from '../constants';
 import {
   tableType,
   addTableName,
@@ -9,22 +9,23 @@ import {
   updateKeyValueData,
   setLibraryManifest,
   updateTableList,
-} from '../storage/redux/data';
+} from '../redux/data';
 
 let lastView;
 let lastTableName;
-
-export function loadDataForView(storage) {
-  return loadDataForView(storage, lastView, null, lastTableName);
-}
 
 /**
  * When we
  * @param {DataView} view
  */
 export function loadDataForView(storage, view, oldTableName, newTableName) {
-  lastView = view;
-  lastTableName = newTableName;
+  if (view) {
+    lastView = view;
+    lastTableName = newTableName;
+  } else {
+    view = lastView;
+    newTableName = lastTableName;
+  }
 
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');

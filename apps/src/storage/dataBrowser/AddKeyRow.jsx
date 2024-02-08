@@ -1,5 +1,4 @@
 /** @overview Component for adding a key/value pair row. */
-import {storageBackend, getStorageTyp, DATABLOCK_STORAGE} from '../storage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -8,7 +7,8 @@ import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import {WarningType} from '../constants';
 import msg from '@cdo/locale';
-import {loadDataForView} from './load-data-for-view';
+import {loadDataForView} from './loadDataForView';
+import {storageBackend, getStorageType, DATABLOCK_STORAGE} from '../storage';
 
 const INITIAL_STATE = {
   isAdding: false,
