@@ -124,8 +124,6 @@ module I18n
             i18n_locale_dir = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME)
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
 
-            return if I18nScriptUtils.source_lang?(language)
-
             i18n_data.each do |type, type_i18n_data|
               # We'd like in the long term for all of our generated course content locale
               # files to be in JSON rather than YAML. As a first step on that journey,
@@ -150,10 +148,8 @@ module I18n
             crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             return unless File.exist?(crowdin_file_path)
 
-            unless I18nScriptUtils.source_lang?(language)
-              target_i18n_file_path = dashboard_i18n_file_path(type, language[:locale_s], 'yml')
-              I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
-            end
+            target_i18n_file_path = dashboard_i18n_file_path(type, language[:locale_s], 'yml')
+            I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
