@@ -14,15 +14,15 @@ import {
 let lastView;
 let lastTableName;
 
-export function refreshLastDataView(storage) {
-  return refreshDataView(storage, lastView, null, lastTableName);
+export function loadDataForView(storage) {
+  return loadDataForView(storage, lastView, null, lastTableName);
 }
 
 /**
  * When we
  * @param {DataView} view
  */
-export function refreshDataView(storage, view, oldTableName, newTableName) {
+export function loadDataForView(storage, view, oldTableName, newTableName) {
   lastView = view;
   lastTableName = newTableName;
 

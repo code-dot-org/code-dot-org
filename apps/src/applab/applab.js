@@ -52,7 +52,7 @@ import {
   setLibraryManifest,
   updateTableList,
 } from '../storage/redux/data';
-import {refreshDataView} from './refresh-data-view';
+import {loadDataForView} from './load-data-for-view';
 import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,
@@ -884,7 +884,7 @@ function setupReduxSubscribers(store) {
       changedToDataMode(state, lastState)
     ) {
       console.log("calling onDataViewChanged() (now called refreshDataView())");
-      refreshDataView(
+      loadDataForView(
         Applab.storage,
         state.data.view,
         lastState.data.tableName,
