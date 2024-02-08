@@ -154,7 +154,10 @@ function TeacherDashboard({
             component={() =>
               applyV1TeacherDashboardWidth(
                 <div
-                  style={classNames(styles.text, dashboardStyles.dashboardPage)}
+                  className={classNames(
+                    dashboardStyles.text,
+                    dashboardStyles.dashboardPage
+                  )}
                 >
                   <SafeMarkdown markdown={i18n.noProgressSection()} />
                 </div>
@@ -192,14 +195,6 @@ TeacherDashboard.propTypes = {
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,
-};
-
-const styles = {
-  text: {
-    fontStyle: 'italic',
-    textAlign: 'center',
-    paddingTop: 10,
-  },
 };
 
 export default TeacherDashboard;
