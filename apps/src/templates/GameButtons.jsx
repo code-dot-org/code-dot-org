@@ -36,6 +36,10 @@ RunButton.propTypes = {
 };
 RunButton.displayName = 'RunButton';
 
+// The reset button is hidden by default,
+// then shown either by passing in style props to override
+// or imperatively by selecting the DOM node by ID
+// elsewhere in our code base (eg, StudioApp)
 export const ResetButton = Radium(props => (
   <button
     type="button"
@@ -91,7 +95,6 @@ UnconnectedGameButtons.propTypes = {
   hideRunButton: PropTypes.bool,
   hideResetButton: PropTypes.bool,
   runButtonText: PropTypes.string,
-  playspacePhoneFrame: PropTypes.bool,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,
@@ -105,7 +108,6 @@ export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
   hideResetButton: state.pageConstants.hideResetButton,
   runButtonText: state.pageConstants.runButtonText,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   nextLevelUrl: state.pageConstants.nextLevelUrl,
   showSkipButton: state.pageConstants.isChallengeLevel,
   widgetMode: state.pageConstants.widgetMode,

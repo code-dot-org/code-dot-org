@@ -1,3 +1,104 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:03a9cc02d211351d43c503c69252fd0a84b536bfca4973347151be3b3bff1577
-size 2134
+@import "color";
+@import "font";
+
+.not-found-page {
+  body {
+    @include main-font-regular;
+    font-size: 14px;
+    line-height: 22px;
+    color: $dimgray;
+    margin: 0;
+  }
+
+  h1 {
+    @include main-font-bold;
+    color: $purple;
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    line-height: 1.2em;
+  }
+
+  button {
+    @include main-font-regular;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    -webkit-writing-mode: horizontal-tb;
+    align-items: flex-start;
+    background-color: $orange;
+    border-color: $orange;
+    background-image: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 34px;
+    letter-spacing: normal;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    text-align: center;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-spacing: 0;
+    writing-mode: lr-tb;
+  }
+
+  .error-image {
+    margin-top: 50px;
+  }
+
+  .error-parent {
+    text-align: center;
+  }
+
+  .error-child {
+    display: inline-block;
+    max-width: 300px;
+  }
+}
+
+.deprecated-course-page {
+  margin-bottom: 100px;
+
+  .deprecated-course-child {
+    display: inline-block;
+    max-width: 500px;
+  }
+
+  p {
+    @include main-font-bold;
+    color: $neutral_dark;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.2em;
+  }
+}

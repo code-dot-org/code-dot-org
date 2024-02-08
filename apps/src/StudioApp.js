@@ -848,7 +848,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.mainBlockSpace.clear();
+    Blockly.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -2785,7 +2785,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.mainBlockSpace.clear();
+        Blockly.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {
@@ -3545,6 +3545,7 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance = singleton();
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {

@@ -2,7 +2,6 @@ import React from 'react';
 import ChoiceResponses from './choice_responses';
 
 export default {
-  title: 'ChoiceResponses',
   component: ChoiceResponses,
 };
 

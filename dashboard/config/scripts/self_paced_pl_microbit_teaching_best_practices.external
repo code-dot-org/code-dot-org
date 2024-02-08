@@ -1,0 +1,8 @@
+name 'self-paced-pl-microbit_teaching_best_practices'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Best Practices for Teaching with micro:bit
+
+MARKDOWN

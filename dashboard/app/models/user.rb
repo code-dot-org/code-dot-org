@@ -490,7 +490,7 @@ class User < ApplicationRecord
 
   has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
+  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
 
   # "sections" previously referred to what is now called :sections_owned.
   def sections
@@ -499,7 +499,7 @@ class User < ApplicationRecord
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections_owned, dependent: :destroy, class_name: 'Section'
-  has_many :followers, through: :sections_instructed
+  has_many :followers, -> {without_deleted}, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
@@ -533,7 +533,7 @@ class User < ApplicationRecord
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
+  validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
