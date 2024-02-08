@@ -12,6 +12,7 @@ import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {PythonlabState} from '@cdo/apps/pythonlab/pythonlabRedux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {BlocklyState} from '../redux/blockly';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
@@ -20,6 +21,7 @@ import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 // with registerReducers.
 export interface RootState {
   aiTutor: AITutorState;
+  blockly: BlocklyState;
   header: HeaderReduxState;
   javalab: JavalabState;
   javalabConsole: JavalabConsoleState;
