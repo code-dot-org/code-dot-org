@@ -37,7 +37,7 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
       aria-expanded={isOpen}
       aria-label={i18n.iconKey()}
     >
-      <div onClick={clickListener}>
+      <div onClick={clickListener} className={styles.iconKeyTitle}>
         <Heading6>
           <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
           {i18n.iconKey()}
