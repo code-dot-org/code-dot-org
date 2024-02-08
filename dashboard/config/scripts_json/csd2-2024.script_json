@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-06 19:52:27 UTC",
+    "serialized_at": "2024-02-07 20:01:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8164,6 +8164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 - Prac_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -8191,7 +8194,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2L13 challenge_3"
+          "CSD U2L13 - Challenge_2024"
         ],
         "lesson.key": "Your Web Page - Prepare",
         "lesson_group.key": "lessonGroup-2",
@@ -8199,7 +8202,7 @@
         "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37"
       },
       "level_keys": [
-        "CSD U2L13 challenge_3"
+        "CSD U2L13 - Challenge_2024"
       ]
     },
     {
@@ -9741,9 +9744,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2L13 challenge_3",
+        "level.key": "CSD U2L13 - Challenge_2024",
         "script_level.level_keys": [
-          "CSD U2L13 challenge_3"
+          "CSD U2L13 - Challenge_2024"
         ],
         "lesson.key": "Your Web Page - Prepare",
         "lesson_group.key": "lessonGroup-2",
