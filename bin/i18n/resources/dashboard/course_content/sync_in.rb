@@ -32,6 +32,10 @@ module I18n
 
           private
 
+          def valid_source_file?(source_file_path)
+            !I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, source_file_path)
+          end
+
           def variable_strings
             @variable_strings ||= {}
           end
@@ -336,13 +340,9 @@ module I18n
                 else
                   File.join(I18N_SOURCE_DIR_PATH, script.version_year)
                 end
-              FileUtils.mkdir_p(script_i18n_directory)
 
-              script_i18n_name = "#{script.name}.json"
-              script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, script_i18n_name, script_i18n_filename)
-
-              File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
+              source_file_path = File.join(script_i18n_directory, "#{script.name}.json")
+              I18nScriptUtils.write_json_file(source_file_path, script_strings) if valid_source_file?(source_file_path)
             end
 
             write_to_yml(BLOCK_CATEGORIES_TYPE, block_category_strings)
@@ -401,6 +401,8 @@ module I18n
 
           def redact_level_content
             Dir[File.join(I18N_SOURCE_DIR_PATH, '/**/*.json')].each do |source_path|
+              next unless valid_source_file?(source_path)
+
               source_data = JSON.load_file(source_path)
               next if source_data.blank?
 
