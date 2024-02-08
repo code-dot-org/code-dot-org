@@ -26,7 +26,7 @@ var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
-import header from '../header';
+import {header} from './project/header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 import {getStore} from '../../redux';
 import {

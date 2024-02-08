@@ -32,6 +32,10 @@ import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 import {setupNavigationHandler} from './browserNavigation';
 import {setCurrentLevelId} from './progressRedux';
 
+// this is used to bust up a circular dependency in the projects.js file.
+// please see that file for further info.
+import {setProjectHeader} from './initApp/project/header';
+
 /**
  * Dynamic header generation and event bindings for header actions.
  */
@@ -288,5 +292,9 @@ header.showTryAgainDialog = () => {
 header.hideTryAgainDialog = () => {
   getStore().dispatch(setShowTryAgainDialog(false));
 };
+
+// defer definition of `header` in `projects.js` until runtime. See
+// project/header.js for more information.
+setProjectHeader(header);
 
 export default header;
