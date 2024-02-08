@@ -3545,6 +3545,7 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance = singleton();
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {
