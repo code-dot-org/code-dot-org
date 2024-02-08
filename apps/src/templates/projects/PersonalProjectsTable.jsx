@@ -34,8 +34,7 @@ export const COLUMNS = {
   PROJECT_NAME: 1,
   APP_TYPE: 2,
   LAST_EDITED: 3,
-  LAST_PUBLISHED: 4,
-  ACTIONS: 5,
+  ACTIONS: 4,
 };
 
 class PersonalProjectsTable extends React.Component {
@@ -181,23 +180,6 @@ class PersonalProjectsTable extends React.Component {
         cell: {
           formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell},
-        },
-      },
-      {
-        property: 'publishedAt',
-        header: {
-          label: i18n.published(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.publishedAtFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.centeredCell,
-            },
-          },
         },
       },
       {
