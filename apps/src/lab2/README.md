@@ -15,3 +15,9 @@ This folder contains the code for Lab2, which is our set of shared components an
   - Lab2Wrapper: Manages showing and hiding a level based on load state.
   - ProjectContainer: Manages loading project and level data for a level, and swapping that data out if the level changes.
 
+## Supported level types
+
+Currently, the follow level types are built for Lab2:
+- [music](../music/)
+- [panels](../panels/)
+- [standalone_video](../standaloneVideo)
