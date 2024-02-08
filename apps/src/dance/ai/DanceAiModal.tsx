@@ -608,17 +608,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     mode === DanceAiModalMode.SELECT_INPUTS
       ? i18n.danceAiModalChooseEmoji()
       : mode === DanceAiModalMode.GENERATING
-      ? i18n.danceAiModalFinding()
+      ? i18n.danceAiModalFinding2()
       : mode === DanceAiModalMode.GENERATED
-      ? i18n.danceAiModalGenerating()
+      ? i18n.danceAiModalGenerating2()
       : mode === DanceAiModalMode.RESULTS &&
         currentToggle === DanceAiPreviewButtonToggleState.EFFECT
-      ? i18n.danceAiModalEffect()
+      ? i18n.danceAiModalEffect2()
       : mode === DanceAiModalMode.RESULTS &&
         currentToggle === DanceAiPreviewButtonToggleState.CODE
-      ? i18n.danceAiModalCode()
+      ? i18n.danceAiModalCode2()
       : mode === DanceAiModalMode.EXPLANATION
-      ? i18n.danceAiModalExplanation()
+      ? i18n.danceAiModalExplanation2()
       : undefined;
 
   // If the AI modal was somehow not opened by an AI block, or we couldn't find the source field,
