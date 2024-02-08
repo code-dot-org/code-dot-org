@@ -1,4 +1,5 @@
-// Use this component if a dashboard page has a header banner with no image
+// Use this component if a dashboard page has a header banner with no image.
+// Adapted from the HeaderBanner component.
 
 import PropTypes from 'prop-types';
 import React from 'react';

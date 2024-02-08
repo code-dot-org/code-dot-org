@@ -1,6 +1,6 @@
 // Styles for studio.code.org/my-professional-learning
 
-@import 'color', 'typography';
+@import 'typography';
 
 main.wrapper {
   max-width: 60rem;
@@ -9,7 +9,7 @@ main.wrapper {
 }
 
 // TODO - this can be removed once the components on this page
-// are updated to use the new Typography component.
+// are updated to use the Typography component.
 h2 {
   @include heading-lg;
 }

@@ -1,4 +1,5 @@
-// Professional Learning landing page
+// My Professional Learning landing page
+// studio.code.org/my-professional-learning
 
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
