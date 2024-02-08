@@ -1,0 +1,20 @@
+name 'course_c_maker_juicemind_bridging_activity_beginner'
+title 'JuiceMind Bridging Activity'
+
+
+markdown <<MARKDOWN
+<h2 style="text-align: center;">JuiceMind Bridging Activity [Optional]</h2>
+
+<div style="text-align: center;">
+<p>Now you're ready to learn new blocks in micro:bit. Ask your teacher for the bridging activity link!</p>
+</div>
+
+<img src="https://images.code.org/d686effcfcf333eede2a1d82e793ac42-image-1707343907729.11.19 PM.png" style="display: block; margin: auto; width: 30%">
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
