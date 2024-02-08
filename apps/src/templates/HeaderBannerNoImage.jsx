@@ -6,7 +6,7 @@ import React from 'react';
 import style from './header-banner-no-image.module.scss';
 import {Heading1, BodyOneText} from '@cdo/apps/componentLibrary/typography';
 
-export default class HeaderBanner extends React.Component {
+export default class HeaderBannerNoImage extends React.Component {
   static propTypes = {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
