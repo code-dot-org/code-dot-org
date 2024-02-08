@@ -14,7 +14,7 @@ const Weblab2Editor: React.FunctionComponent = () => {
   return (
     <CodeEditor
       onCodeChange={onCodeChange}
-      startCode={'<h1>Hello, world!</h1>'}
+      startCode={'<!DOCTYPE HTML>\n<h1>Hello, world!</h1>'}
       editorConfigExtensions={editorExtensions}
     />
   );
