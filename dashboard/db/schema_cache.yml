@@ -2431,6 +2431,14 @@ columns:
     comment:
   - *26
   - *27
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: observations
+    sql_type_metadata: *7
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
   learning_goal_evidence_levels:
   - *17
   - &54 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
