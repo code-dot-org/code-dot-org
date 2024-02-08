@@ -8,7 +8,7 @@ import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
 import {getStore} from '@cdo/apps/redux';
 import {
-  setFailedToGenerateSources,
+  setFailedToGenerateCode,
   setHasIncompatibleSources,
 } from '@cdo/apps/redux/blockly';
 import * as blockUtils from '../block_utils';
@@ -232,20 +232,20 @@ function initializeBlocklyWrapper(blocklyInstance) {
         !!opt_showHidden
       );
       code = strip(code);
-      getStore().dispatch(setFailedToGenerateSources(false));
+      getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
       // We only want to log the error once per failure since getWorkspaceCode
       // gets called many times and the error will be the same every time.
-      if (!getStore().getState().blockly.failedToGenerateSources) {
-        getStore().dispatch(setFailedToGenerateSources(true));
+      if (!getStore().getState().blockly.failedToGenerateCode) {
+        getStore().dispatch(setFailedToGenerateCode(true));
         MetricsReporter.logError({
           event: 'CDO_BLOCKLY_GET_CODE_ERROR',
           errorMessage: e.message,
           stackTrace: e.stack,
         });
       }
-      return code;
     }
+    return code;
   };
 
   // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.
