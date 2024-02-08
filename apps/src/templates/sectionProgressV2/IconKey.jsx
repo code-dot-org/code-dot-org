@@ -26,19 +26,23 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
     </div>
   );
 
-  const clickListener = () => setIsOpen(!isOpen);
+  const clickListener = () => {
+    console.log('lfm');
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <div className={styles.iconKey}>
-      <Heading6 onClick={clickListener}>
-        <FontAwesome
-          className={styles.iconKeyCaret}
-          id="icon-key"
-          icon={caret(isOpen)}
-          aria-label={i18n.iconKey()}
-        />
-        {i18n.iconKey()}
-      </Heading6>
+    <div
+      className={styles.iconKey}
+      aria-expanded={isOpen}
+      aria-label={i18n.iconKey()}
+    >
+      <div onClick={clickListener}>
+        <Heading6>
+          <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
+          {i18n.iconKey()}
+        </Heading6>
+      </div>
       {isOpen && sectionContent()}
     </div>
   );
