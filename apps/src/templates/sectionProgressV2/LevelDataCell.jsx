@@ -9,8 +9,6 @@ import ProgressIcon from './ProgressIcon';
 import {ITEM_TYPE} from './ItemType';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
-export const LEVEL_OVERRIDE_ICON_TEST_TITLE = 'override-icon-';
-
 const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
     return null;
