@@ -8,16 +8,18 @@
               %h1= t('lti.integration.success_header')
           .row
             .span10
-              %p= t('lti.integration.success_body').html_safe
-              %p= t('lti.integration.guide_instructions').html_safe
+              %p= t('lti.integration.success_body')
+              %p  
+                != I18n.t('lti.integration.guide_instructions', lms_guides: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System', contact_us: 'https://code.org/contact', markdown: true)
         - else
           .row
             .span10.header
               %h1= t('lti.integration.exists_header')
           .row
             .span10
-              %p= t('lti.integration.exists_body').html_safe
-              %p= t('lti.integration.guide_instructions').html_safe
+              %p= t('lti.integration.exists_body')
+              %p  
+                != I18n.t('lti.integration.guide_instructions', lms_guides: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System', contact_us: 'https://code.org/contact', markdown: true)
         .row
           .span10
             %br
