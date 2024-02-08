@@ -5,6 +5,8 @@ import FontAwesome from '../FontAwesome';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import classNames from 'classnames';
 
+export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
+
 export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
     <div className={classNames(styles.needsFeedback, styles.cornerBox)} />
@@ -43,6 +45,7 @@ export default function ProgressIcon({itemType}) {
           icon={itemType[0]}
           style={{color: itemType[1]}}
           className={styles.fontAwesomeIcon}
+          title={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
       )}
       {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}

@@ -11,8 +11,8 @@ const Template = args => (
   </div>
 );
 
-export const variousSubmissions = Template.bind({});
-variousSubmissions.args = {
+export const VariousSubmissions = Template.bind({});
+VariousSubmissions.args = {
   reviews: [
     [1, 'accepted'],
     [2, 'rejected'],

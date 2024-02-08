@@ -3,7 +3,7 @@ import SimpleDropdown, {SimpleDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Simple Dropdown',
+  title: 'DesignSystem/Simple Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
   component: SimpleDropdown,
 } as Meta;
 
