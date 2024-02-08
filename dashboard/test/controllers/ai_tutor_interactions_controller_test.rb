@@ -47,7 +47,22 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
                 ai_response: "Yes, I can help."
             }
         end
-        assert_includes(@response.body, "Enjoy.") 
+        assert_includes(@response.body, "There was an error creating a new AiTutorInteraction.") 
+    end
+
+    test "create AI Tutor Interaction with invalid status param" do
+        sign_in @student_with_ai_tutor_access 
+        assert_does_not_create(AiTutorInteraction) do
+            post :create, params: {
+                level_id: 1234,
+                script_id: 987,
+                type: "trash can",
+                prompt: "Can you help me?",
+                status: "hot mess",
+                ai_response: "Yes, I can help."
+            }
+        end
+        assert_includes(@response.body, "There was an error creating a new AiTutorInteraction.") 
     end
 
 
