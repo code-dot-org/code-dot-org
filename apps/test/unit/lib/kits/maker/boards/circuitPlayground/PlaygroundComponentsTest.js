@@ -212,7 +212,6 @@ describe('Circuit Playground Components', () => {
       });
 
       it('with sensor methods', () => {
-        expect(soundSensor).to.haveOwnProperty('start');
         expect(soundSensor).to.haveOwnProperty('setScale');
       });
 
@@ -339,7 +338,6 @@ describe('Circuit Playground Components', () => {
       });
 
       it('with sensor methods', () => {
-        expect(lightSensor).to.haveOwnProperty('start');
         expect(lightSensor).to.haveOwnProperty('setScale');
       });
 

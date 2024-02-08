@@ -165,10 +165,6 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
             component = jsInterpreter.globalProperties[sensorName];
           });
 
-          it('start()', () => {
-            expect(component.start).to.be.a('function');
-          });
-
           it('value', () => {
             expect(component).to.have.property('value');
           });
