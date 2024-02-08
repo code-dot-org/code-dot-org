@@ -28,6 +28,9 @@ const availableCallouts: {
   'trigger-block-workspace': {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.TRIGGERED_AT_SIMPLE2}"]`,
   },
+  'repeat-block-field-workspace': {
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.REPEAT_SIMPLE2}"] > .blocklyEditableText`,
+  },
   'when-run-block': {
     selector: `g[data-id="${BlockTypes.WHEN_RUN_SIMPLE2}"] > path`,
   },
@@ -35,7 +38,7 @@ const availableCallouts: {
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'toolbox-second-block': {
-    selector: '.blocklyFlyout .blocklyDraggable:nth-of-type(3)',
+    selector: '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(3)',
   },
 };
 
