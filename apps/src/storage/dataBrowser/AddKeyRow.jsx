@@ -7,8 +7,8 @@ import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import {WarningType} from '../constants';
 import msg from '@cdo/locale';
-import {loadDataForView} from './loadDataForView';
-import {storageBackend, isDatablockStorage} from '../storage';
+import {refreshCurrentDataView} from './loadDataForView';
+import {storageBackend} from '../storage';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -47,9 +47,7 @@ class AddKeyRow extends React.Component {
           value,
           () => {
             this.setState(INITIAL_STATE);
-            if (isDatablockStorage()) {
-              loadDataForView(storageBackend());
-            }
+            refreshCurrentDataView();
           },
           err => {
             if (

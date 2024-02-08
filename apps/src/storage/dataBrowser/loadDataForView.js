@@ -10,22 +10,31 @@ import {
   setLibraryManifest,
   updateTableList,
 } from '../redux/data';
+import {isDatablockStorage} from '../storage';
 
 let lastView;
 let lastTableName;
+let lastStorage;
+
+export function refreshCurrentDataView() {
+  if (isDatablockStorage()) {
+    loadDataForView(lastStorage, lastView, null, lastTableName);
+  }
+
+  // FIXME: unfirebase
+  // If using firebase storage, this is a no-op because firebase
+  // uses subscriptions and updates the redux store automatically.
+}
 
 /**
  * When we
  * @param {DataView} view
  */
 export function loadDataForView(storage, view, oldTableName, newTableName) {
-  if (view) {
-    lastView = view;
-    lastTableName = newTableName;
-  } else {
-    view = lastView;
-    newTableName = lastTableName;
-  }
+  // Save for later use in refreshCurrentDataView()
+  lastView = view;
+  lastTableName = newTableName;
+  lastStorage = storage;
 
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
