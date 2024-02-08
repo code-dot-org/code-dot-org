@@ -341,4 +341,9 @@ class TestController < ApplicationController
     )
     head :ok
   end
+
+  def get_validate_rubric_ai_config
+    EvaluateRubricJob.new.validate_ai_config
+    render plain: 'OK'
+  end
 end
