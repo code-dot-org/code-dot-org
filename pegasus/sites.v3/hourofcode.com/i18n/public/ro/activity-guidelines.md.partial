@@ -104,23 +104,23 @@ De ce aveţi nevoie:
 * Numele și adresa de e-mail a contactului principal care reprezintă activitatea depusă
 * Numele activității (nu poate include „Ora de Cod” în nume)
 * Link URL către activitate
-* Această activitate include AI: Da sau Nu
-* O descriere a activității (numărul maxim de caractere: 400) 
-    * Vă rugăm să includeţi în descriere dacă activitatea este în principal intuitivă pentru elevi sau trebuie facilitată de profesor. În plus, unele şcoli sunt interesate să ştie dacă activităţile Hour of Code adresează standarde si tehnologii noi, inovative. Dacă activitatea abordează standarde specifice, considerați să includeți și această informaţie.
-* Nivel (e) de clasă recomandat (e) pentru utilizatorii vizați. Puteți consulta \[Standardele K-12 ale Asociației Profesorilor de Informatică\] (https://k12cs.org/framework-statements-by-grade-band/) pentru concepte de informatică adecvate gradelor. Exemplele de niveluri de clasă includ: 
-    * Gradinita - clasa 1 (4-6 ani)
-    * Clasele 2-5 (7-10 ani)
-    * Clasele 6-8 (11-13 ani)
-    * Clasele 9+ (vârsta 14+)
-* O listă de limbaje de programare pe care le predă activitatea dvs. Adică C/C ++, Java, JavaScript etc. sau independent de limbă (pentru planuri de lecție care pot fi predate în mai multe limbi) alege artele lingvistice.
-* O listă de limbi naturale acceptate. Notă: Detectarea limbii este responsabilitatea furnizorului de activitate; vom redirecționa toți utilizatorii către adresa URL unică furnizată. sau independent de limbă (pentru planuri de lecție care pot fi predate în mai multe limbi)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* O listă de limbaje de programare pe care le predă activitatea dvs. Adică C/C ++, Java, JavaScript etc. sau independent de limbă (pentru planuri de lecție care pot fi predate în mai multe limbi) choose language arts.
+* O listă de limbi naturale acceptate. Notă: Detectarea limbii este responsabilitatea furnizorului de activitate; vom redirecționa toți utilizatorii către adresa URL unică furnizată. or language independent (for lesson plans that can be taught in multiple languages)
 * Ce nivel de experiență ar trebui să aibă un educator pentru a vă folosi activitatea? (de exemplu, începător sau confortabil.) Și, ce nivel de experiență ar trebui să aibă studenții?
-* Ce nivel de experiență ar trebui să aibă un educator pentru a vă folosi activitatea? (de exemplu, începător sau confortabil.) Și, ce nivel de experiență ar trebui să aibă studenții? Dacă doriți să pregătiți activități Hour of Code™ mai avansate, vă rugăm să includeți cunoștințele anterioare necesare în descrierea activității dvs.
-* Durata activității dvs. 
-    * Doar 1 oră
-    * 1 oră cu curs de continuare
-    * 2-6 ore (pot fi mai multe lecții)
-* O listă de spații de cazare pentru accesibilitate, dacă activitatea dvs. le are. Acestea includ compatibilitatea cititorului de ecran, capacitățile text-to-speech, utilizarea culorilor cu contrast ridicat sau orice alte acomodări făcute pentru cursanții cu dizabilități.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Lucruri suplimentare de care veți avea nevoie atunci când trimiteți Planuri de lecție
 
@@ -170,7 +170,7 @@ De ce aveţi nevoie:
 
 Un comitet divers de educatori în informatică va clasifica trimiterile pe baza unor criterii calitative și cantitative. Toate activitățile care corespund criteriilor de bază vor fi listate.
 
-Pentru activitățile tradiționale de codificare, un comitet divers de educatori în informatică va clasifica trimiterile pe baza unor criterii calitative și cantitative. Toate activitățile care corespund criteriilor de bază vor fi listate. Profesorii vor putea filtra și sorta pentru a găsi cele mai bune activități pentru clasa lor.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Dacă comisia de revizuire evaluează activitatea la zero în calitatea producției (din cauza erorilor proaste sau a instrucțiunilor care o fac foarte greu de utilizat), în promovarea învățării în grupuri subreprezentate (datorită materialului rasist/sexist), în valoare educațională (nu predă concepte CS) sau distracție/antrenantă (datorită faptului că este dificilă/descurajantă pentru studenți să lucreze), activitatea nu va fi listată.
 
@@ -188,13 +188,13 @@ Pentru activitățile autodirijate pentru noii profesori și studenți, comitetu
 - Nu necesită înscriere
 - Nu necesită nicio plată (excepție pentru activitățile de robotică, acestea pot necesita achiziționarea de robot/kit)
 
-Pentru activitățile autodirijate pentru noii profesori și studenți, comitetul de revizuire va căuta dacă:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Profesorii pot folosi tutorialul sau activitatea fără experiență în informatică
 - Elevii pot avea succes fără experiență în informatică
 - Elevii se pot direcționa prin tutorial fără îndrumarea părinților sau profesorilor
 
-Profesorii și studenții vor putea căuta și filtra lista noastră de activități pe baza filtrelor precum nota, nivelul de experiență, subiectul, hardware-ul etc. În mod implicit, vom arăta mai întâi planurile de lecție și activitățile care:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Primiți cele mai mari evaluări de la comisia de revizuire
 - Sunt activități autodirijate de o oră destinate începătorilor (studenți și profesori)
@@ -208,7 +208,7 @@ Profesorii și studenții vor putea căuta și filtra lista noastră de activit�
 
 ## Sugestii pentru proiectarea de tutoriale auto-ghidate de o oră
 
-Activitățile nu trebuie să includă AI, deși căutăm să oferim mai multe activități legate de AI.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Includeți note pentru profesori.** Cele mai multe activităţi ar trebui să fie orientate către elevi, dar dacă o activitate este facilitată sau administrată de un profesor, vă rugăm să includeţi clar şi simplu direcţii pentru profesor în formă de note-profesor la un URL separat transmis cu activitatea dvs. Nu numai că elevii sunt începători, și unii dintre profesori sunt de asemenea. Includeți informaţii cum ar fi:
 
@@ -221,15 +221,15 @@ Activitățile nu trebuie să includă AI, deși căutăm să oferim mai multe a
 - Se recomandă programarea în perechi?
 - Considerații pentru utilizarea într-o sală de clasă? De exemplu, dacă există videoclipuri, sfătuiți profesorii să afișeze videoclipurile pe un ecran proiectat pentru întreaga clasă pentru a le vizualiza împreună
 
-**Incorporează feedback la sfârșitul activității.** (De exemplu, „Ai terminat 10 niveluri și ai învățat despre bucle! O treabă grozavă!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Încurajati studenţii să posteze pe Social Media (după caz), atunci când le-au terminat.** De exemplu "Am realizat o Ora de Programare cu________ Tu ai participat? #HourOfCode” sau „Am făcut un #HourOfCode ca parte din #CSEdWeek. Tu? @Scratch." Utilizează hashtag-ul **#HourOfCode** (cu litere mari H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Creați-vă activitatea în spaniolă sau în alte limbi în afară de engleză.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Explicați sau conectaţi activitatea cu un context social important.** Programarea pe computer devine o superputere atunci când elevii văd cum se poate schimba lumea în bine!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Asigurați-vă că tutorialul dvs. poate fi utilizat într-o paradigmă de programare [pereche](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** Acest lucru este deosebit de util pentru Hour of Code, deoarece multe săli de clasă nu au hardware 1:1 pentru toți elevii.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**La începutul paginii**](#top)
 
@@ -237,7 +237,7 @@ Activitățile nu trebuie să includă AI, deși căutăm să oferim mai multe a
 
 ## Recomandarile legate de Marca Inregistrată
 
-Hour of Code® și Hora del Código® sunt mărci comerciale înregistrate ale Code.org. Mulți dintre partenerii noștri tutoriali au folosit mărcile noastre comerciale „Hour of Code” pe site-urile lor web în legătură cu activitățile lor Hour of Code. Nu dorim să prevenim această utilizare, dar vrem să ne asigurăm că utilizarea se încadrează în câteva limite:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Folosiți „Hour of Code” numai în legătură cu activitățile necomerciale CS Education în contextul campaniei Hour of Code și nu în alt scop.
 2. Orice referire la „Hour of Code” ar trebui folosită într-un mod care nu sugerează că este propriul nume de marcă, ci mai degrabă face referire la Hour of Code ca o mișcare de bază. Exemplu bun: „Participați la Hour of Code® la ACMECORP.com”. Exemplu negativ: "Încercaţi Ora de Programare de ACME Corp".
@@ -253,15 +253,15 @@ Hour of Code® și Hora del Código® sunt mărci comerciale înregistrate ale C
 
 ## Pixel pentru tracking
 
-Dacă tutorialul dvs. este aprobat și inclus pe pagina finală a tutorialului, Code.org vă va oferi un pixel unic de urmărire pe care să îl integrați în tutorialul dvs. Vezi exemplul de mai jos. Nu includeți pe nicio pagină intermediară a tutorialului dvs.
+Dacă tutorialul dvs. este aprobat și inclus pe pagina finală a tutorialului, Code.org vă va oferi un pixel unic de urmărire pe care să îl integrați în tutorialul dvs. Vezi exemplul de mai jos. Do not include on any interim pages of your tutorial.
 
-Acest lucru ne va permite să numărăm utilizatorii care fac tutorialul dvs. Hour of Code. Aceasta va duce la un număr mai precis de participare pentru tutorialul dvs.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Dacă tutorialul dvs. este aprobat și inclus pe pagina finală a tutorialului, Code.org vă va oferi un pixel unic de urmărire pe care să îl integrați în tutorialul dvs. Vezi exemplul de mai jos.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-Notă: acest lucru nu este important să se facă pentru aplicațiile instalabile (iOS/Android, sau desktop)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Exemplu de pixeli de urmărire pentru Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Promovarea activităților dvs., CSEDWeek și Hour of Code
 
-Vă rugăm să vă promovați activitatea în rețeaua dvs.! Direcționați-le către pagina dvs. Hour of Code. Utilizatorii dvs. sunt mult mai predispuși să reacționeze la o corespondență de la dvs. despre activitatea dvs. Folosiți campania internațională Hour of Code în timpul Săptămânii Educației în Informatică ca scuză pentru a încuraja utilizatorii să invite pe alții să se alăture și pentru a ne ajuta să ajungem la mai mulți studenți!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Prezintă Hour of Code și CSEDWeek pe site-ul dvs. web. Ex: <http://www.tynker.com/hour-of-code>
 - Promovați Hour of Code folosind social media, media tradițională, liste de discuții etc., folosind hashtag-ul #HourOfCode (cu majuscule H, O, C)
