@@ -10,7 +10,7 @@ import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps
 import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
-import style from '../../../../style/code-studio/pl_landing_page.module.scss';
+import style from './landingPage.module.scss';
 
 export default class LandingPage extends Component {
   static propTypes = {
