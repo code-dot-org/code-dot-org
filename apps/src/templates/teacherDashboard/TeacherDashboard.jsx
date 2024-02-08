@@ -137,9 +137,11 @@ function TeacherDashboard({
         )}
         <Route
           path={TeacherDashboardPath.projects}
-          component={props => (
-            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.stats}
