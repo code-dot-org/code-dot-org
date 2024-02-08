@@ -220,7 +220,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get "/gallery", to: redirect("/projects/public")
+    get "/gallery", to: redirect("/projects")
+    get "/projects/public", to: redirect("/projects")
 
     get 'projects/featured', to: 'projects#featured'
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
@@ -913,8 +914,6 @@ Dashboard::Application.routes.draw do
         get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
-
-        get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
