@@ -1466,3 +1466,11 @@ And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/)
   expect(params['name']).to eq(name)
   expect(params['course']).to eq(course)
 end
+
+And(/^I validate rubric ai config for all lessons$/) do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_validate_rubric_ai_config"))
+    response_code = response.code
+    expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
+  end
+end

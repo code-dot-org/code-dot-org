@@ -4,7 +4,7 @@ import {Meta, Story} from '@storybook/react';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 export default {
-  title: 'DesignSystem/Checkbox',
+  title: 'DesignSystem/Checkbox', // eslint-disable-line storybook/no-title-property-in-meta
   component: Checkbox,
 } as Meta;
 
@@ -123,7 +123,7 @@ GroupOfSizesOfCheckboxes.args = {
 // -----------------------------------------------------------
 const SupernovaDefaultMultipleTemplate: Story<{
   components: CheckboxProps[];
-}> = args => (
+}> = () => (
   <>
     <div style={{display: 'flex', justifyContent: 'space-around'}}>
       {[
@@ -186,7 +186,7 @@ export const SupernovaGroupOfDefaultCheckboxes =
 
 const SupernovaSizesMultipleTemplate: Story<{
   components: CheckboxProps[];
-}> = args => (
+}> = () => (
   <>
     <div style={{display: 'flex', justifyContent: 'space-around'}}>
       {[
