@@ -1,15 +1,15 @@
-/**
- * Teacher Landing Page
- */
+// Professional Learning landing page
 
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
+import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import i18n from '@cdo/locale';
+import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
+import style from '../../../../style/code-studio/pl_landing_page.module.scss';
 
 export default class LandingPage extends Component {
   static propTypes = {
@@ -21,54 +21,31 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div>
-        <HeaderImage />
-        <br />
-        {this.props.lastWorkshopSurveyUrl && (
-          <LastWorkshopSurveyBanner
-            subHeading={i18n.plLandingSubheading()}
-            description={i18n.plLandingDescription({
-              course: this.props.lastWorkshopSurveyCourse,
-            })}
-            surveyUrl={this.props.lastWorkshopSurveyUrl}
-          />
-        )}
-        <EnrolledWorkshops />
-        {this.props.deeperLearningCourseData && (
-          <ProfessionalLearningCourseProgress
-            deeperLearningCourseData={this.props.deeperLearningCourseData}
-          />
-        )}
+        <HeaderBannerNoImage
+          headingText={i18n.professionalLearning()}
+          backgroundColor={color.light_gray_50}
+        />
+        <main className={style.wrapper}>
+          {this.props.lastWorkshopSurveyUrl && (
+            <LastWorkshopSurveyBanner
+              subHeading={i18n.plLandingSubheading()}
+              description={i18n.plLandingDescription({
+                course: this.props.lastWorkshopSurveyCourse,
+              })}
+              surveyUrl={this.props.lastWorkshopSurveyUrl}
+            />
+          )}
+          <EnrolledWorkshops />
+          {this.props.deeperLearningCourseData && (
+            <ProfessionalLearningCourseProgress
+              deeperLearningCourseData={this.props.deeperLearningCourseData}
+            />
+          )}
+        </main>
       </div>
     );
   }
 }
-
-const styles = {
-  headerImage: {
-    width: '100%',
-    height: '300px',
-    background: `url(/blockly/media/BannerKids.png) no-repeat`,
-    backgroundSize: 'cover',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  headerText: {
-    backgroundColor: 'rgba(0, 0, 0, .5)',
-    alignSelf: 'flex-end',
-    width: '100%',
-    textAlign: 'center',
-    padding: '30px',
-    fontSize: '40px',
-    color: 'white',
-  },
-};
-
-const HeaderImage = () => (
-  <div style={styles.headerImage}>
-    <div style={styles.headerText}>{i18n.plLandingHeading()}</div>
-  </div>
-);
 
 export const LastWorkshopSurveyBanner = ({
   subHeading,
