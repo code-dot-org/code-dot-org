@@ -3,7 +3,6 @@ import VariableFormGroup from './VariableFormGroup';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 
 export default {
-  title: 'VariableFormGroup',
   component: VariableFormGroup,
   decorators: [reactBootstrapStoryDecorator],
 };
