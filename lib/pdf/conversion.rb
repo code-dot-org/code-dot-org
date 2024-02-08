@@ -29,8 +29,6 @@ module PDF
     cmd = (['timeout', PDF_GENERATION_TIMEOUT.to_s, 'node', script_path] + args).join(" ")
     puts cmd if options[:verbose]
     result = `#{cmd}`
-    puts "right before error"
-    # add counter for number of time to re-run
     if $?.exitstatus == 124
       raise "pdf generation timed out after #{PDF_GENERATION_TIMEOUT} seconds. cmd: #{cmd}"
     elsif $?.exitstatus ==1 

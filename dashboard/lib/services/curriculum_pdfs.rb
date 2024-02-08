@@ -89,10 +89,6 @@ module Services
     # Do no generate the resources pdf is there are no lesson plans since
     # resources are attached to lesson plans
     def self.should_generate_resource_pdf?(unit)
-      puts "unit.unit_without_lesson_plans?"
-      puts unit.unit_without_lesson_plans?
-      puts "unit.lessons.map(&:resources).flatten.any?"
-      puts unit.lessons.map(&:resources).flatten.any?
       !unit.unit_without_lesson_plans? && unit.lessons.map(&:resources).flatten.any?
     end
 
