@@ -26,10 +26,7 @@ export default function IconKey({isViewingLevelProgress, hasLevelValidation}) {
     </div>
   );
 
-  const clickListener = () => {
-    console.log('lfm');
-    setIsOpen(!isOpen);
-  };
+  const clickListener = () => setIsOpen(!isOpen);
 
   return (
     <div
