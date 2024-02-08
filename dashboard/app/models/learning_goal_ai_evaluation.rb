@@ -9,6 +9,7 @@
 #  ai_confidence           :integer
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
+#  observations            :text(65535)
 #
 # Indexes
 #
@@ -40,6 +41,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
       id: id,
       understanding: understanding,
       learning_goal_id: learning_goal_id,
+      observations: observations,
       ai_confidence: ai_confidence,
     }
   end
@@ -57,6 +59,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
       level_name: level.name,
       learning_goal: learning_goal.learning_goal,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.invert[understanding].to_s,
+      observations: observations,
       ai_confidence: AI_CONFIDENCE_LEVELS.invert[ai_confidence].to_s,
     }
   end
