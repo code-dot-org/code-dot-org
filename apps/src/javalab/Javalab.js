@@ -329,20 +329,7 @@ Javalab.prototype.init = function (config) {
     document.getElementById(config.containerId)
   );
 
-  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
-};
-
-// Ensure project is saved before exiting
-Javalab.prototype.beforeUnload = function (event) {
-  if (project.hasOwnerChangedProject()) {
-    // Manually trigger an autosave instead of waiting for the next autosave.
-    project.autosave();
-
-    event.preventDefault();
-    event.returnValue = '';
-  } else {
-    delete event.returnValue;
-  }
+  project.registerSaveOnUnload();
 };
 
 // Called by the Javalab app when it wants execute student code.

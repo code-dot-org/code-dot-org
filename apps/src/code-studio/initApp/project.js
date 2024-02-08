@@ -1923,6 +1923,22 @@ var projects = (module.exports = {
     }
     return sourcesApi;
   },
+
+  // Sets a callback to save the project before unloading the page.
+  registerSaveOnUnload() {
+    const unloadHandler = event => {
+      if (this.hasOwnerChangedProject()) {
+        // Manually trigger an autosave instead of waiting for the next autosave.
+        this.autosave();
+
+        event.preventDefault();
+        event.returnValue = '';
+      } else {
+        delete event.returnValue;
+      }
+    };
+    window.addEventListener('beforeunload', unloadHandler);
+  },
 });
 
 function fetchAbuseScore(resolve) {
