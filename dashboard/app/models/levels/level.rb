@@ -795,6 +795,14 @@ class Level < ApplicationRecord
     return game&.app
   end
 
+  # Whether this level has validation for the completion of student work.
+  def validated?
+    if uses_lab2?
+      return properties.dig('level_data', 'validations').present?
+    end
+    properties['validation_code'].present? || properties['success_condition'].present?
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.

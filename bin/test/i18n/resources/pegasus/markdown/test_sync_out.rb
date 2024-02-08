@@ -8,14 +8,12 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
   let(:crowdin_locale) {'Test'}
   let(:i18n_locale) {'te-ST'}
   let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
-  let(:is_source_language) {false}
 
   around do |test|
     FakeFS.with_fresh {test.call}
   end
 
   before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
     I18n::Utils::PegasusMarkdown.stubs(:restore_file_header)
   end
 
@@ -70,20 +68,6 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
 
         expect_localization_distribution.in_sequence(execution_sequence)
         expect_markdown_i18n_file_header_restoration.in_sequence(execution_sequence)
-        expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
-
-        process_language
-      end
-    end
-
-    context 'when the language is the source language' do
-      let(:is_source_language) {true}
-
-      it 'does not distribute the markdown localization' do
-        execution_sequence = sequence('execution')
-
-        expect_localization_distribution.never
-        expect_markdown_i18n_file_header_restoration.never
         expect_crowdin_locale_resource_dir_removing.in_sequence(execution_sequence)
 
         process_language

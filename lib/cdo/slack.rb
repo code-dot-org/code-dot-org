@@ -9,7 +9,7 @@ class Slack
     green: 'good',
     yellow: 'warning',
     red: 'danger',
-    purple: '#7665a0'
+    purple: '#8c52ba'
   }.freeze
 
   CHANNEL_MAP = {
