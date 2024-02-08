@@ -4,7 +4,6 @@ import {getStore} from '@cdo/apps/redux';
 import style from './ai-tutor.module.scss';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
 import AITutorPanel from './aiTutorPanel';
-import {Level} from '@cdo/apps/aiTutor/types';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
