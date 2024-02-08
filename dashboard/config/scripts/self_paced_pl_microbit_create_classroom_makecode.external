@@ -1,0 +1,7 @@
+name 'self-paced-pl-microbit_create_classroom_MakeCode'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# MakeCode Classroom
+MARKDOWN

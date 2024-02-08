@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-25 21:21:59 UTC",
+    "serialized_at": "2024-02-06 22:35:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -989,15 +989,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
-        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
+          "SP-VPL-CSD-Unit4Navigation"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
@@ -1005,7 +1002,7 @@
         "activity_section.key": "efba6e57-8c0c-4bbe-b763-d64f270d7f0c"
       },
       "level_keys": [
-        "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
+        "SP-VPL-CSD-Unit4Navigation"
       ]
     }
   ],
@@ -1336,9 +1333,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit",
+        "level.key": "SP-VPL-CSD-Unit4Navigation",
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod2_physical-computing-microbit"
+          "SP-VPL-CSD-Unit4Navigation"
         ],
         "lesson.key": "Navigating Support",
         "lesson_group.key": "",
