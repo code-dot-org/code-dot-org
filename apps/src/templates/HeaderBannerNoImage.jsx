@@ -3,8 +3,8 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import style from './header-banner-no-image.module.scss';
+import {Heading1, BodyOneText} from '@cdo/apps/componentLibrary/typography';
 
 export default class HeaderBanner extends React.Component {
   static propTypes = {
@@ -32,19 +32,9 @@ export default class HeaderBanner extends React.Component {
     return (
       <section style={backgroundStyling} className={style.banner}>
         <div className={style.wrapper}>
-          <Typography semanticTag="h1" visualAppearance="heading-xxl">
-            {headingText}
-          </Typography>
-          {subHeadingText && (
-            <Typography semanticTag="p" visualAppearance="body-one">
-              {subHeadingText}
-            </Typography>
-          )}
-          {description && (
-            <Typography semanticTag="p" visualAppearance="body-one">
-              {description}
-            </Typography>
-          )}
+          <Heading1>{headingText}</Heading1>
+          {subHeadingText && <BodyOneText>{subHeadingText}</BodyOneText>}
+          {description && <BodyOneText>{description}</BodyOneText>}
           {children}
         </div>
       </section>
