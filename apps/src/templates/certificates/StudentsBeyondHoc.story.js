@@ -4,7 +4,7 @@ import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
 
 export default {
-  title: 'Congrats/StudentsBeyondHoc',
+  title: 'Congrats/StudentsBeyondHoc', // eslint-disable-line storybook/no-title-property-in-meta
   component: StudentsBeyondHoc,
 };
 

@@ -14092,7 +14092,9 @@ en:
             lesson-2:
               name: Counter
             lesson-7:
-              name: Dance Party 2019 (need to clone)
+              name: JuiceMind Bridging Activity
+            lesson-8:
+              name: JuiceMind Content Assessment
           lesson_groups:
             lessonGroup-2:
               display_name: 'Beginner: Events'
