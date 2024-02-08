@@ -1,0 +1,7 @@
+name 'self-paced-pl-microbit_Best_Practices'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Tips for Teaching Physical Computing
+MARKDOWN

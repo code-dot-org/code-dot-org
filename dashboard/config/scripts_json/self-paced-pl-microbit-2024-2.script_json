@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-02 20:02:49 UTC",
+    "serialized_at": "2024-02-06 17:13:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -39,6 +39,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "#### This lesson provides an overview of the micro:bit module. \n#### **You will:** \n- #### Understand what physical computing is and why to use it in your class.\n- #### Get an overview of the micro:bit module \n\n#### **Suggested time:** 5 minutes\n",
+        "student_overview": "#### This lesson provides an overview of the micro:bit module. \n#### **You will:** \n- #### Understand what physical computing is and why to use it in your class.\n- #### Get an overview of the micro:bit module \n\n#### **Suggested time:** 5 minutes\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -54,6 +56,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "#### This lessons introduces the basics of teaching with the micro:bit\n\n#### **You will:**\n- #### Get acquainted with the micro:bit\n- #### Practice using the micro:bit\n- #### Navigate the classroom feature in Microsoft MakeCode\n- #### Learn best practices for teaching with micro:bit \n\n#### **Suggested time:** 70 minutes\n",
+        "student_overview": "#### This lessons introduces the basics of teaching with the micro:bit\n\n#### **You will:**\n- #### Get acquainted with the micro:bit\n- #### Practice using the micro:bit\n- #### Navigate the classroom feature in Microsoft MakeCode\n- #### Learn best practices for teaching with micro:bit \n\n#### **Suggested time:** 70 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -82,6 +86,7 @@
       "key": "45c23da6-5da3-4e92-870d-b5ed3c43fa1e",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "45c23da6-5da3-4e92-870d-b5ed3c43fa1e",
@@ -94,10 +99,24 @@
       "key": "a7d20d13-f6e3-4440-b32d-24f469fc5bb8",
       "position": 1,
       "properties": {
+        "duration": 70,
+        "name": " micro:bit"
       },
       "seeding_key": {
         "lesson_activity.key": "a7d20d13-f6e3-4440-b32d-24f469fc5bb8",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2"
+      }
+    },
+    {
+      "key": "7e185a3a-e253-4723-a620-c689de0775bd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e185a3a-e253-4723-a620-c689de0775bd",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-microbit-2024-2"
       }
@@ -108,6 +127,7 @@
       "key": "1c2d3d21-852f-417f-a3e8-83d30faa1633",
       "position": 1,
       "properties": {
+        "progression_name": "Introduction to Physical Computing"
       },
       "seeding_key": {
         "activity_section.key": "1c2d3d21-852f-417f-a3e8-83d30faa1633",
@@ -129,10 +149,34 @@
       "key": "90c82e36-32f7-47d1-ab8a-693e324f22ef",
       "position": 2,
       "properties": {
+        "progression_name": "Emotion Badge "
       },
       "seeding_key": {
         "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef",
         "lesson_activity.key": "a7d20d13-f6e3-4440-b32d-24f469fc5bb8"
+      }
+    },
+    {
+      "key": "e5f348e5-5de9-4df4-be10-69bf7d713297",
+      "position": 1,
+      "properties": {
+        "name": "Next Steps",
+        "progression_name": "Deciding your path"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5f348e5-5de9-4df4-be10-69bf7d713297",
+        "lesson_activity.key": "7e185a3a-e253-4723-a620-c689de0775bd"
+      }
+    },
+    {
+      "key": "2732f265-97fb-42e0-a528-7506eb8a00d1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Continue learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "2732f265-97fb-42e0-a528-7506eb8a00d1",
+        "lesson_activity.key": "7e185a3a-e253-4723-a620-c689de0775bd"
       }
     }
   ],
@@ -143,6 +187,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Opening_microbit1"
+        ],
+        "progression": "Introduction to Physical Computing"
       },
       "bonus": false,
       "seeding_key": {
@@ -164,6 +212,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_physical_computing"
+        ],
+        "progression": "Introduction to Physical Computing"
       },
       "bonus": false,
       "seeding_key": {
@@ -185,6 +237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_define_microbit"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -207,6 +262,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_meet_lesson_overview"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -229,6 +287,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_meet_lesson_plan_overview"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -251,6 +312,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_pl_maker_meet_your_microbit"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -273,6 +337,35 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_emoition_lesson_plan_overview"
+        ],
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_emoition_lesson_plan_overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_emoition_lesson_plan_overview"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced_PL_maker_emotion_badge"
+        ],
+        "progression": "Emotion Badge "
       },
       "bonus": false,
       "seeding_key": {
@@ -286,6 +379,175 @@
       },
       "level_keys": [
         "self-paced_PL_maker_emotion_badge"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_create_classroom_MakeCode"
+        ],
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_create_classroom_MakeCode"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_create_classroom_MakeCode"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced_PL-microbit_checkUnderstanding"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      },
+      "level_keys": [
+        "self-paced_PL-microbit_checkUnderstanding"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_teaching_best_practices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_teaching_best_practices"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_deciding_your_path"
+        ],
+        "progression": "Deciding your path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_deciding_your_path"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "e5f348e5-5de9-4df4-be10-69bf7d713297"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_deciding_your_path"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_courses-C-F"
+        ],
+        "progression": "Deciding your path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_courses-C-F"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "e5f348e5-5de9-4df4-be10-69bf7d713297"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_courses-C-F"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Best_Practices"
+        ],
+        "progression": "Deciding your path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_Best_Practices"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "e5f348e5-5de9-4df4-be10-69bf7d713297"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_Best_Practices"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced_PL_microbit_Closing2"
+        ],
+        "progression": "Continue learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced_PL_microbit_Closing2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "2732f265-97fb-42e0-a528-7506eb8a00d1"
+      },
+      "level_keys": [
+        "self-paced_PL_microbit_Closing2"
       ]
     }
   ],
@@ -364,6 +626,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-pl-microbit_emoition_lesson_plan_overview",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_emoition_lesson_plan_overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced_PL_maker_emotion_badge",
         "script_level.level_keys": [
           "self-paced_PL_maker_emotion_badge"
@@ -372,6 +646,90 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-microbit-2024-2",
         "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_create_classroom_MakeCode",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_create_classroom_MakeCode"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced_PL-microbit_checkUnderstanding",
+        "script_level.level_keys": [
+          "self-paced_PL-microbit_checkUnderstanding"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_teaching_best_practices",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_teaching_best_practices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "90c82e36-32f7-47d1-ab8a-693e324f22ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_deciding_your_path",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_deciding_your_path"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "e5f348e5-5de9-4df4-be10-69bf7d713297"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_courses-C-F",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_courses-C-F"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "e5f348e5-5de9-4df4-be10-69bf7d713297"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_Best_Practices",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_Best_Practices"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "e5f348e5-5de9-4df4-be10-69bf7d713297"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced_PL_microbit_Closing2",
+        "script_level.level_keys": [
+          "self-paced_PL_microbit_Closing2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-2",
+        "activity_section.key": "2732f265-97fb-42e0-a528-7506eb8a00d1"
       }
     }
   ],
