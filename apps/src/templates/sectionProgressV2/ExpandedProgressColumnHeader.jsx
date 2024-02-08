@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
 import LevelProgressHeader from './LevelProgressHeader';
+import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -39,7 +40,13 @@ export default function ExpandedProgressColumnHeader({
   }, [lesson, expandedChoiceLevels]);
 
   return (
-    <div className={styles.expandedHeader} key={lesson.id}>
+    <div
+      className={styles.expandedHeader}
+      key={lesson.id}
+      data-tip
+      data-for={getTooltipId(lesson)}
+    >
+      <LessonTitleTooltip lesson={lesson} />
       <div
         className={classNames(
           styles.gridBox,
