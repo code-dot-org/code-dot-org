@@ -15,33 +15,6 @@ class I18nScriptUtilsTest < Minitest::Test
     I18nScriptUtils.log_error(expected_error_class, expected_error_message)
   end
 
-  def test_unit_directory_changing
-    exec_seq = sequence('execution')
-
-    expected_content_dir         = CDO.dir('i18n/locales/source/expected_content_dir')
-    expected_unit_i18n_filename  = 'expected_unit_i18n.json'
-    expected_unit_i18n_filepath1 = CDO.dir('i18n/locales/source/expected_content_dir/1/expected_unit_i18n.json')
-    expected_unit_i18n_filepath2 = CDO.dir('i18n/locales/source/expected_content_dir/2/expected_unit_i18n.json')
-
-    Dir.expects(:glob).with(File.join(expected_content_dir, '**', expected_unit_i18n_filename)).in_sequence(exec_seq).returns([expected_unit_i18n_filepath2])
-    I18nScriptUtils.expects(:log_error).with(
-      'Destination directory for unit is attempting to change',
-      'Unit expected_unit_i18n wants to output strings to 1/expected_unit_i18n.json, but 2/expected_unit_i18n.json already exists'
-    ).in_sequence(exec_seq)
-
-    assert I18nScriptUtils.unit_directory_change?(expected_content_dir, expected_unit_i18n_filename, expected_unit_i18n_filepath1)
-  end
-
-  def test_unit_directory_changing_when_no_matching_files
-    expected_content_dir        = CDO.dir('i18n/locales/source/expected_content_dir')
-    expected_unit_i18n_filename = 'expected_unit_i18n.json'
-    expected_unit_i18n_filepath = CDO.dir('i18n/locales/source/expected_content_dir/expected_unit_i18n.json')
-
-    Dir.expects(:glob).with(File.join(expected_content_dir, '**', expected_unit_i18n_filename)).once.returns([expected_unit_i18n_filepath])
-
-    refute I18nScriptUtils.unit_directory_change?(expected_content_dir, expected_unit_i18n_filename, expected_unit_i18n_filepath)
-  end
-
   def test_yml_file_fixing
     provided_yaml_file_path = 'provided_yaml_file_path'
 
@@ -76,6 +49,42 @@ describe I18nScriptUtils do
 
     it 'returns crowdin_credentials.yml data' do
       _(crowdin_creds).must_equal crowdin_creds_file_data
+    end
+  end
+
+  describe '.unit_directory_change?' do
+    let(:unit_directory_change?) {I18nScriptUtils.unit_directory_change?(content_dir, unit_i18n_filepath)}
+
+    let(:content_dir) {CDO.dir('i18n/locales/source/expected_content_dir')}
+    let(:unit_i18n_filename) {'expected_unit_i18n.json'}
+    let(:unit_i18n_filepath) {File.join(content_dir, 'new_unit_dir', unit_i18n_filename)}
+
+    before do
+      I18nScriptUtils.stubs(:log_error)
+    end
+
+    it 'returns false' do
+      I18nScriptUtils.expects(:log_error).never
+
+      _(unit_directory_change?).must_equal false
+    end
+
+    context 'when the unit file already exists in another dir' do
+      let(:old_unit_i18n_filepath) {File.join(content_dir, 'old_unit_dir', unit_i18n_filename)}
+
+      before do
+        FileUtils.mkdir_p File.dirname(old_unit_i18n_filepath)
+        FileUtils.touch(old_unit_i18n_filepath)
+      end
+
+      it 'logs the error and returns true' do
+        I18nScriptUtils.expects(:log_error).with(
+          'Destination directory for unit is attempting to change',
+          'Unit expected_unit_i18n wants to output strings to new_unit_dir/expected_unit_i18n.json, but old_unit_dir/expected_unit_i18n.json already exists'
+        ).once
+
+        _(unit_directory_change?).must_equal true
+      end
     end
   end
 
@@ -456,26 +465,6 @@ describe I18nScriptUtils do
         I18nScriptUtils.remove_empty_dir(dir)
 
         assert File.directory?(dir)
-      end
-    end
-  end
-
-  describe '.source_lang?' do
-    let(:is_source_lang) {I18nScriptUtils.source_lang?(language)}
-
-    context 'when the language is the i18n source language' do
-      let(:language) {{locale_s: 'en-US'}}
-
-      it 'returns true' do
-        assert is_source_lang
-      end
-    end
-
-    context 'when the language is not the i18n source language' do
-      let(:language) {{locale_s: 'not-EN'}}
-
-      it 'returns false' do
-        refute is_source_lang
       end
     end
   end

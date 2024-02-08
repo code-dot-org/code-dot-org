@@ -8,14 +8,9 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
   let(:crowdin_locale) {'Test'}
   let(:i18n_locale) {'te-ST'}
   let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
-  let(:is_source_language) {false}
 
   around do |test|
     FakeFS.with_fresh {test.call}
-  end
-
-  before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
   end
 
   it 'inherits from I18n::Utils::SyncOutBase' do
@@ -50,19 +45,6 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
       process_language
-    end
-
-    context 'when the language is the source language' do
-      let(:is_source_language) {true}
-
-      it 'does not distribute the localization' do
-        execution_sequence = sequence('execution')
-
-        expect_localization_distribution.never
-        expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-
-        process_language
-      end
     end
 
     context 'when the Crowdin file does not exist' do

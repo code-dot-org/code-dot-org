@@ -9,14 +9,9 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
   let(:i18n_locale) {'uk-UA'}
   let(:js_locale) {'uk_ua'}
   let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
-  let(:is_source_language) {false}
 
   around do |test|
     FakeFS.with_fresh {test.call}
-  end
-
-  before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
   end
 
   it 'inherits from I18n::Utils::SyncOutBase' do
@@ -124,15 +119,6 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
           distribute_ml_playground_l10n
         end
       end
-
-      context 'when the language is the source language' do
-        let(:is_source_language) {true}
-
-        it 'does not distribute ML Playground localization' do
-          I18nScriptUtils.expects(:sanitize_data_and_write).with(anything, target_i18n_file_path).never
-          distribute_ml_playground_l10n
-        end
-      end
     end
 
     describe 'ml-playground dataset localizations distribution' do
@@ -183,15 +169,6 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
         let(:crowdin_dataset_file_data) {{}}
 
         it 'does not try to distribute ML Playground dataset localization' do
-          I18nScriptUtils.expects(:sanitize_data_and_write).with(anything, target_i18n_file_path).never
-          distribute_ml_playground_l10n
-        end
-      end
-
-      context 'when the language is the source language' do
-        let(:is_source_language) {true}
-
-        it 'does not distribute ML Playground dataset localization' do
           I18nScriptUtils.expects(:sanitize_data_and_write).with(anything, target_i18n_file_path).never
           distribute_ml_playground_l10n
         end
@@ -285,15 +262,6 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
       I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale, 'blockly-core')).in_sequence(execution_sequence)
 
       distribute_blockly_core_l10n
-    end
-
-    context 'when the language is the source language' do
-      let(:is_source_language) {true}
-
-      it 'does not distribute Blockly Core localization' do
-        I18nScriptUtils.expects(:write_file).with(target_i18n_file_path, anything).never
-        distribute_blockly_core_l10n
-      end
     end
 
     context 'when the Crowdin file does not exist' do

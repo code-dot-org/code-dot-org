@@ -7,7 +7,6 @@ import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDia
 import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 
 export default {
-  title: 'PersonalProjectsTable',
   component: PersonalProjectsTable,
 };
 
