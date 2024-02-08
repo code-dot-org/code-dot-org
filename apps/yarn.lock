@@ -5240,6 +5240,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/htmlhint@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "@types/htmlhint@npm:1.1.5"
+  checksum: e764554ed9c0ff10d2bce167c6ec77e5cbe6b6aa41e13067eee21712bbf4927245ac53b2382d5e658a958e3f5dd0399f75de0efcae2b55367429d1fe551b62f4
+  languageName: node
+  linkType: hard
+
 "@types/is-function@npm:^1.0.0":
   version: 1.0.1
   resolution: "@types/is-function@npm:1.0.1"
@@ -8097,6 +8104,7 @@ __metadata:
     "@testing-library/react": ^12.1.5
     "@testing-library/user-event": ^14.4.3
     "@types/chai": ^4.3.5
+    "@types/htmlhint": ^1.1.5
     "@types/jquery": ^3.5.16
     "@types/mocha": ^10.0.1
     "@types/react": ^18.0.28
