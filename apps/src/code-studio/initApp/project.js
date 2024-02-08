@@ -7,6 +7,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import NameFailureError from '../NameFailureError';
 import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {setProject} from './project/importable';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -2156,3 +2157,5 @@ function parsePath() {
     action: tokens[PathPart.ACTION],
   };
 }
+
+setProject(projects);

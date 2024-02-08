@@ -2,8 +2,10 @@
 import queryString from 'query-string';
 import firehoseClient from './lib/util/firehose';
 
+import {project as importableProject} from './code-studio/initApp/project/importable';
+
 function project() {
-  return require('./code-studio/initApp/project');
+  return importableProject;
 }
 
 function apiPath(endpoint, channelId, path) {
