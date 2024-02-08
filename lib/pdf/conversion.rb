@@ -30,10 +30,10 @@ module PDF
     @result = `#{cmd}`
     if $?.exitstatus == 124
       raise "pdf generation timed out after #{PDF_GENERATION_TIMEOUT} seconds. cmd: #{cmd}"
-    elsif $?.exitstatus ==1 
+    elsif $?.exitstatus == 1
       warn "Exit status 1.  Re-attempting."
       raise "pdf generation failed with status #{$?.exitstatus}. cmd: #{cmd}" if attempts <= 1
-        invoke_generation_script(args, options, attempts: attempts - 1)
+      invoke_generation_script(args, options, attempts: attempts - 1)
     elsif $?.exitstatus != 0
       raise "pdf generation failed with status #{$?.exitstatus}. cmd: #{cmd}"
     end
