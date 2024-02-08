@@ -7,6 +7,7 @@ import trackEvent from '../../util/trackEvent';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import moduleStyles from './inline-audio.module.scss';
 import classNames from 'classnames';
+import i18n from '@cdo/locale';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -271,6 +272,7 @@ class InlineAudio extends React.Component {
           )}
           style={this.props.style && this.props.style.wrapper}
           onClick={this.toggleAudio}
+          aria-label={i18n.textToSpeech()}
           type="button"
         >
           <div
