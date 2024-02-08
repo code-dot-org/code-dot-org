@@ -1,4 +1,4 @@
-import {dropletGlobalConfigBlocks} from '../../../dropletUtils';
+import {dropletGlobalConfigBlocks} from '../../../dropletGlobalConfigBlocks';
 import * as utils from '../../../utils';
 
 /*

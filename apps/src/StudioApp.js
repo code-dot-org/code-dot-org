@@ -66,7 +66,7 @@ import {
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
-import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser/createLibraryClosure';
 import {
   setAchievements,
   setBlockLimit,
