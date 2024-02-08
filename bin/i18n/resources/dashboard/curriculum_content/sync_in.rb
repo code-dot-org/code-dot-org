@@ -29,7 +29,7 @@ module I18n
 
               name = "#{unit.name}.json"
               i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, get_unit_subdirectory(unit), name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, name, i18n_source_file_path)
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, i18n_source_file_path)
 
               i18n_data = i18n_data_of(unit)
               next if i18n_data.blank?
