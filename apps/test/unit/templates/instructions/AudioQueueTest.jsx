@@ -1,17 +1,19 @@
 import React from 'react';
-import {mount} from 'enzyme';
-import {act} from 'react-dom/test-utils';
-
-import {setExternalGlobals} from '../../../util/testUtils';
+import {render} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
+import {setExternalGlobals} from '../../../util/testUtils';
 import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
-import {AudioQueue} from '@cdo/apps/templates/instructions/AudioQueue';
+import {
+  AudioQueue,
+  AudioQueueContext,
+} from '@cdo/apps/templates/instructions/AudioQueue';
+import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
   assetUrl: () => {},
   isK1: true,
   locale: 'it_it',
-  src: 'test_source',
+  src: 'test',
   textToSpeechEnabled: true,
   style: {
     button: {},
@@ -24,6 +26,7 @@ describe('AudioQueue', () => {
   setExternalGlobals();
 
   let windowAudio;
+
   beforeEach(() => {
     windowAudio = window.Audio;
     window.Audio = FakeAudio;
@@ -32,36 +35,36 @@ describe('AudioQueue', () => {
   afterEach(() => {
     window.Audio = windowAudio;
   });
-
-  it('plays the next audio item in the queue', () => {
-    const wrapper = mount(
+  it('calls addToQueue for each InlineAudio rendered', () => {
+    const addToQueueSpy = sinon.spy();
+    render(
       <AudioQueue>
-        <InlineAudio {...DEFAULT_PROPS} />
-        <InlineAudio {...DEFAULT_PROPS} />
+        <AudioQueueContext.Provider
+          value={{
+            addToQueue: addToQueueSpy,
+          }}
+        >
+          <InlineAudio {...DEFAULT_PROPS} />
+          <InlineAudio {...DEFAULT_PROPS} />
+        </AudioQueueContext.Provider>
       </AudioQueue>
     );
-    console.log(wrapper.debug());
+    expect(addToQueueSpy).to.have.been.calledTwice;
+  });
 
-    const audioQueueInstance = wrapper.at(0).find(AudioQueue).instance();
-
-    const inlineAudioInstance = wrapper.find('InlineAudio').at(0).instance();
-
-    act(() => {
-      audioQueueInstance.addToQueue(inlineAudioInstance);
-    });
-
-    const queueState = audioQueueInstance.state.audioQueue;
-
-    expect(queueState).toHaveLength(1);
-    expect(queueState[0]).toBe(inlineAudioInstance);
-
-    act(() => {
-      audioQueueInstance.playNextAudio();
-    });
-
-    expect(inlineAudioInstance.playAudio).toHaveBeenCalled();
-
-    wrapper.unmount();
+  it('does not add to queue if autoplay is off', () => {
+    const addToQueueSpy = sinon.spy();
+    render(
+      <AudioQueueContext.Provider
+        value={{
+          addToQueue: addToQueueSpy,
+        }}
+      >
+        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={false} />
+        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={false} />
+      </AudioQueueContext.Provider>
+    );
+    expect(addToQueueSpy).to.not.have.been.called;
   });
 });
 

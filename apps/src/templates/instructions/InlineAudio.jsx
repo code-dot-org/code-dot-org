@@ -123,9 +123,11 @@ class InlineAudio extends React.Component {
         playing: false,
         autoplayed: this.props.ttsAutoplayEnabled,
       });
-      const {playNextAudio, isPlaying} = this.context;
-      isPlaying.current = false;
-      playNextAudio();
+      if (this.props.ttsAutoplayEnabled) {
+        const {playNextAudio, isPlaying} = this.context;
+        isPlaying.current = false;
+        playNextAudio();
+      }
     });
 
     audio.addEventListener('error', e => {
@@ -226,8 +228,10 @@ class InlineAudio extends React.Component {
   pauseAudio() {
     this.getAudioElement().pause();
     this.setState({playing: false});
-    const {clearQueue} = this.context;
-    clearQueue();
+    if (this.props.ttsAutoplayEnabled) {
+      const {clearQueue} = this.context;
+      clearQueue();
+    }
   }
 
   render() {
