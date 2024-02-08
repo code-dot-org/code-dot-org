@@ -43,6 +43,7 @@ export default class CoreLibrary {
       pass: 90,
       successFrame: 0,
     };
+    this.variableBubbles = [];
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -50,6 +51,7 @@ export default class CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawVariableBubbles();
         this.drawSpeechBubbles();
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
@@ -104,6 +106,29 @@ export default class CoreLibrary {
         sprite.y - Math.round(sprite.getScaledHeight() / 2),
         bubbleType
       );
+    });
+  }
+
+  drawVariableBubbles() {
+    console.log('this.variableBubbles', this.variableBubbles);
+    if (!this.variableBubbles.length) {
+      return;
+    }
+
+    this.variableBubbles.forEach(variable => {
+      const {name} = variable;
+      if (!name) {
+        return;
+      }
+      console.log('name', name);
+      // TODO: Replace with ID variable lookup
+      const value = Blockly.getMainWorkspace().getVariable(name);
+      console.log('value', value);
+      const x = 150;
+      const y = 200;
+
+      const text = `${name}: ${value}`;
+      drawUtils.variableBubble(this.p5, x, y, text);
     });
   }
 
@@ -190,6 +215,14 @@ export default class CoreLibrary {
         horizontalAlign: this.p5.CENTER,
       }
     );
+  }
+
+  addVariableBubble(name) {
+    console.log('adding variable bubble');
+    // TODO: Ideally we would use Blockly's variable ID here and not a UUID
+    this.variableBubbles.push({
+      name,
+    });
   }
 
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {

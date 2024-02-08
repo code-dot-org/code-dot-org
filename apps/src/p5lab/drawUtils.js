@@ -22,6 +22,26 @@ export function getTextWidth(p5, text, size) {
   return width;
 }
 
+export function variableBubble(p5, x, y, text) {
+  const padding = 10;
+  const textSizeValue = 20; // Size of the text
+  const textWidth = getTextWidth(p5, text, textSizeValue);
+  const textWidthValue = textWidth + 2 * padding; // Calculate width based on text
+  const textHeightValue = textSizeValue + 2 * padding;
+
+  p5.fill(0); // Black background
+  p5.stroke(255); // White border
+  p5.strokeWeight(2);
+  p5.rectMode(p5.CENTER);
+  p5.rect(x, y, textWidthValue, textHeightValue, 20); // Rounded rectangle with 20 as the radius
+
+  p5.fill(255); // White text
+  p5.noStroke();
+  p5.textSize(textSizeValue);
+  p5.textAlign(p5.CENTER, p5.CENTER);
+  p5.text(text, x, y);
+}
+
 /**
  * Draw a speech bubble - a P5 shape comprised of a rectangle
  * with a tail at the bottom. The x/y values will be the
