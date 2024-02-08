@@ -352,6 +352,7 @@ class EvaluateRubricJob < ApplicationJob
     lesson_s3_names.each do |lesson_s3_name|
       validate_ai_config_for_lesson(lesson_s3_name, code)
     end
+    S3_AI_RELEASE_PATH
   end
 
   def validate_ai_config_for_lesson(lesson_s3_name, code)
