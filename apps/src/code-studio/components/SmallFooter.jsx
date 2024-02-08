@@ -31,7 +31,7 @@ export default class SmallFooter extends React.Component {
     i18nDropdown: PropTypes.string,
     copyrightInBase: PropTypes.bool.isRequired,
     copyrightStrings: PropTypes.shape({
-      thank_you: PropTypes.string.isRequired,
+      thanks: PropTypes.string.isRequired,
       help_from_html: PropTypes.string.isRequired,
       art_from_html: PropTypes.string.isRequired,
       code_from_html: PropTypes.string.isRequired,
@@ -233,9 +233,7 @@ export default class SmallFooter extends React.Component {
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
             <h4>{this.props.baseCopyrightString}</h4>
             <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.thank_you
-              )}
+              markdown={decodeURIComponent(this.props.copyrightStrings.thanks)}
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <SafeMarkdown
