@@ -36,11 +36,11 @@ const SET_CAPTCHA_KEY = 'projects/SET_CAPTCHA_KEY';
 
 /**
  * Select a gallery to display on the projects page.
- * @param {string} projectType Default: 'PUBLIC'
- * @returns {{type: string, projectType: string}}
+ * @param {string} galleryType Default: 'PUBLIC'
+ * @returns {{type: string, galleryType: string}}
  */
-export function selectGallery(projectType = Galleries.PUBLIC) {
-  return {type: TOGGLE_GALLERY, projectType};
+export function selectGallery(galleryType = Galleries.PRIVATE) {
+  return {type: TOGGLE_GALLERY, galleryType};
 }
 
 /**
@@ -134,7 +134,7 @@ const initialSelectedGalleryState = Galleries.PUBLIC;
 function selectedGallery(state = initialSelectedGalleryState, action) {
   switch (action.type) {
     case TOGGLE_GALLERY:
-      return action.projectType;
+      return action.galleryType;
     default:
       return state;
   }

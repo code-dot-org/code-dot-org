@@ -38,7 +38,7 @@ export const projectPropType = PropTypes.shape({
 });
 
 export const Galleries = {
-  PUBLIC: 'PUBLIC',
+  PUBLIC: 'PUBLIC', // Deprecated
   LIBRARIES: 'LIBRARIES',
   PRIVATE: 'PRIVATE',
 };
