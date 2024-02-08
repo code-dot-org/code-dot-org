@@ -101,7 +101,6 @@ const OPTIONS = {
 };
 
 export default {
-  title: 'FormController',
   component: FormController,
   decorators: [reactBootstrapStoryDecorator],
 };
