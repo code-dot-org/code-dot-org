@@ -12,11 +12,8 @@ import {compilationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorTypes} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code did not compile.
-const CompilationTutor: React.FunctionComponent<CompilationTutorProps> = ({
-  levelId,
-  isProjectBacked,
-  scriptId,
-}) => {
+
+const CompilationTutor: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const sources = useSelector(
@@ -44,20 +41,26 @@ const CompilationTutor: React.FunctionComponent<CompilationTutorProps> = ({
   const aiResponse = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.aiResponse
   );
+  const level = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.level
+  );
+  const scriptId = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.scriptId
+  );
   const systemPrompt = compilationSystemPrompt;
 
   const handleSend = async (studentCode: string) => {
     const chatContext = {
-      levelId: levelId,
+      levelId: level?.id,
       scriptId: scriptId,
-      isProjectBacked: isProjectBacked,
+      isProjectBacked: level?.isProjectBacked,
       systemPrompt: systemPrompt,
       studentCode: studentCode,
       tutorType: TutorTypes.COMPILATION,
     };
     dispatch(askAITutor(chatContext));
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION, {
-      levelId: levelId,
+      levelId: level?.id,
     });
   };
 
@@ -85,11 +88,5 @@ const CompilationTutor: React.FunctionComponent<CompilationTutorProps> = ({
     </div>
   );
 };
-
-interface CompilationTutorProps {
-  levelId: number;
-  isProjectBacked: boolean;
-  scriptId: number;
-}
 
 export default CompilationTutor;

@@ -12,11 +12,8 @@ import {validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorTypes} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code is not passing tests.
-const ValidationTutor: React.FunctionComponent<ValidationTutorProps> = ({
-  levelId,
-  isProjectBacked,
-  scriptId
-}) => {
+
+const ValidationTutor: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const sources = useSelector(
@@ -47,21 +44,27 @@ const ValidationTutor: React.FunctionComponent<ValidationTutorProps> = ({
   const aiResponse = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.aiResponse
   );
+  const level = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.level
+  );
+  const scriptId = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.scriptId
+  );
 
   const systemPrompt = validationSystemPrompt;
 
   const handleSend = async (studentCode: string) => {
     const chatContext = {
-      levelId: levelId,
+      levelId: level?.id,
       scriptId: scriptId,
-      isProjectBacked: isProjectBacked,
+      isProjectBacked: level?.isProjectBacked,
       systemPrompt: systemPrompt,
       studentCode: studentCode,
       tutorType: TutorTypes.VALIDATION,
     };
     dispatch(askAITutor(chatContext));
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION, {
-      levelId: levelId,
+      levelId: level?.id,
     });
   };
 
@@ -96,11 +99,5 @@ const ValidationTutor: React.FunctionComponent<ValidationTutorProps> = ({
     </div>
   );
 };
-
-interface ValidationTutorProps {
-  levelId: number;
-  isProjectBacked: boolean;
-  scriptId: number;
-}
 
 export default ValidationTutor;

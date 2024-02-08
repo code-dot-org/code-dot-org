@@ -12,6 +12,7 @@ import instructions, {
   setCodeReviewEnabledForLevel,
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
+import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import AITutorFloatingActionButton from '@cdo/apps/code-studio/components/aiTutor/aiTutorFloatingActionButton';
@@ -60,7 +61,6 @@ function initPage() {
 
   if (hasScriptData('script[data-aitutorleveldata]')) {
     const scriptData = getScriptData('scriptdata');
-    console.log("script data", scriptData)
     const aiTutorLevelData = getScriptData('aitutorleveldata');
     const {id, type, hasValidation} = aiTutorLevelData;
     const level = {
@@ -68,12 +68,16 @@ function initPage() {
       type: type,
       hasValidation: hasValidation,
     };
+    getStore().dispatch(setLevel(level));
+    getStore().dispatch(setScriptId(scriptData.script_id));
     const aiTutorFabMountPoint = document.getElementById(
       'ai-tutor-fab-mount-point'
     );
     if (aiTutorFabMountPoint) {
       ReactDOM.render(
-        <AITutorFloatingActionButton level={level} scriptId={scriptData.script_id} />,
+        <Provider store={getStore()}>
+          <AITutorFloatingActionButton />
+        </Provider>,
         aiTutorFabMountPoint
       );
     }

@@ -11,13 +11,17 @@ import {useSelector} from 'react-redux';
 /**
  * Renders the AI Tutor user chat message editor component.
  */
-const UserChatMessageEditor: React.FunctionComponent<
-  UserChatMessageEditorProps
-> = ({levelId, isProjectBacked, scriptId}) => {
+const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
   const isWaitingForChatResponse = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
+  );
+  const level = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.level
+  );
+  const scriptId = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.scriptId
   );
 
   const dispatch = useAppDispatch();
@@ -25,22 +29,15 @@ const UserChatMessageEditor: React.FunctionComponent<
   const handleSubmit = useCallback(() => {
     if (!isWaitingForChatResponse) {
       const chatContext = {
-        levelId: levelId,
+        levelId: level?.id,
         scriptId: scriptId,
-        isProjectBacked: isProjectBacked,
+        isProjectBacked: level?.isProjectBacked,
         message: userMessage,
       };
       dispatch(submitChatMessage(chatContext));
       setUserMessage('');
     }
-  }, [
-    userMessage,
-    dispatch,
-    isWaitingForChatResponse,
-    levelId,
-    scriptId,
-    isProjectBacked,
-  ]);
+  }, [userMessage, dispatch, isWaitingForChatResponse, level, scriptId]);
 
   return (
     <div className={style.UserChatMessageEditor}>
@@ -60,11 +57,5 @@ const UserChatMessageEditor: React.FunctionComponent<
     </div>
   );
 };
-
-interface UserChatMessageEditorProps {
-  levelId: number;
-  isProjectBacked: boolean;
-  scriptId: number;
-}
 
 export default UserChatMessageEditor;
