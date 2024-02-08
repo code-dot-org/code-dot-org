@@ -8,6 +8,7 @@ import moduleStyles from './inline-audio.module.scss';
 import classNames from 'classnames';
 import {Voices} from '@cdo/apps/util/sharedVoices';
 import {AudioQueueContext} from './AudioQueue';
+import {playNextAudio, addToQueue, clearQueue} from '../utils/audioQueueUtils';
 
 const TTS_URL = 'https://tts.code.org';
 
@@ -72,9 +73,8 @@ class InlineAudio extends React.Component {
       this.autoplayTriggerElement = autoplayTriggerElementId
         ? document.getElementById(autoplayTriggerElementId)
         : document;
-
-      const {addToQueue} = this.context;
-      addToQueue(this);
+      const {audioQueue, setAudioQueue} = this.context;
+      addToQueue(audioQueue, this, setAudioQueue);
     }
   }
 
@@ -124,9 +124,9 @@ class InlineAudio extends React.Component {
         autoplayed: this.props.ttsAutoplayEnabled,
       });
       if (this.props.ttsAutoplayEnabled) {
-        const {playNextAudio, isPlaying} = this.context;
+        const {audioQueue, isPlaying} = this.context;
         isPlaying.current = false;
-        playNextAudio();
+        playNextAudio(audioQueue, isPlaying);
       }
     });
 
@@ -229,8 +229,8 @@ class InlineAudio extends React.Component {
     this.getAudioElement().pause();
     this.setState({playing: false});
     if (this.props.ttsAutoplayEnabled) {
-      const {clearQueue} = this.context;
-      clearQueue();
+      const {setAudioQueue, isPlaying} = this.context;
+      clearQueue(setAudioQueue, isPlaying);
     }
   }
 
