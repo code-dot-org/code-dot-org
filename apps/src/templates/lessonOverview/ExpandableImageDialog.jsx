@@ -27,7 +27,11 @@ class ExpandableImageDialog extends React.Component {
         isOpen={this.props.isOpen}
         useUpdatedStyles={true}
       >
-        <img src={this.props.imgUrl} />
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        <img src={this.props.imgUrl} alt="" />
       </BaseDialog>
     );
   }

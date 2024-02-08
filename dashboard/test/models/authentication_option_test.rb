@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class AuthenticationOptionTest < ActiveSupport::TestCase
+  TEST_LTI_AUTH_ID = 'https://some.issuer|1234|uuid-1234-uuid-1123'.freeze
+
   test 'after create sets primary_contact_info on user if contact info is nil' do
     user = create :user
     user.primary_contact_info = nil
@@ -52,6 +54,15 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     assert_equal ['Authentication has already been taken'], new_auth_option.errors.full_messages
   end
 
+  test 'authentication_id has correct format if credential_type is LTI_V1 ' do
+    cred_type = AuthenticationOption::LTI_V1
+    auth_id = TEST_LTI_AUTH_ID
+    valid_option = create :authentication_option, credential_type: cred_type, authentication_id: auth_id
+    assert valid_option.valid?
+    invalid_option = build :authentication_option, credential_type: cred_type, authentication_id: 'nope'
+    refute invalid_option.valid?
+  end
+
   test 'deleted authentication options do not affect uniqueness' do
     cred_type = AuthenticationOption::GOOGLE
     auth_id = '54321'
@@ -65,7 +76,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'user can have multiple authentication options' do
     assert_creates(User) do
       user = create(:user, :with_google_authentication_option, :with_clever_authentication_option)
-      assert_equal 3, user.authentication_options.length
+      assert_equal 3, user.authentication_options.count
       assert_equal user.hashed_email, user.authentication_options.first.hashed_email
     end
   end
@@ -130,6 +141,13 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'oauth? true when credential_type is Windows Live' do
     option = create :authentication_option, credential_type: AuthenticationOption::WINDOWS_LIVE
     assert option.oauth?
+  end
+
+  test 'lti? true when credential_type is LTI_V1' do
+    cred_type = AuthenticationOption::LTI_V1
+    auth_id = TEST_LTI_AUTH_ID
+    option = create :authentication_option, credential_type: cred_type, authentication_id: auth_id
+    assert option.lti?
   end
 
   test 'primary?' do
@@ -264,15 +282,22 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     # even if there already exists a different user account with that same
     # email.
     AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.each do |credential_type|
-      option = build :authentication_option, credential_type: credential_type
+      # Auth options with a LTI_V1 credential type validates for a particular format for authentication_id
+      if credential_type == AuthenticationOption::LTI_V1
+        auth_id = TEST_LTI_AUTH_ID
+        option = build :authentication_option, credential_type: credential_type, authentication_id: auth_id
+      else
+        option = build :authentication_option, credential_type: credential_type
+      end
       create(:user, email: option.email)
       assert option.valid?
     end
   end
 
   test "untrusted emails do not violate uniqueness for trusted emails" do
+    # Not including LTI credential types here as it would require a specific authentication_id format
     untrusted = create :authentication_option,
-      credential_type: AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.sample
+      credential_type: AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.excluding([AuthenticationOption::LTI_V1]).sample
     assert untrusted.valid?
 
     trusted = create :authentication_option,

@@ -52,6 +52,7 @@ class LearningGoal < ApplicationRecord
   def summarize_for_rubric_edit
     {
       id: id,
+      key: key,
       rubricId: rubric_id,
       position: position,
       learningGoal: learning_goal,

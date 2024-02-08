@@ -86,8 +86,23 @@ def lint_failure(output)
   raise "Lint failed"
 end
 
-def do_linting
-  modified_files = HooksUtils.get_staged_files
+# Helper method for running the appropriate linter on each of a subset of
+# files. If no branches are specified, that subset will be all the files staged
+# in git to be committed; this is useful for running linting in a pre-commit
+# hook. If branches are specified, that subset will be those files that have
+# been changed between branches; this is useful for a continuous integration or
+# pre-merge hook.
+def do_linting(base = nil, current = nil)
+  modified_files =
+    if base.nil? || current.nil?
+      HooksUtils.get_staged_files
+    else
+      # Because one way for a file to be changed between branches is for it to
+      # have been deleted, we want to make sure we're only trying to lint files
+      # that actually exist on the filesystem.
+      HooksUtils.get_changed_files_between_branches(base, current).select {|f| File.exist?(f)}
+    end
+
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_scss_dashboard) => filter_scss(modified_files),
@@ -105,4 +120,4 @@ def do_linting
   end
 end
 
-do_linting
+do_linting(*ARGV)

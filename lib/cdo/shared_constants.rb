@@ -47,6 +47,7 @@ module SharedConstants
       email: 'email',
       google_classroom: 'google_classroom',
       clever: 'clever',
+      lti_v1: 'lti_v1',
     }
   )
 
@@ -615,8 +616,12 @@ module SharedConstants
     RUNNING: 1,
     # Succeeded
     SUCCESS: 2,
-    # General failure
-    FAILURE: 3,
+    # General failure (along with anything larger)
+    FAILURE: 1000,
+    # PII Failure
+    PII_VIOLATION: 1001,
+    # Profanity Failure
+    PROFANITY_VIOLATION: 1002,
   }.freeze
 
   EMAIL_LINKS = OpenStruct.new(
@@ -640,4 +645,9 @@ module SharedConstants
   CENSUS_CONSTANTS = OpenStruct.new(
     {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
   )
+
+  # Current song manifest file name for Dance Party. Note that different manifests
+  # can be tested using query params (?manifest=...), but once this value is updated
+  # the default manifest will change for all users.
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v1.json'
 end

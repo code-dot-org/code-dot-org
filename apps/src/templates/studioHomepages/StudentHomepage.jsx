@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
@@ -12,6 +11,7 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
+import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 
 export default class StudentHomepage extends Component {
   static propTypes = {
@@ -21,9 +21,8 @@ export default class StudentHomepage extends Component {
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
-    isEnglish: PropTypes.bool.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool,
-    showDeprecatedCalcAndEvalWarning: PropTypes.bool,
+    specialAnnouncement: shapes.specialAnnouncement,
   };
 
   componentDidMount() {
@@ -37,9 +36,8 @@ export default class StudentHomepage extends Component {
       sections,
       topCourse,
       hasFeedback,
-      isEnglish,
       showVerifiedTeacherWarning,
-      showDeprecatedCalcAndEvalWarning,
+      specialAnnouncement,
     } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
     // Verify background image works for both LTR and RTL languages.
@@ -54,15 +52,12 @@ export default class StudentHomepage extends Component {
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
-          {showDeprecatedCalcAndEvalWarning && (
-            <Notification
-              type={NotificationType.warning}
-              notice={i18n.deprecatedCalcAndEvalWarning()}
-              details={i18n.deprecatedCalcAndEvalDetails()}
-              dismissible={false}
+          {specialAnnouncement && (
+            <MarketingAnnouncementBanner
+              announcement={specialAnnouncement}
+              marginBottom="30px"
             />
           )}
-          {isEnglish && <SpecialAnnouncement isTeacher={false} />}
           {showVerifiedTeacherWarning && (
             <Notification
               type={NotificationType.failure}
@@ -82,11 +77,11 @@ export default class StudentHomepage extends Component {
             isTeacher={false}
             hasFeedback={hasFeedback}
           />
+          <JoinSectionArea initialJoinedStudentSections={sections} />
           <ProjectWidgetWithData
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <JoinSectionArea initialJoinedStudentSections={sections} />
         </div>
       </div>
     );

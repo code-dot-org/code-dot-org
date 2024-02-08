@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
+import EmbeddedWorkspace from '../EmbeddedWorkspace';
 import ChatBubble from './ChatBubble';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {connect} from 'react-redux';
@@ -15,6 +15,7 @@ class InlineHint extends React.Component {
   static propTypes = {
     block: PropTypes.object, // XML
     borderColor: PropTypes.string,
+    backgroundColor: PropTypes.string,
     markdown: PropTypes.string.isRequired,
     video: videoDataShape,
     ttsUrl: PropTypes.string,
@@ -48,6 +49,7 @@ class InlineHint extends React.Component {
     return (
       <ChatBubble
         borderColor={this.props.borderColor}
+        backgroundColor={this.props.backgroundColor}
         textToSpeechEnabled={this.props.textToSpeechEnabled}
         ttsUrl={this.props.ttsUrl}
         ttsMessage={this.props.ttsMessage}
@@ -56,7 +58,7 @@ class InlineHint extends React.Component {
       >
         <SafeMarkdown markdown={this.props.markdown} />
         {this.props.block && (
-          <ReadOnlyBlockSpace
+          <EmbeddedWorkspace
             block={this.props.block}
             isRtl={this.props.isRtl}
           />

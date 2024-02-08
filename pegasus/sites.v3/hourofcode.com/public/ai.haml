@@ -39,15 +39,20 @@ layout: wide_index
     = view :"ai/ai_section_intro", overline_label: hoc_s(:for_students_teacher_led_lessons), section_heading: hoc_s(:learn_about_ai_impacts), section_desc: hoc_s(:hoc_ai_impacts_desc)
     = view :"ai/impacts_of_ai_blocks"
 
+    %hr
+
+    = view :"ai/ai_section_intro", overline_label: hoc_s(:for_educators_heading), section_heading: hoc_s(:additional_educator_resources), section_desc: hoc_s(:hoc_ai_additional_educator_resources_desc)
+    = view :"ai/ai_educator_resources"
+
 %section.activities.bg-neutral-light
   .wrapper.centered
     = view :"ai/ai_section_intro", overline_label: hoc_s(:for_everyone), section_heading: hoc_s(:hoc_ai_activities), section_desc: hoc_s(:hoc_ai_activities_desc)
     .flex-container
-      %img{src: "//code.org/images/tutorials/hoc2019/oceans.jpg", alt: ""}
-      %img{src: "/images/ai/creaticode_chatgpt.png", alt: ""}
-      %img{src: "/images/ai/codecombat_worlds.png", alt: ""}
-      %img{src: "//code.org/images/tutorials/hoc2021/ca_avatar.jpg", alt: ""}
-      %img{src: "/images/ai/mit_imagebot.png", alt: ""}
+      %img{src: "//code.org/images/fill-480x360/tutorials/hoc2023/danceparty_ai.jpg", alt: ""}
+      %img{src: "//code.org/images/tutorials/hoc2023/generation_ai.jpg", alt: ""}
+      %img{src: "//code.org/images/tutorials/hoc2023/codecombat_worlds.jpg", alt: ""}
+      %img{src: "//code.org/images/tutorials/hoc2023/tynker_tickle.jpg", alt: ""}
+      %img{src: "//code.org/images/tutorials/hoc2023/ca_evolution.jpg", alt: ""}
     %a.link-button{href: resolve_url("/learn?subject=ai")}
       =hoc_s(:call_to_action_try_hoc_ai_activities)
 

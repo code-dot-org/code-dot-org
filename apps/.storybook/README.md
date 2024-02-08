@@ -56,7 +56,7 @@ We also have a [test harness](../test/storybook-tests.js) that runs Storybook st
 To run these tests, run
 
 ```bash
-yarn storybook:test
+yarn test:storybook
 ```
 
 ## Static Style Guide

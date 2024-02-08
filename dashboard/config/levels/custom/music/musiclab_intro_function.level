@@ -1,0 +1,90 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-01-09T03:49:19.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "long_instructions": "#### Functions\n\nYou can organize your music using functions.\n\nClick [Functions](#clickable=toolbox-first-row), then drag [bass](#clickable=toolbox-second-block) to [when run](#clickable=when-run-block), to play the content of the bass function.",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 230,
+              "y": 30,
+              "extraState": {
+                "procedureId": "bass-procedure-id",
+                "initialDeleteConfig": false,
+                "initialMoveConfig": false,
+                "userCreated": false
+              },
+              "fields": {
+                "NAME": "bass"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "deletable": false,
+                    "movable": false,
+                    "fields": {
+                      "sound": "bass/bass_synth_glow_up"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "bass-procedure-id",
+            "name": "bass",
+            "returnTypes": null
+          }
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ]
+        }
+      },
+      "validations": [
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
+          ],
+          "message": "Nice work.  You successfully used the function to play a sound.",
+          "next": true
+        },
+        {
+          "message": "Please play a sound by using the function."
+        }
+      ]
+    },
+    "instructions_important": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-01-09T03:49:19.079+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_play_sound\\\"\"],\"cloned_from\":\"musiclab_intro_play_sound\"},{\"changed_at\":\"2024-01-09 03:49:28 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-09 11:06:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

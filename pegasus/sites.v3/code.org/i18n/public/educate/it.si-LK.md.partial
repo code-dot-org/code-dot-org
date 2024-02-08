@@ -70,16 +70,17 @@ theme: responsive
 
 For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
 
-| Priority                                                 | URL                                                                                                        |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Required**                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **To use YouTube hosted videos (Enhanced Privacy Mode)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **To use Code.org hosted videos**                        | `https://videos.code.org`                                                                                  |
-| **To use Internet Simulator**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **To use Web Lab**                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **To use Google Classroom Share Button**                 | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                              | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priority                                                                                                             | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Required**                                                                                                         | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **CAPTCHA පද්ධති ස්වයංක්රීය වංචනික (“බොට්”) ක්රියාකාරකම් වලින් ඔබේ භාවිතය වෙන්කර හඳුනා ගත හැකි බව සහතික කිරීම සඳහා** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **විකල්ප**                                                                                                           | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **යූ ටියුබ් සත්කාරක වීඩියෝ භාවිතා කිරීම සඳහා (වැඩි දියුණු කළ රහස්යතා මාදිලිය**                                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org සත්කාරකත්වය සපයන වීඩියෝ භාවිතා කිරීම සඳහා**                                                               | `https://videos.code.org`                                                                                  |
+| **අන්තර්ජාල සිමියුලේටරය භාවිතා කිරීම**                                                                               | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **වෙබ් විද්යාගාරය භාවිතා කිරීම**                                                                                     | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **ගූගල් පන්ති කාමර බෙදා ගැනීමේ බොත්තම භාවිතා කිරීම**                                                                 | `https://apis.google.com`                                                                                  |
+| **යෙදුම් විද්යාගාර දත්ත කට්ටල භාවිතා කිරීම**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
@@ -104,7 +105,7 @@ Before you start Code.org's online courses, test playback for the video below to
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

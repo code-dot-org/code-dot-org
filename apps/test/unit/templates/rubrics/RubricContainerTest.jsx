@@ -4,6 +4,7 @@ import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import {act} from 'react-dom/test-utils';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('RubricContainer', () => {
   const defaultRubric = {
@@ -23,7 +24,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open
@@ -35,7 +36,7 @@ describe('RubricContainer', () => {
   it('fetches AI evaluations and passes them to children', async () => {
     const mockFetch = sinon.stub(window, 'fetch');
     const mockAiEvaluations = [
-      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+      {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
     mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
@@ -44,7 +45,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open
@@ -65,7 +66,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open
@@ -79,5 +80,21 @@ describe('RubricContainer', () => {
     wrapper.find('HeaderTab').at(0).simulate('click');
     expect(wrapper.find('RubricContent').props().visible).to.be.true;
     expect(wrapper.find('RubricSettings').props().visible).to.be.false;
+  });
+
+  it('displays new RubricTabButtons prop when ai-rubrics-redesign experiment is enabled', () => {
+    experiments.setEnabled('ai-rubrics-redesign', true);
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        studentLevelInfo={{}}
+        teacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        open
+      />
+    );
+    expect(wrapper.find('RubricTabButtons').length).to.equal(1);
+    experiments.setEnabled('ai-rubrics-redesign', false);
   });
 });

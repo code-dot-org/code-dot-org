@@ -30,7 +30,7 @@ def get_social_metadata_for_page(request)
   videos = {
     what_most_schools_dont_teach: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
     computer_science_is_changing_everything: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360},
-    hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360},
+    hour_of_code_worldwide: {youtube_key: "ybBUd9-0ZJQ", width: 640, height: 360},
     creativity_is: {youtube_key: "VYqHGIR7a_k", width: 640, height: 640}
   }
   # rubocop:enable Lint/UselessAssignment
@@ -60,7 +60,6 @@ def get_social_metadata_for_page(request)
     coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
     hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
     cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
-    hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
     blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
     ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
@@ -169,8 +168,8 @@ def get_social_metadata_for_page(request)
     "hoc-overview" => {
       "default" => {
         title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "learn-cdo" => {
@@ -185,13 +184,6 @@ def get_social_metadata_for_page(request)
         title: "CS Leaders Prize - $1 Million for U.S. Schools",
         description: "Tell us how your school will expand computer science, and you could win $10,000 to make it happen!",
         image: images[:cs_leaders_prize]
-      }
-    },
-    "hoc-2022-landing-page" => {
-      "default" => {
-        title: hoc_s(:hoc2022_codeorg_title),
-        description: hoc_s(:hoc2022_codeorg_description),
-        image: images[:hoc_2022_landing_page]
       }
     },
     "maker" => {
@@ -277,14 +269,12 @@ def get_social_metadata_for_page(request)
     page = "learn"
   elsif request.path == "/ai" && request.site == "hourofcode.com"
     page = "ai_hoc"
-  elsif request.path == "/hourofcode/overview" && request.site == "code.org"
+  elsif request.path == "/hourofcode" && request.site == "code.org"
     page = "hoc-overview"
   elsif request.path == "/learn" && request.site == "code.org"
     page = "learn-cdo"
   elsif request.path == "/prize" && request.site == "code.org"
     page = "cs-leaders-prize"
-  elsif request.path == "/hourofcode2022" && request.site == "code.org"
-    page = "hoc-2022-landing-page"
   elsif request.path == "/maker" && request.site == "code.org"
     page = "maker"
   elsif request.path == "/blockchain" && request.site == "code.org"

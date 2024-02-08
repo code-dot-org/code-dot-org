@@ -9,6 +9,7 @@ class ToggleGroup extends Component {
   static propTypes = {
     selected: PropTypes.string,
     activeColor: PropTypes.string,
+    useRebrandedLikeStyles: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     flex: PropTypes.bool,
     children(props, propName, componentName) {
@@ -69,6 +70,12 @@ class ToggleGroup extends Component {
           activeColor={this.props.activeColor}
           title={child.props.title}
           style={child.props.style}
+          /*
+           TODO: [Design2-53] Remove this prop and use Segmented button instead, ideally also remove this component and
+            replace it with SegmentedButtons everywhere once we implement SegmentedButton DSCO component.
+            Temporary workaround until we implement SegmentedButton DSCO component
+          */
+          useRebrandedLikeStyles={this.props.useRebrandedLikeStyles}
           onClick={
             isSelected
               ? undefined

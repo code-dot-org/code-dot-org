@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 > ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/5" target="blank">U6AL5 Lesson Plan: Board Events</a> (Circuit Playground)
 > ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/5" target="blank">U6BL5 Lesson Plan: Board Events</a> (micro:bit)
 
-### Tasks
+## Tasks
 
 * ##### Choose the appropriate lesson plan above and read through
 * ##### Identify how students will use onBoardEvent() in order to get input from their devices

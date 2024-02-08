@@ -31,6 +31,7 @@ class CollapserButton extends Component {
         {this.props.isMinecraft ? (
           <img
             src="/blockly/media/1x1.gif"
+            alt=""
             className={[
               this.props.collapsed ? 'more-btn' : 'less-btn',
               'toggle26',
@@ -80,6 +81,10 @@ const styles = {
     color: color.neutral_dark,
     whiteSpace: 'nowrap',
     ':hover': {
+      backgroundColor: color.neutral_dark20,
+      boxShadow: 'none',
+    },
+    ':focus': {
       backgroundColor: color.neutral_dark20,
       boxShadow: 'none',
     },

@@ -17,7 +17,7 @@
     hoc_s(:hoc_how_to_step_choose_activities_desc_01),
     "",
     hoc_s(:hoc_how_to_step_plan_hour_desc_01),
-    hoc_s(:hoc_how_to_step_educators_spread_word_01, markdown: :inline, locals:{email_url: resolve_url("/promote/resources#sample-emails")}),
+    hoc_s(:hoc_how_to_step_educators_spread_word_desc_01, markdown: :inline, locals:{email_url: resolve_url("/promote/resources#sample-emails")}),
     hoc_s(:hoc_how_to_step_educators_get_coding_desc),
     hoc_s(:hoc_how_to_step_educators_celebrate_desc),
     hoc_s(:hoc_how_to_step_beyond_hoc_subhead)
@@ -25,7 +25,9 @@
 
 %section.steps
   .wrapper
+
     = view :"how-to/steps/side-nav/side_nav_educators"
+
     %div.steps-wrapper
       - steps_educators_index.times do |index|
         .step{id: "step-0#{index + 1}", class:"#{'divider-accent' if index === 0 || index === 5 || index === 7}"}
@@ -71,7 +73,7 @@
                 =hoc_s(:hoc_how_to_step_educators_plan_desc_03)
               %img{src: "/images/group_ipad.jpg", alt: ""}
 
-            -# Step 5 additional content
+            -# Step 4 additional content
             - if index === 3
               %ul
                 %li
@@ -83,7 +85,7 @@
                 %li
                   =hoc_s(:hoc_how_to_step_educators_plan_hour_desc_05)
 
-            -# Step 4 additional content
+            -# Step 5 additional content
             - if index === 4
               %ul
                 %li
@@ -108,6 +110,6 @@
               %p.tag.day-of
                 =hoc_s(:after_hoc)
               %p
-                =hoc_s(:hoc_how_to_step_educators_beyond_desc)
+                =hoc_s(:hoc_how_to_step_beyond_hoc_desc_generic)
               %a.link-button{href: resolve_url("/beyond")}
                 =hoc_s(:call_to_action_go_beyond_hoc)

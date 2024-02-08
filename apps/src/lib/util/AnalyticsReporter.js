@@ -13,6 +13,10 @@ import {
   isDevelopmentEnvironment,
 } from '../../utils';
 
+import {EVENT_GROUPS} from './AnalyticsConstants';
+
+import DCDO from '@cdo/apps/dcdo';
+
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
 
@@ -46,6 +50,37 @@ class AnalyticsReporter {
   }
 
   sendEvent(eventName, payload) {
+    //we can enable/disable sampling based upon the event's group, which is defined in the AnalyticsConstants
+    //file, in the EVENT_GROUPS variable. If an event is not listed in that mapping, it defaults to 'ungrouped'
+
+    // event groups can define a sample rate, as part of the 'amplitude-event-sample-rates' DCDO flag.
+    // e.g. { 'ungrouped' : 1, 'video-events' : 0.25, 'expensive-events' : -1 }
+    // which would, respectively, log:
+    //   all events w/o sampling for 'ungrouped'
+    //   video-events at a 25% sampling rate
+    //   and explicitly turn off expensive-events
+    // sample rate should be in the range (0,1), exclusive
+
+    // if a eventGroup is not defined or set to 0 or 1, then all events will be logged w/o sampling.
+    // if set to -1, then nothing will be logged.
+
+    const sampleRates = DCDO.get('amplitude-event-sample-rates', {});
+    const eventGroup = EVENT_GROUPS[eventName] || 'ungrouped';
+    const sampleRate = sampleRates[eventGroup] || 1;
+
+    const sampleRateString =
+      sampleRate !== 1 ? `[SAMPLE RATE ${sampleRate} for ${eventGroup}]` : '';
+    if (sampleRate < 0 || Math.random() > sampleRate) {
+      this.log(
+        `[SKIPPED SAMPLED EVENT]${sampleRateString}${eventName}. Payload: ${JSON.stringify(
+          {
+            payload,
+          }
+        )}`
+      );
+      return;
+    }
+
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       if (!eventName) {
         logToCloud.addPageAction(
@@ -59,7 +94,11 @@ class AnalyticsReporter {
         track(eventName, payload);
       }
     } else {
-      this.log(`${eventName}. Payload: ${JSON.stringify({payload})}`);
+      this.log(
+        `${sampleRateString}${eventName}. Payload: ${JSON.stringify({
+          payload,
+        })}`
+      );
     }
   }
 

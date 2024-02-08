@@ -16,10 +16,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @facilitator = create :facilitator
     @levelbuilder = create(:levelbuilder)
     @project_validator = create :project_validator
-    @section = create :section, user_id: @teacher.id
+    @section_owner = create :teacher
+    @section = create :section, user: @section_owner
+    create :section_instructor, instructor: @teacher, section: @section
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
-    @pl_section = create :section, user_id: @facilitator.id
+    @pl_section_owner = create :facilitator
+    @pl_section = create :section, user: @pl_section_owner
+    create :section_instructor, instructor: @facilitator, section: @pl_section
     Follower.create!(section_id: @pl_section.id, student_user_id: @teacher.id, user: @facilitator)
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
@@ -60,7 +64,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_lesson = create(:lesson, script: pilot_script, lesson_group: pilot_lesson_group)
     @pilot_script_level = create :script_level, script: pilot_script, lesson: pilot_lesson
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
-    pilot_section = create :section, user: @pilot_teacher, script: pilot_script
+    @pilot_section_owner = create :teacher, pilot_experiment: 'pilot-experiment'
+    pilot_section = create :section, user: @pilot_section_owner, script: pilot_script
+    create :section_instructor, instructor: @pilot_teacher, section: pilot_section
     @pilot_student = create(:follower, section: pilot_section).student_user
 
     pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
@@ -68,7 +74,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
     @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
     @pilot_instructor = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
-    pilot_pl_section = create :section, user: @pilot_instructor, script: pilot_pl_script
+    @pilot_section_owner = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
+    pilot_pl_section = create :section, user: @pilot_section_owner, script: pilot_pl_script
+    create :section_instructor, instructor: @pilot_instructor, section: pilot_pl_section
     @pilot_participant = create :teacher
     create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
 
@@ -104,7 +112,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false}, body)
+    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => []}, body)
   end
 
   test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
@@ -1696,7 +1704,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    experiment = create :single_section_experiment, section: @section
+    experiment = create :single_section_experiment, section: @section, script: script
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(

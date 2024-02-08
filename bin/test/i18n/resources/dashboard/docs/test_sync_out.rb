@@ -33,7 +33,6 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
 
     before do
       FileUtils.mkdir_p(crowdin_locale_dir)
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
     end
 
     let(:expect_localization_distribution) do
@@ -50,22 +49,6 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
       expect_crowdin_files_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
       process_language
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization' do
-        expect_localization_distribution.never
-        process_language
-      end
-
-      it 'moves Crowdin files to the i18n locale dir' do
-        expect_crowdin_files_to_i18n_locale_dir_moving.once
-        process_language
-      end
     end
 
     context 'when the Crowdin locale dir does not exists' do
@@ -144,7 +127,8 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
 
       RedactRestoreUtils.expects(:restore).with(
         i18n_original_file_path, crowdin_file_path, crowdin_file_path, %w[visualCodeBlock link resourceLink]
-      ).once.returns(expected_new_programming_envs_i18n_data)
+      ).once
+      I18nScriptUtils.expects(:parse_file).with(crowdin_file_path).once.returns(expected_new_programming_envs_i18n_data)
 
       assert_equal expected_new_programming_envs_i18n_data, new_programming_envs_i18n_data
     end

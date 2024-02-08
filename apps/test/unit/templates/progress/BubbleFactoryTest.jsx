@@ -1,5 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
+import {updateQueryParam} from '../../../../src/code-studio/utils';
+import {currentLocation} from '@cdo/apps/utils';
 import {
   BasicBubble,
   BubbleShape,
@@ -230,6 +232,15 @@ describe('BubbleFactory', () => {
     it('if there is a sectionId append the section_id to the url', () => {
       const bubbleUrl = getBubbleUrl('a-url', 1, 2);
       expect(bubbleUrl).to.equal('a-url?section_id=2&user_id=1');
+    });
+
+    it('removes version param if it exists even if other params are preserved', () => {
+      const levelUrl = 'http://a-level-url.com';
+      updateQueryParam('version', '456lmnop');
+      expect(currentLocation().search).to.include('version=456lmnop');
+      const preserveQueryParams = true;
+      const bubbleUrl = getBubbleUrl(levelUrl, null, null, preserveQueryParams);
+      expect(bubbleUrl).to.not.include('version=456lmnop');
     });
   });
 

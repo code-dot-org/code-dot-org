@@ -29,7 +29,7 @@ module I18n
 
               name = "#{unit.name}.json"
               i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, get_unit_subdirectory(unit), name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, name, i18n_source_file_path)
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, i18n_source_file_path)
 
               i18n_data = i18n_data_of(unit)
               next if i18n_data.blank?
@@ -71,8 +71,7 @@ module I18n
             i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR_PATH, I18N_BACKUP_DIR_PATH)
             I18nScriptUtils.copy_file(i18n_source_file_path, i18n_original_file_path)
 
-            redacted = RedactRestoreUtils.redact_file(i18n_source_file_path, REDACT_RESTORE_PLUGINS)
-            I18nScriptUtils.write_file(i18n_source_file_path, JSON.pretty_generate(redacted))
+            RedactRestoreUtils.redact(i18n_source_file_path, i18n_source_file_path, REDACT_RESTORE_PLUGINS)
           end
 
           # Helper method to get the desired destination subdirectory of the given

@@ -1,0 +1,21 @@
+name 'self-paced_PL_maker_emotion_badge'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+# Emotion Badge
+
+<p style="font-size: 14pt;"> After you have read the <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22" target="_blank" style="color: #8C52BA;">lesson plan on page 22-24</a> from the course booklet, you are ready to code <b>events</b> on your micro:bit</p>
+
+<br>
+
+#### Click on the image below to get started on the **Emotion Badge** lesson in MakeCode. 
+
+#### *Return to this course when you finish the lesson.* 
+
+<a href = "https://makecode.microbit.org/" target="_blank"><img src="https://images.code.org/f0ac453771c56b3f186fc3d40fc94af7-image-1702499895753.png" alt="microbit with a smiley face" width="335px" style="border-radius:5px; float:left; margin: 0 0 20px 300px;"></a>
+
+
+
+
+MARKDOWN

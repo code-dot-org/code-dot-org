@@ -33,7 +33,8 @@ module I18n
             return false unless File.exist?(original_file_path)
 
             # Course content should be merged with existing content, so existing data doesn't get lost
-            restored_i18n_data = RedactRestoreUtils.restore_file(original_file_path, crowdin_file_path, REDACT_PLUGINS)
+            restored_i18n_file = RedactRestoreUtils.restore_file(original_file_path, crowdin_file_path, REDACT_PLUGINS)
+            restored_i18n_data = JSON.parse(restored_i18n_file)
             i18n_data = JSON.load_file(crowdin_file_path)
             File.write(crowdin_file_path, JSON.pretty_generate(i18n_data.deep_merge(restored_i18n_data)))
 
@@ -123,8 +124,6 @@ module I18n
             i18n_locale_dir = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME)
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
 
-            return if I18nScriptUtils.source_lang?(language)
-
             i18n_data.each do |type, type_i18n_data|
               # We'd like in the long term for all of our generated course content locale
               # files to be in JSON rather than YAML. As a first step on that journey,
@@ -149,10 +148,8 @@ module I18n
             crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             return unless File.exist?(crowdin_file_path)
 
-            unless I18nScriptUtils.source_lang?(language)
-              target_i18n_file_path = dashboard_i18n_file_path(type, language[:locale_s], 'yml')
-              I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
-            end
+            target_i18n_file_path = dashboard_i18n_file_path(type, language[:locale_s], 'yml')
+            I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)

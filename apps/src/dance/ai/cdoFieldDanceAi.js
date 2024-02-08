@@ -2,7 +2,9 @@ import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 import {getStore} from '../../redux';
-import {setCurrentAiModalField} from '../danceRedux';
+import {openAiModal} from '../danceRedux';
+import {getToolboxType} from '@cdo/apps/blockly/addons/cdoUtils';
+import {ToolboxType} from '@cdo/apps/blockly/constants';
 
 const ITEM_WIDTH = 24;
 const ITEM_SPACING = 1;
@@ -63,7 +65,24 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
   }
 
   showEditor_() {
-    getStore().dispatch(setCurrentAiModalField(this));
+    // At time of writing, the modal doesn't open if clicked within a categorized toolbox.
+    // As a result, this logic only accommodates uncategorized toolboxes.
+    // The logic to get the blocks in a categorized toolbox is different than that of an
+    // uncategorized one, so additional logic would need to be added here if that changes.
+    const isInFlyout =
+      getToolboxType() === ToolboxType.UNCATEGORIZED &&
+      Blockly.getMainWorkspace()
+        .getFlyout(true)
+        .getWorkspace()
+        .getAllBlocks(false)
+        .includes(this.getSourceBlock());
+
+    getStore().dispatch(
+      openAiModal({
+        blockId: this.sourceBlock_.id,
+        fromFlyout: isInFlyout,
+      })
+    );
   }
 
   renderContent() {

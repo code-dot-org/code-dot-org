@@ -1,6 +1,8 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
+import LegacyDialog from '../../code-studio/LegacyDialog';
+import experiments from '@cdo/apps/util/experiments';
 
 const dark = 'dark';
 
@@ -171,11 +173,12 @@ const registerDarkMode = function () {
       return MenuOptionStates.ENABLED;
     },
     callback: function (scope) {
+      const currentTheme = scope.workspace.getTheme();
       const themeName =
-        baseName(scope.workspace?.getTheme().name) +
+        baseName(currentTheme.name) +
         (isDarkTheme(scope.workspace) ? '' : dark);
       localStorage.setItem(BLOCKLY_THEME, themeName);
-      setAllWorkspacesTheme(Blockly.themes[themeName]);
+      setAllWorkspacesTheme(Blockly.themes[themeName], currentTheme);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'toggleDarkMode',
@@ -225,9 +228,10 @@ const registerTheme = function (name, label, index) {
       }
     },
     callback: function (scope) {
+      const currentTheme = scope.workspace.getTheme();
       const themeName = name + (isDarkTheme(scope.workspace) ? dark : '');
       localStorage.setItem(BLOCKLY_THEME, themeName);
-      setAllWorkspacesTheme(Blockly.themes[themeName]);
+      setAllWorkspacesTheme(Blockly.themes[themeName], currentTheme);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: name + 'ThemeOption',
@@ -242,6 +246,51 @@ function registerThemes(themes) {
   });
 }
 
+/**
+ * Option to open help for a block.
+ */
+export function registerHelp() {
+  const helpOption = {
+    displayText() {
+      return msg.getBlockDocs();
+    },
+    preconditionFn(scope) {
+      // This option is limited to an experiment until SL documentation is updated.
+      if (!experiments.isEnabled(experiments.SPRITE_LAB_DOCS)) {
+        return 'hidden';
+      }
+      const block = scope.block;
+      const url =
+        typeof block.helpUrl === 'function' ? block.helpUrl() : block.helpUrl;
+      // Some common Blockly blocks have help URLs for pages on Wikipedia, GitHub, etc.
+      // We only want to allow a documentation dialog for one of our local docs links.
+      if (url && url.startsWith('/docs/')) {
+        return 'enabled';
+      }
+      return 'hidden';
+    },
+    callback(scope) {
+      const block = scope.block;
+      const url =
+        typeof block.helpUrl === 'function' ? block.helpUrl() : block.helpUrl;
+      const dialog = new LegacyDialog({
+        body: $('<iframe>')
+          .addClass('markdown-instructions-container')
+          .width('100%')
+          .attr('src', url),
+        autoResizeScrollableElement: '.markdown-instructions-container',
+        id: 'block-documentation-lightbox',
+        link: url,
+      });
+      dialog.show();
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
+    id: 'blockHelp',
+    weight: 11,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
+}
+
 const registerAllContextMenuItems = function () {
   unregisterDefaultOptions();
   registerDeletable();
@@ -252,6 +301,7 @@ const registerAllContextMenuItems = function () {
   registerKeyboardNavigation();
   registerDarkMode();
   registerThemes(themes);
+  registerHelp();
 };
 
 function canBeShadow(block) {
@@ -286,11 +336,20 @@ function baseName(themeName) {
   return themeName.replace(dark, '');
 }
 
-function setAllWorkspacesTheme(theme) {
+function setAllWorkspacesTheme(newTheme, previousTheme) {
   Blockly.Workspace.getAll().forEach(workspace => {
     // Headless workspaces do not have the ability to set the theme.
     if (typeof workspace.setTheme === 'function') {
-      workspace.setTheme(theme);
+      workspace.setTheme(newTheme);
+      // Re-render blocks if the font size changed.
+      // Once https://github.com/google/blockly/issues/7782 is resolved,
+      // we should be able to remove this.
+      if (newTheme.fontStyle?.size !== previousTheme.fontStyle?.size) {
+        workspace.getAllBlocks().map(block => {
+          block.markDirty();
+          block.render();
+        });
+      }
     }
   });
 }
@@ -303,6 +362,7 @@ function unregisterDefaultOptions() {
     GoogleBlockly.ContextMenuRegistry.registry.unregister(
       'blockCollapseExpand'
     );
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('blockHelp');
     GoogleBlockly.ContextMenuRegistry.registry.unregister('blockInline');
     // cleanUp() doesn't currently account for immovable blocks.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');

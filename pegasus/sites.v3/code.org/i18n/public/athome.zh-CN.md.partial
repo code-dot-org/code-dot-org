@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>通过有趣的入门级教程，试听《编程一小时》</h2>
-<p>试听<a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">一小时教程</a>，让《我的世界》、《冰雪奇缘》和《星球大战》等热门游戏和电影伴你学习。 许多教程采用类似于游戏的设计方式，旨在以有趣、引人入胜的方式教授基本的计算机科学概念。</p>
+<p>试试 <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">一小时的教程，里</a> 面有《我的世界》、《冰雪奇缘》和《星球大战》等热门游戏和电影。 许多教程采用类似于游戏的设计方式，旨在以有趣、引人入胜的方式教授基本的计算机科学概念。</p>
 
 <br>
 

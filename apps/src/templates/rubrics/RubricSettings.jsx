@@ -6,9 +6,15 @@ import i18n from '@cdo/locale';
 import {
   BodyTwoText,
   Heading2,
+  Heading5,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import {rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
+import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import experiments from '@cdo/apps/util/experiments';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 
 const STATUS = {
   // we are waiting for initial status from the server
@@ -19,8 +25,32 @@ const STATUS = {
   ALREADY_EVALUATED: 'already_evaluated',
   // the student has work which is ready to evaluate
   READY: 'ready',
+  // evaluation queued and ready to run
   EVALUATION_PENDING: 'evaluation_pending',
+  // evaluation currently in progress
+  EVALUATION_RUNNING: 'evaluation_running',
+  // evaluation successfully completed
   SUCCESS: 'success',
+  // general evaluation error
+  ERROR: 'error',
+  // personal identifying info present in code
+  PII_ERROR: 'pii_error',
+  // profanity present in code
+  PROFANITY_ERROR: 'profanity_error',
+};
+
+const STATUS_ALL = {
+  // we are waiting for initial status from the server
+  INITIAL_LOAD: 'initial_load',
+  // at least one student has work which is ready to evaluate
+  READY: 'ready',
+  EVALUATION_PENDING: 'evaluation_pending',
+  // at least one student's work was evaluated
+  SUCCESS: 'success',
+  // no students have attempted this level
+  NOT_ATTEMPTED: 'not_attempted',
+  // all attempted work has already been evaluated
+  ALREADY_EVALUATED: 'already_evaluated',
   ERROR: 'error',
 };
 
@@ -30,16 +60,37 @@ const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
   );
 };
 
+const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
+  return fetch(
+    `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
+  );
+};
+
 export default function RubricSettings({
   canProvideFeedback,
-  rubricId,
   studentUserId,
   visible,
   refreshAiEvaluations,
+  rubric,
+  studentName,
+  sectionId,
 }) {
+  const rubricId = rubric.id;
+  const {lesson} = rubric;
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
-  const polling = useMemo(() => status === STATUS.EVALUATION_PENDING, [status]);
+  const polling = useMemo(
+    () =>
+      status === STATUS.EVALUATION_PENDING ||
+      status === STATUS.EVALUATION_RUNNING ||
+      statusAll === STATUS_ALL.EVALUATION_PENDING,
+    [status, statusAll]
+  );
+  const [statusAll, setStatusAll] = useState(STATUS_ALL.INITIAL_LOAD);
+  const [unevaluatedCount, setUnevaluatedCount] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
+  const [evaluatedCount, setEvaluatedCount] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
 
   const statusText = () => {
     switch (status) {
@@ -55,45 +106,159 @@ export default function RubricSettings({
         return i18n.aiEvaluationStatus_success();
       case STATUS.EVALUATION_PENDING:
         return i18n.aiEvaluationStatus_pending();
+      case STATUS.EVALUATION_RUNNING:
+        return i18n.aiEvaluationStatus_in_progress();
       case STATUS.ERROR:
         return i18n.aiEvaluationStatus_error();
+      case STATUS.PII_ERROR:
+        return i18n.aiEvaluationStatus_pii_error();
+      case STATUS.PROFANITY_ERROR:
+        return i18n.aiEvaluationStatus_profanity_error();
     }
   };
 
+  const statusAllText = () => {
+    switch (statusAll) {
+      case STATUS_ALL.INITIAL_LOAD:
+        return i18n.aiEvaluationStatus_initial_load();
+      case STATUS_ALL.READY:
+        return i18n.aiEvaluationStatusAll_ready({
+          unevaluatedCount: unevaluatedCount,
+        });
+      case STATUS_ALL.SUCCESS:
+        return i18n.aiEvaluationStatus_success();
+      case STATUS_ALL.EVALUATION_PENDING:
+        return i18n.aiEvaluationStatus_pending();
+      case STATUS_ALL.ERROR:
+        return i18n.aiEvaluationStatus_error();
+      case STATUS.ALREADY_EVALUATED:
+        return i18n.aiEvaluationStatusAll_already_evaluated();
+      case STATUS.NOT_ATTEMPTED:
+        return i18n.aiEvaluationStatusAll_not_attempted();
+    }
+  };
+
+  const summaryText = () => {
+    return i18n.aiEvaluationStatusAll_summary({
+      evaluatedCount: evaluatedCount,
+      totalCount: totalCount,
+    });
+  };
+
+  const studentButtonText = () => {
+    return i18n.runAiAssessment({
+      studentName: studentName,
+    });
+  };
+
+  const showHideDetails = () => {
+    console.log('Hello it clicked');
+    setShowDetails(!showDetails);
+  };
+
   useEffect(() => {
-    if (!!rubricId && !!studentUserId) {
+    if (!!rubricId && !!studentUserId && !!sectionId) {
       fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
         if (!response.ok) {
           setStatus(STATUS.ERROR);
         } else {
           response.json().then(data => {
+            // we can't fetch the csrf token from the DOM because CSRF protection
+            // is disabled on script level pages.
+            setCsrfToken(data.csrfToken);
             if (!data.attempted) {
               setStatus(STATUS.NOT_ATTEMPTED);
             } else if (data.lastAttemptEvaluated) {
               setStatus(STATUS.ALREADY_EVALUATED);
+            } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
+              setStatus(STATUS.EVALUATION_PENDING);
+            } else if (data.status === RubricAiEvaluationStatus.RUNNING) {
+              setStatus(STATUS.EVALUATION_RUNNING);
+            } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
+              setStatus(STATUS.ERROR);
+            } else if (data.status === RubricAiEvaluationStatus.PII_VIOLATION) {
+              setStatus(STATUS.PII_ERROR);
+            } else if (
+              data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
+            ) {
+              setStatus(STATUS.PROFANITY_ERROR);
             } else {
-              // we can't fetch the csrf token from the DOM because CSRF protection
-              // is disabled on script level pages.
-              setCsrfToken(data.csrfToken);
               setStatus(STATUS.READY);
             }
           });
         }
       });
+      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+        if (!response.ok) {
+          setStatusAll(STATUS_ALL.ERROR);
+        } else {
+          response.json().then(data => {
+            // we can't fetch the csrf token from the DOM because CSRF protection
+            // is disabled on script level pages.
+            setCsrfToken(data.csrfToken);
+            setUnevaluatedCount(data.attemptedUnevaluatedCount);
+            setTotalCount(data.attemptedCount + data.notAttemptedCount);
+            setEvaluatedCount(data.lastAttemptEvaluatedCount);
+            if (data.attemptedCount === 0) {
+              setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
+            } else if (data.attemptedUnevaluatedCount === 0) {
+              setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+            } else {
+              setStatusAll(STATUS_ALL.READY);
+            }
+          });
+        }
+      });
     }
-  }, [rubricId, studentUserId]);
+  }, [rubricId, studentUserId, sectionId]);
 
   useEffect(() => {
-    if (polling && !!rubricId && !!studentUserId) {
+    if (polling && !!rubricId && !!studentUserId && !!sectionId) {
       const intervalId = setInterval(() => {
         fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
           if (!response.ok) {
             setStatus(STATUS.ERROR);
           } else {
             response.json().then(data => {
-              if (data.lastAttemptEvaluated) {
+              if (
+                data.lastAttemptEvaluated &&
+                data.status === RubricAiEvaluationStatus.SUCCESS
+              ) {
                 setStatus(STATUS.SUCCESS);
                 refreshAiEvaluations();
+              } else if (data.status === RubricAiEvaluationStatus.QUEUED) {
+                setStatus(STATUS.EVALUATION_PENDING);
+              } else if (data.status === RubricAiEvaluationStatus.RUNNING) {
+                setStatus(STATUS.EVALUATION_RUNNING);
+              } else if (data.status === RubricAiEvaluationStatus.FAILURE) {
+                setStatus(STATUS.ERROR);
+              } else if (
+                data.status === RubricAiEvaluationStatus.PII_VIOLATION
+              ) {
+                setStatus(STATUS.PII_ERROR);
+              } else if (
+                data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
+              ) {
+                setStatus(STATUS.PROFANITY_ERROR);
+              }
+            });
+          }
+        });
+        fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+          if (!response.ok) {
+            setStatusAll(STATUS_ALL.ERROR);
+          } else {
+            response.json().then(data => {
+              // we can't fetch the csrf token from the DOM because CSRF protection
+              // is disabled on script level pages.
+              setCsrfToken(data.csrfToken);
+              setUnevaluatedCount(data.attemptedUnevaluatedCount);
+              if (data.attemptedCount === 0) {
+                setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
+              } else if (data.attemptedUnevaluatedCount === 0) {
+                setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+              } else {
+                setStatusAll(STATUS_ALL.READY);
               }
             });
           }
@@ -101,7 +266,7 @@ export default function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, studentUserId, polling, refreshAiEvaluations]);
+  }, [rubricId, studentUserId, polling, sectionId, refreshAiEvaluations]);
 
   const handleRunAiAssessment = () => {
     setStatus(STATUS.EVALUATION_PENDING);
@@ -121,15 +286,53 @@ export default function RubricSettings({
     });
   };
 
+  const handleRunAiAssessmentAll = () => {
+    setStatusAll(STATUS_ALL.EVALUATION_PENDING);
+    const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
+    const params = {section_id: sectionId};
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken,
+      },
+      body: JSON.stringify(params),
+    }).then(response => {
+      if (!response.ok) {
+        setStatus(STATUS_ALL.ERROR);
+      }
+    });
+  };
+
   return (
     <div
-      className={classnames(style.settings, {
-        [style.settingsVisible]: visible,
-        [style.settingsHidden]: !visible,
-      })}
+      className={classnames(
+        'uitest-rubric-settings',
+        {[style.settings]: !experiments.isEnabled('ai-rubrics-redesign')},
+        {
+          [style.settingsVisible]: visible,
+          [style.settingsHidden]: !visible,
+        }
+      )}
     >
-      <Heading2>{i18n.settings()}</Heading2>
-      {canProvideFeedback && (
+      {!experiments.isEnabled('ai-rubrics-redesign') && (
+        <Heading2>{i18n.settings()}</Heading2>
+      )}
+      {experiments.isEnabled('ai-rubrics-redesign') && (
+        <div className={style.studentInfoGroup}>
+          <Heading5>
+            {i18n.lessonNumbered({
+              lessonNumber: lesson.position,
+              lessonName: lesson.name,
+            })}
+          </Heading5>
+          <div className={style.selectors}>
+            <SectionSelector reloadOnChange={true} requireSelection={false} />
+          </div>
+        </div>
+      )}
+
+      {canProvideFeedback && !experiments.isEnabled('ai-rubrics-redesign') && (
         <div className={style.aiAssessmentOptions}>
           <div>
             <BodyTwoText>
@@ -138,17 +341,79 @@ export default function RubricSettings({
             <BodyTwoText>{i18n.runAiAssessmentDescription()}</BodyTwoText>
           </div>
           <Button
-            text={i18n.runAiAssessment()}
+            className="uitest-run-ai-assessment"
+            text={studentButtonText()}
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={handleRunAiAssessment}
             style={{margin: 0}}
             disabled={status !== STATUS.READY}
           >
-            {status === STATUS.EVALUATION_PENDING && (
+            {polling && <i className="fa fa-spinner fa-spin" />}
+          </Button>
+          <BodyTwoText className="uitest-eval-status-text">
+            {statusText() || ''}
+          </BodyTwoText>
+          <div>
+            <BodyTwoText>
+              <StrongText>{i18n.aiAssessmentAll()}</StrongText>
+            </BodyTwoText>
+            <BodyTwoText>{i18n.runAiAssessmentDescriptionAll()}</BodyTwoText>
+          </div>
+          <Button
+            className="uitest-run-ai-assessment-all"
+            text={i18n.runAiAssessmentAll()}
+            color={Button.ButtonColor.brandSecondaryDefault}
+            onClick={handleRunAiAssessmentAll}
+            style={{margin: 0}}
+            disabled={statusAll !== STATUS_ALL.READY}
+          >
+            {statusAll === STATUS_ALL.EVALUATION_PENDING && (
               <i className="fa fa-spinner fa-spin" />
             )}
           </Button>
-          {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
+          <BodyTwoText className="uitest-eval-status-all-text">
+            {statusAllText() || ''}
+          </BodyTwoText>
+        </div>
+      )}
+
+      {canProvideFeedback && experiments.isEnabled('ai-rubrics-redesign') && (
+        <div className={style.settingsGroup}>
+          <Heading2>{i18n.aiAssessment()}</Heading2>
+          <div className={style.settingsContainers}>
+            <div className={style.runAiAllStatuses}>
+              <BodyTwoText className="uitest-eval-status-all-text">
+                <StrongText>{summaryText()}</StrongText>
+              </BodyTwoText>
+              {statusAllText() && (
+                <BodyTwoText>{statusAllText() || ''}</BodyTwoText>
+              )}
+            </div>
+            <Button
+              className="uitest-run-ai-assessment-all"
+              text={i18n.runAiAssessmentClass()}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              onClick={handleRunAiAssessmentAll}
+              style={{margin: 0}}
+              disabled={statusAll !== STATUS_ALL.READY}
+            >
+              {statusAll === STATUS_ALL.EVALUATION_PENDING && (
+                <i className="fa fa-spinner fa-spin" />
+              )}
+            </Button>
+            <div className={style.detailsGroup}>
+              <BodyTwoText
+                className={
+                  showDetails ? style.detailsVisible : style.detailsHidden
+                }
+              >
+                {i18n.aiEvaluationDetails()}
+              </BodyTwoText>
+              <Link onClick={showHideDetails}>
+                {showDetails ? 'Hide Deatils' : 'Show Details'}
+              </Link>
+            </div>
+          </div>
         </div>
       )}
     </div>
@@ -159,8 +424,10 @@ RubricSettings.propTypes = {
   canProvideFeedback: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   updateTeacherAiSetting: PropTypes.func,
-  rubricId: PropTypes.number,
   studentUserId: PropTypes.number,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
+  rubric: rubricShape.isRequired,
+  studentName: PropTypes.string,
+  sectionId: PropTypes.number,
 };

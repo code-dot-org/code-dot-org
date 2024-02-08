@@ -44,7 +44,7 @@
       "https://curriculum.code.org/images/sprites/dance_20191106/alien_03.png"
     ],
     "custom_helper_library": "World.SPRITE_NAMES = [\"ALIEN\", \"CAT\", \"DUCK\", \"MOOSE\", \"ROBOT\"];",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_06\",\r\n  \"callout_text\": \"Add your new dancer here\",\r\n  \"element_id\": \".svgGroup [block-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"dance_callout_06\",\"callout_text\":\"Add your new dancer here\",\"element_id\":\".svgGroup [block-id=\\\"6\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top center\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklySvg [data-id=\\\"6\\\"]\",\"localization_key\":\"dance_callout_06\",\"callout_text\":\"Add your new dancer here\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top center\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "name_suffix": "_2020",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* You need to have at least two dancers.\\n\\n*This level ends after 5 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c85a5931b14e43d6bff757db1d00edc/Dance_Party_06.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Optional Challenge**\\n\\n* Add a third dancer (or as many as you want!)\\n* Make all of your dancers perform different moves at different points in the song.\",\"hint_id\":\"challenges\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/39a9b4e639b8082602a16e85c358abaf/Dance_Party_06.mp3\"}]",
     "default_song": "notearslefttocry_arianagrande",
@@ -61,7 +61,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="Dancelab_whenSetup" deletable="false" movable="false">
+        <block type="Dancelab_whenSetup" deletable="false" movable="false" id="6">
           <statement name="DO">
             <block type="Dancelab_setBackgroundEffectWithPalette">
               <title name="EFFECT">"galaxy"</title>

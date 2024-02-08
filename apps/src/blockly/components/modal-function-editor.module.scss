@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .container {
   display: none;
@@ -16,6 +16,15 @@
   z-index: 1;
 }
 
+.toolbarRtl {
+  left: 10px;
+  right: 0;
+}
+
 .buttons {
   float: right;
+}
+
+.buttonsRtl {
+  float: left;
 }

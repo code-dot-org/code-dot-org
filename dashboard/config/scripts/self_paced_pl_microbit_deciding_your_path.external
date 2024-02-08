@@ -1,0 +1,8 @@
+name 'self-paced-pl-microbit_deciding_your_path'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Deciding your path
+
+MARKDOWN

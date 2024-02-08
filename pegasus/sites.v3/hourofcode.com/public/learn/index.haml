@@ -21,23 +21,29 @@ social:
 %script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
+- use_preview = !!request.params["preview"]
+- tutorial_sheet_id = use_preview ? :tutorials_preview : :tutorials
+- no_cache = use_preview
+- tutorials_contents = Tutorials.new(tutorial_sheet_id, no_cache).contents(request.host_with_port)
+
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
-- tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 - tutorials_contents.each do |tutorial|
   - tutorial[:image] = CDO.code_org_url(tutorial[:image])
 
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
   - prefix = "tutorial_#{tutorial[:short_code]}_"
-  - tutorial[:name]                                 = hoc_s(prefix + "name")
-  - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
-  - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
-  - tutorial[:language]                             = hoc_language(tutorial[:languages_supported])
-  - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
-  - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
-  - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
-  - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
-  - tutorial[:teachers_notes]                       = CDO.curriculum_url(locale_code, tutorial[:teachers_notes], false)
+  -# Unless showing a preview, look up localized versions of strings.
+  - unless use_preview
+    - tutorial[:name]                                 = hoc_s(prefix + "name")
+    - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
+    - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
+    - tutorial[:language]                             = hoc_language(tutorial[:languages_supported])
+    - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
+    - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
+    - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
+    - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+  - tutorial[:teachers_notes]                       = CDO.curriculum_url(locale_code, tutorial[:teachers_notes], autocomplete_partial_path: false)
 
 #tutorials
 

@@ -17,10 +17,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   end
 
   # GET /api/v1/sections
-  # Get the set of sections owned by the current user
+  # Get the set of sections taught by the current user
   def index
     prevent_caching
-    render json: current_user.sections.map(&:summarize_without_students)
+    render json: current_user.sections_instructed.map(&:summarize_without_students)
   end
 
   # GET /api/v1/sections/<id>
@@ -64,6 +64,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
+        ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
@@ -105,6 +106,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
+    fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
 
     section.update!(fields)
     if @unit

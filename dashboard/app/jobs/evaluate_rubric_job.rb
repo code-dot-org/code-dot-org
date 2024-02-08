@@ -1,13 +1,11 @@
+# Sending token usage to CloudWatch
+require 'cdo/aws/metrics'
+
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
-  # To make this job get run in development, you have two options:
-  # 1. switch the queue_adapter value here to :async, or
-  # 2. leave the value as :delayed_job, and run the delayed job worker locally
-  #    via `dashboard/bin/delayed_job restart` or rake build
-  self.queue_adapter = :delayed_job
-
   S3_AI_BUCKET = 'cdo-ai'.freeze
+  STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files in S3
   # which will be used for AI evaluation.
@@ -19,9 +17,71 @@ class EvaluateRubricJob < ApplicationJob
       'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
       'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
       'CSD web project animated review_2023' => 'New-U3-2022-L13',
-      'CSD games sidescroll review_2023' => 'New-U3-2022-L20'
+      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
+      'CSD U3 collisions flyman bounceOff_2023' => 'New-U3-2023-L24',
+      'CSD games project review_2023' => 'U3-2023-L28',
+    },
+    'allthethings' => {
+      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
+    },
+    'interactive-games-animations-2023' => {
+      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
+      'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
+      'CSD web project animated review_2023' => 'New-U3-2022-L13',
+      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
     }
   }
+
+  # This is raised if there is any raised error due to a rate limit, e.g. a 429
+  # received from the aiproxy service.
+  class TooManyRequestsError < StandardError
+    attr_reader :response
+
+    # Creates a TooManyRequestsError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
+
+      super("Too many requests for #{response.request.uri}")
+    end
+  end
+
+  # The CloudWatch metric namespace
+  AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
+
+  # Write out metrics reflected in the response to CloudWatch
+  #
+  # Currently, this keeps track of a curated set of metrics returned
+  # within the 'metadata.usage' field of the returned response from
+  # the AI proxy service.
+  #
+  # @param [Hash] response The parsed JSON response from the AI proxy.
+  def self.log_metrics(response)
+    # Record the metadata
+    # The aiproxy service will report the usage in the metadata via:
+    # { metadata: { agent: 'openai', usage: { total_tokens: 1234, prompt_tokens: 432, completion_tokens: 802 } } }
+    [:TotalTokens, :PromptTokens, :CompletionTokens].each do |name|
+      # Send a metric to the AIRubric namespace under categories for both the
+      # service used (openai, etc) and the current environment.
+      tokens = response.dig('metadata', 'usage', name.to_s.underscore)
+      next if tokens.nil?
+      Cdo::Metrics.push(
+        AI_RUBRIC_METRICS_NAMESPACE,
+        [
+          {
+            metric_name: name,
+            value: tokens,
+            dimensions: [
+              {name: 'Environment', value: CDO.rack_env},
+              {name: 'Agent', value: response.dig('metadata', 'agent') || 'unknown'},
+            ],
+            unit: 'Count'
+          }
+        ]
+      )
+    end
+  end
 
   # Ensure that the RubricAiEvaluation exists as an argument to the job
   private def pass_in_or_create_rubric_ai_evaluation(job)
@@ -86,6 +146,72 @@ class EvaluateRubricJob < ApplicationJob
     raise exception
   end
 
+  rescue_from(ProfanityFilterException) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Filter Error: #{exception.full_message} Type: #{exception.share_failure.type}"
+    end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # We gracefully just fail, here, and we do not file this exception
+  end
+
+  rescue_from(PIIFilterException) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Filter Error: #{exception.full_message} Type: #{exception.share_failure.type}"
+    end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # We gracefully just fail, here, and we do not file this exception
+  end
+
+  RETRIES_ON_RATE_LIMIT = 3
+
+  # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
+  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: RETRIES_ON_RATE_LIMIT do |job, error|
+    # Job arguments are always serializable, so we just pull out the hash
+    # and send it as context.
+    options = job.arguments.first
+
+    # Send it to honeybadger even though we are handling the error via retry
+    Honeybadger.notify(
+      error,
+      error_message: "Retrying rubric evaluation job due to rate limiting (429).",
+      context: options
+    )
+  end
+
+  RETRIES_ON_TIMEOUT = 2
+
+  # Retry just once on a timeout. It is likely to timeout again.
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
+    # Job arguments are always serializable, so we just pull out the hash
+    # and send it as context.
+    options = job.arguments.first
+
+    # Send it to honeybadger even though we are handling the error via retry
+    Honeybadger.notify(
+      error,
+      error_message: "Retrying rubric evaluation job due to timeout.",
+      context: options
+    )
+  end
+
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
@@ -104,9 +230,19 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
 
-    openai_params = get_openai_params(lesson_s3_name, code)
-    ai_evaluations = get_openai_evaluations(openai_params)
+    # Check for PII / sharing failures
+    # Get the 2-character language code from the user's preferred locale
+    locale = (user.locale || 'en')[0...2]
+    ShareFiltering.find_share_failure(code, locale, exceptions: true)
 
+    openai_params = get_openai_params(lesson_s3_name, code)
+    response = get_openai_evaluations(openai_params)
+
+    # Log tokens and usage information
+    EvaluateRubricJob.log_metrics(response)
+
+    # Get and validate the response data
+    ai_evaluations = response['data']
     validate_evaluations(ai_evaluations, rubric)
 
     ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
@@ -156,7 +292,12 @@ class EvaluateRubricJob < ApplicationJob
 
   private def read_file_from_s3(lesson_s3_name, key_suffix)
     key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
-    s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
+    if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
+      puts "Note: Reading AI prompt from local file: #{key}"
+      File.read(File.join("local-aws", S3_AI_BUCKET, key))
+    else
+      s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
+    end
   end
 
   private def read_examples(lesson_s3_name)
@@ -188,7 +329,8 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def get_openai_evaluations(openai_params)
-    uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
+    origin = get_ai_proxy_origin
+    uri = URI.parse("#{origin}/assessment")
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
@@ -196,9 +338,22 @@ class EvaluateRubricJob < ApplicationJob
       timeout: 120
     )
 
+    # Raise too many requests error if we see a 429
+    # The proxy service will bubble up the 429 error from the service itself
+    raise TooManyRequestsError.new(response) if response.code == 429
+
+    # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
 
-    JSON.parse(response.body)['data']
+    # Parse out the response
+    JSON.parse(response.body)
+  end
+
+  private def get_ai_proxy_origin
+    unless CDO.ai_proxy_origin || [:development, :test].include?(rack_env)
+      raise "CDO.ai_proxy_origin is required outside of development and test environments"
+    end
+    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH, CDO.default_scheme)
   end
 
   private def validate_evaluations(evaluations, rubric)
@@ -237,11 +392,13 @@ class EvaluateRubricJob < ApplicationJob
       rubric.learning_goals.each do |lg|
         next unless ai_mapping.key?(lg.learning_goal)
         ai_evaluation = ai_mapping[lg.learning_goal]
+        label = ai_evaluation.key?('Grade') ? ai_evaluation['Grade'] : ai_evaluation['Label']
         LearningGoalAiEvaluation.create!(
           learning_goal_id: lg.id,
           rubric_ai_evaluation_id: rubric_ai_evaluation.id,
-          understanding: understanding_s_to_i(ai_evaluation['Grade']),
+          understanding: understanding_s_to_i(label),
           ai_confidence: ai_evaluation['Confidence'],
+          observations: ai_evaluation['Observations'] || '',
         )
       end
 

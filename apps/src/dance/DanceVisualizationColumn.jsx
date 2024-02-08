@@ -1,62 +1,22 @@
 import React from 'react';
-import {setCurrentAiModalField} from './danceRedux';
+import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import danceMsg from './locale';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
-import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
+import {getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
+import SongSelector from '@cdo/apps/dance/SongSelector';
+import DCDO from '@cdo/apps/dcdo';
 
-export const SongSelector = Radium(
-  class extends React.Component {
-    static propTypes = {
-      enableSongSelection: PropTypes.bool,
-      setSong: PropTypes.func.isRequired,
-      selectedSong: PropTypes.string,
-      songData: PropTypes.objectOf(PropTypes.object).isRequired,
-      filterOn: PropTypes.bool.isRequired,
-    };
-
-    changeSong = event => {
-      const songId = event.target.value;
-      this.props.setSong(songId);
-    };
-
-    render() {
-      const {selectedSong, songData, enableSongSelection, filterOn} =
-        this.props;
-
-      const songKeys = getFilteredSongKeys(songData, filterOn);
-
-      return (
-        <div id="song-selector-wrapper">
-          <label>
-            <b>{i18n.selectSong()}</b>
-          </label>
-          <select
-            id="song_selector"
-            style={styles.selectStyle}
-            onChange={this.changeSong}
-            value={selectedSong}
-            disabled={!enableSongSelection}
-          >
-            {songKeys.map((option, i) => (
-              <option key={i} value={option}>
-                {songData[option].title}
-              </option>
-            ))}
-          </select>
-        </div>
-      );
-    }
-  }
+const isHocEmailTimeOfYear = ['soon-hoc', 'actual-hoc'].includes(
+  DCDO.get('hoc_mode', false)
 );
 
 class DanceVisualizationColumn extends React.Component {
@@ -67,13 +27,14 @@ class DanceVisualizationColumn extends React.Component {
     levelIsRunning: PropTypes.bool,
     levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
+    unitId: PropTypes.number,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
     over21: PropTypes.bool.isRequired,
-    currentAiModalField: PropTypes.object,
-    setCurrentAiModalField: PropTypes.func,
+    currentAiModalBlockId: PropTypes.string,
     resetProgram: PropTypes.func.isRequired,
+    playSound: PropTypes.func.isRequired,
   };
 
   state = {
@@ -89,15 +50,13 @@ class DanceVisualizationColumn extends React.Component {
 
   componentDidUpdate(prevProps) {
     // Reset the program when the AI modal is opened
-    if (
-      prevProps.currentAiModalField === undefined &&
-      this.props.currentAiModalField
-    ) {
+    if (!prevProps.currentAiModalBlockId && this.props.currentAiModalBlockId) {
       this.props.resetProgram();
     }
   }
 
   render() {
+    const {levelIsRunning, playSound} = this.props;
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
@@ -115,13 +74,19 @@ class DanceVisualizationColumn extends React.Component {
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
-        {(this.props.over21 || this.props.userType === 'teacher') && (
-          <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
-        )}
+        {(this.props.over21 || this.props.userType === 'teacher') &&
+          isHocEmailTimeOfYear &&
+          cookies.get('HourOfCodeGuideEmailDialogSeen') !== 'true' && (
+            <HourOfCodeGuideEmailDialog
+              isSignedIn={isSignedIn}
+              unitId={this.props.unitId}
+            />
+          )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
             <SongSelector
               enableSongSelection={enableSongSelection}
+              levelIsRunning={levelIsRunning}
               setSong={this.props.setSong}
               selectedSong={this.props.selectedSong}
               songData={this.props.songData}
@@ -140,10 +105,15 @@ class DanceVisualizationColumn extends React.Component {
                 <img
                   src="//curriculum.code.org/images/DancePartyLoading.gif"
                   style={styles.loadingGif}
+                  alt={danceMsg.dancePartyLoading()}
                 />
               </div>
               {this.props.isShareView && (
-                <img src={imgSrc} id="danceClickToRun" />
+                <img
+                  src={imgSrc}
+                  id="danceClickToRun"
+                  alt={danceMsg.clickToRunDanceParty()}
+                />
               )}
             </div>
           </ProtectedVisualizationDiv>
@@ -151,10 +121,8 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.currentAiModalField && (
-            <DanceAiModal
-              onClose={() => this.props.setCurrentAiModalField(undefined)}
-            />
+          {this.props.currentAiModalBlockId && (
+            <DanceAiModal playSound={playSound} />
           )}
         </div>
       </div>
@@ -183,24 +151,17 @@ const styles = {
     width: 100,
     height: 100,
   },
-  selectStyle: {
-    width: '100%',
-  },
 };
 
-export default connect(
-  state => ({
-    isShareView: state.pageConstants.isShareView,
-    songData: state.dance.songData,
-    selectedSong: state.dance.selectedSong,
-    userType: state.currentUser.userType,
-    under13: state.currentUser.under13,
-    over21: state.currentUser.over21,
-    levelIsRunning: state.runState.isRunning,
-    levelRunIsStarting: state.dance.runIsStarting,
-    currentAiModalField: state.dance.currentAiModalField,
-  }),
-  dispatch => ({
-    setCurrentAiModalField: value => dispatch(setCurrentAiModalField(value)),
-  })
-)(DanceVisualizationColumn);
+export default connect(state => ({
+  isShareView: state.pageConstants.isShareView,
+  unitId: state.pageConstants.serverScriptId,
+  songData: state.dance.songData,
+  selectedSong: state.dance.selectedSong,
+  userType: state.currentUser.userType,
+  under13: state.currentUser.under13,
+  over21: state.currentUser.over21,
+  levelIsRunning: state.runState.isRunning,
+  levelRunIsStarting: state.dance.runIsStarting,
+  currentAiModalBlockId: state.dance.currentAiModalBlockId,
+}))(DanceVisualizationColumn);

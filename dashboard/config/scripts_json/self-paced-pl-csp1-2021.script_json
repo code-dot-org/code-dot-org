@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSP Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-05-24 18:52:43 UTC",
+    "serialized_at": "2024-01-25 21:32:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -284,6 +285,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice"
+        ],
         "progression": "Welcome to CS Principles"
       },
       "bonus": false,
@@ -514,6 +518,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

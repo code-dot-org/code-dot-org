@@ -5,7 +5,6 @@ import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 const statuses = Object.values(LevelStatus);
 
 const defaultExport = {
-  title: 'ProgressBubble',
   component: ProgressBubble,
 };
 

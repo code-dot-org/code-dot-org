@@ -31,8 +31,8 @@
       height: 100%;
       background-image: url('/images/banners/banner-bg-maze-squares-light.png');
       background-repeat: repeat;
-      background-size: 30%;
-      z-index: 2;
+      background-size: contain;
+      z-index: 1;
     }
   }
 

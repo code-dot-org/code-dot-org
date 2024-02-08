@@ -12,6 +12,8 @@ import {
 } from './rubricShapes';
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
+import RubricTabButtons from './RubricTabButtons';
+import experiments from '@cdo/apps/util/experiments';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -21,20 +23,22 @@ const TAB_NAMES = {
 export default function RubricContainer({
   rubric,
   studentLevelInfo,
-  initialTeacherHasEnabledAi,
+  teacherHasEnabledAi,
   currentLevelName,
   reportingData,
   open,
   closeRubric,
+  sectionId,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
 
   const [selectedTab, setSelectedTab] = useState(TAB_NAMES.RUBRIC);
-  const [teacherHasEnabledAi, setTeacherHasEnabledAi] = useState(
-    initialTeacherHasEnabledAi
-  );
   const [aiEvaluations, setAiEvaluations] = useState(null);
+
+  const tabSelectCallback = tabSelection => {
+    setSelectedTab(tabSelection);
+  };
 
   const fetchAiEvaluations = useCallback(() => {
     if (!!studentLevelInfo && teacherHasEnabledAi) {
@@ -65,27 +69,40 @@ export default function RubricContainer({
     fetchAiEvaluations();
   }, [fetchAiEvaluations]);
 
+  // Currently the settings tab only provides a way to manually run AI.
+  // In the future, we should update or remove this conditional when we
+  // add more functionality to the settings tab.
+  const showSettings = canProvideFeedback && teacherHasEnabledAi;
+
   return (
     <div
       className={classnames(style.rubricContainer, {
         [style.hiddenRubricContainer]: !open,
       })}
     >
-      <div className={style.rubricHeader}>
-        <div className={style.rubricHeaderLeftSide}>
-          <HeaderTab
-            text={i18n.rubric()}
-            isSelected={selectedTab === TAB_NAMES.RUBRIC}
-            onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
-          />
-          {canProvideFeedback && teacherHasEnabledAi && (
+      <div
+        className={
+          experiments.isEnabled('ai-rubrics-redesign')
+            ? style.rubricHeaderRedesign
+            : style.rubricHeader
+        }
+      >
+        {!experiments.isEnabled('ai-rubrics-redesign') && (
+          <div className={style.rubricHeaderLeftSide}>
             <HeaderTab
-              text={i18n.settings()}
-              isSelected={selectedTab === TAB_NAMES.SETTINGS}
-              onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
+              text={i18n.rubric()}
+              isSelected={selectedTab === TAB_NAMES.RUBRIC}
+              onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
             />
-          )}
-        </div>
+            {showSettings && (
+              <HeaderTab
+                text={i18n.settings()}
+                isSelected={selectedTab === TAB_NAMES.SETTINGS}
+                onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
+              />
+            )}
+          </div>
+        )}
         <div className={style.rubricHeaderRightSide}>
           <button
             type="button"
@@ -97,25 +114,49 @@ export default function RubricContainer({
         </div>
       </div>
 
-      <RubricContent
-        rubric={rubric}
-        studentLevelInfo={studentLevelInfo}
-        teacherHasEnabledAi={teacherHasEnabledAi}
-        canProvideFeedback={canProvideFeedback}
-        onLevelForEvaluation={onLevelForEvaluation}
-        reportingData={reportingData}
-        visible={selectedTab === TAB_NAMES.RUBRIC}
-        aiEvaluations={aiEvaluations}
-      />
-      <RubricSettings
-        canProvideFeedback={canProvideFeedback}
-        teacherHasEnabledAi={teacherHasEnabledAi}
-        updateTeacherAiSetting={setTeacherHasEnabledAi}
-        rubricId={rubric.id}
-        studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-        visible={selectedTab === TAB_NAMES.SETTINGS}
-        refreshAiEvaluations={fetchAiEvaluations}
-      />
+      <div
+        className={classnames({
+          [style.fabBackground]: experiments.isEnabled('ai-rubrics-redesign'),
+        })}
+      >
+        {experiments.isEnabled('ai-rubrics-redesign') && (
+          <RubricTabButtons
+            tabSelectCallback={tabSelectCallback}
+            selectedTab={selectedTab}
+            showSettings={showSettings}
+            canProvideFeedback={canProvideFeedback}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            refreshAiEvaluations={fetchAiEvaluations}
+            rubric={rubric}
+            studentName={studentLevelInfo && studentLevelInfo.name}
+          />
+        )}
+
+        <RubricContent
+          rubric={rubric}
+          open={open}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          onLevelForEvaluation={onLevelForEvaluation}
+          reportingData={reportingData}
+          visible={selectedTab === TAB_NAMES.RUBRIC}
+          aiEvaluations={aiEvaluations}
+        />
+        {showSettings && (
+          <RubricSettings
+            canProvideFeedback={canProvideFeedback}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            visible={selectedTab === TAB_NAMES.SETTINGS}
+            refreshAiEvaluations={fetchAiEvaluations}
+            rubric={rubric}
+            studentName={studentLevelInfo && studentLevelInfo.name}
+            sectionId={sectionId}
+          />
+        )}
+      </div>
     </div>
   );
 }
@@ -124,19 +165,25 @@ RubricContainer.propTypes = {
   rubric: rubricShape,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  initialTeacherHasEnabledAi: PropTypes.bool,
+  teacherHasEnabledAi: PropTypes.bool,
   currentLevelName: PropTypes.string,
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
+  sectionId: PropTypes.number,
 };
 
 const HeaderTab = ({text, isSelected, onClick}) => {
   return (
     <button
-      className={classnames(style.rubricHeaderTab, style.buttonStyle, {
-        [style.selectedTab]: isSelected,
-        [style.unselectedTab]: !isSelected,
-      })}
+      className={classnames(
+        'uitest-rubric-header-tab',
+        style.rubricHeaderTab,
+        style.buttonStyle,
+        {
+          [style.selectedTab]: isSelected,
+          [style.unselectedTab]: !isSelected,
+        }
+      )}
       onClick={onClick}
       type="button"
     >

@@ -1,5 +1,10 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2023-04-05T23:37:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -21,7 +26,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**This is an example of an event that happens with a \"when sprite touches\" block.**\r\n\r\n**What should the tour guide say when they visit your landmark?** \r\n- Add a `when sprite touches`(#6AF36C) event to your workspace \r\n- Add a `say`(#5ED5DD) block to that event \r\n- Type in what the guide will say about the landmark\r\n- Click `Run`(#FFBD46) and test your code\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; \"> This level is an excerpt from the <b> Coding Interactive Maps</b> module. Here, students learn how to use events to make their tour guide sprite provide information about a landmark when it touches the landmark sprite.     \r\n</p>\r\n</div>\r\n<br>\r\n\r\n**This is an example of an event that happens with a \"when sprite touches\" block.**\r\n\r\n**What should the tour guide say when they visit your landmark?** \r\n- Add a `when sprite touches`(#6AF36C) event to your workspace \r\n- Add a `say`(#5ED5DD) block to that event \r\n- Type in what the guide will say about the landmark\r\n- Click `Run`(#FFBD46) and test your code\r\n\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -51,12 +56,7 @@
     "short_instructions": "Code the tour guide sprite to say something about the landmark when they visit it.",
     "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-04-05T23:37:21.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2023-04-05T23:37:21.649+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches1_2023\\\"\"],\"cloned_from\":\"csc_landmarks_touches1_2023\"},{\"changed_at\":\"2023-04-05 23:37:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-05 23:41:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-05 23:43:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-04-05T23:37:21.649+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches1_2023\\\"\"],\"cloned_from\":\"csc_landmarks_touches1_2023\"},{\"changed_at\":\"2023-04-05 23:37:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-05 23:41:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-05 23:43:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-11-06 15:50:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

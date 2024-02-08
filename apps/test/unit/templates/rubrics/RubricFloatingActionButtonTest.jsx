@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 
 describe('RubricFloatingActionButton', () => {
   const defaultProps = {

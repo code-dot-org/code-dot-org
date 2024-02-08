@@ -1,8 +1,8 @@
 ---
 fa-IR:
-  20-hour_name: دوره های سریع
+  20-hour_name: دوره‌ی سریع و فشرده
   accelerated_gradelevel: سنین 10 به بالا (پس از دوره 3)
-  accelerated_name: دوره های سریع
+  accelerated_name: دوره‌ی سریع و فشرده
   account_sign_up_child_accept_terms: تأیید می کنم که از والدین یا قیم قانونی خود
     برای استفاده از خدمات Code.org مجوز دارم.
   account_sign_up_email_opt_in: آیا می‌توانیم درباره به‌روزرسانی‌های دوره‌های آموزشی،
@@ -46,7 +46,7 @@ fa-IR:
   appinventor_shortdescription: برنامه خودت را بساز( فقط آندروید)
   applab_gradelevel: سنین سیزده به بالا
   applab_name: لابراتوار اپ
-  applab_tile_start_tutorial: شروع
+  applab_tile_start_tutorial: شروع کنید
   aquatic_name: 'ماین‌کرفت: سفر آبی'
   arduino_beyond_gradelevel: دبیرستان +
   arduino_beyond_longdescription: Arduino یک پلت فرم مشهور است که طراحی شده تا به
@@ -83,7 +83,7 @@ fa-IR:
     های بلوکی که قبل از آموزش های Code.org بودند را دانلود کنید- یک فایل فشرده ی 3
     مگابایتی می تواند در هر کامپیوتری بارگذاری شود یا از روی یک حافظه فلش استفاده
     شود
-  blockly_name: به صورت بلوکی
+  blockly_name: بلاکلی
   blockly_platformtext: 'تنها مرورگرهای مدرن '
   blockly_shortdescription: دانلود فایل زیپ برای یادگیری به صورت  آفلاین
   boxisland_gradelevel: دبستان
@@ -309,10 +309,10 @@ fa-IR:
   congrats_guest_speaker_title: برای کلاست یک سخنران مهمان پیدا کن
   congrats_next_tutorials_desc: این کوتاه تر را انجام دهید، ۱ ساعت آموزش یا <a href="%{current_path}/next">شریک
     آموزش</a> را امتحان کنید.
-  congrats_next_tutorials_title: این آموزش های بعدی را سعی کنید
+  congrats_next_tutorials_title: به مرحله بعدی دست پیدا کنید
   congrats_third_party_title: مهارتهای جدیدت را با این نرم افزارها و وب سایتها استفاده
     کن
-  congratulations: آفرین!
+  congratulations: تبریک!
   congratulations_on_completing_course: تبریک به خاطر تکمیل %{course}
   congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
   congratulations_volunteer: 'تبریک: حالا که یک ساعت کد را امتحان کردید <a href="https://code.org/volunteer">
@@ -454,7 +454,7 @@ fa-IR:
   csedweek_map_legend_title: افسانه
   csedweek_map_search_placeholder: جست و جو برای رویداد های "ساعت کدنویسی"
   csedweek_map_search_reset: تنظیم مجدد
-  csedweek_map_search_search: جستجو کن
+  csedweek_map_search_search: جستجو کنید
   csedweek_map_signup: رویدادتان را ثبت کنید
   csedweek_og_description: 3-9 دسامبر, 2018. یادگیری علوم کامپیوتر برای هر دانش آموز
     لازم است.
@@ -466,14 +466,14 @@ fa-IR:
   csfirst_gradelevel: سنین 9-14
   csfirst_platformtext: مرورگرهای وب مدرن
   dashboard_action_cancel: لغو
-  dashboard_action_confirm: پاک گردد؟
-  dashboard_action_delete: پاک کردن
+  dashboard_action_confirm: پاک شود؟
+  dashboard_action_delete: پاک کنید
   dashboard_action_delete_no: نه
   dashboard_action_delete_yes: بله
   dashboard_action_done: انجام شد
   dashboard_announce_learn_more_button: بیشتر بیاموزید
   dashboard_classroom_strategies: استراتژی‌های کلاس برای دبیران
-  dashboard_correctness_correct: صحیح است
+  dashboard_correctness_correct: 'صحیح '
   dashboard_course1: 'دوره 1:'
   dashboard_course2: 'دوره 2:'
   dashboard_course3: 'دوره 3:'
@@ -491,7 +491,7 @@ fa-IR:
   dashboard_course_ecs_desc: 'کاوش در علوم کامپیوتر یک دوره ی یک ساله شامل 6 واحد
     است: همکاری انسان کامپیوتر، حل مساله، طراحی وب، برنامه نویسی، محاسبه و آنالیز
     داده ها، و رباتیک.'
-  dashboard_curriculum: برنامه آموزشی
+  dashboard_curriculum: برنامه درسی
   dashboard_curriculum_csina: 'علوم کامپیوتر در جبر:'
   dashboard_curriculum_csins: 'علوم کامپیوتر در علم:'
   dashboard_curriculum_csp: 'مفاهیم ® AP علوم کامپیوتر:'
@@ -501,8 +501,10 @@ fa-IR:
   dashboard_curriculum_middle_title: منابع آموزشی دوره راهنمایی
   dashboard_curriculum_overview: بررسی اجمالی برنامه کلاس پنجمی ها
   dashboard_debugging: 'اشکال‌زدایی:'
+  dashboard_download_csv: دانلود CSV
   dashboard_faq: پرسش و پاسخ‌های متداول
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
+  dashboard_filter_all: همه
   dashboard_framework: چارچوب کار
   dashboard_glossary: واژه نامه
   dashboard_grade_k: K
@@ -604,13 +606,16 @@ fa-IR:
   dashboard_question: سؤال
   dashboard_sections_account_creation_question: چه کسی یک حساب کاربری دانش آموزی ساخته
     است؟
+  dashboard_sections_assign_activity: اختصاص دوره
+  dashboard_sections_both_sections: آیا دوست دارید دانش‌آموز(ها) در هر دو بخش حضور
+    داشته باشند؟
   dashboard_sections_choose_secret: اگر شما می خواهید به دانش آموزان خود حساب کاربری
     ارائه کنید، یک <b>کلمه</b> یا <b>تصویر</b> سرّی برای آن بخش را انتخاب کنید.
   dashboard_sections_close: ببند
   dashboard_sections_email_question: همه دانش آموزان یک آدرس ایمیل معتبر دارید؟
-  dashboard_sections_jumbotron_instruction: ایجاد بخش های جدید و افزودن دانش آموزان
-    به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی
-    کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید.
+  dashboard_sections_jumbotron_instruction: ایجاد بخش‌های جدید و اضافه کردن دانش‌آموزان
+    به آن‌ها. بخش‌ها به شما کمک می‌کنند دانش آموزان را در گروه‌های کوچکتر سازماندهی
+    کنید تا بتوانید پیشرفت آن‌ها را پیگیری کرده و حساب کاربریشان را مدیریت نمایید.
   dashboard_sections_login_type_explanation: این جدول به توضیح این که شما کدامیک از
     روش های ورود به سیستم،<b> مثل تصویر، کلمه، یا ایمیل</b>، را می خواهید برای یک
     بخش انتخاب کنید کمک می کند.
@@ -651,7 +656,7 @@ fa-IR:
   dashboard_student_worksheet: ورقه کار دانش آموزان
   dashboard_students_add_multiple: 'نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید،
     فقط یک نام در هر خط:'
-  dashboard_students_completed_levels: سطح‌های کامل شده
+  dashboard_students_completed_levels: سطوح تکمیل شده
   dashboard_students_female: زن
   dashboard_students_join_link: به دانش آموزان خود بگویید که حساب کاربری خود را ایجاد
     کنند و بپیوندند به بخش شما در
@@ -702,7 +707,7 @@ fa-IR:
   en: علوم کامپیوتر
   enter_country: اگر خارج از ایالات متحده آمریکا هستید کشورتان را وارد کنید
   enter_valid_age: لطفا یک سن معتبر انتخاب کنید
-  enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
+  enter_valid_email: لطفا یک آدرس ایمیل معتبر وارد کنید
   express-2021_name: دوره اکسپرس (2021)
   express-2022_name: دوره اکسپرس (2022)
   finch_beyond_gradelevel: سنین بالای 8
@@ -728,7 +733,7 @@ fa-IR:
     بگذارید!
   footer_about: درباره
   footer_built_on_github: ساخته‌شده در GitHub از طریق مایکروسافت
-  footer_cookie_notice: اطلاعیه کوکی
+  footer_cookie_notice: هشدار کوکی
   footer_donate: کمک مالی بدهید
   footer_partners: شرکا
   footer_powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
@@ -754,7 +759,7 @@ fa-IR:
     ببینید و یا با مراجعه به بخش  <a href='/learn/beyond'> از یک ساعت برنامه نویسی
     فراتر بروید</a> امکانات دیگر سایت را مشاهده کنید.
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
-  get_started: شروع
+  get_started: شروع کنید
   girl: دختر
   girls: دختران
   girls_team: تیم دختران
@@ -805,7 +810,7 @@ fa-IR:
   header_educate_community: جامعه‌ی مجازی
   header_educate_elementary: مدرسه ابتدایی
   header_educate_high: دبیرستان
-  header_educate_hoc: ساعت کد نویسی
+  header_educate_hoc: ساعت کدنویسی
   header_educate_inspire: انگیزه دادن به دانش آموز
   header_educate_middle: مدرسه راهنمایی
   header_educate_overview: مروری بر مربی
@@ -814,9 +819,10 @@ fa-IR:
   header_help_us: به ما کمک کنید
   header_learn: یادگیری
   header_legal: حریم خصوصی و مسائل حقوقی
+  header_legal_cookie_notice: هشدار کوکی
   header_legal_privacy: قوانین حفظ حریم خصوصی
   header_legal_tos: شرایط
-  header_my_dashboard: دَشبورد من
+  header_my_dashboard: داشبورد من
   header_professional_learning: یادگیری پیشرفته
   header_project_gallery: پروژه‌ها
   header_report_bug: گزارش مشکل
@@ -846,14 +852,16 @@ fa-IR:
   hoc2018_creativity_courses: با دوره‌های Code.org ادامه دهید
   hoc2018_creativity_courses_link: با <a href="https://studio.code.org/courses">دوره‌های
     Code.org </a>ادامه دهید
-  hoc2018_creativity_create: ایجاد کردن
+  hoc2018_creativity_create: ایجاد کنید
   hoc2018_creativity_homepage: به تخیل بال پرواز بده و نوآروری را متولد کن. با یک
     ساعت برنامه‌نویسی و نسخه ویژه خلاقیت خودت، هر چیزی که ممکن است باشد، شروع کن.
     ویدیو را مشاهده کن.
   hoc2018_dance_amazon_about_future_engineer_button: بیشتر بیاموزید
   hoc2018_dance_keep_on_dancing_box_title: به رقصیدن ادامه دهید
+  hoc2018_dance_party_box_description: یک مهمانی رقص را کد نویسی کنید تا با دوستان
+    خود به اشتراک بگذارید!
   hoc2018_dance_party_box_title: مهمانی رقص
-  hoc2018_dance_party_button: شروع
+  hoc2018_dance_party_button: شروع کنید
   hoc2018_dance_party_main_heading: مهمانی رقص
   hoc2018_dance_teacher_resources_tile1_button: طرح درس
   hoc2018_dance_teacher_resources_tile2_button: فعالیت بدون کامپیوتر
@@ -868,6 +876,7 @@ fa-IR:
   hoc2018_mc_designer_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی
     ماینکرافت شما
   hoc2018_mc_designer_title: طراح ماین‌کرفت
+  hoc2018_mc_educators_box1_button: شروع کنید
   hoc2018_mc_educators_box2_button: دانلود
   hoc2018_mc_go_to_mc_education: رفتن به آموزش Minecraft
   hoc2018_mc_hero_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
@@ -875,7 +884,7 @@ fa-IR:
   hoc2018_mc_homepage_join_us: به ما بپیوندید
   hoc2018_mc_homepage_try_it: آن را امتحان کنید
   hoc2018_mc_minecraft_education: آموزش ماینکرافت
-  hoc2018_mc_start: شروع
+  hoc2018_mc_start: شروع کنید
   hoc2018_mc_video_title_cs_is_everything: علم کامپیوتر همه چیز را تغییر می‌دهد
   hoc2022_banner_description: جهان را بگرد، امتیاز کسب کن، حرکت ایجاد کن - راه‌های
     زیادی برای کار با علوم کامپیوتر هست!
@@ -884,7 +893,7 @@ fa-IR:
   hoc2022_landing_page_banner_alt_right: یک ربات یک توپ فوتبال را در فضای مقابل یک
     موشک که در حال استارت پرواز است دریبل میزند
   hoc2022_landing_page_create_description: چیزی عجیب و غریب و خارق‌العاده بساز!
-  hoc2022_landing_page_create_title: ایجاد کردن
+  hoc2022_landing_page_create_title: ایجاد کنید
   hoc2022_landing_page_explore_description: با علوم کامپیوتر درها را به دنیاهای جدید
     باز کنید!
   hoc2022_landing_page_explore_title: کاوش
@@ -914,7 +923,7 @@ fa-IR:
     تصویری از زمین معلق هستن
   hoc_overview_hello_world_2022_subtitle: یکی از چهار تم جالب را انتخاب کنید تا کاراکترهای
     واکنشگر را در دنیایی که خودتان ایجاد کرده‌اید کدنویسی کنید.
-  hoc_overview_start_tutorial: شروع
+  hoc_overview_start_tutorial: شروع کنید
   homepage_action_text_codevideo: فیلم را تماشا کنید
   homepage_action_text_join_us: به ما بپیوندید
   homepage_action_text_learn: یادگیری را شروع کنید
@@ -931,8 +940,9 @@ fa-IR:
   homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع
     علوم کامپیوتر را بهبود ببخشند.
   homepage_below_hero_announcement_link_text: بیشتر بیاموزید
-  homepage_below_hero_announcement_text: ما به حریم شخصی شما اهمیت می دهیم و برخی
-    از به روز رسانی های مربوط به سیاست حفظ حریم خصوصی را انجام می دهیم.
+  homepage_below_hero_announcement_text: ما به حفظ حریم خصوصی شما اهمیت می‌دهیم و
+    در حال انجام برخی به روز رسانی‌ها در خط مشی حفظ حریم خصوصی هستیم که از 25 مه اعمال
+    می‌شوند.
   homepage_diversity_pledge: پیمان احترام و برابری نژاد ها را بپذیرید
   homepage_donors_donate: کمک مالی بدهید
   homepage_donors_seall: تمامش را ببینید
@@ -1016,7 +1026,7 @@ fa-IR:
   homepage_slot_text_title_advocates: مدافعان
   homepage_slot_text_title_at_home: در خانه یاد بگیرید
   homepage_slot_text_title_educators: آموزگاران
-  homepage_slot_text_title_hoc: ساعت کد نویسی
+  homepage_slot_text_title_hoc: ساعت کدنویسی
   homepage_slot_text_title_students: دانش آموزان
   hopscotch_beyond_gradelevel: مدارس راهنمایی به بالا
   hopscotch_beyond_longdescription: آموزش های هدایت شده توسط دانش آموز بر روی آی پد
@@ -1025,13 +1035,14 @@ fa-IR:
     اکثر تا 3 نفر با هر آی پد).
   hopscotch_beyond_name: 'Hopscotch:  بر روی iPad خودتان برنامه نویسی کنید'
   hopscotch_beyond_shortdescription: یادگیری برنامه نویسی بصری بر روی iPad
-  hour_of_code: ساعت کد نویسی
+  hour_of_code: ساعت کدنویسی
   hourofcode_gradelevel: سنین 4 تا 104
   hourofcode_longdescription: جا نگهدار برای code.org/hoc جدید
   hourofcode_name: ماز معروف و قدیمی
   hourofcode_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   hourofcode_shortcode: کد
   hourofcode_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
+  how_ai_works: هوش مصنوعی چگونه کار می‌کند
   how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
   i_agree: موافقم
   i_am_a: من هستم یک
@@ -1211,12 +1222,12 @@ fa-IR:
   mc_shortdescription: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین
     کرافت
   minecraft_adventurer: ماجراجوی ماین‌کرفت
-  minecraft_adventurer_button: شروع
-  minecraft_agent_button: شروع
+  minecraft_adventurer_button: شروع کنید
+  minecraft_agent_button: شروع کنید
   minecraft_agent_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
   minecraft_designer: طراح ماین‌کرفت
-  minecraft_designer_button: شروع
+  minecraft_designer_button: شروع کنید
   minecraft_designer_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی
     ماینکرافت شما
   minecraft_name: ماین‌کرفت
@@ -1260,7 +1271,7 @@ fa-IR:
   participant_select: "- انتخاب کنید -"
   participant_student: دانش آموز
   participants: شرکت کنندگان
-  personalize_certificate: گواهینامه خود را طراحی کنید
+  personalize_certificate: گواهی خود را شخصی‌سازی کنید
   petition_age: سن
   petition_join_others: 'به #دیگران ملحق شوید'
   petition_join_others_num: به دیگران %{num} بپیوندید
@@ -1422,7 +1433,7 @@ fa-IR:
   studiobar_flappy_body: با پرنده بال زن، بازیهای خودتان را بسازید و به اشتراک بگذارید
   studiobar_flappy_title: کدنویسی Flappy
   studiobar_frozen_body: یک سرزمین عجایب یخی با آنا و السا بسازید
-  studiobar_frozen_title: ساعت کد نویسی
+  studiobar_frozen_title: ساعت کدنویسی
   studiobar_hoc_body: یادگیری  کدنویسی با پرندگان عصبانی
   studiobar_hoc_title: ساعتی با کدنویسی
   studiobar_shop_body: شکستن کلیشه ها. لوگوی ما را با غرور بپوش.
@@ -1451,7 +1462,7 @@ fa-IR:
   texasinstruments_platformtext: ماشین حساب TI
   text-compression_name: فشرده‌سازی متن
   thank_you_: با سپاس!
-  thanks_for_submitting: با سپاس از شما برای ثبت اطلاعات!
+  thanks_for_submitting: با تشکر برای ارسال!
   thanks_for_voting: با تشکر برای رای دادن!
   thinkersmith2_gradelevel: سنین بالای 8
   thinkersmith2_longdescription: دانش آموزان درباره ی نمایش و ذخیره ی حروف در منطق
@@ -1475,7 +1486,7 @@ fa-IR:
     این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار
     ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.
   thinkersmithspanish_platformtext: بدون کامپیوتر
-  third_party_curriculum: برنامه آموزشی
+  third_party_curriculum: برنامه درسی
   third_party_gradelevel_2to8: رده ی سنی  2-8
   third_party_gradelevel_4to12: رده ی سنی 4-12
   third_party_gradelevel_5to12: رده ی سنی 5-12

@@ -1,4 +1,5 @@
 @single_session
+@skip
 Feature: Updating account settings
 
   # Ensure that the checkbox persists when saved

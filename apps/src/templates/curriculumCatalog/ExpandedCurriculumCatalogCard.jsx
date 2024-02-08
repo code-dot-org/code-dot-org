@@ -35,6 +35,8 @@ const ExpandedCurriculumCatalogCard = ({
   imageSrc,
   imageAltText,
   availableResources,
+  isSignedOut,
+  isTeacher,
 }) => {
   const expandedCardRef = useRef(null);
   const iconData = {
@@ -62,10 +64,14 @@ const ExpandedCurriculumCatalogCard = ({
     'Rubric',
   ];
 
+  const availableResourcesCount = availableResources
+    ? Object.keys(availableResources).length
+    : 0;
+
   let availableResourceCounter = 0;
 
   const displayDivider = () => {
-    return ++availableResourceCounter < Object.keys(availableResources).length;
+    return ++availableResourceCounter < availableResourcesCount;
   };
 
   useEffect(() => {
@@ -75,6 +81,11 @@ const ExpandedCurriculumCatalogCard = ({
       150;
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
+
+  const quickViewButtonColor =
+    !isSignedOut && !isTeacher
+      ? Button.ButtonColor.brandSecondaryDefault
+      : Button.ButtonColor.neutralDark;
 
   return (
     <div ref={expandedCardRef}>
@@ -138,7 +149,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {availableResources && (
+                    {availableResourcesCount > 0 && (
                       <div>
                         <Heading4 visualAppearance="heading-xs">
                           {i18n.availableResources()}
@@ -161,6 +172,7 @@ const ExpandedCurriculumCatalogCard = ({
                     )}
                   </div>
                   {isInUS &&
+                    (isSignedOut || isTeacher) &&
                     (professionalLearningProgram ||
                       selfPacedPlCourseOfferingPath) && (
                       <div className={style.professionalLearningContainer}>
@@ -223,23 +235,25 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.buttonsContainer}>
                 <Button
                   __useDeprecatedTag
-                  color={Button.ButtonColor.neutralDark}
+                  color={quickViewButtonColor}
                   type="button"
                   href={pathToCourse}
                   aria-label={i18n.quickViewDescription({
                     course_name: courseDisplayName,
                   })}
                   text={i18n.seeCurriculumDetails()}
-                  style={{flex: 1}}
+                  className={centererStyle.buttonFlex}
                 />
-                <Button
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  type="button"
-                  onClick={() => assignButtonOnClick('expanded-card')}
-                  aria-label={assignButtonDescription}
-                  text={i18n.assignToClassSections()}
-                  style={{flex: 1}}
-                />
+                {(isSignedOut || isTeacher) && (
+                  <Button
+                    color={Button.ButtonColor.brandSecondaryDefault}
+                    type="button"
+                    onClick={() => assignButtonOnClick('expanded-card')}
+                    aria-label={assignButtonDescription}
+                    text={i18n.assignToClassSections()}
+                    className={centererStyle.buttonFlex}
+                  />
+                )}
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
@@ -283,5 +297,7 @@ ExpandedCurriculumCatalogCard.propTypes = {
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
+  isTeacher: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
 };
 export default ExpandedCurriculumCatalogCard;

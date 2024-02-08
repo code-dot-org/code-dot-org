@@ -17,7 +17,7 @@
 
 - video_101_index.times do |index|
   .action-block.action-block--two-col
-    %figure.video-101__video.col-50
+    .media-wrapper.col-50
       = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false', download_path: video_download_path[index]
     .text-wrapper.col-50
       %p.overline

@@ -8,9 +8,9 @@
       .tutorial-info
         %h3{style: "margin-top: 0px;"}=resources[:left_heading]
         .smalltext=resources[:left_description]
-        %a{href: resources[:left_link], target: '_blank'}
-          %button.tutorial-info-start.tutorial-gray=resources[:left_button_text]
-        .clear
+        %a.link-button.secondary{href: resources[:left_link], target: '_blank'}
+          =resources[:left_button_text]
+  .clear
 
   .col-50
     .tutorial-tile
@@ -19,6 +19,6 @@
       .tutorial-info
         %h3{style: "margin-top: 0px;"}=resources[:right_heading]
         .smalltext=resources[:right_description]
-        %a{href: resources[:right_link], target: '_blank'}
-          %button.tutorial-info-start.tutorial-gray=resources[:right_button_text]
-        .clear
+        %a.link-button.secondary{href: resources[:right_link], target: '_blank'}
+          =resources[:right_button_text]
+  .clear

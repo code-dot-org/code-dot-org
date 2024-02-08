@@ -37,21 +37,33 @@ class ExperimentTest < ActiveSupport::TestCase
     refute Experiment.enabled?(user: user_off, experiment_name: experiment.name)
   end
 
-  test "teacher based experiment at 0 percent is not enabled" do
-    experiment = create :teacher_based_experiment, percentage: 0
-    teacher = build :teacher
-    assert_empty Experiment.get_all_enabled(user: teacher)
-    refute Experiment.enabled?(experiment_name: experiment.name, user: teacher)
+  test "creating teacher based experiment without script raises" do
+    assert_raises ActiveRecord::RecordInvalid do
+      create :teacher_based_experiment, script: nil
+    end
   end
 
-  test "teacher based experiment at 100 percent is enabled" do
-    experiment = create :teacher_based_experiment, percentage: 100
-    assert_equal [experiment], Experiment.get_all_enabled(user: @teacher)
-    assert Experiment.enabled?(experiment_name: experiment.name, user: @teacher)
+  test "teacher based experiment at 0 percent is not enabled for matching script" do
+    experiment = create :teacher_based_experiment, percentage: 0, script: @script
+    teacher = build :teacher
+    assert_empty Experiment.get_all_enabled(user: teacher, script: @script)
+    refute Experiment.enabled?(experiment_name: experiment.name, user: teacher, script: @script)
+  end
+
+  test "teacher based experiment at 100 percent is enabled for matching script" do
+    experiment = create :teacher_based_experiment, percentage: 100, script: @script
+    assert_equal [experiment], Experiment.get_all_enabled(user: @teacher, script: @script)
+    assert Experiment.enabled?(experiment_name: experiment.name, user: @teacher, script: @script)
+  end
+
+  test "teacher based experiment at 100 percent is not enabled for nil script" do
+    experiment = create :teacher_based_experiment, percentage: 100, script: @script
+    assert_equal [], Experiment.get_all_enabled(user: @teacher)
+    refute Experiment.enabled?(experiment_name: experiment.name, user: @teacher)
   end
 
   test "teacher based experiment at 50 percent is enabled for only some users" do
-    experiment = create :teacher_based_experiment, percentage: 50
+    experiment = create :teacher_based_experiment, percentage: 50, script: @script
     student_on = create :student
     teacher_on = create :teacher, id: 1025 + experiment.min_user_id
     section_on = create :section, teacher: teacher_on
@@ -62,24 +74,26 @@ class ExperimentTest < ActiveSupport::TestCase
     section_off = create :section, teacher: teacher_off
     create :follower, section: section_off, student_user: student_off
 
-    assert_equal [experiment], Experiment.get_all_enabled(user: student_on)
-    assert Experiment.enabled?(experiment_name: experiment.name, user: student_on)
-    assert_empty Experiment.get_all_enabled(user: student_off)
-    refute Experiment.enabled?(experiment_name: experiment.name, user: student_off)
+    assert_equal [experiment], Experiment.get_all_enabled(user: student_on, script: @script)
+    assert Experiment.enabled?(experiment_name: experiment.name, user: student_on, script: @script)
+    assert_empty Experiment.get_all_enabled(user: student_off, script: @script)
+    refute Experiment.enabled?(experiment_name: experiment.name, user: student_off, script: @script)
   end
 
   test "teacher based experiment is disabled if start time is too late" do
     experiment = create :teacher_based_experiment,
       percentage: 100,
-      earliest_section_at: DateTime.now + 1.day
+      earliest_section_at: DateTime.now + 1.day,
+      script: @script
     assert_empty Experiment.get_all_enabled(user: @teacher)
-    refute Experiment.enabled?(experiment_name: experiment.name, user: @teacher)
+    refute Experiment.enabled?(experiment_name: experiment.name, user: @teacher, script: @script)
   end
 
   test "teacher based experiment is disabled if end_time is too early" do
     experiment = create :teacher_based_experiment,
       percentage: 100,
-      latest_section_at: DateTime.now - 1.day
+      latest_section_at: DateTime.now - 1.day,
+      script: @script
     assert_empty Experiment.get_all_enabled
     refute Experiment.enabled?(experiment_name: experiment.name)
   end
@@ -87,36 +101,40 @@ class ExperimentTest < ActiveSupport::TestCase
   test "teacher based experiment is disabled if other script assigned" do
     experiment = create :teacher_based_experiment,
       percentage: 100,
-      script_id: @script.id + 1
+      script: create(:script)
     assert_empty Experiment.get_all_enabled(script: @script)
     refute Experiment.enabled?(script: @script, experiment_name: experiment.name)
   end
 
-  test "teacher based experiment handles nil section start at" do
+  test "teacher based experiment enabled for sections inside time bounds" do
     experiment = create :teacher_based_experiment,
       percentage: 100,
       earliest_section_at: DateTime.now - 1.day,
       latest_section_at: DateTime.now + 1.day,
-      script_id: @script.id + 1
-    assert_empty Experiment.get_all_enabled(user: @teacher, script: @script)
-    refute Experiment.enabled?(user: @teacher, script: @script, experiment_name: experiment.name)
+      script: @script
+    assert_equal [experiment], Experiment.get_all_enabled(user: @teacher, script: @script)
+    assert Experiment.enabled?(user: @teacher, script: @script, experiment_name: experiment.name)
   end
 
-  test "teacher based experiment is enabled if same script assigned" do
+  test "teacher based experiment disabled for sections outside time bounds" do
     experiment = create :teacher_based_experiment,
       percentage: 100,
-      script_id: @script.id
-    assert_equal [experiment], Experiment.get_all_enabled(script: @script, user: @teacher)
-    assert Experiment.enabled?(script: @script, experiment_name: experiment.name, user: @teacher)
+      earliest_section_at: DateTime.now - 3.days,
+      latest_section_at: DateTime.now - 1.day,
+      script: @script
+    assert_empty Experiment.get_all_enabled(user: @teacher, script: @script)
+    refute Experiment.enabled?(user: @teacher, script: @script, experiment_name: experiment.name)
   end
 
   test "teacher is in the same teacher-based experiment as their section" do
     experiment1 = create :teacher_based_experiment,
       min_user_id: 0,
-      max_user_id: 50
+      max_user_id: 50,
+      script: @script
     experiment2 = create :teacher_based_experiment,
       min_user_id: 50,
-      max_user_id: 100
+      max_user_id: 100,
+      script: @script
 
     teacher = mock('teacher')
     teacher.stubs(:id).returns(1125)
@@ -127,30 +145,47 @@ class ExperimentTest < ActiveSupport::TestCase
     section = mock('section')
     section.stubs(:user_id).returns(teacher.id)
     student.stubs(:sections_as_student).returns([section])
-    teacher.stubs(:sections).returns([section])
+    teacher.stubs(:sections_instructed).returns([section])
 
-    assert Experiment.enabled?(experiment_name: experiment1.name, user: teacher)
-    assert Experiment.enabled?(experiment_name: experiment1.name, user: student)
+    assert Experiment.enabled?(experiment_name: experiment1.name, user: teacher, script: @script)
+    assert Experiment.enabled?(experiment_name: experiment1.name, user: student, script: @script)
 
-    refute Experiment.enabled?(experiment_name: experiment2.name, user: teacher)
-    refute Experiment.enabled?(experiment_name: experiment2.name, user: student)
+    refute Experiment.enabled?(experiment_name: experiment2.name, user: teacher, script: @script)
+    refute Experiment.enabled?(experiment_name: experiment2.name, user: student, script: @script)
   end
 
-  test "single section experiment is enabled" do
+  test "creating single section experiment without script raises" do
+    assert_raises ActiveRecord::RecordInvalid do
+      create :single_section_experiment, script: nil
+    end
+  end
+
+  test "single section experiment is enabled with matching script" do
     experiment = create :single_section_experiment,
-      section_id: @section.id
-    assert_equal [experiment], Experiment.get_all_enabled(user: @teacher)
-    assert Experiment.enabled?(experiment_name: experiment.name, user: @teacher)
-    assert_equal [experiment], Experiment.get_all_enabled(user: @student)
-    assert Experiment.enabled?(experiment_name: experiment.name, user: @student)
+      section_id: @section.id,
+      script: @script
+    assert_equal [experiment], Experiment.get_all_enabled(user: @teacher, script: @script)
+    assert Experiment.enabled?(experiment_name: experiment.name, user: @teacher, script: @script)
+    assert_equal [experiment], Experiment.get_all_enabled(user: @student, script: @script)
+    assert Experiment.enabled?(experiment_name: experiment.name, user: @student, script: @script)
   end
 
-  test "single section experiment is not enabled" do
-    experiment = create :single_section_experiment
+  test "single section experiment is disabled for nil script" do
+    experiment = create :single_section_experiment,
+                        section_id: @section.id,
+                        script: @script
     assert_empty Experiment.get_all_enabled(user: @teacher)
-    refute Experiment.enabled?(experiment_name: experiment.name)
+    refute Experiment.enabled?(experiment_name: experiment.name, user: @teacher)
     assert_empty Experiment.get_all_enabled(user: @student)
     refute Experiment.enabled?(experiment_name: experiment.name, user: @student)
+  end
+
+  test "single section experiment is not enabled without matching section" do
+    experiment = create :single_section_experiment, script: @script
+    assert_empty Experiment.get_all_enabled(user: @teacher, script: @script)
+    refute Experiment.enabled?(experiment_name: experiment.name, script: @script)
+    assert_empty Experiment.get_all_enabled(user: @student, script: @script)
+    refute Experiment.enabled?(experiment_name: experiment.name, user: @student, script: @script)
   end
 
   test "creating experiments does not break get_all_enabled for signed out user" do
@@ -163,8 +198,24 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "teacher is included in single-section experiment" do
-    experiment = create :single_section_experiment
-    assert Experiment.enabled?(experiment_name: experiment.name, user: experiment.section.user)
+    experiment = create :single_section_experiment, script: @script
+    assert Experiment.enabled?(experiment_name: experiment.name, user: experiment.section.user, script: @script)
+  end
+
+  test 'can only create up to max_count single section experiments' do
+    SingleSectionExperiment.any_instance.stubs(:max_count).returns(3)
+
+    3.times do
+      create :single_section_experiment
+    end
+
+    # creating a 4th experiment should fail
+    assert_raises ActiveRecord::RecordInvalid do
+      create :single_section_experiment
+    end
+
+    # once record limit is reached, can still update a record
+    SingleSectionExperiment.last.update!(name: 'new-name')
   end
 
   test 'single user experiment is enabled' do

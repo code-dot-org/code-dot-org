@@ -30,9 +30,7 @@ module I18n
             crowdin_locale_dir = crowdin_locale_dir_of(language)
             return unless File.directory?(crowdin_locale_dir)
 
-            unless I18nScriptUtils.source_lang?(language)
-              distribute_localization(language)
-            end
+            distribute_localization(language)
 
             i18n_locale_dir = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME)
             I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
@@ -230,8 +228,8 @@ module I18n
             file_subpath = crowdin_file_path.partition(DIR_NAME).last
 
             original_file_path = File.join(I18N_BACKUP_DIR_PATH, file_subpath)
-
             RedactRestoreUtils.restore(original_file_path, crowdin_file_path, crowdin_file_path, REDACT_RESTORE_PLUGINS)
+            I18nScriptUtils.parse_file(crowdin_file_path) || {}
           end
 
           def types_i18n_data_of(language)

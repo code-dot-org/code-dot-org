@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/54064)
+* minor README.md updates
+
 ## [0.2.0]()
 * added ```styles/mixins.scss```
 * added README.md

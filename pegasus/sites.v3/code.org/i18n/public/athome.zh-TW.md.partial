@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>透過有趣的入門級教程，試聽《程式設計一小時》</h2>
-<p>試聽<a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">一小時教程</a>，讓《我的世界》、《冰雪奇緣》和《星球大戰》等熱門遊戲和電影伴你學習。 許多教程採用類似於遊戲的設計方式，旨在以有趣、引人入勝的方式教授基本的電腦科學概念。</p>
+<p>試試 <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">一個小時</a> 的教程，其中包含《Minecraft》、《冰雪奇緣》和《星際大戰》等熱門遊戲和電影。 許多教程採用類似於遊戲的設計方式，旨在以有趣、引人入勝的方式教授基本的電腦科學概念。</p>
 
 <br>
 

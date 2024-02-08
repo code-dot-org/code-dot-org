@@ -9,18 +9,22 @@ export default class SvgFrame {
   /**
    * Constructs an SvgFrame instance.
    * @param {Element} element - The block or workspace associated with the frame.
-   * @param {string} text - The text to display in the frame.
-   * @param {string} className - The CSS class name for styling.
-   * @param {string} textColor - The color for the frame's text.
-   * @param {string} headerColor - The color for the frame's header.
+   * @param {string} [text] - The text to display in the frame.
+   * @param {string} [className] - The CSS class name for styling.
+   * @param {Function} [getColor] - Get the color for the frame's header. This function should return a color value.
+   * @param {number} [headerHeight] - An optional override for the header size, used for workspace frames.
+   * @param {number} [fontSize] - An optional override for the size of the header text.
    */
-  constructor(element, text, className, textColor, headerColor) {
+  constructor(element, text, className, getColor, headerHeight, fontSize) {
     this.element_ = element;
     this.text = text || msg.block();
     this.className = className || 'svgFrame';
-    this.textColor = textColor || color.white;
-    this.headerColor = headerColor || color.light_gray;
-    this.baseColor = color.lightest_gray;
+    this.getColor = getColor;
+    this.headerColor = this.getColor() || color.light_gray;
+    this.baseColor = getBaseColor(this.headerColor);
+    this.textColor = color.white;
+    this.headerHeight = headerHeight || frameSizes.BLOCK_HEADER_HEIGHT;
+    this.fontSize = fontSize || 12;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
@@ -63,7 +67,7 @@ export default class SvgFrame {
       {
         x: frameX,
         y: frameY,
-        height: frameSizes.HEADER_HEIGHT,
+        height: this.headerHeight,
       },
       clip
     );
@@ -75,8 +79,8 @@ export default class SvgFrame {
         y: frameY,
         fill: this.baseColor,
         stroke: this.headerColor,
-        rx: 15,
-        ry: 15,
+        rx: 4,
+        ry: 4,
       },
       this.frameGroup_
     );
@@ -87,20 +91,20 @@ export default class SvgFrame {
         x: frameX,
         y: frameY,
         fill: this.headerColor,
-        rx: 15,
-        ry: 15,
+        rx: 4,
+        ry: 4,
         'clip-path': `url(#frameClip${safeCharBlockId})`,
       },
       this.frameGroup_
     );
 
-    var frameTextVerticalPosition = frameY + frameSizes.HEADER_HEIGHT / 2;
+    var frameTextVerticalPosition = frameY + this.headerHeight / 2;
 
     this.frameText_ = Blockly.utils.dom.createSvgElement(
       'text',
       {
         class: 'blocklyText',
-        style: `font-size: 12pt;fill: ${this.textColor}`,
+        style: `font-size: ${this.fontSize}pt;fill: ${this.textColor}`,
         x: frameX + frameSizes.MARGIN_SIDE,
         y: frameTextVerticalPosition,
         'dominant-baseline': 'central',
@@ -108,11 +112,18 @@ export default class SvgFrame {
       this.frameGroup_
     );
     this.frameText_.appendChild(document.createTextNode(this.text));
+    if (this.element_.RTL) {
+      // Place frame text on right side of header.
+      this.frameText_?.setAttribute(
+        'x',
+        -this.frameText_?.getBoundingClientRect().width
+      );
+    }
   }
 
   getPadding() {
     return {
-      top: frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT,
+      top: frameSizes.MARGIN_TOP + this.headerHeight,
       right: frameSizes.MARGIN_SIDE,
       bottom: frameSizes.MARGIN_BOTTOM,
       left: frameSizes.MARGIN_SIDE,
@@ -120,7 +131,7 @@ export default class SvgFrame {
   }
 
   /**
-   * Render the frame with an optional width and height. If args unspecified,
+   * Render the frame with an optional width and height. If args are unspecified,
    * frame will be rendered based on the size of svg rectangle, plus margins.
    * @param {number} [width] - The optional width of the frame.
    * @param {number} [height] - The optional height of the frame.
@@ -133,7 +144,7 @@ export default class SvgFrame {
     // We do this because otherwise, the value returned by
     // getBoundingClientRect would take our size into account, and we
     // would 'grow' every time render was called.
-    this.frameGroup_.remove();
+    this.frameGroup_?.remove();
     var groupRect = svgGroup.getBoundingClientRect();
     svgGroup.prepend(this.frameGroup_);
 
@@ -153,19 +164,45 @@ export default class SvgFrame {
       groupRect.height +
         frameSizes.MARGIN_TOP +
         frameSizes.MARGIN_BOTTOM +
-        frameSizes.HEADER_HEIGHT;
+        this.headerHeight;
+
+    this.headerColor = this.getColor() || color.light_gray;
+    this.baseColor = getBaseColor(this.headerColor);
 
     this.frameClipRect_.setAttribute('width', width);
     this.frameBase_.setAttribute('width', width);
     this.frameBase_.setAttribute('height', height);
+    this.frameBase_.setAttribute('stroke', this.headerColor);
+    this.frameBase_.setAttribute('fill', this.baseColor);
     this.frameHeader_.setAttribute('width', width);
     this.frameHeader_.setAttribute('height', height);
+    this.frameHeader_.setAttribute('fill', this.headerColor);
 
     if (isRtl) {
+      // In RTL the 0 x coordinate is on the right side of the block.
       this.frameClipRect_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameHeader_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
       this.frameBase_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
-      this.frameText_.setAttribute('x', -width + 2 * frameSizes.MARGIN_SIDE);
+      // The text should be on the right side of the header, placed so that the
+      // entire text is visible (hence the x-coordinate is -width). There is no need
+      // for a margin because there is padding around the block already, past the
+      // 0 coordinate.
+      this.frameText_?.setAttribute(
+        'x',
+        -this.frameText_?.getBoundingClientRect().width
+      );
     }
+  }
+}
+
+function getBaseColor(headerColor) {
+  // Add transparency
+  const baseColor = headerColor + '33';
+  // Check that string is a valid hex color with transparency
+  // '#' and eight characters 0-F
+  if (/^#[0-9A-F]{8}$/i.test(baseColor)) {
+    return baseColor;
+  } else {
+    return color.lightest_gray;
   }
 }

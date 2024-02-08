@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
-
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../../../utils/pegasus_markdown'
 require_relative '../markdown'
 
@@ -10,7 +9,7 @@ module I18n
   module Resources
     module Pegasus
       module Markdown
-        class SyncIn
+        class SyncIn < I18n::Utils::SyncInBase
           LOCALIZABLE_FILE_SUBPATHS = %w[
             public/athome.md.partial
             public/break.md.partial
@@ -37,13 +36,8 @@ module I18n
             views/hoc2022_explore_activities.md.partial
           ].freeze
 
-          def self.perform
-            new.execute
-          end
-
-          def execute
-            progress_bar.start
-
+          def process
+            progress_bar.total = LOCALIZABLE_FILE_SUBPATHS.size
             I18nScriptUtils.process_in_threads(LOCALIZABLE_FILE_SUBPATHS) do |file_subpath|
               origin_file_path = File.join(ORIGIN_DIR_PATH, file_subpath)
               next unless File.exist?(origin_file_path)
@@ -57,21 +51,6 @@ module I18n
             ensure
               mutex.synchronize {progress_bar.increment}
             end
-
-            progress_bar.finish
-          end
-
-          private
-
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              title: 'Pegasus/markdown sync-in',
-              total: LOCALIZABLE_FILE_SUBPATHS.size
-            )
-          end
-
-          def mutex
-            @mutex ||= Thread::Mutex.new
           end
         end
       end

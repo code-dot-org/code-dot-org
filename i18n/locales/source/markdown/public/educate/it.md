@@ -71,6 +71,7 @@ For the very best experience with all Code.org content, we recommend consulting 
 | Priority                                                                                 | URL                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Required**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
+| **To ensure CAPTCHA systems can distinguish your usage from automated fraudulent (“bot”) activity** | `https://www.google.com/recaptcha/api.js` |
 | **Optional**                                                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                               |
 | **To use YouTube hosted videos (Enhanced Privacy Mode)**                                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
 | **To use Code.org hosted videos**                                                        | `https://videos.code.org` |
@@ -101,7 +102,7 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

@@ -36,7 +36,6 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     end
 
     before do
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
       FileUtils.mkdir_p(crowdin_locale_dir)
     end
 
@@ -61,22 +60,6 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
 
       it 'does not move Crowdin files to the i18n locale dir' do
         expect_crowdin_files_to_i18n_locale_dir_moving.never
-        process_language
-      end
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization' do
-        expect_localization_distribution.never
-        process_language
-      end
-
-      it 'moves Crowdin files to the i18n locale dir' do
-        expect_crowdin_files_to_i18n_locale_dir_moving.once
         process_language
       end
     end
@@ -187,7 +170,8 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
 
       RedactRestoreUtils.expects(:restore).with(
         original_file_path, crowdin_file_path, crowdin_file_path, %w[resourceLink vocabularyDefinition]
-      ).once.returns(expected_i18n_data)
+      ).once
+      I18nScriptUtils.expects(:parse_file).with(crowdin_file_path).once.returns(expected_i18n_data)
 
       assert_equal expected_i18n_data, restore_file_content
     end

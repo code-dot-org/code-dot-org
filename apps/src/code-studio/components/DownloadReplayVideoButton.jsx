@@ -239,7 +239,10 @@ class DownloadReplayVideoButton extends React.Component {
   };
 
   shouldRenderButton() {
-    return this.props.channelId && this.hasReplayVideo();
+    // this is temporarily disabled until we decide for sure that we want to remove
+    // it entirely or re-enable it after making sure it's working properly.
+    return false;
+    // return this.props.channelId && this.hasReplayVideo();
   }
 
   render() {

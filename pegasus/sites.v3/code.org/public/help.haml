@@ -11,10 +11,10 @@ theme: responsive_full_width
     %h1=hoc_s(:help_page_top_heading)
     %p.body-one
       =hoc_s(:help_page_top_desc)
-    %div.content-wrapper.flex-container.justify-space-between.align-items-center.wrap-reverse{style: "margin-top: 4rem"}
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse{style: "margin-top: 4rem"}
       %figure.col-45
         %img.rounded-corners{src: "/images/help-page-top.png", alt: "", style: "position: relative; width: 100%;"}
-      .text-wrapper.col-50
+      .text-wrapper.col-50{style: "margin-top: -8px"}
         %h2=hoc_s(:help_page_top_subhead)
         %p=hoc_s(:help_page_top_desc_02)
         .button-wrapper{style: "margin-bottom: 1rem"}
@@ -27,7 +27,7 @@ theme: responsive_full_width
   .wrapper.centered
     %h2=hoc_s(:help_page_partners_heading)
     %p=hoc_s(:help_page_partners_desc)
-    .button-wrapper.flex-container.justify-center
+    .button-wrapper.centered
       %a.link-button{href: "/educate/regional-partner"}
         =hoc_s(:call_to_action_become_partner_usa)
       %a.link-button{href: "/international/apply"}

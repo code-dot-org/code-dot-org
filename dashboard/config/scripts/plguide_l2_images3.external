@@ -1,0 +1,17 @@
+name 'PLGuide_L2_Images3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Images Types
+
+## Assets 
+
+## Gifs
+
+## AI Generated
+
+## External Open-source Images
+
+## Images of Text 
+MARKDOWN
