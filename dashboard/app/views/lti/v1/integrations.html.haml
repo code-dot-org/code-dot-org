@@ -7,7 +7,7 @@
     .span10
       %p= t('lti.integration.form_instructions')
       %p
-        != I18n.t('lti.integration.form_instructions_2', install_instructions: SharedConstants::LMS_LINKS.INSTALL_INSTRUCTIONS, markdown: true)
+        != I18n.t('lti.integration.form_instructions_2', install_instructions: SharedConstants::LMS_LINKS.INSTALL_INSTRUCTIONS_URL, markdown: true)
     = form_with(url: :lti_v1_integrations, method: :post, class: "lti-integration-form") do |f|
       .row
         .span8

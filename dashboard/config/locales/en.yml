@@ -1423,7 +1423,7 @@ en:
       exists_header: "Looks like you're are already registered!"
       form_header: "Register Your LMS with Code.org"
       form_instructions: "Please use this form to register your Learning Management System (LMS) with Code.org. This will allow you to install our LTI integration on your LMS."
-      form_instructions_2: "Full guides for obtaining your LMS Client ID, using LMS/LTI integrations, and our list of supported Learning Management Systems [can be found here](%{lti_install_instructions})."
+      form_instructions_2: "Full guides for obtaining your LMS Client ID, using LMS/LTI integrations, and our list of supported Learning Management Systems [can be found here](%{install_instructions})."
       form_instructions_3: "Not seeing your LMS in our list, or running into issues with your installation? Check out our [guides](%{lms_guides}), or [contact us](%{contact_us}) for additional help"
       guide_instructions: "Full guides for installing and our LTI integration [can be found here](%{lms_guides}). Running into issues? Feel free to [contact us](%{contact_us}) for additional support."
       mailer_confirmation_subject: "Code.org has completed your LMS registration request"
