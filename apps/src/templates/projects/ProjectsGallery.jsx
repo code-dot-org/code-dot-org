@@ -6,7 +6,6 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {selectGallery} from './projectsRedux';
 import {connect} from 'react-redux';
 import {Galleries} from './projectConstants';
-import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
 import fontConstants from '@cdo/apps/fontConstants';
@@ -21,11 +20,6 @@ const galleryTabs = [
     key: Galleries.LIBRARIES,
     url: '/projects/libraries',
     headerText: i18n.myLibraries(),
-  },
-  {
-    key: Galleries.PUBLIC,
-    url: '/projects/public',
-    headerText: i18n.publicProjects(),
   },
 ];
 
@@ -65,9 +59,6 @@ class ProjectsGallery extends Component {
           <PersonalProjectsTable canShare={this.props.canShare} />
         )}
         {this.props.selectedGallery === Galleries.LIBRARIES && <LibraryTable />}
-        {this.props.selectedGallery === Galleries.PUBLIC && (
-          <PublicGallery limitedGallery={this.props.limitedGallery} />
-        )}
       </div>
     );
   }
