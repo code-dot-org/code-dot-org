@@ -16,12 +16,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const isWaitingForChatResponse = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
   );
-  const level = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.level
-  );
-  const scriptId = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.scriptId
-  );
 
   const showWaitingAnimation = () => {
     if (isWaitingForChatResponse) {
@@ -45,11 +39,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         {showWaitingAnimation()}
       </div>
       <div id="chat-workspace-editor" className={style.userChatMessageEditor}>
-        <UserChatMessageEditor
-          levelId={level?.Id}
-          isProjectBacked={isProjectBacked}
-          scriptId={scriptId}
-        />
+        <UserChatMessageEditor />
       </div>
     </div>
   );

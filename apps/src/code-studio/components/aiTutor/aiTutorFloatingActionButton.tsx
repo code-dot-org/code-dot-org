@@ -13,18 +13,7 @@ import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
  * toggling the AI Tutor Panel open and closed.
  */
 
-<<<<<<< HEAD
-interface AITutorFloatingActionButtonProps {
-  level: Level;
-  scriptId: number;
-}
-
-const AITutorFloatingActionButton: React.FunctionComponent<
-  AITutorFloatingActionButtonProps
-> = ({level, scriptId}) => {
-=======
 const AITutorFloatingActionButton: React.FunctionComponent = () => {
->>>>>>> eb-ai-tutor-container-components-to-typescript
   const store = getStore();
   const [isOpen, setIsOpen] = useState(false);
   const level = useSelector(
@@ -52,11 +41,7 @@ const AITutorFloatingActionButton: React.FunctionComponent = () => {
         type="button"
       />
       <Provider store={store}>
-<<<<<<< HEAD
-        <AITutorPanel level={level} open={isOpen} scriptId={scriptId} />
-=======
         <AITutorPanel open={isOpen} />
->>>>>>> eb-ai-tutor-container-components-to-typescript
       </Provider>
     </div>
   );
