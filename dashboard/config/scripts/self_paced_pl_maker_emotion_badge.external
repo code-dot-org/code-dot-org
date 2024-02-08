@@ -3,15 +3,19 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-<h2 style="text-align: center;">Emotion Badge</h2>
+# Emotion Badge
 
-<div style="text-align: center;">
-<p>
-Now you’re ready to code  <b>events</b> for the micro:bit.
-Ask your teacher for the micro:bit project link! </p>
-</div>
+<p style="font-size: 14pt;"> Follow allong witht the  <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22" target="_blank" style="color: #8C52BA;">lesson plan on page 22-24</a> from the course booklet. Practice the lesson and get comfortable coding <b>events</b> on your micro:bit</p>
+
+<br>
+
+#### Click on the image below to get started on the **Emotion Badge** lesson in MakeCode. 
+
+#### *Return to this course when you finish the lesson.* 
+
+<a href = "https://makecode.microbit.org/" target="_blank"><img src="https://images.code.org/f0ac453771c56b3f186fc3d40fc94af7-image-1702499895753.png" alt="microbit with a smiley face" width="335px" style="border-radius:5px; float:left; margin: 0 0 20px 300px;"></a>
 
 
-<img src="https://images.code.org/f0ac453771c56b3f186fc3d40fc94af7-image-1702499895753.png" style="display: block; margin: auto; width: 30%">
+
 
 MARKDOWN

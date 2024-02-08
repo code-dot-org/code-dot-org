@@ -763,6 +763,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.functionEditor?.getWorkspace();
   };
 
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = function () {
+    Blockly.getMainWorkspace().clear();
+    if (Blockly.getFunctionEditorWorkspace()) {
+      Blockly.getFunctionEditorWorkspace().clear();
+    }
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      Blockly.getHiddenDefinitionWorkspace().clear();
+    }
+  };
+
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);

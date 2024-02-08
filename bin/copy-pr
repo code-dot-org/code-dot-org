@@ -111,6 +111,9 @@ if check_gh_is_installed
   # Open the new PR in the web browser
   `gh pr view --web #{new_pr_number}`
 
+  puts "NOTE: Staging has drone.yml fixes and drone will not pass on your new PR until you merge staging into it. "
+  puts
+
   # Construct and print the new PR URL in bold
   new_pr_url = "https://github.com/code-dot-org/code-dot-org/pull/#{new_pr_number}"
   puts "\n\e[1mNew PR URL:\n#{new_pr_url}\e[0m"
