@@ -37,7 +37,6 @@
   "src/lib/kits/maker/WebSerialPortWrapper.js -> src/lib/kits/maker/util/boardUtils.js -> src/lib/kits/maker/WebSerialPortWrapper.js",
   "src/lib/kits/maker/dropletConfig.js -> src/dropletUtils.js -> src/StudioApp.js -> src/lib/kits/maker/dropletConfig.js",
   "src/lib/kits/maker/util/boardUtils.js -> src/lib/kits/maker/WebSerialPortWrapper.js -> src/lib/kits/maker/util/boardUtils.js",
-  "src/lib/tools/jsdebugger/redux.js -> src/lib/tools/jsinterpreter/JSInterpreter.js -> src/lib/tools/jsinterpreter/codegen.js -> src/dropletUtils.js -> src/StudioApp.js -> src/lib/tools/jsdebugger/redux.js",
   "src/netsim/NetSimLogEntry.js -> src/netsim/NetSimNodeFactory.js -> src/netsim/NetSimRouterNode.js -> src/netsim/NetSimLogEntry.js",
   "src/netsim/NetSimNodeFactory.js -> src/netsim/NetSimRouterNode.js -> src/netsim/NetSimLogEntry.js -> src/netsim/NetSimNodeFactory.js",
   "src/netsim/NetSimRouterNode.js -> src/netsim/NetSimLogEntry.js -> src/netsim/NetSimNodeFactory.js -> src/netsim/NetSimRouterNode.js",
