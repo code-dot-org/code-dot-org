@@ -1,8 +1,9 @@
 // Weblab2 view
 import React from 'react';
+import Weblab2Editor from './Weblab2Editor';
 
 const Weblab2View: React.FunctionComponent = () => {
-  return <div>Welcome to Web lab 2!</div>;
+  return <Weblab2Editor />;
 };
 
 export default Weblab2View;
