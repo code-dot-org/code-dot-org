@@ -1,5 +1,6 @@
 # Sending token usage to CloudWatch
 require 'cdo/aws/metrics'
+require 'csv'
 
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
@@ -361,6 +362,30 @@ class EvaluateRubricJob < ApplicationJob
     get_openai_params(lesson_s3_name, code)
   rescue Aws::S3::Errors::NoSuchKey => exception
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
+  end
+
+  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that the list
+  # of ai-enabled learning goals in the database equals the list of key
+  # concepts in the rubric in S3.
+  def validate_learning_goals
+    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
+      levels = level_to_lesson.keys
+      levels.each do |level_name|
+        level = Level.find_by_name!(level_name)
+        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
+        lesson = script_level.lesson
+        rubric = Rubric.find_by!(lesson: lesson, level: level)
+        db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal).sort
+
+        lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
+        rubric_rows = CSV.parse(read_file_from_s3(lesson_s3_name, 'standard_rubric.csv'), headers: true).map(&:to_h)
+        s3_learning_goals = rubric_rows.map {|row| row['Key Concept']}.sort
+
+        unless s3_learning_goals == db_learning_goals
+          raise "Learning goals in S3 do not match those in the database for lesson #{lesson_s3_name}.\nS3: #{s3_learning_goals.inspect}\nDB: #{db_learning_goals.inspect}"
+        end
+      end
+    end
   end
 
   private def get_openai_evaluations(openai_params)
