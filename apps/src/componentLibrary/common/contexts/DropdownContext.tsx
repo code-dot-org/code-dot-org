@@ -2,8 +2,11 @@ import React, {createContext, useContext, useState, ReactNode} from 'react';
 
 const DropdownContext = createContext({
   activeDropdownName: '',
+  /**
+   * This is a dummy function to satisfy the type checker
+   * */
   setActiveDropdownName: (name: string) => {
-    console.log(name);
+    return name as unknown as void;
   },
 });
 
