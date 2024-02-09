@@ -1208,7 +1208,7 @@ FirebaseStorage.previewSharedTable = function (
 };
 
 // Unsubscribe Firebase from a table
-// One
+// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.unsubscribeFromTable = function (tableName) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
@@ -1221,6 +1221,7 @@ FirebaseStorage.unsubscribeFromTable = function (tableName) {
   getColumnsRef(getProjectDatabase(), tableName).off();
 };
 
+// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.unsubscribeFromKeyValuePairs = function () {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   getPathRef(projectStorageRef, 'keys').off('value');

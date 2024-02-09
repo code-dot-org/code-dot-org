@@ -10,7 +10,7 @@ import {
   setLibraryManifest,
   updateTableList,
 } from '../redux/data';
-import {isDatablockStorage} from '../storage';
+import {isDatablockStorage,isFirebaseStorage} from '../storage';
 
 let lastView;
 let lastTableName;
@@ -40,9 +40,11 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
   
-  storage.unsubscribeFromKeyValuePairs();
-  if (oldTableName) {
-    storage.unsubscribeFromTable(oldTableName);
+  if (isFirebaseStorage()) {
+    storage.unsubscribeFromKeyValuePairs();
+    if (oldTableName) {
+      storage.unsubscribeFromTable(oldTableName);
+    }
   }
 
   switch (view) {

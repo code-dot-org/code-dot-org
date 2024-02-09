@@ -283,16 +283,6 @@ DatablockStorage.previewSharedTable = function (
   });
 };
 
-DatablockStorage.unsubscribeFromTable = function (tableName) {
-  // Used by FirebaseStorage, but we don't need it for DatablockStorage
-  // since we don't hold subscriptions.
-};
-
-DatablockStorage.unsubscribeFromKeyValuePairs = function () {
-  // Used by FirebaseStorage, but we don't need it for DatablockStorage
-  // since we don't hold subscriptions.
-};
-
 DatablockStorage.createTable = function (tableName, onSuccess, onError) {
   _fetch('create_table', 'POST', {
     table_name: tableName,

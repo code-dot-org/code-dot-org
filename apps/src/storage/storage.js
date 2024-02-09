@@ -10,6 +10,11 @@ export function isDatablockStorage() {
   return getStorageType() === DATABLOCK_STORAGE;
 }
 
+export function isFirebaseStorage() {
+  return getStorageType() === FIREBASE_STORAGE;
+}
+
+
 export function getStorageType() {
   return type;
 }
