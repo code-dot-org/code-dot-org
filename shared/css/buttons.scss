@@ -22,6 +22,20 @@
   }
 }
 
+.no-shadow-on-hover {
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.tight-layout {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-color: white;
+  color: #333;
+}
+
 .primary {
   @include button-with-color($orange);
 }
