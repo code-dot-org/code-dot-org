@@ -221,6 +221,12 @@ DatablockStorage.getTableNames = function () {
 
 // END DIFFERENCE BETWEEN FIREBASESTORAGE AND DATABLOCKSTORAGE //
 
+async function getColumnsForTable(tableName) {
+  const response = await _fetch('get_columns_for_table', 'GET', {table_name: tableName});
+  const json = await response.json();
+  return json;
+}
+
 function loadTableAndColumns({
   tableName,
   isSharedTable,
@@ -230,14 +236,18 @@ function loadTableAndColumns({
   readRecords({tableName, isSharedTable}).then(records => {
     console.log('Got a response from readRecords: ', records);
 
-    // FIXME: unfirebase, we are currently inferring the columns from the
-    // data values, but based on our schema, we should be loading them
-    // from DatablockStorageTables column columns.
-    console.warn(
-      'FIXME DatablockStorage.subscribeToTable: onColumnsChanged is not yet implemented to load from the SQL table'
-    );
-    const columnNames = new Set(records.flatMap(record => Object.keys(record)));
-    onColumnsChanged(Array.from(columnNames));
+    // We used to get columns by inferring them from the records:
+    //
+    // // FIXME: unfirebase, we are currently inferring the columns from the
+    // // data values, but based on our schema, we should be loading them
+    // // from DatablockStorageTables column columns.
+    // console.warn(
+    //   'FIXME DatablockStorage.subscribeToTable: onColumnsChanged is not yet implemented to load from the SQL table'
+    // );
+    // const columnNames = new Set(records.flatMap(record => Object.keys(record)));
+    // onColumnsChanged(Array.from(columnNames));
+
+    getColumnsForTable(tableName).then(onColumnsChanged)
 
     // DataTableView.getTableJson() expects an array of JSON strings
     // which it then parses as JSON, and then stringifies again 🙈
@@ -420,10 +430,7 @@ DatablockStorage.getLibraryManifest = function () {
 
 // returns an array of strings for each of the columns in the table
 DatablockStorage.getColumnsForTable = function (tableName, tableType) {
-  _fetch('get_columns_for_table', 'GET', {
-    table_name: tableName,
-  });
-  throw 'Not implemented yet';
+  return getColumnsForTable(tableName);
 };
 
 // @return {Promise<boolean>} whether the project channelID (configured at initFirebaseStorage) exists
