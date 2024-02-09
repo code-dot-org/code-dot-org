@@ -243,7 +243,9 @@ const ExpandedCurriculumCatalogCard = ({
                       ? i18n.quickViewDescription({
                           course_name: courseDisplayName,
                         })
-                      : i18n.tryNow()
+                      : i18n.tryCourseNow({
+                          course_name: courseDisplayName,
+                        })
                   }
                   text={
                     isTeacherOrSignedOut

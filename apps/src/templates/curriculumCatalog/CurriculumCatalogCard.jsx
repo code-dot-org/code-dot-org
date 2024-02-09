@@ -309,7 +309,9 @@ const CustomizableCurriculumCatalogCard = ({
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
                   href={pathToCourse}
-                  aria-label={i18n.tryNow()}
+                  aria-label={i18n.tryCourseNow({
+                    course_name: courseDisplayName,
+                  })}
                   text={i18n.tryNow()}
                   className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
                 />
