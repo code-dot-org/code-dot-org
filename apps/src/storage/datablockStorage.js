@@ -355,8 +355,6 @@ DatablockStorage.deleteColumn = function (
     table_name: tableName,
     column_name: columnName,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 DatablockStorage.renameColumn = function (
