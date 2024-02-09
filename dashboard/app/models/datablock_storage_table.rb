@@ -21,11 +21,6 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def create_records(record_jsons)
-
-    # FIXME: datablock/use-column-defs
-    # When we create a record, we need to check the Table.columns field, and see if
-    # we need to add new columns that are contained in the records but not in  Table.columns yet
-
     # BEGIN;
     DatablockStorageRecord.transaction do
       # channel_id_quoted = Record.connection.quote(params[:channel_id])
@@ -44,6 +39,7 @@ class DatablockStorageTable < ApplicationRecord
       max_record_id = DatablockStorageRecord.where(channel_id: channel_id, table_name: table_name).maximum(:record_id)
       next_record_id = (max_record_id || 0) + 1
 
+      cols_in_records = Set.new
       record_jsons.each do |record_json|
         # We write the record_id into the JSON as well as storing it in its own column
         # only create_record and update_record should be at risk of modifying this
@@ -52,8 +48,13 @@ class DatablockStorageTable < ApplicationRecord
         #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
         DatablockStorageRecord.create(channel_id: channel_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
 
+        cols_in_records.merge(record_json.keys)
         next_record_id += 1
       end
+
+      # Preserve the old column's order while adding any new columns
+      self.columns = columns + (cols_in_records - columns).to_a
+      save!
     end
     # COMMIT;
   end
