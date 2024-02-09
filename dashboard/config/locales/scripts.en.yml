@@ -10415,6 +10415,8 @@ en:
               name: Function Machines w Artist
             lesson-5:
               name: AI 3-5
+            lesson-7:
+              name: Hello Game Design
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
