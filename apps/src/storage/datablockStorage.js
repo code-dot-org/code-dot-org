@@ -164,7 +164,7 @@ async function getTableNames() {
   return await response.json();
 }
 
-// FIXME: unfirebase, this is only implemented in DatablockStorage
+// This is only called if isDatablockStorage()
 DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
@@ -188,7 +188,7 @@ function loadTableAndColumns({
     // which it then parses as JSON, and then stringifies again 🙈
     // see: https://github.com/code-dot-org/code-dot-org/blob/208ed1f6733ca2524cc91bdfa696ba98c3250f47/apps/src/storage/dataBrowser/DataTableView.jsx/#L89-L93
     //
-    // This is a relic of how our Firebase records were stored
+    // This is a relic of how our F*rebase records were stored
     // and a future improvement might be to optimize this.
     const recordStrings = records.map(record => JSON.stringify(record));
     onRecordsChanged(recordStrings);
@@ -350,19 +350,20 @@ DatablockStorage.getColumnsForTable = function (tableName, tableType) {
   return getColumnsForTable(tableName);
 };
 
-// @return {Promise<boolean>} whether the project channelID (configured at initFirebaseStorage) exists
+// @return {Promise<boolean>} whether the project channelID (configured at initF*rebaseStorage) exists
 DatablockStorage.channelExists = function () {
   return _fetch('channel_exists', 'GET', {});
 };
 
-// deletes the entire channel in firebase
+// deletes all datablock storage data for this channel,
 // used only one place, applab.js config.afterClearPuzzle()
 DatablockStorage.clearAllData = function (onSuccess, onError) {
   _fetch('clear_all_data', 'DELETE', {}).then(onSuccess, onError);
 };
 
+// FIXME: unfirebase, remove this before merging PR
 // Current tables are live updated, the data is NOT copied into
-// the student project, instead a new type of firebase node is created
+// the student project, instead a new type of f*rebase node is created
 // like /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/current_tables/Daily Weather
 // as opposed to a normal table that would be like
 // /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/storage/tables/Daily Weather
