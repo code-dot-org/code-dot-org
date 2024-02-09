@@ -346,8 +346,10 @@ DatablockStorage.getLibraryManifest = function () {
 };
 
 // returns an array of strings for each of the columns in the table
-DatablockStorage.getColumnsForTable = function (tableName, tableType) {
-  return getColumnsForTable(tableName);
+// Note this diverges a little from the F*rebase version, which takes a tableType param
+// which we do not need since we implement this on the backend.
+DatablockStorage.getColumnsForTable = function (tableName) {
+  return getColumnsForTable({tableName});
 };
 
 // @return {Promise<boolean>} whether the project channelID (configured at initF*rebaseStorage) exists
