@@ -375,23 +375,29 @@ class EvaluateRubricJob < ApplicationJob
         level = Level.find_by_name!(level_name)
         script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
         lesson = script_level.lesson
-
-        # find db learning goals
         rubric = Rubric.find_by!(lesson: lesson, level: level)
-        db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal).sort
-
-        # find s3 learning goals
-        lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
-        rubric_rows = CSV.parse(read_file_from_s3(lesson_s3_name, 'standard_rubric.csv'), headers: true).map(&:to_h)
-        s3_learning_goals = rubric_rows.map {|row| row['Key Concept']}.sort
-
-        missing_learning_goals = db_learning_goals - s3_learning_goals
-        if missing_learning_goals.any?
-          raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
-        end
+        validate_learning_goals_for_rubric(rubric)
       rescue StandardError => exception
         raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
       end
+    end
+  end
+
+  def validate_learning_goals_for_rubric(rubric)
+    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
+
+    # find db learning goals
+    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal).sort
+
+    # find s3 learning goals
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    s3_learning_goals = rubric_rows.map {|row| row['Key Concept']}.sort
+
+    # report missing learning goals
+    missing_learning_goals = db_learning_goals - s3_learning_goals
+    if missing_learning_goals.any?
+      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
   end
 
