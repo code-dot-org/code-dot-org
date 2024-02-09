@@ -425,7 +425,6 @@ DatablockStorage.channelExists = function () {
 // used only one place, applab.js config.afterClearPuzzle()
 DatablockStorage.clearAllData = function (onSuccess, onError) {
   _fetch('clear_all_data', 'DELETE', {}).then(onSuccess, onError);
-  throw 'Not implemented yet';
 };
 
 // Current tables are live updated, the data is NOT copied into
@@ -444,15 +443,15 @@ DatablockStorage.addCurrentTableToProject = function (
   _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
-  throw 'Not implemented yet';
 };
 
 // Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
 DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
+  // We don't differentiate between static and current shared tables
+  // they are both just pointers to the 'shared' channel's tables.
   _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
-  throw 'Not implemented yet';
 };
 
 /* TESTING RELATED FUNCTIONS */
