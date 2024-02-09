@@ -232,6 +232,7 @@ export default class CoreLibrary {
   }
 
   addVariableBubble(name, location) {
+    // TODO: Handle collisions with existing variable bubbles
     this.variableBubbles.push({
       name,
       location,
