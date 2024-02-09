@@ -34,6 +34,9 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
   require 'pdf/conversion'
   url = "#{base_url}#{pdf_conversion_info.url_path}"
 
+  puts pdf_conversion_info.output_pdf_path
+  puts "inside generate_pdf_file"
+
   begin
     PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
   rescue Exception => exception
