@@ -1,0 +1,40 @@
+name 'self-paced-pl-microbit_create_classroom_MakeCode'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# micro:bit Classroom
+
+#### Organizing your students’ code and lessons is simple with micro:bit’s classroom feature. 
+
+#### Setting up a classroom allows you to easily transfer starter code to your students, look at what your students are working on, and keep your class projects organized. 
+
+<img src="https://images.code.org/3643dad9f52c859b08241f2e9bfe0e7b-image-1707320963106.png" alt="micro:bit logo" width="250px" style="border-radius:10px; float:right; margin: 0 40px 40px 20px;">
+
+## Key features of micro:bit classroom: 
+- #### Free of charge 
+- #### No logins, registration, or passwords needed for teachers or students 
+- #### Set starter code for your students
+- #### View students’ code from your computer in real time 
+- #### Download a snapshot of all students’ code at any time as a Word document 
+- #### Save the whole lesson as a single file so you can resume it at a later date
+- #### Keep control of all your students’ data
+
+---
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 0px 0px;">
+
+<p style="font-size: 14pt; font-weight: bold;"> Watch  <a href="https://www.youtube.com/watch?v=QD8kpuSC0Vc" target="_blank" style="color: #8C52BA;">this video </a> to learn more about navigating micro:bit classroom. </p>
+
+
+<br>
+
+<p style="font-size: 14pt; font-weight: bold;"> Spend some time exploring  <a href="https://classroom.microbit.org/" target="_blank" style="color: #8C52BA;"> micro:bit classroom </a> and think about how you will use it in your class. 
+
+
+#### *Return to this module when you have finished exploring.* 
+
+
+
+![]()
+MARKDOWN

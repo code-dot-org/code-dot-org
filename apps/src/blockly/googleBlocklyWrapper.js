@@ -69,6 +69,9 @@ import {
   reflowToolbox,
 } from './eventHandlers';
 import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
+import {getStore} from '@cdo/apps/redux';
+import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 
 const options = {
   contextMenu: true,
@@ -160,13 +163,28 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    let workspaceCode = Blockly.JavaScript.workspaceToCode(
-      Blockly.mainBlockSpace
-    );
-    if (this.getHiddenDefinitionWorkspace()) {
-      workspaceCode += Blockly.JavaScript.workspaceToCode(
-        this.getHiddenDefinitionWorkspace()
+    let workspaceCode = '';
+    try {
+      workspaceCode = Blockly.JavaScript.workspaceToCode(
+        Blockly.mainBlockSpace
       );
+      if (this.getHiddenDefinitionWorkspace()) {
+        workspaceCode += Blockly.JavaScript.workspaceToCode(
+          this.getHiddenDefinitionWorkspace()
+        );
+      }
+      getStore().dispatch(setFailedToGenerateCode(false));
+    } catch (e) {
+      // We only want to log the error once per failure since getWorkspaceCode
+      // gets called many times and the error will be the same every time.
+      if (!getStore().getState().blockly.failedToGenerateCode) {
+        getStore().dispatch(setFailedToGenerateCode(true));
+        MetricsReporter.logError({
+          event: 'BLOCKLY_GET_CODE_ERROR',
+          errorMessage: e.message,
+          stackTrace: e.stack,
+        });
+      }
     }
     return workspaceCode;
   };
@@ -761,6 +779,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getFunctionEditorWorkspace = function () {
     return blocklyWrapper.functionEditor?.getWorkspace();
+  };
+
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = function () {
+    Blockly.getMainWorkspace().clear();
+    if (Blockly.getFunctionEditorWorkspace()) {
+      Blockly.getFunctionEditorWorkspace().clear();
+    }
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      Blockly.getHiddenDefinitionWorkspace().clear();
+    }
   };
 
   initializeBlocklyXml(blocklyWrapper);

@@ -48,6 +48,14 @@ function ExpandedProgressDataColumn({
     [levelProgressByStudent, sortedStudents, lesson]
   );
 
+  const getExpandedChoiceLevel = React.useCallback(
+    level => [
+      getSingleLevelColumn(level, {expandedChoiceLevel: true}),
+      ...level.sublevels.map(sublevel => getSingleLevelColumn(sublevel)),
+    ],
+    [getSingleLevelColumn]
+  );
+
   const progress = React.useMemo(
     () => (
       <div className={styles.expandedTable}>
@@ -56,18 +64,13 @@ function ExpandedProgressDataColumn({
             level.sublevels?.length > 0 &&
             expandedChoiceLevels.includes(level.id)
           ) {
-            return [
-              getSingleLevelColumn(level, {overrideIcon: 'split'}),
-              ...level.sublevels.map(sublevel =>
-                getSingleLevelColumn(sublevel)
-              ),
-            ];
+            return getExpandedChoiceLevel(level);
           }
           return [getSingleLevelColumn(level)];
         })}
       </div>
     ),
-    [lesson, expandedChoiceLevels, getSingleLevelColumn]
+    [lesson, expandedChoiceLevels, getSingleLevelColumn, getExpandedChoiceLevel]
   );
 
   return (

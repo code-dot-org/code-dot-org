@@ -1,0 +1,57 @@
+name 'self-paced-pl-microbit_teaching_best_practices'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Best Practices for Teaching with micro:bit
+
+#### Physical computing is a fun and hands-on way to engage students in coding, however, there are some things to consider to make sure your lessons run smoothly. 
+
+
+
+## Organization/set up tips
+
+<img src="https://images.code.org/8c5598c604dc9e7a0e4edcf01d5b7244-image-1707322034881.png" alt="storage container for micro:bit" width="250px" style="border-radius:10px; float:right; margin: 0 40px 80px 40px;">
+
+- #### Labeling the micro:bit is a simple way to assign them to people and count them in and out.
+
+- #### Use the original anti-static pouch to store the micro:bits to protect the device.
+
+- #### Remind students to be gentle when handling their micro:bit. Only handle the  micro:bit by its edges and avoid touching the components when the power is running.
+
+- #### To store multiple micro:bits, there exists a multitude of creative options. Containers can be purchased from a supermarket  perfect to store micro:bits, batteries, cases, USB leads and peripherals like speakers and all-important stickers!
+---
+
+
+<img src="https://images.code.org/f97e7a0677c60156fdd380843c4fc2ea-image-1707322374547.png" alt="micro:bit on a shoe with a one on it" width="250px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
+
+## Relate to familiar concepts 
+
+
+
+- #### Use everyday examples to explain the concepts of inputs and outputs in a way that is relatable to their experiences
+
+- #### Review coding concepts like events and loops that have been learned in class and remind students that these concepts carry over to help them code their micro:bits. 
+
+- #### Provide a real-world context or scenario where the micro:bit can be used. For example, creating a temperature sensor to measure the weather or a step counter for fitness.
+
+<br>
+
+---
+
+<img src="https://images.code.org/613d33bfaf85b3d47b95e2ad96c84c8d-image-1707323049639.png" alt="students holding a micro:bit" width="250px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
+
+## No validation - push the creativity 
+- #### Unlike some of the coding levels on the Code.org platform, MakeCode does not have validation to “pass.” 
+- #### Encourage students to be creative and explore the possibilities. 
+- #### Celebrate perserverance and trying new things, even if it doesn't always work.
+
+<br>
+
+---
+
+## Discussion/ Share out
+- #### Enrich students’ experience with physical computing by building in discussion and sharing amongst students. Students can share or demo their projects, discuss what was easy/challenging and what they liked best about the experience. 
+
+
+MARKDOWN

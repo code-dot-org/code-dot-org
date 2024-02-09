@@ -227,14 +227,15 @@ $level-cell-width: 52;
 
 .sortDropdown {
   height: 76px;
-  overflow-x: hidden;
+  width: fit-content;
 }
-
 
 .studentColumn {
   width: 195px;
   min-width: 195px;
   margin-right: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .pointerMouse {
