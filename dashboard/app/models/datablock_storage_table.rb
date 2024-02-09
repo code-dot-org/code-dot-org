@@ -74,6 +74,12 @@ class DatablockStorageTable < ApplicationRecord
     return record_json
   end
 
+  def import_csv(table_data_csv)
+    records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
+    create_records(records)
+  end
+
+
   def delete_column(column_name)
     records.each do |record|
       record.record_json.delete(column_name)

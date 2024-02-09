@@ -175,9 +175,9 @@ class DatablockStorageController < ApplicationController
   end
 
   def import_csv
-    records = CSV.parse(params[:table_data_csv], headers: true).map(&:to_h)
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
-    table.create_records(records)
+    table.import_csv(params[:table_data_csv])
+    table.save!
 
     render json: true
   end
