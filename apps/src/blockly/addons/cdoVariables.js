@@ -33,9 +33,11 @@ export default function initializeVariables(blocklyWrapper) {
   // Add serialization hooks to allow these blocks to be hidden on the
   // hidden definition workspace. Previously they were used to pre-populate
   // variable dropdown blocks in the toolbox.
-  blocklyWrapper.customBlocks.addSerializationHooksToBlock(
-    blocklyWrapper.Blocks.variables_get
-  );
+  if (blocklyWrapper.Blocks.variables_get) {
+    blocklyWrapper.customBlocks.addSerializationHooksToBlock(
+      blocklyWrapper.Blocks.variables_get
+    );
+  }
 
   /**
    * Note: We should be able to remove this post-migration: https://codedotorg.atlassian.net/browse/CT-215
