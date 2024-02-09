@@ -91,4 +91,26 @@ class DatablockStorageTable < ApplicationRecord
     # Second rename the column in the table definition
     self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
   end
+
+  def _coerce_type(value, column_type)
+    case column_type
+    when 'string'
+      value.to_s
+    when 'number'
+      value.to_f
+    when 'boolean'
+      value.to_b
+    end
+  end
+
+  def coerce_column(column_name, column_type)
+    unless ['string', 'number', 'boolean'].include? column_type
+      raise "column_type must be one of: string, number, boolean"
+    end
+
+    records.each do |record|
+      # column type is one of: string, number, boolean, date
+      record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
+    end
+  end
 end
