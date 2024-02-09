@@ -232,8 +232,6 @@ export default class CoreLibrary {
   }
 
   addVariableBubble(name, location) {
-    console.log('adding variable bubble');
-    // TODO: Ideally we would use Blockly's variable ID here and not a UUID
     this.variableBubbles.push({
       name,
       location,
