@@ -21,6 +21,26 @@ class DatablockStorageTable < ApplicationRecord
     DatablockStorageTable.create!(channel_id: channel_id, table_name: table_name, is_shared_table: true)
   end
 
+  # This would require MySQL option MULTI_STATEMENTS set on the connection, which
+  # has lots of pitfalls and isn't particularly well supported with the mysql2 gem
+  # See: https://github.com/rails/rails/issues/31569
+  #
+  # def create_record_one_round_trip
+  #   channel_id_quoted = Record.connection.quote(params[:channel_id])
+  #   table_name_quoted = Record.connection.quote(params[:table_name])
+  #   json_quoted  = Record.connection.quote JSON.parse params[:json]
+  #   record_json = Record.find_by_sql(<<-SQL
+  #     BEGIN;
+  #       SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} LIMIT 1 FOR UPDATE;
+  #       SELECT @id := IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted};
+  #       INSERT INTO #{Record.table_name} VALUES (#{channel_id_quoted}, #{table_name_quoted}, @id, #{json_quoted}});
+  #     END;
+  #     SELECT * FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} AND record_id=@id;
+  #   SQL)
+
+  #   render json: record_json
+  # end
+
   def create_records(record_jsons)
     # BEGIN;
     DatablockStorageRecord.transaction do

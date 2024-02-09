@@ -25,50 +25,15 @@ class DatablockStorageController < ApplicationController
   end
 
   def create_record
-    # FIXME: the current approach does a number of round-trips,
-    # but our original was a single SQL block with no round-trips
-    # So even though our current code sort-of looks similar, it may
-    # be significantly slower, requiring multiple trips to the DB.
-    # Can we rewrite it to be a single-trip, as it was designed for?
-
-    # Here's the SQL block we have to replicate:
-    #
-    # BEGIN;
-    #   SELECT MIN(record_id) FROM unfirebase.records WHERE channel_id='shared' AND table_name='words' LIMIT 1 FOR UPDATE;
-    #   SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
-
-    #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
-    # COMMIT;
-
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
     record_json = JSON.parse params[:record_json]
 
-    table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
+    table = table_or_create
     table.create_records [record_json]
     table.save!
 
     render json: record_json
   end
-
-  # This would require MySQL option MULTI_STATEMENTS set on the connection, which
-  # has lots of pitfalls and isn't particularly well supported with the mysql2 gem
-  # See: https://github.com/rails/rails/issues/31569
-  #
-  # def create_record_one_round_trip
-  #   channel_id_quoted = Record.connection.quote(params[:channel_id])
-  #   table_name_quoted = Record.connection.quote(params[:table_name])
-  #   json_quoted  = Record.connection.quote JSON.parse params[:json]
-  #   record_json = Record.find_by_sql(<<-SQL
-  #     BEGIN;
-  #       SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} LIMIT 1 FOR UPDATE;
-  #       SELECT @id := IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted};
-  #       INSERT INTO #{Record.table_name} VALUES (#{channel_id_quoted}, #{table_name_quoted}, @id, #{json_quoted}});
-  #     END;
-  #     SELECT * FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} AND record_id=@id;
-  #   SQL)
-
-  #   render json: record_json
-  # end
 
   def read_records
     channel_id = params[:is_shared_table] == 'true' ? 'shared' : params[:channel_id]
@@ -85,7 +50,7 @@ class DatablockStorageController < ApplicationController
   def update_record
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
 
-    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    table = find_table
     record_json = table.update_record params[:record_id], JSON.parse(params[:record_json])
     table.save!
 
@@ -117,17 +82,14 @@ class DatablockStorageController < ApplicationController
   #### METHODS USED BY THE DATASET BROWSER FOR CREATING/MANIUPULATING DATA ####
 
   def create_table
-    table_name = params[:table_name]
-    table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
-    table.save!
+    table_or_create
 
     render json: true
   end
 
   def delete_table
-    table_name = params[:table_name]
-    DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).delete_all
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).delete_all
+    where_table.delete_all
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).delete_all
 
     render json: true
   end
@@ -140,7 +102,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def add_column
-    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    table = find_table
     table.add_column params[:column_name]
     table.save!
 
@@ -148,7 +110,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def delete_column
-    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    table = find_table
     table.delete_column params[:column_name]
     table.save!
 
@@ -156,7 +118,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def rename_column
-    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    table = find_table
     table.rename_column params[:old_column_name], params[:new_column_name]
     table.save!
 
@@ -164,7 +126,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def coerce_column
-    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    table = find_table
     table.coerce_column params[:column_name], params[:column_type]
     table.save!
 
@@ -172,7 +134,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def import_csv
-    table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
+    table = table_or_create
     table.import_csv params[:table_data_csv]
     table.save!
 
@@ -203,7 +165,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def get_columns_for_table
-    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    table = find_table
     render json: table.columns
   end
 
@@ -230,6 +192,18 @@ class DatablockStorageController < ApplicationController
   end
 
   private
+
+  def find_table
+    DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+  end
+
+  def where_table
+    DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name])
+  end
+
+  def table_or_create
+    where_table.first_or_create
+  end
 
   def validate_channel_id
     # FIXME: make sure that the channel_id refers to an applab or weblab project
