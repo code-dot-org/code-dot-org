@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
@@ -67,16 +67,12 @@ export default function RubricSettings({
   const rubricId = rubric.id;
   const {lesson} = rubric;
   const [csrfToken, setCsrfToken] = useState('');
-  const polling = useMemo(
-    () => statusAll === STATUS_ALL.EVALUATION_PENDING,
-    [statusAll]
-  );
   const [statusAll, setStatusAll] = useState(STATUS_ALL.INITIAL_LOAD);
   const [unevaluatedCount, setUnevaluatedCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
   const [evaluatedCount, setEvaluatedCount] = useState(0);
   const [displayDetails, setDisplayDetails] = useState(false);
-
+  const polling = statusAll === STATUS_ALL.EVALUATION_PENDING;
   const statusAllText = () => {
     switch (statusAll) {
       case STATUS_ALL.INITIAL_LOAD:
