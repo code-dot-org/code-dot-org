@@ -234,19 +234,6 @@ function loadTableAndColumns({
   onRecordsChanged,
 }) {
   readRecords({tableName, isSharedTable}).then(records => {
-    console.log('Got a response from readRecords: ', records);
-
-    // We used to get columns by inferring them from the records:
-    //
-    // // FIXME: unfirebase, we are currently inferring the columns from the
-    // // data values, but based on our schema, we should be loading them
-    // // from DatablockStorageTables column columns.
-    // console.warn(
-    //   'FIXME DatablockStorage.subscribeToTable: onColumnsChanged is not yet implemented to load from the SQL table'
-    // );
-    // const columnNames = new Set(records.flatMap(record => Object.keys(record)));
-    // onColumnsChanged(Array.from(columnNames));
-
     getColumnsForTable(tableName).then(onColumnsChanged)
 
     // DataTableView.getTableJson() expects an array of JSON strings
