@@ -28,9 +28,8 @@ module Api::V1::Pd
           apps = apps.where(regional_partner_id: regional_partner_value)
         end
 
-        #apps_statuses = apps.select(:status, "count(id) AS total").group(:status)
-        apps_statuses = apps.map(&:status_including_enrolled).tally
-        apps_statuses.each do |status, total|
+        apps_statuses = apps&.map(&:status_including_enrolled)&.tally
+        apps_statuses&.each do |status, total|
           application_data[role][status] = {total: total}
         end
       end
