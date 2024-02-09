@@ -624,10 +624,11 @@ module SharedConstants
   EMAIL_LINKS = OpenStruct.new(
     {
       PRIVACY_POLICY_URL: "https://code.org/privacy",
+      CONTACT_US_URL: "https://code.org/contact",
       TOS_URL: "https://code.org/tos",
       STUDENT_PRIVACY_PLEDGE_URL: "https://studentprivacypledge.org/signatories/",
       COMMON_SENSE_MEDIA_URL: "https://privacy.commonsense.org/evaluation/code.org",
-      CDO_SUPPORT_MAILTO: "mailto:support@code.org"
+      CDO_SUPPORT_MAILTO: "mailto:support@code.org",
     }
   ).freeze
 
@@ -642,6 +643,13 @@ module SharedConstants
   CENSUS_CONSTANTS = OpenStruct.new(
     {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
   )
+
+  LMS_LINKS = OpenStruct.new(
+    {
+      INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
+      INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
+    }
+  ).freeze
 
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
