@@ -395,17 +395,15 @@ DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
  * @returns {Promise} which resolves when all table data has been written
  */
 DatablockStorage.populateTable = function (jsonData) {
-  _fetch('populate_tables', 'POST', {
-    tables_json: jsonData,
+  _fetch('populate_tables', 'PUT', {
+    tables_json: JSON.stringify(jsonData),
   });
-  throw 'Not implemented yet';
 };
 
 DatablockStorage.populateKeyValue = function (jsonData, onSuccess, onError) {
-  _fetch('populate_key_values', 'POST', {
-    key_values_json: jsonData,
+  _fetch('populate_key_values', 'PUT', {
+    key_values_json: JSON.stringify(jsonData),
   }).then(onSuccess, onError);
-  throw 'Not implemented yet';
 };
 
 // gets a list of all the shared or current tables available in the data browser
