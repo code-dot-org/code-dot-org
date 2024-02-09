@@ -138,7 +138,9 @@ DatablockStorage.updateRecord = function (
     table_name: tableName,
     record_id: record.id,
     record_json: JSON.stringify(record),
-  }).then(onSuccess, onError);
+  }).then((record) => {
+    onSuccess(record, !!record)
+  }, onError);
 };
 
 /**

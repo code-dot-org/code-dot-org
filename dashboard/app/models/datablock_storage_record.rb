@@ -13,5 +13,8 @@
 #
 class DatablockStorageRecord < ApplicationRecord
   self.primary_keys = :channel_id, :table_name, :record_id
-  belongs_to :table, class_name: 'DatablockStorageTable', foreign_key: [:channel_id, :table_name]
+
+  # Enabling this was adding an extra `SELECT `datablock_storage_tables`.*` query to update_record
+  # and we aren't using it, soooo...
+  # belongs_to :table, class_name: 'DatablockStorageTable', foreign_key: [:channel_id, :table_name]
 end

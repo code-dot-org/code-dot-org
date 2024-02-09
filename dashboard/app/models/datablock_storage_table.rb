@@ -60,6 +60,20 @@ class DatablockStorageTable < ApplicationRecord
     # COMMIT;
   end
 
+  def update_record(record_id, record_json)
+    record = records.find_by(record_id: record_id)
+    return unless record
+
+    record_json['id'] = record_id.to_i
+    record.record_json = record_json
+    record.save!
+
+    # update the table columns with any new JSON fields
+    self.columns += (record_json.keys.to_set - columns).to_a
+
+    return record_json
+  end
+
   def delete_column(column_name)
     records.each do |record|
       record.record_json.delete(column_name)

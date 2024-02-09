@@ -85,22 +85,10 @@ class DatablockStorageController < ApplicationController
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
 
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    record_json = table.update_record(params[:record_id], JSON.parse(params[:record_json]))
+    table.save!
 
-    record = DatablockStorageRecord.find_by(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id])
-    if record
-      record_json = JSON.parse params[:record_json]
-      record_json['id'] = params[:record_id].to_i
-      record.record_json = record_json
-      record.save!
-
-      # update the table columns with any new JSON fields
-      table.columns += (record_json.keys.to_set - table.columns).to_a
-      table.save!
-
-      render json: record_json
-    else
-      render json: nil
-    end
+    render json: record_json
   end
 
   def delete_record
