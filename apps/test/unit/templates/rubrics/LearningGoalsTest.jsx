@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
