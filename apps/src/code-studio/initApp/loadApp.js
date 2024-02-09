@@ -2,6 +2,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore} from '../redux';
+
+// this header import is not actually needed in this file, but it -is- needed from a load order
+// perspective to be imported -before- project.js
+import header from '@cdo/apps/code-studio/header'; // eslint-disable-line
+
 import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
