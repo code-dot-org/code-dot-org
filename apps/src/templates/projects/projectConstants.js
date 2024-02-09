@@ -48,7 +48,7 @@ export const featuredProjectTableTypes = {
   archived: 'archivedUnfeatured',
 };
 
-export const MAX_PROJECTS_PER_CATEGORY = 100;
+export const MAX_PROJECTS_PER_CATEGORY = 5;
 
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.

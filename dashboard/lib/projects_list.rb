@@ -2,7 +2,7 @@ require_relative '../legacy/middleware/helpers/user_helpers'
 
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
-  MAX_LIMIT = 100
+  MAX_LIMIT = 10
 
   # A hash map from project group name to a list of publishable project types in
   # that group.
@@ -10,13 +10,8 @@ module ProjectsList
     applab: ['applab'],
     gamelab: ['gamelab'],
     spritelab: ['spritelab', 'thebadguys'],
-    playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
-    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
-    events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
-    k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
-    poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab']
   }.freeze
 
@@ -112,24 +107,25 @@ module ProjectsList
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before: nil)
+    def fetch_featured_projects(project_group, limit:, published_before: nil)
+      puts "FETCH_FEATURED_PROJECTS #{project_group} #{limit} #{published_before}"
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_group == 'all'
+        puts "FETCHING FEATURED PROJECTS FOR ALL PROJECT TYPES"
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
         return include_featured(limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
+      puts "CALLING ON FETCH_PUBLISHED_PROJECT_TYPES #{project_group}"
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
     def include_featured(limit:)
+      puts "INCLUDE_FEATURED"
       published = fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
       featured = fetch_featured_published_projects
-      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
-        featured[project_type].push(published[project_type]).flatten!.uniq!
-      end
       return featured
     end
 
@@ -223,6 +219,7 @@ module ProjectsList
     end
 
     def fetch_featured_projects_by_type(project_type)
+      puts "FETCHING FEATURED PROJECTS BY TYPE #{project_type}"
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
@@ -327,6 +324,7 @@ module ProjectsList
     end
 
     def fetch_published_project_types(project_groups, limit:, published_before: nil)
+      puts "FETCHING PUBLISHED PROJECTS FOR #{project_groups}"
       users = "dashboard_#{CDO.rack_env}__users".to_sym
 
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym

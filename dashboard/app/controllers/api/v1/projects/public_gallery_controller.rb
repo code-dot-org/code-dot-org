@@ -5,7 +5,7 @@ class Api::V1::Projects::PublicGalleryController < ApplicationController
       expires_in 5.seconds, public: true # cache
     end
 
-    render json: ProjectsList.fetch_published_projects(
+    render json: ProjectsList.fetch_featured_projects(
       params[:project_type],
       limit: params[:limit],
       published_before: params[:published_before],
