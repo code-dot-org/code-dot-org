@@ -11,7 +11,7 @@
 #
 class DatablockStorageTable < ApplicationRecord
   self.primary_keys = :channel_id, :table_name
-  has_many :records, class_name: 'DatablockStorageRecord', foreign_key: [:channel_id, :table_name]
+  has_many :records, autosave: true, class_name: 'DatablockStorageRecord', foreign_key: [:channel_id, :table_name]
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
   def self.add_shared_table(channel_id, table_name)
@@ -58,5 +58,15 @@ class DatablockStorageTable < ApplicationRecord
       save!
     end
     # COMMIT;
+  end
+
+  def rename_column(old_column_name, new_column_name)
+    # First rename the column in all the JSON records
+    records.each do |record|
+      record.record_json[new_column_name] = record.record_json.delete(old_column_name)
+    end
+
+    # Second rename the column in the table definition
+    self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
   end
 end
