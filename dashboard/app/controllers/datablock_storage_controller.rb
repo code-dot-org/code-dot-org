@@ -92,7 +92,7 @@ class DatablockStorageController < ApplicationController
 
   def get_table_names
     # SELECT DISTINCT table_name FROM datablock_storage_records WHERE channel_id='{params[:channel_id]}';
-    render json: DatablockStorageRecord.where(channel_id: params[:channel_id]).select(:table_name).distinct.pluck(:table_name)
+    render json: DatablockStorageTable.where(channel_id: params[:channel_id]).pluck(:table_name)
   end
 
   def populate_tables
