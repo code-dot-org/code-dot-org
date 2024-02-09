@@ -90,6 +90,10 @@
 -# rubocop:enable CustomCops/DashboardDbUsage
 
 :javascript
+  // Set up userHeaderEventLogger.js
+  const setupLoggerEvent = document.createEvent('Event');
+  setupLoggerEvent.initEvent('setupUserHeaderEventLogger', true, true);
+  document.dispatchEvent(setupLoggerEvent);
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
   // Use function closure to avoid cluttering global namespace.
   (function() {
@@ -157,10 +161,6 @@
           } catch (e) {}
         }
       });
-      // Set up userHeaderEventLogger.js
-      const setupLoggerEvent = document.createEvent('Event');
-      setupLoggerEvent.initEvent('setupUserHeaderEventLogger', true, true);
-      document.dispatchEvent(setupLoggerEvent);
     });
 
     function hideCreateOptions() {
