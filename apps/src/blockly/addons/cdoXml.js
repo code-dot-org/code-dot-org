@@ -398,7 +398,7 @@ function processBlockAndChildren(block) {
  * Perform any need manipulations for a given XML block element.
  * @param {Element} block - The XML element for a single block.
  */
-function processIndividualBlock(block) {
+export function processIndividualBlock(block) {
   addNameToBlockFunctionCallBlock(block);
   addMissingBehaviorId(block);
   addMutationToBehaviorBlocks(block);
