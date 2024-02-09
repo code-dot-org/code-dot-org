@@ -3,7 +3,9 @@ class DatablockStorageController < ApplicationController
   before_action :validate_channel_id
   before_action :authenticate_user!
 
-  # GET /datasets
+  ##########################################################
+  #   Debug View                                           #
+  ##########################################################
   def index
     @project = Project.find_by_channel_id(params[:channel_id])
     @key_value_pairs = DatablockStorageKvp.where(channel_id: params[:channel_id])
@@ -12,10 +14,9 @@ class DatablockStorageController < ApplicationController
     puts "####################################################"
   end
 
-  def get_key_value
-    kvp = DatablockStorageKvp.find_by(channel_id: params[:channel_id], key: params[:key])
-    render json: kvp ? JSON.parse(kvp.value).to_json : nil
-  end
+  ##########################################################
+  #   Key-Value-Pair API                                   #
+  ##########################################################
 
   def set_key_value
     raise "value must be less than 4096 bytes" if params[:value].length > 4096
@@ -23,6 +24,127 @@ class DatablockStorageController < ApplicationController
     DatablockStorageKvp.set_kvp params[:channel_id], params[:key], value
     render json: {key: params[:key], value: value}
   end
+
+  def get_key_value
+    kvp = DatablockStorageKvp.find_by(channel_id: params[:channel_id], key: params[:key])
+    render json: kvp ? JSON.parse(kvp.value).to_json : nil
+  end
+
+  def delete_key_value
+    key = params[:key]
+    DatablockStorageKvp.where(channel_id: params[:channel_id], key: key).delete_all
+
+    render json: true
+  end
+
+  def get_key_values
+    # SELECT key, value FROM datablock_storage_kvps WHERE channel_id='{params[:channel_id]}';
+    kvps = DatablockStorageKvp.
+      where(channel_id: params[:channel_id]).
+      select(:key, :value).
+      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
+
+    render json: kvps
+  end
+
+  def populate_key_values
+    key_values_json = JSON.parse params[:key_values_json]
+    raise "key_values_json must be a hash" unless key_values_json.is_a? Hash
+    DatablockStorageKvp.set_kvps(params[:channel_id], key_values_json)
+    render json: true
+  end
+
+  ##########################################################
+  #   Table API                                            #
+  ##########################################################
+
+  def create_table
+    table_or_create
+
+    render json: true
+  end
+
+  def add_shared_table
+    DatablockStorageTable.add_shared_table params[:channel_id], params[:table_name]
+  end
+
+  def import_csv
+    table = table_or_create
+    table.import_csv params[:table_data_csv]
+    table.save!
+
+    render json: true
+  end
+
+  def clear_table
+    table_name = params[:table_name]
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).delete_all
+
+    render json: true
+  end
+
+  def delete_table
+    where_table.delete_all
+    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).delete_all
+
+    render json: true
+  end
+
+  def get_table_names
+    # SELECT DISTINCT table_name FROM datablock_storage_records WHERE channel_id='{params[:channel_id]}';
+    render json: DatablockStorageRecord.where(channel_id: params[:channel_id]).select(:table_name).distinct.pluck(:table_name)
+  end
+
+  def populate_tables
+    tables_json = JSON.parse params[:tables_json]
+    DatablockStorageTable.populate_tables params[:channel_id], tables_json
+    render json: true
+  end
+
+  ##########################################################
+  #   Table Column API                                     #
+  ##########################################################
+
+  def add_column
+    table = find_table
+    table.add_column params[:column_name]
+    table.save!
+
+    render json: true
+  end
+
+  def rename_column
+    table = find_table
+    table.rename_column params[:old_column_name], params[:new_column_name]
+    table.save!
+
+    render json: true
+  end
+
+  def coerce_column
+    table = find_table
+    table.coerce_column params[:column_name], params[:column_type]
+    table.save!
+
+    render json: true
+  end
+
+  def delete_column
+    table = find_table
+    table.delete_column params[:column_name]
+    table.save!
+
+    render json: true
+  end
+
+  def get_columns_for_table
+    table = find_table
+    render json: table.get_columns
+  end
+
+  ##########################################################
+  #   Table Record API                                     #
+  ##########################################################
 
   def create_record
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
@@ -65,113 +187,12 @@ class DatablockStorageController < ApplicationController
     table = find_table
     table.delete_record params[:record_id]
     table.save!
-
     render json: nil
   end
 
-  #### METHODS USED BY THE DATASET BROWSER FOR LOADING/BROWSING DATA ####
-
-  def get_table_names
-    # SELECT DISTINCT table_name FROM datablock_storage_records WHERE channel_id='{params[:channel_id]}';
-    render json: DatablockStorageRecord.where(channel_id: params[:channel_id]).select(:table_name).distinct.pluck(:table_name)
-  end
-
-  def get_key_values
-    # SELECT key, value FROM datablock_storage_kvps WHERE channel_id='{params[:channel_id]}';
-    kvps = DatablockStorageKvp.
-      where(channel_id: params[:channel_id]).
-      select(:key, :value).
-      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
-
-    render json: kvps
-  end
-
-  #### METHODS USED BY THE DATASET BROWSER FOR CREATING/MANIUPULATING DATA ####
-
-  def create_table
-    table_or_create
-
-    render json: true
-  end
-
-  def delete_table
-    where_table.delete_all
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).delete_all
-
-    render json: true
-  end
-
-  def clear_table
-    table_name = params[:table_name]
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).delete_all
-
-    render json: true
-  end
-
-  def add_column
-    table = find_table
-    table.add_column params[:column_name]
-    table.save!
-
-    render json: true
-  end
-
-  def delete_column
-    table = find_table
-    table.delete_column params[:column_name]
-    table.save!
-
-    render json: true
-  end
-
-  def rename_column
-    table = find_table
-    table.rename_column params[:old_column_name], params[:new_column_name]
-    table.save!
-
-    render json: true
-  end
-
-  def coerce_column
-    table = find_table
-    table.coerce_column params[:column_name], params[:column_type]
-    table.save!
-
-    render json: true
-  end
-
-  def delete_key_value
-    key = params[:key]
-    DatablockStorageKvp.where(channel_id: params[:channel_id], key: key).delete_all
-
-    render json: true
-  end
-
-  def populate_tables
-    tables_json = JSON.parse params[:tables_json]
-    DatablockStorageTable.populate_tables params[:channel_id], tables_json
-    render json: true
-  end
-
-  def import_csv
-    table = table_or_create
-    table.import_csv params[:table_data_csv]
-    table.save!
-
-    render json: true
-  end
-
-  def populate_key_values
-    key_values_json = JSON.parse params[:key_values_json]
-    raise "key_values_json must be a hash" unless key_values_json.is_a? Hash
-    DatablockStorageKvp.set_kvps(params[:channel_id], key_values_json)
-    render json: true
-  end
-
-  def get_columns_for_table
-    table = find_table
-    render json: table.get_columns
-  end
+  ##########################################################
+  #   Channel API                                          #
+  ##########################################################
 
   # Returns true if validation checks pass
   def channel_exists
@@ -189,10 +210,6 @@ class DatablockStorageController < ApplicationController
     DatablockStorageRecord.where(channel_id: params[:channel_id]).delete_all
 
     render json: true
-  end
-
-  def add_shared_table
-    DatablockStorageTable.add_shared_table params[:channel_id], params[:table_name]
   end
 
   private
