@@ -1104,8 +1104,11 @@ describe('project.js', () => {
 
   describe('registerSaveOnUnload', () => {
     it('calls function to handle unload', () => {
-      const addEventListenerSpy = sinon.spy(window, 'addEventListener');
       const unloadHandlerSpy = sinon.spy(project, 'unloadHandler_');
+      sinon
+        .stub(project.unloadHandler_, 'bind')
+        .returns(project.unloadHandler_);
+      const addEventListenerSpy = sinon.spy(window, 'addEventListener');
 
       project.registerSaveOnUnload();
 
