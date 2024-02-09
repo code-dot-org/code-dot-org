@@ -84,11 +84,7 @@ class DatablockStorageController < ApplicationController
   def update_record
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
 
-    # FIXME: datablock/use-column-defs
-    # When we update a record, we need to check the Table.columns field, and see if
-    # we need to add new columns that are contained in the records but not in  Table.columns yet
-    #
-    # Also, we should extract this logic and move it to DatablockStorageTable.update_record instead
+    table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
 
     record = DatablockStorageRecord.find_by(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id])
     if record
@@ -96,6 +92,11 @@ class DatablockStorageController < ApplicationController
       record_json['id'] = params[:record_id].to_i
       record.record_json = record_json
       record.save!
+
+      # update the table columns with any new JSON fields
+      table.columns += (record_json.keys.to_set - table.columns).to_a
+      table.save!
+
       render json: record_json
     else
       render json: nil
