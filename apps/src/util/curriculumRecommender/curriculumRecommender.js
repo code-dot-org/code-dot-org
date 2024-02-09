@@ -9,24 +9,27 @@ export const getTestRecommendations = (
   curricula,
   duration,
   marketingInitiative,
-  schoolSubjects
+  schoolSubjects,
+  csTopics
 ) => {
   const curriculaScores = [];
   curricula.forEach(curriculum => {
     let score = 0;
     score += hasAnySchoolSubject(FAKE_RECOMMENDER_SCORING, curriculum);
-    score += hasDesiredSchoolSubject(
+    score += hasDesiredSchoolSubjects(
       FAKE_RECOMMENDER_SCORING,
       curriculum,
       schoolSubjects
     );
-    // score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
     score += hasDesiredDuration(FAKE_RECOMMENDER_SCORING, curriculum, duration);
     score += hasDesiredMarketingInitiative(
       FAKE_RECOMMENDER_SCORING,
       curriculum,
       marketingInitiative
     );
+    score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
   });
 
@@ -42,7 +45,7 @@ const hasAnySchoolSubject = (scoring_framework, curriculum) => {
     : 0;
 };
 
-const hasDesiredSchoolSubject = (
+const hasDesiredSchoolSubjects = (
   scoring_framework,
   curriculum,
   schoolSubjects
@@ -54,22 +57,37 @@ const hasDesiredSchoolSubject = (
   curriculumSubjects?.forEach(currSub => {
     desiredSubjects?.forEach(desSub => {
       total +=
-        currSub === desSub ? scoring_framework['hasDesiredSchoolSubject'] : 0;
+        currSub === desSub ? scoring_framework['hasDesiredSchoolSubjects'] : 0;
     });
   });
   return total;
 };
 
-// const hasAnyImportantTopic = (scoring_framework, curriculum) => {
-//   const csTopics = curriculum.cs_topic?.split(',');
-//   csTopics?.forEach(topic => {
-//     if (IMPORTANT_TOPICS.includes(topic)) {
-//       console.log('HERE');
-//       return scoring_framework['hasAnyImportantTopic'];
-//     }
-//   });
-//   return 0;
-// };
+const hasAnyImportantTopic = (scoring_framework, curriculum) => {
+  const csTopics = curriculum.cs_topic?.split(',');
+  if (csTopics) {
+    for (const topic of csTopics) {
+      if (IMPORTANT_TOPICS.includes(topic)) {
+        return scoring_framework['hasAnyImportantTopic'];
+      }
+    }
+  }
+  return 0;
+};
+
+const hasDesiredTopics = (scoring_framework, curriculum, csTopics) => {
+  const curriculumTopics = curriculum.cs_topic?.split(',');
+  const desiredTopics = csTopics.split(',');
+  let total = 0;
+
+  curriculumTopics?.forEach(currTopic => {
+    desiredTopics?.forEach(desTopic => {
+      total +=
+        currTopic === desTopic ? scoring_framework['hasDesiredTopics'] : 0;
+    });
+  });
+  return total;
+};
 
 const hasDesiredDuration = (scoring_framework, curriculum, duration) => {
   return curriculum.duration === duration
@@ -85,6 +103,12 @@ const hasDesiredMarketingInitiative = (
   return curriculum.marketing_initiative === marketingInitiative
     ? scoring_framework['hasDesiredMarketingInitiative']
     : 0;
+};
+
+const howRecentlyPublished = (scoring_framework, curriculum) => {
+  const date = new Date(curriculum.published_date);
+  console.log(date);
+  return 0;
 };
 
 // Sort [curriculum, score] pairs by score in descending order. If multiple curricula get the same score, featured curricula are prioritized over

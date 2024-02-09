@@ -9,8 +9,9 @@ export const IMPORTANT_TOPICS = [
  */
 export const FAKE_RECOMMENDER_SCORING = {
   hasAnySchoolSubject: 1,
-  hasDesiredSchoolSubject: 2,
+  hasDesiredSchoolSubjects: 2,
   hasAnyImportantTopic: 1,
+  hasDesiredTopics: 2,
   hasDesiredDuration: 3,
   hasDesiredMarketingInitiative: 4,
 };
@@ -62,19 +63,9 @@ export const FAKE_SINGLE_TRAIT_CURRICULA = [
     duration: null,
     marketing_initiative: null,
     grade_levels: null,
-    cs_topic: 'fakeTopic1',
+    cs_topic: 'fakeTopic',
     school_subject: null,
     published_date: '2015-05-01 05:00:00 UTC',
-  },
-  {
-    key: 'onlyMultipleCsTopicsCourse',
-    is_featured: false,
-    duration: null,
-    marketing_initiative: null,
-    grade_levels: null,
-    cs_topic: `fakeTopic1,fakeTopic2`,
-    school_subject: null,
-    published_date: '2015-06-01 05:00:00 UTC',
   },
   {
     key: 'onlyImportantCsTopicCourse',
@@ -83,6 +74,16 @@ export const FAKE_SINGLE_TRAIT_CURRICULA = [
     marketing_initiative: null,
     grade_levels: null,
     cs_topic: IMPORTANT_TOPICS[0],
+    school_subject: null,
+    published_date: '2015-06-01 05:00:00 UTC',
+  },
+  {
+    key: 'onlyMultipleCsTopicsCourse',
+    is_featured: false,
+    duration: null,
+    marketing_initiative: null,
+    grade_levels: null,
+    cs_topic: `fakeTopic,${IMPORTANT_TOPICS[0]}`,
     school_subject: null,
     published_date: '2015-07-01 05:00:00 UTC',
   },

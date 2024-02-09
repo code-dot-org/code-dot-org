@@ -8,6 +8,7 @@ describe('testRecommender', () => {
       FAKE_SINGLE_TRAIT_CURRICULA,
       '',
       '',
+      '',
       ''
     ).map(curr => curr.key);
 
@@ -16,10 +17,10 @@ describe('testRecommender', () => {
       'onlyMultipleSchoolSubjectsCourse',
       'onlyOneSchoolSubjectCourse',
       // Curricula with any important topics score higher
+      'onlyMultipleCsTopicsCourse',
       'onlyImportantCsTopicCourse',
       // Sort remaining 0 scores by is_featured and published_date
       'onlyFeaturedCourse',
-      'onlyMultipleCsTopicsCourse',
       'onlyOneCsTopicCourse',
       'onlyMarketingInitiativeCourse',
       'onlyDurationCourse',
@@ -32,7 +33,8 @@ describe('testRecommender', () => {
       FAKE_SINGLE_TRAIT_CURRICULA,
       '',
       '',
-      'fakeSubject1,fakeSubject2'
+      'fakeSubject1,fakeSubject2',
+      ''
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
@@ -41,10 +43,10 @@ describe('testRecommender', () => {
       // Curricula with one specified school subject score higher
       'onlyOneSchoolSubjectCourse',
       // Curricula with any important topics score higher
+      'onlyMultipleCsTopicsCourse',
       'onlyImportantCsTopicCourse',
       // Sort remaining 0 scores by is_featured and published_date
       'onlyFeaturedCourse',
-      'onlyMultipleCsTopicsCourse',
       'onlyOneCsTopicCourse',
       'onlyMarketingInitiativeCourse',
       'onlyDurationCourse',
@@ -57,6 +59,7 @@ describe('testRecommender', () => {
       FAKE_SINGLE_TRAIT_CURRICULA,
       'month',
       '',
+      '',
       ''
     ).map(curr => curr.key);
 
@@ -64,12 +67,12 @@ describe('testRecommender', () => {
       // Curricula with the specified duration score higher
       'onlyDurationCourse',
       // Curricula with any school subjects or any important topics score higher
-      'onlyImportantCsTopicCourse',
       'onlyMultipleSchoolSubjectsCourse',
       'onlyOneSchoolSubjectCourse',
+      'onlyMultipleCsTopicsCourse',
+      'onlyImportantCsTopicCourse',
       // Sort remaining 0 scores by is_featured and published_date
       'onlyFeaturedCourse',
-      'onlyMultipleCsTopicsCourse',
       'onlyOneCsTopicCourse',
       'onlyMarketingInitiativeCourse',
       'nullCourse',
@@ -81,6 +84,7 @@ describe('testRecommender', () => {
       FAKE_SINGLE_TRAIT_CURRICULA,
       '',
       'fakeMarkInit',
+      '',
       ''
     ).map(curr => curr.key);
 
@@ -88,13 +92,38 @@ describe('testRecommender', () => {
       // Curricula with the specified marketing initiative score higher
       'onlyMarketingInitiativeCourse',
       // Curricula with any school subjects or any important topics score higher
-      'onlyImportantCsTopicCourse',
       'onlyMultipleSchoolSubjectsCourse',
       'onlyOneSchoolSubjectCourse',
+      'onlyMultipleCsTopicsCourse',
+      'onlyImportantCsTopicCourse',
       // Sort remaining 0 scores by is_featured and published_date
       'onlyFeaturedCourse',
+      'onlyOneCsTopicCourse',
+      'onlyDurationCourse',
+      'nullCourse',
+    ]);
+  });
+
+  it('adds score to curricula with specified cs topics', () => {
+    const recommendedCurricula = getTestRecommendations(
+      FAKE_SINGLE_TRAIT_CURRICULA,
+      '',
+      '',
+      '',
+      'fakeTopic'
+    ).map(curr => curr.key);
+
+    expect(recommendedCurricula).to.deep.equal([
+      // Curricula with the specified cs topics initiative score higher
       'onlyMultipleCsTopicsCourse',
       'onlyOneCsTopicCourse',
+      // Curricula with any school subjects or any important topics score higher
+      'onlyMultipleSchoolSubjectsCourse',
+      'onlyOneSchoolSubjectCourse',
+      'onlyImportantCsTopicCourse',
+      // Sort remaining 0 scores by is_featured and published_date
+      'onlyFeaturedCourse',
+      'onlyMarketingInitiativeCourse',
       'onlyDurationCourse',
       'nullCourse',
     ]);
