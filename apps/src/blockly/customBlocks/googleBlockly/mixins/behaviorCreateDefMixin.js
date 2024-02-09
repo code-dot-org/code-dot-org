@@ -22,10 +22,7 @@ export const behaviorCreateDefMixin = function () {
       const xy = this.getRelativeToSurfaceXY();
       const newName = Blockly.Procedures.findLegalName(name, this);
       this.renameProcedure(name, newName);
-
-      if (!this.behaviorId) {
-        this.behaviorId = getAlphanumericId();
-      }
+      this.behaviorId = getAlphanumericId();
 
       const blockDef = {
         type: this.defType_,
