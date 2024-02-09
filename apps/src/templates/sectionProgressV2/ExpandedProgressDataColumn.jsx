@@ -50,7 +50,7 @@ function ExpandedProgressDataColumn({
 
   const getExpandedChoiceLevel = React.useCallback(
     level => [
-      getSingleLevelColumn(level, {overrideIcon: 'split'}),
+      getSingleLevelColumn(level, {expandedChoiceLevel: true}),
       ...level.sublevels.map(sublevel => getSingleLevelColumn(sublevel)),
     ],
     [getSingleLevelColumn]
