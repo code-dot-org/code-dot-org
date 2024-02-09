@@ -40,7 +40,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-01 22:19:55 -0800\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:48:35 -0800\",\"changed\":[],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:50:12 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:50:27 -0800\",\"changed\":[],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:52:00 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:58:22 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-02 13:46:19 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-02 15:19:27 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-01 22:19:55 -0800\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:48:35 -0800\",\"changed\":[],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:50:12 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:50:27 -0800\",\"changed\":[],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:52:00 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-01 22:58:22 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-02 13:46:19 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-02 15:19:27 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-07 23:14:59 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-08 21:42:45 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -54,6 +54,7 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <category name="Variables" custom="VARIABLE">
           <block type="EmilysBlocks_showVariable" id=";2WhiGe;qvphQS-pHQ$f"/>
+          <block type="EmilysBlocks_hideVariable" id="([vbrl.=aNalC,[Enfnq"/>
         </category>
         <category name="Location">
           <block type="gamelab_location_picker" id="KMPER[{UH`[5m_l)N0S`">
@@ -64,6 +65,12 @@
         <category name="Math">
           <block type="math_number" id="@?VTg}krpQRK--.IJdQ!">
             <field name="NUM">0</field>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_keyPressed" id="{qaSTvcj,XR,gLg)EPxa">
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
           </block>
         </category>
       </xml>

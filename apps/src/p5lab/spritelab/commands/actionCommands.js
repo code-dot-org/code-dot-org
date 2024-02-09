@@ -25,11 +25,6 @@ function addSpriteSpeechBubble(
   });
 }
 
-function addVariableBubble(coreLibrary, nameArg) {
-  console.log('adding variable bubble');
-  coreLibrary.addVariableBubble(nameArg);
-}
-
 export const commands = {
   addTarget(spriteArg, targetCostume, targetType) {
     if (!['follow', 'avoid'].includes(targetType)) {
@@ -273,19 +268,15 @@ export const commands = {
     });
   },
 
+  hideVariable(nameArg) {
+    this.removeVariableBubble(nameArg);
+  },
+
   showVariable(nameArg, locationArg) {
-    console.log('calling showVariable');
-    console.log('args ', ...arguments);
     if (!nameArg) {
       return;
     }
-    console.log('nameArg', nameArg);
-    console.log('typeof nameArg', typeof nameArg);
-    console.log('this ', this);
-    console.log('window ', window);
-    const codeForValue = `typeof ${nameArg} !== 'undefined' ? ${nameArg} : 'undefined'`;
-    console.log('codeForValue', codeForValue);
-    this.addVariableBubble(nameArg);
+    this.addVariableBubble(nameArg, locationArg);
   },
 
   spriteSay(spriteArg, text) {

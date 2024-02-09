@@ -11,7 +11,7 @@ import {
 import msg from '@cdo/locale';
 
 export default class CoreLibrary {
-  constructor(p5) {
+  constructor(p5, jsInterpreter) {
     this.p5 = p5;
     this.spriteId = 0;
     this.nativeSpriteMap = {};
@@ -44,6 +44,7 @@ export default class CoreLibrary {
       successFrame: 0,
     };
     this.variableBubbles = [];
+    this.jsInterpreter = jsInterpreter;
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -116,20 +117,34 @@ export default class CoreLibrary {
     }
 
     this.variableBubbles.forEach(variable => {
-      const {name} = variable;
-      if (!name) {
+      const {name, location} = variable;
+      if (!name.length || !location) {
         return;
       }
-      console.log('name', name);
-      // TODO: Replace with ID variable lookup
-      const value = Blockly.getMainWorkspace().getVariable(name);
-      console.log('value', value);
-      const x = 150;
-      const y = 200;
 
+      const value = this.getVariableValue(name);
       const text = `${name}: ${value}`;
-      drawUtils.variableBubble(this.p5, x, y, text);
+
+      // TODO: Update to handle locations like top, left, right, bottom
+      drawUtils.variableBubble(this.p5, location.x, location.y, text);
     });
+  }
+
+  getVariableValue(variableName) {
+    if (!this.jsInterpreter) {
+      console.error('JS Interpreter not set in CoreLibrary');
+      return;
+    }
+
+    // Assuming `jsInterpreter` has a method `evaluateExpression` for evaluating
+    // JavaScript expressions in the current program context.
+    try {
+      const result = this.jsInterpreter.evaluateWatchExpression(variableName);
+      return result;
+    } catch (e) {
+      console.error(`Error evaluating variable '${variableName}': ${e}`);
+      return;
+    }
   }
 
   /**
@@ -217,12 +232,19 @@ export default class CoreLibrary {
     );
   }
 
-  addVariableBubble(name) {
+  addVariableBubble(name, location) {
     console.log('adding variable bubble');
     // TODO: Ideally we would use Blockly's variable ID here and not a UUID
     this.variableBubbles.push({
       name,
+      location,
     });
+  }
+
+  removeVariableBubble(name) {
+    this.variableBubbles = this.variableBubbles.filter(
+      variable => variable.name !== name
+    );
   }
 
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
