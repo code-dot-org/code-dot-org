@@ -1,4 +1,4 @@
-import React, {MouseEvent, useCallback} from 'react';
+import React, {MouseEvent, useCallback, useMemo} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -53,6 +53,9 @@ const Timeline: React.FunctionComponent = () => {
     MIN_NUM_MEASURES,
     useMusicSelector(state => state.music.lastMeasure)
   );
+  const loopEnabled = useMusicSelector(state => state.music.loopEnabled);
+  const loopStart = useMusicSelector(state => state.music.loopStart);
+  const loopEnd = useMusicSelector(state => state.music.loopEnd);
 
   const positionToUse = isPlaying
     ? currentPlayheadPosition
@@ -104,6 +107,38 @@ const Timeline: React.FunctionComponent = () => {
   const onTimelineClick = useCallback(() => {
     dispatch(clearSelectedBlockId());
   }, [dispatch]);
+
+  const loopMarkers = useMemo(() => {
+    const startOffset = (loopStart - 1) * barWidth;
+    const endOffset = (loopEnd - 1) * barWidth;
+
+    return (
+      <>
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+          <div
+            className={classNames(
+              moduleStyles.playhead,
+              moduleStyles.playheadLoop
+            )}
+            style={{left: paddingOffset + startOffset}}
+          >
+            &nbsp;
+          </div>
+        </div>
+        <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+          <div
+            className={classNames(
+              moduleStyles.playhead,
+              moduleStyles.playheadLoop
+            )}
+            style={{left: paddingOffset + endOffset}}
+          >
+            &nbsp;
+          </div>
+        </div>
+      </>
+    );
+  }, [loopStart, loopEnd]);
 
   return (
     <div
@@ -173,6 +208,7 @@ const Timeline: React.FunctionComponent = () => {
           &nbsp;
         </div>
       </div>
+      {loopEnabled && loopMarkers}
     </div>
   );
 };

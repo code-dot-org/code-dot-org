@@ -609,6 +609,7 @@ class UnconnectedMusicView extends React.Component {
             AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
           }
         />
+        <PlayerUpdater player={this.player} />
         <MusicLabView
           blocklyDivId={BLOCKLY_DIV_ID}
           setPlaying={this.setPlaying}
