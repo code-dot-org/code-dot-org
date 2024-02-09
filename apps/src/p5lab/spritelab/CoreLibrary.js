@@ -111,7 +111,6 @@ export default class CoreLibrary {
   }
 
   drawVariableBubbles() {
-    console.log('this.variableBubbles', this.variableBubbles);
     if (!this.variableBubbles.length) {
       return;
     }
