@@ -41,7 +41,14 @@ class DatablockStorageTable < ApplicationRecord
   #   render json: record_json
   # end
 
+  def read_records
+    # FIXME: is_shared_table, lookup that table and return its read_records instead
+    return records
+  end
+
   def create_records(record_jsons)
+    # FIXME: is_shared_table, copy-on-write goes here
+
     # BEGIN;
     DatablockStorageRecord.transaction do
       # channel_id_quoted = Record.connection.quote(params[:channel_id])
@@ -81,6 +88,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def update_record(record_id, record_json)
+    # FIXME: is_shared_table, copy-on-write goes here
+
     record = records.find_by(record_id: record_id)
     return unless record
 
@@ -94,18 +103,28 @@ class DatablockStorageTable < ApplicationRecord
     return record_json
   end
 
+  def delete_record(record_id)
+    records.find_by(record_id: record_id).delete
+  end
+
   def import_csv(table_data_csv)
+    # FIXME: is_shared_table, copy-on-write goes here
+
     records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
     create_records(records)
   end
 
   def add_column(column_name)
+    # FIXME: is_shared_table, copy-on-write goes here
+
     unless columns.include? column_name
       self.columns << column_name
     end
   end
 
   def delete_column(column_name)
+    # FIXME: is_shared_table, copy-on-write goes here
+
     records.each do |record|
       record.record_json.delete(column_name)
     end
@@ -114,6 +133,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def rename_column(old_column_name, new_column_name)
+    # FIXME: is_shared_table, copy-on-write goes here
+
     # First rename the column in all the JSON records
     records.each do |record|
       record.record_json[new_column_name] = record.record_json.delete(old_column_name)
@@ -135,6 +156,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def coerce_column(column_name, column_type)
+    # FIXME: is_shared_table, copy-on-write goes here
+
     unless ['string', 'number', 'boolean'].include? column_type
       raise "column_type must be one of: string, number, boolean"
     end

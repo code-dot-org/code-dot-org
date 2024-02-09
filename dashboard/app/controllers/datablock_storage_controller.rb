@@ -36,15 +36,19 @@ class DatablockStorageController < ApplicationController
   end
 
   def read_records
+    # FIXME: its weird that we pass in :is_shared_table here, that's a vestige of
+    # the Firebase model, we should probably remove it, since we are going to
+    # be examining Table.is_shared for lookups
     channel_id = params[:is_shared_table] == 'true' ? 'shared' : params[:channel_id]
-    records = DatablockStorageRecord.where(channel_id: channel_id, table_name: params[:table_name])
+
+    table = find_table
 
     # FIXME: what should we return to indicate that table_name doesn't exist?
     #
     # This condition is detected, currently trying to do readRecords('tabledoesntexist', {}) results in:
     # ERROR: Line: 1: You tried to read records from a table called "nope" but that table doesn't exist in this app
 
-    render json: records.map(&:record_json)
+    render json: table.read_records.map(&:record_json)
   end
 
   def update_record
@@ -58,7 +62,10 @@ class DatablockStorageController < ApplicationController
   end
 
   def delete_record
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id]).delete_all
+    table = find_table
+    table.delete_record params[:record_id]
+    table.save!
+
     render json: nil
   end
 
