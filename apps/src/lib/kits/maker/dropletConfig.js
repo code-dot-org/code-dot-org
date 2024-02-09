@@ -409,13 +409,6 @@ const circuitPlaygroundBlocks = [
     type: 'readonlyproperty',
   },
   {
-    func: 'soundSensor.getAveragedValue',
-    category: CIRCUIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value',
-  },
-  {
     func: 'soundSensor.setScale',
     category: CIRCUIT_CATEGORY,
     params: ['0', '100'],
@@ -428,13 +421,6 @@ const circuitPlaygroundBlocks = [
     func: 'lightSensor.value',
     category: CIRCUIT_CATEGORY,
     type: 'readonlyproperty',
-  },
-  {
-    func: 'lightSensor.getAveragedValue',
-    category: CIRCUIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value',
   },
   {
     func: 'lightSensor.setScale',
@@ -566,13 +552,6 @@ const microBitBlocks = [
     func: 'lightSensor.value',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty',
-  },
-  {
-    func: 'lightSensor.getAveragedValue',
-    category: MICROBIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value',
   },
   {
     func: 'lightSensor.setScale',

@@ -3,13 +3,15 @@ title 'JuiceMind Bridging Activity'
 
 
 markdown <<MARKDOWN
-<h2 style="text-align: center;">JuiceMind Bridging Activity [Optional]</h2>
+<h2 style="text-align: center;">JuiceMind Matching Game</h2>
 
 <div style="text-align: center;">
-<p>Now you're ready to learn new blocks in micro:bit. Ask your teacher for the bridging activity link!</p>
+<p>Now you're ready to learn new blocks in micro:bit! Click the picture below to join your class link.</p>
 </div>
 
+<a href="https://play.juicemind.com/join" target="_blank"> 
 <img src="https://images.code.org/d686effcfcf333eede2a1d82e793ac42-image-1707343907729.11.19 PM.png" style="display: block; margin: auto; width: 30%">
+</a>
 
 
 

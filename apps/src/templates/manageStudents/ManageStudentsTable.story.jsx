@@ -302,7 +302,7 @@ const cleverData = [
 ];
 
 export default {
-  title: 'ManageStudents/ManageStudentsTable',
+  title: 'ManageStudents/ManageStudentsTable', // eslint-disable-line storybook/no-title-property-in-meta
   component: UnconnectedManageStudentsTable,
 };
 
