@@ -299,19 +299,24 @@ export const blocks = {
       return null;
     };
     generator.gamelab_behavior_get = function () {
+      // Generating 'undefined' mimics the code for a missing block.
+      let undefinedCode = ['undefined', generator.ORDER_ATOMIC];
       // If we don't have a behavior Id, find on the definition block.
       if (!this.behaviorId) {
-        const procedureModelName = this.getProcedureModel().name;
+        const procedureModel = this.getProcedureModel();
+        // If there's no model, fail gracefully.
+        if (!procedureModel) {
+          return undefinedCode;
+        }
         const definitionBlock = Blockly.Procedures.getDefinition(
-          procedureModelName,
+          procedureModel.name,
           Blockly.getHiddenDefinitionWorkspace()
         );
-        this.behaviorId = definitionBlock.behaviorId;
-      }
-      // If we somehow still don't have a behavior id, fail gracefully.
-      // Generating 'undefined' mimics the code for a missing block.
-      if (!this.behaviorId) {
-        return ['undefined', generator.ORDER_ATOMIC];
+        this.behaviorId = definitionBlock?.behaviorId;
+        // If we somehow still don't have a behavior id, fail gracefully.
+        if (!this.behaviorId) {
+          return undefinedCode;
+        }
       }
       const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
