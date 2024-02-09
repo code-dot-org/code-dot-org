@@ -38,7 +38,7 @@ class RubricsController < ApplicationController
       @rubric.lesson.script.write_script_json
       render json: @rubric.summarize_for_rubric_edit
     else
-      render action: 'edit'
+      render json: @rubric.errors, status: :bad_request
     end
   end
 
