@@ -104,23 +104,23 @@ El que necessitaràs:
 * Nom i correu electrònic del contacte principal que representa l'activitat presentada
 * Nom de l'activitat (no es pot incloure “Hora del Codi” al nom)
 * Enllaç URL a l'activitat
-* Aquesta activitat inclou IA: Sí o No
-* Una descripció de l'activitat (recompte màxim de caràcters: 400) 
-    * Si us plau, inclogui a la descripció si es tracta principalment de guiat per l'estudiant o facilitat per al professorat. A més, algunes escoles estan interessades a saber si les activitats de l'Hora del Codi aborden els estàndards de ciències comuns o de pròxima generació. Si l'activitat s'adreça a estàndards específics, considereu incloure aquesta informació.
-* Nivell (s) de qualificació recomanat per a usuaris destinats. Podeu referir-vos als \[Estàndards K-12 de la Computer Science Teachers' Association\] (https://k12cs.org/framework-statements-by-grade-band/) per obtenir conceptes de ciències de la computació apropiats. Els nivells de qualificació d'exemple inclouen: 
-    * Kindergarten - Grau 1 (4-6 anys)
-    * Graus 2-5 (edats 7-10)
-    * Graus 6-8 (edats 11-13)
-    * Graus 9+ (majors de 14 anys)
-* Una llista de llenguatges de programació que ensenya la vostra activitat. És a dir, C/C++, Java, JavaScript, etc. o independent de l'idioma (per a plans de lliçons que es poden ensenyar en diversos idiomes) triar les arts del llenguatge.
-* Una llista de llenguatges naturals suportats. Nota: La detecció d'idiomes és responsabilitat del proveïdor d'activitats; redirigirem tots els usuaris a la URL única proporcionada. o independent de l'idioma (per a plans de lliçons que es poden ensenyar en diversos idiomes)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Una llista de llenguatges de programació que ensenya la vostra activitat. És a dir, C/C++, Java, JavaScript, etc. o independent de l'idioma (per a plans de lliçons que es poden ensenyar en diversos idiomes) choose language arts.
+* Una llista de llenguatges naturals suportats. Nota: La detecció d'idiomes és responsabilitat del proveïdor d'activitats; redirigirem tots els usuaris a la URL única proporcionada. or language independent (for lesson plans that can be taught in multiple languages)
 * Quin nivell d'experiència ha de tenir un educador per utilitzar la seva activitat? (per exemple, principiant o còmode.) I quin nivell d'experiència han de tenir els alumnes?
-* Quin nivell d'experiència ha de tenir un educador per utilitzar la seva activitat? (per exemple, principiant o còmode.) I quin nivell d'experiència han de tenir els alumnes? Si voleu preparar activitats més avançades de l'Hora del Codi™, incloeu els coneixements previs necessaris a la descripció de la vostra activitat.
-* La durada de la teva activitat 
-    * Només 1 hora
-    * 1 hora amb curs de seguiment
-    * 2-6 hores (poden ser múltiples lliçons)
-* Una llista d'allotjaments d'accessibilitat, si la vostra activitat els té. Aquests inclouen la compatibilitat del lector de pantalla, les capacitats de text a veu, l'ús de colors d'alt contrast o qualsevol altre allotjament fet per a estudiants amb discapacitat.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Coses addicionals que necessitareu a l'hora d'enviar Plans de lliçons
 
@@ -170,7 +170,7 @@ El que necessitaràs:
 
 Un comitè divers d'educadors en ciències de la computació classificarà les trameses en funció de criteris qualitatius i quantitatius. Es llistaran totes les activitats que s'ajustin als criteris bàsics.
 
-Per a les activitats de codificació tradicionals, un comitè divers d'educadors d'informàtica classificarà les presentacions basades en criteris qualitatius i quantitatius. Es llistaran totes les activitats que s'ajustin als criteris bàsics. Els professors podran filtrar i ordenar per trobar les millors activitats per a la seva aula.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Si el comitè avaluador qualifica l'activitat d'un zero en qualitat de producció (a causa d'errors dolents o instruccions que fan que sigui molt difícil d'utilitzar), en la promoció de l'aprenentatge en grups poc representats (a causa de material racista/sexista), en valor educatiu (no ensenya conceptes CS), o divertit/atractiu (a causa de ser difícil/descoratjador per als estudiants a treballar), l'activitat no es llistarà.
 
@@ -188,13 +188,13 @@ Per a les activitats autodirigides per a nous professors i estudiants, el comit�
 - Requereix no registrar-se
 - No requereix pagament (excepció per a les activitats de robòtica que poden requerir la compra de robot/kit)
 
-Per a les activitats autodirigides per a nous professors i estudiants, el comitè avaluador buscarà si:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Els professors poden utilitzar el tutorial o l'activitat sense antecedents en informàtica
 - Els estudiants poden tenir èxit sense antecedents en informàtica
 - Els estudiants poden dirigir-se a través de la tutoria sense orientació parental o docent
 
-Professors i alumnes podran buscar i filtrar la nostra llista d'activitats en funció de filtres com nota, nivell d'experiència, matèria, maquinari, etc. Per defecte, mostrarem primer els plans de lliçons i les activitats que:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Rebre les qualificacions més altes del comitè avaluador
 - Són activitats autodirigides d'una hora pensades per a principiants (estudiants i professors)
@@ -208,7 +208,7 @@ Professors i alumnes podran buscar i filtrar la nostra llista d'activitats en fu
 
 ## Suggeriments per dissenyar tutorials autoguiats d'una hora
 
-Les activitats no han d'incloure IA, tot i que estem buscant oferir més activitats relacionades amb la IA.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Incloure notes del professor.** La majoria de les activitats han d'estar dirigides als estudiants, però si una activitat és facilitada o gestionada per un professor, si us plau, inclogui indicacions clares i senzilles per al professor en forma de notes del professor en un URL separat enviat amb la vostra activitat. No només els estudiants són novells, alguns dels professors també ho són. Incloure informació com:
 
@@ -221,15 +221,15 @@ Les activitats no han d'incloure IA, tot i que estem buscant oferir més activit
 - Recomaneu la programació per parelles?
 - Consideracions d'ús en una aula? Per exemple, si hi ha vídeos, aconselleu als professors que mostrin els vídeos en una pantalla projectada perquè tota l'aula els visualitzi junts
 
-**Incorporar feedback al final de l'activitat.** (per exemple, “Heu acabat 10 nivells i heu après sobre bucles! Gran treball!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Animeu els estudiants a publicar a les xarxes socials (si escau) quan hagin acabat.** Per exemple “He fet una Hora de Codi amb ________ Tens? #HourOfCode” o “He fet un #HourOfCode com a part de #CSEdWeek. Tens? @Scratch.” Utilitzeu el hashtag **#HourOfCode** (amb majúscules H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Crea la teva activitat en espanyol o en altres idiomes a més de l'anglès.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Explicar o connectar l'activitat a un context socialment significatiu.** La programació informàtica es converteix en una superpotència quan els estudiants veuen com pot canviar el món per a millor!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Assegureu-vos que el vostre tutorial es pot utilitzar en un paradigma [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** Això és particularment útil per a l'Hora del Codi perquè moltes aules no tenen maquinari 1:1 per a tots els estudiants.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Tornar a dalt**](#top)
 
@@ -237,7 +237,7 @@ Les activitats no han d'incloure IA, tot i que estem buscant oferir més activit
 
 ## Indicar les directrius
 
-Hour of Code® i Hora del Código® són marques registrades de Code.org. Molts dels nostres socis tutorials han utilitzat les nostres marques comercials “Hora del Codi” en els seus llocs web en relació amb les seves activitats de l'Hora del Codi. No volem evitar aquest ús, però volem assegurar-nos que l'ús es troba dins d'uns quants límits:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Utilitzeu “Hora del Codi” només en relació amb activitats d'educació CS no comercials en el context de la campanya Hora del Codi, i per a cap altre propòsit.
 2. Qualsevol referència a “Hour of Code” s'ha d'utilitzar en una moda que no suggereixi que sigui el seu propi nom de marca, sinó que faci referència a l'Hour of Code com a moviment de base. Bon exemple: “Participa a l'Hora del Codi® a Acmecorp.com”. Mal exemple: “Prova Hora de Codi per ACME Corp”.
@@ -253,15 +253,15 @@ Hour of Code® i Hora del Código® són marques registrades de Code.org. Molts 
 
 ## Seguiment de píxels
 
-Si el vostre tutorial està aprovat i inclòs a la pàgina final del tutorial, Code.org us proporcionarà un píxel de seguiment únic perquè pugueu integrar-vos al vostre tutorial. Vegeu l'exemple següent. No inclogui en cap pàgina provisional del seu tutorial.
+Si el vostre tutorial està aprovat i inclòs a la pàgina final del tutorial, Code.org us proporcionarà un píxel de seguiment únic perquè pugueu integrar-vos al vostre tutorial. Vegeu l'exemple següent. Do not include on any interim pages of your tutorial.
 
-Això ens permetrà comptar els usuaris que fan el teu tutorial de l'Hora del Codi. Es donarà lloc a recomptes de participació més precisos per al vostre tutorial.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Si el vostre tutorial està aprovat i inclòs a la pàgina final del tutorial, Code.org us proporcionarà un píxel de seguiment únic perquè pugueu integrar-vos al vostre tutorial. Vegeu l'exemple següent.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-NOTA: això no és important fer-ho per a aplicacions instal·lables (aplicacions iOS/Android, o aplicacions d'instal·lació d'escriptori)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Exemple de seguiment de píxels per a Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Promoció de les seves activitats, CSedWeek, i Hora del Codi
 
-Si us plau, promociona la teva activitat a la teva xarxa! Dirigiu-los a la vostra pàgina de l'Hora del Codi. Els vostres usuaris són molt més propensos a reaccionar a un correu vostre sobre la vostra activitat. Utilitzeu la campanya internacional de l'Hora del Codi durant la Setmana de l'Educació de les Ciències de la Computació com a excusa per animar els usuaris a convidar a altres persones a unir-se i ajudar-nos a arribar a més estudiants!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Feature Hour of Code i CSedWeek al seu lloc web. Ex: <http://www.tynker.com/hour-of-code>
 - Promoure l'Hora del Codi utilitzant xarxes socials, mitjans tradicionals, llistes de correu, etc., utilitzant el hashtag #HourOfCode (amb majúscules H, O, C)
