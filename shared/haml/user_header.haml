@@ -157,6 +157,10 @@
           } catch (e) {}
         }
       });
+      // Set up userHeaderEventLogger.js
+      const setupLoggerEvent = document.createEvent('Event');
+      setupLoggerEvent.initEvent('setupUserHeaderEventLogger', true, true);
+      document.dispatchEvent(setupLoggerEvent);
     });
 
     function hideCreateOptions() {
