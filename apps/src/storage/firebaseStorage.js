@@ -1135,7 +1135,7 @@ FirebaseStorage.subscribeToListOfProjectTables = function (
   });
 };
 
-FirebaseStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
+FirebaseStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
 
   getPathRef(projectStorageRef, 'keys').on('value', snapshot => {

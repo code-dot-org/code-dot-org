@@ -262,7 +262,7 @@ DatablockStorage.subscribeToTable = function (
   });
 };
 
-DatablockStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
+DatablockStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
   _fetch('get_key_values', 'GET', {})
     .then(response => response.json())
     .then(json => {

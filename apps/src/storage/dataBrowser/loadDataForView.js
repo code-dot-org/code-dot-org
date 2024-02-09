@@ -50,7 +50,7 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
   switch (view) {
     case DataView.PROPERTIES: {
       // Triggered when the Key Value Pairs tab is brought up
-      storage.subscribeToKeyValuePairs(keyValueData => {
+      storage.getKeyValuePairs(keyValueData => {
         getStore().dispatch(updateKeyValueData(keyValueData));
       });
       return;
