@@ -1,11 +1,12 @@
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import {DataView} from '../constants';
 import EditLink from './EditLink';
-import {storageBackend} from '../storage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import dataStyles from './data-styles.module.scss';
 import msg from '@cdo/locale';
+import {refreshCurrentDataView} from './loadDataForView';
+import {storageBackend} from '../storage';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
@@ -19,7 +20,11 @@ class EditTableListRow extends React.Component {
   };
 
   handleDelete = () => {
-    storageBackend().deleteTable(this.props.tableName, this.props.tableType);
+    storageBackend().deleteTable(
+      this.props.tableName,
+      this.props.tableType,
+      refreshCurrentDataView
+    );
   };
 
   render() {

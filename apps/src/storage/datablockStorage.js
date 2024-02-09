@@ -326,8 +326,6 @@ DatablockStorage.importCsv = function (
     table_name: tableName,
     table_data_csv: tableDataCsv,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 DatablockStorage.addColumn = function (
@@ -355,8 +353,6 @@ DatablockStorage.deleteColumn = function (
     table_name: tableName,
     column_name: columnName,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 DatablockStorage.renameColumn = function (
@@ -387,8 +383,6 @@ DatablockStorage.coerceColumn = function (
     column_name: columnName,
     column_type: columnType,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {

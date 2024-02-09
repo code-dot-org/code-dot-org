@@ -15,6 +15,7 @@ import TableDescription from './TableDescription';
 import classNames from 'classnames';
 import style from './data-table-view.module.scss';
 import msg from '@cdo/locale';
+import { refreshCurrentDataView } from './loadDataForView';
 
 const INITIAL_STATE = {
   showDebugView: false,
@@ -50,6 +51,7 @@ class DataTableView extends React.Component {
       this.props.tableName,
       csvData,
       () => {
+        refreshCurrentDataView();
         this.setState(INITIAL_STATE);
         onComplete();
       },
@@ -69,6 +71,7 @@ class DataTableView extends React.Component {
       this.props.tableListMap[this.props.tableName] === tableType.SHARED;
     const tableName = encodeURIComponent(this.props.tableName);
     const channelId = isSharedTable ? 'shared' : Applab.channelId;
+    // FIXME: unfirebase
     location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
   };
 
@@ -76,7 +79,7 @@ class DataTableView extends React.Component {
   clearTable = () => {
     storageBackend().clearTable(
       this.props.tableName,
-      () => {},
+      refreshCurrentDataView,
       msg => console.warn(msg)
     );
   };

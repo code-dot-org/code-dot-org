@@ -6,6 +6,10 @@ export const FIREBASE_STORAGE = 'FirebaseStorage';
 
 export let type;
 
+export function isDatablockStorage() {
+  return getStorageType() === DATABLOCK_STORAGE;
+}
+
 export function getStorageType() {
   return type;
 }
