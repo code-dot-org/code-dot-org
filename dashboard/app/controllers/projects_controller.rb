@@ -185,8 +185,11 @@ class ProjectsController < ApplicationController
   # GET /projects/:tab_name
   # Where a valid :tab_name is (nil|public|libraries)
   def index
-    redirect_admin_from_labs
- 
+    unless params[:tab_name] == 'public'
+      return redirect_to '/projects/public' unless current_user
+      redirect_admin_from_labs
+    end
+
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
     @limited_gallery = limited_gallery?
     @current_tab = params[:tab_name]
@@ -253,7 +256,7 @@ class ProjectsController < ApplicationController
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
-      redirect_to '/projects', flash: {alert: 'Only project validators can feature projects.'}
+      redirect_to '/projects/public', flash: {alert: 'Only project validators can feature projects.'}
     end
   end
 
