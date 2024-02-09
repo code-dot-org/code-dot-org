@@ -354,6 +354,7 @@ class EvaluateRubricJob < ApplicationJob
     lesson_s3_names.each do |lesson_s3_name|
       validate_ai_config_for_lesson(lesson_s3_name, code)
     end
+    validate_learning_goals
     S3_AI_RELEASE_PATH
   end
 
@@ -383,6 +384,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  # TODO: call this method when saving a rubric in levelbuilder
   def validate_learning_goals_for_rubric(rubric)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
 
