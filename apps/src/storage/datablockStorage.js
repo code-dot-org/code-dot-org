@@ -3,44 +3,6 @@ import _ from 'lodash';
 
 const DatablockStorage = {};
 
-/*
-
-Docs useful to have in here while implementing
-// FIXME: unfirebase, remove this comment before merging PR
-
-Records table:
-
-channelID: VARCHAR(22),
-tableName: VARCHAR(768),
-recordID: INT,
-json: JSON
-Tables table:
-
-Tables table:
-channelID: VARCHAR(22),
-tableName: VARCHAR(768),
-columns: JSON,
-isSharedTable: VARCHAR(768), // if it points to a shared/stock table, load records using this table name instead
-columns (JSON) might look like: ['id', 'Word'], note this assumes the columnIDs (like -Mw7ENQB6uKfQYc0kI8U) that are present in Firebase are not actually used. It doesn't look like they are, e.g. firebaseStorage.js references columns by name not by ID.
-
-KeyValuePairs table:
-
-channelID: VARCHAR(22),
-key: VARCHAR(768), 
-value: VARCHAR(4096), -- v3.config.channels.maxPropertySize, see `rules.bolt`
-VARCHAR sizes:
-
-Firebase validation rules:
-
-maxPropertySize:4096 // value length of a key value pair
-maxRecordSize:4096 // max length of a record
-maxTableCount:10 // this doesn't seem to be encorced in rules.bolt?
-maxTableRows: 20000 // number of records inside a table
-maxKeySize: 768 // this is a firebase limit
-
-Stock/Shared tables are also stored in Records and Tables but use a fixed channelID: channelID: shared
-*/
-
 function getAuthToken() {
   const tokenDOM = document.querySelector('meta[name="csrf-token"]');
   if (!tokenDOM) {
@@ -203,25 +165,10 @@ async function getTableNames() {
   return await response.json();
 }
 
-// DIFFERENCE BETWEEN FIREBASESTORAGE AND DATABLOCKSTORAGE //
-
-// FIREBASE VERSION USES THIS:
-// DatablockStorage.subscribeToListOfProjectTables = function (
-//   onTableAdded,
-//   onTableRemoved
-// ) {
-//   getTableNames().then(tableNames => {
-//     tableNames.forEach(onTableAdded);
-//   });
-// };
-DatablockStorage.subscribeToListOfProjectTables = undefined;
-
-// DATABLOCK STORAGE VERSION USES THIS:
+// FIXME: unfirebase, this is only implemented in DatablockStorage
 DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
-
-// END DIFFERENCE BETWEEN FIREBASESTORAGE AND DATABLOCKSTORAGE //
 
 async function getColumnsForTable(tableName) {
   const response = await _fetch('get_columns_for_table', 'GET', {table_name: tableName});

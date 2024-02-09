@@ -1092,6 +1092,7 @@ function overwriteTableData(tableName, recordsData) {
 
 // Initialize redux's list of tables from firebase, and keep it up to date as
 // new tables are added and removed.
+// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.subscribeToListOfProjectTables = function (
   onTableAdded,
   onTableRemoved
