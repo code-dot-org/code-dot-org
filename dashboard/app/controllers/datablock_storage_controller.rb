@@ -20,7 +20,7 @@ class DatablockStorageController < ApplicationController
   def set_key_value
     raise "value must be less than 4096 bytes" if params[:value].length > 4096
     value = JSON.parse params[:value]
-    DatablockStorageKvp.set_kvp(params[:channel_id], params[:key], value)
+    DatablockStorageKvp.set_kvp params[:channel_id], params[:key], value
     render json: {key: params[:key], value: value}
   end
 
@@ -44,7 +44,8 @@ class DatablockStorageController < ApplicationController
     record_json = JSON.parse params[:record_json]
 
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
-    table.create_records([record_json])
+    table.create_records [record_json]
+    table.save!
 
     render json: record_json
   end
@@ -85,7 +86,7 @@ class DatablockStorageController < ApplicationController
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
 
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    record_json = table.update_record(params[:record_id], JSON.parse(params[:record_json]))
+    record_json = table.update_record params[:record_id], JSON.parse(params[:record_json])
     table.save!
 
     render json: record_json
@@ -148,7 +149,7 @@ class DatablockStorageController < ApplicationController
 
   def delete_column
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    table.delete_column(params[:column_name])
+    table.delete_column params[:column_name]
     table.save!
 
     render json: true
@@ -156,7 +157,7 @@ class DatablockStorageController < ApplicationController
 
   def rename_column
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    table.rename_column(params[:old_column_name], params[:new_column_name])
+    table.rename_column params[:old_column_name], params[:new_column_name]
     table.save!
 
     render json: true
@@ -164,7 +165,7 @@ class DatablockStorageController < ApplicationController
 
   def coerce_column
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    table.coerce_column(params[:column_name], params[:column_type])
+    table.coerce_column params[:column_name], params[:column_type]
     table.save!
 
     render json: true
@@ -172,7 +173,7 @@ class DatablockStorageController < ApplicationController
 
   def import_csv
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
-    table.import_csv(params[:table_data_csv])
+    table.import_csv params[:table_data_csv]
     table.save!
 
     render json: true
@@ -186,16 +187,16 @@ class DatablockStorageController < ApplicationController
   end
 
   def populate_tables
-    tables_json = JSON.parse(params[:tables_json])
+    tables_json = JSON.parse params[:tables_json]
     tables_json.each do |table_name, records|
       table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
-      table.create_records(records)
+      table.create_records records
     end
     render json: true
   end
 
   def populate_key_values
-    key_values_json = JSON.parse(params[:key_values_json])
+    key_values_json = JSON.parse params[:key_values_json]
     raise "key_values_json must be a hash" unless key_values_json.is_a? Hash
     DatablockStorageKvp.set_kvps(params[:channel_id], key_values_json)
     render json: true
@@ -225,7 +226,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def add_shared_table
-    DatablockStorageTable.add_shared_table(params[:channel_id], params[:table_name])
+    DatablockStorageTable.add_shared_table params[:channel_id], params[:table_name]
   end
 
   private
