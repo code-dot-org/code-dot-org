@@ -236,11 +236,7 @@ DatablockStorage.createTable = function (tableName, onSuccess, onError) {
   }).then(onSuccess, onError);
 };
 
-DatablockStorage.deleteTable = function (tableName, type, onSuccess, onError) {
-  // FIXME: unfirebase, we ignore type, which is used by the Firebase implementation
-  // to decide whether to nullify a `current_tables/` ref or a ``storage/tables/` ref.
-  // Instead, we handle this in the backend, where we have a column in the tables table
-  // to specify which type of table it is.
+DatablockStorage.deleteTable = function (tableName, onSuccess, onError) {
   _fetch('delete_table', 'DELETE', {
     table_name: tableName,
   }).then(onSuccess, onError);

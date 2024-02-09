@@ -676,6 +676,8 @@ FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
+// FIXME: unfirebase, note that this diverges from DatablockStorage.deleteTable
+// which doesn't take a `type` parameter, since that's handled on the backend
 FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {
   if (type === tableType.SHARED) {
     getPathRef(getProjectDatabase(), `current_tables/${tableName}`)
