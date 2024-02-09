@@ -60,6 +60,14 @@ class DatablockStorageTable < ApplicationRecord
     # COMMIT;
   end
 
+  def delete_column(column_name)
+    records.each do |record|
+      record.record_json.delete(column_name)
+    end
+
+    self.columns.delete column_name
+  end
+
   def rename_column(old_column_name, new_column_name)
     # First rename the column in all the JSON records
     records.each do |record|

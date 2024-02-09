@@ -163,18 +163,9 @@ class DatablockStorageController < ApplicationController
   end
 
   def delete_column
-    column_name = params[:column_name]
-
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).each do |record|
-      record.record_json.delete(column_name)
-      record.save!
-    end
-
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    if table.columns.include? column_name
-      table.columns.delete column_name
-      table.save!
-    end
+    table.delete_column(params[:column_name])
+    table.save!
 
     render json: true
   end
