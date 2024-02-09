@@ -382,9 +382,10 @@ function getFieldOrTitle(blockElement, name) {
 
 /**
  * A helper function designed to process each individual block in an XML tree.
+ * Exported for testing.
  * @param {Element} block - The XML element for a single block.
  */
-function processBlockAndChildren(block) {
+export function processBlockAndChildren(block) {
   processIndividualBlock(block);
 
   // Blocks can contain other blocks so we must process all of their children.
