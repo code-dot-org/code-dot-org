@@ -387,23 +387,20 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  # TODO: call this method when saving a rubric in levelbuilder
   def validate_learning_goals_for_rubric(rubric)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
-
-    # find db learning goals
-    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal).sort
-
-    # find s3 learning goals
-    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
-    s3_learning_goals = rubric_rows.map {|row| row['Key Concept']}.sort
-
-    # report missing learning goals
+    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
     missing_learning_goals = db_learning_goals - s3_learning_goals
     if missing_learning_goals.any?
       raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
+  end
+
+  def get_s3_learning_goals(lesson_s3_name)
+    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
+    rubric_rows.map {|row| row['Key Concept']}
   end
 
   private def get_openai_evaluations(openai_params)
