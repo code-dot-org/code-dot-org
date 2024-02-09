@@ -6,7 +6,7 @@ import React from 'react';
 import dataStyles from './data-styles.module.scss';
 import msg from '@cdo/locale';
 import {refreshCurrentDataView} from './loadDataForView';
-import {storageBackend} from '../storage';
+import {storageBackend,isFirebaseStorage} from '../storage';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
@@ -20,11 +20,18 @@ class EditTableListRow extends React.Component {
   };
 
   handleDelete = () => {
-    storageBackend().deleteTable(
-      this.props.tableName,
-      this.props.tableType,
-      refreshCurrentDataView
-    );
+    if (isFirebaseStorage()) {
+      storageBackend().deleteTable(
+        this.props.tableName,
+        this.props.tableType,
+        refreshCurrentDataView
+      );
+    } else {
+      storageBackend().deleteTable(
+        this.props.tableName,
+        refreshCurrentDataView
+      );
+    }
   };
 
   render() {

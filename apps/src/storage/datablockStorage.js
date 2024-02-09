@@ -1,45 +1,6 @@
-import {init} from './firebaseUtils';
 import _ from 'lodash';
 
 const DatablockStorage = {};
-
-/*
-
-Docs useful to have in here while implementing
-// FIXME: unfirebase, remove this comment before merging PR
-
-Records table:
-
-channelID: VARCHAR(22),
-tableName: VARCHAR(768),
-recordID: INT,
-json: JSON
-Tables table:
-
-Tables table:
-channelID: VARCHAR(22),
-tableName: VARCHAR(768),
-columns: JSON,
-isSharedTable: VARCHAR(768), // if it points to a shared/stock table, load records using this table name instead
-columns (JSON) might look like: ['id', 'Word'], note this assumes the columnIDs (like -Mw7ENQB6uKfQYc0kI8U) that are present in Firebase are not actually used. It doesn't look like they are, e.g. firebaseStorage.js references columns by name not by ID.
-
-KeyValuePairs table:
-
-channelID: VARCHAR(22),
-key: VARCHAR(768), 
-value: VARCHAR(4096), -- v3.config.channels.maxPropertySize, see `rules.bolt`
-VARCHAR sizes:
-
-Firebase validation rules:
-
-maxPropertySize:4096 // value length of a key value pair
-maxRecordSize:4096 // max length of a record
-maxTableCount:10 // this doesn't seem to be encorced in rules.bolt?
-maxTableRows: 20000 // number of records inside a table
-maxKeySize: 768 // this is a firebase limit
-
-Stock/Shared tables are also stored in Records and Tables but use a fixed channelID: channelID: shared
-*/
 
 function getAuthToken() {
   const tokenDOM = document.querySelector('meta[name="csrf-token"]');
@@ -203,25 +164,10 @@ async function getTableNames() {
   return await response.json();
 }
 
-// DIFFERENCE BETWEEN FIREBASESTORAGE AND DATABLOCKSTORAGE //
-
-// FIREBASE VERSION USES THIS:
-// DatablockStorage.subscribeToListOfProjectTables = function (
-//   onTableAdded,
-//   onTableRemoved
-// ) {
-//   getTableNames().then(tableNames => {
-//     tableNames.forEach(onTableAdded);
-//   });
-// };
-DatablockStorage.subscribeToListOfProjectTables = undefined;
-
-// DATABLOCK STORAGE VERSION USES THIS:
+// This is only called if isDatablockStorage()
 DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
-
-// END DIFFERENCE BETWEEN FIREBASESTORAGE AND DATABLOCKSTORAGE //
 
 async function getColumnsForTable(tableName) {
   const response = await _fetch('get_columns_for_table', 'GET', {table_name: tableName});
@@ -242,14 +188,14 @@ function loadTableAndColumns({
     // which it then parses as JSON, and then stringifies again 🙈
     // see: https://github.com/code-dot-org/code-dot-org/blob/208ed1f6733ca2524cc91bdfa696ba98c3250f47/apps/src/storage/dataBrowser/DataTableView.jsx/#L89-L93
     //
-    // This is a relic of how our Firebase records were stored
+    // This is a relic of how our F*rebase records were stored
     // and a future improvement might be to optimize this.
     const recordStrings = records.map(record => JSON.stringify(record));
     onRecordsChanged(recordStrings);
   });
 }
 
-DatablockStorage.subscribeToTable = function (
+DatablockStorage.loadTable = function (
   tableName,
   onColumnsChanged,
   onRecordsChanged
@@ -262,7 +208,7 @@ DatablockStorage.subscribeToTable = function (
   });
 };
 
-DatablockStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
+DatablockStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
   _fetch('get_key_values', 'GET', {})
     .then(response => response.json())
     .then(json => {
@@ -283,27 +229,13 @@ DatablockStorage.previewSharedTable = function (
   });
 };
 
-DatablockStorage.unsubscribeFromTable = function (tableName) {
-  // Used by FirebaseStorage, but we don't need it for DatablockStorage
-  // since we don't hold subscriptions.
-};
-
-DatablockStorage.unsubscribeFromKeyValuePairs = function () {
-  // Used by FirebaseStorage, but we don't need it for DatablockStorage
-  // since we don't hold subscriptions.
-};
-
 DatablockStorage.createTable = function (tableName, onSuccess, onError) {
   _fetch('create_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
 
-DatablockStorage.deleteTable = function (tableName, type, onSuccess, onError) {
-  // FIXME: unfirebase, we ignore type, which is used by the Firebase implementation
-  // to decide whether to nullify a `current_tables/` ref or a ``storage/tables/` ref.
-  // Instead, we handle this in the backend, where we have a column in the tables table
-  // to specify which type of table it is.
+DatablockStorage.deleteTable = function (tableName, onSuccess, onError) {
   _fetch('delete_table', 'DELETE', {
     table_name: tableName,
   }).then(onSuccess, onError);
@@ -418,19 +350,20 @@ DatablockStorage.getColumnsForTable = function (tableName, tableType) {
   return getColumnsForTable(tableName);
 };
 
-// @return {Promise<boolean>} whether the project channelID (configured at initFirebaseStorage) exists
+// @return {Promise<boolean>} whether the project channelID (configured at initF*rebaseStorage) exists
 DatablockStorage.channelExists = function () {
   return _fetch('channel_exists', 'GET', {});
 };
 
-// deletes the entire channel in firebase
+// deletes all datablock storage data for this channel,
 // used only one place, applab.js config.afterClearPuzzle()
 DatablockStorage.clearAllData = function (onSuccess, onError) {
   _fetch('clear_all_data', 'DELETE', {}).then(onSuccess, onError);
 };
 
+// FIXME: unfirebase, remove this before merging PR
 // Current tables are live updated, the data is NOT copied into
-// the student project, instead a new type of firebase node is created
+// the student project, instead a new type of f*rebase node is created
 // like /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/current_tables/Daily Weather
 // as opposed to a normal table that would be like
 // /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/storage/tables/Daily Weather

@@ -676,6 +676,8 @@ FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
+// FIXME: unfirebase, note that this diverges from DatablockStorage.deleteTable
+// which doesn't take a `type` parameter, since that's handled on the backend
 FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {
   if (type === tableType.SHARED) {
     getPathRef(getProjectDatabase(), `current_tables/${tableName}`)
@@ -1092,6 +1094,7 @@ function overwriteTableData(tableName, recordsData) {
 
 // Initialize redux's list of tables from firebase, and keep it up to date as
 // new tables are added and removed.
+// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.subscribeToListOfProjectTables = function (
   onTableAdded,
   onTableRemoved
@@ -1135,7 +1138,7 @@ FirebaseStorage.subscribeToListOfProjectTables = function (
   });
 };
 
-FirebaseStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
+FirebaseStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
 
   getPathRef(projectStorageRef, 'keys').on('value', snapshot => {
@@ -1158,7 +1161,7 @@ FirebaseStorage.subscribeToKeyValuePairs = function (onKeyValuePairsChanged) {
   });
 };
 
-FirebaseStorage.subscribeToTable = function (
+FirebaseStorage.loadTable = function (
   tableName,
   onColumnsChanged,
   onRecordsChanged
@@ -1208,7 +1211,7 @@ FirebaseStorage.previewSharedTable = function (
 };
 
 // Unsubscribe Firebase from a table
-// One
+// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.unsubscribeFromTable = function (tableName) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
@@ -1221,6 +1224,7 @@ FirebaseStorage.unsubscribeFromTable = function (tableName) {
   getColumnsRef(getProjectDatabase(), tableName).off();
 };
 
+// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.unsubscribeFromKeyValuePairs = function () {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   getPathRef(projectStorageRef, 'keys').off('value');
