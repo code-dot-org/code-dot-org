@@ -231,45 +231,41 @@ Dashboard::Application.routes.draw do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
           if SUPPORTS_DATABLOCK_STORAGE.include? key
-            # Test / Experimentation Method
+            # Datablock Storage: Debug View
             get "/#{key}/:channel_id/datablock_storage", to: 'datablock_storage#index'
 
-            # Datablock Methods: key-value pairs
+            # Datablock Storage: Key-Value-Pair API
             post "/#{key}/:channel_id/datablock_storage/set_key_value", to: 'datablock_storage#set_key_value'
             get "/#{key}/:channel_id/datablock_storage/get_key_value", to: 'datablock_storage#get_key_value'
-            
-            # Datablock Methods: tables
-            delete "/#{key}/:channel_id/datablock_storage/delete_record", to: 'datablock_storage#delete_record'
-            get "/#{key}/:channel_id/datablock_storage/read_records", to: 'datablock_storage#read_records'
-            put "/#{key}/:channel_id/datablock_storage/update_record", to: 'datablock_storage#update_record'
-            post "/#{key}/:channel_id/datablock_storage/create_record", to: 'datablock_storage#create_record'
-
-            # Dataset Browser Methods
-            get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
+            delete "/#{key}/:channel_id/datablock_storage/delete_key_value", to: 'datablock_storage#delete_key_value'
             get "/#{key}/:channel_id/datablock_storage/get_key_values", to: 'datablock_storage#get_key_values'
+            put "/#{key}/:channel_id/datablock_storage/populate_key_values", to: 'datablock_storage#populate_key_values'
 
-            # Dataset Browser Actions: tables
+            # Datablock Storage: Table API
             post "/#{key}/:channel_id/datablock_storage/create_table", to: 'datablock_storage#create_table'
-            delete "/#{key}/:channel_id/datablock_storage/delete_table", to: 'datablock_storage#delete_table'
-            delete "/#{key}/:channel_id/datablock_storage/clear_table", to: 'datablock_storage#clear_table'
+            post "/#{key}/:channel_id/datablock_storage/add_shared_table", to: 'datablock_storage#add_shared_table'
             post "/#{key}/:channel_id/datablock_storage/import_csv", to: 'datablock_storage#import_csv'
+            delete "/#{key}/:channel_id/datablock_storage/clear_table", to: 'datablock_storage#clear_table'
+            delete "/#{key}/:channel_id/datablock_storage/delete_table", to: 'datablock_storage#delete_table'
+            get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
+            put "/#{key}/:channel_id/datablock_storage/populate_tables", to: 'datablock_storage#populate_tables'
 
-            # Dataset Browser Actions: table columns
+            # Datablock Storage: Table Column API
             post "/#{key}/:channel_id/datablock_storage/add_column", to: 'datablock_storage#add_column'
-            delete "/#{key}/:channel_id/datablock_storage/delete_column", to: 'datablock_storage#delete_column'
             put "/#{key}/:channel_id/datablock_storage/rename_column", to: 'datablock_storage#rename_column'
             put "/#{key}/:channel_id/datablock_storage/coerce_column", to: 'datablock_storage#coerce_column'
-
-            # Dataset Browser Actions: key-value pairs
-            delete "/#{key}/:channel_id/datablock_storage/delete_key_value", to: 'datablock_storage#delete_key_value'
-
-            # Other (consider renames)
-            put "/#{key}/:channel_id/datablock_storage/populate_tables", to: 'datablock_storage#populate_tables'
-            put "/#{key}/:channel_id/datablock_storage/populate_key_values", to: 'datablock_storage#populate_key_values'
+            delete "/#{key}/:channel_id/datablock_storage/delete_column", to: 'datablock_storage#delete_column'
             get "/#{key}/:channel_id/datablock_storage/get_columns_for_table", to: 'datablock_storage#get_columns_for_table'
+
+            # Datablock Storage: Table Record API
+            post "/#{key}/:channel_id/datablock_storage/create_record", to: 'datablock_storage#create_record'
+            get "/#{key}/:channel_id/datablock_storage/read_records", to: 'datablock_storage#read_records'
+            put "/#{key}/:channel_id/datablock_storage/update_record", to: 'datablock_storage#update_record'
+            delete "/#{key}/:channel_id/datablock_storage/delete_record", to: 'datablock_storage#delete_record'
+
+            # Datablock Storage: Channel API
             get "/#{key}/:channel_id/datablock_storage/channel_exists", to: 'datablock_storage#channel_exists'
             delete "/#{key}/:channel_id/datablock_storage/clear_all_data", to: 'datablock_storage#clear_all_data'
-            post "/#{key}/:channel_id/datablock_storage/add_shared_table", to: 'datablock_storage#add_shared_table'
           end
 
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
