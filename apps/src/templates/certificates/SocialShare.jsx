@@ -39,6 +39,8 @@ export default function SocialShare({
   const twitterShareUrl = `https://twitter.com/share?${twitter}`;
   const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${linkedin}`;
 
+  const dashboard = window.dashboard;
+
   return (
     <div>
       {/* note that linkedin share doesn't work with localhost urls */}
@@ -54,7 +56,7 @@ export default function SocialShare({
             style={{background: color.linkedin_blue, ...styles.shareButton}}
             onClick={e => e.preventDefault()}
           >
-            <i className="fa fa-linkedin" />
+            <i className="fa fa-linkedin" title={i18n.shareToLinkedIn()} />
           </button>
         </a>
       )}
@@ -71,7 +73,7 @@ export default function SocialShare({
             style={{background: color.facebook_blue, ...styles.shareButton}}
             onClick={e => e.preventDefault()}
           >
-            <i className="fa fa-facebook" />
+            <i className="fa fa-facebook" title={i18n.shareToFacebook()} />
           </button>
         </a>
       )}
@@ -87,7 +89,7 @@ export default function SocialShare({
             style={{background: color.twitter_blue, ...styles.shareButton}}
             onClick={e => e.preventDefault()}
           >
-            <i className="fa fa-twitter" />
+            <i className="fa fa-twitter" title={i18n.shareToTwitter()} />
           </button>
         </a>
       )}
