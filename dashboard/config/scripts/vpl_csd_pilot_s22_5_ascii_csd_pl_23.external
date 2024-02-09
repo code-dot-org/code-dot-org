@@ -5,22 +5,22 @@ description 'description here'
 markdown <<MARKDOWN
 # ASCII and Binary Representation
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Modern computers are electronic devices filled with lots of tiny wires. These wires carry electricity and at any moment a wire can be on or off. As a result, computers must represent information using either "on" or "off".  
+### **Key Vocabulary**
+
+* #### **Binary System** - a way of representing information using only two options
+* #### **ASCII** (ask-ee) - a popular system for representing text in binary
+* #### **Bit** - a single piece of binary information
 </p></div>
 
-## Vocabulary
+#### Modern computers are electronic devices filled with lots of tiny wires. These wires carry electricity and at any moment a wire can be on or off. As a result, computers must represent information using either "on" or "off".  
 
-* ##### **Binary System** - a way of representing information using only two options
-* ##### **ASCII** (ask-ee) - a popular system for representing text in binary
-* ##### **Bit** - a single piece of binary information
-
-##### Computers have their own binary system - they represent "on" or "off" using 0’s and 1’s. This is why you may have heard that computer science is all “0’s and 1’s”. When you have a single 0 or 1, that is called one **bit** of information.
+#### Computers have their own binary system - they represent "on" or "off" using 0’s and 1’s. This is why you may have heard that computer science is all “0’s and 1’s”. When you have a single 0 or 1, that is called one **bit** of information.
 
 ## ASCII
 
-##### There are lots of possible binary systems for representing the letters in binary information, but the most popular is called **ASCII**. You can see the way patterns of "ons" and "offs" represent each letter in the table below. *Click on the image below to enlarge*.
+#### There are lots of possible binary systems for representing the letters in binary information, but the most popular is called **ASCII**. You can see the way patterns of "ons" and "offs" represent each letter in the table below. *Click on the image below to enlarge*.
 <a href="https://images.code.org/46bf51bbe0b24191f3e79454f3b5a23d-image-1651785040312.10.29 PM.png" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/46bf51bbe0b24191f3e79454f3b5a23d-image-1651785040312.10.29 PM.png" style="width:500px; margin-top:0px; margin-bottom:25px; margin-left:200px;"></a>
 
 
@@ -36,9 +36,9 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p>
 
-##### Answer to practice: **CSROCKS**
+#### Answer to practice: **CSROCKS**
 
-##### How did you do?
+#### How did you do?
 </p>
 </div></details>
 MARKDOWN
