@@ -18,11 +18,25 @@ class DatablockStorageTable < ApplicationRecord
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
+  SHARED_TABLE_CHANNEL_ID = 'shared'
+
+  def self.get_table_names(channel_id)
+    DatablockStorageTable.where(channel_id: channel_id).pluck(:table_name)
+  end
+
+  def self.get_shared_table_names
+    get_table_names(SHARED_TABLE_CHANNEL_ID)
+  end
+
+  def self.find_shared_table(table_name)
+    DatablockStorageTable.find_by(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: table_name)
+  end
+
   def self.add_shared_table(channel_id, table_name)
-    unless DatablockStorageTable.exists?(channel_id: "shared", table_name: table_name)
+    unless DatablockStorageTable.exists?(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: table_name)
       raise "Shared table '#{table_name}' does not exist"
     end
-    DatablockStorageTable.create!(channel_id: channel_id, table_name: table_name, is_shared_table: true)
+    DatablockStorageTable.create!(channel_id: channel_id, table_name: table_name, is_shared_table: table_name)
   end
 
   def self.populate_tables(channel_id, tables_json)
@@ -54,12 +68,11 @@ class DatablockStorageTable < ApplicationRecord
   # end
 
   def read_records
-    # FIXME: is_shared_table, read from shared_table
-    return records
+    is_shared_table ? shared_table.records : records
   end
 
   def create_records(record_jsons)
-    # FIXME: is_shared_table, copy-on-write goes here
+    if_shared_table_copy_on_write
 
     # BEGIN;
     DatablockStorageRecord.transaction do
@@ -100,7 +113,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def update_record(record_id, record_json)
-    # FIXME: is_shared_table, copy-on-write goes here
+    if_shared_table_copy_on_write
 
     record = records.find_by(record_id: record_id)
     return unless record
@@ -125,12 +138,11 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def get_columns
-    # FIXME: is_shared_table, read from shared_table
-    return columns
+    is_shared_table ? shared_table.columns : columns
   end
 
   def add_column(column_name)
-    # FIXME: is_shared_table, copy-on-write goes here
+    if_shared_table_copy_on_write
 
     unless columns.include? column_name
       self.columns << column_name
@@ -138,7 +150,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def delete_column(column_name)
-    # FIXME: is_shared_table, copy-on-write goes here
+    if_shared_table_copy_on_write
 
     records.each do |record|
       record.record_json.delete(column_name)
@@ -148,7 +160,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def rename_column(old_column_name, new_column_name)
-    # FIXME: is_shared_table, copy-on-write goes here
+    if_shared_table_copy_on_write
 
     # First rename the column in all the JSON records
     records.each do |record|
@@ -171,7 +183,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def coerce_column(column_name, column_type)
-    # FIXME: is_shared_table, copy-on-write goes here
+    if_shared_table_copy_on_write
 
     unless ['string', 'number', 'boolean'].include? column_type
       raise "column_type must be one of: string, number, boolean"
@@ -181,5 +193,21 @@ class DatablockStorageTable < ApplicationRecord
       # column type is one of: string, number, boolean, date
       record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
     end
+  end
+
+  def shared_table
+    DatablockStorageTable.find_by(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: is_shared_table)
+  end
+
+  def copy_shared_table
+    to_copy = shared_table
+    self.columns = to_copy.columns
+    records.insert_all to_copy.records.map(&:as_json)
+    self.is_shared_table = nil
+    save!
+  end
+
+  def if_shared_table_copy_on_write
+    copy_shared_table if is_shared_table
   end
 end
