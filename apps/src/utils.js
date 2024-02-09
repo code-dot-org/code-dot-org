@@ -812,9 +812,9 @@ export function resetAniGif(element) {
 export function interpolateColors(from, to, value) {
   const fromRGB = new RGBColor(from);
   const toRGB = new RGBColor(to);
-  const r = fromRGB.r * (1 - value) + toRGB.r * value;
-  const g = fromRGB.g * (1 - value) + toRGB.g * value;
-  const b = fromRGB.b * (1 - value) + toRGB.b * value;
+  const r = Math.round(fromRGB.r * (1 - value) + toRGB.r * value);
+  const g = Math.round(fromRGB.g * (1 - value) + toRGB.g * value);
+  const b = Math.round(fromRGB.b * (1 - value) + toRGB.b * value);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
