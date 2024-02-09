@@ -1,4 +1,3 @@
-import {init} from './firebaseUtils';
 import _ from 'lodash';
 
 const DatablockStorage = {};
