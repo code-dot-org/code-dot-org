@@ -77,15 +77,15 @@ class DatablockStorageController < ApplicationController
   end
 
   def clear_table
-    table_name = params[:table_name]
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: table_name).delete_all
+    table = find_table
+    table.records.delete_all
+    table.save!
 
     render json: true
   end
 
   def delete_table
-    where_table.delete_all
-    DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).delete_all
+    find_table.destroy
 
     render json: true
   end
