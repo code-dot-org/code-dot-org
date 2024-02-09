@@ -1,3 +1,4 @@
+import {addMissingBehaviorId} from '@cdo/apps/blockly/addons/cdoXml';
 import {commonFunctions} from './commonProcedureCallerMutator';
 import GoogleBlockly from 'blockly/core';
 
@@ -7,6 +8,7 @@ export const behaviorGetMutator = {
   paramsFromSerializedState_: [],
 
   domToMutation: function (element) {
+    addMissingBehaviorId(element.parentElement, 'domToMutation');
     const name = element.nextElementSibling.textContent;
     this.behaviorId = element.nextElementSibling.getAttribute('id');
     this.deserialize_(name, []);

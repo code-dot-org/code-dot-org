@@ -312,7 +312,7 @@ export function addNameToBlockFunctionCallBlock(blockElement) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-function addMissingBehaviorId(blockElement) {
+export function addMissingBehaviorId(blockElement, trace = 'local') {
   const blockType = blockElement.getAttribute('type');
   if (blockType === BLOCK_TYPES.behaviorGet) {
     const behaviorNameField =
