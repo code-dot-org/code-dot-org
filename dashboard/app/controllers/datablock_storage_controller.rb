@@ -131,7 +131,7 @@ class DatablockStorageController < ApplicationController
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
     # FIXME: unfirebase, what if the table already existed and had columns? Won't this overwrite them?
     # FIXME: datablock/use-column-defs look into this
-    table.columns = '["id"]'
+    table.columns = ["id"]
     table.save!
 
     render json: true
@@ -156,10 +156,8 @@ class DatablockStorageController < ApplicationController
     column_name = params[:column_name]
 
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    columns = JSON.parse(table.columns)
-    unless columns.include? column_name
-      columns << column_name
-      table.columns = columns.to_json
+    unless table.columns.include? column_name
+      table.columns << column_name
       table.save!
     end
 
@@ -175,10 +173,8 @@ class DatablockStorageController < ApplicationController
     end
 
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    columns = JSON.parse(table.columns)
-    if columns.include? column_name
-      columns.delete column_name
-      table.columns = columns.to_json
+    if table.columns.include? column_name
+      table.columns.delete column_name
       table.save!
     end
 
@@ -190,7 +186,6 @@ class DatablockStorageController < ApplicationController
     new_column_name = params[:new_column_name]
 
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    columns = JSON.parse(table.columns)
 
     # First rename the column in all the JSON records
     DatablockStorageRecord.where(channel_id: params[:channel_id], table_name: params[:table_name]).each do |record|
@@ -199,8 +194,7 @@ class DatablockStorageController < ApplicationController
     end
 
     # Second rename the column in the table definition
-    columns = columns.map {|column| column == old_column_name ? new_column_name : column}
-    table.columns = columns.to_json
+    table.columns = table.columns.map {|column| column == old_column_name ? new_column_name : column}
     table.save!
 
     render json: true
@@ -268,7 +262,7 @@ class DatablockStorageController < ApplicationController
 
   def get_columns_for_table
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    render json: JSON.parse(table.columns)
+    render json: table.columns
   end
 
   # Returns true if validation checks pass
