@@ -474,13 +474,12 @@ export function processToolboxXml(toolboxString) {
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(toolboxString, 'text/xml');
   const xmlRoot = xmlDoc.documentElement;
-  const blocks = Array.from(xmlRoot.childNodes).filter(
-    node => node.nodeName === 'block'
-  );
+  if (xmlDoc.querySelector('parsererror')) {
+    throw new Error('Error parsing XML');
+  }
 
-  blocks.forEach(block => {
-    processIndividualBlock(block);
-  });
+  const blocks = xmlDoc.querySelectorAll('block');
+  blocks.forEach(processIndividualBlock);
 
   // Convert the modified XML document back to a string
   const modifiedXmlString = new XMLSerializer().serializeToString(xmlDoc);
