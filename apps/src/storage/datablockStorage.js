@@ -348,8 +348,6 @@ DatablockStorage.addColumn = function (
     table_name: tableName,
     column_name: columnName,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 // Delete the column definition AND filters all rows to remove the offending JSON property
