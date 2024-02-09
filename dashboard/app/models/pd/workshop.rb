@@ -913,4 +913,12 @@ class Pd::Workshop < ApplicationRecord
   def user_attended?(user)
     attending_teachers.include?(user)
   end
+
+  def summarize_for_my_pl_page
+    {
+      course_name: course_name,
+      dates: workshop_date_range_string,
+      location: location_address,
+    }
+  end
 end
