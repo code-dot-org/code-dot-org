@@ -216,7 +216,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def find_table_or_shared_table
-    is_shared_table? ?
+    shared_table? ?
       DatablockStorageTable.find_shared_table(params[:table_name]) :
       find_table
   end
