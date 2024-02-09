@@ -42,7 +42,6 @@ function recordShare(type, appType) {
   if (!window.dashboard) {
     return;
   }
-  console.log('recordShare - type - appType', type, appType);
   if (SHARE_TYPE_EVENT[type]) {
     analyticsReporter.sendEvent(SHARE_TYPE_EVENT[type], {
       lab_type: appType,
