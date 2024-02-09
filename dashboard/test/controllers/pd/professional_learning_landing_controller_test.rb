@@ -199,6 +199,125 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
     assert_equal(['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]})
   end
 
+  test 'id of current year application is passed down' do
+    prepare_scenario
+
+    application = create :pd_teacher_application, user: @teacher, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal application.id, response[:current_year_application_id]
+  end
+
+  test 'enrolled workshops are passed down' do
+    prepare_scenario
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 3, response[:workshops_as_participant].length
+    assert_equal([@csf_workshop, @csd_workshop, @csp_workshop].map(&:course_name), response[:workshops_as_participant].map {|workshop| workshop[:course_name]})
+  end
+
+  test 'facilitated workshops are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::FACILITATOR
+    workshop = create :pd_workshop, facilitators: [@teacher]
+    @teacher.reload
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_as_facilitator].length
+    assert_equal workshop.course_name, response[:workshops_as_facilitator].first[:course_name]
+  end
+
+  test 'organized workshops are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::WORKSHOP_ORGANIZER
+    workshop = create :pd_workshop, organizer: @teacher
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_as_organizer].length
+    assert_equal workshop.course_name, response[:workshops_as_organizer].first[:course_name]
+  end
+
+  test 'workshops for regional partner are passed down' do
+    prepare_scenario
+
+    regional_partner = create :regional_partner
+    @teacher.regional_partners << regional_partner
+    workshop = create :pd_workshop, regional_partner: regional_partner
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 1, response[:workshops_for_regional_partner].length
+    assert_equal workshop.course_name, response[:workshops_for_regional_partner].first[:course_name]
+  end
+
+  test 'progress in PL courses is passed down' do
+    prepare_scenario
+
+    # User has completed all of this unit
+    pl_unit1 = create :pl_unit, :with_lessons
+    create :user_script, user: @teacher, script: pl_unit1
+    unit1_level1 = create :level
+    create :script_level, script: pl_unit1, levels: [unit1_level1], lesson: pl_unit1.lessons.first
+    create :user_level, user: @teacher, level: unit1_level1, script: pl_unit1, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    unit1_level2 = create :level
+    create :script_level, script: pl_unit1, levels: [unit1_level2], lesson: pl_unit1.lessons.first
+    create :user_level, user: @teacher, level: unit1_level2, script: pl_unit1, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    pl_unit1.reload
+
+    # User has completed some of this unit
+    pl_unit2 = create :pl_unit, :with_lessons
+    create :user_script, user: @teacher, script: pl_unit2
+    unit2_level1 = create :level
+    create :script_level, script: pl_unit2, levels: [unit2_level1], lesson: pl_unit2.lessons.first
+    create :user_level, user: @teacher, level: unit2_level1, script: pl_unit2, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    unit2_level2 = create :level
+    create :script_level, script: pl_unit2, levels: [unit2_level2], lesson: pl_unit2.lessons.first
+    pl_unit2.reload
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal 2, response[:pl_courses_started].length
+    assert_equal([pl_unit1.name, pl_unit2.name], response[:pl_courses_started].map {|u| u[:name]})
+    assert_equal 100, response[:pl_courses_started].find {|u| u[:name] == pl_unit1.name}[:percent_completed]
+    assert_equal 50, response[:pl_courses_started].find {|u| u[:name] == pl_unit2.name}[:percent_completed]
+  end
+
+  test 'user permissions are passed down' do
+    prepare_scenario
+
+    @teacher.permission = UserPermission::PROGRAM_MANAGER
+    @teacher.permission = UserPermission::FACILITATOR
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal ['authorized_teacher', 'program_manager', 'facilitator'].sort, response[:user_permissions].sort
+  end
+
+  test 'courses as facilitator are passed down' do
+    prepare_scenario
+
+    create :pd_course_facilitator, facilitator: @teacher, course: @csd_workshop.course
+    create :pd_course_facilitator, facilitator: @teacher, course: @csp_workshop.course
+
+    load_pl_landing @teacher
+
+    response = assigns(:landing_page_data)
+    assert_equal [@csd_workshop.course, @csp_workshop.course], response[:courses_as_facilitator]
+  end
+
   def go_to_workshop(workshop, teacher)
     enrollment = create :pd_enrollment, email: teacher.email, workshop: workshop
     create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
