@@ -57,7 +57,7 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
     }
     case DataView.TABLE: {
       // Triggered when we browse a specific table
-      storage.subscribeToTable(
+      storage.loadTable(
         newTableName,
         columnNames =>
           getStore().dispatch(updateTableColumns(newTableName, columnNames)),

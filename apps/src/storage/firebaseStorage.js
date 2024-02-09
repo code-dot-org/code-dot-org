@@ -1158,7 +1158,7 @@ FirebaseStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
   });
 };
 
-FirebaseStorage.subscribeToTable = function (
+FirebaseStorage.loadTable = function (
   tableName,
   onColumnsChanged,
   onRecordsChanged

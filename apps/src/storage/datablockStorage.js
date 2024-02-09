@@ -249,7 +249,7 @@ function loadTableAndColumns({
   });
 }
 
-DatablockStorage.subscribeToTable = function (
+DatablockStorage.loadTable = function (
   tableName,
   onColumnsChanged,
   onRecordsChanged
