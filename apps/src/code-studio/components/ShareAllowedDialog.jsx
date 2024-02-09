@@ -25,10 +25,28 @@ import Button from '../../templates/Button';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-function recordShare(type) {
+const SHARE_TYPE_EVENT = {
+  'open': EVENTS.SHARING_DIALOG_OPEN,
+  'copy': EVENTS.SHARING_LINK_COPY,
+  'publish': EVENTS.SHARING_PUBLISH,
+  'facebook': EVENTS.SHARING_FB,
+  'twitter': EVENTS.SHARING_TWITTER,
+  'send-to-phone': EVENTS.SHARING_LINK_SEND_TO_PHONE,
+  'close': EVENTS.SHARING_CLOSE_ESCAPE,
+};
+
+function recordShare(type, appType) {
   if (!window.dashboard) {
     return;
+  }
+  console.log('recordShare - type - appType', type, appType);
+  if (SHARE_TYPE_EVENT[type]) {
+    analyticsReporter.sendEvent(SHARE_TYPE_EVENT[type], {
+      lab_type: appType,
+    });
   }
 
   firehoseClient.putRecord(
@@ -43,10 +61,10 @@ function recordShare(type) {
   );
 }
 
-function wrapShareClick(handler, type) {
+function wrapShareClick(handler, type, appType) {
   return function () {
     try {
-      recordShare(type);
+      recordShare(type, appType);
     } finally {
       handler.apply(this, arguments);
     }
@@ -126,7 +144,7 @@ class ShareAllowedDialog extends React.Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
-      recordShare('open');
+      recordShare('open', this.props.appType);
       this.setState({hasBeenCopied: false});
 
       this.checkProjectAndAccountAge();
@@ -164,7 +182,7 @@ class ShareAllowedDialog extends React.Component {
     ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
 
   close = () => {
-    recordShare('close');
+    recordShare('close', this.props.appType);
     this.props.onClose();
     this.setState({
       replayVideoUnavailable: false,
@@ -396,7 +414,7 @@ class ShareAllowedDialog extends React.Component {
                         ...styles.copyButton,
                         ...(this.state.hasBeenCopied && styles.copyButtonLight),
                       }}
-                      onClick={wrapShareClick(this.copy, 'copy')}
+                      onClick={wrapShareClick(this.copy, 'copy', this.props.appType)}
                       text={i18n.copyLinkToProject()}
                       value={shareUrl}
                     />
@@ -413,7 +431,8 @@ class ShareAllowedDialog extends React.Component {
                     href=""
                     onClick={wrapShareClick(
                       this.showSendToPhone,
-                      'send-to-phone'
+                      'send-to-phone',
+                      this.props.appType
                     )}
                     style={styles.sendToPhoneButton}
                   >
@@ -434,7 +453,7 @@ class ShareAllowedDialog extends React.Component {
                         style={
                           hasThumbnail ? styles.button : styles.buttonDisabled
                         }
-                        onClick={wrapShareClick(this.publish, 'publish')}
+                        onClick={wrapShareClick(this.publish, 'publish', this.props.appType)}
                         disabled={disablePublishButton}
                         className="no-mc"
                       >
@@ -469,7 +488,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'facebook'
+                            'facebook',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >
@@ -483,7 +503,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'twitter'
+                            'twitter',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >
