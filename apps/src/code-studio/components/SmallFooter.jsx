@@ -13,6 +13,8 @@ import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import Button from '../../templates/Button';
+import color from '../../util/color';
 import i18n from '@cdo/locale';
 
 const MenuState = {
@@ -29,7 +31,7 @@ export default class SmallFooter extends React.Component {
     i18nDropdown: PropTypes.string,
     copyrightInBase: PropTypes.bool.isRequired,
     copyrightStrings: PropTypes.shape({
-      thank_you: PropTypes.string.isRequired,
+      thanks: PropTypes.string.isRequired,
       help_from_html: PropTypes.string.isRequired,
       art_from_html: PropTypes.string.isRequired,
       code_from_html: PropTypes.string.isRequired,
@@ -172,6 +174,17 @@ export default class SmallFooter extends React.Component {
         maxWidth: '50%',
         minWidth: this.state.baseWidth,
       },
+      copyrightXClose: {
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        padding: 0,
+        color: color.neutral_dark30,
+        backgroundColor: color.background_gray,
+        cursor: 'pointer',
+        fontSize: 24,
+        border: 'none',
+      },
       copyrightScrollArea: {
         maxHeight: this.props.phoneFooter ? 210 : undefined,
         marginBottom: this.state.baseHeight - 1,
@@ -220,9 +233,7 @@ export default class SmallFooter extends React.Component {
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
             <h4>{this.props.baseCopyrightString}</h4>
             <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.thank_you
-              )}
+              markdown={decodeURIComponent(this.props.copyrightStrings.thanks)}
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <SafeMarkdown
@@ -247,6 +258,13 @@ export default class SmallFooter extends React.Component {
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.trademark
               )}
+            />
+            <Button
+              id="x-close-copyright"
+              onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
+              icon="fa-solid fa-xmark"
+              style={styles.copyrightXClose}
+              aria-label={i18n.closeDialog()}
             />
           </div>
         </div>

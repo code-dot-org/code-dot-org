@@ -26,6 +26,9 @@ export function loadUnitProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
+  const startTime = new Date().getTime();
+  let progressLatencyMs = -1;
+  let structureLatencyMs = -1;
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
@@ -47,7 +50,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     });
   }
 
-  let sectionProgress = {
+  const sectionProgress = {
     unitDataByUnit: {},
     studentLevelProgressByUnit: {},
     studentLessonProgressByUnit: {},
@@ -60,6 +63,7 @@ export function loadUnitProgress(scriptId, sectionId) {
   })
     .then(response => response.json())
     .then(scriptData => {
+      structureLatencyMs = new Date().getTime() - startTime;
       sectionProgress.unitDataByUnit = {
         [scriptId]: postProcessDataByScript(
           scriptData,
@@ -82,6 +86,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     return fetch(url, {credentials: 'include'})
       .then(response => response.json())
       .then(data => {
+        progressLatencyMs = new Date().getTime() - startTime;
         sectionProgress.studentLevelProgressByUnit = {
           [scriptId]: {
             ...sectionProgress.studentLevelProgressByUnit[scriptId],
@@ -103,6 +108,8 @@ export function loadUnitProgress(scriptId, sectionId) {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
       scriptId,
+      progressLatencyMs,
+      structureLatencyMs,
     });
 
     sectionProgress.studentLessonProgressByUnit = {
@@ -124,7 +131,7 @@ export function loadUnitProgress(scriptId, sectionId) {
 }
 
 function postProcessDataByScript(scriptData, includeBonusLevels) {
-  // Filter to match scriptDataPropType
+  // Filter to match unitDataPropType
   const filteredScriptData = {
     id: scriptData.id,
     csf: !!scriptData.csf,

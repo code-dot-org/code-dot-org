@@ -77,4 +77,8 @@ class Multi < Match
       }
     )
   end
+
+  def validated?
+    true
+  end
 end

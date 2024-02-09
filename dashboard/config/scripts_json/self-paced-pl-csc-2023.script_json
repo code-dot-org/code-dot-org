@@ -14,10 +14,10 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csc",
-    "serialized_at": "2024-01-11 15:10:41 UTC",
+    "serialized_at": "2024-02-09 00:08:50 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
-    "instructor_audience": "universal_instructor",
+    "instructor_audience": "facilitator",
     "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "self-paced-pl-csc-2023"

@@ -100,81 +100,67 @@ const OPTIONS = {
   three: ['Seventh', 'Eighth', 'Ninth'],
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('FormComponents/FormComponent', module)
-    .addDecorator(reactBootstrapStoryDecorator)
-    .addStoryTable([
-      {
-        name: 'simple form with generated radio buttons',
-        story: () => (
-          <TestPageOne
-            options={{
-              one: OPTIONS.one,
-            }}
-            onChange={action('onChange')}
-            errors={[]}
-            errorMessages={{}}
-            data={{}}
-          />
-        ),
-      },
-      {
-        name: 'simple form with generated check buttons',
-        story: () => (
-          <TestPageTwo
-            options={{
-              two: OPTIONS.two,
-            }}
-            onChange={action('onChange')}
-            errors={[]}
-            errorMessages={{}}
-            data={{}}
-          />
-        ),
-      },
-      {
-        name: 'simple form with generated select dropdown',
-        story: () => (
-          <TestPageThree
-            options={{
-              three: OPTIONS.three,
-            }}
-            onChange={action('onChange')}
-            errors={[]}
-            errorMessages={{}}
-            data={{}}
-          />
-        ),
-      },
-      {
-        name: 'simple form with generated text input',
-        story: () => (
-          <TestPageFour
-            options={{}}
-            onChange={action('onChange')}
-            errors={[]}
-            errorMessages={{}}
-            data={{}}
-          />
-        ),
-      },
-    ]);
+export default {
+  component: FormController,
+  decorators: [reactBootstrapStoryDecorator],
+};
 
-  storybook
-    .storiesOf('FormComponents/FormController', module)
-    .addDecorator(reactBootstrapStoryDecorator)
-    .addStoryTable([
-      {
-        name: 'simple multi-page form',
-        story: () => (
-          <TestController
-            storybook={storybook}
-            apiEndpoint=""
-            options={OPTIONS}
-            requiredFields={[]}
-          />
-        ),
-      },
-    ]);
+export const FormWithRadioButtons = () => {
+  return (
+    <TestPageOne
+      options={{
+        one: OPTIONS.one,
+      }}
+      onChange={action('onChange')}
+      errors={[]}
+      errorMessages={{}}
+      data={{}}
+    />
+  );
+};
+
+export const FormWithCheckButtons = () => {
+  return (
+    <TestPageTwo
+      options={{
+        two: OPTIONS.two,
+      }}
+      onChange={action('onChange')}
+      errors={[]}
+      errorMessages={{}}
+      data={{}}
+    />
+  );
+};
+
+export const FormWithSelectDropdown = () => {
+  return (
+    <TestPageThree
+      options={{
+        three: OPTIONS.three,
+      }}
+      onChange={action('onChange')}
+      errors={[]}
+      errorMessages={{}}
+      data={{}}
+    />
+  );
+};
+
+export const GeneratedTextInput = () => {
+  return (
+    <TestPageFour
+      options={{}}
+      onChange={action('onChange')}
+      errors={[]}
+      errorMessages={{}}
+      data={{}}
+    />
+  );
+};
+
+export const MultiPageForm = () => {
+  return (
+    <TestController apiEndpoint="" options={OPTIONS} requiredFields={[]} />
+  );
 };

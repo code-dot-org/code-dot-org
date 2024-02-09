@@ -1,0 +1,84 @@
+@import 'color';
+
+.iconKey {
+  margin-bottom: 40px;
+}
+
+.iconKeyCaret {
+  margin-inline-end: 12px;
+}
+
+.iconKeyTitle {
+  cursor: pointer;
+  width: fit-content;
+  padding-inline-end: 8px;
+}
+
+.legend {
+  align-items: flex-start;
+  border: 1px solid $light_gray_200;
+  border-radius: 4px;
+  display: inline-flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.legend .headerContainer {
+  width: 100%;
+  padding: 8px 16px;
+  border-bottom: 1px solid $light_gray_200;
+  box-sizing: border-box;
+}
+
+.legendColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icons {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.labelText {
+  margin-bottom: 0;
+}
+
+.fontAwesomeIcon {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+}
+
+.cornerBox {
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color: $neutral_dark40;
+}
+
+.needsFeedback {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M7.4152 2L18 2L18 12.5858L7.4152 2Z' stroke='%238C52BA' stroke-width='2'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.feedbackGiven {
+background-image: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M19 1L19 15L5 1L19 1Z' fill='%23292F36'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}

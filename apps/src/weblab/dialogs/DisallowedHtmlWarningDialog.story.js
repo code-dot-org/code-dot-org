@@ -3,7 +3,6 @@ import {action} from '@storybook/addon-actions';
 import DisallowedHtmlWarningDialog from './DisallowedHtmlWarningDialog';
 
 export default {
-  title: 'DisallowedHtmlWarningDialog',
   component: DisallowedHtmlWarningDialog,
 };
 

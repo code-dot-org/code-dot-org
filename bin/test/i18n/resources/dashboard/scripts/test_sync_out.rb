@@ -19,7 +19,6 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
   end
 
   before do
-    PegasusLanguages.stubs(:all).returns([language])
     I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
   end
 
@@ -27,28 +26,28 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
     assert_equal I18n::Utils::SyncOutBase, described_class.superclass
   end
 
-  describe '.perform' do
-    let(:perform_sync_out) {described_class.perform}
+  describe '#process' do
+    let(:perform_sync_out) {described_instance.process(language)}
 
     let(:expect_localization_restoration) do
-      described_class.any_instance.expects(:restore_localization).with(language)
+      described_instance.expects(:restore_localization).with(language)
     end
     let(:expect_malformed_i18n_reporting) do
-      described_class.any_instance.expects(:report_malformed_i18n).with(language)
+      described_instance.expects(:report_malformed_i18n).with(language)
     end
     let(:expect_localization_distribution) do
-      described_class.any_instance.expects(:distribute_localization).with(language)
+      described_instance.expects(:distribute_localization).with(language)
     end
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
 
     before do
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
 
-      described_class.any_instance.stubs(:restore_localization)
-      described_class.any_instance.stubs(:report_malformed_i18n)
-      described_class.any_instance.stubs(:distribute_localization)
+      described_instance.stubs(:restore_localization)
+      described_instance.stubs(:report_malformed_i18n)
+      described_instance.stubs(:distribute_localization)
       I18nScriptUtils.stubs(:move_file)
 
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
@@ -64,32 +63,6 @@ describe I18n::Resources::Dashboard::Scripts::SyncOut do
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
       perform_sync_out
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not restore localization' do
-        expect_localization_restoration.never
-        perform_sync_out
-      end
-
-      it 'does not report malformed i18n strings' do
-        expect_localization_restoration.never
-        perform_sync_out
-      end
-
-      it 'does not distribute localization' do
-        expect_localization_distribution.never
-        perform_sync_out
-      end
-
-      it 'moves file from the Crowdin locale dir to the I18n locale dir' do
-        expect_crowdin_file_to_i18n_locale_dir_moving.once
-        perform_sync_out
-      end
     end
 
     context 'when the Crowdin file does not exist' do

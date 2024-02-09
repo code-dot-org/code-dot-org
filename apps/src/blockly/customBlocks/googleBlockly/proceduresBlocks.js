@@ -36,7 +36,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: '',
       },
       {
-        type: 'input_dummy',
+        type: 'input_end_row',
         name: 'TOP',
       },
     ],
@@ -48,7 +48,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     style: 'procedure_blocks',
     helpUrl: '/docs/spritelab/codestudio_definingFunction',
-    tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
       'procedure_def_get_def_mixin',
       'procedure_def_var_mixin',
@@ -107,13 +106,10 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
   // If we are in the modal function editor, don't add the button, due to an issue with Blockly
   // not being able to handle us clearing the block right after it has been clicked.
-  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
-  // remove the check on functionEditor workspace id.
   if (
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId() &&
     toolboxConfigurationSupportsEditButton(this)
   ) {
     const button = new Blockly.FieldButton({
@@ -165,10 +161,14 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   flyoutToggleButton.setIcon(false);
 });
 
-// This extension adds an SVG frame around procedures definition blocks.
-// Not used in Music Lab or wherever the modal function is enabled.
+// Adds an SVG frame to procedure definition blocks when they're on the main workspace.
+// Not used in Music Lab, the editor workspace, or embedded workspaces.
+// Note: The workspace frame used in the modal function editor is added there.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
-  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (
+    this.workspace === Blockly.getMainWorkspace() &&
+    !this.workspace.noFunctionBlockFrame
+  ) {
     const getColor = () => {
       return Blockly.cdoUtils.getBlockColor(this);
     };
@@ -252,10 +252,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   if (functionEditorOpen) {
     // No-op - cannot create new functions while the modal editor is open
   } else if (Blockly.useModalFunctionEditor) {
-    const newFunctionButton = getNewFunctionButtonWithCallback(
-      workspace,
-      functionDefinitionBlock
-    );
+    const newFunctionButton = getNewFunctionButtonWithCallback(workspace);
     blockList.push(newFunctionButton);
   } else {
     blockList.push(functionDefinitionBlock);
@@ -297,17 +294,16 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewFunctionButtonWithCallback = (
-  workspace,
-  functionDefinitionBlock
-) => {
+const getNewFunctionButtonWithCallback = workspace => {
   let callbackKey, callback;
 
   callbackKey = 'newProcedureCallback';
-  callback = () =>
+  callback = () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(
       BLOCK_TYPES.procedureDefinition
     );
+  };
 
   workspace.registerButtonCallback(callbackKey, callback);
 

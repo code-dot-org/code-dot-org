@@ -23,15 +23,19 @@
   .user_menu_arrow_up,
   .create_menu_arrow_down,
   .create_menu_arrow_up {
-    font-size: 25px;
-    margin-top: -3px;
+    font-size: 1.5rem;
+    margin-top: -4px;
     .rtl & {
       float: left;
     }
     html[dir='rtl'] & {
       float: left;
-
     }
+  }
+
+  .user_menu_arrow_up,
+  .create_menu_arrow_up {
+    margin-top: -2px;
   }
 
   .user_options, .create_options {
@@ -121,7 +125,6 @@
     padding: 9px 0 16px 0;
     font-size: 26px;
     color: $white;
-    height: 25px;
     cursor: pointer;
     height: 20px;
     vertical-align: middle;

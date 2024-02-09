@@ -90,7 +90,7 @@ class GamelabJr < Gamelab
       <category name="Variables" custom="VARIABLE" />
       <category name="Functions" custom="PROCEDURE" />
       <category name="World" />
-      <category name="Sprites" custom="Sprite" />
+      <category name="Sprites" />
       <category name="Groups" />
       <category name="Events" />
       <category name="Math">
@@ -181,6 +181,11 @@ class GamelabJr < Gamelab
 
   def uses_droplet?
     false
+  end
+
+  # Use a DCDO flag here so we can flip Sprite Lab without a deploy
+  def uses_google_blockly?
+    DCDO.get('sprite_lab_google_blockly', true)
   end
 
   def age_13_required?

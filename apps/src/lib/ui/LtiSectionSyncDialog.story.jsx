@@ -2,7 +2,6 @@ import React from 'react';
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/LtiSectionSyncDialog';
 
 export default {
-  title: 'LtiSectionSyncDialog',
   component: LtiSectionSyncDialog,
 };
 

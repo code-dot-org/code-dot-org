@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 Consider the following sort method. This method correctly sorts the elements of array data into increasing order.
 
 ```
-public static void selectSort(int[] arr) {
+public static void selectSort(int[] data) {
    for (int index = 0; index < data.length - 1; index++) {
       int current = index;
       for (int next = index + 1; next < data.length; next++) {

@@ -76,6 +76,7 @@ export default class MusicPlayer {
    * Pre-load sounds for playback
    */
   async preloadSounds(
+  async preloadSounds(
     events: PlaybackEvent[],
     onLoadFinished?: LoadFinishedCallback
   ) {

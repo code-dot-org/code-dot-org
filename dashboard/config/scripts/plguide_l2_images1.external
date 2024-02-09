@@ -1,0 +1,28 @@
+name 'PLGuide_L2_Images1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sourcing Images
+
+## Image Banks
+
+#### Using images is a great way to break up content and make your levels more appealing. Images of various types can be found in different places.
+
+
+
+<ul><h4>
+<li><a href="https://www.dropbox.com/sh/vsljtm2mqdqjvma/AADYxiq30ejofEb0u3HseMOha?dl=0" target="blank" rel="noopener noreferrer">Dropbox - 2021 Photo Selects</a></li>
+<li><a href="https://www.dropbox.com/scl/fo/6qsa7h6hsi9cotszi80uj/h?rlkey=58vtlywmcwmaxxoxfhoke9alj&dl=0" target="blank" rel="noopener noreferrer">More Dropbox pics</a></li>
+<li><a href="http://flaticon.com/g" target="blank" rel="noopener noreferrer">flaticon.com</a> <i> Use the PL account for upgraded access </i></li>
+</h4>
+</ul>
+
+
+
+## Code.org Photo Libraries
+
+#### Our photography is for documents and reporting created internally, by the Code.org team only. This is because subjects in the photo must sign photo releases in order for us to use their likeness, and these photo releases do not cover external partners using our photography. This is especially important because most of our photos include children under 18. If you have a question about whether or not you can use Code.org imagery, email  <a href="marketing@code.org" target="blank" rel="noopener noreferrer">marketing@code.org</a>
+
+
+MARKDOWN

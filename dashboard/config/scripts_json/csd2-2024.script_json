@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-10 19:48:11 UTC",
+    "serialized_at": "2024-02-08 23:04:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -263,7 +263,7 @@
     },
     {
       "key": "Websites for Expression",
-      "name": "Organizing My Content",
+      "name": "Organizing Content with Flexbox",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -282,16 +282,16 @@
     },
     {
       "key": "Your Web Page - Prepare",
-      "name": "Your Web Page - Prepare",
+      "name": "Flexbox Children for More Control",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students engage in the \"prepare\" stage of the problem-solving process, reinforcing the idea that students should design and plan their pages before they start coding. Before students decide what elements and style their web page will have, they first review the different HTML, CSS, and digital citizenship guidelines they will need in building their web pages. They then describe and sketch their pages, listing the tags and styles they will use to get the layout and design that they decided on. They then move online to find and download the images they will need for their pages. Afterward, they reflect on how their plan will ensure that the website does what it is designed to do.\n\n**Question of the Day:** What do we need to do to prepare to build our web pages?\n",
-        "preparation": "* Print out one copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** What do we need to do to prepare to build our web pages?\n\nIn this lesson, you will work on the \"prepare\" stage of the problem-solving process to decide what elements and style your web page will have. \n\n"
+        "overview": "This lesson introduces students to advanced Flexbox child properties including `order`, `align-self`, `flex-grow`, and `flex-shrink` through an interactive warm-up and the various level exercises. They’ll deepen their understanding of how these properties affect web page layouts and conclude with a creative group drawing game to reinforce their learning.\n\n**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n",
+        "preparation": "* Print out one copy of the activity guide and handout for each student.\n* Print and cut out the Pictionary Terms slips.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "student_overview": "**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n\nIn this lesson, you will learn about \"child\" Flexbox properties that can be applied directly to items within a container. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
@@ -357,17 +357,36 @@
       }
     },
     {
-      "key": "Websites for a Purpose",
-      "name": "Websites for a Purpose",
+      "key": "Linking Pages",
+      "name": "Linking Pages",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson transitions students from thinking about websites as a form of personal expression to considering how websites might serve broader purposes for their creators. They first think of different reasons that they visit websites, then investigate websites that have been created to address a particular problem. After deciding what different purposes those websites might serve for the creators, they begin to think about the problem that they might want to solve with a website. At the end of the lesson, students form the groups that they will be in for their chapter projects, in which students will work in teams to create websites to solve a problem of their choosing.\n\n**Question of the Day:** What are the different reasons people make websites?\n",
+        "overview": "This lesson will give students practice in using links and introduce them to good navigation practices for their sites. Students begin by looking online for the first web page and discussing how its use of links was what started the web. They then transition to Web Lab where they learn how to make their own links, as well as good conventions that make it easier for users to navigate on a page.  Finally, they reflect on their group project and what their personal goals are for the final stretch.\n\n**Question of the Day:** How can we combine several different web pages into one website?\n",
+        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "student_overview": "**Question of the Day:** How can we combine several different web pages into one website?\n\nIn this lesson, you will learn how to use hyperlinks on a web page. "
+      },
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
+      "key": "Websites for a Purpose",
+      "name": "CSS Pseudo-classes",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson introduces students to the dynamic world of CSS pseudo-classes. Students will learn about their role in enhancing web page interactivity and style. They will explore, practice, and apply various pseudo-classes like `link`, `visited`, `hover`, and `active`, understanding how these selectors can transform the user experience on websites.\n\n**Question of the Day:** What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** What are the different reasons people make websites?\n\nIn this lesson, you will explore different reason that people make websites and the problems that may be solved with your own website.  \n\n"
+        "student_overview": "**Question of the Day:** What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?\n\nIn this lesson, you will explore various pseudo-classes and learn how they can transform the user experience on websites.  \n\n"
       },
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
@@ -378,10 +397,10 @@
     {
       "key": "Planning a Multi-Page Site",
       "name": "Planning a Multi-Page Site",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work in teams to plan out their websites and create a sketch of each page. They then download the media that they will need for their sites. At the end of the activity, they decide how the work will be distributed among team members and report whether the entire group agreed to the plan.\n\n**Question of the Day:**  How do we plan a web page as a group?\n",
@@ -390,25 +409,6 @@
       },
       "seeding_key": {
         "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "Linking Pages",
-      "name": "Linking Pages",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 19,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson will give students practice in using links and introduce them to good navigation practices for their sites. Students begin by looking online for the first web page and discussing how its use of links was what started the web. They then transition to Web Lab where they learn how to make their own links, as well as good conventions that make it easier for users to navigate on a page.  Finally, they reflect on their group project and what their personal goals are for the final stretch.\n\n**Question of the Day:** How can we combine several different web pages into one website?\n",
-        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** How can we combine several different web pages into one website?\n\nIn this lesson, you will learn how to use hyperlinks on a web page. "
-      },
-      "seeding_key": {
-        "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd2-2024"
       }
@@ -1040,7 +1040,7 @@
       "key": "369f1978-40cd-4618-8257-fe4e598b5d38",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1054,7 +1054,7 @@
       "key": "7fcc906a-6a9f-48f0-acea-6e7ec51ee522",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1204,6 +1204,48 @@
       }
     },
     {
+      "key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
+      "key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
+      "key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
+        "lesson.key": "Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024"
+      }
+    },
+    {
       "key": "8821bb97-680b-493d-a504-b000c90980e6",
       "position": 1,
       "properties": {
@@ -1283,48 +1325,6 @@
       "seeding_key": {
         "lesson_activity.key": "5dfe500d-5460-4df9-85b6-365e45f2400a",
         "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1",
-        "lesson.key": "Linking Pages",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
-      "position": 2,
-      "properties": {
-        "duration": 80,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3",
-        "lesson.key": "Linking Pages",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024"
-      }
-    },
-    {
-      "key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091",
-        "lesson.key": "Linking Pages",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd2-2024"
       }
@@ -2712,7 +2712,7 @@
       "key": "90ba6bbc-b06b-4b64-9222-31a66e581c48",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [r html_web_page_2/csd/2024]",
+        "description": "**Distribute:** Give each student a copy of the HTML Web Page Project Guide.",
         "name": "Designing and Building Web Pages for Users",
         "tips": [
           {
@@ -4351,7 +4351,18 @@
       "key": "4dd2b959-109f-485b-a725-4a003491692c",
       "position": 10,
       "properties": {
-        "progression_name": "Practice Levels",
+        "progression_name": "Practice Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c",
+        "lesson_activity.key": "212d06e6-b186-4f60-bde7-332c8a424353"
+      }
+    },
+    {
+      "key": "4dbd0474-c8d0-4626-83de-c506f25e0d83",
+      "position": 11,
+      "properties": {
+        "progression_name": "Assessment Level",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4360,7 +4371,18 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c",
+        "activity_section.key": "4dbd0474-c8d0-4626-83de-c506f25e0d83",
+        "lesson_activity.key": "212d06e6-b186-4f60-bde7-332c8a424353"
+      }
+    },
+    {
+      "key": "8b4ef7f7-510b-4416-add3-0132465f985f",
+      "position": 12,
+      "properties": {
+        "progression_name": "Challenge Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b4ef7f7-510b-4416-add3-0132465f985f",
         "lesson_activity.key": "212d06e6-b186-4f60-bde7-332c8a424353"
       }
     },
@@ -4380,7 +4402,7 @@
       "key": "176e19e9-979e-49d5-998e-92989b765160",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference handout in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference Cheat Sheet in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
       },
       "seeding_key": {
         "activity_section.key": "176e19e9-979e-49d5-998e-92989b765160",
@@ -4391,7 +4413,8 @@
       "key": "227d0eba-f4a3-4af6-9989-5ac35b751f90",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**  We've learned a lot of HTML and CSS in this unit, and also a lot about how to be responsible digital citizens.  We're about to plan out the specifics of our web pages. Take a few minutes to think about some of the most important things that we should remember during the project in these categories:\r\n\r\n1. HTML tags and tips/tricks for using them\r\n2. CSS properties and tips/tricks for using them\r\n3. How to be responsible and safe online"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r layout_prediction/csd/2024] Activity Guide to the students.\n",
+        "name": "Predict the Layout"
       },
       "seeding_key": {
         "activity_section.key": "227d0eba-f4a3-4af6-9989-5ac35b751f90",
@@ -4402,7 +4425,8 @@
       "key": "51725d30-5a73-4385-8ac8-fe87ae2d715c",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share out their ideas and display them at the front of the class.\n\n**Discussion Goal:** This is a chance for students to remind themselves of (and for you to check on) the most important things that they have learned in the unit so far. While the focus may vary from class to class, most classes should have a few things to say in every category. Make sure that you are highlighting the differences between structure (HTML) and style (CSS) in your conversations. If you have noticed particular obstacles for your students, this is a good place to make sure they are prepared to face them."
+        "description": "Let’s see how well we remember what we learned last class and get a preview of some new Flex properties with a quick layout prediction game. Your challenge is to try to identify which Flex property was applied to each layout and try to predict what some new Flex properties might do! Get through as many as you can in the time provided! ",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "51725d30-5a73-4385-8ac8-fe87ae2d715c",
@@ -4410,10 +4434,39 @@
       }
     },
     {
-      "key": "bd829868-6532-438c-9ddd-c80bbb14e69f",
+      "key": "6474549b-4ede-4434-a4e0-205789e28938",
       "position": 3,
       "properties": {
-        "description": "**Question of the Day: What do we need to do to prepare to build our web pages?**"
+        "description": "**Group**: Group students into pairs so they have someone to discuss and share their thought processes and reasoning with. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Give students 3-4 minutes to work on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Use the slides to go over the answers. Ask students for volunteer answers. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you review the answers to part 1, use this as an opportunity to ensure students clearly understand how each Flex property from the previous lesson affects the layout. Clarify students' misconceptions or misunderstandings (such as mixing up what `justify-content` and `align-items` do or using `justify-content` to align items horizontally when the direction is a column instead of `align-items`). The discussion should solidify their grasp of properties like `flex-direction`, `flex-wrap`, `justify-content`, and `align-content`.\n\nAs you go over student predictions for part 2, ask students about the reasons behind their predictions. Hearing different perspectives deepens understanding and promotes a collaborative learning atmosphere. This will also help foster an environment where students critically analyze why certain properties result in specific layout changes, reinforcing their knowledge and developing their problem-solving skills. \n\nIf you have time, you can expand on what each child property does as you go over the answers to part 2.\n\nIf any students have incorrect answers from part 1 or part 2, offer a clear explanation or analogy to help the student understand why their answer was incorrect and how the correct property works. For example, “Think of  justify-content like when you are figuring out the spacing for posters across your bedroom wall and align-items like figuring out if you want them close to your ceiling, in the center of your wall or close to the floor” or “Think of order like a VIP getting to skip everyone else in line and move to the front.” Reinforce that making mistakes is a natural and valuable part of the learning process. If appropriate, ask if any other students would like to add their understanding or explanation, fostering a collaborative learning atmosphere.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6474549b-4ede-4434-a4e0-205789e28938",
+        "lesson_activity.key": "a8fd30f7-df6d-4bfe-a660-7aadaa37fda9"
+      }
+    },
+    {
+      "key": "10f89705-7f9b-4a45-8d2e-556f5d5956ae",
+      "position": 4,
+      "properties": {
+        "description": "Well done! You're becoming quite the Flexbox detectives. Understanding these properties and predicting their effects is key to mastering web page layouts.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "10f89705-7f9b-4a45-8d2e-556f5d5956ae",
+        "lesson_activity.key": "a8fd30f7-df6d-4bfe-a660-7aadaa37fda9"
+      }
+    },
+    {
+      "key": "bd829868-6532-438c-9ddd-c80bbb14e69f",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day: How do Flexbox child properties affect the layout and organization of elements within a webpage?**"
       },
       "seeding_key": {
         "activity_section.key": "bd829868-6532-438c-9ddd-c80bbb14e69f",
@@ -4424,7 +4477,9 @@
       "key": "eb993156-da52-425b-9c9b-58c94a439e34",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Hand out student journals or the activity guide, if students are not using journals.  If available, students may want to use colored pencils or crayons to sketch their pages."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Use the activity slides for this lesson to introduce students to the concept of Flexbox Children. Use the Speaker Notes below as a guide to explaining what Flex Children are and why you would use them. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "duration": "5",
+        "name": "Introduction to Flex Children"
       },
       "seeding_key": {
         "activity_section.key": "eb993156-da52-425b-9c9b-58c94a439e34",
@@ -4432,50 +4487,127 @@
       }
     },
     {
-      "key": "703a1223-1245-442f-af75-0cb4263f7571",
+      "key": "b407bf91-fd22-4139-8d20-3ceb7e5e4089",
       "position": 2,
       "properties": {
-        "description": "Give students a few minutes to describe and sketch out their page.  Remind them that they should be thinking about layout as well as content, but that they do not need to include every word of the page.  They can also put more details about the element styles in the next section.",
-        "name": "Describe Your Page\r"
+        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://images.code.org/8e94afe0cf8ccae3ccb548050e691d64-slide1.png) |  **Say:** <br>After the last class, we know that we can control the layout of items, like images, by putting them inside a `div` container...<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>... and then aligning items in a row or in columns ...<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>... we have control over spacing across the page ... <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>... and up and down the page and whether items should wrap onto a new line or not.<br><br>But what if we want even more control?  |\n| ![](https://images.code.org/47a2bb6c3d482eefcb0bfc86a9d0af9f-slide2.png) | **Say:** <br>Our warm-up today gave you a preview of the new Flex properties we will work with today that will unleash even more power and control over our web page layouts. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> But these new properties won't be applied to the `div` container we learned about yesterday ... <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>They'll be applied to flex items _inside_ the `div` container called \"children\".   |\n| ![](https://images.code.org/3b5005d130ffe1673f7b7e7afcdd4b65-slide3.png) |  **Say:** To have more control over flex items, we can target them directly with a class attribute and Flex children properties in CSS.  |\n| ![](https://images.code.org/8dac790ac03795a58d1fefe9b6586fbe-slide4.png) |**Say:**<br> We are going to learn about four properties that can be used with Flex children:<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>`order`, `align-self`, `flex-grow`, and `flex-shrink`<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>You already figured out what some of these do during our warm-up, but there is an important thing we need to know before we jump onto the computer and start building our Flex skills ...  |\n| ![](https://images.code.org/baaa03f8e22b72e8170eb563e2948f66-slide5.png) | **Say:** <br>We **have** to have a container with the `display: flex` property established before any of the Flex children properties will work.<br><br>Since these new properties are Flex children properties, that means the \"parent\" or the container tag they are nested in must have Flex established in order to see our layout change |\n| ![](https://images.code.org/7b935b947a3391245b78b701a142580b-slide6.png) | **Say:** What questions do we have before we jump in and get started? |\n"
       },
       "seeding_key": {
-        "activity_section.key": "703a1223-1245-442f-af75-0cb4263f7571",
+        "activity_section.key": "b407bf91-fd22-4139-8d20-3ceb7e5e4089",
         "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
       }
     },
     {
-      "key": "bae9cc0e-6495-4c8d-a80b-887af44e7e98",
+      "key": "fdff203d-531b-4b6c-926f-d54796b5b19c",
       "position": 3,
       "properties": {
-        "description": "Each student should choose tags related to some of the elements on their pages and describe what those elements will look like (color, size, etc.).  It's not necessary that they write down the exact CSS properties, but there should be enough information that they can use it to guide them when they make their pages.",
-        "name": "Describe Your Styles\r",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "To formatively assess that students logically separate the content, structure, and formatting of a digital artifact you can check that the design sketch in their Activity Guide includes the content and that the tag and style columns in the \"Describe your styles\" section are filled out with HTML tags on the left and style descriptions or CSS on the right."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r flexbox_children_cheat_sheet/csd/2024] handout to the students.\n\n**Transition:** Send students to Code Studio, Lesson 13, Level 1 and have students explore the code.",
+        "duration": "25",
+        "name": "Div and Flex Practice"
       },
       "seeding_key": {
-        "activity_section.key": "bae9cc0e-6495-4c8d-a80b-887af44e7e98",
+        "activity_section.key": "fdff203d-531b-4b6c-926f-d54796b5b19c",
         "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
       }
     },
     {
-      "key": "c0d901c1-b92c-4274-ad20-bdcf0b7b36e2",
+      "key": "232acb50-ca00-4806-a4cd-066161aecc5a",
       "position": 4,
       "properties": {
-        "description": "**Transition** Allow students to go online to find the images that they want to use for their sites. Make sure that they are writing down the information about the copyright and that they can tell you where the image is from, so that they (or you!) can find it in the future.",
-        "name": "Find Your Images\r",
+        "progression_name": "Exploration level"
+      },
+      "seeding_key": {
+        "activity_section.key": "232acb50-ca00-4806-a4cd-066161aecc5a",
+        "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
+      }
+    },
+    {
+      "key": "9de6e580-c0cc-4bfe-8f24-c810f31b1c76",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the new flex properties?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they noticed or what they noticed about the properties. It is okay if they didn’t figure out exactly what each new property does, as they will learn in the next skill building levels. Some possible discoveries might include:\n* `flex-grow` seems to increase the size of an element\n* `flex-shrink` appears to decrease the size of an element\n* `order` rearranged the items\n   * Students may also wonder why a `-1` put the item at the front while a `1` put the item at the end. This is because the default order value of all items is 0. A negative number will put that to the left of items with a \"0\" value and an item with an order value greater than 0 will be placed to the right of items with a 0 value. This information is already noted in their Cheat Sheet but it may be helpful for students to highlight or circle the information.\n* `align-self` changes the vertical alignment for that one item"
+      },
+      "seeding_key": {
+        "activity_section.key": "9de6e580-c0cc-4bfe-8f24-c810f31b1c76",
+        "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
+      }
+    },
+    {
+      "key": "eb4761d8-a811-4232-a998-3db000126576",
+      "position": 6,
+      "properties": {
+        "description": "These 4 flex children properties you just played with are the ones that you will use the most.\nDon’t forget that when applying Flex properties to children, you need to have an established Flex layout in the container.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eb4761d8-a811-4232-a998-3db000126576",
+        "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
+      }
+    },
+    {
+      "key": "63be267d-d5e1-4b16-b03d-35834fbc62d9",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the “Flex Children Steps” slide to stress establishing a Flex layout in the container before applying Flex Children properties. \n\n**Group**: Group students into pairs for Pair Programming.\n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "63be267d-d5e1-4b16-b03d-35834fbc62d9",
+        "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
+      }
+    },
+    {
+      "key": "92c142fd-bc84-4462-b8ce-ab6e97046a19",
+      "position": 8,
+      "properties": {
+        "progression_name": "Skill Building Levels",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "You may want to have each student check in with you on their web page plan before allowing them online to find their images. Make sure each student has sketched out a rough site and described the styles for a few different tags. The sketch and description should show that the page will be sufficient to demonstrate that they have acquired the target skills and understandings of the chapter.\r\n"
+            "markdown": "A slide with a timer has been provided for you. Delete this slide if you prefer a different method of keeping track of time for students so that they switch drivers and navigators often."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c0d901c1-b92c-4274-ad20-bdcf0b7b36e2",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19",
+        "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
+      }
+    },
+    {
+      "key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7",
+      "position": 9,
+      "properties": {
+        "progression_name": "Practice Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7",
+        "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
+      }
+    },
+    {
+      "key": "dfbaf0ea-f00a-460c-909b-fc63926dee95",
+      "position": 10,
+      "properties": {
+        "progression_name": "Assessment Level",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level can be used to assess student understanding of using Flexbox Children properties to organize elements on a web page."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dfbaf0ea-f00a-460c-909b-fc63926dee95",
+        "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
+      }
+    },
+    {
+      "key": "71c5548e-3953-4c33-ac03-394bdf1e8c37",
+      "position": 11,
+      "properties": {
+        "progression_name": "Challenge Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37",
         "lesson_activity.key": "369f1978-40cd-4618-8257-fe4e598b5d38"
       }
     },
@@ -4483,8 +4615,14 @@
       "key": "0b8022ea-55a1-41d2-b079-bb38c298177d",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: What do we need to do to prepare to build our web pages?**",
-        "name": "Journal Prompt/Exit Ticket\r"
+        "description": "**Question of the Day: How do Flexbox child properties affect the layout and organization of elements within a webpage?**\n\n**Group:** Place students into groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Pictionary Terms slips already cut up and in containers, blank pieces of paper, and a few markers to each group.",
+        "name": "Flex Property Pictionary",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You should cut out the slips ahead of time and place them into some type of container for each group, such as a plastic cup. This will save time and give the students a container to pull slips from during the activity.\n\nThe blank piece of paper and markers are where the students will be drawing their properties. If you have enough small dry-erase boards for each group, you might consider using those instead.\n\n**Optional Scoring**: If you would like this activity to have a competitive feature, you can instruct students that whoever guesses correctly keeps the slip of paper. At the end of the activity, students would count the number of slips they had to see who guessed the most properties correctly. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0b8022ea-55a1-41d2-b079-bb38c298177d",
@@ -4495,27 +4633,10 @@
       "key": "2e15fb05-5b17-44f5-8bc7-721c6f3cea86",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** Think back to the \"Define\" part of this project.  Explain two ways that your plan will make your personal web page successful.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Check that students have tied design decisions to the purpose of the website as explained in the \"Websites for Expression\" lesson.\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Use the “Flex Property Pictionary” slide to help you quickly review the activity's instructions.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to play the Pictionary activity until the time is up or they go through all of their slips.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: How did playing this game with your group help you understand Flexbox properties better?\n\n**Discussion Goal**: This quick reflection aims to highlight the value of collaborative learning and peer interaction. This reflection aims to inform students of how sharing ideas, discussing concepts, and working together (even by playing a game) can enhance their comprehension and problem-solving skills, especially in complex subjects like web design. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Children Cheat Sheet Reference handout in their notebooks if they haven’t done so already. "
       },
       "seeding_key": {
         "activity_section.key": "2e15fb05-5b17-44f5-8bc7-721c6f3cea86",
-        "lesson_activity.key": "7fcc906a-6a9f-48f0-acea-6e7ec51ee522"
-      }
-    },
-    {
-      "key": "b7a1351f-7808-48ab-9c50-0a81eff6a5e4",
-      "position": 3,
-      "properties": {
-        "description": "**Collect:**  Collect the journals or the activity guides where students planned their pages.  They will need them in the next lesson."
-      },
-      "seeding_key": {
-        "activity_section.key": "b7a1351f-7808-48ab-9c50-0a81eff6a5e4",
         "lesson_activity.key": "7fcc906a-6a9f-48f0-acea-6e7ec51ee522"
       }
     },
@@ -5270,17 +5391,177 @@
       }
     },
     {
-      "key": "93014448-dbf4-42d4-80e9-a424b630cdb4",
+      "key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What was the last website you visited? Why did you go to that website?",
-        "name": "The Last Website you Visited\r",
+        "description": "**Group:** Place students in pairs.  They do not need to be in their project groups.",
+        "name": "First Web Page Hunt\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
+      "position": 2,
+      "properties": {
+        "description": "**Display:**  Show the two following prompt questions on the board, and direct students to find the answers online by using a search engine of their choice, or whatever methods they might normally use for research.\n\n1. What was the first web page ever created?\n2. What's the one feature it has that we haven't learned how to do yet?",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Websites vs. Apps:** You may find that students don't _think_ that they actually visit websites very frequently, because they use apps instead. If you encounter this, encourage students to consider whether those apps might also have website versions. Facebook, for example, might be used more frequently from an app, but it originally started as a website, and can still be accessed from the web.\r\n"
+            "markdown": "Although there are many places students could go for the answer to this question, a Google search will most likely take them to an article describing the page that Tim Berners-Lee created on August 6, 1991.  The page is comprised of simple text with a few hyperlinks.\r\n\r\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-10-18-at-11.58.45-AM.png)\r\n"
           }
         ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
+      "position": 3,
+      "properties": {
+        "description": "\n\n**Share:**  After giving students time to search online, let them share out their answers."
+      },
+      "seeding_key": {
+        "activity_section.key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
+      "position": 4,
+      "properties": {
+        "description": "Even though the first web page looks simple, it had something that had never been done before: links. Links are what made the web special, because they let people easily move around the Internet. Today, you'll learn how to put links on your own web pages, so that your team can combine all your pages together into one website.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day: How can we combine several different web pages into one website?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
+        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
+      }
+    },
+    {
+      "key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Allow students to continue in their pairs.\r\n\r\n**Transition:** Send students to Code Studio.",
+        "name": "Web Lab\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "276767de-004e-43d5-a258-c06f57aa9356",
+      "position": 2,
+      "properties": {
+        "progression_name": "Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "276767de-004e-43d5-a258-c06f57aa9356",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "04374cfa-25a5-4331-b64b-0616fb392258",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "04374cfa-25a5-4331-b64b-0616fb392258",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Adding Pages",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
+        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
+      }
+    },
+    {
+      "key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
+        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
+      }
+    },
+    {
+      "key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** After students have time to write down their thoughts, allow them to share in small groups before taking ideas from the whole class.\n\n**Discussion Goal:** Students may come up with ideas such as a similar color scheme or styles, or similar content.  They may mention a header at the top of the page or navigation bar.  The most important thing is that they are thinking of the site as a single project that they are all contributing to, rather than a set of individual web pages.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
+        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
+      }
+    },
+    {
+      "key": "93014448-dbf4-42d4-80e9-a424b630cdb4",
+      "position": 1,
+      "properties": {
+        "description": "Today, we’re going to explore CSS pseudo-classes, a powerful tool that brings interactivity and style to our web pages. Let’s dive in on our computers and see firsthand how these pseudo-classes can transform the look and feel of a website with just a few lines of code!",
+        "name": "Explore Pseudo-classes",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "93014448-dbf4-42d4-80e9-a424b630cdb4",
@@ -5291,7 +5572,7 @@
       "key": "fff3011b-6fb0-49e0-9aaf-cf564ee06b36",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share out the last website they visited. Make sure students share why they went to that website and whether the website provided what they were looking for.\n\n**Discussion Goal:** The goal of having this discussion is to pull out that websites share information and that people go to websites for a particular purpose.\n"
+        "description": "**Transition**: Send students to Code Studio, Lesson 18, Level 1, and have students explore the code\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fff3011b-6fb0-49e0-9aaf-cf564ee06b36",
@@ -5302,8 +5583,7 @@
       "key": "39c5e4ff-f9c0-4396-aef7-578789f1f3fc",
       "position": 3,
       "properties": {
-        "description": "We came up with a lot of reasons why we visit websites, but that's only one side of the picture. The people who make websites also have their own reasons for doing so. In the next activity, you're going to start thinking about the purposes that various websites serve for both the user and the creator.",
-        "remarks": true
+        "description": "[exploration level]"
       },
       "seeding_key": {
         "activity_section.key": "39c5e4ff-f9c0-4396-aef7-578789f1f3fc",
@@ -5311,10 +5591,21 @@
       }
     },
     {
-      "key": "858d3105-f64a-4e3d-a33a-9a59ff129f64",
+      "key": "9f6d87a8-e3bb-446a-9bca-1c07016da40a",
       "position": 4,
       "properties": {
-        "description": "**Question of the Day: What are the different reasons people make websites?**"
+        "description": "**Circulate**: As students are exploring the code, walk around to ensure students are discussing with their neighbor. Listen for and give positive affirmations to what students are noticing about the selector of the `<a>` tag. This could include the fact that there is a colon after the `<a>` selector, there are multiple selectors for the `<a>` tag, or noticing what effects different rule sets are having on the hyperlink. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: How can adding these styles impact a user’s experience on a website? \n\n**Discussion Goal**: This quick discussion aims to foster an understanding of how CSS pseudo-classes can enhance user experience and website usability. It aims to make students aware of the practical implications of styling links for aesthetic purposes and improving navigation, accessibility, and overall user engagement on a web page. "
+      },
+      "seeding_key": {
+        "activity_section.key": "9f6d87a8-e3bb-446a-9bca-1c07016da40a",
+        "lesson_activity.key": "8821bb97-680b-493d-a504-b000c90980e6"
+      }
+    },
+    {
+      "key": "858d3105-f64a-4e3d-a33a-9a59ff129f64",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day: What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?**"
       },
       "seeding_key": {
         "activity_section.key": "858d3105-f64a-4e3d-a33a-9a59ff129f64",
@@ -5325,8 +5616,9 @@
       "key": "1fc90a0c-f31e-4e25-b102-1faad334bcf8",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.\n\nDirect students to the \"Sample Websites\" level on Code Studio.",
-        "name": "Purpose of Websites\r"
+        "description": "Before you continue on to the rest of the levels, there’s one very important thing you need to know when using pseudo-classes with links - the order matters! You will see this in your first Skill Building level but let’s go over it real quick.",
+        "name": "Pseudo-class Practice",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "1fc90a0c-f31e-4e25-b102-1faad334bcf8",
@@ -5337,7 +5629,14 @@
       "key": "1adcdf42-6618-4832-bbde-0db7e878a674",
       "position": 2,
       "properties": {
-        "progression_name": "Top Websites"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Use the “Link Pseudo-classes” slides to explain the order in which those pseudo-classes must be applied for anchor tags.\n",
+        "progression_name": "Top Websites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "All of these pseudo-classes can apply to a hyperlink; in some cases, more than one will apply. For example, an unvisited link can be hovered and active simultaneously as it's an unvisited link. Since these four rules apply to the hyperlink, and the selectors all have the same specificity, then the last one listed that matches what the user is doing, wins. \n\nIf we mix up the order, for example, this means that if “hover” was after “active,” the \"active\" style will never appear because the \"hover\" style will always override it. \n\t \nFor this reason, the recommended order is\n\n`a:link`\n`a:visited`\n`a:hover`\n`a:active`\n\nHere’s a fun way for students to remember the order - Just have them remember **LOVE (LV) & HATE (HA)**"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1adcdf42-6618-4832-bbde-0db7e878a674",
@@ -5348,8 +5647,7 @@
       "key": "ef7045c8-b0d6-4728-ab2f-6eaca555ed07",
       "position": 3,
       "properties": {
-        "description": "This activity guide asks students to consider what purposes some sample web pages might serve. Student pairs select two sites that interest them and for each discuss:",
-        "name": "Exploring Websites"
+        "description": "**Group**: Group students into pairs for Pair Programming. \n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room"
       },
       "seeding_key": {
         "activity_section.key": "ef7045c8-b0d6-4728-ab2f-6eaca555ed07",
@@ -5357,98 +5655,58 @@
       }
     },
     {
-      "key": "52708c96-4a60-4224-8c46-a2290225a9dd",
+      "key": "f4a944d0-c60a-48e3-b676-32d7990e6205",
       "position": 4,
       "properties": {
-        "description": "* Why people might use that site (what purpose does it serve users?)\n* Why the creators might have made that site (what purpose does it serve the creators?)\n\nEncourage students to be as detailed as possible when brainstorming the purposes of these sites.",
+        "description": "[skill building levels]",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "They don't need to necessarily get it \"right\" for each site, but they should demonstrate that they have considered the potential purposes that a website might serve for the creator. If students struggle to identify the purpose of a site, consider asking the following prompts:\r\n\r\n* Does the website creator want the user to do something?\r\n* Does the website try to convince the user of something in particular?\r\n* What problem is the website addressing?\r\n* What impact does the creator want the website to have?\r\n\r\n\r\n"
+            "markdown": "A slide with a timer has been provided for you. Delete this slide if you prefer a different method of keeping track of time for students so that they switch drivers and navigators often."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "52708c96-4a60-4224-8c46-a2290225a9dd",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205",
         "lesson_activity.key": "2038c100-d330-4b1b-b0ff-8eedfc0304eb"
       }
     },
     {
-      "key": "613ed671-955e-4c0a-8752-e0c3c6e4e432",
+      "key": "63162e7c-7388-41c2-a5ca-3964179a5866",
       "position": 5,
       "properties": {
+        "description": "[practice levels]"
       },
       "seeding_key": {
-        "activity_section.key": "613ed671-955e-4c0a-8752-e0c3c6e4e432",
+        "activity_section.key": "63162e7c-7388-41c2-a5ca-3964179a5866",
         "lesson_activity.key": "2038c100-d330-4b1b-b0ff-8eedfc0304eb"
       }
     },
     {
-      "key": "6e56f210-f1e6-4148-9819-f4a7a41fbd40",
+      "key": "64f677e2-8529-49b5-8785-5e334f81ca9c",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Once everyone has had a chance to brainstorm about their sites, give the class a chance to discuss their thoughts on the sample websites.\n\n**Discussion Goal:** The goal of this discussion is to prepare students to think of websites as a tool to solve problems and effect change. As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what problems they might address with a site."
-      },
-      "seeding_key": {
-        "activity_section.key": "6e56f210-f1e6-4148-9819-f4a7a41fbd40",
-        "lesson_activity.key": "2038c100-d330-4b1b-b0ff-8eedfc0304eb"
-      }
-    },
-    {
-      "key": "7f16b40e-ac51-4778-90c1-1f073f8abab3",
-      "position": 7,
-      "properties": {
-        "description": "If students haven't had time to brainstorm reasons they might make a website, allow them to do so before moving on to form their groups.",
+        "description": "[assessment level]",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** You can use the table on the activity guide and the reflection prompts as way to assess how well students can identify the reasons someone might create a given website. Consider collecting these activity guides at the end of the class period to review later."
+            "markdown": "This level can be used to assess student understanding of using Flexbox Children properties to organize elements on a web page."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "7f16b40e-ac51-4778-90c1-1f073f8abab3",
+        "activity_section.key": "64f677e2-8529-49b5-8785-5e334f81ca9c",
         "lesson_activity.key": "2038c100-d330-4b1b-b0ff-8eedfc0304eb"
       }
     },
     {
-      "key": "e84efcb2-0d3b-49bd-9d8a-305df664834a",
-      "position": 8,
+      "key": "d6ebc660-38be-4305-ad30-f13b1336c3b5",
+      "position": 7,
       "properties": {
-        "description": "Over the next few classes, you'll have a chance to work in a group to create your own website to help solve a problem.",
-        "name": "Forming Groups",
-        "remarks": true
+        "description": "[challenge levels]"
       },
       "seeding_key": {
-        "activity_section.key": "e84efcb2-0d3b-49bd-9d8a-305df664834a",
-        "lesson_activity.key": "2038c100-d330-4b1b-b0ff-8eedfc0304eb"
-      }
-    },
-    {
-      "key": "62506cfa-3f5f-4242-a8a7-9c917eb25b28",
-      "position": 9,
-      "properties": {
-        "description": "**Share:** Ask students to share out the different problems that they could address with a website and display their answers in the front of the classroom."
-      },
-      "seeding_key": {
-        "activity_section.key": "62506cfa-3f5f-4242-a8a7-9c917eb25b28",
-        "lesson_activity.key": "2038c100-d330-4b1b-b0ff-8eedfc0304eb"
-      }
-    },
-    {
-      "key": "eadd59bf-da8d-48b1-8672-fd569007c8a1",
-      "position": 10,
-      "properties": {
-        "description": "**Group:** Based on the natural discussion of how students reacted to the different topics, groupings may have started to emerge.  Allow students to form groups of 3-4, or assign them into groups.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "There are many considerations when forming groups for a long-term project. Depending on your class, you may choose to assign groups, allow students to form their own groups, or another approach that works best for your class. However you decide to group students, it will be important that they have their groups for the beginning of the next class session.\r\n\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "eadd59bf-da8d-48b1-8672-fd569007c8a1",
+        "activity_section.key": "d6ebc660-38be-4305-ad30-f13b1336c3b5",
         "lesson_activity.key": "2038c100-d330-4b1b-b0ff-8eedfc0304eb"
       }
     },
@@ -5456,7 +5714,7 @@
       "key": "a311173c-69e9-4836-9fd0-7c1c2f0a909e",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: What are the different reasons people make websites?**\r\n\r\n\r\n**Prompt:** Your team will work together over the next few lessons to create a website to address a problem. Together, come up with a team motto or logo design that will remind you (1) why the problem is important to solve (2) how you will work together well as a team."
+        "description": "**Question of the Day: What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?**\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their CSS Charts in their journals to include the pseudo-classes. \n"
       },
       "seeding_key": {
         "activity_section.key": "a311173c-69e9-4836-9fd0-7c1c2f0a909e",
@@ -5467,7 +5725,7 @@
       "key": "e2064881-e6ec-422a-8f26-e489ee62f045",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow teams to share out their designs and mottos.\n\n**Discussion Goal:** As students share out their mottos or logos, encourage them to explain how their values are reflected in them, highlighting the importance of effective collaboration and a focus on shared goals."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: How might you use pseudo-classes in your group’s project to enhance the aesthetics and functionality of your website? \n\n**Discussion Goal**: This quick reflection encourages students to think about the practical application of the concepts they’ve learned. By considering how to incorporate pseudo-classes into their projects, students move from theoretical understanding to practical usage, which is crucial for deep learning and skill retention. It also considers how different pseudo-classes can enhance the aesthetics and functionality of their project, leading to a more engaging and user-friendly end product. "
       },
       "seeding_key": {
         "activity_section.key": "e2064881-e6ec-422a-8f26-e489ee62f045",
@@ -5647,171 +5905,6 @@
       "seeding_key": {
         "activity_section.key": "7fe2bfaa-0b21-44b6-a637-c1c077c1d826",
         "lesson_activity.key": "5dfe500d-5460-4df9-85b6-365e45f2400a"
-      }
-    },
-    {
-      "key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
-      "position": 1,
-      "properties": {
-        "description": "**Group:** Place students in pairs.  They do not need to be in their project groups.",
-        "name": "First Web Page Hunt\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "d09dec71-a2ac-4bb2-bd80-178157bfb69e",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
-      "position": 2,
-      "properties": {
-        "description": "**Display:**  Show the two following prompt questions on the board, and direct students to find the answers online by using a search engine of their choice, or whatever methods they might normally use for research.\n\n1. What was the first web page ever created?\n2. What's the one feature it has that we haven't learned how to do yet?",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Although there are many places students could go for the answer to this question, a Google search will most likely take them to an article describing the page that Tim Berners-Lee created on August 6, 1991.  The page is comprised of simple text with a few hyperlinks.\r\n\r\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-10-18-at-11.58.45-AM.png)\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5fa8c8cf-ac08-442d-a52c-e00e67bae70b",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
-      "position": 3,
-      "properties": {
-        "description": "\n\n**Share:**  After giving students time to search online, let them share out their answers."
-      },
-      "seeding_key": {
-        "activity_section.key": "5828b01d-42d5-4323-afd1-89f294bc3e40",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
-      "position": 4,
-      "properties": {
-        "description": "Even though the first web page looks simple, it had something that had never been done before: links. Links are what made the web special, because they let people easily move around the Internet. Today, you'll learn how to put links on your own web pages, so that your team can combine all your pages together into one website.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "a51daefc-2ba5-4aaf-af65-4c127004a2b8",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
-      "position": 5,
-      "properties": {
-        "description": "**Question of the Day: How can we combine several different web pages into one website?**"
-      },
-      "seeding_key": {
-        "activity_section.key": "73b67a6d-af2b-409f-9b6e-3cef3ddfc967",
-        "lesson_activity.key": "15d1c1a9-2e70-4596-81db-59ad7c7ad1a1"
-      }
-    },
-    {
-      "key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
-      "position": 1,
-      "properties": {
-        "description": "**Group:** Allow students to continue in their pairs.\r\n\r\n**Transition:** Send students to Code Studio.",
-        "name": "Web Lab\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3e72fb46-5ad9-40e8-947c-994e5668d473",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "276767de-004e-43d5-a258-c06f57aa9356",
-      "position": 2,
-      "properties": {
-        "progression_name": "Exploration"
-      },
-      "seeding_key": {
-        "activity_section.key": "276767de-004e-43d5-a258-c06f57aa9356",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "6d6835e2-1a3f-4259-9bcb-df94385d2ec0",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "04374cfa-25a5-4331-b64b-0616fb392258",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "04374cfa-25a5-4331-b64b-0616fb392258",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
-      "position": 5,
-      "properties": {
-        "progression_name": "Adding Pages",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fa194aa0-7750-46cd-acf8-5da83b20d1c9",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
-      "position": 6,
-      "properties": {
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "7ddc96c8-788e-42ee-a79e-224f45cb7274",
-        "lesson_activity.key": "38821bbb-85d8-4bdd-9fd7-1a942fa78eb3"
-      }
-    },
-    {
-      "key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
-      "position": 1,
-      "properties": {
-        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
-        "name": "Journal\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "343fcba8-acca-4345-9bc9-3a8ccf285122",
-        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
-      }
-    },
-    {
-      "key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
-      "position": 2,
-      "properties": {
-        "description": "**Discuss:** After students have time to write down their thoughts, allow them to share in small groups before taking ideas from the whole class.\n\n**Discussion Goal:** Students may come up with ideas such as a similar color scheme or styles, or similar content.  They may mention a header at the top of the page or navigation bar.  The most important thing is that they are thinking of the site as a single project that they are all contributing to, rather than a set of individual web pages.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "b7ad77b9-6f8c-4a7d-a31d-2d02df1d02e0",
-        "lesson_activity.key": "ecfcaf15-ea06-428e-9841-4f76984f6091"
       }
     },
     {
@@ -7871,12 +7964,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 - Prac_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_5"
+          "CSD U2L12 - Prac_2024"
         ],
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
@@ -7884,82 +7980,19 @@
         "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
       },
       "level_keys": [
-        "CSD U2L12 Div Flex SB_5"
+        "CSD U2L12 - Prac_2024"
       ]
     },
     {
       "chapter": 71,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_6"
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_9"
         ],
-        "lesson.key": "Websites for Expression",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
-      },
-      "level_keys": [
-        "CSD U2L12 Div Flex SB_6"
-      ]
-    },
-    {
-      "chapter": 72,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_7"
-        ],
-        "lesson.key": "Websites for Expression",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
-      },
-      "level_keys": [
-        "CSD U2L12 Div Flex SB_7"
-      ]
-    },
-    {
-      "chapter": 73,
-      "position": 9,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_8"
-        ],
-        "lesson.key": "Websites for Expression",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
-      },
-      "level_keys": [
-        "CSD U2L12 Div Flex SB_8"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 10,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice Levels"
+        "progression": "Assessment Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -7969,36 +8002,236 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
+        "activity_section.key": "4dbd0474-c8d0-4626-83de-c506f25e0d83"
       },
       "level_keys": [
         "CSD U2L12 Div Flex SB_9"
       ]
     },
     {
-      "chapter": 75,
-      "position": 11,
-      "activity_section_position": 6,
+      "chapter": 72,
+      "position": 8,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Flex challenge_2024"
+        ],
+        "progression": "Challenge Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Flex challenge_2024"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "8b4ef7f7-510b-4416-add3-0132465f985f"
+      },
+      "level_keys": [
+        "CSD U2 Flex challenge_2024"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 explore_1"
+        ],
+        "progression": "Exploration level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 explore_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "232acb50-ca00-4806-a4cd-066161aecc5a"
+      },
+      "level_keys": [
+        "CSD U2L13 explore_1"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 flex-grow_1"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 flex-grow_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 flex-grow_1"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 flex-shrink_2"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 flex-shrink_2"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 flex-shrink_2"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 order_3"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 order_3"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 order_3"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 align-self_4"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 align-self_4"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      },
+      "level_keys": [
+        "CSD U2L13 align-self_4"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 - Prac_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_10"
+          "CSD U2L13 - Prac_2024"
         ],
-        "lesson.key": "Websites for Expression",
+        "lesson.key": "Your Web Page - Prepare",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
+        "activity_section.key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7"
       },
       "level_keys": [
-        "CSD U2L12 Div Flex SB_10"
+        "CSD U2L13 - Prac_2024"
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 assessment"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "dfbaf0ea-f00a-460c-909b-fc63926dee95"
+      },
+      "level_keys": [
+        "CSD U2L13 assessment"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 - Challenge_2024"
+        ],
+        "progression": "Challenge Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 - Challenge_2024"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37"
+      },
+      "level_keys": [
+        "CSD U2L13 - Challenge_2024"
+      ]
+    },
+    {
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8023,7 +8256,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8048,7 +8281,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8073,7 +8306,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8098,7 +8331,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8123,7 +8356,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8148,7 +8381,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 87,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8173,57 +8406,7 @@
       ]
     },
     {
-      "chapter": 83,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U2 Top Websites_2018_2019_pilot_2024"
-        ],
-        "progression": "Top Websites"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U2 Top Websites_2018_2019_pilot_2024"
-        ],
-        "lesson.key": "Websites for a Purpose",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "1adcdf42-6618-4832-bbde-0db7e878a674"
-      },
-      "level_keys": [
-        "CSD U2 Top Websites_2018_2019_pilot_2024"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD web upload images multi_2024"
-        ],
-        "progression": "Upload Your Images"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD web upload images multi_2024"
-        ],
-        "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
-      },
-      "level_keys": [
-        "CSD web upload images multi_2024"
-      ]
-    },
-    {
-      "chapter": 85,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8248,7 +8431,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8273,7 +8456,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8298,7 +8481,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8323,7 +8506,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8348,7 +8531,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8373,7 +8556,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8398,7 +8581,32 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 95,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web upload images multi_2024"
+        ],
+        "progression": "Upload Your Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web upload images multi_2024"
+        ],
+        "lesson.key": "Planning a Multi-Page Site",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
+      },
+      "level_keys": [
+        "CSD web upload images multi_2024"
+      ]
+    },
+    {
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8423,7 +8631,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8448,7 +8656,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8473,7 +8681,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8498,7 +8706,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8523,7 +8731,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8548,7 +8756,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8573,7 +8781,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8598,7 +8806,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9453,45 +9661,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2L12 Div Flex SB_5",
+        "level.key": "CSD U2L12 - Prac_2024",
         "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_5"
-        ],
-        "lesson.key": "Websites for Expression",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U2L12 Div Flex SB_6",
-        "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_6"
-        ],
-        "lesson.key": "Websites for Expression",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U2L12 Div Flex SB_7",
-        "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_7"
-        ],
-        "lesson.key": "Websites for Expression",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U2L12 Div Flex SB_8",
-        "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_8"
+          "CSD U2L12 - Prac_2024"
         ],
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
@@ -9508,19 +9680,115 @@
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
+        "activity_section.key": "4dbd0474-c8d0-4626-83de-c506f25e0d83"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2L12 Div Flex SB_10",
+        "level.key": "CSD U2 Flex challenge_2024",
         "script_level.level_keys": [
-          "CSD U2L12 Div Flex SB_10"
+          "CSD U2 Flex challenge_2024"
         ],
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c"
+        "activity_section.key": "8b4ef7f7-510b-4416-add3-0132465f985f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 explore_1",
+        "script_level.level_keys": [
+          "CSD U2L13 explore_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "232acb50-ca00-4806-a4cd-066161aecc5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 flex-grow_1",
+        "script_level.level_keys": [
+          "CSD U2L13 flex-grow_1"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 flex-shrink_2",
+        "script_level.level_keys": [
+          "CSD U2L13 flex-shrink_2"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 order_3",
+        "script_level.level_keys": [
+          "CSD U2L13 order_3"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 align-self_4",
+        "script_level.level_keys": [
+          "CSD U2L13 align-self_4"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "92c142fd-bc84-4462-b8ce-ab6e97046a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 - Prac_2024",
+        "script_level.level_keys": [
+          "CSD U2L13 - Prac_2024"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f5ed41e8-e267-4601-8d2c-a8a015bbd1c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 assessment",
+        "script_level.level_keys": [
+          "CSD U2L13 assessment"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "dfbaf0ea-f00a-460c-909b-fc63926dee95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 - Challenge_2024",
+        "script_level.level_keys": [
+          "CSD U2L13 - Challenge_2024"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37"
       }
     },
     {
@@ -9609,30 +9877,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Top Websites_2018_2019_pilot_2024",
-        "script_level.level_keys": [
-          "CSD U2 Top Websites_2018_2019_pilot_2024"
-        ],
-        "lesson.key": "Websites for a Purpose",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "1adcdf42-6618-4832-bbde-0db7e878a674"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD web upload images multi_2024",
-        "script_level.level_keys": [
-          "CSD web upload images multi_2024"
-        ],
-        "lesson.key": "Planning a Multi-Page Site",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2024",
-        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U2 link demo_2024",
         "script_level.level_keys": [
           "CSD U2 link demo_2024"
@@ -9713,6 +9957,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd2-2024",
         "activity_section.key": "7ddc96c8-788e-42ee-a79e-224f45cb7274"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web upload images multi_2024",
+        "script_level.level_keys": [
+          "CSD web upload images multi_2024"
+        ],
+        "lesson.key": "Planning a Multi-Page Site",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "97f0f23b-f873-4c27-8343-674c30296c13"
       }
     },
     {
@@ -10104,6 +10360,18 @@
       }
     },
     {
+      "name": "Flex Children for More Control",
+      "url": "https://docs.google.com/presentation/d/1jQ-ZeHHBmDYqKgAQ8pvknZzQ6BM8g7pgEv6s9H6kFVE/template/preview",
+      "key": "flex_children_for_more_control",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "flex_children_for_more_control"
+      }
+    },
+    {
       "name": "Flexbox Cheat Sheet",
       "url": "https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/edit?usp=sharing",
       "key": "flexbox_cheat_sheet",
@@ -10114,6 +10382,19 @@
       },
       "seeding_key": {
         "resource.key": "flexbox_cheat_sheet"
+      }
+    },
+    {
+      "name": "Flexbox Children Cheat Sheet",
+      "url": "https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing",
+      "key": "flexbox_children_cheat_sheet",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "flexbox_children_cheat_sheet"
       }
     },
     {
@@ -10314,6 +10595,19 @@
       },
       "seeding_key": {
         "resource.key": "intro_to_web_lab_part_2"
+      }
+    },
+    {
+      "name": "Layout Prediction",
+      "url": "https://docs.google.com/document/d/1QtnqtR0HrKo24RjTUCf6qCKvBbtYY4vm7YkAdy7nsdc/edit?usp=sharing",
+      "key": "layout_prediction",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "layout_prediction"
       }
     },
     {
@@ -10537,19 +10831,6 @@
       }
     },
     {
-      "name": "Personal Web Page - Prepare",
-      "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/",
-      "key": "personal_web_page_-_prepare",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Project Guide"
-      },
-      "seeding_key": {
-        "resource.key": "personal_web_page_-_prepare"
-      }
-    },
-    {
       "name": "Personal Web Page - Reflect",
       "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/",
       "key": "personal_web_page_-_reflect",
@@ -10586,6 +10867,19 @@
       },
       "seeding_key": {
         "resource.key": "personal_web_page_1"
+      }
+    },
+    {
+      "name": "Pictionary Terms Slips",
+      "url": "https://docs.google.com/document/d/1dza1kwmREXH4NC6ENo1Z1M5uAepRTPUX_5nIs33gNzs/edit?usp=sharing",
+      "key": "pictionary_terms_slips",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "pictionary_terms_slips"
       }
     },
     {
@@ -10697,18 +10991,6 @@
       },
       "seeding_key": {
         "resource.key": "project_guide_-_html_project"
-      }
-    },
-    {
-      "name": "Project Guide - Personal Web Page - Prepare",
-      "url": "https://docs.google.com/document/d/1zpK8MdquwIvu1yM9RsMqFnDN0bN7qRL3Kwz3MUFtLE4/view",
-      "key": "project_guide_-_personal_web_page_-_prepare",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "project_guide_-_personal_web_page_-_prepare"
       }
     },
     {
@@ -11118,33 +11400,8 @@
       }
     },
     {
-      "name": "Websites for a Purpose",
-      "url": "https://docs.google.com/document/d/1JjaG3J0Jl2KZtqxCsqP-pMLb0tHSTSjni9NwgftBKNI/edit?usp=sharing",
-      "key": "websites_for_a_purpose",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "websites_for_a_purpose"
-      }
-    },
-    {
-      "name": "Websites for a Purpose",
-      "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit",
-      "key": "websites_for_a_purpose_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "websites_for_a_purpose_1"
-      }
-    },
-    {
-      "name": "Websites for a Purpose",
-      "url": "https://docs.google.com/presentation/d/1yHRuBzmhMHTGGkH0YJsHfewh1ceUi1u5ut6_kIlfrQU/template/preview",
+      "name": "CSS Pseudo-classes",
+      "url": "https://docs.google.com/presentation/d/1AF-xp1xqMaJZidD5h4PBOTksESaBl0ULWJYRLrLj1VU/template/preview",
       "key": "websites_for_a_purpose_2",
       "properties": {
         "audience": "Teacher",
@@ -11191,18 +11448,6 @@
       },
       "seeding_key": {
         "resource.key": "your_personal_style_2"
-      }
-    },
-    {
-      "name": "Your Web Page: Prepare",
-      "url": "https://docs.google.com/presentation/d/13RScnxfMzwB5u80mIuncxTIHZ2X7eIBhNhEByzVkOLs/template/preview",
-      "key": "your_web_page_prepare",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "your_web_page_prepare"
       }
     }
   ],
@@ -11804,37 +12049,31 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
-        "resource.key": "websites_for_a_purpose"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Websites for a Purpose",
-        "resource.key": "websites_for_a_purpose_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Websites for a Purpose",
         "resource.key": "websites_for_a_purpose_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "personal_web_page_-_prepare"
+        "resource.key": "flex_children_for_more_control"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "project_guide_-_personal_web_page_-_prepare"
+        "resource.key": "flexbox_children_cheat_sheet"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "your_web_page_prepare"
+        "resource.key": "layout_prediction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "pictionary_terms_slips"
       }
     }
   ],
@@ -12457,7 +12696,7 @@
     {
       "key": "3112d4c8-dac8-47e8-9e9c-ca228b55cb27",
       "properties": {
-        "description": "Create documentation that explains the design decisions of an artifact"
+        "description": "Apply Flexbox children properties in CSS"
       },
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
@@ -12637,7 +12876,7 @@
     {
       "key": "694e5850-ccd9-47ba-a2cd-bc755ac1b28a",
       "properties": {
-        "description": "Identify the reasons someone might create a given website"
+        "description": "Apply pseudo-classes to selectors in CSS to enhance website interactivity and design"
       },
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
@@ -12662,6 +12901,16 @@
       "seeding_key": {
         "lesson.key": "Websites for Expression",
         "objective.key": "71cf9da7-f188-4b32-bf5c-968a82caecfe"
+      }
+    },
+    {
+      "key": "74f74d4d-d7af-4e32-9e25-9fd55bf862f4",
+      "properties": {
+        "description": "Explain the function and importance of CSS Pseudo-classes"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "objective.key": "74f74d4d-d7af-4e32-9e25-9fd55bf862f4"
       }
     },
     {
@@ -12787,7 +13036,7 @@
     {
       "key": "cc075a45-b721-42e6-990f-e70219a92100",
       "properties": {
-        "description": "Logically separate the content, structure and formatting of a digital artifact"
+        "description": "Analyze and solve common web design layout challenges using Flexbox"
       },
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
@@ -13329,14 +13578,35 @@
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-20"
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
+        "standard.shortcode": "2-AP-13"
       }
     },
     {
@@ -13344,6 +13614,13 @@
         "lesson.key": "Your Web Page - Prepare",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
       }
     }
   ],

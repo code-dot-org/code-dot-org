@@ -26,54 +26,61 @@ class TestWrapper extends React.Component {
     }
     return (
       <FieldGroup
-        id="full"
-        type="text"
-        label="this is a more full-featured example that errors if you type non-alpha characters"
+        id={this.props.id}
+        type={this.props.type}
+        componentClass={this.props.componentClass}
+        label={this.props.label}
         validationState={valid}
         onChange={this.handleChange}
         value={this.state.data}
         required={true}
-      />
+      >
+        {this.props.children}
+      </FieldGroup>
     );
   }
 }
 
 TestWrapper.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  componentClass: PropTypes.string,
+  label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  children: PropTypes.arrayOf(PropTypes.node),
 };
 
-export default storybook => {
-  storybook.storiesOf('FormComponents/FieldGroup', module).addStoryTable([
-    {
-      name: 'basic example',
-      story: () => (
-        <FieldGroup
-          id="basic"
-          type="text"
-          label="this is a basic fieldgroup"
-          onChange={action('onChange')}
-        />
-      ),
-    },
-    {
-      name: 'dropdown with children',
-      story: () => (
-        <FieldGroup
-          id="dropdown"
-          componentClass="select"
-          label="a dropdown with children"
-          onChange={action('onChange')}
-        >
-          <option>Please Select One:</option>
-          <option value="first">One</option>
-          <option value="second">Two</option>
-          <option value="third">Three</option>
-        </FieldGroup>
-      ),
-    },
-    {
-      name: 'full-featured example',
-      story: () => <TestWrapper onChange={action('onChange')} />,
-    },
-  ]);
+export default {
+  title: 'FormComponents/FieldGroup', // eslint-disable-line storybook/no-title-property-in-meta
+  component: FieldGroup,
+};
+
+const Template = args => <TestWrapper {...args} />;
+
+export const BasicExample = Template.bind({});
+BasicExample.args = {
+  id: 'basic',
+  type: 'text',
+  label: 'this is a basic fieldgroup',
+  onChange: action('onChange'),
+};
+
+export const DropdownWithChildren = Template.bind({});
+DropdownWithChildren.args = {
+  id: 'dropdown',
+  componentClass: 'select',
+  label: 'a dropdown with children',
+  onChange: action('onChange'),
+  children: [
+    <option key="title">Please Select One:</option>,
+    <option key="first" value="first">
+      One
+    </option>,
+    <option key="second" value="second">
+      Two
+    </option>,
+    <option key="third" value="third">
+      Three
+    </option>,
+  ],
 };

@@ -1,4 +1,3 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import React from 'react';
@@ -88,10 +87,6 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submit = () => {
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'submit_school_info',
-    });
     analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT_SCHOOL_INFO);
 
     if (this.state.formData.schoolId === '-1') {
@@ -163,14 +158,8 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     this.saveToSessionStorage();
 
     if (!isEligible) {
-      firehoseClient.putRecord(
-        {
-          study: 'amazon-future-engineer-eligibility',
-          event: 'ineligible',
-        },
-        {callback: () => (window.location = pegasus('/afe/start-codeorg'))}
-      );
       analyticsReporter.sendEvent(EVENTS.AFE_INELIGIBLE);
+      window.location = pegasus('/afe/start-codeorg');
     }
   }
 
@@ -323,7 +312,8 @@ const styles = {
     paddingBottom: 10,
   },
   container: {
-    borderColor: color.teal,
+    backgroundColor: 'var(--neutral_white)',
+    border: '1px solid var(--neutral_dark20)',
     borderWidth: 'thin',
     borderStyle: 'solid',
     padding: '10px 15px 10px 15px',

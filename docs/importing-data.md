@@ -2,17 +2,17 @@
 
 ## Importing Data
 
-Data may be imported from Google Sheets or CSV files into SQL tables. Columns in these spreedsheets must be named using type suffixes.
+Data may be imported from Google Sheets into SQL tables. Columns in these spreedsheets must be named using type suffixes.
 
 ### Importing Google Sheets
 
-1. Create a sheet in the "Pegasus" Google Docs folder, naming your columns using type suffixes.
-1. In the Dropbox folder for a site, create a file named `data/table_name.gsheet` where table_name is the name you'd like the database table to have. The file should contain the "Pegasus" Google Docs path to the sheet you created in step 1. For example, `code.org/data/about_team.gsheet` would contain `Data/About/Team` and the data will be imported into a table named `about_team`.
-1. The data should import on staging automatically within a few minutes.
-
-### Importing CSV files
-
-1. In the Dropbox folder for a site, create a file named `data/table_name.csv` where table_name is the name you'd like the database table to have naming your columns using type suffixes.
+1. Create a new gsheet in the "Pegasus" Google Docs folder, naming your columns using type suffixes.
+  - Make SiteCloud (`site.googlecloud@code.org`) the owner of the gsheet.
+1. Add a new `table-name.gsheet` file locally in the `pegasus/data` folder.
+1. Paste the gsheet ID in the file. (See more context in [this PR](https://github.com/code-dot-org/code-dot-org/pull/54047))
+1. Run the following commands to populate the data locally:
+  - `cd pegasus`
+  - `bundle exec rake seed:sync`
 
 ### Type Suffixes
 
@@ -70,7 +70,8 @@ Location: (<%= row[:latitude_f] %>, <%= row[:longitude_f] %>)
 ```
 
 ### Developer Details
+Make sure you're in the `pegasus` directory.
 
-- `rake seed:sync` will detect modified gsheets, download updated versions as .csv files, and then perform a `seed:migrate`.
-- `rake seed:migrate` will import any modified .csv files into the database.
-- `rake seed:reset` will import all .csv files into the database regardless of their modification status.
+- `bundle exec rake seed:sync` will detect modified gsheets, download updated versions as .csv files, and then perform a `seed:migrate`.
+- `bundle exec rake seed:migrate` will import any modified .csv files into the database.
+- `bundle exec rake seed:reset` will import all .csv files into the database regardless of their modification status.

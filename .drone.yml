@@ -22,12 +22,30 @@ steps:
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
 
-  - name: clone
-    image: docker:git
+  # We cache a clone of staging in the `cache-staging-clone` pipeline
+  - name: get-cached-staging
+    image: plugins/s3-cache
+    settings:
+      filename: cache-staging-clone.tar
+      endpoint: s3://cdo-drone
+      restore: true
+      debug: true
+      pull: true
+      mount:
+        - .
+
+  - name: checkout
+    image: bitnami/git
     commands:
-      - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
+      - git lfs install --skip-repo
+      # We should be in a cached git repo, but clone if the cache failed
+      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      # Checkout our target branch (=the PR)
+      - git fetch origin $DRONE_SOURCE_BRANCH
+      - git checkout $DRONE_SOURCE_BRANCH
+      - git pull
       - git reset --hard $DRONE_COMMIT
-      # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
+      # Fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
       - git remote set-branches --add origin $DRONE_TARGET_BRANCH
       - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
       # Merge so we're up-to-date with the target before running tests.
@@ -38,7 +56,7 @@ steps:
   - name: restore-cache
     image: plugins/s3-cache
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       restore: true
@@ -46,7 +64,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.9.1
+    image: codedotorg/code-dot-org:1.9.3
     pull: always
     volumes:
       - name: rbenv
@@ -77,7 +95,7 @@ steps:
       - name: rbenv
         path: /home/circleci/.rbenv
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       rebuild: true
@@ -121,10 +139,28 @@ steps:
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
 
-  - name: clone
-    image: docker:git
+  # We cache a clone of staging in the `cache-staging-clone` pipeline
+  - name: get-cached-staging
+    image: plugins/s3-cache
+    settings:
+      filename: cache-staging-clone.tar
+      endpoint: s3://cdo-drone
+      restore: true
+      debug: true
+      pull: true
+      mount:
+        - .
+
+  - name: checkout
+    image: bitnami/git
     commands:
-      - git clone --branch $DRONE_SOURCE_BRANCH  --depth 200 $DRONE_GIT_HTTP_URL .
+      - git lfs install --skip-repo
+      # We should be in a cached git repo, but clone if the cache failed
+      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      # Checkout our target branch (the PR's branch).
+      - git fetch origin $DRONE_SOURCE_BRANCH
+      - git checkout $DRONE_SOURCE_BRANCH
+      - git pull
       - git reset --hard $DRONE_COMMIT
       # Also fetch the target branch (which is staging or staging-next for pull requests.) We need this for determining which tests to run based on changed files.
       - git remote set-branches --add origin $DRONE_TARGET_BRANCH
@@ -137,7 +173,7 @@ steps:
   - name: restore-cache
     image: plugins/s3-cache
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       restore: true
@@ -145,7 +181,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.9.1
+    image: codedotorg/code-dot-org:1.9.3
     pull: always
     volumes:
       - name: rbenv
@@ -187,7 +223,7 @@ steps:
       - name: rbenv
         path: /home/circleci/.rbenv
     settings:
-      endpoint: s3://code-dot-org
+      endpoint: s3://cdo-drone
       debug: true
       pull: true
       rebuild: true
@@ -210,8 +246,45 @@ trigger:
     - "staging-next"
   event:
     - pull_request
+
+---
+
+# On push, cache a clone of staging to drone's S3 bucket.
+# The staging cache reduces git bandwidth in PR pipelines.
+kind: pipeline
+type: docker
+name: cache-staging-clone
+
+clone:
+  disable: true
+
+steps:
+
+  - name: clone
+    image: bitnami/git
+    commands:
+      - git lfs install
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+
+  - name: cache-staging-clone
+    image: plugins/s3-cache
+    settings:
+      filename: cache-staging-clone.tar
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - .
+
+trigger:
+  branch:
+    - "staging"
+    - "staging-next"
+  event:
+    - push
 ---
 kind: signature
-hmac: ac1e6aadef62e0d07f0c3a24559332c7d2da17346db0e07a8d5deb781be7cceb
+hmac: a16fa2865512ffb9127b4d8a311fa8fdc078145723a8aa2767bea7cce97c1ed5
 
 ...

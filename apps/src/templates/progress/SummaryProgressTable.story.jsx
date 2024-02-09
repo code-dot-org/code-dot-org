@@ -12,7 +12,6 @@ import {
 import {Provider} from 'react-redux';
 
 export default {
-  title: 'SummaryProgressTable',
   component: SummaryProgressTable,
 };
 

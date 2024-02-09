@@ -175,6 +175,10 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif script.pl_course?
+      return build_script_level_path(level_to_follow) if level_to_follow
+      next_unit = script.next_unit(user)
+      next_unit ? script_path(next_unit) : script_completion_redirect(script)
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
@@ -329,12 +333,18 @@ class ScriptLevel < ApplicationRecord
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
         app: level.game&.app,
-        uses_lab2: level.uses_lab2?
+        uses_lab2: level.uses_lab2?,
+        is_validated: level.validated?
       }
 
       if progression
         summary[:progression] = progression
-        localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+        localized_progression_name = I18n.t(
+          progression,
+          scope: %i[data progressions],
+          default: progression,
+          smart: true
+        )
         summary[:progression_display_name] = localized_progression_name
       end
 

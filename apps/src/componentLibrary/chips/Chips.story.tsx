@@ -4,7 +4,7 @@ import {Meta, Story} from '@storybook/react';
 import {Chips, ChipsProps} from './index';
 
 export default {
-  title: 'DesignSystem/Chips Component',
+  title: 'DesignSystem/Chips', // eslint-disable-line storybook/no-title-property-in-meta
   component: Chips,
 } as Meta;
 
@@ -85,7 +85,7 @@ SizesOfChips.args = {
         {value: 'Lchip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
     {
       label: 'Chips M',
@@ -100,7 +100,7 @@ SizesOfChips.args = {
         {value: 'Mchip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
     {
       label: 'Chips S',
@@ -115,7 +115,7 @@ SizesOfChips.args = {
         {value: 'Schip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
     {
       label: 'Chips XS',
@@ -130,7 +130,7 @@ SizesOfChips.args = {
         {value: 'XSchip5', label: 'Chip5'},
       ],
       values: [],
-      setValues: values => null,
+      setValues: () => null,
     },
   ],
 };

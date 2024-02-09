@@ -175,6 +175,38 @@ mapbox_access_tileset:    'censustiles'
 # Crowdin
 crowdin_codeorg_api_key:
 
+crowdin_projects:
+  codeorg:
+    id: 26074
+    source_language: 'enus'
+  hour-of-code:
+    id: 55536
+    source_language: 'en'
+  codeorg-markdown:
+    id: 314545
+    source_language: 'en'
+  codeorg-restricted:
+    id: 464582
+    source_language: 'en'
+  codeorg-testing:
+    id: 346087
+    source_language: 'en'
+  codeorg-markdown-testing:
+    id: 547997
+    source_language: 'en'
+  hour-of-code-test:
+    id: 634038
+    source_language: 'en'
+  codeorg-restricted-test:
+    id: 634320
+    source_language: 'en'
+
+crowdin_project_test_mapping:
+  codeorg: codeorg-testing
+  codeorg-markdown: codeorg-markdown-testing
+  codeorg-restricted: codeorg-restricted-test
+  hour-of-code: hour-of-code-test
+
 # Azure Content Moderator
 azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
 azure_content_moderation_key:
@@ -326,7 +358,8 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org codecurricula.com
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co
+
 skip_locales:
 secret_pictures_csv:
 no_https_store:
@@ -417,7 +450,7 @@ levelbuilder_mode:
 # make it easier to tell the difference
 use_local_header_color:
 
-default_hoc_mode: post-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
 default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'

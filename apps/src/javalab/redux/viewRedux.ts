@@ -20,11 +20,11 @@ const {
   FONT_SIZE_INCREMENT_PX,
   MAX_FONT_SIZE_PX,
   MIN_FONT_SIZE_PX,
-} = require('@cdo/apps/javalab/editorThemes');
+} = require('@cdo/apps/lab2/views/components/editor/editorThemes');
 
 type DisplayThemeValue = 'light' | 'dark';
 
-interface JavalabViewState {
+export interface JavalabViewState {
   displayTheme: DisplayThemeValue;
   renderedEditorHeight: number;
   leftWidth: number;
