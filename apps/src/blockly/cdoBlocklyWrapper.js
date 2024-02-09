@@ -12,7 +12,8 @@ import {
   setHasIncompatibleSources,
 } from '@cdo/apps/redux/blockly';
 import * as blockUtils from '../block_utils';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {handleCodeGenerationFailure} from './utils';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -234,16 +235,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       code = strip(code);
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
-      // We only want to log the error once per failure since getWorkspaceCode
-      // gets called many times and the error will be the same every time.
-      if (!getStore().getState().blockly.failedToGenerateCode) {
-        getStore().dispatch(setFailedToGenerateCode(true));
-        MetricsReporter.logError({
-          event: 'CDO_BLOCKLY_GET_CODE_ERROR',
-          errorMessage: e.message,
-          stackTrace: e.stack,
-        });
-      }
+      handleCodeGenerationFailure(MetricEvent.CDO_BLOCKLY_GET_CODE_ERROR, e);
     }
     return code;
   };
