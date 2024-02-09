@@ -364,11 +364,9 @@ DatablockStorage.renameColumn = function (
 ) {
   _fetch('rename_column', 'PUT', {
     table_name: tableName,
-    old_name: oldName,
-    new_name: newName,
+    old_column_name: oldName,
+    new_column_name: newName,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 DatablockStorage.coerceColumn = function (
