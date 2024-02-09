@@ -140,14 +140,6 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
-  def import_csv
-    table = table_or_create
-    table.import_csv params[:table_data_csv]
-    table.save!
-
-    render json: true
-  end
-
   def delete_key_value
     key = params[:key]
     DatablockStorageKvp.where(channel_id: params[:channel_id], key: key).delete_all
@@ -157,10 +149,15 @@ class DatablockStorageController < ApplicationController
 
   def populate_tables
     tables_json = JSON.parse params[:tables_json]
-    tables_json.each do |table_name, records|
-      table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
-      table.create_records records
-    end
+    DatablockStorageTable.populate_tables params[:channel_id], tables_json
+    render json: true
+  end
+
+  def import_csv
+    table = table_or_create
+    table.import_csv params[:table_data_csv]
+    table.save!
+
     render json: true
   end
 

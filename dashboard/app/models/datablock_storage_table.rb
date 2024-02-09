@@ -21,6 +21,14 @@ class DatablockStorageTable < ApplicationRecord
     DatablockStorageTable.create!(channel_id: channel_id, table_name: table_name, is_shared_table: true)
   end
 
+  def self.populate_tables(channel_id, tables_json)
+    tables_json.each do |table_name, records|
+      table = DatablockStorageTable.where(channel_id: channel_id, table_name: table_name).first_or_create
+      table.create_records records
+      table.save!
+    end
+  end
+
   # This would require MySQL option MULTI_STATEMENTS set on the connection, which
   # has lots of pitfalls and isn't particularly well supported with the mysql2 gem
   # See: https://github.com/rails/rails/issues/31569
@@ -108,8 +116,6 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def import_csv(table_data_csv)
-    # FIXME: is_shared_table, copy-on-write goes here
-
     records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
     create_records(records)
   end

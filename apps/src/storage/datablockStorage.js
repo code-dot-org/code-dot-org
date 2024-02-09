@@ -469,4 +469,8 @@ export function initDatablockStorage(config) {
   return DatablockStorage;
 }
 
+// FIXME: unfirebase, remove this before merging PR
+console.warn("Setting window.DatablockStorage for easier debugging, turn off before merging PR");
+window.DatablockStorage = DatablockStorage;
+
 export default DatablockStorage;
