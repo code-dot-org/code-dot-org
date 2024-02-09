@@ -1,5 +1,19 @@
 @import 'color';
 
+.iconKey {
+  margin-bottom: 40px;
+}
+
+.iconKeyCaret {
+  margin-inline-end: 12px;
+}
+
+.iconKeyTitle {
+  cursor: pointer;
+  width: fit-content;
+  padding-inline-end: 8px;
+}
+
 .legend {
   align-items: flex-start;
   border: 1px solid $light_gray_200;
