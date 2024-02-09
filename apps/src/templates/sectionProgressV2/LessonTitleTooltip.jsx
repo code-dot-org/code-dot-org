@@ -14,7 +14,6 @@ export default function LessonTitleTooltip({lesson}) {
       key={tooltipId}
       role="tooltip"
       wrapper="div"
-      effect="solid"
     >
       <div className={styles.lessonHeaderTooltip}>
         {i18n.lessonNumbered({
