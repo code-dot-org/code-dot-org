@@ -199,6 +199,8 @@ Javalab.prototype.init = function (config) {
   });
 
   registerReducers({javalab, javalabConsole, javalabView});
+  project.registerSaveOnUnload();
+
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (this.isStartMode) {
@@ -328,8 +330,6 @@ Javalab.prototype.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
-
-  project.registerSaveOnUnload();
 };
 
 // Called by the Javalab app when it wants execute student code.

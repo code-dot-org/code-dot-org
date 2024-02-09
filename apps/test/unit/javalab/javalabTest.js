@@ -42,26 +42,13 @@ describe('Javalab', () => {
     restoreStudioApp();
   });
 
-  describe('beforeUnload', () => {
-    let eventStub;
+  describe('before unload', () => {
+    it('registers save to occur if unsaved changes', () => {
+      const saveOnUnloadSpy = sinon.spy(project, 'registerSaveOnUnload');
+      javalab.init(config);
+      expect(saveOnUnloadSpy).to.have.been.calledOnce;
 
-    beforeEach(() => {
-      eventStub = {
-        preventDefault: sinon.stub(),
-        returnValue: undefined,
-      };
-    });
-
-    it('triggers an autosave if there are unsaved changes', () => {
-      sinon.stub(project, 'hasOwnerChangedProject').returns(true);
-
-      javalab.beforeUnload(eventStub);
-
-      expect(project.autosave).to.have.been.calledOnce;
-      expect(eventStub.preventDefault).to.have.been.calledOnce;
-      expect(eventStub.returnValue).to.equal('');
-
-      project.hasOwnerChangedProject.restore();
+      project.registerSaveOnUnload.restore();
     });
   });
 

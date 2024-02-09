@@ -181,6 +181,7 @@ describe('project.js', () => {
 
     it('default case', () => {
       window.appOptions.app = 'someOtherType';
+      window.appOptions.app = 'someOtherType';
       expect(project.getNewProjectName()).to.equal(msg.defaultProjectName());
     });
   });
@@ -1098,6 +1099,41 @@ describe('project.js', () => {
           done();
         })
         .catch(err => done(err));
+    });
+  });
+
+  describe('registerSaveOnUnload', () => {
+    it('calls function to handle unload', () => {
+      const addEventListenerSpy = sinon.spy(window, 'addEventListener');
+      const unloadHandlerSpy = sinon.spy(project, 'unloadHandler_');
+
+      project.registerSaveOnUnload();
+
+      expect(addEventListenerSpy).to.have.been.calledWith(
+        'beforeunload',
+        unloadHandlerSpy
+      );
+
+      window.addEventListener.restore();
+      project.unloadHandler_.restore();
+    });
+
+    it('unload handler calls autosave if unsaved changes observed', () => {
+      sinon.stub(project, 'hasOwnerChangedProject').returns(true);
+      const autosaveSpy = sinon.spy(project, 'autosave');
+      const eventStub = {
+        preventDefault: sinon.stub(),
+        returnValue: undefined,
+      };
+
+      project.unloadHandler_(eventStub);
+
+      expect(autosaveSpy).to.have.been.calledOnce;
+      expect(eventStub.preventDefault).to.have.been.calledOnce;
+      expect(eventStub.returnValue).to.equal('');
+
+      project.hasOwnerChangedProject.restore();
+      project.autosave.restore();
     });
   });
 });

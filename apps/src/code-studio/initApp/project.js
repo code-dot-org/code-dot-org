@@ -1926,18 +1926,19 @@ var projects = (module.exports = {
 
   // Sets a callback to save the project before unloading the page.
   registerSaveOnUnload() {
-    const unloadHandler = event => {
-      if (this.hasOwnerChangedProject()) {
-        // Manually trigger an autosave instead of waiting for the next autosave.
-        this.autosave();
+    window.addEventListener('beforeunload', this.unloadHandler_.bind(this));
+  },
 
-        event.preventDefault();
-        event.returnValue = '';
-      } else {
-        delete event.returnValue;
-      }
-    };
-    window.addEventListener('beforeunload', unloadHandler);
+  unloadHandler_(event) {
+    if (this.hasOwnerChangedProject()) {
+      // Manually trigger an autosave instead of waiting for the next autosave.
+      this.autosave();
+
+      event.preventDefault();
+      event.returnValue = '';
+    } else {
+      delete event.returnValue;
+    }
   },
 });
 
