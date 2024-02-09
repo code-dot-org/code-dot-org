@@ -13,4 +13,5 @@
 #
 class DatablockStorageRecord < ApplicationRecord
   self.primary_keys = :channel_id, :table_name, :record_id
+  belongs_to :table, class_name: 'DatablockStorageTable', foreign_key: [:channel_id, :table_name]
 end
