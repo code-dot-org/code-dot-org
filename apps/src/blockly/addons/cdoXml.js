@@ -388,10 +388,12 @@ function processBlockAndChildren(block) {
   processIndividualBlock(block);
 
   // Blocks can contain other blocks so we must process them recursively.
-  const childBlocks = block.querySelectorAll('block');
-  childBlocks.forEach(childBlock => {
-    processBlockAndChildren(childBlock);
-  });
+  const childBlocks = Array.from(block.querySelectorAll('block')).filter(
+    // Only process immediate children in this way so we don't
+    // handle nested blocks multiple times.
+    childBlock => childBlock.parentNode === block
+  );
+  childBlocks.forEach(processBlockAndChildren);
 }
 
 /**
