@@ -11,6 +11,8 @@
 #
 class DatablockStorageTable < ApplicationRecord
   self.primary_keys = :channel_id, :table_name
+  has_many :records, class_name: 'DatablockStorageRecord', foreign_key: [:channel_id, :table_name]
+  after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
   def self.add_shared_table(channel_id, table_name)
     unless DatablockStorageTable.exists?(channel_id: "shared", table_name: table_name)
@@ -38,6 +40,7 @@ class DatablockStorageTable < ApplicationRecord
       max_record_id = DatablockStorageRecord.where(channel_id: channel_id, table_name: table_name).maximum(:record_id)
       next_record_id = (max_record_id || 0) + 1
 
+      cols_in_records = Set.new
       record_jsons.each do |record_json|
         # We write the record_id into the JSON as well as storing it in its own column
         # only create_record and update_record should be at risk of modifying this
@@ -46,8 +49,13 @@ class DatablockStorageTable < ApplicationRecord
         #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
         DatablockStorageRecord.create(channel_id: channel_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
 
+        cols_in_records.merge(record_json.keys)
         next_record_id += 1
       end
+
+      # Preserve the old column's order while adding any new columns
+      self.columns += (cols_in_records - columns).to_a
+      save!
     end
     # COMMIT;
   end
