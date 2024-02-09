@@ -12,6 +12,7 @@
 class DatablockStorageTable < ApplicationRecord
   self.primary_keys = :channel_id, :table_name
   has_many :records, class_name: 'DatablockStorageRecord', foreign_key: [:channel_id, :table_name]
+  after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
   def self.add_shared_table(channel_id, table_name)
     unless DatablockStorageTable.exists?(channel_id: "shared", table_name: table_name)

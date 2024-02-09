@@ -130,9 +130,6 @@ class DatablockStorageController < ApplicationController
   def create_table
     table_name = params[:table_name]
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
-    # FIXME: unfirebase, what if the table already existed and had columns? Won't this overwrite them?
-    # FIXME: datablock/use-column-defs look into this
-    table.columns = ["id"]
     table.save!
 
     render json: true
