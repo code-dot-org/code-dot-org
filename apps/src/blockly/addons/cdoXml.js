@@ -62,7 +62,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     blockElements.forEach(xmlChild => {
-      // Recursively check blocks for XML attributes that need to be manipulated.
+      // Check xmlChild and its children for XML attributes that need to be manipulated.
       processBlockAndChildren(xmlChild);
 
       // Further manipulate the XML for specific top block types.
@@ -387,10 +387,11 @@ function getFieldOrTitle(blockElement, name) {
 function processBlockAndChildren(block) {
   processIndividualBlock(block);
 
-  // Blocks can contain other blocks so we must process them recursively.
+  // Blocks can contain other blocks so we must process all of their children.
+  // This query will get all child blocks of the current block, not just direct descendants.
   const childBlocks = block.querySelectorAll('block');
   childBlocks.forEach(childBlock => {
-    processBlockAndChildren(childBlock);
+    processIndividualBlock(childBlock);
   });
 }
 
