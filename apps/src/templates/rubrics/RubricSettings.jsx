@@ -75,7 +75,7 @@ export default function RubricSettings({
   const [unevaluatedCount, setUnevaluatedCount] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
   const [evaluatedCount, setEvaluatedCount] = useState(0);
-  const [showDetails, setShowDetails] = useState(false);
+  const [displayDetails, setDisplayDetails] = useState(false);
 
   const statusAllText = () => {
     switch (statusAll) {
@@ -106,7 +106,7 @@ export default function RubricSettings({
   };
 
   const showHideDetails = () => {
-    setShowDetails(!showDetails);
+    setDisplayDetails(!displayDetails);
   };
 
   useEffect(() => {
@@ -138,6 +138,7 @@ export default function RubricSettings({
   useEffect(() => {
     if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
+        refreshAiEvaluations();
         fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
           if (!response.ok) {
             setStatusAll(STATUS_ALL.ERROR);
@@ -150,7 +151,7 @@ export default function RubricSettings({
               if (data.attemptedCount === 0) {
                 setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
               } else if (data.attemptedUnevaluatedCount === 0) {
-                setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+                setStatusAll(STATUS_ALL.SUCCESS);
               } else {
                 setStatusAll(STATUS_ALL.READY);
               }
@@ -160,7 +161,7 @@ export default function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, polling, sectionId, refreshAiEvaluations]);
+  }, [rubricId, polling, sectionId, statusAll, refreshAiEvaluations]);
 
   const handleRunAiAssessmentAll = () => {
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
@@ -225,13 +226,13 @@ export default function RubricSettings({
           <div className={style.detailsGroup}>
             <BodyTwoText
               className={
-                showDetails ? style.detailsVisible : style.detailsHidden
+                displayDetails ? style.detailsVisible : style.detailsHidden
               }
             >
               {i18n.aiEvaluationDetails()}
             </BodyTwoText>
             <Link onClick={showHideDetails}>
-              {showDetails ? i18n.hideDetails() : i18n.showDetails()}
+              {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
             </Link>
           </div>
         </div>
