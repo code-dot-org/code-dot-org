@@ -159,8 +159,10 @@ DatablockStorage.deleteRecord = function (
   }).then(onSuccess, onError);
 };
 
-async function getTableNames() {
-  const response = await _fetch('get_table_names', 'GET', {});
+async function getTableNames({isSharedTable = false}={}) {
+  const response = await _fetch('get_table_names', 'GET', {
+    is_shared_table: isSharedTable,
+  });
   return await response.json();
 }
 
@@ -169,8 +171,11 @@ DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
 
-async function getColumnsForTable(tableName) {
-  const response = await _fetch('get_columns_for_table', 'GET', {table_name: tableName});
+async function getColumnsForTable({tableName,isSharedTable = false}) {
+  const response = await _fetch('get_columns_for_table', 'GET', {
+    table_name: tableName,
+    is_shared_table: isSharedTable,
+  });
   const json = await response.json();
   return json;
 }
@@ -182,7 +187,7 @@ function loadTableAndColumns({
   onRecordsChanged,
 }) {
   readRecords({tableName, isSharedTable}).then(records => {
-    getColumnsForTable(tableName).then(onColumnsChanged)
+    getColumnsForTable({tableName, isSharedTable}).then(onColumnsChanged)
 
     // DataTableView.getTableJson() expects an array of JSON strings
     // which it then parses as JSON, and then stringifies again 🙈
@@ -342,12 +347,59 @@ DatablockStorage.populateKeyValue = function (jsonData, onSuccess, onError) {
 
 // gets a list of all the shared or current tables available in the data browser
 DatablockStorage.getLibraryManifest = function () {
-  return getTableNames();
+  return getTableNames({isSharedTable: true}).then(tableNames => {
+    console.log('FOUND SHARED TABLES', tableNames);
+    // FIXME, unfirebase, we don't have this implemented yet
+    // see: issue on implementing the library manifest system here:
+    // https://github.com/code-dot-org/code-dot-org/issues/56472
+    const EXAMPLE_MANIFEST_FROM_FIREBASE = {
+      categories: [
+        {
+          datasets: [
+            '100 Birds of the World',
+            'Bee Colonies',
+            'Cats',
+            'Dogs',
+            'Endangered Species of Canada',
+            'Palmer Penguins',
+          ],
+          name: 'Animals',
+          published: true,
+        },
+      ],
+      tables: [
+        {
+          current: false,
+          description:
+            'Data and images about 100 different species of birds around the world',
+          docUrl: 'https://studio.code.org/data_docs/100-birds/',
+          name: '100 Birds of the World',
+          published: true,
+        },
+        {
+          current: true,
+          description:
+            'Live weather five-day forecast data for 100 cities. Updates daily with expected weather conditions.',
+          docUrl: 'https://studio.code.org/data_docs/daily-weather/',
+          lastUpdated: 1707480317000,
+          name: 'Daily Weather',
+          published: true,
+        },
+      ],
+    };
+    console.error(
+      'DatablockStorage.getLibraryManifest is NOT IMPLEMENTED YET, returning stock EXAMPLE_MANIFEST_FROM_FIREBASE:',
+      EXAMPLE_MANIFEST_FROM_FIREBASE
+    );
+    return EXAMPLE_MANIFEST_FROM_FIREBASE;
+  });
 };
 
 // returns an array of strings for each of the columns in the table
-DatablockStorage.getColumnsForTable = function (tableName, tableType) {
-  return getColumnsForTable(tableName);
+// Note this diverges a little from the F*rebase version, which takes a tableType param
+// which we do not need since we implement this on the backend.
+DatablockStorage.getColumnsForTable = function (tableName) {
+  return getColumnsForTable({tableName});
 };
 
 // @return {Promise<boolean>} whether the project channelID (configured at initF*rebaseStorage) exists
@@ -362,6 +414,10 @@ DatablockStorage.clearAllData = function (onSuccess, onError) {
 };
 
 // FIXME: unfirebase, remove this before merging PR
+//
+// See issue about implementing the library manifest system here:
+// https://github.com/code-dot-org/code-dot-org/issues/56472
+//
 // Current tables are live updated, the data is NOT copied into
 // the student project, instead a new type of f*rebase node is created
 // like /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/current_tables/Daily Weather
@@ -370,20 +426,31 @@ DatablockStorage.clearAllData = function (onSuccess, onError) {
 //
 // Current tables can be found in https://console.firebase.google.com/project/cdo-v3-shared/database/cdo-v3-shared/data/~2Fv3~2Fchannels~2Fshared~2Fmetadata~2Fmanifest~2Ftables
 // where the table has `current: true` set in the manifest object
-DatablockStorage.addCurrentTableToProject = function (
+// DatablockStorage.addCurrentTableToProject = function (
+//   tableName,
+//   onSuccess,
+//   onError
+// ) {
+//   _fetch('add_shared_table', 'POST', {
+//     table_name: tableName,
+//   }).then(onSuccess, onError);
+// };
+//
+// Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
+// DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
+//   // We don't differentiate between static and current shared tables
+//   // they are both just pointers to the 'shared' channel's tables.
+//   _fetch('add_shared_table', 'POST', {
+//     table_name: tableName,
+//   }).then(onSuccess, onError);
+// };
+
+// This is a new method for DatablockStorage which replaces the above APIs
+DatablockStorage.addSharedTable = function (
   tableName,
   onSuccess,
   onError
 ) {
-  _fetch('add_shared_table', 'POST', {
-    table_name: tableName,
-  }).then(onSuccess, onError);
-};
-
-// Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
-DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
-  // We don't differentiate between static and current shared tables
-  // they are both just pointers to the 'shared' channel's tables.
   _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);

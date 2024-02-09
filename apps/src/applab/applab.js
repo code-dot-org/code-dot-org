@@ -834,18 +834,24 @@ async function initDataTab(levelOptions) {
         if (!datasetInfo) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
-        } else if (datasetInfo.current) {
-          Applab.storage.addCurrentTableToProject(
-            table,
-            () => console.log('success'),
-            outputError
-          );
         } else {
-          Applab.storage.copyStaticTable(
-            table,
-            () => console.log('success'),
-            outputError
-          );
+          if (isFirebaseStorage()) {
+            if (datasetInfo.current) {
+              Applab.storage.addCurrentTableToProject(
+                table,
+                () => console.log('success'),
+                outputError
+              );
+            } else {
+              Applab.storage.copyStaticTable(
+                table,
+                () => console.log('success'),
+                outputError
+              );
+            }
+          } else {
+            Applab.storage.addSharedTable(table);
+          }
         }
       });
     }
