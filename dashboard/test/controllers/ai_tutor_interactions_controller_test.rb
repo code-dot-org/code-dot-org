@@ -14,7 +14,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
                 script_id: 987,
                 type: "general_chat",
                 prompt: "Can you help me?",
-                status: "ok",
+                status: "success",
                 ai_response: "Yes, I can help."
             }
         end
@@ -28,7 +28,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
                 script_id: 246,
                 type: "general_chat",
                 prompt: "Can you help me?",
-                status: "ok",
+                status: "success",
                 ai_response: "Yes, I can help."
             }
         end
@@ -43,7 +43,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
                 script_id: 987,
                 type: "trash can",
                 prompt: "Can you help me?",
-                status: "ok",
+                status: "success",
                 ai_response: "Yes, I can help."
             }
         end
@@ -56,9 +56,9 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
             post :create, params: {
                 level_id: 1234,
                 script_id: 987,
-                type: "trash can",
+                type: "general_chat",
                 prompt: "Can you help me?",
-                status: "hot mess",
+                status: "Error",
                 ai_response: "Yes, I can help."
             }
         end
