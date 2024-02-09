@@ -78,9 +78,9 @@ const Timeline: React.FunctionComponent = () => {
   const onMeasuresBackgroundClick = useCallback(
     (event: MouseEvent) => {
       // Ignore if playing
-      if (isPlaying) {
-        return;
-      }
+      // if (isPlaying) {
+      //   return;
+      // }
       const offset =
         event.clientX -
         (event.target as Element).getBoundingClientRect().x -

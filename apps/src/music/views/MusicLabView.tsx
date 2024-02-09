@@ -17,6 +17,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import AdvancedControls from './AdvancedControls';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -205,6 +206,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             }
           >
             <div id={blocklyDivId} />
+            <div style={{position: 'absolute', right: 10, bottom: 0}}>
+              <AdvancedControls />
+            </div>
           </PanelContainer>
         </div>
 

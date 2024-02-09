@@ -144,13 +144,19 @@ class ToneJSPlayer {
 
     const playbackRate = Tone.Transport.bpm.value / sample.originalBpm;
 
-    const player = new Tone.GrainPlayer({
-      url: buffer,
-      grainSize: playbackRate * 0.1,
-    }).toDestination();
+    let player;
+    if (sample.pitchShift === 0 && playbackRate === 1) {
+      player = new Tone.Player(buffer).toDestination();
+    } else {
+      player = new Tone.GrainPlayer({
+        url: buffer,
+        grainSize: playbackRate * 0.1,
+      }).toDestination();
 
-    player.detune = sample.pitchShift * 100;
-    player.playbackRate = playbackRate;
+      player.detune = sample.pitchShift * 100;
+      player.playbackRate = playbackRate;
+    }
+
     player.sync().start(sample.transportTime);
 
     this.activePlayers.push(player);
