@@ -8,11 +8,12 @@ import SearchBar from '@cdo/apps/templates/SearchBar';
 import {getDatasetInfo} from './dataUtils';
 import msg from '@cdo/locale';
 import PreviewModal from './PreviewModal';
-import {storageBackend} from '../storage';
+import {isFirebaseStorage, storageBackend} from '../storage';
 import {WarningType} from '../constants';
 import experiments from '../../util/experiments';
 import _ from 'lodash';
 import style from './data-library-pane.module.scss';
+import { refreshCurrentDataView } from './loadDataForView';
 
 class DataLibraryPane extends React.Component {
   static propTypes = {
@@ -35,19 +36,24 @@ class DataLibraryPane extends React.Component {
   };
 
   importTable = datasetInfo => {
-    if (datasetInfo.current) {
-      storageBackend().addCurrentTableToProject(
-        // TODO: unfirebase
-        datasetInfo.name,
-        () => {},
-        this.onError
-      );
+    if (isFirebaseStorage()) {
+      if (datasetInfo.current) {
+        storageBackend().addCurrentTableToProject(
+          // TODO: unfirebase
+          datasetInfo.name,
+          () => {},
+          this.onError
+        );
+      } else {
+        storageBackend().copyStaticTable(
+          datasetInfo.name,
+          () => {},
+          this.onError
+        ); // TODO: unfirebase
+      }
     } else {
-      storageBackend().copyStaticTable(
-        datasetInfo.name,
-        () => {},
-        this.onError
-      ); // TODO: unfirebase
+      storageBackend().addSharedTable(datasetInfo.name);
+      refreshCurrentDataView();
     }
   };
 

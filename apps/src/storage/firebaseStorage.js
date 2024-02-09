@@ -561,6 +561,7 @@ FirebaseStorage.resetForTesting = function () {
 //
 // Current tables can be found in https://console.firebase.google.com/project/cdo-v3-shared/database/cdo-v3-shared/data/~2Fv3~2Fchannels~2Fshared~2Fmetadata~2Fmanifest~2Ftables
 // where the table has `current: true` set in the manifest object
+// FIXME: unfirebase, this method is not found in DatablockStorage
 FirebaseStorage.addCurrentTableToProject = function (
   tableName,
   onSuccess,
@@ -578,6 +579,7 @@ FirebaseStorage.addCurrentTableToProject = function (
     .then(onSuccess, onError);
 };
 
+// FIXME: unfirebase, this method is not found in DatablockStorage
 FirebaseStorage.copyStaticTable = function (tableName, onSuccess, onError) {
   return enforceUniqueTableNames(tableName)
     .then(incrementRateLimitCounters)
