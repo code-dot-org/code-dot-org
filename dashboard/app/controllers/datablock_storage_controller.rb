@@ -139,13 +139,9 @@ class DatablockStorageController < ApplicationController
   end
 
   def add_column
-    column_name = params[:column_name]
-
     table = DatablockStorageTable.find([params[:channel_id], params[:table_name]])
-    unless table.columns.include? column_name
-      table.columns << column_name
-      table.save!
-    end
+    table.add_column params[:column_name]
+    table.save!
 
     render json: true
   end

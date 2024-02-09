@@ -79,6 +79,11 @@ class DatablockStorageTable < ApplicationRecord
     create_records(records)
   end
 
+  def add_column(column_name)
+    unless columns.include? column_name
+      self.columns << column_name
+    end
+  end
 
   def delete_column(column_name)
     records.each do |record|
