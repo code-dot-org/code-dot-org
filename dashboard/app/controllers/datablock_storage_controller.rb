@@ -46,9 +46,6 @@ class DatablockStorageController < ApplicationController
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name]).first_or_create
     table.create_records([record_json])
 
-    # FIXME: unfirebase, must check Table record to see if we should update the table.columns
-    # column based on this record_json's keys
-
     render json: record_json
   end
 
@@ -87,8 +84,11 @@ class DatablockStorageController < ApplicationController
   def update_record
     raise "record_json must be less than 4096 bytes" if params[:record_json].length > 4096
 
-    # FIXME: unfirebase, must check Table record to see if we should update the table.columns
-    # column based on this record_json's keys
+    # FIXME: datablock/use-column-defs
+    # When we update a record, we need to check the Table.columns field, and see if
+    # we need to add new columns that are contained in the records but not in  Table.columns yet
+    #
+    # Also, we should extract this logic and move it to DatablockStorageTable.update_record instead
 
     record = DatablockStorageRecord.find_by(channel_id: params[:channel_id], table_name: params[:table_name], record_id: params[:record_id])
     if record
@@ -129,7 +129,8 @@ class DatablockStorageController < ApplicationController
   def create_table
     table_name = params[:table_name]
     table = DatablockStorageTable.where(channel_id: params[:channel_id], table_name: table_name).first_or_create
-    # FIXME: unfirebase, what is the table already existed and had columns? Won't this overwrite them?
+    # FIXME: unfirebase, what if the table already existed and had columns? Won't this overwrite them?
+    # FIXME: datablock/use-column-defs look into this
     table.columns = '["id"]'
     table.save!
 

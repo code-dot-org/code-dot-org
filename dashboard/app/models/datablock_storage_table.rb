@@ -20,6 +20,11 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def create_records(record_jsons)
+
+    # FIXME: datablock/use-column-defs
+    # When we create a record, we need to check the Table.columns field, and see if
+    # we need to add new columns that are contained in the records but not in  Table.columns yet
+
     # BEGIN;
     DatablockStorageRecord.transaction do
       # channel_id_quoted = Record.connection.quote(params[:channel_id])
