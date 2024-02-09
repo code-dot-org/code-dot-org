@@ -159,8 +159,10 @@ DatablockStorage.deleteRecord = function (
   }).then(onSuccess, onError);
 };
 
-async function getTableNames() {
-  const response = await _fetch('get_table_names', 'GET', {});
+async function getTableNames({isSharedTable = false}={}) {
+  const response = await _fetch('get_table_names', 'GET', {
+    is_shared_table: isSharedTable,
+  });
   return await response.json();
 }
 
@@ -169,8 +171,11 @@ DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
 
-async function getColumnsForTable(tableName) {
-  const response = await _fetch('get_columns_for_table', 'GET', {table_name: tableName});
+async function getColumnsForTable({tableName,isSharedTable = false}) {
+  const response = await _fetch('get_columns_for_table', 'GET', {
+    table_name: tableName,
+    is_shared_table: isSharedTable,
+  });
   const json = await response.json();
   return json;
 }
@@ -182,7 +187,7 @@ function loadTableAndColumns({
   onRecordsChanged,
 }) {
   readRecords({tableName, isSharedTable}).then(records => {
-    getColumnsForTable(tableName).then(onColumnsChanged)
+    getColumnsForTable({tableName, isSharedTable}).then(onColumnsChanged)
 
     // DataTableView.getTableJson() expects an array of JSON strings
     // which it then parses as JSON, and then stringifies again 🙈

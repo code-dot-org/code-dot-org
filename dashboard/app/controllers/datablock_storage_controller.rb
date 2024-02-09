@@ -91,7 +91,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def get_table_names
-    table_names = is_shared_table? ?
+    table_names = shared_table? ?
       DatablockStorageTable.get_shared_table_names :
       DatablockStorageTable.get_table_names(params[:channel_id])
 
@@ -141,7 +141,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def get_columns_for_table
-    table = find_table
+    table = find_table_or_shared_table
     render json: table.get_columns
   end
 
@@ -161,17 +161,11 @@ class DatablockStorageController < ApplicationController
   end
 
   def read_records
-    # FIXME: its weird that we pass in :is_shared_table here, that's a vestige of
-    # the Firebase model, we should probably remove it, since we are going to
-    # be examining Table.is_shared for lookups
-    channel_id = params[:is_shared_table] == 'true' ? 'shared' : params[:channel_id]
-
-    table = find_table
-
     # FIXME: what should we return to indicate that table_name doesn't exist?
     #
     # This condition is detected, currently trying to do readRecords('tabledoesntexist', {}) results in:
     # ERROR: Line: 1: You tried to read records from a table called "nope" but that table doesn't exist in this app
+    table = find_table_or_shared_table
 
     render json: table.read_records.map(&:record_json)
   end
@@ -216,6 +210,16 @@ class DatablockStorageController < ApplicationController
   end
 
   private
+
+  def shared_table?
+    ActiveRecord::Type::Boolean.new.cast(params[:is_shared_table])
+  end
+
+  def find_table_or_shared_table
+    is_shared_table? ?
+      DatablockStorageTable.find_shared_table(params[:table_name]) :
+      find_table
+  end
 
   def find_table
     DatablockStorageTable.find([params[:channel_id], params[:table_name]])
