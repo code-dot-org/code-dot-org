@@ -792,6 +792,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   };
 
+  blocklyWrapper.customBlocks = customBlocks;
+
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);
@@ -803,7 +805,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
-  blocklyWrapper.customBlocks = customBlocks;
   blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;
