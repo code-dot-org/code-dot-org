@@ -51,16 +51,17 @@ const hasDesiredSchoolSubjects = (
   schoolSubjects
 ) => {
   const curriculumSubjects = curriculum.school_subject?.split(',');
-  const desiredSubjects = schoolSubjects.split(',');
-  let total = 0;
+  const desiredSubjects = schoolSubjects?.split(',');
 
-  curriculumSubjects?.forEach(currSub => {
-    desiredSubjects?.forEach(desSub => {
-      total +=
-        currSub === desSub ? scoring_framework['hasDesiredSchoolSubjects'] : 0;
-    });
-  });
-  return total;
+  const total = curriculumSubjects?.reduce(
+    (total, currTopic) =>
+      total +
+      (desiredSubjects?.includes(currTopic)
+        ? scoring_framework['hasDesiredSchoolSubjects']
+        : 0),
+    0
+  );
+  return total ? total : 0;
 };
 
 const hasAnyImportantTopic = (scoring_framework, curriculum) => {
@@ -77,16 +78,17 @@ const hasAnyImportantTopic = (scoring_framework, curriculum) => {
 
 const hasDesiredTopics = (scoring_framework, curriculum, csTopics) => {
   const curriculumTopics = curriculum.cs_topic?.split(',');
-  const desiredTopics = csTopics.split(',');
-  let total = 0;
+  const desiredTopics = csTopics?.split(',');
 
-  curriculumTopics?.forEach(currTopic => {
-    desiredTopics?.forEach(desTopic => {
-      total +=
-        currTopic === desTopic ? scoring_framework['hasDesiredTopics'] : 0;
-    });
-  });
-  return total;
+  const total = curriculumTopics?.reduce(
+    (total, currTopic) =>
+      total +
+      (desiredTopics?.includes(currTopic)
+        ? scoring_framework['hasDesiredTopics']
+        : 0),
+    0
+  );
+  return total ? total : 0;
 };
 
 const hasDesiredDuration = (scoring_framework, curriculum, duration) => {
@@ -121,10 +123,6 @@ const sortRecommendations = curriculumScores => {
     if (a[0].is_featured !== b[0].is_featured) {
       return a[0].is_featured ? -1 : 1;
     }
-    if (a[0].published_date === b[0].published_date) {
-      return 0;
-    } else {
-      return a[0].published_date > b[0].published_date ? -1 : 1;
-    }
+    return new Date(b[0].published_date) - new Date(a[0].published_date);
   });
 };
