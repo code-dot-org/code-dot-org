@@ -17,6 +17,7 @@ import msg from '@cdo/locale';
 import {WarningType} from '../constants';
 import style from './data-table.module.scss';
 import classNames from 'classnames';
+import { refreshCurrentDataView } from './loadDataForView';
 
 const MAX_ROWS_PER_PAGE = 500;
 
@@ -63,6 +64,7 @@ class DataTable extends React.Component {
         this.props.tableName,
         columnName,
         () => {
+          refreshCurrentDataView();
           this.setState({
             editingColumn: columnName,
             pendingAdd: false,
@@ -85,7 +87,7 @@ class DataTable extends React.Component {
       storageBackend().deleteColumn(
         this.props.tableName,
         columnToRemove,
-        this.resetColumnState,
+        this.onColumnChanged,
         error => {
           console.warn(error);
           this.resetColumnState();
@@ -111,7 +113,7 @@ class DataTable extends React.Component {
           this.props.tableName,
           oldName,
           newName,
-          this.resetColumnState,
+          this.onColumnChanged,
           error => {
             console.warn(error);
             this.resetColumnState();
@@ -123,6 +125,11 @@ class DataTable extends React.Component {
       }
     }, 0);
   };
+
+  onColumnChanged = () => {
+    refreshCurrentDataView();
+    this.resetColumnState();
+  }
 
   resetColumnState = () => {
     this.setState({
@@ -151,7 +158,7 @@ class DataTable extends React.Component {
         this.props.tableName,
         columnName,
         columnType,
-        this.resetColumnState,
+        this.onColumnChanged,
         err => {
           if (err.type === WarningType.CANNOT_CONVERT_COLUMN_TYPE) {
             this.props.onShowWarning(err.msg);
