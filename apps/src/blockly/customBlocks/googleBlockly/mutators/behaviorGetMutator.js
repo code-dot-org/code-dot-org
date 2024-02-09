@@ -8,7 +8,7 @@ export const behaviorGetMutator = {
   paramsFromSerializedState_: [],
 
   domToMutation: function (element) {
-    addMissingBehaviorId(element.parentElement, 'domToMutation');
+    addMissingBehaviorId(element.parentElement);
     const name = element.nextElementSibling.textContent;
     this.behaviorId = element.nextElementSibling.getAttribute('id');
     this.deserialize_(name, []);
