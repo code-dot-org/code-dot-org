@@ -451,15 +451,6 @@ DatablockStorage.addSharedTable = function (
   }).then(onSuccess, onError);
 };
 
-// Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
-DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
-  // We don't differentiate between static and current shared tables
-  // they are both just pointers to the 'shared' channel's tables.
-  _fetch('add_shared_table', 'POST', {
-    table_name: tableName,
-  }).then(onSuccess, onError);
-};
-
 /* TESTING RELATED FUNCTIONS */
 
 // Deletes the entire database for the project, including data and config
