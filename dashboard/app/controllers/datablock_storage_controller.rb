@@ -91,8 +91,11 @@ class DatablockStorageController < ApplicationController
   end
 
   def get_table_names
-    # SELECT DISTINCT table_name FROM datablock_storage_records WHERE channel_id='{params[:channel_id]}';
-    render json: DatablockStorageTable.where(channel_id: params[:channel_id]).pluck(:table_name)
+    table_names = is_shared_table? ?
+      DatablockStorageTable.get_shared_table_names :
+      DatablockStorageTable.get_table_names(params[:channel_id])
+
+    render json: table_names
   end
 
   def populate_tables
