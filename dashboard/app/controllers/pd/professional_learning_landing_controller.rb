@@ -4,6 +4,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
   before_action :authenticate_user!, except: [:applications_closed]
 
   def index
+    view_options(full_width: true, responsive_content: true, no_padding_container: true)
     if Pd::Enrollment.for_user(current_user).empty? && Plc::UserCourseEnrollment.where(user: current_user).empty?
       redirect_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
       return
