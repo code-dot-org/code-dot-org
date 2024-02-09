@@ -138,7 +138,9 @@ DatablockStorage.updateRecord = function (
     table_name: tableName,
     record_id: record.id,
     record_json: JSON.stringify(record),
-  }).then(onSuccess, onError);
+  }).then((record) => {
+    onSuccess(record, !!record)
+  }, onError);
 };
 
 /**
@@ -466,5 +468,9 @@ DatablockStorage.resetRecordListener = function () {};
 export function initDatablockStorage(config) {
   return DatablockStorage;
 }
+
+// FIXME: unfirebase, remove this before merging PR
+console.warn("Setting window.DatablockStorage for easier debugging, turn off before merging PR");
+window.DatablockStorage = DatablockStorage;
 
 export default DatablockStorage;
