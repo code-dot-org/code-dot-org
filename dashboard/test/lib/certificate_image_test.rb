@@ -34,8 +34,9 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_pl_course_template
-    unit = create :unit, instructor_audience: 'facilitator', participant_audience: 'teacher'
-    assert_equal 'self_paced_pl_certificate.png', CertificateImage.certificate_template_for(unit.name)
+    course_version = create :course_version, :with_unit
+    course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
+    assert_equal 'self_paced_pl_certificate.png', CertificateImage.certificate_template_for(course_version.name)
   end
 
   def test_image_generation
@@ -92,8 +93,9 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   def test_pl_certificate_image_generation
-    unit = create :unit, instructor_audience: 'facilitator', participant_audience: 'teacher'
-    pl_certificate_image = CertificateImage.create_pl_certificate_image('Robot Tester', unit.name)
+    course_version = create :course_version, :with_unit
+    course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
+    pl_certificate_image = CertificateImage.create_pl_certificate_image('Robot Tester', course_version.name)
     assert_image pl_certificate_image, 1754, 1240, 'PNG'
   end
 
