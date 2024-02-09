@@ -326,8 +326,6 @@ DatablockStorage.importCsv = function (
     table_name: tableName,
     table_data_csv: tableDataCsv,
   }).then(onSuccess, onError);
-
-  throw 'Not implemented yet';
 };
 
 DatablockStorage.addColumn = function (
