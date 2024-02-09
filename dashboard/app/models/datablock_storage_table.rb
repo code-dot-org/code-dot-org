@@ -50,7 +50,7 @@ class DatablockStorageTable < ApplicationRecord
   # end
 
   def read_records
-    # FIXME: is_shared_table, lookup that table and return its read_records instead
+    # FIXME: is_shared_table, read from shared_table
     return records
   end
 
@@ -118,6 +118,11 @@ class DatablockStorageTable < ApplicationRecord
   def import_csv(table_data_csv)
     records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
     create_records(records)
+  end
+
+  def get_columns
+    # FIXME: is_shared_table, read from shared_table
+    return columns
   end
 
   def add_column(column_name)

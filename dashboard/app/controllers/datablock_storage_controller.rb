@@ -170,7 +170,7 @@ class DatablockStorageController < ApplicationController
 
   def get_columns_for_table
     table = find_table
-    render json: table.columns
+    render json: table.get_columns
   end
 
   # Returns true if validation checks pass
