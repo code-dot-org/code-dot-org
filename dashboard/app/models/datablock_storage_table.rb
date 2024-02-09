@@ -53,7 +53,7 @@ class DatablockStorageTable < ApplicationRecord
       end
 
       # Preserve the old column's order while adding any new columns
-      self.columns = columns + (cols_in_records - columns).to_a
+      self.columns += (cols_in_records - columns).to_a
       save!
     end
     # COMMIT;
