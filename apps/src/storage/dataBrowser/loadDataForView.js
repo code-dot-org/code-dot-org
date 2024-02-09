@@ -39,9 +39,6 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
-
-  console.log('onDataViewChange', view, oldTableName, newTableName);
-  console.log('end');
   
   storage.unsubscribeFromKeyValuePairs();
   if (oldTableName) {
