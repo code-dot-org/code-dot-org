@@ -811,7 +811,7 @@
             </value>
           </block>
           <block type="gamelab_keyPressed">
-            <title name="CONDITION">???</title>
+            <title name="CONDITION">when</title>
             <title name="KEY">"up"</title>
           </block>
         </category>
