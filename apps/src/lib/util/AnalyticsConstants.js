@@ -150,13 +150,14 @@ const EVENTS = {
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 
   // Project sharing
-  SHARING_DIALOG_OPEN: 'Sharing_dialog_opened',
-  SHARING_LINK_COPY: 'Sharing_link_copied',
-  SHARING_PUBLISH: 'Sharing_published',
-  SHARING_FB: 'Sharing_FB',
-  SHARING_TWITTER: 'Sharing_twitter',
-  SHARING_LINK_SEND_TO_PHONE: 'Sharing_link_send_to_phone',
-  SHARING_CLOSE_ESCAPE: 'Sharing_close_escape',
+  SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
+  SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
+  SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
+  SHARING_FB: 'User Clicks Facebook Icon In Project Share Dialog',
+  SHARING_TWITTER: 'User Clicks Twitter Icon In Project Share Dialog',
+  SHARING_LINK_SEND_TO_PHONE:
+    'User Clicks Send To Phone In Project Share Dialog',
+  SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
 };
 
 const EVENT_GROUP_NAMES = {
