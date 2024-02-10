@@ -210,12 +210,8 @@ $container-width: 309px;
 }
 
 // !important tags needed here in order to override Button styling that makes the Learn More button appear at all times.
-.teacherAndSignedOutLearnMoreButton {
+.learnMoreButton {
   display: none !important;
-  text-align: center;
-}
-
-.studentLearnMoreButton {
   text-align: center;
 }
 
@@ -228,7 +224,7 @@ $container-width: 309px;
     display: none !important;
   }
 
-  .teacherAndSignedOutLearnMoreButton {
+  .learnMoreButton {
     display: block !important;
   }
 
