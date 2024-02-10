@@ -741,10 +741,10 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getFieldValue(inputConfig.name);
       if (
-        (inputConfig.type === Blockly.BlockValueType.STRING &&
-          !code.startsWith('"') &&
-          !code.startsWith("'")) ||
-        code === EMPTY_OPTION
+        (inputConfig.type === Blockly.BlockValueType.STRING ||
+          code === EMPTY_OPTION) &&
+        !code.startsWith('"') &&
+        !code.startsWith("'")
       ) {
         // Wraps the value in quotes, and escapes quotes/newlines
         code = JSON.stringify(code);
