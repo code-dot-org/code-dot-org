@@ -2609,6 +2609,7 @@
   "tryIt": "Try it",
   "tryItOut": "Try it out",
   "tryNow": "Try Now",
+  "tryCourseNow": "Try {course_name} now",
   "turtleProgrammingInAppLab": "Turtle Programming in App Lab",
   "turtleProgrammingInAppLabDescription": "Unlock the ability to make rich, interactive apps with JavaScript in the App Lab!",
   "tutorialUnavailable": "Tutorial unavailable for younger students",
