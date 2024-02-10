@@ -104,23 +104,23 @@ Oluşturabileceğiniz çok çeşitli öğretici ve ders planları hakkında fiki
 * Gönderilen aktiviteyi temsil eden birincil ilgili kişinin adı ve e-posta adresi
 * Aktivite Adı (adında "Hour of Code" bulunamaz)
 * Aktivitenin URL bağlantısı
-* Bu aktivite AI içeriyor mu: Evet veya Hayır
-* Bir aktivite açıklaması (maksimum karakter sayısı: 400) 
-    * Lütfen açıklamanızda etkinliğin genel anlamda öğrenci tarafından mı yoksa öğretmen tarafından mı yönlendirildiğine yer verin. Ek olarak, bazı okullar Kodlama Saati aktivitelerinin Common Core veya Next Generation Science Standards uyumlu olup olmadığını bilmek isteyebilirler. Eğer aktivite bu standartlardaysa, bunu da açıklamanıza eklemeyi unutmayın.
-* Hedef kullanıcılar için önerilen sınıf seviyeleri. Sınıflara uygun bilgisayar bilimi kavramları için \[Computer Science Teachers' Association’ın K-12 Standartları'na\] (https://k12cs.org/framework-statements-by-grade-band/) başvurabilirsiniz. Örnek sınıf seviyeleri: 
-    * Anaokulu - 1. Sınıf (4-6 yaş)
-    * 2-5. Sınıflar (7-10 yaş)
-    * 6-8. Sınıflar (11-13 yaş)
-    * 9. ve üzeri Sınıflar (+14 yaş)
-* Aktivitenizin öğrettiği programlama dillerinin listesi. Yani C/C ++, Java, JavaScript vb. veya dilden bağımsız (birden çok dilde öğretilebilen ders planları için) dil sanatlarını seçin.
-* Desteklenen doğal dillerin listesi. Not: Dil saptaması aktiviteyi gönderen kişinin sorumluluğundadır, biz sadece elimize ulaşan URL'yi kullanıcılara yönlendiririz. veya dilden bağımsız (birden çok dilde öğretilebilen ders planları için)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Aktivitenizin öğrettiği programlama dillerinin listesi. Yani C/C ++, Java, JavaScript vb. veya dilden bağımsız (birden çok dilde öğretilebilen ders planları için) choose language arts.
+* Desteklenen doğal dillerin listesi. Not: Dil saptaması aktiviteyi gönderen kişinin sorumluluğundadır, biz sadece elimize ulaşan URL'yi kullanıcılara yönlendiririz. or language independent (for lesson plans that can be taught in multiple languages)
 * Bir eğitimcinin aktivitenizi kullanması için ne düzeyde bir deneyime sahip olması gerekir? (ör. Başlangıç ​​veya Rahat.) Ve öğrenciler hangi düzeyde deneyime sahip olmalıdır?
-* Bir eğitimcinin aktivitenizi kullanması için ne düzeyde bir deneyime sahip olması gerekir? (ör. Başlangıç ​​veya Rahat.) Ve öğrenciler hangi düzeyde deneyime sahip olmalıdır? Daha ileri düzey Hour of Code™ Aktiviteleri hazırlamak istiyorsanız lütfen aktivitenizin açıklamasına gerekli olan ön bilgileri ekleyin.
-* Aktivitenin uzunluğu 
-    * Sadece 1 saat
-    * 1 saat ve devamı olarak yapılacak ders
-    * 2-6 saat (birden fazla ders olabilir)
-* Aktivitenizde varsa erişilebilirlik düzenlemelerinin listesi. Bunlar arasında ekran okuyucu uyumluluğu, metinden-konuşma yetenekleri, yüksek kontrastlı renklerin kullanımı veya engelli öğrenciler için yapılan diğer düzenlemeler bulunur.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Ders Planlarını gönderirken ihtiyacınız olacak ek şeyler
 
@@ -170,7 +170,7 @@ Oluşturabileceğiniz çok çeşitli öğretici ve ders planları hakkında fiki
 
 Bilgisayar bilimi eğitimcilerinden oluşan çeşitli bir komite, başvuruları nitelik ve nicelik kriterlerine göre sıralayacaktır. Temel kriterlere uyan tüm aktiviteler listelenecektir.
 
-Geleneksel kodlama faaliyetleri için, çeşitli bilgisayar bilimi eğitimcileri komitesi, sunumları nitel ve nicel kriterlere göre sıralayacaktır. Temel kriterlere uyan tüm aktiviteler listelenecektir. Öğretmenler, sınıfları için en iyi aktiviteleri bulmak üzere filtreleyip sıralayabilecekler.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Değerlendirme komitesi, aktiviteye üretim kalitesinde (kötü hatalar veya kullanımını çok zorlaştıran talimatlar nedeniyle), yetersiz temsil edilen gruplarda öğrenmeyi teşvik etmede (ırkçı/cinsiyetçi materyal nedeniyle), eğitim değeri açısından (bilgisayar bilimi kavramlarını öğretmiyor) veya eğlence/ilgi çekicilik (öğrenciler için üzerinde çalışması zor/cesaret kırıcı olması nedeniyle) sıfır puan verirse aktivite listeye alınmaz.
 
@@ -188,13 +188,13 @@ Yeni öğretmenler ve öğrenciler için kendi kendini yöneten etkinlikler içi
 - Kayıt gerektirmemesi gerekir
 - Paralı olmaması gerekir (robotik faaliyetler istisnaidir; bunlar robot/kit satın almayı gerektirebilir) Yeni öğretmenler ve öğrenciler için kendi kendine yönlendirmeli aktivitelerde değerlendirme komitesi aşağıdakileri araştıracaktır:
 
-Yeni öğretmenler ve öğrenciler için kendi kendini yöneten etkinlikler için inceleme komitesi aşağıdakileri araştıracaktır:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Öğretmenler öğreticiyi veya etkinliği bilgisayar bilimi geçmişi olmadan kullanabilir
 - Öğrenciler bilgisayar bilimlerinde geçmişleri olmadan başarılı olabilirler
 - Öğrenciler, ebeveyn veya öğretmen rehberliği olmadan eğitim boyunca kendilerini yönlendirebilir
 
-Öğretmenler ve öğrenciler, sınıf, deneyim düzeyi, konu, donanım vb. filtrelere göre etkinlik listemizi arayabilir ve filtreleyebilir. Varsayılan olarak, öncelikle aşağıdakileri sağlayan ders planlarını ve etkinlikleri göstereceğiz:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Olumlu geri bildirim - İyi çalışan yönleri nedir?
 - Yeni başlayanlar (öğrenciler ve öğretmenler) için tasarlanmış bir saatlik kendi kendini yöneten etkinliklerdir.
@@ -208,7 +208,7 @@ Yeni öğretmenler ve öğrenciler için kendi kendini yöneten etkinlikler içi
 
 ## Bir saatlik kendi kendine rehberli eğitimler tasarlamak için öneriler
 
-Faaliyetlerin yapay zekayı içermesi gerekmez, ancak AI ile ilgili daha fazla etkinlik sunmak istiyoruz.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Öğretmen notlarını ekleyin.** Çoğu aktiviteler öğrenciler tarafından yönlendirilmelidir, ancak eğer aktivite bir öğretmen tarafından yönetiliyorsa, lütfen ayrı bir URL'ye, açık ve basit yönlendirmeler kullanarak aktivitenizin bir öğretmen notunu yükleyin. Sadece öğrenciler acemi değil, bazı öğretmenler de acemi. Şu bilgileri ekleyin:
 
@@ -221,15 +221,15 @@ strong>Öğrencileri, bitirdikten sonra (uygun olan yerlerde) sosyal medyada pay
 - Çiftli programlamayı öneriyor musunuz?
 - Sınıfta kullanım için dikkat edilmesi gerekenler? Örneğin video varsa öğretmene videoları projeksiyon kullanarak tüm sınıfın görebileceği şekilde izletmesini tavsiye edin
 
-**Etkinliğin sonuna geri bildirim ekleyin.** (Örn. "10 seviyeyi tamamladınız ve döngüleri öğrendiniz! İyi iş!")
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-strong>Öğrencileri, bitirdikten sonra (uygun olan yerlerde) sosyal medyada paylaşımda bulunmaya teşvik edin.</strong> Örneğin, "________ ile bir Hour of Code yaptım, ya siz? #HourOfCode” veya “#CSEdWeek kapsamında bir #HourOfCode yaptım. Ya sen? @Scratch.” **#HourOfCode** etiketini kullanın (büyük H, O, C harfleri ile)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Aktivitenizi İspanyolca veya İngilizce dışında başka dillerde oluşturun.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Aktiviteyi toplum için önemli bir içerikte anlatın veya bağlantı kurun.** Öğrenciler dünyayı bilgisayar programlama ile daha iyiye taşıyabileceklerini gördüklerinde bu beceri bir süper güce dönüşecek!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Öğretici materyalinizin [Çiftli Programlama](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigmasında kullanılabileceğinden emin olun.** Bu özellikle Hour of Code için kullanışlıdır çünkü birçok sınıfta her öğrenciye bir donanım bulunmamaktadır.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Başa dön**](#top)
 
@@ -237,7 +237,7 @@ strong>Öğrencileri, bitirdikten sonra (uygun olan yerlerde) sosyal medyada pay
 
 ## Ticari marka yönergeleri
 
-Hour of Code® ve Hora del Código®, Code.org'un tescilli ticari markalarıdır. Eğitmen ortaklarımızın çoğu, Hour of Code faaliyetleriyle bağlantılı olarak web sitelerinde "Hour of Code" ticari markalarımızı kullandı. Bu kullanıma engel olmak istemiyoruz ancak bazı kısıtlamalara uyulmasını istiyoruz:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. "Hour of Code"u yalnızca Hour of Code kampanyası kapsamındaki ticari olmayan CS Education etkinlikleriyle bağlantılı olarak kullanın ve başka hiçbir amaçla kullanmayın.
 2. "Hour of Code"a yapılan herhangi bir atıf, bunun kendi marka adınız olduğu izlenimini uyandırmayacak, bunun yerine Hour of Code'a bir taban hareketi olarak atıfta bulunacak şekilde kullanılmalıdır. İyi bir örnek: "ACMECorp.com'daki Hour of Code ® 'a katılın". Kötü örnek : "Hour of Code'u ACME Corp ile deneyin".
@@ -253,15 +253,15 @@ Hour of Code® ve Hora del Código®, Code.org'un tescilli ticari markalarıdır
 
 ## Takip Pikseli
 
-Öğreticiniz kabul edildiyse ve son öğretici sayfasına eklendiyse, Code.org size özel bir takip pikselini öğreticinize yerleştirmeniz için size verecektir. Aşağıdaki örneğe bakın. Eğitiminizin herhangi bir ara sayfasına dahil etmeyin.
+Öğreticiniz kabul edildiyse ve son öğretici sayfasına eklendiyse, Code.org size özel bir takip pikselini öğreticinize yerleştirmeniz için size verecektir. Aşağıdaki örneğe bakın. Do not include on any interim pages of your tutorial.
 
-Bu, Hour of Code öğreticinizi kullanan kullanıcıları saymamıza olanak tanır. Öğreticiniz için daha doğru katılım sayıları elde edilmesini sağlayacaktır.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Öğreticiniz kabul edildiyse ve son öğretici sayfasına eklendiyse, Code.org size özel bir takip pikselini öğreticinize yerleştirmeniz için size verecektir. Aşağıdaki örneğe bakın.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
-Dans Partisi için örnek takip pikselleri:
+Example tracking pixels for Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -272,7 +272,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Aktivitelerinizi tanıtım,CSEdWeek, ve Hour of Code
 
-Lütfen etkinliğinizi ağınıza tanıtın! Onları Hour of Code sayfanıza yönlendirin. Kullanıcılarınız aktiviteniz hakkında sizden e-posta aldıklarında harekete geçme olasılıkları çok daha yüksek olur. CSEdWeek boyunca uluslararası Hour of Code kampanyasını kullanarak kullanıcıları başkalarını davet etmeye teşvik edin ve daha fazla öğrenciye ulaşmamıza yardımcı olun!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Web sitenizde Hour of Code ve CSEdWeek'i öne çıkarın. Örneğin: <http://www.tynker.com/hour-of-code>
 - Geleneksel medya, sosyal medya, e-posta listeleri vs. aracılığıyla #HourOfCode (büyük H, O, C harfleriyle) etiketini kullanarak Hour of Code!u destekleyin
