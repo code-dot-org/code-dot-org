@@ -106,7 +106,7 @@ Ano ang iyong kakailanganin:
 * URL link to the activity
 * Does this activity include AI: Yes or No
 * An activity description (max character count: 400) 
-    * Maaring isama sa description kung kayang gawin ng estudyante lamang o kailangan ng gabay ng guro. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
 * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
     * Kindergarten - Grade 1 (ages 4-6)
     * Grades 2-5 (ages 7-10)
@@ -139,7 +139,7 @@ Ano ang iyong kakailanganin:
         * iOS mobile Safari (mobile-optimized)
         * Android Chrome (mobile-optimized)
     * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Naka-unplug
+    * Unplugged
 * Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. Kung hindi malalagyan ng imahe, maaring kami na lang ang kumuha ng screenshot O KAYA ay hindi ito isali sa listahan ng sumali. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
 * In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
