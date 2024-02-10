@@ -473,7 +473,6 @@ export function appendSharedFunctions(startBlocksSource, functionsXml) {
 export function processToolboxXml(toolboxString) {
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(toolboxString, 'text/xml');
-  const xmlRoot = xmlDoc.documentElement;
   if (xmlDoc.querySelector('parsererror')) {
     throw new Error('Error parsing XML');
   }
