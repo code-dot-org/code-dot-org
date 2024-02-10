@@ -104,23 +104,23 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
 * ชื่อและอีเมลของผู้ติดต่อหลักที่เป็นตัวแทนของกิจกรรมที่ส่ง
 * ชื่อกิจกรรม (ไม่สามารถรวม “ชั่วโมงรหัส” ในชื่อได้)
 * ลิงก์ URL ไปยังกิจกรรม
-* กิจกรรมนี้รวมถึง AI: ใช่หรือไม่
-* คำอธิบายกิจกรรม (จำนวนอักขระสูงสุด: 400) 
-    * กรุณารวมไว้ในคำอธิบายว่าส่วนใหญ่จะเป็นผู้แนะนำนักเรียนหรือครูอำนวยความสะดวก นอกจากนี้ บางโรงเรียนยังสนใจที่จะทราบว่ากิจกรรม Hour of Code จะจัดการกับ Common Core หรือ Next Generation Science Standards หรือไม่ หากกิจกรรมที่อยู่ในมาตรฐานที่เฉพาะเจาะจง, พิจารณารวมข้อมูลนี้.
-* ระดับเกรดที่แนะนำสำหรับผู้ใช้ที่ต้องการ คุณอาจดู \[มาตรฐานเค-12 ของสมาคมครูวิทยาการคอมพิวเตอร์\] (https://k12cs.org/framework-statements-by-grade-band/) สำหรับแนวคิดวิทยาการคอมพิวเตอร์ที่เหมาะสมกับเกรด ระดับคะแนนตัวอย่าง ได้แก่ 
-    * ระดับอนุบาล - ชั้นประถมศึกษาปีที่ 1 (อายุ 4-6 ปี)
-    * เกรด 2-5 (อายุ 7-10 ปี)
-    * เกรด 6-8 (อายุ 11-13 ปี)
-    * เกรด 9 ปีขึ้นไป (อายุ 14 ปีขึ้นไป)
-* รายการภาษาโปรแกรมที่กิจกรรมของคุณสอน เช่น C/C ++, Java, JavaScript, ฯลฯ หรือ ภาษาอิสระ (สำหรับแผนการเรียนที่สามารถสอนได้หลายภาษา) เลือกภาษาศิลป์
-* รายการภาษาธรรมชาติที่รองรับ หมายเหตุ: การตรวจจับภาษาเป็นความรับผิดชอบของผู้ให้บริการกิจกรรม เราจะเปลี่ยนเส้นทางผู้ใช้ทั้งหมดไปยัง URL เดียวที่ให้ไว้ หรือ ภาษาอิสระ (สำหรับแผนการเรียนที่สามารถสอนได้หลายภาษา)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* รายการภาษาโปรแกรมที่กิจกรรมของคุณสอน เช่น C/C ++, Java, JavaScript, ฯลฯ หรือ ภาษาอิสระ (สำหรับแผนการเรียนที่สามารถสอนได้หลายภาษา) choose language arts.
+* รายการภาษาธรรมชาติที่รองรับ หมายเหตุ: การตรวจจับภาษาเป็นความรับผิดชอบของผู้ให้บริการกิจกรรม เราจะเปลี่ยนเส้นทางผู้ใช้ทั้งหมดไปยัง URL เดียวที่ให้ไว้ or language independent (for lesson plans that can be taught in multiple languages)
 * นักการศึกษาควรมีประสบการณ์ระดับใดในการใช้กิจกรรมของคุณ (เช่น ผู้เริ่มต้นหรือสะดวกสบาย)และ, สิ่งที่ระดับของประสบการณ์ที่นักเรียนควรมี?
-* นักการศึกษาควรมีประสบการณ์ระดับใดในการใช้กิจกรรมของคุณ (เช่น ผู้เริ่มต้นหรือสะดวกสบาย)และ, สิ่งที่ระดับของประสบการณ์ที่นักเรียนควรมี? หากคุณต้องการเตรียมกิจกรรม Hour of Code™ ขั้นสูงเพิ่มเติม โปรดระบุความรู้ที่จำเป็นล่วงหน้าในรายละเอียดของกิจกรรมของคุณ
-* ความยาวของกิจกรรมของคุณ 
-    * 1 ชั่วโมงเท่านั้น
-    * 1 ชั่วโมงพร้อมคอร์สติดตามหลักสูตร
-    * 2-6 ชั่วโมง (สามารถเรียนได้หลายบทเรียน)
-* รายการที่พักสำหรับการเข้าถึง, หากกิจกรรมของคุณมีพวกเขา. ซึ่งรวมถึงความเข้ากันได้ของโปรแกรมอ่านหน้าจอ ความสามารถในการแปลงข้อความเป็นคำพูด การใช้สีคอนทราสต์สูง หรือที่พักอื่นๆ ที่จัดทำขึ้นสำหรับผู้เรียนที่มีความพิการ
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### สิ่งอื่นๆ ที่คุณจะต้องใช้เมื่อส่งแผนการเรียน
 
@@ -174,7 +174,7 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
     
     คณะกรรมการที่มีความหลากหลายของนักการศึกษาวิทยาการคอมพิวเตอร์จะจัดอันดับการส่งผลงานตามเกณฑ์เชิงคุณภาพและเชิงปริมาณ กิจกรรมทั้งหมดที่เหมาะสมกับเกณฑ์พื้นฐานจะถูกระบุไว้.
     
-    สำหรับกิจกรรมการเขียนโค้ดแบบดั้งเดิม คณะกรรมการที่มีความหลากหลายของนักการศึกษาวิทยาการคอมพิวเตอร์จะจัดอันดับการส่งผลงานตามเกณฑ์เชิงคุณภาพและเชิงปริมาณ กิจกรรมทั้งหมดที่เหมาะสมกับเกณฑ์พื้นฐานจะถูกระบุไว้. ครูจะสามารถคัดกรองและจัดเรียงเพื่อค้นหากิจกรรมที่ดีที่สุดสำหรับชั้นเรียนของพวกเขา
+    For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
     
     หากคณะกรรมการทบทวนให้คะแนนกิจกรรมเป็นศูนย์ในด้านคุณภาพการผลิต (เนื่องจากข้อบกพร่องที่ไม่ดีหรือคำแนะนำที่ทำให้ยากต่อการใช้) ในการส่งเสริมการเรียนรู้ในกลุ่มที่ด้อยโอกาส (เนื่องจากวัสดุที่เหยียดสีผิว/กีดกัน) ในคุณค่าทางการศึกษา (ไม่สอนแนวคิดเกี่ยวกับวิทยาการคอมพิวเตอร์) หรือความสนุกสนาน/มีส่วนร่วม (เนื่องจากยาก/ท้อแท้สำหรับนักเรียนที่จะทำงานผ่าน) กิจกรรมดังกล่าวจะไม่ถูกระบุไว้
     
@@ -192,13 +192,13 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
     - ไม่ต้องลงทะเบียน
     - ไม่ต้องจ่ายเงิน (ยกเว้นกิจกรรมหุ่นยนต์ที่ต้องซื้อหุ่นยนต์/คิท)
     
-    สำหรับกิจกรรมการกำกับตนเองสำหรับครูและนักเรียนใหม่ คณะกรรมการทบทวนจะพิจารณาว่า
+    For self-directed activities for new teachers and students the review committee will be looking for whether:
     
     - ครูสามารถใช้บทช่วยสอนหรือกิจกรรมที่ไม่มีพื้นฐานในวิทยาการคอมพิวเตอร์
     - นักศึกษาสามารถประสบความสำเร็จได้โดยไม่มีพื้นฐานทางวิทยาการคอมพิวเตอร์
     - นักเรียนสามารถแนะนำตัวเองผ่านการกวดวิชาได้โดยไม่ต้องมีคำแนะนำจากผู้ปกครองหรือครู
     
-    ครูและนักเรียนจะสามารถค้นหาและกรองรายการกิจกรรมของเราตามตัวกรองเช่น เกรด ระดับประสบการณ์ วิชาเรียน ฮาร์ดแวร์ ฯลฯ โดยค่าเริ่มต้นเราจะแสดงแผนการเรียนและกิจกรรมก่อนที่:
+    Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
     
     - ได้รับคะแนนสูงสุดจากคณะกรรมการทบทวน
     - เป็นกิจกรรมที่กำกับตนเองหนึ่งชั่วโมงที่ออกแบบมาสำหรับผู้เริ่มต้น (นักเรียนและครู)
@@ -215,7 +215,7 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
     
     ## ข้อเสนอแนะสำหรับการออกแบบบทเรียนแนะนำด้วยตนเองหนึ่งชั่วโมง
     
-    กิจกรรมไม่จำเป็นต้องมี AI แต่เรากำลังมองหาที่จะนำเสนอกิจกรรมที่เกี่ยวข้องกับ AI มากขึ้น
+    Activities do not have to include AI, though we are looking to offer more AI related activities.
     
     **รวมบันทึกของครู** กิจกรรมส่วนใหญ่ควรเป็นผู้กำกับนักเรียน แต่ถ้ากิจกรรมได้รับการอำนวยความสะดวกหรือจัดการโดยครูโปรดระบุทิศทางที่ชัดเจนและเรียบง่ายสำหรับครูในรูปแบบของบันทึกครูที่ URL แยกต่างหากที่ส่งมาพร้อมกับกิจกรรมของคุณ นอกจากนักเรียนเป็นสามเณรแล้ว ครูบางคนก็เช่นกัน รวมข้อมูล เช่น:
     
@@ -228,15 +228,15 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
     - คุณแนะนำให้เขียนโปรแกรมคู่?
     - ข้อควรพิจารณาสำหรับการใช้งานในห้องเรียน? เช่น หากมีวิดีโอ แนะนำให้ครูแสดงวิดีโอบนหน้าจอที่ฉายให้ทั้งห้องเรียนดูด้วยกัน
     
-    **รวมข้อเสนอแนะในตอนท้ายของกิจกรรม** (เช่น “คุณเสร็จสิ้น 10 ระดับและได้เรียนรู้เกี่ยวกับลูป! ดีมาก!”)
+    **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
     
-    **ส่งเสริมให้นักเรียนโพสต์ลงในโซเชียลมีเดีย (ตามความเหมาะสม) เมื่อพวกเขาเสร็จแล้ว** ยกตัวอย่างเช่น “ฉันได้ทำชั่วโมงรหัสด้วย ________ คุณ? #HourOfCode” หรือ “ฉันได้ทำ #HourOfCode เป็นส่วนหนึ่งของ #CSEdWeek. แล้วคุณล่ะ @Scratch.”ใช้แฮชแท็ก **#HourOfCode** (ด้วยตัวพิมพ์ใหญ่ H, O, C)
+    **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
     
-    **สร้างกิจกรรมของคุณในภาษาสเปนหรือภาษาอื่น ๆ นอกเหนือจากภาษาอังกฤษ**
+    **Create your activity in Spanish or in other languages besides English.**
     
-    **อธิบายหรือเชื่อมต่อกิจกรรมกับบริบทที่สำคัญทางสังคม.** การเขียนโปรแกรมคอมพิวเตอร์กลายเป็นมหาอำนาจเมื่อนักเรียนเห็นว่ามันสามารถเปลี่ยนโลกให้ดีขึ้น!
+    **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
     
-    **ตรวจสอบการกวดวิชาของคุณสามารถนำมาใช้ในการเขียนโปรแกรม [คู่](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) กระบวนทัศน์** นี่เป็นประโยชน์อย่างยิ่งสำหรับ Hour of Code เพราะหลายห้องเรียนไม่มีฮาร์ดแวร์ 1:1 สำหรับนักเรียนทุกคน
+    **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
     
     [**กลับสู่ด้านบน**](#top)
     
@@ -247,7 +247,7 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
     
     ## หลักเกณฑ์เกี่ยวกับเครื่องหมายการค้า
     
-    ชั่วโมงของรหัส® และ Hora เดลCódigo® เป็นเครื่องหมายการค้าจดทะเบียนของ Code.org. หลายพันธมิตรกวดวิชาของเราได้ใช้เครื่องหมายการค้า “Hour of Code” ของเราบนเว็บไซต์ของพวกเขาในการเชื่อมต่อกับชั่วโมงของกิจกรรมรหัสของพวกเขา เราไม่ต้องการที่จะป้องกันการใช้งานนี้ แต่เราต้องการให้แน่ใจว่าการใช้งานอยู่ในขอบเขตไม่กี่ข้อ:
+    Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
     
     1. ใช้ “Hour of Code” เฉพาะในการเชื่อมต่อกับกิจกรรม CS Education ที่ไม่ใช่เชิงพาณิชย์ในบริบทของแคมเปญ Hour of Code และไม่มีวัตถุประสงค์อื่น
     2. การอ้างอิงถึง “Hour of Code” ควรใช้ในแฟชั่นที่ไม่ได้แนะนำว่าเป็นชื่อแบรนด์ของคุณเอง แต่เป็นการอ้างอิงถึงชั่วโมงแห่งประมวลกฎหมายเป็นการเคลื่อนไหวในระดับรากหญ้า ตัวอย่างที่ดี: “มีส่วนร่วมใน Hour of Code® ที่ Acmecorp.com” ตัวอย่างที่ไม่ดี: “ลองชั่วโมงรหัสโดย ACME คอร์ป”.
@@ -266,15 +266,15 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
     
     ## พิกเซลการติดตาม
     
-    หากกวดวิชาของคุณได้รับการอนุมัติและรวมอยู่ในหน้ากวดวิชาสุดท้าย Code.org จะช่วยให้คุณมีพิกเซลติดตามที่ไม่ซ้ำกันสำหรับคุณที่จะรวมเข้ากับการกวดวิชาของคุณ ดูตัวอย่างด้านล่าง ไม่รวมในหน้าใด ๆ ระหว่างกาลของการกวดวิชาของคุณ.
+    หากกวดวิชาของคุณได้รับการอนุมัติและรวมอยู่ในหน้ากวดวิชาสุดท้าย Code.org จะช่วยให้คุณมีพิกเซลติดตามที่ไม่ซ้ำกันสำหรับคุณที่จะรวมเข้ากับการกวดวิชาของคุณ ดูตัวอย่างด้านล่าง Do not include on any interim pages of your tutorial.
     
-    นี้จะช่วยให้เราสามารถนับผู้ใช้ที่ทำชั่วโมงของรหัสกวดวิชา มันจะนำไปสู่การมีส่วนร่วมที่ถูกต้องมากขึ้นนับสำหรับการกวดวิชาของคุณ
+    This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
     
-    หากกวดวิชาของคุณได้รับการอนุมัติและรวมอยู่ในหน้ากวดวิชาสุดท้าย Code.org จะช่วยให้คุณมีพิกเซลติดตามที่ไม่ซ้ำกันสำหรับคุณที่จะรวมเข้ากับการกวดวิชาของคุณ ดูตัวอย่างด้านล่าง
+    If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
     
-    หมายเหตุ: การดำเนินการนี้ไม่สำคัญสำหรับแอปที่ติดตั้งได้ (แอป iOS/Android หรือแอปที่ติดตั้งเดสก์ท็อป)
+    NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
     
-    ตัวอย่างการติดตามพิกเซลสำหรับงานเลี้ยงเต้นรำ:
+    Example tracking pixels for Dance Party:
     
     IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
     
@@ -288,7 +288,7 @@ Code.org เป็นเจ้าภาพจัดกิจกรรม Hour of
     
     ## การส่งเสริมกิจกรรมของคุณ, CSEDWeek, และ Hour of Code
     
-    กรุณาโปรโมตกิจกรรมของคุณไปยังเครือข่ายของคุณ! นำพวกเขาไปยังหน้า Hour of Code ของคุณ ผู้ใช้ของคุณมีมากมีแนวโน้มที่จะตอบสนองต่อการส่งจดหมายจากคุณเกี่ยวกับกิจกรรมของคุณ. ใช้แคมเปญ Hour of Code ระหว่างประเทศในช่วงสัปดาห์การศึกษาวิทยาการคอมพิวเตอร์เป็นข้ออ้างในการส่งเสริมให้ผู้ใช้เชิญผู้อื่นเข้าร่วมและช่วยให้เราเข้าถึงนักเรียนได้มากขึ้น!
+    Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
     
     - คุณลักษณะชั่วโมงของรหัสและ CSEdWeek บนเว็บไซต์ของคุณ. อดีต: <http://www.tynker.com/hour-of-code>
     - โปรโมท Hour of Code โดยใช้โซเชียลมีเดีย สื่อแบบดั้งเดิม รายชื่อผู้รับจดหมาย ฯลฯ โดยใช้แฮชแท็ก #HourOfCode (ด้วยตัวพิมพ์ใหญ่ H, O, C)

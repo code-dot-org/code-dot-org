@@ -177,7 +177,6 @@ const CustomizableCurriculumCatalogCard = ({
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
-  const isTeacherOrSignedOut = isSignedOut || isTeacher;
 
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
@@ -229,6 +228,11 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
 
+  const quickViewButtonColor =
+    !isSignedOut && !isTeacher
+      ? Button.ButtonColor.brandSecondaryDefault
+      : Button.ButtonColor.neutralDark;
+
   return (
     <div className={style.cardsContainer}>
       <div>
@@ -273,47 +277,32 @@ const CustomizableCurriculumCatalogCard = ({
               )}
             >
               <Button
-                color={Button.ButtonColor.neutralDark}
+                color={quickViewButtonColor}
                 type="button"
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
                 text={i18n.quickView()}
                 className={`${style.buttonFlex} ${style.quickViewButton}`}
               />
-              {isTeacherOrSignedOut && (
-                <>
-                  <Button
-                    __useDeprecatedTag
-                    color={Button.ButtonColor.neutralDark}
-                    type="button"
-                    href={pathToCourse}
-                    aria-label={i18n.learnMoreDescription({
-                      course_name: courseDisplayName,
-                    })}
-                    text={i18n.learnMore()}
-                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
-                  />
-                  <Button
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                    type="button"
-                    onClick={() => handleClickAssign('top-card')}
-                    aria-label={assignButtonDescription}
-                    text={assignButtonText}
-                    className={style.buttonFlex}
-                  />
-                </>
-              )}
-              {!isTeacherOrSignedOut && (
+              <Button
+                __useDeprecatedTag
+                color={quickViewButtonColor}
+                type="button"
+                href={pathToCourse}
+                aria-label={i18n.learnMoreDescription({
+                  course_name: courseDisplayName,
+                })}
+                text={i18n.learnMore()}
+                className={`${style.buttonFlex} ${style.learnMoreButton}`}
+              />
+              {(isSignedOut || isTeacher) && (
                 <Button
-                  __useDeprecatedTag
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  href={pathToCourse}
-                  aria-label={i18n.tryCourseNow({
-                    course_name: courseDisplayName,
-                  })}
-                  text={i18n.tryNow()}
-                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+                  onClick={() => handleClickAssign('top-card')}
+                  aria-label={assignButtonDescription}
+                  text={assignButtonText}
+                  className={style.buttonFlex}
                 />
               )}
             </div>
