@@ -1,13 +1,13 @@
 ## Progress
 
-This contains a new progress system that can be used by any Lab2 lab.  It allows for a level to define a variety of conditions, some of which give the user feedback, and some of which allow the user to continue to the next level.
+This contains a new progress system that can be used by any **Lab2** lab.  It allows for a level to define a variety of conditions, some of which give the user feedback, and some of which allow the user to continue to the next level.
 
 It was first introduced by Music Lab in https://github.com/code-dot-org/code-dot-org/pull/50596.  Adapted from that PR's description, here are some key features:
 
 - Each level has a set of validation conditions.
-- The level designer writes these in JSON, rather than JS, so we have a clean separation between validation and the lab's implementation.
+- The level designer writes these in JSON, rather than JavaScript, so we have a clean separation between per-level validation conditions and the lab's internal implementation.
 - Conditions that aren't recognised are skipped, allowing level designers to add necessary conditions while lab engineers will later add support for them.
-- Level designers can specify a variety of feedback messages for specific conditions.
+- Level designers can specify specific feedback messages for specific conditions.
 - It's essentially the same system as was built for Star Wars in 2015 [here](https://github.com/code-dot-org/code-dot-org/blob/1003ddc2281b4bed5a1d4473c2e4104bafc476f8/apps/src/studio/levels.js#L3261-L3290), and AI for Oceans in 2019 [here](https://github.com/code-dot-org/ml-activities/blob/51eedd101c4fe645a82d7d06bb4dfdc62003e023/src/oceans/models/guide.js).
 
 And here are some architectural details:
