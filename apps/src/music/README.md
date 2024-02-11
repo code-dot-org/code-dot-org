@@ -1,5 +1,7 @@
 # Music Lab
 
+<img width="1512" alt="Screenshot 2024-02-12 at 10 11 06 AM" src="https://github.com/code-dot-org/code-dot-org/assets/2205926/ab4c80eb-8824-457f-b0e2-cf330b5dbce0">
+
 This is the client-side code for **Music Lab**, as instantiated by a `music` level using [Lab2](../lab2/).
 
 Music Lab is a powerful lab for creating music using code.  It includes the following features:
