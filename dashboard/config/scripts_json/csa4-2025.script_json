@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-06 07:10:30 UTC",
+    "serialized_at": "2024-02-10 06:37:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7495,8 +7495,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U4L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1AuN6ZG62jztFvdFHNorec0juGbeT4Jfc-lB80cS8HcY/edit?usp=sharing",
+      "name": "[EXEMPLAR] Guided Notes",
+      "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
       "key": "_exemplar_u4l2_guided_notes",
       "properties": {
         "audience": "Verified Teacher",

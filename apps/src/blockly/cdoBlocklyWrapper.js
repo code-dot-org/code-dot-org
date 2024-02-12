@@ -356,6 +356,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
         return source;
       }
     },
+    processToolboxXml(toolbox) {
+      return toolbox;
+    },
   };
   blocklyWrapper.customBlocks = customBlocks;
 

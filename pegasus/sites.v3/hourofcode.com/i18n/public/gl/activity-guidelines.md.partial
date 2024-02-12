@@ -106,7 +106,7 @@ O que você precisará:
 * URL link to the activity
 * Does this activity include AI: Yes or No
 * An activity description (max character count: 400) 
-    * Na descrição, informe se a atividade é principalmente autoexplicativa ou se exige o auxílio de um professor. Alén diso, algunhas escolas queren saber se as actividades da Hora do Código atenden aos padróns Common Core ou Next Generation Science. Se a actividade aborda padróns específicos, considere incluír esa información.
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
 * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
     * Kindergarten - Grade 1 (ages 4-6)
     * Grades 2-5 (ages 7-10)
@@ -139,7 +139,7 @@ O que você precisará:
         * Safari versión mobile do iOS (optimizado para dispositivos móbeis)
         * Chrome para Android (optimizado para dispositivos móbeis)
     * Não baseadas na Web: especificar a plataforma para código nativo (Mac, Win, iOS, Android, xBox, outros)
-    * Actividades offline
+    * Unplugged
 * Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. Se unha imagen apropriada non for fornecida, podemos crear unha captura de pantalla do seu titorial OU podemos optar por non clasificalo. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
 * In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
@@ -212,9 +212,9 @@ Activities do not have to include AI, though we are looking to offer more AI rel
 
 **Inclúa notas para o profesor.** A maioria das actividades debe ser autoexplicativa, pero se unha actividade tivese de ser facilitada ou conducida por un profesor, inclúa instrucións claras e simples na forma de notas, nunha URL separada enviada coa súa actividade. Non só os estudantes, algúns profesores tamén son principiantes. Inclúa informacións como:
 
-**Certifíquese de que un alumno de nivel medio consiga terminar a actividade tranquilamente nunha hora.** Considere acrecentar unha actividade aberta no final para os alumnos que avanzaren máis rapidamente pola leccción. Lémbrese de que a maioria das rapazas e rapaces non teñen ningunha experiencia en informática e programación.
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
 
-**Anime os alumnos a publicaren nas redes sociais (nos sitios apropiados) cando eles terminaren.** Por exemplo “Eu fixen unha Hora do Código con ________. E vostede? Non só os estudantes, algúns profesores tamén son principiantes. E vostede?
+**Anime os alumnos a publicaren nas redes sociais (nos sitios apropiados) cando eles terminaren.** Por exemplo “Eu fixen unha Hora do Código con ________. E vostede? Not only are the students novices, some of the teachers are as well. E vostede?
 
 - What platforms and browsers does the tutorial work best on?
 - Does it work on smartphones? Tablets?
@@ -223,11 +223,11 @@ Activities do not have to include AI, though we are looking to offer more AI rel
 
 **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Anime os alumnos a publicaren nas redes sociais (nos sitios apropiados) cando eles terminaren.** Por exemplo “Eu fixen unha Hora do Código con ________. E vostede? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. E vostede? @Scratch". Use o hashtag **#HoraDoCodigo** (con letras maiúsculas H, D, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
 **Create your activity in Spanish or in other languages besides English.**
 
-**Explique ou asocie a actividade a un contexto socialmente significativo.** A programación de computadores pasa a ter superpoderes cando os alumnos a ven como algo que serve para tornar o mundo mellor!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
 **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
@@ -259,7 +259,7 @@ This will allow us to count users who do your Hour of Code tutorial. It will lea
 
 If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-OBSERVACIÓN: non é preciso facer iso con aplicativos que poden ser instalados (aplicativos iOS/Android ou aplicativos de instalación en desktop)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
 Example tracking pixels for Dance Party:
 
