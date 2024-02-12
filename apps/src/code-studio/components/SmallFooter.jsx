@@ -224,9 +224,7 @@ export default class SmallFooter extends React.Component {
           {this.renderCopyright()}
           {!!this.props.unitYear && yearIsNumeric && (
             <p style={styles.version}>
-              <span className="version-caption">
-                {i18n.version()}:{' '}
-              </span>
+              <span className="version-caption">{i18n.version()}: </span>
               {this.props.unitYear}
             </p>
           )}
