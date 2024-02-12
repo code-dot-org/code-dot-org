@@ -23,38 +23,38 @@ Ndërsa teknologjia kompjuterike është një pjesë integrale e kulturës dhe �
 
 Ndërsa shkencat kompjuterike po transformojnë industrinë, duke krijuar fusha të reja të tregtisë, duke drejtuar inovacionin në të gjitha fushat e shkencës, dhe duke forcuar produktivitetin në sektorët e përcaktuar ekonomik;
 
-Ndërsa fusha e shkencave kompjuterike është një lëndë themelore që mbështet sektorin e teknologjisë së informacionit të ekonomisë sonë, i cili është një kontribues i rëndësishëm në prodhimin ekonomik të Shteteve të Bashkuara;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Ndërsa shkrim-leximi i inteligjencës artificiale i referohet njohurive, aftësive dhe qëndrimeve që lidhen me mënyrën se si funksionon inteligjenca artificiale, duke përfshirë konceptet themelore në shkencat kompjuterike dhe mënyrën e përdorimit të inteligjencës artificiale në mënyrë të sigurt, me përgjegjësi dhe etikë;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-Ndërsa fusha e shkencave kompjuterike, përfshirë inteligjencën artificiale, janë teknologji me fuqinë për të transformuar rrënjësisht pothuajse të gjithë sektorët e ekonomisë së Shteteve të Bashkuara;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-Ndërsa udhëheqja teknologjike në të gjitha fushat e shkencave kompjuterike, përfshirë inteligjencën artificiale, është një domosdoshmëri ekonomike dhe kombëtare e sigurisë
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Ndërsa vështrimi për pozicione pune në shkencat kompjuterike është e shkëlqyer, me mbi 500,000 pozicione në të gjithë vendin;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Ndërsa nxënësve/studentëve iu jepet mundesia të marrin pjesë në aktivitetet me nivel të lartë të shkencave kompjuterike për t'i ekspozuar me mundësitë e pasura të ofertave në terren dhe i ofrohen aftësitë e të menduarit kritik që t'i shërbejnë gjatë gjithë jetës së tyre;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Ndërsa të gjithë nxënësit/studentët meritojnë një përgatitje të plotë në arsimin e shkencave kompjuterike, duke përfshirë aksesin në mësues të kualifikuar, teknologji, dhe kurrikulum të përshtatshëm me moshën të nevojshme për të mësuar shkencat kompjuterike në nivelet fillestare dhe të mesme të arsimit;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Ndërsa edukimi i shkencave kompjuterike ka sfida për t'u adresuar, duke përfshirë përmirësimin e qasjes në kurset e shkencave kompjuterike për të gjithë studentët dhe sigurimin e zhvillimit profesional për mësuesit e shken
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-Ndërsa marrja pjesë në Orën e Kodimit gjatë Javës Edukative në Shkencat Kompjuterike mund të shërbejë për të demitizuar fushën e shkencave kompjuterike dhe për të inkurajuar më shumë nxënës për të marrë studime të mëtejme në shkencat kompjuterike;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Ndërsa fusha e shkencave kompjuterike ka barriera të konsiderueshme të barazisë për të adresuar, duke përfshirë tërheqjen dhe mbajtjen e një fushe të kandidatëve të ndryshëm në racë, etni dhe gjini në të gjitha nivelet dhe degët;
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Ndërsa Grace Murray Hopper, një nga femrat e para në shkencat kompjuterike, projektoi gjuhë të reja programimi dhe standarde udhëheqëse për sistemet kompjuterike të cilat hodhën themelet për shumë avancime në shkenca kompjuterike; dhe
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Perderisa java e <%= campaign_date('start-long') %>, në nderim të ditëlindjes së Grace Hopper's dedikohet si, ‘Java e Edukimit në Shkencat Kompjuterike’: ndaj dhe të jetë<br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-Vendosur, që [KUVENDI APO SENATI, SHTETI, KOMUNA, QYTETI OSE BORDI SHKOLLËS] --
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) mbështet vendosjen e Javës së Arsimimit në Shkencat Kompjuterike (<%= campaign_date('full') %>);
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) inkurajon shkollat, mësuesit, prindërit dhe politikëbërësit për të marrë pjesë në Javën Edukative në Shkencat Kompjuterike duke bërë të mundur që nxënësit e tyre të marrin pjesë në Orën e Kodimit;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) nxit shkollat, mësuesit, studiuesit, universitetet, liderët e biznesit dhe politikë bërësit për të identifikuar mekanizmat për mësuesit që të marrin zhvillim profesional për të siguruar përvoja të qëndrueshme të të mësuarit në shkenca kompjuterike në të gjitha nivelet arsimore dhe për të inkurajuar nxënësit që të jenë të ekspozuar ndaj koncepteve të shkencave kompjuterike;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) inkurajon mundësitë, duke përfshirë përmes programeve ekzistuese, për studentet femra dhe studentët nga grupet racore dhe etnike të nënpërfaqësuara në shkencat kompjuterike.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}
