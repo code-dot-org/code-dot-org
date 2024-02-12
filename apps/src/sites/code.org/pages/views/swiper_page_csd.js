@@ -1,4 +1,6 @@
-// Adds carousels to code.org/csd
+// Adds carousel functionality to code.org/csd
+
+// This installs the Swiper library WebComponent.
 // See docs here: https://swiperjs.com/swiper-api#web-component.
 
 // import function to register Swiper custom elements
@@ -12,21 +14,19 @@ const swipers = [
 ];
 
 const swiperParams = {
-  autoHeight: true,
+  autoHeight: false,
   pagination: {
     clickable: true,
   },
   spaceBetween: 24,
   // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 640px
-    640: {
-      autoHeight: false,
-    },
+    // when window width is >= 768px
     768: {
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
+    // when window width is >= 1024px
     1024: {
       slidesPerView: 3,
       slidesPerGroup: 3,
