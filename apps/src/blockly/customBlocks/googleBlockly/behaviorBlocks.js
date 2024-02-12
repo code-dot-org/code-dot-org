@@ -7,6 +7,7 @@ import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {behaviorCallerGetDefMixin} from './mixins/behaviorCallerGetDefMixin';
+import {behaviorCreateDefMixin} from './mixins/behaviorCreateDefMixin';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -96,8 +97,9 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_update_shape_mixin',
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
-      'procedure_callernoreturn_get_def_block_mixin',
+      'behavior_caller_get_def_block_mixin',
       'modal_procedures_no_destroy',
+      'behavior_create_def_mixin',
     ],
     mutator: 'behavior_get_mutator',
   },
@@ -183,6 +185,21 @@ GoogleBlockly.Extensions.registerMutator(
 GoogleBlockly.Extensions.register(
   'behavior_caller_get_def_mixin',
   behaviorCallerGetDefMixin
+);
+GoogleBlockly.Extensions.register(
+  'behavior_create_def_mixin',
+  behaviorCreateDefMixin
+);
+
+// Used by createDef_ to create a new definition block for an orphaned call block.
+// We need to supply a specific block type used for behavior definitions.
+const procedureCallerNoReturnGetDefBlockMixin = {
+  hasReturn_: false,
+  defType_: BLOCK_TYPES.behaviorDefinition,
+};
+GoogleBlockly.Extensions.registerMixin(
+  'behavior_caller_get_def_block_mixin',
+  procedureCallerNoReturnGetDefBlockMixin
 );
 
 /**

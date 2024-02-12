@@ -997,6 +997,11 @@ FactoryBot.define do
         standalone_unit.save!
       end
     end
+
+    factory :pl_unit do
+      participant_audience {"teacher"}
+      instructor_audience {"facilitator"}
+    end
   end
 
   # WARNING: Using this factory in new tests may cause other tests, including
