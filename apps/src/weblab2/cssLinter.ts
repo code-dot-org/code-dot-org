@@ -2,7 +2,6 @@ import {linter, Diagnostic} from '@codemirror/lint';
 import cssValidator from 'w3c-css-validator';
 
 export const cssLinter = linter(async view => {
-  console.log('linting?');
   const diagnostics: Diagnostic[] = [];
   const docLines = view.state.doc.toString().split('\n');
   const result = await cssValidator.validateText(view.state.doc.toString());
