@@ -11,7 +11,7 @@
       "panels": [
         {
           "imageUrl": "https://studio.code.org/shared/images/teacher-announcement/incubator-projectbeats.png",
-          "text": "#### Welcome to Project Beats!\n\nProject Beats lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
+          "text": "Welcome to **Project Beats**!\n\n**Project Beats** lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
         }
       ]
     }
