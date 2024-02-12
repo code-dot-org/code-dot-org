@@ -30,12 +30,11 @@ function SectionProgressV2({
     }
   }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
 
-  // Needs to be modified so that we are checking .validated not .isConceptLevel
   React.useEffect(() => {
     if (expandedLessonIds.length > 0) {
       const hasValidatedLevel = unitData.lessons.some(
         lesson =>
-          lesson.levels.some(level => level.isConceptLevel) &&
+          lesson.levels.some(level => level.isValidated) &&
           expandedLessonIds.includes(lesson.id)
       );
       setIsViewingValidatedLevel(hasValidatedLevel);
