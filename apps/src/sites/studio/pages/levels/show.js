@@ -59,17 +59,17 @@ function initPage() {
     );
   }
 
-  if (hasScriptData('script[data-aitutorleveldata]')) {
-    const scriptData = getScriptData('scriptdata');
-    const aiTutorLevelData = getScriptData('aitutorleveldata');
-    const {id, type, hasValidation} = aiTutorLevelData;
+  if (hasScriptData('script[data-aitutordata]')) {
+    const aiTutorData = getScriptData('aitutordata');
+    const {levelId, type, hasValidation, isProjectBacked} = aiTutorData;
     const level = {
-      id: id,
+      id: levelId,
       type: type,
       hasValidation: hasValidation,
+      isProjectBacked: isProjectBacked
     };
     getStore().dispatch(setLevel(level));
-    getStore().dispatch(setScriptId(scriptData.script_id));
+    getStore().dispatch(setScriptId(aiTutorData.scriptId));
     const aiTutorFabMountPoint = document.getElementById(
       'ai-tutor-fab-mount-point'
     );

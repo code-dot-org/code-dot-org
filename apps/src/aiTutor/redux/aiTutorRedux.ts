@@ -219,6 +219,7 @@ const aiTutorSlice = createSlice({
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
   setLevel,
+  setScriptId,
   addAIResponse,
   addChatMessage,
   clearChatMessages,
