@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-06 19:52:27 UTC",
+    "serialized_at": "2024-02-08 23:04:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4587,7 +4587,7 @@
       "key": "dfbaf0ea-f00a-460c-909b-fc63926dee95",
       "position": 10,
       "properties": {
-        "description": "[assessment level]",
+        "progression_name": "Assessment Level",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5605,7 +5605,7 @@
       "key": "858d3105-f64a-4e3d-a33a-9a59ff129f64",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day: What are the different reasons people make websites?**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day: What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?**"
       },
       "seeding_key": {
         "activity_section.key": "858d3105-f64a-4e3d-a33a-9a59ff129f64",
@@ -8164,6 +8164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 - Prac_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -8186,12 +8189,37 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 assessment"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "dfbaf0ea-f00a-460c-909b-fc63926dee95"
+      },
+      "level_keys": [
+        "CSD U2L13 assessment"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L13 - Challenge_2024"
+        ],
         "progression": "Challenge Levels"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2L13 challenge_3"
+          "CSD U2L13 - Challenge_2024"
         ],
         "lesson.key": "Your Web Page - Prepare",
         "lesson_group.key": "lessonGroup-2",
@@ -8199,11 +8227,11 @@
         "activity_section.key": "71c5548e-3953-4c33-ac03-394bdf1e8c37"
       },
       "level_keys": [
-        "CSD U2L13 challenge_3"
+        "CSD U2L13 - Challenge_2024"
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8228,7 +8256,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8253,7 +8281,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8278,7 +8306,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8303,7 +8331,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8328,7 +8356,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8353,7 +8381,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8378,7 +8406,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8403,7 +8431,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8428,7 +8456,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8453,7 +8481,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8478,7 +8506,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8503,7 +8531,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8528,7 +8556,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8553,7 +8581,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8578,7 +8606,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8603,7 +8631,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8628,7 +8656,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8653,7 +8681,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8678,7 +8706,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8703,7 +8731,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8728,7 +8756,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8753,7 +8781,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8778,7 +8806,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9741,9 +9769,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2L13 challenge_3",
+        "level.key": "CSD U2L13 assessment",
         "script_level.level_keys": [
-          "CSD U2L13 challenge_3"
+          "CSD U2L13 assessment"
+        ],
+        "lesson.key": "Your Web Page - Prepare",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "dfbaf0ea-f00a-460c-909b-fc63926dee95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 - Challenge_2024",
+        "script_level.level_keys": [
+          "CSD U2L13 - Challenge_2024"
         ],
         "lesson.key": "Your Web Page - Prepare",
         "lesson_group.key": "lessonGroup-2",

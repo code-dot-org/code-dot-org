@@ -6,8 +6,8 @@ sq-AL:
   account_sign_up_child_accept_terms: Konfirmoj se kam lejen e prindit ose të kujdestarit
     ligjor për të përdorur shërbimet e Code.org.
   account_sign_up_email_opt_in: A mund t'ju dërgojmë email-e mbi përditësimin e kurseve
-    tona, mundësitë lokale apo të rejat e shkencave kompjuterike? (afërsisht një herë
-    në muaj)
+    tona, mundësitë apo të rejat për shkencatkompjuterike? (afërsisht një herë në
+    muaj)
   ai_activity: Aktiviteti
   ai_description: Përshkrimi
   ai_for_oceans: IA për oqeanet
@@ -110,7 +110,7 @@ sq-AL:
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
   carousel_heading_beginners: Tutoriale për Fillestarët
   carousel_heading_beyond_devices: Aplikacione me tutoriale për telefona dhe tableta
-  carousel_heading_beyond_javascript: Tutorialet që mësojnë JavaScript
+  carousel_heading_beyond_javascript: Mësoni JavaScript
   carousel_heading_beyond_languages: Tutoriale në gjuhë të tjera programimi
   carousel_heading_devices: Aplikacione me tutoriale për telefona dhe tableta
   carousel_heading_domestic: Tutorialet vetëm në Anglisht
@@ -157,6 +157,7 @@ sq-AL:
   class_submission_out_of_school_summer_camp: Kamp veror
   classicmaze_name: Labirint Klasik
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
+  code_org_logo_alt: Code.org Faqja kryesore
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   codea_beyond_gradelevel: Shkolla e mesme +
   codea_beyond_longdescription: Codea për iPad të lejon ty të krijosh lojëra dhe simulime
@@ -493,7 +494,7 @@ sq-AL:
   dashboard_curriculum: Plani mësimor
   dashboard_curriculum_csina: 'Shkencat Kompjuterike në fushën e algjebrës:'
   dashboard_curriculum_csins: 'Shkencat kompjuterike si pjesë e shkencës:'
-  dashboard_curriculum_csp: 'Ap® Parimet e Shkencave Kompjuterike:'
+  dashboard_curriculum_csp: 'Parimet e Shkencave Kompjuterike:'
   dashboard_curriculum_ecs: 'Explorimi i Shkencave Kompjuterike:'
   dashboard_curriculum_high_title: Burime për Mësues të Shkollave të Mesme
   dashboard_curriculum_k5_title: Burimet e Mësuesve për K-5
@@ -588,7 +589,7 @@ sq-AL:
   dashboard_navigation_view_assessments: Vlerësimet
   dashboard_navigation_view_progress: Ecuri
   dashboard_navigation_view_stats: statistikat
-  dashboard_overview: Përmbledhja
+  dashboard_overview: Përmbledhje
   dashboard_percent: Përqindje
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliko
     këtu</a> për dokumentat tona të privatësisë që mund të ndahen ose printohen për
@@ -617,7 +618,7 @@ sq-AL:
   dashboard_sections_login_type_explanation: Kjo tabelë shpjegonë se cili nga këto
     lloje logimi, <b>figura, fjala ose email-i</b>, do të duash të zgjedhësh për një
     seksion.
-  dashboard_sections_name: Emri Seksionit
+  dashboard_sections_name: 'Emri i sesionit:'
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_password_account_creation: Fjalëkalimi i krijuar nga studentet
   dashboard_sections_password_question: Çfarë përdorin studentët si një "fjalëkalim"?
@@ -646,8 +647,8 @@ sq-AL:
   dashboard_sections_table_section: Pjesë
   dashboard_sections_table_students: Studentët
   dashboard_sections_word_account_creation: Një fjalë e thjeshtë e caktuar nga Code.org
-  dashboard_sections_yes_both: Po, unë dua t'i kopjoj student(ët) që të jenë në këtë
-    seksion DHE në seksionin e ri
+  dashboard_sections_yes_both: Po, dua të kopjoj nxënësit që të jenë në këtë sesion
+    aktual DHE sesionin e ri
   dashboard_sequence: Sekuencë
   dashboard_stage: Fazë
   dashboard_standards: Standartet
@@ -660,7 +661,7 @@ sq-AL:
   dashboard_students_join_link: Thuaju studentëve të krijojnë llogarinë e tyre dhe
     të bashkohen në seksionin tuaj te
   dashboard_students_male: Mashkull
-  dashboard_students_name: Emri
+  dashboard_students_name: 'Emri:'
   dashboard_students_new_section: Ti ke krijuar një seksion të ri! Tani shto studentë
     duke përdorur butonat lartë <b>Shto studentë</b> dhe <b>Shto studentë të shumëfishtë</b>.
   dashboard_students_no_email: Nëse studentet tuaj nuk kanë adresa email-i, ose ti
@@ -685,7 +686,7 @@ sq-AL:
     Kjo do të thotë që secili student ka fjalë sekrete që i përdor në vend të fjalekalimit
     kur logohet. Studentët duhet të perdorin adresën e logimit e dhënë më lart për
     tu loguar.
-  dashboard_students_secret_word_title: Fjala e Fshehtë
+  dashboard_students_secret_word_title: Kodi sekret
   dashboard_students_share_section: 'Shpërndaje këtë faqe logimi për seksionin me
     studentet tuaj:'
   dashboard_students_total_lines: Rreshta Kodi
@@ -815,18 +816,19 @@ sq-AL:
   header_courses: Kurset
   header_educate_beyond: Përtej Code.org
   header_educate_community: Komuniteti Online
-  header_educate_elementary: Shkolla Fillore
-  header_educate_high: Shkolla e Mesme e lartë
+  header_educate_elementary: Shkollë Fillore
+  header_educate_high: Shkollë e Mesme e Lartë
   header_educate_hoc: Ora e Kodimit
   header_educate_inspire: Frymëzoni një student
-  header_educate_middle: Shkolla e Mesme e ultë
-  header_educate_overview: Pasqyra e edukatorit
+  header_educate_middle: Shkollë e Mesme e Ultë
+  header_educate_overview: Përmbledhje e mësimdhënësit
   header_educate_partner: Partner me ne
+  header_educate_requirements: Kërkesat teknike
   header_educate_tools: Veglat dhe Videot
   header_help_us: Na ndihmoni
   header_incubator: Inkubatori
   header_learn: Mëso
-  header_legal: Privatësia & Ligjore
+  header_legal: Ligjore & Private
   header_legal_cookie_notice: Njoftim për Cookie
   header_legal_privacy: Rregullat e Privatësisë
   header_legal_tos: Kushtet e shërbimit
@@ -835,7 +837,7 @@ sq-AL:
   header_project_gallery: Projekte
   header_report_abuse: Raporto abuzim
   header_report_bug: Raporto një problem
-  header_sections: Seksionet
+  header_sections: Sesionet
   header_stats: statistikat
   header_teach: Mësoni
   header_tutorials: Tutoriale
@@ -1040,17 +1042,17 @@ sq-AL:
     ose pafundesi personazhesh Disney.
   just_did_accelerated: Unë sapo përfundova kursin e përshpejtuar - kontrollojeni
     atë ! @codeorg
-  just_did_course1: Unë sapo përfundova kursin 1 - kontrollojeni atë ! @codeorg
-  just_did_course2: Unë sapo përfundova kursin 2- kontrollojeni atë ! @codeorg
-  just_did_course3: Unë sapo përfundova kursin 3- kontrollojeni atë ! @codeorg
-  just_did_course4: Unë sapo përfundova kursin 4- kontrollojeni atë ! @codeorg
+  just_did_course1: Unë sapo përfundova kursin 1 - kontrollojeni atë! @codeorg
+  just_did_course2: Unë sapo përfundova kursin 2 - kontrollojeni atë! @codeorg
+  just_did_course3: Unë sapo përfundova kursin 3 - kontrollojeni atë! @codeorg
+  just_did_course4: Unë sapo përfundova kursin 4 - kontrollojeni atë! @codeorg
   just_did_coursea: Unë sa përfundova Kursin A - shikoje! @codeorg
   just_did_courseb: Unë sa përfundova Kursin B - shikoje! @codeorg
   just_did_coursec: Unë sa përfundova Kursin C - shikoje! @codeorg
   just_did_coursed: Unë sa përfundova Kursin D - shikoje! @codeorg
   just_did_coursee: Unë sa përfundova Kursin E - shikoje! @codeorg
   just_did_coursef: Unë sa përfundova Kursin F - shikoje! @codeorg
-  just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
+  just_did_hoc: 'Sapo bëra #HourOfCode - shikoni! @codeorg'
   khan_beyond_gradelevel: Shkolla tetë vjeçare +
   khan_beyond_longdescription: Mëso bazat e programimit në JavaScript, ndërsa krijon
     vizatime argëtuese me kodin tënd. Bëje vetë ose me klasën tënde!
@@ -1239,9 +1241,10 @@ sq-AL:
   minecraft_leader_guide: Shkarko burime për t'ju ndihmuar të planifikoni dhe të kryesoni
     një ngjarje.
   minecraft_name: Minecraft
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}"> Regjistrohu </a> falas
-    në e kampin Orën së Kodimit  në një dyqan Microsoft në Australi, Kanada, Porto
-    Riko ose SH.B.A. Mëso se si të kombinoni kreativitetin tuaj me kodim.
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Regjistrohuni</a>
+    për punëtoritë falas të Minecraft Hour of Code në Dyqanet e Microsoft në Australi,
+    Kanada, Porto Riko ose SHBA. Mësoni se si kodimi është për të gjithë dhe kombinon
+    kreativitetin, zgjidhjen e problemeve dhe shumë argëtim."
   minecraft_specs: Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+
   minecraft_subtitle: Ora e Kodimit Minecraft
   minecraft_teach_resources: Burimet e mësuesve dhe plani mësim.
@@ -1410,8 +1413,8 @@ sq-AL:
   sphero_beyond_shortdescription: Mësimet SPRK i japin fëmijëve një kurs argëtues
     në programimin e robotëve ndërsa thellojnë njohuritë në matematikë dhe shkencë.
   sports_all_sports_title: Përziej dhe përshtat sportet
-  sports_athlete_Draymond: Draymond Green, Olimpiku i Medaljes së Arit dhe Kampion
-    i NBA-së, Luftëtarët e Shtetit të Artë
+  sports_athlete_Draymond: Draymond Green, Medalisti Olimpik i Artë dhe Kampion i
+    NBA, Golden State Warriors
   sports_athlete_Serena: Serena Williams, Olimpikja e Medaljes së Artë dhe Kampione
     Tenisi
   sports_athlete_Sergio: Sergio Ramos, Kampion i Kupës Botërore dhe lojtar Futbolli,
@@ -1721,11 +1724,11 @@ sq-AL:
   video_2min: 2 minutë
   video_5min: 5 minutë
   video_title_chris_bosh: Chris Bosh në Shkencat Kompjuterike
-  video_title_draymond_green: Ora e Kodit me Draymond Green
+  video_title_draymond_green: Ora e Kodimit me Draymond Green
   video_title_inspire_girl: Frymëzo një vajzë
   video_title_marco_belinelli: Ora e Koditit me Marco Belinelli
   video_title_real_madrid: Ora e Kodit me Real Madritin
-  video_title_russell_okung: Ora e Kodit me Rusell Okung
+  video_title_russell_okung: Ora e Kodimit me Rusell Okung
   videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
     shfaqur modele dhe të famshëm
   view_all_sections: Shiko të gjitha sesionet
@@ -1749,7 +1752,7 @@ sq-AL:
   volunteer_engineer_submission_distance_24: 15 milje
   volunteer_engineer_submission_distance_32: 20 milje
   volunteer_engineer_submission_distance_8: 5 milje
-  volunteer_engineer_submission_distance_80: 50 mil
+  volunteer_engineer_submission_distance_80: 50 milje
   volunteer_engineer_submission_experience_software_professional: Profesionist Software-i
   volunteer_engineer_submission_experience_university_student_or_researcher: Student
     i universitetit (ose studiues)
@@ -1757,9 +1760,9 @@ sq-AL:
   volunteer_engineer_submission_field_company: Firma (ose Universiteti)
   volunteer_engineer_submission_field_company_placeholder: Firma (ose Universiteti)
   volunteer_engineer_submission_field_description: Përshkrimi
-  volunteer_engineer_submission_field_description_placeholder: Përshkrimi i eksperiencës
-    dhe/ose pjesmarrjes. Nëse flitni gjuhë ndryshe nga Anglishtja, sigurojeni duke
-    e cekur këtu.
+  volunteer_engineer_submission_field_description_placeholder: Përshkrimi i përvojës
+    dhe/ose pjesëmarrjes. Nëse flisni gjuhë të tjera përveç anglishtes, sigurohuni
+    që ta përfshini këtu.
   volunteer_engineer_submission_field_email: Adresa Email-it
   volunteer_engineer_submission_field_email_desc: Email adresa yte nuk do të shpërndahet,
     por do ju dërgojmë kërkesat nga mësuesit.
