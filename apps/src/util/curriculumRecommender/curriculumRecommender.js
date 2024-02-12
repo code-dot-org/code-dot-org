@@ -2,6 +2,7 @@ import {
   IMPORTANT_TOPICS,
   FAKE_RECOMMENDER_SCORING,
 } from './curriculumRecommenderConstants';
+import moment from 'moment';
 
 // [TODO]: Add general comment on how these recommendations work and where the edges of this black box are (i.e. filters before, returns array)
 
@@ -108,8 +109,16 @@ const hasDesiredMarketingInitiative = (
 };
 
 const howRecentlyPublished = (scoring_framework, curriculum) => {
-  const date = new Date(curriculum.published_date);
-  console.log(date);
+  // const oneYearAgo = Date.now();
+  // oneYearAgo.setFullYear(oneYearAgo.getYear() - 1);
+  //const publishedDate = new Date(curriculum.published_date);
+
+  const publishedDate = moment.utc(curriculum.published_date);
+
+  // console.log(twoYearsAgo);
+  // console.log(oneYearAgo);
+  console.log(publishedDate);
+
   return 0;
 };
 
