@@ -12,6 +12,7 @@ import {
   editButtonHandler,
   toolboxConfigurationSupportsEditButton,
 } from './proceduresBlocks';
+import {getAlphanumericId} from '@cdo/apps/utils';
 
 const INPUTS = {
   FLYOUT: 'flyout_input',
@@ -222,6 +223,11 @@ export const blocks = {
 
     const generator = Blockly.getGenerator();
     generator.behavior_definition = function (block) {
+      // If we don't have a behavior id, generate a random id.
+      // This ensures the hidden definition block will generate valid code.
+      if (!block.behaviorId) {
+        block.behaviorId = getAlphanumericId();
+      }
       // Define a procedure with a return value.
       const funcName = generator.nameDB_.getName(
         block.behaviorId,
@@ -293,6 +299,25 @@ export const blocks = {
       return null;
     };
     generator.gamelab_behavior_get = function () {
+      // Generating 'undefined' mimics the code for a missing block.
+      let undefinedCode = ['undefined', generator.ORDER_ATOMIC];
+      // If we don't have a behavior Id, find on the definition block.
+      if (!this.behaviorId) {
+        const procedureModel = this.getProcedureModel();
+        // If there's no model, fail gracefully.
+        if (!procedureModel) {
+          return undefinedCode;
+        }
+        const definitionBlock = Blockly.Procedures.getDefinition(
+          procedureModel.name,
+          Blockly.getHiddenDefinitionWorkspace()
+        );
+        this.behaviorId = definitionBlock?.behaviorId;
+        // If we somehow still don't have a behavior id, fail gracefully.
+        if (!this.behaviorId) {
+          return undefinedCode;
+        }
+      }
       const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };

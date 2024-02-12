@@ -104,23 +104,23 @@ Code.org მასპინძლობს კოდის საათის™
 * პირველადი კონტაქტის სახელი და ელ. ფოსტა, რომელიც წარმოადგენს წარმოდგენილ საქმიანობას
 * აქტივობის სახელი (სახელში არ შეიძლება შეიცავდეს „კოდის საათს“)
 * URL ბმული საქმიანობასთან
-* მოიცავს თუ არა ეს აქტივობა AI: დიახ ან არა
-* აქტივობის აღწერა (სიმბოლოების მაქსიმალური რაოდენობა: 400) 
-    * გთხოვთ მოგვაწოდოთ აღწერაც, მიუხედავად იმისა, ტუტორიალი დამოუკიდებლად შესასრულებელია თუ მასწავლებლისთვის გამარტივებული. დამატებით, ზოგიერთი სკოლა დაინტერესებულია იმით, თუ რომელ სტანდარტებს იყენებს კოდის ერთი საათი, Common Core-ს თუ Next Generation Science-ს. თუ აქტივობა სპეციფიურ სტანდარტებს ეხება, სჯობს ეს ინფორმაციაც მოგვაწოდოთ.
-* რეკომენდებული კლასის დონე (ები) განკუთვნილი მომხმარებლებისთვის. თქვენ შეგიძლიათ მიმართოთ \[კომპიუტერული მეცნიერების მასწავლებელთა ასოციაციის K-12 სტანდარტებს\] (https://k12cs.org/framework-statements-by-grade-band/) კომპიუტერული მეცნიერების შესაბამისი კონცეფციებისთვის. კლასის დონის მაგალითი მოიცავს: 
-    * საბავშვო ბაღი - 1 კლასი (4-6 წლის)
-    * 2-5 კლასები (7-10 წლის)
-    * 6-8 კლასები (11-13 წლამდე)
-    * 9+ კლასები (14+ ასაკი)
-* პროგრამირების ენების სია, რომელსაც თქვენი საქმიანობა ასწავლის. ანუ C/C ++, ჯავა, JavaScript და ა. ან დამოუკიდებელი ენა (გაკვეთილის გეგმებისთვის, რომელთა სწავლება შესაძლებელია მრავალ ენაზე) აირჩიეთ ენის ხელოვნება.
-* მხარდაჭერილი ბუნებრივი ენების სია. შენიშვნა: ენის გამოვლენა არის საქმიანობის პროვაიდერის პასუხისმგებლობა; ჩვენ ყველა მომხმარებელს გადამისამართებთ მოწოდებულ ერთ URL- ზე. ან დამოუკიდებელი ენა (გაკვეთილის გეგმებისთვის, რომელთა სწავლება შესაძლებელია მრავალ ენაზე)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* პროგრამირების ენების სია, რომელსაც თქვენი საქმიანობა ასწავლის. ანუ C/C ++, ჯავა, JavaScript და ა. ან დამოუკიდებელი ენა (გაკვეთილის გეგმებისთვის, რომელთა სწავლება შესაძლებელია მრავალ ენაზე) choose language arts.
+* მხარდაჭერილი ბუნებრივი ენების სია. შენიშვნა: ენის გამოვლენა არის საქმიანობის პროვაიდერის პასუხისმგებლობა; ჩვენ ყველა მომხმარებელს გადამისამართებთ მოწოდებულ ერთ URL- ზე. or language independent (for lesson plans that can be taught in multiple languages)
 * რა დონის გამოცდილება უნდა ჰქონდეს პედაგოგს, რომ გამოიყენოს თქვენი საქმიანობა? (მაგალითად დამწყები ან კომფორტული.) და რა დონის გამოცდილება უნდა ჰქონდეთ სტუდენტებს?
-* რა დონის გამოცდილება უნდა ჰქონდეს პედაგოგს, რომ გამოიყენოს თქვენი საქმიანობა? (მაგალითად დამწყები ან კომფორტული.) და რა დონის გამოცდილება უნდა ჰქონდეთ სტუდენტებს? თუ გსურთ მოამზადოთ უფრო მოწინავე კოდის საათი™ აქტივობები, გთხოვთ, მიუთითოთ წინასწარი ცოდნა, რომელიც საჭიროა თქვენი საქმიანობის აღწერაში.
-* თქვენი საქმიანობის ხანგრძლივობა 
-    * მხოლოდ 1 საათი
-    * 1 საათი შემდგომი კურსით
-    * 2-6 საათი (შეიძლება იყოს მრავალი გაკვეთილი)
-* ხელმისაწვდომობის საცხოვრებლის სია, თუ თქვენს საქმიანობას აქვს ისინი. ეს მოიცავს ეკრანის წამკითხველის თავსებადობას, ტექსტ-მეტყველების შესაძლებლობებს, მაღალი კონტრასტული ფერების გამოყენებას ან შეზღუდული შესაძლებლობის მქონე მოსწავლეებისთვის შექმნილ სხვა საცხოვრებელს.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### დამატებითი რამ, რაც დაგჭირდებათ გაკვეთილის გეგმების წარდგენისას
 
@@ -170,7 +170,7 @@ Code.org მასპინძლობს კოდის საათის™
 
 კომპიუტერული მეცნიერების პედაგოგთა მრავალფეროვანი კომიტეტი შეაფასებს წარდგენებს ხარისხობრივი და რაოდენობრივი კრიტერიუმების მიხედვით. ჩამოთვლილი იქნება ყველა აქტივობა, რომელიც შეესაბამება ძირითად კრიტერიუმებს.
 
-ტრადიციული კოდირების აქტივობებისთვის, კომპიუტერული მეცნიერების პედაგოგთა მრავალფეროვანი კომიტეტი შეაფასებს წარდგენებს ხარისხობრივი და რაოდენობრივი კრიტერიუმების მიხედვით. ჩამოთვლილი იქნება ყველა აქტივობა, რომელიც შეესაბამება ძირითად კრიტერიუმებს. მასწავლებლებს შეეძლებათ გაფილტვრა და დალაგება, რათა იპოვონ საუკეთესო აქტივობები თავიანთი კლასისთვის.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 თუ განხილვის კომიტეტი შეაფასებს საქმიანობას ნულოვანი წარმოების ხარისხში (ცუდი შეცდომების ან ინსტრუქციების გამო, რომლებიც ძალიან ართულებს გამოყენებას), სწავლის ხელშეწყობას ნაკლებად წარმოდგენილ ჯგუფებში (რასისტული/სექსისტური მასალის გამო), საგანმანათლებლო ღირებულებით (არ ასწავლის CS კონცეფციებს), ან გართობა/ჩართვა (იმის გამო, რომ სტუდენტებისთვის რთულია მუშაობა), აქტივობა არ იქნება ჩამოთვლილი.
 
@@ -188,13 +188,13 @@ Code.org მასპინძლობს კოდის საათის™
 - არ საჭიროებს რეგისტრაციას
 - არ საჭიროებს გადახდას (გამონაკლისი რობოტიკის საქმიანობისთვის, ეს შეიძლება მოითხოვდეს რობოტის/ნაკრების შეძენას)
 
-ახალი მასწავლებლებისა და სტუდენტებისთვის თვითმართვადი აქტივობებისთვის განხილვის კომიტეტი ეძებს თუ არა:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - მასწავლებლებს შეუძლიათ გამოიყენონ სამეურვეო ან აქტივობა კომპიუტერულ მეცნიერებაში გამოცდილების გარეშე
 - სტუდენტებს შეუძლიათ იყვნენ წარმატებული კომპიუტერულ მეცნიერებაში გამოცდილების გარეშე
 - მოსწავლეებს შეუძლიათ მიმართონ გაკვეთილს მშობლის ან მასწავლებლის მითითების გარეშე
 
-მასწავლებლებსა და სტუდენტებს შეეძლებათ მოძებნონ და გაფილტრონ ჩვენი აქტივობების სია ფილტრების საფუძველზე, როგორიცაა კლასი, გამოცდილების დონე, საგანი, აპარატურა და ა. შ. სტანდარტულად, ჩვენ პირველ რიგში ვაჩვენებთ გაკვეთილის გეგმებსა და აქტივობებს, რომლებიც:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - მიიღეთ უმაღლესი რეიტინგები განხილვის კომიტეტისგან
 - არის ერთსაათიანი თვითმართვადი საქმიანობა, რომელიც განკუთვნილია დამწყებთათვის (მოსწავლეები და მასწავლებლები)
@@ -208,7 +208,7 @@ Code.org მასპინძლობს კოდის საათის™
 
 ## წინადადებები ერთი საათის თვითმართვადი გაკვეთილების დიზაინისთვის
 
-აქტივობები არ უნდა მოიცავდეს AI- ს, თუმცა ჩვენ ვცდილობთ შემოგთავაზოთ მეტი AI დაკავშირებული საქმიანობა.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **ჩასვით მასწავლებლის მინიშნებებიც.** აქტივობების უმეტესობა სასურველია მოსწავლეების მიერ დამოუკიდებლად შესასრულებელი იყოს, მაგრამ თუ აქტივობას ხელს შეუწყობს ან გააკონტროლებს მასწავლებელი, გთხოვთ ჩასვათ ნათელი და უბრალო მითითებები მასწავლებლისთვის მინიშნებების ფორმატში ცალკე URL-ზე, რომელიც თქვენს აქტივობასთან ერთად იქნება წარდგენილი. არა მხოლოდ მოსწავლეები, არამედ ზოგიერთი მასწავლებელიც ახალბედაა. ჩართეთ ინფორმაცია, როგორიცაა:
 
@@ -221,15 +221,15 @@ Code.org მასპინძლობს კოდის საათის™
 - უწევთ თუ არა რეკომენდაციას წყვილებში პროგრამირებას?
 - მოსაზრებები საკლასო ოთახში გამოყენებისთვის? Მაგალითად. თუ არის ვიდეოები, ურჩიეთ მასწავლებლებს აჩვენონ ვიდეოები დაპროექტებულ ეკრანზე მთელი საკლასო ოთახისთვის, რომ ერთად ნახონ
 
-**ჩართეთ უკუკავშირი აქტივობის ბოლოს.** (მაგ. „თქვენ დაასრულეთ 10 დონე და შეიტყვეთ მარყუჟების შესახებ! დიდი სამუშაო!“)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**წაახალისეთ მოსწავლეები, დაპოსტონ სოციალურ მედიაში (სადაც მისაღებია), როცა დაასრულებენ.** მაგალითად "მე გავიარე კოდის ერთი საათი ________-სთან, შენ? #HourOfCode“ ან“ მე გავაკეთე #HourOfCode, როგორც #CSEdWeek — ის ნაწილი. და თქვენ? @Scratch.” გამოიყენეთ ჰეშთეგი **#HourOfCode** (დიდი ასოებით H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**შექმენით თქვენი საქმიანობა ესპანურ ან სხვა ენებზე, ინგლისურის გარდა.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**ახსენით ან დააკავშირეთ აქტივობა სოციალურად მკაფიო კონტექსტთან.** კომპიუტერული პროგრამირება სუპერძალა ხდება, როცა მოსწავლეები იაზრებენ თუ როგორ შეიძლება მისი გამოყენება მსოფლიოს უკეთესობისკენ შესაცვლელად!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**დარწმუნდით, რომ თქვენი გაკვეთილი შეიძლება გამოყენებულ იქნას [წყვილი პროგრამირების](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) პარადიგმაში.** ეს განსაკუთრებით სასარგებლოა კოდის საათისთვის, რადგან ბევრ საკლასო ოთახში არ არის 1:1 აპარატურა ყველა სტუდენტისთვის.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**ზემოთ დაბრუნება**](#top)
 
@@ -237,7 +237,7 @@ Code.org მასპინძლობს კოდის საათის™
 
 ## სავაჭრო ნიშნის გამოყენების წესები
 
-კოდის საათი® და ჰორა დელ კოდიგო® არის Code.org— ის რეგისტრირებული სავაჭრო ნიშნები. ჩვენმა ბევრმა სამეურვეო პარტნიორმა გამოიყენა ჩვენი „კოდის საათის“ სავაჭრო ნიშნები თავიანთ ვებსაიტებზე კოდის საათის აქტივობებთან დაკავშირებით. ჩვენ არ გვინდა, რომ თავიდან ავიცილოთ ეს გამოყენება, მაგრამ ჩვენ გვინდა დავრწმუნდეთ, რომ გამოყენება მოდის ფარგლებში რამდენიმე ლიმიტები:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. გამოიყენეთ „კოდის საათი“ მხოლოდ არაკომერციული CS Education აქტივობებთან დაკავშირებით, კამპანიის Hour of CEducation კონტექსტში და სხვა მიზნით.
 2. ნებისმიერი მითითება „კოდის საათზე“ უნდა იქნას გამოყენებული ისე, რომ არ მიგვითითებს იმაზე, რომ ეს არის თქვენი საკუთარი ბრენდის სახელი, მაგრამ ის უფრო მეტად მოიხსენიებს კოდის საათს, როგორც ძირფესვიანებულ მოძრაობას. კარგი მაგალითი:“ მონაწილეობა მიიღე კოდის საათში AcmeCorp.com— ზე“. ცუდი მაგალითი: "სცადეთ კოდის საათი ACME Corp-ის მეშვეობით".
@@ -253,15 +253,15 @@ Code.org მასპინძლობს კოდის საათის™
 
 ## პიქსელ–კონტროლი
 
-თუ თქვენი სახელმძღვანელო დამტკიცებულია და შედის საბოლოო სამეურვეო გვერდზე, Code.org მოგაწვდით უნიკალურ თვალთვალის პიქსელს, რომ ინტეგრირდეთ თქვენს სახელმძღვანელოში. იხილეთ მაგალითი ქვემოთ. არ შეიტანოთ თქვენი გაკვეთილის შუალედურ გვერდებზე.
+თუ თქვენი სახელმძღვანელო დამტკიცებულია და შედის საბოლოო სამეურვეო გვერდზე, Code.org მოგაწვდით უნიკალურ თვალთვალის პიქსელს, რომ ინტეგრირდეთ თქვენს სახელმძღვანელოში. იხილეთ მაგალითი ქვემოთ. Do not include on any interim pages of your tutorial.
 
-ეს საშუალებას მოგვცემს დავთვალოთ მომხმარებლები, რომლებიც ასრულებენ თქვენი კოდის საათის სახელმძღვანელოს. ეს გამოიწვევს უფრო ზუსტ მონაწილეობას ითვლის თქვენი tutorial.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-თუ თქვენი სახელმძღვანელო დამტკიცებულია და შედის საბოლოო სამეურვეო გვერდზე, Code.org მოგაწვდით უნიკალურ თვალთვალის პიქსელს, რომ ინტეგრირდეთ თქვენს სახელმძღვანელოში. იხილეთ მაგალითი ქვემოთ.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-შენიშვნა: ეს არაა აუცილებელი დასაყენებელი აპლიკაციებისთვის (iOS/Android აპლიკაციები, ან დესკტოპზე დასაყენებელი აპლიკაციები)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-მაგალითი თვალთვალის პიქსელი Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG სრკ = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG სრკ = http://code.org/api/hour/begin_dance.png [](http://code.org/api/
 
 ## თქვენი საქმიანობის, CSEDWeek და კოდის საათის პოპულარიზაცია
 
-გთხოვთ, ხელი შეუწყოთ თქვენს საქმიანობას თქვენს ქსელში! მიმართეთ მათ კოდის საათის გვერდზე. თქვენი მომხმარებლები ბევრად უფრო რეაგირებენ თქვენგან გაგზავნაზე თქვენი საქმიანობის შესახებ. გამოიყენეთ კოდექსის საერთაშორისო კამპანია კომპიუტერული მეცნიერების განათლების კვირეულის განმავლობაში, როგორც საბაბი, რომ წაახალისოთ მომხმარებლები, მოიწვიონ სხვები, რომ შემოგვიერთდნენ და დაგვეხმარონ უფრო მეტი სტუდენტის მიღწევაში!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - მხატვრული კოდის საათი და CSEDWeek თქვენს ვებსაიტზე. მაგ: <http://www.tynker.com/hour-of-code>
 - კოდის საათის პოპულარიზაცია სოციალური მედიის, ტრადიციული მედიის, საფოსტო სიების და ა. შ. #HourOfCode
