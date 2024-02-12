@@ -96,7 +96,7 @@ class CertificateImageTest < ActiveSupport::TestCase
     course_version = create :course_version, :with_unit
     course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
     pl_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', course_version.name)
-    assert_image pl_certificate_image, 1754, 1240, 'PNG'
+    assert_image pl_certificate_image, 2526, 1786, 'PNG'
   end
 
   def test_escape_image_magick_string
