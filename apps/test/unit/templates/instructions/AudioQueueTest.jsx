@@ -3,11 +3,9 @@ import {render} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
-import {
-  AudioQueue,
-  AudioQueueContext,
-} from '@cdo/apps/templates/instructions/AudioQueue';
+import {AudioQueueContext} from '@cdo/apps/templates/instructions/AudioQueue';
 import sinon from 'sinon';
+import {playNextAudio} from '@cdo/apps/templates/utils/audioQueueUtils';
 
 const DEFAULT_PROPS = {
   assetUrl: () => {},
@@ -38,16 +36,14 @@ describe('AudioQueue', () => {
   it('calls addToQueue for each InlineAudio rendered', () => {
     const addToQueueSpy = sinon.spy();
     render(
-      <AudioQueue>
-        <AudioQueueContext.Provider
-          value={{
-            addToQueue: addToQueueSpy,
-          }}
-        >
-          <InlineAudio {...DEFAULT_PROPS} />
-          <InlineAudio {...DEFAULT_PROPS} />
-        </AudioQueueContext.Provider>
-      </AudioQueue>
+      <AudioQueueContext.Provider
+        value={{
+          setAudioQueue: addToQueueSpy,
+        }}
+      >
+        <InlineAudio {...DEFAULT_PROPS} />
+        <InlineAudio {...DEFAULT_PROPS} />
+      </AudioQueueContext.Provider>
     );
     expect(addToQueueSpy).to.have.been.calledTwice;
   });
@@ -57,14 +53,22 @@ describe('AudioQueue', () => {
     render(
       <AudioQueueContext.Provider
         value={{
-          addToQueue: addToQueueSpy,
+          setAudioQueue: addToQueueSpy,
         }}
       >
-        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={false} />
         <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={false} />
       </AudioQueueContext.Provider>
     );
     expect(addToQueueSpy).to.not.have.been.called;
+  });
+
+  it('playNextAudio plays the next audio if the queue is not empty and not already playing', () => {
+    const playAudioMock = sinon.spy();
+    const audioQueueMock = [{playAudio: playAudioMock}];
+    const isPlayingMock = {current: false};
+
+    playNextAudio(audioQueueMock, isPlayingMock);
+    expect(playAudioMock).to.have.been.called;
   });
 });
 
