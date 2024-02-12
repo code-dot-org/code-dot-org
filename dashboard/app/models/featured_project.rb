@@ -7,6 +7,7 @@
 #  featured_at    :datetime
 #  unfeatured_at  :datetime
 #  topic          :string(255)
+#  status         :string(255)      default("saved")
 #
 # Indexes
 #

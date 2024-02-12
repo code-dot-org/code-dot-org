@@ -507,6 +507,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.datetime "featured_at"
     t.datetime "unfeatured_at"
     t.string "topic"
+    t.string "status", default: "saved"
     t.index ["storage_app_id"], name: "index_featured_projects_on_storage_app_id", unique: true
     t.index ["topic"], name: "index_featured_projects_on_topic"
   end
