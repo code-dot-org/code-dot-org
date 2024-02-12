@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2024-02-08 22:25:17 UTC",
+    "serialized_at": "2024-02-09 21:35:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -122,7 +122,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "###**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>\n\n###**Content Assessment [Optional]**\n\nAfter completing the lesson, students can complete a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://www.play.juicemind.com/quizzes/vKVEHwz6lnReDoe38fE9\" target=\"_blank\">here.</a>"
+        "overview": "###**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>\n\n###**Content Assessment**\n\nAfter completing the lesson, students will complete a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://www.play.juicemind.com/quizzes/vKVEHwz6lnReDoe38fE9\" target=\"_blank\">here.</a>"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -1020,7 +1020,7 @@
       "key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8",
       "position": 2,
       "properties": {
-        "progression_name": "JuiceMind Quiz [Optional]"
+        "progression_name": "JuiceMind Quiz"
       },
       "seeding_key": {
         "activity_section.key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8",
@@ -2081,7 +2081,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "JuiceMind Quiz [Optional]"
+        "level_keys": [
+          "course_c_maker_juicemind_content_assessment_beginner"
+        ],
+        "progression": "JuiceMind Quiz"
       },
       "bonus": false,
       "seeding_key": {

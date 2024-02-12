@@ -20,23 +20,33 @@ markdown <<MARKDOWN
 
 ## ASCII
 
-#### There are lots of possible binary systems for representing the letters in binary information, but the most popular is called **ASCII**. You can see the way patterns of "ons" and "offs" represent each letter in the table below. *Click on the image below to enlarge*.
-<a href="https://images.code.org/46bf51bbe0b24191f3e79454f3b5a23d-image-1651785040312.10.29 PM.png" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/46bf51bbe0b24191f3e79454f3b5a23d-image-1651785040312.10.29 PM.png" style="width:500px; margin-top:0px; margin-bottom:25px; margin-left:200px;"></a>
+#### There are lots of possible binary systems for representing the letters in binary information, but the most popular is called **ASCII**. You can see the way patterns of "ons" and "offs" represent each letter in the table below.
 
+##### Click on the image below to enlarge.
+<a href="https://images.code.org/46bf51bbe0b24191f3e79454f3b5a23d-image-1651785040312.10.29 PM.png" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/46bf51bbe0b24191f3e79454f3b5a23d-image-1651785040312.10.29 PM.png" style="width:500px; margin-top:0px; margin-bottom:25px; margin-left:200px;" alt="A key to show the user how to convert from a series of orange and black dots to regular text."></a>
+
+
+#### Want to practice decoding? Click on the dropdowns below to test yourself.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">✍🏼 Practice decoding an ASCII message</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">✍🏼 Practice Decoding an ASCII Message</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:100px;">
-    <p>
-<img src="https://images.code.org/05b226b17c5c167b96fb529006840b33-image-1651785337954.13.10 PM.png" style="width:700px; float:left; margin-left:10px; margin-bottom:25px;">
-</p></div></details>
+
+    
+#### Use the key above to decode the message below. Each letter will correspond to seven dots. There are seven letters total in the answer.
+
+<br>
+
+<img src="https://images.code.org/05b226b17c5c167b96fb529006840b33-image-1651785337954.13.10 PM.png" style="width:900px; margin-left:10px; margin-bottom:25px;" alt="An image using a series of dots to represent letters.">
+
+</div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">✔️ Check Your Answer</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p>
 
-#### Answer to practice: **CSROCKS**
+#### **Answer**: CSROCKS
 
 #### How did you do?
 </p>
