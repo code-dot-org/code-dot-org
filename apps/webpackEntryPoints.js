@@ -185,6 +185,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
   'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
+  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
 
   // hourofcode.com
   'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
