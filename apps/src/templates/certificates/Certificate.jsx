@@ -101,9 +101,13 @@ function Certificate(props) {
     return `/certificates/${encoded}`;
   };
 
-  const getExternalCertificateSharePath = () => {
-    return `${window.location.origin}${getCertificateSharePath()}`;
+  const getFullPath = relativeUrl => {
+    return `${window.location.origin}${relativeUrl}`;
   };
+
+  /*const getExternalCertificateSharePath = () => {
+    return `${window.location.origin}${getCertificateSharePath()}`;
+  };*/
 
   const {
     responsiveSize,
@@ -114,6 +118,7 @@ function Certificate(props) {
     children,
     initialCertificateImageUrl,
     isHocTutorial,
+    tutorialUrl,
   } = props;
 
   const personalizedCertificate = getCertificateImagePath();
@@ -121,7 +126,7 @@ function Certificate(props) {
     ? personalizedCertificate
     : initialCertificateImageUrl;
   const certificateShareLink = getCertificateSharePath();
-  const externalCertificateShareLink = getExternalCertificateSharePath();
+  const externalCertificateShareLink = getFullPath(certificateShareLink);
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -142,6 +147,9 @@ function Certificate(props) {
 
   const linkedin = queryString.stringify({
     url: externalCertificateShareLink,
+    text: `I completed Code.org's self-paced professional learning at ${getFullPath(
+      tutorialUrl
+    )}`,
   });
 
   const print = getPrintPath();
@@ -218,7 +226,7 @@ function Certificate(props) {
             linkedin={linkedin}
             print={print}
             under13={under13}
-            isPlCourse={false}
+            isPlCourse={true}
           />
         </div>
       </div>
@@ -237,6 +245,7 @@ Certificate.propTypes = {
   children: PropTypes.node,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
+  tutorialUrl: PropTypes.string,
 };
 
 export default connect(state => ({

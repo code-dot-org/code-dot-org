@@ -28,6 +28,7 @@ $(document).ready(function () {
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
   const certificateImageUrl = congratsData.certificate_image_url;
   const isHocTutorial = congratsData.is_hoc_tutorial;
+  const tutorialUrl = congratsData.tutorial_url;
 
   let certificateId = '';
   let tutorial = '';
@@ -48,6 +49,7 @@ $(document).ready(function () {
       <Congrats
         certificateId={certificateId}
         tutorial={tutorial}
+        tutorialUrl={tutorialUrl}
         userType={userType}
         under13={under13}
         language={language}

@@ -173,6 +173,7 @@ export default function Congrats(props) {
       <div className={style.certificateContainer}>
         <Certificate
           tutorial={tutorial}
+          tutorialUrl={props.tutorialUrl}
           certificateId={certificateId}
           randomDonorTwitter={randomDonorTwitter}
           randomDonorName={randomDonorName}
@@ -299,6 +300,7 @@ export default function Congrats(props) {
 Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
+  tutorialUrl: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
