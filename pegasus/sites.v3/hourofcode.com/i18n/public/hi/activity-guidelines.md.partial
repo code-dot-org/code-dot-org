@@ -116,23 +116,23 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
         * सबमिट की गई गतिविधि का प्रतिनिधित्व करने वाले प्राथमिक संपर्क का नाम और ईमेल
         * गतिविधि का नाम (नाम में “ऑवर ऑफ़ कोड” शामिल नहीं किया जा सकता)
         * गतिविधि के लिए URL लिंक
-        * क्या इस गतिविधि में AI शामिल है: हाँ या नहीं
-        * गतिविधि का विवरण (अधिकतम वर्ण संख्या: 400) 
-            * कृपया विवरण में शामिल करें कि क्या यह मुख्य रूप से छात्र-निर्देशित है या शिक्षक-सुविधा वाला है। इसके अतिरिक्त, कुछ स्कूल यह जानने में रुचि रखते हैं कि ऑवर ऑफ़ कोड गतिविधियाँ कॉमन कोर या अगली पीढ़ी के विज्ञान मानकों को संबोधित करती हैं या नहीं। यदि गतिविधि विशिष्ट मानकों को संबोधित करती है, तो इस जानकारी को शामिल करने पर विचार करें।
-        * इच्छित यूज़र के लिए अनुशंसित ग्रेड स्तर। आप ग्रेड-उपयुक्त कंप्यूटर विज्ञान अवधारणाओं के लिए \[कंप्यूटर साइंस टीचर्स एसोसिएशन के K-12 मानक\] (https://k12cs.org/framework-statements-by-grade-band/) का उल्लेख कर सकते हैं। उदाहरण ग्रेड स्तरों में शामिल हैं: 
-            * बालवाड़ी - ग्रेड 1 (उम्र 4-6)
-            * ग्रेड 2-5 (उम्र 7-10)
-            * ग्रेड 6-8 (उम्र 11-13)
-            * ग्रेड 9+ (उम्र 14+)
-        * प्रोग्रामिंग भाषाओं की एक सूची जो आपकी गतिविधि सिखाती है। यानी सी/सी ++, जावा, जावास्क्रिप्ट, आदि। या भाषा स्वतंत्र (पाठ योजनाओं के लिए जिन्हें कई भाषाओं में पढ़ाया जा सकता है) भाषा कला चुनें।
-        * समर्थित प्राकृतिक भाषाओं की सूची। ध्यान दें: भाषा का पता लगाना गतिविधि प्रदाता की ज़िम्मेदारी है; हम सभी यूज़र को दिए गए एकल URL पर रीडायरेक्ट करेंगे। या भाषा स्वतंत्र (पाठ योजनाओं के लिए जिन्हें कई भाषाओं में पढ़ाया जा सकता है)
+        * Does this activity include AI: Yes or No
+        * An activity description (max character count: 400) 
+            * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+        * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+            * Kindergarten - Grade 1 (ages 4-6)
+            * Grades 2-5 (ages 7-10)
+            * Grades 6-8 (ages 11-13)
+            * Grades 9+ (ages 14+)
+        * प्रोग्रामिंग भाषाओं की एक सूची जो आपकी गतिविधि सिखाती है। यानी सी/सी ++, जावा, जावास्क्रिप्ट, आदि। या भाषा स्वतंत्र (पाठ योजनाओं के लिए जिन्हें कई भाषाओं में पढ़ाया जा सकता है) choose language arts.
+        * समर्थित प्राकृतिक भाषाओं की सूची। ध्यान दें: भाषा का पता लगाना गतिविधि प्रदाता की ज़िम्मेदारी है; हम सभी यूज़र को दिए गए एकल URL पर रीडायरेक्ट करेंगे। or language independent (for lesson plans that can be taught in multiple languages)
         * एक शिक्षक को आपकी गतिविधि का उपयोग करने के लिए किस स्तर का अनुभव होना चाहिए? (उदाहरण के लिए शुरुआती या आरामदायक।) और, छात्रों के पास किस स्तर का अनुभव होना चाहिए?
-        * एक शिक्षक को आपकी गतिविधि का उपयोग करने के लिए किस स्तर का अनुभव होना चाहिए? (उदाहरण के लिए शुरुआती या आरामदायक।) और, छात्रों के पास किस स्तर का अनुभव होना चाहिए? यदि आप अधिक उन्नत ऑवर ऑफ़ कोड™ गतिविधियाँ तैयार करना चाहते हैं, तो कृपया अपनी गतिविधि के विवरण में आवश्यक पूर्व ज्ञान शामिल करें।
-        * आपकी गतिविधि की अवधि 
-            * केवल 1 घंटा
-            * फॉलो-ऑन कोर्स के साथ 1 घंटा
-            * 2-6 घंटे (कई पाठ हो सकते हैं)
-        * एक्सेसिबिलिटी आवास की एक सूची, यदि आपकी गतिविधि में वे हैं। इनमें स्क्रीन रीडर संगतता, टेक्स्ट-टू-स्पीच क्षमताएं, उच्च-विपरीत रंगों का उपयोग, या विकलांग शिक्षार्थियों के लिए बनाया गया कोई अन्य आवास शामिल है।
+        * What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+        * The length of your activity 
+            * 1 hour only
+            * 1 hour with follow-on course
+            * 2-6 hours (can be multiple lessons)
+        * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
         
         #### पाठ योजनाएँ सबमिट करते समय आपको अतिरिक्त चीज़ों की आवश्यकता होगी
         
@@ -185,7 +185,7 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
         
         कंप्यूटर विज्ञान शिक्षकों की एक विविध समिति गुणात्मक और मात्रात्मक मानदंडों के आधार पर सबमिशन रैंक करेगी। बुनियादी मानदंडों को पूरा करने वाली सभी गतिविधियों को सूचीबद्ध किया जाएगा।
         
-        पारंपरिक कोडिंग गतिविधियों के लिए, कंप्यूटर विज्ञान शिक्षकों की एक विविध समिति गुणात्मक और मात्रात्मक मानदंडों के आधार पर सबमिशन को रैंक करेगी। बुनियादी मानदंडों को पूरा करने वाली सभी गतिविधियों को सूचीबद्ध किया जाएगा। शिक्षक अपनी कक्षा के लिए सर्वोत्तम गतिविधियों को खोजने के लिए फ़िल्टर और सॉर्ट करने में सक्षम होंगे।
+        For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
         
         यदि समीक्षा समिति कम प्रतिनिधित्व वाले समूहों में सीखने को बढ़ावा देने (जातिवादी/सेक्सिस्ट सामग्री के कारण), शैक्षिक मूल्य में (सीएस अवधारणाओं को नहीं सिखाती है), या मज़ेदार (छात्रों के लिए काम करने में मुश्किल/हतोत्साहित करने के कारण), गतिविधि को सूचीबद्ध नहीं किया जाएगा।
         
@@ -203,13 +203,13 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
         - किसी साइन अप की आवश्यकता नहीं है
         - किसी भुगतान की आवश्यकता नहीं है (रोबोटिक्स गतिविधियों को छोड़कर इसके लिए रोबोट/किट खरीद की आवश्यकता हो सकती है)
         
-        नए शिक्षकों और छात्रों के लिए स्व-निर्देशित गतिविधियों के लिए समीक्षा समिति इस बात की तलाश करेगी कि क्या:
+        For self-directed activities for new teachers and students the review committee will be looking for whether:
         
         - शिक्षक कंप्यूटर विज्ञान में बिना किसी पृष्ठभूमि के ट्यूटोरियल या गतिविधि का उपयोग कर सकते हैं
         - कंप्यूटर विज्ञान में बिना किसी पृष्ठभूमि के छात्र सफल हो सकते हैं
         - छात्र माता-पिता या शिक्षक के मार्गदर्शन के बिना ट्यूटोरियल के माध्यम से खुद को निर्देशित कर सकते हैं
         
-        शिक्षक और छात्र ग्रेड, अनुभव स्तर, विषय, हार्डवेयर आदि जैसे फ़िल्टर के आधार पर हमारी गतिविधियों की सूची को खोज और फ़िल्टर करने में सक्षम होंगे। डिफ़ॉल्ट रूप से, हम पहले पाठ योजनाएँ और गतिविधियाँ दिखाएँगे कि:
+        Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
         
         - समीक्षा समिति से उच्चतम रेटिंग प्राप्त करें
         - क्या एक घंटे की स्व-निर्देशित गतिविधियाँ शुरुआती (छात्रों और शिक्षकों) के लिए डिज़ाइन की गई हैं
@@ -226,7 +226,7 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
         
         ## एक घंटे के सेल्फ गाइडेड ट्यूटोरियल्स डिजाइन करने के सुझाव
         
-        गतिविधियों में AI को शामिल करने की आवश्यकता नहीं है, हालांकि हम अधिक AI से संबंधित गतिविधियों की पेशकश करना चाहते हैं।
+        Activities do not have to include AI, though we are looking to offer more AI related activities.
         
         **शिक्षक नोट्स शामिल करें।** अधिकांश गतिविधियों को छात्रों द्वारा निर्देशित किया जाना चाहिए, लेकिन यदि कोई गतिविधि एक शिक्षक द्वारा सुगम या प्रबंधित की जाती है, तो कृपया अपनी गतिविधि के साथ सबमिट किए गए एक अलग URL पर शिक्षक-नोट्स के रूप में शिक्षक के लिए स्पष्ट और सरल निर्देश शामिल करें। न केवल छात्र नौसिखिए हैं, कुछ शिक्षक भी हैं। इस तरह की जानकारी शामिल करें:
         
@@ -239,15 +239,15 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
         - क्या आप पेयर प्रोग्रामिंग की सलाह देते हैं?
         - कक्षा में उपयोग के लिए विचार? उदाहरण के लिए, यदि वीडियो हैं, तो शिक्षकों को पूरी कक्षा को एक साथ देखने के लिए अनुमानित स्क्रीन पर वीडियो दिखाने की सलाह दें
         
-        **गतिविधि के अंत में फ़ीडबैक शामिल करें।** (उदाहरण के लिए, “आपने 10 स्तर पूरे किए और लूप के बारे में सीखा! बढ़िया काम!”)
+        **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
         
-        **छात्रों को सोशल मीडिया पर पोस्ट करने के लिए प्रोत्साहित करें (जहां उपयुक्त हो) जब वे काम पूरा कर लें।** उदाहरण के लिए “मैंने ________ के साथ एक घंटे का कोड किया है क्या आपने? #HourOfCode” या “मैंने #CSEdWeek के एक भाग के रूप में #HourOfCode किया है। क्या आपके पास है? @Scratch.” हैशटैग **#HourOfCode** (बड़े अक्षरों H, O, C के साथ) का उपयोग करें
+        **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
         
-        **स्पेनिश या अंग्रेजी के अलावा अन्य भाषाओं में अपनी गतिविधि बनाएं।**
+        **Create your activity in Spanish or in other languages besides English.**
         
-        **गतिविधि को सामाजिक रूप से महत्वपूर्ण संदर्भ में समझाएं या उससे कनेक्ट करें।** कंप्यूटर प्रोग्रामिंग एक महाशक्ति बन जाती है जब छात्र देखते हैं कि यह दुनिया को बेहतर के लिए कैसे बदल सकता है!
+        **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
         
-        **सुनिश्चित करें कि आपके ट्यूटोरियल का उपयोग [पेयर प्रोग्रामिंग](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) प्रतिमान में किया जा सकता है।** यह ऑवर ऑफ़ कोड के लिए विशेष रूप से उपयोगी है क्योंकि कई कक्षाओं में सभी छात्रों के लिए 1:1 हार्डवेयर नहीं होता है।
+        **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
         
         [**शीर्ष पर वापस जाएं**](#top)
         
@@ -258,7 +258,7 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
         
         ## ट्रेडमार्क दिशानिर्देश
         
-        ऑवर ऑफ़ कोड® और होरा डेल कोडिगो® Code.org के पंजीकृत ट्रेडमार्क हैं। हमारे कई ट्यूटोरियल पार्टनर ने ऑवर ऑफ़ कोड गतिविधियों के संबंध में अपनी वेब साइटों पर हमारे “ऑवर ऑफ़ कोड” ट्रेडमार्क का उपयोग किया है। हम इस उपयोग को रोकना नहीं चाहते हैं, लेकिन हम यह सुनिश्चित करना चाहते हैं कि उपयोग कुछ सीमाओं के भीतर हो:
+        Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
         
         1. ऑवर ऑफ़ कोड अभियान के संदर्भ में केवल गैर-वाणिज्यिक सीएस शिक्षा गतिविधियों के संबंध में “ऑवर ऑफ़ कोड” का उपयोग करें, और किसी अन्य उद्देश्य के लिए नहीं।
         2. “ऑवर ऑफ़ कोड” के किसी भी संदर्भ का उपयोग इस तरह से किया जाना चाहिए, जो यह सुझाव नहीं देता है कि यह आपका अपना ब्रांड नाम है, बल्कि यह ऑवर ऑफ़ कोड को जमीनी स्तर पर आंदोलन के रूप में संदर्भित करता है। अच्छा उदाहरण: “AcmeCorp.com पर ऑवर ऑफ़ कोड® में भाग लें"। खराब उदाहरण: “ACME Corp द्वारा ऑवर ऑफ़ कोड आज़माएं"।
@@ -278,15 +278,15 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
             
             ## ट्रैकिंग पिक्सेल
             
-            यदि आपका ट्यूटोरियल स्वीकृत है और उसे अंतिम ट्यूटोरियल पेज पर शामिल किया गया है, तो Code.org आपको अपने ट्यूटोरियल में एकीकृत करने के लिए एक अद्वितीय ट्रैकिंग पिक्सेल प्रदान करेगा। नीचे उदाहरण देखें। अपने ट्यूटोरियल के किसी भी अंतरिम पेज पर शामिल न करें।
+            यदि आपका ट्यूटोरियल स्वीकृत है और उसे अंतिम ट्यूटोरियल पेज पर शामिल किया गया है, तो Code.org आपको अपने ट्यूटोरियल में एकीकृत करने के लिए एक अद्वितीय ट्रैकिंग पिक्सेल प्रदान करेगा। नीचे उदाहरण देखें। Do not include on any interim pages of your tutorial.
             
-            यह हमें उन यूज़र को गिनने की अनुमति देगा जो आपका ऑवर ऑफ़ कोड ट्यूटोरियल करते हैं। इससे आपके ट्यूटोरियल के लिए अधिक सटीक सहभागिता की गणना हो जाएगी।
+            This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
             
-            यदि आपका ट्यूटोरियल स्वीकृत है और उसे अंतिम ट्यूटोरियल पेज पर शामिल किया गया है, तो Code.org आपको अपने ट्यूटोरियल में एकीकृत करने के लिए एक अद्वितीय ट्रैकिंग पिक्सेल प्रदान करेगा। नीचे उदाहरण देखें।
+            If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
             
-            नोट: इंस्टॉल करने योग्य ऐप्स (iOS/Android ऐप्स, या डेस्कटॉप-इंस्टॉल ऐप्स) के लिए ऐसा करना महत्वपूर्ण नहीं है
+            NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
             
-            डांस पार्टी के लिए ट्रैकिंग पिक्सल का उदाहरण:
+            Example tracking pixels for Dance Party:
             
             आईएमजी एसआरसी = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
             
@@ -300,7 +300,7 @@ Code.org Code.org और ऑवर ऑफ़ कोड वेबसाइटों 
             
             ## अपनी गतिविधियों का प्रचार करना, CSEDWeek, और ऑवर ऑफ़ कोड
             
-            कृपया अपने नेटवर्क पर अपनी गतिविधि का प्रचार करें! उन्हें अपने ऑवर ऑफ़ कोड पेज पर निर्देशित करें। आपके उपयोगकर्ताओं द्वारा आपकी गतिविधि के बारे में आपके द्वारा की गई मेलिंग पर प्रतिक्रिया करने की अधिक संभावना है। कंप्यूटर साइंस एजुकेशन वीक के दौरान उपयोगकर्ताओं को दूसरों को इसमें शामिल होने के लिए आमंत्रित करने के लिए प्रोत्साहित करने और अधिक छात्रों तक पहुंचने में हमारी मदद करने के लिए एक बहाने के रूप में अंतर्राष्ट्रीय ऑवर ऑफ कोड अभियान का उपयोग करें!
+            Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
             
             - अपनी वेबसाइट पर ऑवर ऑफ़ कोड और CSEDWeek की सुविधा दें। उदाहरण: <http://www.tynker.com/hour-of-code>
             - हैशटैग #HourOfCode (बड़े अक्षरों H, O, C के साथ) का उपयोग करके सोशल मीडिया, पारंपरिक मीडिया, मेलिंग सूचियों आदि का उपयोग करके ऑवर ऑफ़ कोड को बढ़ावा दें

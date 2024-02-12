@@ -107,17 +107,17 @@ Czego będziesz potrzebować:
 * Czy ta aktywność obejmuje sztuczną inteligencję: Tak czy Nie
 * Opis aktywności (maksymalna liczba znaków: 400) 
     * W opisie prosimy podać, czy jest to prowadzone głównie przez uczniów, czy przez nauczyciela. Dodatkowo, niektóre szkoły są zainteresowane, czy aktywnosci Godziny Kodowania dotyczą standardów Common Core czy Next Generation Science Standards. Jeśli aktywność dotyczy określonych standardów, rozważ włączenie tej informacji.
-* Zalecany poziom(-y) nauczania dla przewidzianych użytkowników. Możesz odwołać się do \[Standardów K-12 Stowarzyszenia Nauczycieli Informatyki\] (https://k12cs.org/framework-statements-by-grade-band/), aby zapoznać się z koncepcjami informatyki odpowiednimi dla danej klasy. Przykładowe poziomy klas obejmują: 
+* Zalecany poziom(-y) nauczania dla przewidzianych użytkowników. Możesz odwołać się do \[Standardów K-12 Stowarzyszenia Nauczycieli Informatyki\] (https://k12cs.org/framework-statements-by-grade-band/), aby zapoznać się z koncepcjami informatyki odpowiednimi dla danej klasy. Example grade levels include: 
     * Przedszkole - klasa 1 (w wieku 4-6 lat)
     * Klasy 2-5 (w wieku 7-10 lat)
     * Klasy 6-8 (w wieku 11-13 lat)
     * Klasy 9+ (wiek 14+)
-* Lista obszarów tematycznych, które obejmuje Twoja aktywność (oprócz informatyki). Na przykład, jeśli nauczyciel matematyki może wykorzystać Twoją aktywność do nauczania o kątach lub parabolach, wymień jako matematykę. Jeśli masz szaloną aktywność, która uczy czasowników/rzeczowników/itp., to wybierz zajęcia językowe.
+* Lista obszarów tematycznych, które obejmuje Twoja aktywność (oprócz informatyki). Na przykład, jeśli nauczyciel matematyki może wykorzystać Twoją aktywność do nauczania o kątach lub parabolach, wymień jako matematykę. Jeśli masz szaloną aktywność, która uczy czasowników/rzeczowników/itp., choose language arts.
 * Lista języków programowania, których uczy Twoja aktywność. np. C/C ++, Java, JavaScript itp. lub aktywność jest niezależna od języka (dla planów lekcji, które mogą być nauczane w wielu językach)
 * Lista obsługiwanych języków naturalnych. Uwaga: Wykrywanie języka jest obowiązkiem dostawcy aktywności; przekierujemy wszystkich użytkowników na podany pojedynczy adres URL.
 * Jaki poziom doświadczenia powinien mieć nauczyciel, aby wykorzystać Twoją aktywność? (np. początkujący lub podstawowy.) Jaki poziom doświadczenia powinni mieć uczniowie? Jeśli chcesz przygotować bardziej zaawansowane aktywności Godziny Kodowania, dołącz do opisu swojej aktywności opis niezbędnej wiedzy.
 * Długość Twojej aktywności 
-    * Tylko 1 godzina
+    * 1 hour only
     * 1 godzina z kontynuacją kursu
     * 2-6 godzin (może być wiele lekcji)
 * Lista obiektów przystosowanych dla osób niepełnosprawnych, jeśli masz je w Twojej aktywności. Należą do nich kompatybilność z czytnikiem ekranu, funkcje zamiany tekstu na mowę, użycie kolorów o wysokim kontraście lub wszelkie inne udogodnienia przeznaczone dla osób niepełnosprawnych.
@@ -223,7 +223,7 @@ Możesz umieścić logo [Godziny Kodowania](https://hourofcode.com/us/promote/re
 
 **Uwzględnij informację zwrotną na końcu aktywności.** (Np. „Ukończyłeś 10 poziomów i nauczyłeś się o pętlach! Świetna robota!”)
 
-**Zachęcaj uczniów do zamieszczania informacji w mediach społecznościowych (w zależności od okoliczności), gdy ukończą.** Na przykład: "Zaliczyłem Godzinę Kodowania z ________ A Ty? #HourOfCode” lub „Wykonałem #HourOfCode jako część #CSEdWeek. A Ty? @Scratch.” Użyj hasztaga **#HourOfCode** (z wielkimi literami H, O, C)
+**Zachęcaj uczniów do zamieszczania informacji w mediach społecznościowych (w zależności od okoliczności), gdy ukończą.** Na przykład: "Zaliczyłem Godzinę Kodowania z ________ A Ty? #HourOfCode” lub „Wykonałem #HourOfCode jako część #CSEdWeek. Have you? @Scratch.” Użyj hasztaga **#HourOfCode** (z wielkimi literami H, O, C)
 
 **Stwórz swoją aktywność w języku hiszpańskim lub w innych językach oprócz angielskiego.**
 
@@ -257,7 +257,7 @@ Aby dokładniej śledzić uczestnictwo, prosimy każdego partnera samouczka o um
 
 Pozwoli nam to policzyć użytkowników, którzy wykonują Twój samouczek. Umożliwi to dokładniejsze obliczenie uczestnictwa w Twoim samouczku.
 
-Jeśli Twój samouczek zostanie zatwierdzony i zawarty na ostatniej stronie samouczka, Code.org zapewni Ci unikalny piksel śledzenia, który możesz zintegrować z samouczkiem. Zobacz poniższy przykład.
+Jeśli Twój samouczek zostanie zatwierdzony i zawarty na ostatniej stronie samouczka, Code.org zapewni Ci unikalny piksel śledzenia, który możesz zintegrować z samouczkiem. See example below.
 
 UWAGA: nie jest to ważne w przypadku aplikacji do zainstalowania (aplikacji iOS/Android lub aplikacji instalowanych na komputerze)
 

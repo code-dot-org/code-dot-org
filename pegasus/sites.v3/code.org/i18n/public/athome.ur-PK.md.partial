@@ -155,7 +155,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="پری ریڈر ایکسپریس کورس"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">پری ریڈرز کے لیے ایکسپریس کورس</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="پری ریڈر ایکسپریس کورس"></a><br>پری ریڈرز کے لئے <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">ایکسپریس کورس</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -222,7 +222,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ایپ لیب</h3></a>
     <p style="color:#ffffff">ایپ لیب ایک پروگرامنگ ماحول ہے جہاں آپ سادہ ایپس بنا سکتے ہیں۔. ایک ایپ ڈیزائن کریں، اس کے کام کرنے کے لیے بلاکس یا جاوا اسکرپٹ کے ساتھ کوڈ کریں، پھر سیکنڈوں میں اپنی ایپ کا اشتراک کریں۔.</p>
@@ -231,7 +231,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">کھیل لیب</h3></a>
     <p style="color:#ffffff">گیم لیب ایک پروگرامنگ ماحول ہے جہاں آپ ایک دوسرے کے ساتھ تعامل کرنے والی اشیاء اور کرداروں کے ساتھ سادہ اینیمیشن اور گیمز بنا سکتے ہیں۔.</p>
@@ -241,7 +241,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ویب لیب</h3></a>
     <p style="color:#ffffff">ویب لیب ایک پروگرامنگ ماحول ہے جہاں آپ HTML اور CSS کا استعمال کرتے ہوئے سادہ ویب صفحات بنا سکتے ہیں۔. اپنے ویب صفحات ڈیزائن کریں اور سیکنڈوں میں اپنی سائٹ کا اشتراک کریں۔.</p>

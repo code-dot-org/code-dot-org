@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
+import CopyButton from './copyButton';
 
 /**
  * Renders the AI Tutor user chat message editor component.
@@ -42,6 +43,7 @@ const UserChatMessageEditor = () => {
         color={Button.ButtonColor.brandSecondaryDefault}
         disabled={isWaitingForChatResponse}
       />
+      <CopyButton />
     </div>
   );
 };

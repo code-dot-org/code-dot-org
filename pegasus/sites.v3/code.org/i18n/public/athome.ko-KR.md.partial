@@ -160,7 +160,7 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="프리리더 속성 코스"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">프리리더용 속성 코스</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="프리리더 속성 코스"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">사전 독자를 위한 익스프레스 코스</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -230,7 +230,7 @@ target="_blank"><button>모듈 체험하기</button></a>
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">앱 랩</h3></a>
     <p style="color:#ffffff">앱 랩은 간단한 앱을 만들어볼 수 있는 프로그래밍 환경입니다. 앱을 디자인하고 블록이나 JavaScript로 코드를 작성해 작동하게 한 다음 수 초 만에 앱을 공유하세요.</p>
@@ -239,7 +239,7 @@ target="_blank"><button>모듈 체험하기</button></a>
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">게임 랩</h3></a>
     <p style="color:#ffffff">게임 랩은 서로 상호작용하는 캐릭터와 물체를 가지고 간단한 애니메이션과 게임을 만들어볼 수 있는 프로그래밍 환경입니다.</p>
@@ -249,7 +249,7 @@ target="_blank"><button>모듈 체험하기</button></a>
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">웹 랩</h3></a>
     <p style="color:#ffffff">웹 랩은 HTML과 CSS를 활용해 간단한 웹 페이지를 만들어볼 수 있는 프로그래밍 환경입니다. 웹 페이지를 디자인하고 수 초 만에 사이트를 공유하세요.</p>

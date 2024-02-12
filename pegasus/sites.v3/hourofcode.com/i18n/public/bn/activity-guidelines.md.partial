@@ -1,5 +1,5 @@
 ---
-title: কার্যকলাপ নির্দেশিকা
+title: Activity Guidelines
 layout: wide
 ---
 
@@ -110,23 +110,23 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
     * জমা দেওয়া কার্যকলাপের প্রতিনিধিত্বকারী প্রাথমিক যোগাযোগের নাম এবং ইমেল
     * কার্যকলাপের নাম (নামের মধ্যে “কোড ঘন্টা” অন্তর্ভুক্ত করা যাবে না)
     * অ্যাক্টিভিটির সাথে URL লিংক
-    * এই কার্যকলাপ এআই অন্তর্ভুক্ত: হ্যাঁ বা না
-    * একটি ক্রিয়াকলাপের বর্ণনা (সর্বাধিক অক্ষর গণনা: 400) 
-        * এটি প্রধানত ছাত্র-পরিচালিত বা শিক্ষক-সহায়ক কিনা তা দয়া করে বিবরণে অন্তর্ভুক্ত করুন। উপরন্তু, কিছু স্কুল জানতে আগ্রহী যে আওয়ার অফ কোড কার্যক্রমগুলি কমন কোর বা নেক্সট জেনারেশন সায়েন্স স্ট্যান্ডার্ডগুলি মোকাবেলা করে কিনা। কার্যকলাপ নির্দিষ্ট মান ঠিকানা যদি, এই তথ্য সহ বিবেচনা।
-    * অভিপ্রেত ব্যবহারকারীদের জন্য প্রস্তাবিত গ্রেড স্তর (গুলি)। আপনি গ্রেড-উপযুক্ত কম্পিউটার বিজ্ঞান ধারণার জন্য \[কম্পিউটার বিজ্ঞান শিক্ষক সমিতির কে-১২ স্ট্যান্ডার্ডস\] (https://k12cs.org/framework-statements-by-grade-band/) উল্লেখ করতে পারেন। উদাহরণ গ্রেড মাত্রা অন্তর্ভুক্ত: 
-        * কিন্ডারগার্টেন - গ্রেড 1 (বয়স 4-6)
-        * গ্রেড 2-5 (বয়স 7-10)
-        * গ্রেড 6-8 (বয়স 11-13)
-        * গ্রেড 9+ (বয়স 14+)
-    * আপনার কার্যকলাপ শেখায় প্রোগ্রামিং ভাষার একটি তালিকা। অর্থাৎ সি/সি++, জাভা, জাভাস্ক্রিপ্ট ইত্যাদি। বা ভাষা স্বাধীন (একাধিক ভাষায় শেখানো যেতে পারে এমন পাঠ পরিকল্পনার জন্য) ভাষা আর্টস নির্বাচন করুন।
-    * সমর্থিত প্রাকৃতিক ভাষাসমূহের একটি তালিকা। দ্রষ্টব্য: ভাষা সনাক্তকরণ কার্যকলাপ প্রদানকারীর দায়িত্ব; আমরা সমস্ত ব্যবহারকারীকে প্রদত্ত একক URL এ পুনঃনির্দেশিত করব। বা ভাষা স্বাধীন (একাধিক ভাষায় শেখানো যেতে পারে এমন পাঠ পরিকল্পনার জন্য)
+    * Does this activity include AI: Yes or No
+    * An activity description (max character count: 400) 
+        * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+        * Kindergarten - Grade 1 (ages 4-6)
+        * Grades 2-5 (ages 7-10)
+        * Grades 6-8 (ages 11-13)
+        * Grades 9+ (ages 14+)
+    * আপনার কার্যকলাপ শেখায় প্রোগ্রামিং ভাষার একটি তালিকা। অর্থাৎ সি/সি++, জাভা, জাভাস্ক্রিপ্ট ইত্যাদি। বা ভাষা স্বাধীন (একাধিক ভাষায় শেখানো যেতে পারে এমন পাঠ পরিকল্পনার জন্য) choose language arts.
+    * সমর্থিত প্রাকৃতিক ভাষাসমূহের একটি তালিকা। দ্রষ্টব্য: ভাষা সনাক্তকরণ কার্যকলাপ প্রদানকারীর দায়িত্ব; আমরা সমস্ত ব্যবহারকারীকে প্রদত্ত একক URL এ পুনঃনির্দেশিত করব। or language independent (for lesson plans that can be taught in multiple languages)
     * একটি শিক্ষাবিদ আপনার কার্যকলাপ ব্যবহার করতে হবে অভিজ্ঞতা কি স্তরের উচিত? (উদাঃ শিক্ষানবিস বা আরামদায়ক।) এবং, শিক্ষার্থীদের অভিজ্ঞতা কি স্তরের উচিত?
-    * একটি শিক্ষাবিদ আপনার কার্যকলাপ ব্যবহার করতে হবে অভিজ্ঞতা কি স্তরের উচিত? (উদাঃ শিক্ষানবিস বা আরামদায়ক।) এবং, শিক্ষার্থীদের অভিজ্ঞতা কি স্তরের উচিত? আপনি যদি আরও উন্নত ঘন্টা Code™ ক্রিয়াকলাপ প্রস্তুত করতে চান, অনুগ্রহ করে আপনার কার্যকলাপের বর্ণনায় প্রয়োজনীয় জ্ঞান অন্তর্ভুক্ত করুন।
-    * আপনার কার্যকলাপের দৈর্ঘ্য 
-        * মাত্র ১ ঘন্টা
-        * ফলো-অন কোর্সের সাথে 1 ঘন্টা
-        * 2-6 ঘন্টা (একাধিক পাঠ হতে পারে)
-    * অ্যাক্সেসযোগ্যতার আবাসনের একটি তালিকা, আপনার কার্যকলাপ তাদের আছে যদি। এর মধ্যে রয়েছে স্ক্রিন রিডার সামঞ্জস্যতা, টেক্সট-টু-স্পিচ ক্ষমতা, উচ্চ-বৈসাদৃশ্য রঙের ব্যবহার, অথবা প্রতিবন্ধী শিক্ষার্থীদের জন্য তৈরি অন্য কোনও থাকার ব্যবস্থা।
+    * What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+    * The length of your activity 
+        * 1 hour only
+        * 1 hour with follow-on course
+        * 2-6 hours (can be multiple lessons)
+    * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
     
     #### পাঠ পরিকল্পনাগুলি জমা দেওয়ার সময় আপনার অতিরিক্ত জিনিসগুলি প্রয়োজন
     
@@ -145,7 +145,7 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
             * আইওএস মোবাইল সাফারি (মোবাইল-অপ্টিমাইজড)
             * অ্যান্ড্রয়েড ক্রোম (মোবাইল-অপ্টিমাইজড)
         * নন ওয়েব ভিত্তিক: নেটিভ কোডের জন্য প্ল্যাটফর্ম নির্দিষ্ট করুন (ম্যাক, উইন, আইওএস, অ্যান্ড্রয়েড, এক্সবক্স, অন্যান্য)
-        * সংযুক্ত নয় এমন
+        * Unplugged
     * আওয়ার অফ কোড অ্যাক্টিভিটির স্ক্রিনশট বা বিপণন চিত্র। অনুগ্রহ করে ৪:৩ মাত্রা সহ অন্তত একটি ছবি পাঠান। এটি 390px দ্বারা কমপক্ষে 520px হওয়া উচিত। ইংরেজী ভাষাভাষীদের জন্য এটি আরও অ্যাক্সেসযোগ্য করার জন্য এই ছবিতে (আপনার লোগো ছাড়া অন্য) কোন লেখা থাকবে না। যদি কোনও উপযুক্ত ছবি সরবরাহ না করা হয় তবে আমরা আপনার টিউটোরিয়ালের নিজস্ব স্ক্রিনশট নিতে পারি অথবা আমরা এটি তালিকাভুক্ত না করার জন্য বেছে নিতে পারি। সমস্ত ছবি একটি .jpg, .jpeg, বা .png এ একটি URL লিঙ্ক হিসাবে জমা দিতে হবে।
     * আরও সঠিকভাবে অংশগ্রহণ ট্র্যাক করার জন্য, তৃতীয় পক্ষের টিউটোরিয়াল অংশীদারদের তাদের আওয়ার অফ কোড টিউটোরিয়ালের প্রথম পৃষ্ঠায় 1-পিক্সেল ট্র্যাকিং চিত্র অন্তর্ভুক্ত করতে হবে। আরো বিস্তারিত জানার জন্য নীচের [ট্র্যাকিং পিক্সেল](#pixel) বিভাগটি দেখুন।
     * আপনার কার্যকলাপ শেষ করার পরে, ব্যবহারকারীদের [code.org/api/hr/finish](https://code.org/api/hour/finish) এ নির্দেশ করা উচিত যেখানে তারা এটি করতে সক্ষম হবে: 
@@ -179,7 +179,7 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
     
     কম্পিউটার বিজ্ঞান শিক্ষাবিদদের একটি বিচিত্র কমিটি গুণগত এবং পরিমাণগত মানদণ্ডের উপর ভিত্তি করে জমা দিবে। মৌলিক মানদণ্ডের মাপসই সমস্ত কার্যক্রম তালিকাভুক্ত করা হবে।
     
-    প্রথাগত কোডিং কার্যক্রমের জন্য কম্পিউটার বিজ্ঞান শিক্ষাবিদদের একটি বিচিত্র কমিটি গুণগত ও পরিমাণগত মানদণ্ডের উপর ভিত্তি করে সাবমিশন পদে রাখবে। মৌলিক মানদণ্ডের মাপসই সমস্ত কার্যক্রম তালিকাভুক্ত করা হবে। শিক্ষকরা তাদের শ্রেণীকক্ষের জন্য সর্বোত্তম কার্যক্রমগুলি খুঁজে বের করতে এবং ফিল্টার করতে সক্ষম হবে।
+    For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
     
     পর্যালোচনা কমিটি যদি উত্পাদনের গুণগত মান (খারাপ বাগ বা নির্দেশাবলীর কারণে যা এটি ব্যবহার করা খুব কঠিন করে তোলে) কার্যকলাপকে শূন্য করে, অনুন্নত গোষ্ঠীতে শেখার প্রচারের জন্য (বর্ণবাদ/যৌনতাবাদী উপাদানগুলির কারণে), শিক্ষাগত মূল্য (সিএস ধারণা শেখায় না), বা মজা/আকর্ষক (ছাত্রদের মাধ্যমে কাজ করার জন্য কঠিন/নিরুৎসাহিত হওয়ার কারণে), কার্যকলাপটি তালিকাভুক্ত করা হবে না।
     
@@ -197,13 +197,13 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
     - কোনো সাইন-আপ প্রয়োজন নেই
     - কোন পেমেন্ট প্রয়োজন (রোবোটিক্স কার্যক্রম ব্যতিক্রম এই রোবট/কিট ক্রয় প্রয়োজন হতে পারে)
     
-    নতুন শিক্ষক এবং ছাত্রদের জন্য স্ব-পরিচালিত কার্যক্রমের জন্য পর্যালোচনা কমিটি অনুসন্ধান করবে কিনা:
+    For self-directed activities for new teachers and students the review committee will be looking for whether:
     
     - শিক্ষক টিউটোরিয়াল বা কার্যকলাপ কম্পিউটার বিজ্ঞান কোন ব্যাকগ্রাউন্ড ছাড়া ব্যবহার করতে পারেন
     - কম্পিউটার বিজ্ঞানে কোন পটভূমি না থাকায় শিক্ষার্থীরা সফল হতে পারে
     - শিক্ষার্থীরা পিতামাতার বা শিক্ষকের নির্দেশিকা ছাড়াই টিউটোরিয়ালের মাধ্যমে নিজেদেরকে নির্দেশ করতে পারে।
     
-    শিক্ষক এবং শিক্ষার্থীরা ফিল্টার যেমন গ্রেড, অভিজ্ঞতা স্তর, বিষয়, হার্ডওয়্যার ইত্যাদি উপর ভিত্তি করে আমাদের কার্যকলাপের তালিকা অনুসন্ধান এবং ফিল্টার করতে সক্ষম হবে। ডিফল্টরূপে, আমরা প্রথমে পাঠ পরিকল্পনা এবং ক্রিয়াকলাপগুলি দেখাব যা:
+    Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
     
     - পর্যালোচনা কমিটি থেকে সর্বোচ্চ রেটিং পান
     - শুরু করার জন্য ডিজাইন করা এক ঘন্টা স্ব-পরিচালিত কার্যক্রম (ছাত্র এবং শিক্ষক)
@@ -220,7 +220,7 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
     
     ## এক ঘন্টা স্ব নির্দেশিত টিউটোরিয়াল ডিজাইন করার জন্য পরামর্শ
     
-    ক্রিয়াকলাপগুলি এআই অন্তর্ভুক্ত করতে হবে না, যদিও আমরা আরও এআই সম্পর্কিত কার্যক্রমগুলি অফার করতে চাই।
+    Activities do not have to include AI, though we are looking to offer more AI related activities.
     
     **শিক্ষকের নোট অন্তর্ভুক্ত করুন।** বেশিরভাগ কার্যক্রম শিক্ষার্থী-পরিচালিত হওয়া উচিত, কিন্তু যদি কোনও কার্যকলাপ একজন শিক্ষক দ্বারা পরিচালিত বা পরিচালিত হয়, তবে দয়া করে আপনার কার্যকলাপের সাথে জমা দেওয়া একটি পৃথক URL এ শিক্ষক-নোটের আকারে শিক্ষকের জন্য স্পষ্ট এবং সহজ নির্দেশাবলী অন্তর্ভুক্ত করুন। শুধু ছাত্র novices হয় না, শিক্ষক কিছু হিসাবে ভাল হয়। তথ্য অন্তর্ভুক্ত করুন যেমন:
     
@@ -233,13 +233,13 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
     - আপনি জুড়ি প্রোগ্রামিং সুপারিশ করবেন?
     - একটি শ্রেণীকক্ষে ব্যবহারের জন্য বিবেচ্য বিষয়? যেমন, যদি ভিডিও থাকে, তাহলে শিক্ষকদের উপদেশ দিন যেন তারা পুরো শ্রেণীকক্ষে একসাথে দেখার জন্য একটি প্রজেক্টেড স্ক্রিনে ভিডিও দেখান।
     
-    **ক্রিয়াকলাপের শেষে প্রতিক্রিয়া অন্তর্ভুক্ত করুন।** (যেমন “আপনি 10 মাত্রা সমাপ্ত এবং loops সম্পর্কে শিখেছি! দুর্দান্ত কাজ!”)
+    **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
     
-    **শিক্ষার্থীদের সামাজিক মিডিয়াতে পোস্ট করার জন্য উত্সাহিত করুন (যেখানে উপযুক্ত) সমাপ্ত হলে।** । উদাহরণস্বরূপ “আমি সঙ্গে কোড একটি ঘন্টা সম্পন্ন করেছি ________ আপনি আছে? #HourOfCode "বা “আমি #CSEdWeek এর একটি অংশ হিসাবে #HourOfCode করেছি। আপনি কি? @Scratch.” হ্যাশট্যাগ **#HourOfCode ব্যবহার করুন** (মূলধন অক্ষর এইচ, ও, সি সহ)
+    **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” হ্যাশট্যাগ **#HourOfCode ব্যবহার করুন** (মূলধন অক্ষর এইচ, ও, সি সহ)
     
-    **স্প্যানিশ বা ইংরেজি ছাড়াও অন্যান্য ভাষায় আপনার কার্যকলাপ তৈরি করুন।**
+    **Create your activity in Spanish or in other languages besides English.**
     
-    **একটি সামাজিকভাবে গুরুত্বপূর্ণ প্রেক্ষাপটে কার্যকলাপকে ব্যাখ্যা বা সংযুক্ত করুন।** কম্পিউটার প্রোগ্রামিং একটি মহাশক্তি হয়ে ওঠে যখন শিক্ষার্থীরা দেখতে পায় যে এটি কীভাবে বিশ্বকে আরও ভালোভাবে পরিবর্তন করতে পারে!
+    **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
     
     **নিশ্চিত করুন যে আপনার টিউটোরিয়ালটি একটি [পেয়ার প্রোগ্রামিং](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) দৃষ্টান্তে ব্যবহার করা যেতে পারে।** এটি আওয়ার অফ কোডের জন্য বিশেষভাবে উপযোগী কারণ অনেক শ্রেণীকক্ষে সকল শিক্ষার্থীর জন্য ১:১ হার্ডওয়্যার নেই।
     
@@ -252,7 +252,7 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
     
     ## ট্রেডমার্ক নির্দেশিকা
     
-    ঘন্টা অফ কোড® এবং হোরা ডেল কোডিগো® Code.org এর নিবন্ধিত ট্রেডমার্ক। আমাদের অনেক টিউটোরিয়াল অংশীদার তাদের আওয়ার অফ কোড কার্যক্রমের সাথে তাদের ওয়েব সাইটে আমাদের “আওয়ার অফ কোড” ট্রেডমার্ক ব্যবহার করেছেন। আমরা এই ব্যবহার প্রতিরোধ করতে চাই না, তবে আমরা নিশ্চিত করতে চাই যে ব্যবহার কয়েকটি সীমার মধ্যে পড়ে:
+    Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
     
     1. “আওয়ার অফ কোড” ব্যবহার করুন শুধুমাত্র অবাণিজ্যিক সি এস শিক্ষা কার্যক্রমের সাথে সম্পর্কিত আওয়ার অফ কোড প্রচারাভিযানের প্রেক্ষাপটে, এবং অন্য কোন উদ্দেশ্যেই।
     2. “আওয়ার অফ কোড” এর যে কোন তথ্যসূত্র এমন একটি প্রসঙ্গে ব্যবহার করা উচিত যা এটি আপনার নিজের ব্র্যান্ড নাম বলে মনে করে না, বরং এটি আওয়ার অফ কোডকে তৃণমূল পর্যায়ের আন্দোলন হিসেবে উল্লেখ করে। ভাল উদাহরণ: “Acmecorp.com এ কোড® ঘন্টা অংশগ্রহণ করুন"। খারাপ উদাহরণ: “ACME কর্পোরেশন দ্বারা কোড ঘন্টা চেষ্টা করুন"।
@@ -272,15 +272,15 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
         
         ## ট্র্যাকিং পিক্সেল
         
-        আপনার টিউটোরিয়ালটি অনুমোদিত এবং চূড়ান্ত টিউটোরিয়াল পৃষ্ঠাতে অন্তর্ভুক্ত করা হলে, Code.org আপনাকে আপনার টিউটোরিয়ালে একত্রিত করার জন্য একটি অনন্য ট্র্যাকিং পিক্সেল সরবরাহ করবে। নীচের উদাহরণ দেখুন। আপনার টিউটোরিয়ালের কোন অন্তর্বর্তীকালীন পৃষ্ঠাগুলিতে অন্তর্ভুক্ত করবেন না।
+        আপনার টিউটোরিয়ালটি অনুমোদিত এবং চূড়ান্ত টিউটোরিয়াল পৃষ্ঠাতে অন্তর্ভুক্ত করা হলে, Code.org আপনাকে আপনার টিউটোরিয়ালে একত্রিত করার জন্য একটি অনন্য ট্র্যাকিং পিক্সেল সরবরাহ করবে। নীচের উদাহরণ দেখুন। Do not include on any interim pages of your tutorial.
         
-        এটি আমাদের ব্যবহারকারীদের গণনা করতে সাহায্য করবে যারা আপনার আওয়ার অফ কোড টিউটোরিয়াল করে। এটি আপনার টিউটোরিয়াল জন্য আরো সঠিক অংশগ্রহণ সংখ্যা হতে হবে।
+        This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
         
-        আপনার টিউটোরিয়ালটি অনুমোদিত এবং চূড়ান্ত টিউটোরিয়াল পৃষ্ঠাতে অন্তর্ভুক্ত করা হলে, Code.org আপনাকে আপনার টিউটোরিয়ালে একত্রিত করার জন্য একটি অনন্য ট্র্যাকিং পিক্সেল সরবরাহ করবে। নীচের উদাহরণ দেখুন।
+        If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
         
-        দ্রষ্টব্য: ইনস্টলযোগ্য অ্যাপ্লিকেশনের জন্য এটি করা গুরুত্বপূর্ণ নয় (iOS/Android অ্যাপ, অথবা ডেস্কটপ-ইন্সটল অ্যাপস)
+        NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
         
-        ড্যান্স পার্টির জন্য উদাহরণ ট্র্যাকিং পিক্সেল:
+        Example tracking pixels for Dance Party:
         
         আইএমজি এসআরসি = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
         
@@ -294,7 +294,7 @@ Code.org এবং Hour Oour OUR OUR OUR Code™ এর কার্যক্র
         
         ## আপনার কার্যক্রম, CSedWeek, এবং কোড ঘন্টা প্রচার
         
-        অনুগ্রহ করে আপনার নেটওয়ার্কে আপনার কার্যকলাপকে প্রচার করুন! সেগুলিকে আপনার আওয়ার অফ কোড পৃষ্ঠাতে নির্দেশ করুন। আপনার ব্যবহারকারীদের আপনার কার্যকলাপ সম্পর্কে আপনার কাছ থেকে একটি মেইলিং প্রতিক্রিয়া করার সম্ভাবনা বেশি। কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহের সময় আন্তর্জাতিক আওয়ার অফ কোড প্রচারাভিযানের একটি অজুহাত হিসেবে ব্যবহার করুন যাতে ব্যবহারকারীরা অন্যদের সাথে যোগ দিতে আমন্ত্রণ জানাতে এবং আরও বেশি শিক্ষার্থীদের কাছে পৌঁছাতে সহায়তা করে।
+        Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
         
         - ফিচার আওয়ার অফ কোড এবং সিএসডউইক আপনার ওয়েবসাইটে। প্রাক্তন: <http://www.tynker.com/hour-of-code>
         - হ্যাশট্যাগ #HourOfCode (মূলধন অক্ষর এইচ, ও, সি সহ) ব্যবহার করে সোশ্যাল মিডিয়া, ঐতিহ্যগত মিডিয়া, মেইলিং লিস্ট ইত্যাদি ব্যবহার করে আওয়ার অফ কোড প্রচার করুন
