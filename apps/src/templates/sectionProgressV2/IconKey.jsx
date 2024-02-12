@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import color from '@cdo/apps/util/color';
 import LevelTypesBox from './LevelTypesBox';
 import TeacherActionsBox from './TeacherActionsBox';
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
+import styles from './progress-table-legend.module.scss';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '../FontAwesome';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,16 +34,17 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const clickListener = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Button
-        id="icon-key"
-        style={styles.label}
-        styleAsText
-        icon={caret(isOpen)}
-        onClick={clickListener}
-      >
-        {i18n.iconKey()}
-      </Button>
+    <div
+      className={styles.iconKey}
+      aria-expanded={isOpen}
+      aria-label={i18n.iconKey()}
+    >
+      <div onClick={clickListener} className={styles.iconKeyTitle}>
+        <Heading6>
+          <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
+          {i18n.iconKey()}
+        </Heading6>
+      </div>
       {isOpen && sectionContent()}
     </div>
   );
@@ -51,14 +53,4 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
 IconKey.propTypes = {
   isViewingValidatedLevel: PropTypes.bool,
   expandedLessonIds: PropTypes.array,
-};
-
-const styles = {
-  label: {
-    fontFamily: 'Metropolis',
-    color: color.light_gray_900,
-    fontSize: '16px',
-    fontWeight: '600',
-    lineHeight: '148%',
-  },
 };

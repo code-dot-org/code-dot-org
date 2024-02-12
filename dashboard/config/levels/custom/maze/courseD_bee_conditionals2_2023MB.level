@@ -1,5 +1,6 @@
 <Karel>
   <config><![CDATA[{
+  "published": true,
   "game_id": 25,
   "created_at": "2024-01-29T22:23:16.000Z",
   "level_num": "custom",
@@ -32,7 +33,7 @@
     "fast_get_nectar_animation": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"4_5_Bee_Conditionals_2_1\",\r\n  \"callout_text\": \"Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.\",\r\n  \"element_id\": \"#atFlower\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": -10,\r\n     \"y\": 7\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":2,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":2,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "long_instructions": "More clouds! \r\n\r\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \r\n\r\nRemember: Not all clouds hide the same thing!",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nLet’s practice using conditionals with Bee. Follow the directions below to get started coding. As you code, think about which blocks are the conditionals. How do you know they are conditionals? \r\n</p>\r\n</div>\r\n\r\n<br>\r\nMore clouds! \r\n\r\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar *once*.  \r\n\r\nRemember: Not all clouds hide the same thing!",
     "step_speed": "1",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.\",\"hint_id\":\"courseD_bee_conditionals2_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/30edff9a21a32880b13361b7c53df0ab/courseD_bee_conditionals2_2019.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.\",\"hint_id\":\"courseD_bee_conditionals2_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/539806714a528acd7715e8f23e178022/courseD_bee_conditionals2_2019.mp3\"}]",
     "instructions_important": "false",
@@ -49,9 +50,10 @@
     "mini_rubric": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-29T22:23:16.873+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_conditionals2_2023\\\"\"],\"cloned_from\":\"courseD_bee_conditionals2_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-29T22:23:16.873+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_conditionals2_2023\\\"\"],\"cloned_from\":\"courseD_bee_conditionals2_2023\"},{\"changed_at\":\"2024-02-10 00:05:12 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
