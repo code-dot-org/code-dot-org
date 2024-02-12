@@ -4,7 +4,16 @@ import {
 } from './curriculumRecommenderConstants';
 import moment from 'moment';
 
-// [TODO]: Add general comment on how these recommendations work and where the edges of this black box are (i.e. filters before, returns array)
+const now = moment().utc();
+const oneYearAgo = moment()
+  .utc()
+  .year(now.year() - 1);
+const twoYearsAgo = moment()
+  .utc()
+  .year(now.year() - 2);
+
+  // [TODO]: Add general comment on how these recommendations work and where the edges of this black box are (i.e. filters before, returns array)
+
 
 export const getTestRecommendations = (
   curricula,
@@ -16,21 +25,23 @@ export const getTestRecommendations = (
   const curriculaScores = [];
   curricula.forEach(curriculum => {
     let score = 0;
-    score += hasAnySchoolSubject(FAKE_RECOMMENDER_SCORING, curriculum);
-    score += hasDesiredSchoolSubjects(
-      FAKE_RECOMMENDER_SCORING,
-      curriculum,
-      schoolSubjects
-    );
-    score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
-    score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
     score += hasDesiredDuration(FAKE_RECOMMENDER_SCORING, curriculum, duration);
     score += hasDesiredMarketingInitiative(
       FAKE_RECOMMENDER_SCORING,
       curriculum,
       marketingInitiative
     );
-    score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
+
+    // score += hasAnySchoolSubject(FAKE_RECOMMENDER_SCORING, curriculum);
+    // score += hasDesiredSchoolSubjects(
+    //   FAKE_RECOMMENDER_SCORING,
+    //   curriculum,
+    //   schoolSubjects
+    // );
+    // score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
+    // score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
+    
+    // score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
   });
 
@@ -38,6 +49,23 @@ export const getTestRecommendations = (
   console.log(test);
 
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
+};
+
+const hasDesiredDuration = (scoring_framework, curriculum, duration) => {
+  return duration && curriculum.duration === duration
+    ? scoring_framework['hasDesiredDuration']
+    : 0;
+};
+
+const hasDesiredMarketingInitiative = (
+  scoring_framework,
+  curriculum,
+  marketingInitiative
+) => {
+  return marketingInitiative &&
+    curriculum.marketing_initiative === marketingInitiative
+    ? scoring_framework['hasDesiredMarketingInitiative']
+    : 0;
 };
 
 const hasAnySchoolSubject = (scoring_framework, curriculum) => {
@@ -92,33 +120,15 @@ const hasDesiredTopics = (scoring_framework, curriculum, csTopics) => {
   return total ? total : 0;
 };
 
-const hasDesiredDuration = (scoring_framework, curriculum, duration) => {
-  return curriculum.duration === duration
-    ? scoring_framework['hasDesiredDuration']
-    : 0;
-};
-
-const hasDesiredMarketingInitiative = (
-  scoring_framework,
-  curriculum,
-  marketingInitiative
-) => {
-  return curriculum.marketing_initiative === marketingInitiative
-    ? scoring_framework['hasDesiredMarketingInitiative']
-    : 0;
-};
-
 const howRecentlyPublished = (scoring_framework, curriculum) => {
-  // const oneYearAgo = Date.now();
-  // oneYearAgo.setFullYear(oneYearAgo.getYear() - 1);
-  //const publishedDate = new Date(curriculum.published_date);
-
   const publishedDate = moment.utc(curriculum.published_date);
 
-  // console.log(twoYearsAgo);
-  // console.log(oneYearAgo);
-  console.log(publishedDate);
-
+  if (oneYearAgo <= publishedDate) {
+    return scoring_framework['publishedWithinOneYearAgo'];
+  }
+  if (twoYearsAgo <= publishedDate) {
+    return scoring_framework['publishedWithinTwoYearsAgo'];
+  }
   return 0;
 };
 
