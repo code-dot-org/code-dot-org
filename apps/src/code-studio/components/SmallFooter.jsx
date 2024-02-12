@@ -224,7 +224,10 @@ export default class SmallFooter extends React.Component {
           {this.renderCopyright()}
           {!!this.props.unitYear && yearIsNumeric && (
             <p style={styles.version}>
-              {i18n.version()}: {this.props.unitYear}
+              <span className="version-caption">
+                {i18n.version()}:{' '}
+              </span>
+              {this.props.unitYear}
             </p>
           )}
           {this.renderMoreMenuButton()}
