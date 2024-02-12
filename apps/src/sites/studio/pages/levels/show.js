@@ -59,6 +59,7 @@ function initPage() {
 
   if (hasScriptData('script[data-aitutorleveldata]')) {
     const aiTutorLevelData = getScriptData('aitutorleveldata');
+    console.log("aiTutorLevelData", aiTutorLevelData)
     const aiTutorFabMountPoint = document.getElementById(
       'ai-tutor-fab-mount-point'
     );
