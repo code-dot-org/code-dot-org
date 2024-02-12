@@ -32,7 +32,7 @@ export const behaviorCallerGetDefMixin = function () {
         if (hiddenWorkspace) {
           const definitionBlock = hiddenWorkspace
             .getTopBlocks()
-            .filter(block => (block.type = BLOCK_TYPES.behaviorDefinition))
+            .filter(block => block.type === BLOCK_TYPES.behaviorDefinition)
             .find(block => block.behaviorId === this.behaviorId);
           if (definitionBlock) {
             model = definitionBlock.getProcedureModel();
