@@ -38,7 +38,8 @@ const availableCallouts: {
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'toolbox-second-block': {
-    selector: '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(3)',
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(3)',
   },
 };
 
