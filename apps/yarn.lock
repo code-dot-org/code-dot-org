@@ -8384,6 +8384,7 @@ __metadata:
     usb: ^2.8.1
     video.js: 7.6.6
     vmsg: ^0.3.6
+    w3c-css-validator: ^1.3.2
     web-streams-polyfill: ^3.1.0
     webpack: ^5.74.0
     webpack-bundle-analyzer: ^4.4.2
@@ -29573,6 +29574,13 @@ temporal@latest:
   version: 2.0.1
   resolution: "void-elements@npm:2.0.1"
   checksum: 700c07ba9cfa2dff88bb23974b3173118f9ad8107143db9e5d753552be15cf93380954d4e7f7d7bc80e7306c35c3a7fb83ab0ce4d4dcc18abf90ca8b31452126
+  languageName: node
+  linkType: hard
+
+"w3c-css-validator@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "w3c-css-validator@npm:1.3.2"
+  checksum: 2dcbdc121c4580362197c93100559076cd41f5e80681350437e18cebda124969d8d2ddb867241bcef1b30336deaeac0a9afcf28b45ec2b73d4dce20b11531ae8
   languageName: node
   linkType: hard
 

@@ -1,28 +1,22 @@
-import {syntaxTree} from '@codemirror/language';
 import {linter, Diagnostic} from '@codemirror/lint';
-//import stylelint from 'stylelint-bundle';
-
-const cssRuleset = {
-  rules: {
-    'color-no-invalid-hex': true,
-  },
-};
+import cssValidator from 'w3c-css-validator';
 
 export const cssLinter = linter(async view => {
   console.log('linting?');
   const diagnostics: Diagnostic[] = [];
-  syntaxTree(view.state)
-    .cursor()
-    .iterate(node => {
-      console.log({node});
+  const docLines = view.state.doc.toString().split('\n');
+  const result = await cssValidator.validateText(view.state.doc.toString());
+  result.errors.forEach(error => {
+    let errorIndex = 0;
+    for (let i = 0; i < error.line - 1; i++) {
+      errorIndex += docLines[i].length + 1;
+    }
+    diagnostics.push({
+      from: errorIndex,
+      to: errorIndex + docLines[error.line - 1].length,
+      severity: 'error',
+      message: error.message,
     });
-  //const linterResult = CSSLint.verify(view.state.doc.toString());
-  // const linterResult = stylelint.lint({
-  //   code: view.state.doc.toString(),
-  //   config: cssRuleset,
-  //   fix: false,
-  // });
-  // console.log({linterResult});
-  console.log('linting done?');
+  });
   return diagnostics;
 });
