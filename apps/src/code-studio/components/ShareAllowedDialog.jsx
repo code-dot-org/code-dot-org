@@ -34,6 +34,7 @@ function recordShare(type, appType) {
   if (Object.prototype.hasOwnProperty.call(EVENTS, type)) {
     analyticsReporter.sendEvent(type, {
       lab_type: appType,
+      channel_id: dashboard.project && dashboard.project.getCurrentId(),
     });
   }
 }
