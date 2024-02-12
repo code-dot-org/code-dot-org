@@ -21,6 +21,10 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :allow_sending_principal_email
   )
 
+  def status
+    object.try(:status_including_enrolled)
+  end
+
   def principal_approval_state
     object.try(:principal_approval_state)
   end

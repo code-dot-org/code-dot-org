@@ -104,23 +104,23 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 * 代表提交活動的主要聯絡人姓名和電子郵件
 * 活動名稱 (名稱不能包括「一小時玩程式」)
 * 活動的 URL 連結
-* 此活動是否包括 AI：是或否
-* 活動描述（最大字符數：400） 
-    * 請在說明中包含主要是由學生指導還是由老師協助。 此外，有些學校有興趣知道一小時玩程式活動是否符合共同核心或下一代科學標準。 如果活動符合特定標準，請考慮包括此資訊。
-* 適合用戶的建議等級。 您可以參考 [計算機科學教師協會的 K-12 標準]（https://k12cs.org/framework-statements-by-grade-band/），了解適合年級的計算機科學概念。 年級等級範例包括： 
-    * 幼稚園-一年級 (4-6 歲)
-    * 二至五年級（七至十歲）
-    * 六至八年級（11 至 13 歲）
-    * 9 年級以上（14 歲以上）
-* 您的活動所教授的程式語言清單。 即 C /C ++，爪哇，JavaScript 等 或語言無關（適用於可以用多種語言教授的課程計劃） 選擇語言藝術。
-* 支援的自然語言清單。 注意：語言偵測是活動提供者的責任；我們會將所有使用者重新導向至提供的單一 URL。 或語言無關（適用於可以用多種語言教授的課程計劃）
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* 您的活動所教授的程式語言清單。 即 C /C ++，爪哇，JavaScript 等 或語言無關（適用於可以用多種語言教授的課程計劃） choose language arts.
+* 支援的自然語言清單。 注意：語言偵測是活動提供者的責任；我們會將所有使用者重新導向至提供的單一 URL。 or language independent (for lesson plans that can be taught in multiple languages)
 * 教育工作者應該使用您的活動需要多少水平的經驗？ （例如初學者或舒適。）而且，學生應該擁有什麼水平的經驗？
-* 教育工作者應該使用您的活動需要多少水平的經驗？ （例如初學者或舒適。）而且，學生應該擁有什麼水平的經驗？ 如果你想準備更進階的「一小時玩程式™」活動，請在你的活動說明中加入所需的先前知識。
-* 您的活動時間長度 
-    * 僅限 1 小時
-    * 1 小時後續課程
-    * 2-6 小時（可以是多節課）
-* 無障礙住宿清單 (如果您的活動有)。 其中包括螢幕閱讀程式相容性、文字轉語音功能、使用高對比色彩，或任何其他專為身心障礙學習者設計的調整設定。
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### 提交課程計劃時需要的其他東西
 
@@ -170,7 +170,7 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 
 計算機科學教育工作者的多元化委員會將根據定性和定量標準對提交內容進行排名。 將列出符合基本條件的所有活動。
 
-對於傳統的編碼活動，由多元化的計算機科學教育者委員會將根據定性和定量標準對提交內容進行排名。 將列出符合基本條件的所有活動。 教師將能夠進行過濾和排序，以找到適合他們課堂的最佳活動。
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 如果審查委員會將活動評價為零的生產質量（由於錯誤或使其很難使用的說明），在代表性不足的群體中促進學習（由於種族主義/性別歧視材料），教育價值（不教 CS 概念），或者有趣/參與（由於難以/阻止學生工作），該活動將不會列出。
 
@@ -188,13 +188,13 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 - 無需註冊
 - 無需付款（機器人活動除外，這些活動需要購買機器人/套件）
 
-對於新進教師和學生的自主活動，檢討委員會將尋求是否：
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - 教師可以在沒有計算機科學背景的情況下使用教程或活動
 - 學生可以在沒有計算機科學背景的情況下成功
 - 學生可以通過教程指導自己，而無需父母或老師的指導
 
-教師和學生將能夠根據年級，經驗水平，科目，硬件等過濾器搜索和過濾我們的活動列表。 默認情況下，我們將首先顯示課程計劃和活動：
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - 獲得審查委員會的最高評分
 - 為初學者（學生和教師）設計的一小時自主活動
@@ -208,7 +208,7 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 
 ## 設計一小時自助教程的建議
 
-儘管我們希望提供更多與 AI 相關的活動，但活動不一定要包括 AI。
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **包括教師筆記。** 大多數活動應以學生為導向，但如果活動由老師主持或管理，請在您的活動中提交一個單獨的 URL，以老師筆記的形式為老師提供清晰而簡單的指示。 不僅是學生的新手，還有一些老師也是如此。 包括以下資訊：
 
@@ -221,15 +221,15 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 - 你推薦結對編程嗎？
 - 在教室中使用的注意事項？ 例如，如果有視頻，建議教師在投影屏幕上顯示視頻，讓整個教室一起觀看
 
-**在活動結束時合併反饋。** （例如：「您完成了 10 個級別並了解了循環！ 偉大的工作！」）
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**鼓勵學生在完成後（在適當的情況下）張貼文章。** 例如：「我用 ________ 完成了一小時玩程式活動，你有嗎？ #HourOfCode」或「我已經做了 #HourOfCode 作為 #CSEdWeek 的一部分. 你有嗎？ @Scratch.」使用主題標籤 **#HourOfCode** （大寫字母 H，O，C）
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**使用西班牙文或英文以外的其他語言建立活動。**
+**Create your activity in Spanish or in other languages besides English.**
 
-**將活動解釋或連接到具有社會意義的背景。** 當學生看到它如何改變世界變得更美好時，計算機編程將成為一種超級大國！
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**確保您的教程可以在 [對編程](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) 範例中使用。** 這對於「一小時編程」特別有用，因為許多教室並沒有為所有學生提供 1：1 的硬件。
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**返回頁首**](#top)
 
@@ -237,7 +237,7 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 
 ## 商標準則
 
-一小時玩程式® 和霍拉德爾科迪戈® 是 Code.org 的註冊商標。 我們的許多教學合作夥伴都在他們的網站上使用我們的「一小時玩程式」商標，以配合他們的「一小時玩程式」活動。 我們不想阻止這種使用，但我們希望確保使用量在幾個限制範圍內：
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. 只能在「一小時玩程式」活動中使用「一小時玩程式」活動與非商業 CS 教育活動有關，並且不得作其他用途。
 2. 任何對「一小時玩程式」的提述都應該以不表明它是您自己的品牌名稱的方式使用，而是將「一小時玩程式」引用為基層運動。 很好的例子：「在 AcmeCorp.com 參加一小時玩程式活動」。 反例：「試試 ACME 公司的一小時玩程式」。
@@ -253,15 +253,15 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 
 ## 跟蹤像素
 
-如果您的教程獲得批准並包含在最終的教程頁面上，Code.org 將為您提供獨特的跟踪像素，供您整合到您的教程中。 請參閱下面的例子。 請勿包含在教學課程的任何臨時頁面上。
+如果您的教程獲得批准並包含在最終的教程頁面上，Code.org 將為您提供獨特的跟踪像素，供您整合到您的教程中。 請參閱下面的例子。 Do not include on any interim pages of your tutorial.
 
-這將使我們能夠統計進行您的「一小時玩程式」教程的用戶。 這將導致您的教程更準確的參與計數。
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-如果您的教程獲得批准並包含在最終的教程頁面上，Code.org 將為您提供獨特的跟踪像素，供您整合到您的教程中。 請參閱下面的例子。
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-注意：這對於可安裝的應用程序（iOS /Android 應用程序或桌面安裝應用程序）執行此操作並不重要
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-舞會跟踪像素示例：
+Example tracking pixels for Dance Party:
 
 圖格 SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ Code.org 在 Code.org 和「一小時玩程式」網站上舉辦各種各樣的�
 
 ## 推廣您的活動，CSEDWeek 和一小時玩程式
 
-請將您的活動推廣到您的網絡！ 將它們引導至您的「一小時玩程式」頁面。 您的用戶更有可能對您的活動發送的郵件做出反應。 在計算機科學教育週期間，利用國際一小時玩程式活動作為藉口，鼓勵用戶邀請其他人加入，並幫助我們接觸更多學生！
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - 功能一小時玩程式和 CSIDWeek 在您的網站上。 例如： <http://www.tynker.com/hour-of-code>
 - 使用社交媒體、傳統媒體、郵件列表等，使用主題標籤 #HourOfCode 宣傳「一小時玩程式」（大寫字母 H、O、C）

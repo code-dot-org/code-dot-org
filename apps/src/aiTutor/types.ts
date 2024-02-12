@@ -16,6 +16,12 @@ export type AITutorInteraction = {
   aiResponse: string;
 };
 
+export type Level = {
+  id: number;
+  type: string;
+  hasValidation: boolean;
+};
+
 export enum Role {
   ASSISTANT = 'assistant',
   USER = 'user',

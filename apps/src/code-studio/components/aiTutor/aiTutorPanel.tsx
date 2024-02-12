@@ -1,24 +1,29 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import {useDispatch} from 'react-redux';
-import i18n from '@cdo/locale';
+import React, {ChangeEvent, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {commonI18n} from '@cdo/apps/types/locale';
 import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
 import CompilationTutor from './compilationTutor';
 import ValidationTutor from './validationTutor';
 import GeneralChatTutor from './generalChatTutor';
-import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {
+  AITutorState,
+  addAIResponse,
+} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
-import {levelShape} from './aiTutorShapes';
 const icon = require('@cdo/static/ai-bot.png');
 
-const AITutorPanel = ({level, open}) => {
+const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const dispatch = useDispatch();
-  const isCodingLevel = level.type === 'Javalab';
   const [selected, setSelected] = useState('');
+  const level = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.level
+  );
+  const isCodingLevel = level?.type === 'Javalab';
 
   const radioButtons = [
     {
+      key: 'compilation',
       name: 'compilation',
       label: 'Code compilation',
       value: 'compilation',
@@ -26,21 +31,24 @@ const AITutorPanel = ({level, open}) => {
     },
     {
       key: 'validation',
+      name: 'validation',
       label: 'Failing tests',
       value: 'validation',
-      disabled: !level.hasValidation,
+      disabled: !level?.hasValidation,
     },
     {
       key: 'question',
+      name: 'question',
       label: 'I have a question',
       value: 'question',
       disabled: false,
     },
   ];
 
-  const onChange = event => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
     dispatch(addAIResponse(''));
-    setSelected(event.target.value);
+    setSelected(e.target.value);
   };
 
   const compilationSelected = selected === 'compilation';
@@ -54,24 +62,20 @@ const AITutorPanel = ({level, open}) => {
       })}
     >
       <h3 id="ai_tutor_panel">AI Tutor</h3>
-      <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
+      <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
       <div>
         <h4> What would you like AI Tutor to help you with?</h4>
-        <RadioButtonsGroup
-          radioButtons={radioButtons}
-          onChange={() => onChange(event)}
-        />
+        <RadioButtonsGroup radioButtons={radioButtons} onChange={onChange} />
       </div>
-      {compilationSelected && <CompilationTutor levelId={level.id} />}
-      {validationSelected && <ValidationTutor levelId={level.id} />}
+      {compilationSelected && <CompilationTutor />}
+      {validationSelected && <ValidationTutor />}
       {questionSelected && <GeneralChatTutor />}
     </div>
   );
 };
 
-AITutorPanel.propTypes = {
-  level: levelShape,
-  open: PropTypes.bool,
-};
+interface AITutorPanelProps {
+  open: boolean;
+}
 
 export default AITutorPanel;

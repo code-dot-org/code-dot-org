@@ -7,17 +7,17 @@ markdown <<MARKDOWN
 
 ## Protecting Information with Encryption
 
-##### Encrypted messages have been changed so that only some people are able to read them. We can use encryption to protect just the last row of our medical records so only a doctor can read them. In order to use encryption, we need to know the algorithm and the key.  
+#### Encrypted messages have been changed so that only some people are able to read them. We can use encryption to protect just the last row of our medical records so only a doctor can read them. In order to use encryption, we need to know the algorithm and the key.  
 
 <img src="https://images.code.org/d6dcf5508cb20a7bffa6e728b17bed7e-image-1651851267780.34.16 AM.png" style="width:850px; margin-left:40px; margin-top:0px; margin-bottom:0px;">
 
 ### **Algorithm:**	
 
-* ##### **Step 1:** Copy the encrypted message into the first row.
-* ##### **Step 2:** Copy the key into the second row, and keep repeating it until the end.
-* ##### **Step 2:** For each box in the third row: if the two boxes above it are the same (both white or both black), color it black.  Otherwise, leave it white. 
+* #### **Step 1:** Copy the encrypted message into the first row.
+* #### **Step 2:** Copy the key into the second row, and keep repeating it until the end.
+* #### **Step 2:** For each box in the third row: if the two boxes above it are the same (both white or both black), color it black.  Otherwise, leave it white. 
 
-##### This example has been started for you - finish filling in the bottom row to encrypt the medical record.
+#### This example has been started for you - finish filling in the bottom row to encrypt the medical record.
 *(Students will complete this activity using a paper activity guide. You might choose to use scratch paper to complete this practice activity.)*
 
 ![](https://images.code.org/6e30006f0e7983add7dd77d6ac14bbcb-image-1651851477237.37.41 AM.png)
@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### Use the same process above to decrypt our medical cards and view important medical information. 
+#### Use the same process above to decrypt our medical cards and view important medical information. 
 
 ### Key: 
 
