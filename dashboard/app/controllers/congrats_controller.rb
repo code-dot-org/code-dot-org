@@ -16,6 +16,9 @@ class CongratsController < ApplicationController
     end
 
     @is_hoc_tutorial = CertificateImage.hoc_course?(course_name)
+    course_version = CurriculumHelper.find_matching_course_version(course_name)
+    @is_pl_course = course_version.pl_course?
+    @is_k5_pl_course = course_version&.course_offering&.pl_for_elementary_school?
 
     @next_course_script_name = ScriptConstants.csf_next_course_recommendation(course_name)
     next_script = Unit.get_from_cache(@next_course_script_name) if @next_course_script_name

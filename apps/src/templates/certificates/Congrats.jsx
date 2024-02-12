@@ -10,6 +10,9 @@ import {
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 
+import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
+
 export default function Congrats(props) {
   /**
    * @param tutorial The specific tutorial the student completed i.e. 'dance', 'dance-2019', etc
@@ -54,6 +57,7 @@ export default function Congrats(props) {
     initialCertificateImageUrl,
     isHocTutorial,
     isPlCourse,
+    isK5PlCourse,
     nextCourseScriptName,
     nextCourseTitle,
     nextCourseDesc,
@@ -170,10 +174,10 @@ export default function Congrats(props) {
   ];
 
   const selfPacedPlLink = {
-    title: i18n.courseOfferingSelfPacedPl(),
-    description: i18n.selfPacedPlDescription(),
-    buttonText: i18n.exploreProfessionalLearning(),
-    image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+    title: i18n.congratsSelfPacedPlTitle(),
+    description: i18n.congratsSelfPacedPlDescription(),
+    buttonText: i18n.exploreSelfPacedLearning(),
+    image: selfPacedPlBanner,
     link: 'https://code.org/educate/professional-development-online',
   };
 
@@ -183,23 +187,27 @@ export default function Congrats(props) {
       description:
         i18n.learnAboutFacilitatorLeadProfessionalWorkshopsDescription(),
       buttonText: i18n.discoverFacilitatorLedWorkshops(),
-      image: 'https://code.org/images/teach-page-top.png',
+      image: facilitatorLedPlBanner,
       link: 'https://code.org/professional-development-workshops',
     },
     selfPacedPlLink,
   ];
 
-  /*const professionalLearningNextOptions612 = [
+  const professionalLearningNextOptions612 = [
     {
       title: i18n.learnAboutFacilitatorLeadProfessionalWorkshops(),
       description:
         i18n.learnAboutFacilitatorLeadProfessionalWorkshopsDescription(),
       buttonText: i18n.discoverFacilitatorLedWorkshops(),
-      image: 'https://code.org/images/teach-page-top.png',
+      image: facilitatorLedPlBanner,
       link: 'https://code.org/apply',
     },
     selfPacedPlLink,
-  ];*/
+  ];
+
+  const professionalLearningNextOptions = isK5PlCourse
+    ? professionalLearningNextOptionsK5
+    : professionalLearningNextOptions612;
 
   const renderRecommendedOptions = () => {
     if (isHocTutorial) {
@@ -309,7 +317,7 @@ export default function Congrats(props) {
           <div
             className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
           >
-            {professionalLearningNextOptionsK5.map((item, index) => (
+            {professionalLearningNextOptions.map((item, index) => (
               <div
                 className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
                 key={index}
@@ -318,7 +326,7 @@ export default function Congrats(props) {
                   <img
                     src={item.image}
                     alt=""
-                    className={style.professionalLearningImage}
+                    className={style.professionalLearningImageNoBackground}
                   />
                   <Heading3>{item.title}</Heading3>
                   <BodyTwoText>{item.description}</BodyTwoText>
@@ -378,6 +386,7 @@ Congrats.propTypes = {
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
   isPlCourse: PropTypes.bool,
+  isK5PlCourse: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
   nextCourseDesc: PropTypes.string,
