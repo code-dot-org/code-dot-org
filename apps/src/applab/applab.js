@@ -652,10 +652,14 @@ Applab.init = function (config) {
     var designModeViz = document.getElementById('designModeViz');
     designModeViz.addEventListener('click', designMode.onDesignModeVizClick);
 
-    // Mark project as changed on each update in the editor
-    // so that we can save progress before the user navigates away from the page.
-    studioApp().addChangeHandler(project.projectChanged);
-    project.registerSaveOnUnload();
+    if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
+      return;
+    } else {
+      // Mark project as changed on each update in the editor,
+      // so that we can save progress before the user navigates away from the page.
+      studioApp().addChangeHandler(project.projectChanged);
+      project.registerSaveOnUnload();
+    }
   }.bind(this);
 
   // Push initial level properties into the Redux store
