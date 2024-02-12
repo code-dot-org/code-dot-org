@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pl-team-design-guide",
-    "serialized_at": "2024-02-02 22:47:24 UTC",
+    "serialized_at": "2024-02-09 18:30:33 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -373,6 +373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Module 1 Placeholder"
+        ],
         "progression": "Module 1: Welcome "
       },
       "bonus": false,
@@ -887,6 +890,27 @@
       "level_keys": [
         "Assessment Levels"
       ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Design Guide Video"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c"
+      },
+      "level_keys": [
+        "Design Guide Video"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1183,6 +1207,18 @@
         "level.key": "Assessment Levels",
         "script_level.level_keys": [
           "Assessment Levels"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Design Guide Video",
+        "script_level.level_keys": [
+          "Design Guide Video"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
