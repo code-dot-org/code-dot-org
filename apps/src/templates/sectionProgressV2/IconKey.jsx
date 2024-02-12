@@ -10,15 +10,11 @@ import FontAwesome from '../FontAwesome';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isViewingLevelProgress, setIsViewingLevelProgress] = useState(false);
 
-  React.useEffect(() => {
-    setIsViewingLevelProgress(expandedLessonIds.length > 0);
-  }, [expandedLessonIds]);
+  const isViewingLevelProgress = expandedLessonIds.length > 0;
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
-  // TO-DO (TEACH-800): Make content responsive to view on page
   // TO-DO (TEACH-801): Fix spacing between boxes once width of the page is expanded
   const sectionContent = () => (
     <div>

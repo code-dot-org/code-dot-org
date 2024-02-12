@@ -17,8 +17,6 @@ function SectionProgressV2({
   isRefreshingProgress,
 }) {
   const [expandedLessonIds, setExpandedLessons] = React.useState([]);
-  const [isViewingValidatedLevel, setIsViewingValidatedLevel] =
-    React.useState(false);
 
   const levelDataInitialized = React.useMemo(() => {
     return unitData && !isLoadingProgress && !isRefreshingProgress;
@@ -30,17 +28,10 @@ function SectionProgressV2({
     }
   }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
 
-  React.useEffect(() => {
-    if (expandedLessonIds.length > 0) {
-      const hasValidatedLevel = unitData.lessons.some(
-        lesson =>
-          lesson.levels.some(level => level.isValidated) &&
-          expandedLessonIds.includes(lesson.id)
-      );
-      setIsViewingValidatedLevel(hasValidatedLevel);
-    } else {
-      setIsViewingValidatedLevel(false);
-    }
+  const isViewingValidatedLevel = React.useMemo(() => {
+    return unitData?.lessons
+      .filter(lesson => expandedLessonIds.includes(lesson.id))
+      .some(lesson => lesson.levels.some(level => level.isValidated));
   }, [expandedLessonIds, unitData]);
 
   return (
