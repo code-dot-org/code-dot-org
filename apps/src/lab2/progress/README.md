@@ -18,3 +18,6 @@ And here are some architectural details:
 - For now, the lab loads the progression data and passes it into `ProgressManager` when it instantiates that class. The lab also instantiates the lab-specific validator and gives it access to the components it needs to examine progress.
 
 There is a user-friendly levelbuilder UI for building these validations in a level.  Details in https://github.com/code-dot-org/code-dot-org/pull/53142.
+
+Sample level data from **Music Lab**:
+https://github.com/code-dot-org/code-dot-org/blob/1226e19496b69da1e3e9066756979220608ba272/dashboard/config/levels/custom/music/Music%20Level%202.level#L20-L37
