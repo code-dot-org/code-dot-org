@@ -5,30 +5,37 @@ class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
   S3_AI_BUCKET = 'cdo-ai'.freeze
+
+  # The path to the release directory in S3 which contains the AI rubric evaluation config.
+  # When launching AI config changes, this path should be updated to point to the new release.
+  #
+  # Basic validation of the new AI config is done by UI tests, or can be done locally
+  # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-02-07-ai-rubrics-pilot-line-annotations/'.freeze
+
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
-  # 2D Map from unit name and level name, to the name of the lesson files in S3
-  # which will be used for AI evaluation.
-  # TODO: This is a temporary solution. After the pilot, we should at least make
-  # the S3 pointer editable on levelbuilder, and eventually make all of the data
-  # it points to editable there too.
+  # 2D Map from unit name and level name, to the name of the lesson files within
+  # the release dir in S3 which will be used for AI evaluation.
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
     'csd3-2023' => {
-      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
-      'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
-      'CSD web project animated review_2023' => 'New-U3-2022-L13',
-      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
-      'CSD U3 collisions flyman bounceOff_2023' => 'New-U3-2023-L24',
-      'CSD games project review_2023' => 'U3-2023-L28',
+      'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
+      'CSD web project animated review_2023' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2023' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
+      'CSD games project review_2023' => 'csd3-2023-L28',
     },
     'allthethings' => {
-      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
+      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
     'interactive-games-animations-2023' => {
-      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
-      'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
-      'CSD web project animated review_2023' => 'New-U3-2022-L13',
-      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
+      'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
+      'CSD web project animated review_2023' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2023' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
+      'CSD games project review_2023' => 'csd3-2023-L28',
     }
   }
 
@@ -291,12 +298,17 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def read_file_from_s3(lesson_s3_name, key_suffix)
-    key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
-    s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
+    key = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/#{key_suffix}"
+    if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
+      puts "Note: Reading AI prompt from local file: #{key}"
+      File.read(File.join("local-aws", S3_AI_BUCKET, key))
+    else
+      s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
+    end
   end
 
   private def read_examples(lesson_s3_name)
-    prefix = "teaching_assistant/lessons/#{lesson_s3_name}/examples/"
+    prefix = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/examples/"
     response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
     file_names = response.contents.map(&:key)
     file_names = file_names.map {|name| name.gsub(prefix, '')}
@@ -321,6 +333,22 @@ class EvaluateRubricJob < ApplicationJob
       'examples' => examples.to_json,
       'api-key' => CDO.openai_evaluate_rubric_api_key,
     )
+  end
+
+  def validate_ai_config
+    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
+    code = 'hello world'
+    lesson_s3_names.each do |lesson_s3_name|
+      validate_ai_config_for_lesson(lesson_s3_name, code)
+    end
+  end
+
+  def validate_ai_config_for_lesson(lesson_s3_name, code)
+    # this step should raise an error if any essential config files are missing
+    # from the S3 release directory
+    get_openai_params(lesson_s3_name, code)
+  rescue Aws::S3::Errors::NoSuchKey => exception
+    raise "Error validating AI config for lesson #{lesson_s3_name}: #{e.message}\n request params: #{exception.context.params.to_h}"
   end
 
   private def get_openai_evaluations(openai_params)
@@ -393,6 +421,7 @@ class EvaluateRubricJob < ApplicationJob
           rubric_ai_evaluation_id: rubric_ai_evaluation.id,
           understanding: understanding_s_to_i(label),
           ai_confidence: ai_evaluation['Confidence'],
+          observations: ai_evaluation['Observations'] || '',
         )
       end
 

@@ -614,7 +614,7 @@ en:
     student: 'Student'
     teacher: 'Teacher'
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thanks: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, and our video cast for their support in creating Code Studio.'
     help_from_html: 'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.'
     help_from_html_old: 'Engineers from Amazon, Google, and Microsoft helped create these materials.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. All Rights Reserved.'
@@ -1423,13 +1423,13 @@ en:
       exists_header: "Looks like you're are already registered!"
       form_header: "Register Your LMS with Code.org"
       form_instructions: "Please use this form to register your Learning Management System (LMS) with Code.org. This will allow you to install our LTI integration on your LMS."
-      form_instructions_2: "Full guides for obtaining your LMS Client ID, using LMS/LTI integrations, and our list of supported Learning Management Systems <a href='https://code.org/contact'>can be found here.</a>"
-      form_instructions_3: "Not seeing your LMS in our list, or running into issues with your installation? Check out our <a href=''>guides</a>, or <a href='https://code.org/contact'>contact us</a> for additional help"
-      guide_instructions: "Full guides for installing and our LTI integration <a href=''>can be found here.</a> Running into issues? Feel free to <a href=''>contact us</a> for additional support."
+      form_instructions_2: "Full guides for obtaining your LMS Client ID, using LMS/LTI integrations, and our list of supported Learning Management Systems [can be found here](%{install_instructions})."
+      form_instructions_3: "Not seeing your LMS in our list, or running into issues with your installation? Check out our [guides](%{lms_guides}), or [contact us](%{contact_us}) for additional help"
+      guide_instructions: "Full guides for installing and our LTI integration [can be found here](%{lms_guides}). Running into issues? Feel free to [contact us](%{contact_us}) for additional support."
       mailer_confirmation_subject: "Code.org has completed your LMS registration request"
       mailer_confirmation_body: "Great news! We’ve registered your LMS with Code.org. You should now be able to use our Code.org LMS integrations. Please feel free to review & share our [LMS integration guides](%{integration_guide_url}), or browse our [course offerings](%{course_offering_url})."
       mailer_confirmation_signature: "Thank you, and welcome!"
-      privacy_policy: "Your privacy is of utmost importance to us. Your personal information will not be used for any marketing purposes. Please see our <a href='https://code.org/contact'>Privacy Policy here</a> for more information."
+      privacy_policy: "Your privacy is of utmost importance to us. Your personal information will not be used for any marketing purposes. Please see our [Privacy Policy here](%{privacy_policy}) for more information."
       success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"

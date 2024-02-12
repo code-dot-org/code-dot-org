@@ -1,30 +1,29 @@
 import React, {ChangeEvent, useState} from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
 import CompilationTutor from './compilationTutor';
 import ValidationTutor from './validationTutor';
 import GeneralChatTutor from './generalChatTutor';
-import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {
+  AITutorState,
+  addAIResponse,
+} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
-import {Level} from '@cdo/apps/aiTutor/types';
 const icon = require('@cdo/static/ai-bot.png');
 
 interface AITutorPanelProps {
-  level: Level;
   open: boolean;
-  scriptId: number;
 }
 
-const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({
-  level,
-  scriptId,
-  open,
-}) => {
+const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const dispatch = useDispatch();
-  const isCodingLevel = level.type === 'Javalab';
   const [selected, setSelected] = useState('');
+  const level = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.level
+  );
+  const isCodingLevel = level?.type === 'Javalab';
 
   const radioButtons = [
     {
@@ -39,7 +38,7 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({
       name: 'validation',
       label: 'Failing tests',
       value: 'validation',
-      disabled: !level.hasValidation,
+      disabled: !level?.hasValidation,
     },
     {
       key: 'question',
@@ -72,29 +71,15 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({
         <h4> What would you like AI Tutor to help you with?</h4>
         <RadioButtonsGroup radioButtons={radioButtons} onChange={onChange} />
       </div>
-      {compilationSelected && (
-        <CompilationTutor
-          levelId={level.id}
-          isProjectBacked={level.isProjectBacked}
-          scriptId={scriptId}
-        />
-      )}
-      {validationSelected && (
-        <ValidationTutor
-          levelId={level.id}
-          isProjectBacked={level.isProjectBacked}
-          scriptId={scriptId}
-        />
-      )}
-      {questionSelected && (
-        <GeneralChatTutor
-          levelId={level.id}
-          isProjectBacked={level.isProjectBacked}
-          scriptId={scriptId}
-        />
-      )}
+      {compilationSelected && <CompilationTutor />}
+      {validationSelected && <ValidationTutor />}
+      {questionSelected && <GeneralChatTutor />}
     </div>
   );
 };
+
+interface AITutorPanelProps {
+  open: boolean;
+}
 
 export default AITutorPanel;

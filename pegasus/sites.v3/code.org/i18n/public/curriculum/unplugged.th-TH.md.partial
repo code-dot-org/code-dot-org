@@ -46,7 +46,7 @@ th, td {
 }
 #t04 {
   width: 10%;
-  background-color: #00adbc;
+  background-color: var(--brand_primary_default);
 }
 #t05 {
   width: 10%;

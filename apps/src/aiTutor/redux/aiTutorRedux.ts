@@ -8,6 +8,7 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
   level: Level | undefined;
+  scriptId: number | undefined;
   // State for compilation and validation.
   aiResponse: string | undefined;
   isWaitingForAIResponse: boolean;
@@ -28,6 +29,7 @@ const initialChatMessages: ChatCompletionMessage[] = [
 
 const initialState: AITutorState = {
   level: undefined,
+  scriptId: undefined,
   aiResponse: '',
   isWaitingForAIResponse: false,
   chatMessages: initialChatMessages,
@@ -38,7 +40,7 @@ const initialState: AITutorState = {
 export interface ChatContext {
   levelId?: number;
   scriptId?: number;
-  isProjectBacked: boolean;
+  isProjectBacked?: boolean;
   systemPrompt: string;
   studentCode: string;
   tutorType: TutorTypes;
@@ -47,7 +49,7 @@ export interface ChatContext {
 interface GeneralChatContext {
   levelId?: number;
   scriptId?: number;
-  isProjectBacked: boolean;
+  isProjectBacked?: boolean;
   message: string;
 }
 
@@ -163,6 +165,9 @@ const aiTutorSlice = createSlice({
     setLevel: (state, action: PayloadAction<Level | undefined>) => {
       state.level = action.payload;
     },
+    setScriptId: (state, action: PayloadAction<number | undefined>) => {
+      state.scriptId = action.payload;
+    },
     setIsWaitingForAIResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForAIResponse = action.payload;
     },
@@ -214,6 +219,7 @@ const aiTutorSlice = createSlice({
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
   setLevel,
+  setScriptId,
   addAIResponse,
   addChatMessage,
   clearChatMessages,

@@ -6,6 +6,7 @@ import PanelContainer from '../PanelContainer';
 import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
 import {darkMode} from './editorThemes';
+import {autocompletion} from '@codemirror/autocomplete';
 
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
@@ -37,6 +38,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       ...editorConfig,
       darkMode,
       onEditorUpdate,
+      autocompletion(),
       ...editorConfigExtensions,
     ];
     new EditorView({

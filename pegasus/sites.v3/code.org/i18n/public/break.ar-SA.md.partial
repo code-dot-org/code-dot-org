@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="؟" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="؟" style="max-width: 100%"/></div>
 <h1>خذ استراحة برمجة</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">الأنشطة الأسبوعية والحلقات الماضية</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">الأنشطة الأسبوعية والحلقات الماضية</h1></div>
 <h2>الحلقة ١ - الخوارزميات مع هيل هاربر</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٢٥/٣</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٢٥/٣</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>اظهر على اليوتيوب</a></i>  I  <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">اظهر على الفيسبوك</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - الخوارزميات</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - الخوارزميات</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>الحلقة ٢ - النماذج الأولية مع مارك كوبان وليندسي سكوت</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٤/١</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٤/١</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">اعرض على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - النماذج الأولية</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - النماذج الأولية</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ٣ - التشفير مع Ashton Kutcher وMia Gil Epner</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٤/٨</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٤/٨</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">اعرض على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - التشفير</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - التشفير</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -116,11 +116,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ٤: المعلومات الرقمية مع Mike Krieger وAlice Keeler</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ١٥/٤</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ١٥/٤</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>اظهر على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/">اظهر على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - المعلومات الرقمية</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - المعلومات الرقمية</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -139,11 +139,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ٥: المحاكاة والبيانات مع بيل جيتس</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٤/٢٢</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٤/٢٢</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">شاهد على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - المحاكاة والبيانات</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - المحاكاة والبيانات</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -162,11 +162,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ٦: الإنترنت مع Keegan-Michael Key وVint Cerf</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٤/٢٩</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٤/٢٩</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>اظهر على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">اظهر على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - الإنترنت</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - الإنترنت</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -185,11 +185,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ٧ - الجمل الشرطية مع SaI Khan وFlo Vaughn</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٥/٦</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٥/٦</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>اظهر على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">اظهر على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - المتغيرات</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - المتغيرات</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -206,11 +206,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ٨ - المتغيرات مع Yara Shahidi وFuzzy Khosrowshahi</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٥/١٣</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٥/١٣</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">اعرض على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - المتغيرات</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - المتغيرات</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -227,11 +227,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ٩ - الأحداث مع Macklemore وScott Forstall</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٥/٢٠</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٥/٢٠</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">اعرض على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - الأحداث</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - الأحداث</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -248,11 +248,11 @@ social:
 <div style="clear: both;"></div>
 <h2>الحلقة ١٠ - الذكاء الاصطناعي مع Kat Graham وKate Park</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٥/٢٧</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٥/٢٧</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">اعرض على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - الذكاء الاصطناعي</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - الذكاء الاصطناعي</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -269,11 +269,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ١١ - التجريد مع Susan Wojcicki وChina Anne McClain</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٦/٣</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٦/٣</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">شاهد على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - التجريد</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - التجريد</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -290,11 +290,11 @@ social:
 <div style="clear: both;"></div>
 <h2>حلقة ١٢: المعدات مع Aloe Blacc وBret Taylor وPaola Mejia Minaya</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">شاهد الحلقة ٦/١٠</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">شاهد الحلقة ٦/١٠</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>اعرض على اليوتيوب</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">اعرض على الفيسبوك</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">النشاط الأسبوعي - المعدات</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">النشاط الأسبوعي - المعدات</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">الطلاب الأصغر سنًا:</span> لا حاجة لتسجيل الدخول</p>
@@ -314,3 +314,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

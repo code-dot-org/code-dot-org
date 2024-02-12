@@ -185,7 +185,7 @@ class GamelabJr < Gamelab
 
   # Use a DCDO flag here so we can flip Sprite Lab without a deploy
   def uses_google_blockly?
-    DCDO.get('sprite_lab_google_blockly', false)
+    DCDO.get('sprite_lab_google_blockly', true)
   end
 
   def age_13_required?

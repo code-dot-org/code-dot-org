@@ -110,23 +110,23 @@ Misollar:
     * Taqdim etilgan faoliyatni ifodalovchi asosiy kontaktning nomi va elektron pochtasi
     * Faoliyat nomi (nomga “Kod soati” ni kiritish mumkin emas)
     * Faoliyatga URL havolasi
-    * Ushbu faoliyat AIni o'z ichiga oladimi: Ha yoki Yo'q
-    * Faoliyat tavsifi (maksimal belgilar soni: 400) 
-        * Iltimos, tavsifga asosan talabalar tomonidan boshqariladigan yoki o'qituvchi tomonidan yordam beriladimi yoki yo'qligini kiriting. Bundan tashqari, ba'zi maktablar “Kod soati” faoliyati Common Core yoki Next Generation Science Standartlariga mos kelishini bilishdan manfaatdor. Agar faoliyat muayyan standartlarga javob bersa, ushbu ma'lumotlarni qo'shishni o'ylab ko'ring.
-    * Maqsadli foydalanuvchilar uchun tavsiya etilgan daraja (lar). Siz [Informatika o'qituvchilari assotsiatsiyasining K-12 standartlari] ga murojaat qilishingiz mumkin (https://k12cs.org/framework-statements-by-grade-band/) sinf mos informatika tushunchalari uchun. Misol darajasi darajalariga quyidagilar kiradi: 
-        * Bolalar bog'chasi - 1-sinf (4-6 yosh)
-        * 2-5 sinflar (7-10 yosh)
-        * 6-8 sinflar (11-13 yosh)
-        * 9+ sinflar (14 yoshdan katta)
-    * Faoliyatingiz o'rgatadigan dasturlash tillari ro'yxati. Ya'ni C/C ++, Java, JavaScript va boshqalar. yoki tildan mustaqil (bir nechta tillarda o'qitilishi mumkin bo'lgan dars rejalari uchun) til san'atini tanlang.
-    * Qo'llab-quvvatlanadigan tabiiy tillar ro'yxati. Eslatma: Tilni aniqlash - bu faoliyat provayderining javobgarligi; biz barcha foydalanuvchilarni taqdim etilgan yagona URL manziliga yo'naltiramiz. yoki tildan mustaqil (bir nechta tillarda o'qitilishi mumkin bo'lgan dars rejalari uchun)
+    * Does this activity include AI: Yes or No
+    * An activity description (max character count: 400) 
+        * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+        * Kindergarten - Grade 1 (ages 4-6)
+        * Grades 2-5 (ages 7-10)
+        * Grades 6-8 (ages 11-13)
+        * Grades 9+ (ages 14+)
+    * Faoliyatingiz o'rgatadigan dasturlash tillari ro'yxati. Ya'ni C/C ++, Java, JavaScript va boshqalar. yoki tildan mustaqil (bir nechta tillarda o'qitilishi mumkin bo'lgan dars rejalari uchun) choose language arts.
+    * Qo'llab-quvvatlanadigan tabiiy tillar ro'yxati. Eslatma: Tilni aniqlash - bu faoliyat provayderining javobgarligi; biz barcha foydalanuvchilarni taqdim etilgan yagona URL manziliga yo'naltiramiz. or language independent (for lesson plans that can be taught in multiple languages)
     * O'qituvchi sizning faoliyatingizdan foydalanish uchun qanday tajribaga ega bo'lishi kerak? (masalan, boshlang'ich yoki qulay.) Va talabalar qanday tajribaga ega bo'lishlari kerak?
-    * O'qituvchi sizning faoliyatingizdan foydalanish uchun qanday tajribaga ega bo'lishi kerak? (masalan, boshlang'ich yoki qulay.) Va talabalar qanday tajribaga ega bo'lishlari kerak? Agar siz Code™ faoliyatining yanada ilg'or soatini tayyorlamoqchi bo'lsangiz, iltimos, faoliyatingiz tavsifida zarur bo'lgan oldingi bilimlarni kiriting.
-    * Faoliyatingizning davomiyligi 
-        * Faqat 1 soat
-        * Keyingi kurs bilan 1 soat
-        * 2-6 soat (bir nechta dars bo'lishi mumkin)
-    * Agar sizning faoliyatingiz ularga ega bo'lsa, kirish joylari ro'yxati. Bularga ekran o'quvchilarining mosligi, matndan nutqqa o'tish qobiliyati, yuqori kontrastli ranglardan foydalanish yoki nogiron o'quvchilar uchun mo'ljallangan boshqa turar joylar kiradi.
+    * What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+    * The length of your activity 
+        * 1 hour only
+        * 1 hour with follow-on course
+        * 2-6 hours (can be multiple lessons)
+    * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
     
     #### Dars rejalarini topshirishda sizga kerak bo'lgan qo'shimcha narsalar
     
@@ -179,7 +179,7 @@ Misollar:
     
     Informatika o'qituvchilarining turli qo'mitasi taqdimotlarni sifat va miqdoriy mezonlar asosida baholaydi. Asosiy mezonlarga mos keladigan barcha tadbirlar ro'yxatga olinadi.
     
-    An'anaviy kodlash faoliyati uchun informatika o'qituvchilarining turli qo'mitasi taqdimotlarni sifat va miqdoriy mezonlar asosida baholaydi. Asosiy mezonlarga mos keladigan barcha tadbirlar ro'yxatga olinadi. O'qituvchilar o'z sinflari uchun eng yaxshi mashg'ulotlarni topish uchun filtrlash va saralash imkoniyatiga ega bo'ladilar.
+    For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
     
     Agar ko'rib chiqish qo'mitasi faoliyatni ishlab chiqarish sifatidagi nolga teng deb baholasa (yomon xatolar yoki ulardan foydalanishni qiyinlashtiradigan ko'rsatmalar tufayli), kam vakillik guruhlarida o'qishni rag'batlantirishda (irqchilik/jinsiy materiallar tufayli), ta'lim qiymati (CS tushunchalarini o'rgatmaydi) yoki qiziqarli/jalb qilish (talabalar ishlashi qiyin/tushkunligi tufayli), faoliyat ro'yxatga olinmaydi.
     
@@ -197,13 +197,13 @@ Misollar:
     - Ro'yhatdan o'tishni talab qilmang
     - To'lovni talab qilmasdan (robototexnika faoliyati bundan mustasno, ular robot/to'plam sotib olishni talab qilishi mumkin)
     
-    Yangi o'qituvchilar va talabalar uchun o'z-o'zini boshqarish faoliyati uchun ko'rib chiqish qo'mitasi quyidagilarni qidiradi:
+    For self-directed activities for new teachers and students the review committee will be looking for whether:
     
     - O'qituvchilar o'quv qo'llanmasidan yoki informatika fanidan hech qanday ma'lumotga ega bo'lmagan faoliyatdan foydalanishlari mumkin
     - Talabalar informatika fanidan hech qanday ma'lumotga ega bo'lmagan holda muvaffaqiyat qozonishlari mumkin
     - Talabalar ota-onalar yoki o'qituvchilarning ko'rsatmalarisiz o'zlarini darslik orqali yo'naltirishlari mumkin
     
-    O'qituvchilar va talabalar bizning mashg'ulotlar ro'yxatini sinf, tajriba darajasi, mavzu, apparat va boshqalar kabi filtrlar asosida qidirishlari va filtrlashlari mumkin bo'ladi. Odatiy bo'lib, avval dars rejalari va mashg'ulotlarini ko'rsatamiz:
+    Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
     
     - Ko'rib chiqish qo'mitasidan eng yuqori baholarni oling
     - Yangi boshlanuvchilar (talabalar va o'qituvchilar) uchun mo'ljallangan bir soatlik o'z-o'zini boshqarish faoliyati
@@ -220,7 +220,7 @@ Misollar:
     
     ## O'z-o'zidan boshqariladigan bir soatlik darsliklarni loyihalash bo'yicha takliflar
     
-    Faoliyat sun'iy intellektni o'z ichiga olishi shart emas, garchi biz AI bilan bog'liq ko'proq tadbirlarni taklif qilmoqchimiz.
+    Activities do not have to include AI, though we are looking to offer more AI related activities.
     
     **O'qituvchi yozuvlarini qo'shing.** Ko'pgina mashg'ulotlar talabalarga yo'naltirilgan bo'lishi kerak, lekin agar biror faoliyat o'qituvchi tomonidan osonlashtirilsa yoki boshqarilsa, iltimos, o'qituvchi uchun aniq va oddiy ko'rsatmalarni o'qituvchi eslatmalari shaklida o'zingizning faoliyatingiz bilan taqdim etilgan alohida URL manziliga kiriting. Talabalar nafaqat yangi boshlanuvchilar, balki ba'zi o'qituvchilar ham. Kabi ma'lumotlarni qo'shing:
     
@@ -233,15 +233,15 @@ Misollar:
     - Juft dasturlashni tavsiya qilasizmi?
     - Sinfda foydalanish uchun mulohazalar? Masalan, agar videolar bo'lsa, o'qituvchilarga videolarni butun sinf birgalikda ko'rishlari uchun proektsiyalangan ekranda ko'rsatishni maslahat bering
     
-    **Faoliyat oxirida fikr-mulohazalarni kiriting.** (masalan, “Siz 10 darajani tugatdingiz va ilmoqlar haqida bilib oldingiz! Ajoyib ish!”)
+    **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
     
-    **Talabalarni tugatgandan so'ng ijtimoiy tarmoqlarga (kerak bo'lganda) xabar yuborishga undang.** Masalan, “Men ________ bilan bir soatlik kodni bajardim. #HourOfCode “yoki” Men #CSEdWeek ning bir qismi sifatida #HourOfCode qildim. Sizda bormi? @Scratch.” **#HourOfCode** hashtagidan foydalaning (bosh harflar bilan H, O, C)
+    **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
     
-    **Faoliyatingizni ispan tilida yoki ingliz tilidan tashqari boshqa tillarda yarating.**
+    **Create your activity in Spanish or in other languages besides English.**
     
-    **Faoliyatni ijtimoiy ahamiyatga ega bo'lgan kontekstga tushuntiring yoki bog'lang.** Talabalar dunyoni qanday qilib yaxshi tomonga o'zgartirishi mumkinligini ko'rganlarida, kompyuter dasturlash super kuchga aylanadi!
+    **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
     
-    **Qo'llanmangiz [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigmasida ishlatilishi mumkinligiga ishonch hosil qiling.** Bu, ayniqsa, Kod soati uchun foydalidir, chunki ko'plab sinflarda barcha talabalar uchun 1:1 jihozlari mavjud emas.
+    **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
     
     [**Yuqoriga qaytish**](#top)
     
@@ -252,7 +252,7 @@ Misollar:
     
     ## Savdo markasi bo'yicha ko'rsatmalar
     
-    Hour of Code® va Hora del Código® Code.org saytining ro'yxatdan o'tgan savdo belgilaridir. Ko'pgina o'qituvchi hamkorlarimiz o'zlarining veb -saytlarida “Kod soati” savdo belgilaridan o'zlarining “Kod soati” faoliyati bilan bog'liq holda foydalanganlar. Biz ushbu foydalanishni oldini olishni xohlamaymiz, lekin foydalanish bir necha chegaralarga to'g'ri kelishiga ishonch hosil qilishni xohlaymiz:
+    Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
     
     1. “Kod soati” dan faqat “Kod soati” kampaniyasi doirasida notijorat CS Education faoliyati bilan bog'liq holda va boshqa maqsadlarsiz foydalaning.
     2. “Kod soati” ga har qanday havola sizning shaxsiy brendingiz ekanligini ko'rsatmaydigan tarzda ishlatilishi kerak, aksincha u Kod soatini asosiy harakat sifatida ko'rsatadi. Yaxshi misol: “Acmecorp.com saytida Code® soatida ishtirok eting”. Yomon misol: “ACME Corp tomonidan kod soatini sinab ko'ring”.
@@ -271,15 +271,15 @@ Misollar:
     
     ## Pikselni kuzatish
     
-    Agar sizning o'quv qo'llanmangiz tasdiqlangan va yakuniy o'quv sahifasiga kiritilgan bo'lsa, Code.org sizga o'quv qo'llanmasiga qo'shilishingiz uchun noyob kuzatuv pikselini taqdim etadi. Quyidagi misolga qarang. Qo'llanmaning har qanday muvaqqat sahifalariga kiritmang.
+    Agar sizning o'quv qo'llanmangiz tasdiqlangan va yakuniy o'quv sahifasiga kiritilgan bo'lsa, Code.org sizga o'quv qo'llanmasiga qo'shilishingiz uchun noyob kuzatuv pikselini taqdim etadi. Quyidagi misolga qarang. Do not include on any interim pages of your tutorial.
     
-    Bu sizning “Kod soati” darsligini bajaradigan foydalanuvchilarni hisoblashimizga imkon beradi. Bu sizning o'quv qo'llanmangiz uchun aniqroq ishtirok etishga olib keladi.
+    This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
     
-    Agar sizning o'quv qo'llanmangiz tasdiqlangan va yakuniy o'quv sahifasiga kiritilgan bo'lsa, Code.org sizga o'quv qo'llanmasiga qo'shilishingiz uchun noyob kuzatuv pikselini taqdim etadi. Quyidagi misolga qarang.
+    If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
     
-    ESLATMA: O'rnatish mumkin bo'lgan ilovalar (iOS/Android ilovalari yoki ish stoliga o'rnatish dasturlari) uchun buni qilish muhim emas.
+    NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
     
-    Dance Party uchun piksel kuzatish Misol:
+    Example tracking pixels for Dance Party:
     
     IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
     
@@ -293,7 +293,7 @@ Misollar:
     
     ## Faoliyatni targ'ib qilish, CSEDWeek va Kod soati
     
-    Iltimos, o'z faoliyatingizni tarmog'ingizga targ'ib qiling! Ularni “Kod soati” sahifangizga yo'naltiring. Sizning foydalanuvchilaringiz sizning faoliyatingiz haqida sizdan kelgan pochta xabarlariga munosabat bildirishlari ehtimoli ko'proq. Informatika ta'limi haftaligida foydalanuvchilarni boshqalarni qo'shilishga taklif qilishga undash va ko'proq talabalar bilan tanishishimizga yordam berish uchun bahona sifatida xalqaro “Kod soati” kampaniyasidan foydalaning!
+    Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
     
     - Veb-saytingizda kod soati va CSEdWeek xususiyati. Chiqish: <http://www.tynker.com/hour-of-code>
     - Ijtimoiy tarmoqlar, an'anaviy ommaviy axborot vositalari, pochta ro'yxatlari va boshqalar yordamida kod soatini targ'ib qiling #HourOfCode xeshtegi yordamida (H, O, C bosh harflari bilan)
