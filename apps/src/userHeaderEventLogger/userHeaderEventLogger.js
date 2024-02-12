@@ -29,4 +29,4 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
         });
     });
   }
-});
+})();
