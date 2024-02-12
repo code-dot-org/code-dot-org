@@ -16,13 +16,6 @@ class FeaturedProjectsController < ApplicationController
     @featured_project.update! unfeatured_at: DateTime.now
   end
 
-  def destroy
-    _, project_id = storage_decrypt_channel_id(params[:project_id])
-    return render_404 unless project_id
-    @featured_project = FeaturedProject.find_by! project_id: project_id
-    @featured_project.destroy!
-  end
-
   # Featured projects are selected internally for their
   # quality, so we can be reasonably confident that they
   # are not abusive. To prevent users from spamming Zendesk

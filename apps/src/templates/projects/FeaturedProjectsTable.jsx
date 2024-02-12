@@ -14,7 +14,7 @@ import {
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -151,18 +151,6 @@ const feature = (channel, publishedAt) => {
     .fail(handleFeatureFailure);
 };
 
-const onDelete = channel => {
-  console.log('delete');
-  var url = `/featured_projects/${channel}`;
-  $.ajax({
-    url: url,
-    type: 'DELETE',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleFeatureFailure);
-};
-
 const actionsFormatterUnfeatured = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
@@ -170,13 +158,6 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
         onClick={() => feature(rowData.channel, rowData.publishedAt)}
       >
         {i18n.featureAgain()}
-      </PopUpMenu.Item>
-      <MenuBreak />
-      <PopUpMenu.Item
-        onClick={() => onDelete(rowData.channel)}
-        color={color.red}
-      >
-        {i18n.delete()}
       </PopUpMenu.Item>
     </QuickActionsCell>
   );
@@ -215,10 +196,6 @@ class FeaturedProjectsTable extends React.Component {
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
-  };
-
-  onDelete = () => {
-    console.log('delete');
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
