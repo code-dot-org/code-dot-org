@@ -193,13 +193,13 @@ GoogleBlockly.Extensions.register(
 
 // Used by createDef_ to create a new definition block for an orphaned call block.
 // We need to supply a specific block type used for behavior definitions.
-const procedureCallerNoReturnGetDefBlockMixin = {
+const behaviorCallerGetDefBlockMixin = {
   hasReturn_: false,
   defType_: BLOCK_TYPES.behaviorDefinition,
 };
 GoogleBlockly.Extensions.registerMixin(
   'behavior_caller_get_def_block_mixin',
-  procedureCallerNoReturnGetDefBlockMixin
+  behaviorCallerGetDefBlockMixin
 );
 
 /**

@@ -1,5 +1,8 @@
 import _ from 'lodash';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import {getStore} from '../redux';
+import {setFailedToGenerateCode} from '../redux/blockly';
+import MetricsReporter from '../lib/metrics/MetricsReporter';
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
@@ -132,4 +135,24 @@ export function findFlyout(workspace) {
     return workspace.toolbox_.flyout_;
   }
   return null;
+}
+
+/**
+ * Handle a failure to get workspace code by either CDO or Google Blockly
+ * by updating the redux store and logging the error.
+ * We only want to log the error once per failure since getWorkspaceCode
+ * gets called many times and the error will be the same every time.
+ * @param {MetricEvent} eventName Event name to log
+ * @param {Error} error Error thrown by getWorkspaceCode
+ */
+export function handleCodeGenerationFailure(eventName, error) {
+  const store = getStore();
+  if (!store.getState().blockly.failedToGenerateCode) {
+    store.dispatch(setFailedToGenerateCode(true));
+    MetricsReporter.logError({
+      event: eventName,
+      errorMessage: error.message,
+      stackTrace: error.stack,
+    });
+  }
 }
