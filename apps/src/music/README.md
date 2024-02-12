@@ -12,7 +12,7 @@ This is the client-side code for **Music Lab**, as instantiated by a `music` lev
 - Uses WebAudio to play back the audio events.
 - The rendered timeline of audio events reflects code changes instantly.
 - Code can be changed while audio is playing.
-- Support for user triggered code.
+- Support for user-triggered code.
 - Support for user-created functions on the main Blockly workspace.
 - A comprehensive programming model that supports playing sounds together or sequentially, in a fully composable fashion.
 - UI features that allow students to understand connections between code and output:

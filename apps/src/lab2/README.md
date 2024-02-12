@@ -23,9 +23,11 @@ This folder contains the code for **Lab2**, which is our set of shared component
 
 ## Supported level types
 
-Currently, the follow level apps are built for **Lab2**:
+Currently, the following level apps are built for **Lab2**:
 - [Music](../music/)
 - [Panels](../panels/)
 - [StandaloneVideo](../standaloneVideo)
+
+The full list of supported level apps, along with their associated properties, is declared in `LabViewsRenderer` [here](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/lab2/views/LabViewsRenderer.tsx#L47).
 
 **Music** drove the initial implementation of **Lab2**.
