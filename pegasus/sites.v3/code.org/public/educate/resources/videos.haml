@@ -30,7 +30,7 @@ video_player: true
       %p
         = video_page_section_desc[index]
       - if index === 0
-        = view :carousel_video_flexible
+        = view :carousel_ai_videos
       - if index === 1
         = view :carousel_computer_works_video
       -# - if index === 2
@@ -54,4 +54,4 @@ video_player: true
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::VIDEO_LIBRARY_PAGE_VISIT_EVENT
 
 -# Imports the Javascript for the video carousels
-= view :swiper
+= view :swiper_page_videos
