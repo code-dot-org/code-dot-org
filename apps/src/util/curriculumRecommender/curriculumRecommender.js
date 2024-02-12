@@ -31,15 +31,14 @@ export const getTestRecommendations = (
       curriculum,
       marketingInitiative
     );
-
-    // score += hasAnySchoolSubject(FAKE_RECOMMENDER_SCORING, curriculum);
-    // score += hasDesiredSchoolSubjects(
-    //   FAKE_RECOMMENDER_SCORING,
-    //   curriculum,
-    //   schoolSubjects
-    // );
-    // score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
-    // score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
+    score += hasAnySchoolSubject(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += hasDesiredSchoolSubjects(
+      FAKE_RECOMMENDER_SCORING,
+      curriculum,
+      schoolSubjects
+    );
+    score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
     
     // score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
@@ -79,18 +78,21 @@ const hasDesiredSchoolSubjects = (
   curriculum,
   schoolSubjects
 ) => {
-  const curriculumSubjects = curriculum.school_subject?.split(',');
+  if (!curriculum.school_subject) {
+    return 0;
+  }
+
+  const curriculumSubjects = curriculum.school_subject.split(',');
   const desiredSubjects = schoolSubjects?.split(',');
 
-  const total = curriculumSubjects?.reduce(
-    (total, currTopic) =>
+  return curriculumSubjects?.reduce(
+    (total, currSubject) =>
       total +
-      (desiredSubjects?.includes(currTopic)
+      (desiredSubjects?.includes(currSubject)
         ? scoring_framework['hasDesiredSchoolSubjects']
         : 0),
     0
   );
-  return total ? total : 0;
 };
 
 const hasAnyImportantTopic = (scoring_framework, curriculum) => {
@@ -106,10 +108,14 @@ const hasAnyImportantTopic = (scoring_framework, curriculum) => {
 };
 
 const hasDesiredTopics = (scoring_framework, curriculum, csTopics) => {
-  const curriculumTopics = curriculum.cs_topic?.split(',');
+  if (!curriculum.cs_topic) {
+    return 0;
+  }
+
+  const curriculumTopics = curriculum.cs_topic.split(',');
   const desiredTopics = csTopics?.split(',');
 
-  const total = curriculumTopics?.reduce(
+  return curriculumTopics?.reduce(
     (total, currTopic) =>
       total +
       (desiredTopics?.includes(currTopic)
@@ -117,7 +123,6 @@ const hasDesiredTopics = (scoring_framework, curriculum, csTopics) => {
         : 0),
     0
   );
-  return total ? total : 0;
 };
 
 const howRecentlyPublished = (scoring_framework, curriculum) => {
