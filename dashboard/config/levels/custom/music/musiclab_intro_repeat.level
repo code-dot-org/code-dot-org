@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "#### Repeat\n\nSave effort and use code to repeat a sound.\n\nUse the [repeat](#clickable=repeat-block) block to play the same sound three times.",
+    "long_instructions": "#### Repeat\n\nSave effort and use code to repeat a sound.\n\nUse the [repeat](#clickable=repeat-block) block to play the same sound [three](#clickable=repeat-block-field-workspace) times.",
     "level_data": {
       "startSources": {
         "blocks": {

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-08 23:04:59 UTC",
+    "serialized_at": "2024-02-12 21:15:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5583,7 +5583,7 @@
       "key": "39c5e4ff-f9c0-4396-aef7-578789f1f3fc",
       "position": 3,
       "properties": {
-        "description": "[exploration level]"
+        "progression_name": "Exploration Level"
       },
       "seeding_key": {
         "activity_section.key": "39c5e4ff-f9c0-4396-aef7-578789f1f3fc",
@@ -5658,7 +5658,7 @@
       "key": "f4a944d0-c60a-48e3-b676-32d7990e6205",
       "position": 4,
       "properties": {
-        "description": "[skill building levels]",
+        "progression_name": "Skill Building Levels",
         "tips": [
           {
             "type": "teachingTip",
@@ -5675,7 +5675,7 @@
       "key": "63162e7c-7388-41c2-a5ca-3964179a5866",
       "position": 5,
       "properties": {
-        "description": "[practice levels]"
+        "progression_name": "Practice Levels"
       },
       "seeding_key": {
         "activity_section.key": "63162e7c-7388-41c2-a5ca-3964179a5866",
@@ -8189,6 +8189,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 assessment"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8587,6 +8590,153 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSD U2L18 explore_1"
+        ],
+        "progression": "Exploration Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18 explore_1"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "39c5e4ff-f9c0-4396-aef7-578789f1f3fc"
+      },
+      "level_keys": [
+        "CSD U2L18 explore_1"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L18 order_sb_1"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18 order_sb_1"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      },
+      "level_keys": [
+        "CSD U2L18 order_sb_1"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L18 order_sb_2"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18 order_sb_2"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      },
+      "level_keys": [
+        "CSD U2L18 order_sb_2"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L18 order_sb_3"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18 order_sb_3"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      },
+      "level_keys": [
+        "CSD U2L18 order_sb_3"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L18 class_sb_4"
+        ],
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18 class_sb_4"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      },
+      "level_keys": [
+        "CSD U2L18 class_sb_4"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L18 practice_2024"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "63162e7c-7388-41c2-a5ca-3964179a5866"
+      },
+      "level_keys": [
+        "CSD U2 L18 practice_2024"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSD web upload images multi_2024"
         ],
         "progression": "Upload Your Images"
@@ -8606,7 +8756,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8631,7 +8781,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8656,7 +8806,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8681,7 +8831,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 105,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8706,7 +8856,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 106,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8731,7 +8881,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 107,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8756,7 +8906,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8781,7 +8931,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 109,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8806,7 +8956,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9957,6 +10107,78 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd2-2024",
         "activity_section.key": "7ddc96c8-788e-42ee-a79e-224f45cb7274"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18 explore_1",
+        "script_level.level_keys": [
+          "CSD U2L18 explore_1"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "39c5e4ff-f9c0-4396-aef7-578789f1f3fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18 order_sb_1",
+        "script_level.level_keys": [
+          "CSD U2L18 order_sb_1"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18 order_sb_2",
+        "script_level.level_keys": [
+          "CSD U2L18 order_sb_2"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18 order_sb_3",
+        "script_level.level_keys": [
+          "CSD U2L18 order_sb_3"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18 class_sb_4",
+        "script_level.level_keys": [
+          "CSD U2L18 class_sb_4"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "f4a944d0-c60a-48e3-b676-32d7990e6205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L18 practice_2024",
+        "script_level.level_keys": [
+          "CSD U2 L18 practice_2024"
+        ],
+        "lesson.key": "Websites for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-2024",
+        "activity_section.key": "63162e7c-7388-41c2-a5ca-3964179a5866"
       }
     },
     {

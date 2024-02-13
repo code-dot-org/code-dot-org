@@ -62,7 +62,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     blockElements.forEach(xmlChild => {
-      // Recursively check blocks for XML attributes that need to be manipulated.
+      // Check xmlChild and its children for XML attributes that need to be manipulated.
       processBlockAndChildren(xmlChild);
 
       // Further manipulate the XML for specific top block types.
@@ -113,7 +113,29 @@ export function getProjectXml(workspace) {
     workspaceXml.appendChild(clonedNode);
   });
 
+  removeIdsFromBlocks(workspaceXml);
+
   return workspaceXml;
+}
+
+/**
+ * Removes the randomized 'id' attribute from all 'block' elements.
+ * This is intended to prevent writing duplicate entries to the level_sources table.
+ * @param {Element} element - The XML element to process.
+ * @param {string[]} levelBlockIds - An array of ids to preserve, if found.
+ */
+function removeIdsFromBlocks(element) {
+  if (element.nodeName === 'block') {
+    const id = element.getAttribute('id');
+    if (id && !Blockly.levelBlockIds.includes(id)) {
+      element.removeAttribute('id');
+    }
+  }
+
+  // Blocks in XML are nested so we need to iterate through the children.
+  Array.from(element.children).forEach(child => {
+    removeIdsFromBlocks(child);
+  });
 }
 
 /**
@@ -382,15 +404,17 @@ function getFieldOrTitle(blockElement, name) {
 
 /**
  * A helper function designed to process each individual block in an XML tree.
+ * Exported for testing.
  * @param {Element} block - The XML element for a single block.
  */
-function processBlockAndChildren(block) {
+export function processBlockAndChildren(block) {
   processIndividualBlock(block);
 
-  // Blocks can contain other blocks so we must process them recursively.
+  // Blocks can contain other blocks so we must process all of their children.
+  // This query will get all child blocks of the current block, not just direct descendants.
   const childBlocks = block.querySelectorAll('block');
   childBlocks.forEach(childBlock => {
-    processBlockAndChildren(childBlock);
+    processIndividualBlock(childBlock);
   });
 }
 
@@ -398,7 +422,7 @@ function processBlockAndChildren(block) {
  * Perform any need manipulations for a given XML block element.
  * @param {Element} block - The XML element for a single block.
  */
-function processIndividualBlock(block) {
+export function processIndividualBlock(block) {
   addNameToBlockFunctionCallBlock(block);
   addMissingBehaviorId(block);
   addMutationToBehaviorBlocks(block);

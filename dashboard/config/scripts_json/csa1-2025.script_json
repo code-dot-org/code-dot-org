@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-08 05:28:42 UTC",
+    "serialized_at": "2024-02-10 06:48:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6262,7 +6262,13 @@
       "position": 2,
       "properties": {
         "description": "So far, the instance variables and methods we have written in our classes can only be accessed by an instance of the class. However, there are special types of variables and methods that can be used without an object. Today, we'll learn about using the static keyword to create and use class methods.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Note:** The updated AP CS A framework refers to static variables as class variables. These terms are often used interchangeably, but the Code.org curriculum uses the term static variable. A note regarding this vocabulary can be found in the slides for this lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d7b23d9b-724a-41cf-a9ef-bfa250b7d080",
@@ -10027,18 +10033,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U4L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1AuN6ZG62jztFvdFHNorec0juGbeT4Jfc-lB80cS8HcY/edit?usp=sharing",
-      "key": "_exemplar_u4l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l2_guided_notes"
-      }
-    },
-    {
       "name": "[EXEMPLAR] Unit 1 Guide",
       "url": "https://docs.google.com/document/d/1WZnHVMvSLXphwZM0eb0EjZwZ72IQEBtxm2TL_zb8c-4/edit?usp=share_link",
       "key": "_exemplar_unit_1_guide",
@@ -10048,6 +10042,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_1_guide"
+      }
+    },
+    {
+      "name": "[KEY] Calling Class Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1E5BWPgoZT0qvUVLPs08pCF8EFJIql-4TqLkcKn1sSy4/edit?usp=sharing",
+      "key": "_key_calling_class_methods_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_calling_class_methods_extra_practice"
       }
     },
     {
@@ -10288,18 +10294,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/17MRpD62fJTWazjJfNf4_KnBmapF6UKWZv6CS5jhHR2I/edit?usp=sharing",
-      "key": "_key_u4l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l2_extra_practice"
       }
     },
     {
@@ -10544,6 +10538,18 @@
       }
     },
     {
+      "name": "Exemplar Guided Notes - Calling Class Methods",
+      "url": "https://docs.google.com/document/d/1QM1zE8fWVTTNSDbmSCV0ez7yknjlKXE29UUERnB2kgY/edit?usp=sharing",
+      "key": "exemplar_guided_notes_-_calling_class_methods_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
+      }
+    },
+    {
       "name": "Guide to Creating and Using Word Walls",
       "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
       "key": "guide_to_creating_and_using_word_walls",
@@ -10565,6 +10571,18 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guided Notes - CSA [01] Calling Class Methods ",
+      "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
+      "key": "guided_notes_-_csa_01_calling_class_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
       }
     },
     {
@@ -11272,19 +11290,6 @@
       },
       "seeding_key": {
         "resource.key": "u4l2_extra_practice"
-      }
-    },
-    {
-      "name": "Guided Notes",
-      "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
-      "key": "u4l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l2_guided_notes"
       }
     },
     {
@@ -12046,19 +12051,25 @@
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "resource.key": "_exemplar_u4l2_guided_notes"
+        "resource.key": "_key_calling_class_methods_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "resource.key": "_key_u4l2_extra_practice"
+        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
       }
     },
     {
@@ -12083,12 +12094,6 @@
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
         "resource.key": "u4l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "u4l2_guided_notes"
       }
     },
     {

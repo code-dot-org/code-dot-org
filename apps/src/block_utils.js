@@ -2,6 +2,7 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
+import {EMPTY_OPTION} from './blockly/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -740,7 +741,8 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getFieldValue(inputConfig.name);
       if (
-        inputConfig.type === Blockly.BlockValueType.STRING &&
+        (inputConfig.type === Blockly.BlockValueType.STRING ||
+          code === EMPTY_OPTION) &&
         !code.startsWith('"') &&
         !code.startsWith("'")
       ) {
@@ -1135,7 +1137,6 @@ exports.createJsWrapperBlockCreator = function (
             flyoutToggleButton
           );
         }
-        // Blockly.customBlocks.(this);
       },
     };
 

@@ -71,7 +71,8 @@ import {
 import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {handleCodeGenerationFailure} from './utils';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 const options = {
   contextMenu: true,
@@ -175,16 +176,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       }
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
-      // We only want to log the error once per failure since getWorkspaceCode
-      // gets called many times and the error will be the same every time.
-      if (!getStore().getState().blockly.failedToGenerateCode) {
-        getStore().dispatch(setFailedToGenerateCode(true));
-        MetricsReporter.logError({
-          event: 'BLOCKLY_GET_CODE_ERROR',
-          errorMessage: e.message,
-          stackTrace: e.stack,
-        });
-      }
+      handleCodeGenerationFailure(MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR, e);
     }
     return workspaceCode;
   };
@@ -674,6 +666,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     // instead of the default prompt dialogs, so we should also set it here.
     blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
 
+    // In order to prevent writing duplicate solution entries to the level_sources table,
+    // we strip block ids from XML when saving. An exception is made for block ids that
+    // are explicitly set in the level's toolbox or start blocks.
+    blocklyWrapper.levelBlockIds = opt_options.levelBlockIds || [];
+
     // Shrink container to make room for the workspace header
     if (!opt_options.isBlockEditMode) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
@@ -792,6 +789,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   };
 
+  blocklyWrapper.customBlocks = customBlocks;
+
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);
@@ -803,7 +802,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
-  blocklyWrapper.customBlocks = customBlocks;
   blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;
