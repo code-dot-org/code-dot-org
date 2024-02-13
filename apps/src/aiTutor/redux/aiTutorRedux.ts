@@ -85,7 +85,7 @@ export const askAITutor = createAsyncThunk(
       aiResponse: chatApiResponse?.assistantResponse,
     };
 
-    savePromptAndResponse(interactionData);
+    await savePromptAndResponse(interactionData);
   }
 );
 
@@ -150,7 +150,7 @@ export const submitChatMessage = createAsyncThunk(
       aiResponse: chatApiResponse?.assistantResponse,
     };
 
-    savePromptAndResponse(interactionData);
+    await savePromptAndResponse(interactionData);
   }
 );
 
