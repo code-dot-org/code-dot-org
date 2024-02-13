@@ -68,7 +68,6 @@ class ConnectionInstructions extends React.Component {
 
   render() {
     const {webSerialPort} = this.state;
-    console.log(webSerialPort);
     const connectionState = webSerialPort
       ? this.renderSetupChecklist(webSerialPort)
       : this.renderWebSerialConnectButton();
