@@ -1,8 +1,19 @@
 import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {compilationSystemPrompt, generalChatSystemPrompt, validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
+import {
+  compilationSystemPrompt,
+  generalChatSystemPrompt,
+  validationSystemPrompt,
+} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
-import {TutorType, Role, Status, ChatCompletionMessage, Level, ValidationCompilationContext, GeneralChatContext} from '../types';
+import {
+  TutorType,
+  Role,
+  Status,
+  ChatCompletionMessage,
+  Level,
+  ValidationCompilationContext,
+} from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -48,7 +59,7 @@ export const askAITutor = createAsyncThunk(
       levelId: state.aiTutor.level?.id,
       isProjectBacked: state.aiTutor.level?.isProjectBacked,
       scriptId: state.aiTutor.scriptId,
-    }
+    };
 
     let systemPrompt;
     if (chatContext.tutorType === TutorType.VALIDATION) {
@@ -100,7 +111,8 @@ export const submitChatMessage = createAsyncThunk(
       levelId: state.aiTutor.level?.id,
       isProjectBacked: state.aiTutor.level?.isProjectBacked,
       scriptId: state.aiTutor.scriptId,
-    }
+    };
+
     const systemPrompt = generalChatSystemPrompt;
     const storedMessages = state.aiTutor.chatMessages;
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;

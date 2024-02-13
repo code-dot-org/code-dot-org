@@ -8,7 +8,6 @@ import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
 import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorType} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code is not passing tests.

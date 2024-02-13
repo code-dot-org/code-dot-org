@@ -26,12 +26,12 @@ export type Level = {
 
 export interface GeneralChatContext {
   message: string;
-};
+}
 
 export interface ValidationCompilationContext {
   studentCode: string;
   tutorType: TutorType;
-};
+}
 
 export enum Role {
   ASSISTANT = 'assistant',
