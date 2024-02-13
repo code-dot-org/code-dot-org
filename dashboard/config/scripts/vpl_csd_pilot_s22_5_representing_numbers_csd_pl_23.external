@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 ## Patterns of Numbers
 
-#### Unlike ASCII, which is presented as an arbitrary mapping of bit patterns to characters, binary numbers are introduced within the context of patterns of numbers. Students use these patterns to determine the binary representations of numbers, rather than looking them up using a key (as in the ASCII challenge).
+#### Unlike ASCII, which is presented as an arbitrary mapping of bit patterns to characters, **binary numbers** are introduced within the context of patterns of numbers. Students use these patterns to determine the binary representations of numbers, rather than looking them up using a key (as in the ASCII challenge).
 
 
 ## Number Cards
@@ -31,5 +31,32 @@ markdown <<MARKDOWN
 #### This activity models a base-2 number system for the student. However, **it is not necessary for the students to understand the math** behind the patterns that they are creating. Students should focus on the fact that they are using a binary system (face up/face down) to represent information. 
 
 
+## Practice
 
+#### Want to practice using a binary system? Click on the dropdowns below to test yourself.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">✍🏼 Practice Using a Binary System</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:100px;">
+
+    
+#### Below are three additional numbers that can be represented using our system. Which cards should be up and which cards should be down in each row to represent the number?
+
+<br>
+
+<img src="https://images.code.org/e976492c02d93adee057b9dc0c944190-image-1707766330527.32.03 AM.png" style="width:900px; margin-left:10px; margin-bottom:25px;" alt="Three practice numbers for binary systems: 3, 6, and 12.">
+
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">✔️ Check Your Answer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p>
+
+#### **3**: D D U U (2 + 1 = 3)
+#### **6**: D U U D (4 + 2 = 6)
+#### **12**: U U D D (8 + 4 = 12)
+
+</p>
+</div></details>
 MARKDOWN
