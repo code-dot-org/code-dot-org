@@ -1,5 +1,6 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
+import * as locationUtils from '@cdo/apps/p5lab/locationUtils';
 import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
@@ -111,10 +112,6 @@ export default class CoreLibrary {
   }
 
   drawVariableBubbles() {
-    if (!this.variableBubbles.length) {
-      return;
-    }
-
     this.variableBubbles.forEach(variable => {
       const {name, location} = variable;
       if (!name.length || !location) {
@@ -135,8 +132,6 @@ export default class CoreLibrary {
       return;
     }
 
-    // Assuming `jsInterpreter` has a method `evaluateExpression` for evaluating
-    // JavaScript expressions in the current program context.
     try {
       const result = this.jsInterpreter.evaluateWatchExpression(variableName);
       return result;
@@ -231,12 +226,25 @@ export default class CoreLibrary {
     );
   }
 
-  addVariableBubble(name, location) {
-    // TODO: Handle collisions with existing variable bubbles
-    this.variableBubbles.push({
-      name,
-      location,
-    });
+  addVariableBubble(name, locationInput) {
+    const existingBubble = this.variableBubbles.find(
+      bubble => bubble.name === name
+    );
+
+    // We only want the new bubble to overwrite the location of the existing
+    // bubble if the new location is defined
+    const location = locationUtils.resolveLocation(
+      locationInput,
+      existingBubble ? existingBubble.location : undefined
+    );
+
+    // If the variable bubble already exists, update its location
+    // Otherwise, add a new bubble to the array
+    if (existingBubble) {
+      existingBubble.location = location;
+    } else {
+      this.variableBubbles.push({name, location});
+    }
   }
 
   removeVariableBubble(name) {
@@ -463,10 +471,7 @@ export default class CoreLibrary {
       return;
     }
     let name = opts.name;
-    let location = opts.location || {x: 200, y: 200};
-    if (typeof location === 'function') {
-      location = location();
-    }
+    let location = locationUtils.resolveLocation(opts.location);
     let animation = opts.animation;
 
     const sprite = this.p5.createSprite(location.x, location.y);
