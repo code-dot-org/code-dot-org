@@ -61,11 +61,12 @@ function initPage() {
 
   if (hasScriptData('script[data-aitutorleveldata]')) {
     const aiTutorLevelData = getScriptData('aitutorleveldata');
-    const {id, type, hasValidation} = aiTutorLevelData;
+    const {id, type, hasValidation, isAssessment} = aiTutorLevelData;
     const level = {
       id: id,
       type: type,
       hasValidation: hasValidation,
+      isAssessment: isAssessment
     };
     getStore().dispatch(setLevel(level));
     const aiTutorFabMountPoint = document.getElementById(

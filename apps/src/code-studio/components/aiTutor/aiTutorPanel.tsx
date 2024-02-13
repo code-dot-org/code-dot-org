@@ -20,6 +20,7 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
     (state: {aiTutor: AITutorState}) => state.aiTutor.level
   );
   const isCodingLevel = level?.type === 'Javalab';
+  const isAssessmentLevel = level?.isAssessment;
 
   const radioButtons = [
     {
@@ -64,8 +65,13 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
       <h3 id="ai_tutor_panel">AI Tutor</h3>
       <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
       <div>
-        <h4> What would you like AI Tutor to help you with?</h4>
+        {isAssessmentLevel ? (
+          <h4>You don't have access on this level.</h4>
+        ) : (
+          <h4> What would you like AI Tutor to help you with?</h4>
         <RadioButtonsGroup radioButtons={radioButtons} onChange={onChange} />
+        )}
+        
       </div>
       {compilationSelected && <CompilationTutor />}
       {validationSelected && <ValidationTutor />}
