@@ -286,10 +286,6 @@ describe('Enroll Form', () => {
       refute(enrollForm.exists('#previous_courses'));
     });
 
-    it('does not display replace existing question', () => {
-      refute(enrollForm.exists('#replace_existing'));
-    });
-
     it('does not display intent question', () => {
       refute(enrollForm.exists({groupName: 'csf_intro_intent'}));
     });
@@ -321,10 +317,6 @@ describe('Enroll Form', () => {
 
     it('does display previous courses question', () => {
       assert(enrollForm.exists('#previous_courses'));
-    });
-
-    it('does display replace existing question', () => {
-      assert(enrollForm.exists('#replace_existing'));
     });
 
     it('submits when all required params are present', () => {
@@ -371,7 +363,7 @@ describe('Enroll Form', () => {
       });
     });
 
-    ['role', 'previous_courses', 'replace_existing'].forEach(question => {
+    ['role', 'previous_courses'].forEach(question => {
       it('displays questions not relevant for this workshop type', () => {
         refute(enrollForm.exists('#' + question));
       });

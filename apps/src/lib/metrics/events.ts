@@ -1,0 +1,5 @@
+// Metric event names
+export enum MetricEvent {
+  GOOGLE_BLOCKLY_GET_CODE_ERROR = 'BLOCKLY_GET_CODE_ERROR',
+  CDO_BLOCKLY_GET_CODE_ERROR = 'CDO_BLOCKLY_GET_CODE_ERROR',
+}
