@@ -1,0 +1,26 @@
+---
+title: Native American and Indigenous Peoples Initiative
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/naipi-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}=hoc_s(:naipi_page_heading)
+
+%section
+  .wrapper
+    %div.col-50{style: "margin: .5rem 0 1rem;"}
+      = view :display_video_thumbnail, id: "naipi_intro", video_code: "DtCD203NCAk", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/naipi-intro.mp4"
+    .text-wrapper.col-45{style: "float: right;"}
+      %h2=hoc_s(:naipi_page_intro_heading)
+      %p=hoc_s(:naipi_page_intro_desc)
+  .clear
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:naipi_page_perspectives_heading)
+    %p=hoc_s(:naipi_page_perspectives_desc)

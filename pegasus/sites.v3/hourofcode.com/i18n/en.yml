@@ -1272,6 +1272,12 @@
   farsi_page_compliance_heading: "Compliance In Support Of Farsi Translations"
   farsi_page_compliance_desc: "As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements."
 
+  naipi_page_heading: "Native American and Indigenous Peoples Initiative (NAIPI)"
+  naipi_page_intro_heading: "What is NAIPI?"
+  naipi_page_intro_desc: "Code.org's Native American and Indigenous Peoples Initiative presents the integration of Native American perspectives and cultural richness in education and technology. Explore innovative approaches shaping Native American education and computer science, discover collaboration opportunities, and witness the collective impact we can achieve together."
+  naipi_page_perspectives_heading: "Integrating Native American perspectives"
+  naipi_page_perspectives_desc: "Experience a curriculum crafted with care, integrating culturally relevant content that resonates with the rich values and traditions of Native American and Indigenous communities. Elevate your learning journey with resources that truly connect and inspire!"
+
   resources_tabs_heading: "Resources that support you every step of the way"
   resources_tabs_desc: "[Sign up for a Code.org account](%{sign_up_url}) to get access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience."
   resources_tabs_heading_admins: "Resources to support your educators every step of the way"

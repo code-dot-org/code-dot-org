@@ -1,0 +1,11 @@
+// Custom styles for code.org/naipi
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import'breakpoints';
+
+// Hero banner
+.hero-banner-basic {
+  background: url('/images/banners/banner-bg-quilt.png') center center;
+  background-size: cover;
+  background-color: #4B5C1C;
+}
