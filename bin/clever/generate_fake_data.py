@@ -1,8 +1,12 @@
 from faker import Faker
+from datetime import datetime
 import random
 import csv
 
-# Initialize Faker
+# This script generates fake data for the Clever API. It generates fake schools, teachers, students, sections, and enrollments.
+# Find information about the SFTP specification, including required fields for all types here: https://schools.clever.com/files/clever-sftp.pdf
+# If you generate and sync this data with Clever, please save a copy of the CSV's to our Google Drive.
+
 fake = Faker()
 
 # Function to generate a random grade
@@ -19,30 +23,36 @@ def random_grade(low_grade, high_grade):
 
 # Function to generate a random gender
 def random_gender():
-    return random.choice(['Male', 'Female', 'Non-Binary', 'Prefer not to say'])
+    return random.choice(['M', 'F', 'X'])
 
-# Function to generate a random boolean value (Yes/No)
+# Function to generate a random boolean value (Y/N per the SFTP spec)
 def random_boolean():
-    return random.choice(['Yes', 'No'])
+    return random.choice(['Y', 'N'])
 
 # Function to generate a random race
+# Supported values: A B I M P W
+#   A Asian
+#   B Black or African-American
+#   I American Indian or Alaska Native
+#   M Multiracial
+#   P Hawaiian or Pacific Islander
+#   W White
 def random_race():
-    races = ['White', 'Black or African American', 'Asian', 'American Indian or Alaska Native', 'Native Hawaiian or Other Pacific Islander']
+    races = ['A', 'B', 'I', 'M', 'P', 'W']
     return random.choice(races)
 
 # ... (other functions)
 
 # Generate a fake elementary, middle, and high school
-# Required: school_id, name, and school_number
+# Required: school_id, school_name, and school_number
 def generate_schools():
     # Create three schools
     schools = [
         {
             "school_id": "1",
-            "name": "Pineapple Elementary School",
-            "school_number": "1",
+            "school_name": "Pineapple Elementary School",
             "state_id": "1",
-            "type": "Elementary",
+            "school_number": "1",
             "low_grade": "K",
             "high_grade": "5",
         },
@@ -50,8 +60,7 @@ def generate_schools():
             "school_id": "2",
             "school_number": "2",
             "state_id": "2",
-            "name": "Rockaway Beach Middle School",
-            "type": "Middle",
+            "school_name": "Rockaway Beach Middle School",
             "low_grade": "6",
             "high_grade": "8",
         },
@@ -59,8 +68,7 @@ def generate_schools():
             "school_id": "3",
             "school_number": "3",
             "state_id": "3",
-            "name": "City High School",
-            "type": "High",
+            "school_name": "City High School",
             "low_grade": "9",
             "high_grade": "12",
         }
@@ -126,13 +134,13 @@ def generate_students(schools):
                 'middle_name': random.choice([fake.first_name(), ""]),
                 'student_number': fake.unique.random_number(digits=8),
                 'state_id': fake.unique.random_number(digits=8),
-                'grade': random_grade(school["low_grade"], school["high_grade"])
+                'grade': random_grade(school["low_grade"], school["high_grade"]),
                 'gender': random_gender(),
                 'dob': fake.date_of_birth(minimum_age=5, maximum_age=18).strftime('%Y-%m-%d'),
                 'race': random_race(),
                 'hispanic_latino': random_boolean(),
                 'ell_status': random_boolean(),
-                'frl_status': random_boolean(),
+                'frl_status': random.choice(['F', 'R', 'N']),
                 'iep_status': random_boolean(),
                 'street_address': fake.street_address(),
                 'city': fake.city(),
@@ -147,6 +155,57 @@ def generate_students(schools):
             })
 
     return students
+
+def generate_sections(teachers, schools):
+    sections = []
+    for teacher in teachers:
+        # Get the school for the teacher
+        school = [school for school in schools if school['school_id'] == teacher['school_id']][0]
+        # Generate 2 sections for each teacher
+        for _ in range(2):
+            sections.append({
+                # School_id	Section_id	Teacher_id  Name	Section_number	Grade	Course_name	Course_number	Course_description	Period	Subject	Term_name	Term_start	Term_end
+
+                'school_id': school['school_id'],
+                'section_id': fake.unique.random_number(digits=8),
+                'teacher_id': teacher['teacher_id'],
+                
+                # Optional fields
+                'section_number': fake.unique.random_number(digits=8),
+                'course_name': fake.catch_phrase(),
+                'course_number': fake.unique.random_number(digits=8),
+                'course_description': fake.sentence(),
+                # 'grade': random_grade(school["low_grade"], school["high_grade"]),
+                # 'period': random.choice(['1', '2', '3', '4', '5', '6', '7', '8']),
+                # 'subject': random.choice(['Math', 'Science', 'English/language arts', 'Social Studies', 'Language' 'History', 'Arts and music', 'PE and health', 'other']),
+                # term_name
+                # term_start
+                # term_end
+                # ext.*
+            })
+
+    return sections
+
+def generate_enrollments(students, sections):
+    enrollments = []
+    for student in students:
+        # stick each student in 2 sections
+        # get sections where school matches students's school
+        # print student school
+        applicable_sections = []
+        for section in sections:
+            if section['school_id'] == student['school_id']:
+                applicable_sections.append(section)
+
+        random.shuffle(applicable_sections)
+        for section in applicable_sections[:2]:
+            enrollments.append({
+                'school_id': student['school_id'],
+                'student_id': student['student_id'],
+                'section_id': section['section_id']
+            })
+
+    return enrollments
 
 def convert_to_csv(array_of_objects, filename):
     """
@@ -177,9 +236,13 @@ def convert_to_csv(array_of_objects, filename):
 schools = generate_schools()
 teachers = generate_teachers(schools)
 students = generate_students(schools)
-# sections = generate_sections(teachers, schools)
-# enrollments = generate_enrollments(students, sections)
+sections = generate_sections(teachers, schools)
+enrollments = generate_enrollments(students, sections)
 
-convert_to_csv(schools, 'schools.csv')
-convert_to_csv(teachers, 'teachers.csv')
-convert_to_csv(students, 'students.csv')
+timestamp = datetime.now().strftime('%Y-%m-%dT%H:%M')
+
+convert_to_csv(schools, f'schools_{timestamp}.csv')
+convert_to_csv(teachers, f'teachers_{timestamp}.csv')
+convert_to_csv(students, f'students_{timestamp}.csv')
+convert_to_csv(sections, f'sections_{timestamp}.csv')
+convert_to_csv(enrollments, f'enrollments_{timestamp}.csv')
