@@ -152,7 +152,6 @@ const feature = (channel, publishedAt) => {
 };
 
 const onDelete = channel => {
-  console.log('delete');
   var url = `/featured_projects/${channel}`;
   $.ajax({
     url: url,
@@ -215,10 +214,6 @@ class FeaturedProjectsTable extends React.Component {
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
-  };
-
-  onDelete = () => {
-    console.log('delete');
   };
 
   // The user requested a new sorting column. Adjust the state accordingly.
