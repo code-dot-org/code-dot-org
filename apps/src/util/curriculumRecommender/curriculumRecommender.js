@@ -14,7 +14,9 @@ const twoYearsAgo = moment()
 
   // [TODO]: Add general comment on how these recommendations work and where the edges of this black box are (i.e. filters before, returns array)
 
-
+/*
+ * Curriculum recommenders
+ */
 export const getTestRecommendations = (
   curricula,
   duration,
@@ -39,8 +41,7 @@ export const getTestRecommendations = (
     );
     score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
     score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
-    
-    // score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
   });
 
@@ -50,6 +51,9 @@ export const getTestRecommendations = (
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
 };
 
+/*
+ * Scoring questions
+ */
 const hasDesiredDuration = (scoring_framework, curriculum, duration) => {
   return duration && curriculum.duration === duration
     ? scoring_framework['hasDesiredDuration']

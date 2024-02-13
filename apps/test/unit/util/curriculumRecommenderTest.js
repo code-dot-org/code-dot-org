@@ -1,6 +1,7 @@
 import {getTestRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 import {expect} from '../../util/reconfiguredChai';
+import moment from 'moment';
 
 // "nullCourse" and "emptyCourse" have more recent publish dates than the fake courses with a single trait so that
 // it'll be clear which courses received points and which didn't. After sorting by points, the recommended curricula
@@ -142,6 +143,29 @@ const ONLY_TOPICS_COURSES = [
   },
 ];
 
+const ONLY_RECENT_PUBLISHED_DATE_COURSES = [
+  {
+    key: 'publishedWithinOneYearAgoCourse',
+    is_featured: false,
+    duration: null,
+    marketing_initiative: null,
+    grade_levels: null,
+    cs_topic: null,
+    school_subject: null,
+    published_date: moment().utc().subtract(6, 'months').toString(),
+  },
+  {
+    key: 'publishedWithinTwoYearsAgoCourse',
+    is_featured: false,
+    duration: null,
+    marketing_initiative: null,
+    grade_levels: null,
+    cs_topic: null,
+    school_subject: null,
+    published_date: moment().utc().subtract(18, 'months').toString(),
+  },
+];
+
 const IS_FEATURED_TEST_COURSES = [
   ...NULL_AND_EMPTY_COURSES,
   ONLY_FEATURED_COURSE,
@@ -163,6 +187,14 @@ const SCHOOL_SUBJECT_TEST_COURSES = [
 ];
 
 const TOPICS_TEST_COURSES = [...NULL_AND_EMPTY_COURSES, ...ONLY_TOPICS_COURSES];
+
+// This set of courses includes the featured course so that there is a clear division between which courses
+// are scoring points for how recently they were published and which are just being sorted higher because
+// of their recent publish date.
+const PUBLISHED_DATE_TEST_COURSES = [
+  ...IS_FEATURED_TEST_COURSES,
+  ...ONLY_RECENT_PUBLISHED_DATE_COURSES,
+];
 
 describe('testRecommender', () => {
   it('curricula marked as is_featured sorted before other curricula with same score ', () => {
@@ -296,6 +328,28 @@ describe('testRecommender', () => {
       'oneTopicCourse',
       // Curricula with any important topics score higher
       'importantTopicCourse',
+      // Sort remaining 0-score curricula by published_date
+      'emptyCourse',
+      'nullCourse',
+    ]);
+  });
+
+  it('adds score to curricula published within the last 2 years', () => {
+    const recommendedCurricula = getTestRecommendations(
+      PUBLISHED_DATE_TEST_COURSES,
+      '',
+      '',
+      '',
+      ''
+    ).map(curr => curr.key);
+
+    expect(recommendedCurricula).to.deep.equal([
+      // Curricula published within the last year score higher
+      'publishedWithinOneYearAgoCourse',
+      // Curricula published within the last 2 years score higher
+      'publishedWithinTwoYearsAgoCourse',
+      // Curricula marked as is_featured are sorted higher (in this case, it's sorted first of the 0-scoring curricula)
+      'featuredCourse',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
       'nullCourse',
