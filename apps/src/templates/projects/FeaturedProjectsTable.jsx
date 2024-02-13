@@ -15,7 +15,7 @@ import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import { constants } from 'blockly';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -107,13 +107,9 @@ const nameFormatter = (projectName, {rowData}) => {
 
 const unfeature = channel => {
   const url = `/featured_projects/${channel}/unfeature`;
-  $.ajax({
-    url: url,
-    type: 'PUT',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleUnfeatureFailure);
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleUnfeatureFailure);
 };
 
 const handleSuccess = () => {
@@ -143,24 +139,14 @@ const feature = (channel, publishedAt) => {
   if (!publishedAt) {
     alert(i18n.featureUnpublishedWarning());
   }
-  $.ajax({
-    url: url,
-    type: 'PUT',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleFeatureFailure);
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleFeatureFailure);
 };
 
 const onDelete = channel => {
   const url = `/featured_projects/${channel}`;
-  $.ajax({
-    url: url,
-    type: 'DELETE',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleFeatureFailure);
+  HttpClient.delete(url, true).then(handleSuccess).catch(handleFeatureFailure);
 };
 
 const actionsFormatterUnfeatured = (actions, {rowData}) => {
