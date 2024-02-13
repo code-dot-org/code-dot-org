@@ -1,10 +1,10 @@
-import MetricsReporter from '../lib/metrics/MetricsReporter';
+import Lab2Registry from '../lab2/Lab2Registry';
 import {getAuthenticityToken} from '../util/AuthenticityTokenStore';
 import {AITutorInteraction} from './types';
 
 export async function savePromptAndResponse(interactionData: AITutorInteraction) {
   try {
-    let response = await fetch('/ai_tutor_interactions', {
+    await fetch('/ai_tutor_interactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -12,12 +12,9 @@ export async function savePromptAndResponse(interactionData: AITutorInteraction)
       },
       body: JSON.stringify(interactionData),
     });
-    let data = await response.json();
-    console.log('data', data);
   } catch (error) {
-    MetricsReporter.logError({
-      event: 'AI Tutor interaction failed to save.',
-      error: error,
-    });
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('AI Tutor Interaction failed to save.', error as Error);
   }
 }
