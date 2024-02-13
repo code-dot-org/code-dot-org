@@ -9,7 +9,7 @@ import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {compilationSystemPrompt} from '@cdo/apps/aiTutor/constants';
-import {TutorTypes} from '@cdo/apps/aiTutor/types';
+import {TutorType} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code did not compile.
 
@@ -56,7 +56,7 @@ const CompilationTutor: React.FunctionComponent = () => {
       isProjectBacked: level?.isProjectBacked,
       systemPrompt: systemPrompt,
       studentCode: studentCode,
-      tutorType: TutorTypes.COMPILATION,
+      tutorType: TutorType.COMPILATION,
     };
     dispatch(askAITutor(chatContext));
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION, {

@@ -5,7 +5,6 @@ class AiTutorInteractionsController < ApplicationController
 
   # POST /ai_tutor_interactions
   def create
-    pp ai_tutor_interaction_params
     return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor'}) unless current_user.has_ai_tutor_access?
     @ai_tutor_interaction = AiTutorInteraction.new(ai_tutor_interaction_params)
     if @ai_tutor_interaction.save
