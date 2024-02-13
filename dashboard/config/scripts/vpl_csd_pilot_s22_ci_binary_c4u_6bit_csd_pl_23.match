@@ -1,6 +1,6 @@
 name 'VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23'
 title 'Check for Understanding'
-description 'Match the correct number to its binary representation.'
+description 'Match the correct number to its binary representation. Use the row of numbers below to help you remember the value of each square in the binary system.'
 height'65'
 
 
@@ -24,7 +24,7 @@ teacher_markdown <<MARKDOWN
 MARKDOWN
 
 markdown <<MARKDOWN
-![](https://images.code.org/66ca3f28b5012dbbc240ead09a56b4fe-image-1651778773998.25.51 PM.png)
+<img src="https://images.code.org/66ca3f28b5012dbbc240ead09a56b4fe-image-1651778773998.25.51 PM.png" alt="A row of six numbers: 32, 16, 8, 4, 2, 1.">
 
 
 MARKDOWN

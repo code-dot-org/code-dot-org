@@ -87,7 +87,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     if (newValue === EMPTY_OPTION) {
       this.value_ = newValue;
       this.isDirty_ = true;
-      this.selectedOption_ = [EMPTY_OPTION, ''];
+      this.selectedOption = [EMPTY_OPTION, ''];
     } else {
       super.doValueUpdate_(newValue);
     }
