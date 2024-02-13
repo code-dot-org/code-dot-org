@@ -53,6 +53,8 @@ class Policies::Lti
     },
   }
 
+  MAX_COURSE_MEMBERSHIP = 650
+
   def self.get_account_type(id_token)
     id_token[LTI_ROLES_KEY].each do |role|
       return User::TYPE_TEACHER if TEACHER_ROLES.include? role
@@ -95,5 +97,10 @@ class Policies::Lti
   # a Code.org account from an LTI supporting LMS?
   def self.show_email_input?(user)
     user.teacher? && Policies::Lti.lti?(user)
+  end
+
+  # Whether or not a roster sync can be performed for a user.
+  def self.roster_sync_enabled?(user)
+    user.teacher? && user.lti_roster_sync_enabled
   end
 end

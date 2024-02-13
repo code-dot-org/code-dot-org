@@ -5,7 +5,9 @@ import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
 import queryString from 'query-string';
 import {Link} from '@dsco_/link';
-import FontAwesome from '../FontAwesome';
+import ProgressIcon from './ProgressIcon';
+import {ITEM_TYPE} from './ItemType';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -30,14 +32,40 @@ export default function LevelDataCell({
   studentId,
   sectionId,
   studentLevelProgress,
-  overrideIcon,
+  expandedChoiceLevel,
 }) {
-  const levelData = React.useMemo(() => {
-    if (!studentLevelProgress) {
+  const itemType = React.useMemo(() => {
+    if (expandedChoiceLevel) {
+      return ITEM_TYPE.CHOICE_LEVEL;
+    }
+    if (studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking') {
+      return ITEM_TYPE.KEEP_WORKING;
+    }
+    if (
+      !studentLevelProgress ||
+      studentLevelProgress.status === LevelStatus.not_tried
+    ) {
       return;
     }
-    return studentLevelProgress.status;
-  }, [studentLevelProgress]);
+    if (
+      studentLevelProgress.status === LevelStatus.perfect ||
+      studentLevelProgress.status === LevelStatus.submitted ||
+      studentLevelProgress.status === LevelStatus.free_play_complete ||
+      studentLevelProgress.status === LevelStatus.completed_assessment
+    ) {
+      if (level.isValidated) {
+        return ITEM_TYPE.VALIDATED;
+      } else {
+        return ITEM_TYPE.SUBMITTED;
+      }
+    }
+    if (
+      studentLevelProgress.status === LevelStatus.attempted ||
+      studentLevelProgress.status === LevelStatus.passed
+    ) {
+      return ITEM_TYPE.IN_PROGRESS;
+    }
+  }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   return (
     <Link
@@ -46,7 +74,7 @@ export default function LevelDataCell({
       external
       className={classNames(styles.gridBox, styles.gridBoxLevel)}
     >
-      {overrideIcon ? <FontAwesome icon={overrideIcon} /> : levelData}
+      {itemType && <ProgressIcon itemType={itemType} />}
     </Link>
   );
 }
@@ -56,5 +84,5 @@ LevelDataCell.propTypes = {
   sectionId: PropTypes.number,
   studentLevelProgress: studentLevelProgressType,
   level: PropTypes.object.isRequired,
-  overrideIcon: PropTypes.string,
+  expandedChoiceLevel: PropTypes.bool,
 };

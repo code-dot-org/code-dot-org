@@ -159,7 +159,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-Reader Express Kurs"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Oldindan o'qiydiganlar uchun tezkor kurs</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-Reader Express Kurs"></a><br>Oldindan o'quvchilar uchun <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">Ekspress kursi</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -228,7 +228,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Laboratoriya ilovasi</h3></a>
     <p style="color:#ffffff">App Lab - bu oddiy dasturlarni yaratish uchun dasturiy muhit. Ilovani, bloklar bilan kodni yoki JavaScript-ni loyihalashtiring, so'ngra ilovangizni bir necha soniya ichida baham ko'ring.</p>
@@ -237,7 +237,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">O'yin laboratoriyasi</h3></a>
     <p style="color:#ffffff">Game Lab - bu bir-biri bilan o'zaro ta'sir qiladigan ob'ektlar va belgilar bilan oddiy animatsiyalar va o'yinlar yaratishingiz mumkin bo'lgan dasturlash muhiti.</p>
@@ -247,7 +247,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Veb laboratoriyasi</h3></a>
     <p style="color:#ffffff">Web Lab - bu HTML va CSS yordamida oddiy veb-sahifalarni yaratishingiz mumkin bo'lgan dasturlash muhiti. Veb-sahifalaringizni loyihalashtiring va saytingizni bir necha soniya ichida baham ko'ring.</p>

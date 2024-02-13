@@ -3,32 +3,27 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Opening a lesson or unit
-
-#### The lesson begins with an introduction that includes:
-#### * A sentence explaining what the lesson is about
-#### * List of objectives
+## Still need: 
 #### * A presurvey (contact RED team to create the survey) 
 #### * Suggested time 
 #### * an image from the lesson 
 
-
-
-##Exemplar: 
 # Teaching CS Fundamentals Maker with micro:bit
 
 
 
-#### Welcome! This professional learning module is designed to help you prepare to teach Code.org's CS Fundamentals Maker with micro:bit unit. 
+#### Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. The Micro:bit course bridges the gap between digital and physical worlds, and enables students to transfer their computer programs into real-world applications. 
 
 
 
 ## In this module, you will:
 
-* ##### Get an introduction to foundational coding concepts.
+* ##### Prepare you to teach foundational coding concepts like events, loops, conditionals, variables and functions.
+* ##### Gain practical experience in how hardware and software can work together. 
 * ##### Practice key concepts included in the unit.
-* ##### 
-* ##### 
+* ##### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses. 
+
+##### Note: The CS Maker modules have for recommended grade levels 2-5 represented in courses C-F. This professional learning module will prepare you to teach any of the modules but note that not all of these concepts are covered in all of the modules. 
 
 ## Take the pre-survey
 

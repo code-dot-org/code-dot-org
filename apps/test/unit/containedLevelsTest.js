@@ -54,7 +54,6 @@ describe('getContainedLevelResultInfo', () => {
         <GameButtons
           hideRunButton={false}
           runButtonText={'Run'}
-          playspacePhoneFrame={false}
           nextLevelUrl={'nextUrl'}
           showSkipButton
           showFinishButton
