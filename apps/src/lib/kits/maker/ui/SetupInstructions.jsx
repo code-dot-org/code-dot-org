@@ -4,6 +4,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
 import {Provider} from 'react-redux';
+import {isWindows} from '../util/browserChecks';
 import {
   shouldUseWebSerial,
   WEB_SERIAL_FILTERS,
@@ -13,15 +14,7 @@ import {
   CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL,
   CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
-
-const style = {
-  oneColumn: {
-    display: 'flex',
-    flexDirection: 'column',
-    // justifyContent: 'space-between',
-  },
-  connectYourBoardChecklistId: 'connectYourBoardChecklist',
-};
+import styles from './setup-instructions.module.scss';
 
 export default class SetupInstructions extends React.Component {
   constructor(props) {
@@ -81,13 +74,12 @@ class ConnectionInstructions extends React.Component {
       : this.renderWebSerialConnectButton();
 
     if (!shouldUseWebSerial()) {
-      // TODO: Ask Alice how she gets around this in her local env.
-      // return null;
+      return null;
     }
 
     return (
       <div>
-        <h2 id={style.connectYourBoardChecklistId}>
+        <h2 id={styles.checklistId}>
           {applabI18n.makerSetupConnectBoardChecklistTitle()}
         </h2>
         <p>
@@ -99,9 +91,16 @@ class ConnectionInstructions extends React.Component {
           <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
           <li>{applabI18n.makerSetupWebSerialConnectToBoardButton()}</li>
           <li>
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupWebSerialWindowConnect()}
-            />
+            {applabI18n.makerSetupWebSerialWindowConnect()}
+            <ul className={styles.troubleshootList}>
+              <li>
+                <SafeMarkdown
+                  markdown={applabI18n.makerSetupNoCompatibleDevices({
+                    installInstructionsId: styles.installInstructionsId,
+                  })}
+                />
+              </li>
+            </ul>
           </li>
           <li>{applabI18n.makerSetupWebSerialSuccessfulConnection()}</li>
         </ol>
@@ -120,66 +119,73 @@ class CPExpressInstallInstructions extends React.Component {
   }
 
   render() {
-    // TODO: layout with images
-    // TODO: get screenshot for image copy
-    // TODO: reset button gif- put in our cdn?
-    // TODO: make i18n strings for all the strings
+    const buttonName = 'RESET';
+    const driveName = 'CPLAYBOOT';
     return (
-      <div id="CPExpressInstallInstructions">
-        <h2>Install the Firmata firmware onto the CP Express</h2>
+      <div id={styles.installInstructionsId}>
+        <h2>{applabI18n.makerSetupCPXInstallHeader()}</h2>
         <ol>
           <li>
-            Set your Circuit Playground Express to Bootloader Mode
-            <div style={style.oneColumn}>
-              <ul>
-                <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
-                <li>
-                  Press or double-press the RESET button in the center of the
-                  board.
-                </li>
-                <li>
-                  You've successfully entered bootloader mode when all the LEDs
-                  turn green and your computer detects a new removable storage
-                  device called 'CPLAYBOOT'.
-                </li>
-                <li>
-                  If pressing RESET once doesn't work, try double-pressing it.
-                </li>
-                <li>
-                  If the color LEDs turn all red, check your USB cable, try
-                  another cable or another USB port.
-                </li>
-              </ul>
-              <img
-                src="https://cdn-learn.adafruit.com/assets/assets/000/051/201/original/makecode_uf2.gif?1519151701"
-                width={200}
-                alt={
-                  'GIF showing two ways to enter bootloader mode on the Circuit Playground Express by pressing the reset button once, then twice in a row.'
-                }
-              />
+            <div className={styles.listWithImage}>
+              <div>
+                {applabI18n.makerSetupCPXInstallStep1()}
+                <ul>
+                  <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
+                  <li>{applabI18n.makerSetupCPXInstallStep1a({buttonName})}</li>
+                  <li>
+                    {applabI18n.makerSetupCPXInstallStep1b({driveName})}
+                    <ul className={styles.troubleshootList}>
+                      <li>
+                        {applabI18n.makerSetupCPXInstallStep1c({buttonName})}
+                      </li>
+                      <li>{applabI18n.makerSetupCPXInstallStep1d()}</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <figure className={styles.imageContainer}>
+                <img
+                  src="/blockly/media/maker/cpx-bootloader-mode.gif"
+                  alt={applabI18n.makerSetupCPXBootloaderGifAltText()}
+                />
+              </figure>
             </div>
           </li>
           <li>
-            Copy over the Firmata firmware.
+            {applabI18n.makerSetupCPXInstallStep2()}
             <ul>
               <li>
                 <SafeMarkdown
-                  markdown={`Download the [Circuit Playground Express Firmata](${CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL})`}
+                  markdown={applabI18n.makerSetupCPXInstallStep2a({
+                    firmataUrl: CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL,
+                  })}
                 />
               </li>
               <li>
-                Copy the '{CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME}' file to
-                the 'CPLAYBOOT' drive on your computer.
+                {applabI18n.makerSetupCPXInstallStep2b({
+                  firmataFilename: CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
+                  driveName,
+                })}
+
+                <figure className={styles.imageContainer}>
+                  <img
+                    src={
+                      isWindows()
+                        ? '/blockly/media/maker/copy-firmata-windows.png'
+                        : '/blockly/media/maker/copy-firmata-mac.png'
+                    }
+                    alt={applabI18n.makerSetupCPXInstallScreenshotAltText()}
+                  />
+                </figure>
               </li>
-              <li>
-                The Circuit Playground Express will reboot automatically after a
-                few seconds.
-              </li>
+              <li>{applabI18n.makerSetupCPXInstallStep2c()}</li>
             </ul>
           </li>
           <li>
             <SafeMarkdown
-              markdown={`Return to the [checklist](#${style.connectYourBoardChecklistId}) above, and continue where you left off. The device should be discoverable now that the Firmata firmware is installed.`}
+              markdown={applabI18n.makerSetupCPXInstallStep2d({
+                checklistId: styles.checklistId,
+              })}
             />
           </li>
         </ol>
