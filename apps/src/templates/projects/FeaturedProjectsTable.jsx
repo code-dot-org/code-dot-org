@@ -142,17 +142,13 @@ const feature = (channel, publishedAt) => {
   if (!publishedAt) {
     alert(i18n.featureUnpublishedWarning());
   }
-  $.ajax({
-    url: url,
-    type: 'PUT',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleFeatureFailure);
+  fetch(url, {method: 'DELETE'})
+    .then(() => handleSuccess)
+    .catch(err => handleFeatureFailure());
 };
 
 const onDelete = channel => {
-  var url = `/featured_projects/${channel}`;
+  const url = `/featured_projects/${channel}`;
   $.ajax({
     url: url,
     type: 'DELETE',
@@ -175,7 +171,7 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
         onClick={() => onDelete(rowData.channel)}
         color={color.red}
       >
-        {i18n.delete()}
+        Remove
       </PopUpMenu.Item>
     </QuickActionsCell>
   );
