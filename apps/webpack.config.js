@@ -64,6 +64,7 @@ const nodeModulesToTranspile = [
   'slate',
   'react-loading-skeleton',
   'unified',
+  'stylelint-bundle',
 ].map(path => p('node_modules', path));
 
 // As of Webpack 5, Node APIs are no longer automatically polyfilled.
