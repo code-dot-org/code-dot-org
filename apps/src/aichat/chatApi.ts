@@ -7,7 +7,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from './constants';
 import Lab2Registry from '../lab2/Lab2Registry';
-import {TutorTypes} from '../aiTutor/types';
+import {TutorType} from '../aiTutor/types';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
@@ -15,7 +15,7 @@ import {TutorTypes} from '../aiTutor/types';
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: TutorTypes
+  tutorType?: TutorType
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = levelId
     ? {levelId: levelId, messages: messagesToSend, type: tutorType}
@@ -54,7 +54,7 @@ export async function getChatCompletionMessage(
   newMessage: string,
   chatMessages: ChatCompletionMessage[],
   levelId?: number,
-  tutorType?: TutorTypes
+  tutorType?: TutorType
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     {role: Role.SYSTEM, content: systemPrompt},

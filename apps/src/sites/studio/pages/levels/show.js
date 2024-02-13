@@ -66,7 +66,7 @@ function initPage() {
       id: levelId,
       type: type,
       hasValidation: hasValidation,
-      isProjectBacked: isProjectBacked
+      isProjectBacked: isProjectBacked,
     };
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));
