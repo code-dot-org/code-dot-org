@@ -121,7 +121,7 @@ export default class CoreLibrary {
       const value = this.getVariableValue(name);
       const text = `${name}: ${value}`;
 
-      // TODO: Update to handle locations like top, left, right, bottom
+      // TODO: Confirm this handles shadow block locations appropriately
       drawUtils.variableBubble(this.p5, location.x, location.y, text);
     });
   }
