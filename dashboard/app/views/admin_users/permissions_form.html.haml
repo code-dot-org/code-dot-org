@@ -55,7 +55,8 @@
   %button.btn{type: 'submit'}
     %i.fa.fa-search
 -if @users_with_permission
-  = page_header 'users', @users_with_permission, permitted_params: [:permission]
+  - download_csv = link_to('Page as CSV', permissions_csv_path(params.permit([:permission, :page_size, :page, :search_term])), class: 'btn btn-default')
+  = page_header 'users', @users_with_permission, permitted_params: [:permission], extra_buttons: [download_csv]
   %table.table.table-hover.table-condensed.table-auto-width
     %thead
       %th ID
