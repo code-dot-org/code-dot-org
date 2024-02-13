@@ -17,8 +17,6 @@ class CongratsController < ApplicationController
 
     @is_hoc_tutorial = CertificateImage.hoc_course?(course_name)
 
-    @tutorial_url = CurriculumHelper.find_matching_course_version(course_name)&.link
-
     @next_course_script_name = ScriptConstants.csf_next_course_recommendation(course_name)
     next_script = Unit.get_from_cache(@next_course_script_name) if @next_course_script_name
     @next_course_title = next_script.localized_title if next_script

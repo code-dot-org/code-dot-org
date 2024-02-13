@@ -20,7 +20,8 @@ class CertificatesController < ApplicationController
     announcement = Announcements.get_announcement_for_page('/certificates')
 
     @image_url = certificate_image_url(data['name'], data['course'], data['donor'])
-    puts @image_url.inspect
+    curriculum = CurriculumHelper.find_matching_course_version(data['course'])
+    @image_description = "I just finished Code.org's #{curriculum.localized_title} at #{CDO.studio_url(curriculum.link)}!"
     @certificate_data = {
       imageUrl: @image_url,
       printUrl: certificate_print_url(data['name'], data['course'], data['donor']),
