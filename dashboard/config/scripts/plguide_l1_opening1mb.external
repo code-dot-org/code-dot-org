@@ -3,33 +3,23 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Opening a lesson or unit
-
-#### The lesson begins with an introduction that includes:
-#### * A sentence explaining what the lesson is about
-#### * List of objectives
+## Still need: 
 #### * A presurvey (contact RED team to create the survey) 
 #### * Suggested time 
 #### * an image from the lesson 
 
-
-
-##Exemplar: 
 # Teaching CS Fundamentals Maker with micro:bit
 
 
 
-#### Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. 
-
-#### This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. 
-
-#### This professional learning course will prepare you to teach your students fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.
+#### Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. The Micro:bit course bridges the gap between digital and physical worlds, and enables students to transfer their computer programs into real-world applications. 
 
 
 
 ## In this module, you will:
 
-* ##### Get an introduction to foundational coding concepts like events, loops, conditionals, variables and functions.
+* ##### Prepare you to teach foundational coding concepts like events, loops, conditionals, variables and functions.
+* ##### Gain practical experience in how hardware and software can work together. 
 * ##### Practice key concepts included in the unit.
 * ##### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses. 
 

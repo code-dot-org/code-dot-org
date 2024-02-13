@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-09 23:55:21 UTC",
+    "serialized_at": "2024-02-13 00:05:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -40,8 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 5 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 5 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data and Society",
@@ -57,8 +57,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes",
-        "student_overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using a binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 25 minutes"
+        "overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "Explore data at a small scale",
@@ -74,8 +74,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Apply the problem solving process to solve data problems.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Apply the problem solving process to solve data problems.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Apply the Problem Solving Process to solve data problems.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Apply the Problem Solving Process to solve data problems.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Explore data at a large scale",
@@ -91,8 +91,8 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "**You will:**\n\n* Explore end of chapter projects.\n\n**Suggested time:** 10 minutes",
-        "student_overview": "**You will:**\n\n* Explore end of chapter projects.\n\n**Suggested time:** 10 minutes"
+        "overview": "**You will:**\n\n* Explore end-of-chapter projects.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore end-of-chapter projects.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Unit wrap up",
@@ -106,6 +106,7 @@
       "key": "58c3950d-d21a-4c17-b7f3-4f8147d0cefb",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "58c3950d-d21a-4c17-b7f3-4f8147d0cefb",
@@ -118,6 +119,7 @@
       "key": "a5ec6252-22df-40d5-a0ea-d48f3a4eb29c",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "a5ec6252-22df-40d5-a0ea-d48f3a4eb29c",
@@ -130,6 +132,7 @@
       "key": "af9f250b-e6e6-4101-997f-467c11519714",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "af9f250b-e6e6-4101-997f-467c11519714",
@@ -142,6 +145,7 @@
       "key": "69c4adb3-b31b-44b1-84c3-8cf9bad8a738",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "69c4adb3-b31b-44b1-84c3-8cf9bad8a738",
@@ -178,7 +182,7 @@
       "key": "0e6ae18a-a3fd-475d-ab9b-ecaf9677c253",
       "position": 3,
       "properties": {
-        "progression_name": "Explore the first week of curriculum"
+        "progression_name": "Explore the First Week of Curriculum"
       },
       "seeding_key": {
         "activity_section.key": "0e6ae18a-a3fd-475d-ab9b-ecaf9677c253",
@@ -244,7 +248,7 @@
       "key": "c9a7c229-34a7-4cde-8cf3-649cc4ccf614",
       "position": 6,
       "properties": {
-        "progression_name": "Wrap Up"
+        "progression_name": "Section Wrap Up"
       },
       "seeding_key": {
         "activity_section.key": "c9a7c229-34a7-4cde-8cf3-649cc4ccf614",
@@ -325,6 +329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23"
+        ],
         "progression": "Introduction to This Module"
       },
       "bonus": false,
@@ -347,6 +354,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit5"
+        ],
         "progression": "Introduction to This Module"
       },
       "bonus": false,
@@ -447,7 +457,7 @@
         "level_keys": [
           "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23"
         ],
-        "progression": "Explore the first week of curriculum"
+        "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
       "seeding_key": {
@@ -766,13 +776,35 @@
     {
       "chapter": 19,
       "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U4-DecryptionPractice"
+        ],
+        "lesson.key": "Explore data at a small scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "5bf2d410-c152-45f5-9904-e7aa1ab117ba"
+      },
+      "level_keys": [
+        "VPL-CSD-U4-DecryptionPractice"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23"
         ],
-        "progression": "Wrap Up"
+        "progression": "Section Wrap Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -789,7 +821,29 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp"
+        ],
+        "lesson.key": "Explore data at a small scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "c9a7c229-34a7-4cde-8cf3-649cc4ccf614"
+      },
+      "level_keys": [
+        "VPL-CSD_U5SelfPaced_Lesson2WrapUp"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -814,7 +868,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -839,7 +893,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -864,9 +918,31 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Solve Data Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U5-PizzaPartyProblem"
+        ],
+        "lesson.key": "Explore data at a large scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "bfb325bd-c2a3-467c-8960-c0a88c16013d"
+      },
+      "level_keys": [
+        "VPL-CSD-U5-PizzaPartyProblem"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -889,9 +965,9 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -914,9 +990,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -939,8 +1015,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 7,
+      "chapter": 29,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -964,7 +1040,29 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson3WrapUp"
+        ],
+        "lesson.key": "Explore data at a large scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "8e961d05-a016-4358-aeae-8e00f22b5b66"
+      },
+      "level_keys": [
+        "VPL-CSD_U5SelfPaced_Lesson3WrapUp"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -989,7 +1087,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1014,7 +1112,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1039,7 +1137,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1283,9 +1381,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL-CSD-U4-DecryptionPractice",
+        "script_level.level_keys": [
+          "VPL-CSD-U4-DecryptionPractice"
+        ],
+        "lesson.key": "Explore data at a small scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "5bf2d410-c152-45f5-9904-e7aa1ab117ba"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23"
+        ],
+        "lesson.key": "Explore data at a small scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "c9a7c229-34a7-4cde-8cf3-649cc4ccf614"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_U5SelfPaced_Lesson2WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp"
         ],
         "lesson.key": "Explore data at a small scale",
         "lesson_group.key": "",
@@ -1322,6 +1444,18 @@
         "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 Pizza_CSD_PL_23",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U5 Pizza_CSD_PL_23"
+        ],
+        "lesson.key": "Explore data at a large scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "bfb325bd-c2a3-467c-8960-c0a88c16013d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U5-PizzaPartyProblem",
+        "script_level.level_keys": [
+          "VPL-CSD-U5-PizzaPartyProblem"
         ],
         "lesson.key": "Explore data at a large scale",
         "lesson_group.key": "",
@@ -1370,6 +1504,18 @@
         "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_CSD_PL_23",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_CSD_PL_23"
+        ],
+        "lesson.key": "Explore data at a large scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csd-unit5-2-2023",
+        "activity_section.key": "8e961d05-a016-4358-aeae-8e00f22b5b66"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_U5SelfPaced_Lesson3WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson3WrapUp"
         ],
         "lesson.key": "Explore data at a large scale",
         "lesson_group.key": "",
