@@ -1,14 +1,16 @@
 import {linter} from '@codemirror/lint';
 //import cssValidator from 'w3c-css-validator';
-import stylelint from 'stylelint-bundle';
+//import stylelint from 'stylelint-bundle';
 
 export const cssLinter = linter(async view => {
   const diagnostics = [];
   console.log('linting?');
+
+  //await import('stylelint-bundle');
   //const docLines = view.state.doc.toString().split('\n');
-  console.log(`stylelint: ${stylelint}`);
-  console.log({stylelint});
-  console.log({lintMethod: stylelint.lint});
+  // console.log(`stylelint: ${stylelint}`);
+  // console.log({stylelint});
+  // console.log({lintMethod: stylelint.lint});
   const {errored, results} = await stylelint.lint({
     code: view.state.doc.toString(),
     config: {
