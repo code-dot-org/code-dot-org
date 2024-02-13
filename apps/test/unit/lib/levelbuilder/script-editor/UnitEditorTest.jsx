@@ -82,6 +82,7 @@ describe('UnitEditor', () => {
       initialInstructionType: InstructionType.teacher_led,
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
+      initialSupportedLocales: [],
       hasCourse: false,
       scriptPath: '/s/test-unit',
       initialProfessionalLearningCourse: '',
@@ -165,12 +166,40 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input').length).to.equal(24);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(6);
+      expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
       expect(wrapper.find('SaveBar').length).to.equal(1);
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
+    });
+
+    it('locale selection is a multi select checkbox component with initial options selected', () => {
+      const wrapper = createWrapper({
+        initialLocales: [['Hindi', 'hi-IN'],['Tamil', 'ta-IN'],['Kannada', 'ka-IN'],['Bahasa', 'ms-MY']],
+        initialSupportedLocales: ['hi-IN', 'ta-IN']
+      });
+
+      expect(wrapper
+        .find('li')
+        .filterWhere(li =>
+          li.find('input[type="checkbox"]').length == 1 &&
+          li.find('strong').length == 1).length)
+      .to.equal(4);
+
+      expect(wrapper
+        .find('li')
+        .filterWhere(li =>
+          li.find('input[type="checkbox"]').length == 1 &&
+          li.find('strong').filterWhere(st => st.text() === "hi-IN").length == 1).length)
+      .to.equal(1);
+
+      expect(wrapper
+        .find('li')
+        .filterWhere(li =>
+          li.find('input[type="checkbox"]').length == 1 &&
+          li.find('strong').filterWhere(st => st.text() === "ta-IN").length == 1).length)
+      .to.equal(1);
     });
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
