@@ -15,6 +15,7 @@ import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import { constants } from 'blockly';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -105,7 +106,7 @@ const nameFormatter = (projectName, {rowData}) => {
 };
 
 const unfeature = channel => {
-  var url = `/featured_projects/${channel}/unfeature`;
+  const url = `/featured_projects/${channel}/unfeature`;
   $.ajax({
     url: url,
     type: 'PUT',
@@ -138,13 +139,17 @@ const actionsFormatterFeatured = (actions, {rowData}) => {
 };
 
 const feature = (channel, publishedAt) => {
-  var url = `/featured_projects/${channel}/feature`;
+  const url = `/featured_projects/${channel}/feature`;
   if (!publishedAt) {
     alert(i18n.featureUnpublishedWarning());
   }
-  fetch(url, {method: 'DELETE'})
-    .then(() => handleSuccess)
-    .catch(err => handleFeatureFailure());
+  $.ajax({
+    url: url,
+    type: 'PUT',
+    dataType: 'json',
+  })
+    .done(handleSuccess)
+    .fail(handleFeatureFailure);
 };
 
 const onDelete = channel => {
