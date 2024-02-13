@@ -74,12 +74,13 @@ async function fetchJson<ResponseType>(
 }
 
 /**
- * POST to the given endpoint. Adds the Rails authenticity
+ * o to the given endpoint. Adds the Rails authenticity
  * token if useAuthenticityToken is true.
  */
-async function post(
+async function sendRequest(
+  method: string,
   endpoint: string,
-  body: string,
+  body?: string,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {
@@ -88,7 +89,7 @@ async function post(
     headers[AUTHENTICITY_TOKEN_HEADER] = token;
   }
   const response = await fetch(endpoint, {
-    method: 'POST',
+    method,
     body,
     headers,
   });
@@ -104,28 +105,39 @@ async function post(
 
 async function put(
   endpoint: string,
-  body: string,
+  body?: string,
   useAuthenticityToken = false,
   headers: Record<string, string> = {}
 ): Promise<Response> {
-  if (useAuthenticityToken) {
-    const token = await getAuthenticityToken();
-    headers[AUTHENTICITY_TOKEN_HEADER] = token;
-  }
-  const response = await fetch(endpoint, {
-    method: 'PUT',
-    body,
-    headers,
-  });
-  if (!response.ok) {
-    throw new Error(response.status + ' ' + response.statusText);
-  }
+  return sendRequest('PUT', endpoint, body, useAuthenticityToken, headers);
+}
 
-  return response;
+async function post(
+  endpoint: string,
+  body?: string,
+  useAuthenticityToken = false,
+  headers: Record<string, string> = {}
+): Promise<Response> {
+  return sendRequest('POST', endpoint, body, useAuthenticityToken, headers);
+}
+
+async function deleteRequest(
+  endpoint: string,
+  useAuthenticityToken = false,
+  headers: Record<string, string> = {}
+): Promise<Response> {
+  return sendRequest(
+    'DELETE',
+    endpoint,
+    undefined,
+    useAuthenticityToken,
+    headers
+  );
 }
 
 export default {
-  fetchJson,
-  post,
   put,
+  post,
+  delete: deleteRequest,
+  fetchJson,
 };
