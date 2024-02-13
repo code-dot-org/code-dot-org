@@ -176,30 +176,46 @@ describe('UnitEditor', () => {
 
     it('locale selection is a multi select checkbox component with initial options selected', () => {
       const wrapper = createWrapper({
-        initialLocales: [['Hindi', 'hi-IN'],['Tamil', 'ta-IN'],['Kannada', 'ka-IN'],['Bahasa', 'ms-MY']],
-        initialSupportedLocales: ['hi-IN', 'ta-IN']
+        initialLocales: [
+          ['Hindi', 'hi-IN'],
+          ['Tamil', 'ta-IN'],
+          ['Kannada', 'ka-IN'],
+          ['Bahasa', 'ms-MY'],
+        ],
+        initialSupportedLocales: ['hi-IN', 'ta-IN'],
       });
 
-      expect(wrapper
-        .find('li')
-        .filterWhere(li =>
-          li.find('input[type="checkbox"]').length == 1 &&
-          li.find('strong').length == 1).length)
-      .to.equal(4);
+      expect(
+        wrapper
+          .find('li')
+          .filterWhere(
+            li =>
+              li.find('input[type="checkbox"]').length === 1 &&
+              li.find('strong').length === 1
+          ).length
+      ).to.equal(4);
 
-      expect(wrapper
-        .find('li')
-        .filterWhere(li =>
-          li.find('input[type="checkbox"]').length == 1 &&
-          li.find('strong').filterWhere(st => st.text() === "hi-IN").length == 1).length)
-      .to.equal(1);
+      expect(
+        wrapper
+          .find('li')
+          .filterWhere(
+            li =>
+              li.find('input[type="checkbox"]').length === 1 &&
+              li.find('strong').filterWhere(st => st.text() === 'hi-IN')
+                .length === 1
+          ).length
+      ).to.equal(1);
 
-      expect(wrapper
-        .find('li')
-        .filterWhere(li =>
-          li.find('input[type="checkbox"]').length == 1 &&
-          li.find('strong').filterWhere(st => st.text() === "ta-IN").length == 1).length)
-      .to.equal(1);
+      expect(
+        wrapper
+          .find('li')
+          .filterWhere(
+            li =>
+              li.find('input[type="checkbox"]').length === 1 &&
+              li.find('strong').filterWhere(st => st.text() === 'ta-IN')
+                .length === 1
+          ).length
+      ).to.equal(1);
     });
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
