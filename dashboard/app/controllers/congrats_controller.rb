@@ -15,11 +15,13 @@ class CongratsController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    @is_hoc_tutorial = CertificateImage.hoc_course?(course_name)
-    course_version = CurriculumHelper.find_matching_course_version(course_name)
-    @is_pl_course = course_version.pl_course?
-    @is_k5_pl_course = course_version&.course_offering&.pl_for_elementary_school?
-
+    course_type = CertificateImage.course_type(course_name)
+    @is_hoc_tutorial = course_type == 'hoc'
+    @is_pl_course = course_type == 'pl'
+    if @is_pl_course
+      course_version = CurriculumHelper.find_matching_course_version(course_name)
+      @is_k5_pl_course = course_version&.course_offering&.pl_for_elementary_school?
+    end
     @next_course_script_name = ScriptConstants.csf_next_course_recommendation(course_name)
     next_script = Unit.get_from_cache(@next_course_script_name) if @next_course_script_name
     @next_course_title = next_script.localized_title if next_script
