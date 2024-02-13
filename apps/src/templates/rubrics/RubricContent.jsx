@@ -163,21 +163,21 @@ export default function RubricContent({
           </div>
         )}
       </div>
-
-      <Heading5>{i18n.rubric()}</Heading5>
-      <LearningGoals
-        open={open}
-        learningGoals={rubric.learningGoals}
-        teacherHasEnabledAi={teacherHasEnabledAi}
-        canProvideFeedback={canProvideFeedback}
-        reportingData={reportingData}
-        studentLevelInfo={studentLevelInfo}
-        isStudent={false}
-        feedbackAdded={feedbackAdded}
-        setFeedbackAdded={setFeedbackAdded}
-        aiEvaluations={aiEvaluations}
-      />
-
+      <div className={style.learningGoalsWrapper}>
+        <Heading5>{i18n.rubric()}</Heading5>
+        <LearningGoals
+          open={open}
+          learningGoals={rubric.learningGoals}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+          studentLevelInfo={studentLevelInfo}
+          isStudent={false}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+          aiEvaluations={aiEvaluations}
+        />
+      </div>
       {canProvideFeedback && (
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>

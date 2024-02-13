@@ -89,7 +89,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 28px;
 }
 
 .hiddenRubricContent {
@@ -332,23 +332,17 @@ button.rubricHeaderTab {
 .aiToken {
   display: flex;
   height: 20px;
-  padding: 4px 8px;
+  padding: 3px 8px 0;
   justify-content: center;
   align-items: center;
   gap: 4px;
-
   border-radius: 30px;
-  border: 1px solid $product_information_default;
-  background: $lightest_cyan;
+  background: #3cfff8;
 }
 
 p.aiTokenText {
-  color: $product_information_default;
+  font-size: 0.7rem;
   margin-bottom: 0;
-}
-
-.aiTokenText {
-  color: $product_affirmative_default;
 }
 
 h2.studentName {
@@ -372,6 +366,7 @@ h2.studentName {
 }
 
 .learningGoalTips {
+  display: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid $neutral_dark50;
@@ -663,13 +658,18 @@ i.infoAlertIcon {
   align-items: flex-start;
   align-self: stretch;
   gap: 15px;
-  padding: 10px;
 }
 
 .studentInfoGroup {
   display: flex;
-  align-self: stretch;
+  align-self: center;
+  justify-content: space-around;
   flex-direction: column;
+  text-align: center;
+}
+
+.learningGoalsWrapper {
+  width: 100%;
 }
 
 .studentSelector {
@@ -677,13 +677,6 @@ i.infoAlertIcon {
 }
 
 // Start of rubrics redesign
-
-//TODO: remove tempContainer style when redesign is ready to roll out
-.tempContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
 .learningGoalsContainer {
   display: flex;
@@ -696,12 +689,19 @@ i.infoAlertIcon {
   background: $neutral_light;
   width: 100%;
   min-width: 100%;
-  padding: 16px;
+  padding-top: 16px;
 }
 
 .learningGoalButton {
   background: none;
   border: none;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    box-shadow: none;
+    background-color: $light_gray_200;
+  }
 }
 
 .learningGoalsHeader {
@@ -827,9 +827,11 @@ i.infoAlertIcon {
 }
 
 .fabBackground {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   width: 724px;
   padding: 16px 16px 32px 16px;
-  gap: 16px;
   border-radius: 0 0 4px 4px;
   border-right: 2px solid $neutral_dark;
   border-bottom: 2px solid $neutral_dark;

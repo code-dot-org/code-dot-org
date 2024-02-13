@@ -323,7 +323,7 @@ export default function LearningGoals({
               </div>
             )}
           {learningGoals[currentLearningGoal].tips && !isStudent && (
-            <details>
+            <details className={style.learningGoalTips}>
               <summary>
                 <strong>{i18n.tipsForEvaluation()}</strong>
               </summary>
