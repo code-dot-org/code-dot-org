@@ -47,18 +47,9 @@ const ValidationTutor: React.FunctionComponent = () => {
   const level = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.level
   );
-  const scriptId = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.scriptId
-  );
-
-  const systemPrompt = validationSystemPrompt;
 
   const handleSend = async (studentCode: string) => {
     const chatContext = {
-      levelId: level?.id,
-      scriptId: scriptId,
-      isProjectBacked: level?.isProjectBacked,
-      systemPrompt: systemPrompt,
       studentCode: studentCode,
       tutorType: TutorType.VALIDATION,
     };

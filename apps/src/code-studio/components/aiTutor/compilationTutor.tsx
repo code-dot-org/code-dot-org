@@ -8,7 +8,6 @@ import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
 import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {compilationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {TutorType} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code did not compile.
@@ -44,17 +43,9 @@ const CompilationTutor: React.FunctionComponent = () => {
   const level = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.level
   );
-  const scriptId = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.scriptId
-  );
-  const systemPrompt = compilationSystemPrompt;
 
   const handleSend = async (studentCode: string) => {
     const chatContext = {
-      levelId: level?.id,
-      scriptId: scriptId,
-      isProjectBacked: level?.isProjectBacked,
-      systemPrompt: systemPrompt,
       studentCode: studentCode,
       tutorType: TutorType.COMPILATION,
     };

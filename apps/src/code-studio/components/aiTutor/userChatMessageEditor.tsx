@@ -18,27 +18,15 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   const isWaitingForChatResponse = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
   );
-  const level = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.level
-  );
-  const scriptId = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.scriptId
-  );
 
   const dispatch = useAppDispatch();
 
   const handleSubmit = useCallback(() => {
     if (!isWaitingForChatResponse) {
-      const chatContext = {
-        levelId: level?.id,
-        scriptId: scriptId,
-        isProjectBacked: level?.isProjectBacked,
-        message: userMessage,
-      };
-      dispatch(submitChatMessage(chatContext));
+      dispatch(submitChatMessage(userMessage));
       setUserMessage('');
     }
-  }, [userMessage, dispatch, isWaitingForChatResponse, level, scriptId]);
+  }, [userMessage, dispatch, isWaitingForChatResponse]);
 
   return (
     <div className={style.UserChatMessageEditor}>

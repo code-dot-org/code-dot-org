@@ -1,6 +1,6 @@
 import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
+import {compilationSystemPrompt, generalChatSystemPrompt, validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 import {savePromptAndResponse} from '../interactionsApi';
 import {TutorType, Role, Status, ChatCompletionMessage, Level, ValidationCompilationContext, GeneralChatContext} from '../types';
 
@@ -43,7 +43,21 @@ const initialState: AITutorState = {
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
   async (chatContext: ValidationCompilationContext, thunkAPI) => {
-    if (chatContext.systemPrompt === undefined) {
+    const state = thunkAPI.getState() as {aiTutor: AITutorState};
+    const levelContext = {
+      levelId: state.aiTutor.level?.id,
+      isProjectBacked: state.aiTutor.level?.isProjectBacked,
+      scriptId: state.aiTutor.scriptId,
+    }
+
+    let systemPrompt;
+    if (chatContext.tutorType === TutorType.VALIDATION) {
+      systemPrompt = validationSystemPrompt;
+    } else if (chatContext.tutorType === TutorType.COMPILATION) {
+      systemPrompt = compilationSystemPrompt;
+    }
+
+    if (systemPrompt === undefined) {
       throw new Error('systemPrompt is undefined');
     }
 
@@ -52,22 +66,20 @@ export const askAITutor = createAsyncThunk(
     }
 
     const chatApiResponse = await getChatCompletionMessage(
-      chatContext.systemPrompt,
+      systemPrompt,
       0,
       chatContext.studentCode,
       [],
-      chatContext.levelId,
+      levelContext.levelId,
       chatContext.tutorType
     );
 
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.assistantResponse));
-    const prompt = chatContext.systemPrompt + chatContext.studentCode;
+    const prompt = systemPrompt + chatContext.studentCode;
 
     const interactionData = {
-      levelId: chatContext.levelId,
-      scriptId: chatContext.scriptId,
+      ...levelContext,
       type: chatContext.tutorType,
-      isProjectBacked: chatContext.isProjectBacked,
       prompt: JSON.stringify(prompt),
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.assistantResponse,
@@ -82,8 +94,13 @@ export const askAITutor = createAsyncThunk(
 // waits for a chat completion response, and updates the user message state.
 export const submitChatMessage = createAsyncThunk(
   'aitutor/submitChatMessage',
-  async (chatContext: GeneralChatContext, thunkAPI) => {
+  async (message: string, thunkAPI) => {
     const state = thunkAPI.getState() as {aiTutor: AITutorState};
+    const levelContext = {
+      levelId: state.aiTutor.level?.id,
+      isProjectBacked: state.aiTutor.level?.isProjectBacked,
+      scriptId: state.aiTutor.scriptId,
+    }
     const systemPrompt = generalChatSystemPrompt;
     const storedMessages = state.aiTutor.chatMessages;
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
@@ -93,7 +110,7 @@ export const submitChatMessage = createAsyncThunk(
       id: newMessageId,
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: chatContext.message,
+      chatMessageText: message,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
@@ -101,7 +118,7 @@ export const submitChatMessage = createAsyncThunk(
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
       newMessageId,
-      chatContext.message,
+      message,
       storedMessages
     );
 
@@ -124,12 +141,10 @@ export const submitChatMessage = createAsyncThunk(
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
 
-    const prompt = systemPrompt + chatContext.message;
+    const prompt = systemPrompt + message;
     const interactionData = {
-      levelId: chatContext.levelId,
-      scriptId: chatContext.scriptId,
+      ...levelContext,
       type: TutorType.GENERAL_CHAT,
-      isProjectBacked: chatContext.isProjectBacked,
       prompt: JSON.stringify(prompt),
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.assistantResponse,

@@ -24,18 +24,11 @@ export type Level = {
   isProjectBacked: boolean;
 };
 
-interface Context {
-  levelId?: number;
-  scriptId?: number;
-  isProjectBacked?: boolean;
-};
-
-export interface GeneralChatContext extends Context {
+export interface GeneralChatContext {
   message: string;
 };
 
-export interface ValidationCompilationContext extends Context {
-  systemPrompt: string;
+export interface ValidationCompilationContext {
   studentCode: string;
   tutorType: TutorType;
 };
