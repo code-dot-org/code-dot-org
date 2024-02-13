@@ -4,6 +4,8 @@ export const IMPORTANT_TOPICS = [
   'physical_computing',
 ];
 
+export const UTC_PUBLISHED_DATE_FORMAT = 'YYYY-MM-DD hh:mm:ss UTC';
+
 // Test recommender scoring framework.
 export const FAKE_RECOMMENDER_SCORING = {
   hasDesiredDuration: 3,

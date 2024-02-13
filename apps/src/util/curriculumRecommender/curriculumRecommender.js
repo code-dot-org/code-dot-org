@@ -1,5 +1,6 @@
 import {
   IMPORTANT_TOPICS,
+  UTC_PUBLISHED_DATE_FORMAT,
   FAKE_RECOMMENDER_SCORING,
 } from './curriculumRecommenderConstants';
 import moment from 'moment';
@@ -128,7 +129,10 @@ const hasDesiredTopics = (scoring_framework, curriculum, csTopics) => {
 };
 
 const howRecentlyPublished = (scoring_framework, curriculum) => {
-  const publishedDate = moment.utc(curriculum.published_date);
+  const publishedDate = moment(
+    curriculum.published_date,
+    UTC_PUBLISHED_DATE_FORMAT
+  );
 
   if (oneYearAgo <= publishedDate) {
     return scoring_framework['publishedWithinOneYearAgo'];
@@ -149,6 +153,9 @@ const sortRecommendations = curriculumScores => {
     if (a[0].is_featured !== b[0].is_featured) {
       return a[0].is_featured ? -1 : 1;
     }
-    return moment.utc(b[0].published_date) - moment.utc(a[0].published_date);
+    return (
+      moment(b[0].published_date, UTC_PUBLISHED_DATE_FORMAT) -
+      moment(a[0].published_date, UTC_PUBLISHED_DATE_FORMAT)
+    );
   });
 };

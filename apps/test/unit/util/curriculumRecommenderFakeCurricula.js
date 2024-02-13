@@ -1,4 +1,7 @@
-import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
+import {
+  IMPORTANT_TOPICS,
+  UTC_PUBLISHED_DATE_FORMAT,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 import moment from 'moment';
 
 // "nullCourse" and "emptyCourse" have more recent publish dates than the fake courses with a single trait so that
@@ -150,7 +153,10 @@ const ONLY_RECENT_PUBLISHED_DATE_COURSES = [
     grade_levels: null,
     cs_topic: null,
     school_subject: null,
-    published_date: moment.utc().subtract(6, 'months').toString(),
+    published_date: moment()
+      .utc()
+      .subtract(6, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
   },
   {
     key: 'publishedWithinTwoYearsAgoCourse',
@@ -160,7 +166,10 @@ const ONLY_RECENT_PUBLISHED_DATE_COURSES = [
     grade_levels: null,
     cs_topic: null,
     school_subject: null,
-    published_date: moment.utc().subtract(18, 'months').toString(),
+    published_date: moment
+      .utc()
+      .subtract(18, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
   },
 ];
 
