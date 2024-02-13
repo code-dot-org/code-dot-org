@@ -14,6 +14,12 @@ import {LoadFinishedCallback} from '../types';
 // Using require() to import JS in TS files
 const constants = require('../constants');
 
+import * as Tone from 'tone';
+
+console.error("In MusicPlayer.ts, TONE IS: ", Tone);
+const synth = new Tone.Synth().toDestination();
+console.log("In MusicPlayer.ts, Synth is: ", synth);
+
 // Default to 4/4 time, 120 BPM, C Major
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;

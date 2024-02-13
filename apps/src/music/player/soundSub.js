@@ -2,6 +2,13 @@ import SoundEffects from './soundEffects';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+import * as Tone from 'tone';
+
+console.error("In soundSub.js, TONE IS: ", Tone);
+const synth = new Tone.Synth().toDestination();
+synth.triggerAttack("C4", Tone.now())
+console.log('In soundSub.js, Synth is: ', synth);
+
 const DEFAULT_DELAY_TIME = 60 / 120 / 2;
 
 // audio

@@ -81,6 +81,11 @@ import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 import autogenerateML from '@cdo/apps/applab/ai';
 
+import * as Tone from 'tone';
+import {AutoWah} from 'tone';
+
+console.log("TONE IS: ", Tone, 'AutoWah is: ', AutoWah);
+
 /**
  * Create a namespace for the application.
  * @implements LogTarget
