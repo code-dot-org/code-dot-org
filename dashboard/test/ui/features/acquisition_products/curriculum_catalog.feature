@@ -69,6 +69,8 @@ Feature: Curriculum Catalog Page
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Create class section to assign a curriculum)" is visible
     Then I click selector "a:contains(Create Section)"
+    And I wait until current URL contains "/home"
+    And I wait for jquery to load
     And I wait until element "h3:contains(Create a new section)" is visible
 
   Scenario: Signed-in teacher with sections assigns and unassigns offerings to sections
@@ -216,6 +218,8 @@ Feature: Curriculum Catalog Page
     And I click selector "button:contains(Assign to class sections)"
     And I wait until element "h3:contains(Create class section to assign a curriculum)" is visible
     Then I click selector "a:contains(Create Section)"
+    And I wait until current URL contains "/home"
+    And I wait for jquery to load
     And I wait until element "h3:contains(Create a new section)" is visible
   
   @no_mobile
