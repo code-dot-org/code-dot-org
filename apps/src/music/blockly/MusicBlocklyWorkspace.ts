@@ -12,7 +12,7 @@ import {
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {BlocklyOptions, WorkspaceSvg} from 'blockly';
+import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {Abstract} from 'blockly/core/events/events_abstract';
 const experiments = require('@cdo/apps/util/experiments');
@@ -26,12 +26,13 @@ type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  private workspace: WorkspaceSvg | null;
+  private workspace: WorkspaceSvg | Workspace | null;
   private container: HTMLElement | null;
   private codeHooks: {[key: string]: (...args: unknown[]) => void};
   private compiledEvents: CompiledEvents;
   private lastExecutedEvents: CompiledEvents;
   private triggerIdToStartType: {[id: string]: string};
+  private headlessMode: boolean;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
@@ -42,6 +43,7 @@ export default class MusicBlocklyWorkspace {
     this.compiledEvents = {};
     this.triggerIdToStartType = {};
     this.lastExecutedEvents = {};
+    this.headlessMode = false;
   }
 
   /**
@@ -85,21 +87,33 @@ export default class MusicBlocklyWorkspace {
 
     this.workspace.addChangeListener(onBlockSpaceChange);
 
-    this.workspace.registerButtonCallback('createVariableHandler', button => {
-      Blockly.Variables.createVariableButtonHandler(
-        button.getTargetWorkspace()
-      );
-    });
+    (this.workspace as WorkspaceSvg).registerButtonCallback(
+      'createVariableHandler',
+      button => {
+        Blockly.Variables.createVariableButtonHandler(
+          button.getTargetWorkspace()
+        );
+      }
+    );
+    this.headlessMode = false;
+  }
+
+  initHeadless() {
+    if (this.workspace) {
+      this.workspace.dispose();
+    }
+    this.workspace = new Workspace();
+    this.headlessMode = true;
   }
 
   resizeBlockly() {
-    if (!this.workspace || !this.container) {
+    if (this.headlessMode || !this.workspace || !this.container) {
       return;
     }
 
     this.container.style.width = '100%';
     this.container.style.height = '100%';
-    Blockly.svgResize(this.workspace);
+    Blockly.svgResize(this.workspace as WorkspaceSvg);
   }
 
   dispose() {
@@ -355,7 +369,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   updateHighlightedBlocks(playingBlockIds: string[]) {
-    if (!this.workspace) {
+    if (this.headlessMode || !this.workspace) {
       this.metricsReporter.logWarning(
         'updateHighlightedBlocks called before workspace initialized.'
       );
@@ -363,18 +377,18 @@ export default class MusicBlocklyWorkspace {
     }
     // Clear all highlights.
     for (const block of this.workspace.getAllBlocks()) {
-      this.workspace.highlightBlock(block.id, false);
+      (this.workspace as WorkspaceSvg).highlightBlock(block.id, false);
     }
     // Highlight playing blocks.
     for (const blockId of playingBlockIds) {
-      this.workspace.highlightBlock(blockId, true);
+      (this.workspace as WorkspaceSvg).highlightBlock(blockId, true);
     }
   }
 
   // Given a block ID, selects that block.
   // Given undefined, unselects all blocks.
   selectBlock(blockId: string) {
-    if (this.workspace === null) {
+    if (this.headlessMode || this.workspace === null) {
       this.metricsReporter.logWarning(
         'selectBlock called before workspace initialized.'
       );
@@ -382,9 +396,9 @@ export default class MusicBlocklyWorkspace {
     }
 
     if (blockId) {
-      this.workspace.getBlockById(blockId)?.select();
+      (this.workspace as WorkspaceSvg).getBlockById(blockId)?.select();
     } else {
-      this.workspace.getAllBlocks().forEach(block => {
+      (this.workspace as WorkspaceSvg).getAllBlocks().forEach(block => {
         block.unselect();
       });
     }
