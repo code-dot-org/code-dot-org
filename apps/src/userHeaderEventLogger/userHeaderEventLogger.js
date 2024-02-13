@@ -3,12 +3,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Haml DOMContentLoaded');
-});
-
 $(document).ready(function () {
-  console.log('Javascript document.ready');
   const headerCreateMenu = document.getElementById('header_create_menu');
   if (getScriptData('isSignedOut') && headerCreateMenu) {
     // Log if a signed-out user clicks the "Create" menu dropdown
