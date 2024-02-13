@@ -266,7 +266,7 @@ export default function LearningGoals({
             stroke={4}
           />
           <div className={style.learningGoalsHeaderText}>
-            <Heading6>
+            <Heading6 className={'uitest-learning-goal-title'}>
               {learningGoals[currentLearningGoal].learningGoal}
             </Heading6>
             <BodyThreeText>

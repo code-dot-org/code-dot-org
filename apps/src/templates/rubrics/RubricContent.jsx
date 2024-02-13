@@ -101,6 +101,7 @@ export default function RubricContent({
 
   return (
     <div
+      id="uitest-rubric-content"
       className={classnames({
         [style.visibleRubricContent]: visible,
         [style.hiddenRubricContent]: !visible,
