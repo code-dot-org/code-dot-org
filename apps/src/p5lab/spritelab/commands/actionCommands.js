@@ -269,6 +269,9 @@ export const commands = {
   },
 
   hideVariable(nameArg) {
+    if (!nameArg) {
+      return;
+    }
     this.removeVariableBubble(nameArg);
   },
 
