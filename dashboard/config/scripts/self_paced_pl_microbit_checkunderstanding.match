@@ -3,16 +3,15 @@ title 'Check for Understanding: micro:bit'
 
 height '75'
 
-question 'Digital character in a program'
-answer 'Sprite'
-question 'Changes the look of a sprite'
-answer 'Costume'
-question 'Sets the scene for the program'
-answer 'Background'
-question 'Makes something happen in a program based on an action like pressing a button'
-answer 'Event'
-question 'Simplifies complex code to animate programs'
-answer 'Behaviors'
+question 'Using small computers, like micro:bits to interact with the world around us'
+answer 'Physical Computing'
+question 'the information a computer gets from users or sensors'
+answer 'Input'
+question 'the information users get from computers'
+answer 'Output'
+question 'actions that cause something to happen'
+answer 'Events'
+
 
 
 markdown <<MARKDOWN

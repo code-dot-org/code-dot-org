@@ -518,7 +518,8 @@ class Level < ApplicationRecord
       level_id: id.to_s,
       type: self.class.to_s,
       name: name,
-      display_name: display_name
+      display_name: display_name,
+      is_validated: validated?
     }
   end
 
@@ -793,6 +794,14 @@ class Level < ApplicationRecord
 
   def project_type
     return game&.app
+  end
+
+  # Whether this level has validation for the completion of student work.
+  def validated?
+    if uses_lab2?
+      return properties.dig('level_data', 'validations').present?
+    end
+    properties['validation_code'].present? || properties['success_condition'].present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

@@ -16,7 +16,6 @@ import {showPublishDialog} from '../../templates/projects/publishDialog/publishD
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -25,28 +24,25 @@ import Button from '../../templates/Button';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-function recordShare(type) {
+function recordShare(type, appType) {
   if (!window.dashboard) {
     return;
   }
-
-  firehoseClient.putRecord(
-    {
-      study: 'finish-dialog-share',
-      study_group: 'v1',
-      event: 'project-share',
-      project_id: dashboard.project && dashboard.project.getCurrentId(),
-      data_string: type,
-    },
-    {includeUserId: true}
-  );
+  if (Object.prototype.hasOwnProperty.call(EVENTS, type)) {
+    analyticsReporter.sendEvent(type, {
+      lab_type: appType,
+      channel_id: dashboard.project && dashboard.project.getCurrentId(),
+    });
+  }
 }
 
-function wrapShareClick(handler, type) {
+function wrapShareClick(handler, type, appType) {
   return function () {
     try {
-      recordShare(type);
+      recordShare(type, appType);
     } finally {
       handler.apply(this, arguments);
     }
@@ -126,7 +122,7 @@ class ShareAllowedDialog extends React.Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
-      recordShare('open');
+      recordShare('SHARING_DIALOG_OPEN', this.props.appType);
       this.setState({hasBeenCopied: false});
 
       this.checkProjectAndAccountAge();
@@ -164,7 +160,7 @@ class ShareAllowedDialog extends React.Component {
     ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
 
   close = () => {
-    recordShare('close');
+    recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
     this.props.onClose();
     this.setState({
       replayVideoUnavailable: false,
@@ -396,7 +392,11 @@ class ShareAllowedDialog extends React.Component {
                         ...styles.copyButton,
                         ...(this.state.hasBeenCopied && styles.copyButtonLight),
                       }}
-                      onClick={wrapShareClick(this.copy, 'copy')}
+                      onClick={wrapShareClick(
+                        this.copy,
+                        'SHARING_LINK_COPY',
+                        this.props.appType
+                      )}
                       text={i18n.copyLinkToProject()}
                       value={shareUrl}
                     />
@@ -413,7 +413,8 @@ class ShareAllowedDialog extends React.Component {
                     href=""
                     onClick={wrapShareClick(
                       this.showSendToPhone,
-                      'send-to-phone'
+                      'SHARING_LINK_SEND_TO_PHONE',
+                      this.props.appType
                     )}
                     style={styles.sendToPhoneButton}
                   >
@@ -434,7 +435,11 @@ class ShareAllowedDialog extends React.Component {
                         style={
                           hasThumbnail ? styles.button : styles.buttonDisabled
                         }
-                        onClick={wrapShareClick(this.publish, 'publish')}
+                        onClick={wrapShareClick(
+                          this.publish,
+                          'SHARING_PUBLISH',
+                          this.props.appType
+                        )}
                         disabled={disablePublishButton}
                         className="no-mc"
                       >
@@ -469,7 +474,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'facebook'
+                            'SHARING_FB',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >
@@ -483,7 +489,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'twitter'
+                            'SHARING_TWITTER',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >

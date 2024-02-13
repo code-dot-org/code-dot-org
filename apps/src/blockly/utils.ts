@@ -1,6 +1,10 @@
 import _ from 'lodash';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {WorkspaceSvg} from 'blockly';
+import {getStore} from '../redux';
+import {setFailedToGenerateCode} from '../redux/blockly';
+import MetricsReporter from '../lib/metrics/MetricsReporter';
+import {MetricEvent} from '../lib/metrics/events';
 
 type xmlAttribute = string | null;
 
@@ -117,4 +121,27 @@ export function shouldSkipHiddenWorkspace(workspace: WorkspaceSvg) {
     Blockly.getMainWorkspace().id !== workspace.id ||
     Blockly.isToolboxMode
   );
+}
+
+/**
+ * Handle a failure to get workspace code by either CDO or Google Blockly
+ * by updating the redux store and logging the error.
+ * We only want to log the error once per failure since getWorkspaceCode
+ * gets called many times and the error will be the same every time.
+ * @param {MetricEvent} eventName Event name to log
+ * @param {Error} error Error thrown by getWorkspaceCode
+ */
+export function handleCodeGenerationFailure(
+  eventName: MetricEvent,
+  error: Error
+) {
+  const store = getStore();
+  if (!store.getState().blockly.failedToGenerateCode) {
+    store.dispatch(setFailedToGenerateCode(true));
+    MetricsReporter.logError({
+      event: eventName,
+      errorMessage: error.message,
+      stackTrace: error.stack,
+    });
+  }
 }

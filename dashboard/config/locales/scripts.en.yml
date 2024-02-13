@@ -10415,6 +10415,10 @@ en:
               name: Function Machines w Artist
             lesson-5:
               name: AI 3-5
+            lesson-7:
+              name: Hello Game Design
+            lesson-8:
+              name: Game Development
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -12428,6 +12432,8 @@ en:
               name: SNAP - Rosa Linn
             lesson-3:
               name: Free Play
+            lesson-4:
+              name: Test Library
           lesson_groups: {}
           name: musiclab
           title: Music Lab Test Lessons
@@ -13841,8 +13847,8 @@ en:
           title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
         self-paced-pl-csd-unit5-2-2023:
           lessons: {}
           lesson_groups: {}
@@ -13850,8 +13856,8 @@ en:
           title: Preparing to Teach Data and Society
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
         ai-tutor-test:
           lessons:
             lesson-1:
@@ -14092,7 +14098,9 @@ en:
             lesson-2:
               name: Counter
             lesson-7:
-              name: Dance Party 2019 (need to clone)
+              name: JuiceMind Bridging Activity
+            lesson-8:
+              name: JuiceMind Content Assessment
           lesson_groups:
             lessonGroup-2:
               display_name: 'Beginner: Events'
@@ -14875,7 +14883,17 @@ en:
           description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes\n\n"
           student_description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes\n"
         gen-ai-foundations-draft:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
           lesson_groups: {}
           name: gen-ai-foundations-draft
           title: "[Draft] Gen AI - Foundations of LLMs"

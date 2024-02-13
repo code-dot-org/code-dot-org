@@ -148,11 +148,22 @@ const EVENTS = {
 
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
+
+  // Project sharing
+  SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
+  SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
+  SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
+  SHARING_FB: 'User Clicks Facebook Icon In Project Share Dialog',
+  SHARING_TWITTER: 'User Clicks Twitter Icon In Project Share Dialog',
+  SHARING_LINK_SEND_TO_PHONE:
+    'User Clicks Send To Phone In Project Share Dialog',
+  SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
 };
 
 const EVENT_GROUP_NAMES = {
   VIDEO_EVENTS: 'video-events',
   DANCE_PARTY: 'dance-party-events',
+  PROJECT_SHARING: 'project-sharing-events',
 };
 
 const EVENT_GROUPS = {
@@ -174,6 +185,14 @@ const EVENT_GROUPS = {
   [EVENTS.VIDEO_STARTED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
   [EVENTS.VIDEO_PAUSED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
   [EVENTS.VIDEO_ENDED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
+
+  // Project sharing
+  [EVENTS.SHARING_LINK_COPIED]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_PUBLISH]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_FB]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_TWITTER]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_LINK_SEND_TO_PHONE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  [EVENTS.SHARING_CLOSE_ESCAPE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
 };
 
 export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};

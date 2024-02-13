@@ -14,9 +14,9 @@ markdown <<MARKDOWN
 * #### **Clear Communication and Instructions:** Ensure that instructions are clear and straightforward to avoid technical difficulties from hampering the learning experience.
 * #### **Engaging Content:** Use a mix of multimedia like videos, graphics, and interactive levels. 
 * #### **Check for Understanding:** Add assessment levels throughout the module for teachers to validate their learning.
+* #### **Independent Reflection**: Provide reflection experiences that bridge to the classroom, such as planning guide documents that learners can refer to while teaching. Keep open-ended reflections to a minimum as they are not checked by a facilitator in self-paced courses and require the learner to go back to the web page to review their answer.
 
 ## Facilitated Learners 
 * #### **Interactive Activities:** Be sure to use plenty of hands-on coding levels to ensure active engagement.
-* #### **Opportunities for Discussion:** Open-ended reflection levels can be used to foster discussion.
-
+* #### **Opportunities for Discussion:** In facilitated experiences, use open-ended reflection levels to foster discussion. These levels are actively checked by facilitators.
 MARKDOWN

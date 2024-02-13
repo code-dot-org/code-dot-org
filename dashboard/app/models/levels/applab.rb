@@ -187,4 +187,8 @@ class Applab < Blockly
     starter_assets.delete(friendly_name)
     save!
   end
+
+  def validated?
+    properties['log_conditions'].present?
+  end
 end
