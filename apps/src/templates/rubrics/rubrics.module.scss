@@ -190,14 +190,11 @@
 .rubricHeaderLeftSide {
   display: flex;
   gap: 4px;
-  //height: 40px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .rubricHeaderRightSide {
   display: flex;
-  // height: 40px;
-  // justify-content: flex-end;
   align-items: flex-start;
   align-self: stretch;
 }
@@ -709,7 +706,6 @@ i.infoAlertIcon {
   flex-direction: row;
   height: 60px;
   justify-content: space-between;
-  align-items: center;
   align-self: stretch;
   line-height: 154%;
   position: relative;
