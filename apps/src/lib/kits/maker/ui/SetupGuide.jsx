@@ -64,7 +64,7 @@ function HeaderCard({id, title, description, divStyle}) {
     <div id={id} style={divStyle}>
       <h2>{title}</h2>
       <div className="description-content">
-        <SafeMarkdown markdown={description} />
+        <SafeMarkdown markdown={description} openExternalLinksInNewTab={true} />
       </div>
     </div>
   );

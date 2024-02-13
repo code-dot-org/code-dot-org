@@ -13,6 +13,8 @@ import {getStore} from '@cdo/apps/redux';
 import {
   CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL,
   CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
+  RESET_BUTTON_NAME,
+  BOOT_DRIVE_NAME,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import styles from './setup-instructions.module.scss';
 
@@ -26,7 +28,6 @@ export default class SetupInstructions extends React.Component {
       <Provider store={getStore()}>
         <div>
           <ConnectionInstructions />
-          <CPExpressInstallInstructions />
           <Support />
         </div>
       </Provider>
@@ -105,8 +106,10 @@ class ConnectionInstructions extends React.Component {
         </ol>
         <SafeMarkdown
           markdown={applabI18n.makerSetupWebSerialSupportArticle()}
+          openExternalLinksInNewTab={true}
         />
         {connectionState}
+        <CPExpressInstallInstructions />
       </div>
     );
   }
@@ -118,8 +121,6 @@ class CPExpressInstallInstructions extends React.Component {
   }
 
   render() {
-    const buttonName = 'RESET';
-    const driveName = 'CPLAYBOOT';
     return (
       <div id={styles.installInstructionsId}>
         <h2>{applabI18n.makerSetupCPXInstallHeader()}</h2>
@@ -130,12 +131,20 @@ class CPExpressInstallInstructions extends React.Component {
                 {applabI18n.makerSetupCPXInstallStep1()}
                 <ul>
                   <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
-                  <li>{applabI18n.makerSetupCPXInstallStep1a({buttonName})}</li>
                   <li>
-                    {applabI18n.makerSetupCPXInstallStep1b({driveName})}
+                    {applabI18n.makerSetupCPXInstallStep1a({
+                      buttonName: RESET_BUTTON_NAME,
+                    })}
+                  </li>
+                  <li>
+                    {applabI18n.makerSetupCPXInstallStep1b({
+                      driveName: BOOT_DRIVE_NAME,
+                    })}
                     <ul className={styles.troubleshootList}>
                       <li>
-                        {applabI18n.makerSetupCPXInstallStep1c({buttonName})}
+                        {applabI18n.makerSetupCPXInstallStep1c({
+                          buttonName: RESET_BUTTON_NAME,
+                        })}
                       </li>
                       <li>{applabI18n.makerSetupCPXInstallStep1d()}</li>
                     </ul>
@@ -163,7 +172,7 @@ class CPExpressInstallInstructions extends React.Component {
               <li>
                 {applabI18n.makerSetupCPXInstallStep2b({
                   firmataFilename: CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
-                  driveName,
+                  driveName: BOOT_DRIVE_NAME,
                 })}
 
                 <figure>

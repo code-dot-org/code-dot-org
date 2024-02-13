@@ -3,6 +3,8 @@ import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 export const CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME =
   'circuit-playground-express-firmata-ver2018-2-19.UF2';
 export const CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL = `${DOWNLOAD_PREFIX}${CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME}`;
+export const RESET_BUTTON_NAME = 'RESET';
+export const BOOT_DRIVE_NAME = 'CPLAYBOOT';
 
 export const N_COLOR_LEDS = 10;
 export const EXTERNAL_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
