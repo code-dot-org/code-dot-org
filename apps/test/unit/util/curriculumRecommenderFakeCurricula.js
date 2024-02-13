@@ -173,35 +173,41 @@ const ONLY_RECENT_PUBLISHED_DATE_COURSES = [
   },
 ];
 
-export const IS_FEATURED_TEST_COURSES = [
+const IS_FEATURED_TEST_COURSES = [
   ...NULL_AND_EMPTY_COURSES,
   ONLY_FEATURED_COURSE,
 ];
 
-export const DURATION_TEST_COURSES = [
+const DURATION_TEST_COURSES = [
   ...NULL_AND_EMPTY_COURSES,
   ...ONLY_DURATION_COURSES,
 ];
 
-export const MARKETING_INIT_TEST_COURSES = [
+const MARKETING_INIT_TEST_COURSES = [
   ...NULL_AND_EMPTY_COURSES,
   ...ONLY_MARKETING_INIT_COURSES,
 ];
 
-export const SCHOOL_SUBJECT_TEST_COURSES = [
+const SCHOOL_SUBJECT_TEST_COURSES = [
   ...NULL_AND_EMPTY_COURSES,
   ...ONLY_SCHOOL_SUBJECTS_COURSES,
 ];
 
-export const TOPICS_TEST_COURSES = [
-  ...NULL_AND_EMPTY_COURSES,
-  ...ONLY_TOPICS_COURSES,
-];
+const TOPICS_TEST_COURSES = [...NULL_AND_EMPTY_COURSES, ...ONLY_TOPICS_COURSES];
 
 // This set of courses includes the featured course so that there is a clear division between which courses
 // are scoring points for how recently they were published and which are just being sorted higher because
 // of their recent publish date.
-export const PUBLISHED_DATE_TEST_COURSES = [
+const PUBLISHED_DATE_TEST_COURSES = [
   ...IS_FEATURED_TEST_COURSES,
   ...ONLY_RECENT_PUBLISHED_DATE_COURSES,
 ];
+
+export default {
+  IS_FEATURED_TEST_COURSES,
+  DURATION_TEST_COURSES,
+  MARKETING_INIT_TEST_COURSES,
+  SCHOOL_SUBJECT_TEST_COURSES,
+  TOPICS_TEST_COURSES,
+  PUBLISHED_DATE_TEST_COURSES,
+};
