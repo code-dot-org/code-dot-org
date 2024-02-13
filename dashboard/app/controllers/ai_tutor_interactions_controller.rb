@@ -27,7 +27,7 @@ class AiTutorInteractionsController < ApplicationController
     ai_tutor_interaction_params[:user_id] = current_user.id
     ai_tutor_interaction_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
     if params[:isProjectBacked]
-      project_data = find_project_and_version_id(params[:levelId], params[:scriptId])
+      project_data = find_project_and_version_id(params[:level_id], params[:script_id])
       ai_tutor_interaction_params[:project_id] = project_data[:project_id]
       ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]
     end
