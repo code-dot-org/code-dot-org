@@ -20,9 +20,11 @@ export const styles = {
     marginRight: '50%',
   },
   updateButton: {
+    marginTop: 20,
     marginLeft: 5,
   },
   updateButtonRTL: {
+    marginTop: 20,
     marginRight: 5,
   },
   intro: {
@@ -113,7 +115,6 @@ class SchoolInfoConfirmationDialog extends Component {
           </p>
         </div>
         <Button
-          __useDeprecatedTag
           style={isRTL ? styles.updateButtonRTL : styles.updateButton}
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
@@ -121,7 +122,6 @@ class SchoolInfoConfirmationDialog extends Component {
           id="update-button"
         />
         <Button
-          __useDeprecatedTag
           style={isRTL ? styles.buttonRTL : styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.brandSecondaryDefault}
