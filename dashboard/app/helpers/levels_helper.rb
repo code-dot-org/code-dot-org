@@ -578,17 +578,22 @@ module LevelsHelper
     app_options
   end
 
-  def firebase_options # TODO: unfirebase
-    fb_options = {}
+  def datablock_storage_options
+    storage_options = {}
 
-    if @level.game.use_firebase?
-      fb_options[:firebaseName] = CDO.firebase_name
-      fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
-      fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+    if @level.game.use_datablock_storage?
+      channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
+      project = Project.find_by_channel_id(channel_id)
+      storage_options[:useDatablockStorage] = project&.use_datablock_storage || false
+      unless storage_options[:useDatablockStorage]
+        storage_options[:firebaseName] = CDO.firebase_name
+        storage_options[:firebaseAuthToken] = firebase_auth_token
+        storage_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
+        storage_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+      end
     end
 
-    fb_options
+    storage_options
   end
 
   def azure_speech_service_options
@@ -677,7 +682,7 @@ module LevelsHelper
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    app_options.merge!(firebase_options) # TODO: unfirebase
+    app_options.merge!(datablock_storage_options)
     app_options[:canResetAbuse] = true if current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
