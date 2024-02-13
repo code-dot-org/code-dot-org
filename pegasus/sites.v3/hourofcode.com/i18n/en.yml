@@ -1277,6 +1277,10 @@
   naipi_page_intro_desc: "Code.org's Native American and Indigenous Peoples Initiative presents the integration of Native American perspectives and cultural richness in education and technology. Explore innovative approaches shaping Native American education and computer science, discover collaboration opportunities, and witness the collective impact we can achieve together."
   naipi_page_perspectives_heading: "Integrating Native American perspectives"
   naipi_page_perspectives_desc: "Experience a curriculum crafted with care, integrating culturally relevant content that resonates with the rich values and traditions of Native American and Indigenous communities. Elevate your learning journey with resources that truly connect and inspire!"
+  naipi_page_module_quilts_aria_primary: "See details for Coding a Geometric Star Quilt module"
+  naipi_page_module_quilts_aria_secondary: "Start self-paced professional learning for Coding a Geometric Star Quilt module"
+  naipi_page_module_poetry_aria_primary: "See details for Coding with Poetry"
+  naipi_page_module_poetry_aria_secondary: "Start self-paced professional learning for Coding with Poetry"
 
   resources_tabs_heading: "Resources that support you every step of the way"
   resources_tabs_desc: "[Sign up for a Code.org account](%{sign_up_url}) to get access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience."

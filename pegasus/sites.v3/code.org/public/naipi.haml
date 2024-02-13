@@ -21,6 +21,19 @@ theme: responsive_full_width
   .clear
 
 %section.bg-neutral-light
-  .wrapper.centered
-    %h2=hoc_s(:naipi_page_perspectives_heading)
-    %p=hoc_s(:naipi_page_perspectives_desc)
+  .wrapper
+    %h2.centered=hoc_s(:naipi_page_perspectives_heading)
+    %p.centered=hoc_s(:naipi_page_perspectives_desc)
+    = view :naipi_modules
+    %hr
+    %div.centered
+      %h4=hoc_s(:teach_page_free_curriculum_heading_02)
+      %p=hoc_s(:teach_page_free_curriculum_desc)
+      .button-wrapper.centered
+        %a.link-button.secondary{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
+          =hoc_s(:grade_level_label_elementary)
+        %a.link-button.secondary{href: CDO.studio_url("/catalog?grade=grade_6&grade=grade_7&grade=grade_8")}
+          =hoc_s(:grade_level_label_middle)
+        %a.link-button.secondary{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
+          =hoc_s(:grade_level_label_high)
+
