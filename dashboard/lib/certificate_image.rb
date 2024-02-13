@@ -164,7 +164,7 @@ class CertificateImage
     elsif template_file == 'self_paced_pl_certificate.png'
       image = Magick::Image.read(path).first
       apply_text(image, name, 62, 'Helvetica bold', 'rgb(118,101,160)', 0, -248, CERT_NAME_AREA_WIDTH, 70)
-      course_title_width = 1200
+      course_title_width = 1400
       course_title_height = 171
       apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
 
