@@ -218,7 +218,8 @@ class CertificateImage
   end
 
   def self.prefilled_title_course?(course)
-    certificate_template_for(course) != 'blank_certificate.png' && certificate_template_for(course) != 'self_paced_pl_certificate.png'
+    return false if %w(blank_certificate.png self_paced_pl_certificate.png).include?(certificate_template_for(course))
+    true
   end
 
   def self.certificate_template_for(course)
