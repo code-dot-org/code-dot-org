@@ -12,10 +12,12 @@ const twoYearsAgo = moment()
   .utc()
   .year(now.year() - 2);
 
-  // [TODO]: Add general comment on how these recommendations work and where the edges of this black box are (i.e. filters before, returns array)
-
 /*
- * Curriculum recommenders
+ * Curriculum recommenders: Each recommender receives an array of all curricula to consider and any preferences it should prioritize. The given
+ * recommender will score each curriculum based on the questions associated with that recommender. If a curriculum satisfies the conditions of a
+ * question, it receives points based on that recommender's scoring framework found in 'curriculumRecommenderConstants.js'. Once all curricula
+ * have been scored, the recommender returns an array of the passed-in curricula sorted in descending order by score (ties are broken by
+ * prioritizing featured curricula and more recently published curricula).
  */
 export const getTestRecommendations = (
   curricula,
@@ -44,10 +46,6 @@ export const getTestRecommendations = (
     score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
   });
-
-  const test = curriculaScores.map(c => [c[0].key, c[1]]);
-  console.log(test);
-
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
 };
 
@@ -151,6 +149,6 @@ const sortRecommendations = curriculumScores => {
     if (a[0].is_featured !== b[0].is_featured) {
       return a[0].is_featured ? -1 : 1;
     }
-    return new Date(b[0].published_date) - new Date(a[0].published_date);
+    return moment.utc(b[0].published_date) - moment.utc(a[0].published_date);
   });
 };

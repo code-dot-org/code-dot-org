@@ -150,7 +150,7 @@ const ONLY_RECENT_PUBLISHED_DATE_COURSES = [
     grade_levels: null,
     cs_topic: null,
     school_subject: null,
-    published_date: moment().utc().subtract(6, 'months').toString(),
+    published_date: moment.utc().subtract(6, 'months').toString(),
   },
   {
     key: 'publishedWithinTwoYearsAgoCourse',
@@ -160,7 +160,7 @@ const ONLY_RECENT_PUBLISHED_DATE_COURSES = [
     grade_levels: null,
     cs_topic: null,
     school_subject: null,
-    published_date: moment().utc().subtract(18, 'months').toString(),
+    published_date: moment.utc().subtract(18, 'months').toString(),
   },
 ];
 
