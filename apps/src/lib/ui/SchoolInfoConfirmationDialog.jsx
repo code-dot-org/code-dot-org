@@ -7,6 +7,8 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {getStore} from '../../redux';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const styles = {
   button: {
@@ -74,6 +76,7 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickYes = () => {
+    analyticsReporter.sendEvent(EVENTS.CONFIRM_SCHOOL_CLICKED);
     const {authTokenName, authTokenValue} = this.props.scriptData;
     const formData = new FormData();
     formData.append(authTokenName, authTokenValue);
@@ -91,10 +94,12 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickUpdate = () => {
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_CLICKED);
     this.setState({showSchoolInterstitial: true});
   };
 
   renderInitialContent = () => {
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN);
     const {schoolName} = this.state;
     const isRTL = getStore().getState()?.isRtl;
     return (
