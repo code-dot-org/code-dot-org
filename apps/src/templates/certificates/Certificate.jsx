@@ -118,7 +118,6 @@ function Certificate(props) {
     children,
     initialCertificateImageUrl,
     isHocTutorial,
-    tutorialUrl,
   } = props;
 
   const personalizedCertificate = getCertificateImagePath();
@@ -147,9 +146,6 @@ function Certificate(props) {
 
   const linkedin = queryString.stringify({
     url: externalCertificateShareLink,
-    text: `I completed Code.org's self-paced professional learning at ${getFullPath(
-      tutorialUrl
-    )}`,
   });
 
   const print = getPrintPath();
@@ -245,7 +241,6 @@ Certificate.propTypes = {
   children: PropTypes.node,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
-  tutorialUrl: PropTypes.string,
 };
 
 export default connect(state => ({
