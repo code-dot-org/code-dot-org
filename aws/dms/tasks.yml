@@ -58,6 +58,11 @@ cron:
 - dashboard.course_scripts
 - dashboard.survey_results
 - dashboard.sections
+- dashboard.section_instructors
+    # remove_columns:
+    # - first_name?
+    # - last_name?
+    # - etc...
 - dashboard.followers
 - dashboard.section_hidden_stages
 - dashboard.user_proficiencies
