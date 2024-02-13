@@ -12,7 +12,6 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/mouse-events-have-key-events': 'off',
   'jsx-a11y/no-noninteractive-element-interactions': 'off',
-  'jsx-a11y/no-noninteractive-tabindex': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
   'jsx-a11y/tabindex-no-positive': 'off',
 };
@@ -29,6 +28,7 @@ module.exports = {
     'mocha',
     'babel',
     'jsx-a11y',
+    'storybook',
   ],
   parserOptions: {
     babelOptions: {
@@ -39,6 +39,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:storybook/recommended',
   ],
   env: {
     es6: true,
@@ -131,6 +132,12 @@ module.exports = {
         // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
         // tsconfig.json file, but this is currently causing some build issues (SL-791)
         '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.story.@(ts|tsx|js|jsx)'],
+      rules: {
+        'storybook/no-title-property-in-meta': 'error',
       },
     },
   ],

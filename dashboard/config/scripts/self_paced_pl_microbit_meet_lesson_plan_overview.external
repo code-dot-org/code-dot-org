@@ -22,9 +22,37 @@ markdown <<MARKDOWN
  - #### Put code onto micro:bits 
 
 ## Lesson format  
-- #### **Warm-up:** Introduce the micro:bit and the activity.
-- #### **Main activity:** Students work in pairs to explore pre-programmed micro:bits. They’ll explore different physical inputs and outputs while you challenge them to think about what computing concepts might be being used to make the program work. 
-- #### **Wrap-up:** Discuss what they’ve discovered and look at the project code together. You’ll start to familiarize yourselves with the online Microsoft MakeCode block editor. You can optionally follow this with another lesson where students recreate the code for themselves. 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+##### Each lesson begins with a warm up, which introduces the micro:bit and the activity.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+##### Students work in pairs to explore pre-programmed micro:bits. They will explore different physical inputs and outputs while you challenge them to think about what computing concepts might be being used to make the program work. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+##### Discuss what they have discovered and look at the project code together. You will start to familiarize yourselves with the online Microsoft MakeCode block editor. You can optionally follow this with another lesson where students recreate the code for themselves. 
+</p></div>
+</details>
+
 
 ## Equipment list
 #### **You will need:**
