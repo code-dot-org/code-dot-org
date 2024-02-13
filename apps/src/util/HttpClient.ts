@@ -74,7 +74,7 @@ async function fetchJson<ResponseType>(
 }
 
 /**
- * o to the given endpoint. Adds the Rails authenticity
+ * Sends a request to the given endpoint. Adds the Rails authenticity
  * token if useAuthenticityToken is true.
  */
 async function sendRequest(
