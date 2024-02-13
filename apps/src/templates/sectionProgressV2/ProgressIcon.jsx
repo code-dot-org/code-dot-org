@@ -38,7 +38,7 @@ export default function ProgressIcon({itemType}) {
   );
 
   return (
-    <>
+    <div data-testid="progress-icon">
       {itemType?.length && (
         <FontAwesome
           id={'uitest-' + itemType[0]}
@@ -52,7 +52,7 @@ export default function ProgressIcon({itemType}) {
       {itemType === ITEM_TYPE.VIEWED && viewedBox()}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
-    </>
+    </div>
   );
 }
 

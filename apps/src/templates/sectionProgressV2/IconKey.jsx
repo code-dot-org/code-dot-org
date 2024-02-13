@@ -19,7 +19,6 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const sectionContent = () => (
     <div>
       <AssignmentCompletionStatesBox
-        isViewingLevelProgress={isViewingLevelProgress}
         hasValidatedLevels={isViewingValidatedLevel}
       />
       <TeacherActionsBox isViewingLevelProgress={isViewingLevelProgress} />
