@@ -12,7 +12,6 @@ export const FAKE_RECOMMENDER_SCORING = {
   hasDesiredSchoolSubjects: 2,
   hasAnyImportantTopic: 1,
   hasDesiredTopics: 2,
-
   publishedWithinOneYearAgo: 2,
   publishedWithinTwoYearsAgo: 1,
 };
