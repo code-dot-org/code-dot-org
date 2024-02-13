@@ -21,7 +21,10 @@ import {
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
 import * as blockUtils from '../../block_utils';
-import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
+import {
+  getProjectXml,
+  processIndividualBlock,
+} from '@cdo/apps/blockly/addons/cdoXml';
 
 /**
  * Loads blocks to a workspace.
@@ -455,4 +458,29 @@ export function appendSharedFunctions(startBlocksSource, functionsXml) {
     startBlocks = JSON.stringify(stateToLoad);
   }
   return startBlocks;
+}
+/**
+ * Update the XML string representing toolbox data for compatibility with
+ * Google Blockly.
+ * This function potentially modifies each <block> element in the XML
+ * if there are unsupported attributes, missing mutators, etc.
+ * We also process block xml during domToBlockSpace, which is called to
+ * convert sources from XML to JSON.
+ *
+ * @param {string} toolboxString - The XML string representing toolbox data.
+ * @returns {string} The modified XML string after processing.
+ */
+export function processToolboxXml(toolboxString) {
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(toolboxString, 'text/xml');
+  if (xmlDoc.querySelector('parsererror')) {
+    throw new Error('Error parsing XML');
+  }
+
+  const blocks = xmlDoc.querySelectorAll('block');
+  blocks.forEach(processIndividualBlock);
+
+  // Convert the modified XML document back to a string
+  const modifiedXmlString = new XMLSerializer().serializeToString(xmlDoc);
+  return modifiedXmlString;
 }

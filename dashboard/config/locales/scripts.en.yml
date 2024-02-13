@@ -10415,6 +10415,8 @@ en:
               name: Function Machines w Artist
             lesson-5:
               name: AI 3-5
+            lesson-7:
+              name: Hello Game Design
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -14092,7 +14094,9 @@ en:
             lesson-2:
               name: Counter
             lesson-7:
-              name: Dance Party 2019 (need to clone)
+              name: JuiceMind Bridging Activity
+            lesson-8:
+              name: JuiceMind Content Assessment
           lesson_groups:
             lessonGroup-2:
               display_name: 'Beginner: Events'
@@ -14875,7 +14879,17 @@ en:
           description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes\n\n"
           student_description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes\n"
         gen-ai-foundations-draft:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
           lesson_groups: {}
           name: gen-ai-foundations-draft
           title: "[Draft] Gen AI - Foundations of LLMs"

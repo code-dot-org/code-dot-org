@@ -69,6 +69,10 @@ import {
   reflowToolbox,
 } from './eventHandlers';
 import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
+import {getStore} from '@cdo/apps/redux';
+import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
+import {handleCodeGenerationFailure} from './utils';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 const options = {
   contextMenu: true,
@@ -160,13 +164,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    let workspaceCode = Blockly.JavaScript.workspaceToCode(
-      Blockly.mainBlockSpace
-    );
-    if (this.getHiddenDefinitionWorkspace()) {
-      workspaceCode += Blockly.JavaScript.workspaceToCode(
-        this.getHiddenDefinitionWorkspace()
+    let workspaceCode = '';
+    try {
+      workspaceCode = Blockly.JavaScript.workspaceToCode(
+        Blockly.mainBlockSpace
       );
+      if (this.getHiddenDefinitionWorkspace()) {
+        workspaceCode += Blockly.JavaScript.workspaceToCode(
+          this.getHiddenDefinitionWorkspace()
+        );
+      }
+      getStore().dispatch(setFailedToGenerateCode(false));
+    } catch (e) {
+      handleCodeGenerationFailure(MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR, e);
     }
     return workspaceCode;
   };
@@ -774,6 +784,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   };
 
+  blocklyWrapper.customBlocks = customBlocks;
+
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);
@@ -785,7 +797,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
-  blocklyWrapper.customBlocks = customBlocks;
   blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;
