@@ -167,7 +167,7 @@ class CPExpressInstallInstructions extends React.Component {
                   driveName,
                 })}
 
-                <figure className={styles.imageContainer}>
+                <figure>
                   <img
                     src={
                       isWindows()
