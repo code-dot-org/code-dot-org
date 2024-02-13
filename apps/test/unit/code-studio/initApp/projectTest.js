@@ -181,7 +181,6 @@ describe('project.js', () => {
 
     it('default case', () => {
       window.appOptions.app = 'someOtherType';
-      window.appOptions.app = 'someOtherType';
       expect(project.getNewProjectName()).to.equal(msg.defaultProjectName());
     });
   });

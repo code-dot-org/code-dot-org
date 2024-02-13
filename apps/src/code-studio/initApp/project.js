@@ -1930,6 +1930,11 @@ var projects = (module.exports = {
   },
 
   unloadHandler_(event) {
+    // Skipped for UI tests
+    if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
+      return;
+    }
+
     if (this.hasOwnerChangedProject()) {
       // Manually trigger an autosave instead of waiting for the next autosave.
       this.autosave();
