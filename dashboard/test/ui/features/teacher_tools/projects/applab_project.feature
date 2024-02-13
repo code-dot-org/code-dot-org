@@ -92,8 +92,6 @@ Scenario: Save Project After Signing Out
   And I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I wait for the page to fully load
-    # Make sure we can navigate to another page without getting an alert
-  And I disable onBeforeUnload
   And I wait for initial project save to complete
   And I ensure droplet is in block mode
   And I switch to text mode

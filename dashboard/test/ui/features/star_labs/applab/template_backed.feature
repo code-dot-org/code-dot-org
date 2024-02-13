@@ -6,8 +6,6 @@ Feature: App Lab Scenarios
     # One of two levels backed by the same template
     Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/10?noautoplay=true"
     And I wait for the page to fully load
-    # Make sure we can navigate to another page without getting an alert
-    And I disable onBeforeUnload
     And I debug channel id
 
     Then I reset the puzzle to the starting version
