@@ -115,7 +115,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         const wrapperInstance = wrapper.instance();
         const handleClickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
         wrapper.setState({showSchoolInterstitial: false});
-        wrapper.find('div#yes-button').simulate('click');
+        wrapper.find('#yes-button').simulate('click');
 
         expect(wrapperInstance.handleClickYes).to.have.been.called;
         await setTimeout(() => {}, 50);

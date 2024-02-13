@@ -14,6 +14,7 @@ const EVENTS = {
   // School Association
   // Update School Info Dialog
   UPDATE_SCHOOL_INFO_DIALOG_SHOWN: 'Update School Info Dialog Shown',
+  UPDATE_SCHOOL_INFO_DIALOG_CLOSED: 'Update School Info Dialog Closed',
   CONFIRM_SCHOOL_CLICKED: 'Confirm School Clicked',
   UPDATE_SCHOOL_CLICKED: 'Update School Clicked',
 

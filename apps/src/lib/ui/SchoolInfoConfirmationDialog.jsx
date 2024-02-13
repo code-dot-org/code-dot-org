@@ -73,6 +73,7 @@ class SchoolInfoConfirmationDialog extends Component {
   }
 
   closeModal = () => {
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED);
     this.setState({isOpen: false});
     this.props.onClose();
   };
