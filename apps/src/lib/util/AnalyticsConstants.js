@@ -11,6 +11,13 @@ const EVENTS = {
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
   TEACHER_LOGIN_EVENT: 'Teacher Login',
 
+  // School Association
+  // Update School Info Dialog
+  UPDATE_SCHOOL_INFO_DIALOG_SHOWN: 'Update School Info Dialog Shown',
+  UPDATE_SCHOOL_INFO_DIALOG_CLOSED: 'Update School Info Dialog Closed',
+  CONFIRM_SCHOOL_CLICKED: 'Confirm School Clicked',
+  UPDATE_SCHOOL_CLICKED: 'Update School Clicked',
+
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Course Overview Page Visited By Teacher',
