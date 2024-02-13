@@ -51,6 +51,18 @@ class AdminSearchController < ApplicationController
     @users = users.page(params[:page]).per(MAX_PAGE_SIZE)
   end
 
+  def find_student
+    @user = User.with_deleted.where(user_type: 'student').find(params[:user_id])
+  rescue ActiveRecord::RecordNotFound
+    render :not_found
+  end
+
+  def find_teacher
+    @user = User.with_deleted.where(user_type: 'teacher').find(params[:user_id])
+  rescue ActiveRecord::RecordNotFound
+    render :not_found
+  end
+
   def lookup_section
     @section = Section.with_deleted.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?

@@ -1,0 +1,25 @@
+%table.sections{style: 'width: 100%'}
+  %tr
+    - ['ID', 'Name', 'Type', 'Code', 'Created At', 'Deleted At', 'Teacher', 'Email'].each do |field|
+      %th
+        %span= field
+  - sections.each do |section|
+    %tr
+      - [:id, :name, :login_type, :code, :created_at, :deleted_at].each do |field|
+        %td
+          - if field == :code
+            =link_to section.code, find_students_path(sectionFilter: section.code)
+          - else
+            %span= section[field]
+      %td
+        - if section.user
+          = link_to section.user.name, find_teacher_path(user_id: section.user.id)
+        - else
+          %span
+            N/A
+      %td
+        - if section.user
+          %span= section.user.email
+        - else
+          %span
+            N/A

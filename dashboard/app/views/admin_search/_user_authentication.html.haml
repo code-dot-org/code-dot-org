@@ -1,0 +1,28 @@
+%table.authentication{style: 'width: 100%'}
+  %tr
+    - ['Type', 'Created At', 'Secret / ID'].each do |field|
+      %th
+        %span= field
+
+  %tr
+    %td
+      %span Secret Words
+    %td
+      %span= user.created_at
+    %td
+      %span= user.secret_words
+
+  %tr
+    %td
+      %span Secret Picture
+    %td
+      %span= user.created_at
+    %td
+      %span
+        %img{src: image_url(user.secret_picture.path), style: 'width: 3rem'}
+
+  - user.authentication_options.each do |authentication_option|
+    %tr
+      - [:credential_type, :created_at, :authentication_id].each do |field|
+        %td
+          %span= authentication_option[field]
