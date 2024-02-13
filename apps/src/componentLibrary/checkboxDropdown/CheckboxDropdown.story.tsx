@@ -143,6 +143,8 @@ DefaultCheckboxDropdown.args = {
   ],
   labelText: 'Default Dropdown',
   checkedOptions: ['option-1'],
+  disabled: false,
+  color: 'black',
   onChange: args => null,
   onSelectAll: args => null,
   onClearAll: args => null,
@@ -162,6 +164,7 @@ DisabledCheckboxDropdown.args = {
   onSelectAll: args => null,
   onClearAll: args => null,
   disabled: true,
+  color: 'black',
   size: 'm',
 };
 
@@ -173,6 +176,8 @@ WithDisabledOptionCheckboxDropdown.args = {
     {value: 'option-2', label: 'Option 2'},
     {value: 'option-3', label: 'Option 3'},
   ],
+  disabled: false,
+  color: 'black',
   checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
   onChange: args => null,
@@ -196,6 +201,7 @@ GroupOfCheckboxDropdownColors.args = {
       onSelectAll: args => null,
       onClearAll: args => null,
       size: 'm',
+      disabled: false,
       color: 'white',
     },
     {
@@ -211,6 +217,7 @@ GroupOfCheckboxDropdownColors.args = {
       onClearAll: args => null,
       size: 'm',
       color: 'black',
+      disabled: false,
     },
   ],
 };
@@ -229,6 +236,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onSelectAll: args => null,
       onClearAll: args => null,
       size: 'xs',
+      disabled: false,
+      color: 'black',
     },
     {
       name: 'default-dropdown-s',
@@ -242,6 +251,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onSelectAll: args => null,
       onClearAll: args => null,
       size: 's',
+      disabled: false,
+      color: 'black',
     },
     {
       name: 'default-dropdown-m',
@@ -255,6 +266,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onSelectAll: args => null,
       onClearAll: args => null,
       size: 'm',
+      disabled: false,
+      color: 'black',
     },
     {
       name: 'default-dropdown-white',
@@ -268,6 +281,8 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onSelectAll: args => null,
       onClearAll: args => null,
       size: 'l',
+      disabled: false,
+      color: 'black',
     },
   ],
 };
