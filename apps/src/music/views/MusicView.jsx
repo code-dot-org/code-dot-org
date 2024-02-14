@@ -68,6 +68,7 @@ class UnconnectedMusicView extends React.Component {
      * false/undefined if as part of a script or single level.
      * */
     onProjectBeats: PropTypes.bool,
+    onMiniPlayer: PropTypes.bool,
 
     // populated by Redux
     currentLevelIndex: PropTypes.number,
@@ -599,18 +600,21 @@ class UnconnectedMusicView extends React.Component {
             AppConfig.getValue('ui-keyboard-shortcuts-enabled') === 'true'
           }
         />
-        <MusicLabView
-          blocklyDivId={BLOCKLY_DIV_ID}
-          setPlaying={this.setPlaying}
-          playTrigger={this.playTrigger}
-          hasTrigger={id => this.musicBlocklyWorkspace.hasTrigger(id)}
-          getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
-          updateHighlightedBlocks={this.updateHighlightedBlocks}
-          undo={this.undo}
-          redo={this.redo}
-          clearCode={this.clearCode}
-          validator={this.musicValidator}
-        />
+        {this.props.onMiniPlayer && <div>mini player</div>}
+        {!this.props.onMiniPlayer && (
+          <MusicLabView
+            blocklyDivId={BLOCKLY_DIV_ID}
+            setPlaying={this.setPlaying}
+            playTrigger={this.playTrigger}
+            hasTrigger={id => this.musicBlocklyWorkspace.hasTrigger(id)}
+            getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
+            updateHighlightedBlocks={this.updateHighlightedBlocks}
+            undo={this.undo}
+            redo={this.redo}
+            clearCode={this.clearCode}
+            validator={this.musicValidator}
+          />
+        )}
         <Callouts />
       </AnalyticsContext.Provider>
     );
