@@ -918,7 +918,6 @@ function setupReduxSubscribers(store) {
   });
 
   if (store.getState().pageConstants.hasDataMode) {
-    // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
     Applab.storage
       .getLibraryManifest()
       .then(result => store.dispatch(setLibraryManifest(result)));
