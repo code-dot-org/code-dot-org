@@ -1,6 +1,14 @@
 class FeaturedProjectsController < ApplicationController
   authorize_resource
 
+  def save
+    _, project_id = storage_decrypt_channel_id(params[:project_id])
+    return render_404 unless project_id
+    @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
+    @featured_project.update! unfeatured_at: nil, featured_at: nil
+    buffer_abuse_score
+  end
+  
   def feature
     _, project_id = storage_decrypt_channel_id(params[:project_id])
     return render_404 unless project_id
