@@ -448,11 +448,12 @@ export default function LearningGoals({
       </div>
 
       {/*TODO: Pass through data to child component*/}
-      <div>
+      <div className={style.learningGoalOuterBlock}>
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
             aiEvalInfo={aiEvalInfo}
+            isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
             learningGoalKey={learningGoals[currentLearningGoal].key}
             evidenceLevels={learningGoals[currentLearningGoal].evidenceLevels}
             canProvideFeedback={canProvideFeedback}
@@ -466,7 +467,7 @@ export default function LearningGoals({
             !!studentLevelInfo &&
             !!aiEvalInfo &&
             aiEvalInfo.understanding !== undefined && (
-              <div className={style.openedAiAssessment}>
+              <div className={style.aiAssessmentOuterBlock}>
                 <AiAssessment
                   isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                   studentName={studentLevelInfo.name}

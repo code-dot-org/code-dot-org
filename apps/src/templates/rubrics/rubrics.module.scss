@@ -367,6 +367,10 @@ h2.studentName {
   align-items: center;
 }
 
+.learningGoalOuterBlock {
+  align-self: stretch;
+}
+
 .learningGoalExpanded {
   padding: 1rem;
   display: flex;
@@ -396,7 +400,7 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 12px;
+  gap: 8px;
 }
 
 .evidenceLevelInnerDiv:first-child {
@@ -485,6 +489,13 @@ p.errorMessage {
   padding: 1rem 1rem 0 1rem;
 }
 
+.aiAssessmentOuterBlock {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark20;
+  background: $neutral_white;
+}
+
 .aiAssessmentBlock {
   align-items: flex-start;
   display: flex;
@@ -494,7 +505,6 @@ p.errorMessage {
 
 .aiBotImg {
   width: 42px;
-  height: 68px;
 }
 
 .greenAiAssessment {
@@ -731,12 +741,12 @@ button.learningGoalButton {
   display: flex;
   flex-direction: row;
   min-height: 60px;
-  padding: 0;
   justify-content: space-between;
   align-self: stretch;
   line-height: 154%;
   position: relative;
-  margin: 0 0.5rem;
+  margin: 1rem 1rem 0 1rem;
+  padding: 0 0 0.75rem 0;
   border-bottom: 1px $light_gray_100 solid;
   overflow: hidden;
 }
@@ -777,6 +787,10 @@ h5.learningGoalsHeaderTextBody {
   overflow: hidden;
   flex: 1;
   margin: 0;
+
+  &:first-child {
+    margin: 0 0 0.25rem;
+  }
 }
 
 .progressRing {
@@ -795,6 +809,10 @@ h5.learningGoalsHeaderTextBody {
   border-radius: 0.25rem;
   border: 1px solid $neutral_dark20;
   background: $neutral_white;
+}
+
+p.evidenceLevelHeaderText {
+  margin: 0 0 0.25rem;
 }
 
 .evidenceLevelSetHorizontalV2 {
@@ -818,15 +836,20 @@ h5.learningGoalsHeaderTextBody {
   margin-bottom: 0;
 }
 
-.evidenceLevelUnselected {
+.evidenceLevel {
   border-radius: 100px;
-  border: 1px solid $light_black;
-  background: $neutral_white;
-  gap: 10px;
-  padding: 3px 16px 0;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  padding: 0 16px 0;
   font-size: 0.875rem;
   height: 32px;
   text-align: center;
+}
+
+.evidenceLevelUnselected {
+  border-color: $light_black;
+  background: $neutral_white;
 
   &:hover {
     box-shadow: none;
@@ -835,15 +858,9 @@ h5.learningGoalsHeaderTextBody {
 }
 
 .evidenceLevelSelected {
-  border-radius: 100px;
-  border: 1px solid $light_primary_500;
+  border-color: $light_primary_500;
   background: $light_primary_500;
-  gap: 10px;
-  padding: 3px 16px 0;
-  font-size: 0.875rem;
   color: $light_white;
-  height: 32px;
-  text-align: center;
 
   &:hover {
     box-shadow: none;
@@ -851,6 +868,7 @@ h5.learningGoalsHeaderTextBody {
   }
 }
 
+// TODO: update to .evidenceLevelSuggested
 .aiEvalSuggestion {
   border-radius: 100px;
   border: 1px solid $light_black;
@@ -859,10 +877,10 @@ h5.learningGoalsHeaderTextBody {
   padding: 3px 16px 0;
   font-size: 0.875rem;
   height: 32px;
-  box-shadow: 0 0 0 2px $ai_rubric_cyan;
+  box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
 
   &:hover {
-    box-shadow: 0 0 0 2px $ai_rubric_cyan;
+    box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
     background-color: $light_gray_100;
   }
 }

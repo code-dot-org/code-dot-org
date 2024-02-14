@@ -1,6 +1,7 @@
 import React, {useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import classnames from 'classnames';
 import style from './rubrics.module.scss';
 import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
 import {
@@ -22,6 +23,7 @@ export default function EvidenceLevelsForTeachersV2({
   radioButtonCallback,
   canProvideFeedback,
   isAutosaving,
+  isAiAssessed,
   aiEvalInfo,
 }) {
   // Generates a list based on whether the AI understanding level falls in the pass
@@ -29,7 +31,8 @@ export default function EvidenceLevelsForTeachersV2({
   // around evidence level.
   const passFail = useMemo(() => {
     if (!!aiEvalInfo) {
-      if (understanding !== INVALID_UNDERSTANDING) {
+      // If a teacher set an understanding, or no AI assessment, then bail
+      if (understanding !== INVALID_UNDERSTANDING || !isAiAssessed) {
         return [];
       }
       if (aiEvalInfo.understanding > 1) {
@@ -38,7 +41,7 @@ export default function EvidenceLevelsForTeachersV2({
         return [0, 1];
       }
     } else return [];
-  }, [aiEvalInfo, understanding]);
+  }, [aiEvalInfo, isAiAssessed, understanding]);
 
   const [showDescription, setShowDescription] = useState(INVALID_UNDERSTANDING);
   //const evidenceLevelsReverse = evidenceLevels.reverse();
@@ -53,7 +56,9 @@ export default function EvidenceLevelsForTeachersV2({
   if (canProvideFeedback) {
     return (
       <div>
-        <Heading6>{i18n.assignARubricScore()}</Heading6>
+        <BodyThreeText className={style.evidenceLevelHeaderText}>
+          <StrongText>{i18n.assignARubricScore()}</StrongText>
+        </BodyThreeText>
         <div className={style.evidenceLevelSetHorizontal}>
           {evidenceLevels.map(evidenceLevel => (
             <button
@@ -63,13 +68,20 @@ export default function EvidenceLevelsForTeachersV2({
               onClick={() => radioButtonCallback(evidenceLevel.understanding)}
               onMouseOver={() => handleMouseOver(evidenceLevel.understanding)}
               onMouseOut={() => handleMouseOut()}
-              className={
-                understanding === evidenceLevel.understanding
-                  ? style.evidenceLevelSelected
-                  : passFail.includes(evidenceLevel.understanding)
-                  ? style.aiEvalSuggestion
-                  : style.evidenceLevelUnselected
-              }
+              className={classnames(
+                style.evidenceLevel,
+                [
+                  understanding === evidenceLevel.understanding
+                    ? style.evidenceLevelSelected
+                    : passFail.includes(evidenceLevel.understanding)
+                    ? classnames(
+                        style.evidenceLevelHighlighted,
+                        style.evidenceLevelUnselected
+                      )
+                    : style.evidenceLevelUnselected,
+                ],
+                []
+              )}
             >
               {UNDERSTANDING_LEVEL_STRINGS_V2[evidenceLevel.understanding]}
             </button>
@@ -112,5 +124,6 @@ EvidenceLevelsForTeachersV2.propTypes = {
   radioButtonCallback: PropTypes.func,
   canProvideFeedback: PropTypes.bool,
   isAutosaving: PropTypes.bool,
+  isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
 };
