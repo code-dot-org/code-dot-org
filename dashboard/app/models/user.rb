@@ -146,6 +146,7 @@ class User < ApplicationRecord
     ai_rubrics_disabled
     sort_by_family_name
     show_progress_table_v2
+    lti_roster_sync_enabled
   )
 
   attr_accessor(
