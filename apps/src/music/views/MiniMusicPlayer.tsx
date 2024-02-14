@@ -48,6 +48,8 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // and then plays the events.
   // Optimization: cache code and/or compiled song after played once.
   const onPlaySong = useCallback(async (project: Channel) => {
+    playerRef.current.stopSong();
+
     // Load code
     const code = await sourcesStoreRef.current.load(project.id);
     workspaceRef.current.loadCode(JSON.parse(code.source));
@@ -100,7 +102,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
             key={project.id}
             onClick={() => onPlaySong(project)}
           >
-            Play! {project.name}
+            {project.name}
           </button>
         );
       })}
