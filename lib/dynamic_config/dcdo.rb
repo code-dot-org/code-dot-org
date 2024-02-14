@@ -45,14 +45,6 @@ class DCDOBase < DynamicConfigBase
       hoc_mode: DCDO.get('hoc_mode', false),
     }
   end
-
-  def to_h
-    @datastore_cache.all
-  end
-
-  def refresh
-    @datastore_cache.update_local_cache
-  end
 end
 
 DCDO = DCDOBase.create
