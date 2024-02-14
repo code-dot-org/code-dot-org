@@ -77,9 +77,14 @@ theme: responsive_full_width
       =hoc_s(:naipi_page_get_involved_heading)
     = view :"naipi/naipi_editorial_cards"
 
-
-
-
-
-
-
+%section.partners
+  .wrapper
+    %h2=hoc_s(:naipi_page_engage_heading)
+    %p.no-margin-bottom.overline-one
+      =hoc_s(:naipi_page_engage_regional_partners)
+    = view :"naipi/naipi_regional_partners"
+    %hr.light
+    %h3=hoc_s(:naipi_page_engage_other_ways_heading)
+    %p=hoc_s(:naipi_page_engage_other_ways_desc, markdown: :inline, locals: {email_url: "mailto:naipi@code.org"})
+    %a.link-button{href: "mailto:naipi@code.org"}
+      =hoc_s(:naipi_page_engage_other_ways_cta_label)

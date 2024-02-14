@@ -1301,6 +1301,11 @@
   naipi_page_get_involved_community_title: "Community Members"
   naipi_page_get_involved_community_desc: "Partner with us to drive positive change. Explore and share collaboration opportunities, success stories, and the transformative impact we can achieve together in advancing Native American education and computer science. Reach out to us to learn more."
   naipi_page_get_involved_community_cta: "Email us (naipi@code.org)"
+  naipi_page_engage_heading: "Engage with our community committed to bridging gaps for Native American and Indigenous students"
+  naipi_page_engage_regional_partners: "Regional Partners"
+  naipi_page_engage_other_ways_heading: "Other ways to get involved"
+  naipi_page_engage_other_ways_desc: "Are you a teacher? Indigenous community leader? Funder? Curious about how to get involved? Contact [naipi@code.org](%{email_url}) to explore how we can work together."
+  naipi_page_engage_other_ways_cta_label: "Send us an email"
 
   resources_tabs_heading: "Resources that support you every step of the way"
   resources_tabs_desc: "[Sign up for a Code.org account](%{sign_up_url}) to get access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience."

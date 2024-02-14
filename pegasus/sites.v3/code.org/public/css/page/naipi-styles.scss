@@ -9,3 +9,23 @@
   background-size: cover;
   background-color: #4B5C1C;
 }
+
+section.partners {
+
+  p.overline {
+    margin-top: 2rem;
+    color: var(--neutral_dark70);
+  }
+
+  ul.naipi-partners {
+    margin-top: 1rem;
+
+    @media screen and (min-width: $width-sm) { column-count: 2; }
+    @media screen and (min-width: $width-md) { column-count: 3; }
+
+    li {
+      margin: 0 0 0.75rem;
+    }
+  }
+}
+
