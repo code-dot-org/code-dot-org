@@ -39,37 +39,19 @@ export default project => {
     $('#unpublished_warning').show();
   }
 
-  if ($('#feature_project').length && project.isProjectLevel()) {
-    $('#feature_project').click(function () {
-      var url = `/featured_projects/${project.getCurrentId()}/feature`;
+  if ($('#save_project').length && project.isProjectLevel()) {
+    $('#save_project').click(function () {
+      var url = `/featured_projects/${project.getCurrentId()}/save`;
       $.ajax({
         url: url,
         type: 'PUT',
         dataType: 'json',
         success: function (data) {
-          $('#unfeature_project').show();
-          $('#feature_project').hide();
+          $('#exists_in_featured_project_galleryt').show();
+          $('#save_project').hide();
         },
         error: function (data) {
           alert("Shucks. Something went wrong - this project wasn't featured.");
-        },
-      });
-    });
-
-    $('#unfeature_project').click(function () {
-      var url = `/featured_projects/${project.getCurrentId()}/unfeature`;
-      $.ajax({
-        url: url,
-        type: 'PUT',
-        dataType: 'json',
-        success: function (data) {
-          $('#unfeature_project').hide();
-          $('#feature_project').show();
-        },
-        error: function (data) {
-          alert(
-            'Shucks. Something went wrong - this project is still featured.'
-          );
         },
       });
     });
