@@ -1,6 +1,6 @@
-import Lab2Registry from '../lab2/Lab2Registry';
 import {getAuthenticityToken} from '../util/AuthenticityTokenStore';
 import {AITutorInteraction} from './types';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter' 
 
 export async function savePromptAndResponse(
   interactionData: AITutorInteraction
@@ -15,8 +15,9 @@ export async function savePromptAndResponse(
       body: JSON.stringify(interactionData),
     });
   } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('AI Tutor Interaction failed to save.', error as Error);
+    MetricsReporter.logError({
+      event:'AI Tutor Interaction failed to save.',
+      errorMessage: error,
+    });
   }
 }
