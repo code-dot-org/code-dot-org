@@ -1,10 +1,10 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
-import ProgressIcon from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
-import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
+import ProgressIcon, {
+  PROGRESS_ICON_TITLE_PREFIX,
+} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
-import color from '@cdo/apps/util/color';
 
 describe('ProgressIcon Component', () => {
   it('renders the FontAwesome icon for a specific itemType represented with a FontAwesomeIcon', () => {
