@@ -326,7 +326,7 @@ export default function Congrats(props) {
                   <img
                     src={item.image}
                     alt=""
-                    className={style.professionalLearningImageNoBackground}
+                    className={style.professionalLearningNextStepsImage}
                   />
                   <Heading3>{item.title}</Heading3>
                   <BodyTwoText>{item.description}</BodyTwoText>
