@@ -1,4 +1,4 @@
-import React, {MouseEvent, useCallback} from 'react';
+import React, {MouseEvent, useCallback, useEffect, useRef} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -12,12 +12,15 @@ import {
   setStartPlayheadPosition,
 } from '../redux/musicRedux';
 import {useMusicSelector} from './types';
+import usePlaybackUpdate from './usePlaybackUpdate';
 
 const barWidth = 60;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
 // A little room on the left.
 const paddingOffset = 10;
+// Start scrolling the playhead when it's more than this percentage of the way across the timeline area.
+const playheadScrollThreshold = 0.75;
 
 const getEventHeight = (numUniqueRows: number, availableHeight = 110) => {
   // While we might not actually have this many rows to show,
@@ -53,6 +56,8 @@ const Timeline: React.FunctionComponent = () => {
     MIN_NUM_MEASURES,
     useMusicSelector(state => state.music.lastMeasure)
   );
+  const playheadRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
 
   const positionToUse = isPlaying
     ? currentPlayheadPosition
@@ -105,11 +110,38 @@ const Timeline: React.FunctionComponent = () => {
     dispatch(clearSelectedBlockId());
   }, [dispatch]);
 
+  const scrollPlayheadForward = useCallback(() => {
+    if (!timelineRef.current || !playheadRef.current) {
+      return;
+    }
+
+    const playheadOffset =
+      playheadRef.current.getBoundingClientRect().left -
+      timelineRef.current.getBoundingClientRect().left;
+    const scrollThreshold =
+      timelineRef.current.clientWidth * playheadScrollThreshold;
+    if (playheadOffset > scrollThreshold) {
+      const jump = timelineRef.current.clientWidth * 0.5;
+      const scroll = playheadOffset - scrollThreshold;
+      timelineRef.current.scrollBy(scroll, 0);
+    }
+  }, [playheadRef]);
+
+  const scrollToPlayhead = useCallback(() => {
+    playheadRef.current?.scrollIntoView();
+  }, [playheadRef]);
+
+  usePlaybackUpdate(scrollPlayheadForward, scrollToPlayhead, scrollToPlayhead);
+
   return (
     <div
       id="timeline"
-      className={moduleStyles.timeline}
+      className={classNames(
+        moduleStyles.timeline,
+        isPlaying && moduleStyles.timelinePlaying
+      )}
       onClick={onTimelineClick}
+      ref={timelineRef}
     >
       <div
         id="timeline-measures-background"
@@ -169,6 +201,7 @@ const Timeline: React.FunctionComponent = () => {
             isPlaying && moduleStyles.playheadPlaying
           )}
           style={{left: paddingOffset + playHeadOffsetInPixels}}
+          ref={playheadRef}
         >
           &nbsp;
         </div>
