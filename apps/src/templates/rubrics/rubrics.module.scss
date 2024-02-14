@@ -337,6 +337,7 @@ button.rubricHeaderTab {
   justify-content: center;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
   border-radius: 30px;
   background: $ai_rubric_cyan;
 }
@@ -344,6 +345,14 @@ button.rubricHeaderTab {
 p.aiTokenText {
   font-size: 0.7rem;
   margin-bottom: 0;
+}
+
+p.feedbackIndicatorText {
+  margin-bottom: 0;
+}
+
+.aiTokenText {
+  color: $product_affirmative_default;
 }
 
 h2.studentName {
@@ -489,7 +498,7 @@ p.errorMessage {
 }
 
 .greenAiAssessment {
-  align-items: left;
+  align-items: start;
   border: 1px solid $product_affirmative_default;
   background-color: $light_affirmative_100;
   border-radius: 4px;
@@ -501,7 +510,7 @@ p.errorMessage {
 }
 
 .redAiAssessment {
-  align-items: left;
+  align-items: start;
   border: 1px solid $product_negative_default;
   background-color: $product_negative_light;
   border-radius: 4px;
@@ -513,7 +522,7 @@ p.errorMessage {
 }
 
 .noAiAssessment {
-  align-items: left;
+  align-items: start;
   background-color: $lightest_gray;
   border: 1px solid $light_gray;
   border-radius: 4px;
@@ -550,6 +559,10 @@ p.errorMessage {
   justify-content: space-between;
   border-radius: 4px;
   background: $light_info_100;
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
 
   p {
     margin: 0;
@@ -694,46 +707,76 @@ i.infoAlertIcon {
 .learningGoalButton {
   background: none;
   border: none;
-  width: 40px;
-  height: 40px;
+  align-self: center;
+  margin: 0 0.625rem 0 0;
+  padding: 0 0.5rem 0 0;
+  flex: 0 0 auto;
+}
 
+.learningGoalRing {
+  flex: 0 0 auto;
+}
+
+button.learningGoalButton {
+  box-shadow: none;
+  border: 1px solid transparent;
+
+  &:active,
   &:hover {
     box-shadow: none;
-    background-color: $light_gray_200;
   }
 }
 
 .learningGoalsHeader {
   display: flex;
   flex-direction: row;
-  height: 60px;
+  min-height: 60px;
+  padding: 0;
   justify-content: space-between;
   align-self: stretch;
   line-height: 154%;
   position: relative;
+  margin: 0 0.5rem;
+  border-bottom: 1px $light_gray_100 solid;
+  overflow: hidden;
 }
 
 .learningGoalsHeaderLeftSide {
   @include main-font-semi-bold;
   display: flex;
   justify-content: flex-start;
-  align-items: left;
-  gap: 16px;
+  align-items: center;
   font-size: 14px;
+  flex: 1;
+  overflow: hidden;
 }
 
 .learningGoalsHeaderRightSideV2 {
   display: flex;
   justify-content: flex-end;
-  align-items: right;
+  align-items: center;
+  align-self: center;
   gap: 16px;
   font-weight: 325;
+  flex: 0 0 auto;
 }
 
 .learningGoalsHeaderText {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 0 0.5rem;
+  flex: 0 1 100%;
+  overflow: hidden;
+}
+
+p.learningGoalsHeaderTextBody,
+h5.learningGoalsHeaderTextBody {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+  margin: 0;
 }
 
 .progressRing {
@@ -869,6 +912,16 @@ i.infoAlertIcon {
   align-items: flex-start;
   align-self: stretch;
   margin: 0;
+}
+
+button.infoAlertRight {
+  box-shadow: none;
+  border: 1px solid transparent;
+
+  &:active,
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .settingsGroup {

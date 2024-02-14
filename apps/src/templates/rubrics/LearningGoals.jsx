@@ -16,7 +16,7 @@ import {
   BodyThreeText,
   BodyFourText,
   ExtraStrongText,
-  Heading6,
+  Heading5,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -372,6 +372,7 @@ export default function LearningGoals({
             <FontAwesome icon="angle-left" />
           </button>
           <ProgressRing
+            className={style.learningGoalRing}
             learningGoals={learningGoals}
             currentLearningGoal={currentLearningGoal}
             understandingLevels={understandingLevels.current}
@@ -379,10 +380,10 @@ export default function LearningGoals({
             stroke={4}
           />
           <div className={style.learningGoalsHeaderText}>
-            <Heading6 className={'uitest-learning-goal-title'}>
+            <Heading5 className={[style.learningGoalsHeaderTextBody, 'uitest-learning-goal-title']}>
               {learningGoals[currentLearningGoal].learningGoal}
-            </Heading6>
-            <BodyThreeText>
+            </Heading5>
+            <BodyThreeText className={style.learningGoalsHeaderTextBody}>
               {i18n.next()}:{' '}
               {
                 learningGoals[(currentLearningGoal + 1) % learningGoals.length]
@@ -394,6 +395,46 @@ export default function LearningGoals({
         <div className={style.learningGoalsHeaderRightSideV2}>
           {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
             <AiToken />
+          )}
+          {/*TODO: Display status of feedback*/}
+          {canProvideFeedback &&
+            aiEnabled &&
+            displayUnderstanding === INVALID_UNDERSTANDING && (
+              <BodyThreeText className={style.feedbackIndicatorText}>
+                {i18n.approve()}
+              </BodyThreeText>
+            )}
+          {canProvideFeedback &&
+            !aiEnabled &&
+            displayUnderstanding === INVALID_UNDERSTANDING && (
+              <BodyThreeText className={style.feedbackIndicatorText}>
+                {i18n.evaluate()}
+              </BodyThreeText>
+            )}
+          {displayUnderstanding >= 0 && (
+            <BodyThreeText className={style.feedbackIndicatorText}>
+              {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
+            </BodyThreeText>
+          )}
+          {submittedEvaluation && (
+            <div className={style.submittedEvaluation}>
+              {submittedEvaluation.understanding !== null && (
+                <BodyThreeText className={style.feedbackIndicatorText}>
+                  {
+                    UNDERSTANDING_LEVEL_STRINGS[
+                      submittedEvaluation.understanding
+                    ]
+                  }
+                </BodyThreeText>
+              )}
+              {submittedEvaluation.feedback && (
+                <FontAwesome
+                  icon="message"
+                  className="fa-regular"
+                  title={i18n.feedback()}
+                />
+              )}
+            </div>
           )}
           <button
             id="uitest-next-goal"

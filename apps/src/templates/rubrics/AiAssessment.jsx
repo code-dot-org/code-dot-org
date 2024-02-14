@@ -6,7 +6,7 @@ import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
 import AiAssessmentFeedback from './AiAssessmentFeedback';
 import {aiEvaluationShape} from './rubricShapes';
-const icon = require('@cdo/static/ai-bot.png');
+import aiBotImage from './images/AiBot_2x.png';
 
 export default function AiAssessment({
   isAiAssessed,
@@ -19,7 +19,7 @@ export default function AiAssessment({
     <div className="uitest-ai-assessment">
       <Heading6>{i18n.aiAssessment()}</Heading6>
       <div className={style.aiAssessmentBlock}>
-        <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
+        <img alt={i18n.aiBot()} src={aiBotImage} className={style.aiBotImg} />
         <AiAssessmentBox
           isAiAssessed={isAiAssessed}
           aiUnderstandingLevel={aiUnderstandingLevel}
