@@ -8,6 +8,8 @@ import {loadLibrary} from './utils/Loader';
 import MusicLibrary from './player/MusicLibrary';
 import {Triggers} from './constants';
 import {PlaybackEvent} from './player/interfaces/PlaybackEvent';
+import {setUpBlocklyForMusicLab} from './blockly/setup';
+import Lab2Registry from '../lab2/Lab2Registry';
 
 interface MiniPlayerViewProps {
   projects: Channel[];
@@ -28,6 +30,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
   // Setup library and workspace on mount
   const onMount = useCallback(async () => {
+    setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
     const library = await loadLibrary(libraryName);
     MusicLibrary.setCurrent(library);
@@ -43,9 +46,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // and then plays the events.
   // Optimization: cache code and/or compiled song after played once.
   const onPlaySong = useCallback(async (project: Channel) => {
+    playerRef.current.stopSong();
     // Load code
-    const code = await sourcesStoreRef.current.load(project.id);
-    workspaceRef.current.loadCode(JSON.parse(code.source));
+    const projectSources = await sourcesStoreRef.current.load(project.id);
+    workspaceRef.current.loadCode(JSON.parse(projectSources.source));
 
     // Compile song
     workspaceRef.current.compileSong({Sequencer: sequencerRef.current});
@@ -67,10 +71,20 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     workspaceRef.current.executeCompiledSong();
 
     // Preload sounds in player
-    playerRef.current.preloadSounds(
+    await playerRef.current.preloadSounds(
       [...allTriggerEvents, ...sequencerRef.current.getPlaybackEvents()],
-      () => {
-        // TODO: Metrics reporting if necessary
+      (loadTimeMs, soundsLoaded) => {
+        if (soundsLoaded > 0) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .reportLoadTime('MiniPlayer.SoundLoadTime', loadTimeMs);
+        }
+        Lab2Registry.getInstance().getMetricsReporter().logInfo({
+          event: 'MiniPlayerSoundsLoaded',
+          soundsLoaded,
+          loadTimeMs,
+          channelId: project.id,
+        });
       }
     );
 

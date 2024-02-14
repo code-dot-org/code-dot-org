@@ -98,6 +98,10 @@ export default class MusicBlocklyWorkspace {
     this.headlessMode = false;
   }
 
+  /**
+   * Initialize the Blockly workspace in headless mode, with no UI.
+   * This is useful for instances where code needs to only be loaded and executed.
+   */
   initHeadless() {
     if (this.workspace) {
       this.workspace.dispose();
