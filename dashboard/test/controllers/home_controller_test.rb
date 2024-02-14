@@ -289,7 +289,21 @@ class HomeControllerTest < ActionController::TestCase
     sign_in user
     get :index
 
-    assert_select '#user-information-modal'
+    assert_select '#student-information-modal'
+  end
+
+  test 'user without us_state gets us_state prompt' do
+    skip 'TODO: get :home'
+
+    user = create(:user)
+    user.update_attribute(:us_state, nil) # bypasses validations
+    user = user.reload
+    refute user.us_state, "user should not have us_state, but value was #{user.us_state}"
+
+    sign_in user
+    get :index
+
+    assert_select '#student-information-modal'
   end
 
   test 'user with age does not get age prompt' do
@@ -300,13 +314,13 @@ class HomeControllerTest < ActionController::TestCase
 
     get :index
 
-    assert_select '#user-information-modal', false
+    assert_select '#student-information-modal', false
   end
 
   test 'anonymous does not get age prompt' do
     get :index
 
-    assert_select '#user-information-modal', false
+    assert_select '#student-information-modal', false
   end
 
   test "teacher visiting homepage gets expected cookies set" do

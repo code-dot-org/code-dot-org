@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_tutor_interactions", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "ai_tutor_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id"
     t.integer "script_id"
@@ -435,7 +435,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
-  create_table "delayed_jobs", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "delayed_jobs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
@@ -611,7 +611,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "learning_goal_ai_evaluation_id", null: false
     t.bigint "teacher_id", null: false
     t.boolean "ai_feedback_approval", null: false
@@ -625,7 +625,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["learning_goal_ai_evaluation_id"], name: "index_feedback_on_learning_goal_ai_evaluation"
   end
 
-  create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "rubric_ai_evaluation_id", null: false
     t.bigint "learning_goal_id", null: false
     t.integer "understanding"
@@ -647,7 +647,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
   end
 
-  create_table "learning_goal_teacher_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_teacher_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "teacher_id", null: false
     t.integer "learning_goal_id", null: false
@@ -803,7 +803,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "lti_courses", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "lti_courses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "lti_integration_id", null: false
     t.bigint "lti_deployment_id", null: false
     t.string "context_id"
@@ -846,7 +846,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["platform_id"], name: "index_lti_integrations_on_platform_id"
   end
 
-  create_table "lti_sections", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "lti_sections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "lti_course_id", null: false
     t.integer "section_id", null: false
     t.string "lms_section_id"
@@ -1476,7 +1476,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
-  create_table "potential_teachers", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "potential_teachers", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.integer "script_id"
@@ -1666,7 +1666,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
   end
 
-  create_table "rubric_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "rubric_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "requester_id", null: false
     t.bigint "rubric_id", null: false
@@ -1868,7 +1868,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id"
   end
 
-  create_table "section_instructors", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "section_instructors", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "instructor_id", null: false
     t.integer "section_id", null: false
     t.integer "invited_by_id"

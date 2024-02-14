@@ -1,4 +1,4 @@
-.modal#user-information-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
+.modal#student-information-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
   .modal-dialog
     .modal-content.no-modal-icon
       %h1{style: 'margin: 10px 0;font-size: 32px'}= t('activerecord.attributes.user.finish_sign_up_header')
@@ -21,7 +21,7 @@
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.sign_out_markdown', url: destroy_user_session_url, markdown: true)
 :javascript
   $().ready(function() {
-    $("#user-information-modal").modal('show');
+    $("#student-information-modal").modal('show');
 
     $("#edit_user select").on('change', function(event) {
       const ageValue = $("#user_age").val();
@@ -37,10 +37,10 @@
       event.preventDefault($(this).serialize());
       $.ajax({
         type: 'POST',
-        url: $(this).attr('action') + '/set_user_information',
+        url: $(this).attr('action') + '/set_student_information',
         data: $(this).serialize(),
         dataType: 'json',
-        success: function(data) {$("#user-information-modal").modal('hide');}
+        success: function(data) {$("#student-information-modal").modal('hide');}
       });
     });
   });
