@@ -38,7 +38,6 @@ const ExpandedCurriculumCatalogCard = ({
   isSignedOut,
   isTeacher,
 }) => {
-  const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
   const iconData = {
     ideal: {
@@ -83,9 +82,10 @@ const ExpandedCurriculumCatalogCard = ({
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
 
-  const quickViewButtonColor = !isTeacherOrSignedOut
-    ? Button.ButtonColor.brandSecondaryDefault
-    : Button.ButtonColor.neutralDark;
+  const quickViewButtonColor =
+    !isSignedOut && !isTeacher
+      ? Button.ButtonColor.brandSecondaryDefault
+      : Button.ButtonColor.neutralDark;
 
   return (
     <div ref={expandedCardRef}>
@@ -238,23 +238,13 @@ const ExpandedCurriculumCatalogCard = ({
                   color={quickViewButtonColor}
                   type="button"
                   href={pathToCourse}
-                  aria-label={
-                    isTeacherOrSignedOut
-                      ? i18n.quickViewDescription({
-                          course_name: courseDisplayName,
-                        })
-                      : i18n.tryCourseNow({
-                          course_name: courseDisplayName,
-                        })
-                  }
-                  text={
-                    isTeacherOrSignedOut
-                      ? i18n.seeCurriculumDetails()
-                      : i18n.tryNow()
-                  }
+                  aria-label={i18n.quickViewDescription({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.seeCurriculumDetails()}
                   className={centererStyle.buttonFlex}
                 />
-                {isTeacherOrSignedOut && (
+                {(isSignedOut || isTeacher) && (
                   <Button
                     color={Button.ButtonColor.brandSecondaryDefault}
                     type="button"
