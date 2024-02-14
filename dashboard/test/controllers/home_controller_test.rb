@@ -278,46 +278,47 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'a[href="/levels/new"]'
   end
 
-  test 'user without age gets age prompt' do
+  test 'student without age gets student information prompt' do
     skip 'TODO: get :home'
 
-    user = create(:user)
-    user.update_attribute(:birthday, nil) # bypasses validations
-    user = user.reload
+    student = create(:student)
+    student.update_attribute(:birthday, nil) # bypasses validations
+    student = student.reload
     refute user.age, "user should not have age, but value was #{user.age}"
 
-    sign_in user
+    sign_in student
     get :index
 
     assert_select '#student-information-modal'
   end
 
-  test 'user without us_state gets us_state prompt' do
+  test 'student without us_state gets student information prompt' do
     skip 'TODO: get :home'
 
-    user = create(:user)
-    user.update_attribute(:us_state, nil) # bypasses validations
-    user = user.reload
-    refute user.us_state, "user should not have us_state, but value was #{user.us_state}"
+    student = create(:student)
+    student.update_attribute(:us_state, nil) # bypasses validations
+    student = student.reload
+    refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
 
-    sign_in user
+    sign_in student
     get :index
 
     assert_select '#student-information-modal'
   end
 
-  test 'user with age does not get age prompt' do
-    user = create(:user)
-    assert user.age
+  test 'student with age and us_state does not get student information prompt' do
+    student = create(:student, us_state: 'AL')
+    assert student.age
+    assert student.us_state
 
-    sign_in user
+    sign_in student
 
     get :index
 
     assert_select '#student-information-modal', false
   end
 
-  test 'anonymous does not get age prompt' do
+  test 'anonymous does not get student information prompt' do
     get :index
 
     assert_select '#student-information-modal', false
