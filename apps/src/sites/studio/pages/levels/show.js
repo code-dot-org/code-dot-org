@@ -66,7 +66,7 @@ function initPage() {
       id: id,
       type: type,
       hasValidation: hasValidation,
-      isAssessment: isAssessment
+      isAssessment: isAssessment,
     };
     getStore().dispatch(setLevel(level));
     const aiTutorFabMountPoint = document.getElementById(
