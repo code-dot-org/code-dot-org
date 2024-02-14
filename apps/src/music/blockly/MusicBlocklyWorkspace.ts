@@ -3,7 +3,7 @@ import {BlockTypes} from './blockTypes';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import {getBlockMode} from '../appConfig';
-import {BlockMode} from '../constants';
+import {BlockMode, Triggers} from '../constants';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
@@ -98,6 +98,10 @@ export default class MusicBlocklyWorkspace {
     this.headlessMode = false;
   }
 
+  /**
+   * Initialize the Blockly workspace in headless mode, with no UI.
+   * This is useful for instances where code needs to only be loaded and executed.
+   */
   initHeadless() {
     if (this.workspace) {
       this.workspace.dispose();
@@ -310,7 +314,7 @@ export default class MusicBlocklyWorkspace {
 
   /**
    * Executes code for the specific trigger referenced by the ID. It is
-   * assumed that {@link executeSong()} has already been called and all event
+   * assumed that {@link compileSong()} has already been called and all event
    * hooks have already been generated, as triggers cannot be played until
    * the song has started.
    *
@@ -321,6 +325,16 @@ export default class MusicBlocklyWorkspace {
     if (hook) {
       this.callUserGeneratedCode(hook, [startPosition]);
     }
+  }
+
+  /**
+   * Executes code for all triggers in the workspace. Useful for assembling
+   * all events that could be potentially triggered for preloading sounds.
+   */
+  executeAllTriggers(startPosition = 0) {
+    Triggers.forEach(({id}) => {
+      this.executeTrigger(id, startPosition);
+    });
   }
 
   hasTrigger(id: string) {

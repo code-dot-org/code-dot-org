@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
+import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import {shouldSkipHiddenWorkspace} from '../utils';
 
@@ -425,7 +425,7 @@ export function appendProceduresToState(projectState, proceduresState) {
 function blockExists(behaviorId, projectBlocks) {
   return projectBlocks.some(
     block =>
-      block.type === 'behavior_definition' &&
+      block.type === BLOCK_TYPES.behaviorDefinition &&
       block.extraState?.behaviorId === behaviorId
   );
 }
