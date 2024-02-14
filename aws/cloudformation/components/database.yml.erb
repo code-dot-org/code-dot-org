@@ -227,7 +227,7 @@
     Type: AWS::RDS::DBCluster
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters # Resource name generated from db_parameters.yml.erb.
+      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
@@ -250,7 +250,6 @@
     Type: AWS::RDS::DBInstance
     Properties:
       DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
-      # Resource name generated from db_parameters.yml.erb
       # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
       DBParameterGroupName: !Ref AuroraWriterDBParameters
       DBClusterIdentifier: !Ref AuroraCluster
