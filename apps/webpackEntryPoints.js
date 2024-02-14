@@ -227,6 +227,8 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
   'foorm/libraries/editor': './src/sites/studio/pages/foorm/libraries/editor.js',
   'foorm/simple_survey_forms/show': './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
+
+  'plc/user_course_enrollments/index': './src/sites/studio/pages/plc/user_course_enrollments/index.js',
 };
 
 // Entries which are shared between dashboard and pegasus, which are included
