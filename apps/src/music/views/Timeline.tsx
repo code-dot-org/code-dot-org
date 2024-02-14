@@ -1,4 +1,4 @@
-import React, {MouseEvent, useCallback, useEffect, useRef} from 'react';
+import React, {MouseEvent, useCallback, useRef} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -12,7 +12,7 @@ import {
   setStartPlayheadPosition,
 } from '../redux/musicRedux';
 import {useMusicSelector} from './types';
-import usePlaybackUpdate from './usePlaybackUpdate';
+import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 
 const barWidth = 60;
 // Leave some vertical space between each event block.

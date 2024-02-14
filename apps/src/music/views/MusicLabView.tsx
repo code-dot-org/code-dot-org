@@ -17,7 +17,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import usePlaybackUpdate from './usePlaybackUpdate';
+import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
