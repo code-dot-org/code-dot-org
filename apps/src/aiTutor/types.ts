@@ -1,4 +1,7 @@
-import {AiTutorInteractionSaveStatus, AiTutorTypes} from '@cdo/apps/util/sharedConstants';
+import {
+  AiTutorInteractionSaveStatus,
+  AiTutorTypes,
+} from '@cdo/apps/util/sharedConstants';
 
 export type ChatCompletionMessage = {
   id: number;
@@ -40,9 +43,10 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
 }
-export type Status = typeof AiTutorInteractionSaveStatus[keyof typeof AiTutorInteractionSaveStatus];
+export type Status =
+  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
 export const Status = AiTutorInteractionSaveStatus;
 export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
-export type TutorType = typeof AiTutorTypes[keyof typeof AiTutorTypes];
+export type TutorType = (typeof AiTutorTypes)[keyof typeof AiTutorTypes];
 export const TutorType = AiTutorTypes;

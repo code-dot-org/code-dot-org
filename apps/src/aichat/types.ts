@@ -25,7 +25,8 @@ export enum Role {
   SYSTEM = 'system',
 }
 
-export type Status = typeof AiTutorInteractionSaveStatus[keyof typeof AiTutorInteractionSaveStatus];
+export type Status =
+  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
 export const Status = AiTutorInteractionSaveStatus;
 export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
