@@ -5,9 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # micro:bit Classroom
 
-#### Organizing your students’ code and lessons is simple with micro:bit’s classroom feature. 
-
-#### Setting up a classroom allows you to easily transfer starter code to your students, look at what your students are working on, and keep your class projects organized. 
+#### Organizing your students’ code and lessons is simple with the micro:bit classroom feature. 
 
 <img src="https://images.code.org/3643dad9f52c859b08241f2e9bfe0e7b-image-1707320963106.png" alt="micro:bit logo" width="250px" style="border-radius:10px; float:right; margin: 0 40px 40px 20px;">
 

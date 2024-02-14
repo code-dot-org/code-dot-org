@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2024-02-12 23:43:24 UTC",
+    "serialized_at": "2024-02-13 19:40:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -106,7 +106,7 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "####**Overview**\nThis lesson is a pre-requisite for teaching with micro:bit. It gives your students hands-on experience with the micro:bit and allows them to start making connections to concepts they learned in previous lessons.\n\nThis lesson is also designed for you to model for students how to review code. This will help your students make connections between familiar coding concepts and their practical application in physical computing.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>\n\n\n::: details [**Getting Started with micro:bit**]\nBefore teaching the Meet your micro:bit lesson, make sure to download the program onto several micro:bits so students can use them. Watch this [video](https://www.youtube.com/watch?v=X3zxNSIFsdQ) to get you started on using your micro:bits.\n\nFor an overview of how to teach the Course C coding lessons, check out <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=20\" target=\"_blank\">the micro:bit Physical Computing Fundamentals booklet, pp. 20-21.</a>\n:::\n\n::: details [**Matching Game (Optional)**]\nAfter completing the **Meet your micro:bit** lesson, students can complete a short matching game to transition from using Code.org blocks to micro:bit blocks. This activity is hosted on the JuiceMind platform (think Kahoot! for coding). To assign the activity to your students, click <a href=\"https://www.play.juicemind.com/quizzes/sy4iw6XvrsThFMpXF74e\" target=\"_blank\">here.</a>\n:::"
+        "overview": "####**Overview**\nThis lesson is a pre-requisite for teaching with micro:bit. It gives your students hands-on experience with the micro:bit and allows them to start making connections to concepts they learned in previous lessons.\n\nThis lesson is also designed for you to model for students how to review code. This will help your students make connections between familiar coding concepts and their practical application in physical computing.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">lesson plan on pp. 7-17</a> in the micro:bit course booklet.\n\n::: details [**Getting Started with micro:bit**]\nBefore teaching the Meet your micro:bit lesson, make sure to download the program onto several micro:bits so students can use them. Watch this <a href=\"https://www.youtube.com/watch?v=X3zxNSIFsdQ\" target=\"_blank\">video</a> to get you started on using your micro:bits.\n\nFor an overview of how to teach the Course C coding lessons, check out <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=20\" target=\"_blank\">\"How to teach the coding lessons\" on pp. 20-21</a> in the micro:bit course booklet.\n:::\n\n::: details [**Matching Game (Optional)**]\nAfter completing the **Meet your micro:bit** lesson, students can complete a short matching game to transition from using Code.org blocks to micro:bit blocks. This activity is hosted on the JuiceMind platform (think Kahoot! for coding). To assign the activity to your students, click <a href=\"https://www.play.juicemind.com/quizzes/sy4iw6XvrsThFMpXF74e\" target=\"_blank\">here.</a>\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the activity.\n\n:::"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -122,7 +122,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "####**Overview**\n\nThis lesson builds on the coding concepts your students learned in the previous lessons. This micro:bit project lesson allows them to transfer knowledge from the screen into physical projects they can code and hold in their hands.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>\n\n::: details [**Setting up a micro:bit classroom session**]\nBefore teaching this lesson, make sure to set up a new classroom on the BBC micro:bit platform. Watch this [video](https://www.youtube.com/watch?v=QD8kpuSC0Vc) to learn how to set up a classroom. \n:::\n\n####**Content Assessment**\nAfter completing the lesson, students will complete a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://www.play.juicemind.com/quizzes/vKVEHwz6lnReDoe38fE9\" target=\"_blank\">here.</a>"
+        "overview": "####**Overview**\n\nThis lesson builds on the coding concepts your students learned in the previous lessons. This micro:bit project lesson allows them to transfer knowledge from the screen into physical projects they can code and hold in their hands.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">lesson plan on pp. 22-24</a> in the micro:bit course booklet.\n\nClick <a href=\"https://mbit.io/csf-c2-classroom\" target=\"_blank\">here</a> to start a classroom session for Emotion Badge.\n\n::: details [**Setting up a micro:bit classroom session**]\nBefore teaching this lesson, make sure to set up a new classroom on the BBC micro:bit platform. Watch this <a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">video</a> to learn how to set up a classroom. \n:::\n\n####**Content Assessment**\nAfter completing the lesson, students will complete a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://www.play.juicemind.com/quizzes/vKVEHwz6lnReDoe38fE9\" target=\"_blank\">here.</a>\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -2471,6 +2471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit_2"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
