@@ -1,0 +1,9 @@
+name 'game_dev_bad_game_choices'
+display_name 'Choose a game to play'
+description 'These games are bad. Can you decide why?'
+
+sublevels
+level 'game_dev_choice1_bad'
+level 'game_dev_choice2_bad'
+level 'game_dev_choice3_bad'
+level 'game_dev_choice4_bad'

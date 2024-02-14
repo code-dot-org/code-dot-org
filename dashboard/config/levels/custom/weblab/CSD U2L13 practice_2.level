@@ -17,8 +17,24 @@
     "display_name": "Step Layout",
     "bubble_choice_description": "Practice setting the `align-self` property to create some steps!",
     "thumbnail_url": "https://images.code.org/436a2703e4959673c6232f2669a4d0a8-steps.png",
-    "project_template_level_name": "CSD U2L13 practice_2-3 template"
+    "project_template_level_name": "CSD U2L13 practice_2-3 template",
+    "reference_links": [
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html",
+      "/courses/csd-2022/guides/classes"
+    ],
+    "map_reference": "/courses/csd-2022/guides/html-selectors"
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-06T19:55:50.067+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13 practice_1\\\"\"],\"cloned_from\":\"CSD U2L13 practice_1\"},{\"changed_at\":\"2024-02-06 20:37:06 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-06 21:20:52 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-06 21:23:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-06 21:28:39 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-06T19:55:50.067+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13 practice_1\\\"\"],\"cloned_from\":\"CSD U2L13 practice_1\"},{\"changed_at\":\"2024-02-06 20:37:06 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-06 21:20:52 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-06 21:23:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-06 21:28:39 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 20:17:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
