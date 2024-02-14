@@ -1,0 +1,15 @@
+{
+  "category": "World",
+  "config": {
+    "func": "printVariable",
+    "docFunc": "gamelab_printText",
+    "blockText": "print variable \n{VAR}",
+    "args": [
+      {
+        "name": "VAR",
+        "customInput": "variableFieldNamePicker"
+      }
+    ],
+    "style": "default"
+  }
+}

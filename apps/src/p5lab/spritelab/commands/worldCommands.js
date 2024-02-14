@@ -12,6 +12,10 @@ export const commands = {
     /* no-op */
   },
 
+  printVariable(label, value) {
+    commands.printText.bind(this)(`${label}: ${value}`);
+  },
+
   drawTitle() {
     this.p5.fill('black');
     this.p5.stroke('white');

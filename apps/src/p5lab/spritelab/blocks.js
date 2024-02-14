@@ -431,6 +431,25 @@ const customInputTypes = {
       return '';
     },
   },
+  // Custom input for a variable field that generates the name of the variable
+  // rather than the value of the variable.
+  variableFieldNamePicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow.appendField(
+        new Blockly.FieldVariable(),
+        inputConfig.name
+      );
+    },
+
+    generateCode(block, arg) {
+      const fieldValue = block.getFieldValue(arg.name);
+      const label = Blockly.getMainWorkspace()
+        .getVariableMap()
+        .getVariableById(fieldValue).name;
+      const variable = Blockly.JavaScript.getVariableName(fieldValue);
+      return [`"${label}"`, variable];
+    },
+  },
 };
 
 export default {
