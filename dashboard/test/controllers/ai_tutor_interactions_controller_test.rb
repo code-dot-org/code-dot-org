@@ -88,16 +88,42 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     @lesson = create(:lesson, :with_lesson_group)
     @level = create(:level)
     @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
+    @fake_ip = '127.0.0.1'
+    fake_version_id = "fake-version-id"
+    @storage_id = create_storage_id_for_user(@student_with_ai_tutor_access.id)
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    @channel_id = channel_token.channel
+
+    # Don't actually talk to S3 when running SourceBucket.new
+    AWS::S3.stubs :create_client
+    stub_project_source_data(@channel_id)
+    _, @project_id = storage_decrypt_channel_id(@channel_id)
+    @version_id = "fake-version-id"
+
     assert_creates(AiTutorInteraction) do
       post :create, params: {
         level_id: @script_level.levels.first.id,
           script_id: @script_level.script.id,
           type: SharedConstants::AI_TUTOR_TYPES[:VALIDATION],
-          prompt: "Can you help me?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:ERROR],
-          ai_response: "Yes, I can help.",
+          prompt: "Why is my test failing?",
+          status: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK],
+          ai_response: "Because your code is wrong.",
           isProjectBacked: true
       }
+      created_ai_tutor_interaction = AiTutorInteraction.last
+      assert created_ai_tutor_interaction.project_id === @project_id.to_s
+      assert created_ai_tutor_interaction.project_version_id === fake_version_id
     end
+  end
+
+  private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id,
+      last_modified: DateTime.now
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 end
