@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-13 00:05:05 UTC",
+    "serialized_at": "2024-02-13 20:05:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -40,8 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data and Society",
@@ -779,6 +779,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U4-DecryptionPractice"
+        ],
         "progression": "Data Privacy"
       },
       "bonus": false,
@@ -826,6 +829,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -923,6 +929,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-U5-PizzaPartyProblem"
+        ],
         "progression": "Solve Data Problems"
       },
       "bonus": false,
@@ -1045,6 +1054,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson3WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
