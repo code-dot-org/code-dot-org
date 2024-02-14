@@ -15,7 +15,6 @@
 #  standalone              :boolean          default(TRUE)
 #  remix_parent_id         :integer
 #  skip_content_moderation :boolean
-#  use_datablock_storage   :boolean          default(FALSE), not null
 #
 # Indexes
 #
