@@ -10417,6 +10417,8 @@ en:
               name: AI 3-5
             lesson-7:
               name: Hello Game Design
+            lesson-8:
+              name: Game Development
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -12430,6 +12432,8 @@ en:
               name: SNAP - Rosa Linn
             lesson-3:
               name: Free Play
+            lesson-4:
+              name: Test Library
           lesson_groups: {}
           name: musiclab
           title: Music Lab Test Lessons
@@ -13852,8 +13856,8 @@ en:
           title: Preparing to Teach Data and Society
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 60 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 60 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
         ai-tutor-test:
           lessons:
             lesson-1:

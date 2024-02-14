@@ -98,4 +98,9 @@ class Policies::Lti
   def self.show_email_input?(user)
     user.teacher? && Policies::Lti.lti?(user)
   end
+
+  # Whether or not a roster sync can be performed for a user.
+  def self.roster_sync_enabled?(user)
+    user.teacher? && user.lti_roster_sync_enabled
+  end
 end

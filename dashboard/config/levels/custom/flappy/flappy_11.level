@@ -48,7 +48,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="flappy_whenClick" deletable="false"/>
+        <block type="flappy_whenClick" deletable="false" id="whenClick"/>
         <block type="flappy_whenCollideGround" deletable="false"/>
         <block type="flappy_whenCollideObstacle" deletable="false"/>
         <block type="flappy_whenEnterObstacle" deletable="false"/>
@@ -57,8 +57,8 @@
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
-        <block type="flappy_flap_height"/>
-        <block type="flappy_playSound"/>
+        <block type="flappy_flap_height" id="flapHeight"/>
+        <block type="flappy_playSound" id="playSound"/>
         <block type="flappy_incrementPlayerScore"/>
         <block type="flappy_endGame"/>
         <block type="flappy_setSpeed"/>
