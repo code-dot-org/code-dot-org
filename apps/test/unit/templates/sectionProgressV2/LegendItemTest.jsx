@@ -12,7 +12,7 @@ describe('LegendItem ', () => {
         expect(screen.getByText(labelText)).to.exist;
     });
 
-    it('renders ProgressIcon with correct itemType', () => {
+    it('renders ProgressIcon', () => {
         const itemType = ITEM_TYPE.VALIDATED;
         render(<LegendItem labelText="Test Label" itemType={itemType} />);
         const progressIcon = screen.getByTestId('progress-icon');
