@@ -9,11 +9,17 @@ export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
 export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
-    <div className={classNames(styles.needsFeedback, styles.cornerBox)} data-testid="needs-feedback-triangle"/>
+    <div
+      className={classNames(styles.needsFeedback, styles.cornerBox)}
+      data-testid="needs-feedback-triangle"
+    />
   );
 
   const feedbackGivenTriangle = () => (
-    <div className={classNames(styles.feedbackGiven, styles.cornerBox)} data-testid="feedback-given-triangle"/>
+    <div
+      className={classNames(styles.feedbackGiven, styles.cornerBox)}
+      data-testid="feedback-given-triangle"
+    />
   );
 
   const notStartedBox = () => (

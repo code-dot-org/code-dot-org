@@ -22,16 +22,20 @@ describe('IconKey Component', () => {
   });
 
   it('displays LevelTypesBox when viewing level progress', () => {
-    render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[123]} />);
+    render(
+      <IconKey isViewingValidatedLevel={false} expandedLessonIds={[123]} />
+    );
     const containerDiv = screen.getByTestId('expandable-container');
     fireEvent.click(containerDiv);
     expect(screen.getByText('Assignment Completion States')).to.exist;
     expect(screen.getByText('Teacher Actions')).to.exist;
-    expect(screen.getByText('Level Types')).to.exist; 
+    expect(screen.getByText('Level Types')).to.exist;
   });
 
   it('displays Validated level type when viewing level with validated property', () => {
-    render(<IconKey isViewingValidatedLevel={true} expandedLessonIds={[123]} />);
+    render(
+      <IconKey isViewingValidatedLevel={true} expandedLessonIds={[123]} />
+    );
     const containerDiv = screen.getByTestId('expandable-container');
     fireEvent.click(containerDiv);
     expect(screen.getByText('Validated')).to.exist;
