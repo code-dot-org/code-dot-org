@@ -69,11 +69,13 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
           <h4>You don't have access on this level.</h4>
         ) : (
           <div>
-          <h4> What would you like AI Tutor to help you with?</h4>
-          <RadioButtonsGroup radioButtons={radioButtons} onChange={onChange} />
+            <h4> What would you like AI Tutor to help you with?</h4>
+            <RadioButtonsGroup
+              radioButtons={radioButtons}
+              onChange={onChange}
+            />
           </div>
         )}
-        
       </div>
       {compilationSelected && <CompilationTutor />}
       {validationSelected && <ValidationTutor />}
