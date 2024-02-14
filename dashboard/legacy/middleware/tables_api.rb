@@ -11,7 +11,7 @@ class TablesApi < Sinatra::Base
   helpers do
     [
       'table.rb',
-      'datablock_storage_helper.rb',
+      'firebase_helper.rb',
     ].each do |file|
       load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', file))
     end
