@@ -327,9 +327,13 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
-  executeAllTriggers() {
+  /**
+   * Executes code for all triggers in the workspace. Useful for assembling
+   * all events that could be potentially triggered for preloading sounds.
+   */
+  executeAllTriggers(startPosition = 0) {
     Triggers.forEach(({id}) => {
-      this.executeTrigger(id, 0);
+      this.executeTrigger(id, startPosition);
     });
   }
 
