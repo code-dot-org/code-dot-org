@@ -37,3 +37,49 @@ theme: responsive_full_width
         %a.link-button.secondary{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
           =hoc_s(:grade_level_label_high)
 
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large
+        =hoc_s(:naipi_page_quote_desc)
+      %p.no-margin-bottom
+        Richard Winn,
+        =hoc_s(:naipi_page_quote_teacher_title)
+        %span •
+        Wyoming Indian High School
+
+%section.no-padding-bottom
+  .wrapper
+    .flex-container.justify-space-between.align-items-center.wrap.gap-2
+      %figure.col-47
+        %img.rounded-corners{src: "/images/naipi/naipi-page-students-gap.png", alt: "", style: "width: 100%;"}
+      .text-wrapper.col-47
+        %h2=hoc_s(:naipi_page_gaps_heading)
+        %p=hoc_s(:naipi_page_gaps_desc)
+        %p.has-external-link
+          %strong
+            =hoc_s(:naipi_page_gaps_learn_more, markdown: :inline, locals: {state_of_cs_report_url: "https://advocacy.code.org/stateofcs"})
+    .clear
+
+%section
+  .wrapper
+    .flex-container.justify-space-between.align-items-center.wrap-reverse.gap-2
+      .text-wrapper.col-47
+        %h2=hoc_s(:naipi_page_support_heading)
+        %p=hoc_s(:naipi_page_support_desc)
+      %figure.col-47
+        %img.rounded-corners{src: "/images/naipi/naipi-page-teacher-support.png", alt: "", style: "width: 100%;"}
+    .clear
+
+%section.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:naipi_page_get_involved_heading)
+    = view :"naipi/naipi_editorial_cards"
+
+
+
+
+
+
+
