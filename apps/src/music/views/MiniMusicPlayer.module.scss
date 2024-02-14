@@ -1,0 +1,48 @@
+@import "color.scss";
+
+.miniMusicPlayer {
+  background-color: $neutral_dark;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  .entry {
+    background-color: $neutral_dark80;
+    color: $neutral_light;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+
+    .control {
+      width: 60px;
+      padding-left: 10px;
+      box-sizing: border-box;
+
+      .icon {
+        transition: opacity 0.1s ease-in;
+        font-size: 20px;
+      }
+    }
+
+    .name {
+      flex-grow: 1;
+    }
+
+    .other {
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+
+      .icon {
+        transition: opacity 0.1s ease-in;
+        color: $neutral_light;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -12,6 +12,8 @@ import MusicLibrary from '../player/MusicLibrary';
 import {Triggers} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import moduleStyles from './MiniMusicPlayer.module.scss';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 interface MiniPlayerViewProps {
   projects: Channel[];
@@ -29,6 +31,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const sequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
   const sourcesStoreRef = useRef<SourcesStore>(new RemoteSourcesStore());
   const [isLoading, setIsLoading] = useState(true);
+  const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
+    undefined
+  );
 
   // Setup library and workspace on mount
   const onMount = useCallback(async () => {
@@ -76,7 +81,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     workspaceRef.current.executeCompiledSong();
 
     // Preload sounds in player
-    playerRef.current.preloadSounds(
+    await playerRef.current.preloadSounds(
       [...allTriggerEvents, ...sequencerRef.current.getPlaybackEvents()],
       () => {
         // TODO: Metrics reporting if necessary
@@ -85,6 +90,13 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
     // Play sounds
     playerRef.current.playSong(sequencerRef.current.getPlaybackEvents());
+
+    setCurrentProjectId(project.id);
+  }, []);
+
+  const onStopSong = useCallback(async () => {
+    playerRef.current.stopSong();
+    setCurrentProjectId(undefined);
   }, []);
 
   // Some loading UI while we're fetching the library
@@ -94,16 +106,41 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
   // Bare bones render function to hook things together
   return (
-    <div>
+    <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
         return (
-          <button
-            type="button"
+          <div
+            className={moduleStyles.entry}
             key={project.id}
-            onClick={() => onPlaySong(project)}
+            onClick={() => {
+              project.id === currentProjectId
+                ? onStopSong()
+                : onPlaySong(project);
+            }}
           >
-            {project.name}
-          </button>
+            <div className={moduleStyles.control}>
+              <FontAwesomeV6Icon
+                iconName={project.id === currentProjectId ? 'stop' : 'play'}
+                iconStyle="solid"
+                className={moduleStyles.icon}
+              />
+            </div>
+            <div className={moduleStyles.name}>{project.name}</div>
+            <a
+              href={`/projects/music/${project.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className={moduleStyles.other}>
+                <FontAwesomeV6Icon
+                  iconName="arrow-up-right-from-square"
+                  iconStyle="solid"
+                  className={moduleStyles.icon}
+                />
+              </div>
+            </a>
+          </div>
         );
       })}
     </div>
