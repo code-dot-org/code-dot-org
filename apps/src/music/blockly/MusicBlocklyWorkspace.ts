@@ -3,7 +3,7 @@ import {BlockTypes} from './blockTypes';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
 import {getBlockMode} from '../appConfig';
-import {BlockMode} from '../constants';
+import {BlockMode, Triggers} from '../constants';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
@@ -314,7 +314,7 @@ export default class MusicBlocklyWorkspace {
 
   /**
    * Executes code for the specific trigger referenced by the ID. It is
-   * assumed that {@link executeSong()} has already been called and all event
+   * assumed that {@link compileSong()} has already been called and all event
    * hooks have already been generated, as triggers cannot be played until
    * the song has started.
    *
@@ -325,6 +325,12 @@ export default class MusicBlocklyWorkspace {
     if (hook) {
       this.callUserGeneratedCode(hook, [startPosition]);
     }
+  }
+
+  executeAllTriggers() {
+    Triggers.forEach(({id}) => {
+      this.executeTrigger(id, 0);
+    });
   }
 
   hasTrigger(id: string) {

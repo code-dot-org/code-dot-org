@@ -6,8 +6,6 @@ import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
 import {RemoteSourcesStore, SourcesStore} from '../lab2/projects/SourcesStore';
 import {loadLibrary} from './utils/Loader';
 import MusicLibrary from './player/MusicLibrary';
-import {Triggers} from './constants';
-import {PlaybackEvent} from './player/interfaces/PlaybackEvent';
 import {setUpBlocklyForMusicLab} from './blockly/setup';
 import Lab2Registry from '../lab2/Lab2Registry';
 
@@ -55,17 +53,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     workspaceRef.current.compileSong({Sequencer: sequencerRef.current});
 
     // Execute compiled song
-
-    // *** NOTE: this below chunk of code (sequencing out all triggers and events) is
-    // somewhat copied from MusicView and could be factored out
-
     // Sequence out all possible trigger events to preload sounds if necessary.
-    const allTriggerEvents: PlaybackEvent[] = [];
-    Triggers.forEach(trigger => {
-      sequencerRef.current.clear();
-      workspaceRef.current.executeTrigger(trigger.id, 0);
-      allTriggerEvents.push(...sequencerRef.current.getPlaybackEvents());
-    });
+    sequencerRef.current.clear();
+    workspaceRef.current.executeAllTriggers();
+    const allTriggerEvents = sequencerRef.current.getPlaybackEvents();
 
     sequencerRef.current.clear();
     workspaceRef.current.executeCompiledSong();

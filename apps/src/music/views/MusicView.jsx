@@ -468,12 +468,9 @@ class UnconnectedMusicView extends React.Component {
     this.props.clearOrderedFunctions();
 
     // Sequence out all possible trigger events to preload sounds if necessary.
-    const allTriggerEvents = [];
-    Triggers.forEach(trigger => {
-      this.sequencer.clear();
-      this.musicBlocklyWorkspace.executeTrigger(trigger.id, 0);
-      allTriggerEvents.push(...this.sequencer.getPlaybackEvents());
-    });
+    this.sequencer.clear();
+    this.musicBlocklyWorkspace.executeAllTriggers();
+    const allTriggerEvents = this.sequencer.getPlaybackEvents();
 
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
