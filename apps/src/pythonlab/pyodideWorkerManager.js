@@ -31,10 +31,10 @@ const asyncRun = (() => {
       callbacks[id] = onSuccess;
       // Add code to flush stdout to the user's script.
       // Proof of concept that we can import a local file (in a multi-file scenario)
-      let wrappedScript = importFileCode('helpers.py', otherFileContents);
-      wrappedScript += 'import sys\nimport os\n' + script;
-      wrappedScript += '\nsys.stdout.flush()';
-      wrappedScript += '\nos.fsync(sys.stdout.fileno())\n';
+      //let wrappedScript = importFileCode('helpers.py', otherFileContents);
+      let wrappedScript = 'import sys\nimport os\n' + script;
+      //wrappedScript += '\nsys.stdout.flush()';
+      //wrappedScript += '\nos.fsync(sys.stdout.fileno())\n';
       const messageData = {
         ...context,
         python: wrappedScript,
