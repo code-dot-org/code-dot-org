@@ -51,23 +51,6 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // Loads code from the server, compiles the song, executes it to generate events,
   // and then plays the events.
   // Optimization: cache code and/or compiled song after played once.
-  // Setup library and workspace on mount
-  const onMount = useCallback(async () => {
-    setUpBlocklyForMusicLab();
-    workspaceRef.current.initHeadless();
-    const library = await loadLibrary(libraryName);
-    MusicLibrary.setCurrent(library);
-    setIsLoading(false);
-  }, [libraryName]);
-
-  useEffect(() => {
-    onMount();
-  }, [onMount]);
-
-  // This is the main function that is called when a song is played in the mini player
-  // Loads code from the server, compiles the song, executes it to generate events,
-  // and then plays the events.
-  // Optimization: cache code and/or compiled song after played once.
   const onPlaySong = useCallback(async (project: Channel) => {
     playerRef.current.stopSong();
     // Load code
