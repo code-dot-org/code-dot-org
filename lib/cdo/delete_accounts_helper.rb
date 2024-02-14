@@ -72,7 +72,7 @@ class DeleteAccountsHelper
 
     # Clear Firebase contents for user's channels
     @log.puts "Deleting Firebase contents for #{channel_count} channels"
-    FirebaseHelper.delete_channels encrypted_channel_ids
+    DatablockStorageHelper.delete_channels encrypted_channel_ids
 
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end

@@ -50,8 +50,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
 
     # Skip real Firebase operations
-    FirebaseHelper.stubs(:delete_channel)
-    FirebaseHelper.stubs(:delete_channels)
+    DatablockStorageHelper.stubs(:delete_channel)
+    DatablockStorageHelper.stubs(:delete_channels)
 
     # Global log used to check expected log output
     @log = StringIO.new
@@ -1907,7 +1907,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
                             storage_encrypt_channel_id(storage_id, project_id_b)]
-        FirebaseHelper.
+        DatablockStorageHelper.
           expects(:delete_channels).
           with(student_channels)
 

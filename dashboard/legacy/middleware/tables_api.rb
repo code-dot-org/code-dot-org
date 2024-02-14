@@ -11,7 +11,7 @@ class TablesApi < Sinatra::Base
   helpers do
     [
       'table.rb',
-      'firebase_helper.rb',
+      'datablock_storage_helper.rb',
     ].each do |file|
       load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', file))
     end
@@ -22,11 +22,11 @@ class TablesApi < Sinatra::Base
   # Exports a csv file from a table where the first row is the column names
   # and additional rows are the column values.
   #
-  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name| # TODO: unfirebase
+  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name|
     dont_cache
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
-    return FirebaseHelper.new(channel_id).table_as_csv(table_name) # TODO: unfirebase
+    return DatablockStorageHelper.table_as_csv(channel_id, table_name)
   end
 end

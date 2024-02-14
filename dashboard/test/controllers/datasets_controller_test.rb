@@ -31,7 +31,7 @@ class DatasetsControllerTest < ActionController::TestCase
   test 'update_manifest: can update manifest' do
     test_response = mock
     test_response.expects(:code).returns(200)
-    FirebaseHelper.any_instance.stubs(:set_library_manifest).returns(test_response)
+    DatablockStorageHelper.any_instance.stubs(:set_library_manifest).returns(test_response)
     post :update_manifest, params: {manifest: @test_manifest.to_json}
     assert_response :success
   end
@@ -39,7 +39,7 @@ class DatasetsControllerTest < ActionController::TestCase
   test 'update_manifest: passes through the error code' do
     test_response = mock
     test_response.expects(:code).returns(401)
-    FirebaseHelper.any_instance.stubs(:set_library_manifest).returns(test_response)
+    DatablockStorageHelper.any_instance.stubs(:set_library_manifest).returns(test_response)
     post :update_manifest, params: {manifest: @test_manifest.to_json}
     assert_response :unauthorized
   end

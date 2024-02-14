@@ -11,7 +11,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../../deployment'
 require 'ostruct'
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper' # TODO: unfirebase
+require_relative '../../../dashboard/legacy/middleware/helpers/datablock_storage_helper'
 require 'cdo/profanity_filter'
 require 'rest-client'
 
@@ -130,7 +130,6 @@ end
 
 def main
   get_token
-  fb = FirebaseHelper.new('shared') # TODO: unfirebase
 
   if $token.nil_or_empty?
     Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
@@ -150,7 +149,7 @@ def main
       )
       next
     end
-    fb.upload_live_table(chart['title'], records, columns)
+    DatablockStorageHelper.upload_live_table(chart['title'], records, columns)
   end
 end
 

@@ -7,7 +7,7 @@ require 'net/http'
 require 'csv'
 require 'date'
 require 'datapackage'
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper' # TODO: unfirebase
+require_relative '../../../dashboard/legacy/middleware/helpers/datablock_storage_helper'
 
 US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
 MAX_DAYS = 90 # there are 55 states/territories, and the table must be less than 5000 total rows (5000/55 = 90.9)
@@ -103,12 +103,11 @@ def get_world_covid19_data
 end
 
 def main
-  fb = FirebaseHelper.new('shared') # TODO: unfirebase
   records, columns = get_us_covid19_data
-  fb.upload_live_table('COVID-19 Cases per US State', records, columns)
+  DatablockStorageHelper.upload_live_table('COVID-19 Cases per US State', records, columns)
 
   records, columns = get_world_covid19_data
-  fb.upload_live_table('COVID-19 Cases per Country', records, columns)
+  DatablockStorageHelper.upload_live_table('COVID-19 Cases per Country', records, columns)
 end
 
 main if only_one_running?(__FILE__)
