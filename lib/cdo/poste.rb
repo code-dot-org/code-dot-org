@@ -141,6 +141,11 @@ module Poste
       html = nil
       text = nil
 
+      if @template_type == :md
+        markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(safe_links_only: true))
+        content = markdown.render(content)
+      end
+
       if match = content.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
         header = match[:header].strip
         html = match[:html].strip
@@ -157,14 +162,16 @@ module Poste
 
     private def render_header(bound, locals = {})
       return {} unless @header.present?
-      YAML.safe_load(renderer.render(inline: @header, type: :erb, locals: locals))
+      render_type = @template_type == :md ? :md : :erb
+      YAML.safe_load(renderer.render(inline: @header, type: render_type, locals: locals))
     end
 
     private def render_html(bound, locals = {})
       return nil unless @html.present?
-      # All our emails regardless of the extension they use are parsed as ERB
-      # in addition to their regular template type.
-      html = renderer.render(inline: @html, type: :erb, locals: locals)
+
+      if @template_type != :md
+        html = renderer.render(inline: @html, type: :erb, locals: locals)
+      end
       html = renderer.render(inline: html, type: @template_type)
 
       # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
@@ -176,7 +183,8 @@ module Poste
 
     private def render_text(bound, locals = {})
       return nil unless @text.present?
-      renderer.render(inline: @text, type: :erb, locals: locals)
+      render_type = @template_type == :md ? :md : :erb
+      renderer.render(inline: @text, type: render_type, locals: locals)
     end
 
     private def renderer
