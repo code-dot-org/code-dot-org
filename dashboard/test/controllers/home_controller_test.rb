@@ -278,42 +278,57 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'a[href="/levels/new"]'
   end
 
-  test 'student without age gets student information prompt' do
-    skip 'TODO: get :home'
-
+  test 'student without age gets student information prompt with age select' do
     student = create(:student)
     student.update_attribute(:birthday, nil) # bypasses validations
     student = student.reload
-    refute user.age, "user should not have age, but value was #{user.age}"
+    refute student.age, "user should not have age, but value was #{student.age}"
 
     sign_in student
-    get :index
+    get :home
 
     assert_select '#student-information-modal'
+    assert_select '#user_age'
+    assert_select '#user_us_state', false
+    assert_select '#user_gender_student_input', false
   end
 
-  test 'student without us_state gets student information prompt' do
-    skip 'TODO: get :home'
+  test 'LTI student without us_state gets student information prompt' do
+    ids = ['http://some-iss.com', 'some-aud', 'some-sub'].freeze
 
-    student = create(:student)
+    id_token = {
+      sub: ids[2],
+      aud: ids[1],
+      iss: ids[0],
+    }
+
+    student = create :student
+    student.authentication_options.create(
+      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      credential_type: AuthenticationOption::LTI_V1,
+    )
+
     student.update_attribute(:us_state, nil) # bypasses validations
     student = student.reload
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
+    assert Policies::Lti.lti?(student)
 
     sign_in student
-    get :index
+    get :home
 
     assert_select '#student-information-modal'
+    assert_select '#user_age'
+    assert_select '#user_us_state'
+    assert_select '#user_gender_student_input'
   end
 
-  test 'student with age and us_state does not get student information prompt' do
-    student = create(:student, us_state: 'AL')
+  test 'student with age does not get student information prompt' do
+    student = create(:student)
     assert student.age
-    assert student.us_state
 
     sign_in student
 
-    get :index
+    get :home
 
     assert_select '#student-information-modal', false
   end

@@ -10,12 +10,13 @@
         .form-group
           = f.label :age, t('signup_form.age')
           = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: t('signup_form.select_age')
-        .form-group
-          = f.label :us_state, t('activerecord.attributes.user.us_state')
-          = f.select :us_state, User::US_STATE_DROPDOWN_OPTIONS, include_blank: t('school_info.select_state')
-        .field
-          = f.label :gender_student_input, t('gender')
-          = f.text_field :gender_student_input, placeholder: t('type_here')
+        - if Policies::Lti.lti?(current_user)
+          .form-group
+            = f.label :us_state, t('activerecord.attributes.user.us_state')
+            = f.select :us_state, User::US_STATE_DROPDOWN_OPTIONS, include_blank: t('school_info.select_state')
+          .field
+            = f.label :gender_student_input, t('gender')
+            = f.text_field :gender_student_input, placeholder: t('type_here')
         .form-group
           = f.submit t('continue'), class: 'btn btn-primary', disabled: true
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.sign_out_markdown', url: destroy_user_session_url, markdown: true)

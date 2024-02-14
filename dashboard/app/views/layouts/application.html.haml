@@ -56,7 +56,7 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - if current_user&.student? && (current_user.age.nil? || current_user.us_state.nil?)
+    - if current_user&.student? && (current_user.age.nil? || (Policies::Lti.lti?(current_user) && current_user.us_state.nil?))
       = render partial: 'layouts/student_information_interstitial'
 
     - cookie_key = environment_specific_cookie_name('_user_type')
