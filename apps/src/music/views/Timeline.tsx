@@ -121,9 +121,7 @@ const Timeline: React.FunctionComponent = () => {
     const scrollThreshold =
       timelineRef.current.clientWidth * playheadScrollThreshold;
     if (playheadOffset > scrollThreshold) {
-      const jump = timelineRef.current.clientWidth * 0.5;
-      const scroll = playheadOffset - scrollThreshold;
-      timelineRef.current.scrollBy(scroll, 0);
+      timelineRef.current.scrollBy(playheadOffset - scrollThreshold, 0);
     }
   }, [playheadRef]);
 
