@@ -40,7 +40,7 @@
       %div{:class => %w[dcdo-label dcdo-padding]} Value
       %div{:class => %w[dcdo-label dcdo-padding]} Data Type
       %div{:class => %w[dcdo-label]}
-    = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
+    = form_with url: '/admin/dcdo/set' do |f|
       %div{:class => %w[dcdo-row]}
         %div{:class => %w[dcdo-key dcdo-padding]}
           %input{:type => "text", :name => "key", :placeholder => "new key"}
@@ -54,7 +54,7 @@
           %input{:type => "submit", :value => "Add", :class => "btn"}
     - @dcdo_hsh.to_a.sort.each do |key, value|
       - current_type = (value.instance_of?(TrueClass) || value.instance_of?(FalseClass)) ? "Boolean" : value.class.to_s
-      = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
+      = form_with url: '/admin/dcdo/set' do |f|
         %div{:class => %w[dcdo-row]}
           %div{:class => %w[dcdo-key dcdo-padding]}= key
           %div{:class => %w[dcdo-value dcdo-padding]}
