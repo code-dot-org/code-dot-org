@@ -289,7 +289,7 @@ class HomeControllerTest < ActionController::TestCase
     sign_in user
     get :index
 
-    assert_select '#age-modal'
+    assert_select '#user-information-modal'
   end
 
   test 'user with age does not get age prompt' do
@@ -300,13 +300,13 @@ class HomeControllerTest < ActionController::TestCase
 
     get :index
 
-    assert_select '#age-modal', false
+    assert_select '#user-information-modal', false
   end
 
   test 'anonymous does not get age prompt' do
     get :index
 
-    assert_select '#age-modal', false
+    assert_select '#user-information-modal', false
   end
 
   test "teacher visiting homepage gets expected cookies set" do

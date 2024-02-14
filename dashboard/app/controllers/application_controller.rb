@@ -352,7 +352,7 @@ class ApplicationController < ActionController::Base
       # The locked out student needs access to the policy consent API's
       policy_compliance_child_account_consent_path,
       # The age interstitial when the age isn't known will block the lockout page
-      users_set_age_path,
+      users_set_user_information_path,
     ].include?(request.path)
 
     redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user) || Policies::ChildAccount.user_predates_policy?(current_user)

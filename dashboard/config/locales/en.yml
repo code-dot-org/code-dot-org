@@ -69,6 +69,7 @@ en:
         edit_header: 'Edit Account Details'
         ai_settings_header: 'AI Settings'
         finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_header_account_information: 'Please fill out the following information to finish creating your account.'
         finish_sign_up_header_error: 'Please correct the following errors:'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
@@ -95,6 +96,7 @@ en:
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
   okay: "Okay"
+  type_here: "Type here"
   or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   join_section:
@@ -178,6 +180,7 @@ en:
     gender: 'Gender (optional)'
     birthday: 'Birthday (optional)'
     age: 'Age'
+    select_age: 'Select age'
     user_type: 'Are you a student or teacher?'
     submit: 'Sign up'
     go_to_account: 'Go to my account'
@@ -245,6 +248,7 @@ en:
     school_address: 'School Address'
     school_organization_name: 'School/Organization Name'
     school_organization_zip: 'School/Organization Zip Code'
+    select_state: 'Select state'
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email'
@@ -938,7 +942,7 @@ en:
     age: Your age
     header: Account Information Update
     warning: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here."
-    disclaimer: "As always, code.org will never rent, sell or share this information with any third parties."
+    disclaimer: "Code.org will never rent, sell or share this information with any third parties."
     sign_out_markdown: 'If you do not wish to provide your age you may [sign out](%{url}).'
   terms_interstitial:
     title: "Updated Terms of Service and Privacy Policy"
