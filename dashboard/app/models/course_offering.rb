@@ -421,7 +421,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def pl_course?
-    course_versions&.first&.pl_course?
+    !!course_versions&.first&.pl_course?
   end
 
   def get_participant_audience
