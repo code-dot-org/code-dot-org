@@ -7,7 +7,7 @@ import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import color from '@cdo/apps/util/color';
 
 describe('ProgressIcon Component', () => {
-    it('renders the FontAwesome icon for a specific itemType', () => {
+    it('renders the FontAwesome icon for a specific itemType represented with a FontAwesomeIcon', () => {
         const testType = ITEM_TYPE.VALIDATED; 
         console.log(testType);
         render(<ProgressIcon itemType={testType} />);
