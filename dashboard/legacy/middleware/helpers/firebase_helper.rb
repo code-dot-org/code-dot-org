@@ -12,17 +12,28 @@ class FirebaseHelper
     @channel_id = channel_id + CDO.firebase_channel_id_suffix
   end
 
+  def find_table(table_name)
+    DatablockStorageTable.find_by(channel_id: @channel_id, table_name: table_name)
+  end
+
   # @param [String] table_name The name of the table to query.
   # @return [String] A representation of the table (its columns and its data) as a CSV string.
   def table_as_csv(table_name)
-    response = @firebase.get( # TODO: unfirebase
-      "/v3/channels/#{@channel_id}/storage/tables/#{escape_table_name(table_name)}/records"
-    )
-    records = response.body || []
+    table = find_table(table_name)
+    if table
+      # We're in datablock storage
+      table.read_records.map(&:record_json)
+    else
+      # TODO: post-firebase-cleanup
+      response = @firebase.get( # TODO: unfirebase
+        "/v3/channels/#{@channel_id}/storage/tables/#{escape_table_name(table_name)}/records"
+      )
+      records = response.body || []
 
-    # The firebase response could be a Hash or a sparse Array
-    records = records.values if records.is_a? Hash
-    records.compact!
+      # The firebase response could be a Hash or a sparse Array
+      records = records.values if records.is_a? Hash
+      records.compact!
+    end
 
     records.map! {|record| JSON.parse(record)}
     table_to_csv(records, column_order: ['id'])
