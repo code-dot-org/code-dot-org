@@ -50,6 +50,7 @@ class MusiclabController < ApplicationController
       Project.
       where(project_type: "music").
       last(15).
+      reverse.
       map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"]}}.
       compact_blank.
       to_json
