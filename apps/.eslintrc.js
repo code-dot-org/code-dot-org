@@ -87,6 +87,7 @@ module.exports = {
     SerialPort: 'readonly',
     signupErrorMessage: 'readonly',
     Studio: 'readonly',
+    // Only used in Web Lab 2.
     stylelint: 'readonly',
     thanksUrl: 'readonly',
     Turtle: 'readonly',
