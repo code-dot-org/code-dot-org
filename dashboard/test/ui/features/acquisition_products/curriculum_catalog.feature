@@ -299,11 +299,29 @@ Feature: Curriculum Catalog Page
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
   
   @only_mobile
-  Scenario: On mobile, User sees the Learn More button on Catalog Cards
+  Scenario: On mobile, Signed-out User sees the Learn More button on Catalog Cards
     Given I am on "http://studio.code.org/catalog"
     And I rotate to portrait
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Learn more about AI for Oceans']"
+    And I wait until current URL contains "/oceans"
+  
+  @only_mobile
+  Scenario: On mobile, Signed-in teacher sees the Learn More button on Catalog Cards
+    Given I create a teacher named "Teacher Tom"
+    Given I am on "http://studio.code.org/catalog"
+    And I rotate to portrait
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='Learn more about AI for Oceans']"
+    And I wait until current URL contains "/oceans"
+  
+  @only_mobile
+  Scenario: On mobile, Signed-in student sees the Try Now button on Catalog Cards
+    Given I create a student named "Student Sam"
+    Given I am on "http://studio.code.org/catalog"
+    And I rotate to portrait
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='Try AI for Oceans Now']"
     And I wait until current URL contains "/oceans"
   
   # Curriculum Catalog Filter tests
