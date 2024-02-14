@@ -63,5 +63,5 @@ export default function LessonProgressColumnHeader({
 LessonProgressColumnHeader.propTypes = {
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
-  allLocked: PropTypes.bool.isRequired,
+  allLocked: PropTypes.bool,
 };
