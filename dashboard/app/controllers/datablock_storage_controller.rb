@@ -1,5 +1,4 @@
 class DatablockStorageController < ApplicationController
-  # FIXME: implement validate_channel_id, see below
   before_action :validate_channel_id
   before_action :authenticate_user!
 
@@ -7,10 +6,10 @@ class DatablockStorageController < ApplicationController
   #   Debug View                                           #
   ##########################################################
   def index
-    @project = Project.find_by_channel_id(params[:channel_id])
-    @key_value_pairs = DatablockStorageKvp.where(channel_id: params[:channel_id])
-    @records = DatablockStorageRecord.where(channel_id: params[:channel_id])
-    @tables = DatablockStorageTable.where(channel_id: params[:channel_id])
+    @project = Project.find(@project_id)
+    @key_value_pairs = DatablockStorageKvp.where(project_id: @project_id)
+    @records = DatablockStorageRecord.where(project_id: @project_id)
+    @tables = DatablockStorageTable.where(project_id: @project_id)
     puts "####################################################"
   end
 
@@ -21,26 +20,26 @@ class DatablockStorageController < ApplicationController
   def set_key_value
     raise "value must be less than 4096 bytes" if params[:value].length > 4096
     value = JSON.parse params[:value]
-    DatablockStorageKvp.set_kvp params[:channel_id], params[:key], value
+    DatablockStorageKvp.set_kvp @project_id, params[:key], value
     render json: {key: params[:key], value: value}
   end
 
   def get_key_value
-    kvp = DatablockStorageKvp.find_by(channel_id: params[:channel_id], key: params[:key])
+    kvp = DatablockStorageKvp.find_by(project_id: @project_id, key: params[:key])
     render json: kvp ? JSON.parse(kvp.value).to_json : nil
   end
 
   def delete_key_value
     key = params[:key]
-    DatablockStorageKvp.where(channel_id: params[:channel_id], key: key).delete_all
+    DatablockStorageKvp.where(project_id: @project_id, key: key).delete_all
 
     render json: true
   end
 
   def get_key_values
-    # SELECT key, value FROM datablock_storage_kvps WHERE channel_id='{params[:channel_id]}';
+    # SELECT key, value FROM datablock_storage_kvps WHERE project_id='{@project_id}';
     kvps = DatablockStorageKvp.
-      where(channel_id: params[:channel_id]).
+      where(project_id: @project_id).
       select(:key, :value).
       to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
 
@@ -50,7 +49,7 @@ class DatablockStorageController < ApplicationController
   def populate_key_values
     key_values_json = JSON.parse params[:key_values_json]
     raise "key_values_json must be a hash" unless key_values_json.is_a? Hash
-    DatablockStorageKvp.set_kvps(params[:channel_id], key_values_json)
+    DatablockStorageKvp.set_kvps(@project_id, key_values_json)
     render json: true
   end
 
@@ -65,7 +64,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def add_shared_table
-    DatablockStorageTable.add_shared_table params[:channel_id], params[:table_name]
+    DatablockStorageTable.add_shared_table @project_id, params[:table_name]
   end
 
   def import_csv
@@ -93,14 +92,14 @@ class DatablockStorageController < ApplicationController
   def get_table_names
     table_names = shared_table? ?
       DatablockStorageTable.get_shared_table_names :
-      DatablockStorageTable.get_table_names(params[:channel_id])
+      DatablockStorageTable.get_table_names(@project_id)
 
     render json: table_names
   end
 
   def populate_tables
     tables_json = JSON.parse params[:tables_json]
-    DatablockStorageTable.populate_tables params[:channel_id], tables_json
+    DatablockStorageTable.populate_tables @project_id, tables_json
     render json: true
   end
 
@@ -199,12 +198,12 @@ class DatablockStorageController < ApplicationController
   # deletes the entire channel in firebase
   # used only one place, applab.js config.afterClearPuzzle()
   def clear_all_data
-    # FIXME: unfirebase, do we have an index on channel_id alone?
-    DatablockStorageTable.where(channel_id: params[:channel_id]).delete_all
-    # FIXME: unfirebase, do we have an index on channel_id alone?
-    DatablockStorageKvp.where(channel_id: params[:channel_id]).delete_all
-    # FIXME: unfirebase, do we have an index on channel_id alone?
-    DatablockStorageRecord.where(channel_id: params[:channel_id]).delete_all
+    # FIXME: unfirebase, do we have an index on project_id alone?
+    DatablockStorageTable.where(project_id: @project_id).delete_all
+    # FIXME: unfirebase, do we have an index on project_id alone?
+    DatablockStorageKvp.where(project_id: @project_id).delete_all
+    # FIXME: unfirebase, do we have an index on project_id alone?
+    DatablockStorageRecord.where(project_id: @project_id).delete_all
 
     render json: true
   end
@@ -222,11 +221,11 @@ class DatablockStorageController < ApplicationController
   end
 
   def find_table
-    DatablockStorageTable.find([params[:channel_id], params[:table_name]])
+    DatablockStorageTable.find([@project_id, params[:table_name]])
   end
 
   def where_table
-    DatablockStorageTable.where(channel_id: params[:channel_id], table_name: params[:table_name])
+    DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
   end
 
   def table_or_create
@@ -234,16 +233,8 @@ class DatablockStorageController < ApplicationController
   end
 
   def validate_channel_id
-    # FIXME: make sure that the channel_id refers to an applab or weblab project
-
-    # This may be of interest:
-    # begin
-    #   _, project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
-    # rescue ArgumentError, OpenSSL::Cipher::CipherError
-    #   # continue as normal, as we only use this value for stats.
-    # end
-
-    # For performance, we should probably validate this once, and then set a cookie
-    # on the user session, similar to how authenticate_user works
+    _, @project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    # continue as normal, as we only use this value for stats.
   end
 end
