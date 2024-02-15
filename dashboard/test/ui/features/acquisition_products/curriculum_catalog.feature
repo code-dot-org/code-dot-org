@@ -321,7 +321,7 @@ Feature: Curriculum Catalog Page
     Given I am on "http://studio.code.org/catalog"
     And I rotate to portrait
     And I wait until element "h4:contains(AI for Oceans)" is visible
-    And I click selector "[aria-label='Try AI for Oceans now']"
+    And I click selector "[aria-label='Try AI for Oceans Now']"
     And I wait until current URL contains "/oceans"
   
   # Curriculum Catalog Filter tests
