@@ -398,13 +398,21 @@ function simplifyBlockState(block, variableMap) {
   // Create a copy of the block so we can modify certain fields.
   const result = {...block};
 
-  // For VAR fields, look up the name of the variable to use instead of the id.
-  if (block.fields && block.fields.VAR) {
-    result.fields.VAR = {
-      name: variableMap[block.fields.VAR.id] || '',
-      type: '',
-    };
-  }
+  // For variable fields, look up the name of the variable to use instead of the id.
+  const variableFields = [
+    'VAR' /* most common */,
+    'VARIABLE' /* used in gamelab_changeVarBy */,
+  ];
+
+  variableFields.forEach(field => {
+    const fieldValue = block.fields?.[field];
+    if (fieldValue) {
+      result.fields[field] = {
+        name: variableMap[fieldValue.id] || '',
+        type: '',
+      };
+    }
+  });
 
   // Recursively check nested blocks.
   if (block.inputs) {

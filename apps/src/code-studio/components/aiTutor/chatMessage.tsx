@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import style from './ai-tutor.module.scss';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
 
 interface ChatMessageProps {
@@ -73,13 +72,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
 
       {isAssistant(message.role) && (
         <div className={style.assistantMessageContainer}>
-          <Typography
-            className={style.messageHeaderContainer}
-            semanticTag="h5"
-            visualAppearance="heading-xs"
-          >
-            ({message.role})
-          </Typography>
           {displayAssistantMessage(message.status, message.chatMessageText)}
         </div>
       )}
