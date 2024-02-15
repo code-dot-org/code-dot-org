@@ -148,7 +148,7 @@
               - remix_ancestry.each do |channel|
                 %li
                   %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
-        #exists_in_featured_projects_gallery{'style' => ('display: none;' unless exists_in_featured_projects_gallery)}
+        #exists_in_featured_project_gallery{'style' => ('display: none;' unless exists_in_featured_projects_gallery)}
           %li Already saved/featured/archived in featured project gallery
 
       #save_project{'style' => ('display: none;' if exists_in_featured_projects_gallery)}
