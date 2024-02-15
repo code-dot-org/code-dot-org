@@ -13,11 +13,12 @@ import {
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-const LESSON = fakeLessonWithLevels({}, 1);
+const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
   addExpandedLesson: () => {},
+  allLocked: true,
 };
 
 const setUp = overrideProps => {
@@ -35,9 +36,20 @@ describe('LessonProgressColumnHeader', () => {
   });
 
   it('Shows uninteractive if no levels in lesson', () => {
-    const wrapper = setUp({lesson: fakeLesson()});
+    const lesson = fakeLesson();
+    lesson.numberedLesson = true;
+    const wrapper = setUp({lesson});
 
     expect(wrapper.find(FontAwesome)).to.have.length(0);
+  });
+
+  it('Shows uninteractive if lockable lesson', () => {
+    const lesson = fakeLesson();
+    lesson.lockable = true;
+    const wrapper = setUp({lesson});
+
+    expect(wrapper.find(FontAwesome)).to.have.length(1);
+    expect(wrapper.findWhere(n => n.prop('icon') === 'lock')).to.have.length(1);
   });
 
   it('Shows lesson header and expands on click', () => {
@@ -45,6 +57,9 @@ describe('LessonProgressColumnHeader', () => {
     const wrapper = setUp({addExpandedLesson: addExpandedLesson});
 
     expect(wrapper.find(FontAwesome)).to.have.length(1);
+    expect(
+      wrapper.findWhere(n => n.prop('icon') === 'caret-right')
+    ).to.have.length(1);
     expect(wrapper.find(`.${styles.lessonHeaderCell}`)).to.have.length(1);
 
     wrapper.find(`.${styles.lessonHeaderCell}`).simulate('click');
