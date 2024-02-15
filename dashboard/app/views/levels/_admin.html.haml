@@ -126,7 +126,7 @@
         %li= "project id: #{project_id}"
         - exists_in_featured_projects_gallery = FeaturedProject.exists?(:project_id => project_id)
         - if exists_in_featured_projects_gallery
-          - project = FeaturedProject.find_by project_id: project_id   
+          - project = FeaturedProject.find_by project_id: project_id
         - project = Projects.new(get_storage_id)
         - content_moderation_disabled = project.content_moderation_disabled?(params[:channel_id])
         %li
@@ -151,7 +151,7 @@
         #exists_in_featured_projects_gallery{'style' => ('display: none;' unless exists_in_featured_projects_gallery)}
           %li Already saved/featured/archived in featured project gallery
 
-      #save_project{'style' => ('display: none;' unless !exists_in_featured_projects_gallery)}
+      #save_project{'style' => ('display: none;' if exists_in_featured_projects_gallery)}
         %button{id: "save", class: "btn btn-default btn-sm"}
           Save in featured project gallery
 
