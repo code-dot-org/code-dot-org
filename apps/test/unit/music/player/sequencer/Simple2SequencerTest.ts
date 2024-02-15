@@ -27,8 +27,13 @@ describe('Simple2Sequencer', () => {
   beforeEach(() => {
     library = Sinon.createStubInstance(MusicLibrary);
     library.getSoundForId.returns(testSound);
+    Sinon.stub(MusicLibrary, 'getInstance').returns(library);
 
     sequencer = new Simple2Sequencer();
+  });
+
+  afterEach(() => {
+    Sinon.restore();
   });
 
   it('starts a new sequence at the given measure', () => {
