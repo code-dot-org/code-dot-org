@@ -11,8 +11,14 @@
       {
         "name": "UNIT",
         "options": [
-          ["seconds", "\"seconds\""],
-          ["frames", "\"frames\""]
+          [
+            "seconds",
+            "\"seconds\""
+          ],
+          [
+            "frames",
+            "\"frames\""
+          ]
         ]
       }
     ],

@@ -5,7 +5,9 @@
     "func": "whenTouching",
     "docFunc": "gamelab_whenTouching",
     "blockText": "when {SPRITE1} touches {SPRITE2}",
-    "callbackParams": ["extraArgs"],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "SPRITE1",

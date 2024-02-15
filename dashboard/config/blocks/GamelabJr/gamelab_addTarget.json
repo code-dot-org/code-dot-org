@@ -16,8 +16,14 @@
       {
         "name": "OPT",
         "options": [
-          ["follow", "\"follow\""],
-          ["avoid", "\"avoid\""]
+          [
+            "follow",
+            "\"follow\""
+          ],
+          [
+            "avoid",
+            "\"avoid\""
+          ]
         ]
       }
     ]

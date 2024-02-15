@@ -4,7 +4,9 @@
     "style": "event_blocks",
     "func": "atTime",
     "blockText": "at {N} {UNIT}",
-    "callbackParams": ["extraArgs"],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "N",
@@ -13,8 +15,14 @@
       {
         "name": "UNIT",
         "options": [
-          ["seconds", "\"seconds\""],
-          ["frames", "\"frames\""]
+          [
+            "seconds",
+            "\"seconds\""
+          ],
+          [
+            "frames",
+            "\"frames\""
+          ]
         ]
       }
     ],

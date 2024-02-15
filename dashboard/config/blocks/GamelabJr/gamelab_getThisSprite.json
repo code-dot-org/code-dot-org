@@ -6,13 +6,21 @@
     "blockText": "{CHOICE} sprite",
     "returnType": "Sprite",
     "style": "sprite_blocks",
-    "extraArgs": ["extraArgs"],
+    "extraArgs": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "CHOICE",
         "options": [
-          ["this", "\"this\""],
-          ["other", "\"other\""]
+          [
+            "this",
+            "\"this\""
+          ],
+          [
+            "other",
+            "\"other\""
+          ]
         ]
       }
     ]

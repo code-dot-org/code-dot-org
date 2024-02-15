@@ -4,8 +4,12 @@
     "style": "event_blocks",
     "func": "whenSpriteCreated",
     "blockText": "when {SPRITE} created",
-    "miniToolboxBlocks": ["gamelab_newSpritePointer"],
-    "callbackParams": ["extraArgs"],
+    "miniToolboxBlocks": [
+      "gamelab_newSpritePointer"
+    ],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "SPRITE",

@@ -4,7 +4,9 @@
     "style": "event_blocks",
     "func": "whenAllPromptsAnswered",
     "blockText": "when all prompts answered",
-    "callbackParams": ["extraArgs"],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "eventBlock": true
   }
 }

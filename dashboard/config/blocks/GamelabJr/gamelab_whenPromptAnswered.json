@@ -10,7 +10,9 @@
         "customInput": "variableNamePicker"
       }
     ],
-    "callbackParams": ["extraArgs"],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "eventBlock": true
   }
 }

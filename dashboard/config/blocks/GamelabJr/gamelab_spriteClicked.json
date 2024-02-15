@@ -5,14 +5,24 @@
     "func": "spriteClicked",
     "docFunc": "gamelab_spriteClicked",
     "blockText": "{CONDITION} {SPRITE} clicked",
-    "miniToolboxBlocks": ["gamelab_clickedSpritePointer"],
-    "callbackParams": ["extraArgs"],
+    "miniToolboxBlocks": [
+      "gamelab_clickedSpritePointer"
+    ],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "CONDITION",
         "options": [
-          ["when", "\"when\""],
-          ["while", "\"while\""]
+          [
+            "when",
+            "\"when\""
+          ],
+          [
+            "while",
+            "\"while\""
+          ]
         ]
       },
       {

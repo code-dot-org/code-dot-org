@@ -17,7 +17,10 @@
             "driving with arrow keys",
             "new Behavior(driving_with_arrow_keys, [])"
           ],
-          ["being draggable", "draggable()"]
+          [
+            "being draggable",
+            "draggable()"
+          ]
         ]
       }
     ],

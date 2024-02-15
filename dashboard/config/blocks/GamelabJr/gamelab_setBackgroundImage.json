@@ -125,7 +125,10 @@
             "winter",
             "\"https://studio.code.org/blockly/media/skins/studio/background_winter.png\""
           ],
-          ["none", "undefined"]
+          [
+            "none",
+            "undefined"
+          ]
         ]
       }
     ]

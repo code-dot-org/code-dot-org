@@ -17,9 +17,18 @@
       {
         "name": "SIZE",
         "options": [
-          ["large", "100"],
-          ["medium", "50"],
-          ["small", "30"]
+          [
+            "large",
+            "100"
+          ],
+          [
+            "medium",
+            "50"
+          ],
+          [
+            "small",
+            "30"
+          ]
         ]
       }
     ]

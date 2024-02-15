@@ -10,13 +10,34 @@
       {
         "name": "BEHAVIOR",
         "options": [
-          ["spinning right", "new Behavior(spinning_right, [])"],
-          ["spinning left", "new Behavior(spinning_left, [])"],
-          ["fluttering", "new Behavior(fluttering, [])"],
-          ["jittering", "new Behavior(jittering, [])"],
-          ["wobbling", "new Behavior(wobbling, [])"],
-          ["wandering", "new Behavior(wandering, [])"],
-          ["patrolling", "new Behavior(patrolling, [])"],
+          [
+            "spinning right",
+            "new Behavior(spinning_right, [])"
+          ],
+          [
+            "spinning left",
+            "new Behavior(spinning_left, [])"
+          ],
+          [
+            "fluttering",
+            "new Behavior(fluttering, [])"
+          ],
+          [
+            "jittering",
+            "new Behavior(jittering, [])"
+          ],
+          [
+            "wobbling",
+            "new Behavior(wobbling, [])"
+          ],
+          [
+            "wandering",
+            "new Behavior(wandering, [])"
+          ],
+          [
+            "patrolling",
+            "new Behavior(patrolling, [])"
+          ],
           [
             "moving west and looping",
             "new Behavior(moving_west_and_looping, [])"

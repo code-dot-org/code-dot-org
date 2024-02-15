@@ -5,6 +5,8 @@
     "func": "hideTitleScreen",
     "docFunc": "gamelab_hideTitleScreen",
     "blockText": "hide title screen",
-    "args": []
+    "args": [
+
+    ]
   }
 }

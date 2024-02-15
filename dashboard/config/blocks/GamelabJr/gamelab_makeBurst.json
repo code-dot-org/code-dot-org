@@ -17,10 +17,22 @@
       {
         "name": "EFFECT",
         "options": [
-          ["burst", "\"burst\""],
-          ["pop", "\"pop\""],
-          ["rain", "\"rain\""],
-          ["spiral", "\"spiral\""]
+          [
+            "burst",
+            "\"burst\""
+          ],
+          [
+            "pop",
+            "\"pop\""
+          ],
+          [
+            "rain",
+            "\"rain\""
+          ],
+          [
+            "spiral",
+            "\"spiral\""
+          ]
         ]
       }
     ]

@@ -5,7 +5,9 @@
     "func": "clickedOn",
     "docFunc": "gamelab_spriteClicked",
     "blockText": "when {SPRITE} clicked",
-    "callbackParams": ["extraArgs"],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "SPRITE",

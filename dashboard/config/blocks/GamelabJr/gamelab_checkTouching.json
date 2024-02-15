@@ -9,13 +9,21 @@
       "gamelab_subjectSpritePointer",
       "gamelab_objectSpritePointer"
     ],
-    "callbackParams": ["extraArgs"],
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "CONDITION",
         "options": [
-          ["when", "\"when\""],
-          ["while", "\"while\""]
+          [
+            "when",
+            "\"when\""
+          ],
+          [
+            "while",
+            "\"while\""
+          ]
         ]
       },
       {
