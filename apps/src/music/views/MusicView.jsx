@@ -295,7 +295,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (getBlockMode() === BlockMode.SIMPLE2) {
-      this.sequencer = new Simple2Sequencer(this.library);
+      this.sequencer = new Simple2Sequencer();
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
     }
