@@ -65,15 +65,17 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
         [style.hiddenAITutorPanel]: !open,
       })}
     >
-      <h3 id="ai_tutor_panel">AI Tutor</h3>
-      <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
-      <div>
-        <h4> What would you like AI Tutor to help you with?</h4>
-        <RadioButtonsGroup radioButtons={radioButtons} onChange={onChange} />
+      <div className={classnames(style.aiTutorPanelContent)}>
+        <h3 id="ai_tutor_panel">AI Tutor</h3>
+        <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
+        <div>
+          <h4> What would you like AI Tutor to help you with?</h4>
+          <RadioButtonsGroup radioButtons={radioButtons} onChange={onChange} />
+        </div>
+        {compilationSelected && <CompilationTutor />}
+        {validationSelected && <ValidationTutor />}
+        {questionSelected && <GeneralChatTutor />}
       </div>
-      {compilationSelected && <CompilationTutor />}
-      {validationSelected && <ValidationTutor />}
-      {questionSelected && <GeneralChatTutor />}
     </div>
   );
 };
