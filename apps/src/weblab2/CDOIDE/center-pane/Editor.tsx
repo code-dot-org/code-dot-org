@@ -55,7 +55,7 @@ export const Editor = ({saveFile = () => undefined}: EditorProps) => {
   );
 
   const format = async () => {
-    const prettified = await prettify(file.contents, file.language);
+    const prettified = await prettify(file.contents /*, file.language*/);
     saveFile(file.name, prettified);
   };
 
