@@ -48,6 +48,7 @@ export function disableOrphans(event: Abstract) {
   if (!blockEvent.blockId || !blockEvent.workspaceId) {
     return;
   }
+
   const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
   const block = eventWorkspace?.getBlockById(blockEvent.blockId);
   if (
@@ -55,9 +56,6 @@ export function disableOrphans(event: Abstract) {
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
     isEnabledEvent
   ) {
-    if (!blockEvent.blockId) {
-      throw new Error('Encountered a blockEvent without a proper blockId');
-    }
     if (block) {
       updateBlockEnabled(block);
     }
