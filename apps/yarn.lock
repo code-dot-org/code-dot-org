@@ -10938,15 +10938,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.2.6":
-  version: 3.2.6
-  resolution: "debug@npm:3.2.6"
-  dependencies:
-    ms: ^2.1.1
-  checksum: 07bc8b3a13ef3cfa6c06baf7871dfb174c291e5f85dbf566f086620c16b9c1a0e93bb8f1935ebbd07a683249e7e30286f2966e2ef461e8fd17b1b60732062d6b
-  languageName: node
-  linkType: hard
-
 "debug@npm:^4.1.0, debug@npm:^4.1.1":
   version: 4.1.1
   resolution: "debug@npm:4.1.1"
@@ -13986,11 +13977,12 @@ es6-shim@latest:
   linkType: hard
 
 "follow-redirects@npm:^1.0.0":
-  version: 1.7.0
-  resolution: "follow-redirects@npm:1.7.0"
-  dependencies:
-    debug: ^3.2.6
-  checksum: 3e4ace11db65e7cb981e56cce848ccdc1626575442216fcfdba73b2a255605a6800cc73e78a1afa04e0c043f264682d2b5a84089d9c9582c9d77b238eda4b20e
+  version: 1.15.5
+  resolution: "follow-redirects@npm:1.15.5"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 5ca49b5ce6f44338cbfc3546823357e7a70813cecc9b7b768158a1d32c1e62e7407c944402a918ea8c38ae2e78266312d617dc68783fac502cbb55e1047b34ec
   languageName: node
   linkType: hard
 
