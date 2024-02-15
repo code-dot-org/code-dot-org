@@ -4,6 +4,7 @@ description 'Try out these simple games! Watch for similarities in how the games
 
 sublevels
 level 'game_dev_choice1'
-level 'game_dev_choice2'
-level 'game_dev_choice3'
 level 'game_dev_choice4'
+level 'game_dev_choice3'
+level 'game_dev_choice2'
+

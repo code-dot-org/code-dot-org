@@ -1,0 +1,7 @@
+name 'test-slide-embed'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+MARKDOWN

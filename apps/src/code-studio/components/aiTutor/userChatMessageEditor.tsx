@@ -12,7 +12,7 @@ import CopyButton from './copyButton';
 /**
  * Renders the AI Tutor user chat message editor component.
  */
-const UserChatMessageEditor = () => {
+const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
   const isWaitingForChatResponse = useSelector(

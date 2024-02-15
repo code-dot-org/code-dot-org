@@ -7,13 +7,14 @@ export type ChatCompletionMessage = {
 };
 
 export type AITutorInteraction = {
-  userId: number;
-  levelId: number;
-  scriptId: number;
-  type: TutorTypes;
+  userId?: number;
+  levelId?: number;
+  scriptId?: number;
+  type: TutorType;
+  isProjectBacked?: boolean;
   prompt: string;
   status: string;
-  aiResponse: string;
+  aiResponse?: string;
 };
 
 export type Level = {
@@ -21,7 +22,17 @@ export type Level = {
   type: string;
   hasValidation: boolean;
   isAssessment: boolean;
+  isProjectBacked: boolean;
 };
+
+export interface GeneralChatContext {
+  message: string;
+}
+
+export interface ValidationCompilationContext {
+  studentCode: string;
+  tutorType: TutorType;
+}
 
 export enum Role {
   ASSISTANT = 'assistant',
@@ -43,7 +54,7 @@ export enum Status {
 
 export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
-export enum TutorTypes {
+export enum TutorType {
   COMPILATION = 'compilation',
   VALIDATION = 'validation',
   GENERAL_CHAT = 'general_chat',

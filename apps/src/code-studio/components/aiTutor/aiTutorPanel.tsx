@@ -13,6 +13,10 @@ import {
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
 const icon = require('@cdo/static/ai-bot.png');
 
+interface AITutorPanelProps {
+  open: boolean;
+}
+
 const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const dispatch = useDispatch();
   const [selected, setSelected] = useState('');
