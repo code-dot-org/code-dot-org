@@ -51,7 +51,7 @@
   ]
 
 .carousel-wrapper
-  %swiper-container.swiper-01{navigation: "true", "navigation-next-el": ".nav-next-01", "navigation-prev-el": ".nav-prev-01", pagination: "true", init: "false"}
+  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
     - block_item.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.flex-space-between
@@ -60,13 +60,13 @@
               = block_item[:overline]
             %h3
               = block_item[:title]
-            %img{src: "#{block_item[:image]}", alt: "", style: "width: 100%"}
+            %img{src: "#{block_item[:image]}", alt: ""}
             %p
               = block_item[:desc]
           .content-footer
             %a.link-button{href: block_item[:url], aria:{label: "#{block_item[:aria_label]}"}}
               =hoc_s(:call_to_action_see_module_details)
 
-  %button.swiper-nav-prev.nav-prev-01
-  %button.swiper-nav-next.nav-next-01
+  %button.swiper-nav-prev
+  %button.swiper-nav-next
       

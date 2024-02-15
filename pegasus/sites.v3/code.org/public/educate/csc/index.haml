@@ -54,9 +54,9 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:csc_explore_curriculum)
     %p=hoc_s(:csc_explore_desc)
-    = view :section_divider_line
-    %div{style: "margin: 2rem 0 2rem; text-align: center"}
-      %h3=hoc_s(:csc_find_the_right_fit)
+    %hr
+    %h3=hoc_s(:csc_find_the_right_fit)
+    .button-wrapper.centered
       %a.link-button{href: "#csc-week-long-modules"}
         =hoc_s(:csc_week_long_modules)
       %a.link-button{href: "#csc-hour-long-lessons"}
