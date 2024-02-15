@@ -12,6 +12,8 @@ export default class FeaturedProjects extends React.Component {
       .isRequired,
     archivedUnfeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
+    savedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+      .isRequired,
   };
 
   render() {
@@ -21,6 +23,11 @@ export default class FeaturedProjects extends React.Component {
         <FeaturedProjectsTable
           projectList={this.props.currentFeaturedProjects}
           tableVersion={featuredProjectTableTypes.current}
+        />
+        <h3>Saved Featured Projects</h3>
+        <FeaturedProjectsTable
+          projectList={this.props.savedFeaturedProjects}
+          tableVersion={featuredProjectTableTypes.saved}
         />
         <h3>Archive of Previously Featured Projects</h3>
         <FeaturedProjectsTable

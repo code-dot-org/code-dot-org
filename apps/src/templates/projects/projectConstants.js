@@ -28,7 +28,7 @@ export const featuredProjectDataPropType = PropTypes.shape({
   topic: PropTypes.string,
   publishedAt: PropTypes.string,
   thumbnailUrl: PropTypes.string,
-  featuredAt: PropTypes.string.isRequired,
+  featuredAt: PropTypes.string,
   unfeaturedAt: PropTypes.string,
 });
 
@@ -46,6 +46,7 @@ export const Galleries = {
 export const featuredProjectTableTypes = {
   current: 'currentFeatured',
   archived: 'archivedUnfeatured',
+  saved: 'savedFeatured',
 };
 
 export const MAX_PROJECTS_PER_CATEGORY = 100;

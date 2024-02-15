@@ -25,6 +25,10 @@ class FeaturedProject < ApplicationRecord
     !featured_at.nil? && unfeatured_at.nil?
   end
 
+  def saved?
+    featured_at.nil? && unfeatured_at.nil?
+  end
+
   # Determines if a project is currently featured by decrypting the provided
   # encrypted_channel_id, using the project_id to check for a
   # FeaturedProject with the corresponding project_id.  If there is a

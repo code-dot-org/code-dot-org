@@ -168,6 +168,25 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
   );
 };
 
+const actionsFormatterSaved = (actions, {rowData}) => {
+  return (
+    <QuickActionsCell>
+      <PopUpMenu.Item
+        onClick={() => feature(rowData.channel, rowData.publishedAt)}
+      >
+        Feature
+      </PopUpMenu.Item>
+      <MenuBreak />
+      <PopUpMenu.Item
+        onClick={() => onDelete(rowData.channel)}
+        color={color.red}
+      >
+        Remove
+      </PopUpMenu.Item>
+    </QuickActionsCell>
+  );
+};
+
 const dateFormatter = time => {
   if (time) {
     const date = new Date(time);
@@ -300,18 +319,8 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
       },
-      {
-        property: 'publishedAt',
-        header: {
-          label: i18n.published(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
+    ];
+    const archivedColumns = [
       {
         property: 'featuredAt',
         header: {
@@ -324,8 +333,6 @@ class FeaturedProjectsTable extends React.Component {
           props: {style: tableLayoutStyles.cell},
         },
       },
-    ];
-    const archiveColumns = [
       {
         property: 'unfeaturedAt',
         header: {
@@ -357,6 +364,18 @@ class FeaturedProjectsTable extends React.Component {
     ];
     const currentColumns = [
       {
+        property: 'featuredAt',
+        header: {
+          label: i18n.featured(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [dateFormatter],
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
+      {
         property: 'actions',
         header: {
           label: i18n.quickActions(),
@@ -373,11 +392,31 @@ class FeaturedProjectsTable extends React.Component {
         },
       },
     ];
+    const savedColumns = [
+      {
+        property: 'actions',
+        header: {
+          label: i18n.quickActions(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
+        },
+        cell: {
+          formatters: [actionsFormatterSaved],
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
+    ];
 
     if (tableVersion === 'currentFeatured') {
       return dataColumns.concat(currentColumns);
+    } else if (tableVersion === 'archivedUnfeatured') {
+      return dataColumns.concat(archivedColumns);
     } else {
-      return dataColumns.concat(archiveColumns);
+      return dataColumns.concat(savedColumns);
     }
   };
 

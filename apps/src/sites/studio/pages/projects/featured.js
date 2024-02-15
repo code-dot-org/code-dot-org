@@ -10,10 +10,12 @@ $(document).ready(function () {
     featuredProjectsData.currently_featured_projects;
   const archivedUnfeaturedProjects =
     featuredProjectsData.archived_unfeatured_projects;
+  const savedFeaturedProjects = featuredProjectsData.saved_featured_projects;
 
   ReactDOM.render(
     <FeaturedProjects
       currentFeaturedProjects={currentFeaturedProjects}
+      savedFeaturedProjects={savedFeaturedProjects}
       archivedUnfeaturedProjects={archivedUnfeaturedProjects}
     />,
     document.getElementById('featured-projects-container')

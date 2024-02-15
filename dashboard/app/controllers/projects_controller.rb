@@ -234,18 +234,23 @@ class ProjectsController < ApplicationController
       }
       @featured_project_table_rows << featured_project_row
     end
-    sort_projects(@featured_project_table_rows)
+    sort_featured_projects(@featured_project_table_rows)
   end
 
   # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
-  # The rows are sorted into two arrays: featured or unfeatured, based on
-  # on whether the project is currently featured or not.
-  def sort_projects(featured_project_table_rows)
+  # The rows are sorted into three arrays: featured, unfeatured, or saved.
+  def sort_featured_projects(featured_project_table_rows)
     @featured = []
     @unfeatured = []
+    @saved = []
     featured_project_table_rows.each do |row|
-      featured = row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
-      featured ? @featured << row : @unfeatured << row
+      if (row[:unfeaturedAt].nil? && !row[:featuredAt].nil?)
+        @featured << row
+      elsif (!row[:unfeaturedAt].nil? && !row[:featuredAt].nil?)
+        @unfeatured << row
+      else
+        @saved << row
+      end
     end
   end
 
