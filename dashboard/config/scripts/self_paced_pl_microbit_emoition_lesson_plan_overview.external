@@ -15,9 +15,16 @@ markdown <<MARKDOWN
 
 #### The **Emotion Badge** lesson is a great place to start. It is on the beginner pathway of **Course C**. In it, students program the micro:bit to show different emotion images when different buttons are pressed. 
 
+## Key Learning Concepts 
+
+- #### **Events:** actions that cause something happen (e.g., press a button on the micro:bit to make something appear on the display)
+- #### **Inputs:** information computers get from users or sensors (e.g., button press)
+- #### **Outputs:** information users get from computers (e.g., LED display showing happy or sad image)
+
 
 <br>
 
+--- 
 
 <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 0px 0px;">
 
