@@ -1,7 +1,7 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
-- if @summarized_course_enrollments.any?
+- if @summarized_course_enrollments.try(:any?)
   #user-course-enrollment-container
   %script{src: webpack_asset_path('js/plc/user_course_enrollments/index.js'), data: {userCourseEnrollmentData: @summarized_course_enrollments.to_json}}
 - else
