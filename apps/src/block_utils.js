@@ -1085,7 +1085,7 @@ exports.createJsWrapperBlockCreator = function (
         // automatically based on a block's returnType (e.g. yellow for "Location").
         if (color) {
           Blockly.cdoUtils.setHSV(this, ...color);
-        } else if (!returnType && !this.getStyle()) {
+        } else if (!returnType && !this.getStyleName()) {
           // CDO Blockly assigns colors to blocks with an output connection based on return type.
           // See Blockly.Connection.prototype.colorForType
           // Blocks with neither style nor color that do not have a return type can
