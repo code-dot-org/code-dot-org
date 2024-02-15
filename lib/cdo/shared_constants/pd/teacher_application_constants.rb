@@ -290,7 +290,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
@@ -298,7 +297,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csa: [
         :csa_already_know,
@@ -308,7 +306,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ]
     }
 
