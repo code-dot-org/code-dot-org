@@ -103,9 +103,7 @@ class AnalyticsReporter {
   }
 
   log(message) {
-    if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
-      console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
-    }
+    console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
   }
 
   formatUserId(userId) {
