@@ -24,12 +24,12 @@
     "mini_rubric": "true",
     "validation_enabled": "true",
     "encrypted": "false",
-    "rubric_performance_level_1": "All content is contained in tags, uses paragraph tags, multiple sized headings, and at least one list in a logically consistent way.",
+    "rubric_performance_level_1": "All content is contained in tags, uses paragraph tags, multiple sized headings, and at least one list in a logically consistent way. Comments are used to define sections of code.",
     "rubric_performance_level_2": "All content is contained in tags, uses paragraph, heading tags, and a list in a reasonable way.",
     "rubric_performance_level_3": "Most content is contained in tags.  At least one heading tag is used.",
     "rubric_performance_level_4": "Little or no content is contained in tags."
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:31.136+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Test_2023\\\"\"],\"cloned_from\":\"CSD U2 Heading Test_2023\"},{\"changed_at\":\"2023-12-19 17:39:01 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-19 18:32:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:31.136+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Test_2023\\\"\"],\"cloned_from\":\"CSD U2 Heading Test_2023\"},{\"changed_at\":\"2023-12-19 17:39:01 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-19 18:32:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 16:56:36 +0000\",\"changed\":[\"encrypted_examples\",\"rubric_performance_level_1\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -1,0 +1,12 @@
+name 'game_dev_introduction'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##What is a game?
+<img src="https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53 PM.png" style= "width:20%">
+
+<div style= "width: 60%"> 
+
+###**Info here about what the examples have in common. Maybe embedded videos or a matching or predict level**
+MARKDOWN

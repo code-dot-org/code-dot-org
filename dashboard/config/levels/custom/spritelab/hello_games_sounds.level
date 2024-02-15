@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2024-02-08T21:38:38.000Z",
+  "created_at": "2024-02-15T18:58:33.000Z",
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
@@ -22,15 +22,10 @@
     "use_modal_function_editor": "true",
     "standalone_app_name": "spritelab",
     "encrypted": "false",
-    "soft_buttons": [
-      "leftButton",
-      "rightButton",
-      "upButton",
-      "downButton"
-    ],
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##What happens when sprites touch? \r\n\r\n- Add a `when sprite touches sprite` event into the workspace\r\n\t\r\n    ***Tip:*** *Remember, events can go anywhere. They do not attach to the when run program.*\r\n\r\n- Connect a `change sprite costume` block under the new event\r\n- Press `Run` then use the arrows to move the sprite",
+    "display_name": "Adding Sounds",
+    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**New Skill:** Learn how to add sounds to your game when the player scores, wins or looses.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -42,56 +37,119 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
-    "start_animations": "{\"orderedKeys\":[\"38d2cf12-c533-40dd-a4b7-56f458ddda75\",\"383a41c9-82ff-4512-a82c-a2f8c1843187\",\"2f520256-ae72-4f00-9f46-cd956f1ad538\",\"a42ef140-02bd-40ef-a058-3f09910a2e4d\",\"6e435b19-7ced-4bf1-8e3c-a3d47716d1ba\",\"e7c898e4-dd5f-4b99-877a-c1e04f6a1e59\",\"53cf5822-d6f1-4b9b-a3dc-9e96f2169ca3\"],\"propsByKey\":{\"38d2cf12-c533-40dd-a4b7-56f458ddda75\":{\"name\":\"blue_watercolor\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:33:45 UTC\",\"pngLastModified\":\"2021-11-10 23:36:23 UTC\",\"version\":\"7TXSbgENOzcEcABEwbM7lMNH2cHWiwu9\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/7TXSbgENOzcEcABEwbM7lMNH2cHWiwu9/category_backgrounds/blue_watercolor.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"383a41c9-82ff-4512-a82c-a2f8c1843187\":{\"name\":\"dark_watercolors\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:34:04 UTC\",\"pngLastModified\":\"2021-10-12 18:34:01 UTC\",\"version\":\"KTVMe_GvWHWJc4_UWx5.4tzyabQhnTfN\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/KTVMe_GvWHWJc4_UWx5.4tzyabQhnTfN/category_backgrounds/dark_watercolors.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2f520256-ae72-4f00-9f46-cd956f1ad538\":{\"name\":\"ink_mountain\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-11-10 23:23:45 UTC\",\"pngLastModified\":\"2021-11-10 23:23:45 UTC\",\"version\":\"8Daf3mypu5JKWmyfPga8tpQomLjtRcM7\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/8Daf3mypu5JKWmyfPga8tpQomLjtRcM7/category_backgrounds/ink_mountain.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a42ef140-02bd-40ef-a058-3f09910a2e4d\":{\"name\":\"rainbow_glow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:37:15 UTC\",\"pngLastModified\":\"2021-10-12 18:37:13 UTC\",\"version\":\"_97PA1spMZAQE7QjNo6WLLaon5M2TvaM\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/_97PA1spMZAQE7QjNo6WLLaon5M2TvaM/category_backgrounds/rainbow_glow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6e435b19-7ced-4bf1-8e3c-a3d47716d1ba\":{\"name\":\"ice\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":395},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-10-26T22:17:05.000Z\",\"pngLastModified\":\"2022-10-26T22:17:05.000Z\",\"version\":\"e_VZFflg1fF6Ce97mLwvYXkB8FrqJ6y8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/e_VZFflg1fF6Ce97mLwvYXkB8FrqJ6y8/ice.png\",\"sourceSize\":{\"x\":400,\"y\":395}},\"e7c898e4-dd5f-4b99-877a-c1e04f6a1e59\":{\"name\":\"rpgcharacter_17\",\"categories\":[\"fantasy\"],\"frameCount\":1,\"frameSize\":{\"x\":204,\"y\":228},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:54:59 UTC\",\"pngLastModified\":\"2021-01-19 23:55:41 UTC\",\"version\":\"Lxlpuf5n7vK5_PyXUVnM.id8AqkE_udn\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Lxlpuf5n7vK5_PyXUVnM.id8AqkE_udn/category_fantasy/rpgcharacter_17.png\",\"sourceSize\":{\"x\":204,\"y\":228}},\"53cf5822-d6f1-4b9b-a3dc-9e96f2169ca3\":{\"name\":\"rpgcharacter_19\",\"categories\":[\"fantasy\"],\"frameCount\":1,\"frameSize\":{\"x\":258,\"y\":326},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:17 UTC\",\"pngLastModified\":\"2021-01-19 23:54:51 UTC\",\"version\":\"j0mOF4UHvr.Dh.ImUjX4sjZltel_KLMU\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/j0mOF4UHvr.Dh.ImUjX4sjZltel_KLMU/category_fantasy/rpgcharacter_19.png\",\"sourceSize\":{\"x\":258,\"y\":326}}}}\r\n\r\n",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
+    "long_instructions": "##Did you hear that?\r\n*Sounds add fun to your game!*\r\n- Connect a `play sound` block under the event `when sprite clicked`\r\n\r\n- You could also add a sound inside the winning condition\r\n- Press `run`, turn up your volume and try it out!",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
+    "start_animations": "{\"orderedKeys\":[\"5353ee11-1313-4ca4-9b47-f2cb05fdc38d\",\"0a4bdf64-9386-467c-b00d-8ce0991019ec\",\"e28e6d4d-e434-472b-8baa-f99bbe7ee448\",\"ebc05917-1555-4669-b1a4-7ee283c6c9ea\",\"bf0f2ca2-8759-42b4-8b21-d669261399e1\",\"6fa60f68-3ff3-4653-a40a-fef48028dd21\",\"1a66fdcf-96c4-4d10-a5f8-a2b0ce10a54d\",\"1ce86964-ef68-49e6-bd42-42a593b0ee5c\"],\"propsByKey\":{\"5353ee11-1313-4ca4-9b47-f2cb05fdc38d\":{\"name\":\"hw_retro_background\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-29 19:53:35 UTC\",\"pngLastModified\":\"2021-10-29 19:53:35 UTC\",\"version\":\"sWiPMWPzRlwvF2T5isk27lDnXzCXBt7X\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/sWiPMWPzRlwvF2T5isk27lDnXzCXBt7X/category_backgrounds/hw_retro_background.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"0a4bdf64-9386-467c-b00d-8ce0991019ec\":{\"name\":\"background_landscape_11\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"errkPCisxA61A8V_Z5YMSDFc0WtPUZ5f\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/errkPCisxA61A8V_Z5YMSDFc0WtPUZ5f/category_backgrounds/background_landscape_11.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e28e6d4d-e434-472b-8baa-f99bbe7ee448\":{\"name\":\"background_landscape_26\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:15 UTC\",\"pngLastModified\":\"2020-12-01 23:21:15 UTC\",\"version\":\"xgc0hCjiUHTp_dalN1ebCzlVQMEbBD6E\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xgc0hCjiUHTp_dalN1ebCzlVQMEbBD6E/category_backgrounds/background_landscape_26.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ebc05917-1555-4669-b1a4-7ee283c6c9ea\":{\"name\":\"background_landscape_07\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:17 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"zUULcHm5t_jSrB.48UGxZW3Lb.CGqvLl\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zUULcHm5t_jSrB.48UGxZW3Lb.CGqvLl/category_backgrounds/background_landscape_07.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"bf0f2ca2-8759-42b4-8b21-d669261399e1\":{\"name\":\"gameplayobject_item_01\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":346,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:44 UTC\",\"pngLastModified\":\"2021-03-29 19:25:45 UTC\",\"version\":\"ns1xPY5x1bqKvyzVIYCZdzc28ul8_Qga\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/ns1xPY5x1bqKvyzVIYCZdzc28ul8_Qga/category_video_games/gameplayobject_item_01.png\",\"sourceSize\":{\"x\":346,\"y\":400}},\"6fa60f68-3ff3-4653-a40a-fef48028dd21\":{\"name\":\"gameplayobject_item_02\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":384,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:45 UTC\",\"pngLastModified\":\"2021-03-29 19:25:46 UTC\",\"version\":\".xchvmisd6K83VSWxDEi0gjjl0RhfNqz\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/.xchvmisd6K83VSWxDEi0gjjl0RhfNqz/category_video_games/gameplayobject_item_02.png\",\"sourceSize\":{\"x\":384,\"y\":400}},\"1a66fdcf-96c4-4d10-a5f8-a2b0ce10a54d\":{\"name\":\"gameplayobject_item_03\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:46 UTC\",\"pngLastModified\":\"2021-03-29 19:25:47 UTC\",\"version\":\"FBDdYT8_fp3JPwa_lQbcuGlQQH7Iw9dU\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/FBDdYT8_fp3JPwa_lQbcuGlQQH7Iw9dU/category_video_games/gameplayobject_item_03.png\",\"sourceSize\":{\"x\":360,\"y\":400}},\"1ce86964-ef68-49e6-bd42-42a593b0ee5c\":{\"name\":\"gameplayadventure_15\",\"categories\":[\"fantasy\"],\"frameCount\":1,\"frameSize\":{\"x\":195,\"y\":399},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:08 UTC\",\"pngLastModified\":\"2021-01-19 23:55:31 UTC\",\"version\":\"YSp08oBcZgGcZmHs36xaS.bjfMpLIrjD\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/YSp08oBcZgGcZmHs36xaS.bjfMpLIrjD/category_fantasy/gameplayadventure_15.png\",\"sourceSize\":{\"x\":195,\"y\":399}}}}\r\n\r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "thumbnail_url": "https://images.code.org/b6ba1cd5e07d88a55fcc392d97bab073-sounds.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-09 18:20:48 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:23:25 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:25:11 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:27:38 +0000\",\"changed\":[\"start_animations\",\"mini_toolbox\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:28:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:28:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:33:40 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:48:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:48:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:53:42 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:18:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:20:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 17:41:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 17:53:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-15 19:05:18 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:13:49 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:17:20 +0000\",\"changed\":[\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\",\"include_shared_functions\",\"mini_toolbox\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:23:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:24:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:27:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" deletable="false" x="80" y="25">
+        <variables>
+          <variable id="WD|O(zt~DwdQ53I6HTz5">Popped</variable>
+        </variables>
+        <block type="when_run" deletable="false" movable="false" x="65" y="33">
           <next>
             <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"ink_mountain"</field>
+              <field name="IMG">"hw_retro_background"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"rpgcharacter_17"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":106,"y":312}</field>
+                <block type="gamelab_makeSpritesWithSize">
+                  <field name="SIZE">50</field>
+                  <field name="COSTUME">"gameplayobject_item_01"</field>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">8</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNumSprites">
-                      <field name="ANIMATION_NAME">"rpgcharacter_19"</field>
-                      <value name="NUM">
-                        <block type="math_number">
-                          <field name="NUM">3</field>
-                        </block>
-                      </value>
+                    <block type="gamelab_layoutSprites">
+                      <field name="GROUP">"gameplayobject_item_01"</field>
+                      <field name="FORMAT">"circle"</field>
                       <next>
-                        <block type="gamelab_addBehaviorSimple">
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"rpgcharacter_17"</field>
-                            </block>
-                          </value>
-                          <value name="BEHAVIOR">
-                            <block type="gamelab_behaviorPicker">
-                              <field name="BEHAVIOR">driving with arrow keys</field>
-                              <field name="EDIT">Edit</field>
+                        <block type="variables_set">
+                          <field name="VAR" id="WD|O(zt~DwdQ53I6HTz5">Popped</field>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <field name="NUM">0</field>
                             </block>
                           </value>
                         </block>
                       </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked" x="78" y="327">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_spriteClicked"/>
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"gameplayobject_item_01"</field>
+            </block>
+          </value>
+          <next>
+            <block type="math_change">
+              <field name="VAR" id="WD|O(zt~DwdQ53I6HTz5">Popped</field>
+              <value name="DELTA">
+                <shadow type="math_number" id="tThSa}ivq*UAmWL^F#)-">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="gamelab_destroy">
+                  <value name="THIS">
+                    <block type="gamelab_clickedSpritePointer"/>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR" id="WD|O(zt~DwdQ53I6HTz5">Popped</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <field name="NUM">8</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_showTitleScreen">
+                          <value name="TITLE">
+                            <block type="text">
+                              <field name="TEXT">Woo Hoo!</field>
+                            </block>
+                          </value>
+                          <value name="SUBTITLE">
+                            <block type="text">
+                              <field name="TEXT">You popped them all!</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
                     </block>
                   </next>
                 </block>
@@ -1239,50 +1297,8 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_checkTouching" id="ssdY0oC6qjSAPOAuoSkB" x="81" y="30">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_checkTouching"/>
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation" id="?,^b?Z}mI$D_:$pMEg5$">
-              <field name="ANIMATION">"rpgcharacter_17"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation" id="a;;IiUVGq7+|.WtwsxZc">
-              <field name="ANIMATION">"rpgcharacter_19"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setAnimation" id="B7cmI_6I+L.1B31(H,y/" x="26" y="109">
-          <field name="ANIMATION">"ice"</field>
-          <value name="THIS">
-            <block type="gamelab_objectSpritePointer" id="8VO2*yQxf5:1ioS,S.~h"/>
-          </value>
-        </block>
-        <block type="gamelab_destroy" id="xQ/wpru?0[0$?`L4o`jA" x="171" y="204">
-          <value name="THIS">
-            <block type="gamelab_objectSpritePointer" id="Pk?wYal[h*{VOKabcW;:"/>
-          </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="96" y="284">
-          <field name="IMG">"blue_watercolor"</field>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="JIw3/AZ92eD,iyz@QMI#" x="58" y="381">
-          <field name="ANIMATION_NAME">"rpgcharacter_17"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="D=bbm,uR`M;-R6eXQ:/)">
-              <field name="LOCATION">{"x":106,"y":312}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeNumSprites" id="%{2Uw[zSdoAl}A``o)qK" x="91" y="488">
-          <field name="ANIMATION_NAME">"rpgcharacter_19"</field>
-          <value name="NUM">
-            <block type="math_number" id="xV^Q?m?#|8HS3Vm$w6y?">
-              <field name="NUM">3</field>
-            </block>
-          </value>
+        <block type="gamelab_playSoundOptions" id="Pw|kKw:vD-1q8=+r,f~`" x="42" y="49">
+          <field name="SOUND">'sound://category_pop/bubble_pop_cluster_1.mp3'</field>
         </block>
       </xml>
     </toolbox_blocks>
