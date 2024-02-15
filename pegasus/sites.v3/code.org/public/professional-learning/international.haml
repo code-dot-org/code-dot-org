@@ -1,0 +1,39 @@
+---
+title: International Professional Resources
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/international-pl-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:intl_pl_page.heading)
+      %p.body-one{style: "color: white"}
+        =hoc_s(:intl_pl_page.desc)
+    %figure
+      %img{src: "/images/banners/intl-pl-globe.png", alt: ""}
+    .clear
+
+%section
+  .wrapper
+    INTRO
+
+-# TODO ACQ-1410: Set this live when the Int'l PL Partners page is live
+%section.bg-neutral-light
+  .wrapper
+    BANNER
+
+%section
+  .wrapper
+    ADDITIONAL RESOURCES
+
+%section.bg-pattern-dark
+  .wrapper
+    = view :"professional_learning/intl_pl_subscribe_form"
+
+%section.ng-neutral-light
+  .wrapper
+    FEEDBACK

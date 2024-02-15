@@ -1,0 +1,12 @@
+:scss
+  p.body-three a {
+    color: var(--neutral_white);
+    &:hover { color: var(--neutral_dark10); }
+  }
+
+%div.subscribe-form.no-bg.flex-container.justify-space-between.align-items-center.wrap{style: "padding: 0"}
+  .text-wrapper
+    %h2=hoc_s(:admins_page_subscribe_form_heading)
+    %p=hoc_s(:admins_page_subscribe_form_desc)
+  %figure.col-50
+    %iframe{allowtransparency: "true", frameborder: "0", height: "375", src: "https://go.pardot.com/l/153401/2018-07-20/lfw71d", style: "border: 0", type: "text/html", width: "100%"}
