@@ -583,8 +583,8 @@ module LevelsHelper
 
     if @level.game.use_datablock_storage?
       channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-      project = Project.find_by_channel_id(channel_id)
-      storage_options[:useDatablockStorage] = project&.use_datablock_storage || false
+      # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage
+      storage_options[:useDatablockStorage] = ProjectUseDatablockStorage.use_data_block_storage_for?(channel_id)
       unless storage_options[:useDatablockStorage]
         storage_options[:firebaseName] = CDO.firebase_name
         storage_options[:firebaseAuthToken] = firebase_auth_token

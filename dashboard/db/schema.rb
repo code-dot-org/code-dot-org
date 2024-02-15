@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_01_22_193916) do
+ActiveRecord::Schema.define(version: 2024_02_15_100626) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1590,6 +1590,12 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
+  create_table "project_use_datablock_storages", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.boolean "use_datablock_storage", default: false, null: false
+    t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
+  end
+
   create_table "projects", id: :integer, charset: "utf8mb4", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
@@ -2375,6 +2381,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
+  add_foreign_key "project_use_datablock_storages", "projects"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
