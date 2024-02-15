@@ -298,9 +298,9 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    crowdin-api (1.6.0)
+    crowdin-api (1.8.1)
       open-uri (>= 0.1.0, < 0.2.0)
-      rest-client (>= 2.0.0, < 2.1.0)
+      rest-client (>= 2.0.0, < 2.2.0)
     css_parser (1.10.0)
       addressable
     cucumber (3.1.1)
@@ -972,7 +972,7 @@ DEPENDENCIES
   cld
   colorize
   composite_primary_keys (~> 13.0)
-  crowdin-api (~> 1.6.0)
+  crowdin-api (~> 1.8.1)
   cucumber
   daemons
   dalli
