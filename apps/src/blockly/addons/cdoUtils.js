@@ -154,6 +154,19 @@ export function moveHiddenBlocks(source = {}, procedureTypesToHide = []) {
   };
 }
 
+export function handleColorAndStyle(block, color, style) {
+  if (style) {
+    // Styles are preferred because they are compatible with accessible themes.
+    block.setStyle(style);
+  } else if (color) {
+    // Colors are fixed and do not change with themes.
+    setHSV(block, ...color);
+  } else {
+    // The default block style is teal for our default theme.
+    block.setStyle('default');
+  }
+}
+
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
