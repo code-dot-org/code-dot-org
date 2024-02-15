@@ -16,7 +16,7 @@ const codeMirrorLangMapping = {
   css: css(),
 };
 
-const prettify = async (val: string, language: string) => {
+const prettify = async (val: string /* language: string */) => {
   alert(
     `Unfortunately, prettier/standalone doesn't seem to work as of yet in the cdo environment.
 
@@ -24,9 +24,9 @@ const prettify = async (val: string, language: string) => {
 
     Maybe we need to use a different library?`
   );
-  if (language) {
-    return val;
-  }
+
+  return val;
+
   /*const formatted = await prettier.format(val, {
     parser: language,
     plugins: [cssParser, htmlParser],
