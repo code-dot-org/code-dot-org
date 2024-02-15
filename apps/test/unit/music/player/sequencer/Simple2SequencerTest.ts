@@ -29,7 +29,7 @@ describe('Simple2Sequencer', () => {
     library.getSoundForId.returns(testSound);
     Sinon.stub(MusicLibrary, 'getInstance').returns(library);
 
-    sequencer = new Simple2Sequencer(library);
+    sequencer = new Simple2Sequencer();
   });
 
   afterEach(() => {
