@@ -58,6 +58,7 @@ cron:
 - dashboard.course_scripts
 - dashboard.survey_results
 - dashboard.sections
+- dashboard.section_instructors
 - dashboard.followers
 - dashboard.section_hidden_stages
 - dashboard.user_proficiencies
