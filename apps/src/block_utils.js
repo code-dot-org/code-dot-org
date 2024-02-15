@@ -1030,6 +1030,9 @@ exports.createJsWrapperBlockCreator = function (
       );
     }
 
+    if (style && color && pool !== 'craft') {
+      throw new Error(`color is not needed for blocks that have a style.`);
+    }
     args = args || [];
     if (args.filter(arg => arg.statement).length > 1 && inline) {
       console.warn('blocks with multiple statement inputs cannot be inlined');
