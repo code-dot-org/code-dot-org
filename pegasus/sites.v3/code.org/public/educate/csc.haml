@@ -50,17 +50,27 @@ theme: responsive_full_width
         %span •
         =hoc_s(:teacher_label_csc)
 
-%section.explore.bg-neutral-light
+%section.bg-neutral-light.centered
   .wrapper
     %h2=hoc_s(:csc_explore_curriculum)
     %p=hoc_s(:csc_explore_desc)
     = view :section_divider_line
-    %h3=hoc_s(:csc_find_the_right_fit)
+    %div{style: "margin: 2rem 0 2rem; text-align: center"}
+      %h3=hoc_s(:csc_find_the_right_fit)
+      %a.link-button{href: "#csc-week-long-modules"}
+        =hoc_s(:csc_week_long_modules)
+      %a.link-button{href: "#csc-hour-long-lessons"}
+        =hoc_s(:csc_hour_long_lessons)
 
-%section#csc-modules
+%section#csc-week-long-modules
   .wrapper
-    %h2=hoc_s(:heading_find_a_module)
+    %h2=hoc_s(:csc_week_long_modules)
     %p=hoc_s(:csc_page_find_a_module_desc)
+
+%section#csc-hour-long-lessons
+  .wrapper
+    %h2=hoc_s(:csc_hour_long_lessons)
+    %p=hoc_s(:csc_hour_long_lessons_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper

@@ -1456,6 +1456,7 @@
   csc_week_long_modules: "Week-long modules"
   csc_hour_long_lessons: "Hour-long lessons"
   csc_page_find_a_module_desc: "Our current CS Connections offerings are for 3rd to 5th grade classrooms and are designed to take 1 week of 45-minute lessons each day."
+  csc_hour_long_lessons_desc: "Short on time but big on impact, our hour-long Hour of Code lessons are perfect for a quick dive into computer science. Ideal for fitting into a single class period, these one-hour modules are designed to introduce core concepts and demonstrate the excitement of CS."
   csc_page_faq_question_01: "Is CS Connections mapped to standards?"
   csc_page_faq_answer_01: "Yes! CS Connections is mapped to the Common Core State Standards (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the Computer Science Teacher Association Standards (CSTA)."
   csc_page_faq_question_02: "How much does it cost to teach CS Connections?"
