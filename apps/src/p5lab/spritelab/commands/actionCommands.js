@@ -268,20 +268,6 @@ export const commands = {
     });
   },
 
-  hideVariable(nameArg) {
-    if (!nameArg) {
-      return;
-    }
-    this.removeVariableBubble(nameArg);
-  },
-
-  showVariable(nameArg, locationArg) {
-    if (!nameArg) {
-      return;
-    }
-    this.addVariableBubble(nameArg, locationArg);
-  },
-
   spriteSay(spriteArg, text) {
     addSpriteSpeechBubble(this, spriteArg, text, 4 /* seconds */, 'say');
   },

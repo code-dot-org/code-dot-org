@@ -2,7 +2,7 @@
   "category": "Variables",
   "config": {
     "func": "showVariable",
-    "blockText": "show variable {VARIABLE} at {LOCATION}",
+    "blockText": "show variable {VAR} at {LOCATION}",
     "color": [
       312,
       0.32,
@@ -10,8 +10,8 @@
     ],
     "args": [
       {
-        "name": "VARIABLE",
-        "customInput": "variableNamePicker"
+        "name": "VAR",
+        "customInput": "variableFieldNamePicker"
       },
       {
         "name": "LOCATION",

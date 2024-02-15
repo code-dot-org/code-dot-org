@@ -133,6 +133,9 @@ export default class CoreLibrary {
     }
 
     try {
+      // TODO: Check for existence of this.REFERENCE_ERROR and others in result,
+      // Or move this logic into the JSInterpreter and guarantee that it always returns a string
+      // TODO: Decide on what to display for undefined variables
       const result = this.jsInterpreter.evaluateWatchExpression(variableName);
       return result;
     } catch (e) {
