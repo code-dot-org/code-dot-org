@@ -18,25 +18,25 @@ class DatablockStorageTable < ApplicationRecord
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
-  SHARED_TABLE_CHANNEL_ID = 'shared'
+  SHARED_TABLE_PROJECT_ID = 0
 
   def self.get_table_names(project_id)
     DatablockStorageTable.where(project_id: project_id).pluck(:table_name)
   end
 
   def self.get_shared_table_names
-    get_table_names(SHARED_TABLE_CHANNEL_ID)
+    get_table_names(SHARED_TABLE_PROJECT_ID)
   end
 
   def self.find_shared_table(table_name)
-    DatablockStorageTable.find_by(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: table_name)
+    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
   end
 
-  def self.add_shared_table(channel_id, table_name)
-    unless DatablockStorageTable.exists?(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: table_name)
+  def self.add_shared_table(project_id, table_name)
+    unless DatablockStorageTable.exists?(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
       raise "Shared table '#{table_name}' does not exist"
     end
-    DatablockStorageTable.create!(channel_id: channel_id, table_name: table_name, is_shared_table: table_name)
+    DatablockStorageTable.create!(project_id: project_id, table_name: table_name, is_shared_table: table_name)
   end
 
   def self.populate_tables(project_id, tables_json)
@@ -196,7 +196,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def shared_table
-    DatablockStorageTable.find_by(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: is_shared_table)
+    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: is_shared_table)
   end
 
   def copy_shared_table
