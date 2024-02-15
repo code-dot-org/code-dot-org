@@ -10,7 +10,7 @@ class DatablockStorageHelper
   # @return [String] A representation of the table (its columns and its data) as a CSV string.
   def self.table_as_csv(channel_id, table_name)
     # TODO: post-firebase-cleanup
-    firebase_channel_id = @channel_id + CDO.firebase_channel_id_suffix
+    firebase_channel_id = channel_id + CDO.firebase_channel_id_suffix
     raise "CDO.firebase_name not defined" unless CDO.firebase_name
     raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
     firebase = Firebase::Client.new \
