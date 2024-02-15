@@ -111,8 +111,8 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
           isProjectBacked: true
       }
       created_ai_tutor_interaction = AiTutorInteraction.last
-      assert created_ai_tutor_interaction.project_id === @project_id.to_s
-      assert created_ai_tutor_interaction.project_version_id === fake_version_id
+      assert created_ai_tutor_interaction.project_id == @project_id.to_s
+      assert created_ai_tutor_interaction.project_version_id == fake_version_id
     end
   end
 

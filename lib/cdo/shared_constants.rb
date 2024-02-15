@@ -665,7 +665,7 @@ module SharedConstants
     ERROR: 'error',
     PERSONAL: 'personal',
     PROFANITY: 'profanity',
-    INAPPROPRIATE:'inappropriate',
+    INAPPROPRIATE: 'inappropriate',
     OK: 'ok',
     UNKNOWN: 'unknown',
     EMAIL: 'email',
