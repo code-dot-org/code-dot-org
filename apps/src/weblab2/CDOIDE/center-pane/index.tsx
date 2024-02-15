@@ -53,7 +53,6 @@ export const CenterPane = () => {
     }
 
     if (activeFile?.name !== fileName) {
-      console.log('ACTIVE : ', newProject);
       setProject(newProject);
     }
   };

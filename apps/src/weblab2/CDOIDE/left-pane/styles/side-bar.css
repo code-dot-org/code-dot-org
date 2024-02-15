@@ -1,4 +1,13 @@
-.left-side-bar img {
+.left-side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.left-side-bar div {
   width: 32px;
   height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

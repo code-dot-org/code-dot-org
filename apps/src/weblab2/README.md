@@ -21,7 +21,7 @@ Check the `types.ts` file for typing, but the tl;dr is that the `project` prop i
 
 The `config` prop is for layout of the IDE itself - which panes to show, how to configure some of them, instructions for the lesson, and so on.
 
-Look towards `App.jsx` for an example wrapper with some sample data involved.
+Look towards `Weblab2View.jsx` for an example wrapper with some sample data involved.
 
 ## What does this do
 
@@ -39,7 +39,7 @@ Anything else.
 
 ## Where do I start?
 
-- Take a look at `App.tsx` for the wrapper code that just lays out an IDE with some pre-defined `config` and `project` values.
+- Take a look at `Weblab2View.tsx` for the wrapper code that just lays out an IDE with some pre-defined `config` and `project` values.
 - In the `CDOIDE` directory, `CDOIDE/CDOIDE.tsx` is your starting point with the overall layout.
 - There are `left-pane`, `center-pane`, `right-pane` folders laying out the content within each of them.
 - The center pane contains the `Editor.tsx` component which is the interface to `CodeMirror` and the `FileNav.tsx` component which gives the file tabs at the top.

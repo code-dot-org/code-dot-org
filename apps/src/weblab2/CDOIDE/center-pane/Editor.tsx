@@ -2,12 +2,12 @@ import React, {useCallback} from 'react';
 
 import {useCDOIDEContext} from '../CDOIDEContext';
 
-import CodeMirror from '@uiw/react-codemirror';
+import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
 import {css} from '@codemirror/lang-css';
-import prettier from 'prettier/standalone';
-import htmlParser from 'prettier/plugins/html';
-import cssParser from 'prettier/plugins/postcss';
+//import prettier from 'prettier/standalone';
+//import htmlParser from 'prettier/plugins/html';
+//import cssParser from 'prettier/plugins/postcss';
 
 import {SaveFileFunction} from './types';
 
@@ -17,7 +17,17 @@ const codeMirrorLangMapping = {
 };
 
 const prettify = async (val: string, language: string) => {
-  const formatted = await prettier.format(val, {
+  alert(
+    `Unfortunately, prettier/standalone doesn't seem to work as of yet in the cdo environment.
+
+    So this button is off for now.
+
+    Maybe we need to use a different library?`
+  );
+  if (language) {
+    return val;
+  }
+  /*const formatted = await prettier.format(val, {
     parser: language,
     plugins: [cssParser, htmlParser],
     tabWidth: 2,
@@ -25,6 +35,7 @@ const prettify = async (val: string, language: string) => {
   });
 
   return formatted;
+  */
 };
 
 type EditorProps = {
@@ -35,7 +46,7 @@ export const Editor = ({saveFile = () => undefined}: EditorProps) => {
   const {project} = useCDOIDEContext();
 
   const file = Object.values(project.files).filter(f => f.active)?.[0];
-  console.log('EDITS : ', file);
+
   const onChange = useCallback(
     (value: string) => {
       saveFile(file.name, value);
@@ -58,12 +69,11 @@ export const Editor = ({saveFile = () => undefined}: EditorProps) => {
         Format
       </button>
       {file && (
-        <CodeMirror
-          value={file.contents}
-          width="100%"
-          height="10)%"
-          extensions={[codeMirrorLangMapping[file.language]]}
-          onChange={onChange}
+        <CodeEditor
+          darkMode={false}
+          onCodeChange={onChange}
+          startCode={file.contents}
+          editorConfigExtensions={[codeMirrorLangMapping[file.language]]}
         />
       )}
     </div>

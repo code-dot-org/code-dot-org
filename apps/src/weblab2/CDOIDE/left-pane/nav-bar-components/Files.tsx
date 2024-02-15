@@ -41,51 +41,53 @@ const Folders = ({
 
   Object.values(L).filter(l => l.name === 'able');
 
-  return [
-    Object.values(folders)
-      .filter(f => f.parentId === parentId)
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map(f => {
-        const caret = f.open ? 'V' : '>';
-        return (
-          <li key={f.id}>
+  return (
+    <>
+      {Object.values(folders)
+        .filter(f => f.parentId === parentId)
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map(f => {
+          const caret = f.open ? 'V' : '>';
+          return (
+            <li key={f.id}>
+              <span className="label">
+                <span onClick={() => openFolder(f.id)}>{caret}</span>
+                <span>{f.name}</span>
+                <span onClick={() => newFolder(f.id)}>+</span>
+                <span onClick={() => newFile(f.id)}>@</span>
+                <span onClick={() => deleteFolder(f.id)}>X</span>
+              </span>
+              {f.open && (
+                <ul>
+                  <Folders
+                    folders={folders}
+                    newFolder={newFolder}
+                    openFolder={openFolder}
+                    deleteFolder={deleteFolder}
+                    parentId={f.id}
+                    files={files}
+                    openFile={openFile}
+                    deleteFile={deleteFile}
+                    newFile={newFile}
+                  />
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      {Object.values(files)
+        .filter(f => f.folderId === parentId)
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map(f => (
+          <li key={`${f.folderId || 0}/${f.name}`}>
             <span className="label">
-              <span onClick={() => openFolder(f.id)}>{caret}</span>
-              <span>{f.name}</span>
-              <span onClick={() => newFolder(f.id)}>+</span>
-              <span onClick={() => newFile(f.id)}>@</span>
-              <span onClick={() => deleteFolder(f.id)}>X</span>
+              <span onClick={() => openFile(f.name)}>{f.name}</span>
+              <span onClick={() => deleteFile(f.name)}>X</span>
             </span>
-            {f.open && (
-              <ul>
-                <Folders
-                  folders={folders}
-                  newFolder={newFolder}
-                  openFolder={openFolder}
-                  deleteFolder={deleteFolder}
-                  parentId={f.id}
-                  files={files}
-                  openFile={openFile}
-                  deleteFile={deleteFile}
-                  newFile={newFile}
-                />
-              </ul>
-            )}
           </li>
-        );
-      }),
-    Object.values(files)
-      .filter(f => f.folderId === parentId)
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map(f => (
-        <li key={`${f.folderId || 0}/${f.name}`}>
-          <span className="label">
-            <span onClick={() => openFile(f.name)}>{f.name}</span>
-            <span onClick={() => deleteFile(f.name)}>X</span>
-          </span>
-        </li>
-      )),
-  ].flat();
+        ))}
+    </>
+  );
 };
 
 export const Files = () => {

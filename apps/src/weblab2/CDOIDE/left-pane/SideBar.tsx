@@ -10,13 +10,13 @@ export const SideBar = () => {
   return (
     <div className="left-side-bar">
       {sideBar.map(i => (
-        <img
-          key={i}
-          alt={i}
-          src={`/cdo-codemirror-editor-poc/${i}`}
-          onClick={() => alert('not implemented')}
-          style={{cursor: 'pointer'}}
-        />
+        <div key={i}>
+          <i
+            className={`fa-regular fa-2xl ${i}`}
+            onClick={() => alert('not implemented')}
+            style={{cursor: 'pointer'}}
+          />
+        </div>
       ))}
     </div>
   );
