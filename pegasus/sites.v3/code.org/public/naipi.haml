@@ -82,8 +82,10 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:naipi_page_engage_heading)
     .logos.flex-container.justify-start.wrap
-      %img{src: "/images/avatars/indigitize.png", alt: hoc_s(:naipi_page_engage_alt_text_indigitize)}
-      %img{src: "/images/avatars/aises.png", alt: hoc_s(:naipi_page_engage_alt_text_aises)}
+      %a{href: "https://indigitize.org", target: "_blank", rel: "noopener noreferrer"}
+        %img{src: "/images/avatars/indigitize.png", alt: hoc_s(:naipi_page_engage_alt_text_indigitize)}
+      %a{href: "https://aises.org", target: "_blank", rel: "noopener noreferrer"}
+        %img{src: "/images/avatars/aises.png", alt: hoc_s(:naipi_page_engage_alt_text_aises)}
     %p.no-margin-bottom.overline-one
       =hoc_s(:naipi_page_engage_regional_partners)
     = view :"naipi/naipi_regional_partners"
