@@ -7,23 +7,14 @@ theme: responsive
 # Translating the site and tutorials
 The majority of our translations are done through CrowdIn, a localization management platform. It is free to join and any volunteer can immediately contribute to the project by providing translations. There are currently two projects open for translations:
 
-* [Code.org Project](https://crowdin.com/project/codeorg) - For the Code.org site and all Code Studio tutorials. Learn more below.
-* [Hour of Code Project](https://crowdin.com/project/hour-of-code) - For the HourofCode.com site. Learn more [here](https://code.org/translate/hourofcode).
+* [Code.org Project](https://crowdin.com/project/codeorg) - For the Code.org site and all Code Studio tutorials.
+* [Hour of Code Project](https://crowdin.com/project/hour-of-code) - For the HourofCode.com site.
 
 
 Please complete translations for these projects in the above order of priority. If you have completed translations (at least 75% of the project is complete) and do not see your language in the drop down menu, please send a report to translations@code.org.
 
 ## What do I translate first?
-
-1. Please translate our Hour of Code tutorials.
-  * [Dance Party](/translate/dance)
-  * [Minecraft: Voyage Aquatic](/translate/aquatic)
-	* [Minecraft: Hero's Journey](/translate/hero)
-	* [Minecraft Designer](/translate/minecraft)
-  * [Minecraft Adventurer](/translate/mc)
-  * [Star Wars](/translate/starwars)
-  * [Sports and Basketball](/translate/sports)
-1. Then translate the [Code.org](/) homepage. Search for `homepage` in the [pegasus/mobile.yml](https://crowdin.com/translate/codeorg/56/enus-es#q=homepage) file in the Code.org project.
+1. Translate the [Code.org](/) homepage. Search for `homepage` in the [pegasus/mobile.yml](https://crowdin.com/translate/codeorg/56/enus-es#q=homepage) file in the Code.org project.
 1. Then translate the [hourofcode.com/learn](https://hourofcode.com/learn) Hour of Code activity page.
   * Complete the [blockly-mooc/tutorialExplorer.json](https://crowdin.com/translate/codeorg/546/enus-es) file in the Code.org project.
   * Complete tutorial information by searching for `tutorial_` in the [hourofcode.com homepage file](https://crowdin.com/translate/hour-of-code/433/en-es#q=tutorial_) in the Hour of Code Project.
@@ -52,18 +43,18 @@ If you have more time, complete the project in the following prioritized order.
 (context: [Frozen](https://studio.code.org/s/frozen), [Infinity Play Lab](https://studio.code.org/s/infinity), [Play Lab](https://studio.code.org/s/playlab), [Artist](https://studio.code.org/s/artist), [Flappy](https://studio.code.org/s/flappy))
 
 1. dashboard/instructions.yml
-	* search for "Frozen" 
-	* search for "Infinity" 
+	* search for "Frozen"
+	* search for "Infinity"
 	* search for "Standalone_Artist"
 1. dashboard/scripts.yml
-	* search for "Frozen" 
-	* search for "Infinity" 
+	* search for "Frozen"
+	* search for "Infinity"
 	* search for "script -> name -> artist"
-1. dashboard/data.yml 
-	* search for "studio_playlab" 
-	* search for "flappy"	
-1. blockly-mooc/turtle.json - for artist levels 
-1. blockly-mooc/studio.json - for play lab levels 
+1. dashboard/data.yml
+	* search for "studio_playlab"
+	* search for "flappy"
+1. blockly-mooc/turtle.json - for artist levels
+1. blockly-mooc/studio.json - for play lab levels
 1. blockly-mooc/flappy.json
 
 <br/>
@@ -86,8 +77,7 @@ If you have more time, complete the project in the following prioritized order.
 <br/>
 **Remaining Files**
 
-1. The rest of pegasus/mobile.yml 
-	* context: [code.org/learn](https://code.org/learn)
+1. The rest of pegasus/mobile.yml
 	* context: [teacher-dashboard](https://code.org/teacher-dashboard), viewable only when signed into a teacher account
 1. dashboard/base.yml - [Code Studio](https://studio.code.org) strings
 1. dashboard/devise.yml - Account related strings
@@ -112,7 +102,7 @@ The final translation that appears on our site is selected as follows:
 3. if votes are tied, the most recent translation will be selected.
 
 
- 
+
 ---
 
 ### Translate Khan Academy coding tutorials to Spanish and Portuguese
