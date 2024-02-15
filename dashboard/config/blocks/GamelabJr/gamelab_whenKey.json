@@ -7,51 +7,19 @@
       {
         "name": "KEY",
         "options": [
-          [
-            "up",
-            "\"up\""
-          ],
-          [
-            "down",
-            "\"down\""
-          ],
-          [
-            "left",
-            "\"left\""
-          ],
-          [
-            "right",
-            "\"right\""
-          ],
-          [
-            "space",
-            "\"space\""
-          ],
-          [
-            "a",
-            "\"a\""
-          ],
-          [
-            "w",
-            "\"w\""
-          ],
-          [
-            "s",
-            "\"s\""
-          ],
-          [
-            "d",
-            "\"d\""
-          ]
+          ["up", "\"up\""],
+          ["down", "\"down\""],
+          ["left", "\"left\""],
+          ["right", "\"right\""],
+          ["space", "\"space\""],
+          ["a", "\"a\""],
+          ["w", "\"w\""],
+          ["s", "\"s\""],
+          ["d", "\"d\""]
         ]
       }
     ],
     "eventBlock": true,
-    "color": [
-      140,
-      1,
-      0.74
-    ],
     "style": "event_blocks"
   }
 }

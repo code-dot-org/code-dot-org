@@ -4,11 +4,6 @@
     "func": "makeNewSpriteGroup",
     "blockText": "make {N} new {GROUP} in a {FORMAT}",
     "style": "sprite_blocks",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
     "args": [
       {
         "name": "N",
@@ -21,42 +16,15 @@
       {
         "name": "FORMAT",
         "options": [
-          [
-            "border",
-            "\"border\""
-          ],
-          [
-            "circle",
-            "\"circle\""
-          ],
-          [
-            "grid",
-            "\"grid\""
-          ],
-          [
-            "top row",
-            "\"top\""
-          ],
-          [
-            "row",
-            "\"row\""
-          ],
-          [
-            "bottom row",
-            "\"bottom\""
-          ],
-          [
-            "left column",
-            "\"left\""
-          ],
-          [
-            "column",
-            "\"column\""
-          ],
-          [
-            "right column",
-            "\"right\""
-          ]
+          ["border", "\"border\""],
+          ["circle", "\"circle\""],
+          ["grid", "\"grid\""],
+          ["top row", "\"top\""],
+          ["row", "\"row\""],
+          ["bottom row", "\"bottom\""],
+          ["left column", "\"left\""],
+          ["column", "\"column\""],
+          ["right column", "\"right\""]
         ]
       }
     ]

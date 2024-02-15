@@ -4,11 +4,6 @@
     "func": "makeSpritesWithSize",
     "inline": true,
     "blockText": "make {NUM} new {SIZE} {COSTUME} sprites",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
     "style": "sprite_blocks",
     "args": [
       {
@@ -22,18 +17,9 @@
       {
         "name": "SIZE",
         "options": [
-          [
-            "large",
-            "100"
-          ],
-          [
-            "medium",
-            "50"
-          ],
-          [
-            "small",
-            "30"
-          ]
+          ["large", "100"],
+          ["medium", "50"],
+          ["small", "30"]
         ]
       }
     ]

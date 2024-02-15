@@ -5,11 +5,6 @@
     "docFunc": "spritelab_adding-and-removing-behaviors",
     "blockText": "patrolling up and down",
     "returnType": "Behavior",
-    "color": [
-      136,
-      ".84",
-      ".80"
-    ],
     "style": "behavior_blocks"
   }
 }

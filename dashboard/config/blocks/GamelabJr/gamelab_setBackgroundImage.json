@@ -1,11 +1,6 @@
 {
   "category": "Unused",
   "config": {
-    "color": [
-      240,
-      0.45,
-      0.65
-    ],
     "style": "world_blocks",
     "func": "setBackgroundImage",
     "docFunc": "gamelab_setBackgroundImage",
@@ -130,10 +125,7 @@
             "winter",
             "\"https://studio.code.org/blockly/media/skins/studio/background_winter.png\""
           ],
-          [
-            "none",
-            "undefined"
-          ]
+          ["none", "undefined"]
         ]
       }
     ]

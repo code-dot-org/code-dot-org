@@ -1,17 +1,10 @@
 {
   "category": "World",
   "config": {
-    "color": [
-      240,
-      0.45,
-      0.65
-    ],
     "style": "world_blocks",
     "func": "hideTitleScreen",
     "docFunc": "gamelab_hideTitleScreen",
     "blockText": "hide title screen",
-    "args": [
-
-    ]
+    "args": []
   }
 }

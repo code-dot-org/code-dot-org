@@ -6,11 +6,6 @@
     "returnType": "Behavior",
     "expression": "VALUE",
     "docFunc": "spritelab_adding-and-removing-behaviors",
-    "color": [
-      136,
-      ".84",
-      ".80"
-    ],
     "style": "behavior_blocks",
     "args": [
       {

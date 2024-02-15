@@ -1,17 +1,10 @@
 {
   "category": "Unused",
   "config": {
-    "color": [
-      140,
-      1,
-      0.74
-    ],
     "style": "event_blocks",
     "func": "whenLeftArrow",
     "blockText": "when left arrow pressed",
-    "args": [
-
-    ],
+    "args": [],
     "eventBlock": true
   }
 }

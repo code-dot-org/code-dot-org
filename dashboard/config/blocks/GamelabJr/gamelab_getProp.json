@@ -5,11 +5,6 @@
     "docFunc": "gamelab_getProp",
     "blockText": "{SPRITE} {PROPERTY}",
     "returnType": "None",
-    "color": [
-      258,
-      "0.35",
-      "0.62"
-    ],
     "style": "math_blocks",
     "args": [
       {
@@ -19,34 +14,13 @@
       {
         "name": "PROPERTY",
         "options": [
-          [
-            "size",
-            "\"scale\""
-          ],
-          [
-            "rotation",
-            "\"rotation\""
-          ],
-          [
-            "x position",
-            "\"x\""
-          ],
-          [
-            "y position",
-            "\"y\""
-          ],
-          [
-            "movement direction",
-            "\"direction\""
-          ],
-          [
-            "tint",
-            "\"tint\""
-          ],
-          [
-            "speed",
-            "\"speed\""
-          ]
+          ["size", "\"scale\""],
+          ["rotation", "\"rotation\""],
+          ["x position", "\"x\""],
+          ["y position", "\"y\""],
+          ["movement direction", "\"direction\""],
+          ["tint", "\"tint\""],
+          ["speed", "\"speed\""]
         ]
       }
     ]

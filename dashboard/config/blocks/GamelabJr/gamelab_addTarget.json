@@ -1,11 +1,6 @@
 {
   "category": "Sprites",
   "config": {
-    "color": [
-      184,
-      1,
-      0.74
-    ],
     "style": "default",
     "func": "addTarget",
     "blockText": "{SPRITE} gets target {TARGET} to {OPT}",
@@ -21,14 +16,8 @@
       {
         "name": "OPT",
         "options": [
-          [
-            "follow",
-            "\"follow\""
-          ],
-          [
-            "avoid",
-            "\"avoid\""
-          ]
+          ["follow", "\"follow\""],
+          ["avoid", "\"avoid\""]
         ]
       }
     ]

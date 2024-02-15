@@ -1,11 +1,6 @@
 {
   "category": "Events",
   "config": {
-    "color": [
-      140,
-      1,
-      0.74
-    ],
     "style": "event_blocks",
     "func": "checkTouching",
     "docFunc": "gamelab_whenTouching",
@@ -14,21 +9,13 @@
       "gamelab_subjectSpritePointer",
       "gamelab_objectSpritePointer"
     ],
-    "callbackParams": [
-      "extraArgs"
-    ],
+    "callbackParams": ["extraArgs"],
     "args": [
       {
         "name": "CONDITION",
         "options": [
-          [
-            "when",
-            "\"when\""
-          ],
-          [
-            "while",
-            "\"while\""
-          ]
+          ["when", "\"when\""],
+          ["while", "\"while\""]
         ]
       },
       {
