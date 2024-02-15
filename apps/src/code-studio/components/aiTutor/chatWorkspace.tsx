@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import ChatMessage from './chatMessage';
 import UserChatMessageEditor from './userChatMessageEditor';
-import style from './ai-tutor.module.scss';
+import style from './chat-workspace.module.scss';
 import WarningModal from './warningModal';
 
 /**

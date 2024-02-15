@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
-import style from './ai-tutor.module.scss';
+import style from './chat-workspace.module.scss';
 import {
   AITutorState,
   submitChatMessage,
