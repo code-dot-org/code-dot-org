@@ -1,0 +1,9 @@
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-bar img {
+  width: 32px;
+  height: 32px;
+}
