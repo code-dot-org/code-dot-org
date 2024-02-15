@@ -37,8 +37,11 @@ export function loadBlocksToWorkspace(
   source,
   includeHiddenDefinitions = true
 ) {
-  const {mainSource, hiddenDefinitionSource} =
-    prepareSourcesForWorkspaces(source);
+  const embedded = Blockly.isEmbeddedWorkspace(workspace);
+  const {mainSource, hiddenDefinitionSource} = prepareSourcesForWorkspaces(
+    source,
+    embedded
+  );
   // We intentionally load hidden definitions before other blocks on the main workspace.
   if (includeHiddenDefinitions) {
     loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
@@ -69,11 +72,13 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
  * Split source into appropriate serialization objects for the main and the hidden workspaces for loading.
  * Which blocks are moved depends on whether the modal function editor is enabled.
  * @param {string} source - workspace serialization, either XML or JSON
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
  * @returns {mainSource: Object, hiddenDefinitionSource: Object}
  *  mainSource and hiddenDefinitionSource are Blockly serialization objects.
  */
-function prepareSourcesForWorkspaces(source) {
-  const parsedSource = parseSource(source);
+function prepareSourcesForWorkspaces(source, embedded) {
+  const parsedSource = parseSource(source, embedded);
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
@@ -88,15 +93,17 @@ function prepareSourcesForWorkspaces(source) {
 /**
  * Convert source to parsed json objects. If source was xml, convert to json before parsing.
  * @param {string} source - workspace serialization, either XML or JSON
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
  * @returns Object: source as json
  */
-function parseSource(source) {
+function parseSource(source, embedded) {
   let isXml = stringIsXml(source);
   let parsedSource;
 
   if (isXml) {
     const xml = parseXmlElement(source);
-    parsedSource = convertXmlToJson(xml);
+    parsedSource = convertXmlToJson(xml, embedded);
   } else {
     parsedSource = JSON.parse(source);
   }
