@@ -7,6 +7,7 @@ import {
   TOPICS_TEST_COURSES,
   PUBLISHED_DATE_TEST_COURSES,
 } from './curriculumRecommenderFakeCurricula';
+import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('testRecommender', () => {
@@ -28,7 +29,7 @@ describe('testRecommender', () => {
     ]);
   });
 
-  it('adds score to curricula with specified duration', () => {
+  it('adds score to curricula with desired duration', () => {
     const recommendedCurricula = getTestRecommendations(
       DURATION_TEST_COURSES,
       'week',
@@ -38,7 +39,7 @@ describe('testRecommender', () => {
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
-      // Curricula with specified duration score higher
+      // Curricula with desired duration score higher
       'weekDurationCourse',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
@@ -47,7 +48,7 @@ describe('testRecommender', () => {
     ]);
   });
 
-  it('adds score to curricula with specified marketing initiative', () => {
+  it('adds score to curricula with desired marketing initiative', () => {
     const recommendedCurricula = getTestRecommendations(
       MARKETING_INIT_TEST_COURSES,
       '',
@@ -57,7 +58,7 @@ describe('testRecommender', () => {
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
-      // Curricula with specified marketing initiative score higher
+      // Curricula with desired marketing initiative score higher
       'marketingInitCourse1',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
@@ -85,7 +86,7 @@ describe('testRecommender', () => {
     ]);
   });
 
-  it('adds score to curricula with specified school subjects', () => {
+  it('adds score to curricula with desired school subjects', () => {
     const recommendedCurricula = getTestRecommendations(
       SCHOOL_SUBJECT_TEST_COURSES,
       '',
@@ -95,9 +96,9 @@ describe('testRecommender', () => {
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
-      // Curricula with multiple specified school subjects score higher
+      // Curricula with multiple desired school subjects score higher
       'multipleSchoolSubjectsCourse',
-      // Curricula with one specified school subject score higher
+      // Curricula with one desired school subject score higher
       'oneSchoolSubjectCourse',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
@@ -105,27 +106,7 @@ describe('testRecommender', () => {
     ]);
   });
 
-  it('adds score to curricula with any important topics', () => {
-    const recommendedCurricula = getTestRecommendations(
-      TOPICS_TEST_COURSES,
-      '',
-      '',
-      '',
-      ''
-    ).map(curr => curr.key);
-
-    expect(recommendedCurricula).to.deep.equal([
-      // Curricula with any important topics score higher
-      'importantTopicCourse',
-      // Sort remaining 0-score curricula by published_date
-      'emptyCourse',
-      'nullCourse',
-      'multipleTopicsCourse',
-      'oneTopicCourse',
-    ]);
-  });
-
-  it('adds score to curricula with specified topics', () => {
+  it('adds score to curricula with desired topics', () => {
     const recommendedCurricula = getTestRecommendations(
       TOPICS_TEST_COURSES,
       '',
@@ -135,15 +116,38 @@ describe('testRecommender', () => {
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
-      // Curricula with multiple specified topics score higher
+      // Curricula with multiple desired topics score higher
       'multipleTopicsCourse',
-      // Curricula with one specified topic score higher
+      // Curricula with one desired topic score higher
       'oneTopicCourse',
-      // Curricula with any important topics score higher
-      'importantTopicCourse',
+      // Curricula with undesired important topics score higher
+      'undesiredImportantTopicCourse',
+      'desiredImportantTopicCourse',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
       'nullCourse',
+    ]);
+  });
+
+  it('adds score to curricula with non-desired important topics', () => {
+    const recommendedCurricula = getTestRecommendations(
+      TOPICS_TEST_COURSES,
+      '',
+      '',
+      '',
+      IMPORTANT_TOPICS[0]
+    ).map(curr => curr.key);
+
+    expect(recommendedCurricula).to.deep.equal([
+      // Curricula with desired topic score higher
+      'desiredImportantTopicCourse',
+      // Curricula with undesired important topics score higher
+      'undesiredImportantTopicCourse',
+      // Sort remaining 0-score curricula by published_date
+      'emptyCourse',
+      'nullCourse',
+      'multipleTopicsCourse',
+      'oneTopicCourse',
     ]);
   });
 
