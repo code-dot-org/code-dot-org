@@ -1,12 +1,14 @@
 export const commands = {
-  hideVariable(nameArg) {
-    if (!nameArg) {
+  // Since hiding the variable doesn't require the JSInterpreter, we can ignore
+  // the name argument returned by the variableFieldNamePicker
+  hideVariable(labelArg, nameArg) {
+    console.log('labelArg', labelArg);
+    if (!labelArg) {
       return;
     }
-    this.removeVariableBubble(nameArg);
+    this.removeVariableBubble(labelArg);
   },
 
-  // Verify what happens with Blockly name vs. regular name
   showVariable(labelArg, nameArg, locationArg) {
     if (!labelArg || !nameArg) {
       return;

@@ -230,7 +230,7 @@ export default class CoreLibrary {
 
   addVariableBubble(label, name, locationInput) {
     const existingBubble = this.variableBubbles.find(
-      bubble => bubble.name === name
+      bubble => bubble.label === label
     );
 
     // We only want the new bubble to overwrite the location of the existing
@@ -249,9 +249,9 @@ export default class CoreLibrary {
     }
   }
 
-  removeVariableBubble(name) {
+  removeVariableBubble(label) {
     this.variableBubbles = this.variableBubbles.filter(
-      variable => variable.name !== name
+      variable => variable.label !== label
     );
   }
 
