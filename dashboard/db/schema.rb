@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_02_15_100626) do
+ActiveRecord::Schema.define(version: 2024_02_16_053618) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -439,6 +439,14 @@ ActiveRecord::Schema.define(version: 2024_02_15_100626) do
     t.integer "project_id", null: false
     t.string "key", limit: 768, null: false
     t.json "value"
+  end
+
+  create_table "datablock_storage_library_manifest", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.json "library_manifest"
+    t.integer "singleton_guard", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["singleton_guard"], name: "index_datablock_storage_library_manifest_on_singleton_guard", unique: true
   end
 
   create_table "datablock_storage_records", primary_key: ["project_id", "table_name", "record_id"], charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
