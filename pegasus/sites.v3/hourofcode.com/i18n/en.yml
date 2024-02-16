@@ -1628,7 +1628,7 @@
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
 
   intl_pl_page:
-    page_title: "International Professional Resources"
+    page_title: "International Professional Learning Resources"
     heading: "Global professional learning opportunities"
     desc: "Get support and learn how to bring computer science to your country."
     intro:
@@ -1664,6 +1664,19 @@
       subheading: "We greatly value your input and invite you to share your feedback to help shape our offerings."
       desc: "Our international program is continuously expanding, and while resources may be limited, we are committed to growth that meets the needs of educators worldwide. For any questions or suggestions, our dedicated team is ready to assist you as we strive to support your journey in computer science education."
       cta: "Email us at [international@code.org](%{email_url})."
+
+  intl_pl_partners_page:
+    page_title: "International Professional Learning Partners"
+    heading: "Professional learning offered by our partners"
+    desc: "Our global network of partners offers professional learning opportunities for teachers who want to integrate Code.org into their classrooms. Check the list for your country below."
+    table:
+      country: "Country / Territory"
+      organization: "Organization / Program Name"
+      description: "Description"
+      contact: "Contact Details"
+    join:
+      heading: "Don't see your country?"
+      desc: "While we currently do not actively recruit new partners into our professional learning program, we encourage organizations worldwide to join us in organizing the annual Hour of Code campaign as the first step to introducing computer science in your country. [Learn more about a partnership opportunity and apply here!](%{apply_url})"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
