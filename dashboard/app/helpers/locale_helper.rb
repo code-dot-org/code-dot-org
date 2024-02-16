@@ -44,12 +44,9 @@ module LocaleHelper
     options
   end
 
-  # Returns an Array of supported locale codes in dashboard.
+  # Returns an Array of supported locale codes.
   def accepted_locales
-    locale_codes = DashboardLanguages.table.select(:locale_s).map do |locale|
-      locale[:locale_s]
-    end
-    locale_codes
+    I18n.available_locales.map(&:to_s)
   end
 
   # Strips regions off of accepted_locales.
