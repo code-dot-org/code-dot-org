@@ -46,14 +46,13 @@ class MusiclabController < ApplicationController
 
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
 
-    @channel_ids =
-      Project.
-        where(project_type: "music").
-        last(15).
-        reverse.
-        map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"]}}.
-        compact_blank.
-        to_json
+    @channel_ids = Project.
+      where(project_type: "music").
+      last(15).
+      reverse.
+      map {|project| {name: JSON.parse(project.value)["name"], id: JSON.parse(project.value)["id"]}}.
+      compact_blank.
+      to_json
   end
 
   # TODO: This is a temporary addition to serve the analytics API key
