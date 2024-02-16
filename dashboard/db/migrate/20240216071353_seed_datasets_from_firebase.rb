@@ -6,17 +6,21 @@
 class SeedDatasetsFromFirebase < ActiveRecord::Migration[6.1]
 
   def up
-    begin
-      seed_manifest_from_firebase
-      seed_tables_from_firebase
-    rescue => e
-      Rails.logger.warn <<~LOG
-        Failed to seed datablock storage library from Firebase: #{e.message}
-        This isn't an error, unless you really want to get the Firebase
-        'Data Library' data. If its after June 2024, this code should have
-        been removed, somebody forgot to do the `TODO: post-firebase-cleanup`.
-      LOG
-    end
+    seed_manifest_from_firebase
+    seed_tables_from_firebase
+  rescue => e
+    message = <<~LOG
+      Failed to seed datablock storage library from Firebase: #{e.message}
+
+      Traceback:
+      #{e.backtrace.join("\n")}
+
+      This isn't necessarily an error, unless you really want to get the Firebase
+      'Data Library' data. If its after June 2024, this code should have
+      been removed, somebody forgot to do the `TODO: post-firebase-cleanup`.
+    LOG
+    Rails.logger.warn message
+    puts message
   end
 
   def down
@@ -38,14 +42,20 @@ private
     db = DatablockStorageLibraryManifest.instance
     raise "Library manifest already exists, not re-seeding" unless db.library_manifest['tables']&.length < 1
     firebase_manifest = firebase_get('/v3/channels/shared/metadata/manifest')
+    puts "Seeding library manifest from Firebase with #{firebase_manifest['tables']&.length} shared tables"
     db.update!(library_manifest: firebase_manifest)
   end
 
   def seed_tables_from_firebase
-    raise "There are already shared_tables / datasets, not re-seeding"
-      unless DatablockStorageTable.get_shared_table_names.length < 1
-    tables_json = firebase_get('/v3/channels/shared/storage/tables')
-    DatablockStorageTable.populate_tables(DatablockStorageTable::SHARED_TABLE_PROJECT_ID, tables_json)
+    raise "There are already shared_tables / datasets, not re-seeding" unless DatablockStorageTable.get_shared_table_names.length < 1
+    firebase_tables = firebase_get('/v3/channels/shared/storage/tables')
+    # Firebase's JSON format is a little different, in particular in stores
+    # each record not as a JSON object, but as a JSON string
+    firebase_tables.each do |table_name, firebase_table|
+      table = firebase_table['records'].filter_map { |record| JSON.parse(record) if record.is_a?(String) }
+      puts "Seeding shared table from Firebase: '#{table_name}' (#{table.length} records)"
+      DatablockStorageTable.populate_tables(DatablockStorageTable::SHARED_TABLE_PROJECT_ID, {table_name => table})
+    end
   end
 
 end

@@ -11,37 +11,37 @@
 # Indexes
 #
 #  index_datablock_storage_library_manifest_on_singleton_guard  (singleton_guard) UNIQUE
-#
-#
-#
-# A one-row table storing a singleton JSON `library_manifest`` that
-# describes all Data Library datasets and categories:
-#
-# library_manifest = {
-#   categories: [
-#     {
-#       datasets: [
-#         '100 Birds of the World',
-#         'Cats',
-#         'Dogs',
-#       ],
-#       name: 'Animals',
-#       published: true,
-#     },
-#   ],
-#   tables: [
-#     {
-#       description:
-#         'Data and images about 100 different species of birds around the world',
-#       docUrl: 'https://studio.code.org/data_docs/100-birds/',
-#       name: '100 Birds of the World',
-#       published: true,
-#     },
-#   ],
-# };
-#
-# See: `DatasetController`(Ruby) and `DatablockStorage.getLibraryManifest` (JS)
+
+
 class DatablockStorageLibraryManifest < ApplicationRecord
+  # A one-row table storing a singleton JSON `library_manifest`` that
+  # describes all Data Library datasets and categories:
+  #
+  # library_manifest = {
+  #   categories: [
+  #     {
+  #       datasets: [
+  #         '100 Birds of the World',
+  #         'Cats',
+  #         'Dogs',
+  #       ],
+  #       name: 'Animals',
+  #       published: true,
+  #     },
+  #   ],
+  #   tables: [
+  #     {
+  #       description:
+  #         'Data and images about 100 different species of birds around the world',
+  #       docUrl: 'https://studio.code.org/data_docs/100-birds/',
+  #       name: '100 Birds of the World',
+  #       published: true,
+  #     },
+  #   ],
+  # };
+  #
+  # See: `DatasetController`(Ruby) and `DatablockStorage.getLibraryManifest` (JS)
+
   self.table_name = 'datablock_storage_library_manifest'
   
   # DatablockStorageLibraryManifest is a singleton, only one-row allowed in the table
