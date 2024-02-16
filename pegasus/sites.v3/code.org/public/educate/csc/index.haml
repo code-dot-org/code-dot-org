@@ -68,6 +68,8 @@ theme: responsive_full_width
     %p=hoc_s(:csc_page_find_a_module_desc)
     = view :carousel_csc_week_long
 
+= view :section_divider_line
+
 %section#csc-hour-long-lessons
   .wrapper
     %h2=hoc_s(:csc_hour_long_lessons)
@@ -77,7 +79,7 @@ theme: responsive_full_width
         .content-wrapper
           %p.overline=hoc_s(:module_subject_english_language_arts)
           %h3=hoc_s(:tutorial_poemart_name)
-          %img{src: "/images/csc-module-poem-art.png", alt: "", style: "height: 100%, max-width: 430px"}
+          %img{src: "/images/csc-module-poem-art.png", alt: ""}
           %p=hoc_s(:module_desc_coding_w_poetry)
         .content-footer
           %a.link-button{href: CDO.studio_url("/s/poetry?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_w_poetry)}}
