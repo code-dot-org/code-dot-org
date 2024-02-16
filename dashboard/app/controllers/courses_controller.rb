@@ -181,8 +181,8 @@ class CoursesController < ApplicationController
   private def check_plc_enrollment
     if @unit_group.plc_course
       authorize! :show, Plc::UserCourseEnrollment
-      @summarized_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course).summarize]
-      render 'plc/user_course_enrollments/index'
+      @summarized_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)&.summarize]
+      render 'plc/user_course_enrollments/index', locals: {summarized_course_enrollments: @summarized_course_enrollments}
       return
     end
   end
