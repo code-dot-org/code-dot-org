@@ -2,7 +2,7 @@
 #
 # Table name: datablock_storage_tables
 #
-#  channel_id      :string(22)       not null, primary key
+#  project_id      :integer          not null, primary key
 #  table_name      :string(768)      not null, primary key
 #  columns         :json
 #  is_shared_table :string(768)
@@ -10,38 +10,38 @@
 #  updated_at      :datetime         not null
 #
 class DatablockStorageTable < ApplicationRecord
-  self.primary_keys = :channel_id, :table_name
+  self.primary_keys = :project_id, :table_name
   has_many :records, autosave: true,
     class_name: 'DatablockStorageRecord',
-    foreign_key: [:channel_id, :table_name],
+    foreign_key: [:project_id, :table_name],
     dependent: :delete_all
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
-  SHARED_TABLE_CHANNEL_ID = 'shared'
+  SHARED_TABLE_PROJECT_ID = 0
 
-  def self.get_table_names(channel_id)
-    DatablockStorageTable.where(channel_id: channel_id).pluck(:table_name)
+  def self.get_table_names(project_id)
+    DatablockStorageTable.where(project_id: project_id).pluck(:table_name)
   end
 
   def self.get_shared_table_names
-    get_table_names(SHARED_TABLE_CHANNEL_ID)
+    get_table_names(SHARED_TABLE_PROJECT_ID)
   end
 
   def self.find_shared_table(table_name)
-    DatablockStorageTable.find_by(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: table_name)
+    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
   end
 
-  def self.add_shared_table(channel_id, table_name)
-    unless DatablockStorageTable.exists?(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: table_name)
+  def self.add_shared_table(project_id, table_name)
+    unless DatablockStorageTable.exists?(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
       raise "Shared table '#{table_name}' does not exist"
     end
-    DatablockStorageTable.create!(channel_id: channel_id, table_name: table_name, is_shared_table: table_name)
+    DatablockStorageTable.create!(project_id: project_id, table_name: table_name, is_shared_table: table_name)
   end
 
-  def self.populate_tables(channel_id, tables_json)
+  def self.populate_tables(project_id, tables_json)
     tables_json.each do |table_name, records|
-      table = DatablockStorageTable.where(channel_id: channel_id, table_name: table_name).first_or_create
+      table = DatablockStorageTable.where(project_id: project_id, table_name: table_name).first_or_create
       table.create_records records
       table.save!
     end
@@ -83,13 +83,13 @@ class DatablockStorageTable < ApplicationRecord
       # =>
       # DatablockStorageRecord.connection.execute("SELECT MIN(record_id) FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted} LIMIT 1 FOR UPDATE")
       # =>
-      DatablockStorageRecord.where(channel_id: channel_id, table_name: table_name).lock.minimum(:record_id)
+      DatablockStorageRecord.where(project_id: project_id, table_name: table_name).lock.minimum(:record_id)
 
       # SELECT @id := IFNULL(MAX(record_id),0)+1 FROM unfirebase.records WHERE channel_id='shared' AND table_name='words';
       # =>
       # next_record_id = DatablockStorageRecord.connection.select_value("SELECT IFNULL(MAX(record_id),0)+1 FROM #{Record.table_name} WHERE channel_id=#{channel_id_quoted} AND table_name=#{table_name_quoted}")
       # =>
-      max_record_id = DatablockStorageRecord.where(channel_id: channel_id, table_name: table_name).maximum(:record_id)
+      max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id)
       next_record_id = (max_record_id || 0) + 1
 
       cols_in_records = Set.new
@@ -99,7 +99,7 @@ class DatablockStorageTable < ApplicationRecord
         record_json['id'] = next_record_id
 
         #   INSERT INTO unfirebase.records VALUES ('shared', 'words', @id, '{}');
-        DatablockStorageRecord.create(channel_id: channel_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
+        DatablockStorageRecord.create(project_id: project_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
 
         cols_in_records.merge(record_json.keys)
         next_record_id += 1
@@ -196,7 +196,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def shared_table
-    DatablockStorageTable.find_by(channel_id: SHARED_TABLE_CHANNEL_ID, table_name: is_shared_table)
+    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: is_shared_table)
   end
 
   def copy_shared_table
