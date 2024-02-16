@@ -7,8 +7,13 @@ import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
 import {getStore} from '@cdo/apps/redux';
-import {setHasIncompatibleSources} from '../redux/blockly';
+import {
+  setFailedToGenerateCode,
+  setHasIncompatibleSources,
+} from '@cdo/apps/redux/blockly';
 import * as blockUtils from '../block_utils';
+import {handleCodeGenerationFailure} from './utils';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -220,12 +225,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.getWorkspaceCode = function (opt_showHidden) {
-    const code = Blockly.Generator.blockSpaceToCode(
-      'JavaScript',
-      null,
-      !!opt_showHidden
-    );
-    return strip(code);
+    let code = '';
+    try {
+      code = Blockly.Generator.blockSpaceToCode(
+        'JavaScript',
+        null,
+        !!opt_showHidden
+      );
+      code = strip(code);
+      getStore().dispatch(setFailedToGenerateCode(false));
+    } catch (e) {
+      handleCodeGenerationFailure(MetricEvent.CDO_BLOCKLY_GET_CODE_ERROR, e);
+    }
+    return code;
   };
 
   // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.
@@ -288,6 +300,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     isWorkspaceReadOnly: function (workspace) {
       return workspace.isReadOnly();
+    },
+    handleColorAndStyle(block, color, style, returnType) {
+      // CDO Blockly does not support block styles.
+      if (color) {
+        this.setHSV(block, ...color);
+      } else if (!returnType) {
+        // CDO Blockly assigns colors to blocks with an output connection based on return type.
+        // See Blockly.Connection.prototype.colorForType
+        const DEFAULT_COLOR = [184, 1.0, 0.74];
+        this.setHSV(block, ...DEFAULT_COLOR);
+      }
     },
     setHSV: function (block, h, s, v) {
       block.setHSV(h, s, v);

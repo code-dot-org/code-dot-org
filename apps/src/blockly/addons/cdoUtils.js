@@ -37,8 +37,11 @@ export function loadBlocksToWorkspace(
   source,
   includeHiddenDefinitions = true
 ) {
-  const {mainSource, hiddenDefinitionSource} =
-    prepareSourcesForWorkspaces(source);
+  const embedded = Blockly.isEmbeddedWorkspace(workspace);
+  const {mainSource, hiddenDefinitionSource} = prepareSourcesForWorkspaces(
+    source,
+    embedded
+  );
   // We intentionally load hidden definitions before other blocks on the main workspace.
   if (includeHiddenDefinitions) {
     loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
@@ -69,11 +72,13 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
  * Split source into appropriate serialization objects for the main and the hidden workspaces for loading.
  * Which blocks are moved depends on whether the modal function editor is enabled.
  * @param {string} source - workspace serialization, either XML or JSON
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
  * @returns {mainSource: Object, hiddenDefinitionSource: Object}
  *  mainSource and hiddenDefinitionSource are Blockly serialization objects.
  */
-function prepareSourcesForWorkspaces(source) {
-  const parsedSource = parseSource(source);
+function prepareSourcesForWorkspaces(source, embedded) {
+  const parsedSource = parseSource(source, embedded);
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
@@ -88,15 +93,17 @@ function prepareSourcesForWorkspaces(source) {
 /**
  * Convert source to parsed json objects. If source was xml, convert to json before parsing.
  * @param {string} source - workspace serialization, either XML or JSON
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
  * @returns Object: source as json
  */
-function parseSource(source) {
+function parseSource(source, embedded) {
   let isXml = stringIsXml(source);
   let parsedSource;
 
   if (isXml) {
     const xml = parseXmlElement(source);
-    parsedSource = convertXmlToJson(xml);
+    parsedSource = convertXmlToJson(xml, embedded);
   } else {
     parsedSource = JSON.parse(source);
   }
@@ -152,6 +159,19 @@ export function moveHiddenBlocks(source = {}, procedureTypesToHide = []) {
     mainSource,
     hiddenDefinitionSource,
   };
+}
+
+export function handleColorAndStyle(block, color, style) {
+  if (style) {
+    // Styles are preferred because they are compatible with accessible themes.
+    block.setStyle(style);
+  } else if (color) {
+    // Colors are fixed and do not change with themes.
+    setHSV(block, ...color);
+  } else {
+    // The default block style is teal for our default theme.
+    block.setStyle('default');
+  }
 }
 
 export function setHSV(block, h, s, v) {
@@ -398,16 +418,24 @@ function simplifyBlockState(block, variableMap) {
   // Create a copy of the block so we can modify certain fields.
   const result = {...block};
 
-  // For VAR fields, look up the name of the variable to use instead of the id.
-  if (block.fields && block.fields.VAR) {
-    result.fields.VAR = {
-      name: variableMap[block.fields.VAR.id] || '',
-      type: '',
-    };
-  }
+  // For variable fields, look up the name of the variable to use instead of the id.
+  const variableFields = [
+    'VAR' /* most common */,
+    'VARIABLE' /* used in gamelab_changeVarBy */,
+  ];
+
+  variableFields.forEach(field => {
+    const fieldValue = block.fields?.[field];
+    if (fieldValue) {
+      result.fields[field] = {
+        name: variableMap[fieldValue.id] || '',
+        type: '',
+      };
+    }
+  });
 
   // Recursively check nested blocks.
-  if (block.inputs) {
+  if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
       result.inputs[inputKey].block = simplifyBlockState(
         block.inputs[inputKey].block,
@@ -416,7 +444,7 @@ function simplifyBlockState(block, variableMap) {
     }
   }
   // Recursively check next block, if present.
-  if (block.next) {
+  if (block.next?.block) {
     result.next.block = simplifyBlockState(block.next.block, variableMap);
   }
   // Remove unnecessary properties

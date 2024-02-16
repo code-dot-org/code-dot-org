@@ -1,11 +1,6 @@
 {
   "category": "Story Lab",
   "config": {
-    "color": [
-      240,
-      0.45,
-      0.65
-    ],
     "func": "setHeading",
     "blockText": "set heading {HEADING}",
     "args": [

@@ -1,11 +1,6 @@
 {
   "category": "Experimental",
   "config": {
-    "color": [
-      184,
-      1,
-      0.74
-    ],
     "style": "default",
     "func": "startAvoiding",
     "blockText": "{SPRITE} begins avoiding {TARGET}",

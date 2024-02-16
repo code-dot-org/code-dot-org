@@ -18,6 +18,9 @@ export const behaviorCallerGetDefMixin = function () {
      * @override
      */
     findProcedureModel_(name, params = []) {
+      if (Blockly.isEmbeddedWorkspace(this.workspace)) {
+        return null;
+      }
       const workspace = this.getTargetWorkspace_();
       let model = workspace
         .getProcedureMap()
