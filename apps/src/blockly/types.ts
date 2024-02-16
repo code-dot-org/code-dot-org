@@ -2,9 +2,7 @@ import {
   Block,
   BlockSvg,
   BlocklyOptions,
-  Flyout,
   Input,
-  Options,
   Theme,
   VariableMap,
   Workspace,
@@ -12,7 +10,6 @@ import {
 } from 'blockly';
 import GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
-import SvgFrame from './addons/svgFrame';
 import {BlocklyVersion, Themes} from './constants';
 import {Field, FieldProto} from 'blockly/core/field';
 import CdoFieldButton from './addons/cdoFieldButton';
@@ -51,6 +48,7 @@ export interface arg {
 
 type GoogleBlocklyType = typeof GoogleBlockly;
 
+// Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
@@ -127,12 +125,12 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   ) => string;
 }
 
-export type GoogleBlocklyWorkspace = Workspace & {
-  noFunctionBlockFrame?: boolean;
-  svgFrame_?: SvgFrame;
-};
-
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
+
+// Extended types are Blockly types we have monkey patched in googleBlocklyWrapper.
+// We have specific methods we rely on from CDO Blockly that we needed to continue to support,
+// but Blockly does not support overriding their base classes. Therefore we create these Extended
+// types and can cast to them when needed.
 
 export interface ExtendedBlockSvg extends BlockSvg {
   isDisabled: () => boolean;
@@ -153,7 +151,6 @@ export interface ExtendedBlock extends Block {
   // Blockly uses any for value.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
-  createProcedureDefinitionBlock: () => void;
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
@@ -173,10 +170,6 @@ export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
 
 export interface ExtendedVariableMap extends VariableMap {
   addVariables: (variableList: string[]) => void;
-}
-
-export interface ExtendedFlyout extends Flyout {
-  configure: () => void;
 }
 
 export interface ExtendedBlocklyOptions extends BlocklyOptions {

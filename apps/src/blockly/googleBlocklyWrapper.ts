@@ -79,7 +79,6 @@ import {
   ExtendedBlock,
   ExtendedBlockSvg,
   ExtendedBlocklyOptions,
-  ExtendedFlyout,
   ExtendedInput,
   ExtendedVariableMap,
   ExtendedWorkspace,
