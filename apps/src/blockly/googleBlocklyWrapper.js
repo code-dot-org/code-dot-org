@@ -11,6 +11,7 @@ import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoBlockSvg from './addons/cdoBlockSvg';
 import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
@@ -282,6 +283,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
+  blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
 
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
@@ -417,37 +419,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.addChangeListener = function (blockspace, handler) {
     blockspace.addChangeListener(handler);
-  };
-
-  const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
-  blocklyWrapper.BlockSvg.prototype.mixin = function (
-    mixinObj,
-    opt_disableCheck
-  ) {
-    googleBlocklyMixin.call(this, mixinObj, true);
-  };
-
-  blocklyWrapper.BlockSvg.prototype.isDisabled = function () {
-    return this.disabled;
-  };
-
-  blocklyWrapper.BlockSvg.prototype.getHexColour = function () {
-    // In cdo Blockly labs, getColour() returns a numerical hue value, while
-    // in newer Google Blockly it returns a hexademical color value string.
-    // This is only used for locationPicker blocks and can likely be deprecated
-    // once Sprite Lab is using Google Blockly.
-    return this.getColour();
-  };
-
-  blocklyWrapper.BlockSvg.prototype.isVisible = function () {
-    // TODO (eventually) - All Google Blockly blocks are currently visible.
-    // This shouldn't be a problem until we convert other labs.
-    return true;
-  };
-
-  blocklyWrapper.BlockSvg.prototype.isUserVisible = function () {
-    // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
-    return false;
   };
 
   blocklyWrapper.Input.prototype.setStrictCheck = function (check) {
