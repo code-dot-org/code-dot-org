@@ -16,6 +16,71 @@ const queryPromise = (connection, query) => {
   });
 };
 
+
+/*
+  To utilize this SQLUser custom CloudFormation Resource in a Stack:
+  * Ensure the Stack has published 3 Secrets that store the following credentials/configuration settings:
+    - [OPTIONAL] DB Writer Endpoint - servername to connect to the current writer database instance in the cluster.
+    - [REQUIRED] DB Admin Credentials - username & password of admin SQL login that can create the new SQL user and grant it permissions.
+    - [REQUIRED] DB Credentials - username & password of the SQL login that this Lambda should provision.
+  * Ensure the Stack invoking this Lambda grants permissions to this Lambda to Get the 3 Secrets above.
+
+  EXAMPLE USAGE
+
+   # Standard usage. Populate the `DBHost` property with a reference to the Writer Endpoint attribute on the DB Cluster Resource.
+  MyReaderSQLUser:
+    Type: Custom::SQLUser
+    # Wait until DB Instances have completed provisioning before connecting to the DB Cluster to create a SQL user.
+    DependsOn: [DBInstance-0, DBInstance-1]
+    Properties:
+      ServiceToken: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:SQLUser"`
+      DBHost: !GetAtt AuroraCluster.Endpoint.Address
+      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
+      # Credentials (username and password) for the SQL User this Resource is provisioning.
+      DBCredentialSecret: !Ref DatabaseSecretWriter
+      Privileges:
+        - SELECT
+
+  # Alternate usage.
+  # Temporarily (while the production database cluster is NOT provisioned in the Stack), allow for the writer database
+  # endpoint to be passed in via a configuration setting populated in an AWS Secret. Populate `DBWriterEndpointSecret`
+  # Property instead of `DBHost`.
+  MyWriterSQLUser:
+    Type: Custom::SQLUser
+    # Wait until DB Instances have completed provisioning before connecting to the DB Cluster to create a SQL user.
+    DependsOn: [DBInstance-0, DBInstance-1]
+    Properties:
+      ServiceToken: !Sub "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:SQLUser"
+      # Production cluster has not been imported into this Stack, so pass the Secret that stores the writer endpoint
+      # instead of `!GetAtt AuroraCluster.Endpoint.Address`
+      DBWriterEndpointSecret: !Ref DBWriterEndpointConfig
+      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
+      # Credentials (username and password) for the SQL User this Resource is provisioning.
+      DBCredentialSecret: !Ref DatabaseSecretWriter
+      Privileges:
+        - SELECT
+        - INSERT
+        - UPDATE
+        - DELETE
+        - CREATE
+        - DROP
+        - REFERENCES
+        - INDEX
+        - ALTER
+        - CREATE TEMPORARY TABLES
+        - LOCK TABLES
+        - EXECUTE
+        - CREATE VIEW
+        - SHOW VIEW
+        - CREATE ROUTINE
+        - ALTER ROUTINE
+        - EVENT
+        - TRIGGER
+
+
+ */
 exports.handler = async (event, context) => {
   console.log("REQUEST RECEIVED:\n", JSON.stringify(event));
 
