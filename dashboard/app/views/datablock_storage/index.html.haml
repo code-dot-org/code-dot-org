@@ -169,3 +169,16 @@
 = form_tag "add_shared_table", :method => :post, :remote => false do
   = text_field_tag "table_name", "100 Birds of the World", placeholder: "table_name"
   = submit_tag "add_shared_table"
+
+%h2 Library Manifest
+
+%div= @library_manifest
+
+%h3 get_library_manifest
+= form_tag "get_library_manifest", :method => :get, :remote => false do
+  = submit_tag "get_library_manifest"
+
+%h3 set_library_manifest
+= form_tag "set_library_manifest", :method => :put, :remote => false do
+  = text_area_tag "library_manifest", '{"categories":[{"datasets":["100 Birds of the World"],"name":"Animals","published":true}],"tables":[{"current":false,"description":"Data and images about 100 different species of birds around the world","docUrl":"https://studio.code.org/data_docs/100-birds/","name":"100 Birds of the World","published":true}]}'
+  = submit_tag "set_library_manifest"

@@ -10,6 +10,7 @@ class DatablockStorageController < ApplicationController
     @key_value_pairs = DatablockStorageKvp.where(project_id: @project_id)
     @records = DatablockStorageRecord.where(project_id: @project_id)
     @tables = DatablockStorageTable.where(project_id: @project_id)
+    @library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     puts "####################################################"
   end
 
@@ -186,6 +187,20 @@ class DatablockStorageController < ApplicationController
     table.delete_record params[:record_id]
     table.save!
     render json: nil
+  end
+
+  ##########################################################
+  #   Library Manifest API (shared table metadata)         #
+  ##########################################################
+
+  def get_library_manifest
+    render json: DatablockStorageLibraryManifest.instance.library_manifest
+  end
+
+  def set_library_manifest
+    library_manifest = JSON.parse params[:library_manifest]
+    DatablockStorageLibraryManifest.instance.update!(library_manifest: library_manifest)
+    render json: true
   end
 
   ##########################################################
