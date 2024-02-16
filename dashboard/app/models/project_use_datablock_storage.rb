@@ -17,7 +17,6 @@ class ProjectUseDatablockStorage < ApplicationRecord
   #
   # TODO: post-firebase-cleanup, remove this table once 100%
   # of projects are use_datablock_storage=true.
-  belongs_to :project
 
   def self.use_data_block_storage_for?(channel_id)
     project = Project.find_by_channel_id(channel_id)
