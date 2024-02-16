@@ -143,6 +143,7 @@ module Pd
       TEACHING_CS_CONNECTIONS = 'Teaching CS Connections'.freeze,
       CS_BASICS_FOR_K5_TEACHERS = 'Computer Science Basics for K-5 Teachers'.freeze,
       TEACHING_DESIGN_PROCESS = 'Teaching Design Process'.freeze,
+      TEACHING_DATA_AND_SOCIETY = 'Teaching Data and Society'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [
