@@ -1661,8 +1661,8 @@
     heading: "Professional learning offered by our partners"
     desc: "Our global network of partners offers professional learning opportunities for teachers who want to integrate Code.org into their classrooms. Check the list for your country below."
     table:
-      country: "Country/Territory"
-      organization: "Organization/Program Name"
+      country: "Country / Territory"
+      organization: "Organization / Program Name"
       description: "Description"
       contact: "Contact Details"
     join:
