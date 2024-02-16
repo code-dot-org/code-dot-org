@@ -6,7 +6,7 @@
 #
 #    VALIDATE:
 #
-#    code-dot-org % export AWS_PROFILE=codeorg-admin
+#    code-dot-org$ export AWS_PROFILE=codeorg-admin
 #    code-dot-org % bin/aws_access
 #    AWS access: GoogleSignInAdmin/suresh@code.org
 #    code-dot-org % bundle exec rake stack:data:validate RAILS_ENV=production ADMIN=true
