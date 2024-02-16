@@ -297,9 +297,7 @@ class HomeControllerTest < ActionController::TestCase
     student = create :student, :with_lti_auth
 
     student.update_attribute(:us_state, nil) # bypasses validations
-    student = student.reload
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
-    assert Policies::Lti.lti?(student)
 
     sign_in student
     get :home
@@ -313,6 +311,20 @@ class HomeControllerTest < ActionController::TestCase
   test 'student with age does not get student information prompt' do
     student = create(:student)
     assert student.age
+
+    sign_in student
+
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'LTI student with age and us_state does not get student information prompt' do
+    student = create :student, :with_lti_auth
+    assert student.age
+    student.update_attribute(:us_state, 'AL')
+    student = student.reload
+    assert student.us_state
 
     sign_in student
 
