@@ -238,7 +238,7 @@ class ProjectsController < ApplicationController
   end
 
   # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
-  # The rows are sorted into three arrays: featured, unfeatured, or saved.
+  # The rows are sorted into three arrays: active, archived, or saved.
   def sort_featured_projects(featured_project_table_rows)
     @active = []
     @archived = []

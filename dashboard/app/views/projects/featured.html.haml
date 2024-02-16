@@ -1,8 +1,8 @@
 #featured-projects-container
 - featured_projects_data = {}
-- featured_projects_data[:currently_featured_projects] = @featured
-- featured_projects_data[:archived_unfeatured_projects] = @unfeatured
-- featured_projects_data[:saved_featured_projects] = @saved
+- featured_projects_data[:active] = @active
+- featured_projects_data[:archived] = @archived
+- featured_projects_data[:saved] = @saved
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/projects/featured.js'), data: {featuredProjects: featured_projects_data.to_json}}

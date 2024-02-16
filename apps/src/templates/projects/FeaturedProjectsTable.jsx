@@ -411,9 +411,9 @@ class FeaturedProjectsTable extends React.Component {
       },
     ];
 
-    if (tableVersion === 'currentFeatured') {
+    if (tableVersion === 'active') {
       return dataColumns.concat(activeColumns);
-    } else if (tableVersion === 'archivedUnfeatured') {
+    } else if (tableVersion === 'archived') {
       return dataColumns.concat(archivedColumns);
     } else {
       return dataColumns.concat(savedColumns);
