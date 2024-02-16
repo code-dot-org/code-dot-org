@@ -9,7 +9,7 @@ import WarningModal from './warningModal';
 /**
  * Renders the AI Tutor main chat workspace component.
  */
-const ChatWorkspace = () => {
+const ChatWorkspace: React.FunctionComponent = () => {
   const storedMessages = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.chatMessages
   );

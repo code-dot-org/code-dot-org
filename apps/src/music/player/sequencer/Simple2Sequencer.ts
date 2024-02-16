@@ -38,7 +38,6 @@ export default class Simple2Sequencer extends Sequencer {
   private inTrigger: boolean;
 
   constructor(
-    private readonly library: MusicLibrary,
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     super();
@@ -201,8 +200,8 @@ export default class Simple2Sequencer extends Sequencer {
    * Play a sound at the current location.
    */
   playSound(id: string, blockId: string) {
-    const soundData = this.library.getSoundForId(id);
-    if (soundData === null) {
+    const soundData = MusicLibrary.getInstance()?.getSoundForId(id);
+    if (!soundData) {
       this.metricsReporter.logWarning('Could not find sound with ID: ' + id);
       return;
     }

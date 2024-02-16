@@ -1,0 +1,13 @@
+name 'self-paced-pl-microbit_pdf_lessons'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# PDF Pathways
+
+
+
+
+
+
+MARKDOWN

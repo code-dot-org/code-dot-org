@@ -12,7 +12,6 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/mouse-events-have-key-events': 'off',
   'jsx-a11y/no-noninteractive-element-interactions': 'off',
-  'jsx-a11y/no-noninteractive-tabindex': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
   'jsx-a11y/tabindex-no-positive': 'off',
 };
@@ -87,6 +86,8 @@ module.exports = {
     SerialPort: 'readonly',
     signupErrorMessage: 'readonly',
     Studio: 'readonly',
+    // Only used in Web Lab 2.
+    stylelint: 'readonly',
     thanksUrl: 'readonly',
     Turtle: 'readonly',
     YT: 'readonly',

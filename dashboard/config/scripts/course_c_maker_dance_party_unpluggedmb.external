@@ -3,13 +3,17 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-<h2 style="text-align: center;">Dance Party: Unplugged</h2>
+#Events: Unplugged
+## What is an unplugged lesson?
 
-#### Let’s first dive into events by examining one of the unplugged lessons from the CS Maker course. 
+#### An unplugged lesson is a teaching method where CS concepts are taught without the use of a computer. 
 
-#### An unplugged lesson is a teaching method where CS concepts are taught without the use of a computer. These lessons involve hands-on activities or games that illustrate computer science principles in tangible and understandable ways for beginners. 
 
-#### In this lesson, students will learn to think about controlling actions using events. The students will match a dance move to an assigned shape and will act out the moves based on the shape you select. 
+## Why teach an unplugged lesson? 
+#### These lessons involve hands-on activities or games that illustrate computer science principles in tangible and understandable ways for beginners. 
+
+## How?
+#### Unplugged lessons are offered throughout Code.org's curriculum offerings. In the maker course, students engage with unplugged activities through a Dance Party lesson. In this lesson, students will learn to think about controlling actions using events. The students will match a dance move to an assigned shape and will act out the moves based on the shape you select. 
 
 #### Take time to read the Unplugged Dance Party (lesson plan). Make sure to check out the resources including the student facing markdown level, slides, and event controller PDF. 
 

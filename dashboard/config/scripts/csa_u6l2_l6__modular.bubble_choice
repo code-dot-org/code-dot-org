@@ -1,0 +1,9 @@
+name 'CSA U6L2-L6_-modular'
+display_name 'Practice: The substring() Method'
+description 'Practice using the `substring()` method to retrieve characters from a starting index to the end of a `String`.'
+
+sublevels
+level 'CSA U6L2-L6a_-modular'
+level 'CSA U6L2-L6b_-modular'
+level 'CSA U6L2-L6c_-modular'
+level 'CSA U6L2-L6d_-modular'
