@@ -346,54 +346,11 @@ DatablockStorage.populateKeyValue = function (jsonData, onSuccess, onError) {
   }).then(onSuccess, onError);
 };
 
-// gets a list of all the shared or current tables available in the data browser
+// fetch the library manifest used to populate the "Data Library" browser
+// see: datablock_storage_library_manifest.rb
 DatablockStorage.getLibraryManifest = function () {
-  return getTableNames({isSharedTable: true}).then(tableNames => {
-    console.log('FOUND SHARED TABLES', tableNames);
-    // FIXME, unfirebase, we don't have this implemented yet
-    // see: issue on implementing the library manifest system here:
-    // https://github.com/code-dot-org/code-dot-org/issues/56472
-    const EXAMPLE_MANIFEST_FROM_FIREBASE = {
-      categories: [
-        {
-          datasets: [
-            '100 Birds of the World',
-            'Bee Colonies',
-            'Cats',
-            'Dogs',
-            'Endangered Species of Canada',
-            'Palmer Penguins',
-          ],
-          name: 'Animals',
-          published: true,
-        },
-      ],
-      tables: [
-        {
-          current: false,
-          description:
-            'Data and images about 100 different species of birds around the world',
-          docUrl: 'https://studio.code.org/data_docs/100-birds/',
-          name: '100 Birds of the World',
-          published: true,
-        },
-        {
-          current: true,
-          description:
-            'Live weather five-day forecast data for 100 cities. Updates daily with expected weather conditions.',
-          docUrl: 'https://studio.code.org/data_docs/daily-weather/',
-          lastUpdated: 1707480317000,
-          name: 'Daily Weather',
-          published: true,
-        },
-      ],
-    };
-    console.error(
-      'DatablockStorage.getLibraryManifest is NOT IMPLEMENTED YET, returning stock EXAMPLE_MANIFEST_FROM_FIREBASE:',
-      EXAMPLE_MANIFEST_FROM_FIREBASE
-    );
-    return EXAMPLE_MANIFEST_FROM_FIREBASE;
-  });
+  return _fetch('get_library_manifest', 'GET')
+    .then(response => response.json());
 };
 
 // returns an array of strings for each of the columns in the table

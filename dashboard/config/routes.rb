@@ -1136,6 +1136,10 @@ Dashboard::Application.routes.draw do
         put :update_record
         delete :delete_record
 
+        # Datablock Storage: Library Manifest API (=shared table metadata)
+        get :get_library_manifest
+        put :set_library_manifest
+
         # Datablock Storage: Channel API
         get :channel_exists
         delete :clear_all_data

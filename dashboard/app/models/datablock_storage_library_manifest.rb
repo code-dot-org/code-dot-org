@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: datablock_storage_library_manifest
+#
+#  id               :bigint           not null, primary key
+#  library_manifest :json
+#  singleton_guard  :integer          not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+# Indexes
+#
+#  index_datablock_storage_library_manifest_on_singleton_guard  (singleton_guard) UNIQUE
+#
+#
+#
 # A one-row table storing a singleton JSON `library_manifest`` that
 # describes all Data Library datasets and categories:
 #
@@ -28,11 +44,14 @@
 class DatablockStorageLibraryManifest < ApplicationRecord
   self.table_name = 'datablock_storage_library_manifest'
   
+  # DatablockStorageLibraryManifest is a singleton, only one-row allowed in the table
+  # with the unique `singleton_guard` value of 0
   validates_inclusion_of :singleton_guard, in: [0]
   validate :validate_library_manifest
 
   after_initialize :set_default_library_manifest, if: :new_record?
 
+  # DatablockStorageLibraryManifest.instance returns the singleton row
   def self.instance
     first_or_create!(singleton_guard: 0)
   end
