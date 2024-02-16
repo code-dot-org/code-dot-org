@@ -2,6 +2,7 @@ import {
   IMPORTANT_TOPICS,
   UTC_PUBLISHED_DATE_FORMAT,
   FAKE_RECOMMENDER_SCORING,
+  SIMILAR_RECOMMENDER_SCORING,
 } from './curriculumRecommenderConstants';
 import moment from 'moment';
 
@@ -20,6 +21,44 @@ const twoYearsAgo = moment()
  * have been scored, the recommender returns an array of the passed-in curricula sorted in descending order by score (ties are broken by
  * prioritizing featured curricula and more recently published curricula).
  */
+export const getSimilarRecommendations = (
+  curricula,
+  duration,
+  marketingInitiative,
+  schoolSubjects,
+  csTopics
+) => {
+  const curriculaScores = [];
+  curricula.forEach(curriculum => {
+    let score = 0;
+    score += hasDesiredDuration(
+      SIMILAR_RECOMMENDER_SCORING,
+      curriculum,
+      duration
+    );
+    score += hasDesiredMarketingInitiative(
+      SIMILAR_RECOMMENDER_SCORING,
+      curriculum,
+      marketingInitiative
+    );
+    score += hasAnySchoolSubject(SIMILAR_RECOMMENDER_SCORING, curriculum);
+    score += hasDesiredSchoolSubjects(
+      SIMILAR_RECOMMENDER_SCORING,
+      curriculum,
+      schoolSubjects
+    );
+    score += hasAnyImportantTopic(SIMILAR_RECOMMENDER_SCORING, curriculum);
+    score += hasDesiredTopics(
+      SIMILAR_RECOMMENDER_SCORING,
+      curriculum,
+      csTopics
+    );
+    score += howRecentlyPublished(SIMILAR_RECOMMENDER_SCORING, curriculum);
+    curriculaScores.push([curriculum, score]);
+  });
+  return sortRecommendations(curriculaScores).map(curr => curr[0]);
+};
+
 export const getTestRecommendations = (
   curricula,
   duration,

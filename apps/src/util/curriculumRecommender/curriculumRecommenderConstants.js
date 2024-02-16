@@ -6,6 +6,17 @@ export const IMPORTANT_TOPICS = [
 
 export const UTC_PUBLISHED_DATE_FORMAT = 'YYYY-MM-DD hh:mm:ss UTC';
 
+export const SIMILAR_RECOMMENDER_SCORING = {
+  hasDesiredDuration: 2,
+  hasDesiredMarketingInitiative: 2,
+  hasAnySchoolSubject: 1,
+  hasDesiredSchoolSubjects: 2,
+  hasAnyImportantTopic: 1,
+  hasDesiredTopics: 2,
+  publishedWithinOneYearAgo: 1,
+  publishedWithinTwoYearsAgo: 2,
+};
+
 // Test recommender scoring framework.
 export const FAKE_RECOMMENDER_SCORING = {
   hasDesiredDuration: 3,
