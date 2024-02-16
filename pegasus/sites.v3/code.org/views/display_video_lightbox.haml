@@ -24,6 +24,34 @@
   window["showVideo_#{id}"] = function()
   {
     $("#showVideo_#{id}").modal('show');
+    $("#showVideo_#{id}").on('shown.bs.modal', function () {
+      var focusableEls = $(this).find('a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select');
+      var firstFocusableEl = focusableEls.first()[0];
+      var lastFocusableEl = focusableEls.last()[0];
+      var KEYCODE_TAB = 9;
+
+      firstFocusableEl.focus();
+
+      $(this).on('keydown', function(e) {
+        var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+
+        if (!isTabPressed) { 
+          return; 
+        }
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusableEl) {
+            lastFocusableEl.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastFocusableEl) {
+            firstFocusableEl.focus();
+            e.preventDefault();
+          }
+        }
+      });
+    });
     setupPopupWindows();
     window["playVideo_#{id}"](true);
 
