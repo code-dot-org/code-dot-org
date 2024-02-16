@@ -1360,10 +1360,6 @@ table {
   border: 1px solid var(--neutral_dark20);
   width: 100%;
 
-  @media screen and (max-width: 700px) {
-    margin-left: -1px;
-  }
-
   th {
     background-color: var(--neutral_light);
     border: 1px solid var(--neutral_dark20);
@@ -1385,5 +1381,11 @@ table {
   @media screen and (max-width: 700px) {
     border-left: 1px solid var(--neutral_dark20);
     border-right: 1px solid var(--neutral_dark20);
+  }
+
+  @media screen and (max-width: 700px) {
+    table {
+      margin-left: -1px;
+    }
   }
 }
