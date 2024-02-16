@@ -86,46 +86,46 @@ const nodePolyfillConfig = {
       process: 'process/browser',
       timers: 'timers-browserify',
     }),
-    new CircularDependencyPlugin({
-      // ignore everything in a build directory or mode_modules
-      exclude: /node_modules|build/,
-      failOnError: true,
-      allowAsyncCycles: false,
-      cwd: process.cwd(),
-      // when we start, we re-initialize our list of previously seen circles to whatever
-      // we loaded from circular_depencies.json. If that file changes and you need to update, restart
-      // webpack
-      onStart: () => {
-        seenCircles.clear();
-        seenCircles = new Set(Array.from(circularDependenciesSet));
-      },
-      onDetected: ({module: webpackModuleRecord, paths, compilation}) => {
-        const pathString = paths.join(' -> ');
-        // if the path is not a known existing one, then note as an error
-        if (!circularDependenciesSet.has(pathString)) {
-          compilation.errors.push(
-            new Error(
-              `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
-            )
-          );
-        }
-        // and since we've seen that path, we can delete it from our set of seen values
-        seenCircles.delete(pathString);
-      },
-      // finally, at the end, if we still have any circles that we previously knew about but did not see
-      // this time, note it as a warning.
-      onEnd: ({compilation}) => {
-        if (seenCircles.size > 0) {
-          compilation.warnings.push(
-            new Error(
-              `Circular Dependency Checker : Resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
-                seenCircles
-              ).join('\n  ')}`
-            )
-          );
-        }
-      },
-    }),
+    // new CircularDependencyPlugin({
+    //   // ignore everything in a build directory or mode_modules
+    //   exclude: /node_modules|build/,
+    //   failOnError: true,
+    //   allowAsyncCycles: false,
+    //   cwd: process.cwd(),
+    //   // when we start, we re-initialize our list of previously seen circles to whatever
+    //   // we loaded from circular_depencies.json. If that file changes and you need to update, restart
+    //   // webpack
+    //   onStart: () => {
+    //     seenCircles.clear();
+    //     seenCircles = new Set(Array.from(circularDependenciesSet));
+    //   },
+    //   onDetected: ({module: webpackModuleRecord, paths, compilation}) => {
+    //     const pathString = paths.join(' -> ');
+    //     // if the path is not a known existing one, then note as an error
+    //     if (!circularDependenciesSet.has(pathString)) {
+    //       compilation.errors.push(
+    //         new Error(
+    //           `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
+    //         )
+    //       );
+    //     }
+    //     // and since we've seen that path, we can delete it from our set of seen values
+    //     seenCircles.delete(pathString);
+    //   },
+    //   // finally, at the end, if we still have any circles that we previously knew about but did not see
+    //   // this time, note it as a warning.
+    //   onEnd: ({compilation}) => {
+    //     if (seenCircles.size > 0) {
+    //       compilation.warnings.push(
+    //         new Error(
+    //           `Circular Dependency Checker : Resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
+    //             seenCircles
+    //           ).join('\n  ')}`
+    //         )
+    //       );
+    //     }
+    //   },
+    // }),
   ],
   resolve: {
     fallback: {
@@ -391,7 +391,8 @@ function createWebpackConfig({
   //////////////////////////////////////////////
   ///////// WEBPACK CONFIG BEGINS HERE /////////
   //////////////////////////////////////////////
-
+  watch = true;
+  console.log("Are we watching?", watch)
   const WEBPACK_CONFIG = {
     output: {
       path: path.resolve(__dirname, 'build/package/js/'),
@@ -668,23 +669,54 @@ function createWebpackConfig({
               }),
             ]),
       }),
-      ...(watch
-        ? [
-            new LiveReloadPlugin({
-              appendScriptTag: envConstants.AUTO_RELOAD,
-            }),
-          ]
-        : []),
+      // ...(watch
+      //   ? [
+      //       new LiveReloadPlugin({
+      //         appendScriptTag: envConstants.AUTO_RELOAD,
+      //       }),
+      //     ]
+      //   : []),
       ...(watch && watchNotify
         ? [new WebpackNotifierPlugin({alwaysNotify: true})]
         : []),
       new PyodidePlugin(),
     ],
+    devServer: watch
+      ? {
+          allowedHosts: ['localhost-studio.code.org'],
+          // With this config, devs enter in their browser:
+          // http://localhost-studio.code.org:9000/
+          // which connects them to webpackp-dev-server...
+          port: 9000,
+          proxy: [
+            {
+              context: ['**'],
+              target: 'http://localhost-studio.code.org:3000',
+              changeOrigin: false,
+              logLevel: 'debug',
+            },
+          ],
+          // Except stuff that webpack watch / webpack-dev-server will be generating
+          // like: http://localhost-studio.code.org:9000/assets/application.js
+          // or: http://localhost-studio.code.org:9000/assets/js/code-studio.js
+          //publicPath: '/assets/js/',
+
+          // Probably some of these other properties are key, relevant, or useful???
+          // Probably some more at: https://webpack.js.org/configuration/dev-server/
+          //
+          // keepAlive: true,
+          // hot: true,
+          // inline: true,
+          host: '0.0.0.0',
+        }
+      : undefined,
   };
 
   //////////////////////////////////////////////
   ////////// WEBPACK CONFIG ENDS HERE //////////
   //////////////////////////////////////////////
+
+  console.log(WEBPACK_CONFIG.devServer)
 
   return {
     ...WEBPACK_BASE_CONFIG,
