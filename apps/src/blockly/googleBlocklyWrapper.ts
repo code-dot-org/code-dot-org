@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import './addons/plusMinusBlocks/if.js';
 import './addons/plusMinusBlocks/text_join.js';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -51,7 +52,7 @@ import initializeCss from './addons/cdoCss';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import {ToolboxType, Themes, Renderers} from './constants';
+import {Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
@@ -73,6 +74,20 @@ import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import {handleCodeGenerationFailure} from './utils';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import {
+  BlocklyWrapperType,
+  ExtendedBlock,
+  ExtendedBlockSvg,
+  ExtendedBlocklyOptions,
+  ExtendedFlyout,
+  ExtendedInput,
+  ExtendedVariableMap,
+  ExtendedWorkspace,
+  ExtendedWorkspaceSvg,
+  GoogleBlocklyInstance,
+} from './types';
+import {FieldProto} from 'blockly/core/field';
+import {Options, Theme} from 'blockly';
 
 const options = {
   contextMenu: true,
@@ -93,7 +108,10 @@ const INFINITE_LOOP_TRAP =
  * This wrapper will contain all of our customizations to Google Blockly.
  * See also ./cdoBlocklyWrapper.js
  */
-const BlocklyWrapper = function (blocklyInstance) {
+const BlocklyWrapper = function (
+  this: BlocklyWrapperType,
+  blocklyInstance: GoogleBlocklyInstance
+) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
   this.mainWorkspace = undefined;
@@ -134,7 +152,11 @@ const BlocklyWrapper = function (blocklyInstance) {
       this.blockly_.fieldRegistry.register(fieldRegistryName, fieldClass);
 
       // Add each field for when our wrapper is accessed in /apps code
-      this[fieldClassName] = fieldClass;
+      // This method helps us avoid duplicated boilerplate, but we would
+      // need the type of fieldClass to align with fieldClassName
+      // in order to avoid using any here.
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (this as any)[fieldClassName] = fieldClass;
     });
   };
 };
@@ -147,8 +169,12 @@ const BlocklyWrapper = function (blocklyInstance) {
  * If this needs to be called multiple times (for example, in tests), call
  * Blockly.navigationController.dispose() before calling this function again.
  */
-function initializeBlocklyWrapper(blocklyInstance) {
-  const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
+function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
+  // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const blocklyWrapper = new (BlocklyWrapper as any)(
+    blocklyInstance
+  ) as BlocklyWrapperType;
 
   blocklyWrapper.setInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
@@ -176,7 +202,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       }
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
-      handleCodeGenerationFailure(MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR, e);
+      handleCodeGenerationFailure(
+        MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
+        e as Error
+      );
     }
     return workspaceCode;
   };
@@ -267,7 +296,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides = [
+  const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
     // Overrides required for a customization of FieldTextInput
@@ -280,8 +309,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.overrideFields(fieldOverrides);
 
   // Overrides applied directly to core blockly
-  blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
-  blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
+  // TODO: Can we remove this assignment?
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (blocklyWrapper.blockly_ as any).FunctionEditor = FunctionEditor;
+  // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  blocklyWrapper.blockly_.Trashcan = CdoTrashcan as any;
 
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
@@ -324,8 +357,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
   blocklyWrapper.blockly_.serialization.registry.register(
     'blocks',
-    new CdoBlockSerializer(),
-    true /* opt_allowOverrides */
+    new CdoBlockSerializer()
   );
 
   const procedureSerializer =
@@ -420,18 +452,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
-  blocklyWrapper.BlockSvg.prototype.mixin = function (
-    mixinObj,
-    opt_disableCheck
-  ) {
+  blocklyWrapper.BlockSvg.prototype.mixin = function (mixinObj) {
     googleBlocklyMixin.call(this, mixinObj, true);
   };
 
-  blocklyWrapper.BlockSvg.prototype.isDisabled = function () {
-    return this.disabled;
+  const extendedBlockSvg = blocklyWrapper.BlockSvg
+    .prototype as ExtendedBlockSvg;
+
+  extendedBlockSvg.isDisabled = function () {
+    return !this.isEnabled();
   };
 
-  blocklyWrapper.BlockSvg.prototype.getHexColour = function () {
+  extendedBlockSvg.getHexColour = function () {
     // In cdo Blockly labs, getColour() returns a numerical hue value, while
     // in newer Google Blockly it returns a hexademical color value string.
     // This is only used for locationPicker blocks and can likely be deprecated
@@ -439,28 +471,38 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.getColour();
   };
 
-  blocklyWrapper.BlockSvg.prototype.isVisible = function () {
+  extendedBlockSvg.isVisible = function () {
     // TODO (eventually) - All Google Blockly blocks are currently visible.
     // This shouldn't be a problem until we convert other labs.
     return true;
   };
 
-  blocklyWrapper.BlockSvg.prototype.isUserVisible = function () {
+  extendedBlockSvg.isUserVisible = function () {
     // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
     return false;
   };
 
-  blocklyWrapper.Input.prototype.setStrictCheck = function (check) {
+  const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
+
+  extendedInput.setStrictCheck = function (check) {
     return this.setCheck(check);
   };
-  blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
+
+  // We use fieldRow because it is public.
+  extendedInput.getFieldRow = function () {
+    return this.fieldRow;
+  };
+
+  const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
+
+  extendedBlock.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
   };
 
   const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
   // Replaces the original setOutput method with a custom version that will handle the case when "None" is passed appropriately
   // See: https://github.com/code-dot-org/code-dot-org/blob/9d63cbcbfd84b8179ae2519adbb5869cbc319643/apps/src/blocklyAddons/cdoConstants.js#L9
-  blocklyWrapper.Block.prototype.setOutput = function (isOutput, check) {
+  extendedBlock.setOutput = function (isOutput, check) {
     if (check === 'None') {
       return originalSetOutput.call(this, isOutput, null);
     } else {
@@ -469,26 +511,23 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   // Block fields are referred to as titles in CDO Blockly.
-  blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
+  extendedBlock.setTitleValue = function (newValue, name) {
     return this.setFieldValue(newValue, name);
   };
 
-  // We use fieldRow because it is public.
-  blocklyWrapper.Input.prototype.getFieldRow = function () {
-    return this.fieldRow;
-  };
+  const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
+    .prototype as ExtendedWorkspaceSvg;
 
   // Called by StudioApp, but only implemented for CDO Blockly.
-  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener =
-    function () {};
+  extendedWorkspaceSvg.addUnusedBlocksHelpListener = function () {};
 
-  blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function () {
-    return this.getAllBlocks().filter(block => !block.disabled);
+  extendedWorkspaceSvg.getAllUsedBlocks = function () {
+    return this.getAllBlocks().filter(block => block.isEnabled());
   };
 
   // Used in levels when starting over or resetting Version History
   const googleBlocklyBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
-  blocklyWrapper.WorkspaceSvg.prototype.clear = function () {
+  extendedWorkspaceSvg.clear = function () {
     googleBlocklyBlocklyClear.call(this);
     // After clearing the workspace, we need to reinitialize global variables
     // if there are any.
@@ -498,45 +537,46 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   // Used in levels with pre-defined "Blockly Variables"
-  blocklyWrapper.WorkspaceSvg.prototype.registerGlobalVariables = function (
-    variableList
-  ) {
+  extendedWorkspaceSvg.registerGlobalVariables = function (variableList) {
     this.globalVariables = variableList;
     this.getVariableMap().addVariables(variableList);
   };
 
-  blocklyWrapper.WorkspaceSvg.prototype.getContainer = function () {
+  extendedWorkspaceSvg.getContainer = function () {
     return this.svgGroup_.parentNode;
   };
 
-  const googleBlocklyBlocklyResize =
-    blocklyWrapper.WorkspaceSvg.prototype.resize;
-  blocklyWrapper.WorkspaceSvg.prototype.resize = function () {
-    googleBlocklyBlocklyResize.call(this);
-    if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
-      this.flyout_?.resize();
-    }
-  };
+  // const googleBlocklyBlocklyResize =
+  //   blocklyWrapper.WorkspaceSvg.prototype.resize;
+  // extendedWorkspaceSvg.resize = function () {
+  //   googleBlocklyBlocklyResize.call(this);
+  //   if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
+  //     // TODO: flyout_ does not exist on workspacesvg. Can we get rid of this override?
+  //     this.flyout_?.resize();
+  //   }
+  // };
 
-  blocklyWrapper.WorkspaceSvg.prototype.events = {
+  extendedWorkspaceSvg.events = {
     dispatchEvent: () => {}, // TODO
   };
 
   // TODO - called by StudioApp, not sure whether they're still needed.
-  blocklyWrapper.WorkspaceSvg.prototype.setEnableToolbox = function (
-    enabled
-  ) {};
-  blocklyWrapper.WorkspaceSvg.prototype.traceOn = function (armed) {};
+  extendedWorkspaceSvg.setEnableToolbox = function () {};
+  extendedWorkspaceSvg.traceOn = function () {};
 
-  blocklyWrapper.VariableMap.prototype.addVariables = function (variableList) {
+  const extendedVariableMap = blocklyWrapper.VariableMap
+    .prototype as ExtendedVariableMap;
+
+  extendedVariableMap.addVariables = function (variableList) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
   // TODO - used for spritelab behavior blocks
-  blocklyWrapper.Block.createProcedureDefinitionBlock = function (config) {};
+  extendedBlock.createProcedureDefinitionBlock = function () {};
 
   // TODO - used to add "create a behavior" button to the toolbox
-  blocklyWrapper.Flyout.configure = function (type, config) {};
+  (blocklyWrapper.Flyout.prototype as ExtendedFlyout).configure =
+    function () {};
 
   blocklyWrapper.getGenerator = function () {
     return this.JavaScript;
@@ -578,14 +618,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
   // read only workspaces.
   blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
-    const theme = cdoUtils.getUserTheme(options.theme);
+    const theme = cdoUtils.getUserTheme(options.theme) as Theme;
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
       theme: theme,
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
-    });
+    } as Options);
     // Track that this is and embedded workspace to avoid trying
     // to run logic on it to ensure things run properly (such as procedures).
     blocklyWrapper.addEmbeddedWorkspace(workspace);
@@ -622,24 +662,29 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocksInWorkspace
       .filter(block => block.getParent() === null)
       .forEach(block => {
-        const svgTransformList = block.svgGroup_.transform.baseVal;
+        const svgTransformList = block.getSvgRoot().transform.baseVal;
         const svgTransform = svgTransformList.getItem(0);
         const svgTranslationX = svgTransform.matrix.e;
         svgTransform.setTranslate(svgTranslationX, 0);
       });
 
     // Shrink SVG to size of the block
-    const bbox = svg.getBBox();
-    svg.setAttribute('height', bbox.height + bbox.y);
-    svg.setAttribute('width', bbox.width + bbox.x);
+    const bbox = (svg as SVGGraphicsElement).getBBox();
+    svg.setAttribute('height', `${bbox.height + bbox.y}`);
+    svg.setAttribute('width', `${bbox.width + bbox.x}`);
     workspace.setTheme(theme);
     return workspace;
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    if (!opt_options) {
+      opt_options = {};
+    }
+    // We override inject and have extra options we pass in, so we cast to utilize those options here.
+    const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
     const options = {
-      ...opt_options,
-      theme: cdoUtils.getUserTheme(opt_options.theme),
+      ...optOptionsExtended,
+      theme: cdoUtils.getUserTheme(optOptionsExtended.theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -654,31 +699,38 @@ function initializeBlocklyWrapper(blocklyInstance) {
         metricsManager: CdoMetricsManager,
         connectionChecker: CdoConnectionChecker,
       },
-      renderer: opt_options.renderer || Renderers.DEFAULT,
+      renderer: optOptionsExtended.renderer || Renderers.DEFAULT,
       comments: false,
       media: '/blockly/media/google_blockly',
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
-    blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);
+    blocklyWrapper.assetUrl =
+      optOptionsExtended.assetUrl || ((path: string) => `./${path}`);
 
     // CDO Blockly takes customSimpleDialog as an inject option and uses it
     // instead of the default prompt dialogs, so we should also set it here.
-    blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
+    blocklyWrapper.customSimpleDialog = optOptionsExtended.customSimpleDialog;
 
     // In order to prevent writing duplicate solution entries to the level_sources table,
     // we strip block ids from XML when saving. An exception is made for block ids that
     // are explicitly set in the level's toolbox or start blocks.
-    blocklyWrapper.levelBlockIds = opt_options.levelBlockIds || [];
+    blocklyWrapper.levelBlockIds = optOptionsExtended.levelBlockIds || [];
 
     // Shrink container to make room for the workspace header
-    if (!opt_options.isBlockEditMode) {
-      container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
+    if (!optOptionsExtended.isBlockEditMode) {
+      (
+        container as HTMLElement
+      ).style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
-    blocklyWrapper.isStartMode = !!opt_options.editBlocks;
-    blocklyWrapper.isToolboxMode = opt_options.editBlocks === 'toolbox_blocks';
+    blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
+    blocklyWrapper.isToolboxMode =
+      optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
-    const workspace = blocklyWrapper.blockly_.inject(container, options);
+    const workspace = blocklyWrapper.blockly_.inject(
+      container,
+      options
+    ) as ExtendedWorkspaceSvg;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
@@ -686,7 +738,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
-    if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
+    if (!blocklyWrapper.isStartMode && !optOptionsExtended.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);
     }
 
@@ -732,7 +784,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     );
 
     // Hidden workspace where we can put function definitions.
-    const hiddenDefinitionWorkspace = new Blockly.Workspace();
+    const hiddenDefinitionWorkspace =
+      new Blockly.Workspace() as ExtendedWorkspace;
     // The hidden definition workspace is not rendered, so do not try to add
     // svg frames around the definitions.
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
@@ -750,7 +803,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
-  blocklyWrapper.fireUiEvent = function (element, eventName, opt_properties) {
+  blocklyWrapper.fireUiEvent = function (element, eventName) {
     if (eventName === 'resize') {
       blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
     }
