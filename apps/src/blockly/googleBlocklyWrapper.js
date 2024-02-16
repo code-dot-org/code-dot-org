@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import './addons/plusMinusBlocks/if.js';
 import './addons/plusMinusBlocks/text_join.js';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -52,12 +51,12 @@ import initializeCss from './addons/cdoCss';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import {Themes, Renderers} from './constants';
+import {ToolboxType, Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
-import CdoBlockSerializer from './addons/cdoBlockSerializer';
-import customBlocks from './customBlocks/googleBlockly/index';
+import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
+import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import {
@@ -69,15 +68,11 @@ import {
   disableOrphans,
   reflowToolbox,
 } from './eventHandlers';
-import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import {handleCodeGenerationFailure} from './utils';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
-import CdoBlockSvg from './addons/cdoBlockSvg';
-import CdoInput from './addons/cdoInput';
-import CdoBlock from './addons/cdoBlock';
-import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 
 const options = {
   contextMenu: true,
@@ -101,7 +96,6 @@ const INFINITE_LOOP_TRAP =
 const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
-
   this.mainWorkspace = undefined;
   this.embeddedWorkspaces = [];
 
@@ -192,10 +186,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
-  // blocklyWrapper.wrapReadOnlyProperty('Block');
+  blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
-  //blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
+  blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
   blocklyWrapper.wrapReadOnlyProperty('common');
@@ -237,7 +231,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
-  // blocklyWrapper.wrapReadOnlyProperty('Input');
+  blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('inputTypes');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
@@ -268,7 +262,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
-  //blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
+  blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
   // elements in this list should be structured as follows:
@@ -330,7 +324,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
   blocklyWrapper.blockly_.serialization.registry.register(
     'blocks',
-    new CdoBlockSerializer()
+    new CdoBlockSerializer(),
+    true /* opt_allowOverrides */
   );
 
   const procedureSerializer =
@@ -424,15 +419,121 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blockspace.addChangeListener(handler);
   };
 
-  blocklyWrapper.BlockSvg = CdoBlockSvg;
-  blocklyWrapper.Input = CdoInput;
-  blocklyWrapper.Block = CdoBlock;
-  blocklyWrapper.WorkspaceSvg = CdoWorkspaceSvg;
+  const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
+  blocklyWrapper.BlockSvg.prototype.mixin = function (
+    mixinObj,
+    opt_disableCheck
+  ) {
+    googleBlocklyMixin.call(this, mixinObj, true);
+  };
 
-  // TODO: was this only used by WorkspaceSvg and can be replaced by a helper in cdoWorkspaceSvg?
+  blocklyWrapper.BlockSvg.prototype.isDisabled = function () {
+    return this.disabled;
+  };
+
+  blocklyWrapper.BlockSvg.prototype.getHexColour = function () {
+    // In cdo Blockly labs, getColour() returns a numerical hue value, while
+    // in newer Google Blockly it returns a hexademical color value string.
+    // This is only used for locationPicker blocks and can likely be deprecated
+    // once Sprite Lab is using Google Blockly.
+    return this.getColour();
+  };
+
+  blocklyWrapper.BlockSvg.prototype.isVisible = function () {
+    // TODO (eventually) - All Google Blockly blocks are currently visible.
+    // This shouldn't be a problem until we convert other labs.
+    return true;
+  };
+
+  blocklyWrapper.BlockSvg.prototype.isUserVisible = function () {
+    // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
+    return false;
+  };
+
+  blocklyWrapper.Input.prototype.setStrictCheck = function (check) {
+    return this.setCheck(check);
+  };
+  blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
+    return this.setOutput(isOutput, check);
+  };
+
+  const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
+  // Replaces the original setOutput method with a custom version that will handle the case when "None" is passed appropriately
+  // See: https://github.com/code-dot-org/code-dot-org/blob/9d63cbcbfd84b8179ae2519adbb5869cbc319643/apps/src/blocklyAddons/cdoConstants.js#L9
+  blocklyWrapper.Block.prototype.setOutput = function (isOutput, check) {
+    if (check === 'None') {
+      return originalSetOutput.call(this, isOutput, null);
+    } else {
+      return originalSetOutput.call(this, isOutput, check);
+    }
+  };
+
+  // Block fields are referred to as titles in CDO Blockly.
+  blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
+    return this.setFieldValue(newValue, name);
+  };
+
+  // We use fieldRow because it is public.
+  blocklyWrapper.Input.prototype.getFieldRow = function () {
+    return this.fieldRow;
+  };
+
+  // Called by StudioApp, but only implemented for CDO Blockly.
+  blocklyWrapper.WorkspaceSvg.prototype.addUnusedBlocksHelpListener =
+    function () {};
+
+  blocklyWrapper.WorkspaceSvg.prototype.getAllUsedBlocks = function () {
+    return this.getAllBlocks().filter(block => !block.disabled);
+  };
+
+  // Used in levels when starting over or resetting Version History
+  const googleBlocklyBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
+  blocklyWrapper.WorkspaceSvg.prototype.clear = function () {
+    googleBlocklyBlocklyClear.call(this);
+    // After clearing the workspace, we need to reinitialize global variables
+    // if there are any.
+    if (this.globalVariables) {
+      this.getVariableMap().addVariables(this.globalVariables);
+    }
+  };
+
+  // Used in levels with pre-defined "Blockly Variables"
+  blocklyWrapper.WorkspaceSvg.prototype.registerGlobalVariables = function (
+    variableList
+  ) {
+    this.globalVariables = variableList;
+    this.getVariableMap().addVariables(variableList);
+  };
+
+  blocklyWrapper.WorkspaceSvg.prototype.getContainer = function () {
+    return this.svgGroup_.parentNode;
+  };
+
+  const googleBlocklyBlocklyResize =
+    blocklyWrapper.WorkspaceSvg.prototype.resize;
+  blocklyWrapper.WorkspaceSvg.prototype.resize = function () {
+    googleBlocklyBlocklyResize.call(this);
+    if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
+      this.flyout_?.resize();
+    }
+  };
+
+  blocklyWrapper.WorkspaceSvg.prototype.events = {
+    dispatchEvent: () => {}, // TODO
+  };
+
+  // TODO - called by StudioApp, not sure whether they're still needed.
+  blocklyWrapper.WorkspaceSvg.prototype.setEnableToolbox = function (
+    enabled
+  ) {};
+  blocklyWrapper.WorkspaceSvg.prototype.traceOn = function (armed) {};
+
   blocklyWrapper.VariableMap.prototype.addVariables = function (variableList) {
     variableList.forEach(varName => this.createVariable(varName));
   };
+
+  // TODO - used for spritelab behavior blocks
+  blocklyWrapper.Block.createProcedureDefinitionBlock = function (config) {};
 
   // TODO - used to add "create a behavior" button to the toolbox
   blocklyWrapper.Flyout.configure = function (type, config) {};
