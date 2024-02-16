@@ -168,14 +168,6 @@ export function handleColorAndStyle(block, color, style) {
 }
 
 export function setHSV(block, h, s, v) {
-  if (block.getStyleName()) {
-    console.warn(
-      `Ignoring color for ${
-        block.type
-      } block because it already has a style: ${block.getStyleName()}`
-    );
-    return;
-  }
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
 }
 

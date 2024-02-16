@@ -273,9 +273,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // in definitions of various common blocks that are also supported
   // on Google Blockly.
   blocklyWrapper.Block.prototype.setStyle = function () {};
-  blocklyWrapper.Block.prototype.getStyleName = function () {
-    return undefined;
-  };
 
   blocklyWrapper.cdoUtils = {
     loadBlocksToWorkspace(blockSpace, source) {
