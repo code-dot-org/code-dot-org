@@ -246,7 +246,7 @@ class ProjectsController < ApplicationController
     featured_project_table_rows.each do |row|
       if !row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
         @unfeatured << row
-      elsif row[:unfeaturedAt].nil?
+      elsif !row[:featuredAt].nil?
           @featured << row
       else
         @saved << row
