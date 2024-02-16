@@ -31,6 +31,10 @@ module PDF
     if $?.exitstatus == 124
       raise "pdf generation timed out after #{PDF_GENERATION_TIMEOUT} seconds. cmd: #{cmd}"
     elsif $?.exitstatus == 1
+      # We have had inconsistent issues with pdf generation timing out thus here 
+      # we are re-attempting generation using recursion.  We considered using a loop
+      # instead of reucursion, but the code was less readable or had side effects that 
+      # were not addressing this specific issue with time out. 
       if retryAttempts <= 1
         raise "pdf generation failed with status #{$?.exitstatus}. cmd: #{cmd}" 
       else
