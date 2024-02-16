@@ -11,7 +11,7 @@
   "image": null,
   "cs_topic": "artificial_intelligence,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"\",\"chromebook\":\"\",\"tablet\":\"\",\"mobile\":\"\",\"no_device\":\"\"}",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
   "description": null,
   "professional_learning_program": null,
   "video": null,

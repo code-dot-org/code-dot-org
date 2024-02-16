@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-24 19:50:16 UTC",
+    "serialized_at": "2024-02-16 20:21:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -60,6 +60,21 @@
         "lesson_group.key": "",
         "script.name": "melissasandbox-2024-1"
       }
+    },
+    {
+      "key": "Overview",
+      "name": "Overview",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1"
+      }
     }
   ],
   "lesson_activities": [
@@ -86,6 +101,18 @@
         "lesson_group.key": "",
         "script.name": "melissasandbox-2024-1"
       }
+    },
+    {
+      "key": "a2c1f276-6aad-45c1-974a-1f6ca506937c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2c1f276-6aad-45c1-974a-1f6ca506937c",
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1"
+      }
     }
   ],
   "activity_sections": [
@@ -107,6 +134,16 @@
       "seeding_key": {
         "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d",
         "lesson_activity.key": "564a07ec-0bea-4abf-8295-da08de6b8c68"
+      }
+    },
+    {
+      "key": "abb32747-2777-4308-a35c-bbd700aef7b5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5",
+        "lesson_activity.key": "a2c1f276-6aad-45c1-974a-1f6ca506937c"
       }
     }
   ],
@@ -189,6 +226,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_PLexperiences_2024_Unit1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -303,6 +343,90 @@
       "level_keys": [
         "courseC_collector_prog5_2023_MelissaSandbox"
       ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening1MB_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
+      },
+      "level_keys": [
+        "PLGuide_L1_Opening1MB_MB1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How this curriculum works_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
+      },
+      "level_keys": [
+        "How this curriculum works_MB1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening2MB_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
+      },
+      "level_keys": [
+        "PLGuide_L1_Opening2MB_MB1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-lessonactivities_2023MB_MB1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -400,6 +524,54 @@
         "lesson_group.key": "",
         "script.name": "melissasandbox-2024-1",
         "activity_section.key": "e1dfecdc-b375-4be5-897a-0bcdae658d2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Opening1MB_MB1",
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening1MB_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How this curriculum works_MB1",
+        "script_level.level_keys": [
+          "How this curriculum works_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Opening2MB_MB1",
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening2MB_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-lessonactivities_2023MB_MB1",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_MB1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissasandbox-2024-1",
+        "activity_section.key": "abb32747-2777-4308-a35c-bbd700aef7b5"
       }
     }
   ],
