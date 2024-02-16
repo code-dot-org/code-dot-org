@@ -148,12 +148,12 @@
               - remix_ancestry.each do |channel|
                 %li
                   %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
-        #exists_in_featured_project_gallery{'style' => ('display: none;' unless exists_in_featured_projects_gallery)}
-          %li Already saved/featured/archived in featured project gallery
+        #is_featured_project{'style' => ('display: none;' unless exists_in_featured_projects_gallery)}
+          %li Already a featured project
 
       #save_project{'style' => ('display: none;' if exists_in_featured_projects_gallery)}
         %button{id: "save", class: "btn btn-default btn-sm"}
-          Save in featured project gallery
+          Save as featured project
 
       #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
         * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.

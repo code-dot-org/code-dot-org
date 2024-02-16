@@ -47,7 +47,7 @@ export default project => {
         type: 'PUT',
         dataType: 'json',
         success: function (data) {
-          $('#exists_in_featured_project_gallery').show();
+          $('#is_featured_project').show();
           $('#save_project').hide();
         },
         error: function (data) {
