@@ -421,14 +421,11 @@ Applab.init = function (config) {
   }
   Applab.channelId = config.channel;
 
-  function shouldUseDatablockStorage() {
-    // FIXME: unfirebase, how do we implement this?
-    return true;
-  }
-
-  if (shouldUseDatablockStorage()) {
+  if (!!config.useDatablockStorage) {
+    console.error('Initializing DATABLOCK_STORAGE');
     Applab.storage = initStorage(DATABLOCK_STORAGE, {});
   } else {
+    console.error('Initializing FIREBASE_STORAGE');
     Applab.storage = initStorage(FIREBASE_STORAGE, {
       // TODO: unfirebase
       channelId: config.channel,
