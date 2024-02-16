@@ -11,7 +11,7 @@ export const SIMILAR_RECOMMENDER_SCORING = {
   hasDesiredMarketingInitiative: 2,
   hasAnySchoolSubject: 1,
   hasDesiredSchoolSubjects: 2,
-  hasAnyImportantTopic: 1,
+  hasImportantButNotDesiredTopic: 1,
   hasDesiredTopics: 2,
   publishedWithinOneYearAgo: 1,
   publishedWithinTwoYearsAgo: 2,

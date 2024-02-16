@@ -47,7 +47,11 @@ export const getSimilarRecommendations = (
       curriculum,
       schoolSubjects
     );
-    score += hasAnyImportantTopic(SIMILAR_RECOMMENDER_SCORING, curriculum);
+    score += hasImportantButNotDesiredTopic(
+      SIMILAR_RECOMMENDER_SCORING,
+      curriculum,
+      csTopics
+    );
     score += hasDesiredTopics(
       SIMILAR_RECOMMENDER_SCORING,
       curriculum,
