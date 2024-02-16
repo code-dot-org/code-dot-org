@@ -21,6 +21,7 @@ export type Level = {
   id: number;
   type: string;
   hasValidation: boolean;
+  isAssessment: boolean;
   isProjectBacked: boolean;
 };
 
