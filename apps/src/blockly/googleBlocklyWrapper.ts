@@ -546,16 +546,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.svgGroup_.parentNode;
   };
 
-  // const googleBlocklyBlocklyResize =
-  //   blocklyWrapper.WorkspaceSvg.prototype.resize;
-  // extendedWorkspaceSvg.resize = function () {
-  //   googleBlocklyBlocklyResize.call(this);
-  //   if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
-  //     // TODO: flyout_ does not exist on workspacesvg. Can we get rid of this override?
-  //     this.flyout_?.resize();
-  //   }
-  // };
-
   extendedWorkspaceSvg.events = {
     dispatchEvent: () => {}, // TODO
   };
