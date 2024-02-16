@@ -1,13 +1,18 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {Channel} from '../lab2/types';
-import MusicPlayer from './player/MusicPlayer';
-import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
-import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
-import {RemoteSourcesStore, SourcesStore} from '../lab2/projects/SourcesStore';
-import {loadLibrary} from './utils/Loader';
-import MusicLibrary from './player/MusicLibrary';
-import {setUpBlocklyForMusicLab} from './blockly/setup';
-import Lab2Registry from '../lab2/Lab2Registry';
+import {Channel} from '../../lab2/types';
+import MusicPlayer from '../player/MusicPlayer';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import {
+  RemoteSourcesStore,
+  SourcesStore,
+} from '../../lab2/projects/SourcesStore';
+import {loadLibrary} from '../utils/Loader';
+import MusicLibrary from '../player/MusicLibrary';
+import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import Lab2Registry from '../../lab2/Lab2Registry';
+import moduleStyles from './MiniMusicPlayer.module.scss';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 interface MiniPlayerViewProps {
   projects: Channel[];
@@ -25,6 +30,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const sequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
   const sourcesStoreRef = useRef<SourcesStore>(new RemoteSourcesStore());
   const [isLoading, setIsLoading] = useState(true);
+  const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
+    undefined
+  );
 
   // Setup library and workspace on mount
   const onMount = useCallback(async () => {
@@ -81,6 +89,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
     // Play sounds
     playerRef.current.playSong(sequencerRef.current.getPlaybackEvents());
+    setCurrentProjectId(project.id);
+  }, []);
+
+  const onStopSong = useCallback(async () => {
+    playerRef.current.stopSong();
+    setCurrentProjectId(undefined);
   }, []);
 
   // Some loading UI while we're fetching the library
@@ -88,18 +102,42 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     return <div>Loading...</div>;
   }
 
-  // Bare bones render function to hook things together
   return (
-    <div>
+    <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
         return (
-          <button
-            type="button"
+          <div
+            className={moduleStyles.entry}
             key={project.id}
-            onClick={() => onPlaySong(project)}
+            onClick={() => {
+              project.id === currentProjectId
+                ? onStopSong()
+                : onPlaySong(project);
+            }}
           >
-            Play! {project.name}
-          </button>
+            <div className={moduleStyles.control}>
+              <FontAwesomeV6Icon
+                iconName={project.id === currentProjectId ? 'stop' : 'play'}
+                iconStyle="solid"
+                className={moduleStyles.icon}
+              />
+            </div>
+            <div className={moduleStyles.name}>{project.name}</div>
+            <a
+              href={`/projects/music/${project.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className={moduleStyles.other}>
+                <FontAwesomeV6Icon
+                  iconName="arrow-up-right-from-square"
+                  iconStyle="solid"
+                  className={moduleStyles.icon}
+                />
+              </div>
+            </a>
+          </div>
         );
       })}
     </div>
