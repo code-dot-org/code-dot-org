@@ -100,7 +100,7 @@ export async function getChatCompletionMessage(
 
 type OpenaiChatCompletionMessage = {
   status?: Status;
-  role: string;
+  role: Role;
   content: string;
 };
 type ChatCompletionResponse = {

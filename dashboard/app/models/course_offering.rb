@@ -420,6 +420,10 @@ class CourseOffering < ApplicationRecord
     category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
   end
 
+  def pl_course?
+    !!course_versions&.first&.pl_course?
+  end
+
   def get_participant_audience
     course_versions&.first&.content_root&.participant_audience
   end
@@ -443,6 +447,18 @@ class CourseOffering < ApplicationRecord
 
   def high_school_level?
     grade_levels_list.any? {|g| HIGH_SCHOOL_GRADES.include?(g)}
+  end
+
+  def find_corresponding_offerings_for_pl_course
+    return unless pl_course?
+
+    CourseOffering.where(self_paced_pl_course_offering_id: id)
+  end
+
+  def pl_for_elementary_school?
+    return false unless pl_course?
+
+    find_corresponding_offerings_for_pl_course.any?(&:elementary_school_level?)
   end
 
   private def grade_levels_format

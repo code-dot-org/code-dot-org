@@ -23,6 +23,39 @@ export function getTextWidth(p5, text, size) {
 }
 
 /**
+ * Draws a bubble on the canvas that displays a piece of text, representing a variable name and value.
+ * The bubble has a black background with a white border and white text.
+ * The bubble is drawn with rounded corners. The text is horizontally and vertically centered within the bubble.
+ *
+ * The bubble's position is based on the x and y parameters which represent the center of the bubble.
+ * The size of the bubble is dynamically calculated based on the width of the text and padding.
+ *
+ * @param {p5} p5 - The p5 instance used to draw the bubble.
+ * @param {number} x - The x-coordinate of the center of the bubble.
+ * @param {number} y - The y-coordinate of the center of the bubble.
+ * @param {string} text - The text to display inside the bubble. This should represent the variable's name and value.
+ */
+export function variableBubble(p5, x, y, text) {
+  const padding = 10;
+  const textSizeValue = 20;
+  const textWidth = getTextWidth(p5, text, textSizeValue);
+  const textWidthValue = textWidth + 2 * padding;
+  const textHeightValue = textSizeValue + 2 * padding;
+
+  p5.fill(colors.darkest_gray);
+  p5.stroke('white');
+  p5.strokeWeight(3);
+  p5.rectMode(p5.CENTER);
+  p5.rect(x, y, textWidthValue, textHeightValue, 24);
+
+  p5.fill('white');
+  p5.noStroke();
+  p5.textSize(textSizeValue);
+  p5.textAlign(p5.CENTER, p5.CENTER);
+  p5.text(text, x, y);
+}
+
+/**
  * Draw a speech bubble - a P5 shape comprised of a rectangle
  * with a tail at the bottom. The x/y values will be the
  * bottom center of the bubble body, including the height added
