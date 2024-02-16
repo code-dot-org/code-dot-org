@@ -124,7 +124,7 @@ const handleFeatureFailure = () => {
   alert("Shucks. Something went wrong - this project wasn't featured.");
 };
 
-const actionsFormatterFeatured = (actions, {rowData}) => {
+const actionsFormatterActive = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
@@ -149,7 +149,7 @@ const onDelete = channel => {
   HttpClient.delete(url, true).then(handleSuccess).catch(handleFeatureFailure);
 };
 
-const actionsFormatterUnfeatured = (actions, {rowData}) => {
+const actionsFormatterArchived = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
@@ -357,12 +357,12 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
         cell: {
-          formatters: [actionsFormatterUnfeatured],
+          formatters: [actionsFormatterArchived],
           props: {style: tableLayoutStyles.cell},
         },
       },
     ];
-    const currentColumns = [
+    const activeColumns = [
       {
         property: 'featuredAt',
         header: {
@@ -387,7 +387,7 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
         cell: {
-          formatters: [actionsFormatterFeatured],
+          formatters: [actionsFormatterActive],
           props: {style: tableLayoutStyles.cell},
         },
       },
@@ -412,7 +412,7 @@ class FeaturedProjectsTable extends React.Component {
     ];
 
     if (tableVersion === 'currentFeatured') {
-      return dataColumns.concat(currentColumns);
+      return dataColumns.concat(activeColumns);
     } else if (tableVersion === 'archivedUnfeatured') {
       return dataColumns.concat(archivedColumns);
     } else {

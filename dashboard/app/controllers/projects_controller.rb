@@ -240,14 +240,14 @@ class ProjectsController < ApplicationController
   # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
   # The rows are sorted into three arrays: featured, unfeatured, or saved.
   def sort_featured_projects(featured_project_table_rows)
-    @featured = []
-    @unfeatured = []
+    @active = []
+    @archived = []
     @saved = []
     featured_project_table_rows.each do |row|
       if !row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
-        @unfeatured << row
+        @archived << row
       elsif !row[:featuredAt].nil?
-        @featured << row
+        @active << row
       else
         @saved << row
       end

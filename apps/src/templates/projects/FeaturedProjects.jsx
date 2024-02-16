@@ -8,9 +8,9 @@ import {
 
 export default class FeaturedProjects extends React.Component {
   static propTypes = {
-    currentFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+    activeFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
-    archivedUnfeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+    archivedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
     savedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
@@ -21,7 +21,7 @@ export default class FeaturedProjects extends React.Component {
       <div>
         <h3>Currently Featured Projects</h3>
         <FeaturedProjectsTable
-          projectList={this.props.currentFeaturedProjects}
+          projectList={this.props.activeFeaturedProjects}
           tableVersion={featuredProjectTableTypes.current}
         />
         <h3>Saved Featured Projects</h3>
@@ -31,7 +31,7 @@ export default class FeaturedProjects extends React.Component {
         />
         <h3>Archive of Previously Featured Projects</h3>
         <FeaturedProjectsTable
-          projectList={this.props.archivedUnfeaturedProjects}
+          projectList={this.props.archivedFeaturedProjects}
           tableVersion={featuredProjectTableTypes.archived}
         />
       </div>

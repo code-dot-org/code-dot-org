@@ -6,17 +6,16 @@ import FeaturedProjects from '@cdo/apps/templates/projects/FeaturedProjects';
 $(document).ready(function () {
   const script = document.querySelector('script[data-featuredprojects]');
   const featuredProjectsData = JSON.parse(script.dataset.featuredprojects);
-  const currentFeaturedProjects =
-    featuredProjectsData.currently_featured_projects;
-  const archivedUnfeaturedProjects =
-    featuredProjectsData.archived_unfeatured_projects;
+  const activeFeaturedProjects = featuredProjectsData.active_featured_projects;
+  const archivedFeaturedProjects =
+    featuredProjectsData.archived_featured_projects;
   const savedFeaturedProjects = featuredProjectsData.saved_featured_projects;
 
   ReactDOM.render(
     <FeaturedProjects
-      currentFeaturedProjects={currentFeaturedProjects}
+      activeFeaturedProjects={activeFeaturedProjects}
       savedFeaturedProjects={savedFeaturedProjects}
-      archivedUnfeaturedProjects={archivedUnfeaturedProjects}
+      archivedFeaturedProjects={archivedFeaturedProjects}
     />,
     document.getElementById('featured-projects-container')
   );

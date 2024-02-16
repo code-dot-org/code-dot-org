@@ -44,9 +44,9 @@ export const Galleries = {
 };
 
 export const featuredProjectTableTypes = {
-  current: 'currentFeatured',
-  archived: 'archivedUnfeatured',
-  saved: 'savedFeatured',
+  active: 'active',
+  archived: 'archived',
+  saved: 'saved',
 };
 
 export const MAX_PROJECTS_PER_CATEGORY = 100;
