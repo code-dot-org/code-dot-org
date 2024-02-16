@@ -1618,6 +1618,44 @@
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
 
+  intl_pl_page:
+    page_title: "International Professional Resources"
+    heading: "Global professional learning opportunities"
+    desc: "Get support and learn how to bring computer science to your country."
+    intro:
+      heading: "Self-paced professional learning available everywhere"
+      desc: "Unlock flexible, self-paced learning tailored to your educational journey."
+      list_01: "Online professional learning units that align with our curriculum offerings"
+      list_02: "Access to high-quality educational materials you can teach from"
+      button: "Explore self-paced learning"
+    partners:
+      heading: "Explore professional learning opportunities around the world"
+      desc: "Professional learning programs outside of the US are delivered by our partners equipped with the expertise to provide high-quality instruction on teaching with Code.org and tailoring the training programs to suit the local context and needs."
+      button: "View training opportunities"
+    resources:
+      heading: "Additional resources and support for educators"
+      curriculum:
+        title: "Comprehensive Curriculum"
+        desc: "Discover our comprehensive catalog of curriculum offerings and lesson plans for all ages and levels—available globally and in multiple languages at no cost."
+        button: "Explore curriculum catalog"
+      community:
+        title: "Teacher Community"
+        desc: "Engage in a forum for teachers to ask questions and share best practices, thoughts, ideas, and inspiration. Join a community of amazing educators around the world!"
+        button: "Join our teacher forums"
+      support:
+        title: "Extensive Support"
+        desc: "Explore a plethora of materials and detailed guides for educators, parents and students available in our support center or contact our customer support team with your questions!"
+        button: "Visit our support center"
+    subscribe:
+      heading: "Stay up-to-date on our international program"
+      desc: "We are making computer science part of the international education discourse by partnering with ministries of education, advocating for policy change, promoting the Hour of Code campaign, and supporting our partners in organizing teacher training. Stay updated on our global initiatives by subscribing to our quarterly newsletter (distributed in English)."
+      disclaimer: "You can unsubscribe at any time."
+    contact:
+      heading: "Feedback or questions?"
+      subheading: "We greatly value your input and invite you to share your feedback to help shape our offerings."
+      desc: "Our international program is continuously expanding, and while resources may be limited, we are committed to growth that meets the needs of educators worldwide. For any questions or suggestions, our dedicated team is ready to assist you as we strive to support your journey in computer science education."
+      cta: "Email us at [international@code.org](%{email_url})."
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
