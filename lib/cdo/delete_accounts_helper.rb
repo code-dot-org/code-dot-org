@@ -1,6 +1,7 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
+require 'datablock_storage'
 
 # rubocop:disable CustomCops/PegasusDbUsage
 # rubocop:disable CustomCops/DashboardDbUsage
@@ -72,7 +73,7 @@ class DeleteAccountsHelper
 
     # Clear Firebase contents for user's channels
     @log.puts "Deleting Firebase contents for #{channel_count} channels"
-    DatablockStorageHelper.delete_channels encrypted_channel_ids
+    DatablockStorage.delete_channels encrypted_channel_ids
 
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end

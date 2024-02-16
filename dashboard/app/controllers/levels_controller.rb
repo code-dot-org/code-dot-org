@@ -1,6 +1,7 @@
 require "csv"
 require "naturally"
 require 'cdo/firehose'
+require 'datablock_storage'
 
 EMPTY_XML = '<xml></xml>'.freeze
 
@@ -161,7 +162,7 @@ class LevelsController < ApplicationController
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     if @level.is_a? Applab
-      @dataset_library_manifest = DatablockStorageHelper.get_library_manifest # TODO: unfirebase
+      @dataset_library_manifest = DatablockStorage.get_library_manifest # TODO: unfirebase
     end
   end
 

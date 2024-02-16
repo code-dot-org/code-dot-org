@@ -4,6 +4,7 @@ require 'cdo/delete_accounts_helper'
 # rubocop:disable CustomCops/PegasusRequires
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # rubocop:enable CustomCops/PegasusRequires
+require 'datablock_storage'
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -1907,7 +1908,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
                             storage_encrypt_channel_id(storage_id, project_id_b)]
-        DatablockStorageHelper.
+        DatablockStorage.
           expects(:delete_channels).
           with(student_channels)
 
