@@ -4,18 +4,24 @@
 # TODO: post-firebase-cleanup, remove this migration (=turn it into a NoOp)
 # as soon as firebase is outdated, we shouldn't be running this anymore.
 class SeedDatasetsFromFirebase < ActiveRecord::Migration[6.1]
-  def change
+
+  def up
     begin
       seed_manifest_from_firebase
       seed_tables_from_firebase
     rescue => e
       Rails.logger.warn <<~LOG
         Failed to seed datablock storage library from Firebase: #{e.message}
-        This isn't an error, unless you really want to get the Firebase 
+        This isn't an error, unless you really want to get the Firebase
         'Data Library' data. If its after June 2024, this code should have
         been removed, somebody forgot to do the `TODO: post-firebase-cleanup`.
       LOG
     end
+  end
+
+  def down
+    DatablockStorageLibraryManifest.instance.destroy
+    DatablockStorageTable.where(project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID).destroy_all
   end
 
 private
@@ -23,7 +29,7 @@ private
   def firebase_get(path)
     raise "CDO.firebase_shared_secret not defined" unless CDO.firebase_shared_secret
     firebase = Firebase::Client.new 'https://cdo-v3-shared.firebaseio.com/', CDO.firebase_shared_secret
-    response = firebase_client.get(path)
+    response = firebase.get(path)
     raise "Error fetching #{path} from Firebase: #{response.code}" unless response.success?
     response.body
   end
