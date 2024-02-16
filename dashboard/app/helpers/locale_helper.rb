@@ -1,3 +1,5 @@
+require_relative '../../lib/dashboard_languages'
+
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
@@ -42,25 +44,18 @@ module LocaleHelper
     options
   end
 
-  # Parses and ranks locale code strings from the Accept-Language header.
+  # Returns an Array of supported locale codes in dashboard.
   def accepted_locales
-    header = request.env.fetch('HTTP_X_VARNISH_ACCEPT_LANGUAGE', '')
-    begin
-      locale_codes = header.split(',').map do |entry|
-        locale, weight = entry.split(';')
-        weight = (weight || 'q=1').split('=')[1].to_f
-        [locale, weight]
-      end
-      locale_codes.sort_by {|_, weight| -weight}.map {|locale, _| locale.strip}
-    rescue
-      Logger.warn "Error parsing Accept-Language header: #{header}"
-      []
+    locale_codes = DashboardLanguages.table.select(:locale_s).map do |locale|
+      locale[:locale_s]
     end
+    locale_codes
   end
 
   # Strips regions off of accepted_locales.
   def accepted_languages
-    accepted_locales.map {|locale| locale.split('-')[0]}
+    accepted_languages = accepted_locales.map {|locale| locale.split('-')[0]}
+    accepted_languages.uniq
   end
 
   # Looks up a localized string driven by a database value.
