@@ -1,3 +1,25 @@
+# These configuration settings are utilized by data.yml.erb to generate configuration of the AWS Database Migration
+# Service (DMS) Tasks. Merging changes to this file does NOT update the `DATA-production` Stack that provisions
+# our AWS Redshift Cluster and the DMS Replication Tasks that export data into the analytics system. Before merging
+# a Pull Request that changes this file, an Infrastructure Engineer must carry out the following steps to validate and
+# then deploy the changes:
+
+#    VALIDATE:
+#
+#    code-dot-org % export AWS_PROFILE=codeorg-admin
+#    code-dot-org % bin/aws_access
+#    AWS access: GoogleSignInAdmin/suresh@code.org
+#    code-dot-org % bundle exec rake stack:data:validate RAILS_ENV=production ADMIN=true
+#    Finished stack:data:environment (less than a minute)
+#    Parameters:
+#    Pending update for stack `DATA-production`:
+#    Modify DMSCronPii [AWS::DMS::ReplicationTask] Properties Replacement: Conditional (TableMappings)
+#    Modify DMSCron [AWS::DMS::ReplicationTask] Properties Replacement: Conditional (TableMappings)
+#    Finished stack:data:validate (1 minute)
+#
+#    EXECUTE:
+#
+#    code-dot-org % bundle exec rake stack:data:start RAILS_ENV=production ADMIN=true
 cron-pii:
 - dashboard.census_submissions
 - pegasus.contacts
