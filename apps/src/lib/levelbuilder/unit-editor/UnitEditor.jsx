@@ -560,31 +560,6 @@ class UnitEditor extends React.Component {
               }}
             />
           )}
-          <label>
-            Supported locales
-            <HelpTip>
-              <p>
-                A list of other locales supported by this unit besides en-US.
-              </p>
-            </HelpTip>
-            <p>
-              <span>
-                {'Select additional locales supported by this unit. Click '}
-              </span>
-              <a onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
-              <span>{' to clear the selection.'}</span>
-            </p>
-          </label>
-          <MultiCheckboxSelector
-            noHeader={true}
-            items={this.state.locales
-              .filter(locale => !locale[1].startsWith('en'))
-              .map(locale => locale[1])}
-            selected={this.state.supportedLocales}
-            onChange={this.handleChangeSupportedLocales}
-          >
-            <LocaleItemComponent />
-          </MultiCheckboxSelector>
           {this.props.isLevelbuilder && (
             <label>
               Editor Experiment
@@ -618,6 +593,29 @@ class UnitEditor extends React.Component {
             />
           </label>
         </CollapsibleEditorSection>
+        <CollapsibleEditorSection title="Supported locales" collapsed="true">
+          <p>
+            <span>
+              {'Select additional locales supported by this unit. Click '}
+            </span>
+            <a style={{cursor: "pointer"}} onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
+            <span>{' to clear the selection.'}</span>
+          </p>
+          <p>
+              A list of other locales supported by this unit besides en-US.
+          </p>
+          <MultiCheckboxSelector
+            noHeader={true}
+            items={this.state.locales
+              .filter(locale => !locale[1].startsWith('en'))
+              .map(locale => locale[1])}
+            selected={this.state.supportedLocales}
+            onChange={this.handleChangeSupportedLocales}
+          >
+            <LocaleItemComponent />
+          </MultiCheckboxSelector>
+        </CollapsibleEditorSection>
+
 
         {this.props.hasCourse && (
           <CollapsibleEditorSection title="Course Type Settings">
