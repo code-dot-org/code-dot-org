@@ -2,7 +2,6 @@
 import './addons/plusMinusBlocks/if.js';
 import './addons/plusMinusBlocks/text_join.js';
 import {javascriptGenerator} from 'blockly/javascript';
-import GoogleBlockly, {Block, Options, Trashcan, Workspace} from 'blockly/core';
 import {
   ScrollBlockDragger,
   ScrollOptions,
@@ -53,7 +52,7 @@ import initializeCss from './addons/cdoCss';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
-import {ToolboxType, Themes, Renderers} from './constants';
+import {Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
@@ -75,12 +74,10 @@ import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import {handleCodeGenerationFailure} from './utils';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
-import {BlocklyWrapperType} from './types';
-import {FieldProto} from 'blockly/core/field';
 import CdoBlockSvg from './addons/cdoBlockSvg';
 import CdoInput from './addons/cdoInput';
 import CdoBlock from './addons/cdoBlock';
-import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg.js';
+import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 
 const options = {
   contextMenu: true,
@@ -101,10 +98,7 @@ const INFINITE_LOOP_TRAP =
  * This wrapper will contain all of our customizations to Google Blockly.
  * See also ./cdoBlocklyWrapper.js
  */
-const BlocklyWrapper = function (
-  this: BlocklyWrapperType,
-  blocklyInstance: typeof GoogleBlockly
-) {
+const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
 
@@ -146,11 +140,7 @@ const BlocklyWrapper = function (
       this.blockly_.fieldRegistry.register(fieldRegistryName, fieldClass);
 
       // Add each field for when our wrapper is accessed in /apps code
-      // This method helps us avoid duplicated boilerplate, but we would
-      // need the type of fieldClass to align with fieldClassName
-      // in order to avoid using any here.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[fieldClassName] = fieldClass;
+      this[fieldClassName] = fieldClass;
     });
   };
 };
@@ -163,12 +153,8 @@ const BlocklyWrapper = function (
  * If this needs to be called multiple times (for example, in tests), call
  * Blockly.navigationController.dispose() before calling this function again.
  */
-function initializeBlocklyWrapper(blocklyInstance: typeof GoogleBlockly) {
-  // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const blocklyWrapper = new (BlocklyWrapper as any)(
-    blocklyInstance
-  ) as BlocklyWrapperType;
+function initializeBlocklyWrapper(blocklyInstance) {
+  const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
   blocklyWrapper.setInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
@@ -206,10 +192,10 @@ function initializeBlocklyWrapper(blocklyInstance: typeof GoogleBlockly) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
-  blocklyWrapper.wrapReadOnlyProperty('Block');
+  // blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
-  blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
+  //blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('browserEvents');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering.ConstantProvider');
   blocklyWrapper.wrapReadOnlyProperty('common');
@@ -251,7 +237,7 @@ function initializeBlocklyWrapper(blocklyInstance: typeof GoogleBlockly) {
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
-  blocklyWrapper.wrapReadOnlyProperty('Input');
+  // blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('inputTypes');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
@@ -282,12 +268,12 @@ function initializeBlocklyWrapper(blocklyInstance: typeof GoogleBlockly) {
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
-  blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
+  //blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides: [string, string, FieldProto][] = [
+  const fieldOverrides = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
     // Overrides required for a customization of FieldTextInput
@@ -300,13 +286,8 @@ function initializeBlocklyWrapper(blocklyInstance: typeof GoogleBlockly) {
   blocklyWrapper.overrideFields(fieldOverrides);
 
   // Overrides applied directly to core blockly
-  // TODO: Can we remove this assignment?
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.blockly_ as any).FunctionEditor = FunctionEditor;
-
-  // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  blocklyWrapper.blockly_.Trashcan = CdoTrashcan as any;
+  blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
+  blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
@@ -448,22 +429,10 @@ function initializeBlocklyWrapper(blocklyInstance: typeof GoogleBlockly) {
   blocklyWrapper.Block = CdoBlock;
   blocklyWrapper.WorkspaceSvg = CdoWorkspaceSvg;
 
-  blocklyWrapper.WorkspaceSvg.prototype.events = {
-    dispatchEvent: () => {}, // TODO
-  };
-
-  // TODO - called by StudioApp, not sure whether they're still needed.
-  blocklyWrapper.WorkspaceSvg.prototype.setEnableToolbox = function (
-    enabled
-  ) {};
-  blocklyWrapper.WorkspaceSvg.prototype.traceOn = function (armed) {};
-
+  // TODO: was this only used by WorkspaceSvg and can be replaced by a helper in cdoWorkspaceSvg?
   blocklyWrapper.VariableMap.prototype.addVariables = function (variableList) {
     variableList.forEach(varName => this.createVariable(varName));
   };
-
-  // TODO - used for spritelab behavior blocks
-  blocklyWrapper.Block.createProcedureDefinitionBlock = function (config) {};
 
   // TODO - used to add "create a behavior" button to the toolbox
   blocklyWrapper.Flyout.configure = function (type, config) {};

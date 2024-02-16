@@ -21,4 +21,8 @@ export default class CdoBlock extends Block {
   setTitleValue(newValue: any, name: string) {
     return this.setFieldValue(newValue, name);
   }
+
+  // TODO: is this only used by cdo?
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  createProcedureDefinitionBlock() {}
 }

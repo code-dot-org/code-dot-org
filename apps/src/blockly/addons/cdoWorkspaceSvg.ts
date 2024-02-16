@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import {WorkspaceSvg} from 'blockly';
 
 export default class CdoWorkspaceSvg extends WorkspaceSvg {
@@ -29,6 +30,16 @@ export default class CdoWorkspaceSvg extends WorkspaceSvg {
   getContainer() {
     return this.getSvgGroup().parentNode;
   }
+
+  // TODO - called by StudioApp, not sure whether they're still needed.
+  setEnableToolbox() {}
+
+  traceOn() {}
+
+  // TODO: Called by SpriteLab.js, is this needed by google blockly??
+  events = {
+    dispatchEvent() {},
+  };
 
   private addVariablesToVariableMap(variables: string[]) {
     variables.forEach(varName => this.getVariableMap().createVariable(varName));
