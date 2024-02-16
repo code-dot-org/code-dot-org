@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
 import {AITutorState, askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -7,11 +8,11 @@ import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
 import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {validationSystemPrompt} from '@cdo/apps/aiTutor/constants';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {TutorType} from '@cdo/apps/aiTutor/types';
 
 // AI Tutor feature that explains to students why their code is not passing tests.
-const ValidationTutor = (levelId: number) => {
+
+const ValidationTutor: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const sources = useSelector(
@@ -42,18 +43,18 @@ const ValidationTutor = (levelId: number) => {
   const aiResponse = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.aiResponse
   );
-
-  const systemPrompt = validationSystemPrompt;
+  const level = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.level
+  );
 
   const handleSend = async (studentCode: string) => {
     const chatContext = {
-      levelId: levelId,
-      systemPrompt: systemPrompt,
       studentCode: studentCode,
+      tutorType: TutorType.VALIDATION,
     };
     dispatch(askAITutor(chatContext));
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION, {
-      levelId: levelId,
+      levelId: level?.id,
     });
   };
 

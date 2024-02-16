@@ -30,6 +30,7 @@ import {
 import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
+import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -162,15 +163,8 @@ class UnitEditor extends React.Component {
     this.setState({supportedLocales: []});
   };
 
-  handleChangeSupportedLocales = e => {
-    var options = e.target.options;
-    var supportedLocales = [];
-    for (var i = 0, l = options.length; i < l; i++) {
-      if (options[i].selected) {
-        supportedLocales.push(options[i].value);
-      }
-    }
-    this.setState({supportedLocales});
+  handleChangeSupportedLocales = selectedOptions => {
+    this.setState({supportedLocales: selectedOptions});
   };
 
   handleFamilyNameChange = event => {
@@ -575,25 +569,22 @@ class UnitEditor extends React.Component {
             </HelpTip>
             <p>
               <span>
-                {'Select additional locales supported by this unit. Select '}
+                {'Select additional locales supported by this unit. Click '}
               </span>
               <a onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
-              <span>{' or shift-click or cmd-click to select multiple.'}</span>
+              <span>{' to clear the selection.'}</span>
             </p>
-            <select
-              multiple
-              value={this.state.supportedLocales}
-              onChange={this.handleChangeSupportedLocales}
-            >
-              {this.state.locales
-                .filter(locale => !locale[1].startsWith('en'))
-                .map(locale => (
-                  <option key={locale[1]} value={locale[1]}>
-                    {locale[1]}
-                  </option>
-                ))}
-            </select>
           </label>
+          <MultiCheckboxSelector
+            noHeader={true}
+            items={this.state.locales
+              .filter(locale => !locale[1].startsWith('en'))
+              .map(locale => locale[1])}
+            selected={this.state.supportedLocales}
+            onChange={this.handleChangeSupportedLocales}
+          >
+            <LocaleItemComponent />
+          </MultiCheckboxSelector>
           {this.props.isLevelbuilder && (
             <label>
               Editor Experiment
@@ -1083,6 +1074,12 @@ class UnitEditor extends React.Component {
     );
   }
 }
+
+const LocaleItemComponent = function ({item}) {
+  return <strong>{item}</strong>;
+};
+
+LocaleItemComponent.propTypes = {item: PropTypes.string};
 
 const styles = {
   input: {

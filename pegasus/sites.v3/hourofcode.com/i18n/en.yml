@@ -1272,6 +1272,43 @@
   farsi_page_compliance_heading: "Compliance In Support Of Farsi Translations"
   farsi_page_compliance_desc: "As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements."
 
+  naipi_page_heading: "Native American and Indigenous Peoples Initiative (NAIPI)"
+  naipi_page_intro_heading: "What is NAIPI?"
+  naipi_page_intro_desc: "Code.org's Native American and Indigenous Peoples Initiative presents the integration of Native American perspectives and cultural richness in education and technology. Explore innovative approaches shaping Native American education and computer science, discover collaboration opportunities, and witness the collective impact we can achieve together."
+  naipi_page_perspectives_heading: "Integrating Native American perspectives"
+  naipi_page_perspectives_desc: "Experience a curriculum crafted with care, integrating culturally relevant content that resonates with the rich values and traditions of Native American and Indigenous communities. Elevate your learning journey with resources that truly connect and inspire!"
+  naipi_page_module_quilts_aria_primary: "See details for Coding a Geometric Star Quilt module"
+  naipi_page_module_quilts_aria_secondary: "Start self-paced professional learning for Coding a Geometric Star Quilt module"
+  naipi_page_module_poetry_aria_primary: "See details for Coding with Poetry"
+  naipi_page_module_poetry_aria_secondary: "Start self-paced professional learning for Coding with Poetry"
+  naipi_page_quote_desc: "Students who are Native American need to have teachers that are sensitive to the tradition and history of the people. I include Native language, examples, and history while I am teaching. At the same time, I recognize that no one person is the same as another and each student needs to have the tools and experiences they need to be able to grow."
+  naipi_page_quote_teacher_title: "Library/Media Specialist"
+  naipi_page_gaps_heading: "Understanding educational gaps"
+  naipi_page_gaps_desc: "Native American communities face unique challenges in offering and engaging in computer science (CS) education in their K-12 systems. Data gathered in the K-12 Computer Science Access Report shows that Native American students are far less likely to attend a school that offers computer science (67% as opposed to the next lowest access group, Black students at 78%)."
+  naipi_page_gaps_learn_more: "Learn more in our [State of CS Report](%{state_of_cs_report_url})."
+  naipi_page_support_heading: "Enhancing access and support"
+  naipi_page_support_desc: "To address the gap in computer science education for Native American students, focused efforts are crucial in enhancing access, particularly in tribal schools. This includes fostering encouragement and support for students, and building strong partnerships among Native American communities, educational institutions, and organizations to promote computer science as a valuable and promising career path."
+  naipi_page_get_involved_heading: "Get involved in expanding access to Computer Science (CS) education"
+  naipi_page_get_involved_educators_title: "Educators"
+  naipi_page_get_involved_educators_desc: "Empower your teaching journey with comprehensive lesson plans, resources, and professional development from Code.org. Gain access to materials tailored for teaching computer science confidently, suitable for educators at all levels of CS teaching experience."
+  naipi_page_get_involved_educators_cta: "Teach with Code.org"
+  naipi_page_get_involved_leaders_title: "School Leaders"
+  naipi_page_get_involved_leaders_desc: "Join us in our mission to create an engaged community focused on Native Excellence. Through a customizable approach, our District Program aims to build community, support increased access to CS education as well as provide districts with unique spotlighting and recognition opportunities."
+  naipi_page_get_involved_leaders_cta: "Discover our District Program"
+  naipi_page_get_involved_students_title: "Students"
+  naipi_page_get_involved_students_desc: "Discover the keys to your next step! Explore opportunities that empower you — from mentorships to scholarships and exciting extracurricular activities. Unleash your potential, find support, and embark on a journey of growth and success in your academic pursuits."
+  naipi_page_get_involved_students_cta: "Discover CS Journeys"
+  naipi_page_get_involved_community_title: "Community Members"
+  naipi_page_get_involved_community_desc: "Partner with us to drive positive change. Explore and share collaboration opportunities, success stories, and the transformative impact we can achieve together in advancing Native American education and computer science. Reach out to us to learn more."
+  naipi_page_get_involved_community_cta: "Email us (naipi@code.org)"
+  naipi_page_engage_heading: "Engage with our community committed to bridging gaps for Native American and Indigenous students"
+  naipi_page_engage_alt_text_aises: "AISES logo"
+  naipi_page_engage_alt_text_indigitize: "Indigitize logo"
+  naipi_page_engage_regional_partners: "Regional Partners"
+  naipi_page_engage_other_ways_heading: "Other ways to get involved"
+  naipi_page_engage_other_ways_desc: "Are you a teacher? Indigenous community leader? Funder? Curious about how to get involved? Contact [naipi@code.org](%{email_url}) to explore how we can work together."
+  naipi_page_engage_other_ways_cta_label: "Send us an email"
+
   resources_tabs_heading: "Resources that support you every step of the way"
   resources_tabs_desc: "[Sign up for a Code.org account](%{sign_up_url}) to get access to materials that will help you teach computer science with confidence. Code.org has extensive resources designed to support educators, even those without prior CS teaching experience."
   resources_tabs_heading_admins: "Resources to support your educators every step of the way"
@@ -1580,6 +1617,44 @@
 
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
+
+  intl_pl_page:
+    page_title: "International Professional Resources"
+    heading: "Global professional learning opportunities"
+    desc: "Get support and learn how to bring computer science to your country."
+    intro:
+      heading: "Self-paced professional learning available everywhere"
+      desc: "Unlock flexible, self-paced learning tailored to your educational journey."
+      list_01: "Online professional learning units that align with our curriculum offerings"
+      list_02: "Access to high-quality educational materials you can teach from"
+      button: "Explore self-paced learning"
+    partners:
+      heading: "Explore professional learning opportunities around the world"
+      desc: "Professional learning programs outside of the US are delivered by our partners equipped with the expertise to provide high-quality instruction on teaching with Code.org and tailoring the training programs to suit the local context and needs."
+      button: "View training opportunities"
+    resources:
+      heading: "Additional resources and support for educators"
+      curriculum:
+        title: "Comprehensive Curriculum"
+        desc: "Discover our comprehensive catalog of curriculum offerings and lesson plans for all ages and levels—available globally and in multiple languages at no cost."
+        button: "Explore curriculum catalog"
+      community:
+        title: "Teacher Community"
+        desc: "Engage in a forum for teachers to ask questions and share best practices, thoughts, ideas, and inspiration. Join a community of amazing educators around the world!"
+        button: "Join our teacher forums"
+      support:
+        title: "Extensive Support"
+        desc: "Explore a plethora of materials and detailed guides for educators, parents and students available in our support center or contact our customer support team with your questions!"
+        button: "Visit our support center"
+    subscribe:
+      heading: "Stay up-to-date on our international program"
+      desc: "We are making computer science part of the international education discourse by partnering with ministries of education, advocating for policy change, promoting the Hour of Code campaign, and supporting our partners in organizing teacher training. Stay updated on our global initiatives by subscribing to our quarterly newsletter (distributed in English)."
+      disclaimer: "You can unsubscribe at any time."
+    contact:
+      heading: "Feedback or questions?"
+      subheading: "We greatly value your input and invite you to share your feedback to help shape our offerings."
+      desc: "Our international program is continuously expanding, and while resources may be limited, we are committed to growth that meets the needs of educators worldwide. For any questions or suggestions, our dedicated team is ready to assist you as we strive to support your journey in computer science education."
+      cta: "Email us at [international@code.org](%{email_url})."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

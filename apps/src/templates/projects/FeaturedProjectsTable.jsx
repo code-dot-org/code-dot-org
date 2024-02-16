@@ -14,7 +14,8 @@ import {
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -105,14 +106,10 @@ const nameFormatter = (projectName, {rowData}) => {
 };
 
 const unfeature = channel => {
-  var url = `/featured_projects/${channel}/unfeature`;
-  $.ajax({
-    url: url,
-    type: 'PUT',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleUnfeatureFailure);
+  const url = `/featured_projects/${channel}/unfeature`;
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleUnfeatureFailure);
 };
 
 const handleSuccess = () => {
@@ -138,17 +135,18 @@ const actionsFormatterFeatured = (actions, {rowData}) => {
 };
 
 const feature = (channel, publishedAt) => {
-  var url = `/featured_projects/${channel}/feature`;
+  const url = `/featured_projects/${channel}/feature`;
   if (!publishedAt) {
     alert(i18n.featureUnpublishedWarning());
   }
-  $.ajax({
-    url: url,
-    type: 'PUT',
-    dataType: 'json',
-  })
-    .done(handleSuccess)
-    .fail(handleFeatureFailure);
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleFeatureFailure);
+};
+
+const onDelete = channel => {
+  const url = `/featured_projects/${channel}`;
+  HttpClient.delete(url, true).then(handleSuccess).catch(handleFeatureFailure);
 };
 
 const actionsFormatterUnfeatured = (actions, {rowData}) => {
@@ -158,6 +156,13 @@ const actionsFormatterUnfeatured = (actions, {rowData}) => {
         onClick={() => feature(rowData.channel, rowData.publishedAt)}
       >
         {i18n.featureAgain()}
+      </PopUpMenu.Item>
+      <MenuBreak />
+      <PopUpMenu.Item
+        onClick={() => onDelete(rowData.channel)}
+        color={color.red}
+      >
+        Remove
       </PopUpMenu.Item>
     </QuickActionsCell>
   );

@@ -3,24 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Loops
-
-Opening a lesson or unit
-
-#### The lesson begins with an introduction that includes:
-#### * A sentence explaining what the lesson is about
-#### * List of objectives
-#### * A presurvey (contact RED team to create the survey) 
-#### * Suggested time 
-#### * an image from the lesson 
-
-
 
 # Loops
 
-#### So far you have learned how to use block based coding to create algorithms and sequences. In this lesson, you will learn how to code with loops.
 
-<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+#### So far, you have learned about events. In this lesson, you will learn how to code with loops.
+
+<img src="https://images.code.org/c8e299fbb33bc8ca54703e98f1b55f2a-image-1707946383256.32.58 PM.png" alt="cartoon of an holding a pencil on a staircase shaped gray line. " style="border-radius:40px; float: right; padding-right: 10px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this lesson, you will:

@@ -2,9 +2,9 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
+import {EMPTY_OPTION} from './blockly/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
-const DEFAULT_COLOR = [184, 1.0, 0.74];
 
 /**
  * Create the xml for a level's toolbox
@@ -740,7 +740,8 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getFieldValue(inputConfig.name);
       if (
-        inputConfig.type === Blockly.BlockValueType.STRING &&
+        (inputConfig.type === Blockly.BlockValueType.STRING ||
+          code === EMPTY_OPTION) &&
         !code.startsWith('"') &&
         !code.startsWith("'")
       ) {
@@ -1073,24 +1074,8 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // All Google Blockly blocks must have a style in order to be compatible with themes.
-        // However, blocks with just a color and no style are still permitted.
-        if (style) {
-          // Google Blockly method. No-op for CDO Blockly.
-          this.setStyle(style);
-        }
-        // CDO Blockly uses colors, not styles. However, the color may be determined
-        // automatically based on a block's returnType (e.g. yellow for "Location").
-        if (color) {
-          Blockly.cdoUtils.setHSV(this, ...color);
-        } else if (!returnType) {
-          // CDO Blockly assigns colors to blocks with an output connection based on return type.
-          // See Blockly.Connection.prototype.colorForType
-          // Blocks with neither style or color that do not have a return type can
-          // use the default teal color and style.
-          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-          this.setStyle(style || 'default');
-        }
+        // Apply style or color to block as needed, based on Blockly version.
+        Blockly.cdoUtils.handleColorAndStyle(this, color, style, returnType);
 
         if (returnType) {
           this.setOutput(
@@ -1135,7 +1120,6 @@ exports.createJsWrapperBlockCreator = function (
             flyoutToggleButton
           );
         }
-        // Blockly.customBlocks.(this);
       },
     };
 

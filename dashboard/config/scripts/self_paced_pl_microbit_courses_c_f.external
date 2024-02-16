@@ -3,5 +3,94 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Courses C-F
+# Computer Science Fundamentals - Maker Courses
+
+#### Take some time to explore the different courses to find the right fit for your class.
+
+<table>
+	<tr> 
+    	<th> Course C </th>
+        <th> Course D </th>
+    </tr>
+    <tr>
+    	<td>
+         <a href="https://studio.code.org/s/coursec-2023" target="blank" rel="noopener noreferrer">Course Link</a> <br>
+        	<b>Coding skills:</b> 
+            <ul>
+            	<li> <b> Events </b> <i>beginner</i> </li>
+                <li> <b> Sequencing and loops </b><i>intermediate</i> </li>
+                <li><b> Data and variables </b> <i>stretch</i></li>
+            </ul>
+        </td>
+    	<td>
+         <a href="https://studio.code.org/s/coursed-2023" target="blank" rel="noopener noreferrer">Course Link</a> <br>
+        	<b>Coding skills:</b> 
+            <ul>
+            	<li> <b> Conditionals </b> <i>beginner</i> </li>
+                <li> <b> Events and conditionals </b><i>intermediate</i> </li>
+                <li><b> Conditionals and text input </b> <i>stretch</i></li>
+            </ul>
+        </td>
+     </tr>
+     <tr>
+     	<td> 
+        <b> micro:bit pathways </b> <br>
+         <a href="  https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf" target="blank" rel="noopener noreferrer">micro:bit packet</a> 
+        <br> 
+        
+        </td>
+       
+      
+        <td> <b> micro:bit pathways </b>
+        <br>
+         <a href="  https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf" target="blank" rel="noopener noreferrer">micro:bit packet</a> </td>
+     </tr>
+     <tr>
+    	<td> <img src="https://images.code.org/fc483808785b3ebb9f2c948787e4c888-image-1707411089235.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="400" style="border-radius:10px;  margin: 0px 10px 20px 0px;"></td>
+    	<td> <img src="https://images.code.org/87616895ad471157e472551c69510059-image-1707415334218.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="400" style="border-radius:10px;  margin: 0px 10px 20px 0px;"></td>
+      </tr>
+</table>
+
+<table>
+	<tr> 
+        <th> Course E </th>
+        <th> Course F </th>
+    </tr>
+    <tr>
+         <td>
+          <a href="https://studio.code.org/s/coursee-2023" target="blank" rel="noopener noreferrer">Course Link</a> <br>
+        	<b>Coding skills:</b> 
+            <ul>
+            	<li> <b> Events and designing for accessibility </b> <i>beginner</i> </li>
+                <li> <b> Conditionals </b><i>intermediate</i> </li>
+                <li><b> Functions </b> <i>stretch</i></li>
+            </ul>
+   	      </td>
+    	<td>
+        <a href="https://studio.code.org/s/coursef-2023" target="blank" rel="noopener noreferrer">Course Link</a> <br>
+        	<b>Coding skills:</b> 
+            <ul>
+            	<li> <b> Events and variables </b> <i>beginner</i> </li>
+                <li> <b> Conditionals, events, and sounds </b><i>intermediate</i> </li>
+                <li><b> Events, conditionals, and variables </b> <i>stretch</i></li>
+            </ul>
+        </td>
+    </tr>
+     <tr>
+     	<td> <b> micro:bit pathways </b>
+        <br>
+         <a href="  https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf" target="blank" rel="noopener noreferrer">micro:bit packet</a> 
+        </td>
+        <td> <b> micro:bit pathways </b>
+        <br>
+         <a href="  https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf" target="blank" rel="noopener noreferrer">micro:bit packet</a> 
+        </td>
+     </tr>
+     <tr>
+    	<td> <img src="https://images.code.org/fea5987b40b47122eeac02acedb323ba-image-1707415592944.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="400" style="border-radius:10px;  margin: 0px 10px 20px 0px;"></td>
+    	<td> <img src="https://images.code.org/6e6fe76933c422c8940146a86aa36389-image-1707415697454.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="400" style="border-radius:10px;  margin: 0px 10px 20px 0px;"></td>
+      </tr>
+</table>
+
+
 MARKDOWN
