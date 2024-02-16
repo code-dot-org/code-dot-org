@@ -113,13 +113,13 @@ export default class CoreLibrary {
 
   drawVariableBubbles() {
     this.variableBubbles.forEach(variable => {
-      const {name, location} = variable;
-      if (!name.length || !location) {
+      const {name, label, location} = variable;
+      if (!name.length || !label.length || !location) {
         return;
       }
 
       const value = this.getVariableValue(name);
-      const text = `${name}: ${value}`;
+      const text = `${label}: ${value}`;
 
       // TODO: Confirm this handles shadow block locations appropriately
       drawUtils.variableBubble(this.p5, location.x, location.y, text);
@@ -133,14 +133,13 @@ export default class CoreLibrary {
     }
 
     try {
-      // TODO: Check for existence of this.REFERENCE_ERROR and others in result,
-      // Or move this logic into the JSInterpreter and guarantee that it always returns a string
-      // TODO: Decide on what to display for undefined variables
+      // Blockly does not execute code or track the runtime values of variables, so we need to
+      // evaluate the variable's value using the JSInterpreter.
       const result = this.jsInterpreter.evaluateWatchExpression(variableName);
-      return result;
+      return typeof result === 'undefined' ? '' : result;
     } catch (e) {
       console.error(`Error evaluating variable '${variableName}': ${e}`);
-      return;
+      return '';
     }
   }
 
@@ -229,7 +228,7 @@ export default class CoreLibrary {
     );
   }
 
-  addVariableBubble(name, locationInput) {
+  addVariableBubble(label, name, locationInput) {
     const existingBubble = this.variableBubbles.find(
       bubble => bubble.name === name
     );
@@ -246,7 +245,7 @@ export default class CoreLibrary {
     if (existingBubble) {
       existingBubble.location = location;
     } else {
-      this.variableBubbles.push({name, location});
+      this.variableBubbles.push({label, name, location});
     }
   }
 

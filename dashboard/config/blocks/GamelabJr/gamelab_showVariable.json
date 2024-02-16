@@ -3,11 +3,6 @@
   "config": {
     "func": "showVariable",
     "blockText": "show variable {VAR} at {LOCATION}",
-    "color": [
-      312,
-      0.32,
-      0.62
-    ],
     "args": [
       {
         "name": "VAR",

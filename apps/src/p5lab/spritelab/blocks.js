@@ -442,10 +442,11 @@ const customInputTypes = {
 
     generateCode(block, arg) {
       const id = block.getFieldValue(arg.name);
-      const variable = Blockly.getMainWorkspace()
+      const label = Blockly.getMainWorkspace()
         .getVariableMap()
-        .getVariableById(id);
-      return [`"${variable.name}"`];
+        .getVariableById(id).name;
+      const name = Blockly.JavaScript.getVariableName(id);
+      return [`"${label}"`, `"${name}"`];
     },
   },
 };

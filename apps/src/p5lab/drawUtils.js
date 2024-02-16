@@ -36,8 +36,8 @@ export function getTextWidth(p5, text, size) {
  * @param {string} text - The text to display inside the bubble. This should represent the variable's name and value.
  */
 export function variableBubble(p5, x, y, text) {
-  const padding = 15;
-  const textSizeValue = 35; // Text size matches the text size used for title page subtitles
+  const padding = 10;
+  const textSizeValue = 20;
   const textWidth = getTextWidth(p5, text, textSizeValue);
   const textWidthValue = textWidth + 2 * padding;
   const textHeightValue = textSizeValue + 2 * padding;

@@ -3,11 +3,6 @@
   "config": {
     "func": "hideVariable",
     "blockText": "hide variable {VAR}",
-    "color": [
-      312,
-      0.32,
-      0.62
-    ],
     "args": [
       {
         "name": "VAR",

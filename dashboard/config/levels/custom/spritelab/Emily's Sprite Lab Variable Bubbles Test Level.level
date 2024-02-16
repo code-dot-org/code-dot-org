@@ -1,0 +1,178 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2024-02-14T08:45:42.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "embed": "false",
+    "instructions_important": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "submittable": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-13 16:46:24 -0800\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-13 16:50:30 -0800\",\"changed\":[],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-13 16:51:44 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-13 16:52:32 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-13 16:53:13 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-13 16:57:12 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-13 17:08:02 -0800\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 10:02:39 -0800\",\"changed\":[],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 10:06:01 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 16:49:47 -0800\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 17:16:11 -0800\",\"changed\":[\"start_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 19:02:38 -0800\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 19:15:01 -0800\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 19:16:14 -0800\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 19:17:03 -0800\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 19:24:10 -0800\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"},{\"changed_at\":\"2024-02-14 19:27:58 -0800\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"ebeastlake+ladybird@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="!o7IN|jhW5m!,?coDr8K">score</variable>
+          <variable id="jAdxJTnS`8|.[lsGb[!g">lives</variable>
+        </variables>
+        <block type="when_run" id="bX{QRAg#0}}bGz|os^R*" deletable="false" x="47" y="22">
+          <next>
+            <block type="gamelab_makeNewSpriteAnon" id="Kl3OMiq%wF#EHmYW(tKv">
+              <field name="ANIMATION_NAME">"bear"</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker" id="(PPEQ67Z,$f32Lj{]V?w">
+                  <field name="LOCATION">{"x":204,"y":196}</field>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" id="D(woH|wCPO]n?q~6u|X=">
+                  <field name="VAR" id="!o7IN|jhW5m!,?coDr8K">score</field>
+                  <value name="VALUE">
+                    <block type="math_number" id="Vv*pcGMLR0)t=6I]wH;^">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed" id="@qfM#qR|DDQ=/2iIF)iG" x="450" y="22">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
+          <next>
+            <block type="math_change" id="O7Rh5%G?iTR03S#2Hkab">
+              <field name="VAR" id="!o7IN|jhW5m!,?coDr8K">score</field>
+              <value name="DELTA">
+                <shadow type="math_number" id="a:G${##L7?ldU`+nYPX@">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked" id="LzNCD*UC(b_VVH9TRobF" x="458" y="113">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="J@F/n)[wdH#^lotgfIeW">
+              <field name="ANIMATION">"bear"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_showVariable" id="2Ue@=-xViW;?,EvQf`)I">
+              <field name="VAR" id="jAdxJTnS`8|.[lsGb[!g">lives</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker" id="DZDCV^[EUAnC0|v0_McI">
+                  <field name="LOCATION">{"x":298,"y":64}</field>
+                </block>
+              </value>
+              <next>
+                <block type="math_change" id="69mz|iWhoVQXf$H@I;!V">
+                  <field name="VAR" id="jAdxJTnS`8|.[lsGb[!g">lives</field>
+                  <value name="DELTA">
+                    <shadow type="math_number" id="mu}=X@A3rjvcz0*P75UO">
+                      <field name="NUM">-1</field>
+                    </shadow>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_keyPressed" id="#aJBHFM=dnbOsZ:d=FmV" x="464" y="244">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"c"</field>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <variables>
+          <variable id="R:pl~/oQ|;]pxjs].C?~">i</variable>
+          <variable id="n~;)G(?^_afxvm7DNoU2">j</variable>
+        </variables>
+        <category name="Variables" custom="VARIABLE">
+          <block type="gamelab_hideVariable" id="5K_n`l)Eqo?UTiW8Q0_T">
+            <field name="VAR" id="R:pl~/oQ|;]pxjs].C?~">i</field>
+          </block>
+          <block type="variables_set" id="|gfI`c=p(L}QH?oC{f]e">
+            <field name="VAR" id="R:pl~/oQ|;]pxjs].C?~">i</field>
+          </block>
+          <block type="gamelab_changeVarBy" id="K)qhwL*2yo?M^!+KkLg3">
+            <field name="VARIABLE" id="R:pl~/oQ|;]pxjs].C?~">i</field>
+          </block>
+          <block type="variables_get" id="HFtL@9Z.r:FsPir]e;-I">
+            <field name="VAR" id="R:pl~/oQ|;]pxjs].C?~">i</field>
+          </block>
+          <block type="gamelab_showVariable" id="Y}QC-{ff1XB`o+MUi){[">
+    </block>
+        </category>
+        <category name="Locations">
+          <block type="gamelab_location_picker" id="A@78X21E;ucMYsi2`}O{">
+            <field name="LOCATION"/>
+          </block>
+          <block type="gamelab_locationAt" id="x_oZJWhOF]D`xwZeNCWw"/>
+        </category>
+        <category name="Events">
+          <block type="gamelab_whenKey" id="]wS5j|e/7fcHp)nEz8c.">
+            <field name="KEY">"up"</field>
+          </block>
+          <block type="gamelab_spriteClicked" id="|x~f(%L#pB+LMQ4+:z9V">
+            <field name="CONDITION">"when"</field>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number" id="GLT$!Hsn4heBrQ|0.^N:">
+            <field name="NUM">0</field>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon" id="LLMaXgyO*T/jOLOhjMpc">
+            <field name="ANIMATION_NAME">"bear"</field>
+          </block>
+          <block type="gamelab_allSpritesWithAnimation" id="/;!liQ|-d~?UWXWKO;tK">
+            <field name="ANIMATION">"bear"</field>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

@@ -7,10 +7,10 @@ export const commands = {
   },
 
   // Verify what happens with Blockly name vs. regular name
-  showVariable(nameArg, locationArg) {
-    if (!nameArg) {
+  showVariable(labelArg, nameArg, locationArg) {
+    if (!labelArg || !nameArg) {
       return;
     }
-    this.addVariableBubble(nameArg, locationArg);
+    this.addVariableBubble(labelArg, nameArg, locationArg);
   },
 };
