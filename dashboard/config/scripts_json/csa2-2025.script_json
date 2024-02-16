@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-16 23:51:20 UTC",
+    "serialized_at": "2024-02-16 05:19:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -370,12 +370,27 @@
       }
     },
     {
-      "key": "Sandbox: Console",
-      "name": "Sandbox: Console",
+      "key": "lesson-2",
+      "name": "Implementing String Algorithms",
       "absolute_position": 16,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "Sandbox: Console",
+      "name": "Sandbox: Console",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -387,14 +402,33 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Neighborhood",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "Substrings",
+      "name": "Substrings",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
+        "preparation": "* **(Optional)** Print copies of the U6L2 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
+      },
+      "seeding_key": {
+        "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025"
       }
@@ -1019,6 +1053,48 @@
       "seeding_key": {
         "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1",
         "lesson.key": "Sandbox: The Neighborhood",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "86de34ea-a4b9-49f8-906f-5a99687ec946",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86de34ea-a4b9-49f8-906f-5a99687ec946",
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "f79c047c-9100-4a53-a9b9-3983e178209d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d",
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "cc53851c-af76-48ac-8c45-967351db8bf7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7",
+        "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025"
       }
@@ -4777,6 +4853,206 @@
         "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc",
         "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1"
       }
+    },
+    {
+      "key": "b535d28b-119d-4b46-9c79-3a81dda42e2b",
+      "position": 1,
+      "properties": {
+        "description": "You've probably used a smart assistant before. These use natural language processing techniques to break up the things you say and get the meaning of the individual words in your statement or question.",
+        "name": "Smart Assistants",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b535d28b-119d-4b46-9c79-3a81dda42e2b",
+        "lesson_activity.key": "86de34ea-a4b9-49f8-906f-5a99687ec946"
+      }
+    },
+    {
+      "key": "22c1c981-3be4-47df-8637-82e802417b7f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we ask Siri questions, it performs a specific task or gives a response based on our question or statement. But how does it know what task to perform or how to respond?*\n\n**Discussion Goal:** Students suggest that it identifies keywords in the question or statement to determine what action to perform or how it should respond. For example, if it finds the word \"weather\", then it knows it needs to respond with weather information.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nYou can also ask students additional guiding questions to help them realize that smart assistants are identifying keywords and how they might do this. For example:\n* *If you tell Siri to send a message to your friend, how does it know that you want to send a message? How does it know who to send it to? What about what the message itself should be?*\n* *How do you think it breaks up your question or statement to find these pieces?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "22c1c981-3be4-47df-8637-82e802417b7f",
+        "lesson_activity.key": "86de34ea-a4b9-49f8-906f-5a99687ec946"
+      }
+    },
+    {
+      "key": "3c06c4fd-7311-4a56-b4aa-6339572179c0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c06c4fd-7311-4a56-b4aa-6339572179c0",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "e3dceaae-972c-449f-9d29-ba6c7fe5fb92",
+      "position": 2,
+      "properties": {
+        "description": "We previously learned about the `String` class and some of its methods we can use to find the location of specific characters in a `String` object or its length. Today, we'll learn about another useful method in the `String` class that allows us to retrieve a portion of a `String`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e3dceaae-972c-449f-9d29-ba6c7fe5fb92",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: The substring() Method"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "0663d22b-5794-44b5-979f-1d664efb35c7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that there are two versions of the `substring()` method. They realize that the two-parameter version of the `substring()` method returns the characters between the specified index values and that the one-parameter version returns the characters starting at the specified index values to the end of the `String`."
+      },
+      "seeding_key": {
+        "activity_section.key": "0663d22b-5794-44b5-979f-1d664efb35c7",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "c0918877-8cfe-4de3-9eb8-2a0f6081dea7",
+      "position": 5,
+      "properties": {
+        "description": "When we use the `substring()` method, we can get the characters between a starting and ending index in a `String` object or from a starting index to the end of the `String` object.",
+        "duration": "15",
+        "name": "The substring() Method",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0918877-8cfe-4de3-9eb8-2a0f6081dea7",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: The substring() Method"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "6b652d27-4858-4594-9cd9-fb6ff9d847e9",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the one parameter `substring()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the two parameter `substring()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `substring()` method to obtain a single element in a `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that `String` objects are immutable and that `String` methods do not change the `String` object."
+      },
+      "seeding_key": {
+        "activity_section.key": "6b652d27-4858-4594-9cd9-fb6ff9d847e9",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "345f5975-d8f2-4082-a30d-f9361dee45ff",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level on Levels 6 and 7 to practice using the `substring()` method to retrieve characters between a starting and ending index and from a starting index to the end of a `String` object. On Level 8, students complete a choice level to use the `indexOf()` and `substring()` methods.",
+        "duration": "15",
+        "name": "Using the substring() Method",
+        "progression_name": "Practice: The substring() Method",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding is an AP-style multiple choice question that can be used as a formative assessment to gauge understanding of using the `substring()` method.\n\nThe practice level can be used as a formative assessment to gauge understanding of using the `substring()` and `indexOf()` methods."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff",
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d"
+      }
+    },
+    {
+      "key": "723e55ad-64a7-4fc4-b161-28b94ab10212",
+      "position": 1,
+      "properties": {
+        "description": "Natural language processing often uses similar methods and techniques to identify the important parts of a phrase and decide how to respond. For our Natural Language Processing Project, we might use these methods to analyze text to determine what to do next or how we should respond to the user.",
+        "name": "Using String Methods",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "723e55ad-64a7-4fc4-b161-28b94ab10212",
+        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+      }
+    },
+    {
+      "key": "0cef5b3f-3ee2-4d60-ad35-f0e2e3743b12",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nHave students consider how smart assistants like Siri or Google Assistant might use similar methods and techniques. For example:\n* *When you ask Siri about the meaning of a word, how does it know how to respond? What about when you ask it to set a timer for a certain number of minutes?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0cef5b3f-3ee2-4d60-ad35-f0e2e3743b12",
+        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+      }
+    },
+    {
+      "key": "518fb77a-0ff2-47a0-b5f3-f5ac4e169c7d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "518fb77a-0ff2-47a0-b5f3-f5ac4e169c7d",
+        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+      }
+    },
+    {
+      "key": "b72c95ea-01d6-4880-9fbb-ac1f7abe472b",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "b72c95ea-01d6-4880-9fbb-ac1f7abe472b",
+        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+      }
+    },
+    {
+      "key": "24831753-a936-492a-a6ad-44b0b83f6b61",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61",
+        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+      }
     }
   ],
   "script_levels": [
@@ -4786,6 +5062,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L1_2025"
+        ],
         "progression": "Predict and Run: Attributes"
       },
       "bonus": false,
@@ -4808,6 +5087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2_2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4830,6 +5112,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-2_2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4852,6 +5137,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-3_2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4874,6 +5162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L3_2025"
+        ],
         "progression": "Skill Building: Declaring Instance Variables"
       },
       "bonus": false,
@@ -4896,6 +5187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4_2025"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -4918,6 +5212,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4-2_2025"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -4940,6 +5237,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L5_2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -4962,6 +5262,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L6_2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -4984,6 +5287,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5006,6 +5312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1_2025"
+        ],
         "progression": "Predict and Run: No-Argument Constructors"
       },
       "bonus": false,
@@ -5028,6 +5337,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5050,6 +5362,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-2_2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5072,6 +5387,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-3_2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5094,6 +5412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_2025"
+        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -5116,6 +5437,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L4_2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5138,6 +5462,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L5_2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5160,6 +5487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -5182,6 +5512,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5204,6 +5537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L1_2025"
+        ],
         "progression": "Predict and Run: Parameterized Constructors"
       },
       "bonus": false,
@@ -5226,6 +5562,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2_2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5248,6 +5587,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-2_2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5270,6 +5612,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-3_2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5292,6 +5637,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3 CFU_2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5314,6 +5662,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L3_2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5336,6 +5687,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L4_2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5358,6 +5712,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L10_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5380,6 +5737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1_2025"
+        ],
         "progression": "Predict and Run: Constructors and Scope"
       },
       "bonus": false,
@@ -5402,6 +5762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2_2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5424,6 +5787,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3_2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5446,6 +5812,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4_2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5468,6 +5837,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5_2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5490,6 +5862,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L6_2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5512,6 +5887,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L7_2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5534,6 +5912,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5556,6 +5937,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L1_2025"
+        ],
         "progression": "Predict and Run: Constructors and Inheritance"
       },
       "bonus": false,
@@ -5578,6 +5962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L2_2025"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5600,6 +5987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L3_2025"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5622,6 +6012,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L4_2025"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5644,6 +6037,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L5_2025"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5666,6 +6062,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L6_2025"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5688,6 +6087,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L7 Practice_2025"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5710,6 +6112,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5732,6 +6137,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L1_2025"
+        ],
         "progression": "Predict and Run: Variables"
       },
       "bonus": false,
@@ -5754,6 +6162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L2_2025"
+        ],
         "progression": "Investigate and Modify: Variables"
       },
       "bonus": false,
@@ -5776,6 +6187,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5798,6 +6212,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L1_2025"
+        ],
         "progression": "Predict and Run: Accessor Methods"
       },
       "bonus": false,
@@ -5820,6 +6237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L2_2025"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5842,6 +6262,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L3_2025"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5864,6 +6287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L4_2025"
+        ],
         "progression": "Skill Building: Accessor Methods"
       },
       "bonus": false,
@@ -5886,6 +6312,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L5_2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5908,6 +6337,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L6_2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5930,6 +6362,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L7 Practice_2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5952,6 +6387,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5974,6 +6412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L1_2025"
+        ],
         "progression": "Predict and Run: Operators and Expressions"
       },
       "bonus": false,
@@ -5996,6 +6437,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L2_2025"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6018,6 +6462,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L3_2025"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6040,6 +6487,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L4_2025"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6062,6 +6512,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L5_2025"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6084,6 +6537,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L6_2025"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6106,6 +6562,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L7_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6128,6 +6587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L1_2025"
+        ],
         "progression": "Predict and Run: Mutator Methods"
       },
       "bonus": false,
@@ -6150,6 +6612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L2_2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6172,6 +6637,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6194,6 +6662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L4_2025"
+        ],
         "progression": "Skill Building: Mutator Methods"
       },
       "bonus": false,
@@ -6216,6 +6687,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L5_2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6238,6 +6712,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L6_2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6260,6 +6737,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L7 Practice_2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6282,6 +6762,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6304,6 +6787,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L1_2025"
+        ],
         "progression": "Predict and Run: Printing Objects"
       },
       "bonus": false,
@@ -6326,6 +6812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L2_2025"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6348,6 +6837,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L3_2025"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6370,6 +6862,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L4_2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6392,6 +6887,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L5_2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6414,6 +6912,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L6_2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6436,6 +6937,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L7 Practice_2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6458,6 +6962,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6480,6 +6987,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project_2025"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -6502,6 +7012,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Assessment_2025"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -6524,6 +7037,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa2_2025"
+        ],
         "progression": "Unit 2 Survey"
       },
       "bonus": false,
@@ -6546,6 +7062,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project 1-Day_2025"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -6568,6 +7087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6589,6 +7111,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6611,6 +7136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -6625,6 +7153,204 @@
       },
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L1_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b"
+      },
+      "level_keys": [
+        "CSA U6L2-L1_-modular"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L2_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      },
+      "level_keys": [
+        "CSA U6L2-L2_-modular"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L3_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      },
+      "level_keys": [
+        "CSA U6L2-L3_-modular"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L4_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      },
+      "level_keys": [
+        "CSA U6L2-L4_-modular"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L5_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L5_-modular"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L6_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L6_-modular"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L7_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L7_-modular"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L8_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L8_-modular"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L9_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
+      },
+      "level_keys": [
+        "CSA U6L2-L9_-modular"
       ]
     }
   ],
@@ -7636,6 +8362,114 @@
         "script.name": "csa2-2025",
         "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L1_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L1_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L2_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L2_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L3_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L3_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L4_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L4_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L5_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L5_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L6_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L6_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L7_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L7_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L8_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L8_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L9_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L9_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
+      }
     }
   ],
   "resources": [
@@ -7781,6 +8615,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_u2l9_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U6L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1xVs_eiJcMO5qV60HmZ2_36wrFJ8C7ZpOMxsJDszkOEo/edit?usp=sharing",
+      "key": "_exemplar_u6l2_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u6l2_guided_notes"
       }
     },
     {
@@ -7949,6 +8795,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U6L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1IFS1PvC5jeLrIASoDm2--K6lxiHwrCrKk5SzwmeKrY8/edit?usp=share_link",
+      "key": "_key_u6l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l2_extra_practice"
       }
     },
     {
@@ -8363,6 +9221,18 @@
       }
     },
     {
+      "name": "Substrings",
+      "url": "https://docs.google.com/presentation/d/1IPi8lcAecPmMUhj4Y8BjySTZl9FFah7wv-jDb5rx7MM/edit?usp=sharing",
+      "key": "substrings",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "substrings"
+      }
+    },
+    {
       "name": "The this Keyword",
       "url": "https://docs.google.com/presentation/d/1t5Spp8xU2AT4z0tjofAIbqiU1UKpWbu0ZiL1cfkpX68/edit?usp=sharing",
       "key": "the_this_keyword",
@@ -8656,6 +9526,32 @@
       },
       "seeding_key": {
         "resource.key": "u2l9_guided_notes"
+      }
+    },
+    {
+      "name": "U6L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1S8npMPq0suee4tC4pFBKBplmDv3j_yhL5qalzTIEu4U/edit?usp=share_link",
+      "key": "u6l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l2_extra_practice"
+      }
+    },
+    {
+      "name": "U6L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1PWIxX6EeYsAPyd4mIKYxJWDvct5xFdJy7vCnJ0eTWpg/edit?usp=sharing",
+      "key": "u6l2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l2_guided_notes"
       }
     },
     {
@@ -9152,6 +10048,42 @@
       "seeding_key": {
         "lesson.key": "Store Management Project",
         "resource.key": "store_management_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "_exemplar_u6l2_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "_key_u6l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "substrings"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "u6l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "resource.key": "u6l2_guided_notes"
       }
     },
     {
@@ -10155,6 +11087,16 @@
       }
     },
     {
+      "key": "ccb219a4-4d3f-433d-a286-59c742172009",
+      "properties": {
+        "description": "Use the `indexOf()` and `substring()` methods in the `String` class to find and replace specific characters"
+      },
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "objective.key": "ccb219a4-4d3f-433d-a286-59c742172009"
+      }
+    },
+    {
       "key": "dd0584e0-07c6-43c7-a9d9-565737f1a37a",
       "properties": {
         "description": "Use arithmetic operators to write and evaluate Java expressions"
@@ -10182,6 +11124,16 @@
       "seeding_key": {
         "lesson.key": "Attributes",
         "objective.key": "eafd29c4-eed3-4a70-b17c-323a9036c69d"
+      }
+    },
+    {
+      "key": "ed95d1a4-cc01-4678-9d6a-ed682f6e3d7d",
+      "properties": {
+        "description": "Use the `substring()` method in the `String` class to retrieve a substring of a `String` object"
+      },
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "objective.key": "ed95d1a4-cc01-4678-9d6a-ed682f6e3d7d"
       }
     },
     {
@@ -10736,6 +11688,55 @@
         "lesson.key": "Store Management Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Substrings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
