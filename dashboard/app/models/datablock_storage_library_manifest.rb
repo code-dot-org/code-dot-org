@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: datablock_storage_library_manifest
+#
+#  id               :bigint           not null, primary key
+#  library_manifest :json
+#  singleton_guard  :integer          not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+# Indexes
+#
+#  index_datablock_storage_library_manifest_on_singleton_guard  (singleton_guard) UNIQUE
+#
 # A one-row table storing a singleton JSON `library_manifest`` that
 # describes all Data Library datasets and categories:
 #
