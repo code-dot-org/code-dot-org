@@ -6,5 +6,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Songwriting
 
-Use the concept of the chorus in a song to learn about defining and calling functions.
+Use the concept of the chorus in a song to learn about declaring and calling functions.
 MARKDOWN
