@@ -138,6 +138,7 @@ const styles = {
 };
 
 export default connect(
+  // FIXME: unfirebase
   state => ({libraryManifest: state.data.libraryManifest || {}}),
   dispatch => ({})
 )(ManifestEditor);
