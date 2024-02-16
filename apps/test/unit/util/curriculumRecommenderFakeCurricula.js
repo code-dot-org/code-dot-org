@@ -123,7 +123,17 @@ const ONLY_TOPICS_COURSES = [
     published_date: '2015-05-01 05:00:00 UTC',
   },
   {
-    key: 'importantTopicCourse',
+    key: 'multipleTopicsCourse',
+    is_featured: false,
+    duration: null,
+    marketing_initiative: null,
+    grade_levels: null,
+    cs_topic: 'topic1,topic2',
+    school_subject: null,
+    published_date: '2015-05-02 05:00:00 UTC',
+  },
+  {
+    key: 'desiredImportantTopicCourse',
     is_featured: false,
     duration: null,
     marketing_initiative: null,
@@ -133,14 +143,14 @@ const ONLY_TOPICS_COURSES = [
     published_date: '2015-05-03 05:00:00 UTC',
   },
   {
-    key: 'multipleTopicsCourse',
+    key: 'undesiredImportantTopicCourse',
     is_featured: false,
     duration: null,
     marketing_initiative: null,
     grade_levels: null,
-    cs_topic: 'topic1,topic2',
+    cs_topic: IMPORTANT_TOPICS[1],
     school_subject: null,
-    published_date: '2015-05-02 05:00:00 UTC',
+    published_date: '2015-05-04 05:00:00 UTC',
   },
 ];
 

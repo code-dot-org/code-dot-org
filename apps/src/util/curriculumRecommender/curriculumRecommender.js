@@ -42,11 +42,17 @@ export const getTestRecommendations = (
       curriculum,
       schoolSubjects
     );
-    score += hasAnyImportantTopic(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += hasImportantButNotDesiredTopic(
+      FAKE_RECOMMENDER_SCORING,
+      curriculum,
+      csTopics
+    );
     score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
     score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
   });
+  console.log('SEPARATOR');
+  console.log(curriculaScores.map(curr => [curr[0].key, curr[1]]));
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
 };
 
@@ -98,12 +104,18 @@ const hasDesiredSchoolSubjects = (
   );
 };
 
-const hasAnyImportantTopic = (scoring_framework, curriculum) => {
-  const csTopics = curriculum.cs_topic?.split(',');
-  if (csTopics) {
-    for (const topic of csTopics) {
-      if (IMPORTANT_TOPICS.includes(topic)) {
-        return scoring_framework['hasAnyImportantTopic'];
+const hasImportantButNotDesiredTopic = (
+  scoring_framework,
+  curriculum,
+  csTopics
+) => {
+  const curriculumTopics = curriculum.cs_topic?.split(',');
+  const desiredTopics = csTopics?.split(',');
+
+  if (curriculumTopics) {
+    for (const topic of curriculumTopics) {
+      if (IMPORTANT_TOPICS.includes(topic) && !desiredTopics.includes(topic)) {
+        return scoring_framework['hasImportantButNotDesiredTopic'];
       }
     }
   }

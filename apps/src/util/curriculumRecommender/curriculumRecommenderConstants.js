@@ -12,7 +12,7 @@ export const FAKE_RECOMMENDER_SCORING = {
   hasDesiredMarketingInitiative: 4,
   hasAnySchoolSubject: 1,
   hasDesiredSchoolSubjects: 2,
-  hasAnyImportantTopic: 1,
+  hasImportantButNotDesiredTopic: 1,
   hasDesiredTopics: 2,
   publishedWithinOneYearAgo: 2,
   publishedWithinTwoYearsAgo: 1,
