@@ -76,7 +76,7 @@ export default class ProgressBox extends Component {
     };
 
     return (
-      <div style={boxWithBorderStyle}>
+      <div style={boxWithBorderStyle} data-testid="progress-box">
         {this.props.lessonNumber && (
           <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
         )}

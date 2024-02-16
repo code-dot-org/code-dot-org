@@ -1,12 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-02-08T16:29:44.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## DNS and Scalability\r\n\r\nIn your own words explain the following about the Domain Name System\r\n\r\n* What problem does the DNS solve?\r\n* How does the DNS help the world wide web scale so that billions of users can access billions of web pages?",
-    "encrypted_solution": "my4IuQ4j8K4qcG/pRDtc04eIWYleKQ/2ul1Fh8B6avM/KxZQbzD4PIqXKHpY\nIRoTodB4B8Z6clFU1N9fFUULk17ukADj0k45GggwF4PSZ4B19Y9trTg3o8al\n/YNknAeGgmZLyab+4YYyKCqdxHq8CMdTNIlLB3/rLggJC2lhf035GrRD468Y\nb3TETJ+jZY2TPekFxRVdR2gBjT1k7oz1hV+Nl+WgMHjzJIS12kcXxi/0kyg/\nAku4RsrmLmETvHG6Bhe25LY76VH+unarzKL+zw3WEqQMStfPiuiGi+TQqHkF\nMFMWY2ubPHlr+SNUamZdi80GS6w8OfA1XbBHl4ETQ+mZlvxFtWDwzCGJuZJF\nSnZyRSIynBlo9kQ61OrMp6ARVNHS1SgCDWsTirV8ZiOPKnPqJrC6mCnlvDGQ\nFJWihcfqMmjzF/1qPK6CJ02jxwpkbTZZCauNJoORBKQkgfFY2H1liaJ/Boy9\n3ohLEB7kZosDJYzZVjaQXhPcHxyRu7ICVj/f4D0raI92Lpdbq7bFlg==\n",
+    "long_instructions": "## Teaching with micro:bits\r\n\r\n\r\n#### Take a few minutes to reflect on using micro:bits in your classroom. \r\n- #### What are you excited about?\r\n- #### What challenges do you anticipate? ",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,
@@ -19,8 +19,9 @@
     "optional": "false",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-02-08T16:29:44.435+00:00\",\"changed\":[\"cloned from \\\"U2L5 CSP CFU subgroups_2023\\\"\"],\"cloned_from\":\"U2L5 CSP CFU subgroups_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-08T16:29:44.435+00:00\",\"changed\":[\"cloned from \\\"U2L5 CSP CFU subgroups_2023\\\"\"],\"cloned_from\":\"U2L5 CSP CFU subgroups_2023\"},{\"changed_at\":\"2024-02-13 16:33:20 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-02-13 16:37:24 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

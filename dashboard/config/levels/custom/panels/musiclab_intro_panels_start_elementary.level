@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-02-15T22:56:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "panels": [
+        {
+          "imageUrl": "https://studio.code.org/shared/images/teacher-announcement/incubator-projectbeats.png",
+          "text": "#### ✨Welcome to Project Beats! ✨ \n\nYou can mix, remix, and even perform music using code. You don't need to know much about coding 💻 or music 🎵 just yet. All you need is some time ⏰ and curiosity 🤔 to start making your creations. Let's get started! 🚀"
+        }
+      ]
+    },
+    "name_suffix": "_elementary"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-15T22:56:27.149+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_start\\\"\"],\"cloned_from\":\"musiclab_intro_panels_start\"},{\"changed_at\":\"2024-02-15 23:05:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:06:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:08:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:08:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>
