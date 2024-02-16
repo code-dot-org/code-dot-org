@@ -41,7 +41,7 @@ import {
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, DEFAULT_LIBRARY, Triggers} from '../constants';
+import {BlockMode, DEFAULT_LIBRARY} from '../constants';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
@@ -295,7 +295,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (getBlockMode() === BlockMode.SIMPLE2) {
-      this.sequencer = new Simple2Sequencer(this.library);
+      this.sequencer = new Simple2Sequencer();
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
     }
@@ -468,12 +468,9 @@ class UnconnectedMusicView extends React.Component {
     this.props.clearOrderedFunctions();
 
     // Sequence out all possible trigger events to preload sounds if necessary.
-    const allTriggerEvents = [];
-    Triggers.forEach(trigger => {
-      this.sequencer.clear();
-      this.musicBlocklyWorkspace.executeTrigger(trigger.id, 0);
-      allTriggerEvents.push(...this.sequencer.getPlaybackEvents());
-    });
+    this.sequencer.clear();
+    this.musicBlocklyWorkspace.executeAllTriggers();
+    const allTriggerEvents = this.sequencer.getPlaybackEvents();
 
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);

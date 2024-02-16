@@ -10,6 +10,9 @@ import {
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 
+import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
+
 export default function Congrats(props) {
   /**
    * @param tutorial The specific tutorial the student completed i.e. 'dance', 'dance-2019', etc
@@ -53,6 +56,8 @@ export default function Congrats(props) {
     randomDonorName,
     initialCertificateImageUrl,
     isHocTutorial,
+    isPlCourse,
+    isK5PlCourse,
     nextCourseScriptName,
     nextCourseTitle,
     nextCourseDesc,
@@ -168,23 +173,45 @@ export default function Congrats(props) {
     },
   ];
 
-  return (
-    <div className={style.wrapper}>
-      <div className={style.certificateContainer}>
-        <Certificate
-          tutorial={tutorial}
-          certificateId={certificateId}
-          randomDonorTwitter={randomDonorTwitter}
-          randomDonorName={randomDonorName}
-          under13={under13}
-          initialCertificateImageUrl={initialCertificateImageUrl}
-          isHocTutorial={isHocTutorial}
-        >
-          {renderExtraCertificateLinks(language, tutorial)}
-        </Certificate>
-      </div>
+  const selfPacedPlLink = {
+    title: i18n.congratsSelfPacedPlTitle(),
+    description: i18n.congratsSelfPacedPlDescription(),
+    buttonText: i18n.exploreSelfPacedLearning(),
+    image: selfPacedPlBanner,
+    link: 'https://code.org/educate/professional-development-online',
+  };
 
-      {isHocTutorial ? (
+  const professionalLearningNextOptionsK5 = [
+    {
+      title: i18n.learnAboutFacilitatorLeadProfessionalWorkshops(),
+      description:
+        i18n.learnAboutFacilitatorLeadProfessionalWorkshopsDescription(),
+      buttonText: i18n.discoverFacilitatorLedWorkshops(),
+      image: facilitatorLedPlBanner,
+      link: 'https://code.org/professional-development-workshops',
+    },
+    selfPacedPlLink,
+  ];
+
+  const professionalLearningNextOptions612 = [
+    {
+      title: i18n.learnAboutFacilitatorLeadProfessionalWorkshops(),
+      description:
+        i18n.learnAboutFacilitatorLeadProfessionalWorkshopsDescription(),
+      buttonText: i18n.discoverFacilitatorLedWorkshops(),
+      image: facilitatorLedPlBanner,
+      link: 'https://code.org/apply',
+    },
+    selfPacedPlLink,
+  ];
+
+  const professionalLearningNextOptions = isK5PlCourse
+    ? professionalLearningNextOptionsK5
+    : professionalLearningNextOptions612;
+
+  const renderRecommendedOptions = () => {
+    if (isHocTutorial) {
+      return (
         <div>
           <div className={style.continueBeyond}>
             <Heading3 className={style.textCenter}>
@@ -283,7 +310,39 @@ export default function Congrats(props) {
             </div>
           )}
         </div>
-      ) : (
+      );
+    } else if (isPlCourse) {
+      return (
+        <div className={style.professionalLearning}>
+          <div
+            className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
+          >
+            {professionalLearningNextOptions.map((item, index) => (
+              <div
+                className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+                key={index}
+              >
+                <div className={style.contentWrapper}>
+                  <img
+                    src={item.image}
+                    alt=""
+                    className={style.professionalLearningNextStepsImage}
+                  />
+                  <Heading3>{item.title}</Heading3>
+                  <BodyTwoText>{item.description}</BodyTwoText>
+                </div>
+                <div className={style.contentFooter}>
+                  <a className={style.linkButton} href={item.link}>
+                    {item.buttonText}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    } else {
+      return (
         <div>
           <GraduateToNextLevel
             scriptName={nextCourseScriptName}
@@ -291,7 +350,27 @@ export default function Congrats(props) {
             courseDesc={nextCourseDesc}
           />
         </div>
-      )}
+      );
+    }
+  };
+
+  return (
+    <div className={style.wrapper}>
+      <div className={style.certificateContainer}>
+        <Certificate
+          tutorial={tutorial}
+          certificateId={certificateId}
+          randomDonorTwitter={randomDonorTwitter}
+          randomDonorName={randomDonorName}
+          under13={under13}
+          initialCertificateImageUrl={initialCertificateImageUrl}
+          isHocTutorial={isHocTutorial}
+          isPlCourse={isPlCourse}
+        >
+          {renderExtraCertificateLinks(language, tutorial)}
+        </Certificate>
+      </div>
+      {renderRecommendedOptions()}
     </div>
   );
 }
@@ -306,6 +385,8 @@ Congrats.propTypes = {
   randomDonorName: PropTypes.string,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
+  isPlCourse: PropTypes.bool,
+  isK5PlCourse: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
   nextCourseDesc: PropTypes.string,

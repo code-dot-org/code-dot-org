@@ -5,19 +5,21 @@ import {EditorView, ViewUpdate} from '@codemirror/view';
 import PanelContainer from '../PanelContainer';
 import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
-import {darkMode} from './editorThemes';
+import {darkMode as darkModeTheme} from './editorThemes';
 import {autocompletion} from '@codemirror/autocomplete';
 
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
   editorConfigExtensions: Extension[];
   startCode: string;
+  darkMode?: boolean;
 }
 
 const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   onCodeChange,
   editorConfigExtensions,
   startCode,
+  darkMode = true,
 }) => {
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
@@ -36,11 +38,14 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
     const editorExtensions = [
       ...editorConfig,
-      darkMode,
+
       onEditorUpdate,
       autocompletion(),
       ...editorConfigExtensions,
     ];
+    if (darkMode) {
+      editorExtensions.push(darkModeTheme);
+    }
     new EditorView({
       state: EditorState.create({
         doc: startCode,
@@ -56,6 +61,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     onCodeChange,
     startCode,
     didInit,
+    darkMode,
   ]);
 
   return (
