@@ -2,7 +2,7 @@
 #
 # Table name: datablock_storage_tables
 #
-#  project_id      :integer          not null
+#  project_id      :integer          not null, primary key
 #  table_name      :string(768)      not null, primary key
 #  columns         :json
 #  is_shared_table :string(768)

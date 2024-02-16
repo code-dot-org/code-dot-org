@@ -2,7 +2,7 @@
 #
 # Table name: datablock_storage_kvps
 #
-#  project_id :string(22)       not null
+#  project_id :integer          not null, primary key
 #  key        :string(768)      not null, primary key
 #  value      :json
 #
