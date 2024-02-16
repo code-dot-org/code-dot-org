@@ -1,10 +1,10 @@
 import {makeEnum} from '@cdo/apps/utils';
 import {parseElement as parseXmlElement} from '../xml';
 
-export const BlocklyVersion = {
-  CDO: 'CDO',
-  GOOGLE: 'Google',
-};
+export enum BlocklyVersion {
+  CDO = 'CDO',
+  GOOGLE = 'Google',
+}
 
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
@@ -14,17 +14,17 @@ export const MenuOptionStates = {
   HIDDEN: 'hidden',
 };
 
-export const Themes = {
-  MODERN: 'cdomodern',
-  DARK: 'cdomoderndark',
-  HIGH_CONTRAST: 'cdohighcontrast',
-  HIGH_CONTRAST_DARK: 'cdohighcontrastdark',
-  PROTANOPIA: 'cdoprotanopia',
-  PROTANOPIA_DARK: 'cdoprotanopiadark',
-  DEUTERANOPIA: 'cdodeuteranopia',
-  DEUTERANOPIA_DARK: 'cdodeuteranopiadark',
-  TRITANOPIA: 'cdotritanopia',
-  TRITANOPIA_DARK: 'cdotritanopiadark',
+export enum Themes {
+  MODERN = 'cdomodern',
+  DARK = 'cdomoderndark',
+  HIGH_CONTRAST = 'cdohighcontrast',
+  HIGH_CONTRAST_DARK = 'cdohighcontrastdark',
+  PROTANOPIA = 'cdoprotanopia',
+  PROTANOPIA_DARK = 'cdoprotanopiadark',
+  DEUTERANOPIA = 'cdodeuteranopia',
+  DEUTERANOPIA_DARK = 'cdodeuteranopiadark',
+  TRITANOPIA = 'cdotritanopia',
+  TRITANOPIA_DARK = 'cdotritanopiadark',
 };
 
 export const Renderers = {
