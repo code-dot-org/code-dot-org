@@ -9,12 +9,8 @@ class TablesApi < Sinatra::Base
   load(CDO.dir('shared', 'middleware', 'helpers', 'core.rb'))
 
   helpers do
-    [
-      'table.rb',
-      'firebase_helper.rb',
-    ].each do |file|
-      load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', file))
-    end
+    load(CDO.dir('dashboard', 'legacy', 'middleware', 'helpers', 'table.rb'))
+    load(CDO.dir('dashboard', 'lib', 'datablock_storage.rb'))
   end
 
   # GET /v3/export-firebase-tables/<channel-id>/table-name
@@ -27,6 +23,6 @@ class TablesApi < Sinatra::Base
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
-    return DatablockStorageHelper.table_as_csv(channel_id, table_name)
+    return DatablockStorage.table_as_csv(channel_id, table_name)
   end
 end

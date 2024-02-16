@@ -3,29 +3,27 @@ require 'firebase'
 require 'time'
 require 'uri'
 
-# A wrapper around the firebase gem. For gem documentation, see
-# https://github.com/oscardelben/firebase-ruby.
-class DatablockStorageHelper
+module DatablockStorage
   # @param [String] table_name The name of the table to query.
   # @return [String] A representation of the table (its columns and its data) as a CSV string.
   def self.table_as_csv(channel_id, table_name)
-    # TODO: post-firebase-cleanup
-    firebase_channel_id = channel_id + CDO.firebase_channel_id_suffix
-    raise "CDO.firebase_name not defined" unless CDO.firebase_name
-    raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
-    firebase = Firebase::Client.new \
-      "https://#{CDO.firebase_name}.firebaseio.com/",
-      CDO.firebase_secret
-    response = firebase.get(
-      "/v3/channels/#{firebase_channel_id}/storage/tables/#{escape_table_name(table_name)}/records"
-    )
-    records = response.body || []
+    table = DatablockStorageTable.find_by(channel_id: channel_id, table_name: table_name)
+    if table
+      # We're in datablock storage
+      records = table.read_records.map(&:record_json)
+    else
+      # TODO: post-firebase-cleanup
+      response = firebase.get( # TODO: unfirebase
+        "/v3/channels/#{@channel_id}/storage/tables/#{escape_table_name(table_name)}/records"
+      )
+      records = response.body || []
 
-    # The firebase response could be a Hash or a sparse Array
-    records = records.values if records.is_a? Hash
-    records.compact!
+      # The firebase response could be a Hash or a sparse Array
+      records = records.values if records.is_a? Hash
+      records.compact!
+      records.map! {|record| JSON.parse(record)}
+    end
 
-    records.map! {|record| JSON.parse(record)}
     table_to_csv(records, column_order: ['id'])
   end
 
