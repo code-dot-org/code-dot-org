@@ -11,7 +11,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../../deployment'
 require 'ostruct'
-require_relative '../../../dashboard/legacy/middleware/helpers/datablock_storage_helper'
+require_relative '../../../dashboard/lib/datablock_storage'
 require 'cdo/profanity_filter'
 require 'rest-client'
 
@@ -149,7 +149,7 @@ def main
       )
       next
     end
-    DatablockStorageHelper.upload_live_table(chart['title'], records, columns)
+    DatablockStorage.upload_live_table(chart['title'], records, columns)
   end
 end
 

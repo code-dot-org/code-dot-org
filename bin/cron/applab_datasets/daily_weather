@@ -8,7 +8,7 @@ require 'net/http'
 require 'json'
 require 'ostruct'
 require 'date'
-require_relative '../../../dashboard/legacy/middleware/helpers/datablock_storage_helper'
+require_relative '../../../dashboard/lib/datablock_storage'
 require 'honeybadger/ruby'
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip_code)
@@ -214,7 +214,7 @@ def main
       )
     return
   end
-  DatablockStorageHelper.upload_live_table('Daily Weather', records, columns) # TODO: unfirebase
+  DatablockStorage.upload_live_table('Daily Weather', records, columns) # TODO: unfirebase
 end
 
 main

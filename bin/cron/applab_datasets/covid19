@@ -7,7 +7,7 @@ require 'net/http'
 require 'csv'
 require 'date'
 require 'datapackage'
-require_relative '../../../dashboard/legacy/middleware/helpers/datablock_storage_helper'
+require_relative '../../../dashboard/lib/datablock_storage'
 
 US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
 MAX_DAYS = 90 # there are 55 states/territories, and the table must be less than 5000 total rows (5000/55 = 90.9)
@@ -104,10 +104,10 @@ end
 
 def main
   records, columns = get_us_covid19_data
-  DatablockStorageHelper.upload_live_table('COVID-19 Cases per US State', records, columns)
+  DatablockStorage.upload_live_table('COVID-19 Cases per US State', records, columns)
 
   records, columns = get_world_covid19_data
-  DatablockStorageHelper.upload_live_table('COVID-19 Cases per Country', records, columns)
+  DatablockStorage.upload_live_table('COVID-19 Cases per Country', records, columns)
 end
 
 main if only_one_running?(__FILE__)
