@@ -19,8 +19,8 @@ module LocaleHelper
   end
 
   # String representing the Locale code for the Blockly client code.
-  def js_locale
-    locale.to_s.downcase.tr('-', '_')
+  def js_locale(locale_code = locale)
+    locale_code.to_s.downcase.tr('-', '_')
   end
 
   def options_for_locale_select
@@ -44,12 +44,12 @@ module LocaleHelper
 
   # Returns an Array of supported locale codes.
   def accepted_locales
-    I18n.available_locales.map(&:to_s)
+    @accepted_locales ||= I18n.available_locales.map(&:to_s)
   end
 
   # Strips regions off of accepted_locales.
   def accepted_languages
-    accepted_locales.map(&method(:language)).uniq
+    @accepted_languages ||= accepted_locales.map(&method(:language)).uniq
   end
 
   # Looks up a localized string driven by a database value.
