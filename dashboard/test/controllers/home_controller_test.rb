@@ -294,19 +294,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'LTI student without us_state gets student information prompt' do
-    ids = ['http://some-iss.com', 'some-aud', 'some-sub'].freeze
-
-    id_token = {
-      sub: ids[2],
-      aud: ids[1],
-      iss: ids[0],
-    }
-
-    student = create :student
-    student.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
-      credential_type: AuthenticationOption::LTI_V1,
-    )
+    student = create :student, :with_lti_auth
 
     student.update_attribute(:us_state, nil) # bypasses validations
     student = student.reload
