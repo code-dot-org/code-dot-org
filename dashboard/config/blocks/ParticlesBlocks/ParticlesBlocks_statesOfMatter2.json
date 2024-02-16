@@ -3,11 +3,6 @@
   "config": {
     "func": "statesOfMatter2",
     "blockText": "Set {COSTUME} to {BEHAVIOR} behavior",
-    "color": [
-      136,
-      ".84",
-      ".80"
-    ],
     "style": "behavior_blocks",
     "args": [
       {
