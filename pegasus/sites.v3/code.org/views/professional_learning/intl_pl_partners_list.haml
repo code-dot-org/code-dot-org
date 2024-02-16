@@ -1,4 +1,4 @@
-- district_partners = DB[:cdo_international_professional_learning_partners].all
+- intl_partners = DB[:cdo_international_professional_learning_partners].all
 
 .table-wrapper
   %table
@@ -9,7 +9,7 @@
         %th=hoc_s("intl_pl_partners_page.table.description")
         %th=hoc_s("intl_pl_partners_page.table.contact")
     %tbody
-      - district_partners.each do |value|
+      - intl_partners.each do |value|
         %tr
           %td=value[:country_s]
           %td=value[:organization_s]
