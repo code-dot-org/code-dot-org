@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 const DatablockStorage = {};
+let channelId = undefined;
 
 function getAuthToken() {
   const tokenDOM = document.querySelector('meta[name="csrf-token"]');
@@ -14,7 +15,7 @@ function urlFor(func_name) {
   // FIXME: this doesn't work for all URLs where this can be loaded from
   // e.g. http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g/edit/
   // vs http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g
-  return '../datablock_storage/' + func_name;
+  return `/datablock_storage/${channelId}/` + func_name;
 }
 
 function _fetch(path, method, params) {
@@ -465,7 +466,8 @@ DatablockStorage.resetForTesting = function () {
 
 DatablockStorage.resetRecordListener = function () {};
 
-export function initDatablockStorage(config) {
+export function initDatablockStorage({channelId: _channelId}) {
+  channelId = _channelId;
   return DatablockStorage;
 }
 
