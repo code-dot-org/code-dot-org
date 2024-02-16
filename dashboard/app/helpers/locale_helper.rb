@@ -1,5 +1,3 @@
-require_relative '../../lib/dashboard_languages'
-
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
@@ -16,8 +14,8 @@ module LocaleHelper
 
   # String representing the 2 letter language code.
   # Prefer full locale with region where possible.
-  def language
-    locale.to_s.split('-').first
+  def language(locale_code = locale)
+    locale_code.to_s.split('-').first
   end
 
   # String representing the Locale code for the Blockly client code.
@@ -51,8 +49,7 @@ module LocaleHelper
 
   # Strips regions off of accepted_locales.
   def accepted_languages
-    accepted_languages = accepted_locales.map {|locale| locale.split('-')[0]}
-    accepted_languages.uniq
+    accepted_locales.map(&method(:language)).uniq
   end
 
   # Looks up a localized string driven by a database value.
