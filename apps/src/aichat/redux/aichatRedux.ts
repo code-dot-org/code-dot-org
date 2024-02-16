@@ -8,8 +8,8 @@ import {getChatCompletionMessage} from '../chatApi';
 import {
   ChatCompletionMessage,
   AichatLevelProperties,
-  Status,
   Role,
+  Status,
 } from '../types';
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');

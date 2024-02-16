@@ -1,0 +1,18 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "katieCollide",
+    "blockText": "{SPRITE} collides {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "type": "Sprite"
+      }
+    ],
+    "style": "logic_blocks"
+  }
+}

@@ -1,6 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
+import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants';
 import LegacyDialog from '../../code-studio/LegacyDialog';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -173,11 +173,12 @@ const registerDarkMode = function () {
       return MenuOptionStates.ENABLED;
     },
     callback: function (scope) {
+      const currentTheme = scope.workspace.getTheme();
       const themeName =
-        baseName(scope.workspace?.getTheme().name) +
+        baseName(currentTheme.name) +
         (isDarkTheme(scope.workspace) ? '' : dark);
       localStorage.setItem(BLOCKLY_THEME, themeName);
-      setAllWorkspacesTheme(Blockly.themes[themeName]);
+      setAllWorkspacesTheme(Blockly.themes[themeName], currentTheme);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'toggleDarkMode',
@@ -227,9 +228,10 @@ const registerTheme = function (name, label, index) {
       }
     },
     callback: function (scope) {
+      const currentTheme = scope.workspace.getTheme();
       const themeName = name + (isDarkTheme(scope.workspace) ? dark : '');
       localStorage.setItem(BLOCKLY_THEME, themeName);
-      setAllWorkspacesTheme(Blockly.themes[themeName]);
+      setAllWorkspacesTheme(Blockly.themes[themeName], currentTheme);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: name + 'ThemeOption',
@@ -334,11 +336,20 @@ function baseName(themeName) {
   return themeName.replace(dark, '');
 }
 
-function setAllWorkspacesTheme(theme) {
+function setAllWorkspacesTheme(newTheme, previousTheme) {
   Blockly.Workspace.getAll().forEach(workspace => {
     // Headless workspaces do not have the ability to set the theme.
     if (typeof workspace.setTheme === 'function') {
-      workspace.setTheme(theme);
+      workspace.setTheme(newTheme);
+      // Re-render blocks if the font size changed.
+      // Once https://github.com/google/blockly/issues/7782 is resolved,
+      // we should be able to remove this.
+      if (newTheme.fontStyle?.size !== previousTheme.fontStyle?.size) {
+        workspace.getAllBlocks().map(block => {
+          block.markDirty();
+          block.render();
+        });
+      }
     }
   });
 }

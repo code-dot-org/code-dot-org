@@ -336,11 +336,9 @@ module SharedConstants
       "isPressed": null,
       "holdtime": null,
       "soundSensor.value": null,
-      "soundSensor.getAveragedValue": null,
       "soundSensor.setScale": null,
       "soundSensor.threshold": null,
       "lightSensor.value": null,
-      "lightSensor.getAveragedValue": null,
       "lightSensor.setScale": null,
       "lightSensor.threshold": null,
       "tempSensor.F": null,
@@ -359,7 +357,6 @@ module SharedConstants
       "onBoardEvent": null,
       "isPressed": null,
       "lightSensor.value": null,
-      "lightSensor.getAveragedValue": null,
       "lightSensor.setScale": null,
       "lightSensor.threshold": null,
       "compass.getHeading": null
@@ -627,10 +624,11 @@ module SharedConstants
   EMAIL_LINKS = OpenStruct.new(
     {
       PRIVACY_POLICY_URL: "https://code.org/privacy",
+      CONTACT_US_URL: "https://code.org/contact",
       TOS_URL: "https://code.org/tos",
       STUDENT_PRIVACY_PLEDGE_URL: "https://studentprivacypledge.org/signatories/",
       COMMON_SENSE_MEDIA_URL: "https://privacy.commonsense.org/evaluation/code.org",
-      CDO_SUPPORT_MAILTO: "mailto:support@code.org"
+      CDO_SUPPORT_MAILTO: "mailto:support@code.org",
     }
   ).freeze
 
@@ -646,8 +644,39 @@ module SharedConstants
     {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
   )
 
+  LMS_LINKS = OpenStruct.new(
+    {
+      INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
+      INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
+    }
+  ).freeze
+
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2023_v4.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v1.json'
+
+  # We should always specify a version for the LLM so the results don't unexpectedly change.
+  # reference: https://platform.openai.com/docs/models/gpt-3-5
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
+
+  # These reflect the 'status' of an AI Tutor Interaction
+  AI_TUTOR_INTERACTION_SAVE_STATUS = {
+    ERROR: 'error',
+    PERSONAL: 'personal',
+    PROFANITY: 'profanity',
+    INAPPROPRIATE: 'inappropriate',
+    OK: 'ok',
+    UNKNOWN: 'unknown',
+    EMAIL: 'email',
+    ADDRESS: 'address',
+    PHONE: 'phone',
+  }.freeze
+
+  # These are the types of assistance AI Tutor can provide
+  AI_TUTOR_TYPES = {
+    COMPILATION: 'compilation',
+    VALIDATION: 'validation',
+    GENERAL_CHAT: 'general_chat',
+  }.freeze
 end

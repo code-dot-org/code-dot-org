@@ -92,3 +92,14 @@ export function adjustCalloutsOnViewportChange(event) {
     handleWorkspaceResizeOrScroll();
   }
 }
+
+// When the browser is resized, we need to re-adjust the width of any open flyout.
+export function reflowToolbox(event) {
+  const mainWorkspace = Blockly.getMainWorkspace();
+  mainWorkspace?.getFlyout()?.reflow();
+
+  if (Blockly.functionEditor) {
+    const modalWorkspace = Blockly.getFunctionEditorWorkspace();
+    modalWorkspace?.getFlyout()?.reflow();
+  }
+}

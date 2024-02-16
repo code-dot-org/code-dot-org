@@ -360,21 +360,6 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
-  test 'use_google_blockly is false if Experiment is enabled but is_start_mode is true' do
-    @is_start_mode = true
-    Experiment.stubs(:enabled?).returns(true)
-    @level = build :level
-    refute use_google_blockly
-    Experiment.unstub(:enabled?)
-  end
-
-  test 'use_google_blockly is true if Experiment is enabled for google_blockly otherwise' do
-    Experiment.stubs(:enabled?).returns(true)
-    @level = build :level
-    assert use_google_blockly
-    Experiment.unstub(:enabled?)
-  end
-
   test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
     Experiment.stubs(:enabled?).returns(true)
     @level = build :level
@@ -383,16 +368,6 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
-    Experiment.stubs(:enabled?).returns(false)
-    view_options(blocklyVersion: 'google')
-    @level = build :level
-    assert use_google_blockly
-    Experiment.unstub(:enabled?)
-    reset_view_options
-  end
-
-  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options even if start_mode is true' do
-    @is_start_mode = true
     Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'google')
     @level = build :level
@@ -1111,7 +1086,6 @@ class LevelsHelperTest < ActionView::TestCase
       "<style>.blocklySvg { background: none; }</style>" \
       "<script src=\"/assets/js/blockly.js\"></script>" \
       "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>" \
-      "<script src=\"/assets/js/common.js\"></script>" \
       "<script src=\"/assets/js/en_us/maze_locale.js\"></script>" \
       "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>" \
       "<script src=\"/assets/js/embedBlocks.js\"></script>"

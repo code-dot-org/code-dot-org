@@ -12,65 +12,26 @@ I18N_LOCALES_DIR = 'i18n/locales'.freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
 I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
-CROWDIN_PROJECTS = {
-  codeorg: {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg_files_to_sync_out.json')
-  },
-  'codeorg-markdown': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_markdown_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-markdown_files_to_sync_out.json')
-  },
-  'hour-of-code': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/hourofcode_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/hour-of-code_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code_files_to_sync_out.json')
-  },
-  'codeorg-restricted': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_restricted_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted_files_to_sync_out.json')
-  },
-}.freeze
-
-CROWDIN_TEST_PROJECTS = {
-  'codeorg-testing': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-testing_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_files_to_sync_out.json')
-  },
-  'codeorg-markdown-testing': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-markdown-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown-testing_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_markdown_files_to_sync_out.json')
-  },
-  'hour-of-code-test': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/hourofcode-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/hour-of-code-testing_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code-test_files_to_sync_out.json')
-  },
-  'codeorg-restricted-test': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-restricted-testing_crowdin.yml'),
-    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
-    etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted-testing_etags.json'),
-    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted-test_files_to_sync_out.json')
-  },
-}.freeze
-
 class I18nScriptUtils
+  CROWDIN_CREDS_PATH = CDO.dir('bin/i18n/crowdin_credentials.yml').freeze
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
-  PARALLEL_PROCESSES = Parallel.processor_count / 2
-  SOURCE_LOCALE = 'en-US'.freeze
-  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
+  PARALLEL_PROCESSES = Parallel.processor_count.freeze
+  SOURCE_LOCALE = I18n.default_locale.to_s.freeze
+  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %I[#{SOURCE_LOCALE}]).freeze
+  TESTING_BY_DEFAULT = false
+
+  # @return [Hash] the Crowdin credentials.
+  #   @option crowdin_creds [String] 'api_token' the Crowdin API token.
+  def self.crowdin_creds
+    @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
+  end
+
+  # List of supported CDO Languages
+  # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0 Supported CDO languages doc
+  # @return [Array<CdoLanguage>] Supported CDO languages
+  def self.cdo_languages
+    @cdo_languages ||= PegasusLanguages.all
+  end
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -243,7 +204,9 @@ class I18nScriptUtils
   # Note we could try here to remove the old version of the file both from the
   # filesystem and from github, but it would be significantly harder to also
   # remove it from Crowdin.
-  def self.unit_directory_change?(content_dir, unit_i18n_filename, unit_i18n_filepath)
+  def self.unit_directory_change?(content_dir, unit_i18n_filepath)
+    unit_i18n_filename = File.basename(unit_i18n_filepath)
+
     matching_files = Dir.glob(File.join(content_dir, "**", unit_i18n_filename)).reject do |other_filename|
       other_filename == unit_i18n_filepath
     end
@@ -287,38 +250,6 @@ class I18nScriptUtils
     yml_data.gsub!(/^([a-z]+(?:-[A-Z]+)?):(.*)/, '"\1":\2') # Fixes the "no:" problem.
 
     File.write(filepath, yml_data)
-  end
-
-  # Return true iff the specified file in the specified locale had changes
-  # since the last successful sync-out.
-  #
-  # @param locale [String] the locale code to check. This can be either the
-  #  four-letter code used internally (ie, "es-ES", "es-MX", "it-IT", etc), OR
-  #  the two-letter code used by crowdin, for those languages for which we have
-  #  only a single variation ("it", "de", etc).
-  #
-  # @param file [String] the path to the file to check. Note that this should be
-  #  the relative path of the file as it exists within the locale directory; ie
-  #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
-  #  "/course_content/2018/coursea-2018.json", etc.
-  def self.file_changed?(locale, file)
-    @change_data ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
-      # TODO: investigate the condition as a potential cause of sync fails
-      unless File.exist?(project_options[:files_to_sync_out_json])
-        raise <<~ERR
-          File not found #{project_options[:files_to_sync_out_json]}.
-
-          We expect to find a file containing a list of files changed by the most
-          recent sync down; if this file does not exist, it likely means that no
-          sync down has been run on this machine, so there is nothing to sync out
-        ERR
-      end
-      JSON.load_file(project_options[:files_to_sync_out_json])
-    end
-
-    crowdin_code = PegasusLanguages.get_code_by_locale(locale)
-
-    @change_data.any? {|change_data| change_data.dig(locale, file) || change_data.dig(crowdin_code, file)}
   end
 
   # Formats strings like 'en-US' to 'en_us'
@@ -383,11 +314,11 @@ class I18nScriptUtils
   end
 
   def self.create_progress_bar(**args)
-    ProgressBar.create(**args, format: PROGRESS_BAR_FORMAT)
+    ProgressBar.create(format: PROGRESS_BAR_FORMAT, **args)
   end
 
   def self.process_in_threads(data_array, **args)
-    Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
+    Parallel.each(data_array, in_threads: PARALLEL_PROCESSES, **args) {|data| yield(data)}
   end
 
   # Writes file
@@ -454,13 +385,5 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
-  end
-
-  # Checks if the language is the i18n source language
-  #
-  # @param lang [PegasusLanguage] a pegasus language object
-  # @return [true, false]
-  def self.source_lang?(lang)
-    lang[:locale_s] == SOURCE_LOCALE
   end
 end

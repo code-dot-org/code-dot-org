@@ -41,6 +41,7 @@ const CODE_STUDIO_ENTRIES = {
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+  'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
   'programming_classes/show': './src/sites/studio/pages/programming_classes/show.js',
@@ -81,7 +82,6 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
   'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
   'levels/_teacher_panel': './src/sites/studio/pages/levels/_teacher_panel.js',
-  'levels/_ai_tutor_panel': './src/sites/studio/pages/levels/_ai_tutor_panel.js',
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
@@ -185,6 +185,8 @@ const PEGASUS_ENTRIES = {
   'code.org/views/amazon_future_engineer_eligibility': './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
+  'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
+  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
 
   // hourofcode.com
   'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
@@ -232,6 +234,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
+  userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
 };
 
 // prettier-ignore

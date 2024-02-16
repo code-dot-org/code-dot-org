@@ -1,11 +1,10 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
-import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
-
+import {md5} from './util/crypto';
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
  * and whether the elements appear in the same order as the sequence.
@@ -883,7 +882,7 @@ export const findProfanity = (text, locale, authenticityToken = null) => {
  * @returns {string} A string representing an MD5 hash.
  */
 export function hashString(str) {
-  return MD5(str).toString();
+  return md5(str);
 }
 
 /*
@@ -975,4 +974,44 @@ export function getAlphanumericId() {
     );
   }
   return id.join('');
+}
+
+/**
+ * Parses a level's XML properties for block ids that were explicitly set.
+ * @param {Object} appOptions
+ * @returns {string[]} - An array of explicitly set 'id' attributes found in the XML.
+ */
+export function findExplicitlySetBlockIds(appOptions = null) {
+  if (!appOptions || !appOptions.level) {
+    return [];
+  }
+  const explicitlySetIds = [];
+
+  const blockSources = ['startBlocks', 'toolbox'];
+  for (const levelProperty of blockSources) {
+    const xmlString = appOptions.level?.[levelProperty];
+
+    try {
+      if (!xmlString) {
+        break;
+      }
+
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+
+      // Find all 'block' elements and extract explicitly set ids
+      const blockElements = xmlDoc.querySelectorAll('block');
+      blockElements.forEach(blockElement => {
+        const idAttribute = blockElement.getAttribute('id');
+        if (idAttribute) {
+          explicitlySetIds.push(idAttribute);
+        }
+      });
+    } catch (error) {
+      // Handle parsing errors (e.g., invalid XML)
+      console.error(`Error parsing XML for ${levelProperty}:`, error);
+    }
+  }
+
+  return explicitlySetIds;
 }

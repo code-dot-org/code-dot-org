@@ -15,13 +15,16 @@ import {
   appendProceduresToState,
   convertFunctionsXmlToJson,
   convertXmlToJson,
-  getCombinedSerialization,
+  getProjectSerialization,
   hasBlocks,
   positionBlocksOnWorkspace,
-  resetEditorWorkspaceBlockConfig,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
 import * as blockUtils from '../../block_utils';
+import {
+  getProjectXml,
+  processIndividualBlock,
+} from '@cdo/apps/blockly/addons/cdoXml';
 
 /**
  * Loads blocks to a workspace.
@@ -34,14 +37,17 @@ export function loadBlocksToWorkspace(
   source,
   includeHiddenDefinitions = true
 ) {
-  const {mainSource, hiddenDefinitionSource, blockOrderMap} =
-    prepareSourcesForWorkspaces(source);
+  const embedded = Blockly.isEmbeddedWorkspace(workspace);
+  const {mainSource, hiddenDefinitionSource} = prepareSourcesForWorkspaces(
+    source,
+    embedded
+  );
   // We intentionally load hidden definitions before other blocks on the main workspace.
   if (includeHiddenDefinitions) {
     loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
   }
   Blockly.serialization.workspaces.load(mainSource, workspace);
-  positionBlocksOnWorkspace(workspace, blockOrderMap);
+  positionBlocksOnWorkspace(workspace);
 }
 
 /**
@@ -66,12 +72,13 @@ function loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource) {
  * Split source into appropriate serialization objects for the main and the hidden workspaces for loading.
  * Which blocks are moved depends on whether the modal function editor is enabled.
  * @param {string} source - workspace serialization, either XML or JSON
- * @returns {mainSource: Object, hiddenDefinitionSource: Object, blockOrderMap: Object}
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
+ * @returns {mainSource: Object, hiddenDefinitionSource: Object}
  *  mainSource and hiddenDefinitionSource are Blockly serialization objects.
- *  blockOrderMap is only used when source is XML, and is a map of blocks to their positions on the workspace.
  */
-function prepareSourcesForWorkspaces(source) {
-  let {parsedSource, blockOrderMap} = parseSource(source);
+function prepareSourcesForWorkspaces(source, embedded) {
+  const parsedSource = parseSource(source, embedded);
   const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
   if (Blockly.useModalFunctionEditor) {
     procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
@@ -80,29 +87,28 @@ function prepareSourcesForWorkspaces(source) {
     parsedSource,
     procedureTypesToHide
   );
-  return {mainSource, hiddenDefinitionSource, blockOrderMap};
+  return {mainSource, hiddenDefinitionSource};
 }
 
 /**
  * Convert source to parsed json objects. If source was xml, convert to json before parsing.
- * Also create a block order map if source was xml, which will allow us to correctly place blocks on the workspace.
  * @param {string} source - workspace serialization, either XML or JSON
- * @returns {parsedSource: Object, blockOrderMap: Object}
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
+ * @returns Object: source as json
  */
-function parseSource(source) {
+function parseSource(source, embedded) {
   let isXml = stringIsXml(source);
   let parsedSource;
-  let blockOrderMap;
 
   if (isXml) {
     const xml = parseXmlElement(source);
-    parsedSource = convertXmlToJson(xml);
-    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
+    parsedSource = convertXmlToJson(xml, embedded);
   } else {
     parsedSource = JSON.parse(source);
   }
 
-  return {parsedSource, blockOrderMap};
+  return parsedSource;
 }
 
 /**
@@ -153,6 +159,19 @@ export function moveHiddenBlocks(source = {}, procedureTypesToHide = []) {
     mainSource,
     hiddenDefinitionSource,
   };
+}
+
+export function handleColorAndStyle(block, color, style) {
+  if (style) {
+    // Styles are preferred because they are compatible with accessible themes.
+    block.setStyle(style);
+  } else if (color) {
+    // Colors are fixed and do not change with themes.
+    setHSV(block, ...color);
+  } else {
+    // The default block style is teal for our default theme.
+    block.setStyle('default');
+  }
 }
 
 export function setHSV(block, h, s, v) {
@@ -276,29 +295,10 @@ export function getUserTheme(themeOption) {
  */
 export function getCode(workspace, getSourceAsJson) {
   if (!getSourceAsJson) {
-    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+    return Blockly.Xml.domToText(getProjectXml(workspace));
+  } else {
+    return JSON.stringify(getProjectSerialization(workspace));
   }
-
-  const mainWorkspaceSerialization =
-    Blockly.serialization.workspaces.save(workspace);
-
-  const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
-  const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
-    ? Blockly.serialization.workspaces.save(hiddenDefinitionWorkspace)
-    : null;
-
-  // Blocks rendered in the hidden workspace get extra properties that need to be
-  // removed so they don't apply if the block moves to the main workspace on subsequent loads
-  if (hasBlocks(hiddenWorkspaceSerialization)) {
-    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
-  }
-
-  const combinedSerialization = getCombinedSerialization(
-    mainWorkspaceSerialization,
-    hiddenWorkspaceSerialization
-  );
-
-  return JSON.stringify(combinedSerialization);
 }
 
 export function soundField(onClick, transformText, icon) {
@@ -346,33 +346,6 @@ export function locationField(icon, onClick) {
 export function registerCustomProcedureBlocks() {
   unregisterProcedureBlocks();
   Blockly.common.defineBlocks(procedureBlocks);
-}
-
-/**
- * Partitions blocks of the specified types to the front of the list.
- *
- * @param {Element[]|Object[]} blocks - An array of block elements or JSON blocks to be partitioned.
- * @param {Object} [options] - An object containing partitioning options.
- * @param {string[]} [options.prioritizedBlockTypes] - An array of strings representing block types to move to the front.
- * @param {boolean} [options.isJson] - A flag indicating whether the blocks are JSON blocks (vs. block elements).
- * @returns {Element[]|Object[]} A new array of block elements or JSON blocks partitioned based on their types.
- */
-export function partitionBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = [],
-  isBlockElements = true
-) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
-
-  blocks.forEach(block => {
-    const blockType = isBlockElements ? block.getAttribute('type') : block.type;
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 /**
@@ -445,16 +418,24 @@ function simplifyBlockState(block, variableMap) {
   // Create a copy of the block so we can modify certain fields.
   const result = {...block};
 
-  // For VAR fields, look up the name of the variable to use instead of the id.
-  if (block.fields && block.fields.VAR) {
-    result.fields.VAR = {
-      name: variableMap[block.fields.VAR.id] || '',
-      type: '',
-    };
-  }
+  // For variable fields, look up the name of the variable to use instead of the id.
+  const variableFields = [
+    'VAR' /* most common */,
+    'VARIABLE' /* used in gamelab_changeVarBy */,
+  ];
+
+  variableFields.forEach(field => {
+    const fieldValue = block.fields?.[field];
+    if (fieldValue) {
+      result.fields[field] = {
+        name: variableMap[fieldValue.id] || '',
+        type: '',
+      };
+    }
+  });
 
   // Recursively check nested blocks.
-  if (block.inputs) {
+  if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
       result.inputs[inputKey].block = simplifyBlockState(
         block.inputs[inputKey].block,
@@ -463,7 +444,7 @@ function simplifyBlockState(block, variableMap) {
     }
   }
   // Recursively check next block, if present.
-  if (block.next) {
+  if (block.next?.block) {
     result.next.block = simplifyBlockState(block.next.block, variableMap);
   }
   // Remove unnecessary properties
@@ -505,4 +486,29 @@ export function appendSharedFunctions(startBlocksSource, functionsXml) {
     startBlocks = JSON.stringify(stateToLoad);
   }
   return startBlocks;
+}
+/**
+ * Update the XML string representing toolbox data for compatibility with
+ * Google Blockly.
+ * This function potentially modifies each <block> element in the XML
+ * if there are unsupported attributes, missing mutators, etc.
+ * We also process block xml during domToBlockSpace, which is called to
+ * convert sources from XML to JSON.
+ *
+ * @param {string} toolboxString - The XML string representing toolbox data.
+ * @returns {string} The modified XML string after processing.
+ */
+export function processToolboxXml(toolboxString) {
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(toolboxString, 'text/xml');
+  if (xmlDoc.querySelector('parsererror')) {
+    throw new Error('Error parsing XML');
+  }
+
+  const blocks = xmlDoc.querySelectorAll('block');
+  blocks.forEach(processIndividualBlock);
+
+  // Convert the modified XML document back to a string
+  const modifiedXmlString = new XMLSerializer().serializeToString(xmlDoc);
+  return modifiedXmlString;
 }

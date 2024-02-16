@@ -1,12 +1,15 @@
 import _ from 'lodash';
-import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
-import {partitionBlocksByType} from './cdoUtils';
+import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
+import {shouldSkipHiddenWorkspace} from '../utils';
 
-const {BLOCK_HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} =
-  frameSizes;
+const {
+  BLOCK_HEADER_HEIGHT,
+  MARGIN_BOTTOM,
+  MARGIN_SIDE: SVG_FRAME_SIDE_PADDING,
+  MARGIN_TOP,
+} = frameSizes;
 const SVG_FRAME_HEIGHT = BLOCK_HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
-const SVG_FRAME_SIDE_PADDING = MARGIN_SIDE;
 const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
 const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
@@ -30,11 +33,18 @@ function getXCoordinate(block, workspace) {
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
   const width = viewWidth || contentWidth;
 
-  // Multiplier accounts for the fact that blocks with SVG frames need twice as much padding
-  // so their edges don't touch the edge of the workspace
-  let horizontalOffset = block.functionalSvg_ ? 2 * padding : padding;
+  // SVG frames need additional padding so their edges don't touch the edge of the workspace
+  let horizontalOffset = block.functionalSvg_
+    ? SVG_FRAME_SIDE_PADDING + padding
+    : padding;
   // If the workspace is RTL, horizontally mirror the starting position
   return workspace.RTL ? width - horizontalOffset : horizontalOffset;
+}
+
+function getYCoordinate(block) {
+  return block.functionalSvg_
+    ? WORKSPACE_PADDING + SVG_FRAME_TOP_PADDING
+    : WORKSPACE_PADDING;
 }
 
 /**
@@ -54,10 +64,18 @@ function getSpaceBetweenBlocks(block) {
 /**
  * Converts XML serialization to JSON using a temporary unrendered workspace.
  * @param {xml} xml - workspace serialization, current/legacy format
+ * @param {boolean} [embedded] - indicates whether the source will be converted
+ * for an embedded workspace for not.
  * @returns {json} stateToLoad - modern workspace serialization
  */
-export function convertXmlToJson(xml) {
+export function convertXmlToJson(xml, embedded) {
   const tempWorkspace = new Blockly.Workspace();
+
+  // The temporary workspace should mirror the embedded state of the workspace
+  // that will use the converted source.
+  if (embedded) {
+    Blockly.addEmbeddedWorkspace(tempWorkspace);
+  }
 
   // domToBlockSpace returns an array of "block" objects with the following properties:
   //   blockly_block: the actual block object created by Blockly
@@ -98,20 +116,17 @@ export function addPositionsToState(xmlBlocks, blockIdMap) {
 /**
  * Position blocks on a workspace (if they do not already have positions)
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
- * @param {Map} [blockOrderMap] - specifies an original order of blocks from XML
  */
-export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
+export function positionBlocksOnWorkspace(workspace) {
   if (!workspace.rendered) {
     return;
   }
 
   const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
-  const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
   // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
-  const orderedBlocksSetupFirst = partitionBlocksByType(
-    orderedBlocks,
-    SETUP_TYPES,
-    false
+  const orderedBlocksSetupFirst = partitionJsonBlocksByType(
+    topBlocks,
+    SETUP_TYPES
   );
 
   adjustBlockPositions(orderedBlocksSetupFirst, workspace);
@@ -129,16 +144,25 @@ function adjustBlockPositions(blocks, workspace) {
   let orderedColliders = [];
   let blocksToPlace = [];
   blocks.forEach(block => {
-    if (isBlockLocationUnset(block)) {
+    if (isBlockAtEdge(block)) {
       blocksToPlace.push(block);
     } else {
       insertCollider(orderedColliders, getCollider(block));
     }
   });
 
+  const {defaultX, defaultY} = getDefaultLocation(workspace);
   blocksToPlace.forEach(block => {
-    let x = getXCoordinate(block, workspace);
-    let y = WORKSPACE_PADDING;
+    let {x, y} = block.getRelativeToSurfaceXY();
+
+    // Don't overwrite x- (or y-) coordinate if it is set to something other than the default
+    // This retains partially positioned blocks (with either an x- or y-coordinate set)
+    if (x === defaultX) {
+      x = getXCoordinate(block, workspace);
+    }
+    if (y === defaultY) {
+      y = getYCoordinate(block);
+    }
 
     // Set initial position; collision area must be updated to account for new position
     // every time block is moved
@@ -227,14 +251,14 @@ export function isOverlapping(collider1, collider2) {
 }
 
 /**
- * Determines whether a block needs to be repositioned, based on its current position.
+ * Determines whether a block is positioned at the edge of the workspace.
  * @param {Blockly.Block} block - the block being considered
- * @returns {boolean} - true if the block is at the top corner of the workspace
+ * @returns {boolean} - true if the block is at the edge of the workspace
  */
-export function isBlockLocationUnset(block) {
+export function isBlockAtEdge(block) {
   const {defaultX, defaultY} = getDefaultLocation(block.workspace);
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
-  return x === defaultX && y === defaultY;
+  return x === defaultX || y === defaultY;
 }
 
 export const getDefaultLocation = workspaceOverride => {
@@ -264,57 +288,91 @@ export const resetEditorWorkspaceBlockConfig = (blocks = []) =>
   });
 
 /**
- * Reorders an array of blocks based on the given blockOrderMap.
- * If the blockOrderMap is invalid (null or size mismatch), returns the original array.
+ * Partitions JSON objects of the specified types to the front of the list.
  *
- * @param {Array} blocks - The array of blocks to be reordered.
- * @param {Map} blockOrderMap - A map with block index as key and the desired order index as value.
- * @returns {Array} The reordered array of blocks or the original array if blockOrderMap is invalid.
+ * @param {Object[]} [blocks=[]] - An array of JSON blocks to be partitioned.
+ * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
+ * @returns {Object[]} A new array of JSON blocks partitioned based on their types.
  */
-function reorderBlocks(blocks, blockOrderMap) {
-  if (!blockOrderMap || blockOrderMap.size !== blocks.length) {
-    return blocks;
-  }
-  const orderedBlocks = new Array(blocks.length);
-  blocks.forEach((block, index) => {
-    orderedBlocks[blockOrderMap.get(index)] = block;
+export function partitionJsonBlocksByType(
+  blocks = [],
+  prioritizedBlockTypes = []
+) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blocks.forEach(block => {
+    const blockType = block.type;
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
   });
 
-  return orderedBlocks;
+  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 /**
- * Combines the serialization of the main and hidden workspaces (when hidden workspace is present)
- * so that both are saved to the project source when calling getCode.
- * @param {json} mainWorkspaceSerialization - Contains block and procedure information for the main workspace.
- * @param {json} hiddenWorkspaceSerialization - Contains block and procedure information for the hidden
- * (i.e. modal function editor) workspace.
- * @returns {json} A combined serialization, using the mainWorkspaceSerialization as the base, that includes all
+ * Gets the JSON serialization for a project, including its workspace and, if applicable, the hidden definition workspace.
+ *
+ * @param {Blockly.Workspace} workspace - The workspace to serialize
+ * @returns {Object} The combined JSON serialization of the workspace and the hidden definition workspace.
+ */
+export function getProjectSerialization(workspace) {
+  const workspaceSerialization =
+    Blockly.serialization.workspaces.save(workspace);
+
+  if (shouldSkipHiddenWorkspace(workspace)) {
+    return workspaceSerialization;
+  }
+  const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+  const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
+    ? Blockly.serialization.workspaces.save(hiddenDefinitionWorkspace)
+    : null;
+
+  // Blocks rendered in the hidden workspace get extra properties that need to be
+  // removed so they don't apply if the block moves to the main workspace on subsequent loads
+  if (hasBlocks(hiddenWorkspaceSerialization)) {
+    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
+  }
+
+  const combinedSerialization = getCombinedSerialization(
+    workspaceSerialization,
+    hiddenWorkspaceSerialization
+  );
+  return combinedSerialization;
+}
+
+/**
+ * Combines the serialization of two workspaces so that both can be saved to a project source when calling getCode.
+ * @param {json} primaryWorkspaceSerialization - Contains block and procedure information for the first workspace.
+ * @param {json} secondaryWorkspaceSerialization - Contains block and procedure information for the second
+ * (e.g. hidden procedure definitions) workspace.
+ * @returns {json} A combined serialization, using the primaryWorkspaceSerialization as the base, that includes all
  * blocks and procedures from each workspace with unique ids. (Note: The elements on each workspace are not
  * necessarily mutually exclusive.)
  */
 export function getCombinedSerialization(
-  mainWorkspaceSerialization,
-  hiddenWorkspaceSerialization
+  primaryWorkspaceSerialization,
+  secondaryWorkspaceSerialization
 ) {
   if (
-    !hasBlocks(hiddenWorkspaceSerialization) ||
-    !hasBlocks(mainWorkspaceSerialization)
+    !hasBlocks(secondaryWorkspaceSerialization) ||
+    !hasBlocks(primaryWorkspaceSerialization)
   ) {
     // Default case is to return mainWorkspaceSerialization because it's not possible
     // to have a hiddenWorkspaceSerialization but no mainWorkspaceSerialization
-    return mainWorkspaceSerialization;
+    return primaryWorkspaceSerialization;
   }
 
-  const combinedSerialization = _.cloneDeep(mainWorkspaceSerialization);
+  const combinedSerialization = _.cloneDeep(primaryWorkspaceSerialization);
   combinedSerialization.blocks.blocks = _.unionBy(
-    mainWorkspaceSerialization.blocks.blocks,
-    hiddenWorkspaceSerialization.blocks.blocks,
+    primaryWorkspaceSerialization.blocks.blocks,
+    secondaryWorkspaceSerialization.blocks.blocks,
     'id'
   );
   combinedSerialization.procedures = _.unionBy(
-    mainWorkspaceSerialization.procedures,
-    hiddenWorkspaceSerialization.procedures,
+    primaryWorkspaceSerialization.procedures,
+    secondaryWorkspaceSerialization.procedures,
     'id'
   );
   return combinedSerialization;
@@ -375,7 +433,7 @@ export function appendProceduresToState(projectState, proceduresState) {
 function blockExists(behaviorId, projectBlocks) {
   return projectBlocks.some(
     block =>
-      block.type === 'behavior_definition' &&
+      block.type === BLOCK_TYPES.behaviorDefinition &&
       block.extraState?.behaviorId === behaviorId
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from './index';
 
 export default {
-  title: 'DesignSystem/Typography Component',
+  title: 'DesignSystem/Typography', // eslint-disable-line storybook/no-title-property-in-meta
   component: Typography,
 };
 

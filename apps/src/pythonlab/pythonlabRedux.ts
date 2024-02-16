@@ -3,10 +3,12 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface PythonlabState {
   code: string;
+  output: string[];
 }
 
 export const initialState: PythonlabState = {
   code: '',
+  output: [],
 };
 
 const pythonlabSlice = createSlice({
@@ -16,9 +18,15 @@ const pythonlabSlice = createSlice({
     setCode(state, action: PayloadAction<string>) {
       state.code = action.payload;
     },
+    appendOutput(state, action: PayloadAction<string>) {
+      state.output.push(action.payload);
+    },
+    resetOutput(state) {
+      state.output = [];
+    },
   },
 });
 
 registerReducers({pythonlab: pythonlabSlice.reducer});
 
-export const {setCode} = pythonlabSlice.actions;
+export const {setCode, appendOutput, resetOutput} = pythonlabSlice.actions;

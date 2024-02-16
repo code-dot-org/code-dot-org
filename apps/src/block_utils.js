@@ -2,9 +2,9 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
+import {EMPTY_OPTION} from './blockly/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
-const DEFAULT_COLOR = [184, 1.0, 0.74];
 
 /**
  * Create the xml for a level's toolbox
@@ -167,7 +167,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      var input = this.appendDummyInput();
+      var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
       }
@@ -453,7 +453,13 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/field[@id="${name}"]`,
+        // Ignore namespaces. Find blocks of type e.g. behavior_definition
+        // Shared behavior name will either be in the mutation (Google Blockly)
+        // or the name field/title (CDO Blockly)
+        `//*[local-name()="block" and @type="${type}"]/*` +
+          `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
+          `self::*[(local-name()="title" or local-name()="field") and (@id="${name}" or .="${name}")]
+        ]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -717,7 +723,7 @@ const STANDARD_INPUT_TYPES = {
   },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
-      return block.appendDummyInput();
+      return block.appendEndRowInput();
     },
     generateCode(block, inputConfig) {
       return null;
@@ -734,7 +740,8 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getFieldValue(inputConfig.name);
       if (
-        inputConfig.type === Blockly.BlockValueType.STRING &&
+        (inputConfig.type === Blockly.BlockValueType.STRING ||
+          code === EMPTY_OPTION) &&
         !code.startsWith('"') &&
         !code.startsWith("'")
       ) {
@@ -1067,18 +1074,8 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // Styles should be used over hard-coded colors in Google Blockly blocks
-        if (style && this.setStyle) {
-          this.setStyle(style);
-        } else if (color) {
-          Blockly.cdoUtils.setHSV(this, ...color);
-        } else if (!returnType) {
-          if (this.setStyle) {
-            this.setStyle('default');
-          } else {
-            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-          }
-        }
+        // Apply style or color to block as needed, based on Blockly version.
+        Blockly.cdoUtils.handleColorAndStyle(this, color, style, returnType);
 
         if (returnType) {
           this.setOutput(
@@ -1124,12 +1121,6 @@ exports.createJsWrapperBlockCreator = function (
           );
         }
       },
-      // The following generic mutator functions are only used by Google Blockly
-      // and are intentionally undefined for CDO Blockly.
-      mutationToDom: Blockly.customBlocks.mutationToDom,
-      domToMutation: Blockly.customBlocks.domToMutation,
-      saveExtraState: Blockly.customBlocks.saveExtraState,
-      loadExtraState: Blockly.customBlocks.loadExtraState,
     };
 
     generator[blockName] = function () {

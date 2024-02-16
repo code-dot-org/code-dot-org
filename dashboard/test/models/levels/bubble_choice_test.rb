@@ -190,7 +190,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         position: 1,
         letter: 'a',
         icon: nil,
-        status: 'not_tried'
+        status: 'not_tried',
+        is_validated: false
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -205,7 +206,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         letter: 'b',
         icon: nil,
         status: 'not_tried',
-        short_instructions: @sublevel2.short_instructions
+        short_instructions: @sublevel2.short_instructions,
+        is_validated: false
       }
     ]
 
@@ -234,7 +236,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
           level_id: @sublevel_contained_level.id.to_s,
           type: "FreeResponse",
           name: "Sublevel contained level",
-          display_name: nil
+          display_name: nil,
+          is_validated: false
         }],
         id: @sublevel_with_contained.id.to_s,
         description: @sublevel_with_contained.bubble_choice_description,
@@ -246,7 +249,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         perfect: true,
         status: 'perfect',
         teacher_feedback_review_state: nil,
-        exampleSolutions: []
+        exampleSolutions: [],
+        is_validated: false
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -264,7 +268,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         perfect: false,
         status: 'passed',
         teacher_feedback_review_state: nil,
-        exampleSolutions: []
+        exampleSolutions: [],
+        is_validated: false
       }
     ]
 
@@ -335,10 +340,16 @@ class BubbleChoiceTest < ActiveSupport::TestCase
   test 'get_sublevel_for_progress returns sublevel with highest best_result for user when there is no teacher feedback' do
     student = create :student
     script = @script_level.script
-    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
-    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
+    user_levels = [
+      create(:user_level, user: student, level: @sublevel2, script: script, best_result: 100),
+      create(:user_level, user: student, level: @sublevel1, script: script, best_result: 20)
+    ]
 
     assert_equal @sublevel2, @bubble_choice.get_sublevel_for_progress(student, script)
+
+    assert_equal @sublevel2.id, @bubble_choice.get_sublevel_for_progress_optimized(
+      user_levels: user_levels, teacher_feedbacks: []
+    )
   end
 
   test 'get_sublevel_for_progress returns level contained within the sublevel with highest best_result for user when there is no teacher feedback' do
@@ -348,10 +359,16 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     script_level = create :script_level, levels: [bubble_choice]
     script = script_level.script
 
-    create :user_level, user: student, level: @sublevel_contained_level, script: script, best_result: 100
-    create :user_level, user: student, level: @sublevel2, script: script, best_result: 50
+    user_levels = [
+      create(:user_level, user: student, level: @sublevel_contained_level, script: script, best_result: 100),
+      create(:user_level, user: student, level: @sublevel2, script: script, best_result: 50)
+    ]
 
     assert_equal @sublevel_contained_level, bubble_choice.get_sublevel_for_progress(student, script)
+
+    assert_equal @sublevel_contained_level.id, bubble_choice.get_sublevel_for_progress_optimized(
+      user_levels: user_levels, teacher_feedbacks: []
+    )
   end
 
   test 'get_sublevel_for_progress returns sublevel where the latest feedback has keepWorking review state' do
@@ -361,16 +378,22 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     section.students << student # we query for feedback where student is currently in section
 
     script = @script_level.script
-    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
-    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
-    create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+    user_levels = [
+      create(:user_level, user: student, level: @sublevel2, script: script, best_result: 100),
+      create(:user_level, user: student, level: @sublevel1, script: script, best_result: 20)
+    ]
+    teacher_feedbacks = [create(:teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)]
 
     assert_equal @sublevel1, @bubble_choice.get_sublevel_for_progress(student, script)
+    assert_equal @sublevel1.id, @bubble_choice.get_sublevel_for_progress_optimized(
+      user_levels: user_levels, teacher_feedbacks: teacher_feedbacks
+    )
   end
 
   test 'get_sublevel_for_progress returns nil if no sublevels have progress or feedback' do
     student = create :student
     assert_nil @bubble_choice.get_sublevel_for_progress(student, @script_level.script)
+    assert_nil @bubble_choice.get_sublevel_for_progress_optimized(user_levels: [], teacher_feedbacks: [])
   end
 
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do

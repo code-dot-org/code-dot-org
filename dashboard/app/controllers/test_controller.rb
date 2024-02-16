@@ -243,7 +243,6 @@ class TestController < ApplicationController
       csa_how_offer: 'As an AP course',
       csa_phone_screen: 'Yes',
       csa_already_know: 'Yes',
-      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course',
       pay_fee: 'Yes, my school/district would be able to pay the full program fee.'
     }
   end
@@ -340,5 +339,10 @@ class TestController < ApplicationController
       name: params[:experiment_name]
     )
     head :ok
+  end
+
+  def get_validate_rubric_ai_config
+    EvaluateRubricJob.new.validate_ai_config
+    render plain: 'OK'
   end
 end

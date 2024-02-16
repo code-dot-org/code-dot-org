@@ -156,7 +156,6 @@ const style = {
 };
 
 export default {
-  title: 'ProgressLessonTeacherInfo',
   component: ProgressLessonTeacherInfo,
 };
 
@@ -250,43 +249,43 @@ HideableNonLockableNoPlanYesUrl.args = {
   lessonIndex: 3,
 };
 
-export const nonHideableNonLockableYesPlanYesUrl = Template.bind({});
-nonHideableNonLockableYesPlanYesUrl.args = {
+export const NonHideableNonLockableYesPlanYesUrl = Template.bind({});
+NonHideableNonLockableYesPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 1,
 };
 
-export const nonHideableNonLockableNoPlanNoUrl = Template.bind({});
-nonHideableNonLockableNoPlanNoUrl.args = {
+export const NonHideableNonLockableNoPlanNoUrl = Template.bind({});
+NonHideableNonLockableNoPlanNoUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 6,
 };
 
-export const nonHideableNonLockableNoPlanYesUrl = Template.bind({});
-nonHideableNonLockableNoPlanYesUrl.args = {
+export const NonHideableNonLockableNoPlanYesUrl = Template.bind({});
+NonHideableNonLockableNoPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 3,
 };
 
-export const nonHideableLockableYesPlanYesUrl = Template.bind({});
-nonHideableLockableYesPlanYesUrl.args = {
+export const NonHideableLockableYesPlanYesUrl = Template.bind({});
+NonHideableLockableYesPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 2,
 };
 
-export const nonHideableLockableNoPlanNoUrl = Template.bind({});
-nonHideableLockableNoPlanNoUrl.args = {
+export const NonHideableLockableNoPlanNoUrl = Template.bind({});
+NonHideableLockableNoPlanNoUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 4,
 };
 
-export const nonHideableLockableNoPlanYesUrl = Template.bind({});
-nonHideableLockableNoPlanYesUrl.args = {
+export const NonHideableLockableNoPlanYesUrl = Template.bind({});
+NonHideableLockableNoPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 0,

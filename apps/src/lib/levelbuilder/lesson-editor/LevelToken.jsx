@@ -276,7 +276,7 @@ const styles = {
     display: 'table-cell',
     color: 'white',
     background: color.teal,
-    border: '1px solid #00adbc',
+    border: '1px solid #0093a4',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
     cursor: 'pointer',

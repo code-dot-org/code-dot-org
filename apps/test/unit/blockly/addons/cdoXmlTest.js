@@ -1,71 +1,10 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {
-  getPartitionedBlockElements,
-  createBlockOrderMap,
   addMutationToMiniToolboxBlocks,
+  processBlockAndChildren,
 } from '@cdo/apps/blockly/addons/cdoXml';
-import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 
 const parser = new DOMParser();
-
-describe('getPartitionedBlockElements', function () {
-  it('should return partitioned block elements based on their types', function () {
-    // Sample XML data
-    const xmlData = `
-        <xml>
-          <block type="blockType1"></block>
-          <block type="procedures_defnoreturn"></block>
-          <block type="blockType2"></block>
-        </xml>
-      `;
-    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
-
-    // Call the function
-    const partitionedBlockElements = getPartitionedBlockElements(
-      xmlDoc.documentElement,
-      PROCEDURE_DEFINITION_TYPES
-    );
-
-    // Expected partitioned block elements
-    const expectedPartitionedElements = [
-      xmlDoc.querySelector('block[type="procedures_defnoreturn"]'),
-      xmlDoc.querySelector('block[type="blockType1"]'),
-      xmlDoc.querySelector('block[type="blockType2"]'),
-    ];
-
-    // Compare the result with the expected partitioned elements
-    expect(partitionedBlockElements).to.deep.equal(expectedPartitionedElements);
-  });
-});
-
-describe('createBlockOrderMap', function () {
-  it('should create a block order map for the given XML', function () {
-    // Sample XML data
-    const xmlData = `
-            <xml>
-              <block type="blockType1"></block>
-              <block type="procedures_defnoreturn"></block>
-              <block type="blockType2"></block>
-            </xml>
-          `;
-    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
-
-    // Call the function
-    const blockOrderMap = createBlockOrderMap(xmlDoc.documentElement);
-
-    // Expected block order map
-    const expectedMap = new Map();
-    expectedMap.set(1, 0);
-    expectedMap.set(0, 1);
-    expectedMap.set(2, 2);
-    // Convert maps to arrays and compare
-    const blockOrderMapArray = Array.from(blockOrderMap);
-    const expectedMapArray = Array.from(expectedMap);
-
-    // Compare the result with the expected map
-    expect(blockOrderMapArray).to.deep.equal(expectedMapArray);
-  });
-});
 
 describe('addMutationToMiniToolboxBlocks', function () {
   it('should add a mutation element with useDefaultIcon attribute to miniflyout block with "open" miniflyout', function () {
@@ -112,5 +51,26 @@ describe('addMutationToMiniToolboxBlocks', function () {
 
     // Compare the modified blockElement with the original copy
     expect(blockElement.isEqualNode(originalBlockElement)).to.be.true;
+  });
+});
+
+describe('processBlockAndChildren', function () {
+  it('handles deeply nested blocks', function () {
+    // We expect can_disconnect_from_parent to be removed and replaced with movable
+    const xmlData = `
+      <block type="level_0">
+        <block type="level_1">
+          <block type="level_2" can_disconnect_from_parent="true">
+          </block>
+        </block>
+      </block>
+      `;
+
+    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
+    processBlockAndChildren(xmlDoc.documentElement);
+    const nestedNode = xmlDoc.documentElement.querySelector(
+      'block[type="level_2"]'
+    );
+    expect(nestedNode.getAttribute('movable')).to.equal('true');
   });
 });

@@ -69,7 +69,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     handleClickUpdateStub.callsFake(() => {});
     wrapper.setState({showSchoolInterstitial: false});
     wrapper.find('Button');
-    expect(wrapper.find('Button').length).to.equal(2);
+    expect(wrapper.find('Button').length).to.equal(3);
   });
 
   describe('fetch', () => {
@@ -103,7 +103,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickUpdate');
         wrapper.setState({showSchoolInterstitial: false});
-        wrapper.find('div#update-button').simulate('click');
+        wrapper.find('button#update-button').simulate('click');
 
         expect(wrapperInstance.handleClickUpdate).to.have.been.called;
         await setTimeout(() => {}, 50);
@@ -115,7 +115,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         const wrapperInstance = wrapper.instance();
         const handleClickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
         wrapper.setState({showSchoolInterstitial: false});
-        wrapper.find('div#yes-button').simulate('click');
+        wrapper.find('button#yes-button').simulate('click');
 
         expect(wrapperInstance.handleClickYes).to.have.been.called;
         await setTimeout(() => {}, 50);
