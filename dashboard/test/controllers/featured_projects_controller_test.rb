@@ -37,7 +37,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'users without project validator permission can not save projects' do
+  test 'users without project validator permission can not save a project as a featured project' do
     sign_in @teacher
     put :save, params: {project_id: "789"}
     assert_response 403
