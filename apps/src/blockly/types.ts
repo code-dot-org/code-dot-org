@@ -14,9 +14,6 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {Abstract} from 'blockly/core/events/events_abstract';
-import CdoBlockSvg from './addons/cdoBlockSvg';
-import CdoInput from './addons/cdoInput';
-import CdoBlock from './addons/cdoBlock';
 
 export interface BlockDefinition {
   category: string;
@@ -57,9 +54,6 @@ export type BlocklyWrapperType = typeof GoogleBlockly & {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   JavaScript: typeof javascriptGenerator;
-  BlockSvg: typeof CdoBlockSvg;
-  Input: typeof CdoInput;
-  Block: typeof CdoBlock;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
