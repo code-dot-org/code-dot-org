@@ -226,48 +226,9 @@ Dashboard::Application.routes.draw do
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
-    SUPPORTS_DATABLOCK_STORAGE = ['applab', 'gamelab'].freeze
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
-          if SUPPORTS_DATABLOCK_STORAGE.include? key
-            # Datablock Storage: Debug View
-            get "/#{key}/:channel_id/datablock_storage", to: 'datablock_storage#index'
-
-            # Datablock Storage: Key-Value-Pair API
-            post "/#{key}/:channel_id/datablock_storage/set_key_value", to: 'datablock_storage#set_key_value'
-            get "/#{key}/:channel_id/datablock_storage/get_key_value", to: 'datablock_storage#get_key_value'
-            delete "/#{key}/:channel_id/datablock_storage/delete_key_value", to: 'datablock_storage#delete_key_value'
-            get "/#{key}/:channel_id/datablock_storage/get_key_values", to: 'datablock_storage#get_key_values'
-            put "/#{key}/:channel_id/datablock_storage/populate_key_values", to: 'datablock_storage#populate_key_values'
-
-            # Datablock Storage: Table API
-            post "/#{key}/:channel_id/datablock_storage/create_table", to: 'datablock_storage#create_table'
-            post "/#{key}/:channel_id/datablock_storage/add_shared_table", to: 'datablock_storage#add_shared_table'
-            post "/#{key}/:channel_id/datablock_storage/import_csv", to: 'datablock_storage#import_csv'
-            delete "/#{key}/:channel_id/datablock_storage/clear_table", to: 'datablock_storage#clear_table'
-            delete "/#{key}/:channel_id/datablock_storage/delete_table", to: 'datablock_storage#delete_table'
-            get "/#{key}/:channel_id/datablock_storage/get_table_names", to: 'datablock_storage#get_table_names'
-            put "/#{key}/:channel_id/datablock_storage/populate_tables", to: 'datablock_storage#populate_tables'
-
-            # Datablock Storage: Table Column API
-            post "/#{key}/:channel_id/datablock_storage/add_column", to: 'datablock_storage#add_column'
-            put "/#{key}/:channel_id/datablock_storage/rename_column", to: 'datablock_storage#rename_column'
-            put "/#{key}/:channel_id/datablock_storage/coerce_column", to: 'datablock_storage#coerce_column'
-            delete "/#{key}/:channel_id/datablock_storage/delete_column", to: 'datablock_storage#delete_column'
-            get "/#{key}/:channel_id/datablock_storage/get_columns_for_table", to: 'datablock_storage#get_columns_for_table'
-
-            # Datablock Storage: Table Record API
-            post "/#{key}/:channel_id/datablock_storage/create_record", to: 'datablock_storage#create_record'
-            get "/#{key}/:channel_id/datablock_storage/read_records", to: 'datablock_storage#read_records'
-            put "/#{key}/:channel_id/datablock_storage/update_record", to: 'datablock_storage#update_record'
-            delete "/#{key}/:channel_id/datablock_storage/delete_record", to: 'datablock_storage#delete_record'
-
-            # Datablock Storage: Channel API
-            get "/#{key}/:channel_id/datablock_storage/channel_exists", to: 'datablock_storage#channel_exists'
-            delete "/#{key}/:channel_id/datablock_storage/clear_all_data", to: 'datablock_storage#clear_all_data'
-          end
-
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
           get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
 
@@ -1143,5 +1104,42 @@ Dashboard::Application.routes.draw do
       'policy_compliance#child_account_consent'
     post '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent_request'
+
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+      collection do
+        # Datablock Storage: Key-Value-Pair API
+        post :set_key_value
+        get :get_key_value
+        delete :delete_key_value
+        get :get_key_values
+        put :populate_key_values
+
+        # Datablock Storage: Table API
+        post :create_table
+        post :add_shared_table
+        post :import_csv
+        delete :clear_table
+        delete :delete_table
+        get :get_table_names
+        put :populate_tables
+
+        # Datablock Storage: Table Column API
+        post :add_column
+        put :rename_column
+        put :coerce_column
+        delete :delete_column
+        get :get_columns_for_table
+
+        # Datablock Storage: Table Record API
+        post :create_record
+        get :read_records
+        put :update_record
+        delete :delete_record
+
+        # Datablock Storage: Channel API
+        get :channel_exists
+        delete :clear_all_data
+      end
+    end
   end
 end

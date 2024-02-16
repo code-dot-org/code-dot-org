@@ -423,7 +423,9 @@ Applab.init = function (config) {
 
   if (!!config.useDatablockStorage) {
     console.error('Initializing DATABLOCK_STORAGE');
-    Applab.storage = initStorage(DATABLOCK_STORAGE, {});
+    Applab.storage = initStorage(DATABLOCK_STORAGE, {
+      channelId: config.channel,
+    });
   } else {
     console.error('Initializing FIREBASE_STORAGE');
     Applab.storage = initStorage(FIREBASE_STORAGE, {

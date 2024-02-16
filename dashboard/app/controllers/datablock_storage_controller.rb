@@ -65,6 +65,8 @@ class DatablockStorageController < ApplicationController
 
   def add_shared_table
     DatablockStorageTable.add_shared_table @project_id, params[:table_name]
+
+    render json: true
   end
 
   def import_csv
