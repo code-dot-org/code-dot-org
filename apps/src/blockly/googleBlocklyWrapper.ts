@@ -571,12 +571,15 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
-  // TODO - used for spritelab behavior blocks
-  extendedBlock.createProcedureDefinitionBlock = function () {};
+  // Used for spritelab behavior blocks.
+  // We can remove this once we are ready to no longer support sprite lab on CDO Blockly.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (blocklyWrapper.Block as any).createProcedureDefinitionBlock = function () {};
 
-  // TODO - used to add "create a behavior" button to the toolbox
-  (blocklyWrapper.Flyout.prototype as ExtendedFlyout).configure =
-    function () {};
+  // In cdo this is used to add "create a behavior" button to the toolbox
+  // Once we have fully moved to Google Blockly we can remove this.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (blocklyWrapper.Flyout as any).configure = function () {};
 
   blocklyWrapper.getGenerator = function () {
     return this.JavaScript;
