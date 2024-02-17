@@ -27,6 +27,8 @@
   cookie_key = environment_specific_cookie_name('_user_type')
   user_type = request.cookies[cookie_key]
 
+%script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
+
 - if show_create_menu
   .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button"}
     %span.create_button

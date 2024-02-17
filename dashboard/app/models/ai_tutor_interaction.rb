@@ -29,5 +29,6 @@ class AiTutorInteraction < ApplicationRecord
   belongs_to :user
   belongs_to :level, optional: true
   belongs_to :script, optional: true
-  validates :type, inclusion: {in: %w(compilation validation general_chat)}
+  validates :type, inclusion: {in: SharedConstants::AI_TUTOR_TYPES.values}
+  validates :status, inclusion: {in: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS.values}
 end
