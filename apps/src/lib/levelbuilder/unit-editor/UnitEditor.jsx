@@ -598,12 +598,15 @@ class UnitEditor extends React.Component {
             <span>
               {'Select additional locales supported by this unit. Click '}
             </span>
-            <a style={{cursor: "pointer"}} onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
+            <a
+              style={{cursor: 'pointer'}}
+              onClick={this.handleClearSupportedLocalesSelectClick}
+            >
+              none
+            </a>
             <span>{' to clear the selection.'}</span>
           </p>
-          <p>
-              A list of other locales supported by this unit besides en-US.
-          </p>
+          <p>A list of other locales supported by this unit besides en-US.</p>
           <MultiCheckboxSelector
             noHeader={true}
             items={this.state.locales
@@ -615,7 +618,6 @@ class UnitEditor extends React.Component {
             <LocaleItemComponent />
           </MultiCheckboxSelector>
         </CollapsibleEditorSection>
-
 
         {this.props.hasCourse && (
           <CollapsibleEditorSection title="Course Type Settings">
