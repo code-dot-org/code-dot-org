@@ -313,6 +313,11 @@ Resources:
                 Effect: Allow
                 Action: 'secretsmanager:GetSecretValue'
                 Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_reader-??????"
+              # Grant SQLUSer Lambda permission to get the database writer endpoint configuration setting that's stored in a Secret.
+              -
+                Effect: Allow
+                Action: 'secretsmanager:GetSecretValue'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_endpoint_writer-??????"
       PermissionsBoundary: !ImportValue IAM-DevPermissions
 
   LambdaSecurityGroup:
