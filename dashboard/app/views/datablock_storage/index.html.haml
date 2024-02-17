@@ -1,4 +1,4 @@
-%strong{:class => "code", :id => "message"} Hello,  #{@project.project_type}
+%strong{:class => "code", :id => "message"} This #{@project.project_type} project uses #{@storage_backend} as its backing store.
 
 %h2 Tables
 %table
@@ -113,6 +113,12 @@
   = text_area_tag "table_data_csv", "", placeholder: "table_data_csv"
   = submit_tag "import_csv"
 
+%h3 get_column
+= form_tag "get_column", :method => :get, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = text_field_tag "column_name", "", placeholder: "column_name"
+  = submit_tag "get_column"
+
 %h3 add_column
 = form_tag "add_column", :method => :post, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"
@@ -182,3 +188,9 @@
 = form_tag "set_library_manifest", :method => :put, :remote => false do
   = text_area_tag "library_manifest", '{"categories":[{"datasets":["100 Birds of the World"],"name":"Animals","published":true}],"tables":[{"current":false,"description":"Data and images about 100 different species of birds around the world","docUrl":"https://studio.code.org/data_docs/100-birds/","name":"100 Birds of the World","published":true}]}'
   = submit_tag "set_library_manifest"
+
+  %h3 switch storage backend
+= form_tag "use_datablock_storage", :method => :put, :remote => false do
+  = submit_tag "use_datablock_storage"
+= form_tag "use_firebase_storage", :method => :put, :remote => false do
+  = submit_tag "use_firebase_storage"
