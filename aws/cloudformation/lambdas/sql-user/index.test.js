@@ -25,12 +25,6 @@ describe("SQL User Custom Resource", () => {
     const event = {
       RequestType: "Create",
       ResourceProperties: {
-        DBWriterEndpointSecret:
-          "arn:aws:secretsmanager:REGION:ACCOUNT:secret:CfnStack/stack/db_endpoint_writer-123456",
-        DBCredentialAdminSecret:
-          "arn:aws:secretsmanager:REGION:ACCOUNT:secret:CfnStack/stack/db_credential_admin-abcdef",
-        DBCredentialSecret:
-          "arn:aws:secretsmanager:REGION:ACCOUNT:secret:CfnStack/stack/db_credential_writer-zyxvuw",
         Privileges: ["ALL PRIVILEGES"],
       },
       PhysicalResourceId: "someId",
@@ -54,10 +48,6 @@ describe("SQL User Custom Resource", () => {
           username: "sqlUser",
           password: "sqlUserPass",
         }),
-      })
-      .onThirdCall()
-      .resolves({
-        SecretString: "database.cluster.writer.endpoint.example.net",
       });
 
     // Mock MySQL calls
