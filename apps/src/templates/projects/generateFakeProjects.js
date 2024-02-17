@@ -41,9 +41,9 @@ export const stubFakePersonalProjectData = [
   },
 ];
 
-export const stubFakeFeaturedProjectData = [
+export const stubFakeActiveFeaturedProjectData = [
   {
-    projectName: 'Featured Project 1',
+    projectName: 'Active Featured Project 1',
     type: 'gamelab',
     channel: 'abcd5',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -51,7 +51,7 @@ export const stubFakeFeaturedProjectData = [
     unfeaturedAt: 'null',
   },
   {
-    projectName: 'Featured Project 2',
+    projectName: 'Activie Featured Project 2',
     type: 'applab',
     channel: 'abcd6',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -60,7 +60,7 @@ export const stubFakeFeaturedProjectData = [
   },
   {
     projectName:
-      "Featured Project 3 has a super extra long name let's see how it looks in the table",
+      "Active Featured Project 3 has a super extra long name let's see how it looks in the table",
     type: 'artist',
     channel: 'abcd7',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -68,7 +68,7 @@ export const stubFakeFeaturedProjectData = [
     unfeaturedAt: 'null',
   },
   {
-    projectName: 'Featured Project 4',
+    projectName: 'Active Featured Project 4',
     type: 'playlab',
     channel: 'abcd8',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -77,9 +77,9 @@ export const stubFakeFeaturedProjectData = [
   },
 ];
 
-export const stubFakeUnfeaturedProjectData = [
+export const stubFakeArchivedFeaturedProjectData = [
   {
-    projectName: 'Unfeatured Project 1',
+    projectName: 'Archived Featured Project 1',
     type: 'gamelab',
     channel: 'abcd1',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -87,7 +87,7 @@ export const stubFakeUnfeaturedProjectData = [
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
   },
   {
-    projectName: 'Unfeatured Project 2',
+    projectName: 'Archived Featured Project 2',
     type: 'applab',
     channel: 'abcd2',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -96,7 +96,7 @@ export const stubFakeUnfeaturedProjectData = [
   },
   {
     projectName:
-      "Unfeatured Project 3 has a super extra long name let's see how it looks in the table",
+      "Archived Featured Project 3 has a super extra long name let's see how it looks in the table",
     type: 'artist',
     channel: 'abcd3',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -104,12 +104,48 @@ export const stubFakeUnfeaturedProjectData = [
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
   },
   {
-    projectName: 'Unfeatured Project 4',
+    projectName: 'Archived Featured Project 4',
     type: 'playlab',
     channel: 'abcd4',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
     featuredAt: '2016-12-31T23:59:59.999-08:00',
     unfeaturedAt: '2017-12-31T23:59:59.999-08:00',
+  },
+];
+
+export const stubFakeSavedFeaturedProjectData = [
+  {
+    projectName: 'Saved Featured Project 1',
+    type: 'gamelab',
+    channel: 'abcd9',
+    publishedAt: '2015-02-04T23:59:59.999-08:00',
+    featuredAt: 'null',
+    unfeaturedAt: 'null',
+  },
+  {
+    projectName: 'Saved Featured Project 2',
+    type: 'applab',
+    channel: 'abcd10',
+    publishedAt: '2015-02-04T23:59:59.999-08:00',
+    featuredAt: 'null',
+    unfeaturedAt: 'null',
+  },
+  {
+    projectName:
+      "Saved Featured Project 3 has a super extra long name let's see how it looks in the table",
+    type: 'artist',
+    channel: 'abcd11',
+    publishedAt: '2015-02-04T23:59:59.999-08:00',
+    featuredAt: 'null',
+    unfeaturedAt: 'null',
+  },
+  {
+    projectName: 'Saved Featured Project 4',
+    type: 'playlab',
+    channel: 'abcd12',
+    publishedAt: '2015-02-04T23:59:59.999-08:00',
+    featuredAt: 'null',
+    unfeaturedAt: 'null',
   },
 ];
 

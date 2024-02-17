@@ -1,23 +1,30 @@
 import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
 import {
-  stubFakeFeaturedProjectData,
-  stubFakeUnfeaturedProjectData,
+  stubFakeActiveFeaturedProjectData,
+  stubFakeArchivedFeaturedProjectData,
+  stubFakeSavedFeaturedProjectData,
 } from './generateFakeProjects';
 import {featuredProjectTableTypes} from './projectConstants';
 
 const Template = args => <FeaturedProjectsTable {...args} />;
 
-export const FeaturedProjectTableCurrent = Template.bind({});
-FeaturedProjectTableCurrent.args = {
-  projectList: stubFakeFeaturedProjectData,
-  tableVersion: featuredProjectTableTypes.current,
+export const FeaturedProjectTableActive = Template.bind({});
+FeaturedProjectTableActive.args = {
+  projectList: stubFakeActiveFeaturedProjectData,
+  tableVersion: featuredProjectTableTypes.active,
 };
 
-export const FeaturedProjectTableArchive = Template.bind({});
-FeaturedProjectTableArchive.args = {
-  projectList: stubFakeUnfeaturedProjectData,
+export const FeaturedProjectTableArchived = Template.bind({});
+FeaturedProjectTableArchived.args = {
+  projectList: stubFakeArchivedFeaturedProjectData,
   tableVersion: featuredProjectTableTypes.archived,
+};
+
+export const FeaturedProjectTableSaved = Template.bind({});
+FeaturedProjectTableSaved.args = {
+  projectList: stubFakeSavedFeaturedProjectData,
+  tableVersion: featuredProjectTableTypes.saved,
 };
 
 export default {
