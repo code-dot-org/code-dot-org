@@ -10,16 +10,9 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
-import {
-  AlwaysPublishableProjectTypes,
-  ConditionallyPublishableProjectTypes,
-  RestrictedPublishProjectTypes,
-} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
-import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
-import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -54,24 +47,6 @@ class PersonalProjectsTable extends React.Component {
         position: 0,
       },
     },
-  };
-
-  publishedAtFormatter = (publishedAt, {rowData}) => {
-    const {canShare} = this.props;
-    const isPublishable =
-      AlwaysPublishableProjectTypes.includes(rowData.type) ||
-      (ConditionallyPublishableProjectTypes.includes(rowData.type) &&
-        canShare) ||
-      RestrictedPublishProjectTypes.includes(rowData.type);
-
-    return (
-      <PersonalProjectsPublishedCell
-        isPublishable={isPublishable}
-        isPublished={!!rowData.publishedAt}
-        projectId={rowData.channel}
-        projectType={rowData.type}
-      />
-    );
   };
 
   actionsFormatter = (actions, {rowData}) => {
@@ -258,7 +233,6 @@ class PersonalProjectsTable extends React.Component {
             )}
           </div>
         )}
-        <PublishDialog />
         <DeleteProjectDialog />
       </div>
     );
