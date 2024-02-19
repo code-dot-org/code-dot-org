@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2024-02-05 16:26:24 UTC",
+    "serialized_at": "2024-02-13 19:40:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -106,7 +106,7 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 7-17</a>\n"
+        "overview": "####**Overview**\nThis lesson is a pre-requisite for teaching with micro:bit. It gives your students hands-on experience with the micro:bit and allows them to start making connections to concepts they learned in previous lessons.\n\nThis lesson is also designed for you to model for students how to review code. This will help your students make connections between familiar coding concepts and their practical application in physical computing.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7\" target=\"_blank\">lesson plan on pp. 7-17</a> in the micro:bit course booklet.\n\n::: details [**Getting Started with micro:bit**]\nBefore teaching the Meet your micro:bit lesson, make sure to download the program onto several micro:bits so students can use them. Watch this <a href=\"https://www.youtube.com/watch?v=X3zxNSIFsdQ\" target=\"_blank\">video</a> to get you started on using your micro:bits.\n\nFor an overview of how to teach the Course C coding lessons, check out <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=20\" target=\"_blank\">\"How to teach the coding lessons\" on pp. 20-21</a> in the micro:bit course booklet.\n:::\n\n::: details [**Matching Game (Optional)**]\nAfter completing the **Meet your micro:bit** lesson, students can complete a short matching game to transition from using Code.org blocks to micro:bit blocks. This activity is hosted on the JuiceMind platform (think Kahoot! for coding). To assign the activity to your students, click <a href=\"https://www.play.juicemind.com/quizzes/sy4iw6XvrsThFMpXF74e\" target=\"_blank\">here.</a>\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the activity.\n\n:::"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -122,7 +122,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "This lesson plan is not available on Code.org's website - instead, <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">click here to access micro:bit Physical Computing Fundamentals, pp. 22-24</a>"
+        "overview": "####**Overview**\n\nThis lesson builds on the coding concepts your students learned in the previous lessons. This micro:bit project lesson allows them to transfer knowledge from the screen into physical projects they can code and hold in their hands.\n\n####**Lesson Plan**\nThis lesson plan is not available on Code.org's website - instead, follow along with the <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22\" target=\"_blank\">lesson plan on pp. 22-24</a> in the micro:bit course booklet.\n\nClick <a href=\"https://mbit.io/csf-c2-classroom\" target=\"_blank\">here</a> to start a classroom session for Emotion Badge.\n\n::: details [**Setting up a micro:bit classroom session**]\nBefore teaching this lesson, make sure to set up a new classroom on the BBC micro:bit platform. Watch this <a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">video</a> to learn how to set up a classroom. \n:::\n\n####**Content Assessment**\nAfter completing the lesson, students will complete a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://www.play.juicemind.com/quizzes/vKVEHwz6lnReDoe38fE9\" target=\"_blank\">here.</a>\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -995,6 +995,17 @@
       }
     },
     {
+      "key": "a949a200-700a-4907-8cab-19dbe06049e6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Matching Game (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a949a200-700a-4907-8cab-19dbe06049e6",
+        "lesson_activity.key": "f430ee6c-9834-4d3b-9aaf-2f60386441c5"
+      }
+    },
+    {
       "key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
       "position": 1,
       "properties": {
@@ -1002,6 +1013,17 @@
       },
       "seeding_key": {
         "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
+        "lesson_activity.key": "34f3d454-ad69-4b3f-9f47-aaa202cbd4ec"
+      }
+    },
+    {
+      "key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8",
+      "position": 2,
+      "properties": {
+        "progression_name": "JuiceMind Quiz"
+      },
+      "seeding_key": {
+        "activity_section.key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8",
         "lesson_activity.key": "34f3d454-ad69-4b3f-9f47-aaa202cbd4ec"
       }
     },
@@ -1277,24 +1299,13 @@
       }
     },
     {
-      "key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d",
+      "key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219",
       "position": 1,
       "properties": {
-        "description": "Video level: https://mbit.io/csf-1-lesson-guide\n\nProject level: https://mbit.io/csf-1-project",
         "progression_name": "Meet your micro:bit"
       },
       "seeding_key": {
-        "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d",
-        "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
-      }
-    },
-    {
-      "key": "e56e0a0f-1a40-4dc8-a5d6-c42a922e1dc7",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e56e0a0f-1a40-4dc8-a5d6-c42a922e1dc7",
+        "activity_section.key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219",
         "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
       }
     },
@@ -2005,6 +2016,31 @@
     },
     {
       "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_juicemind_bridging_activity_beginner"
+        ],
+        "progression": "Matching Game (Optional)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_juicemind_bridging_activity_beginner"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "a949a200-700a-4907-8cab-19dbe06049e6"
+      },
+      "level_keys": [
+        "course_c_maker_juicemind_bridging_activity_beginner"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2029,7 +2065,32 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_juicemind_content_assessment_beginner"
+        ],
+        "progression": "JuiceMind Quiz"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_juicemind_content_assessment_beginner"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8"
+      },
+      "level_keys": [
+        "course_c_maker_juicemind_content_assessment_beginner"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2054,7 +2115,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2079,7 +2140,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2104,7 +2165,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2129,7 +2190,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2154,7 +2215,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2179,7 +2240,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -2204,7 +2265,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -2229,7 +2290,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -2254,7 +2315,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -2280,7 +2341,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -2305,7 +2366,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -2330,7 +2391,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -2355,7 +2416,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -2380,7 +2441,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -2405,7 +2466,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2423,14 +2484,14 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d"
+        "activity_section.key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219"
       },
       "level_keys": [
         "course_c_maker_meet_your_microbit_2"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2455,7 +2516,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2480,7 +2541,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2505,7 +2566,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2530,7 +2591,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2555,7 +2616,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2580,7 +2641,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2605,7 +2666,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2630,7 +2691,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2655,7 +2716,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2680,7 +2741,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2705,7 +2766,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -2730,7 +2791,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -2755,7 +2816,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2780,7 +2841,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2964,6 +3025,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "course_c_maker_juicemind_bridging_activity_beginner",
+        "script_level.level_keys": [
+          "course_c_maker_juicemind_bridging_activity_beginner"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "a949a200-700a-4907-8cab-19dbe06049e6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "course_c_maker_emotion_badge",
         "script_level.level_keys": [
           "course_c_maker_emotion_badge"
@@ -2972,6 +3045,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024",
         "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_juicemind_content_assessment_beginner",
+        "script_level.level_keys": [
+          "course_c_maker_juicemind_content_assessment_beginner"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "9743c9ca-c9f3-480e-b2d8-80530e9484e8"
       }
     },
     {
@@ -3163,7 +3248,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d"
+        "activity_section.key": "e18d3478-dbe2-44dd-9ce0-fc7eda714219"
       }
     },
     {

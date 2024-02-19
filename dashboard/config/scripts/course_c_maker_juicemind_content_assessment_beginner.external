@@ -1,0 +1,24 @@
+name 'course_c_maker_juicemind_content_assessment_beginner'
+title 'JuiceMind Bridging Activity'
+
+
+markdown <<MARKDOWN
+<h2 style="text-align: center;">JuiceMind Quiz</h2>
+
+<div style="text-align: center;">
+<p>Click the picture below to join your class link.</p>
+</div>
+
+<a href="https://play.juicemind.com/join" target="_blank"> 
+<img src="https://images.code.org/f4d965813eb94bd3823cb1f9e0e259b9-image-1707854014102.png" style="display: block; margin: auto; width: 20%">
+</a>
+<br>
+<div style="text-align: center;">
+<p>Now you're ready to test your knowledge!</p>
+</div>
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

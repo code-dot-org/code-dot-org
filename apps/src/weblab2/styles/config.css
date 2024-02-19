@@ -1,0 +1,14 @@
+.config-modal {
+  position: absolute;
+  background-color: gray;
+  padding: 25px;
+  left: 25vw;
+  top: 25vh;
+  z-index: 100;
+}
+
+.config-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable storybook/default-exports */
 // TODO: Once start working on Button component - uncomment the code and use it as a template for Button component stories
 
 // import React from 'react';

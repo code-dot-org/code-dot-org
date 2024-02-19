@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-06 07:15:24 UTC",
+    "serialized_at": "2024-02-10 06:48:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6218,7 +6218,7 @@
       "key": "4179c792-ab7c-4917-a633-ffbbb2af1617",
       "position": 1,
       "properties": {
-        "description": "In the previous unit, we worked with data as 1D arrays to answer questions and find information.",
+        "description": "We can customize almost anything in the digital world these days, but oftentimes, software engineers need to establish a simple default value for those things we might want to customize. ",
         "name": "Telling a Story",
         "remarks": true
       },
@@ -6231,11 +6231,11 @@
       "key": "52fafddd-7a56-48e8-8e99-c58d6ac950f0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might you tell the story behind the data you worked with in the previous unit as a visualization?*\n\n**Discussion Goal:** Students share ideas about how they might visualize the data they worked with in the previous unit, such as displaying shapes in different sizes to correlate with the number of values that meet specific criteria or convey the largest and smallest values in a dataset.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Can you think of a situation in your life where you interact with software or apps that have default values? \n\nHow do you think software engineers choose these default values, and how do they affect your experience? \n*\n\n**Discussion Goal:** Students share various default values from apps / software, and mention possible considerations such as accessibility, current trends, and common usages.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students consider how they would create these visualizations in The Theater. Ask students if they would create a static image or an animation and how these approaches would impact the effectiveness of the message."
+            "markdown": "If students have interacted with Painter and The Neighborhood, have them consider what sort of default values they would like to see in a Painter. "
           }
         ]
       },
@@ -6261,8 +6261,14 @@
       "key": "d7b23d9b-724a-41cf-a9ef-bfa250b7d080",
       "position": 2,
       "properties": {
-        "description": "So far, the instance variables and methods we have written in our classes can only be accessed by an instance of the class. However, there are special types of variables and methods that can be used without an object. Today, we'll learn about the `static` keyword and how we can use it with variables and methods in a class.",
-        "remarks": true
+        "description": "So far, the instance variables and methods we have written in our classes can only be accessed by an instance of the class. However, there are special types of variables and methods that can be used without an object. Today, we'll learn about using the static keyword to create and use class methods.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary Note:** The updated AP CS A framework refers to static variables as class variables. These terms are often used interchangeably, but the Code.org curriculum uses the term static variable. A note regarding this vocabulary can be found in the slides for this lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d7b23d9b-724a-41cf-a9ef-bfa250b7d080",
@@ -6393,7 +6399,7 @@
       "key": "b72321f5-dfb7-4d5d-a5fe-ec56adfc089f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***instance method*** and ***static method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to create and use a static variable. On Level 7, students complete a choice level to create and use a static method. On Level 8, students complete a choice level to create and use both static variables and methods.",
         "progression_name": "Practice: Static Variables and Methods",
         "tips": [
           {
@@ -6445,7 +6451,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Unit 4 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+            "markdown": "The Guided Notes include the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
           }
         ]
       },
@@ -8493,6 +8499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_modular"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -8515,6 +8524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_modular"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -8537,6 +8549,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_modular"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -8559,6 +8574,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_modular"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -8581,6 +8599,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_modular"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -8603,6 +8624,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_modular"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -8625,6 +8649,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_modular"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -8647,6 +8674,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_modular"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -8669,6 +8699,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_modular"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -10000,18 +10033,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U4L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1AuN6ZG62jztFvdFHNorec0juGbeT4Jfc-lB80cS8HcY/edit?usp=sharing",
-      "key": "_exemplar_u4l2_guided_notes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_u4l2_guided_notes"
-      }
-    },
-    {
       "name": "[EXEMPLAR] Unit 1 Guide",
       "url": "https://docs.google.com/document/d/1WZnHVMvSLXphwZM0eb0EjZwZ72IQEBtxm2TL_zb8c-4/edit?usp=share_link",
       "key": "_exemplar_unit_1_guide",
@@ -10021,6 +10042,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_1_guide"
+      }
+    },
+    {
+      "name": "[KEY] Calling Class Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1E5BWPgoZT0qvUVLPs08pCF8EFJIql-4TqLkcKn1sSy4/edit?usp=sharing",
+      "key": "_key_calling_class_methods_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_calling_class_methods_extra_practice"
       }
     },
     {
@@ -10261,18 +10294,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] U4L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/17MRpD62fJTWazjJfNf4_KnBmapF6UKWZv6CS5jhHR2I/edit?usp=sharing",
-      "key": "_key_u4l2_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_u4l2_extra_practice"
       }
     },
     {
@@ -10517,6 +10538,18 @@
       }
     },
     {
+      "name": "Exemplar Guided Notes - Calling Class Methods",
+      "url": "https://docs.google.com/document/d/1QM1zE8fWVTTNSDbmSCV0ez7yknjlKXE29UUERnB2kgY/edit?usp=sharing",
+      "key": "exemplar_guided_notes_-_calling_class_methods_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
+      }
+    },
+    {
       "name": "Guide to Creating and Using Word Walls",
       "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
       "key": "guide_to_creating_and_using_word_walls",
@@ -10538,6 +10571,18 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "Guided Notes - CSA [01] Calling Class Methods ",
+      "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
+      "key": "guided_notes_-_csa_01_calling_class_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
       }
     },
     {
@@ -11245,19 +11290,6 @@
       },
       "seeding_key": {
         "resource.key": "u4l2_extra_practice"
-      }
-    },
-    {
-      "name": "Guided Notes",
-      "url": "https://docs.google.com/document/d/1JUqFtZ6OslmqVhWzb16_38kPZESGSnCRq1LWXhwzjbg/edit?usp=sharing",
-      "key": "u4l2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "u4l2_guided_notes"
       }
     },
     {
@@ -12019,19 +12051,25 @@
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "resource.key": "_exemplar_u4l2_guided_notes"
+        "resource.key": "_key_calling_class_methods_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
-        "resource.key": "_key_u4l2_extra_practice"
+        "resource.key": "exemplar_guided_notes_-_calling_class_methods_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Static Variables and Methods",
+        "resource.key": "guided_notes_-_csa_01_calling_class_methods"
       }
     },
     {
@@ -12056,12 +12094,6 @@
       "seeding_key": {
         "lesson.key": "Static Variables and Methods",
         "resource.key": "u4l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Static Variables and Methods",
-        "resource.key": "u4l2_guided_notes"
       }
     },
     {
