@@ -3,11 +3,6 @@
   "config": {
     "func": "beginWandering",
     "blockText": "monsters begin wandering",
-    "color": [
-      136,
-      0.84,
-      0.8
-    ],
     "style": "behavior_blocks"
   }
 }

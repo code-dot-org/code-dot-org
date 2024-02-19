@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect} from 'react';
+import React, {useCallback, useContext, useEffect, useRef} from 'react';
 import MusicValidator from '../progress/MusicValidator';
 import moduleStyles from './music-view.module.scss';
 import {
@@ -17,7 +17,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -31,6 +30,7 @@ interface MusicLabViewProps {
   clearCode: () => void;
   validator: MusicValidator;
 }
+const UPDATE_RATE = 1000 / 30; // 30 times per second
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   blocklyDivId,
@@ -54,8 +54,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
 
   const progressManager = useContext(ProgressManagerContext);
+  const intervalId = useRef<number | undefined>(undefined);
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -76,7 +78,21 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     progressManager,
   ]);
 
-  usePlaybackUpdate(doPlaybackUpdate, () => progressManager?.resetValidation());
+  // Starts updates whenever playback is in progress, and stops updates
+  // when playback stops.
+  useEffect(() => {
+    if (isPlaying) {
+      if (intervalId.current !== undefined) {
+        window.clearInterval(intervalId.current);
+      }
+      // Reset validation before starting the update timer when playback starts.
+      progressManager?.resetValidation();
+      intervalId.current = window.setInterval(doPlaybackUpdate, UPDATE_RATE);
+    } else {
+      window.clearInterval(intervalId.current);
+      intervalId.current = undefined;
+    }
+  }, [isPlaying, doPlaybackUpdate, progressManager]);
 
   const onInstructionsTextClick = useCallback(
     (id: string) => {

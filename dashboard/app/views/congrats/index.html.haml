@@ -10,6 +10,8 @@
   congrats_data[:hide_dance_followup] = DCDO.get("hide_dance_followup", false)
   congrats_data[:certificate_image_url] = @certificate_image_url
   congrats_data[:is_hoc_tutorial] = @is_hoc_tutorial
+  congrats_data[:is_pl_course] = @is_pl_course
+  congrats_data[:is_k5_pl_course] = @is_k5_pl_course
   if current_user
     congrats_data[:current_user] = current_user
     # We need to know the user's age to determine whether we should suggest
