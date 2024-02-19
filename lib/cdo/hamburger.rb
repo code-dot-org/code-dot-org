@@ -108,7 +108,7 @@ class Hamburger
     end
 
     signed_out_entries = [
-      {title: "course_catalog", url: CDO.studio_url("/catalog")},     
+      {title: "course_catalog", url: CDO.studio_url("/catalog")},
       {title: "incubator", url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
@@ -250,7 +250,7 @@ class Hamburger
     signed_out_links = [
       # When signed out, "Learn" will take all users to the student view of /courses.
       {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-learn"},
-      {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-teach"},      
+      {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-teach"},
       {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats"},
       {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-help"},
       {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
