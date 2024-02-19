@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-intro-elementary",
-    "serialized_at": "2024-02-15 22:58:14 UTC",
+    "serialized_at": "2024-02-16 22:04:52 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
@@ -172,6 +172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_start_elementary"
+        ],
         "progression": "Intro"
       },
       "bonus": false,
@@ -194,6 +197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_change_sound_elementary"
+        ],
         "progression": "Change a sound"
       },
       "bonus": false,
@@ -216,6 +222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_play_sound_elementary"
+        ],
         "progression": "Play a sound"
       },
       "bonus": false,
@@ -238,6 +247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_play_together_elementary"
+        ],
         "progression": "Play together"
       },
       "bonus": false,
@@ -260,6 +272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_repeat_elementary"
+        ],
         "progression": "Repeat"
       },
       "bonus": false,
@@ -282,6 +297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_function_elementary"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -304,6 +322,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_function_elementary"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -326,6 +347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_trigger_elementary"
+        ],
         "progression": "Play live"
       },
       "bonus": false,
@@ -348,6 +372,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_end_elementary"
+        ],
         "progression": "Outro"
       },
       "bonus": false,
