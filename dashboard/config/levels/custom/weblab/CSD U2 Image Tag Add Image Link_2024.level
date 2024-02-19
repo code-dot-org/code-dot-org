@@ -8,7 +8,7 @@
   "properties": {
     "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n  </head>\\n  <body>\\n    <!-- info on gymnastics -->\\n    <!-- 1) Add an image link for the image \\\"gymnast.gif\\\" -->\\n    <p>Gymnastics involves balance, strength, flexibility, and coordination. Events for women include the vault, uneven bars, balance beam, and floor. Events for men are vault, parallel bars, floor, pummel horse, and still rings. \\n    <br> \\n    <br>\\n      Image by Rolf Dober from German Wikipedia</p>\\n  \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"gymnast.gif\",\r\n      \"url\": \"https://images.code.org/a630b7919c4daac3965bc03959aa74f6-image-1568307036084.gif\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "instructions_important": "false",
-    "long_instructions": "# Add Image Link\r\n\r\nAn image has already been uploaded for you. The next step is to link it to the web page.\r\n\r\n# Do This\r\n1) Add an image link for the image \"gymnast.gif\".\r\n\r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/de0868aea055a3c42a4a4371892c2b93-image-1677104053660.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
+    "long_instructions": "# Add Image Link\r\n\r\nAn image has already been uploaded for you. The next step is to link it to the web page.\r\n\r\n# Do This\r\n1) Add an image link for the image \"gymnast.gif\".\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n<img src=\"https://images.code.org/de0868aea055a3c42a4a4371892c2b93-image-1677104053660.gif\" style=\"width:500px\">\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "hide_share_and_remix": "true",
     "submittable": "false",
     "encrypted_examples": "e2pShcMeTBIbw1ydaH/n4V5D6mxbp+gfQh1s0K8c6OOoaaHITQeOpqyvLRQ5\n0+0OdpcYX1hRId2a9nFlQERUUQ==\n",
@@ -34,6 +34,6 @@
     "validation_enabled": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:47.956+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Add Image Link_2023\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Add Image Link_2023\"},{\"changed_at\":\"2024-02-15 18:23:31 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:47.956+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Add Image Link_2023\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Add Image Link_2023\"},{\"changed_at\":\"2024-02-15 18:23:31 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 21:21:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
