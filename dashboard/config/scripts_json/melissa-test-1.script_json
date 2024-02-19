@@ -1,0 +1,1624 @@
+{
+  "script": {
+    "name": "melissa-test-1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2024"
+    },
+    "new_name": null,
+    "family_name": "mt-playground",
+    "serialized_at": "2024-02-16 21:49:13 UTC",
+    "published_state": "in_development",
+    "instruction_type": "self_paced",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
+    "seeding_key": {
+      "script.name": "melissa-test-1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Overview",
+      "name": "Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "Events",
+      "name": "Events",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "Loops",
+      "name": "Loops",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "name": "Conditionals",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "Data and Variables",
+      "name": "Data and Variables",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f2e1a8c5-360d-4453-8f95-68e4f8dfab5a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2e1a8c5-360d-4453-8f95-68e4f8dfab5a",
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "0dcb5a2f-77c0-45be-8fa3-fefe2baa1ca8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0dcb5a2f-77c0-45be-8fa3-fefe2baa1ca8",
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "b28dbc2b-3fe9-434a-bc7f-08358b11a7d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b28dbc2b-3fe9-434a-bc7f-08358b11a7d9",
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "7babb8e2-9809-4c49-9f31-7809d9eff7f8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7babb8e2-9809-4c49-9f31-7809d9eff7f8",
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    },
+    {
+      "key": "0964136b-5dc9-4b08-a7ca-7a92b8243d9f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0964136b-5dc9-4b08-a7ca-7a92b8243d9f",
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b",
+        "lesson_activity.key": "f2e1a8c5-360d-4453-8f95-68e4f8dfab5a"
+      }
+    },
+    {
+      "key": "f7b34cec-1c7f-4691-b851-608b68819f82",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro to Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7b34cec-1c7f-4691-b851-608b68819f82",
+        "lesson_activity.key": "0dcb5a2f-77c0-45be-8fa3-fefe2baa1ca8"
+      }
+    },
+    {
+      "key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Events with Flappy Bird"
+      },
+      "seeding_key": {
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3",
+        "lesson_activity.key": "0dcb5a2f-77c0-45be-8fa3-fefe2baa1ca8"
+      }
+    },
+    {
+      "key": "14d27d50-1e07-4263-a664-2bd27c74e983",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unplugged Lesson with Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "14d27d50-1e07-4263-a664-2bd27c74e983",
+        "lesson_activity.key": "0dcb5a2f-77c0-45be-8fa3-fefe2baa1ca8"
+      }
+    },
+    {
+      "key": "bcc29569-0158-44b9-937d-7a0fb66c8dce",
+      "position": 4,
+      "properties": {
+        "progression_name": "Print Block + Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcc29569-0158-44b9-937d-7a0fb66c8dce",
+        "lesson_activity.key": "0dcb5a2f-77c0-45be-8fa3-fefe2baa1ca8"
+      }
+    },
+    {
+      "key": "9c24b343-0ea8-479c-b21b-cc85024a8984",
+      "position": 5,
+      "properties": {
+        "progression_name": "Events Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c24b343-0ea8-479c-b21b-cc85024a8984",
+        "lesson_activity.key": "0dcb5a2f-77c0-45be-8fa3-fefe2baa1ca8"
+      }
+    },
+    {
+      "key": "76fa7f05-0d24-4824-af50-3dd767b43fb7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "76fa7f05-0d24-4824-af50-3dd767b43fb7",
+        "lesson_activity.key": "b28dbc2b-3fe9-434a-bc7f-08358b11a7d9"
+      }
+    },
+    {
+      "key": "e11c4c72-ad3f-41fb-8579-921d57078362",
+      "position": 2,
+      "properties": {
+        "progression_name": "Coding with Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362",
+        "lesson_activity.key": "b28dbc2b-3fe9-434a-bc7f-08358b11a7d9"
+      }
+    },
+    {
+      "key": "867536cf-e049-425f-ba9c-5eeaa575af9c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Loops Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "867536cf-e049-425f-ba9c-5eeaa575af9c",
+        "lesson_activity.key": "b28dbc2b-3fe9-434a-bc7f-08358b11a7d9"
+      }
+    },
+    {
+      "key": "56ca2929-da1c-46eb-9faa-8fd75e538b47",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "56ca2929-da1c-46eb-9faa-8fd75e538b47",
+        "lesson_activity.key": "7babb8e2-9809-4c49-9f31-7809d9eff7f8"
+      }
+    },
+    {
+      "key": "160a2aab-ba98-4a1f-870e-df55f638cf25",
+      "position": 2,
+      "properties": {
+        "progression_name": "Conditionals with Bee"
+      },
+      "seeding_key": {
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25",
+        "lesson_activity.key": "7babb8e2-9809-4c49-9f31-7809d9eff7f8"
+      }
+    },
+    {
+      "key": "3e8ab5d4-3a9e-4834-a3ed-f86353178141",
+      "position": 3,
+      "properties": {
+        "progression_name": "Cause & Effect Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e8ab5d4-3a9e-4834-a3ed-f86353178141",
+        "lesson_activity.key": "7babb8e2-9809-4c49-9f31-7809d9eff7f8"
+      }
+    },
+    {
+      "key": "530af7cd-0346-4642-b748-aa5ff3f36c8b",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "530af7cd-0346-4642-b748-aa5ff3f36c8b",
+        "lesson_activity.key": "7babb8e2-9809-4c49-9f31-7809d9eff7f8"
+      }
+    },
+    {
+      "key": "e7ffc8ea-d3cd-4180-a7a4-cf5fabe3cac6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7ffc8ea-d3cd-4180-a7a4-cf5fabe3cac6",
+        "lesson_activity.key": "0964136b-5dc9-4b08-a7ca-7a92b8243d9f"
+      }
+    },
+    {
+      "key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48",
+      "position": 2,
+      "properties": {
+        "progression_name": "Coding with Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48",
+        "lesson_activity.key": "0964136b-5dc9-4b08-a7ca-7a92b8243d9f"
+      }
+    },
+    {
+      "key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Create a Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f",
+        "lesson_activity.key": "0964136b-5dc9-4b08-a7ca-7a92b8243d9f"
+      }
+    },
+    {
+      "key": "4e98142b-52db-45fa-9cee-fe8e17a4f325",
+      "position": 4,
+      "properties": {
+        "progression_name": "Variables Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "4e98142b-52db-45fa-9cee-fe8e17a4f325",
+        "lesson_activity.key": "0964136b-5dc9-4b08-a7ca-7a92b8243d9f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening1MB_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      },
+      "level_keys": [
+        "PLGuide_L1_Opening1MB_1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How this curriculum works_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      },
+      "level_keys": [
+        "How this curriculum works_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening2MB_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      },
+      "level_keys": [
+        "PLGuide_L1_Opening2MB_1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-lessonactivities_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Events_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f7b34cec-1c7f-4691-b851-608b68819f82"
+      },
+      "level_keys": [
+        "Intro to Events_1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      },
+      "level_keys": [
+        "courseC_video_flappyIntro_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      },
+      "level_keys": [
+        "courseC_flappy_events1_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      },
+      "level_keys": [
+        "courseC_flappy_events2_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      },
+      "level_keys": [
+        "courseC_flappy_events3_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      },
+      "level_keys": [
+        "courseC_flappy_events4_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      },
+      "level_keys": [
+        "courseC_flappy_events5_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unplugged Lesson with Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "14d27d50-1e07-4263-a664-2bd27c74e983"
+      },
+      "level_keys": [
+        "course_c_maker_dance_party_unpluggedMB_1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro to loops_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "76fa7f05-0d24-4824-af50-3dd767b43fb7"
+      },
+      "level_keys": [
+        "intro to loops_1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_artistLoops_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "76fa7f05-0d24-4824-af50-3dd767b43fb7"
+      },
+      "level_keys": [
+        "courseB_video_artistLoops_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops2_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      },
+      "level_keys": [
+        "courseB_artist_loops2_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops3_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      },
+      "level_keys": [
+        "courseB_artist_loops3_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops5_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      },
+      "level_keys": [
+        "courseB_artist_loops5_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops6_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      },
+      "level_keys": [
+        "courseB_artist_loops6_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      },
+      "level_keys": [
+        "U2L2 CSP CFU IP Addresses2022_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Conditionals_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "56ca2929-da1c-46eb-9faa-8fd75e538b47"
+      },
+      "level_keys": [
+        "Intro to Conditionals_1"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "56ca2929-da1c-46eb-9faa-8fd75e538b47"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVid1_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals1_predict1_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals2_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals3_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals4_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro to variables_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e7ffc8ea-d3cd-4180-a7a4-cf5fabe3cac6"
+      },
+      "level_keys": [
+        "intro to variables_1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Variable MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e7ffc8ea-d3cd-4180-a7a4-cf5fabe3cac6"
+      },
+      "level_keys": [
+        "Variable MB_1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_change_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48"
+      },
+      "level_keys": [
+        "courseF_variables2_change_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_set_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48"
+      },
+      "level_keys": [
+        "courseF_variables2_set_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_predict_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48"
+      },
+      "level_keys": [
+        "courseF_variables2_predict_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_sprites_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      },
+      "level_keys": [
+        "courseF_clicker_sprites_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_remove_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      },
+      "level_keys": [
+        "courseF_clicker_remove_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_variable_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      },
+      "level_keys": [
+        "courseF_clicker_variable_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_score_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      },
+      "level_keys": [
+        "courseF_clicker_score_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_finish_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      },
+      "level_keys": [
+        "courseF_clicker_finish_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      },
+      "level_keys": [
+        "U2L4 Multiple Choice packets2022_2023MB1_1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Opening1MB_1",
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening1MB_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How this curriculum works_1",
+        "script_level.level_keys": [
+          "How this curriculum works_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Opening2MB_1",
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening2MB_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-lessonactivities_2023MB_1",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_1"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "37afdeb1-6346-4fa7-91fc-ce2f15bb369b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Events_1",
+        "script_level.level_keys": [
+          "Intro to Events_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f7b34cec-1c7f-4691-b851-608b68819f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_flappyIntro_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events1_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events2_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events3_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events4_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events5_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "f06d5bc3-16c4-4795-a26d-00269c30d6b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_dance_party_unpluggedMB_1",
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "14d27d50-1e07-4263-a664-2bd27c74e983"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro to loops_1",
+        "script_level.level_keys": [
+          "intro to loops_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "76fa7f05-0d24-4824-af50-3dd767b43fb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_artistLoops_2023MB_1",
+        "script_level.level_keys": [
+          "courseB_video_artistLoops_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "76fa7f05-0d24-4824-af50-3dd767b43fb7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops2_2023MB_1",
+        "script_level.level_keys": [
+          "courseB_artist_loops2_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops3_2023MB_1",
+        "script_level.level_keys": [
+          "courseB_artist_loops3_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops5_2023MB_1",
+        "script_level.level_keys": [
+          "courseB_artist_loops5_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops6_2023MB_1",
+        "script_level.level_keys": [
+          "courseB_artist_loops6_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 CSP CFU IP Addresses2022_2023MB_1",
+        "script_level.level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023MB_1"
+        ],
+        "lesson.key": "Loops",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e11c4c72-ad3f-41fb-8579-921d57078362"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Conditionals_1",
+        "script_level.level_keys": [
+          "Intro to Conditionals_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "56ca2929-da1c-46eb-9faa-8fd75e538b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVid1_2023MB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "56ca2929-da1c-46eb-9faa-8fd75e538b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals1_predict1_makerMB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals2_2023MB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals3_makerMB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals4_makerMB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "160a2aab-ba98-4a1f-870e-df55f638cf25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro to variables_1",
+        "script_level.level_keys": [
+          "intro to variables_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e7ffc8ea-d3cd-4180-a7a4-cf5fabe3cac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Variable MB_1",
+        "script_level.level_keys": [
+          "Variable MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "e7ffc8ea-d3cd-4180-a7a4-cf5fabe3cac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_change_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_variables2_change_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_set_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_variables2_set_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_predict_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_variables2_predict_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "8bb8b2d5-94b0-4bde-80bc-d0141d92ed48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_sprites_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_clicker_sprites_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_remove_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_clicker_remove_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_variable_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_clicker_variable_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_score_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_clicker_score_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_finish_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_clicker_finish_2023MB_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 Multiple Choice packets2022_2023MB1_1",
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1"
+        ],
+        "lesson.key": "Data and Variables",
+        "lesson_group.key": "",
+        "script.name": "melissa-test-1",
+        "activity_section.key": "c2c6cc4a-7cfe-47c3-b6b0-44204d12687f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

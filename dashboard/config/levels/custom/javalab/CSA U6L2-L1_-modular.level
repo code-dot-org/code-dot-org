@@ -11,8 +11,8 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
-      "Runner.java": {
-        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+      "StringRunner.java": {
+        "text": "public class StringRunner {\n  public static void main(String[] args) {\n\n      String palindromeDefinition = \"a word that is spelled the same forwards and backwards\";\n      \n      String shortExample = \"level\";\n      String mediumExample = \"racecar\";\n      String longExample = \"was it a cat i saw\";\n      \n      String front;\n      \n      for (int i = 0; i < shortExample.length(); i++){\n          front = shortExample.substring(i,i+1);\n          System.out.println(front + \" ---- \");\n      }\n      System.out.println();\n    \n    }\n}\n",
         "isVisible": true,
         "tabOrder": 0
       }
@@ -24,6 +24,6 @@
     "name_suffix": "_-modular"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:19.867+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L1_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L1_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:19.867+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L1_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L1_2025\"},{\"changed_at\":\"2024-02-19 07:02:20 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-02-19 07:03:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-02-19 07:05:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>
