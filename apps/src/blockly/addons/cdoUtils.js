@@ -435,7 +435,7 @@ function simplifyBlockState(block, variableMap) {
   });
 
   // Recursively check nested blocks.
-  if (block.inputs) {
+  if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
       result.inputs[inputKey].block = simplifyBlockState(
         block.inputs[inputKey].block,
@@ -444,7 +444,7 @@ function simplifyBlockState(block, variableMap) {
     }
   }
   // Recursively check next block, if present.
-  if (block.next) {
+  if (block.next?.block) {
     result.next.block = simplifyBlockState(block.next.block, variableMap);
   }
   // Remove unnecessary properties
