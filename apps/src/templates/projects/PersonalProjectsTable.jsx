@@ -156,7 +156,7 @@ class PersonalProjectsTable extends React.Component {
       {
         property: 'type',
         header: {
-          label: i18n.projectType(),
+          label: i18n.projectTypeTable(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -164,7 +164,6 @@ class PersonalProjectsTable extends React.Component {
           formatters: [typeFormatter],
           props: {
             style: {
-              ...styles.cellType,
               ...tableLayoutStyles.cell,
             },
           },
@@ -302,9 +301,6 @@ export const styles = {
     borderWidth: '0px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
-  },
-  cellType: {
-    width: 120,
   },
   centeredCell: {
     textAlign: 'center',
