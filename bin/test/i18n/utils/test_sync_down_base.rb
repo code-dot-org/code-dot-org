@@ -294,11 +294,12 @@ describe I18n::Utils::SyncDownBase do
     end
 
     it 'returns data of all the source files in the root dir' do
-      source_files_data = ['expected_source_file_data']
+      source_file1_data = {'path' => 'expected_source_file1_path'}
+      source_file2_data = {'path' => 'expected_source_file2_path'}
 
-      crowdin_client.expects(:list_source_files).with(crowdin_src).returns(source_files_data)
+      crowdin_client.expects(:list_source_files).with(crowdin_src).returns([source_file2_data, source_file1_data])
 
-      _(source_files).must_equal source_files_data
+      _(source_files).must_equal [source_file1_data, source_file2_data]
     end
 
     context 'when the download source is a file' do
@@ -317,7 +318,7 @@ describe I18n::Utils::SyncDownBase do
       let(:crowdin_src) {'/expected_crowdin_source_path'}
 
       it 'returns data of all the source files in the dir' do
-        source_files_data = ['expected_source_file_data']
+        source_files_data = ['path' => 'expected_source_file_data']
 
         crowdin_client.expects(:list_source_files).with(crowdin_src).returns(source_files_data)
 
