@@ -1687,7 +1687,7 @@
         button: "Join our teacher forums"
       support:
         title: "Get Support"
-        desc: "Our customer support team is ready to answer your questions. Email us at support@code.org or check out our support center, which offers useful guides and answers!"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
 
   intl_pl_page:

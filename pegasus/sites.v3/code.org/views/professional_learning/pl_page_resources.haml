@@ -17,7 +17,7 @@
     {
       image: "/images/editorial-card-support.png",
       title: hoc_s("pl_page.resources.support.title"),
-      desc: hoc_s("pl_page.resources.support.desc"),
+      desc: hoc_s("pl_page.resources.support.desc", markdown: :inline, locals: {email_url: "mailto:support@code.org"}),
       url: "https://support.code.org",
       button_label: hoc_s("pl_page.resources.support.button"),
     },
