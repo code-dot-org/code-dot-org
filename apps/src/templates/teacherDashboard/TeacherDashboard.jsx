@@ -156,9 +156,11 @@ function TeacherDashboard({
         />
         {showAITutorTab && (
           <Route
-          path={TeacherDashboardPath.aiTutorChatMessages}
-          component={props => <AITutorChatMessagesTable sectionId={sectionId} />}
-        />
+            path={TeacherDashboardPath.aiTutorChatMessages}
+            component={props => (
+              <AITutorChatMessagesTable sectionId={sectionId} />
+            )}
+          />
         )}
       </Switch>
     </div>
@@ -171,6 +173,7 @@ TeacherDashboard.propTypes = {
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
   coursesWithProgress: PropTypes.array.isRequired,
+  showAITutorTab: PropTypes.bool,
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,

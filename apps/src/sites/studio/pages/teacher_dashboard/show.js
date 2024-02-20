@@ -94,7 +94,7 @@ $(document).ready(function () {
   store.dispatch(setCoursesWithProgress(reorderedCourses));
 
   const showAITutorTab = canViewStudentAIChatMessages;
-  
+
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>

@@ -45,9 +45,9 @@ const teacherDashboardLinks = [
     url: TeacherDashboardPath.manageStudents,
   },
   {
-    label: "AI Tutor",
+    label: 'AI Tutor',
     url: TeacherDashboardPath.aiTutorChatMessages,
-  }
+  },
 ];
 
 const ListPosition = {
