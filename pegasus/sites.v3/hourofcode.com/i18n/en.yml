@@ -1662,7 +1662,7 @@
       button_k_5: "Explore K-5 workshops"
       button_6_12: "Explore 6-12 workshops"
       button_self_paced: "Explore self-paced courses"
-      disclaimer: "**Not in the United States?** We're expanding our network of international partners to offer more professional learning to teachers. [Learn more here]({%learn_more_url})."
+      disclaimer: "**Not in the United States?** We're expanding our network of international partners to offer more professional learning to teachers. [Learn more here](%{learn_more_url})."
     quote:
       text: "I love getting to work in the lessons and deeply think through how I will use it with students. I don't feel like I often have time to 'slow down' and dive into materials, but this workshop always gives me time and space to do so."
       byline: "CS Discoveries Teacher"

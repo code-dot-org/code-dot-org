@@ -3,11 +3,17 @@
 
 @import "breakpoints";
 
+$border-radius: 4px;
+
 .journey-wrapper {
   margin: 2rem 0 1rem;
 
+  @media screen and (max-width: $width-md) {
+    flex-wrap: wrap;
+  }
+
   h3 {
-    border-radius: 4px 4px 0 0;
+    border-radius: $border-radius $border-radius 0 0;
     margin-bottom: 0;
     padding: 0.5rem;
     text-align: center;
@@ -17,13 +23,21 @@
     h3 {
       background-color: var(--brand_primary_default);
       color: var(--neutral_white);
-      flex: 1;
-      height: fit-content;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      & > .flex-container {
+        flex-wrap: wrap;
+      }
     }
   }
 
   .self-paced-wrapper {
-    flex-basis: 50%;
+    width: 100%;
+
+    @media screen and (min-width: $width-sm) {
+      flex-basis: 50%;
+    }
 
     h3 {
       background-color: var(--brand_primary_light);
@@ -40,19 +54,27 @@
     padding: 1.25rem;
     border: 1px solid var(--neutral_dark10);
     border-top: 0;
-    flex: 1;
+    width: 100%;
 
-    &.k-5 {
-      border-radius: 0 0 0 4px;
+    @media screen and (min-width: $width-sm) {
+      flex: 1;
+
+      &.k-5 {
+        border-radius: 0 0 0 $border-radius;
+      }
+
+      &.mid-high {
+        border-radius: 0 0 $border-radius 0;
+        border-inline-start: 0;
+      }
     }
 
     &.mid-high {
-      border-radius: 0 0 4px 0;
-      border-inline-start: 0;
+      border-radius: 0 0 $border-radius $border-radius;
     }
 
     &.self-paced {
-      border-radius: 0 0 4px 4px;
+      border-radius: 0 0 $border-radius $border-radius;
     }
 
     li {
@@ -66,6 +88,10 @@
       i {
         color: var(--neutral_dark40);
         flex-basis: 10px;
+      }
+
+      p {
+        font-weight: var(--medium-font-weight);
       }
     }
   }
