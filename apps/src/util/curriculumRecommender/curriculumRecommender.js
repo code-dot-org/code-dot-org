@@ -51,8 +51,6 @@ export const getTestRecommendations = (
     score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
   });
-  console.log('SEPARATOR');
-  console.log(curriculaScores.map(curr => [curr[0].key, curr[1]]));
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
 };
 
