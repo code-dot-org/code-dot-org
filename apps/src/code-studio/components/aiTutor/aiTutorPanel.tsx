@@ -62,9 +62,9 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
         [style.hiddenAITutorPanel]: !open,
       })}
     >
-      <h3 id="ai_tutor_panel">AI Tutor</h3>
-      <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
-      <div>
+      <div className={classnames(style.aiTutorPanelContent)}>
+        <h3 id="ai_tutor_panel">AI Tutor</h3>
+        <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
         {isAssessmentLevel ? (
           <h4>You don't have access on this level.</h4>
         ) : (
@@ -76,10 +76,10 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
             />
           </div>
         )}
+        {compilationSelected && <CompilationTutor />}
+        {validationSelected && <ValidationTutor />}
+        {questionSelected && <GeneralChatTutor />}
       </div>
-      {compilationSelected && <CompilationTutor />}
-      {validationSelected && <ValidationTutor />}
-      {questionSelected && <GeneralChatTutor />}
     </div>
   );
 };
