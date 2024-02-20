@@ -263,7 +263,7 @@ describe I18n::Utils::SyncDownBase do
     end
   end
   # This test fails in the test environment while passing locally and in Drone.
-  # For some reason, the test environment is not loadind correctly the CdoLanguages class.
+  # For some reason, the test environment is not loading the CdoLanguages class.
   # describe '#cdo_languages' do
   #   let(:cdo_languages) {described_instance.send(:cdo_languages)}
   #
