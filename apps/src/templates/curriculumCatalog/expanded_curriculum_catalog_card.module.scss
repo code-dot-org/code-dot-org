@@ -161,7 +161,7 @@ $container-width: 960px;
   }
 }
 
-.professionalLearningContainer {
+.professionalLearningContainer, .relatedContainer {
   a {
     color: $brand_secondary_default !important;
     text-decoration: underline !important;
@@ -175,6 +175,10 @@ $container-width: 960px;
 
 .relatedContainer {
   margin-top: 32px;
+
+  .relatedTextlink {
+    margin-top: 8px;
+  }
 
   h4 {
     margin-bottom: 0;
