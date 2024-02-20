@@ -1141,6 +1141,7 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
+              callback(true);
               this.logError_(
                 'unauthorized-save-sources-reload',
                 saveSourcesErrorCount,
@@ -1498,9 +1499,9 @@ var projects = (module.exports = {
    * @param {function} callback Function to be called after saving.
    */
   autosave(callback) {
-    const callCallback = () => {
+    const callCallback = skipHandleUnload => {
       if (callback) {
-        callback();
+        callback(skipHandleUnload);
       }
     };
     // Bail if baseline code doesn't exist (app not yet initialized)
@@ -1541,7 +1542,7 @@ var projects = (module.exports = {
         return;
       }
 
-      this.saveSourceAndHtml_(newSources, () => {
+      this.saveSourceAndHtml_(newSources, skipHandleUnload => {
         if (!projectChangedWhileSaveInProgress) {
           hasProjectChanged = false;
         }
@@ -1940,7 +1941,11 @@ var projects = (module.exports = {
 
     if (this.hasOwnerChangedProject()) {
       // Manually trigger an autosave instead of waiting for the next autosave.
-      this.autosave();
+      this.autosave(skipHandleUnload => {
+        if (skipHandleUnload) {
+          delete event.returnValue;
+        }
+      });
 
       event.preventDefault();
       event.returnValue = '';
