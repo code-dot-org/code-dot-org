@@ -1,7 +1,7 @@
 import {
   IMPORTANT_TOPICS,
   UTC_PUBLISHED_DATE_FORMAT,
-  FAKE_RECOMMENDER_SCORING,
+  TEST_RECOMMENDER_SCORING,
   SIMILAR_RECOMMENDER_SCORING,
 } from './curriculumRecommenderConstants';
 import moment from 'moment';
@@ -73,29 +73,27 @@ export const getTestRecommendations = (
   const curriculaScores = [];
   curricula.forEach(curriculum => {
     let score = 0;
-    score += hasDesiredDuration(FAKE_RECOMMENDER_SCORING, curriculum, duration);
+    score += hasDesiredDuration(TEST_RECOMMENDER_SCORING, curriculum, duration);
     score += hasDesiredMarketingInitiative(
-      FAKE_RECOMMENDER_SCORING,
+      TEST_RECOMMENDER_SCORING,
       curriculum,
       marketingInitiative
     );
-    score += hasAnySchoolSubject(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += hasAnySchoolSubject(TEST_RECOMMENDER_SCORING, curriculum);
     score += hasDesiredSchoolSubjects(
-      FAKE_RECOMMENDER_SCORING,
+      TEST_RECOMMENDER_SCORING,
       curriculum,
       schoolSubjects
     );
     score += hasImportantButNotDesiredTopic(
-      FAKE_RECOMMENDER_SCORING,
+      TEST_RECOMMENDER_SCORING,
       curriculum,
       csTopics
     );
-    score += hasDesiredTopics(FAKE_RECOMMENDER_SCORING, curriculum, csTopics);
-    score += howRecentlyPublished(FAKE_RECOMMENDER_SCORING, curriculum);
+    score += hasDesiredTopics(TEST_RECOMMENDER_SCORING, curriculum, csTopics);
+    score += howRecentlyPublished(TEST_RECOMMENDER_SCORING, curriculum);
     curriculaScores.push([curriculum, score]);
   });
-  console.log('SEPARATOR');
-  console.log(curriculaScores.map(curr => [curr[0].key, curr[1]]));
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
 };
 
