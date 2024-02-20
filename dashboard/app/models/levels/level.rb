@@ -93,6 +93,7 @@ class Level < ApplicationRecord
     bubble_choice_description
     thumbnail_url
     start_libraries
+    ai_tutor_available
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
