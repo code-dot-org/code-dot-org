@@ -17,9 +17,9 @@ Scenario: Gamelab Flow
   And I ensure droplet is in text mode
   And I append gamelab code to draw a ninja
 
-
   # Test the "View code" button, as the owner goes to /edit
-  When I navigate to the share URL
+  Then I open the project share dialog
+  And I navigate to the share URL
   And I wait to see "#footerDiv"
   Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And element "#codeWorkspace" is hidden
