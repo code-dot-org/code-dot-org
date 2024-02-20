@@ -1,6 +1,7 @@
-import {getAuthenticityToken} from '../util/AuthenticityTokenStore';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {AITutorInteraction} from './types';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 export async function savePromptAndResponse(
   interactionData: AITutorInteraction
@@ -16,7 +17,7 @@ export async function savePromptAndResponse(
     });
   } catch (error) {
     MetricsReporter.logError({
-      event: 'AI Tutor Interaction failed to save.',
+      event: MetricEvent.AI_TUTOR_CHAT_SAVE_FAIL,
       errorMessage: error,
     });
   }
