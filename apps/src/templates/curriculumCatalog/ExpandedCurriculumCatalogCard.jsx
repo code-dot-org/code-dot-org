@@ -17,6 +17,7 @@ import {
 } from '../teacherDashboard/CourseOfferingHelpers';
 
 const ExpandedCurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradeRange,
@@ -37,6 +38,7 @@ const ExpandedCurriculumCatalogCard = ({
   availableResources,
   isSignedOut,
   isTeacher,
+  getRecommendedSimilarCurriculum,
 }) => {
   const expandedCardRef = useRef(null);
   const iconData = {
@@ -73,6 +75,9 @@ const ExpandedCurriculumCatalogCard = ({
   const displayDivider = () => {
     return ++availableResourceCounter < availableResourcesCount;
   };
+
+  const recommendedSimilarCurriculum =
+    getRecommendedSimilarCurriculum(courseKey);
 
   useEffect(() => {
     const yOffset =
@@ -265,11 +270,32 @@ const ExpandedCurriculumCatalogCard = ({
                   aria-label="Close Button"
                 />
               </div>
-              <div className={style.relatedContainer} style={{display: 'none'}}>
+              <div className={style.relatedContainer}>
                 <Heading4 visualAppearance="heading-xs">
                   {i18n.relatedCurricula()}
                 </Heading4>
                 <hr className={style.thickDivider} />
+                <img
+                  src={recommendedSimilarCurriculum.image}
+                  alt=""
+                  style={{height: '100%'}}
+                />
+                <TextLink
+                  className={style.relatedTextlink}
+                  text={recommendedSimilarCurriculum.display_name}
+                  href={`${
+                    isSignedOut || isTeacher
+                      ? recommendedSimilarCurriculum.course_version_path +
+                        '?viewAs=Instructor'
+                      : recommendedSimilarCurriculum.course_version_path
+                  }`}
+                  icon={
+                    <FontAwesome
+                      icon="arrow-up-right-from-square"
+                      className="fa-solid"
+                    />
+                  }
+                />
               </div>
             </div>
           </div>
@@ -279,6 +305,7 @@ const ExpandedCurriculumCatalogCard = ({
   );
 };
 ExpandedCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string.isRequired,
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
@@ -299,5 +326,6 @@ ExpandedCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
+  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
 };
 export default ExpandedCurriculumCatalogCard;
