@@ -43,7 +43,11 @@ $(document).ready(function () {
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');
 
   userType === 'teacher' &&
-    analyticsReporter.sendEvent(EVENTS.TEACHER_HOC_CONGRATS_PAGE_VISITED);
+    analyticsReporter.sendEvent(EVENTS.TEACHER_HOC_CONGRATS_PAGE_VISITED, {
+      isHocTutorial,
+      isPlCourse,
+      isK5PlCourse,
+    });
 
   ReactDOM.render(
     <Provider store={store}>
