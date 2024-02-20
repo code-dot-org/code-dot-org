@@ -36,3 +36,7 @@ declare module '*.svg' {
   const value: string;
   export = value;
 }
+
+// Modules without types
+declare module '@blockly/plugin-scroll-options';
+declare module '@blockly/keyboard-navigation';

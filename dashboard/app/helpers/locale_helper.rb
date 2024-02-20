@@ -49,7 +49,9 @@ module LocaleHelper
 
   # Strips regions off of accepted_locales.
   def accepted_languages
-    @accepted_languages ||= accepted_locales.map(&method(:language)).uniq
+    @accepted_languages ||= accepted_locales.map do |locale|
+      language(locale)
+    end.uniq
   end
 
   # Looks up a localized string driven by a database value.
