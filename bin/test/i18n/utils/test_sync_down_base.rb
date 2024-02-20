@@ -277,7 +277,7 @@ describe I18n::Utils::SyncDownBase do
 
       crowdin_client.expects(:get_project).returns('targetLanguages' => [{'id' => available_crowdin_lang_id}])
 
-      _(cdo_languages.first&.class&.name).must_equal 'CdoLanguages'
+      _(cdo_languages.first).must_be_instance_of CdoLanguages
       _(cdo_languages.map {|lang| lang[:crowdin_code_s]}).must_equal [available_crowdin_lang_id]
     end
   end
