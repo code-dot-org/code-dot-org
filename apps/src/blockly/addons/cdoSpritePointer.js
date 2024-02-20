@@ -5,10 +5,10 @@
 /**
  * Get the image url for the given pointer block.
  * @param {Block} block pointer block to get the image url for
- * @param {*} pointerMetadataMap Object of the form {blockType: {imageSourceType: <string>, imageIndex: <number>}},
+ * @param {{[blockType: string]: {imageSourceType: string, imageIndex: number}}} pointerMetadataMap Object of the form {blockType: {imageSourceType: <string>, imageIndex: <number>}},
  *  which maps pointer block types to the image source block type they can shadow and the index of the image to shadow.
  * @param {string} imageSourceId Optional id of the image source block.
- * @returns The url of the image that the pointer block should display, or an empty string if the block should display no image
+ * @returns {string} The url of the image that the pointer block should display, or an empty string if the block should display no image
  */
 export function getPointerBlockImageUrl(
   block,

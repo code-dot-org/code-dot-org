@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-02-12 22:06:57 UTC",
+    "serialized_at": "2024-02-16 00:11:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -804,30 +804,8 @@
       }
     },
     {
-      "key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe",
-      "position": 1,
-      "properties": {
-        "progression_name": "Choice Levels - Successful Games"
-      },
-      "seeding_key": {
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe",
-        "lesson_activity.key": "30764392-7814-49c0-887d-1a030546227f"
-      }
-    },
-    {
-      "key": "eaf31c6c-7338-4926-ac43-f088732511b4",
-      "position": 2,
-      "properties": {
-        "progression_name": "Choice Levels - Bad Games"
-      },
-      "seeding_key": {
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4",
-        "lesson_activity.key": "30764392-7814-49c0-887d-1a030546227f"
-      }
-    },
-    {
       "key": "e27939c0-1803-4455-a3e1-0bfeb0456fc1",
-      "position": 3,
+      "position": 1,
       "properties": {
       },
       "seeding_key": {
@@ -1495,13 +1473,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "hello_games_play_variables"
+          "hello_games_behaviors"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hello_games_play_variables"
+          "hello_games_behaviors"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -1509,13 +1487,37 @@
         "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
       },
       "level_keys": [
-        "hello_games_play_variables"
+        "hello_games_behaviors"
       ]
     },
     {
       "chapter": 29,
       "position": 5,
       "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_competition_event"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_competition_event"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
+      },
+      "level_keys": [
+        "hello_games_competition_event"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1537,43 +1539,19 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "hello_games_change_score_variable"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "hello_games_change_score_variable"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
-      },
-      "level_keys": [
-        "hello_games_change_score_variable"
-      ]
-    },
-    {
       "chapter": 31,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "hello_games_reset_location"
+          "hello_games_winning_conditional_simple"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hello_games_reset_location"
+          "hello_games_winning_conditional_simple"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -1581,7 +1559,7 @@
         "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
       },
       "level_keys": [
-        "hello_games_reset_location"
+        "hello_games_winning_conditional_simple"
       ]
     },
     {
@@ -1591,13 +1569,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "hello_games_multiplayer_sprites"
+          "hello_games_winning_conditional"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hello_games_multiplayer_sprites"
+          "hello_games_winning_conditional"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -1605,7 +1583,7 @@
         "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
       },
       "level_keys": [
-        "hello_games_multiplayer_sprites"
+        "hello_games_winning_conditional"
       ]
     },
     {
@@ -1614,14 +1592,11 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hello_games_competition_event"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hello_games_competition_event"
+          "hello_games_skill_choices"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -1629,7 +1604,7 @@
         "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
       },
       "level_keys": [
-        "hello_games_competition_event"
+        "hello_games_skill_choices"
       ]
     },
     {
@@ -1662,6 +1637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_dev_intro_choices"
+        ],
         "progression": "Successful Games - Play & Learn"
       },
       "bonus": false,
@@ -1689,7 +1667,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_dev_intro"
+          "game_dev_introduction"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
@@ -1697,7 +1675,7 @@
         "activity_section.key": "89fa37a3-a606-46c7-a02b-f6b24779beac"
       },
       "level_keys": [
-        "game_dev_intro"
+        "game_dev_introduction"
       ]
     },
     {
@@ -1706,28 +1684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Bad Games - Play, Learn & Fix"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choices_bad"
+        "level_keys": [
+          "game_dev_bad_example_intro"
         ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "9a14aa87-04bb-43a6-8a8e-4751332b70da"
-      },
-      "level_keys": [
-        "game_dev_choices_bad"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
         "progression": "Bad Games - Play, Learn & Fix"
       },
       "bonus": false,
@@ -1745,11 +1704,14 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 5,
-      "activity_section_position": 3,
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_dev_show_variable"
+        ],
         "progression": "Bad Games - Play, Learn & Fix"
       },
       "bonus": false,
@@ -1767,11 +1729,14 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 6,
-      "activity_section_position": 4,
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_dev_change_variable"
+        ],
         "progression": "Bad Games - Play, Learn & Fix"
       },
       "bonus": false,
@@ -1789,11 +1754,14 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 7,
-      "activity_section_position": 5,
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_dev_conditional_variable"
+        ],
         "progression": "Bad Games - Play, Learn & Fix"
       },
       "bonus": false,
@@ -1811,11 +1779,14 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 8,
-      "activity_section_position": 6,
+      "chapter": 41,
+      "position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_dev_bad_game_choices"
+        ],
         "progression": "Bad Games - Play, Learn & Fix"
       },
       "bonus": false,
@@ -1830,182 +1801,6 @@
       },
       "level_keys": [
         "game_dev_bad_game_choices"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Successful Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice1"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      },
-      "level_keys": [
-        "game_dev_choice1"
-      ]
-    },
-    {
-      "chapter": 44,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Successful Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice2"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      },
-      "level_keys": [
-        "game_dev_choice2"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 11,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Successful Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice3"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      },
-      "level_keys": [
-        "game_dev_choice3"
-      ]
-    },
-    {
-      "chapter": 46,
-      "position": 12,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Successful Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice4"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      },
-      "level_keys": [
-        "game_dev_choice4"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Bad Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice1_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
-      },
-      "level_keys": [
-        "game_dev_choice1_bad"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 14,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Bad Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice2_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
-      },
-      "level_keys": [
-        "game_dev_choice2_bad"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 15,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Bad Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice3_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
-      },
-      "level_keys": [
-        "game_dev_choice3_bad"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 16,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Levels - Bad Games"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "game_dev_choice4_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
-      },
-      "level_keys": [
-        "game_dev_choice4_bad"
       ]
     }
   ],
@@ -2336,9 +2131,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "hello_games_play_variables",
+        "level.key": "hello_games_behaviors",
         "script_level.level_keys": [
-          "hello_games_play_variables"
+          "hello_games_behaviors"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_competition_event",
+        "script_level.level_keys": [
+          "hello_games_competition_event"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2360,9 +2167,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hello_games_change_score_variable",
+        "level.key": "hello_games_winning_conditional_simple",
         "script_level.level_keys": [
-          "hello_games_change_score_variable"
+          "hello_games_winning_conditional_simple"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2372,9 +2179,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hello_games_reset_location",
+        "level.key": "hello_games_winning_conditional",
         "script_level.level_keys": [
-          "hello_games_reset_location"
+          "hello_games_winning_conditional"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2384,21 +2191,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hello_games_multiplayer_sprites",
+        "level.key": "hello_games_skill_choices",
         "script_level.level_keys": [
-          "hello_games_multiplayer_sprites"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f9b08eb6-19cf-4b2e-a680-5a8ce61490d4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hello_games_competition_event",
-        "script_level.level_keys": [
-          "hello_games_competition_event"
+          "hello_games_skill_choices"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2432,26 +2227,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_dev_intro",
+        "level.key": "game_dev_introduction",
         "script_level.level_keys": [
-          "game_dev_intro"
+          "game_dev_introduction"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "89fa37a3-a606-46c7-a02b-f6b24779beac"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choices_bad",
-        "script_level.level_keys": [
-          "game_dev_choices_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "9a14aa87-04bb-43a6-8a8e-4751332b70da"
       }
     },
     {
@@ -2512,102 +2295,6 @@
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "9a14aa87-04bb-43a6-8a8e-4751332b70da"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice1",
-        "script_level.level_keys": [
-          "game_dev_choice1"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice2",
-        "script_level.level_keys": [
-          "game_dev_choice2"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice3",
-        "script_level.level_keys": [
-          "game_dev_choice3"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice4",
-        "script_level.level_keys": [
-          "game_dev_choice4"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "f8df6bc8-c440-4983-92f2-4e355c6c5bfe"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice1_bad",
-        "script_level.level_keys": [
-          "game_dev_choice1_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice2_bad",
-        "script_level.level_keys": [
-          "game_dev_choice2_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice3_bad",
-        "script_level.level_keys": [
-          "game_dev_choice3_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "game_dev_choice4_bad",
-        "script_level.level_keys": [
-          "game_dev_choice4_bad"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "katies-playground",
-        "activity_section.key": "eaf31c6c-7338-4926-ac43-f088732511b4"
       }
     }
   ],

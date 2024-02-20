@@ -1,15 +1,13 @@
 import React, {ChangeEvent, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {commonI18n} from '@cdo/apps/types/locale';
 import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
 import CompilationTutor from './compilationTutor';
 import ValidationTutor from './validationTutor';
 import GeneralChatTutor from './generalChatTutor';
-import {
-  AITutorState,
-  addAIResponse,
-} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
 const icon = require('@cdo/static/ai-bot.png');
 
@@ -20,10 +18,9 @@ interface AITutorPanelProps {
 const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const dispatch = useDispatch();
   const [selected, setSelected] = useState('');
-  const level = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.level
-  );
+  const level = useAppSelector(state => state.aiTutor.level);
   const isCodingLevel = level?.type === 'Javalab';
+  const isAssessmentLevel = level?.isAssessment;
 
   const radioButtons = [
     {
@@ -68,10 +65,17 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
       <div className={classnames(style.aiTutorPanelContent)}>
         <h3 id="ai_tutor_panel">AI Tutor</h3>
         <img alt={commonI18n.aiBot()} src={icon} className={style.aiBotImg} />
-        <div>
-          <h4> What would you like AI Tutor to help you with?</h4>
-          <RadioButtonsGroup radioButtons={radioButtons} onChange={onChange} />
-        </div>
+        {isAssessmentLevel ? (
+          <h4>You don't have access on this level.</h4>
+        ) : (
+          <div>
+            <h4> What would you like AI Tutor to help you with?</h4>
+            <RadioButtonsGroup
+              radioButtons={radioButtons}
+              onChange={onChange}
+            />
+          </div>
+        )}
         {compilationSelected && <CompilationTutor />}
         {validationSelected && <ValidationTutor />}
         {questionSelected && <GeneralChatTutor />}

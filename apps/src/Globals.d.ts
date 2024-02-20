@@ -21,6 +21,11 @@ declare const DEBUG_MINIFIED: number;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const Blockly: typeof import('blockly') & Record<string, any>;
 
+// Declaring stylelint as any for now. We are using this to lint CSS in Web Lab 2,
+// which is currently experimental.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const stylelint: any;
+
 // Imported static files are treated as strings
 declare module '*.png' {
   const value: string;
@@ -31,3 +36,7 @@ declare module '*.svg' {
   const value: string;
   export = value;
 }
+
+// Modules without types
+declare module '@blockly/plugin-scroll-options';
+declare module '@blockly/keyboard-navigation';

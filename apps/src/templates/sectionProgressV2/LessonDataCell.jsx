@@ -9,6 +9,7 @@ import ProgressIcon from './ProgressIcon';
 
 export default function LessonDataCell({
   lesson,
+  locked,
   studentLessonProgress,
   addExpandedLesson,
 }) {
@@ -24,7 +25,11 @@ export default function LessonDataCell({
 
   return (
     <div
-      className={classNames(styles.gridBox, styles.gridBoxLesson)}
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxLesson,
+        locked && styles.littleLock
+      )}
       onClick={expandLesson}
     >
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
@@ -35,7 +40,7 @@ export default function LessonDataCell({
 }
 
 LessonDataCell.propTypes = {
-  studentId: PropTypes.number.isRequired,
+  locked: PropTypes.bool,
   studentLessonProgress: studentLessonProgressType,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,

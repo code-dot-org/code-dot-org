@@ -5,11 +5,6 @@
     "docFunc": "gamelab_getThisSprite",
     "blockText": "{CHOICE} sprite",
     "returnType": "Sprite",
-    "color": [
-      5,
-      ".7",
-      ".7"
-    ],
     "style": "sprite_blocks",
     "extraArgs": [
       "extraArgs"

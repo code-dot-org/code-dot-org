@@ -32,11 +32,11 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/a99418675b349371703fe1ed4b821fc4-image-1707407730242.png" alt="two micro:bits with faces" width="160px" style="border-radius:10px; float:right; margin: 0 40px 0px 20px;">
 
-- #### **Review the lesson plan beforehand.** Familiarize yourself with the lesson and consider areas where students might need extra help.
+- #### **Review the lesson plans in the selected pathway beforehand.** Familiarize yourself with the lessons and consider areas where students might need extra help.
 
 - #### Plan for how the devices will be distributed among your students. 
 
-- #### Practice the lesson.  
+- #### Practice the lessons.  
 </p></div>
 </details>
 
@@ -52,7 +52,7 @@ markdown <<MARKDOWN
 
 - #### Use familiar examples and real-life situations to explain micro:bit concepts in a way that students can relate to.
 
-- #### Review coding concepts like that have been previously taught and remind students that these apply when coding their micro:bits. 
+- #### Review coding concepts that have been previously taught in the CSF pathway and remind students that these apply when coding their micro:bits. 
 
 
 </p></div>
@@ -66,7 +66,7 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/613d33bfaf85b3d47b95e2ad96c84c8d-image-1707323049639.png" alt="students holding a micro:bit" width="160px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
 
-- #### Unlike some of the coding levels on the Code.org platform, MakeCode does not have validation to “pass".
+- #### Unlike some of the coding levels on the Code.org platform, MakeCode does not automatically check your code to let you move on. This allows students to come up with creative or unique solutions. 
 - #### Encourage students to be creative and explore the possibilities. 
 - #### Celebrate perseverance and trying new things, even if it doesn't always work.
 
@@ -80,7 +80,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/0fa0e524a2e581105f69df060126cf8c-image-1707408688944.png" alt="students holding a micro:bit" width="160px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
-- #### **Use the virtual micro:bit.** It is a great tool if you have limited devices or if you want students to practice coding first. 
+- #### **Use the virtual micro:bit.** MakeCode has a virtual micro:bit embedded on the site for students to test their code while they are programming. It is a great tool if you have limited devices or if you want students to practice coding first. 
 
 - #### **Implement pair programming strategies.** Assign one student to be the driver and another as the navigator. Set a timer and allow the students to switch roles. 
 

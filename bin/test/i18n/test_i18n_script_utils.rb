@@ -468,4 +468,16 @@ describe I18nScriptUtils do
       end
     end
   end
+
+  describe '.crowdin_locale_dir' do
+    let(:crowdin_locale_dir) {I18nScriptUtils.crowdin_locale_dir(locale, subdir, file_path)}
+
+    let(:locale) {'uk-UA'}
+    let(:subdir) {nil}
+    let(:file_path) {'expected_file.json'}
+
+    it 'returns the correct Crowdin translation file path' do
+      _(crowdin_locale_dir).must_equal CDO.dir('i18n/crowdin', locale, file_path)
+    end
+  end
 end

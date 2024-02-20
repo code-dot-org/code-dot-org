@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-fourth-grade",
-    "serialized_at": "2023-08-29 20:25:51 UTC",
+    "serialized_at": "2024-02-16 22:31:16 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4133,6 +4133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Nevada_video_introSpriteLab_2023"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,

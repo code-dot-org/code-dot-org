@@ -7,6 +7,7 @@ import {commands as spriteCommands} from './spriteCommands';
 import {commands as storyLabCommands} from './storyLabCommands';
 import {commands as worldCommands} from './worldCommands';
 import {commands as validationCommands} from './validationCommands';
+import {commands as variableCommands} from './variableCommands';
 
 export default {
   ...actionCommands,
@@ -18,4 +19,5 @@ export default {
   ...storyLabCommands,
   ...worldCommands,
   ...validationCommands,
+  ...variableCommands,
 };
