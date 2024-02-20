@@ -1,4 +1,5 @@
 // This file contains customizations to CDO Blockly Sprite Lab blocks.
+// When we are ready to remove support for CDO Blockly we can remove this file.
 import i18n from '@cdo/locale';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 
@@ -233,8 +234,6 @@ export const blocks = {
       ];
     };
 
-    // This is only used by CDO Blockly. When we are ready to remove support
-    // for CDO Blockly we can remove this call.
     Blockly.Blocks.behavior_definition =
       Blockly.Block.createProcedureDefinitionBlock({
         initPostScript(block) {
