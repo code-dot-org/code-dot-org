@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
@@ -22,6 +22,8 @@ interface FolderPanelRowProps {
   libraryGroupPath: string;
   playingPreview: string;
   folder: SoundFolder;
+  currentValue: SoundFolder;
+  onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
 }
 
@@ -29,6 +31,8 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   libraryGroupPath,
   playingPreview,
   folder,
+  currentValue,
+  onSelect,
   onPreview,
 }) => {
   const previewSound = folder.sounds.find(sound => sound.preview);
@@ -37,6 +41,8 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   const imageSrc =
     folder.imageSrc &&
     `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
+
+  const isSelected = folder === currentValue;
 
   const onPreviewClick = useCallback(
     (e: Event) => {
@@ -49,7 +55,13 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   );
 
   return (
-    <div className={classNames('sounds-panel-folder-row', styles.folderRow)}>
+    <div
+      className={classNames(
+        'sounds-panel-folder-row',
+        classNames(styles.folderRow, isSelected && styles.folderRowSelected)
+      )}
+      onClick={() => onSelect(folder)}
+    >
       <div className={styles.folderRowLeft}>
         {imageSrc && (
           <img src={imageSrc} className={styles.folderImage} alt="" />
@@ -160,6 +172,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const folders = library.getAllowedSounds(undefined);
   const libraryGroupPath = library.groups[0].path;
 
+  const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(folders[0]);
+
+  /*
   // Generate a flat list of entries to render.  We need a flat list because
   // we will make the headers sticky.
   const entries: {
@@ -173,7 +188,43 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       entries.push({type: 'sound', folder: folder, sound: sound});
     });
   });
+  */
 
+  return (
+    <div id="sounds-panel" className={styles.soundsPanel}>
+      <div id="sounds-panel-left" className={styles.soundsPanelLeft}>
+        {folders.map((folder, folderIndex) => {
+          return (
+            <FolderPanelRow
+              key={folderIndex}
+              libraryGroupPath={libraryGroupPath}
+              playingPreview={playingPreview}
+              folder={folder}
+              currentValue={selectedFolder}
+              onSelect={setSelectedFolder}
+              onPreview={onPreview}
+            />
+          );
+        })}
+      </div>
+      <div id="sounds-panel-right" className={styles.soundsPanelRight}>
+        {selectedFolder.sounds.map((sound, soundIndex) => {
+          return (
+            <SoundsPanelRow
+              key={soundIndex}
+              currentValue={currentValue}
+              playingPreview={playingPreview}
+              folder={selectedFolder}
+              sound={sound}
+              onSelect={onSelect}
+              onPreview={onPreview}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+  /*
   return (
     <div id="sounds-panel" className={styles.soundsPanel}>
       {entries.map((entry, entryIndex) => {
@@ -203,6 +254,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       })}
     </div>
   );
+  */
 };
 
 export default SoundsPanel;

@@ -91,7 +91,7 @@ class FieldSounds extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    this.newDiv_.style.width = '300px';
+    this.newDiv_.style.width = '600px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
     this.newDiv_.style.cursor = 'pointer';
