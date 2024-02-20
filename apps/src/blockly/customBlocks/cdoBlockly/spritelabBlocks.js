@@ -233,6 +233,8 @@ export const blocks = {
       ];
     };
 
+    // This is only used by CDO Blockly. When we are ready to remove support
+    // for CDO Blockly we can remove this call.
     Blockly.Blocks.behavior_definition =
       Blockly.Block.createProcedureDefinitionBlock({
         initPostScript(block) {
