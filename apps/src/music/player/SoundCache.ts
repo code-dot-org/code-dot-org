@@ -1,5 +1,5 @@
 import {fetchSignedCookies} from '@cdo/apps/utils';
-import {baseAssetUrl} from '../constants';
+import {getBaseAssetUrl} from '../appConfig';
 import MusicLibrary from './MusicLibrary';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
@@ -149,7 +149,7 @@ class SoundCache {
 
     const baseUrl = soundData.restricted
       ? restrictedSoundUrlPath
-      : baseAssetUrl;
+      : getBaseAssetUrl();
 
     return baseUrl + library.groups[0].path + '/' + path + '.mp3';
   }

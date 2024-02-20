@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import classNames from 'classnames';
-import {baseAssetUrl} from '../constants';
+import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicLibrary, {SoundData, SoundFolder} from '../player/MusicLibrary';
@@ -36,7 +36,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =
     folder.imageSrc &&
-    `${baseAssetUrl}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
+    `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
 
   const onPreviewClick = useCallback(
     (e: Event) => {

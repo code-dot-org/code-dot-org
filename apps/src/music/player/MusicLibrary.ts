@@ -122,7 +122,7 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
   return libraryJson;
 };
 
-export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
+export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocals';
 
 /**
  * A single event in a {@link SampleSequence}
