@@ -54,6 +54,31 @@ describe I18n::Resources::Dashboard do
     end
   end
 
+  describe '.sync_down' do
+    it 'sync-down Dashboard resources' do
+      execution_sequence = sequence('execution')
+
+      described_class::BaseContent.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Blocks.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::CourseContent.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::CourseOfferings.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Courses.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::CurriculumContent.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::DataContent.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::DeviseContent.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Docs.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::MarketingAnnouncements.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::RestrictedContent.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Scripts.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::SharedFunctions.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Slides.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::Standards.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::UnpluggedContent.expects(:sync_down).in_sequence(execution_sequence)
+
+      described_class.sync_down
+    end
+  end
+
   describe '.sync_out' do
     it 'sync-out Dashboard resources' do
       execution_sequence = sequence('execution')
