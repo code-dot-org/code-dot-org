@@ -121,16 +121,18 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     sign_in teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
     section = @student_with_ai_tutor_access.sections_as_student.first
-
+    num_ai_tutor_interactions = 3
+    num_ai_tutor_interactions.times do
+      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    end
     get :index, params: {
       sectionId: section.id,
     }
     assert_response :success
 
-    # TODO: Make AiTutorInteractions factory, use it to make interactions for the student,
-    # then check that they are the interactions we expect
     response_json = JSON.parse(response.body)
-    pp response_json
+    assert response_json.length, num_ai_tutor_interactions
+    assert response_json.first["user_id"], @student_with_ai_tutor_access.id
   end
 
   test 'index returns forbidden for section not owned by teacher' do
