@@ -1141,7 +1141,7 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
-              callback(true);
+              callback(err);
               this.logError_(
                 'unauthorized-save-sources-reload',
                 saveSourcesErrorCount,
@@ -1149,6 +1149,7 @@ var projects = (module.exports = {
               ).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
+              callback(err);
               this.logError_(
                 'conflict-save-sources-reload',
                 saveSourcesErrorCount,
