@@ -51,7 +51,7 @@ export const stubFakeActiveFeaturedProjectData = [
     unfeaturedAt: 'null',
   },
   {
-    projectName: 'Activie Featured Project 2',
+    projectName: 'Active Featured Project 2',
     type: 'applab',
     channel: 'abcd6',
     publishedAt: '2015-02-04T23:59:59.999-08:00',

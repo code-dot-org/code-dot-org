@@ -51,7 +51,7 @@ export default project => {
           $('#save_project').hide();
         },
         error: function (data) {
-          alert("Shucks. Something went wrong - this project wasn't featured.");
+          alert("Shucks. Something went wrong - this project wasn't saved.");
         },
       });
     });
