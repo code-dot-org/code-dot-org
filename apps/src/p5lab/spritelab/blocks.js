@@ -9,7 +9,11 @@ import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {
+  BlockColors,
+  BlockStyles,
+  NO_OPTIONS_MESSAGE,
+} from '@cdo/apps/blockly/constants';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -505,7 +509,7 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
-        this.setStyle('sprite_blocks');
+        this.setStyle(BlockStyles.BEHAVIOR);
       },
       getVars: function () {
         return Blockly.Variables.getVars.bind(this)(

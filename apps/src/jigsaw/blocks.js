@@ -205,7 +205,8 @@ function generateBlankBlock(blockly, skin, name, hsv, width, label) {
   blockly.Blocks[name] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, ...hsv);
+      // Jigsaw blocks use a hard-coded HSV color and are not compatible with themes.
+      Blockly.cdoUtils.handleColorAndStyle(this, hsv);
       this.appendDummyInput()
         .appendField(new blockly.FieldImage(skin.blank, width, 54))
         .appendField(
@@ -242,7 +243,8 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function () {
-        Blockly.cdoUtils.setHSV(this, ...HSV);
+        // Jigsaw blocks use a hard-coded HSV color and are not compatible with themes.
+        Blockly.cdoUtils.handleColorAndStyle(this, hsv);
         this.appendDummyInput().appendField(
           new blockly.FieldImage(skin.blank, titleWidth, titleHeight)
         );
