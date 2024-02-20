@@ -593,7 +593,7 @@ class UnitEditor extends React.Component {
             />
           </label>
         </CollapsibleEditorSection>
-        <CollapsibleEditorSection title="Supported locales" collapsed="true">
+        <CollapsibleEditorSection title="Supported locales" collapsed={true}>
           <p>
             <span>
               {'Select additional locales supported by this unit. Click '}
