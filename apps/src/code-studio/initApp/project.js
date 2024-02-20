@@ -986,7 +986,10 @@ var projects = (module.exports = {
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
           thumbnailChanged = false;
-          this.saveSourceAndHtml_(newSources, resolve);
+          this.saveSourceAndHtml_(newSources, () => {
+            hasProjectChanged = false;
+            resolve();
+          });
         } else {
           resolve();
         }
