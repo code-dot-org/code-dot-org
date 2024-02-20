@@ -11,6 +11,8 @@ import {
   addAIResponse,
 } from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
+import TutorTypeSelector from './tutorTypeSelector';
+import {TutorType} from '@cdo/apps/aiTutor/types';
 const icon = require('@cdo/static/ai-bot.png');
 
 interface AITutorPanelProps {
@@ -22,6 +24,9 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const [selected, setSelected] = useState('');
   const level = useSelector(
     (state: {aiTutor: AITutorState}) => state.aiTutor.level
+  );
+  const selectedTutorType = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.selectedTutorType
   );
   const isCodingLevel = level?.type === 'Javalab';
   const isAssessmentLevel = level?.isAssessment;
@@ -56,7 +61,7 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
     setSelected(e.target.value);
   };
 
-  const compilationSelected = selected === 'compilation';
+  const compilationSelected = selectedTutorType === TutorType.COMPILATION;
   const validationSelected = selected === 'validation';
   const questionSelected = selected === 'question';
 
@@ -78,6 +83,7 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
               radioButtons={radioButtons}
               onChange={onChange}
             />
+            <TutorTypeSelector />
           </div>
         )}
       </div>
