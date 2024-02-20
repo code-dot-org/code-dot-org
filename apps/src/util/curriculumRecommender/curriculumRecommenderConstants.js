@@ -18,7 +18,7 @@ export const SIMILAR_RECOMMENDER_SCORING = {
 };
 
 // Test recommender scoring framework.
-export const FAKE_RECOMMENDER_SCORING = {
+export const TEST_RECOMMENDER_SCORING = {
   hasDesiredDuration: 3,
   hasDesiredMarketingInitiative: 4,
   hasAnySchoolSubject: 1,
