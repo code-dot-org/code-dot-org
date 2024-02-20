@@ -11,7 +11,7 @@ import {appendProjects, setHasOlderProjects} from './projectsRedux';
 import i18n from '@cdo/locale';
 import fontConstants from '@cdo/apps/fontConstants';
 
-const NUM_PROJECTS_TO_ADD = 12;
+const NUM_PROJECTS_TO_ADD = 16;
 
 class ProjectAppTypeArea extends React.Component {
   static propTypes = {
@@ -23,20 +23,20 @@ class ProjectAppTypeArea extends React.Component {
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    navigateFunction: PropTypes.func.isRequired,
+    navigateFunction: PropTypes.func,
 
     // Only show one project type.
-    isDetailView: PropTypes.bool.isRequired,
+    isDetailView: PropTypes.bool,
 
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
     // from redux state
-    hasOlderProjects: PropTypes.bool.isRequired,
+    hasOlderProjects: PropTypes.bool,
 
     // from redux dispatch
-    appendProjects: PropTypes.func.isRequired,
-    setHasOlderProjects: PropTypes.func.isRequired,
+    appendProjects: PropTypes.func,
+    setHasOlderProjects: PropTypes.func,
   };
 
   constructor(props) {
@@ -172,27 +172,11 @@ class ProjectAppTypeArea extends React.Component {
         className={`ui-project-app-type-area ui-${this.props.labKey}`}
       >
         <h2 style={styles.labHeading}> {this.props.labName} </h2>
-        {!this.props.hideViewMoreLink && (
-          <span
-            className="viewMoreLink"
-            style={styles.viewMore}
-            onClick={this.viewMore}
-          >
-            {this.props.isDetailView && (
-              <i className="fa fa-angle-left" style={styles.iconPaddingRight} />
-            )}
-            {this.props.labViewMoreString}
-            {!this.props.isDetailView && (
-              <i className="fa fa-angle-right" style={styles.iconPaddingLeft} />
-            )}
-          </span>
-        )}
         <div style={styles.clear} />
         {this.renderProjectCardList(
           this.props.projectList,
           this.state.numProjects
         )}
-        {this.props.isDetailView && this.renderViewMoreButtons()}
       </div>
     );
   }

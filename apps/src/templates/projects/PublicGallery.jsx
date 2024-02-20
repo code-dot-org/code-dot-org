@@ -42,18 +42,38 @@ class PublicGallery extends Component {
    * See the PropTypes of each component for a definition of each format.
    */
   mapProjectData(projectLists) {
-    return _.mapValues(projectLists, projectList => {
-      return projectList.map(projectData => {
-        return {
-          projectData: {
-            ...projectData,
-            publishedToPublic: true,
-            publishedToClass: false,
-          },
-          currentGallery: 'public',
-        };
+    let allFeaturedProjects = [];
+    let specialTopicProjects = [];
+    for (const projectListName in projectLists) {
+      if (projectListName === 'library') {
+        continue;
+      }
+      projectLists[projectListName].forEach(projectData => {
+        if (projectListName !== 'special_topic') {
+          allFeaturedProjects.push({
+            projectData: {
+              ...projectData,
+              publishedToPublic: true,
+              publishedToClass: false,
+            },
+            currentGallery: 'public',
+          });
+        } else {
+          specialTopicProjects.push({
+            projectData: {
+              ...projectData,
+              publishedToPublic: true,
+              publishedToClass: false,
+            },
+            currentGallery: 'public',
+          });
+        }
       });
-    });
+    }
+    return {
+      featured: _.shuffle(allFeaturedProjects),
+      special_topic: specialTopicProjects,
+    };
   }
 
   render() {
