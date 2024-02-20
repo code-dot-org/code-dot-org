@@ -19,7 +19,8 @@
     = stylesheet_link_tag    'font-awesome', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/google_analytics'
-    = render partial: 'layouts/hotjar'
+    - if current_user&.user_type == 'teacher'
+      = render partial: 'layouts/hotjar'
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
