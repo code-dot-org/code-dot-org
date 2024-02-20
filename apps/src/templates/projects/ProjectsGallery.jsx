@@ -25,7 +25,7 @@ const galleryTabs = [
   {
     key: Galleries.PUBLIC,
     url: '/projects/public',
-    headerText: i18n.publicProjects(),
+    headerText: i18n.featuredProjects(),
   },
 ];
 
