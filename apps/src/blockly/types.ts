@@ -24,6 +24,7 @@ import {
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
+import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 
 export interface BlockDefinition {
   category: string;
@@ -166,6 +167,10 @@ export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
   getContainer: () => ParentNode | null;
   setEnableToolbox: () => void;
   traceOn: () => void;
+}
+
+export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
+  svgFrame_: WorkspaceSvgFrame;
 }
 
 export interface ExtendedVariableMap extends VariableMap {
