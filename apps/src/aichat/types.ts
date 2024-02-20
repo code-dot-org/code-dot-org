@@ -1,5 +1,5 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {AiTutorInteractionSaveStatus} from '../util/sharedConstants';
+import {AiTutorInteractionSaveStatus} from '@cdo/apps/util/sharedConstants';
 
 // TODO: Ideally this type would only contain keys present in
 // translated string JSON files (ex. apps/i18n/aichat/en_us.json).

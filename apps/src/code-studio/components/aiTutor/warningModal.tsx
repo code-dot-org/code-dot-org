@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import style from '@cdo/apps/aichat/views/chatWarningModal.module.scss';
+import style from './chat-workspace.module.scss';
 import {
   BodyTwoText,
   Heading2,

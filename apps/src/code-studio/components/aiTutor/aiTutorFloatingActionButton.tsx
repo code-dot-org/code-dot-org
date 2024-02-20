@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {Provider, useSelector} from 'react-redux';
+import {Provider} from 'react-redux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getStore} from '@cdo/apps/redux';
 import style from './ai-tutor.module.scss';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
 import AITutorPanel from './aiTutorPanel';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
@@ -16,9 +16,7 @@ import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 const AITutorFloatingActionButton: React.FunctionComponent = () => {
   const store = getStore();
   const [isOpen, setIsOpen] = useState(false);
-  const level = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.level
-  );
+  const level = useAppSelector(state => state.aiTutor.level);
 
   const handleClick = () => {
     const event = isOpen
