@@ -526,7 +526,7 @@
   "makerSetupCPXInstallStep2a": "Download the [Circuit Playground Express Firmata]({firmataUrl})",
   "makerSetupCPXInstallStep2b": "Copy the {firmataFilename} file to the {driveName} drive on your computer.",
   "makerSetupCPXInstallStep2c": "The Circuit Playground Express will reboot automatically after a few seconds.",
-  "makerSetupCPXInstallStep2d": "Return to the [checklist](#{checklistId}) above, and continue where you left off. The device should be discoverable now that the Firmata firmware is installed.",
+  "makerSetupCPXInstallStep3": "Return to the [checklist](#{checklistId}) above, and continue where you left off. The device should be discoverable now that the Firmata firmware is installed.",
   "makerSetupCPXInstallScreenshotAltText": "Screenshot illustrating how to copy the downloaded file into the correct drive.",
   "makerTryAgain": "Try Again",
   "makerWaitingForConnect": "Waiting for board to connect...",

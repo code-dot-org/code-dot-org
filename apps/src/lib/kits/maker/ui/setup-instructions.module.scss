@@ -1,7 +1,4 @@
-:export {
-  checklistId: connectYourBoardChecklist; 
-  installInstructionsId: installInstructions;
-}
+@import 'color.scss';
 
 .listWithImage {
   display: grid;
@@ -20,5 +17,14 @@ li p {
 }
 
 .troubleshootList {
-  list-style-type: "⚠️";
+  list-style-type: "⚠️ ";
+}
+
+figure {
+  margin: 10px;
+  margin-inline-start: 0;
+  padding: 8px;
+  border-radius: 4px;
+  background: $neutral_light;
+  border: 1px solid $neutral_dark20;
 }

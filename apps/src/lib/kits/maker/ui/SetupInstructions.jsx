@@ -18,6 +18,11 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import styles from './setup-instructions.module.scss';
 
+// These are used for jumplinks between the
+// two sets of instructions in this component.
+const checklistId = 'connectYourBoardChecklist';
+const installInstructionsId = 'installInstructions';
+
 export default class SetupInstructions extends React.Component {
   constructor(props) {
     super(props);
@@ -26,10 +31,8 @@ export default class SetupInstructions extends React.Component {
   render() {
     return (
       <Provider store={getStore()}>
-        <div>
-          <ConnectionInstructions />
-          <Support />
-        </div>
+        <ConnectionInstructions />
+        <Support />
       </Provider>
     );
   }
@@ -79,7 +82,7 @@ class ConnectionInstructions extends React.Component {
 
     return (
       <div>
-        <h2 id={styles.checklistId}>
+        <h2 id={checklistId}>
           {applabI18n.makerSetupConnectBoardChecklistTitle()}
         </h2>
         <p>
@@ -96,7 +99,7 @@ class ConnectionInstructions extends React.Component {
               <li>
                 <SafeMarkdown
                   markdown={applabI18n.makerSetupNoCompatibleDevices({
-                    installInstructionsId: styles.installInstructionsId,
+                    installInstructionsId,
                   })}
                 />
               </li>
@@ -120,80 +123,87 @@ class CPExpressInstallInstructions extends React.Component {
     super(props);
   }
 
-  render() {
+  renderStepOne = () => {
     return (
-      <div id={styles.installInstructionsId}>
-        <h2>{applabI18n.makerSetupCPXInstallHeader()}</h2>
-        <ol>
-          <li>
-            <div className={styles.listWithImage}>
-              <div>
-                {applabI18n.makerSetupCPXInstallStep1()}
-                <ul>
-                  <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
-                  <li>
-                    {applabI18n.makerSetupCPXInstallStep1a({
-                      buttonName: RESET_BUTTON_NAME,
-                    })}
-                  </li>
-                  <li>
-                    {applabI18n.makerSetupCPXInstallStep1b({
-                      driveName: BOOT_DRIVE_NAME,
-                    })}
-                    <ul className={styles.troubleshootList}>
-                      <li>
-                        {applabI18n.makerSetupCPXInstallStep1c({
-                          buttonName: RESET_BUTTON_NAME,
-                        })}
-                      </li>
-                      <li>{applabI18n.makerSetupCPXInstallStep1d()}</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <figure className={styles.imageContainer}>
-                <img
-                  src="/blockly/media/maker/cpx-bootloader-mode.gif"
-                  alt={applabI18n.makerSetupCPXBootloaderGifAltText()}
-                />
-              </figure>
-            </div>
-          </li>
-          <li>
-            {applabI18n.makerSetupCPXInstallStep2()}
-            <ul>
-              <li>
-                <SafeMarkdown
-                  markdown={applabI18n.makerSetupCPXInstallStep2a({
-                    firmataUrl: CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL,
+      <div className={styles.listWithImage}>
+        <div>
+          {applabI18n.makerSetupCPXInstallStep1()}
+          <ul>
+            <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
+            <li>
+              {applabI18n.makerSetupCPXInstallStep1a({
+                buttonName: RESET_BUTTON_NAME,
+              })}
+            </li>
+            <li>
+              {applabI18n.makerSetupCPXInstallStep1b({
+                driveName: BOOT_DRIVE_NAME,
+              })}
+              <ul className={styles.troubleshootList}>
+                <li>
+                  {applabI18n.makerSetupCPXInstallStep1c({
+                    buttonName: RESET_BUTTON_NAME,
                   })}
-                />
-              </li>
-              <li>
-                {applabI18n.makerSetupCPXInstallStep2b({
-                  firmataFilename: CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
-                  driveName: BOOT_DRIVE_NAME,
-                })}
+                </li>
+                <li>{applabI18n.makerSetupCPXInstallStep1d()}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <figure className={styles.imageContainer}>
+          <img
+            src="/blockly/media/maker/cpx-bootloader-mode.gif"
+            alt={applabI18n.makerSetupCPXBootloaderGifAltText()}
+          />
+        </figure>
+      </div>
+    );
+  };
 
-                <figure>
-                  <img
-                    src={
-                      isWindows()
-                        ? '/blockly/media/maker/copy-firmata-windows.png'
-                        : '/blockly/media/maker/copy-firmata-mac.png'
-                    }
-                    alt={applabI18n.makerSetupCPXInstallScreenshotAltText()}
-                  />
-                </figure>
-              </li>
-              <li>{applabI18n.makerSetupCPXInstallStep2c()}</li>
-            </ul>
-          </li>
+  renderStepTwo = () => {
+    return (
+      <>
+        {applabI18n.makerSetupCPXInstallStep2()}
+        <ul>
           <li>
             <SafeMarkdown
-              markdown={applabI18n.makerSetupCPXInstallStep2d({
-                checklistId: styles.checklistId,
+              markdown={applabI18n.makerSetupCPXInstallStep2a({
+                firmataUrl: CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL,
               })}
+            />
+          </li>
+          <li>
+            {applabI18n.makerSetupCPXInstallStep2b({
+              firmataFilename: CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
+              driveName: BOOT_DRIVE_NAME,
+            })}
+            <figure>
+              <img
+                src={
+                  isWindows()
+                    ? '/blockly/media/maker/copy-firmata-windows.png'
+                    : '/blockly/media/maker/copy-firmata-mac.png'
+                }
+                alt={applabI18n.makerSetupCPXInstallScreenshotAltText()}
+              />
+            </figure>
+          </li>
+          <li>{applabI18n.makerSetupCPXInstallStep2c()}</li>
+        </ul>
+      </>
+    );
+  };
+
+  render() {
+    return (
+      <div id={installInstructionsId}>
+        <h2>{applabI18n.makerSetupCPXInstallHeader()}</h2>
+        <ol>
+          <li>{this.renderStepOne()}</li>
+          <li>{this.renderStepTwo()}</li>
+          <li>
+            <SafeMarkdown
+              markdown={applabI18n.makerSetupCPXInstallStep3({checklistId})}
             />
           </li>
         </ol>
@@ -205,10 +215,10 @@ class CPExpressInstallInstructions extends React.Component {
 class Support extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <h2>{i18n.support()}</h2>
         <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
-      </div>
+      </>
     );
   }
 }
