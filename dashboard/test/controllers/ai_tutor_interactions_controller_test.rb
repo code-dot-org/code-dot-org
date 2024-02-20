@@ -116,6 +116,48 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'index returns AI Tutor Interactions for section owned by teacher who can view chats' do
+    teacher = @student_with_ai_tutor_access.teachers.first
+    sign_in teacher
+    User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
+    section = @student_with_ai_tutor_access.sections_as_student.first
+
+    get :index, params: {
+      sectionId: section.id,
+    }
+    assert_response :success
+
+    # TODO: Make AiTutorInteractions factory, use it to make interactions for the student,
+    # then check that they are the interactions we expect
+    response_json = JSON.parse(response.body)
+    pp response_json
+  end
+
+  test 'index returns forbidden for section not owned by teacher' do
+    teacher = @student_with_ai_tutor_access.teachers.first
+    sign_in teacher
+    User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
+    random_section = create :section
+    refute teacher.sections.include?(random_section)
+
+    get :index, params: {
+      sectionId: random_section.id,
+    }
+    assert_response :forbidden
+  end
+
+  test 'index returns forbidden for teacher who can not view chats' do
+    teacher = @student_with_ai_tutor_access.teachers.first
+    sign_in teacher
+    User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(false)
+    section = @student_with_ai_tutor_access.sections_as_student.first
+
+    get :index, params: {
+      sectionId: section.id,
+    }
+    assert_response :forbidden
+  end
+
   private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
     fake_main_json = {source: code}.to_json
     fake_source_data = {
