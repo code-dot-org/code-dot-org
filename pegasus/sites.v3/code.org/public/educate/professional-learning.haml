@@ -1,0 +1,40 @@
+---
+title: Professional Learning
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/professional-learning-styles.css", rel: "stylesheet"}
+
+%section.top
+  .wrapper
+    .text-wrapper.col-50
+      %h1=hoc_s("pl_page.heading")
+      %p=hoc_s("pl_page.desc")
+      = view :"professional_learning/pl_page_top_list"
+    %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
+      %img.rounded-corners.box-shadow-primary{src: "/images/professional-learning/pl-superhero-girl-crop-448x289.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+%section.bg-neutral-light
+  .wrapper
+
+%section.quote
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large
+        =hoc_s("pl_page.quote.text")
+      %p.no-margin-bottom
+        =hoc_s("pl_page.quote.byline")
+        %span •
+        Delaware
+
+%section
+  .wrapper
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s("pl_page.resources.heading")
+    = view :"professional_learning/pl_page_resources"
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::PICK_PL_PAGE_VISITED_EVENT

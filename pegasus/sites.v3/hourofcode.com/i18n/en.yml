@@ -1627,6 +1627,31 @@
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
 
+  pl_page:
+    heading: "Professional learning that empowers"
+    desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+    top_list_01: "Choose your own learning pathway"
+    top_list_02: "Comprehensive quality resources"
+    top_list_03: "A global community of teachers"
+    top_list_04: "Understand curriculum and learning tools"
+    quote:
+      text: "I love getting to work in the lessons and deeply think through how I will use it with students. I don't feel like I often have time to 'slow down' and dive into materials but this workshop always gives me time and space to do so."
+      byline: "CS Discoveries Teacher"
+    resources:
+      heading: "Additional resources and support for educators"
+      intl:
+        title: "International Resources"
+        desc: "We're expanding our network of international partners and professional learning resources for educators outside of the US. Self-paced learning is available everywhere!"
+        button: "See international resources"
+      community:
+        title: "Teacher Community"
+        desc: "A forum for teachers to ask questions and share best practices, thoughts, ideas, and inspiration. Join a community of amazing educators around the world!"
+        button: "Join our teacher forums"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at support@code.org or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
+
   intl_pl_page:
     page_title: "International Professional Learning Resources"
     heading: "Global professional learning opportunities"
