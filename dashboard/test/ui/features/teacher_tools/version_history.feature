@@ -6,6 +6,8 @@ Scenario: Teacher can view student versions
   Then I sign in as "Ron"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
   And I wait for the page to fully load
+  # Make sure we can navigate to another page without getting an alert
+  And I disable onBeforeUnload
   And I click selector "#runButton"
   And I press "show-code-header"
 
@@ -14,7 +16,7 @@ Scenario: Teacher can view student versions
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible
   Then I save the text from ".versionRow:nth-child(1) p"
-  
+
   When I close the dialog
   And I set the project version interval to 1 second
   And I wait for 1.5 seconds
