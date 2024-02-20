@@ -87,7 +87,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
-      'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -110,7 +109,8 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    toolboxConfigurationSupportsEditButton(this)
+    toolboxConfigurationSupportsEditButton(this) &&
+    !Blockly.isEmbeddedWorkspace(this.workspace)
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
