@@ -14,10 +14,7 @@ import {
 import moduleStyles from './customDropdown.module.scss';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {
-  DropdownProviderWrapper,
-  useDropdownContext,
-} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 
 export interface CustomDropdownProps {
@@ -64,7 +61,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         activeDropdownName &&
         dropdownRef.current &&
         event.target instanceof Node &&
-        (!dropdownRef.current.contains(event.target) || isCloseOnClick)
+        !dropdownRef.current.contains(event.target)
       ) {
         setActiveDropdownName('');
       }
@@ -137,12 +134,4 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   );
 };
 
-const WrappedCustomDropdown = (props: CustomDropdownProps) => (
-  <DropdownProviderWrapper>
-    <CustomDropdown {...props} />
-  </DropdownProviderWrapper>
-);
-
-WrappedCustomDropdown.DropdownColors = dropdownColors;
-
-export default WrappedCustomDropdown;
+export default CustomDropdown;

@@ -2,8 +2,10 @@ import React, {useState, useCallback} from 'react';
 import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
+import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
+
 export default {
-  title: 'DesignSystem/Checkbox Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/Dropdown/Icon Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
   component: CheckboxDropdown,
 } as Meta;
 
@@ -144,7 +146,7 @@ DefaultCheckboxDropdown.args = {
   labelText: 'Default Dropdown',
   checkedOptions: ['option-1'],
   disabled: false,
-  color: CheckboxDropdown.DropdownColors.black,
+  color: dropdownColors.black,
   onChange: args => null,
   onSelectAll: args => null,
   onClearAll: args => null,
@@ -164,7 +166,7 @@ DisabledCheckboxDropdown.args = {
   onSelectAll: args => null,
   onClearAll: args => null,
   disabled: true,
-  color: CheckboxDropdown.DropdownColors.black,
+  color: dropdownColors.black,
   size: 'm',
 };
 
@@ -177,7 +179,7 @@ WithDisabledOptionCheckboxDropdown.args = {
     {value: 'option-3', label: 'Option 3'},
   ],
   disabled: false,
-  color: CheckboxDropdown.DropdownColors.black,
+  color: dropdownColors.black,
   checkedOptions: ['option-1'],
   labelText: 'Dropdown with disabled option',
   onChange: args => null,
@@ -202,7 +204,7 @@ GroupOfCheckboxDropdownColors.args = {
       onClearAll: args => null,
       size: 'm',
       disabled: false,
-      color: CheckboxDropdown.DropdownColors.white,
+      color: dropdownColors.white,
     },
     {
       name: 'default-dropdown-black',
@@ -216,7 +218,7 @@ GroupOfCheckboxDropdownColors.args = {
       onSelectAll: args => null,
       onClearAll: args => null,
       size: 'm',
-      color: CheckboxDropdown.DropdownColors.black,
+      color: dropdownColors.black,
       disabled: false,
     },
   ],
@@ -237,7 +239,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: args => null,
       size: 'xs',
       disabled: false,
-      color: CheckboxDropdown.DropdownColors.black,
+      color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-s',
@@ -252,7 +254,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: args => null,
       size: 's',
       disabled: false,
-      color: CheckboxDropdown.DropdownColors.black,
+      color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-m',
@@ -267,7 +269,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: args => null,
       size: 'm',
       disabled: false,
-      color: CheckboxDropdown.DropdownColors.black,
+      color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-white',
@@ -282,7 +284,7 @@ GroupOfSizesOfCheckboxDropdown.args = {
       onClearAll: args => null,
       size: 'l',
       disabled: false,
-      color: CheckboxDropdown.DropdownColors.black,
+      color: dropdownColors.black,
     },
   ],
 };

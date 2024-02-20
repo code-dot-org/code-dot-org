@@ -1,6 +1,6 @@
 # `apps/src/componentLibrary/checkboxDropdown`
 
-###  Status: ```Wip```
+###  Status: ```Ready for Dev```
 
 ## Consuming This Component
 

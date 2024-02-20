@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
-import Button from '@cdo/apps/templates/Button';
 
 import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 
@@ -13,10 +12,13 @@ import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown'
 // @ts-ignore
 // import i18n from '@cdo/apps/locale';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
-import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {
+  DropdownProviderWrapper,
+  useDropdownContext,
+} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name */
@@ -34,7 +36,7 @@ export interface CheckboxDropdownProps {
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
-  onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (args: React.MouseEvent<HTMLLIElement>) => void;
   /** CheckboxDropdown onSelectAll handler */
   onSelectAll: (event: React.MouseEvent<HTMLButtonElement>) => void;
   /** CheckboxDropdown onClearAll handler */
@@ -54,7 +56,7 @@ export interface CheckboxDropdownProps {
  * Design System: Checkbox Dropdown Component.
  * Used to render checkbox (multiple choice) dropdowns.
  */
-const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
+const IconDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
   labelText,
   allOptions,
@@ -66,55 +68,42 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   color = dropdownColors.black,
   size = 'm',
 }) => {
+  const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
+  const onOptionClick = useCallback(
+    (args: React.MouseEvent<HTMLLIElement>) => {
+      onChange(args);
+      setActiveDropdownName('');
+    },
+    [onChange, setActiveDropdownName]
+  );
   return (
     <CustomDropdown
       name={name}
       labelText={labelText}
-      color={color}
       disabled={disabled}
+      color={color}
       size={size}
     >
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>
           {allOptions.map(({value, label, isOptionDisabled}) => (
-            <li key={value}>
-              <Checkbox
-                checked={checkedOptions.includes(value)}
-                disabled={disabled || isOptionDisabled}
-                onChange={onChange}
-                size={size}
-                name={value}
-                value={value}
-                label={label}
-              />
+            <li key={value} onClick={onOptionClick}>
+              <div className={moduleStyles.dropdownMenuItem}>
+                <FontAwesomeV6Icon iconName={'check'} iconStyle={'solid'} />
+                <span>{label}</span>
+              </div>
             </li>
           ))}
         </ul>
-        <div className={moduleStyles.bottomButtonsContainer}>
-          <Button
-            type="button"
-            // text={i18n.selectAll()}
-            onClick={onSelectAll}
-            styleAsText
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
-          <Button
-            type="button"
-            // text={i18n.clearAll()}
-            onClick={onClearAll}
-            styleAsText
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
-        </div>
       </form>
     </CustomDropdown>
   );
 };
 
-const WrappedCheckboxDropdown = (props: CheckboxDropdownProps) => (
+const WrappedIconDropdown = (props: CheckboxDropdownProps) => (
   <DropdownProviderWrapper>
-    <CheckboxDropdown {...props} />
+    <IconDropdown {...props} />
   </DropdownProviderWrapper>
 );
 
-export default WrappedCheckboxDropdown;
+export default WrappedIconDropdown;
