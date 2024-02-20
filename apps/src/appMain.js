@@ -20,7 +20,7 @@ window.__TestInterface = {
   getDropletContents: () => studioApp().editor.getValue(),
   getDroplet: () => studioApp().editor,
   // Set to true to ignore onBeforeUnload events
-  ignoreOnBeforeUnload: true,
+  ignoreOnBeforeUnload: false,
   getStore,
 };
 

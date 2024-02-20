@@ -1223,6 +1223,10 @@ When /^I press double-quote key for element "([^"]*)"$/ do |selector|
   press_keys(@browser.find_element(:css, selector), '"')
 end
 
+When /^I disable onBeforeUnload$/ do
+  @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
   wait_short_until {!/#{old_path}/.match(@browser.execute_script("return location.pathname"))}
 end
