@@ -7,6 +7,7 @@ module I18n
     module Dashboard
       module Scripts
         FILE_NAME = 'scripts.yml'.freeze
+        FILE_PATH = File.join(DIR_NAME, FILE_NAME).freeze
 
         ORIGIN_I18N_FILE_PATH = File.join(ORIGIN_I18N_DIR_PATH, 'scripts.en.yml')
         I18N_SOURCE_FILE_PATH = File.join(I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
@@ -22,6 +23,10 @@ module I18n
 
         def self.sync_up(**opts)
           SyncUp.perform(**opts)
+        end
+
+        def self.sync_down(**opts)
+          SyncDown.perform(**opts)
         end
 
         def self.sync_out
