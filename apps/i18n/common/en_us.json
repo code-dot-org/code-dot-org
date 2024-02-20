@@ -1930,6 +1930,7 @@
   "progressLegendAssessment": "Assessment",
   "progressOnCSTAStandards": "Progress on CSTA Standards",
   "progressOnCSTAStandardsDescription": "This view shows you how the lessons your class has completed map to the **[Computer Science Teachers Association's (CSTA) standards]({cstaLink})**.",
+  "progressTrackingIconKey": "Progress Tracking Icon Key",
   "projectsContinueWorking": "Continue working on a recent project",
   "projectDescriptionApplab": "Start with App Lab:  an introductory programming environment where you can design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
   "projectDescriptionGamelab": "Ready to go further? Game Lab is a more complex programming environment where you can make animations and games with characters that run, jump, fly and more.",

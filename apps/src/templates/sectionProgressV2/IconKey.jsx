@@ -7,15 +7,19 @@ import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 import styles from './progress-table-legend.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
+import Link from '@cdo/apps/componentLibrary/link';
+import MoreDetailsDialog from './MoreDetailsDialog.jsx';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVewingDetails, setIsViewingDetails] = useState(true);
+
+  const toggleIsViewingDetails = () => setIsViewingDetails(true);
 
   const isViewingLevelProgress = expandedLessonIds.length > 0;
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
-  // TO-DO (TEACH-801): Fix spacing between boxes once width of the page is expanded
   const sectionContent = () => (
     <div>
       <AssignmentCompletionStatesBox
@@ -43,8 +47,14 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
           <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
           {i18n.iconKey()}
         </Heading6>
+        <Link type="primary" size="s" onClick={toggleIsViewingDetails}>
+          More Details
+        </Link>
       </div>
       {isOpen && sectionContent()}
+      {isVewingDetails && (
+        <MoreDetailsDialog onClose={() => setIsViewingDetails(false)} />
+      )}
     </div>
   );
 }
