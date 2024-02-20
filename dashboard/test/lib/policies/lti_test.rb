@@ -18,6 +18,9 @@ class Policies::LtiTest < ActiveSupport::TestCase
       sub: @ids[2],
       aud: @ids[1],
       iss: @ids[0],
+      Policies::Lti::LTI_CUSTOM_CLAIMS => {
+        email: 'test@code.org'
+      }
     }
 
     @user = create :user
@@ -29,12 +32,12 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
   test 'get_account_type should return a teacher if id_token has TEACHER_ROLES' do
     @id_token[@roles_key] = @teacher_roles
-    assert_equal Policies::Lti.get_account_type(@id_token), User::TYPE_TEACHER
+    assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_TEACHER
   end
 
   test 'get_account_type should return a student if id_token does not have TEACHER_ROLES' do
     @id_token[@roles_key] = ['not-a-teacher-role']
-    assert_equal Policies::Lti.get_account_type(@id_token), User::TYPE_STUDENT
+    assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_STUDENT
   end
 
   test 'generate_auth_id should create authentication_id string' do
@@ -50,6 +53,16 @@ class Policies::LtiTest < ActiveSupport::TestCase
     auth_option = @user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::LTI_V1}
     auth_option.update!(authentication_id: 'not-lti', credential_type: 'not-lti')
     refute Policies::Lti.lti?(@user)
+  end
+
+  test 'get_email should return the :email stored in the LTI custom fields' do
+    assert_equal 'test@code.org', Policies::Lti.get_email(@id_token)
+  end
+
+  test 'get_email should return nil if :email is NOT stored in the LTI custom fields' do
+    @id_token.delete(Policies::Lti::LTI_CUSTOM_CLAIMS)
+
+    assert_nil Policies::Lti.get_email(@id_token)
   end
 
   test 'lti_provided_email should return the :email stored in the LTI option given LTI user' do

@@ -1,0 +1,40 @@
+.modal#teacher-information-modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', display: 'none'}
+  .modal-dialog
+    .modal-content.no-modal-icon
+      %h1{style: 'margin: 10px 0;font-size: 32px'}= t('lti.upgrade_to_teacher_account.heading')
+      %p{style: 'font-size: 13px; line-height: 18px; color: #333'}
+        = t('lti.upgrade_to_teacher_account.description')
+      = form_with(url: :lti_v1_upgrade_account, method: :post, action: 'upgrade_account', html: {id: 'upgrade-teacher-form'}) do |f|
+        .row
+          .span3.signup-field-label
+            = f.label :email do
+              = succeed '&nbsp;*'.html_safe do
+                = User.human_attribute_name(:email)
+            %p.error{style: 'font-size: 13px; line-height: 18px; color: red; display: none;'}=t('lti.upgrade_to_teacher_account.error.missing_email')
+          .span4
+            = f.email_field :email, maxlength: 255, value: @form_data[:email]
+        .form-group
+          = f.submit t('continue'), class: 'btn btn-primary', disabled: !@form_data[:email].present?
+
+:javascript
+  $().ready(function() {
+    $("#teacher-information-modal").modal('show');
+    $("#upgrade-teacher-form").on('change', function() {
+      if (!$("#email").val()) {
+        $("#teacher-information-modal .btn").prop('disabled', true);
+      } else {
+        $("#teacher-information-modal .btn").prop('disabled', false);
+      }
+    }).submit(function( event ) {
+      event.preventDefault();
+
+      $.ajax({
+        type: 'POST',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function() {window.location.href = '#{@form_data[:destination_url]}'},
+        error: function() { $("#teacher-information-modal .error").css('display', '')}
+      });
+    });
+  });
