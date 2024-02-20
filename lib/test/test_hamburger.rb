@@ -176,5 +176,4 @@ class HamburgerTest < Minitest::Test
     contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
     assert_includes_id contents, "header-about"
   end
-
 end
