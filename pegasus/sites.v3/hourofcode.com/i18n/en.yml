@@ -1634,8 +1634,37 @@
     top_list_02: "Comprehensive quality resources"
     top_list_03: "A global community of teachers"
     top_list_04: "Understand curriculum and learning tools"
+    journey:
+      heading: "Your professional learning journey, your way"
+      desc: "Explore the chart below to find the best professional learning (PL) option for your needs and goals."
+      facilitator_led: "Facilitator-Led"
+      self_paced: "Self-Paced"
+      overview: "Overview:"
+      k_5:
+        title: "K-5 Workshops"
+        desc: "One day workshops for elementary educators at any level."
+      mid_high:
+        title: "6-12 Workshops"
+        desc: "Year-long professional learning programs to support you."
+      online:
+        title: "Online Professional Learning"
+        desc: "Self-paced professional learning modules at no cost!"
+      led_by_facilitator: "Led by an approved facilitator"
+      engage_with_peers: "Engage with a group of peers"
+      options: "In-person and virtual options"
+      one_day_workshop: "1 day workshop for your level"
+      year_long: "Year-long support program"
+      us_only: "Only available in the US*"
+      free: "Completely free!"
+      own_pace: "Learn at your own pace"
+      online_modules: "Flexible online modules that match our curriculum"
+      available_everywhere: "Available everywhere!"
+      button_k_5: "Explore K-5 workshops"
+      button_6_12: "Explore 6-12 workshops"
+      button_self_paced: "Explore self-paced courses"
+      disclaimer: "**Not in the United States?** We're expanding our network of international partners to offer more professional learning to teachers. [Learn more here]({%learn_more_url})."
     quote:
-      text: "I love getting to work in the lessons and deeply think through how I will use it with students. I don't feel like I often have time to 'slow down' and dive into materials but this workshop always gives me time and space to do so."
+      text: "I love getting to work in the lessons and deeply think through how I will use it with students. I don't feel like I often have time to 'slow down' and dive into materials, but this workshop always gives me time and space to do so."
       byline: "CS Discoveries Teacher"
     hands-on:
       heading: "Hands-on practice with lesson content"

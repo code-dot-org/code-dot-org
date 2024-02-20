@@ -3,3 +3,70 @@
 
 @import "breakpoints";
 
+.journey-wrapper {
+  margin: 2rem 0 1rem;
+
+  h3 {
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .facilitator-led-wrapper {
+    h3 {
+      background-color: var(--brand_primary_default);
+      color: var(--neutral_white);
+      flex: 1;
+      height: fit-content;
+    }
+  }
+
+  .self-paced-wrapper {
+    flex-basis: 50%;
+
+    h3 {
+      background-color: var(--brand_primary_light);
+      color: var(--brand_primary_dark);
+    }
+  }
+
+  p.overline-two {
+    color: var(--neutral_dark70);
+  }
+
+  .content-wrapper {
+    background: var(--neutral_white);
+    padding: 1.25rem;
+    border: 1px solid var(--neutral_dark10);
+    border-top: 0;
+    flex: 1;
+
+    &.k-5 {
+      border-radius: 0 0 0 4px;
+    }
+
+    &.mid-high {
+      border-radius: 0 0 4px 0;
+      border-inline-start: 0;
+    }
+
+    &.self-paced {
+      border-radius: 0 0 4px 4px;
+    }
+
+    li {
+      font-weight: var(--medium-font-weight);
+      margin-bottom: 0.75rem;
+      display: flex;
+      gap: 0.5rem;
+
+      &::before { display: none; }
+
+      i {
+        color: var(--neutral_dark40);
+        flex-basis: 10px;
+      }
+    }
+  }
+}

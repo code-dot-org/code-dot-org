@@ -18,6 +18,11 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
+    %h2.centered
+      =hoc_s("pl_page.journey.heading")
+    %p.centered
+      =hoc_s("pl_page.journey.desc")
+    = view :"professional_learning/pl_page_journey"
 
 %section.quote
   .wrapper
