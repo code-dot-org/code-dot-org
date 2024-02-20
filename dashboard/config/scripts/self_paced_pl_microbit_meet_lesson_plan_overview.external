@@ -5,21 +5,26 @@ description 'description here'
 markdown <<MARKDOWN
 # Meet your micro:bit - Lesson Overview
 
+<p style="font-size: 14pt; font-weight: bold;"> Carefully read over the entire <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf" target="_blank" style="color: #8C52BA;">lesson plan</a> before you begin teaching.</p>
+
+#### *Remember, lesson plans for the CSF maker courses are located in the downloadable micro:bit booklet 
+
 ## What your students will learn
 
 <img src="https://images.code.org/44bf037c42889ba3ff0038810da2a3a8-image-1707234436320.png" alt="cartoon style drawing of a student holding a micro:bit" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-#### This lesson is a prerequisite for teaching the coding lessons in this guide. It gives your students an early hands-on experience to discover the excitement that learning with the micro:bit offers.
+#### This lesson is a prerequisite for teaching the coding lessons. 
 
 #### It helps reinforce what your students already know about code and computing concepts by transferring them to the physical world through exploring preprogrammed micro:bits.
 
-#### The exploration is also designed for you to model reviewing code together, helping your students make links between familiar computing concepts and their practical application by programming a physical device.
 
 ## Lesson preparation 
 #### The lesson requires some short preparation to transfer the exploratory project onto micro:bits:
 
- - #### Watch the video
- - #### Put code onto micro:bits 
+ - #### <p style="font-size: 13pt;">Rewatch the download instructions in the <a href="https://www.youtube.com/watch?v=X3zxNSIFsdQ?start=60" target="_blank" rel="noopener noreferrer" style="color: 8C52BA;">video</a> starting at 1 minute.</p> 
+ - #### Download the Meet your micro:bit <a href = "https://mbit.io/csf-1-project" target = "blank"  rel="noopener noreferrer">program</a> onto micro:bits 
+ 
+ ---
 
 ## Lesson format  
 
@@ -53,20 +58,16 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
+---
 
 ## Equipment list
 #### **You will need:**
 - #### Access to the MakeCode online editor on the teacher’s computer.
 - #### Several micro:bits with micro USB cords. One micro:bit for every two to three students is ideal. 
 - #### A power source for the micro:bits. Battery packs are best, but you can also power them from computer USB ports.
- 
----
- 
 
 
-<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 0px 0px;">
 
-<p style="font-size: 14pt; font-weight: bold;"> Be sure to carefully read over the entire <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf" target="_blank" style="color: #8C52BA;">lesson plan</a> before you begin teaching.</p>
 
 
 MARKDOWN

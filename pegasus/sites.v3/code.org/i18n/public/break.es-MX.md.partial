@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
 <h1>Tómate un recreo con código</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Actividades semanales &amp; Episodios pasados</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Actividades semanales &amp; Episodios pasados</h1></div>
 <h2>Episodio 1 - Algoritmos con Hill Harper</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Mira el episodio del 25/3</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Mira el episodio del 25/3</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>Ver en YouTube</a></i> | <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">Ver en Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad semanal - Algoritmos</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad semanal - Algoritmos</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 2 - Prototipos con Mark Cuban y Lyndsey Scott</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Mira el episodio del 1/4</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Mira el episodio del 1/4</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>Ver en YouTube</i></a> | <a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>Ver en Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad semanal - Prototipos</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad semanal - Prototipos</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 3 - Encripción con Ashton Kutcher y Mia Gil Epson</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Mira el episodio del 8/4</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Mira el episodio del 8/4</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>Ver en YouTube</i></a> | <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i> Ver en Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Encripción</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Encripción</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -116,12 +116,12 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 4 - Información Digital con Mike Kireger y Alice Keeler</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Mira el episodio del 15/4</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Mira el episodio del 15/4</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>Ver en YouTube</i></a> | <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
 ">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Información Digital</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Información Digital</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -140,12 +140,12 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 5 - Simulaciones & Data con Bill Gates</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Mira el episodio del 22/4</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Mira el episodio del 22/4</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>Ver en YouTube</i></a> | <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
 ">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Simulaciones & Data</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Simulaciones & Data</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -164,11 +164,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 6 - Internet con Keegan-Michael Key y Vint Cerf</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 29/4</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Ver el episodio del 29/4</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad semanal - El Internet</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad semanal - El Internet</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -187,11 +187,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 7 - Condicionales con Sal Khan y Flo Vaughn</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 6/5</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Ver el episodio del 6/5</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Condicionales</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Condicionales</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -208,11 +208,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 8 - Variables con Yara Shahidi y Fuzzy Khosrowshahi</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 13/5</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Ver el episodio del 13/5</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Variables</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Variables</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -229,11 +229,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 9 - Eventos con Macklemore Y Scott Forstall</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 20/5</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Ver el episodio del 20/5</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Eventos</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Eventos</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -250,11 +250,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 10 - Inteligencia Artificial con Kat Graham y Kate Park</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 27/5</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Ver el episodio del 27/5</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Inteligencia Artificial (IA)</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Inteligencia Artificial (IA)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -271,11 +271,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 11 - Abstracción con Susan Wojcicki y China Anne McClain</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 3/6</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Ver el episodio del 3/6</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Abstracción</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Abstracción</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -292,11 +292,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodio 12 - Hardware con Aloe Blacc, Bret Taylor y Paola Mejia Minaya</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Ver el episodio del 10/6</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Ver el episodio del 10/6</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>Ver en Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">Ver en Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Actividad Semanal - Hardware</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Actividad Semanal - Hardware</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Estudiantes más jóvenes:</span> No es necesario inscribirse</p>
@@ -316,3 +316,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

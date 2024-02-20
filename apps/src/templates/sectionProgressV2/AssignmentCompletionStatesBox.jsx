@@ -6,10 +6,7 @@ import {ITEM_TYPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 
-export default function AssignmentCompletionStatesBox({
-  isViewingLevelProgress,
-  hasValidatedLevels,
-}) {
+export default function AssignmentCompletionStatesBox({hasValidatedLevels}) {
   // TO-DO (TEACH-800): Fix spacing on validated levels once width on page is set
   const legendIcons = () => {
     return (
@@ -34,7 +31,7 @@ export default function AssignmentCompletionStatesBox({
             labelText={i18n.submitted()}
           />
         </div>
-        {isViewingLevelProgress && hasValidatedLevels && (
+        {hasValidatedLevels && (
           <div className={styles.legendColumn}>
             <LegendItem
               itemType={ITEM_TYPE.VALIDATED}
@@ -57,6 +54,5 @@ export default function AssignmentCompletionStatesBox({
 }
 
 AssignmentCompletionStatesBox.propTypes = {
-  isViewingLevelProgress: PropTypes.bool,
   hasValidatedLevels: PropTypes.bool,
 };

@@ -5,21 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Conditionals
 
-Opening a lesson or unit
-
-#### The lesson begins with an introduction that includes:
-#### * A sentence explaining what the lesson is about
-#### * List of objectives
-#### * Suggested time 
-#### * an image from the lesson 
-
-
-
-# Conditionals
-
 #### In this lesson, you will learn how to code with conditionals.
 
-<img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/8553f1e2a321beae0c34547831dbb471-image-1707947875232.57.50 PM.png" alt="Cartoon image of the sea with boat, blue fish, green algae and red coral. " style="border-radius:40px; float: right; padding-right: 10px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this lesson, you will:
@@ -29,11 +17,12 @@ Opening a lesson or unit
 * #### Create programs using conditionals.
 
 
-### **Suggested time:** 10 minutes
+### **Suggested time:** 15 minutes
 
 
 ## Let's get started!
 
 <div style="clear:both"/>
+
 
 MARKDOWN
