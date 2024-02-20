@@ -20,14 +20,14 @@ module I18n
             report_malformed_i18n(language)
             distribute_localization(language)
 
-            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
+            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
           end
 
           private
 
           def crowdin_file_path_of(language)
-            I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+            I18nScriptUtils.locale_dir(language[:crowdin_name_s], FILE_PATH)
           end
 
           def restore_localization(language)
