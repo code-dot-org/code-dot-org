@@ -22,7 +22,7 @@ export default class FeaturedProjects extends React.Component {
         <h3>Active Featured Projects (currently displayed in Gallery)</h3>
         <FeaturedProjectsTable
           projectList={this.props.activeFeaturedProjects}
-          tableVersion={featuredProjectTableTypes.current}
+          tableVersion={featuredProjectTableTypes.active}
         />
         <h3>Saved Featured Projects</h3>
         <FeaturedProjectsTable
