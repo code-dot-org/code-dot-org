@@ -33,6 +33,8 @@ export interface CustomDropdownProps {
   labelText: string;
   /** Does custom dropdown hase a selected value */
   isSomeValueSelected?: boolean;
+  /** Whether to close dropdown on click */
+  isCloseOnClick?: boolean;
   /** Children */
   children: React.ReactNode;
 }
@@ -49,6 +51,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   isSomeValueSelected = false,
   disabled = false,
   color = dropdownColors.black,
+  isCloseOnClick = false,
   size = 'm',
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
@@ -61,7 +64,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         activeDropdownName &&
         dropdownRef.current &&
         event.target instanceof Node &&
-        !dropdownRef.current.contains(event.target)
+        (!dropdownRef.current.contains(event.target) || isCloseOnClick)
       ) {
         setActiveDropdownName('');
       }
@@ -128,7 +131,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         <span className={moduleStyles.dropdownLabel}>{labelText}</span>
         <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
       </button>
-      <form className={moduleStyles.dropdownMenuContainer}>{children}</form>
+      {/** Dropdown menu content is rendered here as children props*/}
+      {children}
     </div>
   );
 };
