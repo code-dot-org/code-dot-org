@@ -53,6 +53,9 @@ export const BlockColors = {
   TEXT: [160, 0.45, 0.65],
   COLOR: [10, 0.45, 0.65],
   BEHAVIOR: [136, 0.84, 0.8],
+  // The colors below do not have a corresponding style and are incompatible with themes.
+  COMMENT: [0, 0, 0.6],
+  UNKNOWN: [0, 0, 0.8],
 };
 
 export const Renderers = {

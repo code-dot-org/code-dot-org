@@ -280,7 +280,7 @@ function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
     init: function () {
       // Comment blocks use a hard-coded HSV color and are not compatible with themes.
-      Blockly.cdoUtils.handleColorAndStyle(this, [0, 0, 0.6]);
+      Blockly.cdoUtils.handleColorAndStyle(this, BlockColors.COMMENT);
       this.appendDummyInput()
         .appendField(commonMsg.commentPrefix())
         .appendField(new Blockly.FieldTextInput(''), 'TEXT');
