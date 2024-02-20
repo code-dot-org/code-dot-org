@@ -29,8 +29,17 @@ theme: responsive_full_width
         %span •
         Delaware
 
+%section.no-padding-bottom
+  .wrapper
+    = view :section_basic_image_text, image_url: "/images/fill-448x280/admins-page-pl.png", heading: hoc_s("pl_page.hands-on.heading"), desc: hoc_s("pl_page.hands-on.desc"), wrap_reverse: false
+
+%section.no-padding-bottom
+  .wrapper
+    = view :section_basic_image_text, image_url: "/images/fill-448x280/intl-pl-page-intro.png", heading: hoc_s("pl_page.pedagogy.heading"), desc: hoc_s("pl_page.pedagogy.desc"), wrap_reverse: true
+
 %section
   .wrapper
+    = view :section_basic_image_text, image_url: "/images/pl-page-educator-support.png", heading: hoc_s("pl_page.support.heading"), desc: hoc_s("pl_page.support.desc"), wrap_reverse: false
 
 %section.bg-neutral-light
   .wrapper.centered
