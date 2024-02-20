@@ -25,7 +25,7 @@ export enum Themes {
   DEUTERANOPIA_DARK = 'cdodeuteranopiadark',
   TRITANOPIA = 'cdotritanopia',
   TRITANOPIA_DARK = 'cdotritanopiadark',
-};
+}
 
 export const Renderers = {
   GERAS: 'cdo_renderer_geras',
