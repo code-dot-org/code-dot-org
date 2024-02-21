@@ -237,7 +237,7 @@ When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, neg
 end
 
 def jquery_is_element_visible(selector)
-  "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+  "return (typeof jQuery !== 'undefined') && $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
 
 def jquery_is_element_displayed(selector)
