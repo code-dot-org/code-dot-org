@@ -126,7 +126,7 @@ export default class TeacherDashboardNavigation extends Component {
       teacherDashboardLinks.push({
         label: 'AI Tutor',
         url: TeacherDashboardPath.aiTutorChatMessages,
-      },)
+      });
     }
     const links = this.props.links || teacherDashboardLinks;
     const containerStyles = this.state.shouldScroll
