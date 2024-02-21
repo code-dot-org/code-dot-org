@@ -18,6 +18,7 @@ import {
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
+  selectedTutorType: TutorType | undefined;
   level: Level | undefined;
   scriptId: number | undefined;
   // State for compilation and validation.
@@ -39,6 +40,7 @@ const initialChatMessages: ChatCompletionMessage[] = [
 ];
 
 const initialState: AITutorState = {
+  selectedTutorType: undefined,
   level: undefined,
   scriptId: undefined,
   aiResponse: '',
@@ -170,6 +172,12 @@ const aiTutorSlice = createSlice({
   name: 'aiTutor',
   initialState,
   reducers: {
+    setSelectedTutorType: (
+      state,
+      action: PayloadAction<TutorType | undefined>
+    ) => {
+      state.selectedTutorType = action.payload;
+    },
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
     },
@@ -229,6 +237,7 @@ const aiTutorSlice = createSlice({
 
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
+  setSelectedTutorType,
   setLevel,
   setScriptId,
   addAIResponse,
