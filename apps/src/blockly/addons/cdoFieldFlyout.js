@@ -46,7 +46,6 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
       minWidth: this.minWidth_,
       maxWidth: this.maxWidth_,
     });
-    this.flyout_.setSourceBlock_(this.getSourceBlock());
     this.fieldGroup_.appendChild(this.flyout_.createDom('g'));
   }
 

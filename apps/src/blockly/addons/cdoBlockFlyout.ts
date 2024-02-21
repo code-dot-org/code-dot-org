@@ -1,19 +1,27 @@
-import GoogleBlockly from 'blockly/core';
+import GoogleBlockly, {IDraggable, Options} from 'blockly/core';
+import {FlyoutItem} from 'blockly/core/flyout_base';
+import {Svg} from 'blockly/core/utils';
 
 const svgPaths = GoogleBlockly.utils.svgPaths;
+interface CdoBlockFlyoutOptions extends Options {
+  minWidth: number;
+  maxWidth: number;
+}
+
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
+  private svgClipPath_: SVGElement | undefined;
+
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
    * This flyout is intended to be placed inside of a block's FieldFlyout.
    *
-   * @param {Object} workspaceOptions - The options for constructing the class.
+   * @param workspaceOptions - The options for constructing the class.
    */
-  constructor(workspaceOptions) {
+  constructor(workspaceOptions: CdoBlockFlyoutOptions) {
     super(workspaceOptions);
-    this.horizontalLayout_ = true;
+    this.horizontalLayout = true;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
-    this.flyoutBlockPadding = 18;
   }
 
   autoClose = false;
@@ -39,8 +47,10 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @returns The flyout's SVG group.
    * @override
    */
-  createDom(tagName) {
-    super.createDom(tagName);
+  createDom(tagName: string | Svg<SVGSVGElement> | Svg<SVGGElement>) {
+    // super.createDom returns this.svgGroup_. Explicitly setting it here
+    // so that TypeScript knows it is not null.
+    this.svgGroup_ = super.createDom(tagName) as SVGGElement;
     tagName =
       'flyoutClip' +
       Blockly.utils.idGenerator.genUid().replace(/([\(\)])/g, '');
@@ -80,8 +90,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       this.updateHeight_(blockHW.height);
       this.updateWidth_(blockHW.width);
 
-      if (this.rectMap_.has(block)) {
-        const rect = this.rectMap_.get(block);
+      const rect = this.rectMap_.get(block);
+      if (rect) {
         this.moveRectToBlock_(rect, block);
       }
     });
@@ -95,7 +105,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param {number} newHeight - The new block height.
    * @private
    */
-  updateHeight_(newHeight) {
+  updateHeight_(newHeight: number) {
     this.height_ = Math.max(this.height_, newHeight);
   }
   /**
@@ -104,7 +114,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param {number} newWidth - The new block width.
    * @private
    */
-  updateWidth_(newWidth) {
+  updateWidth_(newWidth: number) {
     this.width_ += newWidth + this.GAP_X;
   }
 
@@ -123,7 +133,10 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param {number} height The height of the flyout, not including rounded corners.
    * @override
    */
-  setBackgroundPath_(width, height) {
+  setBackgroundPath_(width: number, height: number) {
+    if (!this.svgClipPath_ || !this.svgBackground_) {
+      return;
+    }
     const path = [];
     const cornerEndPositions = [
       svgPaths.point(this.CORNER_RADIUS, -this.CORNER_RADIUS),
@@ -156,17 +169,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @returns {string} The SVG arc path command string, ex. 'a 8 8 0,0,1 8,-8'
    * @private
    */
-  createCornerPath(cornerEndPosition) {
+  createCornerPath(cornerEndPosition: string) {
     return svgPaths.arc('a', '0,0,1', this.CORNER_RADIUS, cornerEndPosition);
-  }
-  /**
-   * Attach this field to a block.
-   *
-   * @param block The block containing this field.
-   * @private
-   */
-  setSourceBlock_(block) {
-    this.sourceBlock_ = block;
   }
 
   /**
@@ -181,7 +185,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    *     area.
    * @override
    */
-  wouldDelete(element, _couldConnect) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  wouldDelete(_element: IDraggable, _couldConnect: boolean) {
     return false;
   }
 
@@ -192,11 +197,10 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param gaps The visible gaps between blocks.
    * @override
    */
-  // TODO: once we upgrade to v10 of blockly we should not need this anymore
-  // and can rely on the parent version of this function.
   // This is copied from the core blockly repo to include a fix from this PR on Blockly:
   // https://github.com/google/blockly/pull/7333
-  layout_(contents, gaps) {
+  // This fix has since been reverted due to rtl rendering issues, but it works for this use case.
+  layout_(contents: FlyoutItem[], gaps: number[]) {
     this.workspace_.scale = this.targetWorkspace?.scale;
     const margin = this.MARGIN;
     let cursorX = margin + this.tabWidth_;
@@ -208,6 +212,9 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     for (let i = 0, item; (item = contents[i]); i++) {
       if (item.type === 'block') {
         const block = item.block;
+        if (!block) {
+          continue;
+        }
         const allBlocks = block?.getDescendants(false);
         for (let j = 0, child; (child = allBlocks[j]); j++) {
           // Mark blocks as being inside a flyout.  This is used to detect and
@@ -232,7 +239,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
         cursorX += blockHW.width + gaps[i];
 
         this.addBlockListeners_(root, block, rect);
-      } else if (item.type === 'button') {
+      } else if (item.type === 'button' && item.button) {
         const button = item.button;
         this.initFlyoutButton_(button, cursorX, cursorY);
         cursorX += button.width + gaps[i];
