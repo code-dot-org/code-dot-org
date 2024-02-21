@@ -30,24 +30,40 @@ export const getTestRecommendations = (
   const curriculaScores = [];
   curricula.forEach(curriculum => {
     let score = 0;
+    // Add points if given curriculum has the desired duration.
     score += hasDesiredDuration(curriculum, duration)
       ? TEST_RECOMMENDER_SCORING['hasDesiredDuration']
       : 0;
+    // Add points if given curriculum has the desired marketing initiative.
     score += hasDesiredMarketingInitiative(curriculum, marketingInitiative)
       ? TEST_RECOMMENDER_SCORING['hasDesiredMarketingInitiative']
       : 0;
-    score += hasAnySchoolSubject(curriculum)
-      ? TEST_RECOMMENDER_SCORING['hasAnySchoolSubject']
-      : 0;
-    score +=
-      numOverlappingDesiredSchoolSubjects(curriculum, schoolSubjects) *
-      TEST_RECOMMENDER_SCORING['numOverlappingDesiredSchoolSubjects'];
-    score += hasImportantButNotDesiredTopic(curriculum, csTopics)
-      ? TEST_RECOMMENDER_SCORING['hasImportantButNotDesiredTopic']
-      : 0;
+    // Add points for each overlapping desired school subject. If no overlapping school
+    // subjects, then add points if the given curriculum has any school subjects.
+    const numOverlappingSubjects = numOverlappingDesiredSchoolSubjects(
+      curriculum,
+      schoolSubjects
+    );
+    if (numOverlappingSubjects === 0) {
+      score += hasAnySchoolSubject(curriculum)
+        ? TEST_RECOMMENDER_SCORING['hasAnySchoolSubject']
+        : 0;
+    } else {
+      score +=
+        TEST_RECOMMENDER_SCORING['numOverlappingDesiredSchoolSubjects'] *
+        numOverlappingSubjects;
+    }
+    // Add points for each overlapping desired CS topic.
     score +=
       numOverlappingDesiredTopics(curriculum, csTopics) *
       TEST_RECOMMENDER_SCORING['numOverlappingDesiredTopics'];
+    // Add points if given curriculum has an important topic that isn't one of the
+    // desired ones.
+    score += hasImportantButNotDesiredTopic(curriculum, csTopics)
+      ? TEST_RECOMMENDER_SCORING['hasImportantButNotDesiredTopic']
+      : 0;
+    // Add points if given curriculum was published within 2 years ago, and add more
+    // points if it was published within 1 year ago.
     score += publishedWithinTwoYearsAgo(curriculum)
       ? publishedWithinOneYearAgo(curriculum)
         ? TEST_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
