@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-02-16T05:19:22.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A blogger needs to get the year from a blog post date.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Blog</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">date</code>, which stores the date formatted as <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"MM/DD/YYYY\"</code>.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Blog</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getYear()</code> method to return a substring containing the year from the date.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">BlogRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getYear()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method.\r\n</div>",
+    "long_instructions": "A blogger needs to check for keywords in a title. \r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Blog</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">title</code>, which stores the title of the block post as a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> object.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Blog</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">checkForKeyword(String target)</code> method to return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> if the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">target</code> is found in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">title</code>.\r\n\r\n✅ **TO DO #2:** <code style=\"background-color: #ececec; color: black; font-weight: bold;\">BlogRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">checkForKeyword(String target)</code> method and print the results.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -28,9 +29,11 @@
         "tabOrder": 1
       }
     },
-    "name_suffix": "_-modular"
+    "name_suffix": "_-modular",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:22.954+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L6a_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L6a_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:22.954+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L6a_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L6a_2025\"},{\"changed_at\":\"2024-02-20 08:25:26 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>
