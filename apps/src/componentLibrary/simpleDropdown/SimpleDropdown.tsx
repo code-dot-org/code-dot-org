@@ -7,6 +7,8 @@ import moduleStyles from './simpleDropdown.module.scss';
 export interface SimpleDropdownProps {
   /** SimpleDropdown items list */
   items: {value: string; text: string}[];
+  /** SimpleDropdown items list with optGroups specified */
+  itemGroups: {label: string; groupItems: {value: string; text: string}[]}[];
   /** SimpleDropdown selected value */
   selectedValue?: string;
   /** SimpleDropdown onChange handler */
@@ -47,6 +49,7 @@ export interface SimpleDropdownProps {
  */
 const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   items,
+  itemGroups,
   selectedValue,
   onChange,
   name,
@@ -58,6 +61,25 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   color = 'black',
   size = 'm',
 }) => {
+  const selectItems = React.useMemo(() => {
+    if (itemGroups) {
+      return itemGroups.map(({label, groupItems}, index) => (
+        <optgroup key={index} label={label}>
+          {groupItems.map(({value, text}) => (
+            <option value={value} key={value}>
+              {text}
+            </option>
+          ))}
+        </optgroup>
+      ));
+    }
+    return items.map(({value, text}) => (
+      <option value={value} key={value}>
+        {text}
+      </option>
+    ));
+  }, [items, itemGroups]);
+
   return (
     <label
       className={classNames(
@@ -81,11 +103,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           className={moduleStyles.dropdown}
           disabled={disabled}
         >
-          {items.map(({value, text}) => (
-            <option value={value} key={value}>
-              {text}
-            </option>
-          ))}
+          {selectItems}
         </select>
       </div>
     </label>
