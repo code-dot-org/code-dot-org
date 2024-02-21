@@ -11,9 +11,9 @@ export const TEST_RECOMMENDER_SCORING = {
   hasDesiredDuration: 3,
   hasDesiredMarketingInitiative: 4,
   hasAnySchoolSubject: 1,
-  numOverlappingDesiredSchoolSubjects: 2,
+  overlappingDesiredSchoolSubject: 2,
   hasImportantButNotDesiredTopic: 1,
-  numOverlappingDesiredTopics: 2,
+  overlappingDesiredTopic: 2,
   publishedWithinOneYearAgo: 2,
   publishedWithinTwoYearsAgo: 1,
 };
