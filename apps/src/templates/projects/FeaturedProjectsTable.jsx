@@ -17,6 +17,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import experiments from '@cdo/apps/util/experiments';
+import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -209,6 +210,11 @@ class FeaturedProjectsTable extends React.Component {
       direction: 'desc',
       position: 0,
     },
+    filterDropdownStatusValue: 'all',
+  };
+
+  setFilterDropdownStatusValue = value => {
+    this.setState({filterDropdownStatusValue: value});
   };
 
   getSortingColumns = () => {
@@ -216,11 +222,20 @@ class FeaturedProjectsTable extends React.Component {
   };
 
   getProjectList = () => {
-    return this.props.activeList.concat(
-      this.props.bookmarkedList,
-      this.props.archivedList
-    );
+    if (this.state.filterDropdownStatusValue === 'active') {
+      return this.props.activeList;
+    } else if (this.state.filterDropdownStatusValue === 'bookmarked') {
+      return this.props.bookmarkedList;
+    } else if (this.state.filterDropdownStatusValue === 'archived') {
+      return this.props.archivedList;
+    } else {
+      return this.props.activeList.concat(
+        this.props.bookmarkedList,
+        this.props.archivedList
+      );
+    }
   };
+
   // The user requested a new sorting column. Adjust the state accordingly.
   onSort = selectedColumn => {
     this.setState({
@@ -319,23 +334,6 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
       },
-      // {
-      //   property: 'topic',
-      //   header: {
-      //     label: 'Topic',
-      //     props: {style: tableLayoutStyles.headerCell},
-      //     transforms: [sortable],
-      //   },
-      //   cell: {
-      //     formatters: [topicFormatter],
-      //     props: {
-      //       style: {
-      //         ...styles.cellType,
-      //         ...tableLayoutStyles.cell,
-      //       },
-      //     },
-      //   },
-      // },
       {
         property: 'featuredAt',
         header: {
@@ -399,6 +397,28 @@ class FeaturedProjectsTable extends React.Component {
     return columns;
   };
 
+  renderStatusFilterDropdown = () => {
+    return (
+      <SimpleDropdown
+        name="featured-projects-table-filter-dropdown"
+        items={[
+          {value: 'all', text: 'all'},
+          {value: 'active', text: 'currently featured'},
+          {value: 'bookmarked', text: 'bookmarked'},
+          {value: 'archived', text: 'archived'},
+        ]}
+        labelText="Featured projects table filter dropdown"
+        isLabelVisible={false}
+        selectedValue={this.state.filterDropdownStatusValue}
+        onChange={e => {
+          this.setFilterDropdownStatusValue(e.target.value);
+          console.log('e.target.value', e.target.value);
+        }}
+        size="s"
+      />
+    );
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -416,10 +436,13 @@ class FeaturedProjectsTable extends React.Component {
     })(this.getProjectList());
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="channel" />
-      </Table.Provider>
+      <div>
+        {this.renderStatusFilterDropdown()}
+        <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="channel" />
+        </Table.Provider>
+      </div>
     );
   }
 }
