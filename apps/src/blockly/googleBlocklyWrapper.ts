@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import './addons/plusMinusBlocks/if.js';
-import './addons/plusMinusBlocks/text_join.js';
+import './addons/plusMinusBlocks/if';
+import './addons/plusMinusBlocks/text_join';
 import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
@@ -56,8 +56,8 @@ import {Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
-import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
-import customBlocks from './customBlocks/googleBlockly/index.js';
+import CdoBlockSerializer from './addons/cdoBlockSerializer';
+import customBlocks from './customBlocks/googleBlockly/index';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import {
@@ -69,7 +69,7 @@ import {
   disableOrphans,
   reflowToolbox,
 } from './eventHandlers';
-import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
+import {initializeScrollbarPair} from './addons/cdoScrollbar';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import {handleCodeGenerationFailure} from './utils';

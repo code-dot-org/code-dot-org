@@ -114,9 +114,9 @@ export default class FunctionEditor {
     Blockly.mainBlockSpace.registerButtonCallback(
       'newProcedureCallback',
       () => {
-        this.newProcedureCallback(Blockly.mainBlockSpace);
+        this.newProcedureCallback();
         // refresh the flyout after the new procedure is created
-        Blockly.mainBlockSpace.getToolbox().refreshSelection();
+        Blockly.mainBlockSpace?.getToolbox()?.refreshSelection();
       }
     );
 
@@ -214,13 +214,13 @@ export default class FunctionEditor {
       // If we already have stored data about the procedure, use that.
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
-      );
+      ) || {type}; // Fall back to serialization that is just the type.
 
       // Disable events here so we don't copy an existing block into the hidden definition
       // workspace.
       Blockly.Events.disable();
       this.block = Blockly.serialization.blocks.append(
-        this.addEditorWorkspaceBlockConfig(existingData || {}),
+        this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       ) as ProcedureBlock;
       Blockly.Events.enable();
@@ -336,7 +336,7 @@ export default class FunctionEditor {
     return name;
   }
 
-  newProcedureCallback = (procedureType: ProcedureType) => {
+  newProcedureCallback = (procedureType?: ProcedureType) => {
     if (!this.editorWorkspace) {
       return;
     }
@@ -476,7 +476,7 @@ export default class FunctionEditor {
    * @param blockConfig: Block json configuration
    * @returns Block configuration with x and y coordinates
    */
-  addEditorWorkspaceBlockConfig(blockConfig: State | object) {
+  addEditorWorkspaceBlockConfig(blockConfig: State) {
     // Position the blocks within the workspace svg frame.
     const x = frameSizes.MARGIN_SIDE + 5;
     const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;

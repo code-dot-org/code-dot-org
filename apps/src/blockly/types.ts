@@ -30,7 +30,7 @@ import {Abstract} from 'blockly/core/events/events_abstract';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import { IProcedureBlock } from 'blockly/core/procedures';
+import {IProcedureBlock} from 'blockly/core/procedures';
 
 export interface BlockDefinition {
   category: string;
@@ -114,7 +114,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   createEmbeddedWorkspace: (
     container: HTMLElement,
     xml: Node,
-    options: ExtendedBlocklyOptions
+    options: BlocklyOptions
   ) => WorkspaceSvg;
   setMainWorkspace: (workspace: WorkspaceSvg) => void;
   getMainWorkspace: () => ExtendedWorkspaceSvg;
