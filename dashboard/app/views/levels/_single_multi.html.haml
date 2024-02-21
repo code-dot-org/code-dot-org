@@ -69,7 +69,7 @@
         - data['answers'].each_with_index do |answer, i|
           -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
           - correct = include_multi_answers?(standalone) ? answer['correct'] : false
-          - answer_class = "answerbutton no-shadow-on-hover " + (use_tight_layout ? "tight-layout" : "btn")
+          - answer_class = "answerbutton " + (use_tight_layout ? "tight-layout" : "btn")
           %button{class: answer_class, style: "display: inline-block; height: #{height}", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
               .fa{class: unchecked_class}
