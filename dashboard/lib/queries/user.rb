@@ -1,5 +1,3 @@
-require 'policies/user'
-
 class Queries::User
   def self.dependent_students_count(user_id)
     user = User.find(user_id)
