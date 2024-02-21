@@ -13,8 +13,8 @@ export const SIMILAR_RECOMMENDER_SCORING = {
   numOverlappingDesiredSchoolSubjects: 2,
   hasImportantButNotDesiredTopic: 1,
   numOverlappingDesiredTopics: 2,
-  publishedWithinOneYearAgo: 1,
-  publishedWithinTwoYearsAgo: 2,
+  publishedWithinOneYearAgo: 2,
+  publishedWithinTwoYearsAgo: 1,
 };
 
 // Test recommender scoring framework.

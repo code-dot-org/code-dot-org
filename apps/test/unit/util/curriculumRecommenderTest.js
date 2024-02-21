@@ -189,14 +189,14 @@ describe('similarRecommender', () => {
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
-      'multipleTopicsCourse', // 4 points = 2 * hasDesiredTopics(2)
-      'multipleSchoolSubjectsCourse',
+      'multipleTopicsCourse', // 4 points = 2 overlapping topics * numOverlappingDesiredTopics(2)
+      'publishedWithinOneYearAgoCourse', // 2 points = publishedWithinOneYearAgo(2) (sorted higher by recent published_date)
+      'oneTopicCourse', // 2 points = 1 overlapping topic * numOverlappingDesiredTopics(2)
+      'multipleSchoolSubjectsCourse', // 2 points =
       'oneSchoolSubjectCourse',
-      'publishedWithinTwoYearsAgoCourse',
-      'oneTopicCourse',
       'marketingInitCourse1',
       'monthDurationCourse',
-      'publishedWithinOneYearAgoCourse',
+      'publishedWithinTwoYearsAgoCourse',
       'undesiredImportantTopicCourse',
       'desiredImportantTopicCourse',
       'featuredCourse',
