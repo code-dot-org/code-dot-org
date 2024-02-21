@@ -9,12 +9,7 @@ export const getTooltipId = lesson => `tooltip-${lesson.id}`;
 export default function LessonTitleTooltip({lesson}) {
   const tooltipId = getTooltipId(lesson);
   return (
-    <ReactTooltip
-      id={tooltipId}
-      key={tooltipId}
-      role="tooltip"
-      wrapper="div"
-    >
+    <ReactTooltip id={tooltipId} key={tooltipId} role="tooltip" wrapper="div">
       <div className={styles.lessonHeaderTooltip}>
         {i18n.lessonNumbered({
           lessonNumber: lesson.relative_position,
