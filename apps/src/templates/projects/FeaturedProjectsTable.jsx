@@ -7,10 +7,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {
-  featuredProjectDataPropType,
-  featuredProjectTableTypes,
-} from './projectConstants';
+import {featuredProjectDataPropType} from './projectConstants';
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -26,9 +23,10 @@ export const COLUMNS = {
   THUMBNAIL: 0,
   PROJECT_NAME: 1,
   APP_TYPE: 2,
-  LAST_PUBLISHED: 3,
-  LAST_FEATURED: 4,
-  ACTIONS: 5,
+  STATUS: 3,
+  LAST_PUBLISHED: 4,
+  LAST_FEATURED: 5,
+  ACTIONS: 6,
 };
 
 export const styles = {
@@ -124,16 +122,6 @@ const handleFeatureFailure = () => {
   alert("Shucks. Something went wrong - this project wasn't featured.");
 };
 
-const actionsFormatterActive = (actions, {rowData}) => {
-  return (
-    <QuickActionsCell>
-      <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
-        {i18n.stopFeaturing()}
-      </PopUpMenu.Item>
-    </QuickActionsCell>
-  );
-};
-
 const feature = (channel, publishedAt) => {
   const url = `/featured_projects/${channel}/feature`;
   if (!publishedAt) {
@@ -149,32 +137,17 @@ const onDelete = channel => {
   HttpClient.delete(url, true).then(handleSuccess).catch(handleFeatureFailure);
 };
 
-const actionsFormatterArchived = (actions, {rowData}) => {
-  return (
-    <QuickActionsCell>
-      <PopUpMenu.Item
-        onClick={() => feature(rowData.channel, rowData.publishedAt)}
-      >
-        {i18n.featureAgain()}
-      </PopUpMenu.Item>
-      <MenuBreak />
-      <PopUpMenu.Item
-        onClick={() => onDelete(rowData.channel)}
-        color={color.red}
-      >
-        Remove
-      </PopUpMenu.Item>
-    </QuickActionsCell>
-  );
-};
-
-const actionsFormatterBookmarked = (actions, {rowData}) => {
+const actionsFormatter = (actions, {rowData}) => {
+  console.log('rowData', rowData);
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
         onClick={() => feature(rowData.channel, rowData.publishedAt)}
       >
         Feature
+      </PopUpMenu.Item>
+      <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
+        Unfeature
       </PopUpMenu.Item>
       <MenuBreak />
       <PopUpMenu.Item
@@ -189,10 +162,21 @@ const actionsFormatterBookmarked = (actions, {rowData}) => {
 
 const dateFormatter = time => {
   if (time) {
-    const date = new Date(time);
-    return date.toLocaleDateString();
+    let date = new Date(time);
+    console.log('date', date);
+    let dateString;
+
+    dateString =
+      ('0' + (date.getMonth() + 1)).slice(-2) +
+      '/' +
+      ('0' + date.getDate()).slice(-2) +
+      '/' +
+      date.getFullYear(); // let dateString = date.toLocaleDateString();
+    console.log('date.toLocaleDateString()', date.toLocaleDateString());
+    console.log('dateString', dateString);
+    return dateString;
   } else {
-    return i18n.no();
+    return 'N/A';
   }
 };
 
@@ -200,15 +184,19 @@ const typeFormatter = type => {
   return FEATURED_PROJECT_TYPE_MAP[type];
 };
 
-const topicFormatter = topic => {
-  return topic;
+const statusFormatter = status => {
+  return status;
 };
+
+// const topicFormatter = topic => {
+//   return topic;
+// };
 
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
-    projectList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
-    tableVersion: PropTypes.oneOf(Object.values(featuredProjectTableTypes))
-      .isRequired,
+    activeList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
+    bookmarkedList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
+    archivedList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
   };
 
   state = {
@@ -222,6 +210,12 @@ class FeaturedProjectsTable extends React.Component {
     return this.state.sortingColumns || {};
   };
 
+  getProjectList = () => {
+    return this.props.activeList.concat(
+      this.props.bookmarkedList,
+      this.props.archivedList
+    );
+  };
   // The user requested a new sorting column. Adjust the state accordingly.
   onSort = selectedColumn => {
     this.setState({
@@ -239,8 +233,7 @@ class FeaturedProjectsTable extends React.Component {
   };
 
   getColumns = sortable => {
-    const tableVersion = this.props.tableVersion;
-    const dataColumns = [
+    const columns = [
       {
         property: 'thumbnailUrl',
         header: {
@@ -303,14 +296,14 @@ class FeaturedProjectsTable extends React.Component {
         },
       },
       {
-        property: 'topic',
+        property: 'status',
         header: {
-          label: 'Topic',
+          label: 'Status',
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          formatters: [topicFormatter],
+          formatters: [statusFormatter],
           props: {
             style: {
               ...styles.cellType,
@@ -319,8 +312,23 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
       },
-    ];
-    const archivedColumns = [
+      // {
+      //   property: 'topic',
+      //   header: {
+      //     label: 'Topic',
+      //     props: {style: tableLayoutStyles.headerCell},
+      //     transforms: [sortable],
+      //   },
+      //   cell: {
+      //     formatters: [topicFormatter],
+      //     props: {
+      //       style: {
+      //         ...styles.cellType,
+      //         ...tableLayoutStyles.cell,
+      //       },
+      //     },
+      //   },
+      // },
       {
         property: 'featuredAt',
         header: {
@@ -357,67 +365,12 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
         cell: {
-          formatters: [actionsFormatterArchived],
+          formatters: [actionsFormatter],
           props: {style: tableLayoutStyles.cell},
         },
       },
     ];
-    const activeColumns = [
-      {
-        property: 'featuredAt',
-        header: {
-          label: i18n.featured(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [dateFormatter],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-      {
-        property: 'actions',
-        header: {
-          label: i18n.quickActions(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-            },
-          },
-        },
-        cell: {
-          formatters: [actionsFormatterActive],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-    ];
-    const bookmarkedColumns = [
-      {
-        property: 'actions',
-        header: {
-          label: i18n.quickActions(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-            },
-          },
-        },
-        cell: {
-          formatters: [actionsFormatterBookmarked],
-          props: {style: tableLayoutStyles.cell},
-        },
-      },
-    ];
-
-    if (tableVersion === 'active') {
-      return dataColumns.concat(activeColumns);
-    } else if (tableVersion === 'archived') {
-      return dataColumns.concat(archivedColumns);
-    } else {
-      return dataColumns.concat(bookmarkedColumns);
-    }
+    return columns;
   };
 
   render() {
@@ -434,7 +387,7 @@ class FeaturedProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(this.props.projectList);
+    })(this.getProjectList());
 
     return (
       <Table.Provider columns={columns} style={tableLayoutStyles.table}>

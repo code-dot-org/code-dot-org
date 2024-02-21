@@ -222,6 +222,12 @@ class ProjectsController < ApplicationController
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
       channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      status = 'bookmarked'
+      if project_details[:featured_at] && project_details[:unfeatured_at]
+        status = 'archived'
+      elsif project_details[:featured_at]
+        status = 'active'
+      end
       featured_project_row = {
         projectName: project_details_value['name'],
         channel: channel,
@@ -231,6 +237,7 @@ class ProjectsController < ApplicationController
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
         unfeaturedAt: project_details[:unfeatured_at],
+        status: status
       }
       @featured_project_table_rows << featured_project_row
     end
