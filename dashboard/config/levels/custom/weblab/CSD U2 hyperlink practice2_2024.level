@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:59:19.000Z",
   "level_num": "custom",
@@ -16,9 +17,28 @@
     "bubble_choice_description": "Find and fix all the bugs in each of the hyperlink tags on each html page.",
     "thumbnail_url": "https://images.code.org/9b0fa667f5de4c260556c375e79fa418-links.png",
     "encrypted_examples": "tGTLK6G7m3wrvmbMEq1hx5QjLCa0rhN58XKyh/tVgSA2GYJDhyatii5zafMI\nXpXuwj7hAN0y1Gp2NBK3vMTQ7g==\n",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "reference_links": [
+      "/courses/csd-2022/guides/flex-children",
+      "/courses/csd-2022/guides/flexbox",
+      "/courses/csd-2022/guides/html-selectors",
+      "/courses/csd-2022/guides/div",
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/hyperlinks"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:19.048+00:00\",\"changed\":[\"cloned from \\\"CSD U2 hyperlink practice2_2023\\\"\"],\"cloned_from\":\"CSD U2 hyperlink practice2_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:19.048+00:00\",\"changed\":[\"cloned from \\\"CSD U2 hyperlink practice2_2023\\\"\"],\"cloned_from\":\"CSD U2 hyperlink practice2_2023\"},{\"changed_at\":\"2024-02-20 19:04:52 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
