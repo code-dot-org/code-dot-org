@@ -851,6 +851,10 @@ $small-footer-standard-width: 400px;
 
     .small-footer-base {
       margin-left: 10px;
+
+      .version-caption {
+        display: none;
+      }
     }
 
     .i18n-dropdown-container, .copyright-link {
@@ -1310,6 +1314,10 @@ input.header_input {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+#teacher-dashboard {
+  margin: 0 39px;
 }
 
 .header_finished_link:hover {

@@ -104,23 +104,23 @@ Det du kommer til å trenge:
 * Navn og e-post til den primære kontakten som representerer den innsendte aktiviteten
 * Aktivitetsnavn (kan ikke inkludere «Kodetime» i navnet)
 * URL-kobling til aktiviteten
-* Inkluderer denne aktiviteten AI: Ja eller Nei
-* En aktivitetsbeskrivelse (maks antall tegn: 400) 
-    * Ta med i beskrivelsen om det hovedsakelig er selvstudium eller tilrettelagt av lærer. I tillegg er noen skoler interessert i å vite om Kodetime-aktiviteter retter seg etter spesifikke standarder. Hvis aktiviteten retter seg etter spesifikke standarder bør det vurderes å inkludere denne informasjonen.
-* Anbefalt karakternivå (er) for tiltenkte brukere. Du kan henvise til \[Computer Science Teachers' Association's K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for karakterpassende datavitenskapskonsepter. Eksempel på klassetrinn inkluderer: 
-    * Barnehage - Grad 1 (alder 4-6)
-    * Grad 2-5 (7-10 år)
-    * Karakter 6-8 (alder 11-13)
-    * Karakterer 9+ (aldre 14+)
-* En liste over programmeringsspråk aktiviteten din lærer. Dvs. C/C ++, Java, JavaScript, etc. eller språkvalavhengig (for leksjonsplaner som kan undervises på flere språk) Velg språk kunst.
-* En liste over støttede naturlige språk. Merk: Språkdeteksjon er aktivitetsleverandørens ansvar; vi vil omdirigere alle brukere til den oppgitte nettadressen. eller språkvalavhengig (for leksjonsplaner som kan undervises på flere språk)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* En liste over programmeringsspråk aktiviteten din lærer. Dvs. C/C ++, Java, JavaScript, etc. eller språkvalavhengig (for leksjonsplaner som kan undervises på flere språk) choose language arts.
+* En liste over støttede naturlige språk. Merk: Språkdeteksjon er aktivitetsleverandørens ansvar; vi vil omdirigere alle brukere til den oppgitte nettadressen. or language independent (for lesson plans that can be taught in multiple languages)
 * Hvilket erfaringsnivå bør en lærer ha for å bruke aktiviteten din? (f.eks. nybegynner eller komfortabel.) Og, hvilket nivå av erfaring skal studentene ha?
-* Hvilket erfaringsnivå bør en lærer ha for å bruke aktiviteten din? (f.eks. nybegynner eller komfortabel.) Og, hvilket nivå av erfaring skal studentene ha? Hvis du ønsker å forberede mer avanserte Hour of Code™ -aktiviteter, vennligst ta med forkunnskapene som trengs i beskrivelsen av aktiviteten din.
-* Lengden på aktiviteten din 
-    * Bare 1 time
-    * 1 time med oppfølgingskurs
-    * 2-6 timer (kan være flere leksjoner)
-* En liste over tilgjengelighetstilbud, hvis aktiviteten din har dem. Disse inkluderer skjermleserkompatibilitet, tekst-til-tale-funksjoner, bruk av farger med høy kontrast, eller andre tilpasninger laget for elever med nedsatt funksjonsevne.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Flere ting du trenger når du sender inn leksjonsplaner
 
@@ -139,7 +139,7 @@ Det du kommer til å trenge:
         * iOS mobil Safari (optimalisert for mobil)
         * Android Chrome (optimalisert for mobil)
     * Ikke nettbasert: spesifiser plattform for opprinnelig kode (Mac, Win, iOS, Android, XBox, annet)
-    * Frakoblet
+    * Unplugged
 * Skjermbilde eller markedsføringsbilde av Hour of Code-aktiviteten. Send minst ett bilde med 4:3 dimensjoner. Det bør være minst 520px x 390px. Dette bildet skal ikke ha tekst på seg (annet enn logoen din), for å gjøre det mer tilgjengelig for ikke-engelsktalende. Hvis et passende bilde ikke er levert, kan vi ta eget skjermbilde av gjennomgangen eller vi kan velge ikke å liste den. Alle bilder må sendes inn som en URL-kobling til .jpg, .jpeg eller .png.
 * For å kunne spore deltakelsen mer nøyaktig, må tredjeparts opplæringspartnere inkludere sporingsbilder med én piksel på første side i veiledningen for timen. Se delen [Tracking Pixel](#pixel) nedenfor for mer informasjon.
 * Når du er ferdig med aktiviteten din, bør brukerne sendes til [](https://code.org/api/hour/finish) code.org/api/hour/finish hvor de vil kunne: 
@@ -170,7 +170,7 @@ Det du kommer til å trenge:
 
 Et mangfoldig utvalg av informatikkpedagoger vil rangere innleveringer basert på kvalitative og kvantitative kriterier. Alle aktiviteter som passer til de grunnleggende kriteriene vil bli oppført.
 
-For tradisjonelle kodingsaktiviteter, en mangfoldig komité av informatikkpedagoger vil rangere innleveringer basert på kvalitative og kvantitative kriterier. Alle aktiviteter som passer til de grunnleggende kriteriene vil bli oppført. Lærere vil kunne filtrere og sortere for å finne de beste aktivitetene for klasserommet.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Hvis vurderingskomiteen vurderer aktiviteten til null i produksjonskvaliteten (på grunn av dårlige feil eller instruksjoner som gjør det veldig vanskelig å bruke), for å fremme læring i underrepresenterte grupper (på grunn av rasistisk/sexistisk materiale), i pedagogisk verdi (lærer ikke CS -konsepter), eller morsom/engasjerende (på grunn av å være vanskelig/nedslående for studenter å jobbe gjennom), vil aktiviteten ikke bli oppført.
 
@@ -188,13 +188,13 @@ For selvstyrte aktiviteter for nye lærere og studenter vil vurderingskomiteen s
 - Krever ingen registrering
 - Krev ingen betaling (unntak for robotikkaktiviteter disse kan kreve kjøp av robot/kit)
 
-For selvstyrte aktiviteter for nye lærere og studenter vil vurderingskomiteen se etter om:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Lærere kan bruke opplæringen eller aktiviteten uten bakgrunn i informatikk
 - Studenter kan lykkes uten bakgrunn i informatikk
 - Studentene kan lede seg gjennom opplæringen uten foreldre- eller lærerveiledning
 
-Lærere og studenter vil kunne søke gjennom og filtrere listen over aktiviteter basert på filtre som karakter, erfaringsnivå, emne, maskinvare, etc. Som standard viser vi leksjonsplaner og aktiviteter først som:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Motta de høyeste rangeringene fra vurderingskomiteen
 - Er en times selvstyrte aktiviteter designet for nybegynnere (studenter og lærere)
@@ -208,7 +208,7 @@ Lærere og studenter vil kunne søke gjennom og filtrere listen over aktiviteter
 
 ## Forslag til utforming av en times selvstyrte opplæringsprogrammer
 
-Aktiviteter trenger ikke å inkludere AI, selv om vi ønsker å tilby flere AI-relaterte aktiviteter.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Inkluder notater til læreren.** De fleste aktiviteter burde være student-rettet, men hvis en aktivitet er tilrettelagt eller holdt av en lærer, vær så snill å inkluder klare og enkle instruksjoner for læreren i form av lærer-notater på en separat lenke innlevert med din aktivitet. Ikke bare studentene er nybegynnere, noen av lærerene er også det. Inkluder info som:
 
@@ -221,15 +221,15 @@ Aktiviteter trenger ikke å inkludere AI, selv om vi ønsker å tilby flere AI-r
 - anbefaler du par-programmering?
 - Hensyn til bruk i et klasserom? For eksempel hvis det er videoer, kan du råde lærerne til å vise videoene på en projisert skjerm for hele klasserommet å se sammen
 
-**Inkluder tilbakemelding på slutten av aktiviteten.** (F.eks. «Du fullførte 10 nivåer og lærte om løkker! Flott jobb!»)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Oppfordre elevene til å legge ut på sosiale medier (der det er aktuelt) når de er ferdige.** For eksempel «Jeg har gjort en Kodetime med ________ Har du? #HourOfCode» eller «Jeg har gjort en #HourOfCode som en del av #CSEdWeek. Har du? @Scratch.» Bruk hashtagen **#Kodetimen**(med stor forbokstav)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Lag din aktivitet på spansk eller på andre språk enn engelsk.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Forklar eller koble din aktivitet til en sosialt signifikant kontekst.** Programmering blir en superkraft når studenter ser hvordan det kan forandre verden til det bedre!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Forsikre deg om at opplæringen din kan brukes i et [Par Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigme.** Dette er spesielt nyttig for kodetimen fordi mange klasserom ikke har 1:1 maskinvare for alle studenter.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Tilbake til toppen**](#top)
 
@@ -237,7 +237,7 @@ Aktiviteter trenger ikke å inkludere AI, selv om vi ønsker å tilby flere AI-r
 
 ## Retningslinjer for varemerker
 
-Hour of Code® og Hora del Código® er registrerte varemerker for Code.org. Mange av våre opplæringspartnere har brukt varemerkene våre «Kodetime» på sine nettsteder i forbindelse med deres Kodetidsaktiviteter. Vi ønsker ikke å forhindre denne bruken, men vi vil sørge for at bruken faller innenfor noen få grenser:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Bruk «Kodetime» bare i forbindelse med ikke-kommersiell CS Education-aktiviteter i sammenheng med Hour of Code-kampanjen, og ikke til noe annet formål.
 2. Enhver referanse til «Kodetime» bør brukes på en måte som ikke antyder at det er ditt eget merkenavn, men at det heller refererer til Kodetimen som en grasrotbevegelse. Godt eksempel: «Delta i kodetimen® på AcmeCorp.com». Dårlig eksempel: «Prøv Kodetimen fra ACME Corp».
@@ -253,15 +253,15 @@ Hour of Code® og Hora del Código® er registrerte varemerker for Code.org. Man
 
 ## Sporingspiksel
 
-Hvis opplæringen din er godkjent og inkludert på den endelige opplæringssiden, vil Code.org gi deg en unik sporingspiksel som du kan integrere i opplæringen din. Se eksempel nedenfor. Ikke ta med på noen midlertidige sider i opplæringen din.
+Hvis opplæringen din er godkjent og inkludert på den endelige opplæringssiden, vil Code.org gi deg en unik sporingspiksel som du kan integrere i opplæringen din. Se eksempel nedenfor. Do not include on any interim pages of your tutorial.
 
-Dette vil tillate oss å telle brukere som gjør din Code Hour of Code-opplæring. Det vil føre til mer nøyaktige deltakelsestall for opplæringen din.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Hvis opplæringen din er godkjent og inkludert på den endelige opplæringssiden, vil Code.org gi deg en unik sporingspiksel som du kan integrere i opplæringen din. Se eksempel nedenfor.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-OBS: Dette er ikke viktig for installerbare apper (iOS/Android apper, eller desktop-install apper)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Eksempel på sporingspiksler for Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Fremme dine aktiviteter, CSEDWeek, og Kodetime
 
-Vennligst markedsfør aktiviteten din til nettverket ditt! Rett dem til Kodetimen din. Det er mye mer sannsynlig at brukerne dine reagerer på en e-post fra deg om aktiviteten din. Bruk den internasjonale Hour of Code-kampanjen under Computer Science Education Week som en unnskyldning for å oppmuntre brukere til å invitere andre til å bli med, og hjelpe oss med å nå flere studenter!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Feature Hour of Code og CSEDWeek på nettstedet ditt. Eks: <http://www.tynker.com/hour-of-code>
 - Markedsfør kodetime ved hjelp av sosiale medier, tradisjonelle medier, adresselister osv. Ved å bruke hashtag #HourOfCode (med store bokstaver H, O, C)
