@@ -1,7 +1,6 @@
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import React, {useCallback} from 'react';
-import i18n from '@cdo/locale';
+import React from 'react';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -15,20 +14,21 @@ function UnitSelectorV2({
   className,
   setScriptId,
 }) {
-  const onSelectUnit = useCallback(
+  const onSelectUnit = React.useCallback(
     e => {
-      setScriptId(scriptId);
-      loadUnitProgress(scriptId, sectionId);
+      const newScriptId = e.target.value;
+      setScriptId(newScriptId);
+      loadUnitProgress(newScriptId, sectionId);
 
       this.recordEvent('change_script_v2', {
-        old_script_id: this.props.scriptId,
-        new_script_id: scriptId,
+        old_script_id: scriptId,
+        new_script_id: newScriptId,
       });
 
       analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
-        sectionId: this.props.sectionId,
-        oldUnitId: this.props.scriptId,
-        unitId: scriptId,
+        sectionId: sectionId,
+        oldUnitId: scriptId,
+        unitId: newScriptId,
       });
     },
     [scriptId, setScriptId, sectionId]
