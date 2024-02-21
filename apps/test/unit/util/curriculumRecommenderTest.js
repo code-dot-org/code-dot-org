@@ -1,4 +1,7 @@
-import {getTestRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {
+  getTestRecommendations,
+  getSimilarRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {
   IS_FEATURED_TEST_COURSES,
   DURATION_TEST_COURSES,
@@ -6,12 +9,13 @@ import {
   SCHOOL_SUBJECT_TEST_COURSES,
   TOPICS_TEST_COURSES,
   PUBLISHED_DATE_TEST_COURSES,
+  SIMILAR_RECOMMENDER_TEST_COURSES,
 } from './curriculumRecommenderTestCurricula';
 import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('testRecommender', () => {
-  it('curricula marked as is_featured sorted before other curricula with same score ', () => {
+  it('curricula marked as is_featured sorted before other curricula with same score', () => {
     const recommendedCurricula = getTestRecommendations(
       IS_FEATURED_TEST_COURSES,
       '',
@@ -170,6 +174,36 @@ describe('testRecommender', () => {
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
       'nullCourse',
+    ]);
+  });
+});
+
+describe('similarRecommender', () => {
+  it('similar curriculum recommender scores test curricula with relevant fields', () => {
+    const recommendedCurricula = getSimilarRecommendations(
+      SIMILAR_RECOMMENDER_TEST_COURSES,
+      'month',
+      'markInit1',
+      'subject1',
+      'topic1,topic2'
+    ).map(curr => curr.key);
+
+    expect(recommendedCurricula).to.deep.equal([
+      'multipleTopicsCourse', // 4 points = 2 * hasDesiredTopics(2)
+      'multipleSchoolSubjectsCourse',
+      'oneSchoolSubjectCourse',
+      'publishedWithinTwoYearsAgoCourse',
+      'oneTopicCourse',
+      'marketingInitCourse1',
+      'monthDurationCourse',
+      'publishedWithinOneYearAgoCourse',
+      'undesiredImportantTopicCourse',
+      'desiredImportantTopicCourse',
+      'featuredCourse',
+      'emptyCourse',
+      'nullCourse',
+      'marketingInitCourse2',
+      'weekDurationCourse',
     ]);
   });
 });
