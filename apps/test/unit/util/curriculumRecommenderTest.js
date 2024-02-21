@@ -185,25 +185,25 @@ describe('similarRecommender', () => {
       'month',
       'markInit1',
       'subject2',
-      'topic1,topic2'
+      `topic1,topic2,${IMPORTANT_TOPICS[0]}`
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
       'multipleTopicsCourse', // 4 points = 2 overlapping topics * overlappingDesiredTopic(2)
       'publishedWithinOneYearAgoCourse', // 2 points = publishedWithinOneYearAgo(2) [sorted highest of the 2-point courses by recent published_date]
+      'firstImportantTopicCourse', // 2 points = 1 overlapping topic * overlappingDesiredTopic(2)
       'oneTopicCourse', // 2 points = 1 overlapping topic * overlappingDesiredTopic(2)
       'multipleSchoolSubjectsCourse', // 2 points = 1 overlapping subject * overlappingDesiredSchoolSubject(2)
       'marketingInitCourse1', // 2 points = hasDesiredMarketingInitiative(2)
       'monthDurationCourse', // 2 points = hasDesiredDuration(2)
       'publishedWithinTwoYearsAgoCourse', // 1 point = publishedWithinTwoYearsAgo(1) [sorted highest of the 1-point courses by recent published_date]
-      'undesiredImportantTopicCourse', // 1 point = hasImportantButNotDesiredTopic(1)
-      'desiredImportantTopicCourse', //
-      'oneSchoolSubjectCourse',
-      'featuredCourse',
-      'emptyCourse',
-      'nullCourse',
-      'marketingInitCourse2',
-      'weekDurationCourse',
+      'secondImportantTopicCourse', // 1 point = hasImportantButNotDesiredTopic(1)
+      'oneSchoolSubjectCourse', // 1 point = hasAnySchoolSubject(1) [only receives points from hasAnySchoolSubject if numOverlappingDesiredSchoolSubjects == 0]
+      'featuredCourse', // 0 points [sorted highest of 0-point courses because it's marked as featured]
+      'emptyCourse', // 0 points
+      'nullCourse', // 0 points
+      'marketingInitCourse2', // 0 points
+      'weekDurationCourse', // 0 points
     ]);
   });
 });
