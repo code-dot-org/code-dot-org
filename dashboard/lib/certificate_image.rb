@@ -161,26 +161,53 @@ class CertificateImage
       vertical_offset = course == '20-hour' ? -125 : -120
       image = create_certificate_image2(path, name, y: vertical_offset)
       donor_text_y_offset = 447
-    elsif template_file == 'self_paced_pl_certificate.png'
-      image = Magick::Image.read(path).first
-      apply_text(image, name, 62, 'Helvetica bold', 'rgb(118,101,160)', 0, -248, CERT_NAME_AREA_WIDTH, 70)
-      course_title_width = 1400
-      course_title_height = 171
-      apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
-
+    else
       unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
-      total_minutes = unit_or_unit_group&.duration_in_minutes || 0
-      total_hours = (total_minutes / 60).floor
-      apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
-      donor_text_y_offset = 611
-    else # all other courses use a certificate image where the course name is also blank
       image = Magick::Image.read(path).first
-      apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
-      # The area in pixels which will display the course title.
-      course_title_width = 1000
-      course_title_height = 60
-      apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
-      donor_text_y_offset = 447
+      if template_file == 'self_paced_pl_certificate.png'
+        apply_text(image, name, 62, 'Helvetica bold', 'rgb(118,101,160)', 0, -248, CERT_NAME_AREA_WIDTH, 70)
+
+        course_title_width = 1400
+        if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
+          unit = unit_or_unit_group
+          unit_group = unit.unit_group
+
+          unit_group_height = 85
+          apply_text(image, unit_group.localized_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, -57, course_title_width, unit_group_height)
+
+          unit_height = 71
+          apply_text(image, unit.localized_title, 57, 'Helvetica bold', 'rgb(29,173,186)', 0, 36, course_title_width, unit_height)
+        else
+          course_title_height = 171
+          apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
+        end
+
+        total_minutes = unit_or_unit_group&.duration_in_minutes || 0
+        total_hours = (total_minutes / 30).floor / 2.0
+        apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
+        donor_text_y_offset = 611
+      else # all other courses use a certificate image where the course name is also blank
+        apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
+        # The area in pixels which will display the course title.
+        if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
+          unit = unit_or_unit_group
+          unit_group = unit.unit_group
+
+          unit_group_width = 1000
+          unit_group_height = 50
+          apply_text(image, unit_group.localized_title, 40, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, unit_group_width, unit_group_height)
+
+          unit_width = 800
+          unit_height = 40
+          apply_text(image, unit.localized_title, 32, 'Helvetica bold', 'rgb(29,173,186)', 0, 47, unit_width, unit_height)
+        else
+          course_title_width = 1000
+          course_title_height = 60
+          apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
+        end
+
+        donor_text_y_offset = 447
+      end
     end
 
     if default_random_donor && !donor_name
