@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:59:26.000Z",
   "level_num": "custom",
@@ -14,7 +15,12 @@
     "name_suffix": "_2024",
     "submittable": "false",
     "reference_links": [
+      "/courses/csd-2022/guides/pseudo-classes",
       "/courses/csd-2022/guides/hyperlinks",
+      "/courses/csd-2022/guides/flex-children",
+      "/courses/csd-2022/guides/flexbox",
+      "/courses/csd-2022/guides/html-selectors",
+      "/courses/csd-2022/guides/div",
       "/courses/csd-2022/guides/classes",
       "/courses/csd-2022/guides/layout-properties",
       "/courses/csd-2022/guides/body-styling",
@@ -22,19 +28,21 @@
       "/courses/csd-2022/guides/creative-commons-search",
       "/courses/csd-2022/guides/style-sheets",
       "/courses/csd-2022/guides/text-properties",
-      "/courses/csd-2022/guides/debugging-html",
       "/courses/csd-2022/guides/formatting-html",
       "/courses/csd-2022/guides/lists",
       "/courses/csd-2022/guides/headings-and-paragraphs",
       "/courses/csd-2022/guides/html-tags",
-      "/courses/csd-2022/guides/web-lab"
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:26.786+00:00\",\"changed\":[\"cloned from \\\"CSD Web incorporate feedback_2023\\\"\"],\"cloned_from\":\"CSD Web incorporate feedback_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:26.786+00:00\",\"changed\":[\"cloned from \\\"CSD Web incorporate feedback_2023\\\"\"],\"cloned_from\":\"CSD Web incorporate feedback_2023\"},{\"changed_at\":\"2024-02-20 19:15:15 +0000\",\"changed\":[\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-02-15T00:27:17.000Z",
   "level_num": "custom",
@@ -45,10 +46,12 @@
       "upButton",
       "downButton"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-15T00:27:17.469+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional\\\"\"],\"cloned_from\":\"hello_games_winning_conditional\"},{\"changed_at\":\"2024-02-15 00:30:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:31:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:32:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:33:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:34:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:36:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-15T00:27:17.469+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional\\\"\"],\"cloned_from\":\"hello_games_winning_conditional\"},{\"changed_at\":\"2024-02-15 00:30:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:31:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:32:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:33:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:34:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:36:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:09:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:10:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:12:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:13:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -85,25 +88,21 @@
                         </block>
                       </value>
                       <next>
-                        <block type="variables_set">
+                        <block type="gamelab_showVariable">
                           <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <field name="NUM">0</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <field name="LOCATION">{"x":200,"y":100}</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_comment">
-                              <field name="COMMENT">placeholder for show score</field>
-                              <next>
-                                <block type="gamelab_printText">
-                                  <value name="TEXT">
-                                    <block type="variables_get">
-                                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
-                                    </block>
-                                  </value>
+                            <block type="variables_set">
+                              <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <field name="NUM">0</field>
                                 </block>
-                              </next>
+                              </value>
                             </block>
                           </next>
                         </block>
@@ -1305,19 +1304,7 @@
         <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="72" y="169">
           <field name="IMG">"gradient_11"</field>
         </block>
-        <block type="gamelab_comment" id="f+`,-VJc_W+*pvNnhH^1" x="37" y="292">
-          <field name="COMMENT">Placeholder for show variable block</field>
-          <next>
-            <block type="gamelab_printText" id="Tee`ye*?%1C6]pFgQ?A+">
-              <value name="TEXT">
-                <block type="variables_get" id="q=QJ,}@=9Hb{EYA)1U!g">
-                  <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="133" y="368">
+        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="26" y="248">
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
           <value name="DELTA">
             <shadow type="math_number" id="Dsygy)_vgya%_J|C?^+(">
@@ -1325,11 +1312,27 @@
             </shadow>
           </value>
         </block>
+        <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr" x="89" y="336">
+          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="MTpyz3~[)2]e-cv8R$w!">
+              <field name="LOCATION">{"x":200,"y":100}</field>
+            </block>
+          </value>
+        </block>
+        <block type="variables_set" id=")R,JJO#7$==Alm:brx|2" x="67" y="395">
+          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+          <value name="VALUE">
+            <block type="math_number" id="O+Q2TbpteuZ$tH8?#oZT">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
         <block type="gamelab_makeNewSpriteAnon" id="JIw3/AZ92eD,iyz@QMI#" x="165" y="475">
           <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="D=bbm,uR`M;-R6eXQ:/)">
-              <field name="LOCATION">{"x":106,"y":312}</field>
+              <field name="LOCATION">{"x":100,"y":300}</field>
             </block>
           </value>
         </block>

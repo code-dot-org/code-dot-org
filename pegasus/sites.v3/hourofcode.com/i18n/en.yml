@@ -419,6 +419,8 @@
   aria_label_call_to_action_dance_unplugged: "Start the Dance Party unplugged activity"
   aria_label_call_to_action_explore_k5_self_paced_pl: "Explore K-5 self-paced professional learning"
   aria_label_call_to_action_explore_k_5_curriculum: "Explore K-5 curriculum"
+  aria_label_call_to_action_explore_data_society_pl: "Explore data and society professional learning"
+  aria_label_call_to_action_explore_data_society_curriculum: "Explore data and society curriculum"
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_facilitator_pl: "Learn more about facilitator-led professional learning workshops"
   aria_label_call_to_action_self_paced_pl: "Learn more about self-paced professional learning"
@@ -552,6 +554,7 @@
   curriculum_name_interactive_animations_games: "Interactive Animations & Games"
   curriculum_name_design_process: "The Design Process"
   curriculum_name_data_society: "Data & Society"
+  curriculum_name_data_and_society: "Data and Society"
   curriculum_desc_dance_party_01: "In this introductory activity, use code to make a variety of colorful characters bust a move to animated backgrounds and upbeat music."
   curriculum_desc_dance_party_02: "Go beyond the introductory tutorial with extended project ideas. Browse a library of examples of more complex dance parties."
   curriculum_desc_dance_party_unplugged: "Get your groove on—no computer needed! Learn how coding concepts, like events, can be used to synchronize dancer choreography."
@@ -664,6 +667,7 @@
   module_duration_2_weeks: "2 weeks"
   module_duration_1_hr: "1 hour"
   module_duration_2_hrs: "2 hours"
+  module_duration_2_hrs_30_minutes: "2.5 hours"
   module_duration_3_hrs: "3 hours"
   module_duration_3_hrs_20_minutes: "3 hours 20 minutes"
   module_duration_5_hrs: "5 hours"
@@ -686,6 +690,7 @@
   module_label_teaching_csf: "Teaching Computer Science Fundamentals"
   module_label_teaching_csd: "Teaching Computer Science Discoveries"
   module_label_teaching_csp: "Teaching Computer Science Principles"
+  module_label_teaching_data_and_society: "Teaching Data and Society"
   module_label_teaching_problem_solving: "Teaching Problem Solving and Computing"
   module_label_teaching_animations: "Interactive Animations and Games"
   module_label_teaching_csc: "Teaching Computer Science Connections"
@@ -1626,6 +1631,69 @@
 
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
+
+  pl_page:
+    heading: "Professional learning that empowers"
+    desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+    top_list_01: "Choose your own learning pathway"
+    top_list_02: "Comprehensive quality resources"
+    top_list_03: "A global community of teachers"
+    top_list_04: "Understand curriculum and learning tools"
+    journey:
+      heading: "Your professional learning journey, your way"
+      desc: "Explore the chart below to find the best professional learning (PL) option for your needs and goals."
+      facilitator_led: "Facilitator-Led"
+      self_paced: "Self-Paced"
+      overview: "Overview:"
+      k_5:
+        title: "K-5 Workshops"
+        desc: "One day workshops for elementary educators at any level."
+      mid_high:
+        title: "6-12 Workshops"
+        desc: "Year-long professional learning programs to support you."
+      online:
+        title: "Online Professional Learning"
+        desc: "Self-paced professional learning modules at no cost!"
+      led_by_facilitator: "Led by an approved facilitator"
+      engage_with_peers: "Engage with a group of peers"
+      options: "In-person and virtual options"
+      one_day_workshop: "1 day workshop for your level"
+      year_long: "Year-long support program"
+      us_only: "Only available in the US*"
+      free: "Completely free!"
+      own_pace: "Learn at your own pace"
+      online_modules: "Flexible online modules that match our curriculum"
+      available_everywhere: "Available everywhere!"
+      button_k_5: "Explore K-5 workshops"
+      button_6_12: "Explore 6-12 workshops"
+      button_self_paced: "Explore self-paced courses"
+      disclaimer: "**Not in the United States?** We're expanding our network of international partners to offer more professional learning to teachers. [Learn more here](%{learn_more_url})."
+    quote:
+      text: "I love getting to work in the lessons and deeply think through how I will use it with students. I don't feel like I often have time to 'slow down' and dive into materials, but this workshop always gives me time and space to do so."
+      byline: "CS Discoveries Teacher"
+    hands-on:
+      heading: "Hands-on practice with lesson content"
+      desc: "Experience our curriculum as your students would in our interactive workshops, preparing you to teach with a deep, practical understanding. You'll leave not just familiar with the material, but fully equipped to engage and inspire your classroom."
+    pedagogy:
+      heading: "Reflection on pedagogy"
+      desc: "Explore the nuances of teaching methods and their impacts on learning through reflective sessions on pedagogy. Our professional learning fosters a deeper understanding of educational practices, enriching your teaching philosophy and classroom approach."
+    support:
+      heading: "Educator support at every level"
+      desc: "Our comprehensive support network caters to educators at all stages, offering year-round assistance, additional programming, and access to vibrant teacher communities. Stay connected, continually develop your skills, and find inspiration within a supportive peer network."
+    resources:
+      heading: "Additional resources and support for educators"
+      intl:
+        title: "International Resources"
+        desc: "We're expanding our network of international partners and professional learning resources for educators outside of the US. Self-paced learning is available everywhere!"
+        button: "See international resources"
+      community:
+        title: "Teacher Community"
+        desc: "A forum for teachers to ask questions and share best practices, thoughts, ideas, and inspiration. Join a community of amazing educators around the world!"
+        button: "Join our teacher forums"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
 
   intl_pl_page:
     page_title: "International Professional Learning Resources"
