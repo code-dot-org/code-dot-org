@@ -157,6 +157,13 @@ export default class FunctionEditor {
     return this.editorWorkspace;
   }
 
+  // Leaving these two functions as placeholders for when we implement parameters.
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
+  renameParameter(_oldName: string, _newName: string) {}
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  refreshParamsEverywhere() {}
+
   autoOpenFunction(functionName: string) {
     const existingProcedureBlock = Blockly.Procedures.getDefinition(
       functionName,

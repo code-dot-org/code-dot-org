@@ -19,7 +19,7 @@ export function initializeScrollbarPair(workspace: ExtendedWorkspaceSvg) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (workspace.scrollbar.hScroll as any).pair = false;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (workspace.scrollbar.hScroll as any).pair = false;
+  (workspace.scrollbar.vScroll as any).pair = false;
 
   // When both scrollbars are present, Core Blockly would always show them.
   // We can hide either scrollbar if it is not yet needed.
