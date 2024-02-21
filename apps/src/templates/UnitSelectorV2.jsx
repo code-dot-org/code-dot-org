@@ -5,13 +5,11 @@ import i18n from '@cdo/locale';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {loadUnitProgress} from './sectionProgressLoader';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 
-const FAMILY_NAME = 'familyName';
-const DISPLAY_NAME = 'displayName';
-
 function UnitSelectorV2({
+  sectionId,
   scriptId,
   coursesWithProgress,
   className,
@@ -20,7 +18,7 @@ function UnitSelectorV2({
   const onSelectUnit = useCallback(
     e => {
       setScriptId(scriptId);
-      loadUnitProgress(scriptId, this.props.sectionId);
+      loadUnitProgress(scriptId, sectionId);
 
       this.recordEvent('change_script_v2', {
         old_script_id: this.props.scriptId,
@@ -33,27 +31,25 @@ function UnitSelectorV2({
         unitId: scriptId,
       });
     },
-    [scriptId, setScriptId]
+    [scriptId, setScriptId, sectionId]
   );
 
-  const itemGroups = coursesWithProgress.map((version, index) => (
-    <optgroup key={index} label={version.display_name}>
-      {version.units.map(unit => (
-        <option key={unit.id} value={unit.id}>
-          {unit.name}
-        </option>
-      ))}
-    </optgroup>
-  ));
+  const itemGroups = coursesWithProgress.map(version => ({
+    label: version.display_name,
+    groupItems: version.units.map(unit => ({
+      value: unit.id,
+      text: unit.name,
+    })),
+  }));
 
   return (
     <SimpleDropdown
-      itemGroups
+      itemGroups={itemGroups}
       selectedValue={scriptId}
       name="unitSelector"
       onChange={onSelectUnit}
-      labelText={i18n.selectACourse()}
       className={className}
+      isLabelVisible={false}
       size="s"
     />
   );
@@ -61,13 +57,18 @@ function UnitSelectorV2({
 
 UnitSelectorV2.propTypes = {
   scriptId: PropTypes.number,
+  sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
   setScriptId: PropTypes.func.isRequired,
   className: PropTypes.string,
 };
 
 export default connect(
-  state => ({isSortedByFamilyName: state.currentUser.isSortedByFamilyName}),
+  state => ({
+    scriptId: state.unitSelection.scriptId,
+    sectionId: state.teacherSections.selectedSectionId,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
+  }),
   dispatch => ({
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));

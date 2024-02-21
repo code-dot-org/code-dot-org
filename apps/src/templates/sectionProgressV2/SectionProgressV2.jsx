@@ -8,6 +8,8 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {connect} from 'react-redux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import styles from './progress-table-v2.module.scss';
+import UnitSelectorV2 from '../UnitSelectorV2';
+import i18n from '@cdo/locale';
 
 function SectionProgressV2({
   scriptId,
@@ -44,7 +46,9 @@ function SectionProgressV2({
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>Students</Heading6>
         <Heading6 className={styles.titleUnitSelector}>
-          UNIT SELECTOR GOES HERE
+          {i18n.lessonsIn()}
+
+          <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
         </Heading6>
       </div>
       <ProgressTableV2
