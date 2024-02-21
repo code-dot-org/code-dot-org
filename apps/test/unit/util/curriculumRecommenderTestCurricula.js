@@ -133,7 +133,7 @@ const ONLY_TOPICS_COURSES = [
     published_date: '2015-05-02 05:00:00 UTC',
   },
   {
-    key: 'desiredImportantTopicCourse',
+    key: 'firstImportantTopicCourse',
     is_featured: false,
     duration: null,
     marketing_initiative: null,
@@ -143,7 +143,7 @@ const ONLY_TOPICS_COURSES = [
     published_date: '2015-05-03 05:00:00 UTC',
   },
   {
-    key: 'undesiredImportantTopicCourse',
+    key: 'secondImportantTopicCourse',
     is_featured: false,
     duration: null,
     marketing_initiative: null,
@@ -213,6 +213,16 @@ const PUBLISHED_DATE_TEST_COURSES = [
   ...ONLY_RECENT_PUBLISHED_DATE_COURSES,
 ];
 
+const SIMILAR_RECOMMENDER_TEST_COURSES = [
+  ...NULL_AND_EMPTY_COURSES,
+  ONLY_FEATURED_COURSE,
+  ...ONLY_DURATION_COURSES,
+  ...ONLY_MARKETING_INIT_COURSES,
+  ...ONLY_SCHOOL_SUBJECTS_COURSES,
+  ...ONLY_TOPICS_COURSES,
+  ...ONLY_RECENT_PUBLISHED_DATE_COURSES,
+];
+
 export default {
   IS_FEATURED_TEST_COURSES,
   DURATION_TEST_COURSES,
@@ -220,4 +230,5 @@ export default {
   SCHOOL_SUBJECT_TEST_COURSES,
   TOPICS_TEST_COURSES,
   PUBLISHED_DATE_TEST_COURSES,
+  SIMILAR_RECOMMENDER_TEST_COURSES,
 };

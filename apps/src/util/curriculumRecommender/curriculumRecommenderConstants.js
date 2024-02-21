@@ -10,11 +10,11 @@ export const SIMILAR_RECOMMENDER_SCORING = {
   hasDesiredDuration: 2,
   hasDesiredMarketingInitiative: 2,
   hasAnySchoolSubject: 1,
-  hasDesiredSchoolSubjects: 2,
+  overlappingDesiredSchoolSubject: 2,
   hasImportantButNotDesiredTopic: 1,
-  hasDesiredTopics: 2,
-  publishedWithinOneYearAgo: 1,
-  publishedWithinTwoYearsAgo: 2,
+  overlappingDesiredTopic: 2,
+  publishedWithinOneYearAgo: 2,
+  publishedWithinTwoYearsAgo: 1,
 };
 
 // Test recommender scoring framework.
@@ -22,9 +22,9 @@ export const TEST_RECOMMENDER_SCORING = {
   hasDesiredDuration: 3,
   hasDesiredMarketingInitiative: 4,
   hasAnySchoolSubject: 1,
-  hasDesiredSchoolSubjects: 2,
+  overlappingDesiredSchoolSubject: 2,
   hasImportantButNotDesiredTopic: 1,
-  hasDesiredTopics: 2,
+  overlappingDesiredTopic: 2,
   publishedWithinOneYearAgo: 2,
   publishedWithinTwoYearsAgo: 1,
 };
