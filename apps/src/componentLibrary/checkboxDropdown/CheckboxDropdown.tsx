@@ -7,7 +7,10 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {
+  ComponentSizeXSToL,
+  DropdownColor,
+} from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './checkboxDropdown.module.scss';
 import Button from '@cdo/apps/templates/Button';
 
@@ -18,15 +21,16 @@ import i18n from '@cdo/locale';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {
-  DropdownProvider,
+  DropdownProviderWrapper,
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 
 export interface CheckboxDropdownProps {
   /** CheckboxDropdown name */
   name: string;
   /** CheckboxDropdown color */
-  color?: 'white' | 'black';
+  color?: DropdownColor;
   /** CheckboxDropdown size */
   size: ComponentSizeXSToL;
   /** CheckboxDropdown disabled state */
@@ -67,7 +71,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   onSelectAll,
   onClearAll,
   disabled = false,
-  color = 'black',
+  color = dropdownColors.black,
   size = 'm',
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
@@ -112,8 +116,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
 
   // Collapse dropdown if 'Escape' is pressed
   const onKeyDown: (e: KeyboardEvent) => void = e => {
-    if (e.keyCode === 27) {
-      e.currentTarget.classList.remove('open');
+    if (e.key === 'Escape') {
+      e.currentTarget.classList.remove(moduleStyles.open);
     }
   };
 
@@ -186,8 +190,12 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   );
 };
 
-export default (props: CheckboxDropdownProps) => (
-  <DropdownProvider>
+const WrappedCheckboxDropdown = (props: CheckboxDropdownProps) => (
+  <DropdownProviderWrapper>
     <CheckboxDropdown {...props} />
-  </DropdownProvider>
+  </DropdownProviderWrapper>
 );
+
+WrappedCheckboxDropdown.DropdownColors = dropdownColors;
+
+export default WrappedCheckboxDropdown;

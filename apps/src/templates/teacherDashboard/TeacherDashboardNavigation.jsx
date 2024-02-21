@@ -16,6 +16,7 @@ export const TeacherDashboardPath = {
   manageStudents: '/manage_students',
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
+  aiTutorChatMessages: '/ai_tutor',
 };
 
 const teacherDashboardLinks = [
@@ -42,6 +43,10 @@ const teacherDashboardLinks = [
   {
     label: i18n.teacherTabManageStudents(),
     url: TeacherDashboardPath.manageStudents,
+  },
+  {
+    label: 'AI Tutor',
+    url: TeacherDashboardPath.aiTutorChatMessages,
   },
 ];
 

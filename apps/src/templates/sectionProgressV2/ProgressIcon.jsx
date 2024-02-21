@@ -9,11 +9,17 @@ export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
 export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
-    <div className={classNames(styles.needsFeedback, styles.cornerBox)} />
+    <div
+      className={classNames(styles.needsFeedback, styles.cornerBox)}
+      data-testid="needs-feedback-triangle"
+    />
   );
 
   const feedbackGivenTriangle = () => (
-    <div className={classNames(styles.feedbackGiven, styles.cornerBox)} />
+    <div
+      className={classNames(styles.feedbackGiven, styles.cornerBox)}
+      data-testid="feedback-given-triangle"
+    />
   );
 
   const notStartedBox = () => (
@@ -38,7 +44,7 @@ export default function ProgressIcon({itemType}) {
   );
 
   return (
-    <>
+    <div data-testid="progress-icon">
       {itemType?.length && (
         <FontAwesome
           id={'uitest-' + itemType[0]}
@@ -52,7 +58,7 @@ export default function ProgressIcon({itemType}) {
       {itemType === ITEM_TYPE.VIEWED && viewedBox()}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
-    </>
+    </div>
   );
 }
 

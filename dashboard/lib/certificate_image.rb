@@ -9,6 +9,13 @@ require 'cdo/pegasus/string'
 CERT_NAME_AREA_WIDTH = 900
 CERT_NAME_AREA_HEIGHT = 80
 
+CERTIFICATE_COURSE_TYPES = {
+  HOC: 'hoc',
+  PL: 'pl',
+  ACCELERATED: 'accelerated',
+  OTHER: 'other',
+}
+
 class CertificateImage
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
@@ -153,6 +160,18 @@ class CertificateImage
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120
       image = create_certificate_image2(path, name, y: vertical_offset)
+      donor_text_y_offset = 447
+    elsif template_file == 'self_paced_pl_certificate.png'
+      image = Magick::Image.read(path).first
+      apply_text(image, name, 62, 'Helvetica bold', 'rgb(118,101,160)', 0, -248, CERT_NAME_AREA_WIDTH, 70)
+      course_title_width = 1400
+      course_title_height = 171
+      apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
+
+      course_version = CurriculumHelper.find_matching_course_version(course)
+      total_hours = (course_version.content_root.duration_in_minutes / 60).floor
+      apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
+      donor_text_y_offset = 611
     else # all other courses use a certificate image where the course name is also blank
       image = Magick::Image.read(path).first
       apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
@@ -160,6 +179,7 @@ class CertificateImage
       course_title_width = 1000
       course_title_height = 60
       apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
+      donor_text_y_offset = 447
     end
 
     if default_random_donor && !donor_name
@@ -173,7 +193,7 @@ class CertificateImage
       # The area in pixels which will display the sponsor message.
       sponsor_area_width = 1400
       sponsor_area_height = 35
-      apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, 447, sponsor_area_width, sponsor_area_height)
+      apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, donor_text_y_offset, sponsor_area_width, sponsor_area_height)
     end
     image
   end
@@ -183,19 +203,27 @@ class CertificateImage
   end
 
   # assume any unrecognized course name is a hoc course
-  def self.hoc_course?(course)
-    course_version = CurriculumHelper.find_matching_course_version(course)
-    return true if course_version&.hoc?
-    return false if accelerated_course?(course)
-    return false if course_version
-    true
+  def self.hoc_course?(course_name)
+    course_type(course_name) == CERTIFICATE_COURSE_TYPES[:HOC]
+  end
+
+  def self.course_type(course_name)
+    return CERTIFICATE_COURSE_TYPES[:ACCELERATED] if accelerated_course?(course_name)
+
+    course_version = CurriculumHelper.find_matching_course_version(course_name)
+    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc?
+    return CERTIFICATE_COURSE_TYPES[:PL] if course_version&.pl_course?
+    return CERTIFICATE_COURSE_TYPES[:OTHER] if course_version
+    CERTIFICATE_COURSE_TYPES[:HOC]
   end
 
   def self.prefilled_title_course?(course)
-    certificate_template_for(course) != 'blank_certificate.png'
+    return false if %w(blank_certificate.png self_paced_pl_certificate.png).include?(certificate_template_for(course))
+    true
   end
 
   def self.certificate_template_for(course)
+    course_type = course_type(course)
     if ScriptConstants.unit_in_category?(:minecraft, course)
       case course
       when ScriptConstants::MINECRAFT_HERO_NAME
@@ -221,8 +249,10 @@ class CertificateImage
       # The 20-hour course is referred to as "accelerated" throughout the
       # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
-    elsif hoc_course?(course)
+    elsif course_type == 'hoc'
       'hour_of_code_certificate.jpg'
+    elsif course_type == 'pl'
+      'self_paced_pl_certificate.png'
     else
       'blank_certificate.png'
     end

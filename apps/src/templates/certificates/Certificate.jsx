@@ -140,6 +140,10 @@ function Certificate(props) {
       : i18n.justDidHourOfCode(),
   });
 
+  const linkedin = queryString.stringify({
+    url: externalCertificateShareLink,
+  });
+
   const print = getPrintPath();
 
   return (
@@ -207,11 +211,14 @@ function Certificate(props) {
           <BodyThreeText>
             {i18n.congratsCertificateShareMessage()}
           </BodyThreeText>
+          {/* TODO(ACQ-1342): determine whether certificate is for pl course  */}
           <SocialShare
             facebook={facebook}
             twitter={twitter}
+            linkedin={linkedin}
             print={print}
             under13={under13}
+            isPlCourse={false}
           />
         </div>
       </div>

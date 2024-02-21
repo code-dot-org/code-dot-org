@@ -1,5 +1,6 @@
 var i18n = require('../locale');
 import {blockTypesToDropdownOptions} from '../utils';
+import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 
 var allBlocks = [
   'bedrock',
@@ -68,8 +69,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_moveForward = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockMoveForward())
       );
@@ -85,8 +89,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_moveBackward = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockMoveBackward())
       );
@@ -103,8 +110,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -129,8 +139,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_destroyBlock = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockDestroyBlock())
       );
@@ -151,8 +164,11 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.setStyle('logic_blocks');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        'logic_blocks'
+      );
       this.appendDummyInput()
         .appendField(i18n.blockIf())
         .appendField(dropdown, 'TYPE')
@@ -180,8 +196,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_ifLavaAhead = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.setStyle('logic_blocks');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOGIC,
+        'logic_blocks'
+      );
       this.appendDummyInput().appendField(i18n.blockIfLavaAhead());
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -209,8 +228,11 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput()
         .appendField(i18n.blockPlaceXPlace())
         .appendField(dropdown, 'TYPE');
@@ -240,8 +262,11 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput()
         .appendField(i18n.blockPlaceXPlace())
         .appendField(dropdown, 'TYPE')

@@ -11,6 +11,13 @@ const EVENTS = {
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
   TEACHER_LOGIN_EVENT: 'Teacher Login',
 
+  // School Association
+  // Update School Info Dialog
+  UPDATE_SCHOOL_INFO_DIALOG_SHOWN: 'Update School Info Dialog Shown',
+  UPDATE_SCHOOL_INFO_DIALOG_CLOSED: 'Update School Info Dialog Closed',
+  CONFIRM_SCHOOL_CLICKED: 'Confirm School Clicked',
+  UPDATE_SCHOOL_CLICKED: 'Update School Clicked',
+
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Course Overview Page Visited By Teacher',
@@ -148,6 +155,12 @@ const EVENTS = {
 
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
+
+  // Header Create menu
+  SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
+    'Signed Out User Clicks Create Dropdown',
+  SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed Out User Selects Create Dropdown Option',
 
   // Project sharing
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
