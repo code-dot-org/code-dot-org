@@ -11,8 +11,8 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * Adapted from:
    * https://github.com/google/blockly/blob/399bd650a69f50843f2b46a9907a8dce826f6b99/core/serialization/blocks.ts#L710-L723
    *
-   * @param {locks: State[]} stateToLoad - The state of the blocks to deserialize.
-   * @param {Blockly.Workspace} workspace - The workspace to deserialize into.
+   * @param stateToLoad - The state of the blocks to deserialize.
+   * @param workspace - The workspace to deserialize into.
    */
   load(stateToLoad: {blocks: State[]}, workspace: Workspace) {
     for (const blockState of stateToLoad['blocks']) {
