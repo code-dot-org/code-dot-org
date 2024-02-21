@@ -30,6 +30,9 @@ class Project < ApplicationRecord
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
   has_one :channel_token
 
+  # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
+  after_create :set_use_datablock_storage
+
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
   # be found.
@@ -74,5 +77,19 @@ class Project < ApplicationRecord
 
   def existed_long_enough_to_publish?
     Time.now > created_at + 30.minutes
+  end
+
+  private
+
+  def set_use_datablock_storage
+    puts "NEW IS NEW!!! in Project.set_use_datablock_storage()"
+    if ['applab', 'gamelab'].include? project_type
+      puts "creating new #{project_type}..."
+      ProjectUseDatablockStorage.find_or_create_by(project_id: id) do |storage|
+        fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
+        storage.use_datablock_storage = rand < fraction
+        puts "new #{project_type} Project #{id}: use_datablock_storage=#{storage.use_datablock_storage}"
+      end
+    end
   end
 end
