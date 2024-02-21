@@ -105,13 +105,13 @@ export const getTestRecommendations = (
         : 0;
     } else {
       score +=
-        TEST_RECOMMENDER_SCORING['numOverlappingDesiredSchoolSubjects'] *
+        TEST_RECOMMENDER_SCORING['overlappingDesiredSchoolSubject'] *
         numOverlappingSubjects;
     }
     // Add points for each overlapping desired CS topic.
     score +=
       numOverlappingDesiredTopics(curriculum, csTopics) *
-      TEST_RECOMMENDER_SCORING['numOverlappingDesiredTopics'];
+      TEST_RECOMMENDER_SCORING['overlappingDesiredTopic'];
     // Add points if given curriculum has an important topic that isn't one of the
     // desired ones.
     score += hasImportantButNotDesiredTopic(curriculum, csTopics)
