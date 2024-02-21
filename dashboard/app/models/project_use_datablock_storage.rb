@@ -20,11 +20,11 @@ class ProjectUseDatablockStorage < ApplicationRecord
 
   def self.use_data_block_storage_for?(channel_id)
     project = Project.find_by_channel_id(channel_id)
-    find_by(project: project)&.use_datablock_storage || false
+    find_by(project_id: project.id)&.use_datablock_storage || false
   end
 
   def self.set_data_block_storage_for!(channel_id, use_datablock_storage)
     project = Project.find_by_channel_id(channel_id)
-    find_or_create_by(project: project).update!(use_datablock_storage: ActiveRecord::Type::Boolean.new.cast(use_datablock_storage))
+    find_or_create_by(project_id: project.id).update!(use_datablock_storage: ActiveRecord::Type::Boolean.new.cast(use_datablock_storage))
   end
 end
