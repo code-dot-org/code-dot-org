@@ -13,12 +13,12 @@ const SelectCompilationButton: React.FunctionComponent = () => {
 
   return (
     <Button
-      color={Button.ButtonColor.white}
-      icon={'clipboard'}
+      color={Button.ButtonColor.brandSecondaryDefault}
+      icon={'exclamation-triangle'}
       key="compilation"
       onClick={onClick}
-      size={Button.ButtonSize.small}
-      text="Help me with code errors"
+      size={Button.ButtonSize.default}
+      text="Code errors"
     />
   );
 };

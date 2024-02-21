@@ -55,15 +55,9 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
     },
   ];
 
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    dispatch(addAIResponse(''));
-    setSelected(e.target.value);
-  };
-
   const compilationSelected = selectedTutorType === TutorType.COMPILATION;
-  const validationSelected = selected === 'validation';
-  const questionSelected = selected === 'question';
+  const validationSelected = selectedTutorType === TutorType.VALIDATION;
+  const questionSelected = selectedTutorType === TutorType.GENERAL_CHAT;
 
   return (
     <div
@@ -79,10 +73,6 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
         ) : (
           <div>
             <h4> What would you like AI Tutor to help you with?</h4>
-            <RadioButtonsGroup
-              radioButtons={radioButtons}
-              onChange={onChange}
-            />
             <TutorTypeSelector />
           </div>
         )}
