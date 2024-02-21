@@ -3,16 +3,6 @@ import _ from 'lodash';
 const DatablockStorage = {};
 let channelId = undefined;
 
-function getAuthToken() {
-  const tokenDOM = document.querySelector('meta[name="csrf-token"]');
-  if (!tokenDOM) {
-    //throw new Error('Could not find CSRF token');
-    console.error('Could not find CSRF token');
-    return;
-  }
-  return tokenDOM.content;
-}
-
 function urlFor(func_name) {
   // FIXME: this doesn't work for all URLs where this can be loaded from
   // e.g. http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g/edit/
@@ -25,13 +15,8 @@ function _fetch(path, method, params) {
     return fetch(
       urlFor(path) +
         '?' +
-        new URLSearchParams({
-          ...params,
-          //authenticity_token: getAuthToken(),
-        }),
-      {
-        method: 'GET',
-      }
+        new URLSearchParams(params),
+      { method: 'GET' }
     );
   } else {
     return fetch(urlFor(path), {
@@ -39,7 +24,6 @@ function _fetch(path, method, params) {
       body: JSON.stringify(params),
       headers: {
         'Content-Type': 'application/json',
-        //'X-CSRF-TOKEN': getAuthToken(),
         'X-Requested-With': 'XMLHttpRequest',
       },
       credentials: 'same-origin',
