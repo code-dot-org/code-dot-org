@@ -3,6 +3,9 @@ import {SoundLoadCallbacks} from '../types';
 import SamplePlayer from './SamplePlayer';
 import {AudioPlayer, SampleEvent} from './types';
 
+/**
+ * An {@link AudioPlayer} implementation that wraps the {@link SamplePlayer}.
+ */
 class SamplePlayerWrapper implements AudioPlayer {
   constructor(
     private readonly samplePlayer: SamplePlayer,
@@ -46,6 +49,16 @@ class SamplePlayerWrapper implements AudioPlayer {
     return this.samplePlayer.previewSample(sample.sampleId, onStop);
   }
 
+  async playSamplesImmediately(
+    samples: SampleEvent[],
+    onStop?: () => void
+  ): Promise<void> {
+    return this.samplePlayer.previewSamples(
+      samples.map(sample => this.getSampleWithOffset(sample)),
+      onStop
+    );
+  }
+
   async playSequenceImmediately(): Promise<void> {
     console.log('Not supported');
   }
@@ -77,6 +90,10 @@ class SamplePlayerWrapper implements AudioPlayer {
 
   stop() {
     this.samplePlayer.stopPlayback();
+  }
+
+  cancelPendingEvents(): void {
+    this.samplePlayer.stopAllSamplesStillToPlay();
   }
 
   // Converts actual seconds used by the audio system into a playhead

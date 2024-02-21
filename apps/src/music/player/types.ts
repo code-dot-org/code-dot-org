@@ -8,6 +8,9 @@ export interface AudioPlayer {
   /** If this player supports samplers */
   supportsSamplers(): boolean;
 
+  /** Set the current BPM */
+  setBpm(bpm: number): void;
+
   /** Get the current playback position in 1-based measures */
   getCurrentPlaybackPosition(): number;
 
@@ -30,6 +33,11 @@ export interface AudioPlayer {
     onStop?: () => void
   ): Promise<void>;
 
+  playSamplesImmediately(
+    samples: SampleEvent[],
+    onStop?: () => void
+  ): Promise<void>;
+
   /** Play a sequence of notes immediately (used for previews) */
   playSequenceImmediately(sequence: SamplerSequence): Promise<void>;
 
@@ -47,6 +55,9 @@ export interface AudioPlayer {
 
   /** Stop playback */
   stop(): void;
+
+  /** Cancel pending audio events */
+  cancelPendingEvents(): void;
 }
 
 /** A single sound played on the timeline */
