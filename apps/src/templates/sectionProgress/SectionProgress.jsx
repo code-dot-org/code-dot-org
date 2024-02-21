@@ -24,6 +24,7 @@ import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import styleConstants from './progressTables/progress-table-constants.module.scss';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
 
@@ -149,7 +150,7 @@ class SectionProgress extends Component {
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
-      <div>
+      <div className={dashboardStyles.dashboardPage}>
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
