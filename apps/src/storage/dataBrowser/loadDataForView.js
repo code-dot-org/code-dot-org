@@ -16,13 +16,10 @@ let lastTableName;
 let lastStorage;
 
 export function refreshCurrentDataView() {
+  // TODO: post-firebase-cleanup, remove if guard, but keep the contents
   if (isDatablockStorage()) {
     loadDataForView(lastStorage, lastView, null, lastTableName);
   }
-
-  // FIXME: unfirebase
-  // If using firebase storage, this is a no-op because firebase
-  // uses subscriptions and updates the redux store automatically.
 }
 
 /**
