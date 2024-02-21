@@ -5691,7 +5691,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:7.0.2":
+"@typescript-eslint/eslint-plugin@npm:^7.0.2":
   version: 7.0.2
   resolution: "@typescript-eslint/eslint-plugin@npm:7.0.2"
   dependencies:
@@ -5716,7 +5716,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:7.0.2":
+"@typescript-eslint/parser@npm:^7.0.2":
   version: 7.0.2
   resolution: "@typescript-eslint/parser@npm:7.0.2"
   dependencies:
@@ -8210,6 +8210,8 @@ __metadata:
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     "@types/sinon": ^10.0.14
+    "@typescript-eslint/eslint-plugin": ^7.0.2
+    "@typescript-eslint/parser": ^7.0.2
     ace-builds: ^1.4.12
     aws-sdk: 2.1231.0
     babel-loader: ^8.2.2
@@ -8413,7 +8415,6 @@ __metadata:
     ts-loader: ^9.4.2
     ts-sinon: ^2.0.2
     typescript: ^5.3.3
-    typescript-eslint: ^7.0.2
     uglifyjs-webpack-plugin: ^2.2.0
     unminified-webpack-plugin: ^3.0.0
     url-loader: ^4.1.1
@@ -28653,21 +28654,6 @@ temporal@latest:
   version: 0.0.6
   resolution: "typedarray@npm:0.0.6"
   checksum: 33b39f3d0e8463985eeaeeacc3cb2e28bc3dfaf2a5ed219628c0b629d5d7b810b0eb2165f9f607c34871d5daa92ba1dc69f49051cf7d578b4cbd26c340b9d1b1
-  languageName: node
-  linkType: hard
-
-"typescript-eslint@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "typescript-eslint@npm:7.0.2"
-  dependencies:
-    "@typescript-eslint/eslint-plugin": 7.0.2
-    "@typescript-eslint/parser": 7.0.2
-  peerDependencies:
-    eslint: ^8.56.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 548effe45694a729606788e78edfad1d83eda6fe485abd73c2ae5b73135f29b41546ae5168726a1cb6b72b9bd9b8e4d003d00329d05c219228fa13d846379822
   languageName: node
   linkType: hard
 
