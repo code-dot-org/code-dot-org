@@ -41,7 +41,7 @@ export default project => {
 
   if ($('#bookmark_project').length && project.isProjectLevel()) {
     $('#bookmark_project').click(function () {
-      var url = `/featured_projects/${project.getCurrentId()}/save`;
+      var url = `/featured_projects/${project.getCurrentId()}/bookmark`;
       $.ajax({
         url: url,
         type: 'PUT',
