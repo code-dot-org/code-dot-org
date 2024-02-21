@@ -8,7 +8,14 @@ import WarningModal from './warningModal';
 /**
  * Renders the AI Tutor main chat workspace component.
  */
-const ChatWorkspace: React.FunctionComponent = () => {
+
+interface ChatWorkspaceProps {
+  generalChat: boolean;
+}
+
+const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  generalChat,
+}) => {
   const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
@@ -28,16 +35,18 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
   return (
     <div id="chat-workspace-area" className={style.chatWorkspace}>
-      <WarningModal />
+      {generalChat && <WarningModal />}
       <div id="chat-workspace-conversation" className={style.conversationArea}>
         {storedMessages.map(message => (
           <ChatMessage message={message} key={message.id} />
         ))}
         {showWaitingAnimation()}
       </div>
-      <div id="chat-workspace-editor" className={style.userChatMessageEditor}>
-        <UserChatMessageEditor />
-      </div>
+      {generalChat && (
+        <div id="chat-workspace-editor" className={style.userChatMessageEditor}>
+          <UserChatMessageEditor />
+        </div>
+      )}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import ChatWorkspace from './chatWorkspace';
 const GeneralChatTutor: React.FunctionComponent = () => {
   return (
     <div className={style.tutorContainer}>
-      <ChatWorkspace />
+      <ChatWorkspace generalChat={true} />
     </div>
   );
 };

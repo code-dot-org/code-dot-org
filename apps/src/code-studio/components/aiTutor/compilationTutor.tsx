@@ -2,10 +2,11 @@ import React from 'react';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {addChatMessage, askAITutor, clearChatMessages} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {TutorType} from '@cdo/apps/aiTutor/types';
+import {Role, Status, TutorType} from '@cdo/apps/aiTutor/types';
+import ChatWorkspace from './chatWorkspace';
 
 // AI Tutor feature that explains to students why their code did not compile.
 
@@ -44,6 +45,7 @@ const CompilationTutor: React.FunctionComponent = () => {
 
   return (
     <div className={style.tutorContainer}>
+      <ChatWorkspace generalChat={false} />
       {!hasRunOrTestedCode && (
         <h4>Run your code first and see what happens.</h4>
       )}
