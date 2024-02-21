@@ -20,13 +20,7 @@ import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
-import classNames from 'classnames';
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
-
-const applyV1TeacherDashboardWidth = children => {
-  return <div className={dashboardStyles.dashboardPage}>{children}</div>;
-};
 
 function TeacherDashboard({
   studioUrlPrefix,
@@ -111,11 +105,9 @@ function TeacherDashboard({
       <Switch>
         <Route
           path={TeacherDashboardPath.manageStudents}
-          component={props =>
-            applyV1TeacherDashboardWidth(
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-            )
-          }
+          component={props => (
+            <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+          )}
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
@@ -125,46 +117,29 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.standardsReport}
-          component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
+          component={props => <StandardsReport />}
         />
         {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
         {studentCount === 0 && (
-          <Route
-            component={props =>
-              applyV1TeacherDashboardWidth(
-                <EmptySection sectionId={sectionId} />
-              )
-            }
-          />
+          <Route component={props => <EmptySection sectionId={sectionId} />} />
         )}
         <Route
           path={TeacherDashboardPath.projects}
-          component={props =>
-            applyV1TeacherDashboardWidth(
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            )
-          }
+          component={props => (
+            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+          )}
         />
         <Route
           path={TeacherDashboardPath.stats}
-          component={props =>
-            applyV1TeacherDashboardWidth(<StatsTableWithData />)
-          }
+          component={props => <StatsTableWithData />}
         />
         {coursesWithProgress.length === 0 && (
           <Route
-            component={() =>
-              applyV1TeacherDashboardWidth(
-                <div
-                  className={classNames(
-                    dashboardStyles.text,
-                    dashboardStyles.dashboardPage
-                  )}
-                >
-                  <SafeMarkdown markdown={i18n.noProgressSection()} />
-                </div>
-              )
-            }
+            component={() => (
+              <div style={styles.text}>
+                <SafeMarkdown markdown={i18n.noProgressSection()} />
+              </div>
+            )}
           />
         )}
         <Route
@@ -173,24 +148,18 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.textResponses}
-          component={props => applyV1TeacherDashboardWidth(<TextResponses />)}
+          component={props => <TextResponses />}
         />
         <Route
           path={TeacherDashboardPath.assessments}
-          component={props =>
-            applyV1TeacherDashboardWidth(
-              <SectionAssessments sectionName={sectionName} />
-            )
-          }
+          component={props => <SectionAssessments sectionName={sectionName} />}
         />
         {showAITutorTab && (
           <Route
             path={TeacherDashboardPath.aiTutorChatMessages}
-            component={props =>
-              applyV1TeacherDashboardWidth(
-                <AITutorChatMessagesTable sectionId={sectionId} />
-              )
-            }
+            component={props => (
+              <AITutorChatMessagesTable sectionId={sectionId} />
+            )}
           />
         )}
       </Switch>
@@ -208,6 +177,14 @@ TeacherDashboard.propTypes = {
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,
+};
+
+const styles = {
+  text: {
+    fontStyle: 'italic',
+    textAlign: 'center',
+    paddingTop: 10,
+  },
 };
 
 export default TeacherDashboard;
