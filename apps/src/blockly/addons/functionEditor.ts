@@ -412,7 +412,7 @@ export default class FunctionEditor {
       this.block.getProcedureModel().getName(),
       Blockly.getHiddenDefinitionWorkspace()
     ).forEach(block => {
-      block.dispose(false /* healStack */);
+      block.dispose(true /* healStack */);
     });
 
     // delete all caller blocks from the main workspace
@@ -420,7 +420,7 @@ export default class FunctionEditor {
       this.block.getProcedureModel().getName(),
       Blockly.mainBlockSpace
     ).forEach(block => {
-      block.dispose(false /* healStack */);
+      block.dispose(true /* healStack */);
     });
 
     // delete the block from the editor workspace's procedure map
@@ -430,7 +430,8 @@ export default class FunctionEditor {
       ?.getProcedureMap()
       .delete(this.block.getProcedureModel().getId());
 
-    // delete the block from the editor workspace and hide the modal
+    // Delete the block from the editor workspace and hide the modal.
+    // We don't need to heal the stack here because we always clear the editor workspace.
     this.block.dispose(false /* healStack */);
     this.hide();
   }
