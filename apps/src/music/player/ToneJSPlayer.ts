@@ -6,7 +6,7 @@
 
 import {SoundLoadCallbacks} from '../types';
 import SoundCache from './SoundCache';
-import * as Tone from 'tone';
+import {GrainPlayer, Player, Sampler, Transport, getContext, start} from 'tone';
 
 const DEFAULT_BPM = 120;
 
@@ -23,44 +23,45 @@ export interface SamplerSequence {
 }
 
 class ToneJSPlayer {
-  private samplers: {[instrument: string]: Tone.Sampler};
-  private activePlayers: (Tone.Player | Tone.GrainPlayer)[];
+  private samplers: {[instrument: string]: Sampler};
+  private activePlayers: (Player | GrainPlayer)[];
   private currentPreview: {
     id: string;
-    player: Tone.Player | Tone.GrainPlayer;
+    player: Player | GrainPlayer;
   } | null;
 
   constructor(
     bpm = DEFAULT_BPM,
     private readonly soundCache: SoundCache = new SoundCache()
   ) {
-    Tone.Transport.bpm.value = bpm;
+    Transport.bpm.value = bpm;
     this.activePlayers = [];
     this.samplers = {};
     this.currentPreview = null;
-    Tone.start().then(() => {
+
+    start().then(() => {
       console.log('TONE: context started');
     });
   }
 
   getCurrentPosition(): string {
-    return Tone.Transport.position as string;
+    return Transport.position as string;
   }
 
   goToPosition(position: string) {
-    Tone.Transport.position = position;
+    Transport.position = position;
   }
 
   setLoopEnabled(enabled: boolean) {
-    Tone.Transport.loop = enabled;
+    Transport.loop = enabled;
   }
 
   setLoopStart(startPosition: string) {
-    Tone.Transport.loopStart = startPosition;
+    Transport.loopStart = startPosition;
   }
 
   setLoopEnd(endPosition: string) {
-    Tone.Transport.loopEnd = endPosition;
+    Transport.loopEnd = endPosition;
   }
 
   async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
@@ -81,11 +82,12 @@ class ToneJSPlayer {
       }
     });
 
-    const sampler = new Tone.Sampler(urls).toDestination();
+    const sampler = new Sampler(urls).toDestination();
     this.samplers[instrumentName] = sampler;
   }
 
   async playSampleImmediately(sound: SampleEvent, onStop?: () => void) {
+    await this.startContextIfNeeded();
     if (this.currentPreview) {
       this.currentPreview.player.stop();
     }
@@ -96,9 +98,9 @@ class ToneJSPlayer {
       return;
     }
 
-    const playbackRate = Tone.Transport.bpm.value / sound.originalBpm;
+    const playbackRate = Transport.bpm.value / sound.originalBpm;
 
-    const player = new Tone.GrainPlayer({
+    const player = new GrainPlayer({
       url: buffer,
       grainSize: playbackRate * 0.1,
     }).toDestination();
@@ -121,11 +123,12 @@ class ToneJSPlayer {
     this.currentPreview = {id: sound.id, player};
   }
 
-  playSequenceImmediately(sequence: SamplerSequence) {
+  async playSequenceImmediately(sequence: SamplerSequence) {
+    await this.startContextIfNeeded();
     sequence.events.forEach(({notes, transportTime}) => {
       this.samplers[sequence.instrument].triggerAttack(
         notes,
-        `+${Tone.Transport.toSeconds(transportTime)}`
+        `+${Transport.toSeconds(transportTime)}`
       );
     });
   }
@@ -139,7 +142,7 @@ class ToneJSPlayer {
   }
 
   setBpm(bpm: number) {
-    Tone.Transport.bpm.value = bpm;
+    Transport.bpm.value = bpm;
   }
 
   scheduleSample(sample: SampleEvent) {
@@ -149,13 +152,13 @@ class ToneJSPlayer {
       return;
     }
 
-    const playbackRate = Tone.Transport.bpm.value / sample.originalBpm;
+    const playbackRate = Transport.bpm.value / sample.originalBpm;
 
     let player;
     if (sample.pitchShift === 0 && playbackRate === 1) {
-      player = new Tone.Player(buffer).toDestination();
+      player = new Player(buffer).toDestination();
     } else {
-      player = new Tone.GrainPlayer({
+      player = new GrainPlayer({
         url: buffer,
         grainSize: playbackRate * 0.1,
       }).toDestination();
@@ -175,23 +178,24 @@ class ToneJSPlayer {
     });
   }
 
-  start(startTime?: string) {
+  async start(startTime?: string) {
+    await this.startContextIfNeeded();
     this.cancelPreviews();
-    Tone.Transport.start(undefined, startTime);
+    Transport.start(undefined, startTime);
   }
 
   pause() {
-    Tone.Transport.pause();
+    Transport.pause();
   }
 
   stop() {
-    Tone.Transport.stop();
+    Transport.stop();
     this.stopAllPlayers();
   }
 
   cancelAllEvents() {
     this.stopAllPlayers();
-    Tone.Transport.cancel();
+    Transport.cancel();
   }
 
   private stopAllPlayers() {
@@ -200,6 +204,12 @@ class ToneJSPlayer {
     Object.values(this.samplers).forEach(sampler =>
       sampler.releaseAll().unsync()
     );
+  }
+
+  private async startContextIfNeeded() {
+    if (getContext().state !== 'running') {
+      return start();
+    }
   }
 }
 
