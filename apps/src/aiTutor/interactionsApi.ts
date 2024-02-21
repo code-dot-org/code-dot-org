@@ -22,3 +22,25 @@ export async function savePromptAndResponse(
     });
   }
 }
+
+export async function getSectionAITutorInteractions(sectionId: number) {
+  let data;
+  let response;
+  try {
+    response = await fetch(`/ai_tutor_interactions?sectionId=${sectionId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+    });
+    data = await response.json();
+  } catch (error) {
+    console.log('error fetching ai tutor interactions', error);
+  }
+
+  if (response && response.ok) {
+    console.log("reponse is ok!")
+    return data;
+  }
+}

@@ -27,7 +27,7 @@ class AiTutorInteractionsController < ApplicationController
     ai_tutor_interaction_params[:user_id] = current_user.id
     ai_tutor_interaction_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
     if params[:isProjectBacked]
-      project_data = find_project_and_version_id(params[:level_id], params[:script_id])
+      project_data = find_project_and_version_id(ai_tutor_interaction_params[:level_id], ai_tutor_interaction_params[:script_id])
       ai_tutor_interaction_params[:project_id] = project_data[:project_id]
       ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]
     end
@@ -70,6 +70,8 @@ class AiTutorInteractionsController < ApplicationController
     section = Section.find(params[:sectionId])
     return render(status: :not_found, json: {error: 'Section not found'}) unless section
     return render(status: :forbidden, json: {error: 'This user does not own this section'}) unless current_user.sections.include?(section)
+    puts "We're in the controller and there should be two student ids..."
+    puts section.students.pluck(:id)
     render json:  AiTutorInteraction.where(user_id: section.students.pluck(:id))
   end
 end
