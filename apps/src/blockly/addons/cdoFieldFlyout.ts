@@ -1,7 +1,16 @@
-import GoogleBlockly from 'blockly/core';
+import GoogleBlockly, {Block, FieldConfig, WorkspaceSvg} from 'blockly/core';
 import CdoBlockFlyout from './cdoBlockFlyout';
 
+interface FieldFlyoutConfig extends FieldConfig {
+  flyoutKey: string;
+}
+
 export default class CdoFieldFlyout extends GoogleBlockly.Field {
+  private workspace_: WorkspaceSvg | undefined;
+  private flyout_: CdoBlockFlyout | undefined;
+  private minWidth_ = 0;
+  private maxWidth_ = 1000;
+
   /**
    * This is a customized class that extends Blockly's Field class.
    * This field depends on `CdoBlockFlyout`, which is used to create a flyout
@@ -10,7 +19,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {string} value - The initial value of the field.
    * @param {Object} [opt_config] - A map of options used to configure the field.
    */
-  constructor(value, opt_config) {
+  constructor(value: string, opt_config: FieldFlyoutConfig) {
     super(value);
     this.configure_(opt_config);
   }
@@ -21,11 +30,11 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {Object} options A JSON object with options.
    * @returns {CdoFieldFlyout} The new field instance.
    */
-  static fromJson(options) {
+  static fromJson(options: FieldFlyoutConfig) {
     return new CdoFieldFlyout(options.flyoutKey, options);
   }
 
-  static getFlyoutId(block) {
+  static getFlyoutId(block: Block) {
     return `flyout_${block.type}_${block.id}`;
   }
 
@@ -37,16 +46,15 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   initView() {
-    this.workspace_ = this.getSourceBlock().workspace;
+    this.workspace_ = this.getSourceBlock()?.workspace as WorkspaceSvg;
     this.flyout_ = new CdoBlockFlyout({
       ...Blockly.getMainWorkspace().options,
-      disabledPatternId: this.workspace_.options.disabledPatternId,
       parentWorkspace: this.workspace_,
       RTL: this.workspace_.RTL,
       minWidth: this.minWidth_,
       maxWidth: this.maxWidth_,
     });
-    this.fieldGroup_.appendChild(this.flyout_.createDom('g'));
+    this.fieldGroup_?.appendChild(this.flyout_.createDom('g'));
   }
 
   /**
@@ -91,25 +99,30 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   render_() {
-    if (this.isFlyoutVisible()) {
+    if (this.isFlyoutVisible() && this.flyout_ && this.sourceBlock_) {
       // Always reflow and re-show the flyout before re-sizing the field.
       // This will ensure the flyout is reporting the correct size (reflow),
       // and the blocks in the flyout are spaced correctly (show).
       this.flyout_.reflow();
       this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_));
     }
-    // The field should be the size of the fieldGroup_.
-    const fieldGroupBBox = this.fieldGroup_.getBBox();
-    this.size_ = new Blockly.utils.Size(
-      fieldGroupBBox.width,
-      fieldGroupBBox.height
-    );
+    if (this.fieldGroup_) {
+      // The field should be the size of the fieldGroup_.
+      const fieldGroupBBox = this.fieldGroup_.getBBox();
+      this.size_ = new Blockly.utils.Size(
+        fieldGroupBBox.width,
+        fieldGroupBBox.height
+      );
+    }
   }
 
   /**
    * Show the flyout, then re-render it.
    */
   setFlyoutVisible() {
+    if (!this.flyout_ || !this.workspace_ || !this.sourceBlock_) {
+      return;
+    }
     if (!this.flyout_.targetWorkspace) {
       this.flyout_.init(this.workspace_);
     }
@@ -123,6 +136,6 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @returns True if visible.
    */
   isFlyoutVisible() {
-    return this.flyout_.isVisible();
+    return this.flyout_?.isVisible() || false;
   }
 }
