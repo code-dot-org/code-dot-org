@@ -87,7 +87,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
-      'procedure_call_heal_stack',
+      'procedure_call_do_update',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -208,7 +208,9 @@ GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
 
 // Override the doProcedureUpdate function to heal the stack. Without this,
 // any child blocks connected to a call block would also get deleted.
-GoogleBlockly.Extensions.register('procedure_call_heal_stack', function () {
+// Copied directly from
+// https://github.com/BeksOmega/blockly-samples/blob/7954a8fff50e41fa7c0f891e957bf9ed616361d6/plugins/block-shareable-procedures/src/blocks.ts#L1068
+GoogleBlockly.Extensions.register('procedure_call_do_update', function () {
   const mixin = {
     /**
      * Updates the shape of this block to reflect the state of the data model.
