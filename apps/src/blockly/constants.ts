@@ -27,6 +27,37 @@ export enum Themes {
   TRITANOPIA_DARK = 'cdotritanopiadark',
 }
 
+export enum BlockStyles {
+  DEFAULT = 'default',
+  SETUP = 'setup_blocks',
+  EVENT = 'event_blocks',
+  LOOP = 'loop_blocks',
+  LOGIC = 'logic_blocks',
+  PROCEDURE = 'procedure_blocks',
+  VARIABLE = 'variable_blocks',
+  MATH = 'math_blocks',
+  TEXT = 'text_blocks',
+  COLOR = 'colour_blocks',
+  BEHAVIOR = 'behavior_blocks',
+}
+
+export const BlockColors = {
+  DEFAULT: [184, 1.0, 0.74],
+  SETUP: [39, 1.0, 0.99],
+  EVENT: [140, 1.0, 0.74],
+  LOOP: [322, 0.9, 0.95],
+  LOGIC: [196, 1.0, 0.79],
+  PROCEDURE: [94, 0.84, 0.6],
+  VARIABLE: [312, 0.32, 0.62],
+  MATH: [258, 0.35, 0.62],
+  TEXT: [160, 0.45, 0.65],
+  COLOR: [10, 0.45, 0.65],
+  BEHAVIOR: [136, 0.84, 0.8],
+  // The colors below do not have a corresponding style and are incompatible with themes.
+  COMMENT: [0, 0, 0.6],
+  UNKNOWN: [0, 0, 0.8],
+};
+
 export const Renderers = {
   GERAS: 'cdo_renderer_geras',
   THRASOS: 'cdo_renderer_thrasos',
