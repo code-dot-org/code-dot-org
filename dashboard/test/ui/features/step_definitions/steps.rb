@@ -236,8 +236,13 @@ When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, neg
   wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
 
+def jquery_is_defined
+  "(typeof jQuery !== 'undefined') && ($ !== 'undefined')"
+end
+
 def jquery_is_element_visible(selector)
-  "return (typeof jQuery !== 'undefined') && $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+  "return #{jquery_is_defined} &&" +
+  " $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
 
 def jquery_is_element_displayed(selector)
@@ -960,7 +965,7 @@ end
 
 def wait_for_jquery
   wait_until do
-    @browser.execute_script("return (typeof jQuery !== 'undefined');")
+    @browser.execute_script("return #{jquery_is_defined};")
   rescue Selenium::WebDriver::Error::ScriptTimeoutError
     puts "execute_script timed out after 30 seconds, likely because this is \
 Safari and the browser was still on about:blank when wait_for_jquery \
