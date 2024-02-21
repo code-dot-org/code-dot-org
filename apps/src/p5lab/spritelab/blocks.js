@@ -547,6 +547,8 @@ export default {
       !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
+      // This is only used by CDO Blockly. When we are ready to remove support
+      // for CDO Blockly we can remove this call.
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {

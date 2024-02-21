@@ -1,4 +1,5 @@
 // This file contains customizations to CDO Blockly Sprite Lab blocks.
+// When we are ready to remove support for CDO Blockly we can remove this file.
 import i18n from '@cdo/locale';
 import {
   BlockColors,
