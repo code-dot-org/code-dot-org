@@ -8198,7 +8198,7 @@ __metadata:
     codemirror: 5.5
     codemirror-spell-checker: ^1.1.2
     copy-webpack-plugin: ^9.0.1
-    crypto-js: ^3.1.9-1
+    crypto-browserify: ^3.12.0
     css-loader: ^6.2.0
     csv-parse: ^4.4.6
     dapjs: ^2.3.0
@@ -10531,7 +10531,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"crypto-browserify@npm:^3.11.0":
+"crypto-browserify@npm:^3.11.0, crypto-browserify@npm:^3.12.0":
   version: 3.12.0
   resolution: "crypto-browserify@npm:3.12.0"
   dependencies:
@@ -10547,13 +10547,6 @@ canvg@gabelerner/canvg:
     randombytes: ^2.0.0
     randomfill: ^1.0.3
   checksum: c1609af82605474262f3eaa07daa0b2140026bd264ab316d4bf1170272570dbe02f0c49e29407fe0d3634f96c507c27a19a6765fb856fed854a625f9d15618e2
-  languageName: node
-  linkType: hard
-
-"crypto-js@npm:^3.1.9-1":
-  version: 3.3.0
-  resolution: "crypto-js@npm:3.3.0"
-  checksum: 193923143a4784b2f974366068d96fe8280168fd3fef2bfea9551a5c3e32096f5a8fa49ff4eeb5bd0b9716d325618d38cfbe6125e359a4ef488fbca93e600824
   languageName: node
   linkType: hard
 

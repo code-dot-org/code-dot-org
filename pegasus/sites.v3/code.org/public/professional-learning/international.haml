@@ -34,15 +34,14 @@ set_dir: true
         =hoc_s("intl_pl_page.intro.button")
   .clear
 
--# TODO ACQ-1410: Set this live when the Int'l PL Partners page is live
--# %section.bg-neutral-light
--#   .wrapper.centered
--#     %h2=hoc_s("intl_pl_page.partners.heading")
--#     %p=hoc_s("intl_pl_page.partners.desc")
--#     %a.link-button{href: "/professional-learning/international-partners"}
--#       =hoc_s("intl_pl_page.partners.button")
-
 %section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s("intl_pl_page.partners.heading")
+    %p=hoc_s("intl_pl_page.partners.desc")
+    %a.link-button{href: "/professional-learning/international-partners"}
+      =hoc_s("intl_pl_page.partners.button")
+
+%section
   .wrapper.centered
     %h2=hoc_s("intl_pl_page.resources.heading")
     = view :"professional_learning/intl_pl_resources"

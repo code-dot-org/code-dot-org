@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-14 19:27:17 UTC",
+    "serialized_at": "2024-02-18 22:41:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3776,7 +3776,7 @@
       "key": "7e34abfb-c02d-4acd-9fe1-27529d038085",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r your_personal_style_2/csd/2024]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slide to go over the goals of this project\n* Design a page to meet a user’s needs\n* Use CSS to style a webpage \n* Write readable code\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r your_personal_style_2/csd/2024]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slide to go over the goals of this project\n* Design a page to meet a user’s needs\n* Add images to a web page\n* Use CSS to style a web page \n* Write readable code\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3793,7 +3793,7 @@
       "key": "133e9482-e1d2-4c44-a9c7-72f2af87ed2c",
       "position": 3,
       "properties": {
-        "description": "**Question of the Day: How can you express your personal style on a web page?**"
+        "description": "**Question of the Day: How can I use CSS to style a web page for a user?**"
       },
       "seeding_key": {
         "activity_section.key": "133e9482-e1d2-4c44-a9c7-72f2af87ed2c",
@@ -7589,15 +7589,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD web CSS project HTML_2024"
-        ],
         "progression": "Add Style to Your User's Page"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD web CSS project HTML_2024"
+          "CSD U2 L10 Project Choices_2024"
         ],
         "lesson.key": "Mini-Project: Your Personal Style",
         "lesson_group.key": "lessonGroup-2",
@@ -7605,7 +7602,7 @@
         "activity_section.key": "3da64b0e-3c82-454f-befb-7a7b4fc175ae"
       },
       "level_keys": [
-        "CSD web CSS project HTML_2024"
+        "CSD U2 L10 Project Choices_2024"
       ]
     },
     {
@@ -7614,15 +7611,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD web CSS project CSS_2024"
-        ],
         "progression": "Add Style to Your User's Page"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD web CSS project CSS_2024"
+          "CSD U2 L10 Project Choices-2_2024"
         ],
         "lesson.key": "Mini-Project: Your Personal Style",
         "lesson_group.key": "lessonGroup-2",
@@ -7630,24 +7624,43 @@
         "activity_section.key": "3da64b0e-3c82-454f-befb-7a7b4fc175ae"
       },
       "level_keys": [
-        "CSD web CSS project CSS_2024"
+        "CSD U2 L10 Project Choices-2_2024"
       ]
     },
     {
       "chapter": 57,
       "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Style to Your User's Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 L10 Project Choices-3_2024"
+        ],
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "3da64b0e-3c82-454f-befb-7a7b4fc175ae"
+      },
+      "level_keys": [
+        "CSD U2 L10 Project Choices-3_2024"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD web CSS project check_2024"
-        ],
         "progression": "Review Your Page"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD web CSS project check_2024"
+          "CSD U2 L10 Project Choices-4_2024"
         ],
         "lesson.key": "Mini-Project: Your Personal Style",
         "lesson_group.key": "lessonGroup-2",
@@ -7655,11 +7668,11 @@
         "activity_section.key": "b6bdc61d-91e0-4f2d-9db7-fa74cbac455c"
       },
       "level_keys": [
-        "CSD web CSS project check_2024"
+        "CSD U2 L10 Project Choices-4_2024"
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7684,7 +7697,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7709,7 +7722,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7734,7 +7747,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7759,7 +7772,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7784,7 +7797,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7809,7 +7822,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7834,7 +7847,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7859,7 +7872,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7884,7 +7897,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7909,7 +7922,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7934,7 +7947,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7959,7 +7972,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7984,7 +7997,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8009,7 +8022,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8034,7 +8047,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8059,7 +8072,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8084,7 +8097,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8109,7 +8122,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8134,7 +8147,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8159,7 +8172,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8184,7 +8197,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8209,7 +8222,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8234,7 +8247,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8259,7 +8272,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8284,7 +8297,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8309,7 +8322,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8334,7 +8347,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8359,7 +8372,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8384,7 +8397,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8409,7 +8422,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8434,7 +8447,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8459,7 +8472,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8484,7 +8497,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8509,7 +8522,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8534,7 +8547,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8559,7 +8572,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8584,7 +8597,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8609,7 +8622,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8634,7 +8647,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8659,7 +8672,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8684,7 +8697,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8709,7 +8722,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8734,11 +8747,14 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L18 assessment"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8756,11 +8772,14 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 L18 challenge_2024"
+        ],
         "progression": "Challenge Levels"
       },
       "bonus": false,
@@ -8778,7 +8797,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8803,7 +8822,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8828,7 +8847,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8853,7 +8872,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8878,7 +8897,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8903,7 +8922,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8928,7 +8947,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8953,7 +8972,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8978,7 +8997,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -9003,7 +9022,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9678,9 +9697,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD web CSS project HTML_2024",
+        "level.key": "CSD U2 L10 Project Choices_2024",
         "script_level.level_keys": [
-          "CSD web CSS project HTML_2024"
+          "CSD U2 L10 Project Choices_2024"
         ],
         "lesson.key": "Mini-Project: Your Personal Style",
         "lesson_group.key": "lessonGroup-2",
@@ -9690,9 +9709,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD web CSS project CSS_2024",
+        "level.key": "CSD U2 L10 Project Choices-2_2024",
         "script_level.level_keys": [
-          "CSD web CSS project CSS_2024"
+          "CSD U2 L10 Project Choices-2_2024"
         ],
         "lesson.key": "Mini-Project: Your Personal Style",
         "lesson_group.key": "lessonGroup-2",
@@ -9702,9 +9721,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD web CSS project check_2024",
+        "level.key": "CSD U2 L10 Project Choices-3_2024",
         "script_level.level_keys": [
-          "CSD web CSS project check_2024"
+          "CSD U2 L10 Project Choices-3_2024"
+        ],
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "3da64b0e-3c82-454f-befb-7a7b4fc175ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 L10 Project Choices-4_2024",
+        "script_level.level_keys": [
+          "CSD U2 L10 Project Choices-4_2024"
         ],
         "lesson.key": "Mini-Project: Your Personal Style",
         "lesson_group.key": "lessonGroup-2",
@@ -10765,7 +10796,7 @@
       }
     },
     {
-      "name": "HTML Web Page",
+      "name": "Peer Review",
       "url": "https://docs.google.com/document/d/1NhJK1vXmFaEzzUZ39eGBs0w9UJRvnj-ATDKWT1kuliY/",
       "key": "html_web_page_1",
       "properties": {

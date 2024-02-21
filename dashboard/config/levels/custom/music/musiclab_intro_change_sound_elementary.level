@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "long_instructions": "####Change a Sound\r\nThere's a block called <span style=\"color: #7D3C98;\">play drum kit</span> in your workspace! \r\n\r\nClick the [name](#clickable=play-sound-block-workspace) of the sound to select a new one.\r\n\r\nThen press [Run](#clickable=run-button).\r\n",
+    "long_instructions": "####Change a Sound\r\nThere's a block called <span style=\"color: #7D3C98;\"><strong>play drum kit</strong></span> in your workspace! \r\n\r\nClick the [name](#clickable=play-sound-block-workspace) of the sound to select a new one.\r\n\r\nThen press [Run](#clickable=run-button).\r\n",
     "level_data": {
       "startSources": {
         "blocks": {
@@ -109,7 +109,7 @@
     "hide_share_and_remix": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-15T22:56:27.346+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_change_sound\\\"\"],\"cloned_from\":\"musiclab_intro_change_sound\"},{\"changed_at\":\"2024-02-15 23:17:35 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:23:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:31:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:33:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:40:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-15T22:56:27.346+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_change_sound\\\"\"],\"cloned_from\":\"musiclab_intro_change_sound\"},{\"changed_at\":\"2024-02-15 23:17:35 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:23:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:31:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:33:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-15 23:40:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-17 00:34:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
