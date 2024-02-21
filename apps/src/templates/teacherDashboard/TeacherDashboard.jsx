@@ -20,6 +20,7 @@ import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
 
 function TeacherDashboard({
   studioUrlPrefix,
@@ -28,6 +29,7 @@ function TeacherDashboard({
   studentCount,
   coursesWithProgress,
   location,
+  showAITutorTab,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -97,7 +99,7 @@ function TeacherDashboard({
             components using Connect/Redux. Library we could use to fix issue:
             https://github.com/supasate/connected-react-router */}
           <TeacherDashboardHeader />
-          <TeacherDashboardNavigation />
+          <TeacherDashboardNavigation showAITutorTab={showAITutorTab} />
         </div>
       )}
       <Switch>
@@ -152,6 +154,14 @@ function TeacherDashboard({
           path={TeacherDashboardPath.assessments}
           component={props => <SectionAssessments sectionName={sectionName} />}
         />
+        {showAITutorTab && (
+          <Route
+            path={TeacherDashboardPath.aiTutorChatMessages}
+            component={props => (
+              <AITutorChatMessagesTable sectionId={sectionId} />
+            )}
+          />
+        )}
       </Switch>
     </div>
   );
@@ -163,6 +173,7 @@ TeacherDashboard.propTypes = {
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
   coursesWithProgress: PropTypes.array.isRequired,
+  showAITutorTab: PropTypes.bool,
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,

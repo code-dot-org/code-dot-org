@@ -411,7 +411,6 @@ FactoryBot.define do
     pay_fee {Pd::Application::TeacherApplication.options[:pay_fee].first}
     enough_course_hours {Pd::Application::TeacherApplication.options[:enough_course_hours].first}
     completing_on_behalf_of_someone_else {'No'}
-    replace_existing {'No, this course will be added to the schedule in addition to an existing computer science course'}
     will_teach {'Yes'}
 
     trait :csp do

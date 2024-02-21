@@ -146,6 +146,7 @@ class User < ApplicationRecord
     ai_rubrics_disabled
     sort_by_family_name
     show_progress_table_v2
+    lti_roster_sync_enabled
   )
 
   attr_accessor(
@@ -1495,6 +1496,11 @@ class User < ApplicationRecord
     !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
+  end
+
+  def can_view_student_ai_chat_messages?
+    sections.any?(&:assigned_csa?) &&
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
   # Students

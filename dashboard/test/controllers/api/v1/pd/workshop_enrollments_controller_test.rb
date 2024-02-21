@@ -275,7 +275,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
       years_teaching: "30",
       years_teaching_cs: "10",
       previous_courses: "I don’t have experience teaching any of these courses",
-      replace_existing: "I don’t know",
       csf_intro_other_factors: "I want to learn computer science concepts.",
       taught_ap_before: "Yes, AP CS Principles or AP CS A",
       planning_to_teach_ap: "Yes"

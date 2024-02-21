@@ -5,16 +5,13 @@ title 'JuiceMind Bridging Activity'
 markdown <<MARKDOWN
 <h2 style="text-align: center;">JuiceMind Quiz</h2>
 
-<div style="text-align: center;">
-<p>Now you're ready to test your knowledge! Click the picture below to join your class link.</p>
-</div>
-
 <a href="https://play.juicemind.com/join" target="_blank"> 
-<img src="https://images.code.org/d686effcfcf333eede2a1d82e793ac42-image-1707343907729.11.19 PM.png" style="display: block; margin: auto; width: 30%">
+<img src="https://images.code.org/50cf80120b2bc0fbd0adc73a1e8ec18d-image-1708117911828.gif" style="display: block; margin: auto; width: 20%">
 </a>
 
-
-
+<div style="text-align: center;">
+<p><strong>Click the picture above.</strong></p>
+</div>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

@@ -104,23 +104,23 @@ Code.org нь Code.org болон Hour of Code вэбсайтууд дээр Hou
 * Ирүүлсэн үйл ажиллагааг төлөөлж буй анхан шатны холбоо барих хаягийн нэр, имэйл
 * Үйл ажиллагааны нэр (нэрэнд “Кодын цаг” оруулах боломжгүй)
 * үйл ажиллагааны URL холбоос
-* Энэ үйл ажиллагаа нь хиймэл оюун ухааны орно уу: Тийм эсвэл Үгүй
-* Үйл ажиллагааны тодорхойлолт (хамгийн их тэмдэгтийн тоо: 400) 
-    * Энэ нь ихэвчлэн оюутны удирдамжтай эсвэл багшийн дэмжлэг үзүүлдэг эсэхийг тайлбарт оруулна уу. Нэмж дурдахад зарим сургуулиуд Код цагийн үйл ажиллагаа нь нийтлэг цөм эсвэл дараагийн үеийн шинжлэх ухааны стандартад нийцсэн эсэхийг мэдэх сонирхолтой байдаг. Хэрэв үйл ажиллагаа нь тодорхой стандартуудыг авч үзвэл энэ мэдээллийг оруулаарай.
-* Зориулалтын хэрэглэгчдэд санал болгож буй ангийн түвшин (ууд). Та \[Компьютерийн шинжлэх ухааны багш нарын холбооны K-12 стандартууд\] (https://k12cs.org/framework-statements-by-grade-band/) зэрэг тохирох компьютерийн шинжлэх ухааны ойлголтуудын талаар лавлаж болно. Жишээ зэрэг түвшин оруулах: 
-    * Цэцэрлэг - 1-р анги (4-6 нас)
-    * 2-5-р анги (7-10 нас)
-    * 6-8-р анги (11-13 нас)
-    * 9+ анги (14+ нас)
-* Таны үйл ажиллагаа заадаг програмчлалын хэлний жагсаалт. өөрөөр хэлбэл C/C ++, Java, JavaScript гэх мэт. эсвэл хэлний бие даасан (олон хэл дээр зааж болох хичээлийн төлөвлөгөөний хувьд) хэлний урлагийг сонгох.
-* Дэмжигдсэн байгалийн хэлний жагсаалт. Тэмдэглэл: Хэл илрүүлэх нь үйл ажиллагааны үйлчилгээ үзүүлэгчийн үүрэг юм; Бид бүх хэрэглэгчдийг өгсөн ганц URL руу дахин чиглүүлэх болно. эсвэл хэлний бие даасан (олон хэл дээр зааж болох хичээлийн төлөвлөгөөний хувьд)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Таны үйл ажиллагаа заадаг програмчлалын хэлний жагсаалт. өөрөөр хэлбэл C/C ++, Java, JavaScript гэх мэт. эсвэл хэлний бие даасан (олон хэл дээр зааж болох хичээлийн төлөвлөгөөний хувьд) choose language arts.
+* Дэмжигдсэн байгалийн хэлний жагсаалт. Тэмдэглэл: Хэл илрүүлэх нь үйл ажиллагааны үйлчилгээ үзүүлэгчийн үүрэг юм; Бид бүх хэрэглэгчдийг өгсөн ганц URL руу дахин чиглүүлэх болно. or language independent (for lesson plans that can be taught in multiple languages)
 * Сурган хүмүүжүүлэгч таны үйл ажиллагааг ашиглахын тулд ямар түвшний туршлагатай байх ёстой вэ? (Жишээ нь: Эхлэгч эсвэл тав тухтай.) Оюутнууд ямар түвшний туршлагатай байх ёстой вэ?
-* Сурган хүмүүжүүлэгч таны үйл ажиллагааг ашиглахын тулд ямар түвшний туршлагатай байх ёстой вэ? (Жишээ нь: Эхлэгч эсвэл тав тухтай.) Оюутнууд ямар түвшний туршлагатай байх ёстой вэ? Хэрэв та илүү дэвшилтэт цагийн Code™ үйл ажиллагааг бэлтгэхийг хүсч байвал үйл ажиллагааныхаа тодорхойлолтод шаардлагатай өмнөх мэдлэгийг оруулна уу.
-* Таны үйл ажиллагааны урт 
-    * Зөвхөн 1 цаг
-    * Дараахь сургалтанд 1 цаг
-    * 2-6 цаг (олон хичээл байж болно)
-* Хүртээмжтэй байрны жагсаалт, хэрэв таны үйл ажиллагаа тэдэнд байгаа бол. Үүнд дэлгэц уншигч нийцтэй байдал, текстээс ярианы чадвар, өндөр тодосгогч өнгө ашиглах, эсвэл хөгжлийн бэрхшээлтэй суралцагчдад зориулж хийсэн бусад байрууд орно.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Хичээлийн төлөвлөгөө гаргахдаа танд хэрэгтэй нэмэлт зүйлс
 
@@ -170,7 +170,7 @@ Code.org нь Code.org болон Hour of Code вэбсайтууд дээр Hou
 
 Компьютерийн шинжлэх ухааны сурган хүмүүжүүлэгчдийн олон янзын хороо нь чанарын болон тоон шалгуурт үндэслэн ирүүлсэн материалыг эрэмбэлэх болно. Үндсэн шалгуурт нийцсэн бүх үйл ажиллагааг жагсаасан болно.
 
-Уламжлалт кодлох үйл ажиллагааны хувьд компьютерийн шинжлэх ухааны сурган хүмүүжүүлэгчдийн олон янзын хороо нь чанарын болон тоон шалгуурт үндэслэн ирүүлсэн материалыг эрэмбэлэх болно. Үндсэн шалгуурт нийцсэн бүх үйл ажиллагааг жагсаасан болно. Багш нар ангидаа хамгийн сайн үйл ажиллагааг олохын тулд шүүж, ангилах боломжтой болно.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Хэрэв хянан шалгах хороо үйл ажиллагааг үйлдвэрлэлийн чанарын хувьд тэг гэж үнэлдэг бол (муу алдаа, зааврыг ашиглахад маш хэцүү болгодог), дутуу төлөөлөлтэй бүлгүүдэд (арьс өнгөөр ялгаварлан гадуурхах/сексист материалын улмаас), боловсролын үнэ цэнэ (CS ойлголтыг заадаггүй), эсвэл хөгжилтэй/татан оролцуулах (оюутнуудад дамжуулан ажиллахад хэцүү/урам хугарах тул) үйл ажиллагааг жагсаахгүй.
 
@@ -188,13 +188,13 @@ Code.org нь Code.org болон Hour of Code вэбсайтууд дээр Hou
 - Бүртгүүлэх шаардлагагүй
 - Төлбөр шаардахгүй (роботын үйл ажиллагаанаас үл хамаарах зүйл нь робот/хэрэгсэл худалдан авахыг шаардаж болно)
 
-Шинэ багш, оюутнуудад зориулсан өөрөө чиглэсэн үйл ажиллагааны хувьд хянан шалгах хороо эсэхийг хайж болно:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Багш нар компьютерийн шинжлэх ухааны ямар ч суурь нь заавар, үйл ажиллагааг ашиглаж болно
 - Оюутнууд компьютерийн шинжлэх ухааны ямар ч суурь мэдлэггүй амжилтанд хүрч чадна
 - Оюутнууд эцэг эх, багшийн удирдамжгүйгээр гарын авлагаар дамжуулан өөрсдийгөө чиглүүлж болно
 
-Багш, оюутнууд анги, туршлагын түвшин, сэдэв, техник хангамж гэх мэт шүүлтүүрүүд дээр үндэслэн манай үйл ажиллагааны жагсаалтыг хайж, шүүж үзэх боломжтой болно. Анхдагчаар бид хичээлийн төлөвлөгөө, үйл ажиллагааг эхлээд харуулах болно.
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Хянан шалгах хорооноос хамгийн өндөр үнэлгээ авах
 - Эхлэгчдэд зориулагдсан нэг цагийн өөрөө чиглэсэн үйл ажиллагаа (оюутан, багш нар)
@@ -208,7 +208,7 @@ Code.org нь Code.org болон Hour of Code вэбсайтууд дээр Hou
 
 ## Нэг цагийн өөрөө удирдан чиглүүлдэг хичээл боловсруулах санал
 
-Үйл ажиллагаа нь AI оруулах шаардлагагүй, гэхдээ бид илүү олон хиймэл оюун ухааны холбоотой үйл ажиллагааг санал болгохыг эрмэлзэж байна.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Багшийн тэмдэглэлийг оруул.** Ихэнх үйл ажиллагаа нь оюутанд чиглэсэн байх ёстой, гэхдээ хэрэв үйл ажиллагааг багш хөнгөвчилсөн эсвэл удирдаж байгаа бол багшид тодорхой, энгийн зааврыг багшийн тэмдэглэл хэлбэрээр оруулна уу. Оюутнууд шинэхэн төдийгүй зарим багш нар бас байдаг. гэх мэт мэдээллийг оруулах:
 
@@ -221,15 +221,15 @@ Code.org нь Code.org болон Hour of Code вэбсайтууд дээр Hou
 - Та хос програмчлалыг санал болгож байна уу?
 - ангид ашиглах анхаарах зүйлс? Жишээ нь: видео байгаа бол багш нарт видео бичлэгийг бүхэлд нь анги хамт үзэхийн тулд төлөвлөсөн дэлгэц дээр харуулахыг зөвлөж байна
 
-**Үйл ажиллагааны төгсгөлд санал хүсэлтийг тусгах.** (Жишээ нь: “Та 10 түвшинг дуусгаж, гогцоонуудын талаар сурсан! Их ажил!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Суралцагчдыг дууссаныхаа дараа олон нийтийн мэдээллийн хэрэгслээр (тохиромжтой бол) байршуулахыг урамшуулан дэмж.** Жишээ нь “Би хамт код нь цаг хийсэн ________ та? #HourOfCode "эсвэл “Би хийсэн #HourOfCode нэг хэсэг болгон #CSEdWeek. Танд байна уу? @Scratch.” Hashtag **#HourOfCode** (H, O, C том үсгээр) ашиглана уу
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Англи хэлнээс гадна испани хэл дээр эсвэл бусад хэл дээр өөрийн үйл ажиллагааг бий болгох.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Үйл ажиллагааг нийгмийн ач холбогдолтой нөхцөл байдалд тайлбарлах эсвэл холбох.** Компьютерийн програмчлал нь оюутнууд ертөнцийг хэрхэн илүү сайн өөрчилж болохыг хараад супер хүч болдог!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Таны зааврыг [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) парадигмд ашиглаж болох эсэхийг шалгаарай.** Энэ нь ялангуяа Код цагийн хувьд ашигтай байдаг, учир нь олон анги танхимд 1:1 бүх оюутнуудад зориулсан тоног төхөөрөмж байдаггүй.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Дээд тал руу буцах**](#top)
 
@@ -237,7 +237,7 @@ Code.org нь Code.org болон Hour of Code вэбсайтууд дээр Hou
 
 ## Барааны тэмдгийн удирдамж
 
-Кодын цаг® ба Хора дель Кодиго® нь Code.org-ийн бүртгэгдсэн худалдааны тэмдэгнүүд юм. Манай сургалтын түншүүдийн ихэнх нь манай “Кодын цаг” худалдааны тэмдгийг өөрсдийн вэбсайт дээрээ Кодын цагийн үйл ажиллагаатай холбогдуулан ашигладаг. Бид энэ хэрэглээг урьдчилан сэргийлэхийг хүсэхгүй байгаа ч хэрэглээ нь цөөн хэдэн хязгаарт багтаж байгаа эсэхийг шалгахыг хүсч байна.
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Ашиглах “Код цаг” зөвхөн хууль аяны цаг хүрээнд арилжааны бус CS Боловсролын үйл ажиллагаатай холбогдуулан, болон өөр ямар ч зорилгоор.
 2. “Кодын цаг” гэсэн аливаа лавлагааг өөрийн брэндийн нэр гэж хэлдэггүй загвараар ашиглах ёстой, гэхдээ энэ нь Кодын цагийг анхан шатны хөдөлгөөн гэж үздэг. Сайн жишээ: “Acmecorp.com дээр Code® цагийн оролцох”. Муу жишээ: “ACME Corp-ийн кодын цагийг туршиж үзээрэй”.
@@ -253,15 +253,15 @@ Code.org нь Code.org болон Hour of Code вэбсайтууд дээр Hou
 
 ## Пикселийг хянах
 
-Хэрэв таны заавар батлагдаж, эцсийн заавар хуудсан дээр орсон бол Code.org танд зааварчилгаанд нэгтгэх өвөрмөц хянах пикселийг танд өгөх болно. Доорх жишээг үзнэ үү. Таны гарын авлага ямар ч түр хуудсан дээр бүү оруулаарай.
+Хэрэв таны заавар батлагдаж, эцсийн заавар хуудсан дээр орсон бол Code.org танд зааварчилгаанд нэгтгэх өвөрмөц хянах пикселийг танд өгөх болно. Доорх жишээг үзнэ үү. Do not include on any interim pages of your tutorial.
 
-Энэ нь таны Hour of Code заавар хийдэг хэрэглэгчдийг тоолох боломжийг бидэнд олгоно. Энэ нь таны гарын авлагад илүү үнэн зөв оролцооны тоог хүргэх болно.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Хэрэв таны заавар батлагдаж, эцсийн заавар хуудсан дээр орсон бол Code.org танд зааварчилгаанд нэгтгэх өвөрмөц хянах пикселийг танд өгөх болно. Доорх жишээг үзнэ үү.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-ТАЙЛБАР:: Энэ нь суулгаж болох апп-уудын хувьд хийх нь чухал биш юм (Тагийн/Android апп-ууд, эсвэл ширээний суулгах програмууд)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Бүжгийн үдэшлэгт зориулсан пиксел мөрдөх жишээ:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Таны үйл ажиллагааг дэмжих, CSEDWeek, болон Кодын цаг
 
-Таны сүлжээнд таны үйл ажиллагааг дэмжих уу! Код хуудас нь таны цаг тэднийг чиглүүлэх. Таны хэрэглэгчид таны үйл ажиллагааны талаар та нараас захидлын хариу үйлдэл хийх магадлал их байдаг. Компьютерийн шинжлэх ухааны боловсролын долоо хоногт олон улсын цагийн кодын кампанит ажлыг ашиглан хэрэглэгчдийг бусдыг нэгдэхийг уриалах, илүү олон оюутнуудад хүрэхэд туслах шалтаг болгон ашиглаарай!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Таны вэб сайт дээр код болон CSEDWeek онцлог цаг. Өмнөх: <http://www.tynker.com/hour-of-code>
 - #HourOfCode hashtag ашиглан нийгмийн хэвлэл мэдээллийн хэрэгсэл, уламжлалт хэвлэл мэдээллийн хэрэгсэл, захидлын жагсаалт гэх мэтийг ашиглан Hour of Code (H, O, C том үсгээр)
