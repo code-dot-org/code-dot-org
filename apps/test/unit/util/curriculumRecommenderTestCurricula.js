@@ -133,7 +133,7 @@ const ONLY_TOPICS_COURSES = [
     published_date: '2015-05-02 05:00:00 UTC',
   },
   {
-    key: 'desiredImportantTopicCourse',
+    key: 'firstImportantTopicCourse',
     is_featured: false,
     duration: null,
     marketing_initiative: null,
@@ -143,7 +143,7 @@ const ONLY_TOPICS_COURSES = [
     published_date: '2015-05-03 05:00:00 UTC',
   },
   {
-    key: 'undesiredImportantTopicCourse',
+    key: 'secondImportantTopicCourse',
     is_featured: false,
     duration: null,
     marketing_initiative: null,

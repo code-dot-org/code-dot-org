@@ -125,8 +125,8 @@ describe('testRecommender', () => {
       // Curricula with one desired topic score higher
       'oneTopicCourse',
       // Curricula with undesired important topics score higher
-      'undesiredImportantTopicCourse',
-      'desiredImportantTopicCourse',
+      'secondImportantTopicCourse',
+      'firstImportantTopicCourse',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
       'nullCourse',
@@ -144,9 +144,9 @@ describe('testRecommender', () => {
 
     expect(recommendedCurricula).to.deep.equal([
       // Curricula with desired topic score higher
-      'desiredImportantTopicCourse',
+      'firstImportantTopicCourse',
       // Curricula with undesired important topics score higher
-      'undesiredImportantTopicCourse',
+      'secondImportantTopicCourse',
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
       'nullCourse',
