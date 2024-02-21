@@ -148,6 +148,11 @@ class HamburgerTest < Minitest::Test
     assert_includes_id contents[:entries], "hamburger-student-projects"
   end
 
+  def test_hamburger_content_nobody
+    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
+    assert_includes_id contents[:entries], "hamburger-schools"
+  end
+
   def test_hamburger_content_nolevel
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert_includes_id contents[:entries], "learn"

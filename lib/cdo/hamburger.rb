@@ -109,7 +109,7 @@ class Hamburger
 
     signed_out_entries = [
       {title: "course_catalog", url: CDO.studio_url("/catalog")},
-      {title: "schools", url: CDO.code_org_url("/administrators")},
+      {title: "schools", url: CDO.code_org_url("/administrators"), id: "hamburger-schools"},
       {title: "incubator", url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
