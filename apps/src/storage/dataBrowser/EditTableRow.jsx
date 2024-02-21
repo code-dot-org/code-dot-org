@@ -76,7 +76,7 @@ class EditTableRow extends React.Component {
       this.setState(INITIAL_STATE);
     }
 
-    refreshCurrentDataView();    
+    refreshCurrentDataView();
   };
 
   handleEdit = () => {

@@ -5,7 +5,7 @@ import color from '../util/color';
 import {getStore} from '@cdo/apps/redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import fontConstants from '@cdo/apps/fontConstants';
-import { isFirebaseStorage } from './storage';
+import {isFirebaseStorage} from './storage';
 
 export const ParamType = {
   TABLE: 'TABLE',
@@ -26,7 +26,9 @@ export default class GetColumnParamPicker extends React.Component {
     if (this.props.param === ParamType.COLUMN) {
       const reduxState = getStore().getState();
       // Only firebase needs tableType, datablock storage checks on the backend
-      const tableType = isFirebaseStorage() ? reduxState.data.tableListMap[this.props.table] : undefined;
+      const tableType = isFirebaseStorage()
+        ? reduxState.data.tableListMap[this.props.table]
+        : undefined;
       Applab.storage
         .getColumnsForTable(this.props.table, tableType)
         .then(columns => this.setState({columns: columns}));

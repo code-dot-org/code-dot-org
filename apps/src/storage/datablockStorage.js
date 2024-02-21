@@ -12,12 +12,9 @@ function urlFor(func_name) {
 
 function _fetch(path, method, params) {
   if (method.toUpperCase() === 'GET') {
-    return fetch(
-      urlFor(path) +
-        '?' +
-        new URLSearchParams(params),
-      { method: 'GET' }
-    );
+    return fetch(urlFor(path) + '?' + new URLSearchParams(params), {
+      method: 'GET',
+    });
   } else {
     return fetch(urlFor(path), {
       method,
@@ -86,8 +83,8 @@ DatablockStorage.updateRecord = function (
     table_name: tableName,
     record_id: record.id,
     record_json: JSON.stringify(record),
-  }).then((record) => {
-    onSuccess(record, !!record)
+  }).then(record => {
+    onSuccess(record, !!record);
   }, onError);
 };
 
@@ -146,7 +143,7 @@ DatablockStorage.deleteRecord = function (
   }).then(onSuccess, onError);
 };
 
-async function getTableNames({isSharedTable = false}={}) {
+async function getTableNames({isSharedTable = false} = {}) {
   const response = await _fetch('get_table_names', 'GET', {
     is_shared_table: isSharedTable,
   });
@@ -158,7 +155,7 @@ DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
 
-async function getColumnsForTable({tableName,isSharedTable = false}) {
+async function getColumnsForTable({tableName, isSharedTable = false}) {
   const response = await _fetch('get_columns_for_table', 'GET', {
     table_name: tableName,
     is_shared_table: isSharedTable,
@@ -174,7 +171,7 @@ function loadTableAndColumns({
   onRecordsChanged,
 }) {
   readRecords({tableName, isSharedTable}).then(records => {
-    getColumnsForTable({tableName, isSharedTable}).then(onColumnsChanged)
+    getColumnsForTable({tableName, isSharedTable}).then(onColumnsChanged);
 
     // DataTableView.getTableJson() expects an array of JSON strings
     // which it then parses as JSON, and then stringifies again 🙈
@@ -335,8 +332,9 @@ DatablockStorage.populateKeyValue = function (jsonData, onSuccess, onError) {
 // fetch the library manifest used to populate the "Data Library" browser
 // see: datablock_storage_library_manifest.rb
 DatablockStorage.getLibraryManifest = function () {
-  return _fetch('get_library_manifest', 'GET')
-    .then(response => response.json());
+  return _fetch('get_library_manifest', 'GET').then(response =>
+    response.json()
+  );
 };
 
 // returns an array of strings for each of the columns in the table
@@ -390,11 +388,7 @@ DatablockStorage.clearAllData = function (onSuccess, onError) {
 // };
 
 // This is a new method for DatablockStorage which replaces the above APIs
-DatablockStorage.addSharedTable = function (
-  tableName,
-  onSuccess,
-  onError
-) {
+DatablockStorage.addSharedTable = function (tableName, onSuccess, onError) {
   _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
@@ -415,7 +409,9 @@ export function initDatablockStorage({channelId: _channelId}) {
 }
 
 // FIXME: unfirebase, remove this before merging PR
-console.warn("Setting window.DatablockStorage for easier debugging, turn off before merging PR");
+console.warn(
+  'Setting window.DatablockStorage for easier debugging, turn off before merging PR'
+);
 window.DatablockStorage = DatablockStorage;
 
 export default DatablockStorage;

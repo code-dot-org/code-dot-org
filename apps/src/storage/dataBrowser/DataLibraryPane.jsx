@@ -13,7 +13,7 @@ import {WarningType} from '../constants';
 import experiments from '../../util/experiments';
 import _ from 'lodash';
 import style from './data-library-pane.module.scss';
-import { refreshCurrentDataView } from './loadDataForView';
+import {refreshCurrentDataView} from './loadDataForView';
 
 class DataLibraryPane extends React.Component {
   static propTypes = {

@@ -17,7 +17,7 @@ import msg from '@cdo/locale';
 import {WarningType} from '../constants';
 import style from './data-table.module.scss';
 import classNames from 'classnames';
-import { refreshCurrentDataView } from './loadDataForView';
+import {refreshCurrentDataView} from './loadDataForView';
 
 const MAX_ROWS_PER_PAGE = 500;
 
@@ -129,7 +129,7 @@ class DataTable extends React.Component {
   onColumnChanged = () => {
     refreshCurrentDataView();
     this.resetColumnState();
-  }
+  };
 
   resetColumnState = () => {
     this.setState({

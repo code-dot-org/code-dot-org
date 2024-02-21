@@ -15,7 +15,7 @@ import TableDescription from './TableDescription';
 import classNames from 'classnames';
 import style from './data-table-view.module.scss';
 import msg from '@cdo/locale';
-import { refreshCurrentDataView } from './loadDataForView';
+import {refreshCurrentDataView} from './loadDataForView';
 
 const INITIAL_STATE = {
   showDebugView: false,

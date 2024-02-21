@@ -14,7 +14,6 @@ export function isFirebaseStorage() {
   return getStorageType() === FIREBASE_STORAGE;
 }
 
-
 export function getStorageType() {
   return type;
 }

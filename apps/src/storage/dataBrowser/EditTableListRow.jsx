@@ -6,7 +6,7 @@ import React from 'react';
 import dataStyles from './data-styles.module.scss';
 import msg from '@cdo/locale';
 import {refreshCurrentDataView} from './loadDataForView';
-import {storageBackend,isFirebaseStorage} from '../storage';
+import {storageBackend, isFirebaseStorage} from '../storage';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
