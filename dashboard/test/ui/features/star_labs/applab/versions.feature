@@ -39,8 +39,6 @@ Scenario: Script Level Versions
 Scenario: Project Load and Reload
   Given I am on "http://studio.code.org/projects/applab/new"
   And I wait for the page to fully load
-  # Make sure we can navigate to another page without getting an alert
-  And I disable onBeforeUnload
   # The initial load results in save only because this is a new project.
   And I wait for initial project save to complete
 

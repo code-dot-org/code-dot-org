@@ -5,8 +5,6 @@ Feature: App Lab Scenarios
   Background:
     Given I start a new Applab project
     And I wait for the page to fully load
-    # Make sure we can navigate to another page without getting an alert
-    And I disable onBeforeUnload
 
   Scenario: App Lab Share
     Given I ensure droplet is in text mode
