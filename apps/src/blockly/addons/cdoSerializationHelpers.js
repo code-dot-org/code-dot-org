@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
+import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import {shouldSkipHiddenWorkspace} from '../utils';
 
@@ -64,10 +64,18 @@ function getSpaceBetweenBlocks(block) {
 /**
  * Converts XML serialization to JSON using a temporary unrendered workspace.
  * @param {xml} xml - workspace serialization, current/legacy format
+ * @param {boolean} [embedded] - indicates whether the source will be converted
+ * for an embedded workspace for not.
  * @returns {json} stateToLoad - modern workspace serialization
  */
-export function convertXmlToJson(xml) {
+export function convertXmlToJson(xml, embedded) {
   const tempWorkspace = new Blockly.Workspace();
+
+  // The temporary workspace should mirror the embedded state of the workspace
+  // that will use the converted source.
+  if (embedded) {
+    Blockly.addEmbeddedWorkspace(tempWorkspace);
+  }
 
   // domToBlockSpace returns an array of "block" objects with the following properties:
   //   blockly_block: the actual block object created by Blockly
@@ -425,7 +433,7 @@ export function appendProceduresToState(projectState, proceduresState) {
 function blockExists(behaviorId, projectBlocks) {
   return projectBlocks.some(
     block =>
-      block.type === 'behavior_definition' &&
+      block.type === BLOCK_TYPES.behaviorDefinition &&
       block.extraState?.behaviorId === behaviorId
   );
 }

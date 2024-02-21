@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-02-10 02:24:53 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-02-15 01:04:46 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -888,7 +888,7 @@
       "key": "77755000-ce58-44a0-93ab-8a17aaba4453",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Display**: Show the video *What is pseudocode?*\n\n**Do This**: Have students translate the pseudocode into a programming language.\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #1\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #2",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Display**: Show the video *What is pseudocode?* *[coming soon]*\n\n**Do This**: Have students translate the pseudocode into a programming language.\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #1\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #2",
         "tips": [
           {
             "type": "teachingTip",
@@ -3712,7 +3712,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chatbot_prompting_guide",
+        "script.name": "coding-with-ai"
+      }
+    }
   ],
   "scripts_student_resources": [
 

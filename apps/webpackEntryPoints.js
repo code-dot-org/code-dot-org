@@ -41,6 +41,7 @@ const CODE_STUDIO_ENTRIES = {
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+  'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
   'programming_classes/show': './src/sites/studio/pages/programming_classes/show.js',
@@ -233,6 +234,7 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
+  userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
 };
 
 // prettier-ignore

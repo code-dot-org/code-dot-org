@@ -3,14 +3,14 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Meet Your micro:bit Overview 
+# Meet Your micro:bit Lesson Overview 
 
-#### All of the courses begin with the Meet your micro:bit lesson. In this lesson, students will learn how:
+#### All of the CSF Maker courses (C-F) begin with the Meet Your micro:bit lesson. In this lesson, students will learn how to:
 
-- #### To use the different inputs and outputs on their micro:bit
+- #### Use the different inputs and outputs on their micro:bit
 - #### Navigate the Microsoft MakeCode block editor
 - #### Download code onto their micro:bits 
-- #### Explore code code blocks
+- #### Explore code blocks
 
 <br>
 
