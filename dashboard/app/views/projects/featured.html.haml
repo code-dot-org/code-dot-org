@@ -2,7 +2,7 @@
 - featured_projects_data = {}
 - featured_projects_data[:active] = @active
 - featured_projects_data[:archived] = @archived
-- featured_projects_data[:saved] = @saved
+- featured_projects_data[:bookmarked] = @bookmarked
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/projects/featured.js'), data: {featuredProjects: featured_projects_data.to_json}}

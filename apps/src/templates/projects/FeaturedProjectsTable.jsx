@@ -168,7 +168,7 @@ const actionsFormatterArchived = (actions, {rowData}) => {
   );
 };
 
-const actionsFormatterSaved = (actions, {rowData}) => {
+const actionsFormatterBookmarked = (actions, {rowData}) => {
   return (
     <QuickActionsCell>
       <PopUpMenu.Item
@@ -392,7 +392,7 @@ class FeaturedProjectsTable extends React.Component {
         },
       },
     ];
-    const savedColumns = [
+    const bookmarkedColumns = [
       {
         property: 'actions',
         header: {
@@ -405,7 +405,7 @@ class FeaturedProjectsTable extends React.Component {
           },
         },
         cell: {
-          formatters: [actionsFormatterSaved],
+          formatters: [actionsFormatterBookmarked],
           props: {style: tableLayoutStyles.cell},
         },
       },
@@ -416,7 +416,7 @@ class FeaturedProjectsTable extends React.Component {
     } else if (tableVersion === 'archived') {
       return dataColumns.concat(archivedColumns);
     } else {
-      return dataColumns.concat(savedColumns);
+      return dataColumns.concat(bookmarkedColumns);
     }
   };
 

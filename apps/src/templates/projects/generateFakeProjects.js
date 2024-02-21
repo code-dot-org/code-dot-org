@@ -115,7 +115,7 @@ export const stubFakeArchivedFeaturedProjectData = [
 
 export const stubFakeSavedFeaturedProjectData = [
   {
-    projectName: 'Saved Featured Project 1',
+    projectName: 'Bookmarked Featured Project 1',
     type: 'gamelab',
     channel: 'abcd9',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -123,7 +123,7 @@ export const stubFakeSavedFeaturedProjectData = [
     unfeaturedAt: 'null',
   },
   {
-    projectName: 'Saved Featured Project 2',
+    projectName: 'Bookmarked Featured Project 2',
     type: 'applab',
     channel: 'abcd10',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -132,7 +132,7 @@ export const stubFakeSavedFeaturedProjectData = [
   },
   {
     projectName:
-      "Saved Featured Project 3 has a super extra long name let's see how it looks in the table",
+      "Saved Bookmarked Project 3 has a super extra long name let's see how it looks in the table",
     type: 'artist',
     channel: 'abcd11',
     publishedAt: '2015-02-04T23:59:59.999-08:00',
@@ -140,7 +140,7 @@ export const stubFakeSavedFeaturedProjectData = [
     unfeaturedAt: 'null',
   },
   {
-    projectName: 'Saved Featured Project 4',
+    projectName: 'Saved Bookmarked Project 4',
     type: 'playlab',
     channel: 'abcd12',
     publishedAt: '2015-02-04T23:59:59.999-08:00',

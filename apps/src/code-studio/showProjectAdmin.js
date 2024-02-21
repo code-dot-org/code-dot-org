@@ -39,8 +39,8 @@ export default project => {
     $('#unpublished_warning').show();
   }
 
-  if ($('#save_project').length && project.isProjectLevel()) {
-    $('#save_project').click(function () {
+  if ($('#bookmark_project').length && project.isProjectLevel()) {
+    $('#bookmark_project').click(function () {
       var url = `/featured_projects/${project.getCurrentId()}/save`;
       $.ajax({
         url: url,
@@ -48,10 +48,12 @@ export default project => {
         dataType: 'json',
         success: function (data) {
           $('#is_featured_project').show();
-          $('#save_project').hide();
+          $('#bookmark_project').hide();
         },
         error: function (data) {
-          alert("Shucks. Something went wrong - this project wasn't saved.");
+          alert(
+            "Shucks. Something went wrong - this project wasn't bookmarked."
+          );
         },
       });
     });

@@ -8,10 +8,10 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     @teacher = create :teacher
   end
 
-  test 'project validators can save a project as a featured project' do
+  test 'project validators can bookmark a project as a featured project' do
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
-    put :save, params: {project_id: "789"}
+    put :bookmark, params: {project_id: "789"}
     assert_response :success
   end
 
@@ -37,9 +37,9 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'users without project validator permission can not save a project as a featured project' do
+  test 'users without project validator permission can not bookmark a project as a featured project' do
     sign_in @teacher
-    put :save, params: {project_id: "789"}
+    put :bookmark, params: {project_id: "789"}
     assert_response 403
   end
 
@@ -61,11 +61,11 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test 'saving a never featured project creates a new feature project' do
+  test 'bookmarking a never featured project creates a new feature project' do
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
     assert_creates(FeaturedProject) do
-      put :save, params: {project_id: "789"}
+      put :bookmark, params: {project_id: "789"}
     end
     assert FeaturedProject.last.project_id == 654
     assert FeaturedProject.last.unfeatured_at.nil?

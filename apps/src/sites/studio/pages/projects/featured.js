@@ -8,12 +8,12 @@ $(document).ready(function () {
   const featuredProjectsData = JSON.parse(script.dataset.featuredprojects);
   const activeFeaturedProjects = featuredProjectsData.active;
   const archivedFeaturedProjects = featuredProjectsData.archived;
-  const savedFeaturedProjects = featuredProjectsData.saved;
+  const bookmarkedFeaturedProjects = featuredProjectsData.bookmarked;
 
   ReactDOM.render(
     <FeaturedProjects
       activeFeaturedProjects={activeFeaturedProjects}
-      savedFeaturedProjects={savedFeaturedProjects}
+      bookmarkedFeaturedProjects={bookmarkedFeaturedProjects}
       archivedFeaturedProjects={archivedFeaturedProjects}
     />,
     document.getElementById('featured-projects-container')

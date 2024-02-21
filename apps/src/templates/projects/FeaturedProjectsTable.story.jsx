@@ -3,7 +3,7 @@ import FeaturedProjectsTable from './FeaturedProjectsTable';
 import {
   stubFakeActiveFeaturedProjectData,
   stubFakeArchivedFeaturedProjectData,
-  stubFakeSavedFeaturedProjectData,
+  stubFakeBookmarkedFeaturedProjectData,
 } from './generateFakeProjects';
 import {featuredProjectTableTypes} from './projectConstants';
 
@@ -21,10 +21,10 @@ FeaturedProjectTableArchived.args = {
   tableVersion: featuredProjectTableTypes.archived,
 };
 
-export const FeaturedProjectTableSaved = Template.bind({});
-FeaturedProjectTableSaved.args = {
-  projectList: stubFakeSavedFeaturedProjectData,
-  tableVersion: featuredProjectTableTypes.saved,
+export const FeaturedProjectTableBookmarked = Template.bind({});
+FeaturedProjectTableBookmarked.args = {
+  projectList: stubFakeBookmarkedFeaturedProjectData,
+  tableVersion: featuredProjectTableTypes.bookmarked,
 };
 
 export default {

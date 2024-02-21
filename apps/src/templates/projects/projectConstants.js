@@ -46,7 +46,7 @@ export const Galleries = {
 export const featuredProjectTableTypes = {
   active: 'active',
   archived: 'archived',
-  saved: 'saved',
+  bookmarked: 'bookmarked',
 };
 
 export const MAX_PROJECTS_PER_CATEGORY = 100;

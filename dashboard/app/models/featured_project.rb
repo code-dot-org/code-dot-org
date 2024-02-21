@@ -25,7 +25,7 @@ class FeaturedProject < ApplicationRecord
     !featured_at.nil? && unfeatured_at.nil?
   end
 
-  def saved?
+  def bookmarked?
     featured_at.nil? && unfeatured_at.nil?
   end
 

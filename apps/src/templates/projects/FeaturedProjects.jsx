@@ -12,7 +12,7 @@ export default class FeaturedProjects extends React.Component {
       .isRequired,
     archivedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
-    savedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+    bookmarkedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
   };
 
@@ -24,10 +24,10 @@ export default class FeaturedProjects extends React.Component {
           projectList={this.props.activeFeaturedProjects}
           tableVersion={featuredProjectTableTypes.active}
         />
-        <h3>Saved Featured Projects</h3>
+        <h3>Bookmarked Featured Projects</h3>
         <FeaturedProjectsTable
-          projectList={this.props.savedFeaturedProjects}
-          tableVersion={featuredProjectTableTypes.saved}
+          projectList={this.props.bookmarkedFeaturedProjects}
+          tableVersion={featuredProjectTableTypes.bookmarked}
         />
         <h3>Archive of Previously Featured Projects</h3>
         <FeaturedProjectsTable

@@ -151,9 +151,9 @@
         #is_featured_project{'style' => ('display: none;' unless is_featured_project)}
           %li Already a featured project
 
-      #save_project{'style' => ('display: none;' if is_featured_project)}
-        %button{id: "save", class: "btn btn-default btn-sm"}
-          Save as featured project
+      #bookmark_project{'style' => ('display: none;' if is_featured_project)}
+        %button{id: "bookmark", class: "btn btn-default btn-sm"}
+          Bookmark as a featured project
 
       #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
         * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
