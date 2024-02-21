@@ -1,5 +1,11 @@
 %strong{:class => "code", :id => "message"} This #{@project.project_type} project uses #{@storage_backend} as its backing store.
 
+%h3 switch storage backend
+= form_tag "use_datablock_storage", :method => :put, :remote => false do
+  = submit_tag "use_datablock_storage"
+= form_tag "use_firebase_storage", :method => :put, :remote => false do
+  = submit_tag "use_firebase_storage"
+
 %h2 Tables
 %table
   %tr
@@ -188,9 +194,3 @@
 = form_tag "set_library_manifest", :method => :put, :remote => false do
   = text_area_tag "library_manifest", '{"categories":[{"datasets":["100 Birds of the World"],"name":"Animals","published":true}],"tables":[{"current":false,"description":"Data and images about 100 different species of birds around the world","docUrl":"https://studio.code.org/data_docs/100-birds/","name":"100 Birds of the World","published":true}]}'
   = submit_tag "set_library_manifest"
-
-  %h3 switch storage backend
-= form_tag "use_datablock_storage", :method => :put, :remote => false do
-  = submit_tag "use_datablock_storage"
-= form_tag "use_firebase_storage", :method => :put, :remote => false do
-  = submit_tag "use_firebase_storage"

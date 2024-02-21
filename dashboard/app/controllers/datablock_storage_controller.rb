@@ -236,11 +236,13 @@ class DatablockStorageController < ApplicationController
   #   Project Use Datablock Storage API                    #
   ##########################################################
 
+  # TODO: post-firebase-cleanup, remove
   def use_datablock_storage
     ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], true)
     render json: true
   end
 
+  # TODO: post-firebase-cleanup, remove
   def use_firebase_storage
     ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], false)
     render json: true

@@ -1145,6 +1145,7 @@ Dashboard::Application.routes.draw do
         get :channel_exists
         delete :clear_all_data
 
+        # TODO: post-firebase-cleanup, remove
         # Project Use Datablock Storage API
         put :use_datablock_storage
         put :use_firebase_storage
