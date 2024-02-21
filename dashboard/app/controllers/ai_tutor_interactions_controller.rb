@@ -70,8 +70,6 @@ class AiTutorInteractionsController < ApplicationController
     section = Section.find(params[:sectionId])
     return render(status: :not_found, json: {error: 'Section not found'}) unless section
     return render(status: :forbidden, json: {error: 'This user does not own this section'}) unless current_user.sections.include?(section)
-    puts "We're in the controller and there should be two student ids..."
-    puts section.students.pluck(:id)
     render json:  AiTutorInteraction.where(user_id: section.students.pluck(:id))
   end
 end
