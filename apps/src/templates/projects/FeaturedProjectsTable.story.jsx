@@ -5,26 +5,14 @@ import {
   stubFakeArchivedFeaturedProjectData,
   stubFakeBookmarkedFeaturedProjectData,
 } from './generateFakeProjects';
-import {featuredProjectTableTypes} from './projectConstants';
 
 const Template = args => <FeaturedProjectsTable {...args} />;
 
-export const FeaturedProjectTableActive = Template.bind({});
-FeaturedProjectTableActive.args = {
-  projectList: stubFakeActiveFeaturedProjectData,
-  tableVersion: featuredProjectTableTypes.active,
-};
-
-export const FeaturedProjectTableArchived = Template.bind({});
-FeaturedProjectTableArchived.args = {
-  projectList: stubFakeArchivedFeaturedProjectData,
-  tableVersion: featuredProjectTableTypes.archived,
-};
-
-export const FeaturedProjectTableBookmarked = Template.bind({});
-FeaturedProjectTableBookmarked.args = {
-  projectList: stubFakeBookmarkedFeaturedProjectData,
-  tableVersion: featuredProjectTableTypes.bookmarked,
+export const FeaturedProjectTable = Template.bind({});
+FeaturedProjectTable.args = {
+  activeList: stubFakeActiveFeaturedProjectData,
+  bookmarkedList: stubFakeBookmarkedFeaturedProjectData,
+  archivedList: stubFakeArchivedFeaturedProjectData,
 };
 
 export default {
