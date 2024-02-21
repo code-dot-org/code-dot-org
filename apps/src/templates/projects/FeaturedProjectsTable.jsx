@@ -7,7 +7,10 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {featuredProjectDataPropType} from './projectConstants';
+import {
+  featuredProjectDataPropType,
+  featuredProjectStatuses,
+} from './projectConstants';
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -138,17 +141,21 @@ const onDelete = channel => {
 };
 
 const actionsFormatter = (actions, {rowData}) => {
-  console.log('rowData', rowData);
+  const status = rowData.status; // active, archived, bookmarked
   return (
     <QuickActionsCell>
-      <PopUpMenu.Item
-        onClick={() => feature(rowData.channel, rowData.publishedAt)}
-      >
-        Feature
-      </PopUpMenu.Item>
-      <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
-        Unfeature
-      </PopUpMenu.Item>
+      {status !== featuredProjectStatuses.active && (
+        <PopUpMenu.Item
+          onClick={() => feature(rowData.channel, rowData.publishedAt)}
+        >
+          Feature
+        </PopUpMenu.Item>
+      )}
+      {status === featuredProjectStatuses.active && (
+        <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
+          Unfeature
+        </PopUpMenu.Item>
+      )}
       <MenuBreak />
       <PopUpMenu.Item
         onClick={() => onDelete(rowData.channel)}
@@ -163,17 +170,14 @@ const actionsFormatter = (actions, {rowData}) => {
 const dateFormatter = time => {
   if (time) {
     let date = new Date(time);
-    console.log('date', date);
-    let dateString;
-
-    dateString =
+    // Format date so that single digits have a leading zero.
+    // This allows sorting by date to work correctly.
+    const dateString =
       ('0' + (date.getMonth() + 1)).slice(-2) +
       '/' +
       ('0' + date.getDate()).slice(-2) +
       '/' +
-      date.getFullYear(); // let dateString = date.toLocaleDateString();
-    console.log('date.toLocaleDateString()', date.toLocaleDateString());
-    console.log('dateString', dateString);
+      date.getFullYear();
     return dateString;
   } else {
     return 'N/A';

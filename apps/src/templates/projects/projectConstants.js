@@ -44,7 +44,7 @@ export const Galleries = {
   PRIVATE: 'PRIVATE',
 };
 
-export const featuredProjectTableTypes = {
+export const featuredProjectStatuses = {
   active: 'active',
   archived: 'archived',
   bookmarked: 'bookmarked',
