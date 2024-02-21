@@ -59,11 +59,13 @@ export const getSimilarRecommendations = (
       : 0;
     // Add points if given curriculum was published within 2 years ago, and add more
     // points if it was published within 1 year ago.
-    score += publishedWithinTwoYearsAgo(curriculum)
-      ? publishedWithinOneYearAgo(curriculum)
-        ? SIMILAR_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
-        : SIMILAR_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo']
-      : 0;
+    const publishedYearsAgo = publishedNumYearsAgo(curriculum);
+    score +=
+      publishedYearsAgo < 2
+        ? publishedYearsAgo < 1
+          ? SIMILAR_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
+          : SIMILAR_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo']
+        : 0;
     curriculaScores.push([curriculum, score]);
   });
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
