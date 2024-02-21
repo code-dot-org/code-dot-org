@@ -10,9 +10,9 @@ export const SIMILAR_RECOMMENDER_SCORING = {
   hasDesiredDuration: 2,
   hasDesiredMarketingInitiative: 2,
   hasAnySchoolSubject: 1,
-  numOverlappingDesiredSchoolSubjects: 2,
+  overlappingDesiredSchoolSubject: 2,
   hasImportantButNotDesiredTopic: 1,
-  numOverlappingDesiredTopics: 2,
+  overlappingDesiredTopic: 2,
   publishedWithinOneYearAgo: 2,
   publishedWithinTwoYearsAgo: 1,
 };

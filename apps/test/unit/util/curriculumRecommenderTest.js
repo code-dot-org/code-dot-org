@@ -184,21 +184,21 @@ describe('similarRecommender', () => {
       SIMILAR_RECOMMENDER_TEST_COURSES,
       'month',
       'markInit1',
-      'subject1',
+      'subject2',
       'topic1,topic2'
     ).map(curr => curr.key);
 
     expect(recommendedCurricula).to.deep.equal([
-      'multipleTopicsCourse', // 4 points = 2 overlapping topics * numOverlappingDesiredTopics(2)
-      'publishedWithinOneYearAgoCourse', // 2 points = publishedWithinOneYearAgo(2) (sorted higher by recent published_date)
-      'oneTopicCourse', // 2 points = 1 overlapping topic * numOverlappingDesiredTopics(2)
-      'multipleSchoolSubjectsCourse', // 2 points =
+      'multipleTopicsCourse', // 4 points = 2 overlapping topics * overlappingDesiredTopic(2)
+      'publishedWithinOneYearAgoCourse', // 2 points = publishedWithinOneYearAgo(2) [sorted highest of the 2-point courses by recent published_date]
+      'oneTopicCourse', // 2 points = 1 overlapping topic * overlappingDesiredTopic(2)
+      'multipleSchoolSubjectsCourse', // 2 points = 1 overlapping subject * overlappingDesiredSchoolSubject(2)
+      'marketingInitCourse1', // 2 points = hasDesiredMarketingInitiative(2)
+      'monthDurationCourse', // 2 points = hasDesiredDuration(2)
+      'publishedWithinTwoYearsAgoCourse', // 1 point = publishedWithinTwoYearsAgo(1) [sorted highest of the 1-point courses by recent published_date]
+      'undesiredImportantTopicCourse', // 1 point = hasImportantButNotDesiredTopic(1)
+      'desiredImportantTopicCourse', //
       'oneSchoolSubjectCourse',
-      'marketingInitCourse1',
-      'monthDurationCourse',
-      'publishedWithinTwoYearsAgoCourse',
-      'undesiredImportantTopicCourse',
-      'desiredImportantTopicCourse',
       'featuredCourse',
       'emptyCourse',
       'nullCourse',

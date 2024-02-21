@@ -51,13 +51,13 @@ export const getSimilarRecommendations = (
         : 0;
     } else {
       score +=
-        SIMILAR_RECOMMENDER_SCORING['numOverlappingDesiredSchoolSubjects'] *
+        SIMILAR_RECOMMENDER_SCORING['overlappingDesiredSchoolSubject'] *
         numOverlappingSubjects;
     }
     // Add points for each overlapping desired CS topic.
     score +=
       numOverlappingDesiredTopics(curriculum, csTopics) *
-      SIMILAR_RECOMMENDER_SCORING['numOverlappingDesiredTopics'];
+      SIMILAR_RECOMMENDER_SCORING['overlappingDesiredTopic'];
     // Add points if given curriculum has an important topic that isn't one of the
     // desired ones.
     score += hasImportantButNotDesiredTopic(curriculum, csTopics)
