@@ -89,7 +89,6 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
     And I click selector "a:contains('thumb wars')" once I see it to load a new tab
