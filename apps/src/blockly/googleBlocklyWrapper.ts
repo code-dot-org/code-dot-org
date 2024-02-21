@@ -56,7 +56,7 @@ import {Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
-import CdoBlockSerializer from './addons/cdoBlockSerializer';
+import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
