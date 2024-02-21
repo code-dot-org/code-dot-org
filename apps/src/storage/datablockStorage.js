@@ -6,7 +6,9 @@ let channelId = undefined;
 function getAuthToken() {
   const tokenDOM = document.querySelector('meta[name="csrf-token"]');
   if (!tokenDOM) {
-    throw new Error('Could not find CSRF token');
+    //throw new Error('Could not find CSRF token');
+    console.error('Could not find CSRF token');
+    return;
   }
   return tokenDOM.content;
 }
@@ -25,7 +27,7 @@ function _fetch(path, method, params) {
         '?' +
         new URLSearchParams({
           ...params,
-          authenticity_token: getAuthToken(),
+          //authenticity_token: getAuthToken(),
         }),
       {
         method: 'GET',
@@ -37,7 +39,7 @@ function _fetch(path, method, params) {
       body: JSON.stringify(params),
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-TOKEN': getAuthToken(),
+        //'X-CSRF-TOKEN': getAuthToken(),
         'X-Requested-With': 'XMLHttpRequest',
       },
       credentials: 'same-origin',
@@ -335,7 +337,7 @@ DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
  * @returns {Promise} which resolves when all table data has been written
  */
 DatablockStorage.populateTable = function (jsonData) {
-  _fetch('populate_tables', 'PUT', {
+  return _fetch('populate_tables', 'PUT', {
     tables_json: JSON.stringify(jsonData),
   });
 };
