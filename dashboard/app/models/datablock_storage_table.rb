@@ -159,6 +159,16 @@ class DatablockStorageTable < ApplicationRecord
     self.columns.delete column_name
   end
 
+  # TODO: What is the current behavior if the column doesn't exist?
+  # This will return Nil. What happens in AppLab today?
+  def get_column(column_name)
+    if columns.include? column_name
+      read_records.map do |record|
+        record.record_json[column_name]
+      end
+    end
+  end
+
   def rename_column(old_column_name, new_column_name)
     if_shared_table_copy_on_write
 

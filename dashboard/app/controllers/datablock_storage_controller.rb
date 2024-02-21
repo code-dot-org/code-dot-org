@@ -11,6 +11,7 @@ class DatablockStorageController < ApplicationController
     @records = DatablockStorageRecord.where(project_id: @project_id)
     @tables = DatablockStorageTable.where(project_id: @project_id)
     @library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
+    @storage_backend = ProjectUseDatablockStorage.use_data_block_storage_for?(params[:channel_id]) ? "Datablock Storage" : "Firebase"
     puts "####################################################"
   end
 
@@ -142,6 +143,12 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  def get_column
+    table = find_table
+    column = table.get_column params[:column_name]
+    render json: column
+  end
+
   def get_columns_for_table
     table = find_table_or_shared_table
     render json: table.get_columns
@@ -225,6 +232,25 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  ##########################################################
+  #   Project Use Datablock Storage API                    #
+  ##########################################################
+
+  # TODO: post-firebase-cleanup, remove
+  def use_datablock_storage
+    ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], true)
+    render json: true
+  end
+
+  # TODO: post-firebase-cleanup, remove
+  def use_firebase_storage
+    ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], false)
+    render json: true
+  end
+
+  ##########################################################
+  #   Private                                              #
+  ##########################################################
   private
 
   def shared_table?
