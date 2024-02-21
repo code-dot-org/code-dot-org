@@ -7,7 +7,6 @@ import {
   updateTableColumns,
   updateTableRecords,
   updateKeyValueData,
-  setLibraryManifest,
   updateTableList,
 } from '../redux/data';
 import {isDatablockStorage, isFirebaseStorage} from '../storage';

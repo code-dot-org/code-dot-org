@@ -19,6 +19,7 @@ import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {
   initStorage,
+  isFirebaseStorage,
   DATABLOCK_STORAGE,
   FIREBASE_STORAGE,
 } from '../storage/storage';
@@ -43,14 +44,9 @@ import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
 import consoleApi from '../consoleApi';
 import {
-  tableType,
-  addTableName,
-  deleteTableName,
   updateTableColumns,
   updateTableRecords,
-  updateKeyValueData,
   setLibraryManifest,
-  updateTableList,
 } from '../storage/redux/data';
 import {loadDataForView} from '../storage/dataBrowser/loadDataForView';
 import {setStepSpeed} from '../redux/runState';
