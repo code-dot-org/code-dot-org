@@ -907,7 +907,8 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
-  def firebase_shared_auth_token # TODO: unfirebase
+  # TODO: post-firebase-cleanup, remove this method
+  def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
     base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
@@ -933,7 +934,8 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
-  def firebase_auth_token # TODO: unfirebase
+  # TODO: post-firebase-cleanup, remove this method
+  def firebase_auth_token
     return nil unless CDO.firebase_secret
 
     base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)

@@ -12,7 +12,6 @@
 #
 #  index_datablock_storage_library_manifest_on_singleton_guard  (singleton_guard) UNIQUE
 
-
 class DatablockStorageLibraryManifest < ApplicationRecord
   # A one-row table storing a singleton JSON `library_manifest`` that
   # describes all Data Library datasets and categories:
@@ -43,7 +42,7 @@ class DatablockStorageLibraryManifest < ApplicationRecord
   # See: `DatasetController`(Ruby) and `DatablockStorage.getLibraryManifest` (JS)
 
   self.table_name = 'datablock_storage_library_manifest'
-  
+
   # DatablockStorageLibraryManifest is a singleton, only one-row allowed in the table
   # with the unique `singleton_guard` value of 0
   validates_inclusion_of :singleton_guard, in: [0]
@@ -58,7 +57,7 @@ class DatablockStorageLibraryManifest < ApplicationRecord
 
   validate :library_manifest
 
-private
+  private
 
   def validate_library_manifest
     unless library_manifest.is_a?(Hash)
@@ -76,6 +75,6 @@ private
   end
 
   def set_default_library_manifest
-    self.library_manifest ||= { 'categories' => [], 'tables' => [] }
+    self.library_manifest ||= {'categories' => [], 'tables' => []}
   end
 end

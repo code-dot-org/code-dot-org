@@ -65,7 +65,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{"name" => 'bob', "age" => 8, "id" => 1}], val
   end
 
-
   test "get_table_names" do
     # FIXME: Implement a test for get_table_names
     assert_equal true, false
@@ -1196,5 +1195,4 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #     });
   #   });
   # });
-
 end
