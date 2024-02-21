@@ -30,25 +30,29 @@ export const getTestRecommendations = (
   const curriculaScores = [];
   curricula.forEach(curriculum => {
     let score = 0;
-    score += hasDesiredDuration(TEST_RECOMMENDER_SCORING, curriculum, duration);
-    score += hasDesiredMarketingInitiative(
-      TEST_RECOMMENDER_SCORING,
-      curriculum,
-      marketingInitiative
-    );
-    score += hasAnySchoolSubject(TEST_RECOMMENDER_SCORING, curriculum);
-    score += hasDesiredSchoolSubjects(
-      TEST_RECOMMENDER_SCORING,
-      curriculum,
-      schoolSubjects
-    );
-    score += hasImportantButNotDesiredTopic(
-      TEST_RECOMMENDER_SCORING,
-      curriculum,
-      csTopics
-    );
-    score += hasDesiredTopics(TEST_RECOMMENDER_SCORING, curriculum, csTopics);
-    score += howRecentlyPublished(TEST_RECOMMENDER_SCORING, curriculum);
+    score += hasDesiredDuration(curriculum, duration)
+      ? TEST_RECOMMENDER_SCORING['hasDesiredDuration']
+      : 0;
+    score += hasDesiredMarketingInitiative(curriculum, marketingInitiative)
+      ? TEST_RECOMMENDER_SCORING['hasDesiredMarketingInitiative']
+      : 0;
+    score += hasAnySchoolSubject(curriculum)
+      ? TEST_RECOMMENDER_SCORING['hasAnySchoolSubject']
+      : 0;
+    score +=
+      numOverlappingDesiredSchoolSubjects(curriculum, schoolSubjects) *
+      TEST_RECOMMENDER_SCORING['numOverlappingDesiredSchoolSubjects'];
+    score += hasImportantButNotDesiredTopic(curriculum, csTopics)
+      ? TEST_RECOMMENDER_SCORING['hasImportantButNotDesiredTopic']
+      : 0;
+    score +=
+      numOverlappingDesiredTopics(curriculum, csTopics) *
+      TEST_RECOMMENDER_SCORING['numOverlappingDesiredTopics'];
+    score += publishedWithinTwoYearsAgo(curriculum)
+      ? publishedWithinOneYearAgo(curriculum)
+        ? TEST_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
+        : TEST_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo']
+      : 0;
     curriculaScores.push([curriculum, score]);
   });
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
@@ -57,100 +61,76 @@ export const getTestRecommendations = (
 /*
  * Scoring questions
  */
-const hasDesiredDuration = (scoring_framework, curriculum, duration) => {
-  return duration && curriculum.duration === duration
-    ? scoring_framework['hasDesiredDuration']
-    : 0;
+const hasDesiredDuration = (curriculum, duration) => {
+  return duration && curriculum.duration === duration;
 };
 
-const hasDesiredMarketingInitiative = (
-  scoring_framework,
-  curriculum,
-  marketingInitiative
-) => {
-  return marketingInitiative &&
+const hasDesiredMarketingInitiative = (curriculum, marketingInitiative) => {
+  return (
+    marketingInitiative &&
     curriculum.marketing_initiative === marketingInitiative
-    ? scoring_framework['hasDesiredMarketingInitiative']
-    : 0;
+  );
 };
 
-const hasAnySchoolSubject = (scoring_framework, curriculum) => {
-  return curriculum.school_subject
-    ? scoring_framework['hasAnySchoolSubject']
-    : 0;
+const hasAnySchoolSubject = curriculum => {
+  return !!curriculum.school_subject;
 };
 
-const hasDesiredSchoolSubjects = (
-  scoring_framework,
-  curriculum,
-  schoolSubjects
-) => {
+const numOverlappingDesiredSchoolSubjects = (curriculum, schoolSubjects) => {
   if (!curriculum.school_subject) {
     return 0;
   }
 
   const curriculumSubjects = curriculum.school_subject.split(',');
   const desiredSubjects = schoolSubjects?.split(',');
-
   return curriculumSubjects?.reduce(
     (total, currSubject) =>
-      total +
-      (desiredSubjects?.includes(currSubject)
-        ? scoring_framework['hasDesiredSchoolSubjects']
-        : 0),
+      total + (desiredSubjects?.includes(currSubject) ? 1 : 0),
     0
   );
 };
 
-const hasImportantButNotDesiredTopic = (
-  scoring_framework,
-  curriculum,
-  csTopics
-) => {
+const hasImportantButNotDesiredTopic = (curriculum, csTopics) => {
   const curriculumTopics = curriculum.cs_topic?.split(',');
   const desiredTopics = csTopics?.split(',');
 
   if (curriculumTopics) {
     for (const topic of curriculumTopics) {
       if (IMPORTANT_TOPICS.includes(topic) && !desiredTopics.includes(topic)) {
-        return scoring_framework['hasImportantButNotDesiredTopic'];
+        return true;
       }
     }
   }
-  return 0;
+  return false;
 };
 
-const hasDesiredTopics = (scoring_framework, curriculum, csTopics) => {
+const numOverlappingDesiredTopics = (curriculum, csTopics) => {
   if (!curriculum.cs_topic) {
     return 0;
   }
 
   const curriculumTopics = curriculum.cs_topic.split(',');
   const desiredTopics = csTopics?.split(',');
-
   return curriculumTopics?.reduce(
-    (total, currTopic) =>
-      total +
-      (desiredTopics?.includes(currTopic)
-        ? scoring_framework['hasDesiredTopics']
-        : 0),
+    (total, currTopic) => total + (desiredTopics?.includes(currTopic) ? 1 : 0),
     0
   );
 };
 
-const howRecentlyPublished = (scoring_framework, curriculum) => {
+const publishedWithinTwoYearsAgo = curriculum => {
   const publishedDate = moment(
     curriculum.published_date,
     UTC_PUBLISHED_DATE_FORMAT
   );
+  return twoYearsAgo <= publishedDate;
+};
 
-  if (oneYearAgo <= publishedDate) {
-    return scoring_framework['publishedWithinOneYearAgo'];
-  }
-  if (twoYearsAgo <= publishedDate) {
-    return scoring_framework['publishedWithinTwoYearsAgo'];
-  }
-  return 0;
+const publishedWithinOneYearAgo = curriculum => {
+  const publishedDate = moment(
+    curriculum.published_date,
+    UTC_PUBLISHED_DATE_FORMAT
+  );
+  return oneYearAgo <= publishedDate;
 };
 
 // Sort [curriculum, score] pairs by score in descending order. If multiple curricula get the same score, featured curricula are prioritized over
