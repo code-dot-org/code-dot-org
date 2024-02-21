@@ -10,7 +10,12 @@ import {
 } from 'blockly';
 import GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
-import {BlocklyVersion, Themes} from './constants';
+import {
+  BLOCK_TYPES,
+  BlocklyVersion,
+  Themes,
+  WORKSPACE_EVENTS,
+} from './constants';
 import {Field, FieldProto} from 'blockly/core/field';
 import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
@@ -25,6 +30,7 @@ import {Abstract} from 'blockly/core/events/events_abstract';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
+import { IProcedureBlock } from 'blockly/core/procedures';
 
 export interface BlockDefinition {
   category: string;
@@ -63,7 +69,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   navigationController: any; // Navigation Controller is not typed by Blockly
   BlockSpace: {
-    EVENTS: object;
+    EVENTS: typeof WORKSPACE_EVENTS;
     onMainBlockSpaceCreated: (callback: () => void) => void;
   };
 
@@ -190,3 +196,24 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
 export interface ExtendedWorkspace extends Workspace {
   noFunctionBlockFrame: boolean;
 }
+
+export interface ProcedureBlock extends Block, IProcedureBlock {
+  userCreated: boolean;
+}
+
+export interface ProcedureBlockConfiguration {
+  kind: 'block';
+  type: ProcedureType;
+  extraState: {
+    procedureId: string;
+    userCreated: boolean;
+    behaviorId?: string;
+  };
+  fields: {
+    NAME: string;
+  };
+}
+
+export type ProcedureType =
+  | BLOCK_TYPES.procedureDefinition
+  | BLOCK_TYPES.behaviorDefinition;

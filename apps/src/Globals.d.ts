@@ -19,7 +19,7 @@ declare const DEBUG_MINIFIED: number;
 // functions and properties not present in Google Blockly. If/when these are
 // converted to TypeScript, this type can be narrowed.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare const Blockly: typeof import('blockly') & Record<string, any>;
+//declare const Blockly: typeof import('blockly') & Record<string, any>;
 
 // Declaring stylelint as any for now. We are using this to lint CSS in Web Lab 2,
 // which is currently experimental.
