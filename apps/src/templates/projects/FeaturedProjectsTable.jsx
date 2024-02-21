@@ -16,6 +16,7 @@ import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import experiments from '@cdo/apps/util/experiments';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -192,9 +193,9 @@ const statusFormatter = status => {
   return status;
 };
 
-// const topicFormatter = topic => {
-//   return topic;
-// };
+const topicFormatter = topic => {
+  return topic;
+};
 
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
@@ -235,6 +236,8 @@ class FeaturedProjectsTable extends React.Component {
       }),
     });
   };
+
+  showSpecialTopic = experiments.isEnabled(experiments.SPECIAL_TOPIC);
 
   getColumns = sortable => {
     const columns = [
@@ -374,6 +377,25 @@ class FeaturedProjectsTable extends React.Component {
         },
       },
     ];
+    if (this.showSpecialTopic) {
+      columns.splice(4, 0, {
+        property: 'topic',
+        header: {
+          label: 'Topic',
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [topicFormatter],
+          props: {
+            style: {
+              ...styles.cellType,
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
+      });
+    }
     return columns;
   };
 
