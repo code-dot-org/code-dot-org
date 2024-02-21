@@ -50,6 +50,9 @@ class Projects
     }
     row[:id] = @table.insert(row)
 
+    # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
+    set_use_datablock_storage row[:id], project_type
+
     storage_encrypt_channel_id(row[:storage_id], row[:id])
   end
 
@@ -447,6 +450,16 @@ class Projects
   end
 
   private
+
+  # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
+  def set_use_datablock_storage(project_id, project_type)
+    if ['applab', 'gamelab'].include? project_type
+      ProjectUseDatablockStorage.find_or_create_by(project_id: project_id) do |storage|
+        fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
+        storage.use_datablock_storage = rand < fraction
+      end
+    end
+  end
 
   #
   # Discovering a channel's project type is a real mess.  We don't usually
