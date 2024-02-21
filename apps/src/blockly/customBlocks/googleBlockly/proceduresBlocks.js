@@ -87,6 +87,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'procedure_call_heal_stack',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -187,15 +188,41 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
   }
 });
 
-// Override the destroy function to not destroy the procedure. We need to do this
-// so that when we clear the modal function editor we don't remove the procedure
-// from the procedure map.
+// Override the destroy function to not destroy the procedure if we're using the
+// modal function editor. We need to do this so that when we clear its workspace
+// we don't remove the procedure from the procedure map. Insertion markers also
+// get this destroy function and they should not cause us to delete a procedure
+// either.
 GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
+  const originalDestroy = this.destroy.bind(this);
   const mixin = {
     destroy: function () {
-      // no-op
-      // this overrides the destroy hook registered
-      // in the procedure_def_get_def_mixin
+      if (!Blockly.useModalFunctionEditor && !this.isInsertionMarker()) {
+        originalDestroy();
+      }
+    },
+  };
+  // We can't register this as a mixin since we're overwriting existing methods
+  Object.assign(this, mixin);
+});
+
+// Override the doProcedureUpdate function to heal the stack. Without this,
+// any child blocks connected to a call block would also get deleted.
+GoogleBlockly.Extensions.register('procedure_call_heal_stack', function () {
+  const mixin = {
+    /**
+     * Updates the shape of this block to reflect the state of the data model.
+     */
+    doProcedureUpdate: function () {
+      if (!this.getProcedureModel()) return;
+      const id = this.getProcedureModel().getId();
+      if (!this.getTargetWorkspace_().getProcedureMap().has(id)) {
+        this.dispose(/* Begin Customization*/ true /* End Customization*/);
+        return;
+      }
+      this.updateName_();
+      this.updateEnabled_();
+      this.updateParameters_();
     },
   };
   // We can't register this as a mixin since we're overwriting existing methods
