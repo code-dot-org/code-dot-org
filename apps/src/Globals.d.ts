@@ -1,4 +1,6 @@
 // Global TypeScript definitions
+// These are types that do not rely on any external imports. If you
+// need to import to declare a type, add to GlobalsModule.d.ts instead.
 
 // Type definition for SCSS modules imported in TypeScript files
 declare module '*.module.scss' {
@@ -13,13 +15,6 @@ declare const IN_UNIT_TEST: boolean;
 declare const IN_STORYBOOK: boolean;
 declare const PISKEL_DEVELOPMENT_MODE: string;
 declare const DEBUG_MINIFIED: number;
-
-// Declare the type for the global Blockly object, set by the Blockly wrapper.
-// The intersection type is needed as the Blockly wrapper provides additional
-// functions and properties not present in Google Blockly. If/when these are
-// converted to TypeScript, this type can be narrowed.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-//declare const Blockly: typeof import('blockly') & Record<string, any>;
 
 // Declaring stylelint as any for now. We are using this to lint CSS in Web Lab 2,
 // which is currently experimental.
