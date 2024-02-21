@@ -14,8 +14,7 @@ import {
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   BodyThreeText,
-  BodyFourText,
-  ExtraStrongText,
+  OverlineThreeText,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -25,6 +24,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ProgressRing from './ProgressRing';
+import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 
 const INVALID_UNDERSTANDING = -1;
 
@@ -66,9 +66,15 @@ export function clearAnnotations() {
  * In this case, we might find this code on lines 8 through 10. So, we would
  * annotate line 8 and highlight lines 8 through 10.
  *
+ * This will return a list of annotation blocks containing the line numbers
+ * and the description.
+ *
  * @param {string} observations - A text block described above.
+ * @returns {Array} The ordered list of annotations.
  */
 export function annotateLines(observations) {
+  let ret = [];
+
   // Go through the AI observations
   // For every reference the AI gave us, we will find it in the code.
   // The AI has trouble giving line numbers, so even though we parse
@@ -114,6 +120,11 @@ export function annotateLines(observations) {
         for (let i = position.firstLine; i <= position.lastLine; i++) {
           EditorAnnotator.highlightLine(i);
         }
+        ret.push({
+          firstLine: position.firstLine,
+          lastLine: position.lastLine,
+          message: message,
+        });
       }
     }
 
@@ -124,8 +135,15 @@ export function annotateLines(observations) {
       for (let i = lineNumber; i <= lastLineNumber; i++) {
         EditorAnnotator.highlightLine(i);
       }
+      ret.push({
+        firstLine: lineNumber,
+        lastLine: lastLineNumber,
+        message: message,
+      });
     }
   }
+
+  return ret;
 }
 
 export default function LearningGoals({
@@ -152,6 +170,8 @@ export default function LearningGoals({
   const [displayUnderstanding, setDisplayUnderstanding] = useState(
     INVALID_UNDERSTANDING
   );
+  const [aiFeedback, setAiFeedback] = useState(-1);
+  const [aiEvidence, setAiEvidence] = useState([]);
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
   const learningGoalEvalIds = useRef(Array(learningGoals.length).fill(null));
   const teacherFeedbacks = useRef(Array(learningGoals.length).fill(''));
@@ -281,10 +301,11 @@ export default function LearningGoals({
     return (
       <div className={`${style.feedbackArea} uitest-learning-goal`}>
         <label className={style.evidenceLevelLabel}>
-          <span>{i18n.feedback()}</span>
+          <span>{i18n.feedbackHeader()}</span>
           <textarea
             id="ui-teacherFeedback"
             className={style.inputTextbox}
+            placeholder={i18n.feedbackPlaceholderShort()}
             name="teacherFeedback"
             value={displayFeedback}
             onChange={handleFeedbackChange}
@@ -335,11 +356,14 @@ export default function LearningGoals({
     }
     setCurrentLearningGoal(currentIndex);
 
+    // Clear feedback
+    setAiFeedback(-1);
+
     // Annotate the lines based on the AI observation
     clearAnnotations();
     const aiEvalInfo = getAiInfo(learningGoals[currentIndex].id);
     if (!!aiEvalInfo && aiEvalInfo.observations) {
-      annotateLines(aiEvalInfo.observations);
+      setAiEvidence(annotateLines(aiEvalInfo.observations));
     }
 
     if (!isStudent) {
@@ -366,7 +390,10 @@ export default function LearningGoals({
         <div className={style.learningGoalsHeaderLeftSide}>
           <button
             type="button"
-            className={style.learningGoalButton}
+            className={classnames(
+              style.learningGoalButton,
+              style.learningGoalButtonLeft
+            )}
             onClick={() => onCarouselPress(-1)}
           >
             <FontAwesome icon="angle-left" />
@@ -381,7 +408,10 @@ export default function LearningGoals({
           />
           <div className={style.learningGoalsHeaderText}>
             <Heading5 className={[style.learningGoalsHeaderTextBody, 'uitest-learning-goal-title']}>
-              {learningGoals[currentLearningGoal].learningGoal}
+              <span>{learningGoals[currentLearningGoal].learningGoal}</span>
+              {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
+                <AiToken />
+              )}
             </Heading5>
             <BodyThreeText className={style.learningGoalsHeaderTextBody}>
               {i18n.next()}:{' '}
@@ -393,29 +423,6 @@ export default function LearningGoals({
           </div>
         </div>
         <div className={style.learningGoalsHeaderRightSideV2}>
-          {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
-            <AiToken />
-          )}
-          {/*TODO: Display status of feedback*/}
-          {canProvideFeedback &&
-            aiEnabled &&
-            displayUnderstanding === INVALID_UNDERSTANDING && (
-              <BodyThreeText className={style.feedbackIndicatorText}>
-                {i18n.approve()}
-              </BodyThreeText>
-            )}
-          {canProvideFeedback &&
-            !aiEnabled &&
-            displayUnderstanding === INVALID_UNDERSTANDING && (
-              <BodyThreeText className={style.feedbackIndicatorText}>
-                {i18n.evaluate()}
-              </BodyThreeText>
-            )}
-          {displayUnderstanding >= 0 && (
-            <BodyThreeText className={style.feedbackIndicatorText}>
-              {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
-            </BodyThreeText>
-          )}
           {submittedEvaluation && (
             <div className={style.submittedEvaluation}>
               {submittedEvaluation.understanding !== null && (
@@ -439,7 +446,10 @@ export default function LearningGoals({
           <button
             id="uitest-next-goal"
             type="button"
-            className={style.learningGoalButton}
+            className={classnames(
+              style.learningGoalButton,
+              style.learningGoalButtonRight
+            )}
             onClick={() => onCarouselPress(1)}
           >
             <FontAwesome icon="angle-right" />
@@ -450,47 +460,52 @@ export default function LearningGoals({
       {/*TODO: Pass through data to child component*/}
       <div className={style.learningGoalOuterBlock}>
         <div className={style.learningGoalExpanded}>
-          {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
-          <EvidenceLevels
-            aiEvalInfo={aiEvalInfo}
-            isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-            learningGoalKey={learningGoals[currentLearningGoal].key}
-            evidenceLevels={learningGoals[currentLearningGoal].evidenceLevels}
-            canProvideFeedback={canProvideFeedback}
-            understanding={displayUnderstanding}
-            radioButtonCallback={radioButtonCallback}
-            submittedEvaluation={submittedEvaluation}
-            isStudent={isStudent}
-            isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
-          />
-          {teacherHasEnabledAi &&
-            !!studentLevelInfo &&
-            !!aiEvalInfo &&
-            aiEvalInfo.understanding !== undefined && (
-              <div className={style.aiAssessmentOuterBlock}>
-                <AiAssessment
-                  isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
-                  studentName={studentLevelInfo.name}
-                  aiConfidence={aiEvalInfo.ai_confidence}
-                  aiUnderstandingLevel={aiEvalInfo.understanding}
-                  aiEvalInfo={aiEvalInfo}
-                />
-              </div>
-            )}
-          {learningGoals[currentLearningGoal].tips && !isStudent && (
-            <details className={style.learningGoalTips}>
-              <summary>
-                <strong>{i18n.tipsForEvaluation()}</strong>
-              </summary>
+          <AiAssessmentFeedbackContext.Provider
+            value={{aiFeedback, setAiFeedback}}
+          >
+            {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
+            <EvidenceLevels
+              aiEvalInfo={aiEvalInfo}
+              isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
+              learningGoalKey={learningGoals[currentLearningGoal].key}
+              evidenceLevels={learningGoals[currentLearningGoal].evidenceLevels}
+              canProvideFeedback={canProvideFeedback}
+              understanding={displayUnderstanding}
+              radioButtonCallback={radioButtonCallback}
+              submittedEvaluation={submittedEvaluation}
+              isStudent={isStudent}
+              isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+            />
+            {teacherHasEnabledAi &&
+              !!studentLevelInfo &&
+              !!aiEvalInfo &&
+              aiEvalInfo.understanding !== undefined && (
+                <div className={style.aiAssessmentOuterBlock}>
+                  <AiAssessment
+                    isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
+                    studentName={studentLevelInfo.name}
+                    aiConfidence={aiEvalInfo.ai_confidence}
+                    aiUnderstandingLevel={aiEvalInfo.understanding}
+                    aiEvalInfo={aiEvalInfo}
+                    aiEvidence={aiEvidence}
+                  />
+                </div>
+              )}
+            {learningGoals[currentLearningGoal].tips && !isStudent && (
+              <details>
+                <summary>
+                  <strong>{i18n.tipsForEvaluation()}</strong>
+                </summary>
 
-              <div className={style.learningGoalsTips}>
-                <SafeMarkdown
-                  markdown={learningGoals[currentLearningGoal].tips}
-                />
-              </div>
-            </details>
-          )}
-          {!!studentLevelInfo && renderAutoSaveTextbox()}
+                <div className={style.learningGoalsTips}>
+                  <SafeMarkdown
+                    markdown={learningGoals[currentLearningGoal].tips}
+                  />
+                </div>
+              </details>
+            )}
+            {!!studentLevelInfo && renderAutoSaveTextbox()}
+          </AiAssessmentFeedbackContext.Provider>
         </div>
       </div>
     </div>
@@ -513,11 +528,13 @@ LearningGoals.propTypes = {
 
 const AiToken = () => {
   return (
-    <div className="uitest-uses-ai">
+    <div className={classnames('uitest-uses-ai', style.aiTokenContainer)}>
       {' '}
-      <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
-        <ExtraStrongText>{i18n.usesAi()}</ExtraStrongText>
-      </BodyFourText>
+      <OverlineThreeText
+        className={classnames(style.aiToken, style.aiTokenText)}
+      >
+        {i18n.usesAi()}
+      </OverlineThreeText>
     </div>
   );
 };

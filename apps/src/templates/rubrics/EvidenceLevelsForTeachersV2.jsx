@@ -44,7 +44,7 @@ export default function EvidenceLevelsForTeachersV2({
   }, [aiEvalInfo, isAiAssessed, understanding]);
 
   const [showDescription, setShowDescription] = useState(INVALID_UNDERSTANDING);
-  //const evidenceLevelsReverse = evidenceLevels.reverse();
+
   const handleMouseOver = understandingValue => {
     setShowDescription(understandingValue);
   };
@@ -87,11 +87,11 @@ export default function EvidenceLevelsForTeachersV2({
             </button>
           ))}
           <BodyFourText>
-            {understanding >= 0
-              ? evidenceLevels.find(e => e.understanding === understanding)
+            {showDescription !== INVALID_UNDERSTANDING
+              ? evidenceLevels.find(e => e.understanding === showDescription)
                   .teacherDescription
-              : showDescription !== INVALID_UNDERSTANDING &&
-                evidenceLevels.find(e => e.understanding === showDescription)
+              : understanding >= 0 &&
+                evidenceLevels.find(e => e.understanding === understanding)
                   .teacherDescription}
           </BodyFourText>
         </div>
