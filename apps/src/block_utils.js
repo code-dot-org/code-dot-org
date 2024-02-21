@@ -2,7 +2,7 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
-import {EMPTY_OPTION} from './blockly/constants';
+import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 
@@ -166,7 +166,11 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     helpUrl: helpUrl,
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
