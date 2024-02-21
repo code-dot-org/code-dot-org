@@ -59,4 +59,19 @@ class CurriculumHelperTest < ActiveSupport::TestCase
 
     assert_nil CurriculumHelper.find_matching_course_version('foo')
   end
+
+  test 'find_matching_unit_or_unit_group' do
+    standalone_unit = create :script, is_course: true
+    create :course_version, content_root: standalone_unit
+    assert_equal standalone_unit, CurriculumHelper.find_matching_unit_or_unit_group(standalone_unit.name)
+
+    unit_group = create :unit_group
+    unit = create :script
+    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+    create :course_version, content_root: unit_group
+    assert_equal unit_group, CurriculumHelper.find_matching_unit_or_unit_group(unit_group.name)
+    assert_equal unit, CurriculumHelper.find_matching_unit_or_unit_group(unit.name)
+
+    assert_nil CurriculumHelper.find_matching_course_version('foo')
+  end
 end

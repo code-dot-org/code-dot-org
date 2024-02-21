@@ -27,8 +27,6 @@ class CertificateImagesController < ApplicationController
     # code tutorial.
     course_name = recognized_course_name?(data['course']) ? data['course'] : 'hourofcode'
 
-    #course_version = CurriculumHelper.find_relat_course_version(course_name)
-    #course_title = course_version&.localized_title
     unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
     course_title = unit_or_unit_group&.localized_title
     begin

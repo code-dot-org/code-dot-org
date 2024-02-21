@@ -11,7 +11,6 @@ class CongratsController < ApplicationController
     begin
       course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
       @certificate_image_url = certificate_image_url(nil, course_name, nil)
-      puts @certificate_image_url
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
     end

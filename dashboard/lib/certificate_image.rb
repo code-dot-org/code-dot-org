@@ -154,7 +154,6 @@ class CertificateImage
     course ||= ScriptConstants::HOC_NAME
 
     template_file = certificate_template_for(course)
-    puts "#{template_file} being used for course #{course}"
 
     path = pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)
     if prefilled_title_course?(course)
