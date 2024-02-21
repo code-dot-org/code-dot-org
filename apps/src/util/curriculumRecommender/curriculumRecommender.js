@@ -7,12 +7,6 @@ import {
 import moment from 'moment';
 
 const now = moment().utc();
-const oneYearAgo = moment()
-  .utc()
-  .year(now.year() - 1);
-const twoYearsAgo = moment()
-  .utc()
-  .year(now.year() - 2);
 
 /*
  * Curriculum recommenders: Each recommender receives an array of all curricula to consider and any preferences it should prioritize. The given
@@ -119,11 +113,13 @@ export const getTestRecommendations = (
       : 0;
     // Add points if given curriculum was published within 2 years ago, and add more
     // points if it was published within 1 year ago.
-    score += publishedWithinTwoYearsAgo(curriculum)
-      ? publishedWithinOneYearAgo(curriculum)
-        ? TEST_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
-        : TEST_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo']
-      : 0;
+    const publishedYearsAgo = publishedNumYearsAgo(curriculum);
+    score +=
+      publishedYearsAgo < 2
+        ? publishedYearsAgo < 1
+          ? TEST_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
+          : TEST_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo']
+        : 0;
     curriculaScores.push([curriculum, score]);
   });
   return sortRecommendations(curriculaScores).map(curr => curr[0]);
@@ -188,20 +184,13 @@ const numOverlappingDesiredTopics = (curriculum, csTopics) => {
   );
 };
 
-const publishedWithinTwoYearsAgo = curriculum => {
+// Returns the number of years ago the given curriculum was published (rounded down).
+const publishedNumYearsAgo = curriculum => {
   const publishedDate = moment(
     curriculum.published_date,
     UTC_PUBLISHED_DATE_FORMAT
   );
-  return twoYearsAgo <= publishedDate;
-};
-
-const publishedWithinOneYearAgo = curriculum => {
-  const publishedDate = moment(
-    curriculum.published_date,
-    UTC_PUBLISHED_DATE_FORMAT
-  );
-  return oneYearAgo <= publishedDate;
+  return now.diff(publishedDate, 'years', false);
 };
 
 // Sort [curriculum, score] pairs by score in descending order. If multiple curricula get the same score, featured curricula are prioritized over
