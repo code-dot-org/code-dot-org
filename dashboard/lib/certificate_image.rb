@@ -154,6 +154,7 @@ class CertificateImage
     course ||= ScriptConstants::HOC_NAME
 
     template_file = certificate_template_for(course)
+    puts "#{template_file} being used for course #{course}"
 
     path = pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)
     if prefilled_title_course?(course)
@@ -168,8 +169,9 @@ class CertificateImage
       course_title_height = 171
       apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
 
-      course_version = CurriculumHelper.find_matching_course_version(course)
-      total_hours = (course_version.content_root.duration_in_minutes / 60).floor
+      unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
+      total_minutes = unit_or_unit_group&.duration_in_minutes || 0
+      total_hours = (total_minutes / 60).floor
       apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
       donor_text_y_offset = 611
     else # all other courses use a certificate image where the course name is also blank
@@ -210,7 +212,8 @@ class CertificateImage
   def self.course_type(course_name)
     return CERTIFICATE_COURSE_TYPES[:ACCELERATED] if accelerated_course?(course_name)
 
-    course_version = CurriculumHelper.find_matching_course_version(course_name)
+    unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
+    course_version = unit_or_unit_group&.get_course_version
     return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc?
     return CERTIFICATE_COURSE_TYPES[:PL] if course_version&.pl_course?
     return CERTIFICATE_COURSE_TYPES[:OTHER] if course_version

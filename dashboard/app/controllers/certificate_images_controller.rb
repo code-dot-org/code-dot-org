@@ -27,8 +27,10 @@ class CertificateImagesController < ApplicationController
     # code tutorial.
     course_name = recognized_course_name?(data['course']) ? data['course'] : 'hourofcode'
 
-    course_version = CurriculumHelper.find_matching_course_version(course_name)
-    course_title = course_version&.localized_title
+    #course_version = CurriculumHelper.find_relat_course_version(course_name)
+    #course_title = course_version&.localized_title
+    unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
+    course_title = unit_or_unit_group&.localized_title
     begin
       image = CertificateImage.create_course_certificate_image(data['name'], course_name, data['donor'], course_title)
       image.format = format
@@ -43,6 +45,6 @@ class CertificateImagesController < ApplicationController
     name.nil? ||
       name == ScriptConstants::ACCELERATED_NAME ||
       CertificateImage.prefilled_title_course?(name) ||
-      CurriculumHelper.find_matching_course_version(name)
+      CurriculumHelper.find_matching_unit_or_unit_group(name)
   end
 end
