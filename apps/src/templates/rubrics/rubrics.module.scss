@@ -334,7 +334,7 @@ button.rubricHeaderTab {
   align-items: center;
   gap: 4px;
   border-radius: 30px;
-  background: #3cfff8;
+  background: $ai_rubric_cyan;
 }
 
 p.aiTokenText {
@@ -673,8 +673,6 @@ i.infoAlertIcon {
   width: 180px;
 }
 
-// Start of rubrics redesign
-
 .learningGoalsContainer {
   display: flex;
   flex-direction: column;
@@ -814,10 +812,10 @@ i.infoAlertIcon {
   padding: 3px 16px 0;
   font-size: 0.875rem;
   height: 32px;
-  box-shadow: 0 0 0 2px #3cfff8;
+  box-shadow: 0 0 0 2px $ai_rubric_cyan;
 
   &:hover {
-    box-shadow: 0 0 0 2px #3cfff8;
+    box-shadow: 0 0 0 2px $ai_rubric_cyan;
     background-color: $light_gray_100;
   }
 }
@@ -910,5 +908,3 @@ i.infoAlertIcon {
 .detailsHidden {
   display: none;
 }
-
-// End of rubrics redesign

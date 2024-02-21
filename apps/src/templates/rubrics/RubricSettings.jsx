@@ -203,9 +203,7 @@ export default function RubricSettings({
             <BodyTwoText className="uitest-eval-status-all-text">
               <StrongText>{summaryText()}</StrongText>
             </BodyTwoText>
-            {statusAllText() && (
-              <BodyTwoText>{statusAllText() || ''}</BodyTwoText>
-            )}
+            {statusAllText() && <BodyTwoText>{statusAllText()}</BodyTwoText>}
           </div>
           <Button
             className="uitest-run-ai-assessment-all"
