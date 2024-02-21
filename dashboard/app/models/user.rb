@@ -79,7 +79,6 @@ require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
 require 'policies/lti'
-require 'policies/user'
 require 'services/user'
 
 class User < ApplicationRecord
