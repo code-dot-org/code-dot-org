@@ -1128,6 +1128,7 @@ Dashboard::Application.routes.draw do
         put :rename_column
         put :coerce_column
         delete :delete_column
+        get :get_column
         get :get_columns_for_table
 
         # Datablock Storage: Table Record API
@@ -1143,6 +1144,11 @@ Dashboard::Application.routes.draw do
         # Datablock Storage: Channel API
         get :channel_exists
         delete :clear_all_data
+
+        # TODO: post-firebase-cleanup, remove
+        # Project Use Datablock Storage API
+        put :use_datablock_storage
+        put :use_firebase_storage
       end
     end
   end
