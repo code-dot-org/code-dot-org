@@ -321,7 +321,7 @@
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
     "timers-browserify": "^2.0.12",
-    "tone": "^14.7.77",
+    "tone": "14.7.77",
     "ts-loader": "^9.4.2",
     "typescript": "^5.3.3",
     "usb": "^2.8.1",

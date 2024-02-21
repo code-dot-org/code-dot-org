@@ -6,6 +6,7 @@
 
 import {SoundLoadCallbacks} from '../types';
 import SoundCache from './SoundCache';
+import * as Tone from 'tone';
 
 const DEFAULT_BPM = 120;
 
@@ -22,9 +23,12 @@ export interface SamplerSequence {
 }
 
 class ToneJSPlayer {
-  private samplers: {[instrument: string]: typeof Tone.Sampler};
-  private activePlayers: (typeof Tone.GrainPlayer)[];
-  private currentPreview: {id: string; player: typeof Tone.GrainPlayer} | null;
+  private samplers: {[instrument: string]: Tone.Sampler};
+  private activePlayers: (Tone.Player | Tone.GrainPlayer)[];
+  private currentPreview: {
+    id: string;
+    player: Tone.Player | Tone.GrainPlayer;
+  } | null;
 
   constructor(
     bpm = DEFAULT_BPM,
@@ -32,12 +36,15 @@ class ToneJSPlayer {
   ) {
     Tone.Transport.bpm.value = bpm;
     this.activePlayers = [];
-    this.samplers = [];
+    this.samplers = {};
     this.currentPreview = null;
+    Tone.start().then(() => {
+      console.log('TONE: context started');
+    });
   }
 
   getCurrentPosition(): string {
-    return Tone.Transport.position;
+    return Tone.Transport.position as string;
   }
 
   goToPosition(position: string) {

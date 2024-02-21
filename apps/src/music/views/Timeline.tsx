@@ -90,7 +90,7 @@ const Timeline: React.FunctionComponent = () => {
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
       dispatch(setStartPlayheadPosition(roundedMeasure));
     },
-    [dispatch, isPlaying]
+    [dispatch]
   );
 
   const onMeasureNumberClick = useCallback(

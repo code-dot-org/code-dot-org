@@ -1991,12 +1991,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.23.5, @babel/runtime@npm:^7.23.6":
-  version: 7.23.8
-  resolution: "@babel/runtime@npm:7.23.8"
+"@babel/runtime@npm:^7.23.9":
+  version: 7.23.9
+  resolution: "@babel/runtime@npm:7.23.9"
   dependencies:
     regenerator-runtime: ^0.14.0
-  checksum: 0bd5543c26811153822a9f382fd39886f66825ff2a397a19008011376533747cd05c33a91f6248c0b8b0edf0448d7c167ebfba34786088f1b7eb11c65be7dfc3
+  checksum: 6bbebe8d27c0c2dd275d1ac197fc1a6c00e18dab68cc7aaff0adc3195b45862bae9c4cc58975629004b0213955b2ed91e99eccb3d9b39cabea246c657323d667
   languageName: node
   linkType: hard
 
@@ -7419,13 +7419,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"automation-events@npm:^6.0.13":
-  version: 6.0.13
-  resolution: "automation-events@npm:6.0.13"
+"automation-events@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "automation-events@npm:7.0.0"
   dependencies:
-    "@babel/runtime": ^7.23.5
+    "@babel/runtime": ^7.23.9
     tslib: ^2.6.2
-  checksum: f5747f368acda9f01548bf901b50de5cce09dcaf061f314470d7cb12a80c381befcd84937d47c866a73fbae9298b0336f03f1a04cae755a3a4303a3516531fe5
+  checksum: e32fb317050c64ce782aa3a1aa66c8a012c0f84fcd846f9886a3f9ea6c3812bf4382a950e53e962da7dbc823c943c102210487ecbaba37f69e8f08870728af1c
   languageName: node
   linkType: hard
 
@@ -8377,7 +8377,7 @@ __metadata:
     swiper: ^11.0.5
     terser-webpack-plugin: ^5.3.6
     timers-browserify: ^2.0.12
-    tone: ^14.7.77
+    tone: 14.7.77
     ts-loader: ^9.4.2
     ts-sinon: ^2.0.2
     typescript: ^5.3.3
@@ -26913,14 +26913,14 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"standardized-audio-context@npm:^25.3.29":
-  version: 25.3.61
-  resolution: "standardized-audio-context@npm:25.3.61"
+"standardized-audio-context@npm:^25.1.8":
+  version: 25.3.64
+  resolution: "standardized-audio-context@npm:25.3.64"
   dependencies:
-    "@babel/runtime": ^7.23.6
-    automation-events: ^6.0.13
+    "@babel/runtime": ^7.23.9
+    automation-events: ^7.0.0
     tslib: ^2.6.2
-  checksum: 80a21d6ad3216e3acf54ffcab69d65d1cd0f52c89ef3bd9a5c4b65ecdf3e2f1220dde4e34fa89c0b7167d9d2815131535e3e7aed7fda85a501ecca43c7d73000
+  checksum: 47a97c30117974a10b422ed6daecb4367322be7a619b988fc574384cef4298328381dbdd3818e15cd28acbba0e2018bf5d5ba6a88634eda18d0d39bd2bd74ecc
   languageName: node
   linkType: hard
 
@@ -28242,13 +28242,13 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"tone@npm:^14.7.77":
-  version: 14.8.49
-  resolution: "tone@npm:14.8.49"
+"tone@npm:14.7.77":
+  version: 14.7.77
+  resolution: "tone@npm:14.7.77"
   dependencies:
-    standardized-audio-context: ^25.3.29
-    tslib: ^2.3.1
-  checksum: ffc0d81f77e9030b5c5074b690f415a72be415edcda5ef01768de1ed89a7176392759ae1aae1cd70c5540da5616754b9c17fdf2a25c1d85dcb0ff64d9cac99c6
+    standardized-audio-context: ^25.1.8
+    tslib: ^2.0.1
+  checksum: cb0dfea08fddd38d7cacdc23eaa4ab98660ca4b60fe7b7431413d79937deee790b3237aa51b2c440ebd5477dace00e1f72d48dd09553c5cad83e9750eba17ea0
   languageName: node
   linkType: hard
 
