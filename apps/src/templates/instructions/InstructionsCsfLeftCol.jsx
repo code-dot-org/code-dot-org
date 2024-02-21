@@ -123,6 +123,7 @@ class InstructionsCsfLeftCol extends React.Component {
           })}
           onClick={this.handleClickLightbulb}
           onKeyDown={this.handleKeyDownLightbulb}
+          role="button"
           tabIndex={0}
           aria-label={i18n.promptIconAndLightbulbInstructionHints()}
         >

@@ -4,11 +4,6 @@
     "func": "int10",
     "blockText": "{VALUE}",
     "returnType": "Number",
-    "color": [
-      258,
-      "0.35",
-      "0.62"
-    ],
     "style": "math_blocks",
     "args": [
       {

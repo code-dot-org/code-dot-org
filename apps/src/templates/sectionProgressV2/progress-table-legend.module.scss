@@ -1,5 +1,19 @@
 @import 'color';
 
+.iconKey {
+  margin-bottom: 40px;
+}
+
+.iconKeyCaret {
+  margin-inline-end: 12px;
+}
+
+.iconKeyTitle {
+  cursor: pointer;
+  width: fit-content;
+  padding-inline-end: 8px;
+}
+
 .legend {
   align-items: flex-start;
   border: 1px solid $light_gray_200;
@@ -7,6 +21,7 @@
   display: inline-flex;
   flex-direction: column;
   white-space: nowrap;
+  margin-right: 16px;
 }
 
 .legend .headerContainer {
@@ -14,6 +29,10 @@
   padding: 8px 16px;
   border-bottom: 1px solid $light_gray_200;
   box-sizing: border-box;
+}
+
+.legend.levelTypes {
+  margin-right: 0;
 }
 
 .legendColumn {
@@ -28,7 +47,7 @@
   display: flex;
   padding: 16px;
   align-items: flex-start;
-  gap: 40px;
+  gap: 28px;
 }
 
 .legendItem {
@@ -63,7 +82,7 @@
 }
 
 .feedbackGiven {
-background-image: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M19 1L19 15L5 1L19 1Z' fill='%23292F36'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M19 1L19 15L5 1L19 1Z' fill='%23292F36'%3E%3C/path%3E%3C/svg%3E");
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: top right;

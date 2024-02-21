@@ -41,6 +41,7 @@ const CODE_STUDIO_ENTRIES = {
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+  'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
   'programming_classes/show': './src/sites/studio/pages/programming_classes/show.js',
@@ -185,6 +186,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
   'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
+  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
 
   // hourofcode.com
   'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
@@ -226,12 +228,15 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
   'foorm/libraries/editor': './src/sites/studio/pages/foorm/libraries/editor.js',
   'foorm/simple_survey_forms/show': './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
+
+  'plc/user_course_enrollments/index': './src/sites/studio/pages/plc/user_course_enrollments/index.js',
 };
 
 // Entries which are shared between dashboard and pegasus, which are included
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
+  userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
 };
 
 // prettier-ignore

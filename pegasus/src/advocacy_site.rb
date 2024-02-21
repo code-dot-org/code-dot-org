@@ -116,10 +116,6 @@ class AdvocacySite
               text_actual: "Bring CS to your school or district",
               url: CDO.code_org_url("/yourschool")
             },
-            {
-              text_actual: "Even more resources",
-              url: CDO.code_org_url("/promote/morestats")
-            }
           ]
       }
     ]

@@ -66,5 +66,7 @@
   "panelHeaderWorkspace": "Workspace",
   "panelHeaderControls": "Controls",
   "panelHeaderTimeline": "Timeline",
-  "continue": "Continue"
+  "continue": "Continue",
+  "undo": "Undo",
+  "redo": "Redo"
 }
