@@ -714,7 +714,7 @@
   module_desc_coding_book_covers: "Use code to create an animated cover of a book, using sprites and text to convey characters, setting, plot, and more."
   module_desc_coding_interactive_maps: "Use coding to develop a map that tells a story, allowing you to explore geographic information in an engaging and interactive way."
   module_desc_hello_world: "Students embark on their coding journey with this Hello World lesson, designed specifically for beginners! Explore Sprite Lab, an intuitive block-based programming interface, and master foundational skills for future coding projects in the K-5 curriculum."
-  
+
   values_01: "We believe computer science is foundational for all students"
   values_02: "We are committed to equity, access, and opportunity"
   values_03: "We believe in the power of a collaborative education community"
