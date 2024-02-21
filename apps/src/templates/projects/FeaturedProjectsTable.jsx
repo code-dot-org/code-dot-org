@@ -18,6 +18,7 @@ import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import experiments from '@cdo/apps/util/experiments';
 import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -143,7 +144,7 @@ const onDelete = channel => {
 };
 
 const actionsFormatter = (actions, {rowData}) => {
-  const status = rowData.status; // active, archived, bookmarked
+  const status = rowData.status;
   return (
     <QuickActionsCell>
       {status !== featuredProjectStatuses.active && (
@@ -210,10 +211,14 @@ class FeaturedProjectsTable extends React.Component {
       direction: 'desc',
       position: 0,
     },
-    filterDropdownStatusValue: 'all',
+    filterDropdownStatusValue: tryGetLocalStorage(
+      'featured-projects-filter-dropdown',
+      'all'
+    ),
   };
 
   setFilterDropdownStatusValue = value => {
+    trySetLocalStorage('featured-projects-filter-dropdown', value);
     this.setState({filterDropdownStatusValue: value});
   };
 
@@ -222,11 +227,18 @@ class FeaturedProjectsTable extends React.Component {
   };
 
   getProjectList = () => {
-    if (this.state.filterDropdownStatusValue === 'active') {
+    if (
+      this.state.filterDropdownStatusValue === featuredProjectStatuses.active
+    ) {
       return this.props.activeList;
-    } else if (this.state.filterDropdownStatusValue === 'bookmarked') {
+    } else if (
+      this.state.filterDropdownStatusValue ===
+      featuredProjectStatuses.bookmarked
+    ) {
       return this.props.bookmarkedList;
-    } else if (this.state.filterDropdownStatusValue === 'archived') {
+    } else if (
+      this.state.filterDropdownStatusValue === featuredProjectStatuses.archived
+    ) {
       return this.props.archivedList;
     } else {
       return this.props.activeList.concat(
@@ -403,9 +415,15 @@ class FeaturedProjectsTable extends React.Component {
         name="featured-projects-table-filter-dropdown"
         items={[
           {value: 'all', text: 'all'},
-          {value: 'active', text: 'currently featured'},
-          {value: 'bookmarked', text: 'bookmarked'},
-          {value: 'archived', text: 'archived'},
+          {value: featuredProjectStatuses.active, text: 'currently featured'},
+          {
+            value: featuredProjectStatuses.bookmarked,
+            text: featuredProjectStatuses.bookmarked,
+          },
+          {
+            value: featuredProjectStatuses.archived,
+            text: featuredProjectStatuses.archived,
+          },
         ]}
         labelText="Featured projects table filter dropdown"
         isLabelVisible={false}
