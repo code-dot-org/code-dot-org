@@ -41,6 +41,7 @@ const {
   localeCode,
   hasSeenStandardsReportInfo,
   coursesWithProgress,
+  canViewStudentAIChatMessages,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -92,6 +93,8 @@ $(document).ready(function () {
   ].reverse();
   store.dispatch(setCoursesWithProgress(reorderedCourses));
 
+  const showAITutorTab = canViewStudentAIChatMessages;
+
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
@@ -105,6 +108,7 @@ $(document).ready(function () {
               sectionName={section.name}
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
+              showAITutorTab={showAITutorTab}
             />
           )}
         />
