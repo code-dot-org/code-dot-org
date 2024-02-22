@@ -1632,6 +1632,69 @@
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
 
+  pl_page:
+    heading: "Professional learning that empowers"
+    desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+    top_list_01: "Choose your own learning pathway"
+    top_list_02: "Comprehensive quality resources"
+    top_list_03: "A global community of teachers"
+    top_list_04: "Understand curriculum and learning tools"
+    journey:
+      heading: "Your professional learning journey, your way"
+      desc: "Explore the chart below to find the best professional learning (PL) option for your needs and goals."
+      facilitator_led: "Facilitator-Led"
+      self_paced: "Self-Paced"
+      overview: "Overview:"
+      k_5:
+        title: "K-5 Workshops"
+        desc: "One day workshops for elementary educators at any level."
+      mid_high:
+        title: "6-12 Workshops"
+        desc: "Year-long professional learning programs to support you."
+      online:
+        title: "Online Professional Learning"
+        desc: "Self-paced professional learning modules at no cost!"
+      led_by_facilitator: "Led by an approved facilitator"
+      engage_with_peers: "Engage with a group of peers"
+      options: "In-person and virtual options"
+      one_day_workshop: "1 day workshop for your level"
+      year_long: "Year-long support program"
+      us_only: "Only available in the US*"
+      free: "Completely free!"
+      own_pace: "Learn at your own pace"
+      online_modules: "Flexible online modules that match our curriculum"
+      available_everywhere: "Available everywhere!"
+      button_k_5: "Explore K-5 workshops"
+      button_6_12: "Explore 6-12 workshops"
+      button_self_paced: "Explore self-paced courses"
+      disclaimer: "**Not in the United States?** We're expanding our network of international partners to offer more professional learning to teachers. [Learn more here](%{learn_more_url})."
+    quote:
+      text: "I love getting to work in the lessons and deeply think through how I will use it with students. I don't feel like I often have time to 'slow down' and dive into materials, but this workshop always gives me time and space to do so."
+      byline: "CS Discoveries Teacher"
+    hands-on:
+      heading: "Hands-on practice with lesson content"
+      desc: "Experience our curriculum as your students would in our interactive workshops, preparing you to teach with a deep, practical understanding. You'll leave not just familiar with the material, but fully equipped to engage and inspire your classroom."
+    pedagogy:
+      heading: "Reflection on pedagogy"
+      desc: "Explore the nuances of teaching methods and their impacts on learning through reflective sessions on pedagogy. Our professional learning fosters a deeper understanding of educational practices, enriching your teaching philosophy and classroom approach."
+    support:
+      heading: "Educator support at every level"
+      desc: "Our comprehensive support network caters to educators at all stages, offering year-round assistance, additional programming, and access to vibrant teacher communities. Stay connected, continually develop your skills, and find inspiration within a supportive peer network."
+    resources:
+      heading: "Additional resources and support for educators"
+      intl:
+        title: "International Resources"
+        desc: "We're expanding our network of international partners and professional learning resources for educators outside of the US. Self-paced learning is available everywhere!"
+        button: "See international resources"
+      community:
+        title: "Teacher Community"
+        desc: "A forum for teachers to ask questions and share best practices, thoughts, ideas, and inspiration. Join a community of amazing educators around the world!"
+        button: "Join our teacher forums"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
+
   intl_pl_page:
     page_title: "International Professional Learning Resources"
     heading: "Global professional learning opportunities"
@@ -10247,7 +10310,7 @@
   about_page_section_specific_description_3: "All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](%{commons_url}) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](%{contact_us_url}). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project.](%{open_source_url})"
   about_page_section_specific_description_4: "The [Code.org Advocacy Coalition](%{advocacy_url}) is a bipartisan coalition of corporations and nonprofits that work together to help establish US federal and state policies to expand and sustain access to K-12 computer science and to broaden participation and diversity in the field. We bring together [Republican and Democratic political leaders](%{leaders_url}) in common cause supporting expanding access to and participation in K-12 computer science."
   about_page_section_specific_description_5: "Code.org is a member of the steering committee that helped establish the [K-12 Computer Science Framework](%{framework_url}) - a high-level guide for states, districts, and organizations implementing computer science education. The Framework has won the support of hundreds of academics, K-12 educators, software companies, nonprofits, and states."
-  about_page_section_specific_description_6: "Code.org IRS form 990 for [2014](%{irs_url_1}), [2015](%{irs_url_2}), [2016](%{irs_url_3}), [2017](%{irs_url_4}), [2018](%{irs_url_5}), [2019](%{irs_url_6}), [2020](%{irs_url_7}), and [2021](%{irs_url_8}). [Donation Policy.](%{donation_policy_url})"
+  about_page_section_specific_description_6: "Code.org IRS form 990 for [2014](%{irs_url_2014}), [2015](%{irs_url_2015}), [2016](%{irs_url_2016}), [2017](%{irs_url_2017}), [2018](%{irs_url_2018}), [2019](%{irs_url_2019}), [2020](%{irs_url_2020}), [2021](%{irs_url_2021}), and [2022](%{irs_url_2022}). [Donation Policy.](%{donation_policy_url})"
   about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url}) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:"
   about_page_section_specific_description_8: "Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](%{partners_url}), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organization for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization."
   about_page_section_donors_description_1: "Code.org® is a registered public 501c3 nonprofit, with support from the general public. We are grateful for the generous support we've received from [individuals and organizations](%{individuals_url}) who support our vision."
