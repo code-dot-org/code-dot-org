@@ -12,15 +12,11 @@ import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
-import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
-import CdoFieldNumber from './addons/cdoFieldNumber';
-import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
@@ -245,6 +241,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('fieldRegistry');
+  blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
+  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
+  blocklyWrapper.wrapReadOnlyProperty('FieldAngle');
+  blocklyWrapper.wrapReadOnlyProperty('FieldMultilineInput');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -298,12 +298,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
-    // Overrides required for a customization of FieldTextInput
-    // and its child classes.
-    ['field_input', 'FieldTextInput', CdoFieldTextInput],
-    ['field_number', 'FieldNumber', CdoFieldNumber],
-    ['field_angle', 'FieldAngle', CdoFieldAngle],
-    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -682,6 +676,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       renderer: optOptionsExtended.renderer || Renderers.DEFAULT,
       comments: false,
       media: '/blockly/media/google_blockly',
+      modalInputs: false, // Prevents pop-up editor on mobile
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
