@@ -5,7 +5,7 @@ import {
   generalChatSystemPrompt,
   validationSystemPrompt,
 } from '@cdo/apps/aiTutor/constants';
-import {getSectionAITutorInteractions, savePromptAndResponse} from '../interactionsApi';
+import {savePromptAndResponse} from '../interactionsApi';
 import {
   TutorType,
   Role,

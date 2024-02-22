@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {fetchStudentChatMessages} from '@cdo/apps/aiTutor/interactionsApi';
 import AITutorChatMessagesTableRow from './aiTutorChatMessageTableRow';
+import style from './chat-messages-table.module.scss';
 
 /**
  * Renders a table showing the section's students' chat messages with AI Tutor.
@@ -32,19 +33,22 @@ const AITutorChatMessagesTable: React.FunctionComponent<
         <thead>
           <tr>
             <td>
-              <div>Student</div>
+              <div className={style.header}>Student</div>
             </td>
             <td>
-              <div>Timestamp</div>
+              <div className={style.header}>Timestamp</div>
             </td>
             <td>
-              <div>AI Tutor Responses</div>
+              <div className={style.header}>AI Tutor Responses</div>
             </td>
           </tr>
         </thead>
         <tbody>
           {chatMessages.map(chatMessage => (
-            <AITutorChatMessagesTableRow chatMessage={chatMessage} />
+            <AITutorChatMessagesTableRow
+              key={chatMessage.id}
+              chatMessage={chatMessage}
+            />
           ))}
         </tbody>
       </table>

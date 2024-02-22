@@ -23,6 +23,7 @@ export type AITutorInteraction = {
 };
 
 export type StudentChatRow = {
+  id: number;
   studentName: string;
   type: TutorType;
   prompt: string;
