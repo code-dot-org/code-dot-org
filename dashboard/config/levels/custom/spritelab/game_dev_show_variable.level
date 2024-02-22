@@ -9,7 +9,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -21,29 +22,29 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "Variables Step 2\r\n\r\nProblem: Starting value is too high\r\n\r\nFix: Set the score to 0 on When Run",
+    "long_instructions": "Problems with variables \r\n\r\nProblem: Player wins before they even get to play\r\n\r\nFix: Set the score to 0 on When Run",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "false",
+    "include_shared_functions": "true",
     "free_play": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
-    "mini_toolbox": "false",
-    "hide_pause_button": "false"
+    "mini_toolbox": "true",
+    "hide_pause_button": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-15 23:41:40 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-15 23:41:40 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 18:53:53 +0000\",\"changed\":[\"block_pools\",\"long_instructions\",\"include_shared_functions\",\"mini_toolbox\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

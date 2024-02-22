@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-28 21:08:50 UTC",
+    "serialized_at": "2024-02-22 01:39:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4533,6 +4533,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4554,6 +4557,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -4576,6 +4582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser_2024"
+        ],
         "progression": "App: Pet Chooser"
       },
       "bonus": false,
@@ -4598,6 +4607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Story_2024"
+        ],
         "progression": "App: Story Creator"
       },
       "bonus": false,
@@ -4620,6 +4632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser 2_2024"
+        ],
         "progression": "App: Improved Pet App"
       },
       "bonus": false,
@@ -4642,6 +4657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing bday_2024"
+        ],
         "progression": "App: Is It Your Birthday?"
       },
       "bonus": false,
@@ -4664,6 +4682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing npark_2024"
+        ],
         "progression": "App: National Parks"
       },
       "bonus": false,
@@ -4686,6 +4707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing countries_2024"
+        ],
         "progression": "App: How Many Countries"
       },
       "bonus": false,
@@ -4708,6 +4732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing writers_2024"
+        ],
         "progression": "App: My Famous Birthday"
       },
       "bonus": false,
@@ -4730,6 +4757,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing notebook_2024"
+        ],
         "progression": "App: Stamp Notebook"
       },
       "bonus": false,
@@ -4752,6 +4782,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing fastest_2024"
+        ],
         "progression": "App: The Fastest Finger"
       },
       "bonus": false,
@@ -4774,6 +4807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing guess_2024"
+        ],
         "progression": "App: Guess the Number"
       },
       "bonus": false,
@@ -4796,6 +4832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing live_2024"
+        ],
         "progression": "App: Where Should I Live?"
       },
       "bonus": false,
@@ -4818,6 +4857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage outfit_2024"
+        ],
         "progression": "App: Outfit Picker"
       },
       "bonus": false,
@@ -4840,6 +4882,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage friends_2024"
+        ],
         "progression": "App: Friend Finder"
       },
       "bonus": false,
@@ -4862,6 +4907,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage movies_2024"
+        ],
         "progression": "App: Choose a Kid's Movie"
       },
       "bonus": false,
@@ -4884,6 +4932,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Student End of Unit Survey - Unit 1_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4906,6 +4957,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U1 Test_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5374,12 +5428,12 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Reflection"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "computer_science_practices"
