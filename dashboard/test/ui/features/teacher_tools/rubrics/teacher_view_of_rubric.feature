@@ -23,7 +23,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:nth(1)" to load a new page
   And I click selector "#ui-floatingActionButton" once I see it
-  And I wait until selector "h6:contains(Code Quality)" is visible
+  And I wait until element "h6:contains(Code Quality)" is visible
   And I wait until element "button:contains(Extensive)" is visible
   Then I click selector "button:contains(Extensive)"
   And I click selector "#ui-teacherFeedback" once I see it
@@ -36,7 +36,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   # Check that the teacher can see submitted feedback
   Then I reload the page
   And I click selector "#ui-floatingActionButton" once I see it
-  And I wait until selector "h6:contains(Code Quality)" is visible
+  And I wait until element "h6:contains(Code Quality)" is visible
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
   # The teacher given feedback is recieved by the student
