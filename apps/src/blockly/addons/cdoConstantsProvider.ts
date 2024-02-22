@@ -8,12 +8,13 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
   private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
 
-  // Blockly enforces a 'type' property on the shape object.
-  // This can be any number. Blockly currently uses 1 and 2, so we'll use 10, 11, 12.
-  private CUSTOM_SHAPE_TYPE = {
-    RECT_INPUT_OUTPUT: 10,
-    TRI_INPUT_OUTPUT: 11,
-    ROUND_INPUT_OUTPUT: 12,
+  // Override the shapes constant to include the new shapes
+  override SHAPES = {
+    PUZZLE: 1,
+    NOTCH: 2,
+    RECTANGLE: 3,
+    TRIANGLE: 4,
+    ROUND: 5,
   };
 
   /**
@@ -72,7 +73,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const pathDown = makeMainPath(-1);
 
     return {
-      type: this.CUSTOM_SHAPE_TYPE.TRI_INPUT_OUTPUT,
+      type: this.SHAPES.TRIANGLE,
       width: width,
       height: height,
       pathDown: pathDown,
@@ -100,7 +101,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const pathDown = makeMainPath(-1);
 
     return {
-      type: this.CUSTOM_SHAPE_TYPE.RECT_INPUT_OUTPUT,
+      type: this.SHAPES.RECTANGLE,
       width: width,
       height: height,
       pathDown: pathDown,
@@ -125,7 +126,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const pathDown = makeMainPath(-1);
 
     return {
-      type: this.CUSTOM_SHAPE_TYPE.ROUND_INPUT_OUTPUT,
+      type: this.SHAPES.ROUND,
       width: width,
       height: height,
       pathDown: pathDown,
