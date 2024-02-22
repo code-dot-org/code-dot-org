@@ -21,43 +21,32 @@ export default function SchoolDataInputs({
   onSchoolTypeChange,
   onSchoolChange,
   onSchoolNotFoundChange,
-  country,
-  schoolType,
-  ncesSchoolId,
-  schoolName,
-  schoolCity,
-  schoolState,
-  schoolZip,
-  schoolLocation,
-  useLocationSearch,
-  fieldNames,
+  country = '',
+  schoolType = '',
+  ncesSchoolId = '',
+  schoolName = '',
+  schoolCity = '',
+  schoolState = '',
+  schoolZip = '',
+  schoolLocation = '',
+  useLocationSearch = false,
+  fieldNames = {
+    schoolType: 'user[school_info_attributes][school_type]',
+    country: 'user[school_info_attributes][country]',
+    ncesSchoolId: 'user[school_info_attributes][school_id]',
+    schoolName: 'user[school_info_attributes][school_name]',
+    schoolState: 'user[school_info_attributes][school_state]',
+    schoolZip: 'user[school_info_attributes][school_zip]',
+    googleLocation: 'user[school_info_attributes][full_address]',
+  },
   showErrors,
   showRequiredIndicator,
   styles,
 }) {
-  const defaultProps = {
-    schoolType: '',
-    country: '',
-    ncesSchoolId: '',
-    schoolName: '',
-    schoolCity: '',
-    schoolState: '',
-    schoolZip: '',
-    schoolLocation: '',
-    useLocationSearch: false,
-    fieldNames: {
-      schoolType: 'user[school_info_attributes][school_type]',
-      country: 'user[school_info_attributes][country]',
-      ncesSchoolId: 'user[school_info_attributes][school_id]',
-      schoolName: 'user[school_info_attributes][school_name]',
-      schoolState: 'user[school_info_attributes][school_state]',
-      schoolZip: 'user[school_info_attributes][school_zip]',
-      googleLocation: 'user[school_info_attributes][full_address]',
-    },
-  };
+  let schoolNotFound;
 
   const bindSchoolNotFound = snf => {
-    this.schoolNotFound = snf;
+    schoolNotFound = snf;
   };
 
   const isSchoolAutocompleteDropdownValid = () => {
@@ -88,7 +77,7 @@ export default function SchoolDataInputs({
   };
 
   const isSchoolNotFoundValid = () => {
-    return this.schoolNotFound.isValid();
+    return schoolNotFound.isValid();
   };
 
   const isUS = country === 'United States';
