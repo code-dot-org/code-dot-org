@@ -1,5 +1,6 @@
-import {getSectionAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
-import React from 'react';
+import {fetchStudentChatMessages} from '@cdo/apps/aiTutor/interactionsApi';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import React, {useEffect, useState} from 'react';
 
 /**
  * Renders a table showing the section's students' chat messages with AI Tutor.
@@ -10,12 +11,29 @@ interface AITutorChatMessagesTableProps {
 
 const AITutorChatMessagesTable: React.FunctionComponent<
   AITutorChatMessagesTableProps
-> = async ({sectionId}) => {
-  const aiTutorInteractions = await getSectionAITutorInteractions(sectionId);
+> = ({sectionId}) => {
+  const [chatMessages, setChatMessages] = useState([]);
 
-  console.log('sectionId: ', sectionId);
-  console.log('aiTutorInteractions ', aiTutorInteractions);
-  return <div>Table of chat messages will go here.</div>;
+  useEffect(() => {
+    (async () => {
+      try {
+        const chatMessages = await fetchStudentChatMessages(sectionId);
+        console.log('chatMessages', chatMessages);
+        setChatMessages(chatMessages);
+      } catch (error) {
+        console.log('error', error);
+      }
+    })();
+  }, [sectionId]);
+
+  return (
+    <div>
+      <h3>Table of chat messages will go here</h3>
+      {chatMessages.map(msg => (
+        <div>{msg.aiResponse}</div>
+      ))}
+    </div>
+  );
 };
 
 export default AITutorChatMessagesTable;

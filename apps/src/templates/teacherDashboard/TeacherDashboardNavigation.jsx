@@ -122,7 +122,7 @@ export default class TeacherDashboardNavigation extends Component {
 
   render() {
     const {listPosition, shouldScroll} = this.state;
-    if (this.props.showAITutorTab) {
+    if (this.props.showAITutorTab && teacherDashboardLinks.length <= 6) {
       teacherDashboardLinks.push({
         label: 'AI Tutor',
         url: TeacherDashboardPath.aiTutorChatMessages,
