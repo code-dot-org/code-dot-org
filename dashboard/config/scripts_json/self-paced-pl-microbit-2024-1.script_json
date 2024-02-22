@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-21 22:41:38 UTC",
+    "serialized_at": "2024-02-22 16:44:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -447,6 +447,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_202"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -468,6 +471,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2022MB"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -712,6 +718,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB_1"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -1359,6 +1368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-features_2023MB"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -1381,6 +1393,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-classsection_2023MB"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -1403,6 +1418,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-STexperience_2023MB"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -1425,6 +1443,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-assessment_2023mb"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -1447,6 +1468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TeachersInClassrooms_2022"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -1469,6 +1493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingLessonPlans_2022"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -1491,6 +1518,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ExploreLessonPlan_2022"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -1513,6 +1543,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL_21-mod2-MakeAPlan-LessonPlanning_2022"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -1535,6 +1568,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingTeacherResources_2022"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -1557,6 +1593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TaskResources_2022"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -1579,6 +1618,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-navigating support_2022"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -1601,6 +1643,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReadSupportArticles_2022"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -1623,6 +1668,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReportAProblem_2022"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -1645,6 +1693,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-JoinTheTeacherCommunity_2022"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,

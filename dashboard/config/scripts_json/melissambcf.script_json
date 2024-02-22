@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-16 21:38:56 UTC",
+    "serialized_at": "2024-02-22 16:50:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -394,6 +394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening1MB_grade5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +418,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How this curriculum works_grade5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +442,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening2MB_grade5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +466,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_grade5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Events_1"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -500,6 +515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -522,6 +540,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -544,6 +565,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -566,6 +590,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -588,6 +615,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -610,6 +640,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -632,6 +665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "prediction explaination_1"
+        ],
         "progression": "Print Block + Events"
       },
       "bonus": false,
@@ -654,6 +690,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_predict_2023MB_1"
+        ],
         "progression": "Print Block + Events"
       },
       "bonus": false,
@@ -676,6 +715,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts_makerMB_1"
+        ],
         "progression": "Print Block + Events"
       },
       "bonus": false,
@@ -698,6 +740,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer_makeMBr_1"
+        ],
         "progression": "Print Block + Events"
       },
       "bonus": false,
@@ -720,6 +765,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB_1"
+        ],
         "progression": "Print Block + Events"
       },
       "bonus": false,
@@ -742,6 +790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -764,6 +815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Conditionals_1"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -786,6 +840,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_2023MB_1"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -808,6 +865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_makerMB_1"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -830,6 +890,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2023MB_1"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -852,6 +915,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_makerMB_1"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -874,6 +940,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_makerMB_1"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -896,6 +965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_conditionals_overviewMB_1"
+        ],
         "progression": "Cause & Effect Conditionals"
       },
       "bonus": false,
@@ -918,6 +990,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_2023MB_1"
+        ],
         "progression": "Cause & Effect Conditionals"
       },
       "bonus": false,
@@ -940,6 +1015,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health_makerMB_1"
+        ],
         "progression": "Cause & Effect Conditionals"
       },
       "bonus": false,
@@ -962,6 +1040,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_justright_algae_makerMB_1"
+        ],
         "progression": "Cause & Effect Conditionals"
       },
       "bonus": false,
@@ -984,6 +1065,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_conditionals_makerMB_1"
+        ],
         "progression": "Cause & Effect Conditionals"
       },
       "bonus": false,
@@ -1006,6 +1090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "intro to variables_1"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -1028,6 +1115,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Variable MB_1"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -1050,6 +1140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_2023MB_1"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -1072,6 +1165,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_2023MB_1"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -1094,6 +1190,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_2023MB_1"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -1116,6 +1215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_2023MB_1"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1138,6 +1240,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_2023MB_1"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1160,6 +1265,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_2023MB_1"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1182,6 +1290,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_2023MB_1"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1204,6 +1315,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_2023MB_1"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1226,6 +1340,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1248,6 +1365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Opening_microbit1_1"
+        ],
         "progression": "Introduction to Physical Computing"
       },
       "bonus": false,
@@ -1270,6 +1390,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_physical_computing_1"
+        ],
         "progression": "Introduction to Physical Computing"
       },
       "bonus": false,
@@ -1292,6 +1415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_deciding_your_path_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -1314,6 +1440,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_courses-C-F_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -1336,6 +1465,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_reflecting_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -1358,6 +1490,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Best_Practices_1"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -1380,6 +1515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_PL_microbit_Closing2_1"
+        ],
         "progression": "Continue learning"
       },
       "bonus": false,

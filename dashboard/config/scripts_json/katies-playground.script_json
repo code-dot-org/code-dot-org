@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-02-21 22:12:03 UTC",
+    "serialized_at": "2024-02-22 17:12:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -351,6 +351,71 @@
       "seeding_key": {
         "lesson_activity.key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210",
         "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "9eaf16fd-d9de-4ec9-add4-c6cc0f96f399",
+      "position": 1,
+      "properties": {
+        "name": "Introduction to User Testing"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9eaf16fd-d9de-4ec9-add4-c6cc0f96f399",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "95ce1870-c9bb-4785-97ff-db4d7f013881",
+      "position": 2,
+      "properties": {
+        "name": "Planning the survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95ce1870-c9bb-4785-97ff-db4d7f013881",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "04621dae-fe8b-48f4-b5e8-02491b3ec1f8",
+      "position": 3,
+      "properties": {
+        "name": "Play the games!"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04621dae-fe8b-48f4-b5e8-02491b3ec1f8",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "96e5ba2c-4278-456e-8929-f42f662e03d1",
+      "position": 4,
+      "properties": {
+        "name": "Data Dig"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96e5ba2c-4278-456e-8929-f42f662e03d1",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "f93184ee-3d77-40d3-a926-49526ddfe3f5",
+      "position": 5,
+      "properties": {
+        "name": "Bonus: Time to Revise Games"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f93184ee-3d77-40d3-a926-49526ddfe3f5",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -932,6 +997,65 @@
       "seeding_key": {
         "activity_section.key": "ce49ad0f-8950-454f-bf65-96579914dceb",
         "lesson_activity.key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210"
+      }
+    },
+    {
+      "key": "b952f5fc-2329-4139-9679-c6adf320b0c4",
+      "position": 1,
+      "properties": {
+        "description": "- Brief overview of what user testing is and its importance in game design.\n\n- Examples IRL on how player feedback can shape and improve games.",
+        "name": "Video:"
+      },
+      "seeding_key": {
+        "activity_section.key": "b952f5fc-2329-4139-9679-c6adf320b0c4",
+        "lesson_activity.key": "9eaf16fd-d9de-4ec9-add4-c6cc0f96f399"
+      }
+    },
+    {
+      "key": "55cbf577-cf8c-4200-929b-d71e93b37c34",
+      "position": 1,
+      "properties": {
+        "description": "- Include a hypothesis about the game, questions, and actions to watch for\n- Include trackable data suggestions\n   - Fun Level\n  - Difficulty Level\n  - Theme \n  - Game Mechanic Usability ",
+        "name": "Provided Activity Guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "55cbf577-cf8c-4200-929b-d71e93b37c34",
+        "lesson_activity.key": "95ce1870-c9bb-4785-97ff-db4d7f013881"
+      }
+    },
+    {
+      "key": "225ce051-f27d-4e9c-b9f2-2bf38406edf8",
+      "position": 1,
+      "properties": {
+        "description": "- Suggestions on logistics \n  - Since they've made games in teams can they take turns obersving the user test and playing games?\n- How many user tests is enough data to find patterns? ",
+        "name": "Classroom Arcade"
+      },
+      "seeding_key": {
+        "activity_section.key": "225ce051-f27d-4e9c-b9f2-2bf38406edf8",
+        "lesson_activity.key": "04621dae-fe8b-48f4-b5e8-02491b3ec1f8"
+      }
+    },
+    {
+      "key": "43e56b1c-7b6f-480d-b04c-76421d6e890d",
+      "position": 1,
+      "properties": {
+        "description": "- Turn individual data into charts\n- Guided prompts and questions \n  - Which graph has the highest results? What can you conclude?\n  - Which graph has the lowest results? What can you conclude? \n  - What did you expect? What surprised you? \n  - What did you notice that wasn't collected on the graphs?\n  - What are the next steps to improve your game? \n\n",
+        "name": "Review the user test data"
+      },
+      "seeding_key": {
+        "activity_section.key": "43e56b1c-7b6f-480d-b04c-76421d6e890d",
+        "lesson_activity.key": "96e5ba2c-4278-456e-8929-f42f662e03d1"
+      }
+    },
+    {
+      "key": "2f558e9b-4716-4e92-956a-2901157b164a",
+      "position": 1,
+      "properties": {
+        "name": "If there is time or if the teacher wants to continue"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f558e9b-4716-4e92-956a-2901157b164a",
+        "lesson_activity.key": "f93184ee-3d77-40d3-a926-49526ddfe3f5"
       }
     }
   ],
@@ -1946,6 +2070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_jam_teams"
+        ],
         "progression": "Teamwork = Dreamwork"
       },
       "bonus": false,
@@ -1968,6 +2095,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_jam_theme"
+        ],
         "progression": "Theme Generator"
       },
       "bonus": false,
@@ -1990,6 +2120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_jam_plan"
+        ],
         "progression": "Quick Plan"
       },
       "bonus": false,
@@ -2012,6 +2145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_jam_create"
+        ],
         "progression": "Make the game!"
       },
       "bonus": false,
