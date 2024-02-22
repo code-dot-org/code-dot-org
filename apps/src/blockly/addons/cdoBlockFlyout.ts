@@ -200,7 +200,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   // https://github.com/google/blockly/pull/7333
   // This fix has since been reverted due to rtl rendering issues, but it works for this use case
   // (and in fact fixes our rtl rendering issues).
-  // The link for the tracked issue is here: 
+  // The link for the tracked issue is here:
   // https://github.com/google/blockly/issues/6280
   // If the issue is fixed we may be able to get rid of this override.
   layout_(contents: FlyoutItem[], gaps: number[]) {
