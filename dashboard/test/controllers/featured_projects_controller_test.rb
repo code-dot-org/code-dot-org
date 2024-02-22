@@ -77,9 +77,9 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     @featured_project.update! unfeatured_at: DateTime.now
-    refute @featured_project.reload.featured?
+    refute @featured_project.reload.active?
     put :feature, params: {project_id: "789"}
-    assert @featured_project.reload.featured?
+    assert @featured_project.reload.active?
   end
 
   test 'unfeaturing a featured project should unfeature the project' do
@@ -87,8 +87,8 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     @featured_project.update! featured_at: DateTime.now
     @featured_project.update! unfeatured_at: nil
-    assert @featured_project.reload.featured?
+    assert @featured_project.reload.active?
     put :unfeature, params: {project_id: "789"}
-    refute @featured_project.reload.featured?
+    refute @featured_project.reload.active?
   end
 end

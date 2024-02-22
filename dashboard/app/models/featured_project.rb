@@ -21,7 +21,7 @@ class FeaturedProject < ApplicationRecord
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
 
-  def featured?
+  def active?
     !featured_at.nil? && unfeatured_at.nil?
   end
 
@@ -38,7 +38,7 @@ class FeaturedProject < ApplicationRecord
   # encrypted_channel_id is currently featured
   def self.featured_channel_id?(encrypted_channel_id)
     _, project_id = storage_decrypt_channel_id encrypted_channel_id
-    find_by(project_id: project_id)&.featured?
+    find_by(project_id: project_id)&.active?
   rescue ArgumentError
     false
   end
