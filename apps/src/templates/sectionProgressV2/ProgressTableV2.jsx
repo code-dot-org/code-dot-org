@@ -52,6 +52,7 @@ function ProgressTableV2({
           <ExpandedProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
+            sectionId={sectionId}
             removeExpandedLesson={lessonId =>
               setExpandedLessons(
                 expandedLessonIds.filter(id => id !== lessonId)
@@ -73,7 +74,13 @@ function ProgressTableV2({
         );
       }
     },
-    [isSkeleton, sortedStudents, expandedLessonIds, setExpandedLessons]
+    [
+      isSkeleton,
+      sortedStudents,
+      sectionId,
+      expandedLessonIds,
+      setExpandedLessons,
+    ]
   );
 
   const table = React.useMemo(() => {

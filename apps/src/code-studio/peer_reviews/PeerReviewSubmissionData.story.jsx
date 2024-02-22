@@ -2,7 +2,6 @@ import React from 'react';
 import PeerReviewSubmissionData from './PeerReviewSubmissionData';
 
 export default {
-  title: 'PeerReviewSubmissionData',
   component: PeerReviewSubmissionData,
 };
 
@@ -12,8 +11,8 @@ const Template = args => (
   </div>
 );
 
-export const variousSubmissions = Template.bind({});
-variousSubmissions.args = {
+export const VariousSubmissions = Template.bind({});
+VariousSubmissions.args = {
   submissions: [
     {
       submitter: 'Jon Snow',

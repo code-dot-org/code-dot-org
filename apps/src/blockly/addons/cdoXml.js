@@ -62,13 +62,12 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     blockElements.forEach(xmlChild => {
-      // Recursively check blocks for XML attributes that need to be manipulated.
+      // Check xmlChild and its children for XML attributes that need to be manipulated.
       processBlockAndChildren(xmlChild);
 
       // Further manipulate the XML for specific top block types.
       addNameToBlockFunctionDefinitionBlock(xmlChild);
       addMutationToProcedureDefBlocks(xmlChild);
-      addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       makeWhenRunUndeletable(xmlChild);
 
@@ -86,6 +85,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+  blocklyWrapper.Xml.textToDom = blocklyWrapper.utils.xml.textToDom;
 }
 /**
  * Gets the XML representation for a project, including its workspace and, if applicable, the hidden definition workspace.
@@ -113,7 +113,29 @@ export function getProjectXml(workspace) {
     workspaceXml.appendChild(clonedNode);
   });
 
+  removeIdsFromBlocks(workspaceXml);
+
   return workspaceXml;
+}
+
+/**
+ * Removes the randomized 'id' attribute from all 'block' elements.
+ * This is intended to prevent writing duplicate entries to the level_sources table.
+ * @param {Element} element - The XML element to process.
+ * @param {string[]} levelBlockIds - An array of ids to preserve, if found.
+ */
+function removeIdsFromBlocks(element) {
+  if (element.nodeName === 'block') {
+    const id = element.getAttribute('id');
+    if (id && !Blockly.levelBlockIds.includes(id)) {
+      element.removeAttribute('id');
+    }
+  }
+
+  // Blocks in XML are nested so we need to iterate through the children.
+  Array.from(element.children).forEach(child => {
+    removeIdsFromBlocks(child);
+  });
 }
 
 /**
@@ -162,7 +184,7 @@ export function makeWhenRunUndeletable(blockElement) {
 }
 
 /**
- * Adds a mutation element to a block if it is a behavior definition.
+ * Adds a mutation element to a block if it is a behavior block.
  * CDO Blockly uses an unsupported method for serializing state
  * where arbitrary XML attributes could hold important information.
  * Mainline Blockly expects a mutator. The presence of the mutation element
@@ -170,8 +192,12 @@ export function makeWhenRunUndeletable(blockElement) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToBehaviorDefBlocks(blockElement) {
-  if (blockElement.getAttribute('type') !== BLOCK_TYPES.behaviorDefinition) {
+export function addMutationToBehaviorBlocks(blockElement) {
+  if (
+    ![BLOCK_TYPES.behaviorDefinition, BLOCK_TYPES.behaviorGet].includes(
+      blockElement.getAttribute('type')
+    )
+  ) {
     return;
   }
   const mutationElement =
@@ -194,7 +220,9 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
   // expects this kind of extra state in a mutator.
-  const nameField = getFieldOrTitle(blockElement, 'NAME');
+  const nameField =
+    getFieldOrTitle(blockElement, 'VAR') ||
+    getFieldOrTitle(blockElement, 'NAME');
   const idAttribute = nameField && nameField.getAttribute('id');
   if (idAttribute) {
     // Create new mutation attribute based on original block attribute.
@@ -367,22 +395,26 @@ function getFieldOrTitle(blockElement, name) {
   // Title is the legacy name for field, we support getting name from
   // either field or title.
   return (
-    blockElement.querySelector(`field[name="${name}"]`) ||
-    blockElement.querySelector(`title[name="${name}"]`)
+    //The :scope pseudo-class is used to refer to the parent element (blockElement)
+    // It ensures that the subsequent selectors target only immediate children.
+    blockElement.querySelector(`:scope > field[name="${name}"]`) ||
+    blockElement.querySelector(`:scope > title[name="${name}"]`)
   );
 }
 
 /**
  * A helper function designed to process each individual block in an XML tree.
+ * Exported for testing.
  * @param {Element} block - The XML element for a single block.
  */
-function processBlockAndChildren(block) {
+export function processBlockAndChildren(block) {
   processIndividualBlock(block);
 
-  // Blocks can contain other blocks so we must process them recursively.
+  // Blocks can contain other blocks so we must process all of their children.
+  // This query will get all child blocks of the current block, not just direct descendants.
   const childBlocks = block.querySelectorAll('block');
   childBlocks.forEach(childBlock => {
-    processBlockAndChildren(childBlock);
+    processIndividualBlock(childBlock);
   });
 }
 
@@ -390,9 +422,10 @@ function processBlockAndChildren(block) {
  * Perform any need manipulations for a given XML block element.
  * @param {Element} block - The XML element for a single block.
  */
-function processIndividualBlock(block) {
+export function processIndividualBlock(block) {
   addNameToBlockFunctionCallBlock(block);
   addMissingBehaviorId(block);
+  addMutationToBehaviorBlocks(block);
   // Convert unsupported can_disconnect_from_parent attributes.
   makeLockedBlockImmovable(block);
   addMutationToTextJoinBlock(block);

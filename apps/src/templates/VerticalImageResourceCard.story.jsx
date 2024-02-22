@@ -21,7 +21,6 @@ const minecraftCard = {
 };
 
 export default {
-  title: 'VerticalImageResourceCard',
   component: VerticalImageResourceCard,
 };
 

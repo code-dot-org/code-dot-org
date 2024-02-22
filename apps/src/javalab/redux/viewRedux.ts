@@ -24,7 +24,7 @@ const {
 
 type DisplayThemeValue = 'light' | 'dark';
 
-interface JavalabViewState {
+export interface JavalabViewState {
   displayTheme: DisplayThemeValue;
   renderedEditorHeight: number;
   leftWidth: number;

@@ -2,7 +2,6 @@ import React from 'react';
 import ChildAccountConsent from './ChildAccountConsent';
 
 export default {
-  title: 'ChildAccountConsent',
   component: ChildAccountConsent,
 };
 

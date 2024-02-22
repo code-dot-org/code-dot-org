@@ -10,7 +10,6 @@
     "background": "music-black",
     "long_instructions": "####Change a Sound\n\nThere are tons of sounds you can choose from. Change up the beat!\n\nClick the [name](#clickable=play-sound-block-workspace) of the sound to select a new one.\n\nThen press [Run](#clickable=run-button).\n",
     "level_data": {
-      "library": "will",
       "startSources": {
         "blocks": {
           "languageVersion": 0,

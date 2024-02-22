@@ -20,22 +20,8 @@ Primary brand color. Should be dominant throughout Code.org branding.</p></div>
 <div style="background-color: #8C52BA; border-radius: 40px; color: #FFFFFF; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
 Purple (secondary)<br>
 Hex code: #8C52BA<br>
-Accent color. Used to emphasize actions and highlighted information.</p></div>
+Accent color. Used to emphasize actions and highlighted information. This color should be used ONLY if an element is clickable (such as a button or link).</p></div>
 <br>
-<div style="background-color: #ED6060; border-radius: 40px; color: #FFFFFF; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
-Strawberry (accent)<br>
-Hex code: #ED6060<br>
-Accent color. Used for notifications and decorative elements.</p></div>
-<br>
-<div style="background-color: #FF8D02; border-radius: 40px; color: #FFFFFF; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
-Orange (accent) <br>
-Hex code: #FF8D02<br>
-Accent color. Used for notifications and decorative elements. (We are considering darkening this color.)</p></div>
-<br>
-<div style="background-color: #3CFFF8; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
-Aqua (AI) <br>
-Hex code: #3CFFF8<br>
-Accent color. Used to denote AI features and recommendations.</p></div>
 
 ### **Neutrals**
 <div style="background-color: #292F36; border-radius: 40px; color: #FFFFFF; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
@@ -49,10 +35,4 @@ Hex code: #FFFFFF</p></div>
 <div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
 Light <br>
 Hex code: #F7F8FA</p></div>
-
-## Color Usage 
-
-#### Usage of our brand colors should strive for a ratio of 60% neutrals (White, Soft Gray, and Black), 30% primary, and 10% accents.
-
-<img src="https://images.code.org/317199bdf05477e565d706a2b1fb5527-image-1706563218468.20.10 PM.png" alt="A diagram showing how often each group of colors (neutrals, primary, and accent) should be used.">
 MARKDOWN

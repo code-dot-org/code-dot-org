@@ -1,6 +1,12 @@
-@no_firefox
+@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 Feature: Evaluate student code against rubrics using AI
+  # Make sure AI config files in S3 are parseable. Do this in a UI test because
+  # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
+  @chrome
+  Scenario: Validate Rubric AI Config
+    Given I validate rubric ai config for all lessons
+
   Scenario: Student code is evaluated by AI when student submits project
     Given I create a teacher-associated student named "Aiden"
     And I am on "http://studio.code.org/home"

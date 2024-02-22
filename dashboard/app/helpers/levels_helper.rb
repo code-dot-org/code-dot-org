@@ -727,7 +727,7 @@ module LevelsHelper
     # These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-      thank_you: ERB::Util.url_encode(I18n.t('footer.thank_you')),
+      thanks: ERB::Util.url_encode(I18n.t('footer.thanks')),
       help_from_html: I18n.t('footer.help_from_html'),
       art_from_html: ERB::Util.url_encode(I18n.t('footer.art_from_html', current_year: Time.now.year)),
       code_from_html: ERB::Util.url_encode(I18n.t('footer.code_from_html')),

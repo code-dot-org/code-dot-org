@@ -7,13 +7,31 @@ import {lessonHasLevels} from '../progress/progressHelpers';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 
-export default function LessonDataCell({lesson, studentLessonProgress}) {
+export default function LessonDataCell({
+  lesson,
+  locked,
+  studentLessonProgress,
+  addExpandedLesson,
+}) {
   const noLevels = !lessonHasLevels(lesson);
   const finished = studentLessonProgress?.completedPercent === 100;
   const partiallyComplete = studentLessonProgress && !finished;
 
+  const expandLesson = () => {
+    if (!noLevels) {
+      addExpandedLesson(lesson.id);
+    }
+  };
+
   return (
-    <div className={classNames(styles.gridBox, styles.gridBoxLesson)}>
+    <div
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxLesson,
+        locked && styles.littleLock
+      )}
+      onClick={expandLesson}
+    >
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
       {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}
       {noLevels && <ProgressIcon itemType={ITEM_TYPE.NO_ONLINE_WORK} />}
@@ -22,7 +40,8 @@ export default function LessonDataCell({lesson, studentLessonProgress}) {
 }
 
 LessonDataCell.propTypes = {
-  studentId: PropTypes.number.isRequired,
+  locked: PropTypes.bool,
   studentLessonProgress: studentLessonProgressType,
   lesson: PropTypes.object.isRequired,
+  addExpandedLesson: PropTypes.func.isRequired,
 };

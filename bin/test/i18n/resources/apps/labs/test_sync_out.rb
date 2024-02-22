@@ -15,10 +15,6 @@ describe I18n::Resources::Apps::Labs::SyncOut do
   end
 
   before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
-  end
-
-  before do
     I18nScriptUtils.stubs(:upload_malformed_restorations)
     RedactRestoreUtils.stubs(:restore)
   end
@@ -70,85 +66,59 @@ describe I18n::Resources::Apps::Labs::SyncOut do
       File.write(en_apps_i18n_lab_file_path, JSON.dump({'en_apps_i18n_lab' => 'expected_translations'}))
     end
 
-    context 'when the file is not en-US' do
-      let(:is_source_language) {false}
+    context "and the lab is was not redacted" do
+      let(:lab) {'unredactable'}
 
-      context "and the lab is was not redacted" do
-        let(:lab) {'unredactable'}
+      it 'distributes the Crowdin locale file' do
+        execution_sequence = sequence('execution')
 
-        it 'distributes the Crowdin locale file' do
+        expect_crowdin_file_restoration.never
+        expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
+        expect_invalid_i18n_reporting.once
+
+        expect_crowdin_locale_file_distribution.in_sequence(execution_sequence)
+        expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
+
+        process_language
+      end
+    end
+
+    I18n::Resources::Apps::Labs::REDACTABLE_LABS.each do |redactable_lab|
+      context "and the lab is `#{redactable_lab}` (redacted)" do
+        let(:lab) {redactable_lab}
+
+        it 'restores and distributes the Crowdin locale file' do
           execution_sequence = sequence('execution')
 
-          expect_crowdin_file_restoration.never
-          expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
-          expect_invalid_i18n_reporting.once
-
+          expect_crowdin_file_restoration.in_sequence(execution_sequence)
+          expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.in_sequence(execution_sequence)
+          expect_invalid_i18n_reporting.in_sequence(execution_sequence)
           expect_crowdin_locale_file_distribution.in_sequence(execution_sequence)
           expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
 
           process_language
         end
       end
-
-      I18n::Resources::Apps::Labs::REDACTABLE_LABS.each do |redactable_lab|
-        context "and the lab is `#{redactable_lab}` (redacted)" do
-          let(:lab) {redactable_lab}
-
-          it 'restores and distributes the Crowdin locale file' do
-            execution_sequence = sequence('execution')
-
-            expect_crowdin_file_restoration.in_sequence(execution_sequence)
-            expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.in_sequence(execution_sequence)
-            expect_invalid_i18n_reporting.in_sequence(execution_sequence)
-            expect_crowdin_locale_file_distribution.in_sequence(execution_sequence)
-            expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
-
-            process_language
-          end
-        end
-      end
-
-      I18n::Resources::Apps::Labs::UNTRANSLATABLE_LABS.each do |untranslatable_lab|
-        context "and the lab is `#{untranslatable_lab}`" do
-          let(:lab) {untranslatable_lab}
-
-          it 'replaces `apps/i18n` locale files with English one' do
-            execution_sequence = sequence('execution')
-
-            expect_crowdin_file_restoration.never
-            expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
-            expect_invalid_i18n_reporting.once
-            expect_crowdin_locale_file_distribution.never
-
-            expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
-
-            process_language
-
-            assert File.exist?(apps_i18n_lab_file_path)
-            assert_equal '{"en_apps_i18n_lab":"expected_translations"}', File.read(apps_i18n_lab_file_path)
-          end
-        end
-      end
     end
 
-    context 'when the file is en-US' do
-      let(:is_source_language) {true}
+    I18n::Resources::Apps::Labs::UNTRANSLATABLE_LABS.each do |untranslatable_lab|
+      context "and the lab is `#{untranslatable_lab}`" do
+        let(:lab) {untranslatable_lab}
 
-      I18n::Resources::Apps::Labs::REDACTABLE_LABS.each do |redactable_lab|
-        context "and the lab is `#{redactable_lab}` (redacted)" do
-          let(:lab) {redactable_lab}
+        it 'replaces `apps/i18n` locale files with English one' do
+          execution_sequence = sequence('execution')
 
-          it 'does not restore and does not distribute the Crowdin locale file' do
-            execution_sequence = sequence('execution')
+          expect_crowdin_file_restoration.never
+          expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
+          expect_invalid_i18n_reporting.once
+          expect_crowdin_locale_file_distribution.never
 
-            expect_crowdin_file_restoration.never
-            expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
-            expect_invalid_i18n_reporting.never
-            expect_crowdin_locale_file_distribution.never
-            expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
+          expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
 
-            process_language
-          end
+          process_language
+
+          assert File.exist?(apps_i18n_lab_file_path)
+          assert_equal '{"en_apps_i18n_lab":"expected_translations"}', File.read(apps_i18n_lab_file_path)
         end
       end
     end

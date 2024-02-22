@@ -9,18 +9,11 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
  * State, reducer, and actions for Music Lab.
  */
 
-enum InstructionsPosition {
+export enum InstructionsPosition {
   TOP = 'TOP',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
 }
-
-// Exporting enum as object for use in JS files
-export const InstructionsPositions = {
-  TOP: InstructionsPosition.TOP,
-  LEFT: InstructionsPosition.LEFT,
-  RIGHT: InstructionsPosition.RIGHT,
-};
 
 export interface MusicState {
   /** If the song is currently playing */
@@ -29,6 +22,8 @@ export interface MusicState {
   currentPlayheadPosition: number;
   /** The ID of the currently selected block, or undefined if no block is selected */
   selectedBlockId: string | undefined;
+  /** The trigger ID of the currently selected trigger block, or undefined if no trigger block is selected */
+  selectedTriggerId: string | undefined;
   /** If the timeline should be positioned at the top above the workspace */
   timelineAtTop: boolean;
   /** If instructions should be shown */
@@ -37,8 +32,6 @@ export interface MusicState {
   instructionsPosition: InstructionsPosition;
   /** If the headers should be hidden */
   hideHeaders: boolean;
-  /** If the Control Pad (Beat Pad) is showing */
-  isBeatPadShowing: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
   /** The current ordered functions */
@@ -68,11 +61,11 @@ const initialState: MusicState = {
   isPlaying: false,
   currentPlayheadPosition: 0,
   selectedBlockId: undefined,
+  selectedTriggerId: undefined,
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
   hideHeaders: false,
-  isBeatPadShowing: true,
   playbackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
@@ -120,6 +113,15 @@ const musicSlice = createSlice({
     clearSelectedBlockId: state => {
       state.selectedBlockId = undefined;
     },
+    setSelectedTriggerId: (state, action: PayloadAction<string>) => {
+      if (state.isPlaying) {
+        return;
+      }
+      state.selectedTriggerId = action.payload;
+    },
+    clearSelectedTriggerId: state => {
+      state.selectedTriggerId = undefined;
+    },
     toggleTimelinePosition: state => {
       state.timelineAtTop = !state.timelineAtTop;
     },
@@ -150,15 +152,6 @@ const musicSlice = createSlice({
     },
     toggleHeaders: state => {
       state.hideHeaders = !state.hideHeaders;
-    },
-    showBeatPad: state => {
-      state.isBeatPadShowing = true;
-    },
-    hideBeatPad: state => {
-      state.isBeatPadShowing = false;
-    },
-    toggleBeatPad: state => {
-      state.isBeatPadShowing = !state.isBeatPadShowing;
     },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
@@ -252,6 +245,8 @@ export const {
   setIsPlaying,
   setCurrentPlayheadPosition,
   selectBlockId,
+  setSelectedTriggerId,
+  clearSelectedTriggerId,
   clearSelectedBlockId,
   toggleTimelinePosition,
   setShowInstructions,
@@ -261,9 +256,6 @@ export const {
   showHeaders,
   hideHeaders,
   toggleHeaders,
-  showBeatPad,
-  hideBeatPad,
-  toggleBeatPad,
   clearPlaybackEvents,
   clearOrderedFunctions,
   addPlaybackEvents,

@@ -116,23 +116,23 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     * جمع کردہ سرگرمی کی نمائندگی کرنے والے بنیادی رابطے کا نام اور ای میل
     * سرگرمی کا نام (نام میں “کوڈ کا گھنٹہ” شامل نہیں ہو سکتا)
     * سرگرمی کے لئے URL لنک
-    * کیا اس سرگرمی میں AI شامل ہے: جی ہاں یا نہیں
-    * ایک سرگرمی کی وضاحت (زیادہ سے زیادہ کردار شمار: 400) 
-        * براہ کرم تفصیلات شامل کریں آیا کہ یہ بنیادی طور پر اسٹوڈینٹ-گائیڈڈ ہے یا ٹیچر-فیسیلیٹڈ ہے۔ اضافی طور پر، کچھ اسکول اس بات کو جاننے میں دلچسپی رکھتے ہیں آیا کہ یہ آور-آف-کوڈ ایکٹیویٹی عمومی یکساں امور اجاگر کرنے کے لیے ہے یا نیکسٹ جنریشن سائنس اسٹینڈرز کے لیے۔ اگر یہ ایکٹیویٹی مخصوص اسٹینڈرڈز پر روشنی ڈالتی ہے، تو اس معلومات کو بھی شامل کرنے پر غور کریں۔
-    * مطلوبہ صارفین کے لئے سفارش کردہ گریڈ لیول (ے). آپ گریڈ کے مناسب کمپیوٹر سائنس تصورات کے لئے \[کمپیوٹر سائنس ٹیچرز ایسوسی ایشن کے -12 معیارات\] (https://k12cs.org/framework-statements-by-grade-band/) سے رجوع کر سکتے ہیں. مثال کے طور پر گریڈ کی سطح میں شامل ہیں: 
-        * کنڈرگارٹن - گریڈ 1 (عمر 4-6)
-        * گریڈ 2-5 (عمر 7-10)
-        * گریڈ 6-8 (عمر 11-13)
-        * گریڈ 9+ (عمر 14+)
-    * پروگرامنگ زبانوں کی ایک فہرست جو آپ کی سرگرمی سکھاتی ہے۔ یعنی سی/سی++، جاوا، جاوا اسکرپٹ وغیرہ۔ یا زبان آزاد (سبق کی منصوبہ بندی کے لئے جو ایک سے زیادہ زبانوں میں سکھایا جا سکتا ہے) زبان کے فنون کا انتخاب کریں.
-    * تائید شدہ قدرتی زبانوں کی ایک فہرست۔ نوٹ: زبان کا پتہ لگانا سرگرمی فراہم کنندہ کی ذمہ داری ہے؛ ہم تمام صارفین کو فراہم کردہ واحد URL پر ری ڈائریکٹ کریں گے۔ یا زبان آزاد (سبق کی منصوبہ بندی کے لئے جو ایک سے زیادہ زبانوں میں سکھایا جا سکتا ہے)
+    * Does this activity include AI: Yes or No
+    * An activity description (max character count: 400) 
+        * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+        * Kindergarten - Grade 1 (ages 4-6)
+        * Grades 2-5 (ages 7-10)
+        * Grades 6-8 (ages 11-13)
+        * Grades 9+ (ages 14+)
+    * پروگرامنگ زبانوں کی ایک فہرست جو آپ کی سرگرمی سکھاتی ہے۔ یعنی سی/سی++، جاوا، جاوا اسکرپٹ وغیرہ۔ یا زبان آزاد (سبق کی منصوبہ بندی کے لئے جو ایک سے زیادہ زبانوں میں سکھایا جا سکتا ہے) choose language arts.
+    * تائید شدہ قدرتی زبانوں کی ایک فہرست۔ نوٹ: زبان کا پتہ لگانا سرگرمی فراہم کنندہ کی ذمہ داری ہے؛ ہم تمام صارفین کو فراہم کردہ واحد URL پر ری ڈائریکٹ کریں گے۔ or language independent (for lesson plans that can be taught in multiple languages)
     * ایک استاد کو آپ کی سرگرمی کا استعمال کرنے کے لئے کس سطح کا تجربہ ہونا چاہئے؟ (مثال کے طور پر ابتدائی یا آرام دہ اور پرسکون.) اور، طالب علموں کو کس سطح کا تجربہ ہونا چاہئے؟
-    * ایک استاد کو آپ کی سرگرمی کا استعمال کرنے کے لئے کس سطح کا تجربہ ہونا چاہئے؟ (مثال کے طور پر ابتدائی یا آرام دہ اور پرسکون.) اور، طالب علموں کو کس سطح کا تجربہ ہونا چاہئے؟ اگر آپ زیادہ اعلی درجے کی گھنٹہ آف کوڈ™ سرگرمیاں تیار کرنا چاہتے ہیں تو، براہ کرم اپنی سرگرمی کی وضاحت میں مطلوبہ پیشگی معلومات شامل کریں.
-    * آپ کی سرگرمی کی لمبائی 
-        * صرف 1 گھنٹہ
-        * فالو پر کورس کے ساتھ 1 گھنٹے
-        * 2-6 گھنٹے (ایک سے زیادہ سبق ہو سکتا ہے)
-    * رسائی کی رہائش کی ایک فہرست، اگر آپ کی سرگرمی ان کے پاس ہے۔ ان میں اسکرین ریڈر مطابقت، متن سے تقریر کی صلاحیتیں، اعلی برعکس رنگوں کا استعمال، یا معذور افراد کے لئے بنائے گئے کسی بھی دوسرے رہائش گاہ شامل ہیں.
+    * What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+    * The length of your activity 
+        * 1 hour only
+        * 1 hour with follow-on course
+        * 2-6 hours (can be multiple lessons)
+    * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
     
     #### سبق منصوبوں کو جمع کرتے وقت آپ کو اضافی چیزیں درکار ہوں گی
     
@@ -185,7 +185,7 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     
     کمپیوٹر سائنس کے اساتذہ کی ایک متنوع کمیٹی کوالٹی اور مقداری معیار پر مبنی پیشکشوں کی درجہ بندی کرے گی. بنیادی معیار کو پورا کرنے والی تمام سرگرمیاں درج کی جائیں گی.
     
-    روایتی کوڈنگ سرگرمیوں کے لئے، کمپیوٹر سائنس کے اساتذہ کی ایک متنوع کمیٹی گتاتمک اور مقداری معیار پر مبنی پیشکشوں کی درجہ بندی کرے گی. بنیادی معیار کو پورا کرنے والی تمام سرگرمیاں درج کی جائیں گی. اساتذہ اپنی کلاس روم کے لئے بہترین سرگرمیوں کو تلاش کرنے کے لئے فلٹر اور ترتیب دینے کے قابل ہو جائے گا.
+    For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
     
     اگر جائزہ لینے والی کمیٹی سرگرمی کو پیداوار کے معیار میں صفر کی شرح دیتی ہے (خراب کیڑے یا ہدایات کی وجہ سے جو استعمال کرنا بہت مشکل ہے)، کم از کم گروپوں میں سیکھنے کو فروغ دینے میں (نسل پرست/جنسی مواد کی وجہ سے)، تعلیمی قدر میں (CS تصورات کو سکھاتا نہیں ہے)، یا مزہ خی/مشغول (طالب علموں کے ذریعے کام کرنے کے لئے مشکل ہونے کی وجہ سے)، سرگرمی درج نہیں کی جائے گی.
     
@@ -203,13 +203,13 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     - کوئی سائن اپ کی ضرورت نہیں ہے
     - کوئی ادائیگی کی ضرورت نہیں ہے (روبوٹکس سرگرمیوں کے لئے استثناء ان کو روبوٹ/کٹ کی خریداری کی ضرورت ہوسکتی ہے)
     
-    نئے اساتذہ اور طالب علموں کے لئے خود ہدایت کی سرگرمیوں کے لئے جائزہ لینے والی کمیٹی تلاش کرے گی کہ آیا:
+    For self-directed activities for new teachers and students the review committee will be looking for whether:
     
     - اساتذہ کمپیوٹر سائنس میں کوئی پس منظر کے ساتھ ٹیوٹوریل یا سرگرمی کا استعمال کر سکتے ہیں
     - طالب علم کمپیوٹر سائنس میں کوئی پس منظر کے ساتھ کامیاب ہو سکتے ہیں
     - طالب علم والدین یا استاد کی رہنمائی کے بغیر ٹیوٹوریل کے ذریعے خود کو براہ راست کرسکتے ہیں
     
-    اساتذہ اور طالب علموں کو فلٹرز جیسے گریڈ، تجربے کی سطح، موضوع، ہارڈ ویئر وغیرہ پر مبنی سرگرمیوں کی ہماری فہرست کو تلاش کرنے اور فلٹر کرنے کے قابل ہو جائے گا. پہلے سے طے شدہ طور پر، ہم سبق کی منصوبہ بندی اور سرگرمیاں سب سے پہلے دکھائیں گے کہ:
+    Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
     
     - جائزہ لینے والی کمیٹی سے سب سے زیادہ درجہ بندی وصول کریں
     - beginners کے لئے ڈیزائن کیا گیا ایک گھنٹے خود ہدایت کی سرگرمیوں ہیں (طالب علموں اور اساتذہ)
@@ -226,7 +226,7 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     
     ## ایک گھنٹہ خود ہدایت سبق ڈیزائن کرنے کے لئے تجاویز
     
-    سرگرمیوں کو AI شامل کرنے کی ضرورت نہیں ہے، اگرچہ ہم مزید AI سے متعلق سرگرمیوں کو پیش کرنے کے خواہاں ہیں.
+    Activities do not have to include AI, though we are looking to offer more AI related activities.
     
     **ٹیچرز نوٹ شامل کریں: ** اکثر ایکٹیویٹیز کو اسٹوڈینٹس-ڈائریکٹڈ ہونا چاہیئے، لیکن اگر کوئی ایکٹیویٹی ٹیچر کی جانب سے سہولت کردہ یا منظم کردہ ہو، تو براہ کرم ٹیچر کے لیے سادہ اور آسان طریقہ ہدایات شامل کریں جو کہ ٹیچرز-نوٹس کی صورت میں ہوں اور ایک الگ URL میں جس کو وہ اپنی ایکٹیویٹی کے ساتھ شامل کریں۔ محض اسٹوڈینٹس ہی اس میں نووارد نہیں بلکہ کچھ ٹیچرز بھی ہیں۔ معلومات شامل کریں جیسا کہ:
     
@@ -239,15 +239,15 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     - کیا آپ پیئر-پروگرامنگ کی تجویز کرتے ہیں؟
     - ایک کلاس روم میں استعمال کے لئے تحفظات? مثال کے طور پر، اگر ویڈیوز موجود ہیں، تو اساتذہ کو مشورہ دیں کہ وہ پوری کلاس روم کے لئے پیش کردہ اسکرین پر ویڈیوز دکھائیں تاکہ وہ مل کر دیکھیں
     
-    **سرگرمی کے اختتام پر رائے شامل کریں.** (مثال کے طور پر “آپ نے 10 کی سطح ختم کر دی اور loops کے بارے میں سیکھا! بہت اچھا کام!”)
+    **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
     
-    **اسٹوڈینٹس کی حوصلہ افزائی کریں کہ وہ سوشل میڈیا پر پوسٹ کریں (جہاں مناسب ہو) جب وہ اپنا کام مکمل کرلیں۔<0> مثال کے طور پر "میں نے اپنا آور-آف-کوڈ ________کے ساتھ مکمل کرلیا ہے، کیا آپ نے بھی؟ #HourOfCode” یا “میں نے #CSEdWeek کے ایک حصے کے طور پر #HourOfCode کیا ہے. کیا تمہارے پاس ہے؟ @Scratch.” ہیش ٹیگ **#HourOfCode کا استعمال کریں** (دارالحکومت حروف H، O، C کے ساتھ)</p> 
+    **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” ہیش ٹیگ **#HourOfCode کا استعمال کریں** (دارالحکومت حروف H، O، C کے ساتھ)
     
-    **ہسپانوی میں یا انگریزی کے علاوہ دیگر زبانوں میں اپنی سرگرمی بنائیں.**
+    **Create your activity in Spanish or in other languages besides English.**
     
-    **اپنی ایکٹیویٹی کو سماجی سیاق و سباق سے منسلک یا واضح کریں۔** کمپیوٹر پروگرامنگ سپرپاور بن جاتی ہے تو اسٹوڈینٹس یہ دیکھتے ہیں کہ اس سے دنیا بہتری کے لیے کیسے تبدیل ہوجاتی ہے!
+    **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
     
-    **اس بات کو یقینی بنائیں کہ آپ کے ٹیوٹوریل میں استعمال کیا جا سکتا ہے [جوڑی پروگرامنگ](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) نمونہ.** یہ کوڈ کے گھنٹہ کے لئے خاص طور پر مفید ہے کیونکہ بہت سے کلاس رومز کی ضرورت نہیں ہے 1:1 تمام طالب علموں کے لئے ہارڈ ویئر.
+    **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
     
     [**اوپر کی جانب واپسی**](#top)
     
@@ -258,7 +258,7 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     
     ## ٹریڈ مارک گائیڈ لائنز
     
-    کوڈ کے گھنٹے® اور ہورا ڈیل Código® Code.org کے ٹریڈ مارکس رجسٹرڈ ہیں. ہمارے ٹیوٹوریل شراکت داروں میں سے بہت سے ہمارے “کوڈ کے گھنٹے” ٹریڈ مارکس کو ان کی گھنٹہ کوڈ سرگرمیوں کے سلسلے میں ان کی ویب سائٹس پر استعمال کیا ہے. ہم اس استعمال کو روکنے کے لئے نہیں چاہتے، لیکن ہم اس بات کو یقینی بنانا چاہتے ہیں کہ استعمال چند حدود کے اندر ہو:
+    Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
     
     1. کوڈ کے گھنٹے کی مہم کے تناظر میں صرف غیر تجارتی CS تعلیم کی سرگرمیوں کے سلسلے میں “کوڈ کا گھنٹہ” استعمال کریں، اور کسی دوسرے مقصد کے لئے.
     2. “کوڈ کا گھنٹہ” کا کوئی حوالہ اس فیشن میں استعمال کیا جانا چاہئے جو یہ نہیں بتاتا کہ یہ آپ کا اپنا برانڈ نام ہے، بلکہ یہ کہ یہ گھنٹہ کوڈ کو ایک نچلی سطح پر تحریک کے طور پر حوالہ دیتا ہے. اچھی مثال: “Acmecorp.com پر کوڈ® کے گھنٹہ میں شرکت کریں”. خراب مثال: “ACME کارپوریشن کی طرف سے کوڈ کے گھنٹے کی کوشش کریں”.
@@ -277,15 +277,15 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     
     ## ٹریکنگ پکسل
     
-    اگر آپ کے ٹیوٹوریل کی منظوری دی گئی ہے اور حتمی ٹیوٹوریل صفحہ پر شامل ہے تو، Code.org آپ کو آپ کے ٹیوٹوریل میں ضم کرنے کے لئے ایک منفرد ٹریکنگ پکسل فراہم کرے گا. ذیل میں مثال ملاحظہ کریں۔ آپ کے ٹیوٹوریل کے کسی عبوری صفحات پر شامل نہ ہوں.
+    اگر آپ کے ٹیوٹوریل کی منظوری دی گئی ہے اور حتمی ٹیوٹوریل صفحہ پر شامل ہے تو، Code.org آپ کو آپ کے ٹیوٹوریل میں ضم کرنے کے لئے ایک منفرد ٹریکنگ پکسل فراہم کرے گا. ذیل میں مثال ملاحظہ کریں۔ Do not include on any interim pages of your tutorial.
     
-    یہ ہمیں صارفین کو شمار کرنے کی اجازت دے گا جو آپ کے کوڈ ٹیوٹوریل کا گھنٹہ کرتے ہیں. یہ آپ کے ٹیوٹوریل کے لئے زیادہ درست شرکت شمار کی قیادت کرے گا.
+    This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
     
-    اگر آپ کے ٹیوٹوریل کی منظوری دی گئی ہے اور حتمی ٹیوٹوریل صفحہ پر شامل ہے تو، Code.org آپ کو آپ کے ٹیوٹوریل میں ضم کرنے کے لئے ایک منفرد ٹریکنگ پکسل فراہم کرے گا. ذیل میں مثال ملاحظہ کریں۔
+    If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
     
-    نوٹ: یہ بات اہم نہیں کہ صرف انسٹال-ایبل ایپس کے لیے ہی کیا جائے (iOS/اینڈرائیڈ ایپس، یا ڈیسک ٹاپ-انسٹال ایپس)
+    NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
     
-    رقص پارٹی کے لئے مثالیں ٹریکنگ پکسلز:
+    Example tracking pixels for Dance Party:
     
     آئی ایم جی ایس آر سی = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
     
@@ -299,7 +299,7 @@ Code.org Code.org اور گھنٹہ کوڈ ویب سائٹس پر مختلف ق�
     
     ## اپنی سرگرمیوں کو فروغ دینا، CSedweek، اور گھنٹہ کوڈ
     
-    براہ مہربانی اپنے نیٹ ورک پر اپنی سرگرمی کو فروغ دیں! انہیں اپنے گھنٹہ کوڈ کے صفحے پر براہ راست کریں. آپ کے صارفین کو آپ کی سرگرمی کے بارے میں آپ سے ایک میلنگ پر رد عمل کا اظہار کرنے کا بہت امکان ہے. کمپیوٹر سائنس ایجوکیشن ویک کے دوران بین الاقوامی ہوور آف کوڈ مہم کا استعمال کریں تاکہ صارفین کو دوسروں کو اس میں شامل ہونے کے لیے مدعو کرنے کی حوصلہ افزائی کی جائے، اور مزید طلباء تک پہنچنے میں ہماری مدد کریں!
+    Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
     
     - آپ کی ویب سائٹ پر کوڈ اور CSedWek کی خصوصیت گھنٹے. سابق: <http://www.tynker.com/hour-of-code>
     - ہیش ٹیگ #HourOfCode (دارالحکومت حروف H، O، C کے ساتھ) کا استعمال کرتے ہوئے سوشل میڈیا، روایتی میڈیا، میلنگ کی فہرست، وغیرہ کا استعمال کرتے ہوئے کوڈ کے گھنٹے کو فروغ دینا

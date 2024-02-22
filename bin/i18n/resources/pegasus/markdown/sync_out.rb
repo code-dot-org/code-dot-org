@@ -18,9 +18,7 @@ module I18n
             crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
             return unless File.directory?(crowdin_locale_dir)
 
-            unless I18nScriptUtils.source_lang?(language)
-              distribute(language[:locale_s], crowdin_locale_dir)
-            end
+            distribute(language[:locale_s], crowdin_locale_dir)
 
             FileUtils.rm_r(crowdin_locale_dir)
           end

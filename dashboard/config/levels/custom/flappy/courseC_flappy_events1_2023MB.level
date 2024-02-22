@@ -1,5 +1,6 @@
 <Flappy>
   <config><![CDATA[{
+  "published": true,
   "game_id": 61,
   "created_at": "2024-01-29T22:10:36.000Z",
   "level_num": "custom",
@@ -39,17 +40,19 @@
     "obstacles": "false",
     "score": "false",
     "shareable": "false",
-    "long_instructions": "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \r\n\r\n---\r\n\r\nClick or tap on the play space to move Flappy to the target.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nLet’s practice using events in Flappy. Follow the directions below to get started coding. \r\n<br> Remember to attach the code directly to the event block and then press the orange run button on the left-hand side of your screen underneath the play space to test your code.\r\n</p>\r\n</div>\r\n<br>\r\n\r\n\r\nAttach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \r\n\r\n---\r\n\r\nClick or tap on the play space to move Flappy to the target.",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)\",\"hint_id\":\"courseC_flappy_events1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseC_flappy_events1.mp3\"}]",
     "parent_level_id": 21259,
     "name_suffix": "_2023",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
+    "encrypted": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-29T22:10:36.430+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events1_2023\\\"\"],\"cloned_from\":\"courseC_flappy_events1_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-29T22:10:36.430+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events1_2023\\\"\"],\"cloned_from\":\"courseC_flappy_events1_2023\"},{\"changed_at\":\"2024-02-05 22:20:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-02-05 22:21:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

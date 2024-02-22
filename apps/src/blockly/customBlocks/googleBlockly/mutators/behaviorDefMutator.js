@@ -76,7 +76,9 @@ export const behaviorDefMutator = {
         this.description = node.textContent;
       }
     }
-    this.behaviorId = xmlElement.getAttribute('behaviorId');
+    this.behaviorId =
+      xmlElement.getAttribute('behaviorId') ||
+      xmlElement.nextElementSibling.getAttribute('id');
     this.userCreated = readBooleanAttribute(
       xmlElement,
       'userCreated',

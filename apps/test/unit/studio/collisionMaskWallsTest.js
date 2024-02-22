@@ -64,7 +64,7 @@ describe('collisionMaskWalls', function () {
       expect(hexToRgb('#7F7F7F')).to.deep.equal({R: 127, G: 127, B: 127});
       expect(hexToRgb('#000000')).to.deep.equal({R: 0, G: 0, B: 0});
       expect(hexToRgb('#FFFFFF')).to.deep.equal({R: 255, G: 255, B: 255});
-      expect(hexToRgb('#00adbc')).to.deep.equal({R: 0, G: 0xad, B: 0xbc});
+      expect(hexToRgb('#0093A4')).to.deep.equal({R: 0, G: 147, B: 164});
     });
 
     it('parses short forms', function () {

@@ -7,7 +7,6 @@ import {
 } from './assessmentsTestHelpers';
 
 export default {
-  title: 'FreeResponsesAssessmentsTable',
   component: FreeResponsesAssessmentsTable,
 };
 

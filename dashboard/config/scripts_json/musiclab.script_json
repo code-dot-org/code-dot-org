@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "musiclab",
-    "serialized_at": "2024-01-25 21:46:45 UTC",
+    "serialized_at": "2024-02-12 18:47:26 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -80,6 +80,21 @@
         "lesson_group.key": "",
         "script.name": "musiclab"
       }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Test Library",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab"
+      }
     }
   ],
   "lesson_activities": [
@@ -117,6 +132,18 @@
       "seeding_key": {
         "lesson_activity.key": "a993a33d-6517-4f75-b2b7-9ce228b5d8cf",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab"
+      }
+    },
+    {
+      "key": "472c94c6-44f0-473d-8b7e-2c3ef7168a13",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "472c94c6-44f0-473d-8b7e-2c3ef7168a13",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "musiclab"
       }
@@ -249,6 +276,16 @@
         "activity_section.key": "cbec4ea2-4833-419b-be54-319a81a14e44",
         "lesson_activity.key": "a993a33d-6517-4f75-b2b7-9ce228b5d8cf"
       }
+    },
+    {
+      "key": "237e0dbd-b62f-4473-b15e-5af2ad5680fa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "237e0dbd-b62f-4473-b15e-5af2ad5680fa",
+        "lesson_activity.key": "472c94c6-44f0-473d-8b7e-2c3ef7168a13"
+      }
     }
   ],
   "script_levels": [
@@ -258,6 +295,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels"
+        ],
         "progression": "Intro"
       },
       "bonus": false,
@@ -380,6 +420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_function_panels"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -452,6 +495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_end"
+        ],
         "progression": "Outro"
       },
       "bonus": false,
@@ -562,6 +608,27 @@
       },
       "level_keys": [
         "SNAP"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_test_library"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "237e0dbd-b62f-4473-b15e-5af2ad5680fa"
+      },
+      "level_keys": [
+        "musiclab_test_library"
       ]
     }
   ],
@@ -720,6 +787,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab",
         "activity_section.key": "cbec4ea2-4833-419b-be54-319a81a14e44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_test_library",
+        "script_level.level_keys": [
+          "musiclab_test_library"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "237e0dbd-b62f-4473-b15e-5af2ad5680fa"
       }
     }
   ],

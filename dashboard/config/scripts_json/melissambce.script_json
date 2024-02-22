@@ -1,0 +1,2273 @@
+{
+  "script": {
+    "name": "melissambce",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-02-16 21:39:03 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "melissambce"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Overview",
+      "name": "Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "Events",
+      "name": "Events",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "name": "Conditionals",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "Functions",
+      "name": "Functions",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "Microbit Overview",
+      "name": "Microbit Overview",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "#### This lesson provides an overview of the micro:bit module. \n#### **You will:** \n- #### Understand what physical computing is and why to use it in your class.\n- #### Get an overview of the micro:bit module \n\n#### **Suggested time:** 5 minutes\n",
+        "student_overview": "#### This lesson provides an overview of the micro:bit module. \n#### **You will:** \n- #### Understand what physical computing is and why to use it in your class.\n- #### Get an overview of the micro:bit module \n\n#### **Suggested time:** 5 minutes\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Microbit Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "Meet your micro:bit",
+      "name": "Meet your micro:bit",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "#### This lessons introduces the basics of teaching with the micro:bit\n\n#### **You will:**\n- #### Get acquainted with the micro:bit\n- #### Practice using the micro:bit\n- #### Navigate the classroom feature in Microsoft MakeCode\n- #### Learn best practices for teaching with micro:bit \n\n#### **Suggested time:** 70 minutes\n",
+        "student_overview": "#### This lessons introduces the basics of teaching with the micro:bit\n\n#### **You will:**\n- #### Get acquainted with the micro:bit\n- #### Practice using the micro:bit\n- #### Navigate the classroom feature in Microsoft MakeCode\n- #### Learn best practices for teaching with micro:bit \n\n#### **Suggested time:** 70 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "Next Steps",
+      "name": "Next Steps",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "7da8d6a8-19ac-4056-9815-ca73e343f2b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7da8d6a8-19ac-4056-9815-ca73e343f2b6",
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "b2e50ef0-89c7-4adf-a067-c7ebb5b9d2a2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2e50ef0-89c7-4adf-a067-c7ebb5b9d2a2",
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "03024747-c3c1-487b-b5bd-e147dd7a7bc2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03024747-c3c1-487b-b5bd-e147dd7a7bc2",
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "e643f248-57e8-40d0-b00f-e88b76e1e7c9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e643f248-57e8-40d0-b00f-e88b76e1e7c9",
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "1a109d07-2cf3-4c7f-8079-438e8c59c9b3",
+      "position": 1,
+      "properties": {
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a109d07-2cf3-4c7f-8079-438e8c59c9b3",
+        "lesson.key": "Microbit Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "93bf99c5-c7ee-43e1-9d1d-5b4c9ffc6e09",
+      "position": 1,
+      "properties": {
+        "duration": 70,
+        "name": " micro:bit"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "93bf99c5-c7ee-43e1-9d1d-5b4c9ffc6e09",
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    },
+    {
+      "key": "97d38409-8942-4b1c-9b3d-63b736a22757",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97d38409-8942-4b1c-9b3d-63b736a22757",
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89",
+        "lesson_activity.key": "7da8d6a8-19ac-4056-9815-ca73e343f2b6"
+      }
+    },
+    {
+      "key": "38a59f2b-c785-46a5-9a74-efb6056e1cbd",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro to Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "38a59f2b-c785-46a5-9a74-efb6056e1cbd",
+        "lesson_activity.key": "b2e50ef0-89c7-4adf-a067-c7ebb5b9d2a2"
+      }
+    },
+    {
+      "key": "882cee0a-56cc-47b1-aa6e-091e0a52f254",
+      "position": 2,
+      "properties": {
+        "progression_name": "Events with Flappy Bird"
+      },
+      "seeding_key": {
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254",
+        "lesson_activity.key": "b2e50ef0-89c7-4adf-a067-c7ebb5b9d2a2"
+      }
+    },
+    {
+      "key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13",
+      "position": 3,
+      "properties": {
+        "progression_name": "Print Block + Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13",
+        "lesson_activity.key": "b2e50ef0-89c7-4adf-a067-c7ebb5b9d2a2"
+      }
+    },
+    {
+      "key": "99a32a66-4df7-4703-8c17-cb1230126a62",
+      "position": 4,
+      "properties": {
+        "progression_name": "Unplugged Lesson with Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "99a32a66-4df7-4703-8c17-cb1230126a62",
+        "lesson_activity.key": "b2e50ef0-89c7-4adf-a067-c7ebb5b9d2a2"
+      }
+    },
+    {
+      "key": "09863dba-85b3-4e24-9dda-4af4cef15209",
+      "position": 5,
+      "properties": {
+        "progression_name": "Events Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "09863dba-85b3-4e24-9dda-4af4cef15209",
+        "lesson_activity.key": "b2e50ef0-89c7-4adf-a067-c7ebb5b9d2a2"
+      }
+    },
+    {
+      "key": "1f5c5359-b771-4f66-8ae1-e1a385bbaedd",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f5c5359-b771-4f66-8ae1-e1a385bbaedd",
+        "lesson_activity.key": "03024747-c3c1-487b-b5bd-e147dd7a7bc2"
+      }
+    },
+    {
+      "key": "588fdef6-7253-469d-8c6d-df564e63cad3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Conditionals with Bee"
+      },
+      "seeding_key": {
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3",
+        "lesson_activity.key": "03024747-c3c1-487b-b5bd-e147dd7a7bc2"
+      }
+    },
+    {
+      "key": "f090e1bd-b943-4d3f-b2de-3452c3194b40",
+      "position": 3,
+      "properties": {
+        "progression_name": "Cause & Effect Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40",
+        "lesson_activity.key": "03024747-c3c1-487b-b5bd-e147dd7a7bc2"
+      }
+    },
+    {
+      "key": "1c951d46-fe17-47cf-89b2-cabcdf18df23",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c951d46-fe17-47cf-89b2-cabcdf18df23",
+        "lesson_activity.key": "03024747-c3c1-487b-b5bd-e147dd7a7bc2"
+      }
+    },
+    {
+      "key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e",
+        "lesson_activity.key": "e643f248-57e8-40d0-b00f-e88b76e1e7c9"
+      }
+    },
+    {
+      "key": "2fa74b20-7450-40d5-a962-74f4017feccd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Coding with Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd",
+        "lesson_activity.key": "e643f248-57e8-40d0-b00f-e88b76e1e7c9"
+      }
+    },
+    {
+      "key": "f6341f5a-21a1-4b98-bf87-4e6f176b907f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Functions Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6341f5a-21a1-4b98-bf87-4e6f176b907f",
+        "lesson_activity.key": "e643f248-57e8-40d0-b00f-e88b76e1e7c9"
+      }
+    },
+    {
+      "key": "c2587e16-b913-4de9-bd6f-2d5905c5b145",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Physical Computing"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2587e16-b913-4de9-bd6f-2d5905c5b145",
+        "lesson_activity.key": "1a109d07-2cf3-4c7f-8079-438e8c59c9b3"
+      }
+    },
+    {
+      "key": "81a177f0-0bc3-45e9-b295-a3297aee48f7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7",
+        "lesson_activity.key": "93bf99c5-c7ee-43e1-9d1d-5b4c9ffc6e09"
+      }
+    },
+    {
+      "key": "e70f784c-e026-4bc5-b0a3-6398776c0336",
+      "position": 2,
+      "properties": {
+        "progression_name": "Emotion Badge "
+      },
+      "seeding_key": {
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336",
+        "lesson_activity.key": "93bf99c5-c7ee-43e1-9d1d-5b4c9ffc6e09"
+      }
+    },
+    {
+      "key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd",
+      "position": 1,
+      "properties": {
+        "name": "Next Steps",
+        "progression_name": "Deciding your path"
+      },
+      "seeding_key": {
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd",
+        "lesson_activity.key": "97d38409-8942-4b1c-9b3d-63b736a22757"
+      }
+    },
+    {
+      "key": "07b7f9c4-6784-481a-8dc5-73ccd325fd8a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Continue learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "07b7f9c4-6784-481a-8dc5-73ccd325fd8a",
+        "lesson_activity.key": "97d38409-8942-4b1c-9b3d-63b736a22757"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening1MB_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      },
+      "level_keys": [
+        "PLGuide_L1_Opening1MB_grade4"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How this curriculum works_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      },
+      "level_keys": [
+        "How this curriculum works_grade4"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening2MB_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      },
+      "level_keys": [
+        "PLGuide_L1_Opening2MB_grade4"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-lessonactivities_2023MB_grade4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Events_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "38a59f2b-c785-46a5-9a74-efb6056e1cbd"
+      },
+      "level_keys": [
+        "Intro to Events_1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      },
+      "level_keys": [
+        "courseC_video_flappyIntro_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      },
+      "level_keys": [
+        "courseC_flappy_events1_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      },
+      "level_keys": [
+        "courseC_flappy_events2_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      },
+      "level_keys": [
+        "courseC_flappy_events3_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      },
+      "level_keys": [
+        "courseC_flappy_events4_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Events with Flappy Bird"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      },
+      "level_keys": [
+        "courseC_flappy_events5_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Print Block + Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "prediction explaination_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      },
+      "level_keys": [
+        "prediction explaination_1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Print Block + Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_predict_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      },
+      "level_keys": [
+        "courseF_variables_predict_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Print Block + Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_prompts_makerMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      },
+      "level_keys": [
+        "courseF_text_prompts_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Print Block + Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_answer_makeMBr_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      },
+      "level_keys": [
+        "courseF_text_answer_makeMBr_1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Print Block + Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      },
+      "level_keys": [
+        "U2L4 Multiple Choice packets2022_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unplugged Lesson with Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "99a32a66-4df7-4703-8c17-cb1230126a62"
+      },
+      "level_keys": [
+        "course_c_maker_dance_party_unpluggedMB_1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Conditionals_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1f5c5359-b771-4f66-8ae1-e1a385bbaedd"
+      },
+      "level_keys": [
+        "Intro to Conditionals_1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1f5c5359-b771-4f66-8ae1-e1a385bbaedd"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVid1_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals1_predict1_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals2_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals3_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals with Bee"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals4_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Cause & Effect Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_conditionals_overviewMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      },
+      "level_keys": [
+        "csc_ecosystems_conditionals_overviewMB_1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Cause & Effect Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Cause & Effect Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral_health_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Cause & Effect Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_justright_algae_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_justright_algae_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Cause & Effect Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_conditionals_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      },
+      "level_keys": [
+        "csc_ecosystems_matching_conditionals_makerMB_1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro to functions_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e"
+      },
+      "level_keys": [
+        "intro to functions_1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Songwriting-Unplugged2022_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e"
+      },
+      "level_keys": [
+        "Songwriting-Unplugged2022_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "functions MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e"
+      },
+      "level_keys": [
+        "functions MB_1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      },
+      "level_keys": [
+        "courseE_artist_functions_predict1_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions2_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      },
+      "level_keys": [
+        "courseE_artist_functions2_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions8a_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      },
+      "level_keys": [
+        "courseE_artist_functions8a_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions3_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      },
+      "level_keys": [
+        "courseE_artist_functions3_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_functions5_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      },
+      "level_keys": [
+        "courseE_artist_functions5_2023MB_1"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Coding with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "functions multiple choice_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      },
+      "level_keys": [
+        "functions multiple choice_1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Physical Computing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_Opening_microbit1_1"
+        ],
+        "lesson.key": "Microbit Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "c2587e16-b913-4de9-bd6f-2d5905c5b145"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_Opening_microbit1_1"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Physical Computing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_physical_computing_1"
+        ],
+        "lesson.key": "Microbit Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "c2587e16-b913-4de9-bd6f-2d5905c5b145"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_physical_computing_1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_define_microbit_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_define_microbit_1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_pdf_lessons_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_pdf_lessons_1"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_meet_lesson_overview_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_meet_lesson_overview_1"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_meet_lesson_plan_overview_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_meet_lesson_plan_overview_1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced_pl_maker_meet_your_microbit_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      },
+      "level_keys": [
+        "self-paced_pl_maker_meet_your_microbit_1"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_create_classroom_MakeCode_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_create_classroom_MakeCode_1"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_emoition_lesson_plan_overview_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_emoition_lesson_plan_overview_1"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced_PL_maker_emotion_badge_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      },
+      "level_keys": [
+        "self-paced_PL_maker_emotion_badge_1"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Emotion Badge "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced_PL-microbit_checkUnderstanding_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      },
+      "level_keys": [
+        "self-paced_PL-microbit_checkUnderstanding_1"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Deciding your path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_deciding_your_path_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_deciding_your_path_1"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Deciding your path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_courses-C-F_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_courses-C-F_1"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Deciding your path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_reflecting_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_reflecting_1"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Deciding your path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_Best_Practices_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_Best_Practices_1"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Continue learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced_PL_microbit_Closing2_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "07b7f9c4-6784-481a-8dc5-73ccd325fd8a"
+      },
+      "level_keys": [
+        "self-paced_PL_microbit_Closing2_1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Opening1MB_grade4",
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening1MB_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How this curriculum works_grade4",
+        "script_level.level_keys": [
+          "How this curriculum works_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Opening2MB_grade4",
+        "script_level.level_keys": [
+          "PLGuide_L1_Opening2MB_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-lessonactivities_2023MB_grade4",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_grade4"
+        ],
+        "lesson.key": "Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "bb009cb6-55ac-4d5a-9a6d-fb4fbfac1f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Events_1",
+        "script_level.level_keys": [
+          "Intro to Events_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "38a59f2b-c785-46a5-9a74-efb6056e1cbd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_flappyIntro_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_video_flappyIntro_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events1_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events1_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events2_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events2_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events3_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events3_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events4_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events4_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_flappy_events5_2023MB_1",
+        "script_level.level_keys": [
+          "courseC_flappy_events5_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "882cee0a-56cc-47b1-aa6e-091e0a52f254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "prediction explaination_1",
+        "script_level.level_keys": [
+          "prediction explaination_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_predict_2023MB_1",
+        "script_level.level_keys": [
+          "courseF_variables_predict_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_prompts_makerMB_1",
+        "script_level.level_keys": [
+          "courseF_text_prompts_makerMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_answer_makeMBr_1",
+        "script_level.level_keys": [
+          "courseF_text_answer_makeMBr_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 Multiple Choice packets2022_2023MB_1",
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1088d607-b226-4c92-a3d3-2cd01bd2cc13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_dance_party_unpluggedMB_1",
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "99a32a66-4df7-4703-8c17-cb1230126a62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Conditionals_1",
+        "script_level.level_keys": [
+          "Intro to Conditionals_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1f5c5359-b771-4f66-8ae1-e1a385bbaedd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVid1_2023MB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "1f5c5359-b771-4f66-8ae1-e1a385bbaedd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals1_predict1_makerMB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals2_2023MB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals3_makerMB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals4_makerMB_1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "588fdef6-7253-469d-8c6d-df564e63cad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_conditionals_overviewMB_1",
+        "script_level.level_keys": [
+          "csc_ecosystems_conditionals_overviewMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral_2023MB_1",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_2023MB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral_health_makerMB_1",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_justright_algae_makerMB_1",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_justright_algae_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_matching_conditionals_makerMB_1",
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_conditionals_makerMB_1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f090e1bd-b943-4d3f-b2de-3452c3194b40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro to functions_1",
+        "script_level.level_keys": [
+          "intro to functions_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Songwriting-Unplugged2022_2023MB_1",
+        "script_level.level_keys": [
+          "Songwriting-Unplugged2022_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "functions MB_1",
+        "script_level.level_keys": [
+          "functions MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e669a0b4-a538-4f02-97f4-79b1d5ed0d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions_predict1_2023MB_1",
+        "script_level.level_keys": [
+          "courseE_artist_functions_predict1_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions2_2023MB_1",
+        "script_level.level_keys": [
+          "courseE_artist_functions2_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions8a_2023MB_1",
+        "script_level.level_keys": [
+          "courseE_artist_functions8a_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions3_2023MB_1",
+        "script_level.level_keys": [
+          "courseE_artist_functions3_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_functions5_2023MB_1",
+        "script_level.level_keys": [
+          "courseE_artist_functions5_2023MB_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "functions multiple choice_1",
+        "script_level.level_keys": [
+          "functions multiple choice_1"
+        ],
+        "lesson.key": "Functions",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "2fa74b20-7450-40d5-a962-74f4017feccd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_Opening_microbit1_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_Opening_microbit1_1"
+        ],
+        "lesson.key": "Microbit Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "c2587e16-b913-4de9-bd6f-2d5905c5b145"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_physical_computing_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_physical_computing_1"
+        ],
+        "lesson.key": "Microbit Overview",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "c2587e16-b913-4de9-bd6f-2d5905c5b145"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_define_microbit_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_define_microbit_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_pdf_lessons_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_pdf_lessons_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_meet_lesson_overview_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_meet_lesson_overview_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_meet_lesson_plan_overview_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_meet_lesson_plan_overview_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced_pl_maker_meet_your_microbit_1",
+        "script_level.level_keys": [
+          "self-paced_pl_maker_meet_your_microbit_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "81a177f0-0bc3-45e9-b295-a3297aee48f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_create_classroom_MakeCode_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_create_classroom_MakeCode_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_emoition_lesson_plan_overview_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_emoition_lesson_plan_overview_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced_PL_maker_emotion_badge_1",
+        "script_level.level_keys": [
+          "self-paced_PL_maker_emotion_badge_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced_PL-microbit_checkUnderstanding_1",
+        "script_level.level_keys": [
+          "self-paced_PL-microbit_checkUnderstanding_1"
+        ],
+        "lesson.key": "Meet your micro:bit",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "e70f784c-e026-4bc5-b0a3-6398776c0336"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_deciding_your_path_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_deciding_your_path_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_courses-C-F_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_courses-C-F_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_reflecting_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_reflecting_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_Best_Practices_1",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_Best_Practices_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "f034c12f-ac54-4a05-9c94-22f3232ddcdd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced_PL_microbit_Closing2_1",
+        "script_level.level_keys": [
+          "self-paced_PL_microbit_Closing2_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "melissambce",
+        "activity_section.key": "07b7f9c4-6784-481a-8dc5-73ccd325fd8a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

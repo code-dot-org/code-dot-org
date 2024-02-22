@@ -3,7 +3,6 @@ import MatchByStudentTable from './MatchByStudentTable';
 import {matchDataForSingleStudent} from './assessmentsTestHelpers';
 
 export default {
-  title: 'MatchByStudentTable',
   component: MatchByStudentTable,
 };
 

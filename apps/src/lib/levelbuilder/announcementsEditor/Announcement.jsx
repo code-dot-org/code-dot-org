@@ -5,6 +5,7 @@ import {
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default class Announcement extends Component {
   static propTypes = {
@@ -38,6 +39,17 @@ export default class Announcement extends Component {
         </label>
         <label>
           Link
+          <HelpTip>
+            <p>
+              If linking to a studio.code.org, use the relative path, ie
+              "/projects".
+            </p>
+            <p>
+              {' '}
+              If linking to a code.org url, use the full path including
+              protocol, ie "https://code.org/about".
+            </p>
+          </HelpTip>
           <input
             value={announcement.link}
             style={inputStyle}

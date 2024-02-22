@@ -28,10 +28,19 @@ function SectionProgressV2({
     }
   }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
 
+  const isViewingValidatedLevel = React.useMemo(() => {
+    return unitData?.lessons
+      .filter(lesson => expandedLessonIds.includes(lesson.id))
+      .some(lesson => lesson.levels.some(level => level.isValidated));
+  }, [expandedLessonIds, unitData]);
+
   return (
     <div>
       <Heading1>Progress</Heading1>
-      <IconKey isViewingLevelProgress={true} hasLevelValidation={false} />
+      <IconKey
+        isViewingValidatedLevel={isViewingValidatedLevel}
+        expandedLessonIds={expandedLessonIds}
+      />
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>Students</Heading6>
         <Heading6 className={styles.titleUnitSelector}>

@@ -5,13 +5,21 @@ import FontAwesome from '../FontAwesome';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import classNames from 'classnames';
 
+export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
+
 export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
-    <div className={classNames(styles.needsFeedback, styles.cornerBox)} />
+    <div
+      className={classNames(styles.needsFeedback, styles.cornerBox)}
+      data-testid="needs-feedback-triangle"
+    />
   );
 
   const feedbackGivenTriangle = () => (
-    <div className={classNames(styles.feedbackGiven, styles.cornerBox)} />
+    <div
+      className={classNames(styles.feedbackGiven, styles.cornerBox)}
+      data-testid="feedback-given-triangle"
+    />
   );
 
   const notStartedBox = () => (
@@ -36,20 +44,21 @@ export default function ProgressIcon({itemType}) {
   );
 
   return (
-    <>
+    <div data-testid="progress-icon">
       {itemType?.length && (
         <FontAwesome
           id={'uitest-' + itemType[0]}
           icon={itemType[0]}
           style={{color: itemType[1]}}
           className={styles.fontAwesomeIcon}
+          title={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
       )}
       {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}
       {itemType === ITEM_TYPE.VIEWED && viewedBox()}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
-    </>
+    </div>
   );
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import LockoutLinkedAccounts from './LockoutLinkedAccounts';
 
 export default {
-  title: 'LockoutLinkedAccounts',
   component: LockoutLinkedAccounts,
 };
 

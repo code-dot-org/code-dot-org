@@ -301,15 +301,16 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       'num-passing-labels' => '2',
       'temperature' => '0.2'
     }.to_json
+    path_prefix = EvaluateRubricJob::S3_AI_RELEASE_PATH
     bucket = {
-      'teaching_assistant/lessons/fake-lesson-s3-name/system_prompt.txt' => 'fake-system-prompt',
-      'teaching_assistant/lessons/fake-lesson-s3-name/standard_rubric.csv' => 'fake-standard-rubric',
-      'teaching_assistant/lessons/fake-lesson-s3-name/params.json' => fake_params,
-      'teaching_assistant/lessons/fake-lesson-s3-name/confidence.json' => fake_confidence_levels,
-      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.js' => 'fake-code-1',
-      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.tsv' => 'fake-response-1',
-      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.js' => 'fake-code-2',
-      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.tsv' => 'fake-response-2',
+      "#{path_prefix}fake-lesson-s3-name/system_prompt.txt" => 'fake-system-prompt',
+      "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => 'fake-standard-rubric',
+      "#{path_prefix}fake-lesson-s3-name/params.json" => fake_params,
+      "#{path_prefix}fake-lesson-s3-name/confidence.json" => fake_confidence_levels,
+      "#{path_prefix}fake-lesson-s3-name/examples/1.js" => 'fake-code-1',
+      "#{path_prefix}fake-lesson-s3-name/examples/1.tsv" => 'fake-response-1',
+      "#{path_prefix}fake-lesson-s3-name/examples/2.js" => 'fake-code-2',
+      "#{path_prefix}fake-lesson-s3-name/examples/2.tsv" => 'fake-response-2',
     }
 
     s3_client.stub_responses(

@@ -55,6 +55,7 @@ export default class FunctionEditor {
     this.dom = modalEditor;
     this.isReadOnly = options.readOnly;
 
+    this.primaryWorkspace = Blockly.getMainWorkspace();
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
@@ -85,7 +86,7 @@ export default class FunctionEditor {
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
     this.editorWorkspace.addChangeListener(disableOrphans);
-
+    Blockly.navigationController.addWorkspace(this.editorWorkspace);
     // Close handler
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
@@ -124,10 +125,18 @@ export default class FunctionEditor {
   }
 
   hide() {
+    // If keyboard navigation was on, enable it on the primary workspace
+    if (this.editorWorkspace.keyboardAccessibilityMode) {
+      // Disable it on the current workspace so there's no chance of
+      // controlling it accidentally while it is hidden.
+      Blockly.navigationController.disable(this.editorWorkspace);
+      Blockly.navigationController.enable(this.primaryWorkspace);
+    }
     if (this.dom) {
       this.dom.style.display = 'none';
       this.editorWorkspace.hideChaff();
     }
+    Blockly.common.setMainWorkspace(this.primaryWorkspace);
   }
 
   // We kept this around for backwards compatibility with the CDO
@@ -242,6 +251,21 @@ export default class FunctionEditor {
     }
     this.block.setDeletable(false);
 
+    // If keyboard navigation was on, enable it on the editor workspace.
+    if (
+      this.editorWorkspace.keyboardAccessibilityMode ||
+      this.primaryWorkspace.keyboardAccessibilityMode
+    ) {
+      // Disable it on the primary workspace so there's no chance of
+      // controlling it accidentally while the function editor is open.
+      Blockly.navigationController.disable(this.primaryWorkspace);
+      Blockly.navigationController.enable(this.editorWorkspace);
+      // If this editor was already open (e.g. changing from one function to another)
+      // we need to re-focus so the cursor highlights the correct block.
+      Blockly.navigationController.navigation.focusWorkspace(
+        this.editorWorkspace
+      );
+    }
     // We only want to be able to delete things that are user-created (functions and behaviors)
     // and not things that are being previewed from a read-only workspace.
     // We allow deleting non-user created behaviors in start mode.
@@ -268,6 +292,9 @@ export default class FunctionEditor {
       getDefinitionBlockColor
     );
     this.editorWorkspace.svgFrame_.render();
+
+    // Make the function editor workspace the active/focused workspace.
+    Blockly.common.setMainWorkspace(this.editorWorkspace);
   }
 
   /**

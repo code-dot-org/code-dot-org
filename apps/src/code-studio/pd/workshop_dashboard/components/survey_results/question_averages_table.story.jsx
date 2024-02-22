@@ -15,7 +15,6 @@ const questions = [
 ];
 
 export default {
-  title: 'QuestionAveragesTable',
   component: QuestionAveragesTable,
 };
 

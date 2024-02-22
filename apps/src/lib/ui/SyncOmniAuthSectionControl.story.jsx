@@ -10,7 +10,6 @@ import {action} from '@storybook/addon-actions';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 export default {
-  title: 'SyncOmniAuthSectionButton',
   component: SyncOmniAuthSectionButton,
 };
 

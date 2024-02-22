@@ -155,7 +155,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="学前速学课程"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">适合学前儿童的速学课程</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="学前速学课程"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">预读者速成课程</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -222,7 +222,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">应用程序实验室</h3></a>
     <p style="color:#ffffff">应用实验室是一个编程环境，你可以在其中编写简单的应用程序。 设计一款应用，使用代码块或JavaScript编写代码并使其运行，然后在几秒钟内分享你的设计。</p>
@@ -231,7 +231,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">游戏实验室</h3></a>
     <p style="color:#ffffff">游戏实验室是一个编程环境，你可以在其中使用相互交互的对象和角色制作简单的动画和游戏。</p>
@@ -241,7 +241,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">网络实验室</h3></a>
     <p style="color:#ffffff">网络实验室是一个编程环境，你可以在其中使用HTML和CSS制作简单的网页。 设计自己的网页并在几秒钟内分享网站。</p>

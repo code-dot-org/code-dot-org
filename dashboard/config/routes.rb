@@ -223,6 +223,7 @@ Dashboard::Application.routes.draw do
     get "/gallery", to: redirect("/projects/public")
 
     get 'projects/featured', to: 'projects#featured'
+    delete '/featured_projects/:project_id', to: 'featured_projects#destroy'
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
@@ -624,6 +625,8 @@ Dashboard::Application.routes.draw do
 
     get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
     get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
+    get '/deeper-learning', to: 'plc/user_course_enrollments#index'
 
     namespace :plc do
       root to: 'plc#index'
@@ -1098,6 +1101,8 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+
+    resources :ai_tutor_interactions, only: [:create, :index]
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

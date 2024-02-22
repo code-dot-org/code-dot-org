@@ -11,7 +11,6 @@
     "background": "music-black",
     "long_instructions": "####Free Play\n\nYou're ready to create!  Be sure to explore the blocks and the sounds.  There is a lot to explore and use to make an amazing track.",
     "level_data": {
-      "library": "will",
       "startSources": {
         "blocks": {
           "languageVersion": 0,

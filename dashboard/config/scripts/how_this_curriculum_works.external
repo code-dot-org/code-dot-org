@@ -1,0 +1,28 @@
+name 'How this curriculum works'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Progression
+
+## How to Teach CS Fundamentals Maker with micro:bit
+![](https://images.code.org/213009fbb5738a19b2de4b3d336e4d27-image-1708546076317.org colors maker pathways plain.jpg)
+
+## CS Maker Resources 
+#### Each course includes detailed lesson plans. Each lesson comes fully equipped with a complete set of resources to aid in teaching including slides and activity guides. 
+
+#### Clearly stated objectives, warm-up activities, and guided notes accompany each lesson. In addition to high-quality videos you’ll also find helpful teaching tips to enhance your delivery, and a list of additional resources for further exploration. 
+
+## Not Sure Where to Begin? 
+#### Start at the **beginner pathway** and work your way through intermediate and stretch. 
+
+#### Each of the three pathways has **two components**. First, students will develop their coding knowledge in **skill-building lessons from Code.org**. Then, students will go to the **micro:bit platform to code their physical computing projects**.
+
+
+
+
+
+## Let’s get started learning coding concepts!
+
+
+MARKDOWN

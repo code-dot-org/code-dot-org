@@ -175,12 +175,13 @@ class SectionProgress extends Component {
         </div>
         <div style={styles.topRowContainer}>
           {showProgressTable && (
-            <SortByNameDropdown
-              selectStyles={styles.sortOrderSelect}
-              sectionId={sectionId}
-              unitName={scriptData?.title}
-              source={SECTION_PROGRESS}
-            />
+            <div style={styles.sortOrderSelect}>
+              <SortByNameDropdown
+                sectionId={sectionId}
+                unitName={scriptData?.title}
+                source={SECTION_PROGRESS}
+              />
+            </div>
           )}
           {levelDataInitialized && <ProgressViewHeader />}
         </div>

@@ -33,6 +33,7 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "supported_locales": [
+        "es-MX",
         "it-IT"
       ],
       "tts": true,
@@ -41,7 +42,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-08-31 17:34:44 UTC",
+    "serialized_at": "2024-02-06 20:28:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
