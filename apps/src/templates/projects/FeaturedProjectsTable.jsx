@@ -209,7 +209,7 @@ class FeaturedProjectsTable extends React.Component {
     filterDropdownStatusValue: tryGetLocalStorage(
       'featured-projects-filter-dropdown',
       'all'
-    ) || '',
+    ) || 'all',
   };
 
   setFilterDropdownStatusValue = value => {
