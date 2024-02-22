@@ -2,11 +2,15 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import shapes from './shapes';
+import {
+  Heading2,
+  Heading3,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 
 export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
@@ -17,7 +21,6 @@ export class UnconnectedTwoColumnActionBlock extends Component {
     imageExtra: PropTypes.node,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
-    subHeadingSmallFont: PropTypes.bool,
     description: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(
       PropTypes.shape({
@@ -41,7 +44,6 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       imageExtra,
       heading,
       subHeading,
-      subHeadingSmallFont,
       description,
       buttons,
       backgroundColor,
@@ -57,7 +59,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
     return (
       <div id={id} style={styles.container}>
-        {heading && <h4 style={styles.heading}>{heading}</h4>}
+        {heading && <Heading2>{heading}</Heading2>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
             <div style={{float, width}}>
@@ -68,18 +70,11 @@ export class UnconnectedTwoColumnActionBlock extends Component {
           <div style={{float, width}}>
             <div style={textItemCustomBackgroundColor}>
               {subHeading && (
-                <div
-                  style={
-                    subHeadingSmallFont
-                      ? styles.subHeadingSmallFont
-                      : styles.subHeading
-                  }
-                  id="two-column-action-block--sub-heading"
-                >
+                <Heading3 visualAppearance={'heading-sm'}>
                   {subHeading}
-                </div>
+                </Heading3>
               )}
-              <div style={styles.description}>{description}</div>
+              <BodyThreeText>{description}</BodyThreeText>
               {buttons.map((button, index) => (
                 <span key={index}>
                   <Button
@@ -205,16 +200,6 @@ export class SpecialAnnouncementActionBlock extends Component {
 }
 
 const styles = {
-  heading: {
-    paddingRight: 5,
-    paddingTop: 10,
-    paddingBottom: 20,
-    marginBottom: 0,
-    fontSize: 24,
-    lineHeight: '26px',
-    ...fontConstants['main-font-regular'],
-    color: color.neutral_dark,
-  },
   textItem: {
     border: `1px solid ${color.neutral_dark20}`,
     backgroundColor: color.neutral_light,
@@ -222,35 +207,11 @@ const styles = {
     minHeight: 281,
     boxSizing: 'border-box',
   },
-  subHeading: {
-    paddingRight: 0,
-    paddingBottom: 20,
-    fontSize: 27,
-    lineHeight: 1.2,
-    ...fontConstants['main-font-bold'],
-    color: color.neutral_dark,
-  },
-  subHeadingSmallFont: {
-    paddingRight: 0,
-    paddingBottom: 20,
-    fontSize: 25,
-    lineHeight: 1.2,
-    ...fontConstants['main-font-bold'],
-    color: color.neutral_dark,
-  },
   image: {
     width: 485,
     minHeight: 260,
     height: 279,
     border: `1px solid ${color.neutral_dark20}`,
-  },
-  description: {
-    paddingRight: 10,
-    paddingBottom: 20,
-    fontSize: 14,
-    ...fontConstants['main-font-regular'],
-    lineHeight: '22px',
-    color: color.neutral_dark,
   },
   clear: {
     clear: 'both',
