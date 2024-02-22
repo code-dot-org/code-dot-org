@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
-  var editUser = $('#edit_user_race');
+  var editUser = $('#edit_user_race_form');
   var raceCheckboxes = $('.race-checkbox');
 
   editUser.on('change', () => {
