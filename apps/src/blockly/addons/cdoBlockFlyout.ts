@@ -19,7 +19,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   constructor(workspaceOptions: CdoBlockFlyoutOptions) {
     super(workspaceOptions);
-    this.horizontalLayout = true;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
   }
@@ -199,7 +198,11 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   // This is copied from the core blockly repo to include a fix from this PR on Blockly:
   // https://github.com/google/blockly/pull/7333
-  // This fix has since been reverted due to rtl rendering issues, but it works for this use case.
+  // This fix has since been reverted due to rtl rendering issues, but it works for this use case
+  // (and in fact fixes our rtl rendering issues).
+  // The link for the tracked issue is here: 
+  // https://github.com/google/blockly/issues/6280
+  // If the issue is fixed we may be able to get rid of this override.
   layout_(contents: FlyoutItem[], gaps: number[]) {
     this.workspace_.scale = this.targetWorkspace?.scale;
     const margin = this.MARGIN;
@@ -210,11 +213,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     }
 
     for (let i = 0, item; (item = contents[i]); i++) {
-      if (item.type === 'block') {
+      if (item.block) {
         const block = item.block;
-        if (!block) {
-          continue;
-        }
         const allBlocks = block?.getDescendants(false);
         for (let j = 0, child; (child = allBlocks[j]); j++) {
           // Mark blocks as being inside a flyout.  This is used to detect and
@@ -239,7 +239,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
         cursorX += blockHW.width + gaps[i];
 
         this.addBlockListeners_(root, block, rect);
-      } else if (item.type === 'button' && item.button) {
+      } else if (item.button) {
         const button = item.button;
         this.initFlyoutButton_(button, cursorX, cursorY);
         cursorX += button.width + gaps[i];
