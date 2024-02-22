@@ -42,7 +42,8 @@ export default function AiAssessmentBox({
       {isAiAssessed && (
         <div className={style.aiAssessmentInfoRow}>
           <BodyFourText>
-            <StrongText>Score:</StrongText> {studentAchievement()}
+            <StrongText>Score:</StrongText>
+            <span>{studentAchievement()}</span>
           </BodyFourText>
           {aiConfidence && <AiConfidenceBox aiConfidence={aiConfidence} />}
           <AiAssessmentFeedbackRadio

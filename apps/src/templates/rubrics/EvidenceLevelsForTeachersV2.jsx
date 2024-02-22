@@ -8,7 +8,6 @@ import {
   BodyThreeText,
   BodyFourText,
   StrongText,
-  Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import {
   UNDERSTANDING_LEVEL_STRINGS,
@@ -100,7 +99,9 @@ export default function EvidenceLevelsForTeachersV2({
   } else {
     return (
       <div className={style.evidenceLevelSet}>
-        <Heading6>{i18n.rubricScores()}</Heading6>
+        <BodyThreeText>
+          <StrongText>{i18n.rubricScores()}</StrongText>
+        </BodyThreeText>
         {evidenceLevels.map(evidenceLevel => (
           <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
             {/*TODO: [DES-321] Label-two styles here*/}

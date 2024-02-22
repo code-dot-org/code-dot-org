@@ -356,7 +356,7 @@ export default function LearningGoals({
     }
     setCurrentLearningGoal(currentIndex);
 
-    // Clear feedback
+    // Clear feedback (without sending it)
     setAiFeedback(-1);
 
     // Annotate the lines based on the AI observation

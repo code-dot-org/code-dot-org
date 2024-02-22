@@ -169,15 +169,15 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
   });
@@ -239,7 +239,7 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
@@ -250,7 +250,7 @@ describe('LearningGoals', () => {
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -263,7 +263,7 @@ describe('LearningGoals', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
