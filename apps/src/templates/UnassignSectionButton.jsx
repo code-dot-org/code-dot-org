@@ -17,7 +17,7 @@ const FIREHOSE_CANCEL_EVENT = 'cancel-course-unassigned-from-section';
  * Removes null values from stringified object before sending firehose record
  */
 function removeNullValues(key, val) {
-  if (val === null || typeof val === undefined) {
+  if (val === null || typeof val === 'undefined') {
     return undefined;
   }
   return val;
