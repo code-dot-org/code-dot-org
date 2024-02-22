@@ -217,17 +217,18 @@ class ProjectsController < ApplicationController
     extract_data_for_tables(project_featured_project_combo_data)
   end
 
+  def get_featured_project_status(featured_at, unfeatured_at)
+    return 'archived' if featured_at && unfeatured_at
+    return 'active' if featured_at
+    'bookmarked'
+  end
+
   def extract_data_for_tables(project_featured_project_combo_data)
     @featured_project_table_rows = []
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
       channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
-      status = 'bookmarked'
-      if project_details[:featured_at] && project_details[:unfeatured_at]
-        status = 'archived'
-      elsif project_details[:featured_at]
-        status = 'active'
-      end
+      status = get_featured_project_status(project_details[:featured_at], project_details[:unfeatured_at])
       featured_project_row = {
         projectName: project_details_value['name'],
         channel: channel,
@@ -251,9 +252,10 @@ class ProjectsController < ApplicationController
     @archived = []
     @bookmarked = []
     featured_project_table_rows.each do |row|
-      if !row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
+      status = get_featured_project_status(row[:featuredAt], row[:unfeaturedAt])
+      if status == 'archived'
         @archived << row
-      elsif !row[:featuredAt].nil?
+      elsif status == 'active'
         @active << row
       else
         @bookmarked << row
