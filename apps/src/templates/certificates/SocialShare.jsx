@@ -42,11 +42,6 @@ export default function SocialShare({
     window.dashboard?.popupWindow(e);
   };
 
-  const onPrint = () => {
-    analyticsReporter.sendEvent(EVENTS.CERTIFICATE_PRINTED);
-    return true;
-  };
-
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${facebook}`;
   const twitterShareUrl = `https://twitter.com/share?${twitter}`;
   const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${linkedin}`;
@@ -103,7 +98,7 @@ export default function SocialShare({
           </button>
         </a>
       )}
-      <a href={print} className="social-print-link" onClick={onPrint}>
+      <a href={print} className="social-print-link">
         <button type="button" style={styles.printButton}>
           <i className="fa fa-print" />
           {' ' + i18n.print()}

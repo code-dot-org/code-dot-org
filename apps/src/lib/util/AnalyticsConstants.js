@@ -146,7 +146,7 @@ const EVENTS = {
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
   TEACHER_VISITED_CONGRATS_PAGE: 'Teacher Visited Congrats Page',
   CERTIFICATE_SHARED: 'Certificate Shared',
-  CERTIFICATE_PRINTED: 'Certificate Printed',
+  CERTIFICATE_PRINT_PAGE_VISITED: 'Certificate Print Page Visited',
 
   // Coteacher
   COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',
