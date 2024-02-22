@@ -1,0 +1,14 @@
+name 'game_jam_teams'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Let's get together!
+
+
+<div style= "width: 60%"> 
+
+###Find your team and discuss the roles you will be responsible for. (You may need to take on more than one role.)
+
+List of roles with images & descriptions: designer, programmer, sound tech, tester
+MARKDOWN
