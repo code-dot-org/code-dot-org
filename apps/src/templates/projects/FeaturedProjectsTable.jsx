@@ -172,15 +172,8 @@ const actionsFormatter = (actions, {rowData}) => {
 
 const dateFormatter = time => {
   if (time) {
-    let date = new Date(time);
-    // Format date so that single digits have a leading zero and year is first.
-    // This allows sorting by date to work correctly.
-    const dateString =
-      date.getFullYear() +
-      '/' +
-      ('0' + (date.getMonth() + 1)).slice(-2) +
-      '/' +
-      ('0' + date.getDate()).slice(-2);
+    const date = new Date(time);
+    const dateString = date.toLocaleDateString();
     return dateString;
   } else {
     return 'N/A';
@@ -430,7 +423,6 @@ class FeaturedProjectsTable extends React.Component {
         selectedValue={this.state.filterDropdownStatusValue}
         onChange={e => {
           this.setFilterDropdownStatusValue(e.target.value);
-          console.log('e.target.value', e.target.value);
         }}
         size="s"
       />
