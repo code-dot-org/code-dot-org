@@ -1,0 +1,30 @@
+name 'self-paced-pl-microbit_juiceMInd_intro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# JuiceMind 
+
+#### Code.org has partnered with JuiceMind to create engaging, interactive assessments for this course. **JuiceMind** is an educational platform offering fun coding quizzes and projects for CS teachers and students.
+
+
+#### You can choose to assign the JuiceMind assessments to your class on the Code.org course page. 
+
+## Sample Questions
+#### Interactive questions engage users through dynamic graphic matching and versatile multiple-choice formats.
+
+<img src="https://images.code.org/654f4dcd19abbc5d7b732d3ff33a11bc-image-1708541509419.png" alt="sample question on JuiceMind" width="344px" style="border-radius:10px; float:left; margin: 0 20px 40px 80px;">
+
+<img src="https://images.code.org/890a45a5fe6384e146c261eda0879812-image-1708543077926.png" alt="sample question on JuiceMind" width="385px" style="border-radius:10px; float:right; margin: 0 80px 40px 0px;">
+
+<br>
+<br>
+
+## Explore JuiceMind 
+
+ <p style="font-size: 14pt; ">Try out the JuiceMind <a href="https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/1/topicNumber/2/quizId/rBYlV1ov5omq9rIKXB1s" target="_blank" style="color: 8C52BA;">assessment for Course C</a> to get aquainted with this feature.</p>
+
+
+
+
+MARKDOWN
