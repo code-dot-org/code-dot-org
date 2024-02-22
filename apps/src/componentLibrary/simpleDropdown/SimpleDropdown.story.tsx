@@ -107,6 +107,26 @@ DisabledDropdown.args = {
   size: 'm',
 };
 
+export const ItemGroupDropdown = SingleTemplate.bind({});
+ItemGroupDropdown.args = {
+  name: 'item-groups-dropdown',
+  itemGroups: [
+    {
+      label: 'Group 1',
+      groupItems: [
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
+      ],
+    },
+    {label: 'Group 2', groupItems: [{value: 'option-3', text: 'Option 3'}]},
+  ],
+  labelText: 'Item Groups Dropdown',
+  isLabelVisible: false,
+  selectedValue: 'option-1',
+  onChange: args => console.log(args, args.target.value),
+  size: 'm',
+};
+
 export const GroupOfDropdownColors = MultipleTemplate.bind({});
 GroupOfDropdownColors.args = {
   components: [
