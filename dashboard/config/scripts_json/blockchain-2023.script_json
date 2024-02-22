@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "blockchain",
-    "serialized_at": "2023-08-23 19:06:43 UTC",
+    "serialized_at": "2024-02-21 19:47:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4013,7 +4013,6 @@
       "key": "_key_blockchain_scenarios",
       "properties": {
         "audience": "Teacher",
-        "include_in_pdf": true,
         "type": "Answer Key"
       },
       "seeding_key": {

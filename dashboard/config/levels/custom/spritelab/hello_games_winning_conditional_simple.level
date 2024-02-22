@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-02-15T00:27:17.000Z",
   "level_num": "custom",
@@ -46,12 +45,10 @@
       "upButton",
       "downButton"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-15T00:27:17.469+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional\\\"\"],\"cloned_from\":\"hello_games_winning_conditional\"},{\"changed_at\":\"2024-02-15 00:30:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:31:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:32:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:33:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:34:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:36:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:09:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:10:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:12:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:13:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-02-15T00:27:17.469+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional\\\"\"],\"cloned_from\":\"hello_games_winning_conditional\"},{\"changed_at\":\"2024-02-15 00:30:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:31:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:32:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:33:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:34:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:35:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:36:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:09:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:10:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:12:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:13:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 16:53:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 16:54:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 16:54:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 17:01:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -66,8 +63,9 @@
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"gradient_01"</field>
               <next>
-                <block type="gamelab_makeNumSprites">
-                  <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+                <block type="gamelab_makeSpritesWithSize">
+                  <field name="SIZE">50</field>
+                  <field name="COSTUME">"gameplayfaces_04"</field>
                   <value name="NUM">
                     <block type="math_number">
                       <field name="NUM">5</field>
@@ -1284,20 +1282,11 @@
         <variables>
           <variable id="@-=S@3O,n:QRq]zW8kK+">Score</variable>
         </variables>
-        <block type="controls_if" id="fE^S@}j3!f(%NAixPff?" x="81" y="23">
-          <value name="IF0">
-            <block type="logic_compare" id="kx6-d.j)-BOu_E!$p/q#">
-              <field name="OP">EQ</field>
-              <value name="A">
-                <block type="variables_get" id="A9DHn)2,P(Qk)M=a!GXz">
-                  <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
-                </block>
-              </value>
-              <value name="B">
-                <block type="gamelab_int10" id="2t8E!7{*h:db_buZJ|3I">
-                  <field name="VALUE">5</field>
-                </block>
-              </value>
+        <block type="gamelab_ifVarEquals" id="`kUb%OM1icUG[7n:kdsV" x="368" y="48">
+          <field name="NUM" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+          <value name="VAL">
+            <block type="gamelab_int10" id="2t8E!7{*h:db_buZJ|3I">
+              <field name="VALUE">5</field>
             </block>
           </value>
         </block>
@@ -1336,8 +1325,9 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeNumSprites" id="%{2Uw[zSdoAl}A``o)qK" x="11" y="536">
-          <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+        <block type="gamelab_makeSpritesWithSize" id="lHTaF[tAmtGL7uK{uv}P" x="436" y="550">
+          <field name="SIZE">50</field>
+          <field name="COSTUME">"gameplayfaces_04"</field>
           <value name="NUM">
             <block type="math_number" id="xV^Q?m?#|8HS3Vm$w6y?">
               <field name="NUM">3</field>
