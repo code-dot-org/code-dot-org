@@ -2,6 +2,11 @@
 
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
 import {BLOCK_TYPES} from './constants';
+import {Abstract} from 'blockly/core/events/events_abstract';
+import {BlockChange} from 'blockly/core/events/events_block_change';
+import {BlockMove} from 'blockly/core/events/events_block_move';
+import {BlockCreate} from 'blockly/core/events/events_block_create';
+import {Block, WorkspaceSvg} from 'blockly';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.
@@ -23,34 +28,42 @@ import {BLOCK_TYPES} from './constants';
 // We re-disable any orphan call blocks when the definition block is dragged.
 // This bug is tracked by the Blockly team:
 // https://github.com/google/blockly-samples/issues/2035
-export function disableOrphans(blockEvent) {
+export function disableOrphans(event: Abstract) {
   // This check is for when a block goes from disabled to enabled (value false is enabled).
   // We need to run the check on this event due to the Blockly bug described above.
-  const isEnabledEvent =
-    blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
-    blockEvent.element === 'disabled' &&
-    !blockEvent.newValue &&
-    blockEvent.oldValue;
-  if (!blockEvent.workspaceId) {
+  if (
+    event.type !== Blockly.Events.BLOCK_CHANGE &&
+    event.type !== Blockly.Events.BLOCK_MOVE &&
+    event.type !== Blockly.Events.BLOCK_CREATE
+  ) {
     return;
   }
+  const blockEvent = event as BlockChange | BlockMove | BlockCreate;
+  const isEnabledEvent =
+    blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
+    (blockEvent as BlockChange).element === 'disabled' &&
+    !(blockEvent as BlockChange).newValue &&
+    (blockEvent as BlockChange).oldValue;
+
+  if (!blockEvent.blockId || !blockEvent.workspaceId) {
+    return;
+  }
+
   const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
-  const block = eventWorkspace.getBlockById(blockEvent.blockId);
+  const block = eventWorkspace?.getBlockById(blockEvent.blockId);
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
     isEnabledEvent
   ) {
-    if (!blockEvent.blockId) {
-      throw new Error('Encountered a blockEvent without a proper blockId');
-    }
     if (block) {
       updateBlockEnabled(block);
     }
   } else if (
     blockEvent.type === Blockly.Events.BLOCK_DRAG &&
     block &&
-    block.type === BLOCK_TYPES.procedureDefinition
+    block.type === BLOCK_TYPES.procedureDefinition &&
+    eventWorkspace
   ) {
     // When a function definition is moved, we should not suddenly enable
     // its call blocks.
@@ -63,7 +76,7 @@ export function disableOrphans(blockEvent) {
   }
 }
 
-function updateBlockEnabled(block) {
+function updateBlockEnabled(block: Block) {
   // Changing blocks as part of this event shouldn't be undoable.
   const initialUndoFlag = Blockly.Events.getRecordUndo();
   try {
@@ -75,10 +88,11 @@ function updateBlockEnabled(block) {
         child.setEnabled(true);
       }
     } else if (block.outputConnection || block.previousConnection) {
+      let currentBlock: Block | null = block;
       do {
-        block.setEnabled(false);
-        block = block.getNextBlock();
-      } while (block);
+        currentBlock.setEnabled(false);
+        currentBlock = currentBlock.getNextBlock();
+      } while (currentBlock);
     }
   } finally {
     Blockly.Events.setRecordUndo(initialUndoFlag);
@@ -87,19 +101,19 @@ function updateBlockEnabled(block) {
 
 // When the viewport of the workspace is changed (due to scrolling for example),
 // we need to reposition any callouts.
-export function adjustCalloutsOnViewportChange(event) {
+export function adjustCalloutsOnViewportChange(event: Abstract) {
   if (event.type === Blockly.Events.VIEWPORT_CHANGE) {
     handleWorkspaceResizeOrScroll();
   }
 }
 
 // When the browser is resized, we need to re-adjust the width of any open flyout.
-export function reflowToolbox(event) {
-  const mainWorkspace = Blockly.getMainWorkspace();
+export function reflowToolbox() {
+  const mainWorkspace = Blockly.getMainWorkspace() as WorkspaceSvg;
   mainWorkspace?.getFlyout()?.reflow();
 
   if (Blockly.functionEditor) {
-    const modalWorkspace = Blockly.getFunctionEditorWorkspace();
+    const modalWorkspace = Blockly.getFunctionEditorWorkspace() as WorkspaceSvg;
     modalWorkspace?.getFlyout()?.reflow();
   }
 }

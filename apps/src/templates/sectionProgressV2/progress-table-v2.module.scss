@@ -118,6 +118,11 @@ $level-cell-width: 52;
     text-align: center;
   }
   
+  &HeaderTooltip {
+    height: 18px;
+    line-height: 18px;
+  }
+
   &HeaderCaret {
     margin-inline-end: 12px;
   }

@@ -12,6 +12,10 @@
   height: 100%;
   position: relative;
 
+  &Playing {
+    overflow-x: hidden;
+  }
+
   .fullWidthOverlay {
     height: 100%;
     position: absolute;
