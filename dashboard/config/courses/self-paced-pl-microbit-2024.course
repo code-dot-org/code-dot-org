@@ -1,7 +1,6 @@
 {
   "name": "self-paced-pl-microbit-2024",
   "script_names": [
-    "self-paced-pl-microbit-2024-1",
     "self-paced-pl-microbit-2024-2"
   ],
   "published_state": "in_development",

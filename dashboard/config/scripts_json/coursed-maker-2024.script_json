@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursed-maker",
-    "serialized_at": "2024-02-16 23:16:29 UTC",
+    "serialized_at": "2024-02-22 22:54:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -170,7 +170,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "Meet your micro:bit",
+      "name": "Meet your micro:bit-A",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": false,
@@ -221,7 +221,7 @@
     },
     {
       "key": "lesson-1",
-      "name": "Meet your micro:bit",
+      "name": "Meet your micro:bit-C",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
@@ -2221,6 +2221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_juicemind_bridging_activity_beginner"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -2268,6 +2271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_juicemind_content_assessment_beginner"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
@@ -2940,6 +2946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_juicemind_bridging_activity_intermediate"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -2987,6 +2996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_juicemind_content_assessment_intermediate"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
@@ -3259,6 +3271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_juicemind_bridging_activity_stretch"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -3306,6 +3321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_juicemind_content_assessment_stretch"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
