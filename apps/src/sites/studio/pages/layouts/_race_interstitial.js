@@ -39,7 +39,6 @@ $(document).ready(() => {
       type: 'POST',
       url: form.prop('action'),
       data: form.serialize(),
-      dataType: 'json',
       success: data => $('#race-modal').modal('hide'),
     });
   }
@@ -56,9 +55,7 @@ $(document).ready(() => {
     submitCheckboxData(editUser);
     $('#race-modal').modal('hide');
   });
-});
 
-$(document).ready(() => {
   $('#race-modal').modal('show');
   $('#closed-dialog-label').hide();
 });
