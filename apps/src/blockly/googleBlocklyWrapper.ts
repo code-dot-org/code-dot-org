@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import './addons/plusMinusBlocks/if.js';
-import './addons/plusMinusBlocks/text_join.js';
+import './addons/plusMinusBlocks/if';
+import './addons/plusMinusBlocks/text_join';
 import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
@@ -8,19 +8,15 @@ import {
 } from '@blockly/plugin-scroll-options';
 import {NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
+import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
-import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
-import CdoFieldNumber from './addons/cdoFieldNumber';
-import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
@@ -56,8 +52,8 @@ import {Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
-import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
-import customBlocks from './customBlocks/googleBlockly/index.js';
+import CdoBlockSerializer from './addons/cdoBlockSerializer';
+import customBlocks from './customBlocks/googleBlockly/index';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import {
@@ -69,7 +65,7 @@ import {
   disableOrphans,
   reflowToolbox,
 } from './eventHandlers';
-import {initializeScrollbarPair} from './addons/cdoScrollbar.js';
+import {initializeScrollbarPair} from './addons/cdoScrollbar';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import {handleCodeGenerationFailure} from './utils';
@@ -245,6 +241,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('fieldRegistry');
+  blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
+  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
+  blocklyWrapper.wrapReadOnlyProperty('FieldAngle');
+  blocklyWrapper.wrapReadOnlyProperty('FieldMultilineInput');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -298,12 +298,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
-    // Overrides required for a customization of FieldTextInput
-    // and its child classes.
-    ['field_input', 'FieldTextInput', CdoFieldTextInput],
-    ['field_number', 'FieldNumber', CdoFieldNumber],
-    ['field_angle', 'FieldAngle', CdoFieldAngle],
-    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -573,13 +567,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // TODO - used for validation in CS in Algebra.
   blocklyWrapper.findEmptyContainerBlock = function () {};
   blocklyWrapper.BlockSpace = {
-    EVENTS: {
-      MAIN_BLOCK_SPACE_CREATED: 'mainBlockSpaceCreated',
-      EVENT_BLOCKS_IMPORTED: 'blocksImported',
-      BLOCK_SPACE_CHANGE: 'blockSpaceChange',
-      BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
-      RUN_BUTTON_CLICKED: 'runButtonClicked',
-    },
+    EVENTS: WORKSPACE_EVENTS,
     onMainBlockSpaceCreated: callback => {
       if (Blockly.mainBlockSpace) {
         callback();
@@ -682,6 +670,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       renderer: optOptionsExtended.renderer || Renderers.DEFAULT,
       comments: false,
       media: '/blockly/media/google_blockly',
+      modalInputs: false, // Prevents pop-up editor on mobile
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
@@ -814,8 +803,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // Google Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {
     Blockly.getMainWorkspace().clear();
-    if (Blockly.getFunctionEditorWorkspace()) {
-      Blockly.getFunctionEditorWorkspace().clear();
+    const functionEditorWorkspace = Blockly.getFunctionEditorWorkspace();
+    if (functionEditorWorkspace) {
+      functionEditorWorkspace.clear();
     }
     if (Blockly.getHiddenDefinitionWorkspace()) {
       Blockly.getHiddenDefinitionWorkspace().clear();

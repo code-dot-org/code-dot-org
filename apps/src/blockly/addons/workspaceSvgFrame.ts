@@ -1,6 +1,9 @@
-import msg from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {frameSizes} from './cdoConstants.js';
-import SvgFrame from './svgFrame.js';
+import SvgFrame from './svgFrame';
+import {WorkspaceSvg} from 'blockly';
+import {Abstract} from 'blockly/core/events/events_abstract.js';
+import {EditorWorkspaceSvg} from '../types.js';
 
 /**
  * Represents an SVG frame specifically designed for workspaces.
@@ -15,9 +18,14 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * @param {string} className - The CSS class name for styling.
    * @param {Function} getColor - Returns the color for the frame's header.
    */
-  constructor(workspace, text, className, getColor) {
+  constructor(
+    workspace: WorkspaceSvg,
+    text: string,
+    className: string,
+    getColor: () => string
+  ) {
     className = className || 'blocklyWorkspaceSvgFrame';
-    text = text || msg.function();
+    text = text || commonI18n.function();
     const fontSize = 16;
     super(
       workspace,
@@ -27,18 +35,18 @@ export default class WorkspaceSvgFrame extends SvgFrame {
       frameSizes.WORKSPACE_HEADER_HEIGHT,
       fontSize
     );
-    let frameX = this.getFrameX();
+    const frameX = this.getFrameX();
     const frameY =
       frameSizes.MARGIN_TOP -
-      this.element_.getMetricsManager().getMetrics().viewTop;
+      workspace.getMetricsManager().getMetrics().viewTop;
     super.initChildren(frameX, frameY);
-    if (this.element_.RTL) {
+    if (workspace.RTL) {
       // Frame Text x coordinate is calculated differently for the workspace frame
       // than the default frame, so reset the x value here.
-      this.frameText_.setAttribute('x', this.getRtlFrameTextX());
+      this.frameText_?.setAttribute('x', `${this.getRtlFrameTextX()}`);
     }
     this.addBrowserResizeListener();
-    this.element_.addChangeListener(onWorkspaceChange);
+    workspace.addChangeListener(onWorkspaceChange);
   }
 
   /**
@@ -60,22 +68,32 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * Overrides the standard render to create a frame within the element, rather than around it.
    */
   render() {
-    const minWidth = this.frameText_?.getBoundingClientRect().width;
+    if (
+      !this.frameText_ ||
+      !this.frameBase_ ||
+      !this.frameHeader_ ||
+      !this.frameClipRect_
+    ) {
+      return;
+    }
+    // this.element_ is always a workspace in this class.
+    const workspace = this.element_ as WorkspaceSvg;
+    const minWidth = this.frameText_.getBoundingClientRect().width;
     let width =
       Math.max(
         minWidth,
-        this.element_.getMetricsManager().getMetrics().contentWidth
+        workspace.getMetricsManager().getMetrics().contentWidth
       ) +
       2 * frameSizes.MARGIN_SIDE;
 
     let height =
-      this.element_.getMetricsManager().getMetrics().contentHeight +
+      workspace.getMetricsManager().getMetrics().contentHeight +
       frameSizes.MARGIN_TOP +
       frameSizes.MARGIN_BOTTOM * 2 +
       frameSizes.WORKSPACE_HEADER_HEIGHT;
     // Increase the frame size to the full workspace.
     // Get the height and width of the rendered workspace, not including toolbox
-    const viewMetrics = this.element_.getMetricsManager().getViewMetrics();
+    const viewMetrics = workspace.getMetricsManager().getViewMetrics();
     // Set the height and width based on the workspace size, unless the block content is bigger.
     width = Math.max(width, viewMetrics.width - frameSizes.MARGIN_SIDE);
     height = Math.max(
@@ -87,28 +105,28 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     const frameY =
       frameSizes.MARGIN_TOP -
       // Get top-edge of the visible portion of the workspace
-      this.element_.getMetricsManager().getMetrics().viewTop;
+      workspace.getMetricsManager().getMetrics().viewTop;
 
     // Move the workspace frame up as the user scrolls down
-    this.frameClipRect_.setAttribute('y', frameY);
-    this.frameBase_.setAttribute('y', frameY);
-    this.frameHeader_.setAttribute('y', frameY);
+    this.frameClipRect_.setAttribute('y', `${frameY}`);
+    this.frameBase_.setAttribute('y', `${frameY}`);
+    this.frameHeader_.setAttribute('y', `${frameY}`);
     this.frameText_?.setAttribute(
       'y',
-      frameY + frameSizes.WORKSPACE_HEADER_HEIGHT / 2
+      `${frameY + frameSizes.WORKSPACE_HEADER_HEIGHT / 2}`
     );
     if (this.element_.RTL) {
       const frameX = this.getFrameX();
-      this.frameClipRect_.setAttribute('x', frameX);
-      this.frameHeader_.setAttribute('x', frameX);
-      this.frameBase_.setAttribute('x', frameX);
-      this.frameText_.setAttribute('x', this.getRtlFrameTextX());
+      this.frameClipRect_.setAttribute('x', `${frameX}`);
+      this.frameHeader_.setAttribute('x', `${frameX}`);
+      this.frameBase_.setAttribute('x', `${frameX}`);
+      this.frameText_.setAttribute('x', `${this.getRtlFrameTextX()}`);
     }
   }
 
   getFrameX() {
     // In LTR the svg should be to the right of the toolbox, plus a margin.
-    const metricsManager = this.element_.getMetricsManager();
+    const metricsManager = (this.element_ as WorkspaceSvg).getMetricsManager();
     let frameX = frameSizes.MARGIN_SIDE / 2;
     // Toolbox width > 0 if we have a categorized toolbox.
     const toolboxWidth = metricsManager.getToolboxMetrics().width;
@@ -143,12 +161,14 @@ export default class WorkspaceSvgFrame extends SvgFrame {
 
   getRtlFrameTextX() {
     // Width of the visible portion of the workspace.
-    const viewWidth = this.element_.getMetricsManager().getViewMetrics().width;
+    const viewWidth = (this.element_ as WorkspaceSvg)
+      .getMetricsManager()
+      .getViewMetrics().width;
     // In RTL, frame text should be on the right side of the visible portion
     // of the screen, with a margin.
     return (
       viewWidth -
-      this.frameText_.getBoundingClientRect().width -
+      (this.frameText_?.getBoundingClientRect().width || 0) -
       frameSizes.MARGIN_SIDE
     );
   }
@@ -163,17 +183,18 @@ export default class WorkspaceSvgFrame extends SvgFrame {
  *
  * @param {Blockly.Events.Abstract} event - The Blockly event object.
  */
-function onWorkspaceChange(event) {
+function onWorkspaceChange(event: Abstract) {
   if (
     [
       Blockly.Events.DELETE,
       Blockly.Events.MOVE,
       Blockly.Events.THEME_CHANGE,
       Blockly.Events.VIEWPORT_CHANGE,
-    ].includes(event.type)
+    ].includes(event.type) &&
+    event.workspaceId
   ) {
     const workspace = Blockly.common.getWorkspaceById(event.workspaceId);
-    const svgFrame = workspace.svgFrame_;
+    const svgFrame = (workspace as EditorWorkspaceSvg).svgFrame_;
     svgFrame.render();
   }
 }

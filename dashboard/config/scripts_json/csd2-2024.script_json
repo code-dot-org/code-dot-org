@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-21 00:51:01 UTC",
+    "serialized_at": "2024-02-22 01:48:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2657,7 +2657,7 @@
       "key": "4279ade1-60e9-434f-b489-61dc0fad2d7e",
       "position": 1,
       "properties": {
-        "description": "This mini-roject focuses on assessing knowledge and skills associated with utilizing several basic HTML concepts by having students design a webpage for a user. When designing for users, it can often require the web developer to interview the user to find out what information they would like on their page. This has been replicated by providing detailed user descriptions in the project guide. Depending on the difficulty level and time constraints, there are two project guide options to choose from. \n\n**Project Guide #1:** This version has detailed user descriptions with the potential topic headings already underlined and information they should include already highlighted for them. The students can look over what has been underlined and highlighted and make their design layout from there.Choose this option if your time is limited or if you have students who might need more support.  \n\n**Project Guide #2:** This version had detailed user descriptions with the first three potential topic headings already underlined as a starting point for the students. The remaining topic headings and the information that should be included for each topic are left up to the student to decide as the web developer. Choose this option if you have at least 2 days (1 day for planning and design and 1 day for building the webpage) or if your students would benefit from the extra challenge and web developer experience. \n\nMake sure you select the HTML Web Page Project Guide that corresponds to the option you choose. You will also need to go into the provided slide deck and delete the slide for the choice you did *not* select *(either slide 9 or slide 10)*."
+        "description": "This mini-project focuses on assessing knowledge and skills associated with utilizing several basic HTML concepts by having students design a webpage for a user. When designing for users, it can often require the web developer to interview the user to find out what information they would like on their page. This has been replicated by providing detailed user descriptions in the project guide. Depending on the difficulty level and time constraints, there are two project guide options to choose from. \n\n**Project Guide #1:** This version has detailed user descriptions with the potential topic headings already underlined and information they should include already highlighted for them. The students can look over what has been underlined and highlighted and make their design layout from there. Choose this option if your time is limited or if you have students who might need more support.  \n\n**Project Guide #2:** This version has detailed user descriptions with the first three potential topic headings already underlined as a starting point for the students. The remaining topic headings and the information that should be included for each topic are left up to the student to decide as the web developer. Choose this option if you have at least 2 days (1 day for planning and design and 1 day for building the webpage) or if your students would benefit from the extra challenge and web developer experience. \n\nMake sure you select the HTML Web Page Project Guide that corresponds to the option you choose. You will also need to go into the provided slide deck and delete the slide for the choice you did *not* select *(either slide 9 or slide 10)*."
       },
       "seeding_key": {
         "activity_section.key": "4279ade1-60e9-434f-b489-61dc0fad2d7e",
@@ -3533,7 +3533,7 @@
       "key": "5a14f245-45ac-4899-aeff-339c7653149e",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n**Code Studio**: Have students continue to the next levels in Code Studio",
+        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -4687,7 +4687,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute** Give each student a copy of the Chapter 1 Project Guide",
-        "name": "Final Webpage Product for Users ",
+        "name": "Final Product for Users ",
         "tips": [
           {
             "type": "teachingTip",
@@ -6460,6 +6460,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L2 Assess FR"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6732,6 +6735,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L3 Assess FR"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7129,6 +7135,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L6 Assess FR"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7376,6 +7385,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L Assess FR"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7623,6 +7635,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L9 Assess FR"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7945,6 +7960,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L11 Assess FR"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8167,6 +8185,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L12 Assess FR"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8389,6 +8410,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L13 Assess FR"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8761,6 +8785,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L17 Assess FR"
+        ],
         "progression": "Adding Pages"
       },
       "bonus": false,
@@ -8983,6 +9010,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L18 Assess FR"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -10755,7 +10785,7 @@
   "resources": [
     {
       "name": "[Key] (Warm Up) Word Search",
-      "url": "https://drive.google.com/file/d/1BFVsoww-8Y0zM9kxTe0Z1jUuPMQLLslq/view?usp=share_link",
+      "url": "https://drive.google.com/file/d/1-Ww5pygEZrF62nYQjLS91Z5Y8JFDZJ2d/view?usp=drivesdkview",
       "key": "_key_warm_up_word_search",
       "properties": {
         "audience": "Verified Teacher",
@@ -10767,7 +10797,7 @@
     },
     {
       "name": "[Key] Web Design for Users",
-      "url": "https://docs.google.com/document/d/1vPvu5pwsbKRbjhm80TPBDhHU6_FdwPAXy818SdTWrtA/edit#",
+      "url": "https://docs.google.com/document/d/1SlNIWi6MDDI1ZxHs3QXnzO-a9qU0rDcFreV1mnRAPFg/view",
       "key": "_key_web_design_for_users",
       "properties": {
         "audience": "Verified Teacher",
@@ -10779,7 +10809,7 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit",
+      "url": "https://docs.google.com/document/d/1fkKYZAhY5eox37teWHAsOIN11N75fkBcCEws2kze8rs/view",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
@@ -10860,12 +10890,12 @@
     },
     {
       "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+      "url": "https://docs.google.com/document/d/1gX1ki1x8HH7EN-59JcCFjaYnCVPhbniEH4ysZBuGKW8/view",
       "key": "computer_science_practices",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Reflection"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "computer_science_practices"
@@ -10985,7 +11015,7 @@
     },
     {
       "name": "CSS Classes",
-      "url": "https://docs.google.com/presentation/d/1FLQlIJpStf7kueNjH-oRhxbSSViz7jexkLxjusUa2oM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1V5WSBQRbKy8oC12gMzz4U0gPvPRXQFsux2YukegVvOc/template/preview",
       "key": "css_classes",
       "properties": {
         "audience": "Teacher",
@@ -10997,7 +11027,7 @@
     },
     {
       "name": "Digital Footprint",
-      "url": "https://docs.google.com/presentation/d/1erPjRFCS7_RvMafbmIqv2_NWV0Fd6ndmMZloqoj_njg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1VUq00zJ3rNEnMLAAJUyA2OinguCFu6SXnSTPJ8OS_u4/template/preview",
       "key": "digital_footprint",
       "properties": {
         "audience": "Teacher",
@@ -11021,7 +11051,7 @@
     },
     {
       "name": "Exploring Web Pages",
-      "url": "https://docs.google.com/presentation/d/158pMxcRgqMvMSyMRVZyAyiEcRY_XfO8DM40dQLg4TyY/template/preview",
+      "url": "https://docs.google.com/presentation/d/10MRScPFtJg4AhHf6ElWz263GRk0jubqkjkFFG9n0FZ8/template/preview",
       "key": "exploring_web_pages",
       "properties": {
         "audience": "Teacher",
@@ -11045,7 +11075,7 @@
     },
     {
       "name": "Flexbox Cheat Sheet",
-      "url": "https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/view",
       "key": "flexbox_cheat_sheet",
       "properties": {
         "audience": "Student",
@@ -11058,7 +11088,7 @@
     },
     {
       "name": "Flexbox Children Cheat Sheet",
-      "url": "https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/view",
       "key": "flexbox_children_cheat_sheet",
       "properties": {
         "audience": "Student",
@@ -11083,7 +11113,7 @@
     },
     {
       "name": "Headings and Lists",
-      "url": "https://docs.google.com/presentation/d/1Al6euAqLNyka0vClWcPhmrtYOlqbF72nytVxGgDNoGs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1cUmxkGuspzcnmvhNcwWd6U9JXLzrIYj_Bb1csmzrWvo/template/preview",
       "key": "headings_and_lists",
       "properties": {
         "audience": "Teacher",
@@ -11131,8 +11161,8 @@
       }
     },
     {
-      "name": "HTML Web Page",
-      "url": "https://docs.google.com/document/d/1l6tIyQWurGV_Rc9fjrWiVJHwL52XywbpV34ZJvPYGUQ/",
+      "name": "HTML Web Page Rubric",
+      "url": "https://docs.google.com/document/d/1l6tIyQWurGV_Rc9fjrWiVJHwL52XywbpV34ZJvPYGUQ/view",
       "key": "html_web_page",
       "properties": {
         "audience": "Student",
@@ -11145,7 +11175,7 @@
     },
     {
       "name": "Peer Review",
-      "url": "https://docs.google.com/document/d/1NhJK1vXmFaEzzUZ39eGBs0w9UJRvnj-ATDKWT1kuliY/",
+      "url": "https://docs.google.com/document/d/1NhJK1vXmFaEzzUZ39eGBs0w9UJRvnj-ATDKWT1kuliY/view",
       "key": "html_web_page_1",
       "properties": {
         "audience": "Student",
@@ -11158,7 +11188,7 @@
     },
     {
       "name": "Option #1 - HTML Web Page Project Guide",
-      "url": "https://docs.google.com/document/d/1N_WaufN75hFmLlxuP5bn5sUYHxMOTRfXvgBDV07Ufvw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1N_WaufN75hFmLlxuP5bn5sUYHxMOTRfXvgBDV07Ufvw/view",
       "key": "html_web_page_2",
       "properties": {
         "audience": "Student",
@@ -11195,7 +11225,7 @@
     },
     {
       "name": "Intellectual Property",
-      "url": "https://docs.google.com/presentation/d/1pUx0YnvtOefy5vbcVmcxAUdjAyq-QmCPwxadiuMIxi8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1nB7lNN6uP63WZKfR7-_YMLK4GEzQu5sD6lPE5xBa8iA/template/preview",
       "key": "intellectual_property",
       "properties": {
         "audience": "Teacher",
@@ -11207,7 +11237,7 @@
     },
     {
       "name": "Internet Scavenger Hunt",
-      "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
+      "url": "https://docs.google.com/document/d/1aNgU8i8voO1OIZBhuCrZOnMefwPKTk5AUwvD_b_Vqsc/view",
       "key": "internet_scavenger_hunt",
       "properties": {
         "audience": "Student",
@@ -11246,7 +11276,7 @@
     },
     {
       "name": "Intro to HTML",
-      "url": "https://docs.google.com/presentation/d/1nBCPFtTc_2t_dXFjY1nNZuLkQa_SxjEp9Z767QKaJOA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1THsvC-ZcYupB91jl762-Sk8adEw3fKCDV9NC5n53k60/template/preview",
       "key": "intro_to_html",
       "properties": {
         "audience": "Teacher",
@@ -11271,7 +11301,7 @@
     },
     {
       "name": "Layout Prediction",
-      "url": "https://docs.google.com/document/d/1QtnqtR0HrKo24RjTUCf6qCKvBbtYY4vm7YkAdy7nsdc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1QtnqtR0HrKo24RjTUCf6qCKvBbtYY4vm7YkAdy7nsdc/view",
       "key": "layout_prediction",
       "properties": {
         "audience": "Student",
@@ -11296,7 +11326,7 @@
     },
     {
       "name": "Licensing Your Work",
-      "url": "https://docs.google.com/document/d/1Fx-NsWsvtGJf4uMM4OuOAE3LCj1bFypoVcRahdpkre0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1QsvL-qX524DaX8laaUEiRAK3mE6UDKrh1DwtlufzBJc/view",
       "key": "licensing_your_work",
       "properties": {
         "audience": "Verified Teacher",
@@ -11308,7 +11338,7 @@
     },
     {
       "name": "Licensing Your Work",
-      "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
+      "url": "https://docs.google.com/document/d/1H8X3BYRQorpHbrErmYGRZaeVYYMFA99OLSA1Z7RB9pY/view",
       "key": "licensing_your_work_1",
       "properties": {
         "audience": "Student",
@@ -11321,7 +11351,7 @@
     },
     {
       "name": "Linking Pages",
-      "url": "https://docs.google.com/presentation/d/1lc7JO0hw_VBv6rbKvWB4zrbz5z2HSP7drC0yQf6f5j8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GleidjFmzckgaOdYsfFwC8I560P7to_afnnNg5W0VMM/template/preview",
       "key": "linking_pages",
       "properties": {
         "audience": "Teacher",
@@ -11333,7 +11363,7 @@
     },
     {
       "name": "Links and Research",
-      "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE",
+      "url": "https://docs.google.com/document/d/1ObV5dB_witrc3nJqhbpsiD8OeKbj5pgRfAU-R2JLklM/view",
       "key": "links_and_research",
       "properties": {
         "audience": "Verified Teacher",
@@ -11345,7 +11375,7 @@
     },
     {
       "name": "Links and Research",
-      "url": "https://docs.google.com/document/d/1ojSWv2at3l-QCzbkmMVyEbPYsouvPJSHbpOo8k2t-jA/edit",
+      "url": "https://docs.google.com/document/d/1TjrlAkOD5XuU_NPDztiCyzJHasKa2mGhM6CHCKi3rKM/view",
       "key": "links_and_research_1",
       "properties": {
         "audience": "Student",
@@ -11382,7 +11412,7 @@
     },
     {
       "name": "Mini-Project: Your Personal Style",
-      "url": "https://docs.google.com/presentation/d/1X2JXDNErFaeI6vmuf5perZT30DL1renuvvdQrG1L7GA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kpSJSNVzy9xmcqsMfHN32J4jyebYmOsnP5gsElEX6kw/template/preview",
       "key": "mini-project_your_personal_style",
       "properties": {
         "audience": "Teacher",
@@ -11394,7 +11424,7 @@
     },
     {
       "name": "Option #2 - HTML Web Page Project Guide",
-      "url": "https://docs.google.com/document/d/1M3O2VKNkrp5B1gzqLo21LI0N7iAxJde7ftpczjWDxtA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1M3O2VKNkrp5B1gzqLo21LI0N7iAxJde7ftpczjWDxtA/view",
       "key": "option_2_-_html_web_page",
       "properties": {
         "audience": "Student",
@@ -11430,8 +11460,8 @@
       }
     },
     {
-      "name": "Peer Review - Final Personal Website",
-      "url": "https://docs.google.com/document/d/1fbZ7Ik_H0r39t5yHEkgrYa5mSbx5BCqfLpuH6G1pP6k/view",
+      "name": "Peer Review - Website for a Purpose",
+      "url": "https://docs.google.com/document/d/1y16gNTM2wWSZ8mvLwFKpc2UCxGyP4DeZRv9CaSFRsW8/view",
       "key": "peer_review_-_final_personal_website",
       "properties": {
         "audience": "Verified Teacher",
@@ -11439,18 +11469,6 @@
       },
       "seeding_key": {
         "resource.key": "peer_review_-_final_personal_website"
-      }
-    },
-    {
-      "name": "Peer Review - HTML Web Page",
-      "url": "https://docs.google.com/document/d/18JNbIAo4rrhAFlYk8qKxLrkYjmGp4k6RXQgXq5uFq2M/view",
-      "key": "peer_review_-_html_web_page",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_-_html_web_page"
       }
     },
     {
@@ -11466,20 +11484,8 @@
       }
     },
     {
-      "name": "Peer Review - Your Personal Style",
-      "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view",
-      "key": "peer_review_-_your_personal_style",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_-_your_personal_style"
-      }
-    },
-    {
       "name": "Peer Review and Final Touches",
-      "url": "https://docs.google.com/presentation/d/1U37Rl-DFoQf7BuTmmCbn_z1ogB8HT_EK2ggwqhizX10/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_vkz4jEtQk5kqfUH8tmqHzVvDfCVoGxY6xZY1butEGQ/template/preview",
       "key": "peer_review_and_final_touches",
       "properties": {
         "audience": "Teacher",
@@ -11543,11 +11549,10 @@
     },
     {
       "name": "Pictionary Terms Slips",
-      "url": "https://docs.google.com/document/d/1dza1kwmREXH4NC6ENo1Z1M5uAepRTPUX_5nIs33gNzs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1dza1kwmREXH4NC6ENo1Z1M5uAepRTPUX_5nIs33gNzs/view",
       "key": "pictionary_terms_slips",
       "properties": {
         "audience": "Teacher",
-        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -11556,12 +11561,11 @@
     },
     {
       "name": "Plan a Multi-Page Website",
-      "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw",
+      "url": "https://docs.google.com/document/d/1jHYPkuHIWOlqXzEtcGBYG7kzGBzpBwGsEVtL8C0TcwE/view",
       "key": "plan_a_multi-page_website",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Project Guide"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "plan_a_multi-page_website"
@@ -11569,7 +11573,7 @@
     },
     {
       "name": "Planning a Multi-Page Site",
-      "url": "https://docs.google.com/presentation/d/14Iom3PhbswyO2lQqYhYaA8XC84Wxy3-kAZp7gkVpezE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1l8i9ZFAdB1WYJztfn0oe1bvaYg5_bRmTjJPZkT2zpL8/template/preview",
       "key": "planning_a_multi-page_site",
       "properties": {
         "audience": "Teacher",
@@ -11593,7 +11597,7 @@
     },
     {
       "name": "Practices Reflection",
-      "url": "https://docs.google.com/document/d/13svaYu3k7WwNYSr8uSgwqQaOIUPPWAzqkhphTP3bNAw/view",
+      "url": "https://docs.google.com/document/d/1eCezGZ3d8rPzJi0Uys0Wz0998gFphn4aSaS37_qtQLE/view",
       "key": "practices_reflection_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -11605,7 +11609,7 @@
     },
     {
       "name": "Problem Solving and Design",
-      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1adyft9qT9H9YNs-UVWuDReqPbiOIF4UfZvPH2m7BBUU/view",
       "key": "problem_solving_and_design",
       "properties": {
         "audience": "Student",
@@ -11631,7 +11635,7 @@
     },
     {
       "name": "Project - Personal Web Page",
-      "url": "https://docs.google.com/presentation/d/153O_4NxX7l_OwuRKVim24RiWqlUdZ77emPt1oKH4ESs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1pjCeguRFkqafZWL3BmDfzkxhoEdTtyNa2DzeMEe92cU/template/preview",
       "key": "project_-_personal_web_page",
       "properties": {
         "audience": "Teacher",
@@ -11643,7 +11647,7 @@
     },
     {
       "name": "Project - Website for a Purpose",
-      "url": "https://docs.google.com/presentation/d/198rIZkq2Vf_aDOFc8HUIgVOYuvMIpZHTbO6SBagATG0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1baW5I6--R3oAuu0iEjNxKmIaIJpBPl1peRH13llBqD0/template/preview",
       "key": "project_-_website_for_a_purpose",
       "properties": {
         "audience": "Teacher",
@@ -11651,18 +11655,6 @@
       },
       "seeding_key": {
         "resource.key": "project_-_website_for_a_purpose"
-      }
-    },
-    {
-      "name": "Project Guide - HTML Project",
-      "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view",
-      "key": "project_guide_-_html_project",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "project_guide_-_html_project"
       }
     },
     {
@@ -11679,7 +11671,7 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Prepare",
-      "url": "https://docs.google.com/document/d/1EgfsYO_XPaTznzucxKttsEmuNPOhBnC_ynxDZ1SkN0w/view",
+      "url": "https://docs.google.com/document/d/1b64kdib8xTbW5paXXxj3grWoshvBoLp--bWZiIxqiZs/view",
       "key": "project_guide_-_website_for_a_purpose_-_prepare",
       "properties": {
         "audience": "Verified Teacher",
@@ -11691,7 +11683,7 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Reflect",
-      "url": "https://docs.google.com/document/d/1yAw19zO5FfOx5P1inmgYApu9VXH_Bpo8WDlDjoW-RgA/view",
+      "url": "https://docs.google.com/document/d/11syXtuzZTvZm_WllGLNNdfXR33xs9x8QCE3YTG7lwi8/view",
       "key": "project_guide_-_website_for_a_purpose_-_reflect",
       "properties": {
         "audience": "Verified Teacher",
@@ -11699,18 +11691,6 @@
       },
       "seeding_key": {
         "resource.key": "project_guide_-_website_for_a_purpose_-_reflect"
-      }
-    },
-    {
-      "name": "Project Guide - Your Personal Style",
-      "url": "https://docs.google.com/document/d/14Zlx1BC-QxW01D0vk_C5JTB77PCK80OatVFv1hcClZw/view",
-      "key": "project_guide_-_your_personal_style",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "project_guide_-_your_personal_style"
       }
     },
     {
@@ -11728,7 +11708,7 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit",
+      "url": "https://docs.google.com/document/d/1vF6olHOB8uJ7qiut3r4wvJj5wJjJyPuI8P1LKXNkcXo/view",
       "key": "social_sleuth",
       "properties": {
         "audience": "Verified Teacher",
@@ -11740,7 +11720,7 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
+      "url": "https://docs.google.com/document/d/1ublV9BWfawzHvwZK7N9ZbzOpfpKMUqYMWXIuNqN2tvc/view",
       "key": "social_sleuth_1",
       "properties": {
         "audience": "Student",
@@ -11753,7 +11733,7 @@
     },
     {
       "name": "Sources and Research",
-      "url": "https://docs.google.com/presentation/d/1rkqr-0W7XG1Q5FBOQwemEm-OAdtRcCa_irdDDYx3JjM/template/preview",
+      "url": "https://docs.google.com/presentation/d/182csuhb4oMqlYceybczX3RXKqvDvQFNnAAtKJbofnQQ/template/preview",
       "key": "sources_and_research",
       "properties": {
         "audience": "Teacher",
@@ -11777,7 +11757,7 @@
     },
     {
       "name": "Styling Elements with CSS",
-      "url": "https://docs.google.com/presentation/d/1mFNJeuQ-SlVebZ8fJFNSAzysOZRUeEkVsqOHq9qejRk/template/preview",
+      "url": "https://docs.google.com/presentation/d/14BYGoCn3gDy5dcP18LTgvKbwKirCi6ayso8hU1Decgw/template/preview",
       "key": "styling_elements_with_css",
       "properties": {
         "audience": "Teacher",
@@ -11789,7 +11769,7 @@
     },
     {
       "name": "Styling Text with CSS",
-      "url": "https://docs.google.com/presentation/d/18D5OD2P5z8xRw6ULnGd6oH5CL4bP5uyfmwaNaj8ilmQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1lN9kHUL9w7hwMV5I6hc-TnnBnFENRCK2gxDBBR4jrXs/template/preview",
       "key": "styling_text_with_css",
       "properties": {
         "audience": "Teacher",
@@ -11811,7 +11791,7 @@
     },
     {
       "name": "Team Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1zHPYxlNb4PYxcyZTvIwQDl1QDCoY3_hx6dapw2SvSXU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1cAeVr9gUhuyf0kPgq8WklVyUadWHN6cOKDNT1vzM8ak/template/preview",
       "key": "team_problem_solving",
       "properties": {
         "audience": "Teacher",
@@ -11869,7 +11849,7 @@
     },
     {
       "name": "Using Images",
-      "url": "https://docs.google.com/presentation/d/16RXRcZCC1rGcrYR4XoGxN8OvRzSgyY6w4i1col84hxs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1mAUT_XTWrs1Y-nnDBnvXNc13ireAWWPZ28IlIIDdxV4/template/preview",
       "key": "using_images",
       "properties": {
         "audience": "Teacher",
@@ -11946,7 +11926,7 @@
     },
     {
       "name": "Web Design for Users (A)",
-      "url": "https://docs.google.com/document/d/1IuppZwMZZ0SEMbj0SVI17vXrnWa_hTsGR9C-BLvu1s4/view",
+      "url": "https://docs.google.com/document/d/1dZxd7DuruNKhqjp9nxAzr0RSICJFyb3sc-B6bgY2bIs/view",
       "key": "web_design_for_users_a_",
       "properties": {
         "audience": "Student",
@@ -11959,7 +11939,7 @@
     },
     {
       "name": "Web Design for Users (B)",
-      "url": "https://docs.google.com/document/d/1vkubXei6_E1XZyjqiEDaEG7MEPViHamjkZ_IBCJyi8c/view",
+      "url": "https://docs.google.com/document/d/1dZxd7DuruNKhqjp9nxAzr0RSICJFyb3sc-B6bgY2bIs/view",
       "key": "web_design_for_users_b_",
       "properties": {
         "audience": "Student",
@@ -11972,7 +11952,7 @@
     },
     {
       "name": "Web Design Template ",
-      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Tuy8PedaZIGagT7B19X3E4cn9jM57RWusXidI8jjncI/view",
       "key": "web_design_template",
       "properties": {
         "audience": "Student",
@@ -11997,7 +11977,7 @@
     },
     {
       "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/19ObCznDrFTz93q15fq3SMUkURiVgTuchLbFninlj3ww/edit",
+      "url": "https://docs.google.com/document/d/1npD3ERU8C6chX_mXTfid1bzZzeivaUHYVz6CpiF6b5I/view",
       "key": "website_for_a_purpose",
       "properties": {
         "audience": "Student",
@@ -12010,12 +11990,12 @@
     },
     {
       "name": "Website for a Purpose - Reflect",
-      "url": "https://docs.google.com/document/d/1aThUWcwpI-7KNFtWfbn0V2haHiOHbVzDaIYG6SfCiGs/edit",
+      "url": "https://docs.google.com/document/d/1Ni0Ux61HMZyX7_IUTzVNAl1Ev1PbEYQ-xoP-jcKMo8w/view",
       "key": "website_for_a_purpose_-_reflect",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "website_for_a_purpose_-_reflect"
@@ -12023,7 +12003,7 @@
     },
     {
       "name": "Website for a Purpose - Student Checklist",
-      "url": "https://docs.google.com/document/d/1HA8nG3-qIb57id98VJfpYgVTx83vsri9C5ACLtvk8wA/edit",
+      "url": "https://docs.google.com/document/d/1foeIXBKOmRdM3vv8JU5ii4YWvzENvO4GGzBdLgi4TrM/view",
       "key": "website_for_a_purpose_-_student_checklist",
       "properties": {
         "audience": "Student",
@@ -12034,13 +12014,13 @@
       }
     },
     {
-      "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1zcF1XGxdvmysJhYpv3f9mBljI2gbAN_4U0ctM3Ero5g/edit",
+      "name": "Peer Review - Website for a Purpose",
+      "url": "https://docs.google.com/document/d/1j73YPcfPEpY7Th3U_Znl2jRDfQ5OIFM2xeHIXZyD5fU/view",
       "key": "website_for_a_purpose_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Peer Review"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "website_for_a_purpose_1"
@@ -12048,7 +12028,7 @@
     },
     {
       "name": "Website Team Plan",
-      "url": "https://docs.google.com/document/d/1aiH8sJkWOupnPNC99pgCIUvC9Posjojbx8lrZy-7faM/edit?usp=sharing/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/144Ra5afPklXapRMYxBNWK3_ODxMlehO5EmLBJ4pDjds/view",
       "key": "website_team_plan",
       "properties": {
         "audience": "Verified Teacher",
@@ -12060,7 +12040,7 @@
     },
     {
       "name": "Website Team Plan",
-      "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/",
+      "url": "https://docs.google.com/document/d/1DFwg35wAnukoVVP2_efHLFxOsRZzLNp5MgPuDDsYnZQ/view",
       "key": "website_team_plan_1",
       "properties": {
         "audience": "Student",
@@ -12084,8 +12064,8 @@
       }
     },
     {
-      "name": "Adding Style to a Webpage",
-      "url": "https://docs.google.com/document/d/1vSTT-HSyqbZgIUhtBsZoYPDnDPdkfffX6Qy4X6wv_oA/edit?usp=drive_link",
+      "name": "Adding Style to a Webpage Rubric",
+      "url": "https://docs.google.com/document/d/1vSTT-HSyqbZgIUhtBsZoYPDnDPdkfffX6Qy4X6wv_oA/view",
       "key": "your_personal_style",
       "properties": {
         "audience": "Student",
@@ -12098,7 +12078,7 @@
     },
     {
       "name": "Peer Review - Adding Style to a Webpage ",
-      "url": "https://docs.google.com/document/d/1YpGKn_tdMilI1GT-Hd3v0ISUI-6FwR9BQy5iCIcbkjo/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1YpGKn_tdMilI1GT-Hd3v0ISUI-6FwR9BQy5iCIcbkjo/view",
       "key": "your_personal_style_1",
       "properties": {
         "audience": "Student",
@@ -12111,7 +12091,7 @@
     },
     {
       "name": "Adding Style to a Webpage - Project Guide",
-      "url": "https://docs.google.com/document/d/1Kg31eruK6eK_7L26aL5mqxOIEtVJnPa2JIqfMmbX1nk/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1Kg31eruK6eK_7L26aL5mqxOIEtVJnPa2JIqfMmbX1nk/view",
       "key": "your_personal_style_2",
       "properties": {
         "audience": "Student",
@@ -12349,19 +12329,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "peer_review_-_html_web_page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "problem_solving_process_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "project_guide_-_html_project"
       }
     },
     {
@@ -12373,19 +12341,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "peer_review_-_your_personal_style"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
         "resource.key": "problem_solving_process_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "project_guide_-_your_personal_style"
       }
     },
     {

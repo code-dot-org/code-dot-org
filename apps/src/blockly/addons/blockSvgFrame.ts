@@ -1,6 +1,7 @@
-import msg from '@cdo/locale';
-import {frameSizes} from './cdoConstants.js';
-import SvgFrame from './svgFrame.js';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {frameSizes} from './cdoConstants';
+import SvgFrame from './svgFrame';
+import {BlockSvg} from 'blockly';
 
 /**
  * Represents an SVG frame specifically designed for blocks, rather than workspaces.
@@ -8,10 +9,14 @@ import SvgFrame from './svgFrame.js';
 export default class BlockSvgFrame extends SvgFrame {
   /**
    * Constructs an svg frame for a block, such as a function definition.
-   * @param {Element} block - The block element associated with the frame.
    */
-  constructor(block, text, className, getColor) {
-    text = text || msg.block();
+  constructor(
+    block: BlockSvg,
+    text: string | undefined,
+    className: string | undefined,
+    getColor: () => string
+  ) {
+    text = text || commonI18n.block();
     className = className || 'blockFrame';
     super(block, text, className, getColor);
 
