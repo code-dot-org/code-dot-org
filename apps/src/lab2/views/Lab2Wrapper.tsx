@@ -29,7 +29,9 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
-  const overlayStyle: string = isLoading
+  const overlayStyle: string = window.location.href.includes('no-fade')
+    ? moduleStyles.hidingBlock
+    : isLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
 

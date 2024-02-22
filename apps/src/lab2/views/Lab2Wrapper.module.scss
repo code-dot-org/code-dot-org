@@ -74,6 +74,10 @@
       animation: fade-out-block 0.5s;
     }
 
+    &.hidingBlock {
+      opacity: 0;
+    }
+
     .slowLoadContainer {
       display: flex;
       flex-direction: column;
