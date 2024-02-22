@@ -22,6 +22,15 @@ export type AITutorInteraction = {
   aiResponse?: string;
 };
 
+export type StudentChatRow = {
+  studentName: string;
+  type: TutorType;
+  prompt: string;
+  status: string;
+  aiResponse?: string;
+  createdAt: string;
+};
+
 export type Level = {
   id: number;
   type: string;

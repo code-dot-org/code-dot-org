@@ -1,6 +1,6 @@
-import {fetchStudentChatMessages} from '@cdo/apps/aiTutor/interactionsApi';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import React, {useEffect, useState} from 'react';
+import {fetchStudentChatMessages} from '@cdo/apps/aiTutor/interactionsApi';
+import AITutorChatMessagesTableRow from './aiTutorChatMessageTableRow';
 
 /**
  * Renders a table showing the section's students' chat messages with AI Tutor.
@@ -28,10 +28,26 @@ const AITutorChatMessagesTable: React.FunctionComponent<
 
   return (
     <div>
-      <h3>Table of chat messages will go here</h3>
-      {chatMessages.map(msg => (
-        <div>{msg.aiResponse}</div>
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <td>
+              <div>Student</div>
+            </td>
+            <td>
+              <div>Timestamp</div>
+            </td>
+            <td>
+              <div>AI Tutor Responses</div>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          {chatMessages.map(chatMessage => (
+            <AITutorChatMessagesTableRow chatMessage={chatMessage} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
