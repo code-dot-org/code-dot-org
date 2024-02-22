@@ -392,7 +392,7 @@ function createWebpackConfig({
   ///////// WEBPACK CONFIG BEGINS HERE /////////
   //////////////////////////////////////////////
   watch = true;
-  console.log("Are we watching?", watch)
+  console.log('Are we watching?', watch);
   const WEBPACK_CONFIG = {
     output: {
       path: path.resolve(__dirname, 'build/package/js/'),
@@ -416,6 +416,7 @@ function createWebpackConfig({
       },
       ['@babel/polyfill/noConflict', 'whatwg-fetch']
     ),
+    // entry: './src/homeTest.js',
     externals: [
       {
         jquery: 'var $',
@@ -477,110 +478,111 @@ function createWebpackConfig({
 
       // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
       // by 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
-      splitChunks: process.env.DEV
-        ? undefined
-        : {
-            // Override the default limit of 3 concurrent downloads on page load,
-            // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
-            // been observed to degrade only with > 200 simultaneous downloads.
-            maxInitialRequests: 100,
-            cacheGroups: {
-              // Pull any module shared by 2+ appsEntries into the "common" chunk.
-              common: {
-                name: 'common',
-                minChunks: 2,
-                chunks: chunk => {
-                  return Object.keys(appsEntries).includes(chunk.name);
+      splitChunks:
+        process.env.DEV || true
+          ? undefined
+          : {
+              // Override the default limit of 3 concurrent downloads on page load,
+              // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
+              // been observed to degrade only with > 200 simultaneous downloads.
+              maxInitialRequests: 100,
+              cacheGroups: {
+                // Pull any module shared by 2+ appsEntries into the "common" chunk.
+                common: {
+                  name: 'common',
+                  minChunks: 2,
+                  chunks: chunk => {
+                    return Object.keys(appsEntries).includes(chunk.name);
+                  },
                 },
-              },
-              // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
-              // "code-studio-common" chunk.
-              'code-studio-common': {
-                name: 'code-studio-common',
-                minChunks: 2,
-                chunks: chunk => {
-                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES);
-                  return chunkNames.includes(chunk.name);
+                // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
+                // "code-studio-common" chunk.
+                'code-studio-common': {
+                  name: 'code-studio-common',
+                  minChunks: 2,
+                  chunks: chunk => {
+                    const chunkNames = Object.keys(CODE_STUDIO_ENTRIES);
+                    return chunkNames.includes(chunk.name);
+                  },
+                  priority: 10,
                 },
-                priority: 10,
-              },
-              // With just the cacheGroups listed above, we end up with many
-              // duplicate modules between the "common" and "code-studio-common"
-              // chunks. The next cache group eliminates some of this duplication
-              // by pulling more modules from "common" into "code-studio-common".
-              //
-              // The use of minChunks provides a guarantee that we don't
-              // unnecessarily move things into "code-studio-common" which are
-              // needed only by appsEntries. This avoids increasing the download
-              // size for code studio pages which include code-studio-common.js
-              // but not common.js.
-              //
-              // There is no converse guarantee that this strategy will eliminate
-              // all duplication between "common" and "code-studio-common".
-              // However, at the time of this writing, bundle analysis indicates
-              // that is currently effective in eliminating any duplication.
-              //
-              // In the future, we want to move toward asynchronous imports, which
-              // allow webpack to manage bundle splitting and sharing behind the
-              // scenes. Once we adopt this approach, the need for predefined
-              // cacheGroups will go away.
-              //
-              // For more information see: https://webpack.js.org/guides/code-splitting/
-              'code-studio-multi': {
-                name: 'code-studio-common',
-                minChunks: Object.keys(appsEntries).length + 1,
-                chunks: chunk => {
-                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES).concat(
-                    Object.keys(appsEntries)
-                  );
-                  return chunkNames.includes(chunk.name);
+                // With just the cacheGroups listed above, we end up with many
+                // duplicate modules between the "common" and "code-studio-common"
+                // chunks. The next cache group eliminates some of this duplication
+                // by pulling more modules from "common" into "code-studio-common".
+                //
+                // The use of minChunks provides a guarantee that we don't
+                // unnecessarily move things into "code-studio-common" which are
+                // needed only by appsEntries. This avoids increasing the download
+                // size for code studio pages which include code-studio-common.js
+                // but not common.js.
+                //
+                // There is no converse guarantee that this strategy will eliminate
+                // all duplication between "common" and "code-studio-common".
+                // However, at the time of this writing, bundle analysis indicates
+                // that is currently effective in eliminating any duplication.
+                //
+                // In the future, we want to move toward asynchronous imports, which
+                // allow webpack to manage bundle splitting and sharing behind the
+                // scenes. Once we adopt this approach, the need for predefined
+                // cacheGroups will go away.
+                //
+                // For more information see: https://webpack.js.org/guides/code-splitting/
+                'code-studio-multi': {
+                  name: 'code-studio-common',
+                  minChunks: Object.keys(appsEntries).length + 1,
+                  chunks: chunk => {
+                    const chunkNames = Object.keys(CODE_STUDIO_ENTRIES).concat(
+                      Object.keys(appsEntries)
+                    );
+                    return chunkNames.includes(chunk.name);
+                  },
+                  priority: 20,
                 },
-                priority: 20,
-              },
-              vendors: {
-                name: 'vendors',
-                priority: 30,
-                chunks: chunk => {
-                  // all 'initial' chunks except OTHER_ENTRIES
-                  const chunkNames = Object.keys({
-                    ...appsEntries,
-                    ...CODE_STUDIO_ENTRIES,
-                    ...INTERNAL_ENTRIES,
-                    ...PEGASUS_ENTRIES,
-                    ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-                    ...SHARED_ENTRIES,
-                  });
+                vendors: {
+                  name: 'vendors',
+                  priority: 30,
+                  chunks: chunk => {
+                    // all 'initial' chunks except OTHER_ENTRIES
+                    const chunkNames = Object.keys({
+                      ...appsEntries,
+                      ...CODE_STUDIO_ENTRIES,
+                      ...INTERNAL_ENTRIES,
+                      ...PEGASUS_ENTRIES,
+                      ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+                      ...SHARED_ENTRIES,
+                    });
 
-                  return chunkNames.includes(chunk.name);
+                    return chunkNames.includes(chunk.name);
+                  },
+                  test(module) {
+                    return [
+                      '@babel/polyfill/noConflict',
+                      'immutable',
+                      'lodash',
+                      'moment',
+                      'pepjs',
+                      'radium',
+                      'react',
+                      'react-dom',
+                      'wgxpath',
+                    ].some(libName =>
+                      new RegExp(`/apps/node_modules/${libName}/`).test(
+                        module.resource
+                      )
+                    );
+                  },
                 },
-                test(module) {
-                  return [
-                    '@babel/polyfill/noConflict',
-                    'immutable',
-                    'lodash',
-                    'moment',
-                    'pepjs',
-                    'radium',
-                    'react',
-                    'react-dom',
-                    'wgxpath',
-                  ].some(libName =>
-                    new RegExp(`/apps/node_modules/${libName}/`).test(
-                      module.resource
-                    )
-                  );
+                p5lab: {
+                  name: 'p5-dependencies',
+                  priority: 10,
+                  minChunks: 2,
+                  chunks: chunk =>
+                    ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
+                  test: module => /p5/.test(module.resource),
                 },
-              },
-              p5lab: {
-                name: 'p5-dependencies',
-                priority: 10,
-                minChunks: 2,
-                chunks: chunk =>
-                  ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
-                test: module => /p5/.test(module.resource),
               },
             },
-          },
     },
     mode: minify ? 'production' : 'development',
     plugins: [
@@ -696,6 +698,7 @@ function createWebpackConfig({
               logLevel: 'debug',
             },
           ],
+          client: {progress: true},
           // Except stuff that webpack watch / webpack-dev-server will be generating
           // like: http://localhost-studio.code.org:9000/assets/application.js
           // or: http://localhost-studio.code.org:9000/assets/js/code-studio.js
@@ -708,6 +711,7 @@ function createWebpackConfig({
           // hot: true,
           // inline: true,
           host: '0.0.0.0',
+          hot: true,
         }
       : undefined,
   };
@@ -716,7 +720,7 @@ function createWebpackConfig({
   ////////// WEBPACK CONFIG ENDS HERE //////////
   //////////////////////////////////////////////
 
-  console.log(WEBPACK_CONFIG.devServer)
+  console.log(WEBPACK_CONFIG.devServer);
 
   return {
     ...WEBPACK_BASE_CONFIG,
