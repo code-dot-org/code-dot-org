@@ -10419,6 +10419,10 @@ en:
               name: Hello Game Design
             lesson-8:
               name: Game Development
+            lesson-9:
+              name: Game Jam - Create
+            lesson-10:
+              name: Game Jam - Play
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -14870,6 +14874,8 @@ en:
               name: Functions
             lesson-6:
               name: Overview
+            lesson-7:
+              name: Implementing with Code.org
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-1
           title: CSF Levels

@@ -319,23 +319,6 @@ export default {
       ];
     };
 
-    Blockly.Blocks.behavior_definition =
-      Blockly.Block.createProcedureDefinitionBlock({
-        initPostScript(block) {
-          block.setHSV(136, 0.84, 0.8);
-          block.parameterNames_ = ['this sprite'];
-          block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
-        },
-        overrides: {
-          getVars(category) {
-            return {
-              Behavior: [this.getFieldValue('NAME')],
-            };
-          },
-          callType_: 'gamelab_behavior_get',
-        },
-      });
-
     generator.behavior_definition = generator.procedures_defnoreturn;
 
     Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
@@ -343,18 +326,6 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-      initialize(flyout, cursor) {
-        if (behaviorEditor && !behaviorEditor.isOpen()) {
-          flyout.addButtonToFlyout_(
-            cursor,
-            i18n.createBlocklyBehavior(),
-            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-          );
-        }
-      },
-      addDefaultVar: false,
-    });
     delete blockly.Blocks.procedures_defreturn;
     delete blockly.Blocks.procedures_ifreturn;
   },

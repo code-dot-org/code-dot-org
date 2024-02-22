@@ -121,7 +121,7 @@ module I18n
 
       def source_files(crowdin_src)
         if crowdin_src.nil? || File.extname(crowdin_src).empty?
-          crowdin_client.list_source_files(crowdin_src)
+          crowdin_client.list_source_files(crowdin_src).sort_by {|source_file| source_file['path']}
         else
           [crowdin_client.get_source_file(crowdin_src)]
         end
