@@ -458,18 +458,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const extendedBlockSvg = blocklyWrapper.BlockSvg
     .prototype as ExtendedBlockSvg;
 
-  extendedBlockSvg.isDisabled = function () {
-    return !this.isEnabled();
-  };
-
-  extendedBlockSvg.getHexColour = function () {
-    // In cdo Blockly labs, getColour() returns a numerical hue value, while
-    // in newer Google Blockly it returns a hexademical color value string.
-    // This is only used for locationPicker blocks and can likely be deprecated
-    // once Sprite Lab is using Google Blockly.
-    return this.getColour();
-  };
-
   extendedBlockSvg.isVisible = function () {
     // TODO (eventually) - All Google Blockly blocks are currently visible.
     // This shouldn't be a problem until we convert other labs.

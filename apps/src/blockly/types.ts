@@ -133,8 +133,6 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 // types and can cast to them when needed.
 
 export interface ExtendedBlockSvg extends BlockSvg {
-  isDisabled: () => boolean;
-  getHexColour: () => string;
   isVisible: () => boolean;
   isUserVisible: () => boolean;
 }
