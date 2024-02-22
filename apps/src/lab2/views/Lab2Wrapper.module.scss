@@ -68,6 +68,7 @@
 
     &.showingBlock {
       opacity: 1;
+      pointer-events: initial;
     }
 
     &.fadeInBlock {
