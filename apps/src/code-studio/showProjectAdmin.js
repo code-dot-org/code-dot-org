@@ -47,7 +47,7 @@ export default project => {
         type: 'PUT',
         dataType: 'json',
         success: function (data) {
-          $('#is_featured_project').show();
+          $('#is_bookmarked_featured_project').show();
           $('#bookmark_project').hide();
         },
         error: function (data) {

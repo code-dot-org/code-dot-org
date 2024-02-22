@@ -127,6 +127,7 @@
         - is_featured_project = FeaturedProject.exists?(:project_id => project_id)
         - if is_featured_project
           - project = FeaturedProject.find_by project_id: project_id
+          - status = project.status
         - project = Projects.new(get_storage_id)
         - content_moderation_disabled = project.content_moderation_disabled?(params[:channel_id])
         %li
@@ -148,9 +149,12 @@
               - remix_ancestry.each do |channel|
                 %li
                   %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
-        #is_featured_project{'style' => ('display: none;' unless is_featured_project)}
-          %li Already a featured project
-
+        #is_active_featured_project{'style' => ('display: none;' unless status=='active')}
+          %li Already an active featured project
+        #is_bookmarked_featured_project{'style' => ('display: none;' unless status=='bookmarked')}
+          %li Already a bookmarked featured project
+        #is_archived_featured_project{'style' => ('display: none;' unless status=='archived')}
+          %li Already an archived featured project
       #bookmark_project{'style' => ('display: none;' if is_featured_project)}
         %button{id: "bookmark", class: "btn btn-default btn-sm"}
           Bookmark as a featured project

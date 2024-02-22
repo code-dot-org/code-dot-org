@@ -25,8 +25,10 @@ class FeaturedProject < ApplicationRecord
     !featured_at.nil? && unfeatured_at.nil?
   end
 
-  def bookmarked?
-    featured_at.nil? && unfeatured_at.nil?
+  def status
+    return 'active' if active?
+    return 'archived' if !featured_at.nil? && !unfeatured_at.nil?
+    'bookmarked'
   end
 
   # Determines if a project is currently featured by decrypting the provided
