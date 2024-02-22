@@ -241,8 +241,7 @@ def jquery_is_defined
 end
 
 def jquery_is_element_visible(selector)
-  "return #{jquery_is_defined} &&" +
-  " $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+  "return #{jquery_is_defined} && $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
 
 def jquery_is_element_displayed(selector)
