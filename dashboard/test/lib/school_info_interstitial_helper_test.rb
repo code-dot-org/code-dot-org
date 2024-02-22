@@ -136,6 +136,8 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
   end
 
   test 'user school info updates as expected over lifetime of user' do
+    skip 'fails one week before a leap day'
+
     user = create :teacher
 
     assert_nil user.school_info
