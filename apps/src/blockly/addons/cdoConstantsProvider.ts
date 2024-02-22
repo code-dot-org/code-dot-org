@@ -7,6 +7,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   private RECT_INPUT_OUTPUT: PuzzleTab | undefined;
   private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
   private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
+
   /**
    * Get an object with connection shape and sizing information based on the
    * type of the connection.
@@ -63,7 +64,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const pathDown = makeMainPath(-1);
 
     return {
-      type: 1,
+      type: this.SHAPES.PUZZLE,
       width: width,
       height: height,
       pathDown: pathDown,
@@ -91,7 +92,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const pathDown = makeMainPath(-1);
 
     return {
-      type: 1,
+      type: this.SHAPES.PUZZLE,
       width: width,
       height: height,
       pathDown: pathDown,
@@ -116,7 +117,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const pathDown = makeMainPath(-1);
 
     return {
-      type: 1,
+      type: this.SHAPES.PUZZLE,
       width: width,
       height: height,
       pathDown: pathDown,
