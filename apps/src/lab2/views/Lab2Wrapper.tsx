@@ -29,11 +29,14 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
-  const overlayStyle: string = window.location.href.includes('no-fade')
-    ? moduleStyles.hidingBlock
+  const noFade = window.location.href.includes('no-fade');
+  const overlayStyle: string = noFade
+    ? isLoading
+      ? moduleStyles.noFadeLoading
+      : moduleStyles.noFadeLoaded
     : isLoading
-    ? moduleStyles.showingBlock
-    : moduleStyles.fadeInBlock;
+    ? moduleStyles.fadeLoading
+    : moduleStyles.fadeLoaded;
 
   return (
     <ErrorBoundary

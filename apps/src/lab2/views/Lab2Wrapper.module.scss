@@ -66,17 +66,25 @@
     opacity: 0;
     z-index: 70;
 
-    &.showingBlock {
-      opacity: 1;
+    &.noFadeLoading {
+      opacity: 0;
+      pointer-events: initial;
     }
 
-    &.fadeInBlock {
+    &.noFadeLoaded {
+      opacity: 0;
+    }
+
+    &.fadeLoading {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    &.fadeLoaded {
       animation: fade-out-block 0.5s;
     }
 
-    &.hidingBlock {
-      opacity: 0;
-    }
+
 
     .slowLoadContainer {
       display: flex;
