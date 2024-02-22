@@ -5,6 +5,7 @@ module I18n
   module Resources
     module Dashboard
       module RestrictedContent
+        CROWDIN_PROJECT = 'codeorg-restricted'.freeze
         FILE_NAME = 'restricted.yml'.freeze
         FILE_PATH = File.join(DIR_NAME, FILE_NAME).freeze
 

@@ -9,7 +9,7 @@ module I18n
     module Dashboard
       module RestrictedContent
         class SyncDown < I18n::Utils::SyncDownBase
-          config.crowdin_project = 'codeorg-restricted'
+          config.crowdin_project = CROWDIN_PROJECT
           config.download_paths << DownloadPath.new(crowdin_src: FILE_PATH)
         end
       end
