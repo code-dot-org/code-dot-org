@@ -2394,22 +2394,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/redactable-markdown@npm:0.4.0":
-  version: 0.4.0
-  resolution: "@code-dot-org/redactable-markdown@npm:0.4.0"
+"@code-dot-org/redactable-markdown@npm:0.9.4":
+  version: 0.9.4
+  resolution: "@code-dot-org/redactable-markdown@npm:0.9.4"
   dependencies:
-    minimist: ^1.2.0
+    "@code-dot-org/remark-plugins": 1.2.4
+    minimist: ^1.2.8
     remark-html: ^9.0.0
     remark-parse: ^6.0.0
+    remark-redactable: 2.0.2
     remark-stringify: ^6.0.0
     unified: ^7.0.0
+    unist-util-select: ^2.0.2
+    xtend: ^4.0.2
   bin:
     normalize: src/bin/normalize.js
     parse: src/bin/parse.js
     redact: src/bin/redact.js
     render: src/bin/render.js
     restore: src/bin/restore.js
-  checksum: 819fc8341d0128df58954f1c77d4358ac9abbacdd10e79231f8c63f8b0037a7029e30da6783380b294b973347bc5c35e572adcd57e41d18b35872d6f843bd16c
+  checksum: cca6dcf9bbec38d44a4dbf0ce2995a4e5b8ae4dd2077c16a7a310e950d4c045cdef452e3dd8f3af4cb4f293f3a0a3ae3841e5df69440542a1488fcad81a284b4
+  languageName: node
+  linkType: hard
+
+"@code-dot-org/remark-plugins@npm:1.2.4":
+  version: 1.2.4
+  resolution: "@code-dot-org/remark-plugins@npm:1.2.4"
+  checksum: 15edd1d21ee671c38c1f29fd54b7245b6d584611ce4804b9df383ac99f99336477c1337f9fbf8ab599ff2994f71ec5c7906879c5e5b32f994b3a99945694ad77
   languageName: node
   linkType: hard
 
@@ -8193,7 +8204,7 @@ __metadata:
     "@code-dot-org/ml-playground": 0.0.47
     "@code-dot-org/p5.play": 1.3.21-cdo
     "@code-dot-org/piskel": 0.13.0-cdo.13
-    "@code-dot-org/redactable-markdown": 0.4.0
+    "@code-dot-org/redactable-markdown": 0.9.4
     "@code-dot-org/remark-plugins": 1.3.1
     "@codemirror/autocomplete": ^6.11.1
     "@codemirror/commands": ^6.3.2
@@ -10718,6 +10729,13 @@ canvg@gabelerner/canvg:
     domutils: ^2.8.0
     nth-check: ^2.0.1
   checksum: d6202736839194dd7f910320032e7cfc40372f025e4bf21ca5bf6eb0a33264f322f50ba9c0adc35dadd342d3d6fae5ca244779a4873afbfa76561e343f2058e0
+  languageName: node
+  linkType: hard
+
+"css-selector-parser@npm:^1.1.0":
+  version: 1.4.1
+  resolution: "css-selector-parser@npm:1.4.1"
+  checksum: 31948754e579eedb918c2fb2d5a4c643ec769ff4a0d03a7bd10b43b25d44973f8cbe86d7ec00c4494269f7ff38b3d2ab0f6ea801cece0ef0974e74469dff770c
   languageName: node
   linkType: hard
 
@@ -20124,7 +20142,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.1.1":
+"minimist@npm:^1.1.1, minimist@npm:^1.2.8":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
@@ -20998,6 +21016,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"not@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "not@npm:0.1.0"
+  checksum: 8043bb53bc1c465a4a4f751394f11aad1d8ccae08dd2123310c6a5d160a5ad4138706d50af905cf114b72507a328585d4f2a73cd3d6730981dd2675aa9c8436f
+  languageName: node
+  linkType: hard
+
 "npm-run-path@npm:^2.0.0":
   version: 2.0.2
   resolution: "npm-run-path@npm:2.0.2"
@@ -21049,6 +21074,15 @@ es6-shim@latest:
     gauge: ^4.0.3
     set-blocking: ^2.0.0
   checksum: ae238cd264a1c3f22091cdd9e2b106f684297d3c184f1146984ecbe18aaa86343953f26b9520dedd1b1372bc0316905b736c1932d778dbeb1fcf5a1001390e2a
+  languageName: node
+  linkType: hard
+
+"nth-check@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "nth-check@npm:1.0.2"
+  dependencies:
+    boolbase: ~1.0.0
+  checksum: 59e115fdd75b971d0030f42ada3aac23898d4c03aa13371fa8b3339d23461d1badf3fde5aad251fb956aaa75c0a3b9bfcd07c08a34a83b4f9dadfdce1d19337c
   languageName: node
   linkType: hard
 
@@ -25070,6 +25104,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"remark-redactable@npm:2.0.2":
+  version: 2.0.2
+  resolution: "remark-redactable@npm:2.0.2"
+  checksum: f91998669d4740f4c125b1a12c6c06c9416751b8c173cc5c1626a85f86137a5907c742c82c423d5a7d7f5720ad5532c3f55fab6036c23669a1aa79ed4bf0851f
+  languageName: node
+  linkType: hard
+
 "remark-rehype@npm:^4.0.0":
   version: 4.0.0
   resolution: "remark-rehype@npm:4.0.0"
@@ -28993,6 +29034,13 @@ temporal@latest:
   languageName: node
   linkType: hard
 
+"unist-util-is@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "unist-util-is@npm:3.0.0"
+  checksum: d24a5dd80c670f763b2ae608651cf062317456aa81be51f66f45cbd7d440a2ab18356e4f48aeac6b5e3d391c69d3c3452ade5fe5aa9574bec4a2de0b10122ed5
+  languageName: node
+  linkType: hard
+
 "unist-util-is@npm:^4.0.0":
   version: 4.0.2
   resolution: "unist-util-is@npm:4.0.2"
@@ -29031,6 +29079,19 @@ temporal@latest:
   dependencies:
     unist-util-is: ^4.0.0
   checksum: 99e54f3ea0523f8cf957579a6e84e5b58427bffab929cc7f6aa5119581f929db683dd4691ea5483df0c272f486dda9dbd04f4ab74dca6cae1f3ebe8e4261a4d9
+  languageName: node
+  linkType: hard
+
+"unist-util-select@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "unist-util-select@npm:2.0.2"
+  dependencies:
+    css-selector-parser: ^1.1.0
+    not: ^0.1.0
+    nth-check: ^1.0.1
+    unist-util-is: ^3.0.0
+    zwitch: ^1.0.3
+  checksum: 5f356bfa4e8fca4b3805768ca4a2e425c7d2a8c664c25fbf7d4d1e7108ecd6b4ed358bf599135164a3ed901c7fa8607bb312ef3778b2e370bc5e61617bed3cdc
   languageName: node
   linkType: hard
 
@@ -30653,7 +30714,7 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"xtend@npm:~4.0.0":
+"xtend@npm:^4.0.2, xtend@npm:~4.0.0":
   version: 4.0.2
   resolution: "xtend@npm:4.0.2"
   checksum: ac5dfa738b21f6e7f0dd6e65e1b3155036d68104e67e5d5d1bde74892e327d7e5636a076f625599dc394330a731861e87343ff184b0047fef1360a7ec0a5a36a
@@ -30836,5 +30897,12 @@ temporal@latest:
   version: 1.0.3
   resolution: "zwitch@npm:1.0.3"
   checksum: 70a17791abe9d627d140e1b9140a4b4b3854a905aaf9f54c6f7d40b79bd674ba71e5e76943e1cebe4b88e66d59889fe8c227fc70eead87975f2996eacbc2275b
+  languageName: node
+  linkType: hard
+
+"zwitch@npm:^1.0.3":
+  version: 1.0.5
+  resolution: "zwitch@npm:1.0.5"
+  checksum: 28a1bebacab3bc60150b6b0a2ba1db2ad033f068e81f05e4892ec0ea13ae63f5d140a1d692062ac0657840c8da076f35b94433b5f1c329d7803b247de80f064a
   languageName: node
   linkType: hard
