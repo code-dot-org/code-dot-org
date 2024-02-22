@@ -1,22 +1,18 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {
-  AITutorState,
-  submitChatMessage,
-} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {useSelector} from 'react-redux';
+import {submitChatMessage} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import CopyButton from './copyButton';
 
 /**
  * Renders the AI Tutor user chat message editor component.
  */
-const UserChatMessageEditor = () => {
+const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
-  const isWaitingForChatResponse = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
+  const isWaitingForChatResponse = useAppSelector(
+    state => state.aiTutor.isWaitingForChatResponse
   );
 
   const dispatch = useAppDispatch();

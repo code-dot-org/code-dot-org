@@ -86,6 +86,8 @@ module.exports = {
     SerialPort: 'readonly',
     signupErrorMessage: 'readonly',
     Studio: 'readonly',
+    // Only used in Web Lab 2.
+    stylelint: 'readonly',
     thanksUrl: 'readonly',
     Turtle: 'readonly',
     YT: 'readonly',
@@ -128,6 +130,7 @@ module.exports = {
       rules: {
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', {args: 'none'}],
         // TODO: We are temporarily disabling this rule to allow using require() to import
         // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
         // tsconfig.json file, but this is currently causing some build issues (SL-791)

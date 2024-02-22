@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-01-29T22:16:36.000Z",
   "level_num": "custom",
@@ -59,16 +60,18 @@
     "hide_pause_button": "false",
     "instructions_icon": "purplebunny",
     "short_instructions": "Build a program that changes a variable's value over time. Make the sprite say the new value when it changes.",
-    "long_instructions": "The value stored in a **variable** can change over time. Let's build a program that uses the same variable multiple times. A new block has been added to the **Variables** section of your toolbox:\r\n\r\n<xml><block type=\"math_change\">\r\n      <title name=\"VAR\">???</title>\r\n      <value name=\"DELTA\">\r\n        <block type=\"math_number\">\r\n          <title name=\"NUM\">1</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>\r\n\r\nThis blocks *adds* another number to the value stored in a variable. It only works when the variable is used to store a number.\r\n\r\n## Do This\r\n- Connect a `change by` block under the `at 4 seconds` event block.\r\n  - Use the same *label* for each variable block in your program.\r\n- Connect a `say` block under the `change by` block.\r\n  - Make the sprite say the value of the variable after it is changed.\r\n- Press \"Run\", then wait 4 seconds. Your sprite should say a new number.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nIf students struggle with the concepts of variables, frondload the lesson with real life examples. A simple example of a variable is counting.The number (value) changes as you count (variable) up. Other examples include: scoreboard in a game, volume control, and a thermometer.\r\n</p>\r\n</div>\r\n\r\n\r\n\r\nThe value stored in a **variable** can change over time. Let's build a program that uses the same variable multiple times. A new block has been added to the **Variables** section of your toolbox:\r\n\r\n<xml><block type=\"math_change\">\r\n      <title name=\"VAR\">???</title>\r\n      <value name=\"DELTA\">\r\n        <block type=\"math_number\">\r\n          <title name=\"NUM\">1</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>\r\n\r\nThis blocks *adds* another number to the value stored in a variable. It only works when the variable is used to store a number.\r\n\r\n## Do This\r\n- Connect a `change by` block under the `at 4 seconds` event block.\r\n  - Use the same *label* for each variable block in your program.\r\n- Connect a `say` block under the `change by` block.\r\n  - Make the sprite say the value of the variable after it is changed.\r\n- Press \"Run\", then wait 4 seconds. Your sprite should say a new number.",
     "authored_hints": "[]",
     "hint_prompt_attempts_threshold": "1",
     "validation_code": "// This level requires the variableLog Helper Library\r\n\r\nif (World.frameCount == 1) {\r\n  setDelayTime(60);\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumSprites(1);\r\n  }, 'starterSprites');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return !varLabelStartsWithUnderscore();\r\n  }, 'renameVariable');\r\n  addCriteria(function(){\r\n    return atTimeEventFound();\r\n  }, 'addAtTimeEvent');\r\n  addCriteria(function(){\r\n    return detectVariableLogChange();\r\n  }, 'changeVariableBlock');\r\n  addCriteria(function(){\r\n    return anySpriteSpeaks() && atTimeEventFound();\r\n  }, 'saySprite');\r\n  addCriteria(function(){\r\n    return anySpeechIncludesValues(varLog) && detectVariableLogChange();\r\n  }, 'sayVariable');\r\n}\r\n\r\ncheck();",
     "encrypted_examples": "yBTPd7o1rKcB9PyMk7vPVSFQ1CN1PSQHmwq90pcGZrFtm87oe40uHzawYoUE\nbqZUVMKws/ukT/zBhgNie3viYw==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-29T22:16:36.808+00:00\",\"changed\":[\"cloned from \\\"courseF_variables2_change_2023\\\"\"],\"cloned_from\":\"courseF_variables2_change_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-29T22:16:36.808+00:00\",\"changed\":[\"cloned from \\\"courseF_variables2_change_2023\\\"\"],\"cloned_from\":\"courseF_variables2_change_2023\"},{\"changed_at\":\"2024-02-14 22:26:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-02-14 23:10:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-02-14 23:13:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-02-14 23:16:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,0 +1,89 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-02-15T22:56:27.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "long_instructions": "#### Play Together\n\nThis code currently plays a bass sound after a drum sound.\n\nBut you can also play them together at the same time.\n\nConnect [play together](#clickable=play-sounds-together-block) to [when run](#clickable=when-run-block).\n\nThen, move the two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "fields": {
+                    "sound": "beats/groovy_beat"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "fields": {
+                        "sound": "bass/bass_home_steady"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "validations": [
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 2
+            }
+          ],
+          "message": "Nice work.  You successfully played two sounds together.",
+          "next": "true"
+        },
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
+          ],
+          "message": "It's good that you played one sound, but you need to play two sounds together."
+        },
+        {
+          "message": "Please play two sounds together."
+        }
+      ]
+    },
+    "instructions_important": "false",
+    "name_suffix": "_elementary",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-02-15T22:56:27.759+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_play_together\\\"\"],\"cloned_from\":\"musiclab_intro_play_together\"}]"
+}]]></config>
+  <blocks/>
+</Music>

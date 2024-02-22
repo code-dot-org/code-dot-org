@@ -4,7 +4,7 @@ import msg from '@cdo/locale';
 /**
  * Constructs the blocks required by the flyout for the variables category.
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
- * @returns {Array<Object>} An array of JSON block elements.
+ * @returns {import('blockly/core/utils/toolbox').FlyoutDefinition} An array of JSON block elements.
  */
 export function flyoutCategory(workspace) {
   const blockList = [];

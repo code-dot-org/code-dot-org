@@ -32,11 +32,5 @@ module.exports = {
         ignoreSelectors: [':export'],
       },
     ],
-    'property-case': [
-      'lower',
-      {
-        ignoreSelectors: [':export'],
-      },
-    ],
   },
 };

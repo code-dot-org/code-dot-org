@@ -15,6 +15,12 @@ module I18n
         Labs.sync_up(**opts)
       end
 
+      def self.sync_down(**opts)
+        Animations.sync_down(**opts)
+        ExternalSources.sync_down(**opts)
+        Labs.sync_down(**opts)
+      end
+
       def self.sync_out
         Animations.sync_out
         ExternalSources.sync_out

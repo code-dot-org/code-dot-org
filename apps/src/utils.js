@@ -1,11 +1,10 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
-import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
-
+import {md5} from './util/crypto';
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
  * and whether the elements appear in the same order as the sequence.
@@ -883,7 +882,7 @@ export const findProfanity = (text, locale, authenticityToken = null) => {
  * @returns {string} A string representing an MD5 hash.
  */
 export function hashString(str) {
-  return MD5(str).toString();
+  return md5(str);
 }
 
 /*
