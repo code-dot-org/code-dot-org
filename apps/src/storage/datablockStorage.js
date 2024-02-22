@@ -41,8 +41,7 @@ DatablockStorage.getKeyValue = function (key, onSuccess, onError) {
 };
 
 DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
-  console.log('Using the overridden DatablockStorage method setKeyValue');
-
+  value = value === undefined ? null : value;
   _fetch('set_key_value', 'POST', {
     key,
     value: JSON.stringify(value),
