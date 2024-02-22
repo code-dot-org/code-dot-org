@@ -8,7 +8,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
   private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
 
-  // Override the shapes constant to include the new shapes
+  // Override the shapes constant to include the custom shapes.
   override SHAPES = {
     PUZZLE: 1,
     NOTCH: 2,
