@@ -7,9 +7,8 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
 
   let(:malformed_i18n_reporter) {stub}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -22,7 +21,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
   describe '#process' do
     let(:process_language) {described_instance.process(language)}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale)}
     let(:crowdin_file_path) {File.join(crowdin_locale_dir, 'dashboard/blocks.yml')}
     let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/blocks.yml')}
 
@@ -49,7 +48,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
     end
 
     before do
-      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}])
+      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{locale_s: i18n_locale}])
       I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
 
       FileUtils.mkdir_p(File.dirname(crowdin_file_path))

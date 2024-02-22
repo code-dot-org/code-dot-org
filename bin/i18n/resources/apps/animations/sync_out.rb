@@ -11,7 +11,7 @@ module I18n
       module Animations
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
             return unless File.exist?(crowdin_file_path)
 
             js_locale = I18nScriptUtils.to_js_locale(language[:locale_s])

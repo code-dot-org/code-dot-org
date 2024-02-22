@@ -25,7 +25,7 @@ module I18n
           private
 
           def crowdin_file_path_of(language)
-            I18nScriptUtils.locale_dir(language[:crowdin_name_s], FILE_PATH)
+            I18nScriptUtils.crowdin_locale_dir(language[:locale_s], FILE_PATH)
           end
 
           def restore_localization(language)

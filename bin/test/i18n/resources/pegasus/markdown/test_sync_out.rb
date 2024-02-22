@@ -5,9 +5,8 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
   let(:described_class) {I18n::Resources::Pegasus::Markdown::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'Test'}
   let(:i18n_locale) {'te-ST'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -24,7 +23,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
   describe '#process' do
     let(:process_language) {described_instance.process(language)}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale)}
     let(:crowdin_locale_resource_dir) {File.join(crowdin_locale_dir, 'codeorg-markdown')}
     let(:crowdin_file_path) {File.join(crowdin_locale_resource_dir, 'test.md')}
     let(:origin_markdown_file_path) {CDO.dir('pegasus/sites.v3/code.org/public/test.md')}

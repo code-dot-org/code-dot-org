@@ -7,10 +7,9 @@ describe I18n::Resources::Apps::Animations::SyncOut do
 
   let(:spritelab_manifest_builder) {stub}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'uk-UA'}
   let(:js_locale) {'uk_ua'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -29,7 +28,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
   describe '#process' do
     let(:process_language) {described_instance.process(language)}
 
-    let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'animations/spritelab_animation_library.json')}
+    let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, 'animations/spritelab_animation_library.json')}
     let(:crowdin_file_data) {{'i18n_key' => 'i18n_val'}}
     let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'animations/spritelab_animation_library.json')}
 

@@ -5,13 +5,12 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncOut do
   let(:described_class) {I18n::Resources::Dashboard::MarketingAnnouncements::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:lang_crowdin_name) {'expected_crowdin_name'}
   let(:lang_locale) {'expected_locale'}
-  let(:language) {{crowdin_name_s: lang_crowdin_name, locale_s: lang_locale}}
+  let(:language) {{locale_s: lang_locale}}
 
   let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "marketing_announcements.#{lang_locale}.json")}
   let(:i18n_file_path) {CDO.dir('i18n/locales', lang_locale, "dashboard/marketing_announcements.json")}
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', lang_crowdin_name, "dashboard/marketing_announcements.json")}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', lang_locale, "dashboard/marketing_announcements.json")}
   let(:crowdin_file_data) do
     {
       'banners' => {

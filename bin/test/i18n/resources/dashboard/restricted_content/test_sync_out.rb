@@ -5,11 +5,10 @@ describe I18n::Resources::Dashboard::RestrictedContent::SyncOut do
   let(:described_class) {I18n::Resources::Dashboard::RestrictedContent::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, "dashboard/restricted.yml")}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "dashboard/restricted.yml")}
   let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, "dashboard/restricted.yml")}
   let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "restricted.#{i18n_locale}.yml")}
 
