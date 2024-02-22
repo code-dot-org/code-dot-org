@@ -97,6 +97,7 @@ class TeacherDashboardHeader extends React.Component {
           href="/home#classroom-sections"
           text={i18n.viewAllSections()}
           iconBefore
+          style={styles.linkPadding}
         />
         <this.lockedSectionNotification
           restrictSection={this.props.selectedSection.restrictSection}
@@ -164,6 +165,9 @@ const styles = {
   buttonWithMargin: {
     margin: 0,
     marginRight: 5,
+  },
+  linkPadding: {
+    padding: '10px 0',
   },
 };
 

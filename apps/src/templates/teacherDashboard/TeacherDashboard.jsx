@@ -25,7 +25,11 @@ import classNames from 'classnames';
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
 
 const applyV1TeacherDashboardWidth = children => {
-  return <div className={dashboardStyles.dashboardPage}>{children}</div>;
+  return (
+    <div className={dashboardStyles.dashboardPage}>
+      <div className={dashboardStyles.dashboardPageContent}>{children}</div>
+    </div>
+  );
 };
 
 function TeacherDashboard({

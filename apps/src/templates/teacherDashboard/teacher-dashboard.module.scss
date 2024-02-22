@@ -1,4 +1,11 @@
+@import 'color.scss';
+
 .dashboardPage {
+  background-color: $white;
+  width: 100%;
+}
+
+.dashboardPageContent {
   max-width: 970px;
 }
 
