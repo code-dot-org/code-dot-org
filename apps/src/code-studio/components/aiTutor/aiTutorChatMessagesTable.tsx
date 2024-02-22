@@ -19,7 +19,6 @@ const AITutorChatMessagesTable: React.FunctionComponent<
     (async () => {
       try {
         const chatMessages = await fetchStudentChatMessages(sectionId);
-        console.log('chatMessages', chatMessages);
         setChatMessages(chatMessages);
       } catch (error) {
         console.log('error', error);

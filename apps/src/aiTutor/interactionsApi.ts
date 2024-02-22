@@ -39,6 +39,9 @@ export const fetchStudentChatMessages = async (sectionId: number) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log('error fetching chat messages:', error);
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_CHAT_FETCH_FAIL,
+      errorMessage: error,
+    });
   }
 };
