@@ -1,6 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 import CdoPathObject from './cdoPathObjectThrasos';
 import CdoConstantsProvider from './cdoConstantsProvider';
+import {BlockStyle} from 'blockly/core/theme';
 
 export default class CdoRendererThrasosBase extends GoogleBlockly.thrasos
   .Renderer {
@@ -9,7 +10,7 @@ export default class CdoRendererThrasosBase extends GoogleBlockly.thrasos
    * Use our PathObject class instead of the default. Our PathObject has
    * different styles for highlighted and disabled blocks than the geras default.
    */
-  makePathObject(root, style) {
+  makePathObject(root: SVGElement, style: BlockStyle) {
     return new CdoPathObject(root, style, this.getConstants());
   }
 
