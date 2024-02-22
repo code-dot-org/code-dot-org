@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
-import SchoolTypeDropdown from '@cdo/apps/templates/SchoolTypeDropdown';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from '@cdo/locale';
+import {Heading1, Heading2, Heading3} from '@cdo/apps/lib/ui/Headings';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -49,37 +49,6 @@ export default function SchoolDataInputs({
     schoolNotFound = snf;
   };
 
-  const isSchoolAutocompleteDropdownValid = () => {
-    if (!ncesSchoolId) {
-      return false;
-    }
-
-    if (ncesSchoolId === '-1') {
-      return isSchoolNotFoundValid();
-    } else {
-      return true;
-    }
-  };
-
-  const isValid = () => {
-    if (!country || !schoolType) {
-      return false;
-    }
-
-    if (
-      country === 'United States' &&
-      SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType)
-    ) {
-      return isSchoolAutocompleteDropdownValid();
-    } else {
-      return isSchoolNotFoundValid();
-    }
-  };
-
-  const isSchoolNotFoundValid = () => {
-    return schoolNotFound.isValid();
-  };
-
   const isUS = country === 'United States';
   const outsideUS = !isUS;
   const ncesInfoNotFound = ncesSchoolId === '-1';
@@ -101,6 +70,9 @@ export default function SchoolDataInputs({
 
   return (
     <div style={{width: 600, ...styles}}>
+      <Heading1>{i18n.censusHeading()}</Heading1>
+      <Heading2>{i18n.findYourSchool()}</Heading2>
+      <Heading3>{i18n.whatCountry()}</Heading3>
       <CountryAutocompleteDropdown
         onChange={onCountryChange}
         value={country}
@@ -110,14 +82,7 @@ export default function SchoolDataInputs({
         singleLineLayout
         maxHeight={160}
       />
-      <SchoolTypeDropdown
-        value={schoolType}
-        fieldName={fieldNames.schoolType}
-        country={country}
-        onChange={onSchoolTypeChange}
-        showErrorMsg={showErrors}
-        showRequiredIndicator={showRequiredIndicator}
-      />
+      <Heading3>{i18n.enterYourSchoolZip()}</Heading3>
       {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType) && (
         <SchoolAutocompleteDropdownWithLabel
           setField={onSchoolChange}
@@ -128,6 +93,7 @@ export default function SchoolDataInputs({
           showRequiredIndicator={showRequiredIndicator}
         />
       )}
+      <Heading3>{i18n.selectYourSchool()}</Heading3>
       {(outsideUS || ncesInfoNotFound || noDropdownForSchoolType) && (
         <SchoolNotFound
           ref={bindSchoolNotFound}
