@@ -30,8 +30,8 @@ export const COLUMNS = {
   PROJECT_NAME: 1,
   APP_TYPE: 2,
   STATUS: 3,
-  LAST_PUBLISHED: 4,
-  LAST_FEATURED: 5,
+  LAST_FEATURED: 4,
+  LAST_UNFEATURED: 5,
   ACTIONS: 6,
 };
 
@@ -200,9 +200,11 @@ class FeaturedProjectsTable extends React.Component {
   };
 
   state = {
-    [COLUMNS.PROJECT_NAME]: {
-      direction: 'desc',
-      position: 0,
+    sortingColumns: {
+      [COLUMNS.LAST_FEATURED]: {
+        direction: 'desc',
+        position: 4,
+      },
     },
     filterDropdownStatusValue: tryGetLocalStorage(
       'featured-projects-filter-dropdown',
