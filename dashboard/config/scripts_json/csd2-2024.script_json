@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 16:14:58 UTC",
+    "serialized_at": "2024-02-22 18:33:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5788,7 +5788,7 @@
       "key": "2d0bba18-8ae2-4670-9746-e439025abda0",
       "position": 2,
       "properties": {
-        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. Assure them that they will learn how to add new pages and link between them in the next lesson, but that they will plan out the pages that they want first.",
+        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. ",
         "name": "Overview\r"
       },
       "seeding_key": {
