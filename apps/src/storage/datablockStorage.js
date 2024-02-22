@@ -16,7 +16,6 @@ function _fetch(path, method, params) {
       method: 'GET',
     });
   } else {
-    console.log("Fetching with params", JSON.stringify(params));
     return fetch(urlFor(path), {
       method,
       body: JSON.stringify(params),
