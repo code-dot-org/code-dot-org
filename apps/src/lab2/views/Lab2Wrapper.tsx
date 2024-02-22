@@ -22,6 +22,8 @@ export interface Lab2WrapperProps {
   children: React.ReactNode;
 }
 
+const noFade = window.location.href.includes('lab2-no-fade');
+
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
   const isPageError: boolean = useSelector(hasPageError);
@@ -29,7 +31,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
-  const noFade = window.location.href.includes('no-fade');
+
   const overlayStyle: string = noFade
     ? isLoading
       ? moduleStyles.noFadeLoading
