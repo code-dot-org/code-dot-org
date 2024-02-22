@@ -62,4 +62,14 @@ class AiTutorInteractionsController < ApplicationController
       version_id: version_id,
     }
   end
+
+  # GET /ai_tutor_interactions
+  def index
+    return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor chat messages'}) unless current_user.can_view_student_ai_chat_messages?
+    params.require([:sectionId])
+    section = Section.find(params[:sectionId])
+    return render(status: :not_found, json: {error: 'Section not found'}) unless section
+    return render(status: :forbidden, json: {error: 'This user does not own this section'}) unless current_user.sections.include?(section)
+    render json:  AiTutorInteraction.where(user_id: section.students.pluck(:id))
+  end
 end

@@ -81,6 +81,7 @@ export default class FunctionEditor {
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       toolbox: options.toolbox,
       trashcan: false, // Don't use default trashcan.
+      modalInputs: false,
     }) as EditorWorkspaceSvg;
     const scrollOptionsPlugin = new ScrollOptions(this.editorWorkspace);
     scrollOptionsPlugin.init();
