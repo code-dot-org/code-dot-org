@@ -1613,6 +1613,10 @@ html[dir=rtl] .qtip-content {
   @include close-button($cornerOffset: -20px);
 }
 
+.tooltip-x-close:focus {
+  border-color: $brand_primary_default;
+}
+
 a.download-video {
   z-index: 1;
   cursor: pointer;
@@ -3002,7 +3006,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-mark {
     display: inline-block;
     text-align: left;
-    padding-right: 10px;
+    padding-right: 30px;
     box-sizing: border-box;
     font-size: 21px;
     width: 30px;
