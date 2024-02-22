@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-02-20 17:39:08 UTC",
+    "serialized_at": "2024-02-21 22:12:03 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -153,6 +153,36 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Game Jam - Create",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Game Jam - Play",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -309,6 +339,18 @@
       "seeding_key": {
         "lesson_activity.key": "30764392-7814-49c0-887d-1a030546227f",
         "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -845,6 +887,51 @@
       "seeding_key": {
         "activity_section.key": "e27939c0-1803-4455-a3e1-0bfeb0456fc1",
         "lesson_activity.key": "30764392-7814-49c0-887d-1a030546227f"
+      }
+    },
+    {
+      "key": "8e79eda0-b5d8-4e7b-97c0-b6a56e2d176a",
+      "position": 1,
+      "properties": {
+        "name": "Game Jam",
+        "progression_name": "Teamwork = Dreamwork"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e79eda0-b5d8-4e7b-97c0-b6a56e2d176a",
+        "lesson_activity.key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210"
+      }
+    },
+    {
+      "key": "ec4b2799-0f79-414b-9d73-888099359611",
+      "position": 2,
+      "properties": {
+        "progression_name": "Theme Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec4b2799-0f79-414b-9d73-888099359611",
+        "lesson_activity.key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210"
+      }
+    },
+    {
+      "key": "71b24c82-113a-43e0-a468-3cbf84af2104",
+      "position": 3,
+      "properties": {
+        "progression_name": "Quick Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "71b24c82-113a-43e0-a468-3cbf84af2104",
+        "lesson_activity.key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210"
+      }
+    },
+    {
+      "key": "ce49ad0f-8950-454f-bf65-96579914dceb",
+      "position": 4,
+      "properties": {
+        "progression_name": "Make the game!"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce49ad0f-8950-454f-bf65-96579914dceb",
+        "lesson_activity.key": "c88b6fca-0e6f-41a0-8ff6-8b38d0935210"
       }
     }
   ],
@@ -1434,6 +1521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Games are fun!"
+        ],
         "progression": "Game Design & Setup"
       },
       "bonus": false,
@@ -1456,6 +1546,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_player_sprite"
+        ],
         "progression": "Game Design & Setup"
       },
       "bonus": false,
@@ -1478,6 +1571,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_rules_say"
+        ],
         "progression": "Game Design & Setup"
       },
       "bonus": false,
@@ -1550,6 +1646,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_sounds"
+        ],
         "progression": "Game Development - Mechanics"
       },
       "bonus": false,
@@ -1572,6 +1671,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_score_variable"
+        ],
         "progression": "Game Development - Scoring & Winning"
       },
       "bonus": false,
@@ -1594,6 +1696,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_winning_conditional_simple"
+        ],
         "progression": "Game Development - Scoring & Winning"
       },
       "bonus": false,
@@ -1616,6 +1721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_skill_choices"
+        ],
         "progression": "Level Up & Explore"
       },
       "bonus": false,
@@ -1638,6 +1746,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_choices"
+        ],
         "progression": "Level Up & Explore"
       },
       "bonus": false,
@@ -1827,6 +1938,94 @@
       },
       "level_keys": [
         "game_dev_bad_game_choices"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teamwork = Dreamwork"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_teams"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "8e79eda0-b5d8-4e7b-97c0-b6a56e2d176a"
+      },
+      "level_keys": [
+        "game_jam_teams"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Theme Generator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_theme"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "ec4b2799-0f79-414b-9d73-888099359611"
+      },
+      "level_keys": [
+        "game_jam_theme"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Quick Plan"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_plan"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "71b24c82-113a-43e0-a468-3cbf84af2104"
+      },
+      "level_keys": [
+        "game_jam_plan"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make the game!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "ce49ad0f-8950-454f-bf65-96579914dceb"
+      },
+      "level_keys": [
+        "game_jam_create"
       ]
     }
   ],
@@ -2321,6 +2520,54 @@
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "9a14aa87-04bb-43a6-8a8e-4751332b70da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_teams",
+        "script_level.level_keys": [
+          "game_jam_teams"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "8e79eda0-b5d8-4e7b-97c0-b6a56e2d176a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_theme",
+        "script_level.level_keys": [
+          "game_jam_theme"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "ec4b2799-0f79-414b-9d73-888099359611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_plan",
+        "script_level.level_keys": [
+          "game_jam_plan"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "71b24c82-113a-43e0-a468-3cbf84af2104"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create",
+        "script_level.level_keys": [
+          "game_jam_create"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "ce49ad0f-8950-454f-bf65-96579914dceb"
       }
     }
   ],

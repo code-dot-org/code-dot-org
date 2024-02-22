@@ -41,13 +41,13 @@
     "mini_toolbox": "true",
     "hide_pause_button": "false",
     "thumbnail_url": "https://images.code.org/cc9a499d75d54111c80fe27989a0c1d5-sports_ball.jpg",
-    "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**How to play:** The balls bounce around while you try to click on them!\r\n\r\n**How to win:** Get 12 balls!",
+    "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Game Mechanics:** Click & Collect \r\n\r\n**How to win:** Click on 12 of the bouncing balls!",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-14 17:59:56 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:03:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:04:00 +0000\",\"changed\":[\"mini_toolbox\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:05:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:07:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:09:52 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:39:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:55:35 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-14 17:59:56 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:03:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:04:00 +0000\",\"changed\":[\"mini_toolbox\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:05:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:07:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:09:52 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:39:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:55:35 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:15:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:16:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:18:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:20:01 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -107,9 +107,9 @@
                                     </block>
                                   </value>
                                   <value name="BEHAVIOR">
-                                    <block type="gamelab_behaviorPicker">
-                                      <field name="BEHAVIOR">wandering</field>
-                                      <field name="EDIT">Edit</field>
+                                    <block type="gamelab_behavior_get">
+                                      <mutation behaviorId="wandering" name="wandering"/>
+                                      <field name="NAME">wandering</field>
                                     </block>
                                   </value>
                                 </block>
@@ -135,18 +135,23 @@
             </block>
           </value>
           <next>
-            <block type="gamelab_destroy">
-              <value name="THIS">
-                <block type="gamelab_clickedSpritePointer"/>
-              </value>
+            <block type="gamelab_playSoundOptions">
+              <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
               <next>
-                <block type="math_change">
-                  <field name="VAR" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
-                  <value name="DELTA">
-                    <shadow type="math_number" id="@u5:ckTU^62I@)bjo9hQ">
-                      <field name="NUM">1</field>
-                    </shadow>
+                <block type="gamelab_destroy">
+                  <value name="THIS">
+                    <block type="gamelab_clickedSpritePointer"/>
                   </value>
+                  <next>
+                    <block type="math_change">
+                      <field name="VAR" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
+                      <value name="DELTA">
+                        <shadow type="math_number" id="@u5:ckTU^62I@)bjo9hQ">
+                          <field name="NUM">1</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
