@@ -16,6 +16,7 @@ export const TeacherDashboardPath = {
   manageStudents: '/manage_students',
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
+  aiTutorChatMessages: '/ai_tutor',
 };
 
 const teacherDashboardLinks = [
@@ -53,6 +54,7 @@ const ListPosition = {
 
 export default class TeacherDashboardNavigation extends Component {
   static propTypes = {
+    showAITutorTab: PropTypes.bool,
     links: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
@@ -120,6 +122,12 @@ export default class TeacherDashboardNavigation extends Component {
 
   render() {
     const {listPosition, shouldScroll} = this.state;
+    if (this.props.showAITutorTab) {
+      teacherDashboardLinks.push({
+        label: 'AI Tutor',
+        url: TeacherDashboardPath.aiTutorChatMessages,
+      });
+    }
     const links = this.props.links || teacherDashboardLinks;
     const containerStyles = this.state.shouldScroll
       ? {...styles.container, ...styles.scrollableContainer}

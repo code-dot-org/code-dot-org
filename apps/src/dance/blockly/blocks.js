@@ -1,5 +1,6 @@
 import i18n from '@cdo/locale';
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
+import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -205,7 +206,11 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        Blockly.cdoUtils.setHSV(this, 631, 0.84, 0.8);
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.BEHAVIOR,
+          BlockStyles.BEHAVIOR
+        );
         const mainTitle = this.appendDummyInput()
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
@@ -314,23 +319,6 @@ export default {
       ];
     };
 
-    Blockly.Blocks.behavior_definition =
-      Blockly.Block.createProcedureDefinitionBlock({
-        initPostScript(block) {
-          block.setHSV(136, 0.84, 0.8);
-          block.parameterNames_ = ['this sprite'];
-          block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
-        },
-        overrides: {
-          getVars(category) {
-            return {
-              Behavior: [this.getFieldValue('NAME')],
-            };
-          },
-          callType_: 'gamelab_behavior_get',
-        },
-      });
-
     generator.behavior_definition = generator.procedures_defnoreturn;
 
     Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
@@ -338,18 +326,6 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-      initialize(flyout, cursor) {
-        if (behaviorEditor && !behaviorEditor.isOpen()) {
-          flyout.addButtonToFlyout_(
-            cursor,
-            i18n.createBlocklyBehavior(),
-            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-          );
-        }
-      },
-      addDefaultVar: false,
-    });
     delete blockly.Blocks.procedures_defreturn;
     delete blockly.Blocks.procedures_ifreturn;
   },
