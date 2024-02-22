@@ -18,6 +18,3 @@
       .span8
         - @level.reference_links = [''] unless @level.reference_links.try(:present?)
         = text_area_tag 'level[reference_links]', @level.reference_links.join("\r\n"), rows: 6, class: "input-block-level", placeholder: 'Additional Reference Link'
-
-  .field
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_tutor_available, description: "AI Tutor Available"}

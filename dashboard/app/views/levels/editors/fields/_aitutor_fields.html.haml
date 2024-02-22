@@ -1,0 +1,5 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#ai_tutor"}}
+  AI Tutor
+#ai_tutor.in.collapse
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_tutor_available, description: "AI Tutor Available"}
