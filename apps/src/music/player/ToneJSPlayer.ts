@@ -11,7 +11,7 @@ import {DEFAULT_BPM} from '../constants';
 /**
  * An {@link AudioPlayer} implementation using the Tone.js library.
  *
- * TODO:
+ * TODO for ToneJS integration:
  * - Effects
  * - Sample sequences
  */

@@ -9,13 +9,15 @@ import MusicLibrary, {
 } from './MusicLibrary';
 import SamplePlayer from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {getTranposedNote, Key} from '../utils/Notes';
+import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
-import {AudioPlayer, SampleEvent} from './types';
+import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
 import SamplePlayerWrapper from './SamplePlayerWrapper';
+import appConfig from '../appConfig';
+import ToneJSPlayer from './ToneJSPlayer';
 
 // Using require() to import JS in TS files
 const constants = require('../constants');
@@ -38,11 +40,17 @@ export default class MusicPlayer {
   constructor(
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
-    audioPlayer: AudioPlayer = new SamplePlayerWrapper(new SamplePlayer()),
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+    audioPlayer?: AudioPlayer
   ) {
-    this.audioPlayer = audioPlayer;
     this.metricsReporter = metricsReporter;
+    if (!audioPlayer && appConfig.getValue('player') === 'tonejs') {
+      this.audioPlayer = new ToneJSPlayer();
+      console.log('[MusicPlayer] Using ToneJSPlayer');
+    } else {
+      this.audioPlayer = new SamplePlayerWrapper(new SamplePlayer());
+      console.log('[MusicPlayer] Using SamplePlayer');
+    }
     this.updateConfiguration(bpm, key);
   }
 
@@ -84,6 +92,10 @@ export default class MusicPlayer {
     events: PlaybackEvent[],
     onLoadFinished?: LoadFinishedCallback
   ) {
+    // If using samplers, chord and pattern sounds have already been loaded.
+    if (this.audioPlayer.supportsSamplers()) {
+      events = events.filter(event => event.type === 'sound');
+    }
     const sampleIds = Array.from(
       new Set(
         events
@@ -133,19 +145,28 @@ export default class MusicPlayer {
       id: 'preview',
       blockId: 'preview',
     };
-    this.audioPlayer.playSamplesImmediately(
-      this.convertEventToSamples(chordEvent),
-      onStop
-    );
+
+    if (this.audioPlayer.supportsSamplers()) {
+      const sequence = this.convertChordEventToSequence(chordEvent);
+      if (sequence) {
+        this.audioPlayer.playSequenceImmediately(sequence);
+      }
+    } else {
+      this.audioPlayer.playSamplesImmediately(
+        this.convertEventToSamples(chordEvent),
+        onStop
+      );
+    }
   }
 
-  previewNote(note: number, instrument: string, onStop?: () => void) {
-    const sampleId = this.getSampleForNote(note, instrument);
-    if (sampleId === null) {
-      return;
-    }
+  previewNote(note: number, instrument: string) {
+    const singleNoteEvent: ChordEventValue = {
+      instrument,
+      notes: [note],
+      playStyle: 'together',
+    };
 
-    this.previewSound(sampleId, onStop);
+    this.previewChord(singleNoteEvent);
   }
 
   previewPattern(patternValue: PatternEventValue, onStop?: () => void) {
@@ -159,10 +180,17 @@ export default class MusicPlayer {
       blockId: 'preview',
     };
 
-    this.audioPlayer.playSamplesImmediately(
-      this.convertEventToSamples(patternEvent),
-      onStop
-    );
+    if (this.audioPlayer.supportsSamplers()) {
+      const sequence = this.patternEventToSequence(patternEvent);
+      if (sequence) {
+        this.audioPlayer.playSequenceImmediately(sequence);
+      }
+    } else {
+      this.audioPlayer.playSamplesImmediately(
+        this.convertEventToSamples(patternEvent),
+        onStop
+      );
+    }
   }
 
   /**
@@ -198,10 +226,21 @@ export default class MusicPlayer {
   }
 
   private scheduleEvents(events: PlaybackEvent[]) {
-    for (const event of events
-      .map(event => this.convertEventToSamples(event))
-      .flat()) {
-      this.audioPlayer.scheduleSample(event);
+    for (const event of events) {
+      if (event.type === 'sound' || !this.audioPlayer.supportsSamplers()) {
+        for (const sample of this.convertEventToSamples(event)) {
+          this.audioPlayer.scheduleSample(sample);
+        }
+      } else {
+        // Use samplers for chords and patterns if supported
+        const sequence =
+          event.type === 'chord'
+            ? this.convertChordEventToSequence(event as ChordEvent)
+            : this.patternEventToSequence(event as PatternEvent);
+        if (sequence) {
+          this.audioPlayer.scheduleSamplerSequence(sequence);
+        }
+      }
     }
   }
 
@@ -372,6 +411,53 @@ export default class MusicPlayer {
     return samples;
   }
 
+  private convertChordEventToSequence(
+    event: ChordEvent
+  ): SamplerSequence | null {
+    const {instrument, notes} = event.value;
+    if (notes.length === 0) {
+      return null;
+    }
+
+    const generatedNotes: ChordNote[] = generateNotesFromChord(event.value);
+
+    return {
+      instrument,
+      events: generatedNotes.map(({note, tick}) => ({
+        notes: [getPitchName(note)],
+        playbackPosition: event.when + (tick - 1) / 16,
+      })),
+    };
+  }
+
+  private patternEventToSequence(
+    patternEvent: PatternEvent
+  ): SamplerSequence | null {
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      this.metricsReporter.logWarning('Library not set. Cannot play sounds.');
+      return null;
+    }
+
+    const kit = patternEvent.value.kit;
+    const folder = library.getFolderForPath(kit);
+    if (folder === null) {
+      this.metricsReporter.logWarning(`No instrument ${kit}`);
+      return null;
+    }
+
+    // TODO: Store note index instead of src for easier lookup
+    return {
+      instrument: kit,
+      events: patternEvent.value.events.map(event => {
+        return {
+          notes: [getPitchName(event.note)],
+          playbackPosition: patternEvent.when + (event.tick - 1) / 16,
+        };
+      }),
+    };
+  }
+
   private validateBpm(bpm: number): number {
     if (bpm < 1 || bpm > 500) {
       console.warn('Invalid BPM. Defaulting to 120');
@@ -392,5 +478,52 @@ export default class MusicPlayer {
 
   private calculatePitchShift(soundData: SoundData) {
     return soundData.type === 'beat' ? 0 : this.key - (soundData.key || Key.C);
+  }
+
+  // TODO: Kind of a hack to preload all instrument sounds. Ideally, load each instrument as needed when
+  // opening the chord/pattern panel.
+  async setupAllInstruments(onLoadFinished?: LoadFinishedCallback) {
+    const library = MusicLibrary.getInstance();
+    if (library === undefined) {
+      return;
+    }
+
+    const instruments = library.groups[0].folders
+      .filter(folder => folder.type === 'kit' || folder.type === 'instrument')
+      .map(folder => folder.path);
+
+    for (const instrument of instruments) {
+      await this.setupSampler(instrument, onLoadFinished);
+    }
+  }
+
+  async setupSampler(
+    instrument: string,
+    onLoadFinished?: LoadFinishedCallback
+  ) {
+    if (!this.audioPlayer.supportsSamplers()) {
+      return;
+    }
+
+    const library = MusicLibrary.getInstance();
+    if (library === undefined) {
+      this.metricsReporter.logWarning('Library not set. Cannot load sampler.');
+      return;
+    }
+
+    const folder = library.getFolderForPath(instrument);
+    if (folder === null) {
+      return;
+    }
+
+    const sampleMap = folder.sounds.reduce((map, sound, index) => {
+      map[sound.note || index] = `${folder.path}/${sound.src}`;
+      return map;
+    }, {} as {[note: number]: string});
+
+    return this.audioPlayer.loadInstrument(folder.path, sampleMap, {
+      updateLoadProgress: this.updateLoadProgress,
+      onLoadFinished,
+    });
   }
 }
