@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U8L2-Linear Search PBT_2024",
     "teacher_markdown": "Students should notice the efficiency of the algorithm gets worse when the list is larger and the target value to find is closer to the end of the list or not found at all.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:08:26.194+00:00\",\"changed\":[\"cloned from \\\"CSA U8L2-L3_2023\\\"\"],\"cloned_from\":\"CSA U8L2-L3_2023\"}]"
