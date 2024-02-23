@@ -12,6 +12,31 @@ const RENAME_THIS_ID = 'RENAME_THIS_ID';
 const RENAME_ALL_ID = 'RENAME_ALL_ID';
 
 export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
+  // Fix built-in block
+  /**
+   * Prompt the user for a variable name and perform some whitespace cleanup
+   * @param promptText description text for window prompt
+   * @param confirmButtonLabel Label of confirm button, e.g. "Rename"
+   * @param defaultText default input text for window prompt
+   * @param callback with parameter (text) of new name
+   */
+  static modalPromptName = function (
+    promptText: string,
+    confirmButtonLabel: string,
+    defaultText: string,
+    callback: (newName: string) => void
+  ) {
+    Blockly.customSimpleDialog({
+      bodyText: promptText,
+      prompt: true,
+      promptPrefill: defaultText,
+      cancelText: confirmButtonLabel,
+      confirmText: commonI18n.cancel(),
+      onConfirm: null,
+      onCancel: callback,
+    });
+  };
+
   /**
    * Handle the selection of an item in the variable dropdown menu.
    * Special case the 'Rename all' and 'Rename this' options to prompt the user
@@ -113,30 +138,5 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
     options.push([commonI18n.renameThis(), RENAME_THIS_ID]);
 
     return options;
-  };
-
-  // Fix built-in block
-  /**
-   * Prompt the user for a variable name and perform some whitespace cleanup
-   * @param promptText description text for window prompt
-   * @param confirmButtonLabel Label of confirm button, e.g. "Rename"
-   * @param defaultText default input text for window prompt
-   * @param callback with parameter (text) of new name
-   */
-  static modalPromptName = function (
-    promptText: string,
-    confirmButtonLabel: string,
-    defaultText: string,
-    callback: (newName: string) => void
-  ) {
-    Blockly.customSimpleDialog({
-      bodyText: promptText,
-      prompt: true,
-      promptPrefill: defaultText,
-      cancelText: confirmButtonLabel,
-      confirmText: commonI18n.cancel(),
-      onConfirm: null,
-      onCancel: callback,
-    });
   };
 }
