@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 01:48:52 UTC",
+    "serialized_at": "2024-02-22 18:33:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5788,7 +5788,7 @@
       "key": "2d0bba18-8ae2-4670-9746-e439025abda0",
       "position": 2,
       "properties": {
-        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. Assure them that they will learn how to add new pages and link between them in the next lesson, but that they will plan out the pages that they want first.",
+        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. ",
         "name": "Overview\r"
       },
       "seeding_key": {
@@ -5954,7 +5954,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2024] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [Extra Code in Challenge Levels](https://docs.google.com/document/d/1zCMJHXk_KISNIkwN3WcoVUCZT4RotkNGfOMhT6sVB-k/view) as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -11976,6 +11976,19 @@
       }
     },
     {
+      "name": "Web Development Challenge Levels Extra Code",
+      "url": "https://docs.google.com/document/d/1zCMJHXk_KISNIkwN3WcoVUCZT4RotkNGfOMhT6sVB-k/view",
+      "key": "web_development_challenge_levels_extra_code",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_development_challenge_levels_extra_code"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/1npD3ERU8C6chX_mXTfid1bzZzeivaUHYVz6CpiF6b5I/view",
       "key": "website_for_a_purpose",
@@ -12522,6 +12535,12 @@
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
         "resource.key": "project_-_website_for_a_purpose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "web_development_challenge_levels_extra_code"
       }
     },
     {

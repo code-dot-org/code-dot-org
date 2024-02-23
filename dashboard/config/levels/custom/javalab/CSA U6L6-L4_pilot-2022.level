@@ -18,7 +18,8 @@
       }
     },
     "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tM9E9IspvpSby6P4e/Z\n1tOrvjcDSu5peMYG8SVXe60hI1eRKEgPG4HzgAEKaa+23+U=\n",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:08.665+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L4_2022\\\"\"],\"cloned_from\":\"CSA U6L6-L4_2022\"}]"

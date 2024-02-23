@@ -358,7 +358,8 @@
       ]
     ],
     "teacher_markdown": "Students should notice that the `paintColors()` method uses a `while` loop to access the elements in the 1D array `colors` starting at `0` to the last element. Inside the `while` loop, the `moveAndPaint()` method is called, which accesses the specific color in the 1D array `colors` at the specified index. Then the value of `index` is increased by `2`.\r\n\r\nStudents should notice that the `toString()` method is also using a `while` loop to access the elements in the 1D array `colors` starting at `0` to the last element. In this method, the value of the element is concatenated to `result`, and the value of `index` is increased by `1`.\r\n\r\nWhen students run the program, they see that the `ArrayPainter` object paints with every other element in the 1D array `paintColors`, but every element in the 1D array is printed to the console.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:22.245+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L2_2023\\\"\"],\"cloned_from\":\"CSA U3L3-L2_2023\"}]"
