@@ -155,12 +155,7 @@ function TeacherDashboard({
           <Route
             component={() =>
               applyV1TeacherDashboardWidth(
-                <div
-                  className={classNames(
-                    dashboardStyles.text,
-                    dashboardStyles.dashboardPage
-                  )}
-                >
+                <div className={dashboardStyles.text}>
                   <SafeMarkdown markdown={i18n.noProgressSection()} />
                 </div>
               )

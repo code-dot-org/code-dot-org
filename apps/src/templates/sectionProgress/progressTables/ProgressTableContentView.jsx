@@ -183,7 +183,7 @@ export default class ProgressTableContentView extends React.Component {
           rowKey={'id'}
           onScroll={this.props.onScroll}
           style={{
-            overflowX: 'visible',
+            overflowX: 'scroll',
             overflowY: 'auto',
             maxHeight: parseInt(styleConstants.MAX_BODY_HEIGHT),
           }}
