@@ -2,6 +2,7 @@ import {
   Block,
   BlockSvg,
   BlocklyOptions,
+  CodeGenerator,
   Input,
   Theme,
   VariableMap,
@@ -94,6 +95,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   // TODO: better define this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   cdoUtils: any;
+  Generator: ExtendedGenerator;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -156,6 +158,7 @@ export interface ExtendedBlock extends Block {
   // Blockly uses any for value.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
+  skipNextBlockGeneration?: boolean;
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
@@ -193,6 +196,16 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
 
 export interface ExtendedWorkspace extends Workspace {
   noFunctionBlockFrame: boolean;
+}
+
+type CodeGeneratorType = typeof CodeGenerator;
+export interface ExtendedGenerator extends CodeGeneratorType {
+  xmlToBlocks: (name: string, xml: Node) => Block[];
+  blockSpaceToCode: (
+    name: string,
+    opt_typeFilter?: string | string[]
+  ) => string;
+  prefixLines: (text: string, prefix: string) => string;
 }
 
 export interface ProcedureBlock extends Block, IProcedureBlock {
