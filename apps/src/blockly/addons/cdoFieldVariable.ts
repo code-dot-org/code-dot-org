@@ -1,5 +1,12 @@
-import GoogleBlockly from 'blockly/core';
-import msg from '@cdo/locale';
+import GoogleBlockly, {
+  FieldDropdown,
+  FieldVariable,
+  Menu,
+  MenuItem,
+  MenuOption,
+  VariableModel,
+} from 'blockly/core';
+import {commonI18n} from '@cdo/apps/types/locale';
 
 const RENAME_THIS_ID = 'RENAME_THIS_ID';
 const RENAME_ALL_ID = 'RENAME_ALL_ID';
@@ -13,20 +20,21 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
    * @param {!Blockly.MenuItem} menuItem The MenuItem selected within menu.
    * @protected
    */
-  onItemSelected_(menu, menuItem) {
+  onItemSelected_(menu: Menu, menuItem: MenuItem) {
     const oldVar = this.getText();
-    var id = menuItem.getValue();
+    const id = menuItem.getValue();
     if (this.sourceBlock_ && this.sourceBlock_.workspace) {
       switch (id) {
         case RENAME_ALL_ID:
           // Rename all instances of this variable.
           CdoFieldVariable.modalPromptName(
-            msg.renameAllPromptTitle({variableName: oldVar}),
-            msg.rename(),
+            commonI18n.renameAllPromptTitle({variableName: oldVar}),
+            commonI18n.rename(),
             oldVar,
             newName =>
-              this.sourceBlock_.workspace.renameVariableById(
-                this.variable.getId(),
+              this.sourceBlock_?.workspace.renameVariableById(
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                ((this as any).variable as VariableModel).getId(),
                 newName
               )
           );
@@ -34,13 +42,15 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
         case RENAME_THIS_ID:
           // Rename just this variable.
           CdoFieldVariable.modalPromptName(
-            msg.renameThisPromptTitle(),
-            msg.create(),
+            commonI18n.renameThisPromptTitle(),
+            commonI18n.create(),
             '',
             newName => {
               const newVar =
-                this.sourceBlock_.workspace.createVariable(newName);
-              this.setValue(newVar.getId());
+                this.sourceBlock_?.workspace.createVariable(newName);
+              if (newVar) {
+                this.setValue(newVar.getId());
+              }
             }
           );
           break;
@@ -57,12 +67,12 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
    * center it on Safari.
    *  @override */
   createTextArrow_() {
-    this.arrow = Blockly.utils.dom.createSvgElement(
+    const arrow = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.TSPAN,
       {},
       this.textElement_
     );
-    this.arrow.appendChild(
+    arrow.appendChild(
       document.createTextNode(
         this.getSourceBlock()?.RTL
           ? Blockly.FieldDropdown.ARROW_CHAR + ' '
@@ -73,20 +83,23 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
     /**
      * Begin CDO customization
      */
-    this.arrow.setAttribute('dominant-baseline', 'central');
+    arrow.setAttribute('dominant-baseline', 'central');
     /**
      * End CDO customization
      */
 
     if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(this.arrow, this.textContent_);
+      this.getTextElement().insertBefore(arrow, this.textContent_);
     } else {
-      this.getTextElement().appendChild(this.arrow);
+      this.getTextElement().appendChild(arrow);
     }
+    // this.arrow is private in the parent.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (this as any).arrow = arrow;
   }
 
-  menuGenerator_ = function () {
-    const options = CdoFieldVariable.dropdownCreate.call(this);
+  menuGenerator_ = function (this: FieldDropdown): MenuOption[] {
+    const options = CdoFieldVariable.dropdownCreate.call(this as FieldVariable);
 
     // Remove the last two options (Delete and Rename)
     options.pop();
@@ -94,35 +107,36 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
 
     // Add our custom options (Rename this variable, Rename all)
     options.push([
-      msg.renameAll({variableName: this.getText()}),
+      commonI18n.renameAll({variableName: this.getText()}),
       RENAME_ALL_ID,
     ]);
-    options.push([msg.renameThis(), RENAME_THIS_ID]);
+    options.push([commonI18n.renameThis(), RENAME_THIS_ID]);
 
     return options;
   };
+
+  // Fix built-in block
+  /**
+   * Prompt the user for a variable name and perform some whitespace cleanup
+   * @param promptText description text for window prompt
+   * @param confirmButtonLabel Label of confirm button, e.g. "Rename"
+   * @param defaultText default input text for window prompt
+   * @param callback with parameter (text) of new name
+   */
+  static modalPromptName = function (
+    promptText: string,
+    confirmButtonLabel: string,
+    defaultText: string,
+    callback: (newName: string) => void
+  ) {
+    Blockly.customSimpleDialog({
+      bodyText: promptText,
+      prompt: true,
+      promptPrefill: defaultText,
+      cancelText: confirmButtonLabel,
+      confirmText: commonI18n.cancel(),
+      onConfirm: null,
+      onCancel: callback,
+    });
+  };
 }
-// Fix built-in block
-/**
- * Prompt the user for a variable name and perform some whitespace cleanup
- * @param {string} promptText description text for window prompt
- * @param {string} confirmButtonLabel Label of confirm button, e.g. "Rename"
- * @param {string} defaultText default input text for window prompt
- * @param {Function} callback with parameter (text) of new name
- */
-CdoFieldVariable.modalPromptName = function (
-  promptText,
-  confirmButtonLabel,
-  defaultText,
-  callback
-) {
-  Blockly.customSimpleDialog({
-    bodyText: promptText,
-    prompt: true,
-    promptPrefill: defaultText,
-    cancelText: confirmButtonLabel,
-    confirmText: msg.cancel(),
-    onConfirm: null,
-    onCancel: callback,
-  });
-};
