@@ -220,7 +220,6 @@
     "crypto-browserify": "^3.12.0",
     "csv-parse": "^4.4.6",
     "dapjs": "^2.3.0",
-    "data-collection": "^1.1.6",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "fast-memoize": "2.0.2",
     "filesaver.js": "0.2.0",
