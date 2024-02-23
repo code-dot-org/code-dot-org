@@ -27,8 +27,7 @@ const {
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
-  dependentStudents,
-  studentCount,
+  dependentStudentsCount,
   personalAccountLinkingEnabled,
 } = scriptData;
 
@@ -132,8 +131,8 @@ $(document).ready(() => {
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}
         dependedUponForLogin={dependedUponForLogin}
-        dependentStudents={dependentStudents}
-        hasStudents={studentCount > 0}
+        dependentStudentsCount={dependentStudentsCount}
+        hasStudents={dependentStudentsCount > 0}
         isAdmin={isAdmin}
       />,
       deleteAccountMountPoint

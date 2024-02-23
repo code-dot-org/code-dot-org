@@ -620,7 +620,7 @@ en:
           description_teacher: ''
           version_title: ''
         melissasandbox-2024:
-          title: melissasandbox-2024
+          title: k5-maker-sandbox-2024
           description_short: sandbox for melissa toohey
           description_student: ''
           description_teacher: ''
@@ -658,5 +658,11 @@ en:
 
             * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and [Course Name]. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
 
+          version_title: ''
+        k5-maker-pilot-2024:
+          title: k5-maker-pilot-2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
           version_title: ''
 ...
