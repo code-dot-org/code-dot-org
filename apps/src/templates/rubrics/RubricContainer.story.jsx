@@ -88,7 +88,7 @@ const defaultStudentLevelInfo = {
 };
 
 const Template = args => (
-  <Provider store={reduxStore(teacherSections)}>
+  <Provider store={reduxStore({teacherSections})}>
     <RubricContainer
       rubric={defaultRubric}
       teacherHasEnabledAi={false}
