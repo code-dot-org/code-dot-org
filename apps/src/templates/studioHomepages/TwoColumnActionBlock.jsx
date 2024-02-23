@@ -1,24 +1,20 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import color from '../../util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import shapes from './shapes';
 import {
   Heading2,
-  Heading3,
+  BodyOneText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import styles from './twoColumnActionBlock.module.scss';
 
 export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     id: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     imageUrl: PropTypes.string.isRequired,
-    imageExtra: PropTypes.node,
     heading: PropTypes.string,
     subHeading: PropTypes.string,
     description: PropTypes.string.isRequired,
@@ -38,43 +34,30 @@ export class UnconnectedTwoColumnActionBlock extends Component {
   render() {
     const {
       id,
-      isRtl,
-      responsiveSize,
       imageUrl,
-      imageExtra,
       heading,
       subHeading,
       description,
       buttons,
-      backgroundColor,
-      marginBottom = '60px',
+      marginBottom = '64px',
     } = this.props;
-    const float = isRtl ? 'right' : 'left';
-    const width = responsiveSize === 'lg' ? '50%' : '100%';
-
-    const textItemCustomBackgroundColor = {
-      ...styles.textItem,
-      backgroundColor: backgroundColor || styles.textItem.backgroundColor,
-    };
 
     return (
-      <div id={id} style={styles.container}>
+      <div id={id} className={styles.container}>
         {heading && <Heading2>{heading}</Heading2>}
-        <div style={styles.container}>
-          {responsiveSize === 'lg' && (
-            <div style={{float, width}}>
-              <img src={imageUrl} style={styles.image} alt={heading} />
-              {imageExtra}
-            </div>
-          )}
-          <div style={{float, width}}>
-            <div style={textItemCustomBackgroundColor}>
-              {subHeading && (
-                <Heading3 visualAppearance={'heading-sm'}>
-                  {subHeading}
-                </Heading3>
-              )}
-              <BodyThreeText>{description}</BodyThreeText>
+        <div
+          className={styles.actionBlockWrapper}
+          style={{marginBottom: marginBottom}}
+        >
+          <img src={imageUrl} alt="" className={styles.image} />
+          <div className={styles.contentWrapper}>
+            {subHeading && (
+              <BodyOneText visualAppearance={'heading-sm'}>
+                {subHeading}
+              </BodyOneText>
+            )}
+            <BodyThreeText>{description}</BodyThreeText>
+            <div className={styles.buttonsContainer}>
               {buttons.map((button, index) => (
                 <span key={index}>
                   <Button
@@ -83,28 +66,22 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     color={
                       button.color || Button.ButtonColor.brandSecondaryDefault
                     }
-                    style={{marginBottom: 16}}
                     text={button.text}
                     target={button.target}
                     id={button.id}
                     onClick={button.onClick}
                   />
-                  &nbsp; &nbsp; &nbsp;
                 </span>
               ))}
             </div>
           </div>
         </div>
-        <div style={{...styles.clear, marginBottom: marginBottom}} />
       </div>
     );
   }
 }
 
-export const TwoColumnActionBlock = connect(state => ({
-  responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl,
-}))(UnconnectedTwoColumnActionBlock);
+export const TwoColumnActionBlock = UnconnectedTwoColumnActionBlock;
 
 export class AdministratorResourcesActionBlock extends Component {
   render() {
@@ -192,32 +169,8 @@ export class SpecialAnnouncementActionBlock extends Component {
         subHeading={announcement.title}
         description={announcement.body}
         buttons={this.state.buttonList}
-        backgroundColor={announcement.backgroundColor}
         marginBottom={this.props.marginBottom}
       />
     );
   }
 }
-
-const styles = {
-  textItem: {
-    border: `1px solid ${color.neutral_dark20}`,
-    backgroundColor: color.neutral_light,
-    padding: 25,
-    minHeight: 281,
-    boxSizing: 'border-box',
-  },
-  image: {
-    width: 485,
-    minHeight: 260,
-    height: 279,
-    border: `1px solid ${color.neutral_dark20}`,
-  },
-  clear: {
-    clear: 'both',
-  },
-  container: {
-    width: '100%',
-    position: 'relative',
-  },
-};
