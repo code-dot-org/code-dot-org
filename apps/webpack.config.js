@@ -430,7 +430,7 @@ function createWebpackConfig({
     //   },
     //   ['@babel/polyfill/noConflict', 'whatwg-fetch']
     // ),
-    entry: './src/homeTest.jsx',
+    entry: './src/home.js',
     externals: [
       {
         jquery: 'var $',
@@ -675,7 +675,7 @@ function createWebpackConfig({
           }
           return file;
         },
-        ...(process.env.DEV
+        ...(process.env.DEV || true
           ? []
           : [
               // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
