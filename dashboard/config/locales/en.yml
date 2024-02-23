@@ -48,6 +48,7 @@ en:
         blank_plural: "are required"
         invalid: "is invalid"
         invalid_plural: "are invalid"
+        required: "Required"
     attributes:
       user:
         name: 'Display Name'
