@@ -44,12 +44,6 @@ export const Galleries = {
   PRIVATE: 'PRIVATE',
 };
 
-export const featuredProjectStatuses = {
-  active: 'active',
-  archived: 'archived',
-  bookmarked: 'bookmarked',
-};
-
 export const MAX_PROJECTS_PER_CATEGORY = 100;
 
 // The project table uses the channels API to populate the personal projects

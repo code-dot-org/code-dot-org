@@ -149,11 +149,11 @@
               - remix_ancestry.each do |channel|
                 %li
                   %tt= link_to channel[0,7], "/projects/#{params[:key]}/#{channel}"
-        #is_active_featured_project{'style' => ('display: none;' unless status=='active')}
+        #is_active_featured_project{'style' => ('display: none;' unless status==SharedConstants::FEATURED_PROJECT_STATUS.active)}
           %li Already an active featured project
-        #is_bookmarked_featured_project{'style' => ('display: none;' unless status=='bookmarked')}
+        #is_bookmarked_featured_project{'style' => ('display: none;' unless status==SharedConstants::FEATURED_PROJECT_STATUS.bookmarked)}
           %li Already a bookmarked featured project
-        #is_archived_featured_project{'style' => ('display: none;' unless status=='archived')}
+        #is_archived_featured_project{'style' => ('display: none;' unless status==SharedConstants::FEATURED_PROJECT_STATUS.archived)}
           %li Already an archived featured project
       #bookmark_project{'style' => ('display: none;' if is_featured_project)}
         %button{id: "bookmark", class: "btn btn-default btn-sm"}

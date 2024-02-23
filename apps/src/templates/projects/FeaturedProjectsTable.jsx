@@ -7,10 +7,8 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {
-  featuredProjectDataPropType,
-  featuredProjectStatuses,
-} from './projectConstants';
+import {featuredProjectDataPropType} from './projectConstants';
+import {FeaturedProjectStatus} from '@cdo/apps/util/sharedConstants';
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -147,14 +145,14 @@ const actionsFormatter = (actions, {rowData}) => {
   const status = rowData.status;
   return (
     <QuickActionsCell>
-      {status !== featuredProjectStatuses.active && (
+      {status !== FeaturedProjectStatus.active && (
         <PopUpMenu.Item
           onClick={() => feature(rowData.channel, rowData.publishedAt)}
         >
           Feature
         </PopUpMenu.Item>
       )}
-      {status === featuredProjectStatuses.active && (
+      {status === FeaturedProjectStatus.active && (
         <PopUpMenu.Item onClick={() => unfeature(rowData.channel)}>
           Unfeature
         </PopUpMenu.Item>
@@ -173,8 +171,7 @@ const actionsFormatter = (actions, {rowData}) => {
 const dateFormatter = time => {
   if (time) {
     const date = new Date(time);
-    const dateString = date.toLocaleDateString();
-    return dateString;
+    return date.toLocaleDateString();
   } else {
     return 'N/A';
   }
@@ -220,17 +217,14 @@ class FeaturedProjectsTable extends React.Component {
   };
 
   getProjectList = () => {
-    if (
-      this.state.filterDropdownStatusValue === featuredProjectStatuses.active
-    ) {
+    if (this.state.filterDropdownStatusValue === FeaturedProjectStatus.active) {
       return this.props.activeList;
     } else if (
-      this.state.filterDropdownStatusValue ===
-      featuredProjectStatuses.bookmarked
+      this.state.filterDropdownStatusValue === FeaturedProjectStatus.bookmarked
     ) {
       return this.props.bookmarkedList;
     } else if (
-      this.state.filterDropdownStatusValue === featuredProjectStatuses.archived
+      this.state.filterDropdownStatusValue === FeaturedProjectStatus.archived
     ) {
       return this.props.archivedList;
     } else {
@@ -408,14 +402,14 @@ class FeaturedProjectsTable extends React.Component {
         name="featured-projects-table-filter-dropdown"
         items={[
           {value: 'all', text: 'all'},
-          {value: featuredProjectStatuses.active, text: 'currently featured'},
+          {value: FeaturedProjectStatus.active, text: 'currently featured'},
           {
-            value: featuredProjectStatuses.bookmarked,
-            text: featuredProjectStatuses.bookmarked,
+            value: FeaturedProjectStatus.bookmarked,
+            text: FeaturedProjectStatus.bookmarked,
           },
           {
-            value: featuredProjectStatuses.archived,
-            text: featuredProjectStatuses.archived,
+            value: FeaturedProjectStatus.archived,
+            text: FeaturedProjectStatus.archived,
           },
         ]}
         labelText="Featured projects table filter dropdown"

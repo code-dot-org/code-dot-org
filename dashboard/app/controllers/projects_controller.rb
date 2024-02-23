@@ -218,9 +218,9 @@ class ProjectsController < ApplicationController
   end
 
   def get_featured_project_status(featured_at, unfeatured_at)
-    return 'archived' if featured_at && unfeatured_at
-    return 'active' if featured_at
-    'bookmarked'
+    return SharedConstants::FEATURED_PROJECT_STATUS.archived if featured_at && unfeatured_at
+    return SharedConstants::FEATURED_PROJECT_STATUS.active if featured_at
+    SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
   end
 
   def extract_data_for_tables(project_featured_project_combo_data)
@@ -253,9 +253,9 @@ class ProjectsController < ApplicationController
     @bookmarked = []
     featured_project_table_rows.each do |row|
       status = get_featured_project_status(row[:featuredAt], row[:unfeaturedAt])
-      if status == 'archived'
+      if status == SharedConstants::FEATURED_PROJECT_STATUS.archived
         @archived << row
-      elsif status == 'active'
+      elsif status == SharedConstants::FEATURED_PROJECT_STATUS.active
         @active << row
       else
         @bookmarked << row

@@ -26,9 +26,9 @@ class FeaturedProject < ApplicationRecord
   end
 
   def status
-    return 'active' if active?
-    return 'archived' if !featured_at.nil? && !unfeatured_at.nil?
-    'bookmarked'
+    return SharedConstants::FEATURED_PROJECT_STATUS.active if active?
+    return SharedConstants::FEATURED_PROJECT_STATUS.archived if !featured_at.nil? && !unfeatured_at.nil?
+    SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
   end
 
   # Determines if a project is currently featured by decrypting the provided
