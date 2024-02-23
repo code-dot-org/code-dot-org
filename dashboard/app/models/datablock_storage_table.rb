@@ -188,7 +188,7 @@ class DatablockStorageTable < ApplicationRecord
     when 'number'
       value.to_f
     when 'boolean'
-      value.to_bool
+      ActiveRecord::Type::Boolean.new.cast(value)
     end
   end
 
