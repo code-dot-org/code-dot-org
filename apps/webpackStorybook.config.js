@@ -32,6 +32,9 @@ function storybookConfig(sbConfig) {
     plugins: [
       ...sbConfig.plugins,
       new webpack.ProvidePlugin({React: 'react'}),
+      new webpack.ProvidePlugin({
+        Buffer: ['buffer', 'Buffer'],
+      }),
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(true),
