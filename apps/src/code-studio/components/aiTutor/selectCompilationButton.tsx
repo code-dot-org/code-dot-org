@@ -12,12 +12,15 @@ const SelectCompilationButton: React.FunctionComponent = () => {
   const hasRunOrTestedCode = useAppSelector(
     state => state.javalab.hasRunOrTestedCode
   );
+  const storedMessages = useAppSelector(
+    state => state.aiTutor.chatMessages
+  )
 
   const onClick = () => {
     dispatch(setSelectedTutorType(TutorType.COMPILATION));
     dispatch(
       addChatMessage({
-        id: 1,
+        id: storedMessages[storedMessages.length - 1].id + 1,
         role: Role.USER,
         status: Status.OK,
         chatMessageText: "Why doesn't my code compile?",
@@ -26,7 +29,7 @@ const SelectCompilationButton: React.FunctionComponent = () => {
     if (!hasRunOrTestedCode) {
       dispatch(
         addChatMessage({
-          id: 2,
+          id: storedMessages[storedMessages.length - 1].id + 1,
           role: Role.ASSISTANT,
           status: Status.OK,
           chatMessageText: 'Run your code first and see what happens.',
@@ -36,7 +39,7 @@ const SelectCompilationButton: React.FunctionComponent = () => {
     if (hasRunOrTestedCode && !hasCompilationError) {
       dispatch(
         addChatMessage({
-          id: 2,
+          id: storedMessages[storedMessages.length - 1].id + 1,
           role: Role.ASSISTANT,
           status: Status.OK,
           chatMessageText:
@@ -47,7 +50,7 @@ const SelectCompilationButton: React.FunctionComponent = () => {
     if (hasRunOrTestedCode && hasCompilationError) {
       dispatch(
         addChatMessage({
-          id: 2,
+          id: storedMessages[storedMessages.length - 1].id + 1,
           role: Role.ASSISTANT,
           status: Status.OK,
           chatMessageText:
@@ -62,7 +65,7 @@ const SelectCompilationButton: React.FunctionComponent = () => {
       color={Button.ButtonColor.brandSecondaryDefault}
       icon={'exclamation-triangle'}
       key="compilation"
-      onClick={onClick}
+      onClick={() => onClick()}
       size={Button.ButtonSize.default}
       text="Code errors"
     />

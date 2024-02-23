@@ -4,21 +4,19 @@ import ChatMessage from './chatMessage';
 import UserChatMessageEditor from './userChatMessageEditor';
 import style from './chat-workspace.module.scss';
 import WarningModal from './warningModal';
+import {TutorType} from '@cdo/apps/aiTutor/types';
 
 /**
  * Renders the AI Tutor main chat workspace component.
  */
 
-interface ChatWorkspaceProps {
-  generalChat: boolean;
-}
-
-const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
-  generalChat,
-}) => {
+const ChatWorkspace: React.FunctionComponent = () => {
   const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
+  );
+  const tutorType = useAppSelector(
+    state => state.aiTutor.selectedTutorType
   );
 
   const showWaitingAnimation = () => {
@@ -33,6 +31,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   };
 
+  const generalChat = tutorType === TutorType.GENERAL_CHAT;
+
   return (
     <div id="chat-workspace-area" className={style.chatWorkspace}>
       {generalChat && <WarningModal />}
@@ -42,11 +42,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         ))}
         {showWaitingAnimation()}
       </div>
-      {generalChat && (
-        <div id="chat-workspace-editor" className={style.userChatMessageEditor}>
-          <UserChatMessageEditor />
-        </div>
-      )}
+      <div id="chat-workspace-editor" className={style.userChatMessageEditor}>
+        <UserChatMessageEditor />
+      </div>
     </div>
   );
 };

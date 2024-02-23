@@ -3,9 +3,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {commonI18n} from '@cdo/apps/types/locale';
 import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
-import CompilationTutor from './compilationTutor';
+import AITutor from './aiTutor';
 import ValidationTutor from './validationTutor';
-import GeneralChatTutor from './generalChatTutor';
 import TutorTypeSelector from './tutorTypeSelector';
 import {TutorType} from '@cdo/apps/aiTutor/types';
 const icon = require('@cdo/static/ai-bot.png');
@@ -42,9 +41,10 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
             <TutorTypeSelector />
           </div>
         )}
-        {compilationSelected && <CompilationTutor />}
+        {(compilationSelected || questionSelected) && (
+          <AITutor />
+        )}
         {validationSelected && <ValidationTutor />}
-        {questionSelected && <GeneralChatTutor />}
       </div>
     </div>
   );
