@@ -188,7 +188,7 @@ class DatablockStorageTable < ApplicationRecord
     when 'number'
       value.to_f
     when 'boolean'
-      value.to_b
+      value.to_bool
     end
   end
 
