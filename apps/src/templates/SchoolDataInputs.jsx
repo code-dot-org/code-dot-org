@@ -4,7 +4,8 @@ import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocomplete
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from '@cdo/locale';
-import {Heading1, Heading2, Heading3} from '@cdo/apps/lib/ui/Headings';
+import {Heading2, Heading3} from '@cdo/apps/lib/ui/Headings';
+import style from './school-association.module.scss';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -18,7 +19,6 @@ export const SCHOOL_TYPES_HAVING_NAMES = [
 
 export default function SchoolDataInputs({
   onCountryChange,
-  onSchoolTypeChange,
   onSchoolChange,
   onSchoolNotFoundChange,
   country = '',
@@ -41,7 +41,6 @@ export default function SchoolDataInputs({
   },
   showErrors,
   showRequiredIndicator,
-  styles,
 }) {
   let schoolNotFound;
 
@@ -69,52 +68,54 @@ export default function SchoolDataInputs({
     : i18n.schoolName();
 
   return (
-    <div style={{width: 600, ...styles}}>
-      <Heading1>{i18n.censusHeading()}</Heading1>
-      <Heading2>{i18n.findYourSchool()}</Heading2>
-      <Heading3>{i18n.whatCountry()}</Heading3>
-      <CountryAutocompleteDropdown
-        onChange={onCountryChange}
-        value={country}
-        fieldName={fieldNames.country}
-        showErrorMsg={showErrors}
-        showRequiredIndicator={showRequiredIndicator}
-        singleLineLayout
-        maxHeight={160}
-      />
-      <Heading3>{i18n.enterYourSchoolZip()}</Heading3>
-      {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType) && (
-        <SchoolAutocompleteDropdownWithLabel
-          setField={onSchoolChange}
-          value={ncesSchoolId}
-          fieldName={fieldNames.ncesSchoolId}
+    <div className={style.outerContainer}>
+      <Heading2>{i18n.censusHeading()}</Heading2>
+      <Heading3>{i18n.findYourSchool()}</Heading3>
+      <div className={style.inputContainer}>
+        <Heading3>{i18n.whatCountry()}</Heading3>
+        <CountryAutocompleteDropdown
+          onChange={onCountryChange}
+          value={country}
+          fieldName={fieldNames.country}
           showErrorMsg={showErrors}
-          singleLineLayout
           showRequiredIndicator={showRequiredIndicator}
-        />
-      )}
-      <Heading3>{i18n.selectYourSchool()}</Heading3>
-      {(outsideUS || ncesInfoNotFound || noDropdownForSchoolType) && (
-        <SchoolNotFound
-          ref={bindSchoolNotFound}
-          onChange={onSchoolNotFoundChange}
-          isNcesSchool={isNcesSchool}
-          schoolName={askForName ? schoolName : SchoolNotFound.OMIT_FIELD}
-          schoolType={SchoolNotFound.OMIT_FIELD}
-          schoolCity={SchoolNotFound.OMIT_FIELD}
-          schoolState={isUS ? schoolState : SchoolNotFound.OMIT_FIELD}
-          schoolZip={isUS ? schoolZip : SchoolNotFound.OMIT_FIELD}
-          schoolLocation={schoolLocation}
-          country={country}
-          controlSchoolLocation={true}
-          fieldNames={fieldNames}
-          showErrorMsg={showErrors}
           singleLineLayout
-          showRequiredIndicators={showRequiredIndicator}
-          schoolNameLabel={schoolNameLabel}
-          useLocationSearch={useLocationSearch}
+          maxHeight={160}
         />
-      )}
+        <Heading3>{i18n.enterYourSchoolZip()}</Heading3>
+        {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType) && (
+          <SchoolAutocompleteDropdownWithLabel
+            setField={onSchoolChange}
+            value={ncesSchoolId}
+            fieldName={fieldNames.ncesSchoolId}
+            showErrorMsg={showErrors}
+            singleLineLayout
+            showRequiredIndicator={showRequiredIndicator}
+          />
+        )}
+        <Heading3>{i18n.selectYourSchool()}</Heading3>
+        {(outsideUS || ncesInfoNotFound || noDropdownForSchoolType) && (
+          <SchoolNotFound
+            ref={bindSchoolNotFound}
+            onChange={onSchoolNotFoundChange}
+            isNcesSchool={isNcesSchool}
+            schoolName={askForName ? schoolName : SchoolNotFound.OMIT_FIELD}
+            schoolType={SchoolNotFound.OMIT_FIELD}
+            schoolCity={SchoolNotFound.OMIT_FIELD}
+            schoolState={isUS ? schoolState : SchoolNotFound.OMIT_FIELD}
+            schoolZip={isUS ? schoolZip : SchoolNotFound.OMIT_FIELD}
+            schoolLocation={schoolLocation}
+            country={country}
+            controlSchoolLocation={true}
+            fieldNames={fieldNames}
+            showErrorMsg={showErrors}
+            singleLineLayout
+            showRequiredIndicators={showRequiredIndicator}
+            schoolNameLabel={schoolNameLabel}
+            useLocationSearch={useLocationSearch}
+          />
+        )}
+      </div>
     </div>
   );
 }
