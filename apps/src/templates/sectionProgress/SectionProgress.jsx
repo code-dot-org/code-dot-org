@@ -219,6 +219,7 @@ const styles = {
     display: 'flex',
     alignItems: 'flex-end',
     marginBottom: 10,
+    width: '100%',
   },
   chevronLink: {
     display: 'flex',

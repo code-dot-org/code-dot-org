@@ -98,6 +98,7 @@ def main
     DANCE_SONG_MANIFEST_FILENAME
     AI_TUTOR_INTERACTION_SAVE_STATUS
     AI_TUTOR_TYPES
+    FEATURED_PROJECT_STATUS
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")

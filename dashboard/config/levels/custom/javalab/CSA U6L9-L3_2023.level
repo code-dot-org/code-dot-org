@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2023-04-03T15:59:02.000Z",
   "level_num": "custom",
@@ -20,11 +19,10 @@
       }
     },
     "project_template_level_name": "CSA U6L9-NLP PBT_2023",
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "Students notice that the overall sentiment of the second song is also negative but is higher than the first song. If students look at the text files for each song, they'll likely conclude that neither song sounds negative overall. They should notice that specific words on their own may be considered negative, which contributes to the overall scoring by the program, but looking at the words within the context of the sentence or overall song changes their sentiment."
+    "teacher_markdown": "Students notice that the overall sentiment of the second song is also negative but is higher than the first song. If students look at the text files for each song, they'll likely conclude that neither song sounds negative overall. They should notice that specific words on their own may be considered negative, which contributes to the overall scoring by the program, but looking at the words within the context of the sentence or overall song changes their sentiment.",
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T15:59:02.948+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L2_2023\\\"\"],\"cloned_from\":\"CSA U6L9-L2_2023\"},{\"changed_at\":\"2023-04-03 15:59:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-02 13:22:33 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-06 15:52:42 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
