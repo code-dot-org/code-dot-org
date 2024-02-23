@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:31:57.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In TemperatureScene.java:\r\n\r\n1. Write the method `getImage()`(#e7e8ea) using nested `if`(#e7e8ea) statements to return the correct image to draw.\r\n\r\n   * If `temp`(#e7e8ea) is greater than `75`(#e7e8ea) and `hasClouds`(#e7e8ea) is `true`(#e7e8ea), return the `\"clouds.png\"`(#e7e8ea) image.\r\n\r\n   * If `temp`(#e7e8ea) is greater than `75`(#e7e8ea) and `hasClouds`(#e7e8ea) is `false`(#e7e8ea), return the `\"sun.png\"`(#e7e8ea) image.\r\n   \r\n##In MyConsole.java:\r\n\r\n2. Test your algorithm by changing the values for the `TemperatureScene`(#e7e8ea) object.",
@@ -23,12 +27,9 @@
         "text": "import org.code.theater.*;\n\n/*\n * Represents a scene displaying either clouds or a sun\n */\npublic class TemperatureScene extends Scene {\n\n  private int temp;            // The temperature\n  private boolean hasClouds;   // Whether or not there are clouds\n\n  /*\n   * Constructor to create a TemperatureScene\n   * with the specified temperature and status of clouds\n   */\n  public TemperatureScene(int temp, boolean hasClouds) {\n    this.temp = temp;\n    this.hasClouds = hasClouds;\n  }\n\n  /*\n   * Sets temp to a new temperature\n   */\n  public void setTemp(int newTemp) {\n    this.temp = newTemp;\n  }\n\n  /*\n   * Sets hasClouds to the new clouds status\n   */\n  public void setHasClouds(boolean newHasClouds) {\n    this.hasClouds = newHasClouds;\n  }\n\n  /*\n   * Returns either an image of clouds or of a sun based on\n   * the temperature and status of hasClouds\n   */\n  public String getImage() {\n    String image = \"\";\n    \n    // TO DO #1: Implement your algorithm to return the correct image\n    // based on the temperature and status of hasClouds.\n    \n    \n\n    return image;\n  }\n\n  /*\n   * Creates a scene displaying either clouds or a sun\n   * based on the temperature and status of clouds\n   */\n  public void createScene() {\n    String imageToDraw = getImage();\n    drawImage(imageToDraw, 0, 0, getWidth());\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:31:57.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:31:57.852+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L2_2022\\\"\"],\"cloned_from\":\"CSA U4L3-L2_2022\"},{\"changed_at\":\"2022-09-19 20:01:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:02:08 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:02:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:03:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:03:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:12:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:13:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:13:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:13:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-19 20:16:05 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

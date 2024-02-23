@@ -9,7 +9,8 @@
     "link_title": "COCO - Common Objects in Context Dataset",
     "url": "https://cocodataset.org/#home",
     "long_instructions": "# COCO - Common Objects in Context Dataset\r\n\r\nLook around on the COCO website, focusing specifically on the **Explore** section under the **Dataset** menu.",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:34:18.199+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L1-L3\\\"\"],\"cloned_from\":\"CSA-CV-L1-L3\"}]"

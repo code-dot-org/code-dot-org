@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L8-Comparing Strings PBT_2024",
     "teacher_markdown": "Students should notice that the `countGenre()` method is not correctly counting all of the `\"Rock\"` entries. The condition in the `if` statement is supposed to check if the current response is equivalent to `targetGenre`, however using the `==` operator to compare two `String` objects does not work as expected.\r\n\r\nWhen students modify the condition to use the `equals()` method, they should notice that the `countGenre()` method now correctly counts all of the `\"Rock\"` entries. Students should recall that a `String` is an object and conclude that the `equals()` method must be used to compare two `String` objects for equivalence.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:52:28.206+00:00\",\"changed\":[\"cloned from \\\"CSA U3L8-L2_2023\\\"\"],\"cloned_from\":\"CSA U3L8-L2_2023\"}]"

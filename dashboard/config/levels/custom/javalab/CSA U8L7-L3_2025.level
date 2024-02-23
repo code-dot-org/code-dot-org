@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U8L7-Multiple Lists PBT_2025",
     "teacher_markdown": "Students realize that this method returns an `ArrayList` containing the elements that appear in the first two lists but not in the third list.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:41:01.512+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L3_2023\\\"\"],\"cloned_from\":\"CSA U8L7-L3_2023\"}]"

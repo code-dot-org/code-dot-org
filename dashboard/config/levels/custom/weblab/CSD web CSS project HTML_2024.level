@@ -1,14 +1,15 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:43.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "project_template_level_name": "CSD web CSS project template_2024",
+    "project_template_level_name": "CSD web html project template_2024",
     "hide_share_and_remix": "false",
-    "long_instructions": "# Add HTML\r\n\r\nNext, you should add the HTML to your page.\r\n\r\n# Do This\r\n1) Add HTML to make the page you sketched in your project guide.\r\n",
+    "long_instructions": "# Add CSS File\r\n\r\nThe HTML code you wrote for your user in the previous mini-project has been carried over to this level so that you can style the web page according to your user's requests in your project guide. \r\n\r\nIn order to start styling the web page for our user, we need to add the CSS file.\r\n\r\n# Do This\r\n1) Add the CSS file to the project.\r\n2) Rename your CSS file to \"style.css\"\r\n3) Add the link for your CSS file in the `head` tag.\r\n",
     "parent_level_id": 23020,
     "name_suffix": "_2024",
     "reference_links": [
@@ -25,11 +26,15 @@
     "submittable": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "teacher_markdown": "**New Style, New Project**: To give students opportunities to create a variety of projects and help emphasize their newfound CSS skills, this project is **not** linked to the previous HTML Mini-Project in Lesson 4. If students would like to build off of their previous work, they can go back and copy-and-paste their HTML Code into this project. Or, they can use this as an opportunity to build a completely new website to suit their personality.",
-    "validation_enabled": "true"
+    "validation_enabled": "true",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Lesson 5 User",
+    "bubble_choice_description": "Choose this level if you created an HTML web page for a user during the previous mini-project.",
+    "thumbnail_url": "https://images.code.org/d63ac68f142c45840c90dd2053982325-behavior.png"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:43.144+00:00\",\"changed\":[\"cloned from \\\"CSD web CSS project HTML_2023\\\"\"],\"cloned_from\":\"CSD web CSS project HTML_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:43.144+00:00\",\"changed\":[\"cloned from \\\"CSD web CSS project HTML_2023\\\"\"],\"cloned_from\":\"CSD web CSS project HTML_2023\"},{\"changed_at\":\"2024-02-17 20:28:43 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-18 17:16:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-18 22:03:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
