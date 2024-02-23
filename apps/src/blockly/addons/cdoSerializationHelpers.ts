@@ -10,7 +10,6 @@ import {
   WorkspaceSerialization,
   XmlBlockConfig,
 } from '../types';
-import {Coordinate} from 'blockly/core/utils';
 
 const {
   BLOCK_HEADER_HEIGHT,
@@ -186,7 +185,7 @@ function adjustBlockPositions(
 
     // Set initial position; collision area must be updated to account for new position
     // every time block is moved
-    block.moveTo(new Coordinate(x, y));
+    block.moveTo(new Blockly.utils.Coordinate(x, y));
     let collider = getCollider(block);
 
     orderedColliders.forEach(orderedCollider => {
@@ -195,7 +194,7 @@ function adjustBlockPositions(
           orderedCollider.y +
           orderedCollider.height +
           getSpaceBetweenBlocks(block);
-        block.moveTo(new Coordinate(x, y));
+        block.moveTo(new Blockly.utils.Coordinate(x, y));
         collider = getCollider(block);
       }
     });
