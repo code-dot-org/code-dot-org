@@ -101,6 +101,7 @@ describe('LearningGoal', () => {
           evidenceLevels: [],
           tips: 'Tips',
         }}
+        teacherHasEnabledAi={false}
         isStudent={true}
       />
     );
@@ -164,12 +165,14 @@ describe('LearningGoal', () => {
       <LearningGoal
         learningGoal={{
           learningGoal: 'Testing',
+          aiEnabled: true,
           evidenceLevels: [],
         }}
         submittedEvaluation={{
           feedback: 'test feedback',
           understanding: RubricUnderstandingLevels.LIMITED,
         }}
+        teacherHasEnabledAi={false}
       />
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -180,7 +183,11 @@ describe('LearningGoal', () => {
 
     const wrapper = shallow(
       <LearningGoal
-        learningGoal={{key: 'key', learningGoal: 'Testing', evidenceLevels: []}}
+        learningGoal={{
+          key: 'key',
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
       />
     );

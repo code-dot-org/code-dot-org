@@ -157,9 +157,19 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
+    // Push the `fetch` through
     await act(async () => {
       await Promise.resolve();
     });
+    // Perform the json() call from the fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    // Perform the data call from the fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    // Let the component re-render with the set state
     wrapper.update();
     expect(fetchStub).to.have.been.calledThrice;
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
