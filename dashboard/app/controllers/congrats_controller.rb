@@ -20,8 +20,24 @@ class CongratsController < ApplicationController
           else
             completed_units.map {|unit| certificate_image_url(nil, unit.name, nil)}
           end
+        @certificate_data =
+          if completed_units.empty? || completed_units.length == units.length
+            [{
+              courseName: course_name
+            }]
+          else
+            completed_units.map do |unit|
+              {
+                courseName: unit.name
+              }
+            end
+          end
+
       else
         @certificate_image_urls = [certificate_image_url(nil, course_name, nil)]
+        @certificate_data = [{
+          courseName: course_name
+        }]
       end
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}

@@ -26,6 +26,7 @@ $(document).ready(function () {
   // Allows us to conditionally hide the promotional card for the Dance Party
   // Extras tutorial if we have problems during Hour of Code.
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
+  const certificateData = congratsData.certificate_data;
   const isHocTutorial = congratsData.is_hoc_tutorial;
   const isPlCourse = congratsData.is_pl_course;
   const isK5PlCourse = congratsData.is_k5_pl_course;
@@ -59,6 +60,7 @@ $(document).ready(function () {
         randomDonorTwitter={randomDonorTwitter}
         randomDonorName={randomDonorName}
         hideDancePartyFollowUp={hideDancePartyFollowUp}
+        certificateData={certificateData}
         isHocTutorial={isHocTutorial}
         isPlCourse={isPlCourse}
         isK5PlCourse={isK5PlCourse}

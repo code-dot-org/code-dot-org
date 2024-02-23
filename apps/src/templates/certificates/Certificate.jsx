@@ -19,17 +19,6 @@ import {
 import {register} from 'swiper/element/bundle';
 register();
 
-/*import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation, Pagination, Scrollbar, A11y} from 'swiper/modules';
-import 'swiper/scss';
-//import 'swiper/css';
-import 'swiper/scss/navigation';
-import {use} from 'chai';
-import {init} from '@cdo/apps/assetManagement/assetPrefix';
-import testImageAccess from '@cdo/apps/code-studio/url_test';
-//import 'swiper/scss/pagination';
-//import 'swiper/css/a11y';*/
-
 /**
  * Without this, we get an error on the server "invalid byte sequence in UTF-8".
  *
@@ -78,11 +67,11 @@ function Certificate(props) {
     });
   };
 
-  const getEncodedParams = () => {
+  const getEncodedParams = courseName => {
     const donor = studentName ? props.randomDonorName : null;
     const data = {
       name: studentName,
-      course: props.tutorial,
+      course: courseName,
       donor,
     };
     const asciiData = btoa(reEncodeNonLatin1(JSON.stringify(data)));
@@ -99,61 +88,34 @@ function Certificate(props) {
     return urlSafeData;
   };
 
-  /*const getCertificateImagePath = tutorial => {
-    const filename = getEncodedParams();
+  const getCertificateImagePath = courseName => {
+    const filename = getEncodedParams(courseName);
     return `/certificate_images/${filename}.jpg`;
-  };*/
+  };
 
-  const getPrintPath = () => {
-    const encoded = getEncodedParams();
+  const getPrintPath = courseName => {
+    const encoded = getEncodedParams(courseName);
     return `/print_certificates/${encoded}`;
   };
 
-  const getCertificateSharePath = () => {
-    const encoded = getEncodedParams();
+  const getCertificateSharePath = courseName => {
+    const encoded = getEncodedParams(courseName);
     return `/certificates/${encoded}`;
   };
 
-  const getExternalCertificateSharePath = () => {
-    return `${window.location.origin}${getCertificateSharePath()}`;
+  const getExternalCertificateSharePath = courseName => {
+    return `${window.location.origin}${getCertificateSharePath(courseName)}`;
   };
 
   const {
     responsiveSize,
-    tutorial,
     certificateId,
     randomDonorTwitter,
     under13,
     children,
+    certificateData,
     isHocTutorial,
   } = props;
-
-  const imgSrc = getCertificateImagePath();
-  const certificateShareLink = getCertificateSharePath();
-  const externalCertificateShareLink = getExternalCertificateSharePath();
-  const desktop =
-    responsiveSize === ResponsiveSize.lg ||
-    responsiveSize === ResponsiveSize.md;
-  const headingStyle = desktop ? style.heading : style.mobileHeading;
-  const certificateStyle = desktop ? style.desktopHalf : style.mobileFull;
-
-  const facebook = queryString.stringify({
-    u: externalCertificateShareLink,
-  });
-
-  const twitter = queryString.stringify({
-    url: externalCertificateShareLink,
-    related: 'codeorg',
-    text: randomDonorTwitter
-      ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
-      : i18n.justDidHourOfCode(),
-  });
-
-  const linkedin = queryString.stringify({
-    url: externalCertificateShareLink,
-  });
-
-  const print = getPrintPath();
 
   const swiperRef = useRef(null);
 
@@ -186,6 +148,54 @@ function Certificate(props) {
     }
   }, []);
 
+  const [currentCertificateIndex, setCurrentImageIndex] = useState(0);
+  useEffect(() => {
+    // listen for Swiper events using addEventListener
+    swiperRef.current.addEventListener('swiperprogress', e => {
+      const [swiper, progress] = e.detail;
+      console.log(swiper, progress);
+      console.log(swiper.activeIndex);
+    });
+
+    swiperRef.current.addEventListener('swiperslidechange', e => {
+      const [swiper] = e.detail;
+      /*console.log('slide changed', e);
+      console.log(swiper, progress);
+      console.log(swiper.activeIndex);
+ */
+      console.log('Swiper slide changed to active index' + swiper.activeIndex);
+      setCurrentImageIndex(swiper.activeIndex);
+    });
+  }, []);
+
+  const courseName = certificateData[currentCertificateIndex]?.courseName;
+
+  const externalCertificateShareLink =
+    getExternalCertificateSharePath(courseName);
+  const desktop =
+    responsiveSize === ResponsiveSize.lg ||
+    responsiveSize === ResponsiveSize.md;
+  const headingStyle = desktop ? style.heading : style.mobileHeading;
+  const certificateStyle = desktop ? style.desktopHalf : style.mobileFull;
+
+  const facebook = queryString.stringify({
+    u: externalCertificateShareLink,
+  });
+
+  const twitter = queryString.stringify({
+    url: externalCertificateShareLink,
+    related: 'codeorg',
+    text: randomDonorTwitter
+      ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
+      : i18n.justDidHourOfCode(),
+  });
+
+  const linkedin = queryString.stringify({
+    url: externalCertificateShareLink,
+  });
+
+  const print = getPrintPath(courseName);
+
   return (
     <div className={style.container}>
       <div className={style.headerContainer}>
@@ -193,9 +203,9 @@ function Certificate(props) {
           {i18n.congratsCertificateHeading()}
         </Heading1>
       </div>
-      {tutorial && (
+      {courseName && (
         <LargeChevronLink
-          link={`/s/${tutorial}`}
+          link={`/s/${courseName}`}
           linkText={i18n.backToActivity()}
         />
       )}
@@ -214,21 +224,25 @@ function Certificate(props) {
             />
           }
           <swiper-container ref={swiperRef} class={style.swiperContainer}>
-            {initialCertificateImageUrls.map(imgUrl => (
-              <swiper-slide key={imgUrl} class={style.swiperSlide}>
-                <a href={certificateShareLink}>
+            {certificateData.map(image => (
+              <swiper-slide key={image.courseName} class={style.swiperSlide}>
+                <a href={getCertificateSharePath(image.courseName)}>
                   {
                     // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
                     // Verify or update this alt-text as necessary
                   }
-                  <img src={imgUrl} alt="" style={{width: 470}} />
+                  <img
+                    src={getCertificateImagePath(image.courseName)}
+                    alt=""
+                    style={{width: 470}}
+                  />
                 </a>
               </swiper-slide>
             ))}
           </swiper-container>
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
-          {tutorial && !personalized && (
+          {courseName && !personalized && (
             <div>
               <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
               <BodyThreeText className={style.enterName}>
@@ -252,7 +266,7 @@ function Certificate(props) {
               </div>
             </div>
           )}
-          {tutorial && personalized && (
+          {courseName && personalized && (
             <div>
               <Heading2>
                 <div id="uitest-thanks">{i18n.congratsCertificateThanks()}</div>
@@ -282,13 +296,13 @@ function Certificate(props) {
 }
 
 Certificate.propTypes = {
-  tutorial: PropTypes.string,
   certificateId: PropTypes.string,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
+  certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
   isHocTutorial: PropTypes.bool,
 };
 
