@@ -76,7 +76,7 @@ class AiTutorInteractionsController < ApplicationController
     ai_tutor_interactions.each do |interaction|
       student_name = students.find(interaction["user_id"]).name
       interaction["student_name"] = student_name
-      student_chat = interaction.transform_keys{ |key| key.camelize(:lower)}
+      student_chat = interaction.transform_keys {|key| key.camelize(:lower)}
       student_chats << student_chat
     end
     render json: student_chats
