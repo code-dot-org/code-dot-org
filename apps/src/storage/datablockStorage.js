@@ -31,7 +31,6 @@ function _fetch(path, method, params) {
 async function getKeyValue(key) {
   const response = await _fetch('get_key_value', 'GET', {key});
   const json = await response.json();
-  console.log('json is ', json);
   return json === null ? undefined : json;
 }
 
@@ -52,7 +51,6 @@ async function createRecord(tableName, record) {
     table_name: tableName,
     record_json: JSON.stringify(record),
   });
-  console.log('response is ', response);
   return await response.json();
 }
 
