@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {fetchStudentChatMessages} from '@cdo/apps/aiTutor/interactionsApi';
 import AITutorChatMessagesTableRow from './aiTutorChatMessageTableRow';
 import style from './chat-messages-table.module.scss';
+import {StudentChatRow} from '@cdo/apps/aiTutor/types';
 
 /**
  * Renders a table showing the section's students' chat messages with AI Tutor.
@@ -13,7 +14,7 @@ interface AITutorChatMessagesTableProps {
 const AITutorChatMessagesTable: React.FunctionComponent<
   AITutorChatMessagesTableProps
 > = ({sectionId}) => {
-  const [chatMessages, setChatMessages] = useState([]);
+  const [chatMessages, setChatMessages] = useState<StudentChatRow[]>([]);
 
   useEffect(() => {
     (async () => {
