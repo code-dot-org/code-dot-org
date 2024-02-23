@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
-<<<<<<< HEAD
 import {addChatMessage, setSelectedTutorType} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Role, Status, TutorType} from '@cdo/apps/aiTutor/types';
@@ -55,17 +54,6 @@ const SelectCompilationButton: React.FunctionComponent = () => {
         })
       );
     }
-=======
-import {setSelectedTutorType} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {TutorType} from '@cdo/apps/aiTutor/types';
-
-const SelectCompilationButton: React.FunctionComponent = () => {
-  const dispatch = useAppDispatch();
-
-  const onClick = () => {
-    dispatch(setSelectedTutorType(TutorType.COMPILATION));
->>>>>>> staging
   };
 
   return (
