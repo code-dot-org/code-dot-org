@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-02-16T05:19:21.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** What is the purpose of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method? What is the difference between <code style=\"background-color: #ececec; color: black; font-weight: bold;\">aSubstring</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">anotherSubstring</code>?\r\n\r\nTry changing the parameters to different values.",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** What is the purpose of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method? How does the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method get characters from the palindrome?\r\n\r\nTry changing the parameters to different values.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -20,9 +21,12 @@
     },
     "project_template_level_name": "CSA U6L2-Substring PBT_-modular",
     "teacher_markdown": "These are two different ways of calling the `substring()` method. In the first, for `aSubstring`, the method will return the characters in the `String` from index `4` until the end of the `String`. For `anotherSubstring`, we see two arguments: these indicate that a `String` will be returned starting at index `4` (inclusive) to `8` (exclusive).",
-    "name_suffix": "_-modular"
+    "name_suffix": "_-modular",
+    "ai_tutor_available": true,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:21.736+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L2_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L2_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:21.736+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L2_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L2_2025\"},{\"changed_at\":\"2024-02-23 04:09:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>
