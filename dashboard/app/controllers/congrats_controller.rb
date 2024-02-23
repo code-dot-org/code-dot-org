@@ -9,7 +9,20 @@ class CongratsController < ApplicationController
     @random_donor_twitter = DashboardCdoDonor.get_random_donor_twitter
     @random_donor_name = DashboardCdoDonor.get_random_donor_name
     begin
-      @course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
+      course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
+      unit_group = UnitGroup.get_from_cache(course_name)
+      if unit_group
+        units = unit_group.units_for_user(current_user)
+        completed_units = UserScript.where(user: current_user, script: units).where.not(completed_at: nil).map(&:script)
+        @certificate_image_urls =
+          if completed_units.empty? || completed_units.length == units.length
+            [certificate_image_url(nil, course_name, nil)]
+          else
+            completed_units.map {|unit| certificate_image_url(nil, unit.name, nil)}
+          end
+      else
+        @certificate_image_urls = [certificate_image_url(nil, course_name, nil)]
+      end
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
     end

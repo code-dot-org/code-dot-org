@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -16,6 +16,19 @@ import {
   Heading2,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
+import {register} from 'swiper/element/bundle';
+register();
+
+/*import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation, Pagination, Scrollbar, A11y} from 'swiper/modules';
+import 'swiper/scss';
+//import 'swiper/css';
+import 'swiper/scss/navigation';
+import {use} from 'chai';
+import {init} from '@cdo/apps/assetManagement/assetPrefix';
+import testImageAccess from '@cdo/apps/code-studio/url_test';
+//import 'swiper/scss/pagination';
+//import 'swiper/css/a11y';*/
 
 /**
  * Without this, we get an error on the server "invalid byte sequence in UTF-8".
@@ -86,10 +99,10 @@ function Certificate(props) {
     return urlSafeData;
   };
 
-  const getCertificateImagePath = () => {
+  /*const getCertificateImagePath = tutorial => {
     const filename = getEncodedParams();
     return `/certificate_images/${filename}.jpg`;
-  };
+  };*/
 
   const getPrintPath = () => {
     const encoded = getEncodedParams();
@@ -142,6 +155,37 @@ function Certificate(props) {
 
   const print = getPrintPath();
 
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      const swiperParams = {
+        autoHeight: true,
+        pagination: {
+          clickable: true,
+        },
+        spaceBetween: 24,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        breakpoints: {
+          640: {
+            autoHeight: false,
+          },
+        },
+        injectStyles: [
+          `
+            :host .swiper-pagination {
+              position: relative;
+              margin-top: 2rem;
+            }
+            `,
+        ],
+      };
+      Object.assign(swiperRef.current, swiperParams);
+      swiperRef.current.initialize();
+    }
+  }, []);
+
   return (
     <div className={style.container}>
       <div className={style.headerContainer}>
@@ -156,18 +200,32 @@ function Certificate(props) {
         />
       )}
       <div className={style.certificateContainer}>
-        <div id="uitest-certificate" className={certificateStyle}>
-          <BackToFrontConfetti
-            active={personalized}
-            className={style.confetti}
-          />
-          <a href={certificateShareLink}>
-            {
-              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-              // Verify or update this alt-text as necessary
-            }
-            <img src={imgSrc} alt="" />
-          </a>
+        <div
+          id="uitest-certificate"
+          style={{
+            width: '50%',
+            display: 'flex',
+          }}
+        >
+          {
+            <BackToFrontConfetti
+              active={personalized}
+              className={style.confetti}
+            />
+          }
+          <swiper-container ref={swiperRef} class={style.swiperContainer}>
+            {initialCertificateImageUrls.map(imgUrl => (
+              <swiper-slide key={imgUrl} class={style.swiperSlide}>
+                <a href={certificateShareLink}>
+                  {
+                    // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                    // Verify or update this alt-text as necessary
+                  }
+                  <img src={imgUrl} alt="" style={{width: 470}} />
+                </a>
+              </swiper-slide>
+            ))}
+          </swiper-container>
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
           {tutorial && !personalized && (

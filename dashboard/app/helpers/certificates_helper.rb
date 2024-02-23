@@ -5,14 +5,17 @@ module CertificatesHelper
       course: course,
       donor: donor
     }.compact
+    puts opts.inspect
     Base64.urlsafe_encode64(opts.to_json)
   end
 
   def certificate_image_url(name, course, donor)
+    puts "getting certificate image url for #{name}, #{course}, #{donor}"
     return CDO.code_org_url('/images/hour_of_code_certificate.jpg') if course.blank?
     is_prefilled = CertificateImage.prefilled_title_course?(course)
     return CDO.code_org_url("/images/#{CertificateImage.certificate_template_for(course)}") if is_prefilled && !name
     encoded = encode_params(name, course, donor)
+    puts "encoded: #{encoded}"
     "/certificate_images/#{encoded}.jpg"
   end
 
