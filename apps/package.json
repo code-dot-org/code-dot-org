@@ -98,7 +98,7 @@
     "events": "^3.3.0",
     "file-loader": "^6.2.0",
     "firebase-bolt": "^0.8.0",
-    "firebase-mock": "^1.1.16",
+    "firebase-mock": "1.0.8",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
     "glob": "5.0.14",
     "global-jsdom": "^8.8.0",

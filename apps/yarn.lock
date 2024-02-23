@@ -8284,7 +8284,7 @@ __metadata:
     filesaver.js: 0.2.0
     firebase: ^2.4.2
     firebase-bolt: ^0.8.0
-    firebase-mock: ^1.1.16
+    firebase-mock: 1.0.8
     firmata: ^2.2.0
     focus-trap-react: ^10.1.1
     fork-ts-checker-webpack-plugin: ^8.0.0
@@ -13928,15 +13928,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"firebase-mock@npm:^1.1.16":
-  version: 1.1.16
-  resolution: "firebase-mock@npm:1.1.16"
+"firebase-mock@npm:1.0.8":
+  version: 1.0.8
+  resolution: "firebase-mock@npm:1.0.8"
   dependencies:
     firebase-auto-ids: ~1.1.0
-    lodash: ^3.10.1
+    lodash: ~2.4.1
     md5: ~2.2.1
     rsvp: ^3.3.3
-  checksum: d72b4694a9570ab60675790c166b2665332ec449d79ef8f0688d8fcedb8afe9ecd016fc77412e6141027ff73be778e8f55cc9cb74c0887f0dde9c1d40a38b148
+  checksum: 94c1b892ad23faae5186e94f505ad8c6bfad6274b369773bcc3e47257b9636719082cb9d11e0681c9a8a06ba25c14e1d16a4fc73977b2d8b87220100c647e48b
   languageName: node
   linkType: hard
 
@@ -19204,7 +19204,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"lodash@npm:^3.10.1, lodash@npm:^3.8.0":
+"lodash@npm:^3.8.0":
   version: 3.10.1
   resolution: "lodash@npm:3.10.1"
   checksum: 53065d3712a2fd90b55690c5af19f9625a5bbb2b7876ff76d782ee1dc22618fd4dff191d44a8e165a17b5b81a851c3e884d3b5b25e314422fbe24bb299542685
@@ -19215,6 +19215,13 @@ es6-shim@latest:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
+  languageName: node
+  linkType: hard
+
+"lodash@npm:~2.4.1":
+  version: 2.4.2
+  resolution: "lodash@npm:2.4.2"
+  checksum: b18a5e5858091e2a0e6498e9f0efde559f64a2cc7adfa240c7da92930b7c734a9e52519101522e9fbd7acfcfb0ef682ce9b9cb668b5fea4809cb340435c1764d
   languageName: node
   linkType: hard
 
