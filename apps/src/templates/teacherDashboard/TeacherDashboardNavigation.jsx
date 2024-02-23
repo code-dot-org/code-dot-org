@@ -44,6 +44,10 @@ const teacherDashboardLinks = [
     label: i18n.teacherTabManageStudents(),
     url: TeacherDashboardPath.manageStudents,
   },
+  {
+    label: 'AI Tutor',
+    url: TeacherDashboardPath.aiTutorChatMessages,
+  }
 ];
 
 const ListPosition = {
@@ -66,10 +70,16 @@ export default class TeacherDashboardNavigation extends Component {
   state = {
     listPosition: ListPosition.start,
     shouldScroll: true,
+    linksToShow: [],
   };
 
   componentDidMount() {
     this.setShouldScroll();
+    let linksToShow = this.props.links || teacherDashboardLinks;;
+    if (!this.props.showAITutorTab) {
+      linksToShow = teacherDashboardLinks.filter(link => link.label != 'AI Tutor');
+    }
+    this.setState({linksToShow});
   }
 
   setShouldScroll = () => {
@@ -122,13 +132,7 @@ export default class TeacherDashboardNavigation extends Component {
 
   render() {
     const {listPosition, shouldScroll} = this.state;
-    if (this.props.showAITutorTab && teacherDashboardLinks.length <= 6) {
-      teacherDashboardLinks.push({
-        label: 'AI Tutor',
-        url: TeacherDashboardPath.aiTutorChatMessages,
-      });
-    }
-    const links = this.props.links || teacherDashboardLinks;
+    const links = this.state.linksToShow;
     const containerStyles = this.state.shouldScroll
       ? {...styles.container, ...styles.scrollableContainer}
       : styles.container;
