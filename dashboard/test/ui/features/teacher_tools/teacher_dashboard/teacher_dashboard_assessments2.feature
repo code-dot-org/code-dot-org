@@ -1,5 +1,5 @@
 @no_mobile
-@no_firefox
+
 Feature: Using the assessments tab in the teacher dashboard
 
   Scenario: Assessments tab survey submissions
