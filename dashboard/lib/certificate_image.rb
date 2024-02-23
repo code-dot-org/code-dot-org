@@ -169,8 +169,9 @@ class CertificateImage
       apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
 
       course_version = CurriculumHelper.find_matching_course_version(course)
-      total_hours = (course_version.content_root.duration_in_minutes / 60).floor
-      apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
+      total_hours_to_half_hour = (course_version.content_root.duration_in_minutes / 30).round / 2.0
+      hours_string = format('%<duration>g', duration: total_hours_to_half_hour)
+      apply_text(image, hours_string, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
       donor_text_y_offset = 611
     else # all other courses use a certificate image where the course name is also blank
       image = Magick::Image.read(path).first
