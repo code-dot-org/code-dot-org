@@ -34,7 +34,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     super(
       () => fixMenuGenerator(menuGenerator, width, height),
       undefined /* validator */,
-      {columns: numColumns, primaryColour: color.white}
+      {columns: numColumns}
     );
 
     this.buttons_ = buttons;
@@ -46,10 +46,10 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
    * @override
    * Duplicated from Blockly.FieldDropdown.showEditor_ and FieldGridDropdown.showEditor_
    * There are two functionality changes:
-   * 1. Override primaryColour to always be white. The Blockly team is planning
-   * to change FieldGridDropdown to make the dropdown color configurable. Once that
-   * change is shipped, we can remove the custom logic here.
+   * 1. Override primaryColour to always be white. FieldGridGropdown allows overriding the primary
+   *  color via config, but it happens in showEditor_, which we need to override because of 2.
    * 2. Create MenuItems for the buttons and add them before we render the menu.
+   * We are accessing private fields here, so if we upgrade Blockly we should verify no names changed.
    */
   showEditor_(opt_e?: MouseEvent) {
     // dropdownCreate is private in the parent.
@@ -70,10 +70,10 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
 
     if (this.buttons_) {
       // Force buttons to a new row by adding blank elements if needed.
-      // menuItems is private.
+      // menuItems is private in the parent.
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const numItems = ((this.menu_ as any).menuItems as MenuItem[]).length;
-      // columns is private.
+      // columns is private in the parent.
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const columns = (this as any).columns as number;
       const numInLastRow = numItems % columns;
@@ -127,6 +127,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     // view. See issue #1329.
     this.menu_.focus();
 
+    // selectedMenuItem is private in the parent.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const selectedMenuItem = (this as any).selectedMenuItem as MenuItem | null;
     if (selectedMenuItem) {
@@ -135,6 +136,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
 
     this.applyColour();
 
+    // updateColumnsStyling_ is private in the parent.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (this as any).updateColumnsStyling_();
 
