@@ -15,6 +15,7 @@ const NUM_ERRORS_BEFORE_WARNING = 3;
 
 var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
+console.log('hasProjectChanged = false');
 var hasProjectChanged = false;
 let projectSaveInProgress = false;
 let projectChangedWhileSaveInProgress = false;
@@ -745,6 +746,7 @@ var projects = (module.exports = {
           }.bind(this)
         );
         $(window).on(events.workspaceChange, function () {
+          console.log('hasProjectChanged = true');
           hasProjectChanged = true;
         });
 
@@ -782,6 +784,7 @@ var projects = (module.exports = {
     showProjectAdmin(this);
   },
   projectChanged() {
+    console.log('inside projectChanged() - hasProjectChanged = true');
     hasProjectChanged = true;
     if (projectSaveInProgress) {
       projectChangedWhileSaveInProgress = true;
@@ -976,6 +979,7 @@ var projects = (module.exports = {
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
   saveIfSourcesChanged() {
+    console.log('saveIfSourcesChanged');
     if (!isEditable()) {
       return Promise.resolve();
     }
@@ -986,7 +990,18 @@ var projects = (module.exports = {
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
           thumbnailChanged = false;
+<<<<<<< Updated upstream
           this.saveSourceAndHtml_(newSources, resolve);
+=======
+          console.log(
+            'calling saveSourcesAndHtml_ in saveIfSourcesChanged after soruces changed!'
+          );
+          this.saveSourceAndHtml_(newSources, () => {
+            console.log('inside saveIfSourcesChanged callback - hasProjectChanged = false');
+            hasProjectChanged = false;
+            resolve();
+          });
+>>>>>>> Stashed changes
         } else {
           resolve();
         }
@@ -1034,6 +1049,7 @@ var projects = (module.exports = {
    * @returns {Promise} A promise containing the project data.
    */
   save(forceNewVersion, preparingRemix) {
+    console.log('inside project.save');
     if (!isEditable()) {
       return Promise.resolve();
     }
@@ -1085,6 +1101,7 @@ var projects = (module.exports = {
     if (!isEditable()) {
       return;
     }
+    console.log('callback in saveSourceAndHtml_', callback);
 
     header.showProjectSaving();
 
@@ -1307,6 +1324,7 @@ var projects = (module.exports = {
    * @private
    */
   getUpdatedSourceAndHtml_(callback) {
+    console.log('getUpdatedSourceAndHtml_');
     this.sourceHandler.getAnimationList(animations =>
       this.sourceHandler
         .getLevelSource()
@@ -1502,17 +1520,20 @@ var projects = (module.exports = {
     };
     // Bail if baseline code doesn't exist (app not yet initialized)
     if (currentSources.source === null) {
+      console.log('if currentSources.source === null');
       callCallback();
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
+      console.log('if !appOptions.droplet && !hasProjectChanged');
       callCallback();
       return;
     }
 
     if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
+      console.log('if designModeViz .ui-draggable-dragging');
       callCallback();
       return;
     }
@@ -1523,13 +1544,18 @@ var projects = (module.exports = {
     projectSaveInProgress = true;
     this.getUpdatedSourceAndHtml_(newSources => {
       if (newSources.error) {
+        console.log(
+          'if newSources.error - callback in getUpdatedSourceAndHtml_'
+        );
         header.showProjectSaveError();
         callCallback();
         return;
       }
 
       if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
+        console.log('if currentSources === newSources');
         if (!projectChangedWhileSaveInProgress) {
+          console.log('inside getUpdatedSourceAndHtml - hasProjectChanged=false');
           hasProjectChanged = false;
         }
         projectSaveInProgress = false;
@@ -1540,6 +1566,7 @@ var projects = (module.exports = {
 
       this.saveSourceAndHtml_(newSources, () => {
         if (!projectChangedWhileSaveInProgress) {
+          console.log('inside saveSourceAndHtml_ - hasProjectChanged=false');
           hasProjectChanged = false;
         }
         projectSaveInProgress = false;
@@ -1923,6 +1950,41 @@ var projects = (module.exports = {
     }
     return sourcesApi;
   },
+<<<<<<< Updated upstream
+=======
+
+  // Sets a callback to save the project before unloading the page.
+  registerSaveOnUnload() {
+    window.addEventListener('beforeunload', this.unloadHandler_.bind(this));
+  },
+
+  unloadHandler_(event) {
+    if (this.hasOwnerChangedProject()) {
+      console.log('hasOwnerChangedProject true inside unloadHandler_');
+      // Manually trigger an autosave instead of waiting for the next autosave.
+<<<<<<< Updated upstream
+      this.autosave();
+=======
+      const callback = skipHandleUnload => {
+        console.log(
+          'inside callback for autosave - skipHandleUnload',
+          skipHandleUnload
+        );
+        if (skipHandleUnload) {
+          console.log('inside callback - skipHandleUnload === true -> delete event.returnValue');
+          delete event.returnValue;
+        }
+      };
+      this.autosave(callback);
+>>>>>>> Stashed changes
+
+      event.preventDefault();
+      event.returnValue = '';
+    } else {
+      delete event.returnValue;
+    }
+  },
+>>>>>>> Stashed changes
 });
 
 function fetchAbuseScore(resolve) {
