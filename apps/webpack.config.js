@@ -14,6 +14,7 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const {PyodidePlugin} = require('@pyodide/webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const circularDependencies = require('./circular_dependencies.json');
 
@@ -321,6 +322,19 @@ const WEBPACK_BASE_CONFIG = {
             },
           ]
         : []),
+      // update to dev only
+      {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              plugins: [require.resolve('react-refresh/babel')],
+            },
+          },
+        ],
+      },
       ...(process.env.DEV
         ? [
             // Enable source maps locally for Blockly for easier debugging.
@@ -404,19 +418,19 @@ function createWebpackConfig({
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
     watch,
-    entry: addPollyfillsToEntryPoints(
-      {
-        ...appsEntries,
-        ...CODE_STUDIO_ENTRIES,
-        ...INTERNAL_ENTRIES,
-        ...PEGASUS_ENTRIES,
-        ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-        ...SHARED_ENTRIES,
-        ...OTHER_ENTRIES,
-      },
-      ['@babel/polyfill/noConflict', 'whatwg-fetch']
-    ),
-    // entry: './src/homeTest.js',
+    // entry: addPollyfillsToEntryPoints(
+    //   {
+    //     ...appsEntries,
+    //     ...CODE_STUDIO_ENTRIES,
+    //     ...INTERNAL_ENTRIES,
+    //     ...PEGASUS_ENTRIES,
+    //     ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+    //     ...SHARED_ENTRIES,
+    //     ...OTHER_ENTRIES,
+    //   },
+    //   ['@babel/polyfill/noConflict', 'whatwg-fetch']
+    // ),
+    entry: './src/homeTest.jsx',
     externals: [
       {
         jquery: 'var $',
@@ -682,6 +696,8 @@ function createWebpackConfig({
         ? [new WebpackNotifierPlugin({alwaysNotify: true})]
         : []),
       new PyodidePlugin(),
+      // update to only dev
+      new ReactRefreshWebpackPlugin({overlay: false}),
     ],
     devServer: watch
       ? {
@@ -698,7 +714,17 @@ function createWebpackConfig({
               logLevel: 'debug',
             },
           ],
-          client: {progress: true},
+          client: {
+            progress: true,
+            // this doesn't work.
+            // passing via react refresh plugin config also didn't seem to work,
+            // https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/28#issuecomment-1130634371
+            // overlay: {
+            //   errors: false,
+            //   warnings: false,
+            //   runtimeErrors: false,
+            // },
+          },
           // Except stuff that webpack watch / webpack-dev-server will be generating
           // like: http://localhost-studio.code.org:9000/assets/application.js
           // or: http://localhost-studio.code.org:9000/assets/js/code-studio.js
