@@ -9,7 +9,7 @@ import {getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {LoadFinishedCallback} from '../types';
+import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 
 // Using require() to import JS in TS files
 const constants = require('../constants');
@@ -26,6 +26,7 @@ const DEFAULT_KEY = Key.C;
 export default class MusicPlayer {
   private readonly metricsReporter: LabMetricsReporter;
   private readonly samplePlayer: SamplePlayer;
+  private updateLoadProgress: UpdateLoadProgressCallback | undefined;
 
   private bpm: number = DEFAULT_BPM;
   private key: Key = DEFAULT_KEY;
@@ -51,8 +52,8 @@ export default class MusicPlayer {
     }
   }
 
-  setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
-    this.samplePlayer.setUpdateLoadProgress(updateLoadProgress);
+  setUpdateLoadProgress(updateLoadProgress: UpdateLoadProgressCallback) {
+    this.updateLoadProgress = updateLoadProgress;
   }
 
   /**
@@ -88,7 +89,10 @@ export default class MusicPlayer {
       )
     );
 
-    return this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
+    return this.samplePlayer.loadSounds(sampleIds, {
+      onLoadFinished,
+      updateLoadProgress: this.updateLoadProgress,
+    });
   }
 
   /**

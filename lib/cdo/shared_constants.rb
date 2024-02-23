@@ -126,6 +126,15 @@ module SharedConstants
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
 
+  # The status of a featured project based on it's `featured_at` and `unfeatured_at` properties
+  FEATURED_PROJECT_STATUS = OpenStruct.new(
+    {
+      active: 'active',
+      bookmarked: 'bookmarked',
+      archived: 'archived',
+    }
+  )
+
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.

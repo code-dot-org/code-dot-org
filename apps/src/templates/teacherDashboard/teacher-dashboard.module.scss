@@ -1,5 +1,8 @@
+@import "style-constants";
+
 .dashboardPage {
-  max-width: 970px;
+  max-width: $content-width;
+  padding: 0 64px 64px 64px;
 }
 
 .text {
