@@ -69,7 +69,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
         event: eventLabel,
         data_json: JSON.stringify({
           banner_title: bannerRef.current.querySelector(
-            '#two-column-action-block--sub-heading'
+            '.two-column-action-block--sub-heading'
           ).innerText,
         }),
       },

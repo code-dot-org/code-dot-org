@@ -52,7 +52,10 @@ export class UnconnectedTwoColumnActionBlock extends Component {
           <img src={imageUrl} alt="" className={styles.image} />
           <div className={styles.contentWrapper}>
             {subHeading && (
-              <BodyOneText visualAppearance={'heading-sm'}>
+              <BodyOneText
+                visualAppearance={'heading-sm'}
+                className="two-column-action-block--sub-heading"
+              >
                 {subHeading}
               </BodyOneText>
             )}
