@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U7L4-L1 Private PBT_2025",
     "teacher_markdown": "Students no longer get the error when the `filterByDiet()` method is `public`. Students should notice that this method is intended to be a helper method for the `getRecommendedRecipes()` method, so other classes should use this method instead of the `filterByDiet()` method.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:30.174+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2_2023\\\"\"],\"cloned_from\":\"CSA U7L4-L2_2023\"}]"

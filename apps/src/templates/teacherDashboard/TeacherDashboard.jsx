@@ -99,7 +99,7 @@ function TeacherDashboard({
             components using Connect/Redux. Library we could use to fix issue:
             https://github.com/supasate/connected-react-router */}
           <TeacherDashboardHeader />
-          <TeacherDashboardNavigation />
+          <TeacherDashboardNavigation showAITutorTab={showAITutorTab} />
         </div>
       )}
       <Switch>
