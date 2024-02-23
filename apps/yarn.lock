@@ -2016,6 +2016,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.23.9":
+  version: 7.23.9
+  resolution: "@babel/runtime@npm:7.23.9"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: 6bbebe8d27c0c2dd275d1ac197fc1a6c00e18dab68cc7aaff0adc3195b45862bae9c4cc58975629004b0213955b2ed91e99eccb3d9b39cabea246c657323d667
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.4.5":
   version: 7.8.3
   resolution: "@babel/runtime@npm:7.8.3"
@@ -7475,6 +7484,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"automation-events@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "automation-events@npm:7.0.0"
+  dependencies:
+    "@babel/runtime": ^7.23.9
+    tslib: ^2.6.2
+  checksum: e32fb317050c64ce782aa3a1aa66c8a012c0f84fcd846f9886a3f9ea6c3812bf4382a950e53e962da7dbc823c943c102210487ecbaba37f69e8f08870728af1c
+  languageName: node
+  linkType: hard
+
 "autoprefixer@npm:^9.8.6":
   version: 9.8.8
   resolution: "autoprefixer@npm:9.8.8"
@@ -8426,6 +8445,7 @@ __metadata:
     swiper: ^11.0.5
     terser-webpack-plugin: ^5.3.6
     timers-browserify: ^2.0.12
+    tone: 14.7.77
     ts-loader: ^9.4.2
     ts-sinon: ^2.0.2
     typescript: ^5.3.3
@@ -26981,6 +27001,17 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"standardized-audio-context@npm:^25.1.8":
+  version: 25.3.64
+  resolution: "standardized-audio-context@npm:25.3.64"
+  dependencies:
+    "@babel/runtime": ^7.23.9
+    automation-events: ^7.0.0
+    tslib: ^2.6.2
+  checksum: 47a97c30117974a10b422ed6daecb4367322be7a619b988fc574384cef4298328381dbdd3818e15cd28acbba0e2018bf5d5ba6a88634eda18d0d39bd2bd74ecc
+  languageName: node
+  linkType: hard
+
 "state-toggle@npm:^1.0.0":
   version: 1.0.1
   resolution: "state-toggle@npm:1.0.1"
@@ -28306,6 +28337,16 @@ temporal@latest:
   languageName: node
   linkType: hard
 
+"tone@npm:14.7.77":
+  version: 14.7.77
+  resolution: "tone@npm:14.7.77"
+  dependencies:
+    standardized-audio-context: ^25.1.8
+    tslib: ^2.0.1
+  checksum: cb0dfea08fddd38d7cacdc23eaa4ab98660ca4b60fe7b7431413d79937deee790b3237aa51b2c440ebd5477dace00e1f72d48dd09553c5cad83e9750eba17ea0
+  languageName: node
+  linkType: hard
+
 "totalist@npm:^1.0.0":
   version: 1.1.0
   resolution: "totalist@npm:1.1.0"
@@ -28485,6 +28526,13 @@ temporal@latest:
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
   languageName: node
   linkType: hard
 
