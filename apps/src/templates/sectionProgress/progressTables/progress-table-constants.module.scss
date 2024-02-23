@@ -8,7 +8,7 @@ $max-rows: 14;
 $max-height: $max-rows * $row-height + $scrollbar-height;
 $table-width: calc($content-width - 64px);
 $student-list-width: 170px;
-$content-view-width: $table-width - $student-list-width - 64;
+$content-view-width: $table-width - $student-list-width;
 
 :export {
   MAX_BODY_HEIGHT: math.div($max-height, 1px);
