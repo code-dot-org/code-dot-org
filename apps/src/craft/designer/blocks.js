@@ -4,6 +4,7 @@ import {stripQuotes} from '../../utils';
 import _ from 'lodash';
 import {EventType} from '@code-dot-org/craft';
 import {BLOCK_NAME_TO_DISPLAY_TEXT} from '../utils';
+import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 
 const ENTITY_INPUT_EXTRA_SPACING = 14;
 
@@ -176,8 +177,11 @@ export const install = (blockly, blockInstallOptions) => {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
@@ -207,8 +211,11 @@ export const install = (blockly, blockInstallOptions) => {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(
           blockly.Blocks.craft_entityTurn.ENTITY_DIRECTIONS
@@ -241,8 +248,11 @@ export const install = (blockly, blockInstallOptions) => {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(
           blockly.Blocks.craft_entityTurnLR.ENTITY_DIRECTIONS
@@ -424,8 +434,11 @@ export const install = (blockly, blockInstallOptions) => {
     blockly.Blocks[`craft_${functionName}`] = {
       helpUrl: '',
       init: function () {
-        Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
-        this.setStyle('event_blocks');
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.EVENT,
+          BlockStyles.EVENT
+        );
         this.appendDummyInput().appendField(text);
         this.appendStatementInput('DO');
         this.setPreviousStatement(false);
@@ -469,9 +482,11 @@ export const install = (blockly, blockInstallOptions) => {
         if (doSort) {
           dropdownOptions = _.sortBy(dropdownOptions, 0);
         }
-
-        Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-        this.setStyle('default');
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.DEFAULT,
+          BlockStyles.DEFAULT
+        );
         this.appendDummyInput()
           .appendField(new blockly.FieldLabel(blockText))
           .appendField(dropdown, 'TYPE');
@@ -490,8 +505,11 @@ export const install = (blockly, blockInstallOptions) => {
     blockly.Blocks[`craft_${simpleFunctionName}`] = {
       helpUrl: '',
       init: function () {
-        Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-        this.setStyle('default');
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.DEFAULT,
+          BlockStyles.DEFAULT
+        );
         this.appendDummyInput().appendField(new blockly.FieldLabel(blockText));
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -516,8 +534,11 @@ export const install = (blockly, blockInstallOptions) => {
         const dropdown = new blockly.FieldDropdown(dropdownOptions);
         dropdown.setValue(dropdownOptions[0][1]);
 
-        Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-        this.setStyle('default');
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.DEFAULT,
+          BlockStyles.DEFAULT
+        );
         this.appendDummyInput()
           .appendField(new blockly.FieldLabel(blockText))
           .appendField(dropdown, 'TYPE');
@@ -572,8 +593,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_forever = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.setStyle('loop_blocks');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput().appendField(i18n.forever());
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -588,8 +612,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_repeatTimes = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.setStyle('loop_blocks');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput()
         .appendField(i18n.blockActionRepeat())
         .appendField(
@@ -614,8 +641,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_repeatRandom = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.setStyle('loop_blocks');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput().appendField(i18n.blockActionRepeatRandom());
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -638,8 +668,11 @@ export const install = (blockly, blockInstallOptions) => {
       const dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.setStyle('loop_blocks');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput()
         .appendField(i18n.blockActionRepeat())
         .appendField(dropdown, 'TIMES');
@@ -675,8 +708,11 @@ export const install = (blockly, blockInstallOptions) => {
       const locationDropdown = new blockly.FieldDropdown(locationOptions);
       locationDropdown.setValue(locationOptions[0][1]);
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput()
         .appendField(new blockly.FieldLabel(i18n.blockActionSpawn()))
         .appendField(entityTypeDropdown, 'TYPE')
@@ -704,8 +740,11 @@ export const install = (blockly, blockInstallOptions) => {
       );
       entityTypeDropdown.setValue(entityTypeDropdownOptions[0][1]);
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput()
         .appendField(new blockly.FieldLabel('spawn'))
         .appendField(entityTypeDropdown, 'TYPE');
@@ -722,8 +761,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntityNorth = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(new blockly.FieldLabel('move north'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -737,8 +779,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntitySouth = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(new blockly.FieldLabel('move south'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -752,8 +797,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntityEast = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(new blockly.FieldLabel('move east'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -767,8 +815,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.Blocks.craft_moveEntityWest = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput().appendField(new blockly.FieldLabel('move west'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -799,8 +850,11 @@ export const install = (blockly, blockInstallOptions) => {
       );
       dropdown.setValue(dropdownOptions[0][1]);
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput()
         .appendField(i18n.blockActionPlaySound())
         .appendField(dropdown, 'TYPE');
@@ -823,8 +877,11 @@ export const install = (blockly, blockInstallOptions) => {
       const dropdown = new blockly.FieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.setStyle('default');
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       this.appendDummyInput()
         .appendField(i18n.blockActionAdd())
         .appendField(dropdown, 'SCORE')

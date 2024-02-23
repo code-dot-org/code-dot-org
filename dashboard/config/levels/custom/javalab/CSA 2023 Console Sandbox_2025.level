@@ -17,7 +17,8 @@
       }
     },
     "long_instructions": "##Welcome to Java Lab!",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:51:11.298+00:00\",\"changed\":[\"cloned from \\\"CSA 2023 Console Sandbox\\\"\"],\"cloned_from\":\"CSA 2023 Console Sandbox\"}]"

@@ -1917,4 +1917,10 @@ FactoryBot.define do
     email {"foobar@example.com"}
     receives_marketing {true}
   end
+
+  factory :ai_tutor_interaction do
+    association :user
+    type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
+    status {SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK]}
+  end
 end

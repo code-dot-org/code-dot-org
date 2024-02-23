@@ -1,0 +1,12 @@
+@import "style-constants";
+
+.dashboardPage {
+  max-width: $content-width;
+  padding: 0 64px 64px 64px;
+}
+
+.text {
+  font-style: italic;
+  text-align: center;
+  padding-top: 10px;
+}

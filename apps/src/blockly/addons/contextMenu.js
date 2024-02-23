@@ -291,7 +291,7 @@ export function registerHelp() {
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
 }
 
-const registerAllContextMenuItems = function () {
+export const registerAllContextMenuItems = function () {
   unregisterDefaultOptions();
   registerDeletable();
   registerMovable();
@@ -371,5 +371,3 @@ function unregisterDefaultOptions() {
     GoogleBlockly.ContextMenuRegistry.registry.unregister('workspaceDelete');
   } catch (error) {}
 }
-
-exports.registerAllContextMenuItems = registerAllContextMenuItems;

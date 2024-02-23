@@ -83,10 +83,10 @@ describe('ExpandedProgressDataColumn', () => {
     renderDefault();
 
     expect(
-      screen.getByText(
+      screen.getAllByText(
         'Lesson ' + LESSON.relative_position + ': ' + LESSON.name
       )
-    ).to.exist;
+    ).to.have.length(2);
 
     LESSON.levels.forEach(level => {
       expect(
