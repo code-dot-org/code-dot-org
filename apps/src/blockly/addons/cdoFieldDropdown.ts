@@ -10,6 +10,8 @@ import {
 } from '@cdo/apps/blockly/utils';
 
 type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+// Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
+// will always use [string, string].
 type CustomMenuOption = [string, string];
 
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
@@ -196,7 +198,6 @@ function toHumanReadableString(text: string) {
 export function arrayToMap(optionsArray: CustomMenuGenerator | undefined) {
   return Array.isArray(optionsArray)
     ? optionsArray.reduce((optionsMap: {[key: string]: string}, curr) => {
-        // We always use string as key and value
         optionsMap[curr[1]] = curr[0];
         return optionsMap;
       }, {})
