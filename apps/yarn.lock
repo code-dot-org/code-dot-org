@@ -5645,7 +5645,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/w3c-web-usb@npm:^1.0.4, @types/w3c-web-usb@npm:^1.0.6":
+"@types/w3c-web-usb@npm:^1.0.4":
   version: 1.0.6
   resolution: "@types/w3c-web-usb@npm:1.0.6"
   checksum: 9f30948cb84174fa290066b08274bdfb034d38c6db0976e9a826508732fba04d81e3300bca41ea23b737f1424c51adec5ae810cdf85d5b5a158d5840914f0417
@@ -8442,7 +8442,6 @@ __metadata:
     uglifyjs-webpack-plugin: ^2.2.0
     unminified-webpack-plugin: ^3.0.0
     url-loader: ^4.1.1
-    usb: ^2.8.1
     video.js: 7.6.6
     vm-browserify: ^1.1.2
     vmsg: ^0.3.6
@@ -20727,15 +20726,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"node-addon-api@npm:^5.0.0":
-  version: 5.1.0
-  resolution: "node-addon-api@npm:5.1.0"
-  dependencies:
-    node-gyp: latest
-  checksum: 2508bd2d2981945406243a7bd31362fc7af8b70b8b4d65f869c61731800058fb818cc2fd36c8eac714ddd0e568cc85becf5e165cebbdf7b5024d5151bbc75ea1
-  languageName: node
-  linkType: hard
-
 "node-dir@npm:^0.1.10":
   version: 0.1.16
   resolution: "node-dir@npm:0.1.16"
@@ -20787,17 +20777,6 @@ es6-shim@latest:
   version: 0.10.0
   resolution: "node-forge@npm:0.10.0"
   checksum: 5aa6dc9922e424a20ef101d2f517418e2bc9cfc0255dd22e0701c0fad1568445f510ee67f6f3fcdf085812c4ca1b847b8ba45683b34776828e41f5c1794e42e1
-  languageName: node
-  linkType: hard
-
-"node-gyp-build@npm:^4.5.0":
-  version: 4.6.0
-  resolution: "node-gyp-build@npm:4.6.0"
-  bin:
-    node-gyp-build: bin.js
-    node-gyp-build-optional: optional.js
-    node-gyp-build-test: build-test.js
-  checksum: 25d78c5ef1f8c24291f4a370c47ba52fcea14f39272041a90a7894cd50d766f7c8cb8fb06c0f42bf6f69b204b49d9be3c8fc344aac09714d5bdb95965499eb15
   languageName: node
   linkType: hard
 
@@ -29300,18 +29279,6 @@ temporal@latest:
     punycode: 1.3.2
     querystring: 0.2.0
   checksum: 50d100d3dd2d98b9fe3ada48cadb0b08aa6be6d3ac64112b867b56b19be4bfcba03c2a9a0d7922bfd7ac17d4834e88537749fe182430dfd9b68e520175900d90
-  languageName: node
-  linkType: hard
-
-"usb@npm:^2.8.1":
-  version: 2.8.1
-  resolution: "usb@npm:2.8.1"
-  dependencies:
-    "@types/w3c-web-usb": ^1.0.6
-    node-addon-api: ^5.0.0
-    node-gyp: latest
-    node-gyp-build: ^4.5.0
-  checksum: 6a785154529e58dd503ffd55ebe539137028968c129d0fe0a3dcde70f512c76367c102be888124378ba2c8e4679391577155f40b503de45a50041a4f32c29cae
   languageName: node
   linkType: hard
 
