@@ -401,7 +401,7 @@ class ProgressTableView extends React.Component {
 
 const styles = {
   container: {
-    width: styleConstants['content-width'],
+    width: parseInt(progressTableStyleConstants.TABLE_WIDTH),
   },
   studentList: {
     display: 'inline-block',
