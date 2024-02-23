@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
+import {act} from 'react-dom/test-utils';
 
 describe('RubricContent', () => {
   let store;
@@ -74,9 +75,7 @@ describe('RubricContent', () => {
     {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
   ];
 
-  const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));
-
-  it('displays LearningGoals component with correct props when viewing student work on assessment level', () => {
+  it('displays LearningGoals component with correct props when viewing student work on assessment level', async () => {
     const wrapper = mount(
       <Provider store={store}>
         <RubricContent {...defaultProps} aiEvaluations={aiEvaluations} />
@@ -215,14 +214,6 @@ describe('RubricContent', () => {
   });
 
   it('handles successful submit button click', async () => {
-    const wrapper = shallow(
-      <RubricContent
-        rubric={defaultRubric}
-        teacherHasEnabledAi
-        canProvideFeedback
-        studentLevelInfo={{name: 'Grace Hopper'}}
-      />
-    );
     const postStub = sinon.stub(HttpClient, 'post').returns(
       Promise.resolve({
         json: () => {
@@ -230,19 +221,37 @@ describe('RubricContent', () => {
         },
       })
     );
+    const wrapper = shallow(
+      <RubricContent
+        rubric={defaultRubric}
+        teacherHasEnabledAi
+        canProvideFeedback
+        studentLevelInfo={{name: 'Grace Hopper'}}
+      />
+    );
+
     wrapper.find('Button').simulate('click');
     expect(postStub).to.have.been.calledOnce;
-    postStub.restore();
     expect(wrapper.find('Button').props().disabled).to.be.true;
-    await processEventLoop();
+    await act(async () => {
+      await Promise.resolve();
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
     wrapper.update();
     expect(wrapper.find('Button').props().disabled).to.be.false;
     expect(wrapper.find('BodyThreeText').at(1).props().children).to.include(
       'Feedback submitted at'
     );
+    postStub.restore();
   });
 
   it('handles error on submit button click', async () => {
+    const postStub = sinon.stub(HttpClient, 'post').returns(Promise.reject());
     const wrapper = shallow(
       <RubricContent
         rubric={defaultRubric}
@@ -251,15 +260,23 @@ describe('RubricContent', () => {
         canProvideFeedback
       />
     );
-    const postStub = sinon.stub(HttpClient, 'post').returns(Promise.reject());
     wrapper.find('Button').simulate('click');
     expect(postStub).to.have.been.calledOnce;
-    postStub.restore();
     expect(wrapper.find('Button').props().disabled).to.be.true;
-    await processEventLoop();
+    await act(async () => {
+      await Promise.resolve();
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
     expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
       'Error submitting feedback to student.'
     );
+    postStub.restore();
   });
 
   it('does not pass down AI analysis to components when teacher has disabled AI', () => {
