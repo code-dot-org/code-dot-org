@@ -8,6 +8,7 @@ import {
   VariableMap,
   Workspace,
   WorkspaceSvg,
+  Xml,
 } from 'blockly';
 import GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -32,6 +33,7 @@ import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
+import BlockSvgFrame from './addons/blockSvgFrame';
 
 export interface BlockDefinition {
   category: string;
@@ -96,6 +98,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   cdoUtils: any;
   Generator: ExtendedGenerator;
+  Xml: ExtendedXml;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -110,8 +113,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     handler: (e: Abstract) => void
   ) => void;
   getGenerator: () => typeof javascriptGenerator;
-  addEmbeddedWorkspace: (workspace: WorkspaceSvg) => void;
-  isEmbeddedWorkspace: (workspace: WorkspaceSvg) => boolean;
+  addEmbeddedWorkspace: (workspace: Workspace) => void;
+  isEmbeddedWorkspace: (workspace: Workspace) => boolean;
   findEmptyContainerBlock: () => void;
   createEmbeddedWorkspace: (
     container: HTMLElement,
@@ -144,6 +147,8 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  // used for function blocks
+  functionalSvg_?: BlockSvgFrame;
 }
 
 export interface ExtendedInput extends Input {
@@ -208,9 +213,44 @@ export interface ExtendedGenerator extends CodeGeneratorType {
   prefixLines: (text: string, prefix: string) => string;
 }
 
+type XmlType = typeof Xml;
+export interface ExtendedXml extends XmlType {
+  textToDom: (text: string) => Element;
+  blockSpaceToDom: (workspace: Workspace, opt_noId?: boolean) => Element;
+  domToBlockSpace: (workspace: Workspace, xml: Document) => XmlBlockConfig[];
+}
+
+export interface XmlBlockConfig {
+  blockly_block: Block;
+  x: number;
+  y: number;
+}
+
+export interface JsonBlockConfig {
+  id: string;
+  x?: number;
+  y?: number;
+  movable?: boolean;
+  deletable?: boolean;
+  // extraState can be any object.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  extraState?: any;
+}
+
+export interface Collider {
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+}
+
 export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
 }
+
+// Blockly uses any here. We may be able to define this better.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type WorkspaceSerialization = {[key: string]: any};
 
 export interface ProcedureBlockConfiguration {
   kind: 'block';
