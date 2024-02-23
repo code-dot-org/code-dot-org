@@ -26,8 +26,9 @@ describe('Tests for Professional Learning Landing Page', () => {
         'Submit your feedback'
       );
       expect(mainWrapper.childAt(1).is('EnrolledWorkshops')).to.be.true;
-      expect(mainWrapper.childAt(2).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
+      expect(
+        mainWrapper.find('ProfessionalLearningCourseProgress')
+      ).to.have.length(1);
     });
 
     it('page is as expected for a CSD/CSP teacher with a pending survey', () => {
@@ -43,8 +44,9 @@ describe('Tests for Professional Learning Landing Page', () => {
         mainWrapper.childAt(0).shallow().text().indexOf('Submit your feedback')
       ).to.equal(-1);
       expect(mainWrapper.childAt(1).is('EnrolledWorkshops')).to.be.true;
-      expect(mainWrapper.childAt(2).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
+      expect(
+        mainWrapper.find('ProfessionalLearningCourseProgress')
+      ).to.have.length(1);
     });
 
     it('page is as expected for a teacher with no pending survey but upcoming workshops and plc enrollments', () => {
@@ -54,8 +56,9 @@ describe('Tests for Professional Learning Landing Page', () => {
 
       const mainWrapper = landingPage.find('main');
       expect(mainWrapper.childAt(0).is('EnrolledWorkshops')).to.be.true;
-      expect(mainWrapper.childAt(1).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
+      expect(
+        mainWrapper.find('ProfessionalLearningCourseProgress')
+      ).to.have.length(1);
     });
   });
 });

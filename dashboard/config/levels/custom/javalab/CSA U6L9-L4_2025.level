@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U6L9-NLP PBT_2025",
     "teacher_markdown": "Students should notice that the program considers the word `got` as the most negative word in `song2.txt`. Students should now be wondering how the sentiment values are determined for each word and likely have questions about the data.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:16:11.875+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L4_2023\\\"\"],\"cloned_from\":\"CSA U6L9-L4_2023\"}]"
