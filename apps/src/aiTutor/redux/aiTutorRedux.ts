@@ -87,7 +87,18 @@ export const askAITutor = createAsyncThunk(
       chatContext.tutorType
     );
 
-    thunkAPI.dispatch(addAIResponse(chatApiResponse?.assistantResponse));
+    const newMessageId = state.aiTutor.chatMessages[state.aiTutor.chatMessages.length - 1].id + 1;
+
+    if (chatApiResponse.assistantResponse) {
+      const assistantChatMessage: ChatCompletionMessage = {
+        id: newMessageId,
+        role: Role.ASSISTANT,
+        status: Status.OK,
+        chatMessageText: chatApiResponse.assistantResponse,
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+    }
+  
     const prompt = systemPrompt + chatContext.studentCode;
 
     const interactionData = {

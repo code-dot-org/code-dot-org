@@ -5,17 +5,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Role, Status, TutorType} from '@cdo/apps/aiTutor/types';
 
 const SelectCompilationButton: React.FunctionComponent = () => {
-  const state = useAppSelector(state => state);
-  console.log("state", state)
   const dispatch = useAppDispatch();
-  const sources = useAppSelector(state => state.javalabEditor.sources);
-  const fileMetadata = useAppSelector(
-    state => state.javalabEditor.fileMetadata
-  );
-  const activeTabKey = useAppSelector(
-    state => state.javalabEditor.activeTabKey
-  );
-  const studentCode = sources[fileMetadata[activeTabKey]].text;
   const hasCompilationError = useAppSelector(
     state => state.javalabEditor.hasCompilationError
   );
@@ -29,7 +19,7 @@ const SelectCompilationButton: React.FunctionComponent = () => {
       addChatMessage({
         id: 1,
         role: Role.USER,
-        status: Status.UNKNOWN,
+        status: Status.OK,
         chatMessageText: "Why doesn't my code compile?",
       })
     );
@@ -38,7 +28,7 @@ const SelectCompilationButton: React.FunctionComponent = () => {
         addChatMessage({
           id: 2,
           role: Role.ASSISTANT,
-          status: Status.UNKNOWN,
+          status: Status.OK,
           chatMessageText: 'Run your code first and see what happens.',
         })
       );
@@ -48,9 +38,20 @@ const SelectCompilationButton: React.FunctionComponent = () => {
         addChatMessage({
           id: 2,
           role: Role.ASSISTANT,
-          status: Status.UNKNOWN,
+          status: Status.OK,
           chatMessageText:
             '🎉 Your code is compiling successfully. Great work!',
+        })
+      );
+    }
+    if (hasRunOrTestedCode && hasCompilationError) {
+      dispatch(
+        addChatMessage({
+          id: 2,
+          role: Role.ASSISTANT,
+          status: Status.OK,
+          chatMessageText:
+            'Ah! You do have an error. Submit your code, and I will try to help.',
         })
       );
     }

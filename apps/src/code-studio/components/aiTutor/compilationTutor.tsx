@@ -26,10 +26,6 @@ const CompilationTutor: React.FunctionComponent = () => {
   const hasRunOrTestedCode = useAppSelector(
     state => state.javalab.hasRunOrTestedCode
   );
-  const isWaitingForAIResponse = useAppSelector(
-    state => state.aiTutor.isWaitingForAIResponse
-  );
-  const aiResponse = useAppSelector(state => state.aiTutor.aiResponse);
   const level = useAppSelector(state => state.aiTutor.level);
 
   const handleSend = async (studentCode: string) => {
@@ -46,23 +42,15 @@ const CompilationTutor: React.FunctionComponent = () => {
   return (
     <div className={style.tutorContainer}>
       <ChatWorkspace generalChat={false} />
-      {!hasRunOrTestedCode && (
-        <h4>Run your code first and see what happens.</h4>
-      )}
-      {hasRunOrTestedCode && !hasCompilationError && (
-        <h4>🎉 Your code is compiling successfully. Great work!</h4>
-      )}
       {hasRunOrTestedCode && hasCompilationError && (
         <>
-          <h4>Why didn't my code compile?</h4>
           <Button
-            text="Ask AI Tutor"
-            isPending={isWaitingForAIResponse}
-            pendingText="waiting"
+            key="submit"
+            text="Submit Code"
+            icon="arrow-up"
             onClick={() => handleSend(studentCode)}
-            disabled={!hasCompilationError}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
-          <p id="ai-response">{aiResponse}</p>
         </>
       )}
     </div>
