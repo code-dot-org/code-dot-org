@@ -2,13 +2,8 @@
 @import "style-constants";
 
 .dashboardPage {
-  background-color: $white;
   max-width: $content-width;
   padding: 10px 64px 64px 64px;
-}
-
-.dashboardPageContent {
-  max-width: 970px;
 }
 
 .text {
