@@ -8268,7 +8268,6 @@ __metadata:
     codemirror: 5.5
     codemirror-spell-checker: ^1.1.2
     copy-webpack-plugin: ^9.0.1
-    crypto-browserify: ^3.12.0
     css-loader: ^6.2.0
     csv-parse: ^4.4.6
     dapjs: ^2.3.0
@@ -8344,6 +8343,7 @@ __metadata:
     load-grunt-tasks: 3.5.0
     loadable-components: 2.2.3
     lodash: ^4.17.21
+    md5: ^2.3.0
     memoize-one: ^5.1.1
     messageformat: 2.3.0
     ml-knn: ^3.0.0
@@ -9432,6 +9432,13 @@ canvg@gabelerner/canvg:
   version: 1.1.2
   resolution: "character-reference-invalid@npm:1.1.2"
   checksum: 5e2f976846bc9395063d268fb6b1c810f7a31311de0d7e37e3a36e74469438c1c9a75bd46d002a27bcd1b91e3be05d7237206f296ec362275dc0567949ef870d
+  languageName: node
+  linkType: hard
+
+"charenc@npm:0.0.2":
+  version: 0.0.2
+  resolution: "charenc@npm:0.0.2"
+  checksum: 81dcadbe57e861d527faf6dd3855dc857395a1c4d6781f4847288ab23cffb7b3ee80d57c15bba7252ffe3e5e8019db767757ee7975663ad2ca0939bb8fcaf2e5
   languageName: node
   linkType: hard
 
@@ -10596,6 +10603,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"crypt@npm:0.0.2":
+  version: 0.0.2
+  resolution: "crypt@npm:0.0.2"
+  checksum: baf4c7bbe05df656ec230018af8cf7dbe8c14b36b98726939cef008d473f6fe7a4fad906cfea4062c93af516f1550a3f43ceb4d6615329612c6511378ed9fe34
+  languageName: node
+  linkType: hard
+
 "crypt@npm:>= 0.0.1":
   version: 0.0.1
   resolution: "crypt@npm:0.0.1"
@@ -10603,7 +10617,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"crypto-browserify@npm:^3.11.0, crypto-browserify@npm:^3.12.0":
+"crypto-browserify@npm:^3.11.0":
   version: 3.12.0
   resolution: "crypto-browserify@npm:3.12.0"
   dependencies:
@@ -17006,7 +17020,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"is-buffer@npm:^1.1.5":
+"is-buffer@npm:^1.1.5, is-buffer@npm:~1.1.6":
   version: 1.1.6
   resolution: "is-buffer@npm:1.1.6"
   checksum: 4a186d995d8bbf9153b4bd9ff9fd04ae75068fe695d29025d25e592d9488911eeece84eefbd8fa41b8ddcc0711058a71d4c466dcf6f1f6e1d83830052d8ca707
@@ -19541,6 +19555,17 @@ es6-shim@latest:
     hash-base: ^3.0.0
     inherits: ^2.0.1
   checksum: 627ac499175cd2ab3d912b10697d51326914ca88db2092c79e6d59e9e4b91a89221d05b2d09e28bcb3933562436cb904dc6aa3e347f7704fd5ed9efa28e093a7
+  languageName: node
+  linkType: hard
+
+"md5@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "md5@npm:2.3.0"
+  dependencies:
+    charenc: 0.0.2
+    crypt: 0.0.2
+    is-buffer: ~1.1.6
+  checksum: a63cacf4018dc9dee08c36e6f924a64ced735b37826116c905717c41cebeb41a522f7a526ba6ad578f9c80f02cb365033ccd67fe186ffbcc1a1faeb75daa9b6e
   languageName: node
   linkType: hard
 
