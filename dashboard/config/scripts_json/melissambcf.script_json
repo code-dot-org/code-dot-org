@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 22:22:38 UTC",
+    "serialized_at": "2024-02-22 23:05:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -469,14 +469,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseF_variables2_change_2023MB_1"
+          "courseF_variables2_predict_2023MB_1"
         ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_variables2_change_2023MB_1"
+          "courseF_variables2_predict_2023MB_1"
         ],
         "lesson.key": "Data and Variables",
         "lesson_group.key": "",
@@ -484,7 +484,7 @@
         "activity_section.key": "ef25b268-d284-4aab-88f7-5d6928ab1f36"
       },
       "level_keys": [
-        "courseF_variables2_change_2023MB_1"
+        "courseF_variables2_predict_2023MB_1"
       ]
     },
     {
@@ -519,14 +519,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseF_variables2_predict_2023MB_1"
+          "courseF_variables2_change_2023MB_1"
         ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_variables2_predict_2023MB_1"
+          "courseF_variables2_change_2023MB_1"
         ],
         "lesson.key": "Data and Variables",
         "lesson_group.key": "",
@@ -534,7 +534,7 @@
         "activity_section.key": "ef25b268-d284-4aab-88f7-5d6928ab1f36"
       },
       "level_keys": [
-        "courseF_variables2_predict_2023MB_1"
+        "courseF_variables2_change_2023MB_1"
       ]
     },
     {
@@ -823,9 +823,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_variables2_change_2023MB_1",
+        "level.key": "courseF_variables2_predict_2023MB_1",
         "script_level.level_keys": [
-          "courseF_variables2_change_2023MB_1"
+          "courseF_variables2_predict_2023MB_1"
         ],
         "lesson.key": "Data and Variables",
         "lesson_group.key": "",
@@ -847,9 +847,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_variables2_predict_2023MB_1",
+        "level.key": "courseF_variables2_change_2023MB_1",
         "script_level.level_keys": [
-          "courseF_variables2_predict_2023MB_1"
+          "courseF_variables2_change_2023MB_1"
         ],
         "lesson.key": "Data and Variables",
         "lesson_group.key": "",
