@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `Cities`(#e7e8ea) class contains instance variables for a 1D array of city names and a 1D array of the average annual hours worked by their residents.\r\n\r\n##Investigate and Modify\r\n\r\nExplore this program using the guiding questions on the [**Exploring Algorithms**](https://docs.google.com/document/d/1N4WzLSRXwTiNLik8BK-9uUSz1Mz0Y0yEFtlGsrcpkGM/edit?usp=sharing) activity guide.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.lenstore.co.uk/research/healthy-lifestyle-report/)!*",
@@ -19,12 +23,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:13.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:13.689+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L2_2022\\\"\"],\"cloned_from\":\"CSA U3L4-L2_2022\"},{\"changed_at\":\"2022-09-01 13:59:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 13:59:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 13:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:19:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:19:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 13:01:46 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

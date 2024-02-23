@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-02-21T19:18:57.000Z",
   "level_num": "custom",
@@ -37,10 +38,13 @@
     "validation_enabled": "false",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "##This will be a choice level \r\nThe choices each provide a carefully curated toolbox to support building games featuring specific game mechanics.\r\n\r\n- **Choice 1:** Collecting & Clicking\r\n\r\n- **Choice 2:** Chasing, Avoiding & Falling\r\n- **Choice 3:** Jumping\r\n- **Choice 4:** Freeplay (with all blocks available) "
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-21T19:18:57.658+00:00\",\"changed\":[\"cloned from \\\"game_dev_intro\\\"\"],\"cloned_from\":\"game_dev_intro\"},{\"changed_at\":\"2024-02-21 23:24:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:25:32 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:27:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-21T19:18:57.658+00:00\",\"changed\":[\"cloned from \\\"game_dev_intro\\\"\"],\"cloned_from\":\"game_dev_intro\"},{\"changed_at\":\"2024-02-21 23:24:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:25:32 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:27:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 16:55:00 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

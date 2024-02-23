@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2023-01-11T21:13:50.000Z",
   "level_num": "custom",
@@ -21,10 +20,9 @@
     },
     "project_template_level_name": "CSA U3L1-Array_2023",
     "teacher_markdown": "Students will see the following printed to the console:\r\n\r\n```\r\nNumber of Integers in firstValues: 10\r\nNumber of Integers in secondValues: 5\r\nNumber of Integers for firstManager: 10\r\nNumber of Integers for secondManager: 20\r\n```\r\n\r\nThe constructor `ArrayManager(int[] arrayValues)` is used to initialize the instance variable `arrayValues` to point to the 1D array `thirdValues`.\r\n\r\nStudents should conclude that a 1D array can be used to represent an attribute of an object, and it can be initialized by either specifying the length of the 1D array as a parameter in a constructor or it can point to an existing 1D array that is declared and initialized elsewhere.",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2023-01-11T21:13:50.704+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L1-L3_2023\"},{\"changed_at\":\"2023-01-11 21:13:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 18:37:00 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 18:48:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-22 15:40:48 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-07-04 13:22:27 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
