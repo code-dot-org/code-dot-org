@@ -92,7 +92,7 @@ class TeacherDashboardHeader extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.headerContainer}>
         <SmallChevronLink
           href="/home#classroom-sections"
           text={i18n.viewAllSections()}
@@ -168,6 +168,9 @@ const styles = {
   },
   linkPadding: {
     padding: '10px 0',
+  },
+  headerContainer: {
+    padding: '0 64px',
   },
 };
 

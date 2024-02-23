@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-17T18:36:36.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -15,12 +19,9 @@
     },
     "contained_level_names": [
       "CSA U4L5-L1 Contained_2023"
-    ]
+    ],
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-02-17T18:36:36.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:36:36.516+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L1_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L1_2023\"},{\"changed_at\":\"2023-02-17 18:36:43 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 16:06:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

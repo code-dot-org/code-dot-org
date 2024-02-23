@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L5-Super PBT_2025",
     "teacher_markdown": "After changing the code, students will see the following error:\r\n\r\n```\r\n/Movie.java:21: error: call to super must be first statement in constructor\r\n    super(title, year);\r\n         ^\r\n```\r\n\r\nThis emphasizes that the call to the superclass constructor must be the first statement in the body of the constructor.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:50:15.298+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L3_2023\\\"\"],\"cloned_from\":\"CSA U2L5-L3_2023\"}]"

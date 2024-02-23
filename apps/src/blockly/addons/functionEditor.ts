@@ -182,9 +182,7 @@ export default class FunctionEditor {
    */
   showForFunction(
     procedure: ObservableProcedureModel,
-    procedureType?:
-      | BLOCK_TYPES.behaviorDefinition
-      | BLOCK_TYPES.procedureDefinition
+    procedureType?: ProcedureType
   ) {
     const existingProcedureBlock = Blockly.Procedures.getDefinition(
       procedure.getName(),

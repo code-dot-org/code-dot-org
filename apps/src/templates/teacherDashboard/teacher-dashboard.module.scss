@@ -1,8 +1,10 @@
 @import 'color.scss';
+@import "style-constants";
 
 .dashboardPage {
   background-color: $white;
-  width: 100%;
+  max-width: $content-width;
+  padding: 0 64px 64px 64px;
 }
 
 .dashboardPageContent {
