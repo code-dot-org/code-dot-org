@@ -119,7 +119,7 @@ export enum BLOCK_TYPES {
 // A list of block types that are procedure definitions. These are sorted
 // first when loading blocks so that we can set up the procedure map
 // correctly while using the shareable procedure blocks plugin.
-export const PROCEDURE_DEFINITION_TYPES = [
+export const PROCEDURE_DEFINITION_TYPES: string[] = [
   BLOCK_TYPES.behaviorDefinition,
   BLOCK_TYPES.procedureDefinition,
 ];
