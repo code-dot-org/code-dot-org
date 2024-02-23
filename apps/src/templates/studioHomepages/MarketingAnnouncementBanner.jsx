@@ -113,7 +113,6 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
           subHeading={announcement.title}
           description={announcement.body}
           buttons={[button]}
-          backgroundColor={announcement.backgroundColor}
           marginBottom={marginBottom}
         />
       </div>
@@ -136,10 +135,10 @@ const styles = {
   dismissButtonStyle: {
     position: 'absolute',
     top: '6px',
-    right: '10px',
-    color: color.neutral_dark60,
-    fontSize: '22px',
-    fontWeight: 'bold',
+    right: '6px',
+    color: color.neutral_dark40,
+    fontSize: '24px',
+    fontWeight: '300',
   },
 };
 
