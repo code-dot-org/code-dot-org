@@ -47,7 +47,7 @@ const teacherDashboardLinks = [
   {
     label: 'AI Tutor',
     url: TeacherDashboardPath.aiTutorChatMessages,
-  }
+  },
 ];
 
 const ListPosition = {
@@ -75,9 +75,11 @@ export default class TeacherDashboardNavigation extends Component {
 
   componentDidMount() {
     this.setShouldScroll();
-    let linksToShow = this.props.links || teacherDashboardLinks;;
+    let linksToShow = this.props.links || teacherDashboardLinks;
     if (!this.props.showAITutorTab) {
-      linksToShow = teacherDashboardLinks.filter(link => link.label != 'AI Tutor');
+      linksToShow = teacherDashboardLinks.filter(
+        link => link.label !== 'AI Tutor'
+      );
     }
     this.setState({linksToShow});
   }
