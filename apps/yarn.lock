@@ -6301,16 +6301,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"MD5@npm:~1.2.1":
-  version: 1.2.2
-  resolution: "MD5@npm:1.2.2"
-  dependencies:
-    charenc: ">= 0.0.1"
-    crypt: ">= 0.0.1"
-  checksum: 160699687543154edb4c957c0f393fdc2b5d3b7f7e03ef6c7dfd143b2ba3a8cb9479b38dc9e93f0f571ab6eff9936cf6f2fcdff506b40f642b0a255b5b9206cf
-  languageName: node
-  linkType: hard
-
 "abab@npm:^2.0.6":
   version: 2.0.6
   resolution: "abab@npm:2.0.6"
@@ -8294,7 +8284,7 @@ __metadata:
     filesaver.js: 0.2.0
     firebase: ^2.4.2
     firebase-bolt: ^0.8.0
-    firebase-mock: ^1.0.5
+    firebase-mock: ^1.1.16
     firmata: ^2.2.0
     focus-trap-react: ^10.1.1
     fork-ts-checker-webpack-plugin: ^8.0.0
@@ -9435,17 +9425,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"charenc@npm:0.0.2":
+"charenc@npm:0.0.2, charenc@npm:~0.0.1":
   version: 0.0.2
   resolution: "charenc@npm:0.0.2"
   checksum: 81dcadbe57e861d527faf6dd3855dc857395a1c4d6781f4847288ab23cffb7b3ee80d57c15bba7252ffe3e5e8019db767757ee7975663ad2ca0939bb8fcaf2e5
-  languageName: node
-  linkType: hard
-
-"charenc@npm:>= 0.0.1":
-  version: 0.0.1
-  resolution: "charenc@npm:0.0.1"
-  checksum: a7b77ae43c16178715e237c9be4a880817c3f13f3fb1d8cb2cdb9889ca148877d2a917d9f13b6debdf1fe2cc4984e2d05cbdcdc1f541328604a1daf16e339b98
   languageName: node
   linkType: hard
 
@@ -10603,17 +10586,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"crypt@npm:0.0.2":
+"crypt@npm:0.0.2, crypt@npm:~0.0.1":
   version: 0.0.2
   resolution: "crypt@npm:0.0.2"
   checksum: baf4c7bbe05df656ec230018af8cf7dbe8c14b36b98726939cef008d473f6fe7a4fad906cfea4062c93af516f1550a3f43ceb4d6615329612c6511378ed9fe34
-  languageName: node
-  linkType: hard
-
-"crypt@npm:>= 0.0.1":
-  version: 0.0.1
-  resolution: "crypt@npm:0.0.1"
-  checksum: 3287cb6a32daad814f0d80590b078dbe553e29d8c9ffe862608dc11a1c9cd50142826576315546fd0656c3bf1cd8735cffc6839e3571b6842fec364f720b29d0
   languageName: node
   linkType: hard
 
@@ -13952,15 +13928,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"firebase-mock@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "firebase-mock@npm:1.0.5"
+"firebase-mock@npm:^1.1.16":
+  version: 1.1.16
+  resolution: "firebase-mock@npm:1.1.16"
   dependencies:
-    MD5: ~1.2.1
     firebase-auto-ids: ~1.1.0
-    lodash: ~2.4.1
+    lodash: ^3.10.1
+    md5: ~2.2.1
     rsvp: ^3.3.3
-  checksum: d47c84b865f14acc70efcd463287437945e956cec228cb049e814fdb3c63dcab6d7210c2e57e50440b0931c64aef8e8f25a68174a93e0d1adcb3f98b3aa7a4d6
+  checksum: d72b4694a9570ab60675790c166b2665332ec449d79ef8f0688d8fcedb8afe9ecd016fc77412e6141027ff73be778e8f55cc9cb74c0887f0dde9c1d40a38b148
   languageName: node
   linkType: hard
 
@@ -17020,7 +16996,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"is-buffer@npm:^1.1.5, is-buffer@npm:~1.1.6":
+"is-buffer@npm:^1.1.5, is-buffer@npm:~1.1.1, is-buffer@npm:~1.1.6":
   version: 1.1.6
   resolution: "is-buffer@npm:1.1.6"
   checksum: 4a186d995d8bbf9153b4bd9ff9fd04ae75068fe695d29025d25e592d9488911eeece84eefbd8fa41b8ddcc0711058a71d4c466dcf6f1f6e1d83830052d8ca707
@@ -19228,7 +19204,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"lodash@npm:^3.8.0":
+"lodash@npm:^3.10.1, lodash@npm:^3.8.0":
   version: 3.10.1
   resolution: "lodash@npm:3.10.1"
   checksum: 53065d3712a2fd90b55690c5af19f9625a5bbb2b7876ff76d782ee1dc22618fd4dff191d44a8e165a17b5b81a851c3e884d3b5b25e314422fbe24bb299542685
@@ -19239,13 +19215,6 @@ es6-shim@latest:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
-  languageName: node
-  linkType: hard
-
-"lodash@npm:~2.4.1":
-  version: 2.4.2
-  resolution: "lodash@npm:2.4.2"
-  checksum: b18a5e5858091e2a0e6498e9f0efde559f64a2cc7adfa240c7da92930b7c734a9e52519101522e9fbd7acfcfb0ef682ce9b9cb668b5fea4809cb340435c1764d
   languageName: node
   linkType: hard
 
@@ -19566,6 +19535,17 @@ es6-shim@latest:
     crypt: 0.0.2
     is-buffer: ~1.1.6
   checksum: a63cacf4018dc9dee08c36e6f924a64ced735b37826116c905717c41cebeb41a522f7a526ba6ad578f9c80f02cb365033ccd67fe186ffbcc1a1faeb75daa9b6e
+  languageName: node
+  linkType: hard
+
+"md5@npm:~2.2.1":
+  version: 2.2.1
+  resolution: "md5@npm:2.2.1"
+  dependencies:
+    charenc: ~0.0.1
+    crypt: ~0.0.1
+    is-buffer: ~1.1.1
+  checksum: 2237e583f961d04d43c59c2f9383d1e47099427fa37f9dc50e8aec32e770f8b038ad9268c2523a7c8041ab6f4678a742ca533a7f670dbc2857c5b18388cf4d71
   languageName: node
   linkType: hard
 
