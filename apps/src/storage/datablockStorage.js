@@ -36,7 +36,6 @@ async function getKeyValue(key) {
 }
 
 DatablockStorage.getKeyValue = function (key, onSuccess, onError) {
-  console.log('Using the overridden DatablockStorage method getKeyValue');
   return getKeyValue(key).then(onSuccess, onError);
 };
 
@@ -63,7 +62,6 @@ DatablockStorage.createRecord = function (
   onSuccess,
   onError
 ) {
-  console.log('Using the overridden DatablockStorage method createRecord');
   createRecord(tableName, record).then(
     newRecord => onSuccess(newRecord),
     onError
@@ -76,8 +74,6 @@ DatablockStorage.updateRecord = function (
   onSuccess,
   onError
 ) {
-  console.log('Using the overridden DatablockStorage method updateRecord');
-
   _fetch('update_record', 'PUT', {
     table_name: tableName,
     record_id: record.id,
@@ -124,7 +120,6 @@ DatablockStorage.readRecords = function (
   onSuccess,
   onError
 ) {
-  console.log('Using the overridden DatablockStorage method readRecords');
   return readRecords({tableName, searchParams}).then(onSuccess, onError);
 };
 
@@ -134,8 +129,6 @@ DatablockStorage.deleteRecord = function (
   onSuccess,
   onError
 ) {
-  console.log('Using the overridden DatablockStorage method deleteRecord');
-
   _fetch('delete_record', 'DELETE', {
     table_name: tableName,
     record_id: record.id,
