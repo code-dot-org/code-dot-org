@@ -14,11 +14,9 @@ module I18n
             crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
             return unless File.exist?(crowdin_file_path)
 
-            unless I18nScriptUtils.source_lang?(language)
-              js_locale = I18nScriptUtils.to_js_locale(language[:locale_s])
-              i18n_data = I18nScriptUtils.parse_file(crowdin_file_path)
-              spritelab_manifest_builder.upload_localized_manifest(js_locale, i18n_data)
-            end
+            js_locale = I18nScriptUtils.to_js_locale(language[:locale_s])
+            i18n_data = I18nScriptUtils.parse_file(crowdin_file_path)
+            spritelab_manifest_builder.upload_localized_manifest(js_locale, i18n_data)
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)

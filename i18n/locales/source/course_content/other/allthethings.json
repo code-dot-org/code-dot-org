@@ -2591,6 +2591,18 @@
   "https://studio.code.org/s/allthethings/lessons/37/levels/2": {
     "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
   },
+  "https://studio.code.org/s/allthethings/lessons/37/levels/4": {
+    "short_instructions": "**You can customize the effect A.I. creates!**\nClick the emojis on the block. Then either `Regenerate`, `Use code`, or `Start over`.",
+    "long_instructions": "**A.I. gets you started. You can customize the effect it creates!**\n\n-   Click the emojis to try one of these: \n\n    -   <img src=\"https://images.code.org/101001680b5a4de2d752a6b3b59a116f-image-1699478528416.jpg\" style=\" margin-right: 5px;  height: 20px;\">`Regenerate`  A.I. will recommend a different effect based on the same emojis.\n\n    -   `Use code`  Use the code A.I. writes and customize it! \n\n    -   <img src=\"https://images.code.org/3e2c74fbae82198ebc3264ecaf3a823e-image-1699478492041.jpg\" style=\" margin-right: 5px;  height: 15px;\">`Start over`  Choose three new emojis to generate a new effect. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Customize the effect by clicking emojis on the [blockly block][0] block in the workspace. ",
+      "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> If you would like to use the code A.I. writes, toggle to show the code and then click `Use code`. The blocks will replace the  [blockly block][0] block in your workspace. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> **Still stuck?** Watch the video to see how you can customize the effect. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": "Click here."
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/38/levels/1": {
     "long_instructions": "This level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
     "mini_rubric": {

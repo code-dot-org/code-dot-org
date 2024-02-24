@@ -2,7 +2,6 @@ import React from 'react';
 import SummaryViewLegend from './SummaryViewLegend';
 
 export default {
-  title: 'SummaryViewLegend',
   component: SummaryViewLegend,
 };
 

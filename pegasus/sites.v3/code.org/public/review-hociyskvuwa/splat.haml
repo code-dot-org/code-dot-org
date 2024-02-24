@@ -4,7 +4,9 @@ title: Review Hour of Code special events
 :ruby
   dont_cache
   authentication_required!
+  # rubocop:disable CustomCops/DashboardDbUsage
   forbidden! unless dashboard_user[:user_type] == 'teacher'
+  # rubocop:enable CustomCops/DashboardDbUsage
 
   splat = request.splat_path_info[1..-1].split("/")
   country = splat.first

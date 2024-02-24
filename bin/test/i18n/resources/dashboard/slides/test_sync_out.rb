@@ -45,22 +45,6 @@ describe I18n::Resources::Dashboard::Slides::SyncOut do
       process_language
     end
 
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization' do
-        expect_localization_distribution.never
-        process_language
-      end
-
-      it 'moves Crowdin files to the i18n locale dir' do
-        expect_crowdin_file_to_i18n_locale_dir_moving.once
-        process_language
-      end
-    end
-
     context 'when the Crowdin file does not exists' do
       before do
         FileUtils.rm(crowdin_file_path)

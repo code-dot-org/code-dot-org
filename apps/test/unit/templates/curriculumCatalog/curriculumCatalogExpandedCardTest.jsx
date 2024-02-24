@@ -58,7 +58,10 @@ describe('CurriculumCatalogExpandedCard', () => {
   it('renders course name', () => {
     renderCurriculumExpandedCard();
 
-    screen.getByRole('heading', {name: defaultProps.courseDisplayName});
+    screen.getByRole('heading', {
+      name: defaultProps.courseDisplayName,
+      hidden: true,
+    });
   });
 
   it('renders grade range with icon', () => {
@@ -111,7 +114,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       video: null,
     });
 
-    screen.getByRole('img');
+    screen.getByRole('img', {hidden: true});
   });
 
   it('renders image with alt text if passed and no video', () => {
@@ -123,7 +126,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     // when alt text is present, the img name is the alt text
-    screen.getByRole('img', {name: altText});
+    screen.getByRole('img', {name: altText, hidden: true});
   });
 
   it('renders available resources section when resources are available', () => {
@@ -226,6 +229,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       name: new RegExp(
         `Assign ${defaultProps.courseDisplayName} to your classroom`
       ),
+      hidden: true,
     });
 
     fireEvent.click(assignButton);
@@ -244,6 +248,7 @@ describe('CurriculumCatalogExpandedCard', () => {
 
     const onCloseButton = screen.getByRole('button', {
       name: 'Close Button',
+      hidden: true,
     });
 
     fireEvent.click(onCloseButton);

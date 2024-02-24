@@ -93,7 +93,7 @@ social:
 
 <a href="https://code.org/oceans" target="_blank"><img src="/images/tutorials/hoc2019/oceans.png" style="width: 100%"></a>
 <br>
-<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>AI for Oceans</strong></h3></a>
+<a href="https://code.org/oceans" target="_blank"><h3 style="color:var(--brand_secondary_default)"><strong>AI for Oceans</strong></h3></a>
 <p>Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</p>
 <p><i>From Code.org. For grades 3 and up.</i></p>
 
@@ -103,7 +103,7 @@ social:
 
 <a href="https://aka.ms/HourofCode2020" target="_blank"><img src="/images/tutorials/hoc2020/mee_empathy.jpg" style="width: 100%"></a>
 <br>
-<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
+<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:var(--brand_secondary_default)"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
 <p>Use the power of code to bring two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special.</p>
 <p><i>From Minecraft Education. For grades 2 and up.</i></p>
 
@@ -113,7 +113,7 @@ social:
 
 <a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="/images/tutorials/hoc2020/csfirst_unplugged.png" style="width: 100%"></a>
 <br>
-<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS First Unplugged</strong></h3></a>
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:var(--brand_secondary_default)"><strong>CS First Unplugged</strong></h3></a>
 <p>No computer or internet? No problem. Try the CS First Unplugged activities to explore how computer science can solve problems like helping people stay connected while apart. "Plugged in" Scratch activities are available too!</p>
 <p><i>From Google. For grades 2 through 8.</i></p>
 

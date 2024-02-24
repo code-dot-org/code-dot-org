@@ -1,4 +1,3 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import React from 'react';
@@ -6,7 +5,7 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
-const RETURN_TO = `user_return_to=${pegasus('/afe/submit')}`;
+const RETURN_TO = `user_return_to=${pegasus('/afe')}`;
 const SIGN_UP_URL = studio(
   `/users/sign_up?user[user_type]=teacher&${RETURN_TO}`
 );
@@ -14,27 +13,14 @@ const SIGN_IN_URL = studio(`/users/sign_in?${RETURN_TO}`);
 
 export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
   signUpButtonPress = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'amazon-future-engineer-eligibility',
-        event: 'sign_up_button_press',
-      },
-      {callback: () => (window.location = SIGN_UP_URL)}
-    );
     analyticsReporter.sendEvent(EVENTS.AFE_SIGN_UP_BUTTON_PRESS);
+    window.location = SIGN_UP_URL;
   };
 
   signInButtonPress = event => {
     event.preventDefault();
-
-    firehoseClient.putRecord(
-      {
-        study: 'amazon-future-engineer-eligibility',
-        event: 'sign_in_button_press',
-      },
-      {callback: () => (window.location = SIGN_IN_URL)}
-    );
     analyticsReporter.sendEvent(EVENTS.AFE_SIGN_IN_BUTTON_PRESS);
+    window.location = SIGN_IN_URL;
   };
 
   render() {

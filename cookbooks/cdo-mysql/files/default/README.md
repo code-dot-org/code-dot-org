@@ -35,11 +35,8 @@ VALUES
   (0, 'writer', 3306, 'fine', 10000000),
   (1, 'writer', 3306, 'fine', 1),
   (1, 'reader', 3306, 'fine', 10000000),
-  (1, 'reporting', 3306, 'fine', 1),
   (2, 'writer', 3306, 'fine', 10000000),
-  (2, 'reader', 3306, 'fine', 1),
-  (2, 'reporting', 3306, 'fine', 1),
-  (3, 'reporting', 3306, 'fine', 1);
+  (2, 'reader', 3306, 'fine', 1);
 ```
 
 Inspect the table.

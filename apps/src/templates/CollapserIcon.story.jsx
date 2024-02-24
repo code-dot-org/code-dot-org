@@ -8,7 +8,6 @@ const styles = {
 };
 
 export default {
-  title: 'CollapserIcon',
   component: CollapserIcon,
 };
 

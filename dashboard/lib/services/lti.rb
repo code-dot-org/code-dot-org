@@ -33,6 +33,35 @@ class Services::Lti
     LtiUserIdentity.create(user: user, subject: subject, lti_integration: lti_integration)
   end
 
+  def self.create_lti_integration(
+    name:,
+    client_id:,
+    issuer:,
+    platform_name:,
+    auth_redirect_url:,
+    jwks_url:,
+    access_token_url:,
+    admin_email:
+    )
+    LtiIntegration.create!(
+      name: name,
+      client_id: client_id,
+      issuer: issuer,
+      platform_name: platform_name,
+      auth_redirect_url: auth_redirect_url,
+      jwks_url: jwks_url,
+      access_token_url: access_token_url,
+      admin_email: admin_email
+    )
+  end
+
+  def self.create_lti_deployment(integration_id, deployment_id)
+    LtiDeployment.create(
+      lti_integration_id: integration_id,
+      deployment_id: deployment_id,
+    )
+  end
+
   def self.get_claim_from_list(id_token, keys_array)
     keys_array.filter_map {|key| get_claim(id_token, key)}.first
   end

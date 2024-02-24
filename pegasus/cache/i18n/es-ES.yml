@@ -271,6 +271,7 @@ es-ES:
   class_submission_out_of_school_summer_camp: Campamento de verano
   classicmaze_name: Laberinto clásico
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
+  code_org_logo_alt: Inicio de Code.org
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   codea_beyond_gradelevel: Secundaria
   codea_beyond_longdescription: Codea códigos para iPad te permite crear juegos y
@@ -1151,7 +1152,8 @@ es-ES:
   footer_cookie_notice: Aviso de Cookies
   footer_donate: Dona
   footer_partners: Socios
-  footer_powered_by_aws: Impulsado por Amazon Web Services
+  footer_powered_by_aws: Amazon Web Services y el logotipo «Powered by AWS» son marcas
+    registradas de Amazon.com, Inc. o sus filiales en los Estados Unidos u otros países.
   footer_privacy_policy: Política de Privacidad
   footer_privacy_policy_updated: Política de privacidad (actualizada)
   footer_store: Tienda

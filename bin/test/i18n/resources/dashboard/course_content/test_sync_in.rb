@@ -3,6 +3,7 @@ require_relative '../../../../../i18n/resources/dashboard/course_content/sync_in
 
 class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def setup
+    I18n::Metrics.stubs(:report_runtime).yields(nil)
     File.stubs(:write)
     FileUtils.stubs(:mkdir_p)
   end
@@ -23,8 +24,6 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:write_to_yml).with('variable_names', 'expected_variable_strings').in_sequence(execution_sequence)
     I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:write_to_yml).with('parameter_names', 'expected_parameter_strings').in_sequence(execution_sequence)
 
-    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:redact_level_content).in_sequence(execution_sequence)
-
     I18n::Resources::Dashboard::CourseContent::SyncIn.perform
   end
 
@@ -32,7 +31,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
     exec_seq = sequence('execution')
 
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/course_content/Hour of Code/hoc-script.json')
+    expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
+    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'Hour of Code/hoc-script.json')
     expected_string_level_progression = 'expected_progression_string'
     expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
     expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
@@ -56,9 +56,9 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(true)
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/Hour of Code')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'hoc-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).in_sequence(exec_seq)
+    I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
+    sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).in_sequence(exec_seq)
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
     sync_in_instance.expects(:write_to_yml).with('progressions', {expected_string_level_progression => expected_string_level_progression}).in_sequence(exec_seq)
@@ -73,7 +73,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
     exec_seq = sequence('execution')
 
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/course_content/other/unversioned-script.json')
+    expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
+    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'other/unversioned-script.json')
     expected_string_level_progression = 'expected_progression_string'
     expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
     expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
@@ -98,9 +99,9 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(true)
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/other')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'unversioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).in_sequence(exec_seq)
+    I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
+    sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).in_sequence(exec_seq)
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
     sync_in_instance.expects(:write_to_yml).with('progressions', {expected_string_level_progression => expected_string_level_progression}).in_sequence(exec_seq)
@@ -115,7 +116,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
     exec_seq = sequence('execution')
 
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/course_content/expected_version_year/versioned-script.json')
+    expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
+    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'expected_version_year/versioned-script.json')
     expected_string_level_progression = 'expected_progression_string'
     expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
     expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
@@ -140,9 +142,9 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/expected_version_year')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'versioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).in_sequence(exec_seq)
+    I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
+    sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).in_sequence(exec_seq)
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
     sync_in_instance.expects(:write_to_yml).with('progressions', {expected_string_level_progression => expected_string_level_progression}).in_sequence(exec_seq)
@@ -157,7 +159,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
     exec_seq = sequence('execution')
 
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/course_content/expected_version_year/versioned-script.json')
+    expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
+    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'expected_version_year/versioned-script.json')
     expected_string_level_progression = 'expected_progression_string'
     expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
     expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
@@ -182,9 +185,9 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/expected_version_year')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'versioned-script.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).never
+    I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
+    I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).never
+    sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).never
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', expected_block_categories).in_sequence(exec_seq)
     sync_in_instance.expects(:write_to_yml).with('progressions', {expected_string_level_progression => expected_string_level_progression}).in_sequence(exec_seq)
@@ -199,7 +202,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
     exec_seq = sequence('execution')
 
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/course_content/expected_version_year/versioned-script.json')
+    expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
+    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'expected_version_year/versioned-script.json')
     expected_string_level_progression = 'expected_progression_string'
     expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
     expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
@@ -224,9 +228,9 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance.expects(:get_i18n_strings).with(level).never.returns(expected_level_i18n_strings)
     Unit.expects(:unit_in_category?).with('hoc', script.name).never.returns(false)
     script.expects(:unversioned?).never.returns(false)
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/course_content/expected_version_year')).never
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/course_content'), 'versioned-script.json', expected_i18n_source_file_path).never.returns(false)
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_level_url": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]).never
+    I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).never.returns(false)
+    I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).never
+    sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).never
 
     sync_in_instance.expects(:write_to_yml).with('block_categories', {}).in_sequence(exec_seq)
     sync_in_instance.expects(:write_to_yml).with('progressions', {}).in_sequence(exec_seq)
@@ -244,6 +248,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
       level = FactoryBot.build(:level)
 
+      expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
+      expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'projects.json')
       expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
       expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
       expected_parameter_names = {'expected_parameter_name_key' => 'expected_parameter_name_value'}
@@ -256,10 +262,11 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
 
       Level.expects(:find_by_name).with('expected_project_name').in_sequence(exec_seq).returns(level)
       sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_project_i18n_strings)
-      File.expects(:write).with(
-        CDO.dir('i18n/locales/source/course_content/projects.json'),
-        %Q[{\n  "https://studio.code.org/p/expected_project_key": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]
+      I18nScriptUtils.expects(:write_json_file).with(
+        expected_i18n_source_file_path,
+        {'https://studio.code.org/p/expected_project_key' => {'expected_script_string_key' => 'expected_script_string_value'}}
       ).in_sequence(exec_seq)
+      sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).in_sequence(exec_seq)
 
       sync_in_instance.send(:prepare_project_content)
 
@@ -289,6 +296,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
       level = FactoryBot.build(:level)
 
+      expected_i18n_source_file_path = CDO.dir('i18n/locales/source/course_content/projects.json')
       expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
       expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
       expected_parameter_names = {'expected_parameter_name_key' => 'expected_parameter_name_value'}
@@ -301,10 +309,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
 
       Level.expects(:find_by_name).with('expected_project_name').never.returns(level)
       sync_in_instance.expects(:get_i18n_strings).with(level).never.returns(expected_project_i18n_strings)
-      File.expects(:write).with(
-        CDO.dir('i18n/locales/source/course_content/projects.json'),
-        %Q[{\n  "https://studio.code.org/p/expected_project_key": {\n    "expected_script_string_key": "expected_script_string_value"\n  }\n}]
-      ).never
+      I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {}).once
+      sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).once
 
       sync_in_instance.send(:prepare_project_content)
 
@@ -654,26 +660,48 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
 
     assert_equal expected_result, sync_in_instance.send(:select_redactable, provided_i18n_strings)
   end
+end
 
-  def test_level_content_redaction
-    sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
-    exec_seq = sequence('execution')
+describe I18n::Resources::Dashboard::CourseContent::SyncIn do
+  let(:described_class) {I18n::Resources::Dashboard::CourseContent::SyncIn}
+  let(:described_instance) {described_class.new}
 
-    Dir.expects(:[]).with(CDO.dir('i18n/locales/source/course_content/**/*.json')).in_sequence(exec_seq).returns([CDO.dir('i18n/locales/source/course_content/blank_i18n_source_file.json'), CDO.dir('i18n/locales/source/course_content/expected_i18n_source_file.json')])
+  around do |test|
+    FakeFS.with_fresh {test.call}
+  end
 
-    # 'i18n/locales/source/course_content/blank_i18n_source_file.json' should be skipped
-    JSON.expects(:load_file).with(CDO.dir('i18n/locales/source/course_content/blank_i18n_source_file.json')).in_sequence(exec_seq).returns({})
-    sync_in_instance.expects(:select_redactable).with({}).never
+  describe '#redact_json_file' do
+    let(:redact_json_file) {described_instance.send(:redact_json_file, i18n_source_file_path)}
 
-    JSON.expects(:load_file).with(CDO.dir('i18n/locales/source/course_content/expected_i18n_source_file.json')).in_sequence(exec_seq).returns({'expected_level_url' => 'expected_i18n_strings'})
-    sync_in_instance.expects(:select_redactable).with('expected_i18n_strings').in_sequence(exec_seq).returns({'expected_redactable_data' => 'expected_redactable_i18n_strings'})
+    let(:i18n_original_file_path) {CDO.dir('i18n/locales/original/course_content/expected_version_year/unit.json')}
+    let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/course_content/expected_version_year/unit.json')}
+    let(:i18n_source_file_data) {{level_url => i18n_data}}
 
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/original/course_content')).in_sequence(exec_seq)
-    File.expects(:write).with(CDO.dir('i18n/locales/original/course_content/expected_i18n_source_file.json'), %Q[{\n  "expected_level_url": {\n    "expected_redactable_data": "expected_redactable_i18n_strings"\n  }\n}]).in_sequence(exec_seq)
+    let(:level_url) {'expected_level_url'}
+    let(:i18n_data) {'expected_i18n_data'}
 
-    RedactRestoreUtils.expects(:redact_data).with({'expected_level_url' => {'expected_redactable_data' => 'expected_redactable_i18n_strings'}}, %w[blockly]).in_sequence(exec_seq).returns({'expected_level_url' => {'expected_redactable_data' => 'expected_redacted_i18n_strings'}})
-    File.expects(:write).with(CDO.dir('i18n/locales/source/course_content/expected_i18n_source_file.json'), %Q[{\n  "expected_level_url": {\n    "expected_redactable_data": "expected_redacted_i18n_strings"\n  }\n}]).in_sequence(exec_seq)
+    let(:redactable_data) {{level_url => 'expected_redactable_data'}}
+    let(:redacted_data) {{level_url => 'expected_redacted_data'}}
 
-    sync_in_instance.send(:redact_level_content)
+    before do
+      FileUtils.mkdir_p File.dirname(i18n_source_file_path)
+      File.write i18n_source_file_path, JSON.dump(i18n_source_file_data)
+
+      described_instance.stubs(:select_redactable).with(i18n_data).returns(redactable_data[level_url])
+      RedactRestoreUtils.stubs(:redact_data).with(redactable_data, %w[blockly]).returns(redacted_data)
+    end
+
+    it 'creates the i18n original file for restoration' do
+      redact_json_file
+
+      _(File.file?(i18n_original_file_path)).must_equal true
+      _(JSON.load_file(i18n_original_file_path)).must_equal redactable_data
+    end
+
+    it 'redacts the i18n source file data' do
+      redact_json_file
+
+      _(JSON.load_file(i18n_source_file_path)).must_equal redacted_data
+    end
   end
 end

@@ -1067,7 +1067,7 @@ end
 
 And /^I dismiss the hoc guide dialog$/ do
   steps <<~GHERKIN
-    And I click selector "#uitest-no-email-guide" once I see it
+    And I click selector "#uitest-no-email-guide" if I see it
     And I wait until I don't see selector "#uitest-no-email-guide"
   GHERKIN
 end
@@ -1465,4 +1465,12 @@ And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/)
   params = JSON.parse(Base64.urlsafe_decode64(encoded_params))
   expect(params['name']).to eq(name)
   expect(params['course']).to eq(course)
+end
+
+And(/^I validate rubric ai config for all lessons$/) do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_validate_rubric_ai_config"))
+    response_code = response.code
+    expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
+  end
 end

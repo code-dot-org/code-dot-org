@@ -4,7 +4,7 @@
 .label {
   display: flex;
   gap: 8px;
-  align-items: start;
+  align-items: center;
 
   i {
     vertical-align: bottom;
@@ -20,7 +20,6 @@
 
   span {
     margin-bottom: 0;
-    line-height: initial;
   }
 
   input[type="checkbox"] {

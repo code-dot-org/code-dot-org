@@ -571,6 +571,7 @@ module.exports = function (grunt) {
     'newer:copy:lib',
     'locales',
     'ejs',
+    'detect-production-webpack-chunks',
   ]);
 
   grunt.registerTask('check-entry-points', function () {
@@ -600,6 +601,21 @@ module.exports = function (grunt) {
       }
       done();
     });
+  });
+
+  grunt.registerTask('detect-production-webpack-chunks', function () {
+    if (
+      process.env.DEV &&
+      fs.existsSync('./build/package/js/code-studio-common.js')
+    ) {
+      grunt.warn(
+        'You are building in dev mode (DEV=1), but the build/ directory already contains production Webpack chunks, such as code-studio-common.js.\n' +
+          'These will not be overwritten by a dev build, and their presence will cause loading errors in some labs (e.g., Applab).\n' +
+          "Note that after cleaning your build directory, some static assets that aren't rebuilt via yarn start may not load.\n" +
+          'These can be regenerated via yarn build.\n' +
+          'Run yarn clean (then yarn build) and try again.'
+      );
+    }
   });
 
   grunt.registerTask('compile-firebase-rules', function () {

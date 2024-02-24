@@ -19,7 +19,8 @@ export const fakeLesson = (
   id,
   lockable = false,
   lessonNumber = undefined,
-  lessonStartUrl = 'code.org'
+  lessonStartUrl = 'code.org',
+  levels = []
 ) => ({
   name,
   id,
@@ -27,6 +28,7 @@ export const fakeLesson = (
   lessonNumber,
   lessonStartUrl,
   isFocusArea: false,
+  levels,
 });
 
 export const fakeLevel = (overrides = {}) => {
@@ -44,6 +46,26 @@ export const fakeLevel = (overrides = {}) => {
     isUnplugged: false,
     ...overrides,
   };
+};
+
+export const fakeLevelWithSubLevels = (
+  numSublevels,
+  startLevel = 1,
+  overrides = {}
+) => {
+  const sublevels = _.range(numSublevels).map(index => {
+    const overrideData = {
+      id: index + startLevel,
+      levelNumber: index + startLevel,
+    };
+    return fakeLevel(overrideData);
+  });
+  return fakeLevel({
+    sublevels: sublevels,
+    id: startLevel + numSublevels,
+    levelNumber: startLevel + numSublevels,
+    ...overrides,
+  });
 };
 
 export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>

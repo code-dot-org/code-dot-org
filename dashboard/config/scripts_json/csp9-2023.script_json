@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-03 21:00:34 UTC",
+    "serialized_at": "2024-02-22 19:34:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -191,7 +191,7 @@
       "key": "eea7ca97-a9b3-4cbb-86e3-882868d869c1",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -432,7 +432,7 @@
       "key": "e697cf9c-45bd-4783-b164-36ef1bffecde",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. ",
         "duration": "5",
         "name": "What is Required of My Program?"
       },
@@ -457,8 +457,8 @@
       "key": "ac184b1b-7fc9-48f5-a37b-4b0fcc91028c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
-        "duration": "10",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
+        "duration": "15",
         "name": "Function Requirement Activity 1: Does It Count?"
       },
       "seeding_key": {
@@ -474,30 +474,6 @@
       },
       "seeding_key": {
         "activity_section.key": "9c7be61d-173a-43ae-9557-772d38b76a4f",
-        "lesson_activity.key": "f5a998db-ab00-4e83-98c3-e16d8f3a82b8"
-      }
-    },
-    {
-      "key": "07347eba-f7b4-4182-a92c-179699239eb7",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to \ncomplete the activity on page 5. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result.",
-        "duration": "10",
-        "name": "Function Requirements Activity 2: Two Function Calls:"
-      },
-      "seeding_key": {
-        "activity_section.key": "07347eba-f7b4-4182-a92c-179699239eb7",
-        "lesson_activity.key": "f5a998db-ab00-4e83-98c3-e16d8f3a82b8"
-      }
-    },
-    {
-      "key": "89b4dac2-b2c3-4826-8d14-ffbefd6c7683",
-      "position": 9,
-      "properties": {
-        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterward, lead a discussion on the patterns they see.*\n\n**Discussion Goal:** This activity is designed to help students anticipate how they'll need to make some decisions about how to design their functions. Here are some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "89b4dac2-b2c3-4826-8d14-ffbefd6c7683",
         "lesson_activity.key": "f5a998db-ab00-4e83-98c3-e16d8f3a82b8"
       }
     },
@@ -563,7 +539,7 @@
       "key": "22edf043-450b-4963-bdcf-39873b774d5f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a class read the \"Narrow It Down\" section (page 6) of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a class read the \"Narrow It Down\" section (page 4) of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n",
         "duration": "5",
         "name": "Narrow It Down"
       },
@@ -589,7 +565,7 @@
       "key": "3aa05580-5a78-435d-9dc6-70c679248b3e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Quickly read this section (page 8) with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Quickly read this section (page 6) with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can.",
         "duration": "5",
         "name": "Choosing a Project Idea "
       },
@@ -602,7 +578,7 @@
       "key": "41237178-12eb-4a90-86d9-7b9f24aa1775",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students use page 8 to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students use page 6 to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects.",
         "duration": "10",
         "name": "Brainstorm Ideas"
       },
@@ -626,7 +602,7 @@
       "key": "eeadc5fb-2afc-4c4d-89f9-ec7c61fe32f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 12 class hours to track their progress and make sure they have every component needed to answer the questions.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 7):** Review the sample schedule provided on page 10.",
         "name": "Make a Plan\r"
       },
       "seeding_key": {

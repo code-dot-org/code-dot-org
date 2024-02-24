@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c241d2860287a2e845d7f0ba67b45420cf7f3a1bacae528d8e216387943d496
-size 1449
+// DEPRECATD: Do not add new javascript dependencies here. Instead, you should
+// add them to the apps package so they can be explicitly required/imported where
+// they are needed.
+
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+
+// Gem assets
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+// (Former location of video.js; reference while converting to code-studio.js)
+//= require bootstrap
+
+// Vendor assets
+//= require add2home
+//= require jquery.mask.min
+//= require jquery.placeholder
+//= require jquery.qtip.min
+//= require jquery.simulate
+//= require jquery.ui.touch-punch
+//= require jquery.overlaps
+
+// Shared assets
+//= require details-polyfill/jquery.details
+//= require details-polyfill/details-polyfill
+
+// window.dashboard is used to communicate between dashboard/apps in a variety
+// of places. In this case we want to make availale to our JS the url of the
+// pegasus portion of our site (i.e. http://code.org vs. http://studio.code.org)
+window.dashboard = window.dashboard || {};
+window.dashboard.CODE_ORG_URL = "<%= CDO.code_org_url %>";
+window.dashboard.rack_env = "<%= CDO.rack_env %>";

@@ -1,8 +1,6 @@
 import {cachedWeightsMappings} from '../constants';
 import {FieldKey, GeneratedEffect, EffectsQuality} from '../types';
-
 import {calculateOutputSummedWeights} from './calculateOutputSummedWeights';
-import {getSortedOptions} from './getSortedOptions';
 
 const NUM_RANDOM_TOP_OPTIONS = 3;
 const NUM_RANDOM_BOTTOM_OPTIONS = 20;
@@ -32,15 +30,20 @@ export function chooseEffects(
   };
   for (const field of Object.values(FieldKey)) {
     const mapping = cachedWeightsMappings[field];
-    // Get final output summed weights based on set of three selected emoji inputs
+    // Get final output summed weights mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
+    // based on set of three selected emoji inputs for a particular field
+    // (background effect, background color, or foreground effect).
     const weightVector = calculateOutputSummedWeights(selectedEmojis, mapping);
-    // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
-    const allSortedOptions = getSortedOptions(weightVector, mapping);
+
+    // Sort and select slice of top or bottom scoring options,
+    // and randomly choose an effect from these options.
+    const allSortedOptions: [number, string][] = weightVector.sort(
+      (item1, item2) => item2[0] - item1[0]
+    );
     const topOrBottomOptions =
       quality === EffectsQuality.GOOD
         ? allSortedOptions.slice(0, NUM_RANDOM_TOP_OPTIONS)
         : allSortedOptions.slice(-NUM_RANDOM_BOTTOM_OPTIONS);
-
     const selectedOutputOption =
       topOrBottomOptions[Math.floor(Math.random() * topOrBottomOptions.length)];
     chosenEffects[field] = selectedOutputOption[1];

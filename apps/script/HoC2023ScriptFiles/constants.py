@@ -1,4 +1,4 @@
-EMBEDDING_MODEL = 'text-embedding-ada-002' # The most recent Ada model as of October 2023.
+EMBEDDING_MODEL = 'amazon.titan-embed-text-v1' # Most recent stable model as of 01/08/2024.
 
 # Constants for 4 option lists.
 EMOJIS = 'emojis'

@@ -6,6 +6,7 @@ require 'mocha/mini_test'
 require 'cdo/poste'
 require 'digest/md5'
 
+# rubocop:disable CustomCops/PegasusDbUsage
 class PosteTest < SequelTestCase
   STUDENT_EMAIL = 'student@example.net'.freeze
   STUDENT_EMAIL_HASH = Digest::MD5.hexdigest(STUDENT_EMAIL).freeze
@@ -356,3 +357,4 @@ class Poste2Test < SequelTestCase
       POSTE_DB[:contacts].where(hashed_email: hashed_email).first[:created_ip]
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

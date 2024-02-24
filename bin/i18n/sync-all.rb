@@ -79,8 +79,18 @@ class I18nSync
 
   private
 
+  attr_reader :options
+
   def sync_in
     I18n::SyncIn.perform
+  end
+
+  def sync_up
+    I18n::SyncUp.perform(options.slice(:testing))
+  end
+
+  def sync_down
+    I18n::SyncDown.perform(options.slice(:testing))
   end
 
   def sync_out
@@ -88,7 +98,10 @@ class I18nSync
   end
 
   def parse_options(args)
-    options = {}
+    options = {
+      testing: I18nScriptUtils::TESTING_BY_DEFAULT,
+    }
+
     opt_parser = OptionParser.new do |opts|
       opts.banner = <<-USAGE
   Usage: sync-all [options]
@@ -116,6 +129,10 @@ class I18nSync
 
       opts.on("-y", "--yes", "Run without confirmation") do
         options[:yes] = true
+      end
+
+      opts.on('-t', '--testing', 'Run in testing mode') do
+        options[:testing] = true
       end
     end
     opt_parser.parse!(args)

@@ -91,6 +91,7 @@ import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
+import KeyHandler from './util/KeyHandler';
 
 var copyrightStrings;
 
@@ -242,6 +243,11 @@ class StudioApp extends EventEmitter {
      * Stores the code at run. It's undefined if the code is not running.
      */
     this.executingCode = undefined;
+
+    /**
+     * Global key handler for the app.
+     */
+    this.keyHandler = new KeyHandler(document);
   }
 }
 /**
@@ -842,7 +848,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.mainBlockSpace.clear();
+    Blockly.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -1229,6 +1235,8 @@ StudioApp.prototype.inject = function (div, options) {
   } else if (experiments.isEnabled('geras')) {
     options.renderer = Renderers.GERAS;
   }
+
+  options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -2097,6 +2105,13 @@ StudioApp.prototype.configureDom = function (config) {
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+    this.keyHandler.registerEvent(['Control', 'Enter'], () => {
+      if (this.isRunning()) {
+        this.resetButtonClick();
+      } else {
+        throttledRunClick();
+      }
+    });
   }
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {
@@ -2243,29 +2258,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         });
 
         buttonRow.appendChild(openWorkspace);
-
-        if (
-          ['algebra_game', 'calc', 'eval'].includes(
-            appOptions?.level?.projectType
-          )
-        ) {
-          const deprecationUrl =
-            'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses';
-          ReactDOM.render(
-            <div style={{color: '#ff7a7a', textAlign: 'initial'}}>
-              {msg.deprecatedCalcAndEvalBrief()}
-              &nbsp;
-              <a
-                href={deprecationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {msg.learnMore()}
-              </a>
-            </div>,
-            buttonRow.appendChild(document.createElement('div'))
-          );
-        }
       }
     }
   }
@@ -2795,7 +2787,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.mainBlockSpace.clear();
+        Blockly.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {
@@ -2851,7 +2843,13 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // replace it with a full toolbox. I think some levels may depend on this
   // behavior. We want a way to specify no toolbox, which is <xml></xml>
   if (config.level.toolbox) {
-    var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // (Nothing is changed if we are using CDO Blockly.)
+    config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
+      config.level.toolbox
+    );
+
+    const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
     if (
       toolboxWithoutWhitespace === '<xml></xml>' ||
       toolboxWithoutWhitespace === '<xml/>'
@@ -3555,6 +3553,7 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance = singleton();
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {

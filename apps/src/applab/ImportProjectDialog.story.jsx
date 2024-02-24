@@ -3,7 +3,6 @@ import {ImportProjectDialog} from './ImportProjectDialog';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'ImportProjectDialog',
   component: ImportProjectDialog,
 };
 

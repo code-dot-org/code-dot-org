@@ -48,14 +48,66 @@ export const ExpandableImagesWrapper = connect(null, dispatch => ({
   },
 }))(UnconnectedExpandableImagesWrapper);
 
+// Clickable text can be added via markdown instructions like this:
+//   [play](#clickable=play-sound-block)
+//
+// This code will replace any link that had #clickable=[id]
+// with bold clickable text that, when clicked, will call the
+// provided handleInstructionsTextClick function with the ID.
+//
+// The clickable text support in our remark-plugins repo has
+// done some intermediate work by converting those links into
+// the following HTML format:
+//   <b data-id="id" class="clickable-text">text</b>
+export class ClickableTextWrapper extends React.Component {
+  static propTypes = {
+    handleInstructionsTextClick: PropTypes.func.isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
+  };
+
+  componentDidMount() {
+    this.postRenderHook();
+  }
+
+  componentDidUpdate(prevProps) {
+    // TODO: do we need to do any kind of cleanup here? Or otherwise do
+    // something more precise than calling the method again when we're
+    // responding to an update rather than an initial render?
+    this.postRenderHook();
+  }
+
+  postRenderHook() {
+    const thisNode = ReactDOM.findDOMNode(this);
+    this.renderClickableText(thisNode);
+  }
+
+  renderClickableText(node) {
+    const clickableTextAll = node.querySelectorAll('b.clickable-text');
+    for (const clickableText of clickableTextAll) {
+      const id = clickableText.dataset.id;
+      clickableText.onclick = () => this.props.handleInstructionsTextClick(id);
+    }
+  }
+
+  render() {
+    return this.props.children;
+  }
+}
+
 /**
  * A wrapper for our SafeMarkdown component which adds some extra
  * functionality.
  *
- * Right now, that extra functionality is limited to support for the
- * "expandable images" functionality, but the intent is for this to serve as a
- * common place to implement all of the other things we do on _top_ of
- * markdown; embedded Blockly, links automatically opening in a new tab, etc.
+ * Right now, that extra functionality is limited to:
+ *   - Support for the "expandable images" functionality.
+ *   - Support for clickable text that shows a callout.
+ *
+ * But the intent is for this to serve as a common place to implement all of
+ * the other things we do on _top_ of markdown; embedded Blockly, links
+ * automatically opening in a new tab, etc.
  */
 export default class EnhancedSafeMarkdown extends React.Component {
   static propTypes = {
@@ -63,6 +115,7 @@ export default class EnhancedSafeMarkdown extends React.Component {
     openExternalLinksInNewTab: PropTypes.bool,
     expandableImages: PropTypes.bool,
     className: PropTypes.string,
+    handleInstructionsTextClick: PropTypes.func,
   };
 
   render() {
@@ -71,10 +124,10 @@ export default class EnhancedSafeMarkdown extends React.Component {
     // wrapping the component in other components which each add their own
     // self-contained functionality.
     //
-    // Right now, that's just expandable images. But we could (should?) take
-    // the "open external links" functionality out of SafeMarkdown and add it
-    // here; I expect we almost certainly will put the "render blockly blocks"
-    // functionality in here, too.
+    // Right now, that's just expandable images and clickable text. But we
+    // could (should?) take the "open external links" functionality out of
+    // SafeMarkdown and add it here; I expect we almost certainly will put the
+    // "render blockly blocks" functionality in here, too.
     let result = (
       <SafeMarkdown
         markdown={this.props.markdown}
@@ -85,6 +138,16 @@ export default class EnhancedSafeMarkdown extends React.Component {
 
     if (this.props.expandableImages) {
       result = <ExpandableImagesWrapper>{result}</ExpandableImagesWrapper>;
+    }
+
+    if (this.props.handleInstructionsTextClick) {
+      result = (
+        <ClickableTextWrapper
+          handleInstructionsTextClick={this.props.handleInstructionsTextClick}
+        >
+          {result}
+        </ClickableTextWrapper>
+      );
     }
 
     return result;

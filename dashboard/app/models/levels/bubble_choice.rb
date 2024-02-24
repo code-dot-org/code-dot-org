@@ -192,6 +192,18 @@ class BubbleChoice < DSLDefined
     return best_result_sublevel(student, script)
   end
 
+  # Use pre-loaded feedback and progress data to get the sublevel ID using the
+  # same criteria as in get_sublevel_for_progress
+  def get_sublevel_for_progress_optimized(teacher_feedbacks:, user_levels:)
+    keep_working_level_id = teacher_feedbacks.find do |feedback|
+      feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
+    end&.level_id
+
+    return keep_working_level_id if keep_working_level_id
+
+    user_levels.max_by(&:best_result)&.level_id
+  end
+
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
   # @param [String] level_name. The name of the sublevel.
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.

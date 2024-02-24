@@ -6,7 +6,6 @@ import {
 } from '../../../test/unit/templates/lessonOverview/sampleStandardsData.js';
 
 export default {
-  title: 'LessonStandards',
   component: LessonStandards,
 };
 

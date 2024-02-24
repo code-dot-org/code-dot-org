@@ -12,6 +12,7 @@ import {DATE_FORMAT} from '../workshopConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {InputGroup, FormGroup, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import 'react-datepicker/dist/react-datepicker.css';
+import '@cdo/apps/code-studio/assets/date_picker.scss';
 
 class DateInputWithIconUnwrapped extends React.Component {
   static propTypes = {
@@ -119,6 +120,7 @@ export default class DatePicker extends React.Component {
         startDate={this.props.startDate}
         endDate={this.props.endDate}
         disabled={this.props.readOnly}
+        popperClassName={'datePicker'}
       />
     );
   }

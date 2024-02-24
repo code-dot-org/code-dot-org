@@ -36,6 +36,39 @@ class Policies::Lti
   TEACHER_NAME_KEYS = [:name, :display_name, :full_name, :family_name, :given_name].freeze
   STUDENT_NAME_KEYS = [:name, :display_name, :full_name, :given_name].freeze
 
+  LMS_PLATFORMS = {
+    canvas_cloud: {
+      name: 'Canvas'.freeze,
+      issuer: 'https://canvas.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
+    },
+    canvas_beta_cloud: {
+      name: 'Canvas - Beta'.freeze,
+      issuer: 'https://canvas.beta.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token'.freeze,
+    },
+    canvas_test_cloud: {
+      name: 'Canvas - Test'.freeze,
+      issuer: 'https://canvas.test.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token'.freeze,
+    },
+    schoology: {
+      name: 'Schoology'.freeze,
+      issuer: 'https://schoology.schoology.com'.freeze,
+      auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect'.freeze,
+      jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
+      access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token'.freeze,
+    },
+  }
+
+  MAX_COURSE_MEMBERSHIP = 650
+
   def self.get_account_type(id_token)
     id_token[LTI_ROLES_KEY].each do |role|
       return User::TYPE_TEACHER if TEACHER_ROLES.include? role
@@ -59,6 +92,15 @@ class Policies::Lti
     nil
   end
 
+  # Converts the `issuer` or `iss` LTI value to a string we would show to
+  # users of Code.org
+  # Example: 'https://schoology.schoology.com' -> 'Schoology'
+  def self.issuer_name(issuer)
+    return 'Canvas' if /canvas/.match?(issuer)
+    return 'Schoology' if /schoology/.match?(issuer)
+    I18n.t(:lti_v1, scope: [:section, :type])
+  end
+
   # Returns the email provided by the LMS when creating the User through LTI
   # provisioning.
   def self.lti_provided_email(user)
@@ -69,5 +111,10 @@ class Policies::Lti
   # a Code.org account from an LTI supporting LMS?
   def self.show_email_input?(user)
     user.teacher? && Policies::Lti.lti?(user)
+  end
+
+  # Whether or not a roster sync can be performed for a user.
+  def self.roster_sync_enabled?(user)
+    user.teacher? && user.lti_roster_sync_enabled
   end
 end

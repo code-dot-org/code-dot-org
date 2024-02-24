@@ -8,10 +8,8 @@ namespace :install do
   timed_task_with_logging :hooks do
     files = %w(
       pre-commit
-      post-commit
       post-checkout
       post-merge
-      pre-push
     )
     git_path = ".git/hooks"
 

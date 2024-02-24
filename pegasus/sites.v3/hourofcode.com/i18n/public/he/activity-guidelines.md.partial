@@ -104,23 +104,23 @@ Code.org מארח מגוון פעילויות, שיעורים וסרטונים �
 * שם ודוא"ל של איש הקשר הראשי המייצג את הפעילות שהוגשה
 * שם הפעילות (לא יכול לכלול את "שעת הקוד" בשם)
 * קישור URL לפעילות
-* האם פעילות זו כוללת AI: כן או לא
-* תיאור פעילות (ספירת תווים מקסימלית: 400) 
-    * אנא כלול בתיאור אם זה בעיקר מונחה תלמידים או בהנחיית מורים. בנוסף, חלק מבתי הספר מעוניינים לדעת אם פעילויות שעת הקוד מתייחסות לתקני מדע הליבה המשותפת או הדור הבא. אם הפעילות מתייחסת לתקנים ספציפיים, שקול לכלול מידע זה.
-* רמות ציון מומלצות למשתמשים המיועדים. אתה יכול להתייחס ל \[תקני K-12 של איגוד המורים למדעי המחשב\] (https://k12cs.org/framework-statements-by-grade-band/) לקבלת מושגי מדעי המחשב המתאימים לכיתה. רמות כיתה לדוגמה כוללות: 
-    * גן ילדים - כיתה א' (גילאי 4-6)
-    * כיתות ה' (גילאי 7-10)
-    * כיתות ו'-ח (גילאי 11-13)
-    * כיתות ט'+ (גילאי 14+)
-* רשימה של שפות תכנות שהפעילות שלך מלמדת. כלומר C/C ++, ג'אווה, JavaScript וכו '. או שפה עצמאית (עבור מערכי שיעור שניתן ללמד במספר שפות) בחר אומנויות שפה.
-* רשימה של שפות טבעיות נתמכות. הערה: זיהוי שפה הוא באחריותו של ספק הפעילות; אנו נפנה את כל המשתמשים לכתובת האתר היחידה שסופקה. או שפה עצמאית (עבור מערכי שיעור שניתן ללמד במספר שפות)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* רשימה של שפות תכנות שהפעילות שלך מלמדת. כלומר C/C ++, ג'אווה, JavaScript וכו '. או שפה עצמאית (עבור מערכי שיעור שניתן ללמד במספר שפות) choose language arts.
+* רשימה של שפות טבעיות נתמכות. הערה: זיהוי שפה הוא באחריותו של ספק הפעילות; אנו נפנה את כל המשתמשים לכתובת האתר היחידה שסופקה. or language independent (for lesson plans that can be taught in multiple languages)
 * איזו רמת ניסיון צריכה להיות למחנך כדי להשתמש בפעילות שלך? (למשל מתחיל או נוח.) ואיזו רמת ניסיון צריכה להיות לתלמידים?
-* איזו רמת ניסיון צריכה להיות למחנך כדי להשתמש בפעילות שלך? (למשל מתחיל או נוח.) ואיזו רמת ניסיון צריכה להיות לתלמידים? אם ברצונך להכין פעילויות מתקדמות יותר של Hour of Code™, אנא כלול את הידע המוקדם הדרוש בתיאור הפעילות שלך.
-* אורך הפעילות שלך 
-    * שעה אחת בלבד
-    * 1 שעה עם קורס המשך
-    * 2-6 שעות (יכול להיות שיעורים מרובים)
-* רשימה של התאמות נגישות, אם הפעילות שלך כוללת אותן. אלה כוללים תאימות לקורא מסך, יכולות טקסט לדיבור, שימוש בצבעים בעלי ניגודיות גבוהה או כל התאמה אחרת המיועדת ללומדים עם מוגבלויות.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### דברים נוספים שתצטרך בעת הגשת מערכי שיעור
 
@@ -170,7 +170,7 @@ Code.org מארח מגוון פעילויות, שיעורים וסרטונים �
 
 ועדה מגוונת של מחנכים למדעי המחשב תדרג הגשות על פי קריטריונים איכותיים וכמותיים. כל הפעילויות המתאימות לקריטריונים הבסיסיים יפורטו.
 
-עבור פעילויות קידוד מסורתיות, ועדה מגוונת של אנשי חינוך למדעי המחשב תדרג הגשות על פי קריטריונים איכותיים וכמותיים. כל הפעילויות המתאימות לקריטריונים הבסיסיים יפורטו. המורים יוכלו לסנן ולמיין כדי למצוא את הפעילויות הטובות ביותר לכיתה שלהם.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 אם ועדת הביקורת מדרגת את הפעילות באפס באיכות הייצור (עקב באגים רעים או הוראות שמקשות מאוד על השימוש), בקידום למידה בקבוצות מיוצגות פחות (עקב חומר גזעני/סקסיסטי), בערך החינוכי (לא מלמד מושגי CS), או כיף/מרתק (בגלל היותך קשה/מייאש את התלמידים לעבוד), הפעילות לא תופיע ברשימה.
 
@@ -188,13 +188,13 @@ Code.org מארח מגוון פעילויות, שיעורים וסרטונים �
 - אין צורך בהרשמה
 - אין צורך בתשלום (למעט פעילויות רובוטיקה אלה יכולות לדרוש רכישת רובוט/ערכה)
 
-לפעילויות בהכוונה עצמית למורים ולתלמידים חדשים ועדת הבדיקה תחפש האם:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - מורים יכולים להשתמש במדריך או בפעילות ללא רקע במדעי המחשב
 - סטודנטים יכולים להצליח ללא רקע במדעי המחשב
 - התלמידים יכולים לכוון את עצמם דרך ההדרכה ללא הדרכת הורים או מורים
 
-מורים ותלמידים יוכלו לחפש ולסנן את רשימת הפעילויות שלנו על סמך פילטרים כמו ציון, רמת ניסיון, נושא, חומרה וכו '. כברירת מחדל, נציג תחילה מערכי שיעור ופעילויות ש:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - קבל את הדירוגים הגבוהים ביותר מוועדת הביקורת
 - האם פעילויות בהכוונה עצמית של שעה המיועדות למתחילים (תלמידים ומורים)
@@ -208,7 +208,7 @@ Code.org מארח מגוון פעילויות, שיעורים וסרטונים �
 
 ## הצעות לעיצוב הדרכות בהדרכה עצמית של שעה
 
-פעילויות אינן חייבות לכלול AI, אם כי אנו מחפשים להציע פעילויות נוספות הקשורות ל- AI.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **כלול הערות מורים.** רוב הפעילויות צריכות להיות מכוונות לתלמידים, אך אם פעילות מקלה או מנוהלת על ידי מורה, אנא כלול הנחיות ברורות ופשוטות למורה בצורה של הערות מורים בכתובת URL נפרדת שהוגשה עם הפעילות שלך. לא רק שהתלמידים הם טירונים, גם חלק מהמורים. כלול מידע כגון:
 
@@ -221,15 +221,15 @@ Code.org מארח מגוון פעילויות, שיעורים וסרטונים �
 - האם אתה ממליץ על תכנות זוג?
 - שיקולים לשימוש בכיתה? לְמָשָׁל. אם יש סרטונים, יעץ למורים להציג את הסרטונים על גבי מסך מוקרן כדי שכל הכיתה תצפה יחד
 
-**שלב משוב בסוף הפעילות.** (למשל "סיימת 10 רמות ולמדת על לולאות! עבודה נהדרת!")
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**עודד את התלמידים לפרסם במדיה החברתית (במידת הצורך) לאחר שיסיימו.** לדוגמה "עשיתי שעה של קוד עם ________ יש לך? #HourOfCode" או "עשיתי #HourOfCode כחלק #CSEdWeek. יש לך? @Scratch." השתמש בהאשטאג **#HourOfCode** (עם אותיות גדולות H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**צור את הפעילות שלך בספרדית או בשפות אחרות מלבד אנגלית.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**הסבר או חבר את הפעילות להקשר משמעותי מבחינה חברתית.** תכנות מחשבים הופך למעצמת על כאשר התלמידים רואים כיצד הוא יכול לשנות את העולם לטובה!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**ודא שניתן להשתמש במדריך שלך בפרדיגמה של [זוג תכנות](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** זה שימושי במיוחד עבור שעת הקוד מכיוון שבכיתות רבות אין חומרה 1:1 לכל התלמידים.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**חזרה לפסגה**](#top)
 
@@ -237,7 +237,7 @@ Code.org מארח מגוון פעילויות, שיעורים וסרטונים �
 
 ## הנחיות לסימנים מסחריים
 
-שעה של קוד® ו Hora del Código® הם סימנים מסחריים רשומים של Code.org. רבים משותפי ההדרכה שלנו השתמשו בסימנים המסחריים שלנו "שעת הקוד" באתרי האינטרנט שלהם בקשר לפעילויות שעת הקוד שלהם. איננו רוצים למנוע שימוש זה, אך אנו רוצים לוודא שהשימוש נופל בכמה גבולות:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. השתמש ב"שעת הקוד "רק בקשר לפעילויות חינוך לא מסחריות במדעי המחשב בהקשר של קמפיין שעת הקוד, ולא לשום מטרה אחרת.
 2. יש להשתמש בכל התייחסות ל"שעת הקוד "באופן שאינו מצביע על כך שזה שם המותג שלך, אלא שהוא מתייחס לשעת הקוד כתנועה עממית. דוגמה טובה: "השתתף בשעה של קוד® ב- AcmeCorp.com". דוגמה רעה: "נסה שעה של קוד על ידי ACME Corp".
@@ -253,15 +253,15 @@ Code.org מארח מגוון פעילויות, שיעורים וסרטונים �
 
 ## מעקב אחר פיקסל
 
-אם המדריך שלך מאושר ונכלל בדף ההדרכה הסופי, Code.org יספק לך פיקסל מעקב ייחודי שתוכל להשתלב במדריך שלך. ראה דוגמה למטה. אל תכלול בדפי ביניים כלשהם במדריך שלך.
+אם המדריך שלך מאושר ונכלל בדף ההדרכה הסופי, Code.org יספק לך פיקסל מעקב ייחודי שתוכל להשתלב במדריך שלך. ראה דוגמה למטה. Do not include on any interim pages of your tutorial.
 
-זה יאפשר לנו לספור משתמשים שעושים את הדרכת שעת הקוד שלך. זה יוביל לספירת השתתפות מדויקת יותר עבור ההדרכה שלך.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-אם המדריך שלך מאושר ונכלל בדף ההדרכה הסופי, Code.org יספק לך פיקסל מעקב ייחודי שתוכל להשתלב במדריך שלך. ראה דוגמה למטה.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-הערה: לא חשוב לעשות זאת עבור אפליקציות הניתנות להתקנה (אפליקציות iOS/Android, או אפליקציות להתקנה בשולחן העבודה)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-דוגמה למעקב אחר פיקסלים למסיבת ריקודים:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## קידום הפעילויות שלך, CSEDWeek ושעת הקוד
 
-אנא קדם את הפעילות שלך לרשת שלך! הפנה אותם לדף שעת הקוד שלך. סביר להניח שהמשתמשים שלך יגיבו לדיוור ממך לגבי הפעילות שלך. השתמש בקמפיין הבינלאומי של Hour of Code במהלך שבוע החינוך למדעי המחשב כתירוץ לעודד משתמשים להזמין אחרים להצטרף, ולעזור לנו להגיע לתלמידים נוספים!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - תכונה שעת קוד ו- CSEDWeek באתר האינטרנט שלך. אקס: <http://www.tynker.com/hour-of-code>
 - קדם את שעת הקוד באמצעות מדיה חברתית, מדיה מסורתית, רשימות תפוצה וכו ', באמצעות hashtag #HourOfCode (עם אותיות גדולות H, O, C)

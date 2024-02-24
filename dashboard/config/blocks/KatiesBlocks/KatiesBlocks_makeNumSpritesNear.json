@@ -4,11 +4,6 @@
     "func": "makeNumSpritesNear",
     "inline": true,
     "blockText": "make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
     "style": "sprite_blocks",
     "args": [
       {

@@ -22,7 +22,6 @@ export default class StudentHomepage extends Component {
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool,
-    showDeprecatedCalcAndEvalWarning: PropTypes.bool,
     specialAnnouncement: shapes.specialAnnouncement,
   };
 
@@ -38,7 +37,6 @@ export default class StudentHomepage extends Component {
       topCourse,
       hasFeedback,
       showVerifiedTeacherWarning,
-      showDeprecatedCalcAndEvalWarning,
       specialAnnouncement,
     } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
@@ -54,14 +52,6 @@ export default class StudentHomepage extends Component {
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
-          {showDeprecatedCalcAndEvalWarning && (
-            <Notification
-              type={NotificationType.warning}
-              notice={i18n.deprecatedCalcAndEvalWarning()}
-              details={i18n.deprecatedCalcAndEvalDetails()}
-              dismissible={false}
-            />
-          )}
           {specialAnnouncement && (
             <MarketingAnnouncementBanner
               announcement={specialAnnouncement}

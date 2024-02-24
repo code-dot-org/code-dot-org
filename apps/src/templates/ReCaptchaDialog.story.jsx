@@ -2,7 +2,6 @@ import React from 'react';
 import ReCaptchaDialog from './ReCaptchaDialog';
 
 export default {
-  title: 'ReCaptchaDialog',
   component: ReCaptchaDialog,
 };
 

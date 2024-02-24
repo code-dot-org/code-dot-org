@@ -24,6 +24,7 @@ module Pd
 
     COHORT_CALCULATOR_STATUSES = %w(
       accepted
+      enrolled
     )
   end
 end

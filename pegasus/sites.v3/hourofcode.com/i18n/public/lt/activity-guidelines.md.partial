@@ -1,5 +1,5 @@
 ---
-title: Veiklos gairės
+title: Activity Guidelines
 layout: wide
 ---
 
@@ -104,23 +104,23 @@ Ką jums reikės:
 * Pirminio kontakto, atstovaujančio pateiktą veiklą, vardas, pavardė ir el. Paštas
 * Veiklos pavadinimas (pavadinime negali būti “Kodo valanda”)
 * URL nuoroda į veiklą
-* Ar ši veikla apima AI: Taip arba Ne
-* Veiklos aprašymas (maks. Simbolių skaičius: 400) 
-    * Prašome įtraukti į aprašymą, ar tai daugiausia studentų vadovaujasi ar mokytojas palengvino. Be to, kai kurios mokyklos yra suinteresuotos žinoti, ar “Hour of Code” veikla yra susijusi su bendraisiais pagrindiniais ar naujos kartos mokslo standartais. Jei veikla susijusi su konkrečiais standartais, apsvarstykite galimybę įtraukti šią informaciją.
-* Rekomenduojamas (-i) klasės lygis (-ai) numatytiems vartotojams. Galite kreiptis į \[Computer Science Teachers' Association anketa K-12 Standartai\] (https://k12cs.org/framework-statements-by-grade-band/) už laipsnį-tinkamas kompiuterių mokslo sąvokas. Pavyzdys laipsnio lygiai apima: 
-    * Vaikų darželis - 1 klasė (4—6 metų amžiaus)
-    * 2-5 klasės (7-10 metų amžiaus)
-    * 6-8 klasės (11—13 metų)
-    * 9+ klasės (14+ amžius)
-* Programavimo kalbų, kurias moko jūsų veikla, sąrašas. T.y. C/C ++, “Java”, “JavaScript” ir kt. arba nepriklausoma nuo kalbos (pamokų planams, kurie gali būti mokomi keliomis kalbomis) pasirinkti kalbos menus.
-* Palaikomų natūralių kalbų sąrašas. Pastaba: Kalbos nustatymas yra veiklos teikėjo atsakomybė; mes peradresuosime visus vartotojus į vieną pateiktą URL. arba nepriklausoma nuo kalbos (pamokų planams, kurie gali būti mokomi keliomis kalbomis)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Programavimo kalbų, kurias moko jūsų veikla, sąrašas. T.y. C/C ++, “Java”, “JavaScript” ir kt. arba nepriklausoma nuo kalbos (pamokų planams, kurie gali būti mokomi keliomis kalbomis) choose language arts.
+* Palaikomų natūralių kalbų sąrašas. Pastaba: Kalbos nustatymas yra veiklos teikėjo atsakomybė; mes peradresuosime visus vartotojus į vieną pateiktą URL. or language independent (for lesson plans that can be taught in multiple languages)
 * Kokio lygio patirtį pedagogas turėtų naudoti jūsų veiklai? (pvz., Pradedantysis arba patogus.) Ir kokio lygio patirtį turėtų turėti studentai?
-* Kokio lygio patirtį pedagogas turėtų naudoti jūsų veiklai? (pvz., Pradedantysis arba patogus.) Ir kokio lygio patirtį turėtų turėti studentai? Jei norite parengti pažangesnę “Hour of Code™” veiklą, įtraukite ankstesnes žinias, reikalingas savo veiklos aprašyme.
-* Jūsų veiklos trukmė 
-    * Tik 1 valanda
-    * 1 valanda su tolesnio kurso
-    * 2-6 valandos (gali būti kelios pamokos)
-* Prieinamumo apgyvendinimo vietų sąrašas, jei jūsų veikla juos turi. Tai apima ekrano skaitytuvo suderinamumą, teksto į kalbą galimybes, didelio kontrasto spalvų naudojimą ar bet kokią kitą pritaikytą neįgaliesiems pritaikytą pritaikymą.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Papildomi dalykai, kurių jums reikės pateikdami pamokų planus
 
@@ -139,7 +139,7 @@ Ką jums reikės:
         * “iOS” mobilusis “Safari” (optimizuotas mobiliesiems telefonams)
         * “Android Chrome” (optimizuotas mobiliesiems telefonams)
     * Ne žiniatinklio pagrindu: nurodykite vietinio kodo platformą (“Mac”, “Win”, “iOS”, “Android”, “XBox”, kita)
-    * Atjungtas
+    * Unplugged
 * Kodo valandos veiklos ekrano kopija arba rinkodaros vaizdas. Prašome atsiųsti bent vieną vaizdą su 4:3 matmenimis. Tai turėtų būti bent 520pikselių iki 390 pikselių. Šiame paveikslėlyje neturėtų būti jokio teksto (išskyrus jūsų logotipą), kad jis būtų labiau prieinamas ne angliškai kalbėtojams. Jei nepateikiamas tinkamas vaizdas, mes galime padaryti savo ekrano kopiją iš jūsų mokymo programos ARBA galime pasirinkti jo neišvardyti. Visi vaizdai turi būti pateikti kaip URL nuoroda į .jpg, .jpeg arba .png.
 * Norėdami tiksliau stebėti dalyvavimą, trečiųjų šalių mokymo partneriai turi įtraukti 1 pikselių stebėjimo vaizdus į pirmąjį savo “Hour of Code” vadovėlių puslapį. Žr. [stebėjimo pikselių](#pixel) skyrių žemiau, jei norite gauti daugiau informacijos.
 * Baigę savo veiklą, vartotojai turėtų būti nukreipti į [code.org/api/hour/finish](https://code.org/api/hour/finish) , kur jie galės: 
@@ -170,7 +170,7 @@ Ką jums reikės:
 
 Įvairus informatikos pedagogų komitetas reitinguos teikimus pagal kokybinius ir kiekybinius kriterijus. Bus išvardytos visos veiklos rūšys, atitinkančios pagrindinius kriterijus.
 
-Tradicinei kodavimo veiklai įvairus informatikos pedagogų komitetas reitinguos pateikimus pagal kokybinius ir kiekybinius kriterijus. Bus išvardytos visos veiklos rūšys, atitinkančios pagrindinius kriterijus. Mokytojai galės filtruoti ir rūšiuoti, kad surastų geriausią veiklą savo klasėje.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Jei peržiūros komitetas įvertina nulinę gamybos kokybę (dėl blogų klaidų ar instrukcijų, dėl kurių ją labai sunku naudoti), skatinant mokymąsi nepakankamai atstovaujamose grupėse (dėl rasistinės/seksistinės medžiagos), edukacine verte (nemoko CS sąvokų) arba linksmas/įtraukiantis (dėl sunku/atgrasymo studentams dirbti), veikla nebus įtraukta į sąrašą.
 
@@ -188,13 +188,13 @@ Naujų mokytojų ir studentų savarankiškos veiklos peržiūros komitetas iešk
 - Nereikalauti užsiregistruoti
 - Reikalauti nemokėti (išskyrus robotikos veiklą, dėl kurios gali prireikti roboto/rinkinio pirkimo)
 
-Naujų mokytojų ir studentų savarankiškos veiklos peržiūros komitetas ieškos, ar:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Mokytojai gali naudotis pamoka ar veikla be jokių informatikos fone
 - Studentai gali būti sėkmingas be informatikos fone
 - Studentai gali nukreipti save per pamoka be tėvų ar mokytojų patarimų
 
-Mokytojai ir mokiniai galės ieškoti ir filtruoti mūsų veiklų sąrašą, remdamiesi tokiais filtrais kaip pažymys, patirties lygis, tema, aparatinė įranga ir kt. Pagal numatytuosius nustatymus pirmiausia parodysime pamokų planus ir veiklą, kuri:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Gaukite aukščiausius įvertinimus iš peržiūros komiteto
 - Ar viena valanda savarankiškai nukreipta veikla skirta pradedantiesiems (studentams ir mokytojams)
@@ -208,7 +208,7 @@ Mokytojai ir mokiniai galės ieškoti ir filtruoti mūsų veiklų sąrašą, rem
 
 ## Pasiūlymai projektuojant vieną valandą savarankiškai vadovaujasi vadovėliai
 
-Veikla neturi apimti AI, nors mes norime pasiūlyti daugiau su AI susijusių veiklų.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Įtraukti mokytojo pastabas.** Dauguma veiklų turėtų būti nukreipta į studentus, tačiau jei veiklą palengvina ar valdo mokytojas, prašome nurodyti aiškias ir paprastas mokytojo nurodymus mokytojo užrašų pavidalu atskiru URL, pateiktu kartu su jūsų veikla. Ne tik studentai yra naujokai, bet ir kai kurie mokytojai. Įtraukti tokią informaciją kaip:
 
@@ -221,15 +221,15 @@ Veikla neturi apimti AI, nors mes norime pasiūlyti daugiau su AI susijusių vei
 - Ar rekomenduojate poros programavimą?
 - Naudojimo klasėje svarstymai? Pvz., jei yra vaizdo įrašų, patarkite mokytojams parodyti vaizdo įrašus projektuojamu ekranu, kad visa klasė galėtų peržiūrėti kartu
 
-**Įtraukti grįžtamąjį ryšį veiklos pabaigoje.** (Pvz. “Jūs baigėte 10 lygių ir sužinojote apie kilpas! Puikus darbas!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Skatinkite studentus skelbti socialinėje žiniasklaidoje (kai tinkama), kai jie baigs.** Pavyzdžiui, “Aš padariau valandą kodo su ________ Ar jūs? #HourOfCode “arba “Aš padariau #HourOfCode kaip #CSEdWeek dalį. Ar tu? @Scratch.” Naudokite žymą **#HourOfCode** (didžiosiomis raidėmis H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Sukurkite savo veiklą ispanų arba kitomis kalbomis, be anglų kalbos.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Paaiškinkite arba prijunkite veiklą prie socialiai reikšmingo konteksto.** Kompiuterių programavimas tampa supervalstybe, kai studentai mato, kaip jis gali pakeisti pasaulį į gerąją pusę!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Įsitikinkite, kad jūsų pamoka gali būti naudojama [poros programavimo](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigmoje.** Tai ypač naudinga Kodekso valandai, nes daugelyje klasių nėra 1:1 aparatūros visiems studentams.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Atgal į viršų**](#top)
 
@@ -237,7 +237,7 @@ Veikla neturi apimti AI, nors mes norime pasiūlyti daugiau su AI susijusių vei
 
 ## Prekių ženklų gairės
 
-“Hour of Code®” ir “Hora del Código®” yra registruoti “Code.org” prekių ženklai. Daugelis mūsų mokymo partnerių savo interneto svetainėse naudojo mūsų “Kodo valandos” prekių ženklus, susijusius su savo “Hour of Code” veikla. Nenorime užkirsti kelio šiam naudojimui, tačiau norime įsitikinti, kad naudojimas neviršija kelių ribų:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Naudokite “Kodo valandą” tik dėl nekomercinių CS švietimo veiklos “Hour of Code” kampanijos kontekste ir jokiais kitais tikslais.
 2. Bet kokia nuoroda į “Kodo valandą” turėtų būti naudojama taip, kad tai nereiškia, kad tai yra jūsų prekės ženklas, o tai reiškia “Kodo valandą” kaip “grassroots” judėjimą. Geras pavyzdys: “Dalyvaukite “Code®” valandoje “Acmecorp.com”. Blogas pavyzdys: “Išbandykite “ACME Corp” kodo valandą”.
@@ -253,15 +253,15 @@ Veikla neturi apimti AI, nors mes norime pasiūlyti daugiau su AI susijusių vei
 
 ## Pikselių sekimas
 
-Jei jūsų pamoka yra patvirtinta ir įtraukta į galutinį mokymo puslapį, Code.org suteiks jums unikalų stebėjimo pikselių, kad galėtumėte integruoti į savo vadovėlį. Žr. Pavyzdį žemiau. Neįtraukite į jokius tarpinius savo mokymo puslapius.
+Jei jūsų pamoka yra patvirtinta ir įtraukta į galutinį mokymo puslapį, Code.org suteiks jums unikalų stebėjimo pikselių, kad galėtumėte integruoti į savo vadovėlį. Žr. Pavyzdį žemiau. Do not include on any interim pages of your tutorial.
 
-Tai leis mums suskaičiuoti vartotojus, kurie atlieka jūsų “Hour of Code” pamoką. Tai lems tikslesnius dalyvavimo skaičiavimus jūsų pamoka.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Jei jūsų pamoka yra patvirtinta ir įtraukta į galutinį mokymo puslapį, Code.org suteiks jums unikalų stebėjimo pikselių, kad galėtumėte integruoti į savo vadovėlį. Žr. Pavyzdį žemiau.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-PASTABA: tai nėra svarbu daryti įdiegiamose programose (“iOS”/“Android” programose arba darbalaukyje įdiegtoms programoms)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-“Dance Party” pikselių stebėjimo pavyzdys:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Skatinti savo veiklą, CSedWeek, ir Hour of Code
 
-Prašome reklamuoti savo veiklą savo tinkle! Nukreipkite juos į savo “Hour of Code” puslapį. Jūsų vartotojai yra daug labiau linkę reaguoti į laišką iš jūsų apie jūsų veiklą. Naudokite tarptautinę “Hour of Code” kampaniją kompiuterių mokslo švietimo savaitės metu kaip pasiteisinimą, kad paskatintumėte vartotojus pakviesti kitus prisijungti ir padėti mums pasiekti daugiau studentų!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Funkcija Kodo valanda ir CSedWeek jūsų svetainėje. Ex: <http://www.tynker.com/hour-of-code>
 - Skatinkite kodo valandą naudodami socialinę žiniasklaidą, tradicinę žiniasklaidą, adresų sąrašus ir kt., Naudodami hashtag #HourOfCode (didžiosiomis raidėmis H, O, C)

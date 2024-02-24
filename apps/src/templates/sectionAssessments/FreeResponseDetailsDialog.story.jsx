@@ -2,7 +2,6 @@ import React from 'react';
 import {UnconnectedFreeResponseDetailsDialog as FreeResponseDetailsDialog} from '@cdo/apps/templates/sectionAssessments/FreeResponseDetailsDialog';
 
 export default {
-  title: 'FreeResponseDetailsDialog',
   component: FreeResponseDetailsDialog,
 };
 

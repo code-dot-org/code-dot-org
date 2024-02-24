@@ -33,6 +33,12 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course4')
   end
 
+  def test_pl_course_template
+    course_version = create :course_version, :with_unit
+    course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
+    assert_equal 'self_paced_pl_certificate.png', CertificateImage.certificate_template_for(course_version.name)
+  end
+
   def test_image_generation
     mc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'mc')
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
@@ -84,6 +90,13 @@ class CertificateImageTest < ActiveSupport::TestCase
     iso_8859_name = 'An ISO-8859 Tester \xE0' # Includes an à in ISO-8859-1
     twenty_hour_certificate_image = CertificateImage.create_course_certificate_image(iso_8859_name, '20-hour')
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
+  end
+
+  def test_pl_certificate_image_generation
+    course_version = create :course_version, :with_unit
+    course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
+    pl_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', course_version.name)
+    assert_image pl_certificate_image, 2526, 1786, 'PNG'
   end
 
   def test_escape_image_magick_string

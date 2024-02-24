@@ -139,7 +139,7 @@
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree",
               "visible": false,
-              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/15/2023 per PL team - NZM."
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles', moved to AYW4 - 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",
@@ -149,7 +149,7 @@
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree",
               "visible": false,
-              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/15/2023 per PL team - NZM."
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles', moved to AYW4 - 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",
@@ -159,7 +159,7 @@
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree",
               "visible": false,
-              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/15/2023 per PL team - NZM."
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles', moved to AYW4 - 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",
@@ -169,7 +169,7 @@
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree",
               "visible": false,
-              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/15/2023 per PL team - NZM."
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles', moved to AYW4 - 11/15/2023 per PL team - NZM."
             },
             {
               "type": "rating",

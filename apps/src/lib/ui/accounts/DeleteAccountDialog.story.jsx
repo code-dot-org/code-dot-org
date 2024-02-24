@@ -18,10 +18,10 @@ const DEFAULT_PROPS = {
   onCancel: action('Cancel'),
   disableConfirm: false,
   deleteUser: action('Delete my Account'),
+  isAdmin: false,
 };
 
 export default {
-  title: 'DeleteAccountDialog',
   component: DeleteAccountDialog,
 };
 

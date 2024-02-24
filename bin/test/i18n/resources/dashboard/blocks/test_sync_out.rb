@@ -10,14 +10,9 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
   let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
   let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
-  let(:is_source_language) {false}
 
   around do |test|
     FakeFS.with_fresh {test.call}
-  end
-
-  before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
   end
 
   it 'inherits from I18n::Utils::SyncOutBase' do
@@ -113,25 +108,6 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
 
         # Distribution
         expect_localization_distribution.in_sequence(execution_sequence)
-        expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-
-        process_language
-      end
-    end
-
-    context 'when the language is the source language' do
-      let(:is_source_language) {true}
-
-      it 'does not process the file' do
-        execution_sequence = sequence('execution')
-
-        # Restoration
-        expect_crowdin_file_restoration.never
-        expect_mailformed_i18n_reporter_file_processing.never
-        expect_mailformed_i18n_reporting.never
-
-        # Distribution
-        expect_localization_distribution.never
         expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
         process_language

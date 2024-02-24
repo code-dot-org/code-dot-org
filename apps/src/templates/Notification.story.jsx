@@ -5,7 +5,6 @@ import Notification from './Notification';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'Notification',
   component: Notification,
 };
 

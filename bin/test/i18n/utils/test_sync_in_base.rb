@@ -6,6 +6,10 @@ describe I18n::Utils::SyncInBase do
   let(:described_instance) {described_class.new}
 
   describe '.perform' do
+    before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
+    end
+
     it 'calls `#perform`' do
       described_class.any_instance.expects(:process).once
       described_class.perform

@@ -7,6 +7,16 @@
       "announcements": [
         {
           "key": "45b14035-d069-49b6-9240-021f81c39e53",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 4: The Design Process. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
+          "link": "https://studio.code.org/courses/self-paced-pl-csd-unit4-2023",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Unit 4 Self-Paced PL"
+        },
+        {
+          "key": "6b6192b9-42c9-4abd-9230-5d8bb07e178b",
           "notice": "Free Teacher Resources from Amazon Future Engineer",
           "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
           "link": "https://code.org/afe",
@@ -30,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 03:16:30 UTC",
+    "serialized_at": "2024-01-23 18:10:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

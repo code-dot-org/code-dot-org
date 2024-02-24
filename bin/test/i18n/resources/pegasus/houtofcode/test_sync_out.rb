@@ -9,14 +9,12 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
   let(:i18n_locale) {'te-ST'}
   let(:unique_language_code) {'expected_unique_language_code'}
   let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale, unique_language_s: unique_language_code}}
-  let(:is_source_language) {false}
 
   around do |test|
     FakeFS.with_fresh {test.call}
   end
 
   before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
     I18n::Utils::PegasusMarkdown.stubs(:restore_file_header)
   end
 
@@ -52,26 +50,6 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
         refute File.exist?(crowdin_origin_en_file_path)
         assert File.exist?(i18n_origin_locale_file_path)
         assert_equal "---\nexpected_unique_language_code:\n  i18n_key: i18n_val\n", File.read(i18n_origin_locale_file_path)
-      end
-
-      context 'when the locale is en-US' do
-        let(:is_source_language) {true}
-        let(:crowdin_locale) {'English'}
-        let(:i18n_locale) {'en-US'}
-        let(:unique_language_code) {'en'}
-
-        it 'does not distribute the origin file' do
-          process_language
-          refute File.exist?(hoc_origin_i18n_file_path)
-        end
-
-        it 'moves the origin i18n file from crowdin locale dir to i18n locale dir without changes' do
-          process_language
-
-          refute File.exist?(crowdin_origin_en_file_path)
-          assert File.exist?(i18n_origin_locale_file_path)
-          assert_equal crowdin_origin_en_file_content, File.read(i18n_origin_locale_file_path)
-        end
       end
     end
 
@@ -115,24 +93,6 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
 
         refute File.exist?(crowdin_markdown_file_path)
         assert File.exist?(i18n_markdown_file_path)
-      end
-
-      context 'when the language is the source language' do
-        let(:is_source_language) {true}
-
-        it 'does not distribute the crowdin markdown file with restored sanitized headers' do
-          expect_crowdin_file_to_hoc_markdown_i18n_dir_copying.never
-          expect_hoc_markdown_i18n_file_header_restoring.never
-
-          process_language
-        end
-
-        it 'moves the markdown i18n file from crowdin locale dir to i18n locale dir without changes' do
-          process_language
-
-          refute File.exist?(crowdin_markdown_file_path)
-          assert File.exist?(i18n_markdown_file_path)
-        end
       end
     end
   end

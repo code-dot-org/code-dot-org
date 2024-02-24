@@ -123,6 +123,7 @@ module Pd
         title_i_status: 'Title I status',
         rural_status: 'Rural Status',
         school_type: 'School Type',
+        school_last_census_status: 'Teaches CS',
         total_student_enrollment: 'Total Student Enrollment',
         free_lunch_percent: 'Percent of students eligible to receive free/reduced lunch',
         underrepresented_minority_percent: 'Percent of students from underrepresented racial and ethnic groups',
@@ -134,7 +135,6 @@ module Pd
         white_percent: 'Percent of student enrollment by race: White',
         other_races_percent: 'Percent of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{YEAR} Professional Learning Program?",
-        principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{YEAR} if <Teacher Name> is accepted into the program?",
       }
     }.freeze
 
@@ -237,16 +237,12 @@ module Pd
       principal_role: {teacher: :principal_role, principal: :principal_response_role},
       principal_email: {teacher: :principal_email, principal: :principal_response_email},
 
-      replace_existing: {teacher: :replace_existing, principal: :principal_wont_replace_existing_course},
-
       pay_fee: {teacher: :pay_fee, principal: :principal_pay_fee},
-
-      contact_invoicing: {principal: :principal_contact_invoicing},
-      contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
 
       title_i_status: {stats: :title_i_status},
       rural_status: {stats: :rural_status},
       school_type: {teacher: :school_type, stats: :school_type},
+      school_last_census_status: {census: :school_last_census_status},
       total_student_enrollment: {principal: :principal_total_enrollment, stats: :students_total},
       free_lunch_percent: {principal: :principal_free_lunch_percent, stats: :frl_eligible_percent},
       underrepresented_minority_percent: {principal: :principal_underrepresented_minority_percent, stats: :urm_percent},
@@ -278,6 +274,7 @@ module Pd
       # Scholarship requirements
       free_lunch_percent: YES_NO,
       underrepresented_minority_percent: YES_NO,
+      school_last_census_status: YES_NO,
     }
 
     # Need to explicitly list these for the shared constant generation to work.
@@ -285,7 +282,7 @@ module Pd
       scholarship_questions: [
         :underrepresented_minority_percent,
         :free_lunch_percent,
-        :not_teaching_in_access_report,
+        :school_last_census_status,
       ],
       criteria_score_questions_csd: [
         :csd_which_grades,
@@ -293,7 +290,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
@@ -301,7 +297,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csa: [
         :csa_already_know,
@@ -311,7 +306,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ]
     }
 
