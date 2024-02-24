@@ -8312,7 +8312,6 @@ __metadata:
     htmlhint: ^1.1.4
     http-server: ^0.9.0
     immutable: 3.8.1
-    is-hotkey: ^0.2.0
     isolate-react: ^2.3.0
     istanbul-instrumenter-loader: ^3.0.1
     jquery: 1.12.1
@@ -8408,7 +8407,6 @@ __metadata:
     rehype-raw: ^4.0.0
     rehype-react: ^3.1.0
     rehype-sanitize: ^2.0.2
-    rehype-stringify: ^7.0.0
     remark-rehype: ^4.0.0
     rgbcolor: 0.0.4
     rosie: ^2.0.1
@@ -15783,24 +15781,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"hast-util-to-html@npm:^7.0.0":
-  version: 7.1.0
-  resolution: "hast-util-to-html@npm:7.1.0"
-  dependencies:
-    ccount: ^1.0.0
-    comma-separated-tokens: ^1.0.0
-    hast-util-is-element: ^1.0.0
-    hast-util-whitespace: ^1.0.0
-    html-void-elements: ^1.0.0
-    property-information: ^5.0.0
-    space-separated-tokens: ^1.0.0
-    stringify-entities: ^3.0.0
-    unist-util-is: ^4.0.0
-    xtend: ^4.0.0
-  checksum: 3bb6e384778dcad8779d4c9b15a6593a24caf679fca61af5dbb5c1927c0b6839ac1cd91e19777c42444f4ea40d13097d517ea64b54b45ca294abcd6d341140b9
-  languageName: node
-  linkType: hard
-
 "hast-util-to-parse5@npm:^5.0.0":
   version: 5.0.0
   resolution: "hast-util-to-parse5@npm:5.0.0"
@@ -17109,13 +17089,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"is-decimal@npm:^1.0.2":
-  version: 1.0.4
-  resolution: "is-decimal@npm:1.0.4"
-  checksum: ed483a387517856dc395c68403a10201fddcc1b63dc56513fbe2fe86ab38766120090ecdbfed89223d84ca8b1cd28b0641b93cb6597b6e8f4c097a7c24e3fb96
-  languageName: node
-  linkType: hard
-
 "is-descriptor@npm:^0.1.0":
   version: 0.1.6
   resolution: "is-descriptor@npm:0.1.6"
@@ -17330,13 +17303,6 @@ es6-shim@latest:
   version: 0.1.8
   resolution: "is-hotkey@npm:0.1.8"
   checksum: 793d0cccaf804583d8f4b835e040d4b6a74cb3f8d4094cb8188ed7cc86e6edf8f650fc80fabd4309e6c29938f5b0e9a17b45504b29dbf92735ef8d780d613aa0
-  languageName: node
-  linkType: hard
-
-"is-hotkey@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "is-hotkey@npm:0.2.0"
-  checksum: 97d295cfd8c3eb2c9b218daee5bff0ddaf47210930e3eb1eff36d2e6ad74854028203c640f35ea2d183d0cba94ac4c4bcd291925bc3a343d8a4c7d2c5ab3e2a6
   languageName: node
   linkType: hard
 
@@ -24992,16 +24958,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"rehype-stringify@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "rehype-stringify@npm:7.0.0"
-  dependencies:
-    hast-util-to-html: ^7.0.0
-    xtend: ^4.0.0
-  checksum: 89929ec0d624e320c4211693b0d5f300879dc08ff672ae33e5fa1aa92961feb124d98edc10188078bc07393b167d52bbecdcc1cf2344f5c06d56576e3e61f26f
-  languageName: node
-  linkType: hard
-
 "relateurl@npm:0.2.x, relateurl@npm:^0.2.7":
   version: 0.2.7
   resolution: "relateurl@npm:0.2.7"
@@ -27370,19 +27326,6 @@ es6-shim@latest:
     is-alphanumerical: ^1.0.0
     is-hexadecimal: ^1.0.0
   checksum: 4cbe43d89ef25d45034e60733caf9e27becf7521cb1e132749fd11ac34acb42214427db14ec6ed4b64ac077ccf09df7a1192a75f6104a38303a0462967bcd347
-  languageName: node
-  linkType: hard
-
-"stringify-entities@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "stringify-entities@npm:3.0.0"
-  dependencies:
-    character-entities-html4: ^1.0.0
-    character-entities-legacy: ^1.0.0
-    is-alphanumerical: ^1.0.0
-    is-decimal: ^1.0.2
-    is-hexadecimal: ^1.0.0
-  checksum: 6b48c8c0398ea91c9e287e1e9d49b6fb11e19c1ad1ed81ec1856429e641d884b5c207d04239d81afd4e948fdc5f5f023e6ad741850bfa044231bc8e6eeb65fbf
   languageName: node
   linkType: hard
 
