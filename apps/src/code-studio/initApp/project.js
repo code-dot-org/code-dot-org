@@ -1565,15 +1565,13 @@ var projects = (module.exports = {
     });
   },
   /**
-   * Freezes the project. Also hides so that it's not available for
-   * deleting/renaming in the user's project list.
+   * Freezes the project.
    */
   freeze(callback) {
     if (!(current && current.isOwner)) {
       return;
     }
     current.frozen = true;
-    current.hidden = true;
     this.updateChannels_(callback);
   },
 

@@ -135,8 +135,12 @@ const nodePolyfillConfig = {
       'process/browser': require.resolve('process/browser'),
       stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
+<<<<<<< HEAD
       crypto: require.resolve('crypto-browserify'),
       vm: require.resolve('vm-browserify'),
+=======
+      crypto: false,
+>>>>>>> parent of 40bd243c47c (replace crypto-js with native crypto and crypto-browserify as crypto-js is no longer maintained.)
     },
   },
 };

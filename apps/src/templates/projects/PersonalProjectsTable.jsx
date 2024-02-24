@@ -83,6 +83,7 @@ class PersonalProjectsTable extends React.Component {
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
         projectNameFailure={rowData.projectNameFailure}
+        isFrozen={rowData.frozen}
       />
     );
   };
