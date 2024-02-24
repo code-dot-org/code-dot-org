@@ -98,7 +98,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'behavior_caller_get_def_block_mixin',
-      'modal_procedures_no_destroy',
       'behavior_create_def_mixin',
     ],
     mutator: 'behavior_get_mutator',
@@ -193,13 +192,13 @@ GoogleBlockly.Extensions.register(
 
 // Used by createDef_ to create a new definition block for an orphaned call block.
 // We need to supply a specific block type used for behavior definitions.
-const procedureCallerNoReturnGetDefBlockMixin = {
+const behaviorCallerGetDefBlockMixin = {
   hasReturn_: false,
   defType_: BLOCK_TYPES.behaviorDefinition,
 };
 GoogleBlockly.Extensions.registerMixin(
   'behavior_caller_get_def_block_mixin',
-  procedureCallerNoReturnGetDefBlockMixin
+  behaviorCallerGetDefBlockMixin
 );
 
 /**
@@ -208,7 +207,7 @@ GoogleBlockly.Extensions.registerMixin(
  * Derived from core Google Blockly:
  * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/core/procedures.ts#L202-L287
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
- * @returns an array of XML block elements
+ * @returns {import('blockly/core/utils/toolbox').FlyoutDefinition} an array of XML block elements
  */
 export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];

@@ -1,6 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
+import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants';
 import LegacyDialog from '../../code-studio/LegacyDialog';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -291,7 +291,7 @@ export function registerHelp() {
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
 }
 
-const registerAllContextMenuItems = function () {
+export const registerAllContextMenuItems = function () {
   unregisterDefaultOptions();
   registerDeletable();
   registerMovable();
@@ -371,5 +371,3 @@ function unregisterDefaultOptions() {
     GoogleBlockly.ContextMenuRegistry.registry.unregister('workspaceDelete');
   } catch (error) {}
 }
-
-exports.registerAllContextMenuItems = registerAllContextMenuItems;

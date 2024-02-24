@@ -1,0 +1,27 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-02-15T22:56:28.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "panels": [
+        {
+          "imageUrl": "https://images.code.org/e8cf0ed0263af03d3bed73749081b995-musiclab_intro_function_0.png",
+          "text": "A cool feature in Project Beats is that you can take a set of blocks and put them into your own block.  In coding, this is called making a *function*."
+        },
+        {
+          "imageUrl": "https://images.code.org/79cffd279632872b91b162a1fe460e15-musiclab_intro_function_1.png",
+          "text": "You can \"call\" your new function by using the block with the matching name, like this."
+        }
+      ]
+    },
+    "name_suffix": "_elementary"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-02-15T22:56:28.181+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_function\\\"\"],\"cloned_from\":\"musiclab_intro_panels_function\"}]"
+}]]></config>
+</Panels>

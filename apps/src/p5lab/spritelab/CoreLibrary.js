@@ -1,5 +1,6 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
+import * as locationUtils from '@cdo/apps/p5lab/locationUtils';
 import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
 import {APP_HEIGHT, APP_WIDTH} from '../constants';
@@ -11,7 +12,7 @@ import {
 import msg from '@cdo/locale';
 
 export default class CoreLibrary {
-  constructor(p5) {
+  constructor(p5, jsInterpreter) {
     this.p5 = p5;
     this.spriteId = 0;
     this.nativeSpriteMap = {};
@@ -43,6 +44,8 @@ export default class CoreLibrary {
       pass: 90,
       successFrame: 0,
     };
+    this.variableBubbles = [];
+    this.jsInterpreter = jsInterpreter;
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -50,6 +53,7 @@ export default class CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawVariableBubbles();
         this.drawSpeechBubbles();
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
@@ -105,6 +109,38 @@ export default class CoreLibrary {
         bubbleType
       );
     });
+  }
+
+  drawVariableBubbles() {
+    this.variableBubbles.forEach(variable => {
+      const {name, label, location} = variable;
+      if (!name.length || !label.length || !location) {
+        return;
+      }
+
+      const value = this.getVariableValue(name);
+      const text = `${label}: ${value}`;
+
+      // TODO: Confirm this handles shadow block locations appropriately
+      drawUtils.variableBubble(this.p5, location.x, location.y, text);
+    });
+  }
+
+  getVariableValue(variableName) {
+    if (!this.jsInterpreter) {
+      console.error('JS Interpreter not set in CoreLibrary');
+      return;
+    }
+
+    try {
+      // Blockly does not execute code or track the runtime values of variables, so we need to
+      // evaluate the variable's value using the JSInterpreter.
+      const result = this.jsInterpreter.evaluateWatchExpression(variableName);
+      return typeof result === 'undefined' ? '' : result;
+    } catch (e) {
+      console.error(`Error evaluating variable '${variableName}': ${e}`);
+      return '';
+    }
   }
 
   /**
@@ -189,6 +225,33 @@ export default class CoreLibrary {
       {
         horizontalAlign: this.p5.CENTER,
       }
+    );
+  }
+
+  addVariableBubble(label, name, locationInput) {
+    const existingBubble = this.variableBubbles.find(
+      bubble => bubble.label === label
+    );
+
+    // We only want the new bubble to overwrite the location of the existing
+    // bubble if the new location is defined
+    const location = locationUtils.resolveLocation(
+      locationInput,
+      existingBubble ? existingBubble.location : undefined
+    );
+
+    // If the variable bubble already exists, update its location
+    // Otherwise, add a new bubble to the array
+    if (existingBubble) {
+      existingBubble.location = location;
+    } else {
+      this.variableBubbles.push({label, name, location});
+    }
+  }
+
+  removeVariableBubble(label) {
+    this.variableBubbles = this.variableBubbles.filter(
+      variable => variable.label !== label
     );
   }
 
@@ -410,10 +473,7 @@ export default class CoreLibrary {
       return;
     }
     let name = opts.name;
-    let location = opts.location || {x: 200, y: 200};
-    if (typeof location === 'function') {
-      location = location();
-    }
+    let location = locationUtils.resolveLocation(opts.location);
     let animation = opts.animation;
 
     const sprite = this.p5.createSprite(location.x, location.y);

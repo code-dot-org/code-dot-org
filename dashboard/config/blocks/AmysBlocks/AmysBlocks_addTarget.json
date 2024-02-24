@@ -1,11 +1,6 @@
 {
   "category": "Sprites",
   "config": {
-    "color": [
-      184,
-      1,
-      0.74
-    ],
     "style": "default",
     "func": "addTarget",
     "blockText": "{TARGET} {OPT} {SPRITE} ",

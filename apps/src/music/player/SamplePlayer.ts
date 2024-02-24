@@ -3,7 +3,7 @@ import {Effects} from './interfaces/Effects';
 import SoundCache from './SoundCache';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import SoundPlayer from './SoundPlayer';
-import {LoadFinishedCallback} from '../types';
+import {SoundLoadCallbacks} from '../types';
 
 // Multiplied by the duration of a single beat to determine the length of
 // time to fade out a sound, if trimming to a specific duration. This results
@@ -38,7 +38,6 @@ export default class SamplePlayer {
   private playingSamples: PlayingSample[];
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
-  private updateLoadProgress: ((value: number) => void) | undefined;
 
   constructor(
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
@@ -51,10 +50,6 @@ export default class SamplePlayer {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
-  }
-
-  setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
-    this.updateLoadProgress = updateLoadProgress;
   }
 
   setBpm(bpm: number) {
@@ -223,11 +218,8 @@ export default class SamplePlayer {
     }
   }
 
-  async loadSounds(sampleIds: string[], onLoadFinished?: LoadFinishedCallback) {
-    return this.soundCache.loadSounds(sampleIds, {
-      updateLoadProgress: this.updateLoadProgress,
-      onLoadFinished,
-    });
+  async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
+    return this.soundCache.loadSounds(sampleIds, callbacks);
   }
 
   private startInternal(

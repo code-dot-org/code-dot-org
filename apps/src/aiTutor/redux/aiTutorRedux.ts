@@ -1,14 +1,26 @@
-import {
-  getChatCompletionMessage,
-  postOpenaiChatCompletion,
-} from '@cdo/apps/aichat/chatApi';
-import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aichat/types';
+import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
+import {
+  compilationSystemPrompt,
+  generalChatSystemPrompt,
+  validationSystemPrompt,
+} from '@cdo/apps/aiTutor/constants';
+import {savePromptAndResponse} from '../interactionsApi';
+import {
+  TutorType,
+  Role,
+  Status,
+  ChatCompletionMessage,
+  Level,
+  ValidationCompilationContext,
+} from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
+  selectedTutorType: TutorType | undefined;
+  level: Level | undefined;
+  scriptId: number | undefined;
   // State for compilation and validation.
   aiResponse: string | undefined;
   isWaitingForAIResponse: boolean;
@@ -28,6 +40,9 @@ const initialChatMessages: ChatCompletionMessage[] = [
 ];
 
 const initialState: AITutorState = {
+  selectedTutorType: undefined,
+  level: undefined,
+  scriptId: undefined,
   aiResponse: '',
   isWaitingForAIResponse: false,
   chatMessages: initialChatMessages,
@@ -35,35 +50,55 @@ const initialState: AITutorState = {
   chatMessageError: false,
 };
 
-export interface ChatContext {
-  levelId?: number;
-  systemPrompt: string;
-  studentCode: string;
-}
-
 // THUNKS
 
 // Compilation & Validation
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
-  async (ChatContext: ChatContext, thunkAPI) => {
-    if (ChatContext.systemPrompt === undefined) {
+  async (chatContext: ValidationCompilationContext, thunkAPI) => {
+    const state = thunkAPI.getState() as {aiTutor: AITutorState};
+    const levelContext = {
+      levelId: state.aiTutor.level?.id,
+      isProjectBacked: state.aiTutor.level?.isProjectBacked,
+      scriptId: state.aiTutor.scriptId,
+    };
+
+    let systemPrompt;
+    if (chatContext.tutorType === TutorType.VALIDATION) {
+      systemPrompt = validationSystemPrompt;
+    } else if (chatContext.tutorType === TutorType.COMPILATION) {
+      systemPrompt = compilationSystemPrompt;
+    }
+
+    if (systemPrompt === undefined) {
       throw new Error('systemPrompt is undefined');
     }
 
-    if (ChatContext.studentCode === undefined) {
+    if (chatContext.studentCode === undefined) {
       throw new Error('studentCode is undefined');
     }
 
-    const chatApiResponse = await postOpenaiChatCompletion(
-      [
-        {role: Role.SYSTEM, content: ChatContext.systemPrompt},
-        {role: Role.USER, content: ChatContext.studentCode},
-      ],
-      ChatContext.levelId
+    const chatApiResponse = await getChatCompletionMessage(
+      systemPrompt,
+      0,
+      chatContext.studentCode,
+      [],
+      levelContext.levelId,
+      chatContext.tutorType
     );
 
-    thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
+    thunkAPI.dispatch(addAIResponse(chatApiResponse?.assistantResponse));
+    const prompt = systemPrompt + chatContext.studentCode;
+
+    const interactionData = {
+      ...levelContext,
+      type: chatContext.tutorType,
+      prompt: JSON.stringify(prompt),
+      status: chatApiResponse?.status,
+      aiResponse: chatApiResponse?.assistantResponse,
+    };
+
+    await savePromptAndResponse(interactionData);
   }
 );
 
@@ -74,6 +109,12 @@ export const submitChatMessage = createAsyncThunk(
   'aitutor/submitChatMessage',
   async (message: string, thunkAPI) => {
     const state = thunkAPI.getState() as {aiTutor: AITutorState};
+    const levelContext = {
+      levelId: state.aiTutor.level?.id,
+      isProjectBacked: state.aiTutor.level?.isProjectBacked,
+      scriptId: state.aiTutor.scriptId,
+    };
+
     const systemPrompt = generalChatSystemPrompt;
     const storedMessages = state.aiTutor.chatMessages;
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
@@ -113,6 +154,17 @@ export const submitChatMessage = createAsyncThunk(
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
+
+    const prompt = systemPrompt + message;
+    const interactionData = {
+      ...levelContext,
+      type: TutorType.GENERAL_CHAT,
+      prompt: JSON.stringify(prompt),
+      status: chatApiResponse?.status,
+      aiResponse: chatApiResponse?.assistantResponse,
+    };
+
+    await savePromptAndResponse(interactionData);
   }
 );
 
@@ -120,8 +172,20 @@ const aiTutorSlice = createSlice({
   name: 'aiTutor',
   initialState,
   reducers: {
+    setSelectedTutorType: (
+      state,
+      action: PayloadAction<TutorType | undefined>
+    ) => {
+      state.selectedTutorType = action.payload;
+    },
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
+    },
+    setLevel: (state, action: PayloadAction<Level | undefined>) => {
+      state.level = action.payload;
+    },
+    setScriptId: (state, action: PayloadAction<number | undefined>) => {
+      state.scriptId = action.payload;
     },
     setIsWaitingForAIResponse: (state, action: PayloadAction<boolean>) => {
       state.isWaitingForAIResponse = action.payload;
@@ -173,6 +237,9 @@ const aiTutorSlice = createSlice({
 
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
+  setSelectedTutorType,
+  setLevel,
+  setScriptId,
   addAIResponse,
   addChatMessage,
   clearChatMessages,

@@ -11,7 +11,7 @@ wrong '![](https://images.code.org/ff1b9a3fb0056055aee686115100e6f4-Q4E.png)'
 
 
 teacher_markdown <<MARKDOWN
-**Content: Unit 2 Lesson 17**
+**Content: Unit 2 Lesson 11**
 
 The image of clouds and the image of rainbows both have the class weather. To write a style rule-set for that class, the selector for the rule-set has a `.` before the class name.
 MARKDOWN

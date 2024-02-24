@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U5L5-Enhanced For Loops PBT_2024",
     "teacher_markdown": "Since we changed the inner `for` loop from an enhanced `for` loop to a regular one, we are now able to update the values within the array. In this case, the function will take the value at each element and multiply it by two.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:01:31.923+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L4_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L4_2023\"}]"

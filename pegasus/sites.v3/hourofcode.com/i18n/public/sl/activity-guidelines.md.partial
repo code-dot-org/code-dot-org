@@ -1,5 +1,5 @@
 ---
-title: Smernice za dejavnost
+title: Activity Guidelines
 layout: wide
 ---
 
@@ -104,23 +104,23 @@ Kaj boste potrebovali:
 * Ime in e-poštni naslov primarnega stika, ki predstavlja predloženo dejavnost
 * Ime dejavnosti (v imenu ni mogoče vključiti »Ura kode«)
 * URL povezava do dejavnosti
-* Ali ta dejavnost vključuje AI: Da ali Ne
-* Opis dejavnosti (največje število znakov: 400) 
-    * V opis vključite, ali je v glavnem voden učenec ali učitelj. Poleg tega nekatere šole zanima, ali dejavnosti Hour of Code obravnavajo skupne jedre ali znanstvene standarde naslednje generacije. Če dejavnost obravnava posebne standarde, razmislite o vključitvi teh informacij.
-* Priporočena raven (-e) razreda (-e) za predvidene uporabnike. Lahko se nanašajo na \[Computer Science Teachers' Association je K-12 Standardi\] (https://k12cs.org/framework-statements-by-grade-band/) za razred primerne računalniške znanosti konceptov. Primer stopnje stopnje vključujejo: 
-    * Vrtec - 1. razred (4-6 let)
-    * 2. do 5. stopnje (7-10 let)
-    * 6. in 8. stopnje (11-13 let)
-    * 9+ razredov (14+ let)
-* Seznam programskih jezikov, ki jih vaša dejavnost uči. Tj C/C ++, Java, JavaScript itd. ali jezik neodvisen (za učne načrte, ki jih je mogoče poučevati v več jezikih) izberite jezikovne umetnosti.
-* Seznam podprtih naravnih jezikov. Opomba: Odkrivanje jezika je odgovoren ponudnik dejavnosti; vse uporabnike bomo preusmerili na en sam URL. ali jezik neodvisen (za učne načrte, ki jih je mogoče poučevati v več jezikih)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Seznam programskih jezikov, ki jih vaša dejavnost uči. Tj C/C ++, Java, JavaScript itd. ali jezik neodvisen (za učne načrte, ki jih je mogoče poučevati v več jezikih) choose language arts.
+* Seznam podprtih naravnih jezikov. Opomba: Odkrivanje jezika je odgovoren ponudnik dejavnosti; vse uporabnike bomo preusmerili na en sam URL. or language independent (for lesson plans that can be taught in multiple languages)
 * Kakšno raven izkušenj mora imeti vzgojitelj za uporabo vaše dejavnosti? (npr. Začetnik ali Udobno.) In kakšno raven izkušenj bi morali imeti študenti?
-* Kakšno raven izkušenj mora imeti vzgojitelj za uporabo vaše dejavnosti? (npr. Začetnik ali Udobno.) In kakšno raven izkušenj bi morali imeti študenti? Če želite pripraviti naprednejše dejavnosti Hour of Code™, v opis svoje dejavnosti vključite predhodno znanje.
-* Dolžina vaše dejavnosti 
-    * Samo 1 ura
-    * 1 ura z nadaljnjim tečajem
-    * 2-6 ur (lahko več lekcij)
-* Seznam prenočišča za dostopnost, če jih ima vaša dejavnost. Ti vključujejo združljivost bralnika zaslona, zmogljivosti besedila v govor, uporabo barv z visokim kontrastom ali katere koli druge nastanitve, namenjene učencem s posebnimi potrebami.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Dodatne stvari, ki jih boste potrebovali pri oddaji učnih načrtov
 
@@ -139,7 +139,7 @@ Kaj boste potrebovali:
         * iOS mobilni Safari (optimiziran za mobilne naprave)
         * Android Chrome (optimiziran za mobilne naprave)
     * Ne spletna: določite platformo za izvorno kodo (Mac, Win, iOS, Android, XBox, drugo)
-    * Izklopljeno
+    * Unplugged
 * Posnetek zaslona ali tržna podoba dejavnosti Ura kode. Prosimo, pošljite vsaj eno sliko z dimenzijami 4:3. To bi moralo biti vsaj 520px za 390px. Ta slika ne sme imeti besedila (razen vašega logotipa), da bi bila dostopnejša za govorce, ki niso angleški. Če ustrezna slika ni na voljo, lahko posnamemo svoj posnetek vaše vadnice ALI se lahko odločimo, da je ne bomo našteli. Vse slike morajo biti predložene kot URL povezava na .jpg, .jpeg ali .png.
 * Da bi natančneje spremljali udeležbo, morajo partnerji z vadnicami tretjih oseb vključiti slike za sledenje z 1 slikovnimi pikami na prvo stran svojih vadnic Hour of Code. Za več podrobnosti si oglejte spodnji razdelek [Sledenje Pixel](#pixel) .
 * Ko končate svojo dejavnost, je treba uporabnike usmeriti na [code.org/api/hour/finish](https://code.org/api/hour/finish) , kjer bodo lahko: 
@@ -170,7 +170,7 @@ Kaj boste potrebovali:
 
 Raznolik odbor vzgojiteljev računalništva bo uvrstil vloge na podlagi kvalitativnih in kvantitativnih meril. Navedene bodo vse dejavnosti, ki ustrezajo osnovnim merilom.
 
-Za tradicionalne dejavnosti kodiranja bo raznolik odbor vzgojiteljev računalništva razvrstil prispevke na podlagi kvalitativnih in kvantitativnih meril. Navedene bodo vse dejavnosti, ki ustrezajo osnovnim merilom. Učitelji bodo lahko filtrirali in razvrstili, da bi našli najboljše dejavnosti za svojo učilnico.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Če odbor za pregled oceni dejavnost nič v kakovosti proizvodnje (zaradi slabih napak ali navodil, zaradi katerih je zelo težko uporabljati), pri spodbujanju učenja v premalo zastopanih skupinah (zaradi rasističnega/seksističnega gradiva), izobraževalne vrednosti (ne uči konceptov CS) ali zabava/vključevanje (zaradi težko/odvračanja študentov za delo skozi), dejavnost ne bo navedena.
 
@@ -188,13 +188,13 @@ Za samousmerjene dejavnosti za nove učitelje in študente bo pregledna komisija
 - Ne zahtevajte prijave
 - Ne zahtevajte plačila (izjema za dejavnosti robotike lahko zahtevajo nakup robota/kompleta)
 
-Za samousmerjene dejavnosti za nove učitelje in študente bo pregledna komisija iskala, ali:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Učitelji lahko uporabljajo vadnico ali dejavnost brez ozadja v računalništvu
 - Študenti so lahko uspešni brez ozadja v računalništvu
 - Učenci se lahko usmerijo skozi vadnico brez starševskega ali učiteljskega vodstva
 
-Učitelji in učenci bodo lahko iskali in filtrirali naš seznam dejavnosti na podlagi filtrov, kot so ocena, raven izkušenj, predmet, strojna oprema itd. Privzeto bomo najprej prikazali načrte in dejavnosti lekcij, ki:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Prejmite najvišje ocene odbora za pregled
 - So enourne samousmerjene dejavnosti, namenjene začetnikom (študentom in učiteljem)
@@ -208,7 +208,7 @@ Učitelji in učenci bodo lahko iskali in filtrirali naš seznam dejavnosti na p
 
 ## Predlogi za oblikovanje eno uro samo vodene vaje
 
-Dejavnosti ni treba vključevati AI, čeprav želimo ponuditi več dejavnosti, povezanih z umetno inteligenco.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Vključi zapiske učiteljev.** Večina dejavnosti mora biti usmerjena v študente, če pa učitelj olajša ali upravlja dejavnost, vključite jasna in preprosta navodila za učitelja v obliki zapiskov učitelja na ločenem URL-ju, ki je bil predložen z vašo dejavnostjo. Ne samo, da so študenti novinci, nekateri učitelji so tudi. Vključi informacije, kot so:
 
@@ -221,15 +221,15 @@ Dejavnosti ni treba vključevati AI, čeprav želimo ponuditi več dejavnosti, p
 - Ali priporočate programiranje parov?
 - Premisleki za uporabo v razredu? Na primer, če obstajajo videoposnetki, svetujte učiteljem, naj videoposnetke prikazujejo na predvidenem zaslonu za celotno učilnico, da si jih ogledajo skupaj
 
-**Vključi povratne informacije na koncu dejavnosti.** (Npr. »Končali ste 10 stopenj in se naučili zank! Odlično delo!«)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Spodbujajte študente, da objavijo na socialnih medijih (kjer je to primerno), ko končajo.** Na primer »Naredil sem uro kode z ________ Ali ste? #HourOfCode« ali »Sem naredil #HourOfCode kot del #CSEdWeek. Ali ste? @Scratch.« Uporabite hashtag **#HourOfCode** (z velikimi črkami H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Ustvarite svojo dejavnost v španščini ali drugih jezikih poleg angleščine.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Pojasnite ali povežite dejavnost z družbeno pomembnim kontekstom.** Računalniško programiranje postane velesila, ko študenti vidijo, kako lahko spremeni svet na bolje!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Prepričajte se, da je vaša vadnica lahko uporabljena v paradigmi [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** To je še posebej uporabno za Hour of Code, ker številne učilnice nimajo strojne opreme 1:1 za vse študente.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Nazaj na vrh**](#top)
 
@@ -237,7 +237,7 @@ Dejavnosti ni treba vključevati AI, čeprav želimo ponuditi več dejavnosti, p
 
 ## Smernice za blagovno znamko
 
-Hour of Code® in Hora del Código® sta registrirani blagovni znamki Code.org. Številni naši partnerji so uporabili naše blagovne znamke »Hour of Code« na svojih spletnih straneh v povezavi z dejavnostmi Hour of Code. Te uporabe ne želimo preprečiti, vendar želimo zagotoviti, da uporaba spada v nekaj omejitev:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Uporabljajte »Uro kode« samo v povezavi z nekomercialnimi dejavnostmi CS Izobraževanje v okviru kampanje Ura kode in za noben drug namen.
 2. Vsako sklicevanje na »Uro kode« je treba uporabiti na način, ki ne nakazuje, da je to vaša lastna blagovna znamka, ampak da se raje sklicuje na Uro kode kot množično gibanje. Dober primer: »Sodelujte v Hour of Code® na Acmecorp.com«. Slab primer: »Poskusite uro kode z ACME Corp«.
@@ -253,15 +253,15 @@ Hour of Code® in Hora del Código® sta registrirani blagovni znamki Code.org. 
 
 ## Sledenje Pixel
 
-Če je vaša vadnica odobrena in vključena na končno stran z vadnicami, vam bo Code.org zagotovil edinstven slikovni pik za sledenje, ki ga boste lahko vključili v vašo vadnico. Glej primer spodaj. Ne vključujte na vseh vmesnih straneh vadnice.
+Če je vaša vadnica odobrena in vključena na končno stran z vadnicami, vam bo Code.org zagotovil edinstven slikovni pik za sledenje, ki ga boste lahko vključili v vašo vadnico. Glej primer spodaj. Do not include on any interim pages of your tutorial.
 
-To nam bo omogočilo, da štejemo uporabnike, ki delajo vašo vadnico Hour of Code. To bo privedlo do natančnejših števila udeležbe za vašo vadnico.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Če je vaša vadnica odobrena in vključena na končno stran z vadnicami, vam bo Code.org zagotovil edinstven slikovni pik za sledenje, ki ga boste lahko vključili v vašo vadnico. Glej primer spodaj.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-OPOMBA: to ni pomembno storiti za namestljive aplikacije (aplikacije iOS/Android ali aplikacije za namestitev namiznih računalnikov)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Primer sledenja slikovnih pik za Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Spodbujanje vaših dejavnosti, CsedWeek in Ura kodiranja
 
-Prosimo, promovirajte svojo dejavnost v svojem omrežju! Usmerite jih na svojo stran Ura kode. Vaši uporabniki so veliko bolj verjetno, da se odzovejo na pošiljanje od vas o vaši dejavnosti. Uporabite mednarodno kampanjo Hour of Code med tednom izobraževanja računalništva kot izgovor, da spodbudite uporabnike, da povabijo druge, da se pridružijo, in nam pomagajte doseči več študentov!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Funkcija Ura kode in CsedWeek na vaši spletni strani. Na primer: <http://www.tynker.com/hour-of-code>
 - Spodbujanje ure kode z uporabo socialnih medijev, tradicionalnih medijev, poštnih seznamov itd. Z uporabo hashtaga #HourOfCode (z velikimi črkami H, O, C)

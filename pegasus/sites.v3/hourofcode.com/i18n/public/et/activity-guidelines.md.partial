@@ -104,23 +104,23 @@ Mida vajate:
 * Esitatud tegevust esindava esmase kontakti nimi ja e-post
 * Tegevuse nimi (ei tohi sisaldada nimesse „Kooditund”)
 * URL-i link tegevusele
-* Kas see tegevus hõlmab AI: Jah või Ei
-* Tegevuse kirjeldus (max märkide arv: 400) 
-    * Palun lisage kirjeldusse, kas see on peamiselt üliõpilaste juhitud või õpetajate hõlbustatav. Lisaks on mõned koolid huvitatud sellest, kas kooditunni tegevused käsitlevad Common Core või Next Generation Science Standards. Kui tegevus käsitleb konkreetseid standardeid, kaaluge selle teabe lisamist.
-* Soovituslik hinne (d) mõeldud kasutajatele. Arvutiteaduse õpetajate ühingu K-12 standarditele (https://k12cs.org/framework-statements-by-grade-band/) võib viidata kvaliteediklassi arvutiteaduse mõistete jaoks. Näiteks hinne tasemed on järgmised: 
-    * Lasteaed - 1. aste (vanuses 4-6)
-    * 2.-5. klass (vanuses 7-10)
-    * 6.—8. klass (vanuses 11-13)
-    * 9+ klassid (vanuses 14+)
-* Programmeerimiskeelte loend, mida teie tegevus õpetab. See tähendab C/C++, Java, JavaScript jne või keelest sõltumatu (tunniplaanid, mida saab õpetada mitmes keeles) valida keelekunsti.
-* Toetatud loomulike keelte loend. Märkus.: Keele tuvastamise eest vastutab tegevuse pakkuja; suuname kõik kasutajad ümber antud URL-ile. või keelest sõltumatu (tunniplaanid, mida saab õpetada mitmes keeles)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Programmeerimiskeelte loend, mida teie tegevus õpetab. See tähendab C/C++, Java, JavaScript jne või keelest sõltumatu (tunniplaanid, mida saab õpetada mitmes keeles) choose language arts.
+* Toetatud loomulike keelte loend. Märkus.: Keele tuvastamise eest vastutab tegevuse pakkuja; suuname kõik kasutajad ümber antud URL-ile. or language independent (for lesson plans that can be taught in multiple languages)
 * Millise kogemuse tase peaks õpetaja oma tegevust kasutama? (nt algaja või mugav.) Ja millise kogemuse tase peaks õpilastel olema?
-* Millise kogemuse tase peaks õpetaja oma tegevust kasutama? (nt algaja või mugav.) Ja millise kogemuse tase peaks õpilastel olema? Kui soovid valmistada ette täpsemaid kooditund™ Tegevusi, lisage oma tegevuse kirjeldusse vajalikud eelteadmised.
-* Teie tegevuse pikkus 
-    * Ainult 1 tund
-    * 1 tund koos jätkuravikuuriga
-    * 2-6 tundi (võib olla mitu tundi)
-* Loetelu juurdepääsetavus majutust, kui teie tegevus on neid. Nende hulka kuuluvad ekraanilugeri ühilduvus, teksti kõnesünteesi võimalused, suure kontrastsusega värvide kasutamine või muu puuetega õppijatele mõeldud majutus.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Täiendavad asjad, mida vajate tunniplaanide esitamisel
 
@@ -170,7 +170,7 @@ Mida vajate:
 
 Mitmekesine komitee infotehnoloogia õpetajad auaste esildised põhinevad kvalitatiivsed ja kvantitatiivsed kriteeriumid. Loetletakse kõik põhikriteeriumidele vastavad tegevused.
 
-Traditsiooniliste kodeerimistegevuste puhul järjestab mitmekesine arvutiteaduse õpetajate komitee esildised kvalitatiivsete ja kvantitatiivsete kriteeriumide alusel. Loetletakse kõik põhikriteeriumidele vastavad tegevused. Õpetajad saavad filtreerida ja sortida, et leida oma klassiruumi jaoks parimad tegevused.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Kui ülevaatuskomisjon hindab tegevust tootmiskvaliteedis nulli (halbade vigade või juhiste tõttu, mis muudavad selle väga raskeks kasutamiseks), õppimise edendamisel alaesindatud rühmades (rassistlik/seksistliku materjali tõttu), hariduslikus väärtuses (ei õpeta CS-kontseptsioone) või lõbus/kaasamine (õpilaste töötamise raskus/takistamine), ei loetleta tegevust.
 
@@ -188,13 +188,13 @@ Uutele õpetajatele ja üliõpilastele suunatud tegevuste jaoks otsib läbivaata
 - Nõua registreerumist
 - Maksmist ei nõua (erand robootikategevuste puhul, mis võivad nõuda robot/komplekti ostmist)
 
-Uutele õpetajatele ja üliõpilastele suunatud tegevuste jaoks otsib läbivaatamiskomisjon, kas:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Õpetajad saavad kasutada õpetus või tegevus ilma tausta infotehnoloogia
 - Õpilased võivad olla edukad ilma tausta infotehnoloogia
 - Õpilased saavad suunata end läbi juhendaja ilma vanemate või õpetajate juhised
 
-Õpetajad ja õpilased saavad meie tegevuste nimekirja läbi otsida ja filtreerida selliste filtrite põhjal nagu klass, kogemuste tase, teema, riistvara jne. Vaikimisi näitame kõigepealt tunniplaane ja tegevusi, mis:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Saate ülevaatekomisjonilt kõrgeimad reitingud
 - Kas üks tund ise suunatud tegevusi mõeldud algajatele (õpilased ja õpetajad)
@@ -208,7 +208,7 @@ Uutele õpetajatele ja üliõpilastele suunatud tegevuste jaoks otsib läbivaata
 
 ## Soovitused ühe tunni isejuhitud õpetuste kujundamiseks
 
-Tegevused ei pea sisaldama tehisintellekti, kuigi soovime pakkuda rohkem tehisintellektiga seotud tegevusi.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Kaasa õpetaja märkmed.** Enamik tegevusi peaks olema üliõpilastele suunatud, kuid kui tegevust hõlbustab või haldab õpetaja, siis palun lisage õpetaja jaoks selged ja lihtsad juhised õpetaja-märkmete kujul eraldi teie tegevusega esitatud URL-ile. Mitte ainult õpilased algajad, mõned õpetajad on samuti. Lisage infot, näiteks:
 
@@ -221,15 +221,15 @@ Tegevused ei pea sisaldama tehisintellekti, kuigi soovime pakkuda rohkem tehisin
 - Kas soovitate paari programmeerimist?
 - Kaalutlused kasutamiseks klassiruumis? Näiteks kui on videoid, soovitame õpetajatel näidata videoid projitseeritud ekraanil, et kogu klassiruumis oleks võimalik vaadata koos
 
-**Lisage tagasiside tegevuse lõpus.** (nt „Sa lõpetanud 10 taset ja õppisid silmustest! Hea töö!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Julgustage õpilasi postitama sotsiaalmeediasse (vajaduse korral), kui nad on lõpetanud.** Näiteks „Ma olen teinud tunnis koodi ________ Kas olete? #HourOfCode” või „Ma olen teinud #HourOfCode osana #CSEdWeek. Kas teil on? @Scratch.” Kasutage räsimärki **#HourOfCode** (suurte tähtedega H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Loo oma tegevus hispaania keeles või muudes keeltes peale inglise.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Selgitage või ühendage tegevus sotsiaalselt olulise kontekstiga.** Arvutiprogrammeerimine muutub suurriik, kui õpilased näevad, kuidas see võib muuta maailma paremaks!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Veenduge, et teie juhendaja saab kasutada [paari programmeerimine](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigma.** See on eriti kasulik kooditunnile, sest paljudel klassiruumidel ei ole kõigi õpilaste jaoks 1:1 riistvara.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Tagasi algusesse**](#top)
 
@@ -237,7 +237,7 @@ Tegevused ei pea sisaldama tehisintellekti, kuigi soovime pakkuda rohkem tehisin
 
 ## Kaubamärgi juhised
 
-Code tund® ja Hora del Código® on Code.org registreeritud kaubamärgid. Paljud meie õppepartnerid on kasutanud meie „Hour of Code” kaubamärke oma veebilehtedel seoses Hour of Code tegevusega. Me ei soovi seda kasutamist takistada, kuid me tahame veenduda, et kasutus jääb mõne piirangu piiresse:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Kasuta „Tunni koodi” ainult seoses mitteärilistel CS Haridus tegevusi kontekstis Hour of Code kampaania, ja mitte mingil muul eesmärgil.
 2. Iga viide „Hour of Code” tuleks kasutada viisil, mis ei viita sellele, et see on teie enda brändi nimi, vaid et see pigem viitab kooditund kui rohujuure liikumist. Hea näide: „Osale Code Hour® at AcmeCORP.com”. Halb näide: „Proovige kooditund ACME Corp”.
@@ -253,15 +253,15 @@ Code tund® ja Hora del Código® on Code.org registreeritud kaubamärgid. Palju
 
 ## Jälgimise piksel
 
-Kui teie õpetus on heaks kiidetud ja lisatud viimasele juhendaja lehele, pakub Code.org teile unikaalse jälgimispiksli, et saaksite integreerida oma juhendajasse. Vaata allpool toodud näidet. Ärge lisage ühtegi vahepealset lehekülge oma juhendaja.
+Kui teie õpetus on heaks kiidetud ja lisatud viimasele juhendaja lehele, pakub Code.org teile unikaalse jälgimispiksli, et saaksite integreerida oma juhendajasse. Vaata allpool toodud näidet. Do not include on any interim pages of your tutorial.
 
-See võimaldab meil lugeda kasutajaid, kes teevad teie kooditund juhendaja. See toob kaasa täpsema osalemise loeb teie juhendaja.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Kui teie õpetus on heaks kiidetud ja lisatud viimasele juhendaja lehele, pakub Code.org teile unikaalse jälgimispiksli, et saaksite integreerida oma juhendajasse. Vaata allpool toodud näidet.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-MÄRKUS. See ei ole oluline installitavate rakenduste (iOS/Androidi rakendused või lauaarvutile installitud rakendused) jaoks
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Näide jälgimise pikslid tantsupidu:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Tegevuste edendamine, CSEDWeek ja kooditund
 
-Palun edendada oma tegevust oma võrku! Suutke need oma kooditunni lehele. Teie kasutajad reageerivad teie tegevuse kohta teie postitusele palju tõenäolisemalt. Kasutage rahvusvahelist kooditunnide kampaaniat arvutiteaduse haridusnädala ajal ettekäändena, et julgustada kasutajaid kutsuma teisi liituma ja aitaks meil jõuda rohkemate õpilasteni!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Feature Hour of Code ja CSEDWeek oma veebilehel. Nt: <http://www.tynker.com/hour-of-code>
 - Reklaamida koodi tund sotsiaalmeedias, traditsioonilises meedias, postituslistites jne, kasutades märksõna #HourOfCode (suurtähtedega H, O, C)

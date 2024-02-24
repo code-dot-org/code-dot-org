@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2024-02-16T05:19:22.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** What would happen if the two-parameter version of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">substring()</code> method was called with index values that were next to each other?\r\n\r\nTry changing the parameters for <code style=\"background-color: #ececec; color: black; font-weight: bold;\">anotherSubstring</code> to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">5</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">6</code>, then run the program.\r\n\r\nWhat is printed? Why do you think this happened?\r\n\r\n\r\n✅ TO DO: How can we make this into method? What would an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">isPalindrome(String word)</code> method return? \r\n\r\n\r\nIn <code style=\"background-color: #ececec; color: black; font-weight: bold;\">StringAnalyzer.java</code>, Replace the loop with this version:\r\nfor (int i = 0; i < word.length(); i++){\r\n          front = word.substring(i,i+1);\r\n          back = word.substring(word.length() - i - 1, word.length() - i);\r\n          if (!front.equals(back)){\r\n              return false;\r\n          }\r\n      }\r\nreturn true;\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "teacher_markdown": "In this instance, a single character `\"u\"` is returned. This is because the `substring()` method is returning a `String` composed of the single character at index `5` (inclusive) to index `6` (exclusive).",
+    "name_suffix": "_-modular",
+    "ai_tutor_available": true,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:22.070+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L4_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L4_2025\"},{\"changed_at\":\"2024-02-23 04:30:12 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-02-23 04:46:51 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-02-23 04:57:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Javalab>
