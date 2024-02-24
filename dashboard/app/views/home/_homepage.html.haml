@@ -1,6 +1,7 @@
 - content_for(:head) do
   -#%script{src: webpack_asset_path('js/home/_homepage.js'), data: {homepage: @homepage_data.to_json}}
-  %script{src: webpack_asset_path('js/main.js')}
+  %script{src: webpack_asset_path('js/homeEntryTest.js')}
+  -#%script{src: webpack_asset_path('js/main.js')}
   - if @homepage_data[:showCensusBanner]
     %script{type: "text/javascript", src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"}
     %link{rel: "stylesheet", type: "text/css", href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"}

@@ -15,6 +15,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const {PyodidePlugin} = require('@pyodide/webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ReactRefreshTypeScript = require('react-refresh-typescript');
 
 const circularDependencies = require('./circular_dependencies.json');
 
@@ -286,7 +287,7 @@ const WEBPACK_BASE_CONFIG = {
         },
       },
       {
-        test: /\.tsx?$/,
+        test: /\.[jt]sx?$/,
         use: [
           {
             loader: 'ts-loader',
@@ -295,6 +296,10 @@ const WEBPACK_BASE_CONFIG = {
               // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
               transpileOnly: true,
               configFile: 'tsconfig.build.json',
+              // make dev only
+              getCustomTransformers: () => ({
+                before: [new ReactRefreshTypeScript()],
+              }),
             },
           },
         ],
@@ -323,18 +328,18 @@ const WEBPACK_BASE_CONFIG = {
           ]
         : []),
       // update to dev only
-      {
-        test: /\.[jt]sx?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: require.resolve('babel-loader'),
-            options: {
-              plugins: [require.resolve('react-refresh/babel')],
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.[jt]sx?$/,
+      //   exclude: /node_modules/,
+      //   use: [
+      //     {
+      //       loader: require.resolve('babel-loader'),
+      //       options: {
+      //         plugins: [require.resolve('react-refresh/babel')],
+      //       },
+      //     },
+      //   ],
+      // },
       ...(process.env.DEV
         ? [
             // Enable source maps locally for Blockly for easier debugging.
@@ -418,19 +423,19 @@ function createWebpackConfig({
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
     watch,
-    // entry: addPollyfillsToEntryPoints(
-    //   {
-    //     ...appsEntries,
-    //     ...CODE_STUDIO_ENTRIES,
-    //     ...INTERNAL_ENTRIES,
-    //     ...PEGASUS_ENTRIES,
-    //     ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-    //     ...SHARED_ENTRIES,
-    //     ...OTHER_ENTRIES,
-    //   },
-    //   ['@babel/polyfill/noConflict', 'whatwg-fetch']
-    // ),
-    entry: './src/home.js',
+    entry: addPollyfillsToEntryPoints(
+      {
+        ...appsEntries,
+        ...CODE_STUDIO_ENTRIES,
+        ...INTERNAL_ENTRIES,
+        ...PEGASUS_ENTRIES,
+        ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+        ...SHARED_ENTRIES,
+        ...OTHER_ENTRIES,
+      },
+      ['@babel/polyfill/noConflict', 'whatwg-fetch']
+    ),
+    // entry: './src/homeEntryTest.js',
     externals: [
       {
         jquery: 'var $',

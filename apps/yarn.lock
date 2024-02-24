@@ -8543,6 +8543,7 @@ __metadata:
     react-portal: ^4.2.1
     react-redux: ~8.0.5
     react-refresh: ^0.14.0
+    react-refresh-typescript: ^2.0.9
     react-router: 3.2.6
     react-router-dom: ^4.3.1
     react-select: ^1.2.1
@@ -24429,6 +24430,16 @@ es6-shim@latest:
     redux:
       optional: true
   checksum: a108f4f7ead6ac005e656d46051474a2bbdb31ede481bbbb3d8d779c1a35e1940b8655577cc5021313411864d305f67fc719aa48d6e5ed8288cf9cbe8b7042e4
+  languageName: node
+  linkType: hard
+
+"react-refresh-typescript@npm:^2.0.9":
+  version: 2.0.9
+  resolution: "react-refresh-typescript@npm:2.0.9"
+  peerDependencies:
+    react-refresh: 0.10.x || 0.11.x || 0.12.x || 0.13.x || 0.14.x
+    typescript: ^4.8 || ^5.0
+  checksum: 7690d8abe8c2886ced1e354d48c61323839a373cb55b51abb5669c41721e8f0b2d9332cd2290b4661faf551c0cbc95f142368fdfcbcd82b17f66bb97b4b8ac73
   languageName: node
   linkType: hard
 
