@@ -74,8 +74,8 @@ export interface SampleEvent {
   pitchShift: number;
   // Effects to apply
   effects?: Effects;
-  // Length to play the sample for
-  lengthSeconds?: number;
+  // Length in measures to play the sample for
+  length?: number;
 }
 
 /** A sequence of notes played on a sampler instrument */

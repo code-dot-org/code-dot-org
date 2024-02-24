@@ -20,8 +20,6 @@ import SamplePlayerWrapper from './SamplePlayerWrapper';
 // Using require() to import JS in TS files
 const constants = require('../constants');
 
-// Default to 4/4 time, 120 BPM, C Major
-const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
 const DEFAULT_KEY = Key.C;
 
@@ -221,22 +219,6 @@ export default class MusicPlayer {
     return this.audioPlayer.getCurrentPlaybackPosition();
   }
 
-  // Converts actual seconds used by the audio system into a playhead
-  // position, which is 1-based and scaled to measures.
-  convertSecondsToPlayheadPosition(seconds: number): number {
-    return 1 + seconds / this.secondsPerMeasure();
-  }
-
-  // Converts a playhead position, which is 1-based and scaled to measures,
-  // into actual seconds used by the audio system.
-  convertPlayheadPositionToSeconds(playheadPosition: number): number {
-    return this.secondsPerMeasure() * (playheadPosition - 1);
-  }
-
-  secondsPerMeasure() {
-    return (60 / this.bpm) * BEATS_PER_MEASURE;
-  }
-
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     const library = MusicLibrary.getInstance();
     if (!library) {
@@ -375,11 +357,10 @@ export default class MusicPlayer {
       const sampleId = this.getSampleForNote(tranposedNote, instrument);
       if (sampleId !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
-        const lengthSeconds = (event.length / 16) * this.secondsPerMeasure();
         samples.push({
           sampleId,
           playbackPosition: eventWhen,
-          lengthSeconds,
+          length: event.length,
           triggered,
           effects,
           originalBpm: this.bpm,
