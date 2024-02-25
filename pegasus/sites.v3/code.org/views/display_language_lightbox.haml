@@ -31,6 +31,42 @@
     return keyValue ? keyValue[2] : null;
   }
 
+  /**
+   * A focus trap is a common accessibility feature that ensures that the keyboard focus remains
+   * within a certain container (like a modal dialog), and does not move to other parts of the 
+   * page.
+  */
+  function focusTrap(modalId) {
+    return () => {
+      var focusableEls = $(modalId).find('a[href], button, textarea, input:not([disabled]), select');
+      var firstFocusableEl = focusableEls.first()[0];
+      var lastFocusableEl = focusableEls.last()[0];
+      var KEYCODE_TAB = 9;
+
+      firstFocusableEl.focus();
+
+      $(modalId).on('keydown', function(e) {
+        var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+
+        if (!isTabPressed) { 
+          return; 
+        }
+
+        if (e.shiftKey) { // if shift key pressed for shift + tab combination
+          if (document.activeElement === firstFocusableEl) {
+            lastFocusableEl.focus();
+            e.preventDefault();
+          }
+        } else { // if tab key is pressed
+          if (document.activeElement === lastFocusableEl) { // if focused has reached to last item then focus first item after tab
+            firstFocusableEl.focus();
+            e.preventDefault();
+          }
+        }
+      });
+    }
+  }
+
   $( document ).ready(function() {
     already_shown = !!getCookie('_loc_notice');
     if(!already_shown) {
@@ -38,34 +74,7 @@
         country_code = data['country_code'];
         if(country_code != 'US') {
           $('#selectLanguage').modal('show');
-          $('#selectLanguage').on('shown.bs.modal', function () {
-            var focusableEls = $(this).find('a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select');
-            var firstFocusableEl = focusableEls.first()[0];
-            var lastFocusableEl = focusableEls.last()[0];
-            var KEYCODE_TAB = 9;
-
-            firstFocusableEl.focus();
-
-            $(this).on('keydown', function(e) {
-              var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
-
-              if (!isTabPressed) { 
-                return; 
-              }
-
-              if (e.shiftKey) {
-                if (document.activeElement === firstFocusableEl) {
-                  lastFocusableEl.focus();
-                  e.preventDefault();
-                }
-              } else {
-                if (document.activeElement === lastFocusableEl) {
-                  firstFocusableEl.focus();
-                  e.preventDefault();
-                }
-              }
-            });
-          });
+          $('#selectLanguage').on('shown.bs.modal', focusTrap('#selectLanguage'));
         }
       });
       setCookie('_loc_notice', '1', 365)
