@@ -15,6 +15,7 @@ import {
   unsetNameFailure,
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import {showProjectInfoDialog} from '@cdo/apps/templates/projects/projectInfoDialog/projectInfoDialogRedux';
 import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 
 export const styles = {
@@ -28,6 +29,7 @@ export class PersonalProjectsTableActionsCell extends Component {
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
     showDeleteDialog: PropTypes.func.isRequired,
+    showProjectInfoDialog: PropTypes.func.isRequired,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,
     startRenamingProject: PropTypes.func.isRequired,
@@ -37,10 +39,18 @@ export class PersonalProjectsTableActionsCell extends Component {
     remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     unsetNameFailure: PropTypes.func.isRequired,
+    isFrozen: PropTypes.bool,
   };
 
   onDelete = () => {
     this.props.showDeleteDialog(this.props.projectId);
+  };
+
+  onClickInfo = () => {
+    console.log(
+      'Congratulations! This project was selected to be a featured project or an exemplar project!'
+    );
+    this.props.showProjectInfoDialog();
   };
 
   onRename = () => {
@@ -70,17 +80,29 @@ export class PersonalProjectsTableActionsCell extends Component {
       <div>
         {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item onClick={this.onRename}>
-              {i18n.rename()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && (
+              <PopUpMenu.Item onClick={this.onRename}>
+                {i18n.rename()}
+              </PopUpMenu.Item>
+            )}
             <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
             <MenuBreak />
-            <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-              <FontAwesome icon="times-circle" style={styles.xIcon} />
-              {i18n.delete()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && (
+              <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+                <FontAwesome icon="times-circle" style={styles.xIcon} />
+                {i18n.delete()}
+              </PopUpMenu.Item>
+            )}
+            {this.props.isFrozen && (
+              <PopUpMenu.Item
+                onClick={this.onClickInfo}
+                color={color.default_blue}
+              >
+                Project Info
+              </PopUpMenu.Item>
+            )}
           </QuickActionsCell>
         )}
         {isEditing && (
@@ -118,6 +140,9 @@ export default connect(
   dispatch => ({
     showDeleteDialog(projectId) {
       dispatch(showDeleteDialog(projectId));
+    },
+    showProjectInfoDialog() {
+      dispatch(showProjectInfoDialog());
     },
     startRenamingProject(projectId, updatedName) {
       dispatch(startRenamingProject(projectId, updatedName));

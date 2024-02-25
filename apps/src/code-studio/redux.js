@@ -12,6 +12,7 @@ import hiddenLesson from './hiddenLessonRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
+import projectInfoDialog from '../templates/projects/projectInfoDialog/projectInfoDialogRedux';
 import projects from '../templates/projects/projectsRedux';
 import verifiedInstructor from './verifiedInstructorRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
@@ -35,6 +36,7 @@ registerReducers({
   isRtl,
   responsive,
   publishDialog,
+  projectInfoDialog,
   projects,
   verifiedInstructor,
   currentUser,
