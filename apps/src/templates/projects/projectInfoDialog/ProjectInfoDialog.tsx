@@ -30,8 +30,18 @@ const ProjectInfoDialog: React.FunctionComponent = () => {
     >
       <h3>Project Info</h3>
       <p>
-        Congratulations! This project was selected to be a featured project or
-        an exemplar project!
+        Congratulations! This project has been selected to be a featured project
+        or an exemplar project!
+      </p>
+      <p>
+        This project is now view-only and is unable to be edited. However, you
+        can remix this project and edit the remixed version.
+      </p>
+      <p>
+        If you have any questions or if you would like to request that your
+        project no longer be displayed in the featured gallery at
+        https://studio.code.org/projects/public, please reach out to us at
+        support@code.org.
       </p>
       <DialogFooter>
         <Button
