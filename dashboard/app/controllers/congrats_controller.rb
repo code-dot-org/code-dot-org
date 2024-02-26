@@ -14,30 +14,30 @@ class CongratsController < ApplicationController
       if unit_group
         units = unit_group.units_for_user(current_user)
         completed_units = UserScript.where(user: current_user, script: units).where.not(completed_at: nil).map(&:script)
-        @certificate_image_urls =
-          if completed_units.empty? || completed_units.length == units.length
-            [certificate_image_url(nil, course_name, nil)]
-          else
-            completed_units.map {|unit| certificate_image_url(nil, unit.name, nil)}
-          end
         @certificate_data =
-          if completed_units.empty? || completed_units.length == units.length
+          if completed_units.length == units.length
             [{
-              courseName: course_name
+              courseName: course_name,
+              coursePath: course_path(unit_group),
             }]
           else
             completed_units.map do |unit|
               {
-                courseName: unit.name
+                courseName: unit.name,
+                coursePath: script_path(unit),
               }
             end
           end
 
       else
-        @certificate_image_urls = [certificate_image_url(nil, course_name, nil)]
-        @certificate_data = [{
-          courseName: course_name
-        }]
+        unit = Script.get_from_cache(course_name)
+        # The order of this conditional is important. During HoC, we generally want to avoid
+        # hitting the database, so we check if the unit is an HoC unit first.
+        if unit&.hoc? || UserScript.where(user: current_user, script: unit).where.not(completed_at: nil).exists?
+          @certificate_data = [{
+            courseName: course_name
+          }]
+        end
       end
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
