@@ -118,6 +118,12 @@ class ToneJSPlayer implements AudioPlayer {
     this.currentPreview = {id: sample.sampleId, player};
   }
 
+  async playSamplesImmediately() {
+    console.log(
+      'Not supported. Use playSequenceImmediately for previewing note sequences.'
+    );
+  }
+
   async playSequenceImmediately({instrument, events}: SamplerSequence) {
     if (this.samplers[instrument] === undefined) {
       this.metricsReporter.logError(`Instrument not loaded: ${instrument}`);
@@ -197,7 +203,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.stopAllPlayers();
   }
 
-  cancelAllEvents() {
+  cancelPendingEvents() {
     this.stopAllPlayers();
     Transport.cancel();
   }
