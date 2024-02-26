@@ -34,11 +34,14 @@ export const isBlackKey = (note: number): boolean => {
   );
 };
 
+// Get the note name ('C', 'D', 'E', etc.) from the MIDI note value.
 export const getNoteName = (note: number): string => Key[note % 12];
 
+// Get the note octave from the MIDI note value.
 export const getNoteOctave = (note: number): number =>
   Math.floor(note / 12) - 1;
 
+// Get the full pitch name ('C4', 'D5', etc.) from the MIDI note value.
 export const getPitchName = (note: number): string =>
   getNoteName(note) + getNoteOctave(note);
 

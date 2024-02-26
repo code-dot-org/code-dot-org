@@ -305,8 +305,6 @@ class UnconnectedMusicView extends React.Component {
       this.library.getKey()
     );
 
-    this.player.setupAllInstruments();
-
     this.setState({
       currentLibraryName: libraryName,
     });

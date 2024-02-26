@@ -16,8 +16,6 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
 import SamplePlayerWrapper from './SamplePlayerWrapper';
-import appConfig from '../appConfig';
-import ToneJSPlayer from './ToneJSPlayer';
 
 // Using require() to import JS in TS files
 const constants = require('../constants');
@@ -40,17 +38,11 @@ export default class MusicPlayer {
   constructor(
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
-    audioPlayer?: AudioPlayer
+    audioPlayer: AudioPlayer = new SamplePlayerWrapper(new SamplePlayer()),
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
+    this.audioPlayer = audioPlayer;
     this.metricsReporter = metricsReporter;
-    if (!audioPlayer && appConfig.getValue('player') === 'tonejs') {
-      this.audioPlayer = new ToneJSPlayer();
-      console.log('[MusicPlayer] Using ToneJSPlayer');
-    } else {
-      this.audioPlayer = new SamplePlayerWrapper(new SamplePlayer());
-      console.log('[MusicPlayer] Using SamplePlayer');
-    }
     this.updateConfiguration(bpm, key);
   }
 
@@ -446,7 +438,6 @@ export default class MusicPlayer {
       return null;
     }
 
-    // TODO: Store note index instead of src for easier lookup
     return {
       instrument: kit,
       events: patternEvent.value.events.map(event => {
