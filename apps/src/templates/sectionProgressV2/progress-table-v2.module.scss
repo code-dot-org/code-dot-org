@@ -73,6 +73,10 @@ $level-cell-width: 52;
   background-position: top 3px right 4px;
 }
 
+.lessonInteractive {
+  cursor: pointer;
+}
+
 .grid {
   border-bottom: 1px solid $light_gray_200;
   border-right: 1px solid $light_gray_200;

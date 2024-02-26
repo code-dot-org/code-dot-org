@@ -23,14 +23,17 @@ export default function LessonDataCell({
     }
   };
 
+  const interactive = !noLevels && !locked;
+
   return (
     <div
       className={classNames(
         styles.gridBox,
         styles.gridBoxLesson,
-        locked && styles.littleLock
+        locked && styles.littleLock,
+        interactive && styles.lessonInteractive
       )}
-      onClick={expandLesson}
+      onClick={locked ? undefined : expandLesson}
     >
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
       {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}
