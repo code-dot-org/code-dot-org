@@ -242,9 +242,16 @@ export default class MusicPlayer {
         );
       }
 
+      const folder = library.getFolderForId(soundEvent.id);
+
+      if (folder === null) {
+        this.metricsReporter.logWarning(`No folder for ${soundEvent.id}`);
+        return [];
+      }
+
       return [
         {
-          sampleId: soundEvent.id,
+          sampleId: `${folder.path}/${soundData.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(soundEvent.when),
           triggered: soundEvent.triggered,
           effects: soundEvent.effects,
@@ -257,9 +264,16 @@ export default class MusicPlayer {
 
       const kit = patternEvent.value.kit;
 
+      const folder: SoundFolder | null = library.getFolderForFolderId(kit);
+
+      if (folder === null) {
+        this.metricsReporter.logWarning(`No kit ${kit}`);
+        return [];
+      }
+
       for (const event of patternEvent.value.events) {
         const resultEvent = {
-          sampleId: `${kit}/${event.src}`,
+          sampleId: `${folder.path}/${event.src}`,
           offsetSeconds: this.convertPlayheadPositionToSeconds(
             patternEvent.when + (event.tick - 1) / 16
           ),
@@ -300,7 +314,7 @@ export default class MusicPlayer {
         const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
         results.push({
-          sampleId,
+          sampleId: /*'instruments/' +*/ sampleId,
           offsetSeconds: this.convertPlayheadPositionToSeconds(noteWhen),
           ...event,
         });
@@ -316,7 +330,7 @@ export default class MusicPlayer {
       return null;
     }
 
-    const folder: SoundFolder | null = library.getFolderForPath(instrument);
+    const folder: SoundFolder | null = library.getFolderForFolderId(instrument);
 
     if (folder === null) {
       this.metricsReporter.logWarning(`No instrument ${instrument}`);
@@ -331,7 +345,8 @@ export default class MusicPlayer {
       return null;
     }
 
-    return `${instrument}/${sound.src}`;
+    //   return `instruments/${instrument}/${sound.src}`;
+    return `${folder.path}/${sound.src}`;
   }
 
   private getSamplesForSequence(

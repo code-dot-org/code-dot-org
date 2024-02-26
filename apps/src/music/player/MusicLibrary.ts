@@ -13,7 +13,8 @@ export default class MusicLibrary {
   }
 
   name: string;
-  groups: FolderGroup[];
+  libraryJson: LibraryJson;
+  folders: SoundFolder[];
   private allowedSounds: Sounds | null;
 
   // BPM & Key associated with this library, or undefined if not present.
@@ -22,38 +23,42 @@ export default class MusicLibrary {
 
   constructor(name: string, libraryJson: LibraryJson) {
     this.name = name;
-    this.groups = libraryJson.groups;
+    this.libraryJson = libraryJson;
     this.allowedSounds = null;
 
-    const firstGroup: FolderGroup = this.groups[0];
-    if (firstGroup.bpm) {
-      this.bpm = firstGroup.bpm;
+    // Combine the JSON-specified folders into one flat list of folders.
+    this.folders = [
+      ...libraryJson.packs,
+      ...libraryJson.instruments,
+      ...libraryJson.kits,
+    ];
+
+    if (libraryJson.bpm) {
+      this.bpm = libraryJson.bpm;
     }
 
-    if (firstGroup.key) {
-      this.key = Key[firstGroup.key.toUpperCase() as keyof typeof Key];
+    if (libraryJson.key) {
+      this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
     }
   }
 
   getDefaultSound(): string | undefined {
-    const firstGroup: FolderGroup = this.groups[0];
-
     // Return the specified default sound if there is one.
-    if (firstGroup?.defaultSound) {
-      return firstGroup?.defaultSound;
+    if (this.libraryJson?.defaultSound) {
+      return this.libraryJson?.defaultSound;
     }
 
     // The fallback is the first non-instrument/kit folder's first sound.
-    const firstFolder = firstGroup?.folders.find(group => !group.type);
-    return `${firstFolder?.path}/${firstFolder?.sounds[0].src}`;
+    const firstFolder = this.libraryJson?.packs.find(group => !group.type);
+    return `${firstFolder?.id}/${firstFolder?.sounds[0].src}`;
   }
 
   getSoundForId(id: string): SoundData | null {
-    const splitId = id.split('/');
-    const path = splitId[0];
-    const src = splitId[1];
+    var lastSlashIndex = id.lastIndexOf('/');
+    var folderId = id.substring(0, lastSlashIndex);
+    var src = id.substring(lastSlashIndex + 1);
 
-    const folder = this.getFolderForPath(path);
+    const folder = this.getFolderForFolderId(folderId);
 
     if (folder) {
       return folder.sounds.find(sound => sound.src === src) || null;
@@ -62,8 +67,33 @@ export default class MusicLibrary {
     return null;
   }
 
-  getFolderForPath(path: string): SoundFolder | null {
-    return this.groups[0].folders.find(folder => folder.path === path) || null;
+  getSoundForPath(id: string): SoundData | null {
+    var lastSlashIndex = id.lastIndexOf('/');
+    var folderPath = id.substring(0, lastSlashIndex);
+    var src = id.substring(lastSlashIndex + 1);
+
+    const folder = this.getFolderForFolderPath(folderPath);
+
+    if (folder) {
+      return folder.sounds.find(sound => sound.src === src) || null;
+    }
+
+    return null;
+  }
+
+  getFolderForId(id: string): SoundFolder | null {
+    var lastSlashIndex = id.lastIndexOf('/');
+    var folderId = id.substring(0, lastSlashIndex);
+
+    return this.getFolderForFolderId(folderId);
+  }
+
+  getFolderForFolderId(folderId: string): SoundFolder | null {
+    return this.folders.find(folder => folder.id === folderId) || null;
+  }
+
+  getFolderForFolderPath(folderPath: string): SoundFolder | null {
+    return this.folders.find(folder => folder.path === folderPath) || null;
   }
 
   // A progression step might specify a smaller set of allowed sounds.
@@ -74,7 +104,7 @@ export default class MusicLibrary {
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
   getAllowedSounds(folderType: string | undefined): SoundFolder[] {
-    const folders = this.groups[0].folders;
+    const folders = this.libraryJson.packs;
 
     // Let's just do a deep copy and then do filtering in-place.
     let foldersCopy: SoundFolder[] = JSON.parse(
@@ -88,12 +118,12 @@ export default class MusicLibrary {
 
     if (this.allowedSounds) {
       foldersCopy = foldersCopy.filter(
-        (folder: SoundFolder) => this.allowedSounds?.[folder.path]
+        (folder: SoundFolder) => this.allowedSounds?.[folder.id]
       );
 
       foldersCopy.forEach((folder: SoundFolder) => {
         folder.sounds = folder.sounds.filter((sound: SoundData) =>
-          this.allowedSounds?.[folder.path]?.includes(sound.src)
+          this.allowedSounds?.[folder.id]?.includes(sound.src)
         );
       });
     }
@@ -110,13 +140,9 @@ export default class MusicLibrary {
   }
 }
 
-export type LibraryJson = {
-  groups: FolderGroup[];
-};
-
 export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
   const libraryJson = response as LibraryJson;
-  if (!libraryJson.groups || libraryJson.groups.length === 0) {
+  if (!libraryJson) {
     throw new Error(`Invalid library JSON: ${response}`);
   }
   return libraryJson;
@@ -159,15 +185,18 @@ export interface SoundData {
   preview?: boolean;
 }
 
+export type SoundFolderType = 'sound' | 'kit' | 'instrument';
+
 export interface SoundFolder {
   name: string;
-  type?: 'kit' | 'instrument';
+  id: string;
+  type?: SoundFolderType;
   path: string;
   imageSrc: string;
   sounds: SoundData[];
 }
 
-interface FolderGroup {
+export type LibraryJson = {
   id: string;
   name: string;
   imageSrc: string;
@@ -176,7 +205,10 @@ interface FolderGroup {
   key?: string;
   defaultSound?: string;
   folders: SoundFolder[];
-}
+  instruments: SoundFolder[];
+  kits: SoundFolder[];
+  packs: SoundFolder[];
+};
 
 interface Sounds {
   [index: string]: [string];

@@ -122,7 +122,7 @@ class SoundCache {
       return null;
     }
 
-    const soundData = library.getSoundForId(path);
+    const soundData = library.getSoundForPath(path);
     if (!soundData) {
       return null;
     }
@@ -151,7 +151,7 @@ class SoundCache {
       ? restrictedSoundUrlPath
       : getBaseAssetUrl();
 
-    return baseUrl + library.groups[0].path + '/' + path + '.mp3';
+    return baseUrl + library.libraryJson.path + '/' + path + '.mp3';
   }
 }
 

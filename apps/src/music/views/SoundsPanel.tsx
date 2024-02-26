@@ -36,11 +36,11 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   onPreview,
 }) => {
   const previewSound = folder.sounds.find(sound => sound.preview);
-  const soundPath = previewSound && folder.path + '/' + previewSound.src;
+  const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =
     folder.imageSrc &&
-    `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
+    `${getBaseAssetUrl()}${libraryGroupPath}/${folder.id}/${folder.imageSrc}`;
 
   const isSelected = folder === currentValue;
 
@@ -107,7 +107,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   onSelect,
   onPreview,
 }) => {
-  const soundPath = folder.path + '/' + sound.src;
+  const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
   const typeIconPath = `/blockly/media/music/icon-${sound.type}.png`;
@@ -128,7 +128,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         styles.soundRow,
         isSelected && styles.soundRowSelected
       )}
-      onClick={() => onSelect(folder.path + '/' + sound.src)}
+      onClick={() => onSelect(folder.id + '/' + sound.src)}
     >
       <div className={styles.soundRowLeft}>
         <img src={typeIconPath} className={styles.typeIcon} alt="" />
@@ -170,7 +170,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   onPreview,
 }) => {
   const folders = library.getAllowedSounds(undefined);
-  const libraryGroupPath = library.groups[0].path;
+  const libraryGroupPath = library.libraryJson.id;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(folders[0]);
 
