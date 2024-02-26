@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
-import {TwoColumnActionBlock} from './TwoColumnActionBlock';
+import TwoColumnActionBlock from './TwoColumnActionBlock';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import color from '../../util/color';
