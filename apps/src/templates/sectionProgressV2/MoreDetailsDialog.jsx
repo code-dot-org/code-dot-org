@@ -10,7 +10,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
     <AccessibleDialog onClose={onClose}>
       <div role="region">
         <div>
-          <Heading3>{i18n.progressTrackingIconDetails()}</Heading3>
+          <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
         </div>
         <div>
           <Heading5>Info info info</Heading5>
