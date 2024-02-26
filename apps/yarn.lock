@@ -6294,16 +6294,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"MD5@npm:~1.2.1":
-  version: 1.2.2
-  resolution: "MD5@npm:1.2.2"
-  dependencies:
-    charenc: ">= 0.0.1"
-    crypt: ">= 0.0.1"
-  checksum: 160699687543154edb4c957c0f393fdc2b5d3b7f7e03ef6c7dfd143b2ba3a8cb9479b38dc9e93f0f571ab6eff9936cf6f2fcdff506b40f642b0a255b5b9206cf
-  languageName: node
-  linkType: hard
-
 "abab@npm:^2.0.6":
   version: 2.0.6
   resolution: "abab@npm:2.0.6"
@@ -8260,7 +8250,6 @@ __metadata:
     codemirror: 5.5
     codemirror-spell-checker: ^1.1.2
     copy-webpack-plugin: ^9.0.1
-    crypto-browserify: ^3.12.0
     css-loader: ^6.2.0
     csv-parse: ^4.4.6
     dapjs: ^2.3.0
@@ -8287,7 +8276,7 @@ __metadata:
     filesaver.js: 0.2.0
     firebase: ^2.4.2
     firebase-bolt: ^0.8.0
-    firebase-mock: ^1.0.5
+    firebase-mock: 1.0.8
     firmata: ^2.2.0
     focus-trap-react: ^10.1.1
     fork-ts-checker-webpack-plugin: ^8.0.0
@@ -8335,6 +8324,7 @@ __metadata:
     load-grunt-tasks: 3.5.0
     loadable-components: 2.2.3
     lodash: ^4.17.21
+    md5: ^2.3.0
     memoize-one: ^5.1.1
     messageformat: 2.3.0
     ml-knn: ^3.0.0
@@ -8392,7 +8382,6 @@ __metadata:
     react-tether: ^1.0.4
     react-tooltip: ^3.2.7
     react-transition-group: 2.9.0
-    react-typist: ^2.0.5
     react-virtualized: ^9.18.5
     react-virtualized-select: ^3.0.1
     react-with-context: ^2.0.0
@@ -8407,7 +8396,6 @@ __metadata:
     rehype-raw: ^4.0.0
     rehype-react: ^3.1.0
     rehype-sanitize: ^2.0.2
-    rehype-stringify: ^7.0.0
     remark-rehype: ^4.0.0
     rgbcolor: 0.0.4
     rosie: ^2.0.1
@@ -8446,7 +8434,6 @@ __metadata:
     video.js: 7.6.6
     vm-browserify: ^1.1.2
     vmsg: ^0.3.6
-    web-streams-polyfill: ^3.1.0
     webpack: ^5.74.0
     webpack-bundle-analyzer: ^4.4.2
     webpack-cli: ^5.1.4
@@ -9425,10 +9412,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"charenc@npm:>= 0.0.1":
-  version: 0.0.1
-  resolution: "charenc@npm:0.0.1"
-  checksum: a7b77ae43c16178715e237c9be4a880817c3f13f3fb1d8cb2cdb9889ca148877d2a917d9f13b6debdf1fe2cc4984e2d05cbdcdc1f541328604a1daf16e339b98
+"charenc@npm:0.0.2, charenc@npm:~0.0.1":
+  version: 0.0.2
+  resolution: "charenc@npm:0.0.2"
+  checksum: 81dcadbe57e861d527faf6dd3855dc857395a1c4d6781f4847288ab23cffb7b3ee80d57c15bba7252ffe3e5e8019db767757ee7975663ad2ca0939bb8fcaf2e5
   languageName: node
   linkType: hard
 
@@ -10577,14 +10564,14 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"crypt@npm:>= 0.0.1":
-  version: 0.0.1
-  resolution: "crypt@npm:0.0.1"
-  checksum: 3287cb6a32daad814f0d80590b078dbe553e29d8c9ffe862608dc11a1c9cd50142826576315546fd0656c3bf1cd8735cffc6839e3571b6842fec364f720b29d0
+"crypt@npm:0.0.2, crypt@npm:~0.0.1":
+  version: 0.0.2
+  resolution: "crypt@npm:0.0.2"
+  checksum: baf4c7bbe05df656ec230018af8cf7dbe8c14b36b98726939cef008d473f6fe7a4fad906cfea4062c93af516f1550a3f43ceb4d6615329612c6511378ed9fe34
   languageName: node
   linkType: hard
 
-"crypto-browserify@npm:^3.11.0, crypto-browserify@npm:^3.12.0":
+"crypto-browserify@npm:^3.11.0":
   version: 3.12.0
   resolution: "crypto-browserify@npm:3.12.0"
   dependencies:
@@ -13919,15 +13906,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"firebase-mock@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "firebase-mock@npm:1.0.5"
+"firebase-mock@npm:1.0.8":
+  version: 1.0.8
+  resolution: "firebase-mock@npm:1.0.8"
   dependencies:
-    MD5: ~1.2.1
     firebase-auto-ids: ~1.1.0
     lodash: ~2.4.1
+    md5: ~2.2.1
     rsvp: ^3.3.3
-  checksum: d47c84b865f14acc70efcd463287437945e956cec228cb049e814fdb3c63dcab6d7210c2e57e50440b0931c64aef8e8f25a68174a93e0d1adcb3f98b3aa7a4d6
+  checksum: 94c1b892ad23faae5186e94f505ad8c6bfad6274b369773bcc3e47257b9636719082cb9d11e0681c9a8a06ba25c14e1d16a4fc73977b2d8b87220100c647e48b
   languageName: node
   linkType: hard
 
@@ -15782,24 +15769,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"hast-util-to-html@npm:^7.0.0":
-  version: 7.1.0
-  resolution: "hast-util-to-html@npm:7.1.0"
-  dependencies:
-    ccount: ^1.0.0
-    comma-separated-tokens: ^1.0.0
-    hast-util-is-element: ^1.0.0
-    hast-util-whitespace: ^1.0.0
-    html-void-elements: ^1.0.0
-    property-information: ^5.0.0
-    space-separated-tokens: ^1.0.0
-    stringify-entities: ^3.0.0
-    unist-util-is: ^4.0.0
-    xtend: ^4.0.0
-  checksum: 3bb6e384778dcad8779d4c9b15a6593a24caf679fca61af5dbb5c1927c0b6839ac1cd91e19777c42444f4ea40d13097d517ea64b54b45ca294abcd6d341140b9
-  languageName: node
-  linkType: hard
-
 "hast-util-to-parse5@npm:^5.0.0":
   version: 5.0.0
   resolution: "hast-util-to-parse5@npm:5.0.0"
@@ -16987,7 +16956,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"is-buffer@npm:^1.1.5":
+"is-buffer@npm:^1.1.5, is-buffer@npm:~1.1.1, is-buffer@npm:~1.1.6":
   version: 1.1.6
   resolution: "is-buffer@npm:1.1.6"
   checksum: 4a186d995d8bbf9153b4bd9ff9fd04ae75068fe695d29025d25e592d9488911eeece84eefbd8fa41b8ddcc0711058a71d4c466dcf6f1f6e1d83830052d8ca707
@@ -17105,13 +17074,6 @@ es6-shim@latest:
   version: 1.0.2
   resolution: "is-decimal@npm:1.0.2"
   checksum: fec772686fd94a91ec598e7ac4fee6123adf43d68e3bac81d0e43a3854f74fc53da9000fefea0280009a1c2c4eaf3ba4329e67a7973201e7c6c5e031cdf65cd1
-  languageName: node
-  linkType: hard
-
-"is-decimal@npm:^1.0.2":
-  version: 1.0.4
-  resolution: "is-decimal@npm:1.0.4"
-  checksum: ed483a387517856dc395c68403a10201fddcc1b63dc56513fbe2fe86ab38766120090ecdbfed89223d84ca8b1cd28b0641b93cb6597b6e8f4c097a7c24e3fb96
   languageName: node
   linkType: hard
 
@@ -19515,6 +19477,28 @@ es6-shim@latest:
     hash-base: ^3.0.0
     inherits: ^2.0.1
   checksum: 627ac499175cd2ab3d912b10697d51326914ca88db2092c79e6d59e9e4b91a89221d05b2d09e28bcb3933562436cb904dc6aa3e347f7704fd5ed9efa28e093a7
+  languageName: node
+  linkType: hard
+
+"md5@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "md5@npm:2.3.0"
+  dependencies:
+    charenc: 0.0.2
+    crypt: 0.0.2
+    is-buffer: ~1.1.6
+  checksum: a63cacf4018dc9dee08c36e6f924a64ced735b37826116c905717c41cebeb41a522f7a526ba6ad578f9c80f02cb365033ccd67fe186ffbcc1a1faeb75daa9b6e
+  languageName: node
+  linkType: hard
+
+"md5@npm:~2.2.1":
+  version: 2.2.1
+  resolution: "md5@npm:2.2.1"
+  dependencies:
+    charenc: ~0.0.1
+    crypt: ~0.0.1
+    is-buffer: ~1.1.1
+  checksum: 2237e583f961d04d43c59c2f9383d1e47099427fa37f9dc50e8aec32e770f8b038ad9268c2523a7c8041ab6f4678a742ca533a7f670dbc2857c5b18388cf4d71
   languageName: node
   linkType: hard
 
@@ -24984,16 +24968,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"rehype-stringify@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "rehype-stringify@npm:7.0.0"
-  dependencies:
-    hast-util-to-html: ^7.0.0
-    xtend: ^4.0.0
-  checksum: 89929ec0d624e320c4211693b0d5f300879dc08ff672ae33e5fa1aa92961feb124d98edc10188078bc07393b167d52bbecdcc1cf2344f5c06d56576e3e61f26f
-  languageName: node
-  linkType: hard
-
 "relateurl@npm:0.2.x, relateurl@npm:^0.2.7":
   version: 0.2.7
   resolution: "relateurl@npm:0.2.7"
@@ -27362,19 +27336,6 @@ es6-shim@latest:
     is-alphanumerical: ^1.0.0
     is-hexadecimal: ^1.0.0
   checksum: 4cbe43d89ef25d45034e60733caf9e27becf7521cb1e132749fd11ac34acb42214427db14ec6ed4b64ac077ccf09df7a1192a75f6104a38303a0462967bcd347
-  languageName: node
-  linkType: hard
-
-"stringify-entities@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "stringify-entities@npm:3.0.0"
-  dependencies:
-    character-entities-html4: ^1.0.0
-    character-entities-legacy: ^1.0.0
-    is-alphanumerical: ^1.0.0
-    is-decimal: ^1.0.2
-    is-hexadecimal: ^1.0.0
-  checksum: 6b48c8c0398ea91c9e287e1e9d49b6fb11e19c1ad1ed81ec1856429e641d884b5c207d04239d81afd4e948fdc5f5f023e6ad741850bfa044231bc8e6eeb65fbf
   languageName: node
   linkType: hard
 
@@ -29748,13 +29709,6 @@ temporal@latest:
   version: 1.1.2
   resolution: "web-namespaces@npm:1.1.2"
   checksum: 28741ad0ddf755697b2f58cc4c41482145a23a7109e918b39fa94ad64dc5ee45103406cb46c3d0a0c42232fcedc0cee6e51109e3f3de1367688d453dd9326e1f
-  languageName: node
-  linkType: hard
-
-"web-streams-polyfill@npm:^3.1.0":
-  version: 3.2.1
-  resolution: "web-streams-polyfill@npm:3.2.1"
-  checksum: b119c78574b6d65935e35098c2afdcd752b84268e18746606af149e3c424e15621b6f1ff0b42b2676dc012fc4f0d313f964b41a4b5031e525faa03997457da02
   languageName: node
   linkType: hard
 
