@@ -4,6 +4,7 @@ import {
   BlocklyOptions,
   CodeGenerator,
   Input,
+  Procedures,
   Theme,
   VariableMap,
   Workspace,
@@ -99,6 +100,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   cdoUtils: any;
   Generator: ExtendedGenerator;
   Xml: ExtendedXml;
+  Procedures: ExtendedProcedures;
+  BlockValueType: {[key: string]: string};
+  SNAP_RADIUS: number;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -246,6 +250,12 @@ export interface Collider {
   y: number;
   height: number;
   width: number;
+}
+
+type ProceduresType = typeof Procedures;
+
+export interface ExtendedProcedures extends ProceduresType {
+  DEFINITION_BLOCK_TYPES: string[];
 }
 
 export interface ProcedureBlock extends Block, IProcedureBlock {

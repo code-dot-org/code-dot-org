@@ -1,5 +1,10 @@
 @import "color.scss";
 
+.progressV2Page {
+  padding: 10px 64px 64px 64px;
+  background-color: $light_gray_50;
+}
+
 .progressTableV2 {
   width: 100%;
   font-size: 16px;
@@ -71,6 +76,10 @@ $level-cell-width: 52;
   background-size: 12px;
   background-repeat: no-repeat;
   background-position: top 3px right 4px;
+}
+
+.lessonInteractive {
+  cursor: pointer;
 }
 
 .grid {
@@ -185,8 +194,7 @@ $level-cell-width: 52;
     }
 
     &LevelCell {
-      // If width is updated, must also update `LEVEL_HEADER_WIDTH` in ExpandedProgressDataColumn.jsx
-      width: 52px;
+      width: $level-cell-width + px;
       text-align: center;
       height: 32px;
       line-height: 32px;
@@ -201,12 +209,13 @@ $level-cell-width: 52;
       border-top: 1px solid $light_gray_200;
 
       .expandedHeaderExpandedLevelCell:last-child {
-        width: 52px;
+        width: $level-cell-width + px;
+        border-right: 0;
       }
     }
 
     &ExpandedLevelCell {
-      width: 53px;
+      width: $level-cell-width + 1 + px;
     }
 
     &LevelCaret {

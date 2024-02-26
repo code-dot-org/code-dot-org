@@ -29,7 +29,7 @@ export default function EvidenceLevelsForTeachersV2({
   // around evidence level.
   const passFail = useMemo(() => {
     if (!!aiEvalInfo) {
-      if (understanding === INVALID_UNDERSTANDING) {
+      if (understanding !== INVALID_UNDERSTANDING) {
         return [];
       }
       if (aiEvalInfo.understanding > 1) {
