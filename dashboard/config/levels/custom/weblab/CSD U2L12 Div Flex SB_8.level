@@ -16,8 +16,25 @@
     "long_instructions": "<img src=\"https://images.code.org/206a7742149ba08385f454fb98910893-image-1705777723042.png\" style=\"float:right; width: 350px;\">\r\n\r\n# Find All The Bugs!\r\n\r\nTrinity was making this webpage to blog about her love of Super Mario but she has run into some problems. She had the page looking like the image to the right but then she wasn't paying attention and changed some stuff and can't figure out where the bugs are. Can you help her?\r\n\r\n# Do This\r\n\r\n1. Look through both the HTML file and the CSS file to see if you can find and fix all 4 bugs to get Trinity's page to look like the image to the right.\r\n\r\n![]()",
     "display_name": "Find All The Bugs!",
     "bubble_choice_description": "Can you find all the bugs to fix the image gallery?",
-    "thumbnail_url": "https://images.code.org/18034cab25645c5e17e8dd7d39d3a6e9-mario.png"
+    "thumbnail_url": "https://images.code.org/18034cab25645c5e17e8dd7d39d3a6e9-mario.png",
+    "reference_links": [
+      "/courses/csd-2022/guides/div",
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/flexbox"
   },
-  "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:32 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"},{\"changed_at\":\"2024-01-05 18:03:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 19:09:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 19:22:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:32 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"},{\"changed_at\":\"2024-01-05 18:03:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 19:09:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 19:22:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 18:50:50 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

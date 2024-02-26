@@ -26,7 +26,8 @@
       "chai.jpg": "f8f63e0d-4b64-40f2-aaf5-909c0aa2367b.jpg",
       "cricket.jpg": "3ba0ef8e-c1eb-4f10-b9de-2cf910a1c742.jpg"
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:14:11.717+00:00\",\"changed\":[\"cloned from \\\"CSA U5 Personal Narrative Project_2023\\\"\"],\"cloned_from\":\"CSA U5 Personal Narrative Project_2023\"}]"

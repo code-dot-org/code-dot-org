@@ -48,7 +48,7 @@ export default function initializeGenerator(blocklyWrapper) {
   ) {
     // Skip disabled block check for non-rendered workspaces. Non-rendered workspaces
     // do not have an unused concept.
-    if (block?.workspace?.rendered && block?.isDisabled()) {
+    if (block?.workspace?.rendered && !block?.isEnabled()) {
       return '';
     }
     return originalBlockToCode.call(

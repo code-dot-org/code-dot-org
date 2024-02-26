@@ -20,6 +20,14 @@ describe('Congrats', () => {
     isHocTutorial: true,
   };
 
+  const plProps = {
+    language: 'en',
+    initialCertificateImageUrl,
+    isHocTutorial: false,
+    isPlCourse: true,
+    userType: 'teacher',
+  };
+
   //Non HOC course Tests
   userTypes.forEach(userType => {
     it(`renders a Certificate component for user type ${userType}`, () => {
@@ -84,5 +92,41 @@ describe('Congrats', () => {
     const congratsPageText = wrapper.text();
 
     expect(congratsPageText).to.not.include('Teach with Code.org');
+  });
+
+  it('renders self paced next options for self-paced k5 course', () => {
+    const wrapper = shallow(<Congrats {...plProps} isK5PlCourse />);
+    expect(
+      wrapper
+        .find(
+          'a[href="https://code.org/educate/professional-development-online"]'
+        )
+        .exists()
+    ).to.be.true;
+    expect(
+      wrapper
+        .find('a[href="https://code.org/professional-development-workshops"]')
+        .exists()
+    ).to.be.true;
+    expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
+      .false;
+  });
+
+  it('renders self paced next options for self-paced 6-12 course', () => {
+    const wrapper = shallow(<Congrats {...plProps} isK5PlCourse={false} />);
+    expect(
+      wrapper
+        .find(
+          'a[href="https://code.org/educate/professional-development-online"]'
+        )
+        .exists()
+    ).to.be.true;
+    expect(
+      wrapper
+        .find('a[href="https://code.org/professional-development-workshops"]')
+        .exists()
+    ).to.be.false;
+    expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
+      .true;
   });
 });
