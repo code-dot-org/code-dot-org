@@ -98,11 +98,12 @@ class I18nSync
   end
 
   def parse_options(args)
-    options = {
-      testing: I18nScriptUtils::TESTING_BY_DEFAULT,
-    }
+    options = {}
+    opt_parser = nil
 
-    opt_parser = OptionParser.new do |opts|
+    I18nScriptUtils.parse_options(args, options: options) do |opts|
+      opt_parser = opts
+
       opts.banner = <<-USAGE
   Usage: sync-all [options]
 
@@ -130,12 +131,7 @@ class I18nSync
       opts.on("-y", "--yes", "Run without confirmation") do
         options[:yes] = true
       end
-
-      opts.on('-t', '--testing', 'Run in testing mode') do
-        options[:testing] = true
-      end
     end
-    opt_parser.parse!(args)
 
     unless options[:interactive] || options[:command]
       puts "  ERROR: Must specify either interactive or command mode\n\n"
