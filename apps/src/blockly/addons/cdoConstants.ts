@@ -1,4 +1,8 @@
-export default function initializeCdoConstants(blocklyWrapper) {
+import {BlocklyWrapperType} from '@cdo/apps/blockly/types';
+
+export default function initializeCdoConstants(
+  blocklyWrapper: BlocklyWrapperType
+) {
   blocklyWrapper.Procedures.DEFINITION_BLOCK_TYPES = [
     'procedures_defnoreturn',
     'procedures_defreturn',

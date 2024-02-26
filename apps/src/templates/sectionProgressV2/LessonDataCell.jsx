@@ -17,18 +17,19 @@ export default function LessonDataCell({
   const finished = studentLessonProgress?.completedPercent === 100;
   const partiallyComplete = studentLessonProgress && !finished;
 
-  const expandLesson = () => {
-    if (!noLevels) {
-      addExpandedLesson(lesson.id);
-    }
-  };
+  const interactive = !noLevels && !locked;
+
+  const expandLesson = interactive
+    ? () => addExpandedLesson(lesson.id)
+    : undefined;
 
   return (
     <div
       className={classNames(
         styles.gridBox,
         styles.gridBoxLesson,
-        locked && styles.littleLock
+        locked && styles.littleLock,
+        interactive && styles.lessonInteractive
       )}
       onClick={expandLesson}
     >

@@ -3,6 +3,7 @@ import {
   BlockSvg,
   BlocklyOptions,
   Input,
+  Procedures,
   Theme,
   VariableMap,
   Workspace,
@@ -94,6 +95,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   // TODO: better define this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   cdoUtils: any;
+  Procedures: ExtendedProcedures;
+  BlockValueType: {[key: string]: string};
+  SNAP_RADIUS: number;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -193,6 +197,12 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
 
 export interface ExtendedWorkspace extends Workspace {
   noFunctionBlockFrame: boolean;
+}
+
+type ProceduresType = typeof Procedures;
+
+export interface ExtendedProcedures extends ProceduresType {
+  DEFINITION_BLOCK_TYPES: string[];
 }
 
 export interface ProcedureBlock extends Block, IProcedureBlock {

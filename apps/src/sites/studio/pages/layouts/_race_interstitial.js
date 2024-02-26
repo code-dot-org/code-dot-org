@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
-  var editUser = $('#edit_user');
+  var editUser = $('#edit_user_race_form');
   var raceCheckboxes = $('.race-checkbox');
 
   editUser.on('change', () => {
@@ -39,7 +39,6 @@ $(document).ready(() => {
       type: 'POST',
       url: form.prop('action'),
       data: form.serialize(),
-      dataType: 'json',
       success: data => $('#race-modal').modal('hide'),
     });
   }
@@ -56,9 +55,7 @@ $(document).ready(() => {
     submitCheckboxData(editUser);
     $('#race-modal').modal('hide');
   });
-});
 
-$(document).ready(() => {
   $('#race-modal').modal('show');
   $('#closed-dialog-label').hide();
 });
