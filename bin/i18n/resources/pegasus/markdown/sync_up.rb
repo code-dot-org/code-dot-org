@@ -9,7 +9,7 @@ module I18n
     module Pegasus
       module Markdown
         class SyncUp < I18n::Utils::SyncUpBase
-          config.crowdin_project = 'codeorg-markdown'
+          config.crowdin_project = CROWDIN_PROJECT
           config.base_path = I18N_SOURCE_DIR_PATH
           config.source_paths << '**/*.md'
           config.ignore_paths << 'ai.md'
