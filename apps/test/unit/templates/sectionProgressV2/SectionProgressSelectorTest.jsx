@@ -7,6 +7,7 @@ import DCDO from '@cdo/apps/dcdo';
 import sinon from 'sinon';
 import currentUser, {
   setShowProgressTableV2,
+  setProgressTableV2ClosedBeta,
 } from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
@@ -43,6 +44,7 @@ describe('SectionProgressSelector', () => {
 
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);
+    DCDO.set('progress-table-v2-closed-beta-enabled', false);
   });
 
   afterEach(() => {
@@ -132,5 +134,41 @@ describe('SectionProgressSelector', () => {
     });
 
     stub.reset();
+  });
+
+  it('shows v1 only if user not in closed beta', () => {
+    DCDO.set('progress-table-v2-enabled', false);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    renderDefault();
+
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+
+    screen.getByTestId(V1_TEST_ID);
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+  });
+
+  it('shows toggle if user is in closed beta', () => {
+    DCDO.set('progress-table-v2-enabled', false);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    store.dispatch(setProgressTableV2ClosedBeta(true));
+    renderDefault();
+
+    screen.getByText(V1_PAGE_LINK_TEXT);
+
+    screen.getByTestId(V1_TEST_ID);
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+  });
+
+  it('shows toggle if user not in closed beta, but v2 enabled', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    renderDefault();
+
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
+
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
   });
 });

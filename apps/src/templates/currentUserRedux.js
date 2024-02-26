@@ -14,6 +14,8 @@ const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
+const SET_PROGRESS_TABLE_V2_CLOSED_BETA =
+  'currentUser/SET_PROGRESS_TABLE_V2_CLOSED_BETA';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -69,6 +71,10 @@ export const setSortByFamilyName = (
 export const setShowProgressTableV2 = showProgressTableV2 => ({
   type: SET_SHOW_PROGRESS_TABLE_V2,
   showProgressTableV2,
+});
+export const setProgressTableV2ClosedBeta = progressTableV2ClosedBeta => ({
+  type: SET_PROGRESS_TABLE_V2_CLOSED_BETA,
+  progressTableV2ClosedBeta,
 });
 
 const initialState = {
@@ -154,6 +160,12 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       showProgressTableV2: action.showProgressTableV2,
+    };
+  }
+  if (action.type === SET_PROGRESS_TABLE_V2_CLOSED_BETA) {
+    return {
+      ...state,
+      progressTableV2ClosedBeta: action.progressTableV2ClosedBeta,
     };
   }
   if (action.type === SET_INITIAL_DATA) {
