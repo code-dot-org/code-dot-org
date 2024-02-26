@@ -5,6 +5,7 @@ import {
   Input,
   Procedures,
   Theme,
+  Variables,
   VariableMap,
   Workspace,
   WorkspaceSvg,
@@ -98,6 +99,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   Procedures: ExtendedProcedures;
   BlockValueType: {[key: string]: string};
   SNAP_RADIUS: number;
+  Variables: ExtendedVariables;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -206,6 +208,15 @@ type ProceduresType = typeof Procedures;
 
 export interface ExtendedProcedures extends ProceduresType {
   DEFINITION_BLOCK_TYPES: string[];
+}
+
+type VariablesType = typeof Variables;
+export interface ExtendedVariables extends VariablesType {
+  DEFAULT_CATEGORY: string;
+  getters: {[key: string]: string};
+  registerGetter: (category: string, blockName: string) => void;
+  allVariablesFromBlock: (block: Block) => string[];
+  getVars: (opt_category?: string) => {[key: string]: string[]};
 }
 
 export interface ProcedureBlock extends Block, IProcedureBlock {

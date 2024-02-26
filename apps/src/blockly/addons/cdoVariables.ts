@@ -1,4 +1,9 @@
-export default function initializeVariables(blocklyWrapper) {
+import {Block} from 'blockly';
+import {BlocklyWrapperType} from '../types';
+
+export default function initializeVariables(
+  blocklyWrapper: BlocklyWrapperType
+) {
   blocklyWrapper.Variables.DEFAULT_CATEGORY = 'Default';
 
   // TODO: Removing support for sprite variables as a separate variable type is
@@ -23,9 +28,9 @@ export default function initializeVariables(blocklyWrapper) {
    * Standard implementation of getVars for blocks with a single 'VAR' title
    * @param {string=} opt_category Variable category, defaults to 'Default'
    */
-  blocklyWrapper.Variables.getVars = function (opt_category) {
-    var category = opt_category || blocklyWrapper.Variables.DEFAULT_CATEGORY;
-    var vars = {};
+  blocklyWrapper.Variables.getVars = function (this: Block, opt_category) {
+    const category = opt_category || blocklyWrapper.Variables.DEFAULT_CATEGORY;
+    const vars: {[key: string]: string[]} = {};
     vars[category] = [this.getFieldValue('VAR')];
     return vars;
   };
@@ -57,13 +62,13 @@ export default function initializeVariables(blocklyWrapper) {
    * @param {Blockly.Block} block Block from which to pull the current workspace.
    * @return {string} New variable name.
    */
-  const originalGenerateUniqueName =
-    blocklyWrapper.Variables.generateUniqueName; // Core Blockly function is originally stored here and then gets overwritten
-  blocklyWrapper.Variables.generateUniqueName = function (
-    _baseName = null,
-    block
-  ) {
-    const workspace = block.workspace;
-    return originalGenerateUniqueName.call(this, workspace);
-  };
+  // const originalGenerateUniqueName =
+  //   blocklyWrapper.Variables.generateUniqueName; // Core Blockly function is originally stored here and then gets overwritten
+  // blocklyWrapper.Variables.generateUniqueName = function (
+  //   _baseName = null,
+  //   block
+  // ) {
+  //   const workspace = block.workspace;
+  //   return originalGenerateUniqueName.call(this, workspace);
+  // };
 }
