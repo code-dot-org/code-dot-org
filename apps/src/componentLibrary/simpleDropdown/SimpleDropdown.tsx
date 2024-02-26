@@ -84,7 +84,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           className={moduleStyles.dropdown}
           disabled={disabled}
         >
-          {itemGroups && itemGroups.length > 0
+          {itemGroups.length > 0
             ? itemGroups.map(({label, groupItems}, index) => (
                 <optgroup key={index} label={label}>
                   {groupItems.map(({value, text}) => (
