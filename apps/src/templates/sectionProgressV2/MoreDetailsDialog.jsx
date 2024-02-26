@@ -8,9 +8,9 @@ import {Heading3, Heading5} from '@cdo/apps/componentLibrary/typography';
 export default function MoreDetailsDialog({hasValidation, onClose}) {
   return (
     <AccessibleDialog onClose={onClose}>
-      <div role="region" aria-label={i18n.directionsForAssigningSections()}>
+      <div role="region">
         <div>
-          <Heading3>More Details</Heading3>
+          <Heading3>{i18n.progressTrackingIconDetails()}</Heading3>
         </div>
         <div>
           <Heading5>Info info info</Heading5>

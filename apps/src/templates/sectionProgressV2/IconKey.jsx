@@ -58,7 +58,7 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
           onClick={toggleIsViewingDetails}
           className={styles.iconKeyMoreDetailsLink}
         >
-          More Details
+          {i18n.moreDetails()}
         </Link>
       </div>
       {isOpen && sectionContent()}
