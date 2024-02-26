@@ -85,6 +85,8 @@ npm-debug.log
 /bin/i18n/*_credentials.yml
 /bin/i18n/crowdin/etags/*testing_etags.json
 /bin/i18n/crowdin/etags/*test_etags.json
+/bin/i18n/crowdin/etags/**/*testing.json
+/bin/i18n/crowdin/etags/**/*test.json
 /bin/test/coverage
 /dashboard/config/newrelic.yml
 /dashboard/db/ui_test_data.*
@@ -96,6 +98,7 @@ npm-debug.log
 /pegasus/.sass-cache
 /pegasus/sites.v3/*/public/css/generated
 /tools/scripts/brokenLinkChecker/node_modules/
+/i18n/crowdin/*
 /i18n/locales/*/codeorg-markdown/
 /i18n/locales/*/curriculum_content/
 /i18n/locales/*/piskel/

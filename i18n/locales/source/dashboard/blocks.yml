@@ -1340,6 +1340,8 @@ en:
         text: "[SPRITE][0] glide to [LOCATION][1]"
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_hideVariable:
+        text: hide variable [VAR][0]
       gamelab_ifVarEquals:
         text: |-
           if [NUM][0] =[VAL][1]
@@ -1748,6 +1750,8 @@ en:
           [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
         text: show title screen [BREAK][0] title [TITLE][1] subtitle [SUBTITLE][2]
+      gamelab_showVariable:
+        text: show variable [VAR][0] at [LOCATION][1]
       gamelab_spriteClicked:
         text: "[CONDITION][0] [SPRITE][1] clicked"
         options:

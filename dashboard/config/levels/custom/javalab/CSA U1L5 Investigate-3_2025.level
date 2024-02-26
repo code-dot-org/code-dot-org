@@ -358,7 +358,8 @@
       ]
     ],
     "teacher_markdown": "There are several colors in the `Painter` class documentation that students can use to paint with. Students should change some of the `\"white\"` values to a different color to experiment with different colors.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:00:48.409+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5 Investigate-3_2023\\\"\"],\"cloned_from\":\"CSA U1L5 Investigate-3_2023\"}]"

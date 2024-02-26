@@ -44,6 +44,7 @@ const CODE_STUDIO_ENTRIES = {
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
+  'print_certificates/show': './src/sites/studio/pages/print_certificates/show.js',
   'programming_classes/show': './src/sites/studio/pages/programming_classes/show.js',
   'programming_environments/index': './src/sites/studio/pages/programming_environments/index.js',
   'programming_environments/show': './src/sites/studio/pages/programming_environments/show.js',
@@ -228,6 +229,8 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
   'foorm/libraries/editor': './src/sites/studio/pages/foorm/libraries/editor.js',
   'foorm/simple_survey_forms/show': './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
+
+  'plc/user_course_enrollments/index': './src/sites/studio/pages/plc/user_course_enrollments/index.js',
 };
 
 // Entries which are shared between dashboard and pegasus, which are included

@@ -44,6 +44,20 @@ class Policies::Lti
       jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
     },
+    canvas_beta_cloud: {
+      name: 'Canvas - Beta'.freeze,
+      issuer: 'https://canvas.beta.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token'.freeze,
+    },
+    canvas_test_cloud: {
+      name: 'Canvas - Test'.freeze,
+      issuer: 'https://canvas.test.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token'.freeze,
+    },
     schoology: {
       name: 'Schoology'.freeze,
       issuer: 'https://schoology.schoology.com'.freeze,
