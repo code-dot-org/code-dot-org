@@ -42,10 +42,8 @@ export default function SchoolDataInputs({
   showErrors,
   showRequiredIndicator,
 }) {
-  let schoolNotFound;
-
   const bindSchoolNotFound = snf => {
-    schoolNotFound = snf;
+    this.schoolNotFound = snf;
   };
 
   const isUS = country === 'United States';
