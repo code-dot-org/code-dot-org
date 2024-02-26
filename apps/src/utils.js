@@ -4,7 +4,8 @@ import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
-import {md5} from './util/crypto';
+import md5 from 'md5';
+
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
  * and whether the elements appear in the same order as the sequence.
