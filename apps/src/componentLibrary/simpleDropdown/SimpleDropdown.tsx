@@ -48,8 +48,8 @@ export interface SimpleDropdownProps {
  * and browser's native select options.
  */
 const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
-  items,
-  itemGroups,
+  items = [],
+  itemGroups = [],
   selectedValue,
   onChange,
   name,
