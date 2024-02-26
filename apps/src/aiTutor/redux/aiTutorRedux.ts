@@ -23,7 +23,6 @@ export interface AITutorState {
   scriptId: number | undefined;
   // State for compilation and validation.
   aiResponse: string | undefined;
-  isWaitingForAIResponse: boolean;
   // State for general chat.
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
@@ -44,7 +43,6 @@ const initialState: AITutorState = {
   level: undefined,
   scriptId: undefined,
   aiResponse: '',
-  isWaitingForAIResponse: false,
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   chatMessageError: false,
@@ -98,7 +96,7 @@ export const askAITutor = createAsyncThunk(
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
-  
+
     const prompt = systemPrompt + chatContext.studentCode;
 
     const interactionData = {
@@ -198,11 +196,14 @@ const aiTutorSlice = createSlice({
     setScriptId: (state, action: PayloadAction<number | undefined>) => {
       state.scriptId = action.payload;
     },
-    setIsWaitingForAIResponse: (state, action: PayloadAction<boolean>) => {
-      state.isWaitingForAIResponse = action.payload;
-    },
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+      const newMessageId =
+        state.chatMessages[state.chatMessages.length - 1].id + 1;
+      const newMessage = {
+        ...action.payload,
+        id: newMessageId,
+      };
+      state.chatMessages.push(newMessage);
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -223,14 +224,14 @@ const aiTutorSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(askAITutor.fulfilled, state => {
-      state.isWaitingForAIResponse = false;
+      state.isWaitingForChatResponse = false;
     });
     builder.addCase(askAITutor.rejected, (state, action) => {
-      state.isWaitingForAIResponse = false;
+      state.isWaitingForChatResponse = false;
       console.error(action.error);
     });
     builder.addCase(askAITutor.pending, state => {
-      state.isWaitingForAIResponse = true;
+      state.isWaitingForChatResponse = true;
     });
     builder.addCase(submitChatMessage.fulfilled, state => {
       state.isWaitingForChatResponse = false;

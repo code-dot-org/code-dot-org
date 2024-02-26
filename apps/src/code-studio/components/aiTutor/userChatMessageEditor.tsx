@@ -1,7 +1,10 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {askAITutor, submitChatMessage} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {
+  askAITutor,
+  submitChatMessage,
+} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {TutorType} from '@cdo/apps/aiTutor/types';
 import CopyButton from './copyButton';
@@ -19,9 +22,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     state => state.aiTutor.isWaitingForChatResponse
   );
 
-  const tutorType = useAppSelector(
-    state => state.aiTutor.selectedTutorType
-  );
+  const tutorType = useAppSelector(state => state.aiTutor.selectedTutorType);
 
   const level = useAppSelector(state => state.aiTutor.level);
 
@@ -40,6 +41,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   const hasRunOrTestedCode = useAppSelector(
     state => state.javalab.hasRunOrTestedCode
   );
+  const isRunning = useAppSelector(state => state.javalab.isRunning);
 
   const generalChat = tutorType === TutorType.GENERAL_CHAT;
   const compilation = tutorType === TutorType.COMPILATION;
@@ -49,21 +51,21 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
 
   const canSubmit = () => {
     if (compilation) {
-      return hasRunOrTestedCode && hasCompilationError;
+      return !isRunning && hasRunOrTestedCode && hasCompilationError;
     } else {
       return true;
     }
-  }
+  };
 
   const showSubmitButton = canSubmit();
 
   const getButtonText = () => {
     if (compilation) {
-      return 'Submit code'
+      return 'Submit code';
     } else if (validation) {
-      return 'Submit code and tests'
+      return 'Submit code and tests';
     } else {
-      return 'Submit'
+      return 'Submit';
     }
   };
 
@@ -85,7 +87,14 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         setUserMessage('');
       }
     }
-  }, [userMessage, dispatch, isWaitingForChatResponse]);
+  }, [
+    compilation,
+    level,
+    studentCode,
+    userMessage,
+    dispatch,
+    isWaitingForChatResponse,
+  ]);
 
   return (
     <div className={style.UserChatMessageEditor}>

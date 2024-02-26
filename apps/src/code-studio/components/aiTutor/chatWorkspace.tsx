@@ -15,9 +15,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
   );
-  const tutorType = useAppSelector(
-    state => state.aiTutor.selectedTutorType
-  );
+  const tutorType = useAppSelector(state => state.aiTutor.selectedTutorType);
 
   const showWaitingAnimation = () => {
     if (isWaitingForChatResponse) {

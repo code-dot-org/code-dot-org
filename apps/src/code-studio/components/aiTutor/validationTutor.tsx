@@ -29,8 +29,8 @@ const ValidationTutor: React.FunctionComponent = () => {
   const hasRunOrTestedCode = useAppSelector(
     state => state.javalab.hasRunOrTestedCode
   );
-  const isWaitingForAIResponse = useAppSelector(
-    state => state.aiTutor.isWaitingForAIResponse
+  const isWaitingForChatResponse = useAppSelector(
+    state => state.aiTutor.isWaitingForChatResponse
   );
   const aiResponse = useAppSelector(state => state.aiTutor.aiResponse);
   const level = useAppSelector(state => state.aiTutor.level);
@@ -66,7 +66,7 @@ const ValidationTutor: React.FunctionComponent = () => {
           <h4>Why aren't my tests passing?</h4>
           <Button
             text="Ask AI Tutor"
-            isPending={isWaitingForAIResponse}
+            isPending={isWaitingForChatResponse}
             pendingText="waiting"
             onClick={() => handleSend(studentCode)}
             disabled={!enableAskAITutor}
