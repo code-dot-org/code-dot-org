@@ -19,6 +19,8 @@ export const TeacherDashboardPath = {
   aiTutorChatMessages: '/ai_tutor',
 };
 
+const aiTutor = 'AI Tutor'; 
+
 const teacherDashboardLinks = [
   {
     label: i18n.teacherTabProgress(),
@@ -45,7 +47,7 @@ const teacherDashboardLinks = [
     url: TeacherDashboardPath.manageStudents,
   },
   {
-    label: 'AI Tutor',
+    label: aiTutor,
     url: TeacherDashboardPath.aiTutorChatMessages,
   },
 ];
@@ -78,7 +80,7 @@ export default class TeacherDashboardNavigation extends Component {
     let linksToShow = this.props.links || teacherDashboardLinks;
     if (!this.props.showAITutorTab) {
       linksToShow = teacherDashboardLinks.filter(
-        link => link.label !== 'AI Tutor'
+        link => link.label !== aiTutor
       );
     }
     this.setState({linksToShow});
