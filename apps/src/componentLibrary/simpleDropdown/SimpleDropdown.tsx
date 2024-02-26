@@ -6,9 +6,9 @@ import moduleStyles from './simpleDropdown.module.scss';
 
 export interface SimpleDropdownProps {
   /** SimpleDropdown items list */
-  items: {value: string; text: string}[];
+  items?: {value: string; text: string}[];
   /** SimpleDropdown grouped list of items */
-  itemGroups: {label: string; groupItems: {value: string; text: string}[]}[];
+  itemGroups?: {label: string; groupItems: {value: string; text: string}[]}[];
   /** SimpleDropdown selected value */
   selectedValue?: string;
   /** SimpleDropdown onChange handler */
