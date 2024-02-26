@@ -184,6 +184,8 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * Override of createTextArrow_ to fix the arrow position on Safari.
    * We need to add dominant-baseline="central" to the arrow element in order to
    * center it on Safari.
+   * We can remove this if this Blockly issue is fixed:
+   * https://github.com/google/blockly/issues/7890
    *  @override */
   createTextArrow_() {
     const arrow = Blockly.utils.dom.createSvgElement(
