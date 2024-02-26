@@ -8,10 +8,18 @@
   margin-inline-end: 12px;
 }
 
+.iconKeyHeader {
+  display: flex;
+}
+
 .iconKeyTitle {
   cursor: pointer;
   width: fit-content;
   padding-inline-end: 8px;
+}
+
+.iconKeyMoreDetailsLink {
+  margin: 0 0 0.5em 20px;
 }
 
 .legend {

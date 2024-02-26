@@ -24,13 +24,13 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
   const sectionContent = () => (
-    <div>
+    <>
       <AssignmentCompletionStatesBox
         hasValidatedLevels={isViewingValidatedLevel}
       />
       <TeacherActionsBox isViewingLevelProgress={isViewingLevelProgress} />
       {isViewingLevelProgress && <LevelTypesBox />}
-    </div>
+    </>
   );
 
   const clickListener = () => setIsOpen(!isOpen);
@@ -41,22 +41,32 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
       aria-expanded={isOpen}
       aria-label={i18n.iconKey()}
     >
-      <div
-        onClick={clickListener}
-        className={styles.iconKeyTitle}
-        data-testid="expandable-container"
-      >
-        <Heading6>
-          <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
-          {i18n.iconKey()}
-        </Heading6>
-        <Link type="primary" size="s" onClick={toggleIsViewingDetails}>
+      <div className={styles.iconKeyHeader}>
+        <div
+          onClick={clickListener}
+          className={styles.iconKeyTitle}
+          data-testid="expandable-container"
+        >
+          <Heading6>
+            <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
+            {i18n.iconKey()}
+          </Heading6>
+        </div>
+        <Link
+          type="primary"
+          size="s"
+          onClick={toggleIsViewingDetails}
+          className={styles.iconKeyMoreDetailsLink}
+        >
           More Details
         </Link>
       </div>
       {isOpen && sectionContent()}
       {isIconDetailsOpen && (
-        <MoreDetailsDialog onClose={() => setIconDetailsOpen(false)} />
+        <MoreDetailsDialog
+          onClose={() => setIconDetailsOpen(false)}
+          hasValidation={isViewingValidatedLevel}
+        />
       )}
     </div>
   );
