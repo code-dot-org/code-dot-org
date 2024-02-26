@@ -47,7 +47,7 @@ export default function initializeGenerator(
   const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;
   blocklyWrapper.Generator.prototype.blockToCode = function (
     block: Block | null,
-    opt_thisOnly: boolean
+    opt_thisOnly?: boolean
   ) {
     // Skip disabled block check for non-rendered workspaces. Non-rendered workspaces
     // do not have an unused concept.

@@ -220,19 +220,23 @@ export interface ExtendedXml extends XmlType {
   domToBlockSpace: (workspace: Workspace, xml: Document) => XmlBlockConfig[];
 }
 
+// This type is likely incomplete. We should add to it if we discover
+// more properties it contains.
 export interface XmlBlockConfig {
   blockly_block: Block;
   x: number;
   y: number;
 }
 
+// This type is likely incomplete. We should add to it if we discover
+// more properties it contains.
 export interface JsonBlockConfig {
   id: string;
   x?: number;
   y?: number;
   movable?: boolean;
   deletable?: boolean;
-  // extraState can be any object.
+  // extraState can be any object. We may be able to define this better.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
 }
