@@ -45,7 +45,8 @@
     "contained_level_names": [
       "CSA U3L7-L1 Contained_2023"
     ],
-    "project_template_level_name": "CSA U3L7-Enhanced PBT_2023"
+    "project_template_level_name": "CSA U3L7-Enhanced PBT_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-01-12T21:44:54.168+00:00\",\"changed\":[\"cloned from \\\"CSA Predict Level Template\\\"\"],\"cloned_from\":\"CSA Predict Level Template\"},{\"changed_at\":\"2023-01-12 21:45:03 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-01-11 15:27:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

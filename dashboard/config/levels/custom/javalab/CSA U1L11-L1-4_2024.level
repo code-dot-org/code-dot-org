@@ -907,7 +907,8 @@
     },
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Can the methods in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">DuckPainter</code> class be broken down further to focus on more specific tasks? Experiment with different ways to break down one or more of the methods.",
     "teacher_markdown": "Some methods could be broken down further. For example, the `paintBothWings()` method paints the left wing, then moves to the starting position for the right wing, then paints the right wing. This could be broken up to have a separate method for getting to the starting position for the right wing.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:44:13.436+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L1-4_2023\\\"\"],\"cloned_from\":\"CSA U1L11-L1-4_2023\"}]"

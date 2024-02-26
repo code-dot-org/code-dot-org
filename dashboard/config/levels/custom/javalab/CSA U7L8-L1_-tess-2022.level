@@ -22,7 +22,8 @@
       }
     },
     "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tP0qO790WjUelWax+V/\nOrnEGaT6PD93CxprokdnNMe59LS5HlbyVdGI7M5gUo/4Tvw=\n",
-    "name_suffix": "_-tess-2022"
+    "name_suffix": "_-tess-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-03-30T21:29:46.295+00:00\",\"changed\":[\"cloned from \\\"CSA U7L8-L1\\\"\"],\"cloned_from\":\"CSA U7L8-L1\"}]"

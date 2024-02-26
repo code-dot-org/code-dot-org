@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U6L3-Wrapper PBT_2024",
     "teacher_markdown": "Since `firstInteger` and `secondInteger` are both `Integer` objects, we are able to create a primitive type (`int`) and to unbox these two `Integer` objects into the primitive data type simply by declaring `total` as an `int` and then initializing it as the sum of the two objects.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:14.773+00:00\",\"changed\":[\"cloned from \\\"CSA U6L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U6L3-L3_2023\"}]"
