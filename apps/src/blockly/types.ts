@@ -128,7 +128,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   getFunctionEditorWorkspace: () => ExtendedWorkspaceSvg | undefined;
   clearAllStudentWorkspaces: () => void;
   getPointerBlockImageUrl: (
-    block: Block,
+    block: ExtendedBlockSvg,
     pointerMetadataMap: PointerMetadataMap,
     imageSourceId: string
   ) => string;
