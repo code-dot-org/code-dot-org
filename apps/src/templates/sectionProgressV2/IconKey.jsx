@@ -12,9 +12,12 @@ import MoreDetailsDialog from './MoreDetailsDialog.jsx';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVewingDetails, setIsViewingDetails] = useState(true);
+  const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
 
-  const toggleIsViewingDetails = () => setIsViewingDetails(true);
+  const toggleIsViewingDetails = event => {
+    event.preventDefault();
+    setIconDetailsOpen(true);
+  };
 
   const isViewingLevelProgress = expandedLessonIds.length > 0;
 
@@ -52,8 +55,8 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
         </Link>
       </div>
       {isOpen && sectionContent()}
-      {isVewingDetails && (
-        <MoreDetailsDialog onClose={() => setIsViewingDetails(false)} />
+      {isIconDetailsOpen && (
+        <MoreDetailsDialog onClose={() => setIconDetailsOpen(false)} />
       )}
     </div>
   );
