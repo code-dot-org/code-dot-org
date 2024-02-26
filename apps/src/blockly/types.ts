@@ -129,9 +129,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   clearAllStudentWorkspaces: () => void;
   getPointerBlockImageUrl: (
     block: Block,
-    pointerMetadataMap: {
-      [blockType: string]: {imageSourceType: string; imageIndex: number};
-    },
+    pointerMetadataMap: PointerMetadataMap,
     imageSourceId: string
   ) => string;
 }
@@ -146,6 +144,11 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
+  imageSourceId?: string;
+  shortString?: string;
+  longString?: string;
+  thumbnailSize?: number;
 }
 
 export interface ExtendedInput extends Input {
@@ -225,3 +228,10 @@ export interface ProcedureBlockConfiguration {
 export type ProcedureType =
   | BLOCK_TYPES.procedureDefinition
   | BLOCK_TYPES.behaviorDefinition;
+
+export type PointerMetadataMap = {
+  [blockType: string]: {
+    imageSourceType: string;
+    imageIndex: number;
+  };
+};
