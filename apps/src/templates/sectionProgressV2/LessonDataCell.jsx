@@ -17,13 +17,11 @@ export default function LessonDataCell({
   const finished = studentLessonProgress?.completedPercent === 100;
   const partiallyComplete = studentLessonProgress && !finished;
 
-  const expandLesson = () => {
-    if (!noLevels) {
-      addExpandedLesson(lesson.id);
-    }
-  };
-
   const interactive = !noLevels && !locked;
+
+  const expandLesson = interactive
+    ? () => addExpandedLesson(lesson.id)
+    : undefined;
 
   return (
     <div
@@ -33,7 +31,7 @@ export default function LessonDataCell({
         locked && styles.littleLock,
         interactive && styles.lessonInteractive
       )}
-      onClick={locked ? undefined : expandLesson}
+      onClick={expandLesson}
     >
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
       {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}
