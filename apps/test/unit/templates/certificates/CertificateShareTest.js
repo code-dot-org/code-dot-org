@@ -38,7 +38,7 @@ describe('CertificateShare', () => {
     const image = printLink.find('img');
     expect(image.prop('src')).to.equal('/certificate-image');
 
-    const block = wrapper.find('Connect(UnconnectedTwoColumnActionBlock)');
+    const block = wrapper.find('UnconnectedTwoColumnActionBlock');
     expect(block.prop('imageUrl')).to.equal('//code.org/announcement-image');
   });
 
