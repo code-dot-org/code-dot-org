@@ -14881,7 +14881,7 @@ en:
           title: Intro to Code.org
           description_audience: ''
           description_short: ''
-          description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### add objective \n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** ?? minutes"
+          description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** ?? minutes"
           student_description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### add objective \n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 10 minutes"
         self-paced-pl-microbit-2024-2:
           lessons:
@@ -14974,8 +14974,18 @@ en:
           title: Course C (2nd-3rd Grade)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** ?? minutes\n\n\n"
+          student_description: |+
+            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+
+            #### **You will:**
+            * #### Code using events with Code.org.
+            * #### Explore an unplugged coding lesson.
+
+
+            #### **Suggested Time:** ?? minutes
+
+
         melissambcd:
           lessons: {}
           lesson_groups: {}
@@ -14983,8 +14993,26 @@ en:
           title: Course D (3rd-4th Grade)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |+
+            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+
+            #### **You will:**
+            * #### Code using loops and conditionals with Code.org.
+
+
+            #### **Suggested Time:** ?? minutes
+
+
+          student_description: |+
+            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+
+            #### **You will:**
+            * #### Code using loops and conditionals with Code.org.
+
+
+            #### **Suggested Time:** ?? minutes
+
+
         melissambcoursed:
           lessons: {}
           lesson_groups: {}
@@ -14995,8 +15023,8 @@ en:
           title: Course E (4th-5th) Grade
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** ?? minutes\n\n\n"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** ?? minutes\n\n\n"
         melissambcf:
           lessons: {}
           lesson_groups: {}
@@ -15004,8 +15032,8 @@ en:
           title: Course F (5th-6th Grade)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** ?? minutes\n\n\n"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** ?? minutes\n\n\n"
         coursed-maker-2024-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -15108,3 +15136,4 @@ en:
         k5-maker-pilot-2024-6:
           lessons: {}
           lesson_groups: {}
+...

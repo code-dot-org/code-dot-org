@@ -6,8 +6,7 @@ import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
 import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
 import {Source, SourceOptions} from 'tone/build/esm/source/Source';
-
-const DEFAULT_BPM = 120;
+import {DEFAULT_BPM} from '../constants';
 
 /**
  * An {@link AudioPlayer} implementation using the Tone.js library.
@@ -35,7 +34,11 @@ class ToneJSPlayer implements AudioPlayer {
     this.currentPreview = null;
   }
 
-  getCurrentPosition(): number {
+  supportsSamplers(): boolean {
+    return true;
+  }
+
+  getCurrentPlaybackPosition(): number {
     return this.transportTimeToPlaybackTime(
       Transport.position as BarsBeatsSixteenths
     );
@@ -115,6 +118,12 @@ class ToneJSPlayer implements AudioPlayer {
     this.currentPreview = {id: sample.sampleId, player};
   }
 
+  async playSamplesImmediately() {
+    console.log(
+      'Not supported. Use playSequenceImmediately for previewing note sequences.'
+    );
+  }
+
   async playSequenceImmediately({instrument, events}: SamplerSequence) {
     if (this.samplers[instrument] === undefined) {
       this.metricsReporter.logError(`Instrument not loaded: ${instrument}`);
@@ -179,10 +188,10 @@ class ToneJSPlayer implements AudioPlayer {
     });
   }
 
-  async start(startTime?: string) {
+  async start(startPosition = 1) {
     await this.startContextIfNeeded();
     this.cancelPreviews();
-    Transport.start(undefined, startTime);
+    Transport.start(undefined, this.playbackTimeToTransportTime(startPosition));
   }
 
   pause() {
@@ -194,7 +203,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.stopAllPlayers();
   }
 
-  cancelAllEvents() {
+  cancelPendingEvents() {
     this.stopAllPlayers();
     Transport.cancel();
   }
