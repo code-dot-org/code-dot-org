@@ -82,7 +82,6 @@ class PersonalProjectsTable extends React.Component {
         projectId={rowData.channel}
         projectType={rowData.type}
         isEditing={rowData.isEditing}
-        updatedName={rowData.updatedName}
         projectNameFailure={rowData.projectNameFailure}
         isFrozen={rowData.frozen}
       />
@@ -365,10 +364,7 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
-  const updatedName = rowData.isEditing ? rowData.updatedName : '';
-  if (rowData.frozen) {
-    projectName = projectName + ' *';
-  }
+  console.log('rowData', rowData);
   return (
     <PersonalProjectsNameCell
       id={rowData.id}
@@ -376,7 +372,7 @@ const nameFormatter = (projectName, {rowData}) => {
       projectType={rowData.type}
       projectName={projectName}
       isEditing={rowData.isEditing}
-      updatedName={updatedName}
+      isFrozen={rowData.frozen}
     />
   );
 };

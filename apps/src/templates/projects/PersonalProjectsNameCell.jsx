@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import styles from './personal-projects-name-cell.module.scss';
+import {showProjectInfoDialog} from '@cdo/apps/templates/projects/projectInfoDialog/projectInfoDialogRedux';
 
 class PersonalProjectsNameCell extends Component {
   static propTypes = {
@@ -12,10 +15,17 @@ class PersonalProjectsNameCell extends Component {
     isEditing: PropTypes.bool,
     updatedName: PropTypes.string,
     updateProjectName: PropTypes.func.isRequired,
+    isFrozen: PropTypes.bool,
+    showProjectInfoDialog: PropTypes.func,
   };
 
   onChangeName = e => {
     this.props.updateProjectName(this.props.projectId, e.target.value);
+  };
+
+  showProjectInfo = () => {
+    console.log('show project info');
+    this.props.showProjectInfoDialog();
   };
 
   render() {
@@ -26,15 +36,31 @@ class PersonalProjectsNameCell extends Component {
     return (
       <div>
         {!isEditing && (
-          <a
-            style={tableLayoutStyles.link}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ui-projects-table-project-name"
-          >
-            {projectName}
-          </a>
+          <div>
+            <a
+              style={tableLayoutStyles.link}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-projects-table-project-name"
+            >
+              {projectName}
+            </a>
+            {isFrozen && (
+              <span>
+                <button
+                  type="button"
+                  onClick={this.showProjectInfo}
+                  className={styles.cautionButton}
+                >
+                  <FontAwesome
+                    icon="circle-exclamation"
+                    className={styles.cautionIcon}
+                  />
+                </button>
+              </span>
+            )}
+          </div>
         )}
         {isEditing && (
           <div>
@@ -52,17 +78,14 @@ class PersonalProjectsNameCell extends Component {
   }
 }
 
-const styles = {
-  inputBox: {
-    width: 225,
-  },
-};
-
 export default connect(
   state => ({}),
   dispatch => ({
     updateProjectName(projectId, updatedName) {
       dispatch(updateProjectName(projectId, updatedName));
+    },
+    showProjectInfoDialog() {
+      dispatch(showProjectInfoDialog());
     },
   })
 )(PersonalProjectsNameCell);
