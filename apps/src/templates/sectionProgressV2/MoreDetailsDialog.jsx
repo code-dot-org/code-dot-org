@@ -3,10 +3,7 @@ import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-
 import {Heading3, Heading5} from '@cdo/apps/componentLibrary/typography';
-
-// import moduleStyle from './multiple-sections-assigner.module.scss';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
   return (
