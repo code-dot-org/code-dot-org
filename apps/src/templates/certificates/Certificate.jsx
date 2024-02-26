@@ -112,14 +112,10 @@ function Certificate(props) {
     randomDonorTwitter,
     under13,
     children,
-    initialCertificateImageUrl,
     isHocTutorial,
   } = props;
 
-  const personalizedCertificate = getCertificateImagePath();
-  const imgSrc = personalized
-    ? personalizedCertificate
-    : initialCertificateImageUrl;
+  const imgSrc = getCertificateImagePath();
   const certificateShareLink = getCertificateSharePath();
   const externalCertificateShareLink = getExternalCertificateSharePath();
   const desktop =
@@ -235,7 +231,6 @@ Certificate.propTypes = {
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
-  initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
 };
 
