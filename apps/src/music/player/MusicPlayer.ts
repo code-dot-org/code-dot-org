@@ -471,23 +471,6 @@ export default class MusicPlayer {
     return soundData.type === 'beat' ? 0 : this.key - (soundData.key || Key.C);
   }
 
-  // TODO: Kind of a hack to preload all instrument sounds. Ideally, load each instrument as needed when
-  // opening the chord/pattern panel.
-  async setupAllInstruments(onLoadFinished?: LoadFinishedCallback) {
-    const library = MusicLibrary.getInstance();
-    if (library === undefined) {
-      return;
-    }
-
-    const instruments = library.groups[0].folders
-      .filter(folder => folder.type === 'kit' || folder.type === 'instrument')
-      .map(folder => folder.path);
-
-    for (const instrument of instruments) {
-      await this.setupSampler(instrument, onLoadFinished);
-    }
-  }
-
   async setupSampler(
     instrument: string,
     onLoadFinished?: LoadFinishedCallback
