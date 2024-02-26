@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2024-01-10 20:53:41 UTC",
+    "serialized_at": "2024-02-22 19:08:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1147,6 +1147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Match 1-test"
+        ]
       },
       "bonus": false,
       "seeding_key": {

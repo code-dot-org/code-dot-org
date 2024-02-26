@@ -1,5 +1,6 @@
 <Flappy>
   <config><![CDATA[{
+  "published": true,
   "game_id": 61,
   "created_at": "2024-02-08T22:53:14.000Z",
   "level_num": "custom",
@@ -42,11 +43,14 @@
     "project_template_level_name": "courseC_flappy_events_template_2023",
     "parent_level_id": 21263,
     "name_suffix": "_2023",
+    "encrypted": "false",
+    "show_type_hints": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-02-08T22:53:14.252+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events5_2023\\\"\"],\"cloned_from\":\"courseC_flappy_events5_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-08T22:53:14.252+00:00\",\"changed\":[\"cloned from \\\"courseC_flappy_events5_2023\\\"\"],\"cloned_from\":\"courseC_flappy_events5_2023\"},{\"changed_at\":\"2024-02-21 22:42:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

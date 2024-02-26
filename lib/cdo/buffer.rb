@@ -34,8 +34,8 @@ module Cdo
       @min_interval = min_interval
       @log = log
 
-      @task = RescheduledTask.new(0.0, &method(:flush_batch)).
-        with_observer(&method(:schedule_flush))
+      @task = RescheduledTask.new(0.0) {flush_batch}.
+        with_observer {schedule_flush}
 
       @buffer = []
       @buffer.extend(MonitorMixin)

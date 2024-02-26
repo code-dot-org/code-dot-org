@@ -766,7 +766,8 @@
       ]
     ],
     "teacher_markdown": "When students change the condition in the `for` loop, they will see the following displayed in the console:\r\n\r\n```\r\nException message: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5\r\n\t at LoopPainter.paintAndMove(LoopPainter.java:60)\r\n\t at NeighborhoodRunner.main(NeighborhoodRunner.java:13)\r\n```\r\n\r\nThis is because the variable `index` reaches the value that is equivalent to the length of the 1D array `paintColors`, which is one more than the last index in the 1D array.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:29.129+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L4_2023\\\"\"],\"cloned_from\":\"CSA U3L4-L4_2023\"}]"

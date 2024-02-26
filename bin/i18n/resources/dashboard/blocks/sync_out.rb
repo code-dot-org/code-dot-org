@@ -12,13 +12,13 @@ module I18n
       module Blocks
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
+            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], FILE_PATH)
             return unless File.file?(crowdin_file_path)
 
             restore(language[:locale_s], crowdin_file_path)
             distribute_localization(language[:locale_s], crowdin_file_path)
 
-            I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME))
+            I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH))
           end
 
           private

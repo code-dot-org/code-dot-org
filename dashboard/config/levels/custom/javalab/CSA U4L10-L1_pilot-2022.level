@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:18.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Run the program several times to observe the results. What do you notice about the output?\r\n\r\n2. In `APExamScene.java`(#e7e8ea), look at the `countRanges()`(#e7e8ea) method. What do you notice about the code?\r\n\r\n3. Look at the values in the `percentages.txt`(#e7e8ea) file. Is the `if`(#e7e8ea) statement ever `true`(#e7e8ea) in the `countRanges()`(#e7e8ea) method?\r\n\r\n4. In `APExamScene.java`(#e7e8ea), change the values in each condition in the `countRanges()`(#e7e8ea) method. Run the program after each change. How does this change the output?\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://code.org/promote/ap)!*",
@@ -30,12 +34,9 @@
         "text": "14\n38\n20\n26\n33\n38\n51\n32\n46\n31\n31\n39\n24\n14\n30\n24\n35\n44\n23\n48\n52\n27\n33\n25\n33\n23\n12\n23\n20\n32\n32\n49\n17\n50\n33\n24\n20\n18\n38\n56\n25\n8\n24\n27\n16\n34\n18\n38\n25\n27\n31",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:32:18.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:18.440+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L1_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L1_2022\"},{\"changed_at\":\"2022-09-22 17:49:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 17:49:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

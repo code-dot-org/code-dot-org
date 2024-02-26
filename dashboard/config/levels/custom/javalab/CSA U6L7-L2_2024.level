@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U6L7-Lists PBT_2024",
     "teacher_markdown": "When we delete the `<Book>` tag from the `ArrayList` declaration and initialization, we can still add `Book` objects into the `ArrayList`. However, we can also add other types of objects. This type of `ArrayList` would be non-generic. When we add a tag like `<Book>`, it becomes a generic `ArrayList` and can only hold objects of that type.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:40.133+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L2_2023\\\"\"],\"cloned_from\":\"CSA U6L7-L2_2023\"}]"

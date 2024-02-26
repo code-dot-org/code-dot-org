@@ -1364,12 +1364,28 @@ table {
     background-color: var(--neutral_light);
     border: 1px solid var(--neutral_dark20);
     color: var(--neutral_dark);
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: var(--semi-bold-font-weight);
     text-align: initial;
   }
 
   td {
     border: 1px solid var(--neutral_dark20);
+  }
+}
+
+// Wrap a <table> in this class if the table needs to be responsive
+.table-wrapper {
+  overflow-x: auto;
+
+  @media screen and (max-width: 700px) {
+    border-left: 1px solid var(--neutral_dark20);
+    border-right: 1px solid var(--neutral_dark20);
+  }
+
+  @media screen and (max-width: 700px) {
+    table {
+      margin-left: -1px;
+    }
   }
 }

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-14T15:06:20.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nNavigate the `Painter` through The Neighborhood.\r\n\r\n1. Initialize a `PainterPlus` object at `(0, 19)` facing `North` with `200` units of paint.\r\n\r\n2. Create a `String` array with at least four paint colors.\r\n\r\n3. While the `Painter` is facing north:\r\n\r\n   * Use `Math.random()` to generate a random number between `0` and the number of paint colors.\r\n\r\n   * Use `if/else` statements to navigate and paint using randomly chosen colors from the array.\r\n\r\n![](https://images.code.org/f45e2505317a45d21833ff5565318c20-image-1631907984880.png)",
@@ -2055,13 +2059,10 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tOOKutcoECsKgbm95L5\nRfnPvsl+HjLcg2/GU+IN3AdYBtyK/+7mXpUjPLI+PWQEqnc=\n"
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tOOKutcoECsKgbm95L5\nRfnPvsl+HjLcg2/GU+IN3AdYBtyK/+7mXpUjPLI+PWQEqnc=\n",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-09-14T15:06:20.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-09-14 15:06:23 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 16:23:10 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 16:25:03 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 16:34:00 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 16:38:23 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 19:33:32 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 19:48:10 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 19:50:29 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

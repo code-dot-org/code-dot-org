@@ -167,7 +167,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
       expect(wrapper.find('SaveBar').length).to.equal(1);
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
