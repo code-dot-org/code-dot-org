@@ -8,7 +8,7 @@ import shapes from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-// MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock
+// MarketingAnnouncementBanner is a wrapper around TwoColumnActionBlock
 // which adds a button to dismiss the banner.
 const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   const [displayBanner, setDisplayBanner] = useState(true);
