@@ -365,6 +365,7 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
 };
 
 const nameFormatter = (projectName, {rowData}) => {
+  const updatedName = rowData.isEditing ? rowData.updatedName : '';
   if (rowData.frozen) {
     projectName = projectName + ' *';
   }
