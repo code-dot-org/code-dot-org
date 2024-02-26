@@ -27,6 +27,9 @@ export interface AudioPlayer {
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
 
+  /** If the given instrument has been loaded */
+  isInstrumentLoaded(instrumentName: string): boolean;
+
   /** Play a sample immediately (used for previews) */
   playSampleImmediately(
     sample: SampleEvent,

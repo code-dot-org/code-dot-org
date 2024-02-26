@@ -475,7 +475,10 @@ export default class MusicPlayer {
     instrument: string,
     onLoadFinished?: LoadFinishedCallback
   ) {
-    if (!this.audioPlayer.supportsSamplers()) {
+    if (
+      !this.audioPlayer.supportsSamplers() ||
+      this.audioPlayer.isInstrumentLoaded(instrument)
+    ) {
       return;
     }
 
