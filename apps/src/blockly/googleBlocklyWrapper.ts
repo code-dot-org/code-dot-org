@@ -38,7 +38,6 @@ import {
   CdoDeuteranopiaDarkTheme,
   CdoTritanopiaDarkTheme,
 } from './themes/cdoAccessibleDarkThemes';
-import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
@@ -816,7 +815,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
-  initializeTouch(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
   initializeCss(blocklyWrapper);
