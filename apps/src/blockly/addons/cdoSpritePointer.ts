@@ -116,6 +116,7 @@ function changePointerImage(
   updatePointerImageHelper(
     block,
     block.shortString,
+    imageUrl,
     block.thumbnailSize,
     block.thumbnailSize
   );
@@ -124,19 +125,20 @@ function changePointerImage(
 // Reset the block to no longer have an image input, and only
 // show the long text input.
 function resetPointerImageToLongString(block: ExtendedBlockSvg) {
-  updatePointerImageHelper(block, block.longString, 1, block.thumbnailSize);
+  updatePointerImageHelper(block, block.longString, '', 1, block.thumbnailSize);
 }
 
 function updatePointerImageHelper(
   block: ExtendedBlockSvg,
   textInputValue: string | undefined,
+  imageUrl: string,
   width: number | undefined,
   height: number | undefined
 ) {
   const textInput = block.inputList[0].fieldRow[0];
   const previewInput = block.inputList[0].fieldRow[1] as CdoFieldImage;
   textInput.setValue(textInputValue);
-  previewInput.setValue('');
+  previewInput.setValue(imageUrl);
   if (width !== undefined && height !== undefined) {
     previewInput.updateDimensions(width, height);
   }
