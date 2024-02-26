@@ -4185,4 +4185,9 @@ a {
   }
 }
 
+// Globally override button hover styling applied by Bootstrap
+button:hover {
+  box-shadow: none;
+}
+
 @import "NpsSurveyBlock";
