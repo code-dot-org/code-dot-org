@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import {ExtendedWorkspaceSvg} from '../types';
 
 export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
   /**
@@ -12,10 +13,10 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
    **/
   reflowInternal_() {
     this.workspace_.scale = this.getFlyoutScale();
-    var flyoutWidth = 0;
-    var blocks = this.workspace_.getTopBlocks(false);
+    let flyoutWidth = 0;
+    const blocks = this.workspace_.getTopBlocks(false);
     for (let i = 0, block; (block = blocks[i]); i++) {
-      var width = block.getHeightWidth().width;
+      let width = block.getHeightWidth().width;
       if (block.outputConnection) {
         width -= this.tabWidth_;
       }
@@ -33,7 +34,9 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     const functionEditorWorkspace = Blockly.getFunctionEditorWorkspace();
 
     if (
-      [mainWorkspace, functionEditorWorkspace].includes(this.targetWorkspace)
+      [mainWorkspace, functionEditorWorkspace].includes(
+        this.targetWorkspace as ExtendedWorkspaceSvg
+      )
     ) {
       // Constrain the flyout to not be wider than 40% of the total main workspace space.
       flyoutWidth = Math.min(
@@ -49,22 +52,22 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
       for (let i = 0, block; (block = blocks[i]); i++) {
         if (this.RTL) {
           // With the flyoutWidth known, right-align the blocks.
-          var oldX = block.getRelativeToSurfaceXY().x;
-          var newX = flyoutWidth / this.workspace_.scale - this.MARGIN;
+          const oldX = block.getRelativeToSurfaceXY().x;
+          let newX = flyoutWidth / this.workspace_.scale - this.MARGIN;
           if (!block.outputConnection) {
             newX -= this.tabWidth_;
           }
           block.moveBy(newX - oldX, 0);
         }
-        if (block.flyoutRect_) {
-          this.moveRectToBlock_(block.flyoutRect_, block);
+        if (this.rectMap_.has(block)) {
+          this.moveRectToBlock_(this.rectMap_.get(block)!, block);
         }
       }
       if (this.RTL) {
         // With the flyoutWidth known, right-align the buttons.
         for (let i = 0, button; (button = this.buttons_[i]); i++) {
-          var y = button.getPosition().y;
-          var x =
+          const y = button.getPosition().y;
+          const x =
             flyoutWidth / this.workspace_.scale -
             button.width -
             this.MARGIN -
@@ -105,6 +108,9 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     }
     this.reflowInternal_();
     const toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
-    document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+    const header = document.getElementById('toolbox-header');
+    if (header) {
+      header.style.width = toolboxWidth + 'px';
+    }
   }
 }
