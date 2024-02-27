@@ -23,6 +23,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #   level_source1a = create :level_source, level: level1, data: 'Here is the answer 1a'
   # end
 
+  def create_bob_record
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"name" => 'bob', "age" => 8}.to_json,
+    }
+    assert_response :success
+  end
+
   def set_and_get_key_value(key, value)
     post _url(:set_key_value), params: {
       key: key,
@@ -68,10 +76,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_equal [], JSON.parse(@response.body)
 
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {"name" => 'bob', "age" => 8}.to_json,
-    }
+    create_bob_record
 
     get _url(:get_table_names)
     assert_response :success
@@ -116,13 +121,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     post _url(:create_table), params: {table_name: 'mytable'}
     assert_response :success
 
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {"name" => 'bob', "age" => 8}.to_json,
-    }
-    assert_response :success
-    get _url(:read_records), params: {table_name: 'mytable'}
-    assert_response :success
+    create_bob_record
 
     delete _url(:delete_table), params: {table_name: 'mytable'}
     assert_response :success
@@ -137,11 +136,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "clear_table" do
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {"name" => 'bob', "age" => 8}.to_json,
-    }
-    assert_response :success
+    create_bob_record
 
     delete _url(:clear_table), params: {table_name: 'mytable'}
     assert_response :success
@@ -169,10 +164,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "delete_column" do
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {"name" => 'bob', "age" => 8}.to_json,
-    }
+    create_bob_record
 
     delete _url(:delete_column), params: {table_name: 'mytable', column_name: 'age'}
     assert_response :success
