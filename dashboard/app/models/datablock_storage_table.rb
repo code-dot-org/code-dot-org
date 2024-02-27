@@ -24,6 +24,10 @@ class DatablockStorageTable < ApplicationRecord
   # but we're skipping it until this is implemented.
   MAX_TABLE_COUNT = 10
 
+  # TODO: implement enforcement of MAX_TABLE_ROW_COUNT, we already have a test for it
+  # but we're skipping it until this is implemented.
+  MAX_TABLE_ROW_COUNT = 20000
+
   def self.get_table_names(project_id)
     DatablockStorageTable.where(project_id: project_id).pluck(:table_name)
   end
