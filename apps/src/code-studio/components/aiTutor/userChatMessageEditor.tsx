@@ -1,10 +1,7 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {
-  askAITutor,
-  submitChatMessage,
-} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {TutorType} from '@cdo/apps/aiTutor/types';
 import CopyButton from './copyButton';
@@ -42,6 +39,9 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     state => state.javalab.hasRunOrTestedCode
   );
   const isRunning = useAppSelector(state => state.javalab.isRunning);
+  const validationPassed = useAppSelector(
+    state => state.javalab.validationPassed
+  );
 
   const generalChat = tutorType === TutorType.GENERAL_CHAT;
   const compilation = tutorType === TutorType.COMPILATION;
@@ -52,8 +52,10 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   const canSubmit = () => {
     if (compilation) {
       return !isRunning && hasRunOrTestedCode && hasCompilationError;
+    } else if (validation) {
+      return hasRunOrTestedCode && !hasCompilationError && !validationPassed;
     } else {
-      return true;
+      return generalChat;
     }
   };
 
@@ -72,28 +74,35 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
   const buttonText = getButtonText();
 
   const handleSubmit = useCallback(() => {
-    if (compilation) {
+    const studentInput = generalChat ? userMessage : studentCode;
+    if (!isWaitingForChatResponse) {
       const chatContext = {
-        studentCode: studentCode,
-        tutorType: TutorType.COMPILATION,
+        studentInput: studentInput,
+        tutorType: tutorType,
       };
       dispatch(askAITutor(chatContext));
-      analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION, {
-        levelId: level?.id,
-      });
-    } else {
-      if (!isWaitingForChatResponse) {
-        dispatch(submitChatMessage(userMessage));
-        setUserMessage('');
-      }
+      setUserMessage('');
     }
+
+    let event;
+    if (compilation) {
+      event = EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION;
+    } else if (validation) {
+      event = EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION;
+    }
+    analyticsReporter.sendEvent(event, {
+      levelId: level?.id,
+    });
   }, [
-    compilation,
-    level,
-    studentCode,
+    generalChat,
     userMessage,
-    dispatch,
+    studentCode,
     isWaitingForChatResponse,
+    compilation,
+    validation,
+    level?.id,
+    tutorType,
+    dispatch,
   ]);
 
   return (
@@ -115,7 +124,9 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
           disabled={isWaitingForChatResponse}
         />
       )}
-      <CopyButton />
+      <div>
+        <CopyButton />
+      </div>
     </div>
   );
 };

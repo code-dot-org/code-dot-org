@@ -12,7 +12,7 @@ import {
   Status,
   ChatCompletionMessage,
   Level,
-  ValidationCompilationContext,
+  ChatContext,
 } from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -21,9 +21,7 @@ export interface AITutorState {
   selectedTutorType: TutorType | undefined;
   level: Level | undefined;
   scriptId: number | undefined;
-  // State for compilation and validation.
   aiResponse: string | undefined;
-  // State for general chat.
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   chatMessageError: boolean;
@@ -49,11 +47,9 @@ const initialState: AITutorState = {
 };
 
 // THUNKS
-
-// Compilation & Validation
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
-  async (chatContext: ValidationCompilationContext, thunkAPI) => {
+  async (chatContext: ChatContext, thunkAPI) => {
     const state = thunkAPI.getState() as {aiTutor: AITutorState};
     const levelContext = {
       levelId: state.aiTutor.level?.id,
@@ -61,31 +57,49 @@ export const askAITutor = createAsyncThunk(
       scriptId: state.aiTutor.scriptId,
     };
 
+    const tutorType = chatContext.tutorType;
+    const generalChat = tutorType === TutorType.GENERAL_CHAT;
+    const compilation = tutorType === TutorType.COMPILATION;
+    const validation = tutorType === TutorType.VALIDATION;
+
     let systemPrompt;
-    if (chatContext.tutorType === TutorType.VALIDATION) {
+    if (validation) {
       systemPrompt = validationSystemPrompt;
-    } else if (chatContext.tutorType === TutorType.COMPILATION) {
+    } else if (compilation) {
       systemPrompt = compilationSystemPrompt;
+    } else {
+      systemPrompt = generalChatSystemPrompt;
     }
 
-    if (systemPrompt === undefined) {
-      throw new Error('systemPrompt is undefined');
-    }
+    const storedMessages = state.aiTutor.chatMessages;
 
-    if (chatContext.studentCode === undefined) {
-      throw new Error('studentCode is undefined');
+    const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
+
+    if (generalChat) {
+      const newMessage: ChatCompletionMessage = {
+        id: newMessageId,
+        role: Role.USER,
+        status: Status.UNKNOWN,
+        chatMessageText: chatContext.studentInput,
+      };
+      thunkAPI.dispatch(addChatMessage(newMessage));
     }
 
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
-      0,
-      chatContext.studentCode,
-      [],
+      newMessageId,
+      chatContext.studentInput,
+      storedMessages,
       levelContext.levelId,
       chatContext.tutorType
     );
 
-    const newMessageId = state.aiTutor.chatMessages[state.aiTutor.chatMessages.length - 1].id + 1;
+    thunkAPI.dispatch(
+      updateChatMessageStatus({
+        id: chatApiResponse.id,
+        status: chatApiResponse.status,
+      })
+    );
 
     if (chatApiResponse.assistantResponse) {
       const assistantChatMessage: ChatCompletionMessage = {
@@ -97,77 +111,11 @@ export const askAITutor = createAsyncThunk(
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
 
-    const prompt = systemPrompt + chatContext.studentCode;
+    const prompt = systemPrompt + chatContext.studentInput;
 
     const interactionData = {
       ...levelContext,
       type: chatContext.tutorType,
-      prompt: JSON.stringify(prompt),
-      status: chatApiResponse?.status,
-      aiResponse: chatApiResponse?.assistantResponse,
-    };
-
-    await savePromptAndResponse(interactionData);
-  }
-);
-
-// General Chat
-// This thunk's callback function submits a user chat message to the chat completion endpoint,
-// waits for a chat completion response, and updates the user message state.
-export const submitChatMessage = createAsyncThunk(
-  'aitutor/submitChatMessage',
-  async (message: string, thunkAPI) => {
-    const state = thunkAPI.getState() as {aiTutor: AITutorState};
-    const levelContext = {
-      levelId: state.aiTutor.level?.id,
-      isProjectBacked: state.aiTutor.level?.isProjectBacked,
-      scriptId: state.aiTutor.scriptId,
-    };
-
-    const systemPrompt = generalChatSystemPrompt;
-    const storedMessages = state.aiTutor.chatMessages;
-    const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
-
-    // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
-      role: Role.USER,
-      status: Status.UNKNOWN,
-      chatMessageText: message,
-    };
-    thunkAPI.dispatch(addChatMessage(newMessage));
-
-    // Send user message to backend and retrieve assistant response.
-    const chatApiResponse = await getChatCompletionMessage(
-      systemPrompt,
-      newMessageId,
-      message,
-      storedMessages
-    );
-
-    // Find message in chatMessages and update status.
-    thunkAPI.dispatch(
-      updateChatMessageStatus({
-        id: chatApiResponse.id,
-        status: chatApiResponse.status,
-      })
-    );
-
-    // Add assistant chat messages to chatMessages.
-    if (chatApiResponse.assistantResponse) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: chatApiResponse.id + 1,
-        role: Role.ASSISTANT,
-        status: Status.OK,
-        chatMessageText: chatApiResponse.assistantResponse,
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-    }
-
-    const prompt = systemPrompt + message;
-    const interactionData = {
-      ...levelContext,
-      type: TutorType.GENERAL_CHAT,
       prompt: JSON.stringify(prompt),
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.assistantResponse,
@@ -231,17 +179,6 @@ const aiTutorSlice = createSlice({
       console.error(action.error);
     });
     builder.addCase(askAITutor.pending, state => {
-      state.isWaitingForChatResponse = true;
-    });
-    builder.addCase(submitChatMessage.fulfilled, state => {
-      state.isWaitingForChatResponse = false;
-    });
-    builder.addCase(submitChatMessage.rejected, (state, action) => {
-      state.isWaitingForChatResponse = false;
-      state.chatMessageError = true;
-      console.error(action.error);
-    });
-    builder.addCase(submitChatMessage.pending, state => {
       state.isWaitingForChatResponse = true;
     });
   },

@@ -18,6 +18,9 @@ const AITutor: React.FunctionComponent = () => {
   const hasRunOrTestedCode = useAppSelector(
     state => state.javalab.hasRunOrTestedCode
   );
+  const validationPassed = useAppSelector(
+    state => state.javalab.validationPassed
+  );
 
   const setCompilationChatMessages = useCallback(() => {
     const runCode = {
@@ -54,6 +57,59 @@ const AITutor: React.FunctionComponent = () => {
     }
   }, [dispatch, hasCompilationError, hasRunOrTestedCode, isRunning]);
 
+  const setValidationChatMessages = useCallback(() => {
+    const testCode = {
+      id: 0,
+      role: Role.ASSISTANT,
+      status: Status.OK,
+      chatMessageText: 'Test your code first and see what happens.',
+    };
+
+    const validationSuccess = {
+      id: 0,
+      role: Role.ASSISTANT,
+      status: Status.OK,
+      chatMessageText: '🎉 Your tests are passing. Wahoo!',
+    };
+
+    const compilationError = {
+      id: 0,
+      role: Role.ASSISTANT,
+      status: Status.OK,
+      chatMessageText:
+        'Uh oh! Your code has to compile successfully before we can work on passing tests.',
+    };
+
+    const vaildationError = {
+      id: 0,
+      role: Role.ASSISTANT,
+      status: Status.OK,
+      chatMessageText:
+        'Your tests are failing. Submit your code and tests, and I will try to help.',
+    };
+
+    if (!isRunning) {
+      if (!hasRunOrTestedCode && !validationPassed) {
+        dispatch(addChatMessage(testCode));
+      }
+      if (hasRunOrTestedCode && hasCompilationError) {
+        dispatch(addChatMessage(compilationError));
+      }
+      if (validationPassed) {
+        dispatch(addChatMessage(validationSuccess));
+      }
+      if (hasRunOrTestedCode && !hasCompilationError && !validationPassed) {
+        dispatch(addChatMessage(vaildationError));
+      }
+    }
+  }, [
+    dispatch,
+    hasCompilationError,
+    hasRunOrTestedCode,
+    isRunning,
+    validationPassed,
+  ]);
+
   const setGeneralChatMessages = useCallback(() => {
     const generalChatMessage = {
       id: 0,
@@ -71,7 +127,15 @@ const AITutor: React.FunctionComponent = () => {
     if (tutorType === TutorType.GENERAL_CHAT) {
       setGeneralChatMessages();
     }
-  }, [tutorType, setCompilationChatMessages, setGeneralChatMessages]);
+    if (tutorType === TutorType.VALIDATION) {
+      setValidationChatMessages();
+    }
+  }, [
+    tutorType,
+    setCompilationChatMessages,
+    setGeneralChatMessages,
+    setValidationChatMessages,
+  ]);
 
   return (
     <div className={style.tutorContainer}>
