@@ -129,7 +129,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def delete_record(record_id)
-    records.find_by(record_id: record_id).delete
+    records.find_by!(record_id: record_id).delete
   end
 
   def import_csv(table_data_csv)

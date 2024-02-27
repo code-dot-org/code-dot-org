@@ -196,7 +196,11 @@ class DatablockStorageController < ApplicationController
 
   def delete_record
     table = find_table
-    table.delete_record params[:record_id]
+    begin
+      table.delete_record params[:record_id]
+    rescue ActiveRecord::RecordNotFound
+      raise StudentFacingError, "You tried to delete a record with id \"#{params[:record_id]}\" from table \"#{table.table_name}\" but no recording matching that ID could be found."
+    end
     table.save!
     render json: nil
   end
