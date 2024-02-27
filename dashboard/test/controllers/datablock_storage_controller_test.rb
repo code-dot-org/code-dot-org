@@ -83,8 +83,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create_record can't create more than maxTableCount tables" do
-    skip "FIXME: test will fail, because enforcing max table count is not yet implemented"
-
     # Lower the max table count to 3 so its easy to test
     original_max_table_count = DatablockStorageTable::MAX_TABLE_COUNT
     DatablockStorageTable.const_set(:MAX_TABLE_COUNT, 3)
@@ -99,7 +97,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     post _url(:create_record), params: {table_name: 'table4', record_json: {'name' => 'bob'}.to_json}
-    # test will fail here, currently this returns a 200, but it should be a 400 with a warning:
+    skip "FIXME: controller bug, test will fail, because enforcing max table count is not yet implemented so we get :success when :bad_request is desired"
     assert_response :bad_request
     assert_equal 'MAX_TABLES_EXCEEDED', JSON.parse(@response.body)['type']
   ensure
@@ -234,8 +232,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column converts anything to string" do
-    skip "FIXME: create_record_where_foo_is(nil) and create_record_without_foo both fail"
-
     create_record_where_foo_is(1)
     create_record_where_foo_is('one')
     create_record_where_foo_is('1')
@@ -246,6 +242,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'string'}
     assert_response :success
 
+    skip "FIXME: controller bug, create_record_where_foo_is(nil) and create_record_without_foo both fail to produce the expected value"
     assert_equal [
       {"foo" => "1", "id" => 1},
       {"foo" => "one", "id" => 2},
@@ -291,12 +288,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column warns on invalid booleans" do
-    skip "FIXME: coerce_column does not return a warning, AND it modifies invalid booleans whereas it should leave them alone (stay as a string in this case)"
-
     create_record_where_foo_is(true)
     create_record_where_foo_is('bar')
 
     put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'boolean'}
+
+    skip "FIXME: controller bug, coerce_column does not return a warning, AND it modifies invalid booleans whereas it should leave them alone (stay as a string in this case)"
     assert_response :bad_request
     assert_equal 'CANNOT_CONVERT_COLUMN_TYPE', JSON.parse(@response.body)['type']
 
@@ -307,12 +304,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column warns on invalid numbers" do
-    skip "FIXME: coerce_column does not return a warning, AND it modifies invalid numbers whereas it should leave them alone (stay as a string in this case)"
-
     create_record_where_foo_is(1)
     create_record_where_foo_is('2xyz')
 
     put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
+
+    skip "FIXME: controller bug, coerce_column does not return a warning, AND it modifies invalid numbers whereas it should leave them alone (stay as a string in this case)"
     assert_response :bad_request
     assert_equal 'CANNOT_CONVERT_COLUMN_TYPE', JSON.parse(@response.body)['type']
 
@@ -344,8 +341,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "populate_table does not overwrite existing data" do
-    skip "FIXME: populate_tables is returning a 500, need to debug, expected behavior is to not return even a warning, and silently fail if the table already exists"
-
     NYC_RECORD = {"city" => "New York", "state" => "NY", "id" => 1}
 
     post _url(:create_record), params: {
@@ -354,18 +349,18 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
 
     put _url(:populate_tables), params: {table_data_json: POPULATE_TABLE_DATA_JSON_STRING}
-    # Expected behavior: silently fail if the `cites` table already exists
-    # Current behavior (wrong): 500 error
+
+    skip "FIXME: controller bug, populate_tables is returning a 500, desired behavior is to not return even a warning, and silently fail if the table already exists"
     assert_response :success
 
     assert_equal [NYC_RECORD], read_records('cities')
   end
 
   test "populate_table prints a friendly error message when given bad table json" do
-    skip "FIXME: populate_tables is returning a 500, expected behavior is to return a 400 with an error message"
-
     BAD_JSON = '{'
     put _url(:populate_tables), params: {table_data_json: BAD_JSON}
+
+    skip "FIXME: controller bug, populate_tables is returning a 500, desired behavior is to return a 400 with an error message"
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
@@ -385,8 +380,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "populate_key_values does not overwrite existing data" do
-    skip "FIXME: populate_key_values is overwriting the existing key value"
-
     post _url(:set_key_value), params: {key: 'click_count', value: 1.to_json}
     assert_response :success
 
@@ -395,13 +388,15 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     get _url(:get_key_values)
     assert_response :success
+
+    skip "FIXME: controller bug, populate_key_values is overwriting the existing key value"
     assert_equal ({"click_count" => 1}), JSON.parse(@response.body)
   end
 
   test "populate_key_values prints a friendly error message when given bad key value json" do
-    skip "FIXME: populate_key_values is returning a 500, expected behavior is to return a 400 with an error message"
-
     put _url(:populate_key_values), params: {key_values_json: '{'}
+
+    skip "FIXME: controller bug, populate_key_values is returning a 500, expected behavior is to return a 400 with an error message"
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
@@ -474,31 +469,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "add_shared_table cannot overwrite an existing table" do
-    skip "FIXME: Not yet implemented"
-    #     it('Cannot overwrite an existing project table', done => {
-    #       FirebaseStorage.createTable(
-    #         'mytable',
-    #         () => {
-    #           FirebaseStorage.copyStaticTable(
-    #             'mytable',
-    #             () => {
-    #               throw 'unexpectedly allowed to overwrite existing table';
-    #             },
-    #             error => {
-    #               expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
-    #               done();
-    #             }
-    #           );
-    #         },
-    #         () => {
-    #           throw 'error';
-    #         }
-    #       );
-    #     });
-  end
+    post _url(:create_record), params: {
+      table_name: 'mysharedtable',
+      record_json: {"name" => 'bob', "age" => 8}.to_json,
+    }
+    assert_response :success
 
-  test "read_records works on a shared table" do
-    skip "FIXME: Not yet implemented"
+    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+
+    skip "FIXME: controller bug, add_shared_table is returning a 500, expected behavior is to not return even a warning, and silently fail if the table already exists"
+    assert_response :bad_request
+
+    error = JSON.parse(@response.body)
+    assert_equal 'DUPLICATE_TABLE_NAME', error['type']
   end
 
   test "deletes a record" do
@@ -545,16 +528,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "import_csv" do
-    skip "FIXME: test will fail because import_csv doesn't cast values, see bottom of test"
-
-    csv_data = <<~CSV
+    CSV_DATA = <<~CSV
       id,name,age,male
       4,alice,7,false
       5,bob,8,true
       6,charlie,9,true
     CSV
 
-    expected_records = [
+    EXPECTED_RECORDS = [
       {"id" => 1, "name" => "alice", "age" => 7, "male" => false},
       {"id" => 2, "name" => "bob", "age" => 8, "male" => true},
       {"id" => 3, "name" => "charlie", "age" => 9, "male" => true},
@@ -562,7 +543,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:import_csv), params: {
       table_name: 'mytable',
-      table_data_csv: csv_data,
+      table_data_csv: CSV_DATA,
     }
     assert_response :success
     get _url(:read_records), params: {
@@ -571,10 +552,8 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     val = JSON.parse(@response.body)
 
-    # FIXME FIXME FIXME
-    # this is /expected/ to fail currently because importCSV is not
-    # casting values that can be JSON.parse()d, so everything is a string
-    assert_equal expected_records, val
+    skip "FIXME: controller bug, test will fail because import_csv doesn't cast values, see bottom of test"
+    assert_equal EXPECTED_RECORDS, val
   end
 
   test "import_csv overwrites existing data" do
