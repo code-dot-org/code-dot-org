@@ -221,7 +221,7 @@ type XmlType = typeof Xml;
 export interface ExtendedXml extends XmlType {
   textToDom: (text: string) => Element;
   blockSpaceToDom: (workspace: Workspace, opt_noId?: boolean) => Element;
-  domToBlockSpace: (workspace: Workspace, xml: Document) => XmlBlockConfig[];
+  domToBlockSpace: (workspace: Workspace, xml: Element) => XmlBlockConfig[];
 }
 
 // This type is likely incomplete. We should add to it if we discover
@@ -243,6 +243,7 @@ export interface JsonBlockConfig {
   // extraState can be any object. We may be able to define this better.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
+  type: string;
 }
 
 export interface Collider {
