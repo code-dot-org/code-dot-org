@@ -158,6 +158,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "add_column" do
+    post _url(:create_table), params: {table_name: 'mytable'}
+
+    post _url(:add_column), params: {table_name: 'mytable', column_name: 'newcol'}
+    assert_response :success
+
+    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    assert_response :success
+    assert_equal ['id', 'newcol'], JSON.parse(@response.body)
   end
 
   test "delete_column" do
