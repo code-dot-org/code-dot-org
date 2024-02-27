@@ -197,9 +197,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "coerce_column" do
   end
 
-  test "import_csv" do
-  end
-
   test "populate_tables" do
   end
 
@@ -262,8 +259,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #     }
   #   });
 
-  # describe('deleteRecord', () => {
-
   test "deletes a record" do
     post _url(:create_record), params: {
       table_name: 'mytable',
@@ -306,46 +301,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     val = JSON.parse(@response.body)
     assert_equal [{'name' => 'sally', 'age' => 10, 'id' => 1}], val
   end
-
-  #   it('deletes a record', done => {
-  #     FirebaseStorage.createRecord(
-  #       'mytable',
-  #       {name: 'bob', age: 8},
-  #       deleteRecord,
-  #       error => {
-  #         throw error;
-  #       }
-  #     );
-
-  #     function deleteRecord(record) {
-  #       expect(record.id).to.equal(1);
-  #       FirebaseStorage.deleteRecord('mytable', record, handleDelete, error => {
-  #         throw error;
-  #       });
-  #     }
-
-  #     function handleDelete(status) {
-  #       expect(status).to.equal(true);
-  #       getProjectDatabase()
-  #         .child(`storage/tables/${'mytable'}/records`)
-  #         .once('value')
-  #         .then(snapshot => {
-  #           expect(snapshot.val()).to.equal(null);
-  #           done();
-  #         });
-  #     }
-  #   });
-
-  #   describe('createTable', () => {
-  #     it('creates a table but not a record', done => {
-  #       FirebaseStorage.createTable(
-  #         'mytable',
-  #         () => verifyEmptyTable(done),
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-  #     });
 
   #     it('cant create more than maxTableCount tables', done => {
   #       FirebaseStorage.createTable('table1', createTable2, error => {
@@ -557,51 +512,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #       );
   #     });
   #   });
-
-  #   describe('clearTable', () => {
-  #     it('deletes records but not the table', done => {
-  #       FirebaseStorage.createRecord(
-  #         'mytable',
-  #         {name: 'bob', age: 8},
-  #         clearTable,
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-
-  #       function clearTable() {
-  #         FirebaseStorage.clearTable(
-  #           'mytable',
-  #           () => verifyEmptyTable(done),
-  #           error => {
-  #             throw error;
-  #           }
-  #         );
-  #       }
-  #     });
-  #   });
-
-  #   describe('deleteTable', () => {
-  #     it('deletes the records and the table', done => {
-  #       FirebaseStorage.createRecord(
-  #         'mytable',
-  #         {name: 'bob', age: 8},
-  #         deleteTable,
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-
-  #       function deleteTable() {
-  #         FirebaseStorage.deleteTable(
-  #           'mytable',
-  #           tableType.PROJECT,
-  #           verifyNoTable,
-  #           error => {
-  #             throw error;
-  #           }
-  #         );
-  #       }
 
   #       function verifyNoTable() {
   #         const countersRef = getProjectDatabase().child(
@@ -1123,37 +1033,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #     });
   #   });
 
-  #   describe('readRecords', () => {
-  #     it('can read a table with rows', done => {
-  #       const csvData =
-  #         'id,name,age,male\n' +
-  #         '4,alice,7,false\n' +
-  #         '5,bob,8,true\n' +
-  #         '6,charlie,9,true\n';
-  #       const expectedRecords = [
-  #         {id: 1, name: 'alice', age: 7, male: false},
-  #         {id: 2, name: 'bob', age: 8, male: true},
-  #         {id: 3, name: 'charlie', age: 9, male: true},
-  #       ];
-
-  #       FirebaseStorage.importCsv(
-  #         'mytable',
-  #         csvData,
-  #         () => {
-  #           FirebaseStorage.readRecords('mytable', {}, onSuccess, error => {
-  #             throw error;
-  #           });
-  #         },
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-  #       function onSuccess(records) {
-  #         expect(records).to.deep.equal(expectedRecords);
-  #         done();
-  #       }
-  #     });
-
   #     it('can read a current table', done => {
   #       const tableData = {
   #         1: '{"id":1,"name":"alice","age":7,"male":false}',
@@ -1186,24 +1065,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #           throw 'error';
   #         }
   #       );
-  #     });
-
-  #     it('returns [] for a table with no rows', done => {
-  #       FirebaseStorage.createTable(
-  #         'emptytable',
-  #         () => {
-  #           FirebaseStorage.readRecords('emptytable', {}, onSuccess, error => {
-  #             throw error;
-  #           });
-  #         },
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-  #       function onSuccess(records) {
-  #         expect(records).to.deep.equal([]);
-  #         done();
-  #       }
   #     });
 
   #     it('returns null for a non-existent table', done => {
