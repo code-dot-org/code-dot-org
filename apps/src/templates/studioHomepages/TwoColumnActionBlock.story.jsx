@@ -1,22 +1,31 @@
 import React from 'react';
-import {
-  AdministratorResourcesActionBlock,
-  TwoColumnActionBlock,
-} from './TwoColumnActionBlock';
-import {Provider} from 'react-redux';
-import {reduxStore} from '@cdo/storybook/decorators';
+import TwoColumnActionBlock from './TwoColumnActionBlock';
 
 export default {
   component: TwoColumnActionBlock,
 };
 
-const AdministratorResourcesActionBlockTemplate = args => {
-  return (
-    <Provider store={reduxStore()}>
-      <AdministratorResourcesActionBlock showHeading={true} />
-    </Provider>
-  );
-};
-
-export const AdministratorResourcesActionBlockExamples =
-  AdministratorResourcesActionBlockTemplate.bind({});
+export const Basic = () => (
+  <TwoColumnActionBlock
+    id={'id'}
+    heading={'Heading goes here'}
+    subHeading={'Subheading goes here'}
+    description={'Description goes here'}
+    imageUrl={
+      'https://code.org/images/dance-hoc/dance-party-activity-ai-edition.png'
+    }
+    buttons={[
+      {
+        id: 'your_school_professional_learning',
+        url: 'https://code.org/professional-learning',
+        text: 'Learn more',
+      },
+      {
+        id: 'your_school_administrators',
+        url: 'https://code.org/administrators',
+        text: 'Try this',
+      },
+    ]}
+    marginBottom={'64px'}
+  />
+);

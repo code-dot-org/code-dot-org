@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './progress-table-v2.module.scss';
+import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 import classNames from 'classnames';
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
@@ -32,6 +33,6 @@ export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
 }
 
 SkeletonProgressDataColumn.propTypes = {
-  sortedStudents: PropTypes.array,
+  sortedStudents: PropTypes.arrayOf(studentShape),
   lesson: PropTypes.object.isRequired,
 };
