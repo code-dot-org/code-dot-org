@@ -178,6 +178,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "rename_column" do
+    create_bob_record
+
+    put _url(:rename_column), params: {
+      table_name: 'mytable',
+      old_column_name: 'name',
+      new_column_name: 'first_name'
+    }
+    assert_response :success
+
+    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    assert_equal ['id', 'first_name', 'age'], JSON.parse(@response.body)
+
+    get _url(:read_records), params: {table_name: 'mytable'}
+    assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
   end
 
   test "coerce_column" do
