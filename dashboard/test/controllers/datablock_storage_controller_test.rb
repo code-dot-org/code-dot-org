@@ -298,59 +298,29 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     ], read_records
   end
 
-  test "populate_tables" do
-    skip "FIXME: Not yet implemented"
-    #   describe('populateTable', () => {
-    #     const EXISTING_TABLE_DATA = {
-    #       cities: {
-    #         records: {
-    #           1: '{"city":"New York","state":"NY","id":1}',
-    #         },
-    #       },
-    #     };
-    #     const EXISTING_COUNTER_DATA = {
-    #       cities: {
-    #         lastId: 2,
-    #         rowCount: 2,
-    #       },
-    #     };
-    #     const NEW_TABLE_DATA_JSON = `{
-    #       "cities": [
-    #         {"city": "Seattle", "state": "WA"},
-    #         {"city": "Chicago", "state": "IL"}
-    #       ]
-    #     }`;
-    #     const NEW_TABLE_DATA = {
-    #       cities: {
-    #         records: {
-    #           1: '{"city":"Seattle","state":"WA","id":1}',
-    #           2: '{"city":"Chicago","state":"IL","id":2}',
-    #         },
-    #       },
-    #     };
-    #     const BAD_JSON = '{';
-    #     function verifyTable(expectedTablesData) {
-    #       return getProjectDatabase()
-    #         .child(`storage/tables`)
-    #         .once('value')
-    #         .then(
-    #           snapshot => {
-    #             expect(snapshot.val()).to.deep.equal(expectedTablesData);
-    #           },
-    #           error => {
-    #             throw error;
-    #           }
-    #         );
-    #     }
+  POPULATE_TABLE_DATA_JSON_STRING = <<~JSON
+    {
+      "cities": [
+        {"city": "Seattle", "state": "WA"},
+        {"city": "Chicago", "state": "IL"}
+      ]
+    }
+  JSON
 
-    #     it('loads new table data when no previous data exists', done => {
-    #       FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
-    #         () => verifyTable(NEW_TABLE_DATA).then(done),
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #     });
+  POPULATE_TABLE_DATA_RECORDS = [
+    {"city" => "Seattle", "state" => "WA", "id" => 1},
+    {"city" => "Chicago", "state" => "IL", "id" => 2},
+  ]
+
+  test "populate_tables" do
+    EXISTING_TABLE_DATA = [
+      {"city" => "New York", "state" => "NY", "id" => 1}
+    ]
+
+    put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
+    assert_response :success
+
+    assert_equal POPULATE_TABLE_DATA_RECORDS, read_records('cities')
   end
 
   test "populate_table does not overwrite existing data" do
@@ -597,7 +567,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "import_csv" do
-    skip "FIXME: test implemented, but will fail because import_csv doesn't cast values, see bottom of test"
+    skip "FIXME: test will fail because import_csv doesn't cast values, see bottom of test"
 
     csv_data = <<~CSV
       id,name,age,male
