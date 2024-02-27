@@ -164,7 +164,7 @@ const actionsFormatter = (actions, {rowData}) => {
           Unfeature
         </PopUpMenu.Item>
       )}
-      {status !== FeaturedProjectStatus.bookmarked && (
+      {status === FeaturedProjectStatus.archived && (
         <PopUpMenu.Item onClick={() => bookmark(rowData.channel)}>
           Bookmark
         </PopUpMenu.Item>
