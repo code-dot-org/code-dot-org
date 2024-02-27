@@ -1,0 +1,98 @@
+# A cloudformation template that creates an ECS service
+# TODO: convert this to a component ERB file.
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'ActiveJob ECS Service'
+
+Parameters: 
+  AppImageUri:
+    Type: String
+    Description: 'The URI of the Docker image to use for the ActiveJob ECS service'
+
+Resources:
+  EcrRepository:
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: !Sub "${AWS::StackName}-activejob"
+      RepositoryPolicyText:
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Sid: AllowDeveloperPushPull
+            Effect: Allow
+            Principal: 
+              AWS: 
+                - !Sub arn:aws:iam::${AWS::AccountId}:role/admin/Developer
+                - !Sub arn:aws:iam::${AWS::AccountId}:role/Engineering_FullAccess
+            Action: 
+              - "ecr:GetDownloadUrlForLayer"
+              - "ecr:BatchGetImage"
+              - "ecr:BatchCheckLayerAvailability"
+              - "ecr:PutImage"
+              - "ecr:InitiateLayerUpload"
+              - "ecr:UploadLayerPart"
+              - "ecr:CompleteLayerUpload"
+
+  ActiveJobEcsCluster:
+    Type: AWS::ECS::Cluster
+  
+  ActiveJobEcsService:
+    Type: AWS::ECS::Service
+    Properties:
+      Cluster: !Ref ActiveJobEcsCluster
+      TaskDefinition: !Ref ActiveJobEcsTaskDefinition
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: DISABLED
+          SecurityGroups: 
+            - !Ref ActiveJobEcsSecurityGroup
+          Subnets:
+            # Place ECS Service in private subnets
+            - !ImportValue VPC-SubnetB
+            - !ImportValue VPC-SubnetC
+            - !ImportValue VPC-SubnetD
+            - !ImportValue VPC-SubnetE
+
+  ActiveJobEcsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      GroupDescription: Security Group for ECS Service
+      # TODO: This copies geocoder, but we should probably have a separate VPC for this service.
+      VpcId: !ImportValue VPC
+      # TODO: I don't think we need this, since this doesn't need to be accessed from the internet
+      # SecurityGroupIngress:
+      #   - IpProtocol: tcp
+      #     FromPort: 80
+      #     ToPort: 80
+      #     CidrIp: 0.0.0.0/0
+
+  ActiveJobEcsTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: activejob
+      RequiresCompatibilities:
+        - FARGATE
+      NetworkMode: awsvpc
+      # Role from IAM stack
+      ExecutionRoleArn: !Sub arn:aws:iam::${AWS::AccountId}:role/ecsTaskExecutionRole
+      Cpu: 256
+      Memory: 512
+      ContainerDefinitions:
+        - Name: activejob
+          Image: !Ref AppImageUri
+          Memory: 512
+          Cpu: 256
+          Essential: true
+          PortMappings:
+            - ContainerPort: 80
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref LogGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: ecs
+
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "${AWS::StackName}-activejob"
