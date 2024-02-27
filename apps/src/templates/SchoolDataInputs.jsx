@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
-import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
-import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from '@cdo/locale';
 import {Heading2, Heading3} from '@cdo/apps/lib/ui/Headings';
 import style from './school-association.module.scss';
+import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
+import {COUNTRIES} from '@cdo/apps/geographyConstants';
+import SearchBar from './SearchBar';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -42,28 +42,10 @@ export default function SchoolDataInputs({
   showErrors,
   showRequiredIndicator,
 }) {
-  const bindSchoolNotFound = snf => {
-    this.schoolNotFound = snf;
-  };
-
-  const isUS = country === 'United States';
-  const outsideUS = !isUS;
-  const ncesInfoNotFound = ncesSchoolId === '-1';
-  const noDropdownForSchoolType =
-    !SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType) && schoolType !== '';
-  const askForName = SCHOOL_TYPES_HAVING_NAMES.includes(schoolType);
-
-  // Added condition to show required field indicator(asterisk)
-  // only when type is NCES. If non-US or US, non-NCES school,
-  // type field is not required (asterisk is not shown).
-  let isNcesSchool = false;
-  const ncesSchoolType = ['public', 'private', 'charter'];
-  if (ncesSchoolType.includes(schoolType)) {
-    isNcesSchool = true;
+  let COUNTRY_ITEMS = [];
+  for (const item of Object.values(COUNTRIES)) {
+    COUNTRY_ITEMS.push({value: item.label, text: item.value});
   }
-  const schoolNameLabel = ['afterschool', 'organization'].includes(schoolType)
-    ? i18n.signupFormSchoolOrOrganization()
-    : i18n.schoolName();
 
   return (
     <div className={style.outerContainer}>
@@ -71,48 +53,27 @@ export default function SchoolDataInputs({
       <Heading3>{i18n.findYourSchool()}</Heading3>
       <div className={style.inputContainer}>
         <Heading3>{i18n.whatCountry()}</Heading3>
-        <CountryAutocompleteDropdown
+        <SimpleDropdown
+          items={COUNTRY_ITEMS}
+          name="countryDropdown"
+          selectedValue={country}
           onChange={onCountryChange}
-          value={country}
-          fieldName={fieldNames.country}
-          showErrorMsg={showErrors}
-          showRequiredIndicator={showRequiredIndicator}
-          singleLineLayout
-          maxHeight={160}
+          size="s"
         />
         <Heading3>{i18n.enterYourSchoolZip()}</Heading3>
-        {isUS && SCHOOL_TYPES_HAVING_NCES_SEARCH.includes(schoolType) && (
-          <SchoolAutocompleteDropdownWithLabel
-            setField={onSchoolChange}
-            value={ncesSchoolId}
-            fieldName={fieldNames.ncesSchoolId}
-            showErrorMsg={showErrors}
-            singleLineLayout
-            showRequiredIndicator={showRequiredIndicator}
-          />
-        )}
+        <SearchBar
+          placeholderText={''}
+          onChange={() => {}}
+          clearButton={true}
+        />
         <Heading3>{i18n.selectYourSchool()}</Heading3>
-        {(outsideUS || ncesInfoNotFound || noDropdownForSchoolType) && (
-          <SchoolNotFound
-            ref={bindSchoolNotFound}
-            onChange={onSchoolNotFoundChange}
-            isNcesSchool={isNcesSchool}
-            schoolName={askForName ? schoolName : SchoolNotFound.OMIT_FIELD}
-            schoolType={SchoolNotFound.OMIT_FIELD}
-            schoolCity={SchoolNotFound.OMIT_FIELD}
-            schoolState={isUS ? schoolState : SchoolNotFound.OMIT_FIELD}
-            schoolZip={isUS ? schoolZip : SchoolNotFound.OMIT_FIELD}
-            schoolLocation={schoolLocation}
-            country={country}
-            controlSchoolLocation={true}
-            fieldNames={fieldNames}
-            showErrorMsg={showErrors}
-            singleLineLayout
-            showRequiredIndicators={showRequiredIndicator}
-            schoolNameLabel={schoolNameLabel}
-            useLocationSearch={useLocationSearch}
-          />
-        )}
+        <SimpleDropdown
+          items={[]}
+          name="schoolDropdown"
+          selectedValue={''}
+          onChange={() => {}}
+          size="s"
+        />
       </div>
     </div>
   );
