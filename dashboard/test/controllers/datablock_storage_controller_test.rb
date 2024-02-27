@@ -4,10 +4,11 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   setup do
     @student = create :student
     sign_in @student
-    @level = create :applab
-    user_storage_id = fake_storage_id_for_user_id(@student.id)
-    channel_token = create :channel_token, level: @level, storage_id: user_storage_id
-    @channel_id = channel_token.channel # calls storage_encrypt_channel_id(storage_id, project_id)
+
+    project = create :project, owner: @student
+    project.project_type = 'applab'
+    project.save!
+    @channel_id = project.channel_id
   end
 
   def _url(action)
