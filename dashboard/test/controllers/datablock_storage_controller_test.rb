@@ -49,8 +49,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     set_and_get_key_value('key', nil)
   end
 
-  # describe('createRecord', () => {
-
   test "creates a record" do
     post _url(:create_record), params: {
       table_name: 'mytable',
@@ -80,6 +78,21 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ['mytable'], JSON.parse(@response.body)
   end
 
+  test "create_table" do
+    get _url(:get_table_names)
+    assert_response :success
+    assert_equal [], JSON.parse(@response.body)
+
+    post _url(:create_table), params: {table_name: 'mytable'}
+    assert_response :success
+
+    get _url(:get_table_names)
+    assert_response :success
+    assert_equal ['mytable'], JSON.parse(@response.body)
+
+    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    assert_response :success
+    assert_equal ['id'], JSON.parse(@response.body)
   end
 
   test "get_key_values" do
@@ -97,9 +110,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     get _url(:get_key_values)
     assert_response :success
     assert_equal ({"name" => 'bob', "age" => 8}), JSON.parse(@response.body)
-  end
-
-  test "create_table" do
   end
 
   test "delete_table" do
