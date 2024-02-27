@@ -178,10 +178,6 @@ class DatablockStorageController < ApplicationController
   end
 
   def read_records
-    # FIXME: what should we return to indicate that table_name doesn't exist?
-    #
-    # This condition is detected, currently trying to do readRecords('tabledoesntexist', {}) results in:
-    # ERROR: Line: 1: You tried to read records from a table called "nope" but that table doesn't exist in this app
     table = find_table_or_shared_table
 
     render json: table.read_records.map(&:record_json)
@@ -273,6 +269,8 @@ class DatablockStorageController < ApplicationController
 
   def find_table
     DatablockStorageTable.find([@project_id, params[:table_name]])
+  rescue ActiveRecord::RecordNotFound
+    raise StudentFacingError, "You tried to use a table called \"#{params[:table_name]}\" but that table doesn't exist in this app"
   end
 
   def where_table
