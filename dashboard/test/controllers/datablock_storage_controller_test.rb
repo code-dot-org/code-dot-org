@@ -454,6 +454,23 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal shared_records + [new_record], read_records('mysharedtable')
   end
+
+  test "shared_table copies on write when we delete_record" do
+    shared_records, mysharedtable = create_shared_table
+
+    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    assert_response :success
+
+    delete _url(:delete_record), params: {
+      table_name: 'mysharedtable',
+      record_id: 1,
+    }
+    assert_response :success
+
+    # We shouldn't modify the original copy of the shared table
+    assert_equal shared_records.length, mysharedtable.records.count
+
+    assert_equal shared_records.drop(1), read_records('mysharedtable')
   end
 
   test "add_shared_table cannot overwrite an existing table" do

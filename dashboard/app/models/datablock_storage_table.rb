@@ -133,6 +133,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def delete_record(record_id)
+    if_shared_table_copy_on_write
+
     records.find_by!(record_id: record_id).delete
   end
 
