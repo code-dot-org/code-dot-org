@@ -8,11 +8,12 @@ class DatablockStorageController < ApplicationController
     render json: {msg: exception.message}, status: :bad_request
   end
 
+  SUPPORTED_PROJECT_TYPES = ['applab', 'gamelab']
+
   ##########################################################
   #   Debug View                                           #
   ##########################################################
   def index
-    @project = Project.find(@project_id)
     @key_value_pairs = DatablockStorageKvp.where(project_id: @project_id)
     @records = DatablockStorageRecord.where(project_id: @project_id)
     @tables = DatablockStorageTable.where(project_id: @project_id)
@@ -287,8 +288,11 @@ class DatablockStorageController < ApplicationController
   end
 
   def validate_channel_id
-    _, @project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
-    # continue as normal, as we only use this value for stats.
+    # channel_id is valid if it decrypts into a valid + loadable project_id
+    _, @project_id = storage_decrypt_channel_id(params[:channel_id])
+    @project = Project.find(@project_id)
+    unless SUPPORTED_PROJECT_TYPES.includes? @project.project_type
+      raise "DatablockStorage is only available for applab and gamelab projects"
+    end
   end
 end
