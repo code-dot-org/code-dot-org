@@ -111,12 +111,10 @@ export const askAITutor = createAsyncThunk(
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
 
-    const prompt = systemPrompt + chatContext.studentInput;
-
     const interactionData = {
       ...levelContext,
       type: chatContext.tutorType,
-      prompt: JSON.stringify(prompt),
+      prompt: JSON.stringify(chatContext.studentInput),
       status: chatApiResponse?.status,
       aiResponse: chatApiResponse?.assistantResponse,
     };
