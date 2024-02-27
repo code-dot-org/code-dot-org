@@ -1,5 +1,9 @@
+@import 'color.scss';
+@import "style-constants";
+
 .dashboardPage {
-  max-width: 970px;
+  max-width: $content-width;
+  padding: 10px 64px 64px 64px;
 }
 
 .text {

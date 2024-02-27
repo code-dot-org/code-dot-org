@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 01:48:52 UTC",
+    "serialized_at": "2024-02-26 17:31:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4640,7 +4640,7 @@
       "key": "9a67fb96-ba3b-46ab-bb0b-404dabfcf4a0",
       "position": 1,
       "properties": {
-        "description": "This chapter project assesses knowledge and skills of utilizing CSS Classes and flexbox concepts. Adding Flexbox concepts to an already created web page can often require the web developer to shift and move around the HTML content for the page to look as expected. As a result, this project has 3 options for you to choose from depending on the difficulty level and time constraints. \n\n**Easy:** Students can add classes and flexbox to web page content that is already organized to make adding `<div>` elements and flexbox style easy. Choose this option if you don’t have time available to allow your students to alter the code that will be brought over from the Lesson 10 mini-project.\n\n**Intermediate:** Students can add classes and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (possibly 2 days) to allow students to shift their HTML code, iterating on their HTML to make their page look as they expect.\n\n**Challenging:** Students can create a webpage for a user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process. If you choose this option, you might consider adding criteria from the previous mini-projects to the chapter project rubric to capture all the skills students will demonstrate.\n\nSelect the Chapter Project Guide that corresponds to your chosen option.\n"
+        "description": "This chapter project assesses knowledge and skills of utilizing CSS Classes and flexbox concepts. Adding Flexbox concepts to an already created web page can often require the web developer to shift and move around the HTML content for the page to look as expected. As a result, this project has 3 options for you to choose from depending on the difficulty level and time constraints. \n\n**Option 1 - Easy:** Students can add classes and flexbox to web page content that is already organized to make adding `<div>` elements and flexbox style easy. Choose this option if you don’t have time available to allow your students to alter the code that will be brought over from the Lesson 10 mini-project.\n\n**Option 2 - Intermediate:** Students can add classes and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (possibly 2 days) to allow students to shift their HTML code, iterating on their HTML to make their page look as they expect.\n\n**Option 3 - Challenging:** Students can create a webpage for a user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process. If you choose this option, you might consider adding criteria from the previous mini-projects to the chapter project rubric to capture all the skills students will demonstrate.\n\nSelect the Chapter Project Guide that corresponds to your chosen option.\n"
       },
       "seeding_key": {
         "activity_section.key": "9a67fb96-ba3b-46ab-bb0b-404dabfcf4a0",
@@ -4796,8 +4796,19 @@
       }
     },
     {
-      "key": "08ec3259-a8ac-4722-a149-7e8f466fd399",
+      "key": "621fce78-558e-4d56-bd91-cd2467063d2a",
       "position": 9,
+      "properties": {
+        "name": "Chapter 1 Project [NEW]"
+      },
+      "seeding_key": {
+        "activity_section.key": "621fce78-558e-4d56-bd91-cd2467063d2a",
+        "lesson_activity.key": "ffa9fe9b-3c3c-4cec-af16-5aace4ee2f50"
+      }
+    },
+    {
+      "key": "08ec3259-a8ac-4722-a149-7e8f466fd399",
+      "position": 10,
       "properties": {
         "description": "**Circulate:** Encourage students to use the steps in the Problem Solving Process for Programming when they get stuck or are unsure what to do next. Not all bullets in the Problem Solving Process will apply to every problem a student has. Instead, encourage them to pick one or two from each category to try each time they are stuck. ",
         "tips": [
@@ -4814,7 +4825,7 @@
     },
     {
       "key": "ba6ea9aa-4529-4068-91a5-6af6f852914c",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "As part of this project, you may choose to allow students to give feedback to their peers using the Peer Review form. This will likely extend the project by at least one day but will allow students to reflect and make any needed improvements in Level 3 based on feedback. \n",
         "name": "Peer Feedback",
@@ -4827,7 +4838,7 @@
     },
     {
       "key": "678a7257-8413-4cf6-bfc1-f06aae775cd4",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review the page they styled for their user. They should use Level 5 to make sure they have included everything their user needs as well as met the requirements of the project by consulting the project rubric one last time.\n\n**Circulate:** As you walk around the class, encourage students to refer to the project rubric to make sure they have met all the requirements at a level they are happy with. \n",
         "tips": [
@@ -4844,7 +4855,7 @@
     },
     {
       "key": "2659d9ff-4a2a-4595-8c04-cf556e414d9b",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection questions on their project guide. These questions allow students to think about what they liked best about their pages, what was challenging, and what they would do differently next time. You may also want to allow students to formally or informally present their work to the rest of the class.\n",
         "name": "Step 4: Reflect",
@@ -4862,7 +4873,7 @@
     },
     {
       "key": "226fb429-f6ca-465e-a80c-df0ca7599cc1",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "**Collect:** Project Guides and Peer Review Guides."
       },
@@ -4873,7 +4884,7 @@
     },
     {
       "key": "906203b4-0f67-48ed-9c70-4708f8125b08",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/csd/2024] video in the slides.\n\n",
         "name": "[OPTIONAL] Publishing Your Website",
@@ -4891,7 +4902,7 @@
     },
     {
       "key": "e5cdfd2a-1cfc-4f2e-9b6d-8aeea05a9097",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?\n\n**Discussion Goal:** The video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nIn addition, as they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written.\n",
         "progression_name": "Publishing Your Website"
@@ -5788,7 +5799,7 @@
       "key": "2d0bba18-8ae2-4670-9746-e439025abda0",
       "position": 2,
       "properties": {
-        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. Assure them that they will learn how to add new pages and link between them in the next lesson, but that they will plan out the pages that they want first.",
+        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. ",
         "name": "Overview\r"
       },
       "seeding_key": {
@@ -5954,7 +5965,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2024] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [Extra Code in Challenge Levels](https://docs.google.com/document/d/1zCMJHXk_KISNIkwN3WcoVUCZT4RotkNGfOMhT6sVB-k/view) as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -8560,6 +8571,27 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L14 - Option 1 Choices_2024"
+        ],
+        "lesson.key": "Project - Personal Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "621fce78-558e-4d56-bd91-cd2467063d2a"
+      },
+      "level_keys": [
+        "CSD U2L14 - Option 1 Choices_2024"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSD U2 project review_2024"
         ],
@@ -8580,8 +8612,8 @@
       ]
     },
     {
-      "chapter": 95,
-      "position": 6,
+      "chapter": 96,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8605,8 +8637,8 @@
       ]
     },
     {
-      "chapter": 96,
-      "position": 7,
+      "chapter": 97,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -8630,7 +8662,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8655,7 +8687,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8680,7 +8712,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8705,7 +8737,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8730,7 +8762,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8755,7 +8787,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8780,7 +8812,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": 2,
       "assessment": true,
@@ -8805,7 +8837,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8830,7 +8862,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8855,7 +8887,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8880,7 +8912,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8905,7 +8937,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8930,7 +8962,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8955,7 +8987,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8980,7 +9012,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9005,7 +9037,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -9030,7 +9062,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9055,7 +9087,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9080,7 +9112,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9105,7 +9137,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9130,7 +9162,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9155,7 +9187,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9180,7 +9212,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9205,7 +9237,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9230,7 +9262,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9255,7 +9287,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -9280,7 +9312,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -10419,6 +10451,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
         "activity_section.key": "63f7ebbc-9565-48ec-bf45-f57e61daaa84"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L14 - Option 1 Choices_2024",
+        "script_level.level_keys": [
+          "CSD U2L14 - Option 1 Choices_2024"
+        ],
+        "lesson.key": "Project - Personal Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "621fce78-558e-4d56-bd91-cd2467063d2a"
       }
     },
     {
@@ -11976,6 +12020,19 @@
       }
     },
     {
+      "name": "Web Development Challenge Levels Extra Code",
+      "url": "https://docs.google.com/document/d/1zCMJHXk_KISNIkwN3WcoVUCZT4RotkNGfOMhT6sVB-k/view",
+      "key": "web_development_challenge_levels_extra_code",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_development_challenge_levels_extra_code"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/1npD3ERU8C6chX_mXTfid1bzZzeivaUHYVz6CpiF6b5I/view",
       "key": "website_for_a_purpose",
@@ -12522,6 +12579,12 @@
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
         "resource.key": "project_-_website_for_a_purpose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "web_development_challenge_levels_extra_code"
       }
     },
     {
