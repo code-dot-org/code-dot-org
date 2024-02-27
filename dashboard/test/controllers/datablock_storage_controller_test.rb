@@ -338,14 +338,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "populate_table prints a friendly error message when given bad table json" do
-    skip "FIXME: populate_tables is returning a 500, need to debug, expected behavior is to return a 400 with an error message"
+    skip "FIXME: populate_tables is returning a 500, expected behavior is to return a 400 with an error message"
 
     BAD_JSON = '{'
     put _url(:populate_tables), params: {table_data_json: BAD_JSON}
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
-    # Error message should be like (form the JS):
+    # Error message should be like (from the JS):
     # `${e}\nwhile parsing initial table data: ${jsonData}`
     assert_match(/SyntaxError/, error)
     assert_match(/while parsing initial table data: {/, error)
@@ -375,20 +375,16 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "populate_key_values prints a friendly error message when given bad key value json" do
-    #     it('prints a friendly error message when given bad key value json', done => {
-    #       FirebaseStorage.populateKeyValue(
-    #         BAD_JSON,
-    #         () => {
-    #           throw 'expected JSON error to be reported';
-    #         },
-    #         validateError
-    #       );
-    #       function validateError(error) {
-    #         expect(error).to.contain('SyntaxError');
-    #         expect(error).to.contain('while parsing initial key/value data: {');
-    #         done();
-    #       }
-    #     });
+    skip "FIXME: populate_key_values is returning a 500, expected behavior is to return a 400 with an error message"
+
+    put _url(:populate_key_values), params: {key_values_json: '{'}
+    assert_response :bad_request
+
+    error = JSON.parse(@response.body)
+    # Error message should be like (from the JS):
+    # `${e}\nwhile parsing initial key/value data: ${jsonData}`
+    assert_match(/SyntaxError/, error)
+    assert_match(/while parsing initial key\/value data: {/, error)
   end
 
   test "add_shared_table" do
