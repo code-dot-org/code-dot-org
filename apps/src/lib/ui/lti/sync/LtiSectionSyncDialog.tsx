@@ -11,11 +11,15 @@ import {
   SubView,
 } from './types';
 import PropTypes from 'prop-types';
+import $ from 'jquery';
 
 // This dialog is shown to the teacher whenever they have requested Code.org to
 // import/sync the teacher's sections and students managed by their LMS.
-export default function LtiSectionSyncDialog(props: LtiSectionSyncDialogProps) {
-  const {syncResult, onClose} = props;
+export default function LtiSectionSyncDialog({
+  syncResult,
+  onClose,
+  disableRosterSyncEnabled,
+}: LtiSectionSyncDialogProps) {
   const initialView = syncResult.error ? SubView.ERROR : SubView.SYNC_RESULT;
   const [currentView, setCurrentView] = useState<SubView>(initialView);
 
@@ -50,6 +54,36 @@ export default function LtiSectionSyncDialog(props: LtiSectionSyncDialogProps) {
     );
   };
 
+  const disableRosterSyncView = () => {
+    return (
+      <div data-testid={'disable-roster-sync'}>
+        <div>
+          <h2 style={styles.dialogHeader}>
+            {i18n.ltiSectionSyncDisableRosterSyncHeading()}
+          </h2>
+          <p>{i18n.ltiSectionSyncDisableRosterSyncDescription()}</p>
+        </div>
+        <DialogFooter>
+          <Button
+            color={Button.ButtonColor.brandSecondaryDefault}
+            text={i18n.dialogCancel()}
+            onClick={() => setCurrentView(SubView.SYNC_RESULT)}
+          />
+          <Button text={i18n.continue()} onClick={handleDisableRosterSync} />
+        </DialogFooter>
+      </div>
+    );
+  };
+
+  const handleDisableRosterSync = () => {
+    return $.post({
+      url: `/api/v1/users/disable_lti_roster_sync`,
+      success: () => {
+        handleClose();
+      },
+    });
+  };
+
   /**
    * Displays a summary of the changes after a successful sync with the LMS
    * @param syncResult
@@ -80,31 +114,41 @@ export default function LtiSectionSyncDialog(props: LtiSectionSyncDialogProps) {
     return (
       <div>
         <div>
-          <h2 style={styles.dialogHeader}>{dialogTitle}</h2>
+          <h2 style={styles.dialogHeader} id={'roster-sync-status'}>
+            {dialogTitle}
+          </h2>
           <SafeMarkdown markdown={dialogDescription} />
-          <ul> {sectionListItems} </ul>
+          <ul aria-labelledby={'roster-sync-status'}> {sectionListItems} </ul>
         </div>
-        <DialogFooter rightAlign>
-          <Button text={'Continue'} onClick={handleClose} />
+        <DialogFooter rightAlign={!disableRosterSyncEnabled}>
+          {disableRosterSyncEnabled && (
+            <Button
+              color={Button.ButtonColor.brandSecondaryDefault}
+              text={i18n.ltiSectionSyncDisableRosterSyncButtonLabel()}
+              onClick={() => setCurrentView(SubView.DISABLE_ROSTER_SYNC)}
+            />
+          )}
+          <Button text={i18n.continue()} onClick={handleClose} />
         </DialogFooter>
       </div>
     );
   };
 
-  let currentViewContent;
-  switch (currentView) {
-    case SubView.SYNC_RESULT:
-      currentViewContent = syncResultView(syncResult);
-      break;
-    case SubView.SPINNER:
-      currentViewContent = spinnerView();
-      break;
-    case SubView.ERROR:
-      currentViewContent = errorView(syncResult.error);
-      break;
-    default:
-      currentViewContent = <div />;
-  }
+  const currentViewContent = () => {
+    switch (currentView) {
+      case SubView.SYNC_RESULT:
+        return syncResultView(syncResult);
+      case SubView.SPINNER:
+        return spinnerView();
+      case SubView.ERROR:
+        return errorView(syncResult.error);
+      case SubView.DISABLE_ROSTER_SYNC:
+        return disableRosterSyncView();
+      default:
+        return <div />;
+    }
+  };
+
   const hideCloseButton = currentView === SubView.SPINNER;
 
   return (
@@ -115,7 +159,7 @@ export default function LtiSectionSyncDialog(props: LtiSectionSyncDialogProps) {
       handleClose={handleClose}
       hideCloseButton={hideCloseButton}
     >
-      {currentViewContent}
+      {currentViewContent()}
     </BaseDialog>
   );
 }

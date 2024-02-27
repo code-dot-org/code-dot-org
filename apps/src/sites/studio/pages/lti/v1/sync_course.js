@@ -22,7 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = scriptData['lti_section_sync_result'];
 
   ReactDOM.render(
-    <LtiSectionSyncDialog isOpen syncResult={result} onClose={onClose} />,
+    <LtiSectionSyncDialog
+      isOpen
+      syncResult={result}
+      onClose={onClose}
+      disableRosterSyncEnabled
+    />,
     mountPoint
   );
 });

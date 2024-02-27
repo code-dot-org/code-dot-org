@@ -21,6 +21,7 @@ const Template: ComponentStory<typeof LtiSectionSyncDialog> = args => (
 export const SuccessfulSync = Template.bind({});
 SuccessfulSync.args = {
   isOpen: true,
+  disableRosterSyncEnabled: true,
   syncResult: {
     all: {
       1: {
