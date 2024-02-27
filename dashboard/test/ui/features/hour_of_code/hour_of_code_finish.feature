@@ -19,7 +19,7 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
 
 @eyes
 Scenario: Flappy customized dashboard certificate pages
-  When I open my eyes to test 'flappy certificates'
+  When I open my eyes to test "flappy certificates"
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
 
@@ -27,13 +27,13 @@ Scenario: Flappy customized dashboard certificate pages
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
-  And I see no difference for 'flappy congrats page'
+  And I see no difference for "flappy congrats page"
 
   When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   Then I wait to see an image "/certificate_images/"
-  And I see no difference for 'personalixed flappy congrats page'
+  And I see no difference for "personalixed flappy congrats page"
 
   When I press the first "#uitest-certificate img" element to load a new page
   And I wait until current URL contains "/certificates/"
@@ -81,7 +81,7 @@ Scenario: non-mee 3rd party tutorial redirects to congrats page with params
 
 @eyes
 Scenario: Oceans uncustomized dashboard certificate pages
-  When I open my eyes to test 'oceans certificates'
+  When I open my eyes to test "oceans certificates"
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
 
@@ -89,15 +89,15 @@ Scenario: Oceans uncustomized dashboard certificate pages
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
-  And I see no difference for 'oceans congrats page'
+  And I see no difference for "oceans congrats page"
 
   When I press the first "#uitest-certificate img" element to load a new page
   And I wait until current URL contains "/certificates/"
-  And I see no difference for 'oceans certificate page'
+  And I see no difference for "oceans certificate page"
 
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
-  And I see no difference for 'oceans print certificate page'
+  And I see no difference for "oceans print certificate page"
 
   And I close my eyes
 
@@ -121,27 +121,27 @@ Scenario: Course A 2017 uncustomized dashboard certificate pages
 
 @eyes
 Scenario: customized dashboard certificate pages with no course name
-  When I open my eyes to test 'customized certificates'
+  When I open my eyes to test "customized certificates"
   Given I am on "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
-  And I see no difference for 'uncustomized congrats page'
+  And I see no difference for "uncustomized congrats page"
 
   When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   Then I wait to see an image "/certificate_images/"
-  And I see no difference for 'personalized congrats page'
+  And I see no difference for "personalized congrats page"
 
   When I press the first "#uitest-certificate img" element to load a new page
   And I wait until current URL contains "/certificates/"
   Then I wait to see an image "/certificate_images/"
-  And I see no difference for 'certificate page'
+  And I see no difference for "certificate page"
 
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
-  And I see no difference for 'print certificate page'
+  And I see no difference for "print certificate page"
 
   And I close my eyes
 
