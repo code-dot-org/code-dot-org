@@ -546,14 +546,9 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       table_data_csv: CSV_DATA,
     }
     assert_response :success
-    get _url(:read_records), params: {
-      table_name: 'mytable',
-    }
-    assert_response :success
-    val = JSON.parse(@response.body)
 
     skip "FIXME: controller bug, test will fail because import_csv doesn't cast values, see bottom of test"
-    assert_equal EXPECTED_RECORDS, val
+    assert_equal EXPECTED_RECORDS, read_records
   end
 
   test "import_csv overwrites existing data" do
