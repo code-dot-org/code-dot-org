@@ -32,15 +32,11 @@ export interface IconDropdownProps {
   /** CheckboxDropdown label */
   labelText: string;
   /** CheckboxDropdown options */
-  allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
+  options: {value: string; label: string; isOptionDisabled?: boolean}[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.MouseEvent<HTMLLIElement>) => void;
-  /** CheckboxDropdown onSelectAll handler */
-  onSelectAll: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  /** CheckboxDropdown onClearAll handler */
-  onClearAll: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 /**
@@ -59,11 +55,9 @@ export interface IconDropdownProps {
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   labelText,
-  allOptions,
+  options,
   checkedOptions = [],
   onChange,
-  onSelectAll,
-  onClearAll,
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
@@ -86,7 +80,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
     >
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>
-          {allOptions.map(({value, label, isOptionDisabled}) => (
+          {options.map(({value, label, isOptionDisabled}) => (
             <li key={value} onClick={onOptionClick}>
               <div className={moduleStyles.dropdownMenuItem}>
                 <FontAwesomeV6Icon iconName={'check'} iconStyle={'solid'} />

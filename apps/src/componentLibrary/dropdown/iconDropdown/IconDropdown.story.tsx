@@ -27,28 +27,12 @@ const SingleTemplate: Story<IconDropdownProps> = args => {
     },
     [args, selectedValues, setValues]
   );
-  const onSelectAll = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      setValues(args.allOptions.map(option => option.value));
-      args.onSelectAll(e);
-    },
-    [args]
-  );
-  const onClearAll = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      setValues([]);
-      args.onClearAll(e);
-    },
-    [args]
-  );
 
   return (
     <IconDropdown
       {...args}
       checkedOptions={selectedValues}
       onChange={onChange}
-      onSelectAll={onSelectAll}
-      onClearAll={onClearAll}
     />
   );
 };
@@ -93,19 +77,6 @@ const MultipleTemplate: Story<{
             // }
             componentArg.onChange(e);
           };
-          const onSelectAll = (e: React.MouseEvent<HTMLButtonElement>) => {
-            setValues({
-              ...values,
-              [componentArg.name]: componentArg.allOptions.map(
-                option => option.value
-              ),
-            });
-            componentArg.onSelectAll(e);
-          };
-          const onClearAll = (e: React.MouseEvent<HTMLButtonElement>) => {
-            setValues({...values, [componentArg.name]: []});
-            componentArg.onClearAll(e);
-          };
 
           return componentArg.color === 'white' ? (
             <div style={{background: 'black', padding: 10}}>
@@ -114,8 +85,6 @@ const MultipleTemplate: Story<{
                 {...componentArg}
                 checkedOptions={values[componentArg.name]}
                 onChange={onChange}
-                onSelectAll={onSelectAll}
-                onClearAll={onClearAll}
               />
             </div>
           ) : (
@@ -126,8 +95,6 @@ const MultipleTemplate: Story<{
                 values[componentArg.name] || componentArg.checkedOptions
               }
               onChange={onChange}
-              onSelectAll={onSelectAll}
-              onClearAll={onClearAll}
             />
           );
         })}
@@ -139,7 +106,7 @@ const MultipleTemplate: Story<{
 export const DefaultIconDropdown = SingleTemplate.bind({});
 DefaultIconDropdown.args = {
   name: 'default-dropdown',
-  allOptions: [
+  options: [
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
   ],
@@ -148,23 +115,19 @@ DefaultIconDropdown.args = {
   disabled: false,
   color: dropdownColors.black,
   onChange: args => null,
-  onSelectAll: args => null,
-  onClearAll: args => null,
   size: 'm',
 };
 
 export const DisabledIconDropdown = SingleTemplate.bind({});
 DisabledIconDropdown.args = {
   name: 'default-dropdown',
-  allOptions: [
+  options: [
     {value: 'option-1', label: 'Option 1'},
     {value: 'option-2', label: 'Option 2'},
   ],
   checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
   onChange: args => null,
-  onSelectAll: args => null,
-  onClearAll: args => null,
   disabled: true,
   color: dropdownColors.black,
   size: 'm',
@@ -173,7 +136,7 @@ DisabledIconDropdown.args = {
 export const WithDisabledOptionIconDropdown = SingleTemplate.bind({});
 WithDisabledOptionIconDropdown.args = {
   name: 'default-dropdown',
-  allOptions: [
+  options: [
     {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
     {value: 'option-2', label: 'Option 2'},
     {value: 'option-3', label: 'Option 3'},
@@ -183,8 +146,6 @@ WithDisabledOptionIconDropdown.args = {
   checkedOptions: ['option-1'],
   labelText: 'Dropdown with disabled option',
   onChange: args => null,
-  onSelectAll: args => null,
-  onClearAll: args => null,
   size: 'm',
 };
 
@@ -193,30 +154,26 @@ GroupOfIconDropdownColors.args = {
   components: [
     {
       name: 'default-dropdown-white',
-      allOptions: [
+      options: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
       checkedOptions: ['option-1'],
       labelText: 'White Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
       size: 'm',
       disabled: false,
       color: dropdownColors.white,
     },
     {
       name: 'default-dropdown-black',
-      allOptions: [
+      options: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
       checkedOptions: ['option-1'],
       labelText: 'Black Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
       size: 'm',
       color: dropdownColors.black,
       disabled: false,
@@ -228,60 +185,52 @@ GroupOfSizesOfIconDropdown.args = {
   components: [
     {
       name: 'default-dropdown-xs',
-      allOptions: [
+      options: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
       checkedOptions: ['option-1'],
       labelText: 'XS Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
       size: 'xs',
       disabled: false,
       color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-s',
-      allOptions: [
+      options: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
       checkedOptions: ['option-1'],
       labelText: 'S Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
       size: 's',
       disabled: false,
       color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-m',
-      allOptions: [
+      options: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
       checkedOptions: ['option-1'],
       labelText: 'M Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
       size: 'm',
       disabled: false,
       color: dropdownColors.black,
     },
     {
       name: 'default-dropdown-white',
-      allOptions: [
+      options: [
         {value: 'option-1', label: 'Option 1'},
         {value: 'option-2', label: 'Option 2'},
       ],
       checkedOptions: ['option-1'],
       labelText: 'L Dropdown',
       onChange: args => null,
-      onSelectAll: args => null,
-      onClearAll: args => null,
       size: 'l',
       disabled: false,
       color: dropdownColors.black,
