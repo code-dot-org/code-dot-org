@@ -1,4 +1,5 @@
 import React, {useCallback} from 'react';
+import classNames from 'classnames';
 
 import {
   ComponentSizeXSToL,
@@ -21,7 +22,6 @@ import {
   DropdownProviderWrapper,
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import classNames from 'classnames';
 
 export interface IconDropdownProps {
   /** CheckboxDropdown name */
