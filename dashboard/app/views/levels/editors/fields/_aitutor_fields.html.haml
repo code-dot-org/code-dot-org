@@ -3,3 +3,8 @@
 #ai_tutor.in.collapse
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_tutor_available, description: "AI Tutor Available"}
+  .field
+    = f.label :ai_tutor_prompt, "AI Tutor Prompt"
+    ~ f.text_area :ai_tutor_prompt,
+      placeholder: 'customizations for the AI Tutor system prompt, listing skills and knowledge students have at this point',
+      rows: 2, class:"input-block-level"
