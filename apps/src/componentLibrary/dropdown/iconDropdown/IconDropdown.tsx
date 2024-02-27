@@ -12,13 +12,16 @@ import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown'
 // @ts-ignore
 // import i18n from '@cdo/apps/locale';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import classNames from 'classnames';
 
 export interface IconDropdownProps {
   /** CheckboxDropdown name */
@@ -32,7 +35,12 @@ export interface IconDropdownProps {
   /** CheckboxDropdown label */
   labelText: string;
   /** CheckboxDropdown options */
-  options: {value: string; label: string; isOptionDisabled?: boolean}[];
+  options: {
+    value: string;
+    label: string;
+    isOptionDisabled?: boolean;
+    icon: FontAwesomeV6IconProps;
+  }[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
@@ -80,14 +88,37 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
     >
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>
-          {options.map(({value, label, isOptionDisabled}) => (
-            <li key={value} onClick={onOptionClick}>
-              <div className={moduleStyles.dropdownMenuItem}>
-                <FontAwesomeV6Icon iconName={'check'} iconStyle={'solid'} />
-                <span>{label}</span>
-              </div>
-            </li>
-          ))}
+          {options.map(
+            ({
+              value,
+              label,
+              isOptionDisabled,
+              icon: {
+                iconName,
+                iconStyle,
+                title: iconTitle,
+                className: iconClassName,
+              },
+            }) => (
+              <li key={value} onClick={onOptionClick}>
+                <div
+                  className={classNames(
+                    moduleStyles.dropdownMenuItem,
+                    isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
+                    false && moduleStyles.selectedDropdownMenuItem
+                  )}
+                >
+                  <FontAwesomeV6Icon
+                    iconName={iconName}
+                    iconStyle={iconStyle}
+                    title={iconTitle}
+                    className={iconClassName}
+                  />
+                  <span>{label}</span>
+                </div>
+              </li>
+            )
+          )}
         </ul>
       </form>
     </CustomDropdown>

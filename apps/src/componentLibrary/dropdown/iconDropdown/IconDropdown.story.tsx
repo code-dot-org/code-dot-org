@@ -107,8 +107,16 @@ export const DefaultIconDropdown = SingleTemplate.bind({});
 DefaultIconDropdown.args = {
   name: 'default-dropdown',
   options: [
-    {value: 'option-1', label: 'Option 1'},
-    {value: 'option-2', label: 'Option 2'},
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
   ],
   labelText: 'Default Dropdown',
   checkedOptions: ['option-1'],
@@ -122,8 +130,16 @@ export const DisabledIconDropdown = SingleTemplate.bind({});
 DisabledIconDropdown.args = {
   name: 'default-dropdown',
   options: [
-    {value: 'option-1', label: 'Option 1'},
-    {value: 'option-2', label: 'Option 2'},
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
   ],
   checkedOptions: ['option-1'],
   labelText: 'Disabled Dropdown',
@@ -137,9 +153,22 @@ export const WithDisabledOptionIconDropdown = SingleTemplate.bind({});
 WithDisabledOptionIconDropdown.args = {
   name: 'default-dropdown',
   options: [
-    {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
-    {value: 'option-2', label: 'Option 2'},
-    {value: 'option-3', label: 'Option 3'},
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      isOptionDisabled: true,
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
+    {
+      value: 'option-3',
+      label: 'Option 3',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+    },
   ],
   disabled: false,
   color: dropdownColors.black,
@@ -155,8 +184,16 @@ GroupOfIconDropdownColors.args = {
     {
       name: 'default-dropdown-white',
       options: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
       ],
       checkedOptions: ['option-1'],
       labelText: 'White Dropdown',
@@ -168,8 +205,16 @@ GroupOfIconDropdownColors.args = {
     {
       name: 'default-dropdown-black',
       options: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
       ],
       checkedOptions: ['option-1'],
       labelText: 'Black Dropdown',
@@ -186,8 +231,16 @@ GroupOfSizesOfIconDropdown.args = {
     {
       name: 'default-dropdown-xs',
       options: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
       ],
       checkedOptions: ['option-1'],
       labelText: 'XS Dropdown',
@@ -199,8 +252,16 @@ GroupOfSizesOfIconDropdown.args = {
     {
       name: 'default-dropdown-s',
       options: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
       ],
       checkedOptions: ['option-1'],
       labelText: 'S Dropdown',
@@ -212,8 +273,16 @@ GroupOfSizesOfIconDropdown.args = {
     {
       name: 'default-dropdown-m',
       options: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
       ],
       checkedOptions: ['option-1'],
       labelText: 'M Dropdown',
@@ -225,8 +294,16 @@ GroupOfSizesOfIconDropdown.args = {
     {
       name: 'default-dropdown-white',
       options: [
-        {value: 'option-1', label: 'Option 1'},
-        {value: 'option-2', label: 'Option 2'},
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
       ],
       checkedOptions: ['option-1'],
       labelText: 'L Dropdown',

@@ -65,6 +65,7 @@
         .dropdownMenuItem {
           display: flex;
           align-items: center;
+          cursor: pointer;
         }
 
         label, .dropdownMenuItem {
@@ -76,7 +77,7 @@
           background-color: $light_gray_100;
         }
 
-        &:active, &:has(input[type="checkbox"]:checked) {
+        &:active, &:has(input[type="checkbox"]:checked), &:has(.selectedDropdownMenuItem) {
           background-color: $light_primary_500;
 
           i::before {
@@ -87,14 +88,32 @@
           span {
             color: $light_white;
           }
+
+          .dropdownMenuItem {
+            i::before {
+              background-color: $light_primary_500;
+              color: $light_white;
+            }
+
+            span {
+              color: $light_white;
+            }
+          }
         }
 
-        &:has(input[type="checkbox"]:disabled) {
-          cursor: not-allowed;
+        &:has(input[type="checkbox"]:disabled), &:has(.disabledDropdownMenuItem) {
           color: $light_gray_200;
           background-color: unset;
+          pointer-events: none;
+          cursor: not-allowed;
 
-          span {
+
+          .dropdownMenuItem {
+            pointer-events: none;
+            cursor: not-allowed;
+          }
+
+          span, .dropdownMenuItem span {
             color: $light_gray_200;
           }
         }
