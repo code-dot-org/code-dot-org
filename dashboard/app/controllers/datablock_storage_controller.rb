@@ -3,6 +3,11 @@ class DatablockStorageController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
 
+  class StudentFacingError < StandardError; end
+  rescue_from StudentFacingError do |exception|
+    render json: {msg: exception.message}, status: :bad_request
+  end
+
   ##########################################################
   #   Debug View                                           #
   ##########################################################

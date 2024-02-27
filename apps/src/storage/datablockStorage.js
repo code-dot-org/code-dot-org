@@ -10,13 +10,14 @@ function urlFor(func_name) {
   return `/datablock_storage/${channelId}/` + func_name;
 }
 
-function _fetch(path, method, params) {
+async function _fetch(path, method, params) {
+  let response;
   if (method.toUpperCase() === 'GET') {
-    return fetch(urlFor(path) + '?' + new URLSearchParams(params), {
+    response = await fetch(urlFor(path) + '?' + new URLSearchParams(params), {
       method: 'GET',
     });
   } else {
-    return fetch(urlFor(path), {
+    response = await fetch(urlFor(path), {
       method,
       body: JSON.stringify(params),
       headers: {
@@ -26,6 +27,10 @@ function _fetch(path, method, params) {
       credentials: 'same-origin',
     });
   }
+  if (!response.ok) {
+    throw await response.json();
+  }
+  return response;
 }
 
 async function getKeyValue(key) {
