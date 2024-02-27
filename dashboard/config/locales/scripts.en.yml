@@ -9875,6 +9875,8 @@ en:
               name: Ecosystems Test
             lesson-7:
               name: Matching Levels
+            lesson-9:
+              name: AI Draft Levels
           lesson_groups: {}
           name: emmas-playground
           title: ''
