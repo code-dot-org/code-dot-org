@@ -3,7 +3,7 @@
 # Table name: datablock_storage_records
 #
 #  project_id  :integer          not null, primary key
-#  table_name  :string(768)      not null, primary key
+#  table_name  :string(700)      not null, primary key
 #  record_id   :integer          not null, primary key
 #  record_json :json
 #

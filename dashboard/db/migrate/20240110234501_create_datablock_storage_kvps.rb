@@ -1,8 +1,12 @@
 class CreateDatablockStorageKvps < ActiveRecord::Migration[6.1]
   def change
-    create_table :datablock_storage_kvps, primary_key: [:project_id, :key] do |t|
+    # We use utf8mb4 because we want .string to support emoji
+    create_table :datablock_storage_kvps, primary_key: [:project_id, :key], charset: 'utf8mb4', collation: 'utf8mb4_bin' do |t|
       t.integer :project_id
-      t.string :key, limit: 768
+      # this is part of the composite primary_key and max key length in mysql is 3072 bytes,
+      # so 700 * 4-bytes per utf8 character. This also slightly exceeds the existing Firebase
+      # data's max key length.
+      t.string :key, limit: 700
       t.json :value
     end
   end

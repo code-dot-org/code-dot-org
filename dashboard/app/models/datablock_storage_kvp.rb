@@ -3,7 +3,7 @@
 # Table name: datablock_storage_kvps
 #
 #  project_id :integer          not null, primary key
-#  key        :string(768)      not null, primary key
+#  key        :string(700)      not null, primary key
 #  value      :json
 #
 class DatablockStorageKvp < ApplicationRecord
