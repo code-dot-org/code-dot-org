@@ -133,16 +133,15 @@ module ProjectsList
       return featured
     end
 
-    def fetch_active_published_featured_projects(project_group, limit:, published_before: nil)
+    def fetch_active_published_featured_projects(project_group, limit:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_group == 'all'
-        raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
         return fetch_featured_published_projects
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      fetch_featured_projects_by_type([project_group.to_sym], limit: limit, published_before: published_before)
+      fetch_featured_projects_by_type([project_group.to_sym])
     end
 
     def fetch_featured_published_projects
