@@ -361,21 +361,17 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "populate_key_values does not overwrite existing data" do
-    #     it('does not overwrite existing data', done => {
-    #       getProjectDatabase()
-    #         .child(`storage/keys`)
-    #         .set(EXISTING_KEY_VALUE_DATA)
-    #         .then(() => {
-    #           FirebaseStorage.populateKeyValue(
-    #             NEW_KEY_VALUE_DATA_JSON,
-    #             () => verifyKeyValue(EXISTING_KEY_VALUE_DATA).then(done),
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         });
-    #     });
-    #   });
+    skip "FIXME: populate_key_values is overwriting the existing key value"
+
+    post _url(:set_key_value), params: {key: 'click_count', value: 1.to_json}
+    assert_response :success
+
+    put _url(:populate_key_values), params: {key_values_json: '{"click_count": 5}'}
+    assert_response :success
+
+    get _url(:get_key_values)
+    assert_response :success
+    assert_equal ({"click_count" => 1}), JSON.parse(@response.body)
   end
 
   test "populate_key_values prints a friendly error message when given bad key value json" do
