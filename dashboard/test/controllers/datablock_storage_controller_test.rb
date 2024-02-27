@@ -30,22 +30,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     JSON.parse(@response.body)
   end
 
-  def create_record_where_foo_is(value)
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {"foo" => value}.to_json,
-    }
-    assert_response :success
-  end
-
-  def create_record_without_foo
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {}.to_json,
-    }
-    assert_response :success
-  end
-
   def set_and_get_key_value(key, value)
     post _url(:set_key_value), params: {
       key: key,
@@ -209,6 +193,22 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
   end
 
+  def create_record_where_foo_is(value)
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"foo" => value}.to_json,
+    }
+    assert_response :success
+  end
+
+  def create_record_without_foo
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {}.to_json,
+    }
+    assert_response :success
+  end
+
   test "coerce_column converts anything to string" do
     skip "FIXME: create_record_where_foo_is(nil) and create_record_without_foo both fail"
 
@@ -222,7 +222,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'string'}
     assert_response :success
 
-    get _url(:read_records), params: {table_name: 'mytable'}
     assert_equal [
       {"foo" => "1", "id" => 1},
       {"foo" => "one", "id" => 2},
@@ -234,72 +233,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column converts valid booleans" do
-    skip "FIXME: Not yet implemented"
+    create_record_where_foo_is(true)
+    create_record_where_foo_is('true')
+    create_record_where_foo_is(false)
+    create_record_where_foo_is('false')
 
-    #     it('converts valid booleans', done => {
-    #       FirebaseStorage.createRecord(
-    #         'mytable',
-    #         {foo: true},
-    #         () => {
-    #           FirebaseStorage.createRecord(
-    #             'mytable',
-    #             {foo: 'true'},
-    #             () => {
-    #               FirebaseStorage.createRecord(
-    #                 'mytable',
-    #                 {foo: false},
-    #                 () => {
-    #                   FirebaseStorage.createRecord(
-    #                     'mytable',
-    #                     {foo: 'false'},
-    #                     () => {
-    #                       doCoerce();
-    #                     },
-    #                     error => {
-    #                       throw error;
-    #                     }
-    #                   );
-    #                 },
-    #                 error => {
-    #                   throw error;
-    #                 }
-    #               );
-    #             },
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         },
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       function doCoerce() {
-    #         FirebaseStorage.coerceColumn(
-    #           'mytable',
-    #           'foo',
-    #           'boolean',
-    #           validate,
-    #           error => {
-    #             throw error;
-    #           }
-    #         );
-    #       }
-    #       function validate() {
-    #         const recordsRef = getProjectDatabase().child(
-    #           `storage/tables/mytable/records`
-    #         );
-    #         recordsRef.once('value').then(snapshot => {
-    #           expect(snapshot.val()).to.deep.equal({
-    #             1: '{"foo":true,"id":1}',
-    #             2: '{"foo":true,"id":2}',
-    #             3: '{"foo":false,"id":3}',
-    #             4: '{"foo":false,"id":4}',
-    #           });
-    #           done();
-    #         });
-    #       }
-    #     });
+    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'boolean'}
+    assert_response :success
+
+    assert_equal [
+      {"foo" => true, "id" => 1},
+      {"foo" => true, "id" => 2},
+      {"foo" => false, "id" => 3},
+      {"foo" => false, "id" => 4},
+    ], read_records
   end
 
   test "coerce_column converts valid numbers" do
