@@ -267,58 +267,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column warns on invalid booleans" do
-    skip "FIXME: Not yet implemented"
-    #     it('warns on invalid booleans', done => {
-    #       FirebaseStorage.createRecord(
-    #         'mytable',
-    #         {foo: true},
-    #         () => {
-    #           FirebaseStorage.createRecord(
-    #             'mytable',
-    #             {foo: 'bar'},
-    #             () => {
-    #               doCoerce();
-    #             },
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         },
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
+    skip "FIXME: coerce_column does not return a warning, AND it converts invalid booleans whereas it should leave them alone (stay as a string in this case)"
 
-    #       function doCoerce() {
-    #         FirebaseStorage.coerceColumn(
-    #           'mytable',
-    #           'foo',
-    #           'boolean',
-    #           validate,
-    #           validateError
-    #         );
-    #       }
+    create_record_where_foo_is(true)
+    create_record_where_foo_is('bar')
 
-    #       let onErrorCalled = false;
-    #       function validateError(error) {
-    #         expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
-    #         onErrorCalled = true;
-    #       }
+    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'boolean'}
+    assert_response :bad_request
+    assert_equal 'CANNOT_CONVERT_COLUMN_TYPE', JSON.parse(@response.body)['type']
 
-    #       function validate() {
-    #         const recordsRef = getProjectDatabase().child(
-    #           `storage/tables/mytable/records`
-    #         );
-    #         recordsRef.once('value').then(snapshot => {
-    #           expect(snapshot.val()).to.deep.equal({
-    #             1: '{"foo":true,"id":1}',
-    #             2: '{"foo":"bar","id":2}',
-    #           });
-    #           expect(onErrorCalled).to.be.true;
-    #           done();
-    #         });
-    #       }
-    #     });
+    assert_equal [
+      {"foo" => true, "id" => 1},
+      {"foo" => 'bar', "id" => 2},
+    ], read_records
   end
 
   test "coerce_column warns on invalid numbers" do
