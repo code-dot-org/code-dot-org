@@ -25,7 +25,7 @@ function UnitSelectorV2({
         new_script_id: newScriptId,
       });
 
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_CHANGE_UNIT, {
         sectionId: sectionId,
         oldUnitId: scriptId,
         unitId: newScriptId,
