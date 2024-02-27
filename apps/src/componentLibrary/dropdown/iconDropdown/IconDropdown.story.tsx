@@ -1,28 +1,28 @@
 import React, {useState, useCallback} from 'react';
-import CheckboxDropdown, {CheckboxDropdownProps} from './index';
+import IconDropdown, {IconDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
 
 export default {
   title: 'DesignSystem/Dropdown/Icon Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
-  component: CheckboxDropdown,
+  component: IconDropdown,
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<CheckboxDropdownProps> = args => {
+const SingleTemplate: Story<IconDropdownProps> = args => {
   const [selectedValues, setValues] = useState(
     (args.checkedOptions = [] as string[])
   );
   const onChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (e.target.checked) {
-        setValues([...selectedValues, e.target.value]);
-      } else {
-        setValues(selectedValues.filter(value => value !== e.target.value));
-      }
+    (e: React.MouseEvent<HTMLLIElement>) => {
+      // if (e.target.checked) {
+      //   setValues([...selectedValues, e.target.value]);
+      // } else {
+      //   setValues(selectedValues.filter(value => value !== e.target.value));
+      // }
       args.onChange(e);
     },
     [args, selectedValues, setValues]
@@ -43,7 +43,7 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
   );
 
   return (
-    <CheckboxDropdown
+    <IconDropdown
       {...args}
       checkedOptions={selectedValues}
       onChange={onChange}
@@ -54,7 +54,7 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
 };
 
 const MultipleTemplate: Story<{
-  components: CheckboxDropdownProps[];
+  components: IconDropdownProps[];
 }> = args => {
   const [values, setValues] = useState({} as Record<string, string[]>);
 
@@ -74,23 +74,23 @@ const MultipleTemplate: Story<{
             });
           }
 
-          const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-            if (e.target.checked) {
-              setValues({
-                ...values,
-                [componentArg.name]: [
-                  ...values[componentArg.name],
-                  e.target.value,
-                ],
-              });
-            } else {
-              setValues({
-                ...values,
-                [componentArg.name]: values[componentArg.name].filter(
-                  value => value !== e.target.value
-                ),
-              });
-            }
+          const onChange = (e: React.MouseEvent<HTMLLIElement>) => {
+            // if (e.target.checked) {
+            //   setValues({
+            //     ...values,
+            //     [componentArg.name]: [
+            //       ...values[componentArg.name],
+            //       e.target.value,
+            //     ],
+            //   });
+            // } else {
+            //   setValues({
+            //     ...values,
+            //     [componentArg.name]: values[componentArg.name].filter(
+            //       value => value !== e.target.value
+            //     ),
+            //   });
+            // }
             componentArg.onChange(e);
           };
           const onSelectAll = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -109,7 +109,7 @@ const MultipleTemplate: Story<{
 
           return componentArg.color === 'white' ? (
             <div style={{background: 'black', padding: 10}}>
-              <CheckboxDropdown
+              <IconDropdown
                 key={`${componentArg.name}`}
                 {...componentArg}
                 checkedOptions={values[componentArg.name]}
@@ -119,7 +119,7 @@ const MultipleTemplate: Story<{
               />
             </div>
           ) : (
-            <CheckboxDropdown
+            <IconDropdown
               key={`${componentArg.name}`}
               {...componentArg}
               checkedOptions={
@@ -136,8 +136,8 @@ const MultipleTemplate: Story<{
   );
 };
 
-export const DefaultCheckboxDropdown = SingleTemplate.bind({});
-DefaultCheckboxDropdown.args = {
+export const DefaultIconDropdown = SingleTemplate.bind({});
+DefaultIconDropdown.args = {
   name: 'default-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1'},
@@ -153,8 +153,8 @@ DefaultCheckboxDropdown.args = {
   size: 'm',
 };
 
-export const DisabledCheckboxDropdown = SingleTemplate.bind({});
-DisabledCheckboxDropdown.args = {
+export const DisabledIconDropdown = SingleTemplate.bind({});
+DisabledIconDropdown.args = {
   name: 'default-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1'},
@@ -170,8 +170,8 @@ DisabledCheckboxDropdown.args = {
   size: 'm',
 };
 
-export const WithDisabledOptionCheckboxDropdown = SingleTemplate.bind({});
-WithDisabledOptionCheckboxDropdown.args = {
+export const WithDisabledOptionIconDropdown = SingleTemplate.bind({});
+WithDisabledOptionIconDropdown.args = {
   name: 'default-dropdown',
   allOptions: [
     {value: 'option-1', label: 'Option 1', isOptionDisabled: true},
@@ -188,8 +188,8 @@ WithDisabledOptionCheckboxDropdown.args = {
   size: 'm',
 };
 
-export const GroupOfCheckboxDropdownColors = MultipleTemplate.bind({});
-GroupOfCheckboxDropdownColors.args = {
+export const GroupOfIconDropdownColors = MultipleTemplate.bind({});
+GroupOfIconDropdownColors.args = {
   components: [
     {
       name: 'default-dropdown-white',
@@ -223,8 +223,8 @@ GroupOfCheckboxDropdownColors.args = {
     },
   ],
 };
-export const GroupOfSizesOfCheckboxDropdown = MultipleTemplate.bind({});
-GroupOfSizesOfCheckboxDropdown.args = {
+export const GroupOfSizesOfIconDropdown = MultipleTemplate.bind({});
+GroupOfSizesOfIconDropdown.args = {
   components: [
     {
       name: 'default-dropdown-xs',

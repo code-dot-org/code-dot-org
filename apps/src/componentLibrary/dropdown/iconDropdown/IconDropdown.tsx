@@ -20,7 +20,7 @@ import {
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 
-export interface CheckboxDropdownProps {
+export interface IconDropdownProps {
   /** CheckboxDropdown name */
   name: string;
   /** CheckboxDropdown color */
@@ -56,7 +56,7 @@ export interface CheckboxDropdownProps {
  * Design System: Checkbox Dropdown Component.
  * Used to render checkbox (multiple choice) dropdowns.
  */
-const IconDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
+const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   labelText,
   allOptions,
@@ -68,7 +68,7 @@ const IconDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   color = dropdownColors.black,
   size = 'm',
 }) => {
-  const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
+  const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
     (args: React.MouseEvent<HTMLLIElement>) => {
       onChange(args);
@@ -100,7 +100,7 @@ const IconDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   );
 };
 
-const WrappedIconDropdown = (props: CheckboxDropdownProps) => (
+const WrappedIconDropdown = (props: IconDropdownProps) => (
   <DropdownProviderWrapper>
     <IconDropdown {...props} />
   </DropdownProviderWrapper>
