@@ -71,6 +71,9 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  tableMessage: {
+    marginLeft: 10,
+  },
 };
 
 // Cell formatters.
@@ -454,9 +457,15 @@ class FeaturedProjectsTable extends React.Component {
       sort: orderBy,
     })(this.getProjectList());
 
+    const mustBePulishedMessage =
+      '* Featured projects must be published in order to be displayed in the public featured projects gallery.';
+
     return (
       <div>
         {this.renderStatusFilterDropdown()}
+        <span style={styles.tableMessage}>
+          {mustBePulishedMessage}
+        </span>
         <Table.Provider columns={columns} style={tableLayoutStyles.table}>
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="channel" />
