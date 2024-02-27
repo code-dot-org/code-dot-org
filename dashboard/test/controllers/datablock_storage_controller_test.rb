@@ -31,6 +31,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  def read_records(table_name = 'mytable')
+    get _url(:read_records), params: {
+      table_name: table_name,
+    }
+    assert_response :success
+    JSON.parse(@response.body)
+  end
+
   def set_and_get_key_value(key, value)
     post _url(:set_key_value), params: {
       key: key,
