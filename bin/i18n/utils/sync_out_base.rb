@@ -43,7 +43,7 @@ module I18n
         I18nScriptUtils.process_in_threads(languages) do |language|
           process(language)
         ensure
-          I18nScriptUtils.remove_empty_dir I18nScriptUtils.locale_dir(language[:crowdin_name_s])
+          I18nScriptUtils.remove_empty_dir I18nScriptUtils.crowdin_locale_dir(language[:locale_s])
 
           mutex.synchronize {progress_bar.increment}
         end
