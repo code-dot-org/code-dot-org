@@ -358,7 +358,8 @@
       ]
     ],
     "teacher_markdown": "The `while` loop initially paints with every other color in the 1D array `colors` because `index` is increasing by `2`. When this is changed to add `1` to `index` instead, each color in the 1D array `colors` is accessed, so the `ArrayPainter` object paints with each color.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:52:22.491+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L3-L3_2023\"}]"

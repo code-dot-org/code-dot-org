@@ -7,8 +7,17 @@ markdown <<MARKDOWN
 
 #### Code.org has partnered with JuiceMind to create engaging, interactive assessments for this course. **JuiceMind** is an educational platform offering fun coding quizzes and projects for CS teachers and students.
 
+## Assigning JuiceMind Assessments
 
-#### You can choose to assign the JuiceMind assessments to your class on the Code.org course page. 
+#### You can choose to assign the JuiceMind assessments to your class on the Code.org course dashboard following these steps: 
+
+- #### Click "Assign" on the assessment page to create a unique class session.
+- #### Direct students to the Join page and provide them with the session code.
+- #### After students complete the assessment, access the JuiceMind teacher dashboard to view their results.
+
+#### **Note:** You will need to sign up for an account on JuiceMind to assign the assessment.
+
+---
 
 ## Sample Questions
 #### Interactive questions engage users through dynamic graphic matching and versatile multiple-choice formats.
@@ -17,8 +26,9 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/890a45a5fe6384e146c261eda0879812-image-1708543077926.png" alt="sample question on JuiceMind" width="385px" style="border-radius:10px; float:right; margin: 0 80px 40px 0px;">
 
-<br>
-<br>
+
+
+---
 
 ## Explore JuiceMind 
 

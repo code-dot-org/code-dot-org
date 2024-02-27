@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 01:48:52 UTC",
+    "serialized_at": "2024-02-23 01:03:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4640,7 +4640,7 @@
       "key": "9a67fb96-ba3b-46ab-bb0b-404dabfcf4a0",
       "position": 1,
       "properties": {
-        "description": "This chapter project assesses knowledge and skills of utilizing CSS Classes and flexbox concepts. Adding Flexbox concepts to an already created web page can often require the web developer to shift and move around the HTML content for the page to look as expected. As a result, this project has 3 options for you to choose from depending on the difficulty level and time constraints. \n\n**Easy:** Students can add classes and flexbox to web page content that is already organized to make adding `<div>` elements and flexbox style easy. Choose this option if you don’t have time available to allow your students to alter the code that will be brought over from the Lesson 10 mini-project.\n\n**Intermediate:** Students can add classes and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (possibly 2 days) to allow students to shift their HTML code, iterating on their HTML to make their page look as they expect.\n\n**Challenging:** Students can create a webpage for a user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process. If you choose this option, you might consider adding criteria from the previous mini-projects to the chapter project rubric to capture all the skills students will demonstrate.\n\nSelect the Chapter Project Guide that corresponds to your chosen option.\n"
+        "description": "This chapter project assesses knowledge and skills of utilizing CSS Classes and flexbox concepts. Adding Flexbox concepts to an already created web page can often require the web developer to shift and move around the HTML content for the page to look as expected. As a result, this project has 3 options for you to choose from depending on the difficulty level and time constraints. \n\n**Option 1 - Easy:** Students can add classes and flexbox to web page content that is already organized to make adding `<div>` elements and flexbox style easy. Choose this option if you don’t have time available to allow your students to alter the code that will be brought over from the Lesson 10 mini-project.\n\n**Option 2 - Intermediate:** Students can add classes and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (possibly 2 days) to allow students to shift their HTML code, iterating on their HTML to make their page look as they expect.\n\n**Option 3 - Challenging:** Students can create a webpage for a user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process. If you choose this option, you might consider adding criteria from the previous mini-projects to the chapter project rubric to capture all the skills students will demonstrate.\n\nSelect the Chapter Project Guide that corresponds to your chosen option.\n"
       },
       "seeding_key": {
         "activity_section.key": "9a67fb96-ba3b-46ab-bb0b-404dabfcf4a0",
@@ -5788,7 +5788,7 @@
       "key": "2d0bba18-8ae2-4670-9746-e439025abda0",
       "position": 2,
       "properties": {
-        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. Assure them that they will learn how to add new pages and link between them in the next lesson, but that they will plan out the pages that they want first.",
+        "description": "Review the project requirements with the students, emphasizing that part of the project is working together as a group. ",
         "name": "Overview\r"
       },
       "seeding_key": {
@@ -5954,7 +5954,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2024] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [Extra Code in Challenge Levels](https://docs.google.com/document/d/1zCMJHXk_KISNIkwN3WcoVUCZT4RotkNGfOMhT6sVB-k/view) as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -11976,6 +11976,19 @@
       }
     },
     {
+      "name": "Web Development Challenge Levels Extra Code",
+      "url": "https://docs.google.com/document/d/1zCMJHXk_KISNIkwN3WcoVUCZT4RotkNGfOMhT6sVB-k/view",
+      "key": "web_development_challenge_levels_extra_code",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "web_development_challenge_levels_extra_code"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/1npD3ERU8C6chX_mXTfid1bzZzeivaUHYVz6CpiF6b5I/view",
       "key": "website_for_a_purpose",
@@ -12522,6 +12535,12 @@
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
         "resource.key": "project_-_website_for_a_purpose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "web_development_challenge_levels_extra_code"
       }
     },
     {

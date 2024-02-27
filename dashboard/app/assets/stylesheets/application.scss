@@ -1316,10 +1316,6 @@ input.header_input {
   }
 }
 
-#teacher-dashboard {
-  margin: 0 39px;
-}
-
 .header_finished_link:hover {
   background-color: transparent;
   text-decoration: underline;
@@ -1615,6 +1611,10 @@ html[dir=rtl] .qtip-content {
 
 .tooltip-x-close.qtip-icon {
   @include close-button($cornerOffset: -20px);
+}
+
+.tooltip-x-close:focus {
+  border-color: $brand_primary_default;
 }
 
 a.download-video {
@@ -3006,7 +3006,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-mark {
     display: inline-block;
     text-align: left;
-    padding-right: 10px;
+    padding-right: 30px;
     box-sizing: border-box;
     font-size: 21px;
     width: 30px;
@@ -4183,6 +4183,11 @@ a {
   .lti-btn-white {
     @include white-button;
   }
+}
+
+// Globally override button hover styling applied by Bootstrap
+button:hover {
+  box-shadow: none;
 }
 
 @import "NpsSurveyBlock";

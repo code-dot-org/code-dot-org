@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-21 18:36:51 UTC",
+    "serialized_at": "2024-02-22 22:03:17 UTC",
     "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "self-paced-pl-microbit-2024-2"
     }
@@ -463,6 +463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_juiceMInd_intro"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
