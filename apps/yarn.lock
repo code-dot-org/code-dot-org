@@ -8253,7 +8253,6 @@ __metadata:
     css-loader: ^6.2.0
     csv-parse: ^4.4.6
     dapjs: ^2.3.0
-    data-collection: ^1.1.6
     dedent: ^0.7.0
     details-element-polyfill: "https://github.com/javan/details-element-polyfill"
     ejs: ^2.6.1
@@ -10861,13 +10860,6 @@ canvg@gabelerner/canvg:
   dependencies:
     assert-plus: ^1.0.0
   checksum: 3634c249570f7f34e3d34f866c93f866c5b417f0dd616275decae08147dcdf8fccfaa5947380ccfb0473998ea3a8057c0b4cd90c875740ee685d0624b2983598
-  languageName: node
-  linkType: hard
-
-"data-collection@npm:^1.1.6":
-  version: 1.1.6
-  resolution: "data-collection@npm:1.1.6"
-  checksum: bb332d9ef338b174a0f566c4bb19795c4545b2c515e0a43717c4b70922aad59f6ea1d25eff479a5704680b4e543e49cb125619ab72a48d165a0d4ef02a98a803
   languageName: node
   linkType: hard
 
