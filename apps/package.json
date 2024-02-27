@@ -260,7 +260,6 @@
     "query-string": "4.1.0",
     "radium": "^0.25.2",
     "react": "~16.14.0",
-    "react-ace": "^9.2.1",
     "react-beautiful-dnd": "^13.1.0",
     "react-bootstrap": "^0.33.1",
     "react-bootstrap-2": "npm:react-bootstrap@^2.7.4",
