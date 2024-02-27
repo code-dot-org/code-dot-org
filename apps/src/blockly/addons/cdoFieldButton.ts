@@ -1,6 +1,27 @@
-import GoogleBlockly from 'blockly/core';
+import GoogleBlockly, {BlockSvg, FieldValidator} from 'blockly/core';
+
+interface ColorOverrides {
+  button: string | undefined;
+  icon: string | undefined;
+  text: string | undefined;
+}
+
+interface CdoFieldButtonOptions {
+  value: string | undefined;
+  validator: FieldValidator<string> | null;
+  onClick: () => void;
+  transformText: ((text: string) => string) | undefined;
+  icon: SVGElement | undefined;
+  colorOverrides: ColorOverrides | undefined;
+  allowReadOnlyClick: boolean | undefined;
+}
 
 export default class CdoFieldButton extends GoogleBlockly.Field {
+  private onClick: () => void | undefined;
+  private transformText: ((text: string) => string) | undefined;
+  private icon: SVGElement | undefined;
+  private colorOverrides: ColorOverrides | undefined;
+  private allowReadOnlyClick: boolean | undefined;
   /**
    * This is a customized field which the user clicks to select an option from a customized picker,
    * for example, the location of a sprite from a grid or a sound file from a customized modal.
@@ -24,7 +45,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     icon,
     colorOverrides,
     allowReadOnlyClick = false,
-  }) {
+  }: CdoFieldButtonOptions) {
     super(value, validator);
     this.onClick = onClick;
     this.transformText = transformText;
@@ -34,7 +55,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.allowReadOnlyClick = allowReadOnlyClick;
   }
 
-  static fromJson(options) {
+  static fromJson(options: CdoFieldButtonOptions) {
     return new CdoFieldButton(options);
   }
 
@@ -45,11 +66,12 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   initView() {
     super.initView();
     if (this.icon) {
+      const sourceBlock = this.getSourceBlock() as BlockSvg;
       this.icon.style.fill =
-        this.colorOverrides?.icon || this.getSourceBlock().style.colourPrimary;
+        this.colorOverrides?.icon || sourceBlock?.style.colourPrimary;
       // Make the icon centered on Safari.
       this.icon.setAttribute('dominant-baseline', 'central');
-      this.textElement_.appendChild(this.icon);
+      this.textElement_?.appendChild(this.icon);
     }
   }
 
@@ -59,7 +81,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   getDisplayText_() {
-    let text = this.getText();
+    const text = this.getText();
     if (!text) {
       return GoogleBlockly.Field.NBSP;
     }
@@ -83,7 +105,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * call onClick here, otherwise we use the default behavior.
    * @override
    */
-  onMouseDown_(e) {
+  onMouseDown_(e: PointerEvent) {
     if (this.allowReadOnlyClick) {
       this.onClick();
     } else {
@@ -96,13 +118,13 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock();
+    const sourceBlock = this.getSourceBlock() as BlockSvg;
     const buttonColor = this.colorOverrides?.button;
     const textColor = this.colorOverrides?.text;
     const iconColor = this.colorOverrides?.icon;
 
     if (this.icon) {
-      this.icon.style.fill = iconColor || sourceBlock.style.colourPrimary;
+      this.icon.style.fill = iconColor || sourceBlock?.style.colourPrimary;
     }
 
     const borderRect = this.borderRect_;

@@ -1,14 +1,29 @@
-import GoogleBlockly from 'blockly/core';
+import GoogleBlockly, {
+  FieldDropdownConfig,
+  FieldDropdownValidator,
+  MenuGeneratorFunction,
+} from 'blockly/core';
 import {EMPTY_OPTION} from '../constants';
 import {
   printerStyleNumberRangeToList,
   numberListToString,
 } from '@cdo/apps/blockly/utils';
 
+type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+// Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
+// will always use [string, string].
+type CustomMenuOption = [string, string];
+
 export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
+  private config: string | null | undefined;
+
   // Blockly expects a menu generator, but some of our older blocks skip this and use
   // the field element's config attribute to specify a range of menu options.
-  constructor(menuGenerator, validator, config) {
+  constructor(
+    menuGenerator?: CustomMenuGenerator,
+    validator?: FieldDropdownValidator,
+    config?: FieldDropdownConfig
+  ) {
     if (!menuGenerator) {
       menuGenerator = [['', '']];
     }
@@ -21,7 +36,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @override Add special case for '???' and accommodate valid initial values that are not surrounded
    * by quotes in xml.
    */
-  doClassValidation_(newValue) {
+  doClassValidation_(newValue?: string) {
     if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
@@ -62,7 +77,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    *     (human-readable text or image, language-neutral name).
    * @throws {TypeError} If generated options are incorrectly structured.
    */
-  getOptions(useCache, newValue) {
+  getOptions(useCache?: boolean, newValue?: string) {
     const options = super.getOptions(useCache);
 
     // Behavior pickers do not populate correctly until the workspace has been loaded.
@@ -83,11 +98,14 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * Add special case for '???'.
    * @override
    */
-  doValueUpdate_(newValue) {
+  doValueUpdate_(newValue: string) {
     if (newValue === EMPTY_OPTION) {
       this.value_ = newValue;
       this.isDirty_ = true;
-      this.selectedOption = [EMPTY_OPTION, ''];
+      // selectedOption is private in FieldDropdown, but we need to
+      // explicitly set it here.
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (this as any).selectedOption = [EMPTY_OPTION, ''];
     } else {
       super.doValueUpdate_(newValue);
     }
@@ -100,7 +118,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @param state The state we want to apply to the field.
    * @override because `state` is stored as either json or xml in our code base.
    */
-  loadState(state) {
+  // Blockly uses any here
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  loadState(state: any) {
     // Check if state is not stringified xml, i.e., value from json.
     const fieldTagRegEx = /<field/;
     if (!fieldTagRegEx.test(state)) {
@@ -121,7 +141,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @param element xml
    * @override
    */
-  fromXml(element) {
+  fromXml(element: Element) {
     // If the field xml contains a `config`, then the dropdown options
     // are determined by `config`.
     // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
@@ -134,7 +154,9 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       // a human-readable string and a language-neutral string. For example,
       // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
       // Options are included in the block definition.
-      const existingOptionsMap = arrayToMap(this.menuGenerator_);
+      const existingOptionsMap = arrayToMap(
+        this.menuGenerator_ as CustomMenuGenerator
+      );
       this.menuGenerator_ = getUpdatedOptionsFromConfig(
         this.config,
         existingOptionsMap
@@ -150,7 +172,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * @return element
    * @override
    */
-  toXml(element) {
+  toXml(element: Element) {
     if (this.config) {
       element.setAttribute('config', this.config);
     }
@@ -162,14 +184,16 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * Override of createTextArrow_ to fix the arrow position on Safari.
    * We need to add dominant-baseline="central" to the arrow element in order to
    * center it on Safari.
+   * We can remove this if this Blockly issue is fixed:
+   * https://github.com/google/blockly/issues/7890
    *  @override */
   createTextArrow_() {
-    this.arrow = Blockly.utils.dom.createSvgElement(
+    const arrow = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.TSPAN,
       {},
       this.textElement_
     );
-    this.arrow.appendChild(
+    arrow.appendChild(
       document.createTextNode(
         this.getSourceBlock()?.RTL
           ? Blockly.FieldDropdown.ARROW_CHAR + ' '
@@ -180,23 +204,26 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     /**
      * Begin CDO customization
      */
-    this.arrow.setAttribute('dominant-baseline', 'central');
+    arrow.setAttribute('dominant-baseline', 'central');
     /**
      * End CDO customization
      */
 
     if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(this.arrow, this.textContent_);
+      this.getTextElement().insertBefore(arrow, this.textContent_);
     } else {
-      this.getTextElement().appendChild(this.arrow);
+      this.getTextElement().appendChild(arrow);
     }
+    // this.arrow is private in the parent.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (this as any).arrow = arrow;
   }
 }
 
 /**
  * Converts language-neutral string to humnan-readable string.
  */
-function toHumanReadableString(text) {
+function toHumanReadableString(text: string) {
   return text.replace(/['"]+/g, '').toLowerCase();
 }
 
@@ -207,9 +234,9 @@ function toHumanReadableString(text) {
  * @param optionsArray  field
  * @return map of options
  */
-export function arrayToMap(optionsArray) {
+export function arrayToMap(optionsArray: CustomMenuGenerator | undefined) {
   return Array.isArray(optionsArray)
-    ? optionsArray.reduce((optionsMap, curr) => {
+    ? optionsArray.reduce((optionsMap: {[key: string]: string}, curr) => {
         optionsMap[curr[1]] = curr[0];
         return optionsMap;
       }, {})
@@ -221,7 +248,10 @@ export function arrayToMap(optionsArray) {
  * @param config attribute of field
  * @return Array of option arrays
  */
-export function getUpdatedOptionsFromConfig(config, existingOptionsMap) {
+export function getUpdatedOptionsFromConfig(
+  config: string,
+  existingOptionsMap: {[key: string]: string}
+) {
   const numberList = printerStyleNumberRangeToList(config);
   // If numberList is assigned a non-empty array, it contains a list of numbers.
   // Convert this list to a string of dropdown options separated by commas and assign to options.
@@ -229,7 +259,8 @@ export function getUpdatedOptionsFromConfig(config, existingOptionsMap) {
   // Note that `config` is either a printer-style number range or a string of options separated
   // by commas, but not both. For example, a `config` like "1,6-9, &quot;SLOTH&quot;"
   // would NOT be supported.
-  let options = numberList.length > 0 ? numberListToString(numberList) : config;
+  let options: string | CustomMenuOption[] =
+    numberList.length > 0 ? numberListToString(numberList) : config;
   options = options.split(',').map(val => {
     val = val.trim();
     // If val is one of the options in this.menuGenerator_,

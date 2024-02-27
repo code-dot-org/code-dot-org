@@ -1,6 +1,27 @@
-import GoogleBlockly from 'blockly/core';
+import GoogleBlockly, {Block, BlockSvg, Field} from 'blockly/core';
+
+interface CdoFieldButtonToggleOptions {
+  onClick: () => void;
+  defaultIcon: SVGElement;
+  alternateIcon: SVGElement;
+  useDefaultIcon: boolean;
+  callback?: (block: Block) => void;
+  colorOverrides?: {
+    icon?: string;
+    button?: string;
+  };
+}
 
 export default class CdoFieldToggle extends GoogleBlockly.Field {
+  private onClick: () => void;
+  private defaultIcon: SVGElement;
+  private alternateIcon: SVGElement;
+  private useDefaultIcon: boolean;
+  private callback?: (block: Block) => void;
+  private colorOverrides?: {
+    icon?: string;
+    button?: string;
+  };
   /**
    * This is a customized field which the user clicks to toggle between two different states,
    * for example, displaying or hiding the the block flyout.
@@ -22,8 +43,8 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     useDefaultIcon,
     callback,
     colorOverrides,
-  }) {
-    super();
+  }: CdoFieldButtonToggleOptions) {
+    super(Field.SKIP_SETUP);
     this.onClick = onClick;
     this.defaultIcon = defaultIcon;
     this.alternateIcon = alternateIcon;
@@ -39,7 +60,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * @param {Object} options - A JSON object with options.
    * @returns {CdoFieldToggle} The new field instance.
    */
-  static fromJson(options) {
+  static fromJson(options: CdoFieldButtonToggleOptions) {
     return new CdoFieldToggle(options);
   }
 
@@ -52,6 +73,9 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     // Make the icon centered on Safari.
     this.defaultIcon.setAttribute('dominant-baseline', 'central');
     this.alternateIcon.setAttribute('dominant-baseline', 'central');
+    if (!this.textElement_) {
+      return;
+    }
     if (this.useDefaultIcon) {
       this.textElement_.appendChild(this.defaultIcon);
     } else {
@@ -64,13 +88,13 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    *
    * @param {boolean} useDefaultIcon - Indicates whether to use the default icon.
    */
-  setIcon(useDefaultIcon) {
+  setIcon(useDefaultIcon: boolean) {
     this.useDefaultIcon = useDefaultIcon;
     // If the field is not using the default icon, we might want an additional
     // callback, such as opening a block flyout.
-    if (!this.useDefaultIcon) {
-      typeof this.callback === 'function' &&
-        this.callback(this.getSourceBlock());
+    const sourceBlock = this.getSourceBlock();
+    if (!this.useDefaultIcon && sourceBlock) {
+      typeof this.callback === 'function' && this.callback(sourceBlock);
     }
   }
 
@@ -90,6 +114,9 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * @override
    */
   showEditor_() {
+    if (!this.textElement_) {
+      return;
+    }
     if (this.useDefaultIcon) {
       this.textElement_.replaceChild(this.alternateIcon, this.defaultIcon);
     } else {
@@ -106,7 +133,10 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock();
+    const sourceBlock = this.getSourceBlock() as BlockSvg | null;
+    if (!sourceBlock) {
+      return;
+    }
     const borderRect = this.borderRect_;
     // If an override is not provided, use the block style to determine colors.
     // Primary and secondary colors are used to provide contrast between
