@@ -10,7 +10,7 @@ import currentUser, {
   setProgressTableV2ClosedBeta,
 } from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
 import {
@@ -41,6 +41,7 @@ describe('SectionProgressSelector', () => {
 
     store = getStore();
     store.dispatch(setShowProgressTableV2(false));
+    store.dispatch(setScriptId(1));
 
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);
@@ -112,8 +113,8 @@ describe('SectionProgressSelector', () => {
 
   it('shows default v2 if no user preference', () => {
     DCDO.set('progress-table-v2-default-v2', true);
-    renderDefault();
     store.dispatch(setShowProgressTableV2(undefined));
+    renderDefault();
 
     screen.getByText(V2_PAGE_LINK_TEXT);
     screen.getByTestId(V2_TEST_ID);
