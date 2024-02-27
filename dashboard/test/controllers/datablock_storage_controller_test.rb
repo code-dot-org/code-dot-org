@@ -137,6 +137,24 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "clear_table" do
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"name" => 'bob', "age" => 8}.to_json,
+    }
+    assert_response :success
+
+    delete _url(:clear_table), params: {table_name: 'mytable'}
+    assert_response :success
+
+    # Rows should be gone
+    get _url(:read_records), params: {table_name: 'mytable'}
+    assert_response :success
+    assert_equal [], JSON.parse(@response.body)
+
+    # Columns should still be there
+    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    assert_response :success
+    assert_equal ['id', 'name', 'age'], JSON.parse(@response.body)
   end
 
   test "add_column" do
