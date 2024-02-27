@@ -6355,13 +6355,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ace-builds@npm:^1.4.12, ace-builds@npm:^1.4.6":
-  version: 1.4.12
-  resolution: "ace-builds@npm:1.4.12"
-  checksum: 009f999a2518abef33057b17f461d1a776ef6ad88baa3dde6d4437f19bcf5588f416349e526a9e3a29658c173bc4bad9df23d9d96e5e56fb569e12be27a09ef3
-  languageName: node
-  linkType: hard
-
 "acorn-globals@npm:^7.0.0":
   version: 7.0.1
   resolution: "acorn-globals@npm:7.0.1"
@@ -8228,7 +8221,6 @@ __metadata:
     "@types/sinon": ^10.0.14
     "@typescript-eslint/eslint-plugin": ^7.0.2
     "@typescript-eslint/parser": ^7.0.2
-    ace-builds: ^1.4.12
     aws-sdk: 2.1231.0
     babel-loader: ^8.2.2
     babel-plugin-add-module-exports: ^0.2.1
@@ -8351,7 +8343,6 @@ __metadata:
     radium: ^0.25.2
     raw-loader: ^4.0.2
     react: ~16.14.0
-    react-ace: ^9.2.1
     react-addons-test-utils: ~15.4.0
     react-beautiful-dnd: ^13.1.0
     react-bootstrap: ^0.33.1
@@ -11402,13 +11393,6 @@ canvg@gabelerner/canvg:
   version: 0.0.1
   resolution: "di@npm:0.0.1"
   checksum: 3f09a99534d33e49264585db7f863ea8bc76c25c4d5a60df387c946018ecf1e1516b2c05a2092e5ca51fcdc08cefe609a6adc5253fa831626cb78cad4746505e
-  languageName: node
-  linkType: hard
-
-"diff-match-patch@npm:^1.0.4":
-  version: 1.0.5
-  resolution: "diff-match-patch@npm:1.0.5"
-  checksum: 841522d01b09cccbc4e4402cf61514a81b906349a7d97b67222390f2d35cf5df277cb23959eeed212d5e46afb5629cebab41b87918672c5a05c11c73688630e3
   languageName: node
   linkType: hard
 
@@ -23572,22 +23556,6 @@ es6-shim@latest:
   bin:
     rc: ./cli.js
   checksum: 2e26e052f8be2abd64e6d1dabfbd7be03f80ec18ccbc49562d31f617d0015fbdbcf0f9eed30346ea6ab789e0fdfe4337f033f8016efdbee0df5354751842080e
-  languageName: node
-  linkType: hard
-
-"react-ace@npm:^9.2.1":
-  version: 9.2.1
-  resolution: "react-ace@npm:9.2.1"
-  dependencies:
-    ace-builds: ^1.4.6
-    diff-match-patch: ^1.0.4
-    lodash.get: ^4.4.2
-    lodash.isequal: ^4.5.0
-    prop-types: ^15.7.2
-  peerDependencies:
-    react: ^0.13.0 || ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
-    react-dom: ^0.13.0 || ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
-  checksum: 32bfcca13f2ea7cfba9148caaccec5676dadffcca29f9354c367b208805092b6c8680067bbf6d12e2aaf7f700b4eb270874b92447eab272761b44e6b55ccf4a8
   languageName: node
   linkType: hard
 
