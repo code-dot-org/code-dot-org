@@ -12,7 +12,6 @@ module Crowdin
     attr_reader(
       :project,
       :files_to_download_json,
-      :files_to_sync_out_json,
       :etags_json,
       :locales_dir,
       :locale_subdir,
@@ -23,8 +22,6 @@ module Crowdin
     # @param options [Hash, nil]
     # @options options [String, nil] :files_to_download_json path to file where files
     #  should be downloaded will be written out in JSON format
-    # @options options [String, nil] :files_to_sync_out_json path to file where files
-    #  should be synced-out will be written out in JSON format
     # @options options [String, nil] :etags_json path to file where etags will be
     #  written out in JSON format
     # @options options [String, nil] :locales_dir path to directory where changed
@@ -36,7 +33,6 @@ module Crowdin
       @project = project
       @etags_json = options.fetch(:etags_json, "/tmp/#{project.id}_etags.json")
       @files_to_download_json = options.fetch(:files_to_download_json, "/tmp/#{project.id}_files_to_download.json")
-      @files_to_sync_out_json = options.fetch(:files_to_sync_out_json, "/tmp/#{project.id}_files_to_sync_out.json")
       @locales_dir = options.fetch(:locales_dir, "/tmp/locales")
       @locale_subdir = options.fetch(:locale_subdir, nil)
       @logger = options.fetch(:logger, Logger.new(STDOUT))
@@ -47,10 +43,6 @@ module Crowdin
     # and updates the etags by writing the results out to @etags_json.
     def download_changed_files
       etags = File.exist?(@etags_json) ? JSON.parse(File.read(@etags_json)) : {}
-      # Initialize @files_to_sync_out file if it doesn't exist yet.
-      # It could already exist if multiple sync-down's occurred since the last sync-out.
-      File.write @files_to_sync_out_json, JSON.pretty_generate({}) unless File.exist?(@files_to_sync_out_json)
-      files_to_sync_out = JSON.parse(File.read(@files_to_sync_out_json))
 
       files = @project.list_files
       languages = @project.languages
@@ -87,12 +79,6 @@ module Crowdin
         # Save incremental progress so we don't have to re-download everything
         # if the current run fails for any reason.
         # The order of saving progress is important for recovery purpose.
-        # Since @files_to_sync_out_json depends on @etags_json, @etags_json
-        # should be updated last.
-        files_to_sync_out[language_code] ||= {}
-        files_to_sync_out[language_code].merge! downloaded_files
-        File.write @files_to_sync_out_json, JSON.pretty_generate(files_to_sync_out)
-
         etags[language_code] ||= {}
         etags[language_code].merge! downloaded_files
         File.write @etags_json, JSON.pretty_generate(etags)

@@ -23,38 +23,38 @@ Hesaplama teknolojisi modern kültürün ayrılmaz bir parçası iken ve insanla
 
 Bilgisayar bilimi sanayiyi dönüştürürken, yeni ticaret alanları yaratıyor, bilimin her alanında yeniliği sürüyor ve kurulu ekonomik sektörlerde üretkenliği artıyor;
 
-Bilgisayar bilimi alanı, ABD'nin ekonomik çıktısına önemli bir katkı sağlayan ekonomimizin bilgi teknolojisi sektörünün temelini oluşturan temel bir konudur;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Yapay zeka okuryazarlığı, bilgisayar bilimindeki temel kavramlar da dahil olmak üzere yapay zekanın nasıl çalıştığı ve yapay zekanın güvenli, sorumlu ve etik olarak nasıl kullanılacağı ile ilgili bilgi, beceri ve tutumları ifade ederken;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-Yapay zeka da dahil olmak üzere bilgisayar bilimi alanı, ABD ekonomisinin neredeyse tüm sektörlerini temelden dönüştürme gücüne sahip teknolojilerdir;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-Yapay zeka da dahil olmak üzere bilgisayar biliminin tüm alanlarında teknolojik liderlik ekonomik ve ulusal bir güvenlik zorunluluğudur;
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Bilgisayar bilimindeki işler için görünüm, ülkenin her yerinde 500.000'i aşkın açık bilgisayar pozisyonuyla aydınlatılmışken;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Öğrencilere yüksek kaliteli bilgisayar bilimleri etkinliklerine katılma şansını sunmak onları alanın sunduğu zengin fırsatlara ve hayatları boyunca onlara hizmet edecek eleştirel düşünme becerilerine bırakır;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Tüm öğrenciler, ilk ve orta öğrenim seviyesinde bilgisayar bilimi öğrenmek için gerekli kalifiye öğretmenlere, teknolojiye ve yaşa uygun müfredata erişim de dahil olmak üzere bilgisayar bilimleri eğitiminde kapsamlı bir hazırlık yapmayı hak ediyor;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Bilgisayar bilimleri eğitiminin, tüm öğrenciler için bilgisayar bilimleri kurslarına erişimin iyileştirilmesi ve bilgisayar bilimleri öğretmenleri için mesleki gelişim sağlanması da dahil olmak üzere ele alınacak zorluklar vardır;
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-Bilgisayar Bilimleri Eğitim Haftası boyunca Kodlama Saatine katılarak bilgisayar bilimleri alanının gizemini aralayıp açıklayarak ve daha fazla öğrenciyi bilgisayar bilimi konusunda daha fazla çalışmaya teşvik etmeye hizmet ederken;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Bilgisayar bilimi alanının, her düzeyde ve dalda ırk, etnik köken ve cinsiyet açısından farklı bir aday alanını çekmek ve elde tutmak da dahil olmak üzere ele alınacak önemli eşitlik engelleri vardır;
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Bilgisayar bilimi alanında ilk kadınlardan biri olan Grace Murray Hopper, yeni yazılım dilleri geliştirdi ve bilgisayar bilimlerinde pek çok ilerlemenin temelini atan bilgisayar sistemleri için öncül standartlar geliştirdi; ve
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-{{ campaign_date/start_long }} haftası, Grace Hopper'ın doğum günü onuruna "Bilgisayar Bilimi Eğitim Haftası" olarak ilan edilmiştir. Yukarıdaki hususlar göz önünde bulundurularak<br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-(MECLİS VEYA SENATO, EYALET, İLÇE, ŞEHİR VEYA OKUL YÖNETİM KURULU) tarafından aşağıdakilerin yapılmasına karar verilmiştir:
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) Bilgisayar Bilimi Eğitim Haftası ({{ campaign_date/full }}) tanıtılması desteklenecek;
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) okulları, eğiticileri, ebeveynleri ve politika yapıcıları Bilgisayar Bilim Eğitim Haftası'na öğrencilerinin Kod Yasasına katılmalarını sağlayarak katılmalarını teşvik eder;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) okullar, öğretmenler, araştırmacılar, üniversiteler, iş dünyası liderleri ve politika yapıcılar; öğretmenlerin tüm eğitim düzeylerinde bilgisayar bilimlerinde sürdürülebilir öğrenmeyi sağlamaları için en yeni mesleki gelişim olanaklarından yararlanabilmeleri ve öğrencileri bilgisayar bilimi kavramlarıyla tanıştırmaları için gerekli mekanizmaları belirlemeye teşvik edilecek;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) kız öğrenciler ve bilgisayar bilimlerinde yeterince temsil edilmeyen ırksal ve etnik gruplardan gelen öğrenciler için mevcut programlar dahil olmak üzere fırsatları teşvik eder.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

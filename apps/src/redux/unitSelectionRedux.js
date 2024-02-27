@@ -44,6 +44,10 @@ export const getSelectedScriptDescription = state => {
   return getSelectedUnit(state) ? getSelectedUnit(state).description : null;
 };
 
+export const doesCurrentCourseUseFeedback = state => {
+  return !!getSelectedUnit(state)?.is_feedback_enabled;
+};
+
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,

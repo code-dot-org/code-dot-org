@@ -41,14 +41,12 @@ $container-width: 309px;
 .assignSuccessMessageContainer {
   display: flex;
   min-width: 250px;
-  margin-left: -125px;
   background-color: color.$bootstrap_success_background;
   text-align: center;
   border-radius: 5px;
   border-color: color.$bootstrap_success_border;
   position: fixed;
-  z-index: 1;
-  left: 50%;
+  z-index: 4;
   top: 70px;
 
   button {
@@ -64,4 +62,9 @@ $container-width: 309px;
 .assignSuccessMessage {
   margin: 16px;
   color: color.$bootstrap_success_text;
+}
+
+.assignSuccessMessageCenter {
+  display: flex;
+  justify-content: center;
 }

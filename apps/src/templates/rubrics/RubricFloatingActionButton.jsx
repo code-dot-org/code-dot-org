@@ -1,7 +1,9 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import style from './rubrics.module.scss';
-const icon = require('@cdo/static/ai-fab-background.png');
+import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -10,14 +12,17 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
+import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-export default function RubricFloatingActionButton({
+function RubricFloatingActionButton({
   rubric,
   studentLevelInfo,
   currentLevelName,
   reportingData,
+  aiEnabled,
+  sectionId,
 }) {
-  const [isOpen, setIsOpen] = useState(!!studentLevelInfo);
+  const [isOpen, setIsOpen] = useState(false);
 
   const eventData = useMemo(() => {
     return {
@@ -55,9 +60,12 @@ export default function RubricFloatingActionButton({
     }
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
+  const icon = aiEnabled ? aiFabIcon : rubricFabIcon;
+
   return (
     <div id="fab-contained">
       <button
+        id="ui-floatingActionButton"
         className={style.floatingActionButton}
         // I couldn't get an image url to work in the SCSS module, so using an inline style for now
         style={{backgroundImage: `url(${icon})`}}
@@ -70,9 +78,10 @@ export default function RubricFloatingActionButton({
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
         currentLevelName={currentLevelName}
-        initialTeacherHasEnabledAi
+        teacherHasEnabledAi={aiEnabled}
         open={isOpen}
         closeRubric={handleClick}
+        sectionId={sectionId}
       />
     </div>
   );
@@ -83,4 +92,12 @@ RubricFloatingActionButton.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
+  aiEnabled: PropTypes.bool,
+  sectionId: PropTypes.number,
 };
+
+export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
+
+export default connect(state => ({
+  sectionId: selectedSection(state)?.id,
+}))(RubricFloatingActionButton);

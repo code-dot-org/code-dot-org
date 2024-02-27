@@ -2,6 +2,8 @@ require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
+# rubocop:disable CustomCops/PegasusDbUsage
+# rubocop:disable CustomCops/DashboardDbUsage
 class DeleteAccountsHelper
   class SafetyConstraintViolation < RuntimeError; end
 
@@ -197,7 +199,6 @@ class DeleteAccountsHelper
 
     unless pd_enrollment_ids.empty?
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
     end
@@ -287,16 +288,6 @@ class DeleteAccountsHelper
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
   end
 
-  # Removes signature and school_id from applications for this user
-  # @param [User] user
-  def anonymize_circuit_playground_discount_application(user)
-    @log.puts "Anonymizing CircuitPlaygroundDiscountApplication"
-    if user.circuit_playground_discount_application
-      user.circuit_playground_discount_application.anonymize
-      @log.puts "Anonymized 1 CircuitPlaygroundDiscountApplication"
-    end
-  end
-
   def purge_teacher_feedbacks(user_id)
     @log.puts "Removing TeacherFeedback"
 
@@ -374,6 +365,12 @@ class DeleteAccountsHelper
     user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
   end
 
+  def purge_lti_user_identities(user)
+    @log.puts "Deleting lti user identities"
+    # Delete most recently destroyed (soft-deleted) record first
+    user.lti_user_identities.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
+  end
+
   def purge_contact_rollups(email)
     @log.puts "Deleting ContactRollups records for email #{email}"
     return unless email
@@ -422,11 +419,11 @@ class DeleteAccountsHelper
 
     user.destroy
 
+    purge_lti_user_identities(user)
     purge_teacher_feedbacks(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
-    anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
@@ -498,3 +495,5 @@ class DeleteAccountsHelper
       )
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage
+# rubocop:enable CustomCops/DashboardDbUsage

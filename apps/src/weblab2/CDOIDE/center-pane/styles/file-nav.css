@@ -1,0 +1,17 @@
+.files-nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  align-items: flex-end;
+  height: 100%;
+  overflow-x: scroll;
+  max-width: 100%;
+}
+
+.file-tab {
+  border: 1px solid black;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

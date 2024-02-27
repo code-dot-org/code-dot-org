@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Day 2, Asynchronous Part 1
+# Day 1, Asynchronous Part 1
 
 ##### Welcome! This asynchronous module is designed to give you time to review the lesson that your group will be leading during your TLO (Teacher-Learner-Observer) session.
 

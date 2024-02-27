@@ -18,16 +18,16 @@
             "\"rand\""
           ],
           [
-            "Circles",
-            "\"circles\""
-          ],
-          [
             "Angles",
             "\"quads\""
           ],
           [
             "Blooming Petals",
             "\"blooming_petals\""
+          ],
+          [
+            "Circles",
+            "\"circles\""
           ],
           [
             "Clouds",
@@ -102,10 +102,6 @@
             "\"text\""
           ],
           [
-            "Squiggles",
-            "\"squiggles\""
-          ],
-          [
             "Space",
             "\"galaxy\""
           ],
@@ -120,6 +116,10 @@
           [
             "Squares",
             "\"disco\""
+          ],
+          [
+            "Squiggles",
+            "\"squiggles\""
           ],
           [
             "Starburst",

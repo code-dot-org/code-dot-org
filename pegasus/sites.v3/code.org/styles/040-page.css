@@ -5,7 +5,6 @@
 .h0 {
   color: #555;
   font-size: 44px;
-  font-family: Gotham\ 4r, sans-serif;
   margin-top: 50px;
   margin-bottom: 30px;
   line-height: 1.2em
@@ -14,7 +13,6 @@
 .btn-gray-override {
   display: inline-block;
   font-size: 12px;
-  font-family: "Gotham 4r",sans-serif;
   border-style: solid;
   border-width: 1px;
   text-decoration: none;
@@ -56,10 +54,6 @@ blockquote {
 blockquote p {
   color: #ff8a00;
   line-height: 1.8
-}
-
-em strong, strong em {
-  font-family: Gotham\ 7i, sans-serif
 }
 
 /*This can be removed when Bootstrap is updated, as they've addressed
@@ -117,9 +111,7 @@ th a:active, th a:hover, th a:link, th a:visited {
 }
 
 #index .count h1, #index .count h2 {
-  font-family: Gotham\ 5r, sans-serif;
   color: #fff;
-  font-weight: 400
 }
 
 #index .count h2 {
@@ -139,9 +131,7 @@ th a:active, th a:hover, th a:link, th a:visited {
 }
 
 #index .count h3, #index .count h4 {
-  font-family: Gotham\ 5r, sans-serif;
   color: #fff;
-  font-weight: 400
 }
 
 #index .count h4 {
@@ -170,9 +160,7 @@ th a:active, th a:hover, th a:link, th a:visited {
 }
 
 #index #twentyhour #heading {
-  font-family: Gotham\ 5r, sans-serif;
   font-size: 21px;
-  font-weight: 400;
   padding-bottom: 14px
 }
 
@@ -214,9 +202,7 @@ th a:active, th a:hover, th a:link, th a:visited {
 }
 
 #oldindex .count h1, #oldindex .count h2 {
-  font-family: Gotham\ 5r, sans-serif;
   color: #fff;
-  font-weight: 400
 }
 
 #oldindex .count h2 {
@@ -227,11 +213,9 @@ th a:active, th a:hover, th a:link, th a:visited {
 }
 
 #oldindex .count h3 {
-  font-family: Gotham\ 5r, sans-serif;
   color: #fff;
   font-size: 32px;
   line-height: 32px;
-  font-weight: 400;
   margin-top: 5px;
   margin-bottom: 0
 }
@@ -297,7 +281,6 @@ th a:active, th a:hover, th a:link, th a:visited {
 }
 
 .sidebar h3 {
-  font-family: Gotham\ 4r, sans-serif;
   font-size: 18px
 }
 
@@ -314,9 +297,7 @@ th a:active, th a:hover, th a:link, th a:visited {
 
 .courseblock a {
   text-decoration: none;
-  font-weight: 400;
   color: dimgray;
-  font-family: Gotham\ 4r, sans-serif
 }
 
 .courseblock h3 {
@@ -349,7 +330,6 @@ th a:active, th a:hover, th a:link, th a:visited {
 #hoc2014 {
   font-size: 18px;
   color: #fff;
-  font-family: Gotham\ 5r, sans-serif;
   line-height: 32px
 }
 
@@ -378,13 +358,11 @@ th a:active, th a:hover, th a:link, th a:visited {
 
 #hoc2014 .optionbutton {
   font-size: 18px;
-  font-family: Gotham\ 5r, sans-serif;
   height: 40px
 }
 
 #hoc2014 .whatishoc {
   font-size: 14px;
-  font-family: Gotham\ 5r, sans-serif
 }
 
 .studiobar h1 {
@@ -411,7 +389,6 @@ th a:active, th a:hover, th a:link, th a:visited {
 
 .studiobar .title {
   font-size: 20px;
-  font-family: Gotham\ 5r, sans-serif;
   padding-left: 10px;
   padding-right: 10px;
   border-width: 0 1px;
@@ -424,7 +401,6 @@ th a:active, th a:hover, th a:link, th a:visited {
 }
 
 .studiobar .body {
-  font-family: Gotham\ 4r, sans-serif;
   padding: 10px;
   padding-top: 4px;
   line-height: 18px;
@@ -517,12 +493,6 @@ th a:active, th a:hover, th a:link, th a:visited {
   color: #c1c1c1 !important
 }
 
-.btn-white {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc
-}
-
 .btn-carousel-slide {
   background: #ffa401
 }
@@ -547,7 +517,6 @@ th a:active, th a:hover, th a:link, th a:visited {
 a.lines_of_code_link {
   color: grey;
   text-decoration: none;
-  font-family: Gotham\ 4r, sans-serif
 }
 
 .show-film .show-film-content {
@@ -563,7 +532,6 @@ a.lines_of_code_link {
 
 .show-film h3 {
   font-size: 1.25em;
-  font-family: Gotham\ 4r, sans-serif;
   text-align: center;
   color: #7c7c7c;
   margin: 1em 0 .5em

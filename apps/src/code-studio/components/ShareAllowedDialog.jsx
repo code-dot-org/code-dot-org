@@ -16,36 +16,33 @@ import {showPublishDialog} from '../../templates/projects/publishDialog/publishD
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '../../templates/Button';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-function recordShare(type) {
+function recordShare(type, appType) {
   if (!window.dashboard) {
     return;
   }
-
-  firehoseClient.putRecord(
-    {
-      study: 'finish-dialog-share',
-      study_group: 'v1',
-      event: 'project-share',
-      project_id: dashboard.project && dashboard.project.getCurrentId(),
-      data_string: type,
-    },
-    {includeUserId: true}
-  );
+  if (Object.prototype.hasOwnProperty.call(EVENTS, type)) {
+    analyticsReporter.sendEvent(type, {
+      lab_type: appType,
+      channel_id: dashboard.project && dashboard.project.getCurrentId(),
+    });
+  }
 }
 
-function wrapShareClick(handler, type) {
+function wrapShareClick(handler, type, appType) {
   return function () {
     try {
-      recordShare(type);
+      recordShare(type, appType);
     } finally {
       handler.apply(this, arguments);
     }
@@ -101,6 +98,9 @@ class ShareAllowedDialog extends React.Component {
     isFacebookAvailable: false,
     replayVideoUnavailable: false,
     hasBeenCopied: false,
+    isLoadingAccountAndProjectAge: false,
+    isAccountOldEnoughToPublish: false,
+    isProjectOldEnoughToPublish: false,
   };
 
   componentDidMount() {
@@ -116,14 +116,38 @@ class ShareAllowedDialog extends React.Component {
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
     }
+
+    this.checkProjectAndAccountAge();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
-      recordShare('open');
+      recordShare('SHARING_DIALOG_OPEN', this.props.appType);
       this.setState({hasBeenCopied: false});
+
+      this.checkProjectAndAccountAge();
     }
   }
+
+  checkProjectAndAccountAge = () => {
+    if (this.isPublishAllowed() && dashboard.project) {
+      this.setState({isLoadingAccountAndProjectAge: true});
+
+      const appType = dashboard.project.getStandaloneApp();
+      const channelId = dashboard.project.getCurrentId();
+      fetch(`/projects/${appType}/${channelId}/can_publish_age_status`)
+        .then(response => response.json())
+        .then(data => {
+          this.setState({
+            isProjectOldEnoughToPublish:
+              data.project_existed_long_enough_to_publish,
+            isAccountOldEnoughToPublish:
+              data.user_existed_long_enough_to_publish,
+            isLoadingAccountAndProjectAge: false,
+          });
+        });
+    }
+  };
 
   replayVideoNotFound = () => {
     this.setState({
@@ -136,7 +160,7 @@ class ShareAllowedDialog extends React.Component {
     ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
 
   close = () => {
-    recordShare('close');
+    recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
     this.props.onClose();
     this.setState({
       replayVideoUnavailable: false,
@@ -178,12 +202,49 @@ class ShareAllowedDialog extends React.Component {
     );
   };
 
+  // inRestrictedShareMode overrides canPublish and canShareSocial
+  isPublishAllowed = () =>
+    this.props.canPublish && !this.props.inRestrictedShareMode;
+  isSocialShareAllowed = () =>
+    this.props.canShareSocial && !this.props.inRestrictedShareMode;
+
+  getWarningText = showPublishInfo => {
+    if (this.props.inRestrictedShareMode) {
+      return i18n.restrictedShareInfo();
+    }
+
+    if (this.state.replayVideoUnavailable) {
+      return i18n.downloadReplayVideoButtonError();
+    }
+
+    // The following warnings require showPublishInfo to be true
+    if (!showPublishInfo) {
+      return null;
+    }
+
+    if (!this.props.thumbnailUrl) {
+      return i18n.thumbnailWarning();
+    }
+
+    if (
+      !this.state.isLoadingAccountAndProjectAge &&
+      !this.state.isAccountOldEnoughToPublish
+    ) {
+      return i18n.publishFailedAccountTooNew();
+    }
+
+    if (
+      !this.state.isLoadingAccountAndProjectAge &&
+      !this.state.isProjectOldEnoughToPublish
+    ) {
+      return i18n.publishFailedProjectTooNew();
+    }
+  };
+
   render() {
     const {
       canPrint,
-      canPublish,
       isPublished,
-      inRestrictedShareMode,
       canShareSocial,
       appType,
       selectedSong,
@@ -197,9 +258,12 @@ class ShareAllowedDialog extends React.Component {
       channelId,
     } = this.props;
 
-    // inRestrictedShareMode overrides canPublish and canShareSocial
-    const publishAllowed = canPublish && !inRestrictedShareMode;
-    const socialShareAllowed = canShareSocial && !inRestrictedShareMode;
+    const {
+      isAccountOldEnoughToPublish,
+      isProjectOldEnoughToPublish,
+      isLoadingAccountAndProjectAge,
+    } = this.state;
+
     const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
@@ -250,6 +314,14 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: p5labConstants.APP_WIDTH + 40,
       };
     }
+
+    const showPublishInfo = this.isPublishAllowed() && !isPublished;
+    const disablePublishButton =
+      !hasThumbnail ||
+      !isAccountOldEnoughToPublish ||
+      !isProjectOldEnoughToPublish;
+
+    const warningText = this.getWarningText(showPublishInfo);
 
     return (
       <div>
@@ -304,7 +376,11 @@ class ShareAllowedDialog extends React.Component {
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
-                    <img style={styles.thumbnailImg} src={thumbnailUrl} />
+                    <img
+                      style={styles.thumbnailImg}
+                      src={thumbnailUrl}
+                      alt={i18n.projectThumbnail()}
+                    />
                   </div>
                   <div>
                     <Button
@@ -316,7 +392,11 @@ class ShareAllowedDialog extends React.Component {
                         ...styles.copyButton,
                         ...(this.state.hasBeenCopied && styles.copyButtonLight),
                       }}
-                      onClick={wrapShareClick(this.copy, 'copy')}
+                      onClick={wrapShareClick(
+                        this.copy,
+                        'SHARING_LINK_COPY',
+                        this.props.appType
+                      )}
                       text={i18n.copyLinkToProject()}
                       value={shareUrl}
                     />
@@ -333,7 +413,8 @@ class ShareAllowedDialog extends React.Component {
                     href=""
                     onClick={wrapShareClick(
                       this.showSendToPhone,
-                      'send-to-phone'
+                      'SHARING_LINK_SEND_TO_PHONE',
+                      this.props.appType
                     )}
                     style={styles.sendToPhoneButton}
                   >
@@ -343,22 +424,29 @@ class ShareAllowedDialog extends React.Component {
                     </span>
                   </Button>
 
-                  {publishAllowed && !isPublished && (
-                    <Button
-                      type="button"
-                      color={Button.ButtonColor.neutralDark}
-                      id="share-dialog-publish-button"
-                      style={
-                        hasThumbnail ? styles.button : styles.buttonDisabled
-                      }
-                      onClick={wrapShareClick(this.publish, 'publish')}
-                      disabled={!hasThumbnail}
-                      className="no-mc"
-                    >
-                      <span>{i18n.publish()}</span>
-                    </Button>
-                  )}
-                  {publishAllowed && isPublished && (
+                  {showPublishInfo &&
+                    (isLoadingAccountAndProjectAge ? (
+                      <Spinner size="medium" style={styles.loadingSpinner} />
+                    ) : (
+                      <Button
+                        type="button"
+                        color={Button.ButtonColor.neutralDark}
+                        id="share-dialog-publish-button"
+                        style={
+                          hasThumbnail ? styles.button : styles.buttonDisabled
+                        }
+                        onClick={wrapShareClick(
+                          this.publish,
+                          'SHARING_PUBLISH',
+                          this.props.appType
+                        )}
+                        disabled={disablePublishButton}
+                        className="no-mc"
+                      >
+                        <span>{i18n.publish()}</span>
+                      </Button>
+                    ))}
+                  {this.isPublishAllowed() && isPublished && (
                     <PendingButton
                       id="share-dialog-unpublish-button"
                       isPending={isUnpublishPending}
@@ -377,7 +465,7 @@ class ShareAllowedDialog extends React.Component {
                     </a>
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
-                  {socialShareAllowed && !isUnpublishPending && (
+                  {this.isSocialShareAllowed() && !isUnpublishPending && (
                     <span>
                       {this.state.isFacebookAvailable && (
                         <a
@@ -386,7 +474,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'facebook'
+                            'SHARING_FB',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >
@@ -400,7 +489,8 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'twitter'
+                            'SHARING_TWITTER',
+                            this.props.appType
                           )}
                           style={styles.socialLink}
                         >
@@ -428,33 +518,13 @@ class ShareAllowedDialog extends React.Component {
                     <div style={{clear: 'both'}} />
                   </div>
                 )}
-                {publishAllowed && !isPublished && !hasThumbnail && (
-                  <div style={{clear: 'both', marginTop: 10}}>
+                {warningText && (
+                  <div style={styles.warningMessageContainer}>
                     <span
                       style={styles.thumbnailWarning}
                       className="thumbnail-warning"
                     >
-                      {i18n.thumbnailWarning()}
-                    </span>
-                  </div>
-                )}
-                {inRestrictedShareMode && (
-                  <div style={{clear: 'both', marginTop: 10}}>
-                    <span
-                      style={styles.thumbnailWarning}
-                      className="thumbnail-warning"
-                    >
-                      {i18n.restrictedShareInfo()}
-                    </span>
-                  </div>
-                )}
-                {this.state.replayVideoUnavailable && (
-                  <div style={{clear: 'both', marginTop: 10}}>
-                    <span
-                      style={styles.thumbnailWarning}
-                      className="thumbnail-warning"
-                    >
-                      {i18n.downloadReplayVideoButtonError()}
+                      {warningText}
                     </span>
                   </div>
                 )}
@@ -594,6 +664,13 @@ const styles = {
   },
   socialLink: {
     marginRight: 16,
+  },
+  loadingSpinner: {
+    marginRight: 16,
+  },
+  warningMessageContainer: {
+    clear: 'both',
+    marginTop: 10,
   },
 };
 

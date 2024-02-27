@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
-  title: 'ResourceCard',
   component: ResourceCard,
 };
 

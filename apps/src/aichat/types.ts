@@ -1,4 +1,5 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {AiTutorInteractionSaveStatus} from '@cdo/apps/util/sharedConstants';
 
 // TODO: Ideally this type would only contain keys present in
 // translated string JSON files (ex. apps/i18n/aichat/en_us.json).
@@ -15,6 +16,7 @@ export type ChatCompletionMessage = {
   role: Role;
   chatMessageText: string;
   status: Status;
+  timestamp?: string;
 };
 
 export enum Role {
@@ -23,12 +25,10 @@ export enum Role {
   SYSTEM = 'system',
 }
 
-export enum Status {
-  OK = 'ok',
-  PERSONAL = 'personal',
-  INAPPROPRIATE = 'inappropriate',
-  UNKNOWN = 'unknown',
-}
+export type Status =
+  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
+export const Status = AiTutorInteractionSaveStatus;
+export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
 export interface AichatLevelProperties extends LevelProperties {
   systemPrompt: string;

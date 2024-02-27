@@ -275,6 +275,7 @@ export const processedLevel = level => {
         ? undefined
         : level.letter || level.title.toString(),
     isConceptLevel: level.is_concept_level,
+    isValidated: level.is_validated,
     bonus: level.bonus,
     pageNumber:
       typeof level.page_number !== 'undefined'

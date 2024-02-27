@@ -38,7 +38,7 @@ describe('EvidenceLevelsForTeachers', () => {
   });
 
   it('calls radioButtonCallback when understanding is selected', () => {
-    const callback = sinon.stub();
+    const callback = sinon.spy();
     const wrapper = mount(
       <EvidenceLevelsForTeachers
         {...DEFAULT_PROPS}
@@ -48,6 +48,8 @@ describe('EvidenceLevelsForTeachers', () => {
     );
     wrapper.find('input').first().simulate('change');
     sinon.assert.calledOnce(callback);
+    const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
+    expect(callback).to.have.been.calledWith(firstEvidenceLevel.understanding);
     wrapper.unmount();
   });
 

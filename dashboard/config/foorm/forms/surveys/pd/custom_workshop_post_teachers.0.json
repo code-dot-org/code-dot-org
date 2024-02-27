@@ -14,24 +14,61 @@
           "type": "radiogroup",
           "name": "pd_content",
           "title": "What content was the focus of the PD workshop you participated in?",
+          "isRequired": true,
           "choices": [
             {
-              "value": "csd_6_maker_microbit",
-              "text": "Creating Apps with Devices (micro:bit)"
+              "value": "csd_7_maker_microbit",
+              "text": "AI and Machine Learning"
             },
             {
               "value": "csd_6_maker_circuit_playground",
               "text": "Creating Apps with Devices (Circuit Playground)"
             },
             {
-              "value": "csd_7_maker_microbit",
-              "text": "AI and Machine Learning"
+              "value": "csd_6_maker_microbit",
+              "text": "Creating Apps with Devices (micro:bit)"
+            },
+            {
+              "value": "csb",
+              "text": "Computer Science Basics"
+            },
+            {
+              "value": "csc",
+              "text": "Computer Science Connections"
+            },
+            {
+              "value": "csd_5_data_society",
+              "text": "Data and Society"
+            },
+            {
+              "value": "csd_3_interactive_animations_games",
+              "text": "Interactive Animations and Games"
+            },
+            {
+              "value": "csd_4_design_process",
+              "text": "The Design Process"
+            },
+            {
+              "value": "csd_1_problem_solving_process",
+              "text": "The Problem Solving Process"
+            },
+            {
+              "value": "csd_2_web_development",
+              "text": "Web Development"
             },
             {
               "value": "not_sure",
               "text": "I'm not sure"
             }
           ]
+        },
+        {
+          "type": "text",
+          "name": "workshop_date",
+          "title": "Please enter the date of the workshop you attended",
+          "isRequired": true,
+          "inputType": "date",
+          "min": "2023-10-24"
         },
         {
           "type": "radiogroup",
@@ -151,7 +188,7 @@
           "maxRateDescription": "Very interested"
         },
         {
-          "type": "text",
+          "type": "comment",
           "name": "open_questions_implementation",
           "title": "Do you have any questions about implementing this curriculum in your classroom that were not answered during this workshop?",
           "rows": 3

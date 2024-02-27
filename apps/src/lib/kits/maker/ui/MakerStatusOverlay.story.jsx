@@ -16,7 +16,6 @@ const commonProps = {
 };
 
 export default {
-  title: 'MakerStatusOverlay',
   component: UnconnectedMakerStatusOverlay,
 };
 

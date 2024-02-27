@@ -6,7 +6,7 @@
   It is defined as: If there are selected songs, then use the first one in the list. Otherwise, use the first song in the list
   of all songs.
 - songMap = @level.class.hoc_songs.reduce({}) {|hash, song| hash[song[1]] = song; hash }
-- selectedSongObjects = @level.song_selection ? @level.song_selection.map {|s| songMap[s] } : @level.class.hoc_songs
+- selectedSongObjects = @level.song_selection ? @level.song_selection.map {|s| songMap[s] }.compact : @level.class.hoc_songs
 - selectedSongMap = selectedSongObjects.reduce({}) {|hash, song| hash[song[1]] = song; hash }
 - fallbackDefaultSong = selectedSongObjects[0]
 
@@ -22,4 +22,4 @@
 
 %p Previously chosen default song (may not match actual default if song selection was limited):
 
-= songMap[@level.default_song]&.[](0) || "No song chosen"
+= (songMap[@level.default_song]&.length && songMap[@level.default_song][0]) || "No song chosen"

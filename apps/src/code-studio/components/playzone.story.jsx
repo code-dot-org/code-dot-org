@@ -3,7 +3,6 @@ import PlayZone from './playzone';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'PlayZone',
   component: PlayZone,
 };
 

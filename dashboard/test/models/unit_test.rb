@@ -1242,6 +1242,26 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal expected_announcements, summary[:announcements]
   end
 
+  test 'summarize_for_unit_selector determines whether feedback is enabled' do
+    course_version = create :course_version, :with_unit
+    course_offering = course_version.course_offering
+    course_offering.update!(marketing_initiative: 'CSD')
+    unit = course_version.content_root
+    summary = unit.summarize_for_unit_selector
+    assert summary[:is_feedback_enabled]
+
+    course_offering.update!(marketing_initiative: 'HOC')
+    unit.reload
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+
+    # no course version means no feedback
+    unit = create :script
+    refute unit.get_course_version
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+  end
+
   test 'should generate PLC objects for migrated unit' do
     i18n = {
       'en' => {
@@ -2089,6 +2109,42 @@ class UnitTest < ActiveSupport::TestCase
   test 'localized_title defaults to name' do
     unit = create :script, name: "test-localized-title-default"
     assert_equal "test-localized-title-default", unit.localized_title
+  end
+
+  test 'next_unit returns next unit if there is another unit in unit group' do
+    unit_group = create :unit_group
+    unit1 = create :unit
+    unit2 = create :unit
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_equal unit2, unit1.next_unit(student)
+  end
+
+  test 'next_unit returns nil if there is no next unit in unit group' do
+    unit1 = create :unit
+    unit2 = create :unit
+    unit_group = create :unit_group
+    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+    unit1.reload
+    unit2.reload
+
+    student = create :student
+
+    assert_nil unit2.next_unit(student)
+  end
+
+  test 'next_unit returns nil if not in a unit group' do
+    unit1 = create :unit, is_course: true
+
+    student = create :student
+
+    assert_nil unit1.next_unit(student)
   end
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase

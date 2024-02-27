@@ -15,7 +15,6 @@ const mockApi = {
 };
 
 export default {
-  title: 'AddAssetButtonRow',
   component: AddAssetButtonRow,
 };
 

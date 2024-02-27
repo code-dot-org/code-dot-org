@@ -14,13 +14,15 @@ markdown <<MARKDOWN
 
 ##### Chapter 1 of the Problem Solving and Computing unit consists of three lessons. Throughout the chapter, students will solve problems that require them to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. 
 
-##### Click the dropdown arrows below to view lesson overviews.
+###### Click the dropdown arrows below to view lesson overviews.
 
 <details style="background-color: #ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:5px;">
 <summary style="font-size:1.5em; font-weight: bold;">🔎 Lesson 1: Intro to Problem Solving</summary>
 <div style="margin-top:20px; margin-left:20px; margin-right:20px;">
 <p>
-<img src="https://images.code.org/564c63dd5be84166dd2753dbaf88c895-image-1651244113551.54.00 AM.png" alt="Image of sample activity guide" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/564c63dd5be84166dd2753dbaf88c895-image-1651244113551.54.00 AM.png" alt="Image of sample activity guide" width="300px" style="float:left; margin: 0 0 5px 40px;  padding-right: 30px;">
+
+<a href="https://studio.code.org/s/csd1-2023/lessons/1" target="blank" rel="noopener noreferrer">Link to lesson</a>
 
 **Question of the Day:** What can help us to work together and solve problems as a team?
 
@@ -28,7 +30,7 @@ markdown <<MARKDOWN
 
 In this lesson, students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course
 
-Alternate versions of this lesson are also available.
+Alternate versions of this lesson are also available depending on the resources available to you. These lessons are lessons 9, 10, and 11 of the unit. You **are not expected** to teach all of the following lessons.
 
 * Newspaper Table
 * Spaghetti Bridge
@@ -50,6 +52,8 @@ Alternate versions of this lesson are also available.
 <p>
 <img src="https://images.code.org/1798a4589fe0e8f16210ba9a1c208df3-image-1651244302341.58.12 AM.png" alt="Image of web lab" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
+<a href="https://studio.code.org/s/csd1-2023/lessons/2" target="blank" rel="noopener noreferrer">Link to lesson</a>
+
 **Question of the Day:** What are some common steps we can use to solve many different types of problems?
 
 **Lesson Overview:**
@@ -70,6 +74,8 @@ This lesson introduces the formal problem solving process that students will use
 <div style="margin-top:20px; margin-left:20px; margin-right:20px;">
 <p>
 <img src="https://images.code.org/5246334c13c32e5c91ba41ae1dd43045-image-1651244490640.01.19 AM.png" alt="Image of an activity guide" width="300px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+<a href="https://studio.code.org/s/csd1-2023/lessons/3" target="blank" rel="noopener noreferrer">Link to lesson</a>
 
 **Question of the Day:** How can we apply the problem solving process to many different kinds of problems?
 

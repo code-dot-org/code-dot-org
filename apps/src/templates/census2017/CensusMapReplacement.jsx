@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import i18n from '@cdo/locale';
 
 class CensusMapInfoWindow extends Component {
   static propTypes = {
@@ -89,15 +90,6 @@ class CensusMapInfoWindow extends Component {
               <div className="button">
                 <div className="button-text">
                   Take the survey for this school
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="button-link-div">
-            <a href="/yourschool/letter" target="_blank">
-              <div className="button">
-                <div className="button-text">
-                  Send the survey to a teacher at this school
                 </div>
               </div>
             </a>
@@ -408,7 +400,10 @@ export default class CensusMapReplacement extends Component {
           </div>
           <div id="right">
             <span id="footer-text">In partnership with</span>
-            <img src="/images/fit-100/avatars/computer_science_teachers_association.png" />
+            <img
+              src="/images/fit-100/avatars/computer_science_teachers_association.png"
+              alt={i18n.CSTALogo()}
+            />
           </div>
         </div>
         <br />

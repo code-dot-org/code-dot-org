@@ -9,6 +9,7 @@ import {useSelector} from 'react-redux';
 import {AnalyticsContext} from '../context';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './undo-redo-buttons.module.scss';
+import musicI18n from '../locale';
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
@@ -60,11 +61,11 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const onFeedbackClicked = () => {
     if (analyticsReporter) {
       analyticsReporter.onButtonClicked('feedback');
-      window.open(
-        'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-        '_blank'
-      );
     }
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
+      '_blank'
+    );
   };
 
   return (
@@ -74,7 +75,11 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
         type="button"
         className={classNames(moduleStyles.button)}
       >
-        <FontAwesome title={undefined} icon="refresh" className={'icon'} />
+        <FontAwesome
+          title={musicI18n.startOver()}
+          icon="refresh"
+          className={'icon'}
+        />
       </button>
       <button
         onClick={() => onClickUndoRedo('undo')}
@@ -84,7 +89,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           !canUndo && moduleStyles.buttonDisabled
         )}
       >
-        <FontAwesome title={undefined} icon="undo" className={'icon'} />
+        <FontAwesome title={musicI18n.undo()} icon="undo" className={'icon'} />
       </button>
       <button
         onClick={() => onClickUndoRedo('redo')}
@@ -94,14 +99,18 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           !canRedo && moduleStyles.buttonDisabled
         )}
       >
-        <FontAwesome title={undefined} icon="redo" className={'icon'} />
+        <FontAwesome title={musicI18n.redo()} icon="redo" className={'icon'} />
       </button>
       <button
         onClick={onFeedbackClicked}
         type="button"
         className={classNames(moduleStyles.button)}
       >
-        <FontAwesome title={undefined} icon="commenting" className={'icon'} />
+        <FontAwesome
+          title={musicI18n.feedback()}
+          icon="commenting"
+          className={'icon'}
+        />
       </button>
     </div>
   );

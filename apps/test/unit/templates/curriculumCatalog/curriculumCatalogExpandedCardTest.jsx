@@ -46,6 +46,8 @@ describe('CurriculumCatalogExpandedCard', () => {
       isInUS: true,
       imageSrc:
         'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
+      isSignedOut: false,
+      isTeacher: true,
     };
   });
 
@@ -56,7 +58,10 @@ describe('CurriculumCatalogExpandedCard', () => {
   it('renders course name', () => {
     renderCurriculumExpandedCard();
 
-    screen.getByRole('heading', {name: defaultProps.courseDisplayName});
+    screen.getByRole('heading', {
+      name: defaultProps.courseDisplayName,
+      hidden: true,
+    });
   });
 
   it('renders grade range with icon', () => {
@@ -109,7 +114,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       video: null,
     });
 
-    screen.getByRole('img');
+    screen.getByRole('img', {hidden: true});
   });
 
   it('renders image with alt text if passed and no video', () => {
@@ -121,7 +126,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     // when alt text is present, the img name is the alt text
-    screen.getByRole('img', {name: altText});
+    screen.getByRole('img', {name: altText, hidden: true});
   });
 
   it('renders available resources section when resources are available', () => {
@@ -224,6 +229,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       name: new RegExp(
         `Assign ${defaultProps.courseDisplayName} to your classroom`
       ),
+      hidden: true,
     });
 
     fireEvent.click(assignButton);
@@ -242,6 +248,7 @@ describe('CurriculumCatalogExpandedCard', () => {
 
     const onCloseButton = screen.getByRole('button', {
       name: 'Close Button',
+      hidden: true,
     });
 
     fireEvent.click(onCloseButton);
@@ -254,5 +261,60 @@ describe('CurriculumCatalogExpandedCard', () => {
     screen.getByLabelText(
       new RegExp(`View details about ${defaultProps.courseDisplayName}`)
     );
+  });
+
+  it('renders Assign button for signed out user', () => {
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      isSignedOut: true,
+      isTeacher: false,
+    });
+    screen.getByText('Assign to class sections');
+  });
+
+  it('renders Assign button for teacher', () => {
+    renderCurriculumExpandedCard();
+    screen.getByText('Assign to class sections');
+  });
+
+  it('does not render Assign button for student', () => {
+    renderCurriculumExpandedCard({...defaultProps, isTeacher: false});
+    expect(screen.queryByText('Assign to class sections')).to.be.null;
+  });
+
+  it('renders Professional Learning section for signed out user', () => {
+    const professional_learning_program = 'https://code.org/apply';
+    const self_paced_pl_course_offering_path = '/courses/vpl-csa-2023';
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      professionalLearningProgram: professional_learning_program,
+      selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
+      isSignedOut: true,
+      isTeacher: false,
+    });
+    screen.getByText('Professional Learning');
+  });
+
+  it('renders Professional Learning section for teacher', () => {
+    const professional_learning_program = 'https://code.org/apply';
+    const self_paced_pl_course_offering_path = '/courses/vpl-csa-2023';
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      professionalLearningProgram: professional_learning_program,
+      selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
+    });
+    screen.getByText('Professional Learning');
+  });
+
+  it('does not render Professional Learning section for student', () => {
+    const professional_learning_program = 'https://code.org/apply';
+    const self_paced_pl_course_offering_path = '/courses/vpl-csa-2023';
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      professionalLearningProgram: professional_learning_program,
+      selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
+      isTeacher: false,
+    });
+    expect(screen.queryByText('Professional Learning')).to.be.null;
   });
 });

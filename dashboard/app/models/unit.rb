@@ -45,6 +45,7 @@ class Unit < ApplicationRecord
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
+  include Unit::TextToSpeech
 
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
@@ -197,6 +198,8 @@ class Unit < ApplicationRecord
   after_save :generate_plc_objects
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+
+  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
 
   def prevent_course_version_change?
     resources.any? ||
@@ -395,7 +398,7 @@ class Unit < ApplicationRecord
 
   # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def lesson_by_relative_position(position, unnumbered_lesson = false)
+  def lesson_by_relative_position(position, unnumbered_lesson: false)
     if unnumbered_lesson
       lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
     else
@@ -718,6 +721,16 @@ class Unit < ApplicationRecord
     user.assigned_script?(self)
   end
 
+  # If this unit is in a unit group, returns the next unit in the unit group.
+  # If it's the last unit in the unit group, returns nil.
+  # If it's not in a unit group, returns nil.
+  def next_unit(user)
+    return nil unless unit_group
+    other_units = unit_group.units_for_user(user)
+    self_index = other_units.index {|u| u.id == id}
+    other_units[self_index + 1] if self_index
+  end
+
   # @param family_name [String] The family name for a unit family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
@@ -975,15 +988,6 @@ class Unit < ApplicationRecord
       }
     end
     summarized_lesson_levels
-  end
-
-  def text_to_speech_enabled?
-    tts?
-  end
-
-  # Generates TTS files for each level in a unit.
-  def tts_update(update_all = false)
-    levels.each {|l| l.tts_update(update_all)}
   end
 
   def hint_prompt_enabled?
@@ -1360,7 +1364,7 @@ class Unit < ApplicationRecord
     end
     update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
-    tts_update(true) if need_to_update_tts
+    tts_update(update_all: true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Unit.find_by_name(unit_name)
@@ -1637,7 +1641,7 @@ class Unit < ApplicationRecord
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
-    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
 
@@ -1909,8 +1913,14 @@ class Unit < ApplicationRecord
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_units&.first&.position,
-      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
+      is_feedback_enabled: teacher_feedback_enabled?
     }
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 
   def summarize_for_assignment_dropdown

@@ -58,22 +58,25 @@ $(document).ready(() => {
   init();
 
   function init() {
-    if (inClearerUserTypeRollout) {
-      // If in variant, toggle large buttons
-      document.getElementById('select-user-type-original').style.cssText =
-        'display:none;';
-      document.getElementById('select-user-type-variant').style.cssText =
-        'display:flex;';
-      document.getElementById('signup-select-user-type-label').style.cssText =
-        'width:135px;';
-    } else {
-      // Otherwise (also the default), keep original dropdown
-      document.getElementById('select-user-type-variant').style.cssText =
-        'display:none;';
-      document.getElementById('select-user-type-original').style.cssText =
-        'display:flex;';
-      document.getElementById('signup-select-user-type-label').style.cssText =
-        'width:220px;';
+    let hiddenUserType = $('#user_user_type').attr('type') === 'hidden';
+    if (!hiddenUserType) {
+      if (inClearerUserTypeRollout) {
+        // If in variant, toggle large buttons
+        document.getElementById('select-user-type-original').style.cssText =
+          'display:none;';
+        document.getElementById('select-user-type-variant').style.cssText =
+          'display:flex;';
+        document.getElementById('signup-select-user-type-label').style.cssText =
+          'width:135px;';
+      } else {
+        // Otherwise (also the default), keep original dropdown
+        document.getElementById('select-user-type-variant').style.cssText =
+          'display:none;';
+        document.getElementById('select-user-type-original').style.cssText =
+          'display:flex;';
+        document.getElementById('signup-select-user-type-label').style.cssText =
+          'width:220px;';
+      }
     }
     setUserType(user_type);
     renderSchoolInfo();
@@ -96,7 +99,9 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
-    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT);
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': user_type,
+    });
   });
 
   function cleanSchoolInfo() {

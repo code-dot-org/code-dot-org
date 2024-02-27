@@ -52,6 +52,8 @@ const CurriculumCatalogCard = ({
   onQuickViewClick,
   isInUS,
   availableResources,
+  isSignedOut,
+  isTeacher,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -80,7 +82,11 @@ const CurriculumCatalogCard = ({
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
-    pathToCourse={pathToCourse + '?viewAs=Instructor'}
+    pathToCourse={`${
+      isSignedOut || isTeacher
+        ? pathToCourse + '?viewAs=Instructor'
+        : pathToCourse
+    }`}
     onAssignSuccess={onAssignSuccess}
     deviceCompatibility={deviceCompatibility}
     description={description}
@@ -92,6 +98,8 @@ const CurriculumCatalogCard = ({
     onQuickViewClick={onQuickViewClick}
     isInUS={isInUS}
     availableResources={availableResources}
+    isSignedOut={isSignedOut}
+    isTeacher={isTeacher}
     {...props}
   />
 );
@@ -130,6 +138,8 @@ CurriculumCatalogCard.propTypes = {
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
+  isTeacher: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -167,6 +177,7 @@ const CustomizableCurriculumCatalogCard = ({
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+  const isTeacherOrSignedOut = isSignedOut || isTeacher;
 
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
@@ -267,14 +278,44 @@ const CustomizableCurriculumCatalogCard = ({
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
                 text={i18n.quickView()}
+                className={`${style.buttonFlex} ${style.quickViewButton}`}
               />
-              <Button
-                color={Button.ButtonColor.brandSecondaryDefault}
-                type="button"
-                onClick={() => handleClickAssign('top-card')}
-                aria-label={assignButtonDescription}
-                text={assignButtonText}
-              />
+              {isTeacherOrSignedOut && (
+                <>
+                  <Button
+                    __useDeprecatedTag
+                    color={Button.ButtonColor.neutralDark}
+                    type="button"
+                    href={pathToCourse}
+                    aria-label={i18n.learnMoreDescription({
+                      course_name: courseDisplayName,
+                    })}
+                    text={i18n.learnMore()}
+                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                  />
+                  <Button
+                    color={Button.ButtonColor.brandSecondaryDefault}
+                    type="button"
+                    onClick={() => handleClickAssign('top-card')}
+                    aria-label={assignButtonDescription}
+                    text={assignButtonText}
+                    className={style.buttonFlex}
+                  />
+                </>
+              )}
+              {!isTeacherOrSignedOut && (
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  type="button"
+                  href={pathToCourse}
+                  aria-label={i18n.tryCourseNow({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.tryNow()}
+                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -300,6 +341,8 @@ const CustomizableCurriculumCatalogCard = ({
           imageSrc={imageSrc}
           imageAltText={imageAltText}
           availableResources={availableResources}
+          isSignedOut={isSignedOut}
+          isTeacher={isTeacher}
         />
       )}
     </div>
@@ -326,7 +369,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-  isTeacher: PropTypes.bool,
+  isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   onAssignSuccess: PropTypes.func,
   // for screenreaders

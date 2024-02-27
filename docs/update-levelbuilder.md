@@ -10,7 +10,7 @@ This .md file should only contain information which is specific to Code.org engi
 
 ## To commit changes from levelbuilder into staging:
 
-1. `ssh -t gateway.code.org ssh -t levelbuilder-staging levelbuilder/bin/content-push`
+1. `ssh -t gateway.code.org ssh -t levelbuilder levelbuilder/bin/content-push`
 1. On GitHub, open a pull request from `levelbuilder` into `staging`. link: [staging...levelbuilder](https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder)
 2. Click the "Merge pull request" button and watch the "infra-staging" room in Slack to make sure the build succeeds. If anything breaks, see the "Did it break section" below. 
 

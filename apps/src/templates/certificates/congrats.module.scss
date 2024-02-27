@@ -1,0 +1,73 @@
+@import 'phase1-design-system';
+@import 'color', 'font', 'typography', 'breakpoints',
+  'barlow-semi-condensed-font';
+
+.headerContainer {
+  margin-top: 50px;
+}
+
+.header {
+  color: $neutral_dark;
+}
+
+.inputContainer {
+  background-color: $neutral_light;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.certificateContainer {
+  display: flex;
+  width: 100%;
+}
+
+.heading {
+  width: 100%;
+}
+
+.container {
+  margin-bottom: 50px;
+  float: left;
+}
+
+.mobileHeading {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.desktopHalf {
+  width: 50%;
+  float: left;
+}
+
+.mobileFull {
+  width: 100%;
+  float: left;
+}
+
+.nameInput {
+  height: 26px !important;
+  border: 1px solid $neutral_dark !important;
+  flex: 2;
+}
+
+.submit {
+  background: $light_secondary_500;
+  color: $neutral_white;
+  font-size: 16px;
+  padding: 8px 20px;
+  margin: 0 5px;
+  height: 38px;
+}
+
+.confetti {
+  top: 100px;
+}
+.enterName {
+  font-weight: bold !important;
+  margin: 0 !important;
+}
+
+.inputButtonContainer {
+  display: flex;
+}

@@ -24,7 +24,6 @@ const sampleStudents = [
 ];
 
 export default {
-  title: 'ParentLetter',
   component: ParentLetter,
 };
 

@@ -8,10 +8,12 @@ class DashboardTest < Minitest::Test
   describe 'Dashboard::User' do
     before do
       FakeDashboard.use_fake_database
+      # rubocop:disable CustomCops/DashboardDbUsage
       @student = Dashboard::User.get(FakeDashboard::STUDENT[:id])
       @deleted_student = Dashboard::User.
         get(FakeDashboard::STUDENT_DELETED[:id])
       @teacher = Dashboard::User.get(FakeDashboard::TEACHER[:id])
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     describe 'to_hash' do

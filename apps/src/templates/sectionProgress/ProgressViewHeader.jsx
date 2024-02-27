@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {getCurrentUnitData} from './sectionProgressRedux';
-import {ViewType, scriptDataPropType} from './sectionProgressConstants';
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -19,7 +19,7 @@ class ProgressViewHeader extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
   };
 
   getLinkToOverview() {

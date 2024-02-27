@@ -73,7 +73,7 @@ class CreateI18nPullRequests
 
     I18nScriptUtils.git_add_and_commit(
       [
-        "bin/i18n/crowdin/*etags.json"
+        "bin/i18n/crowdin/etags/*.json"
       ],
       "etags updates"
     )

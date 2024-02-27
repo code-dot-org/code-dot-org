@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/templates/Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -35,7 +35,6 @@ export const UnconnectedTeacherHomepage = ({
   plCourses,
   courses,
   afeEligible,
-  isEnglish,
   joinedStudentSections,
   joinedPlSections,
   ncesSchoolId,
@@ -55,24 +54,29 @@ export const UnconnectedTeacherHomepage = ({
   hasFeedback,
   showIncubatorBanner,
   currentUserId,
-  showDeprecatedCalcAndEvalWarning,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
-  /* We are hiding the AFE banner to free up space on the Teacher Homepage as of September 2023).
-   * When we want to show the AFE banner again remove the next line and uses of 'shouldShowAFEBanner'.
+  /*
+   * Determines whether the AFE banner will take premium space on the Teacher Homepage
    */
-  const shouldShowAFEBanner = false;
+  const shouldShowAFEBanner = true;
+
+  /* We are hiding the Census banner to free up space on the Teacher Homepage (November 2023)
+   * when we want to show the Census banner again remove the next line
+   */
+  const forceHideCensusBanner = true;
 
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
    * when we want to show the Census banner again set this to true
    */
   const showPLBanner = false;
 
-  const [displayCensusBanner, setDisplayCensusBanner] =
-    useState(showCensusBanner);
+  const [displayCensusBanner, setDisplayCensusBanner] = useState(
+    showCensusBanner && !forceHideCensusBanner
+  );
   const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
     useState(null);
   const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
@@ -155,7 +159,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showAFEBanner = shouldShowAFEBanner && isEnglish && afeEligible;
+  const showAFEBanner = shouldShowAFEBanner && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
@@ -179,14 +183,6 @@ export const UnconnectedTeacherHomepage = ({
       />
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
-        {showDeprecatedCalcAndEvalWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.deprecatedCalcAndEvalWarning()}
-            details={i18n.deprecatedCalcAndEvalDetails()}
-            dismissible={false}
-          />
-        )}
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
@@ -264,7 +260,7 @@ export const UnconnectedTeacherHomepage = ({
         )}
         {showAFEBanner && (
           <div>
-            <DonorTeacherBanner showPegasusLink={true} source="teacher_home" />
+            <DonorTeacherBanner source="teacher_home" />
             <div style={styles.clear} />
           </div>
         )}
@@ -315,7 +311,6 @@ UnconnectedTeacherHomepage.propTypes = {
   courses: shapes.courses,
   afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
-  isEnglish: PropTypes.bool.isRequired,
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,
@@ -335,7 +330,6 @@ UnconnectedTeacherHomepage.propTypes = {
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
   currentUserId: PropTypes.number,
-  showDeprecatedCalcAndEvalWarning: PropTypes.bool,
 };
 
 const styles = {

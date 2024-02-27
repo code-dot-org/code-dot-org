@@ -2,25 +2,10 @@ require 'test_helper'
 require 'dynamic_config/dcdo'
 
 class DCDOTest < ActiveSupport::TestCase
-  class FakeListener
-    attr_reader :changed
-
-    def initialize
-      @changed = false
-    end
-
-    def on_change
-      @changed = true
-    end
-  end
-
   test 'basic set and get' do
-    listener = FakeListener.new
-    DCDO.add_change_listener(listener)
-    refute listener.changed
+    assert_nil DCDO.get('key', nil)
     DCDO.set('key', 'okay')
     assert_equal DCDO.get('key', nil), 'okay'
-    assert listener.changed
   end
 
   test 'returns default if key is not stored' do

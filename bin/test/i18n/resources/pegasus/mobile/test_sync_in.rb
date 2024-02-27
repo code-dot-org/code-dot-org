@@ -2,24 +2,19 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/pegasus/mobile/sync_in'
 
 describe I18n::Resources::Pegasus::Mobile::SyncIn do
-  def around
-    FakeFS.with_fresh {yield}
+  let(:described_class) {I18n::Resources::Pegasus::Mobile::SyncIn}
+  let(:described_instance) {described_class.new}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
-  before do
-    STDOUT.stubs(:print)
+  it 'inherits from I18n::Utils::SyncInBase' do
+    assert_equal I18n::Utils::SyncInBase, described_class.superclass
   end
 
-  describe '.perform' do
-    it 'calls #execute' do
-      I18n::Resources::Pegasus::Mobile::SyncIn.any_instance.expects(:execute).once
-
-      I18n::Resources::Pegasus::Mobile::SyncIn.perform
-    end
-  end
-
-  describe '#execute' do
-    let(:sync_in) {I18n::Resources::Pegasus::Mobile::SyncIn.new}
+  describe '#process' do
+    let(:process) {described_instance.process}
 
     let(:pegasus_i18n_file_path) {CDO.dir('pegasus/cache/i18n/en-US.yml')}
 
@@ -34,7 +29,7 @@ describe I18n::Resources::Pegasus::Mobile::SyncIn do
       I18nScriptUtils.expects(:fix_yml_file).with(pegasus_i18n_file_path).in_sequence(execution_sequence)
       I18nScriptUtils.expects(:copy_file).with(pegasus_i18n_file_path, CDO.dir('i18n/locales/source/pegasus/mobile.yml')).in_sequence(execution_sequence)
 
-      sync_in.execute
+      process
     end
   end
 end

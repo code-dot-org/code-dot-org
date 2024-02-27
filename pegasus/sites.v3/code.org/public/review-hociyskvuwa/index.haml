@@ -4,7 +4,9 @@ title: Review Hour of Code special events
 :ruby
   dont_cache
   authentication_required!
+  # rubocop:disable CustomCops/DashboardDbUsage
   forbidden! unless dashboard_user[:user_type] == 'teacher'
+  # rubocop:enable CustomCops/DashboardDbUsage
 
   require pegasus_dir 'helper_modules/hoc_event_review'
   countries = HocEventReview.event_counts_by_country(reviewed: false, special_events_only: true)

@@ -2,6 +2,16 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
+  private static instance: MusicLibrary;
+
+  static getInstance(): MusicLibrary | undefined {
+    return this.instance;
+  }
+
+  static setCurrent(library: MusicLibrary) {
+    this.instance = library;
+  }
+
   name: string;
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
@@ -63,7 +73,7 @@ export default class MusicLibrary {
 
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
-  getAllowedSounds(folderType: string): SoundFolder[] {
+  getAllowedSounds(folderType: string | undefined): SoundFolder[] {
     const folders = this.groups[0].folders;
 
     // Let's just do a deep copy and then do filtering in-place.
@@ -147,6 +157,8 @@ export interface SoundData {
   restricted?: boolean;
   sequence?: SampleSequence;
   preview?: boolean;
+  bpm?: number;
+  key?: Key;
 }
 
 export interface SoundFolder {

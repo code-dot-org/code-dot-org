@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-20 17:42:49 UTC",
+    "serialized_at": "2023-10-25 15:32:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -149,8 +149,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**Purpose:**\nThis transition prepares participants for a set of asynchronous activities, providing them with information about the assignment, their role, and the support available to them.\n\n**Objectives:**\n\n* Participants are prepared to complete asynchronous activities on their own.\n\n**Suggested time:** 75 minutes",
-        "student_overview": "**You will:**\n\n* Be prepared to complete asynchronous activities on your own.\n"
+        "overview": "**Purpose:**\nTo explore AP Classroom and the Code.org Platform.\n\n**Objectives:**\n\n* Participants navigate the College Board Resources.\n* Participants get familiar with navigating the Code.org website, especially how they use it to manage a class.\n\n**Suggested time:** 75 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the College Board Resources.\n* Get familiar with navigating the Code.org website, especially how you use it to manage a class.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 2",
@@ -492,6 +492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_1video"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -539,6 +542,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_7_video"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,
@@ -561,6 +567,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_1_2_2_2"
+        ],
         "progression": "Code.org Platform Tour"
       },
       "bonus": false,

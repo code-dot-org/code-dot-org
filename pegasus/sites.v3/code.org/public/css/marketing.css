@@ -9,8 +9,8 @@
 }
 
 h2.purple-block{
-  background-color: #7665a0;
-  padding: 1em;
+  background-color: var(--brand_secondary_dark);
+  padding: 1rem 1.5rem;
   font-size: 24px;
   color: #ffffff;
   border-radius: 10px 10px 0 0;
@@ -26,9 +26,7 @@ figure img{
 }
 
   figcaption {
-    font-size: .875em;
-    margin-top: 1em;
-    line-height: 1.4;
+    text-align: initial;
   }
 
 /* columns */
@@ -54,7 +52,7 @@ figure img{
 .callout-box {padding: 10px;margin-top: 30px;}
 .callout-box img {max-width:100%; vertical-align:middle;}
 
-.bp0 {background-color:#7665a0; color:#ffffff;}
+.bp0 {background-color:var(--brand_secondary_default); color:#ffffff;}
 .bp1 {background-color:#a69bc1;}
 .bp2 {background-color:#cfc9de;}
 .bp3 {background-color:#ebe8f1;}
@@ -62,7 +60,7 @@ figure img{
 .bch0 {background-color:#5b6770;color:#ffffff}
 .bch1 {background-color:#949ca2;color:#ffffff}
 
-.bt0 {background-color:#00adbc; color:#ffffff}
+.bt0 {background-color:var(--brand_primary_default); color:#ffffff}
 
 .bc0 {background-color:#0094ca; color:#ffffff}
 
@@ -88,16 +86,17 @@ h3.rounded-info-h {  margin-top: 0px;  font-weight: bold;}
 .embedvid .video_caption_link {padding-top:6px; font-weight:bold; font-size:1.1em}
 
 /* Annual report */
-h2.highlight {
+h4.highlight {
   background: url("../images/AR2020/highlight.png") no-repeat top left;
   background-size: 22px 32px;
+  line-height: 1;
   padding-left: 32px;
   min-height: 32px;
-  margin: 3em auto .5em;
+  margin: 2rem auto 1rem;
 }
 
 .ceo-letter{
-  margin-top: 2em
+  margin: 2rem auto 0;
 }
   .ceo-letter figure{
     margin: 0 1.5em 0 0;
@@ -128,7 +127,7 @@ h2.highlight {
 
 hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm/panafbars5.png');   background-repeat: repeat-x;}
 
-.bhm-heading {color:#7665a0; }
+.bhm-heading {color:var(--brand_secondary_default); }
 
 .blackstudentdata img {width:100%;}
 .blackstudentdata p {margin: 1em;}
@@ -150,7 +149,7 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 
   .callout-quote {font-size:18px}
 
-  h2.highlight { background-position-y: 4px; }
+  h4.highlight { background-position-y: 4px; }
 
   .centerspot{
     padding: 2em 0;

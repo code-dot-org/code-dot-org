@@ -125,12 +125,15 @@ const FormController = props => {
     onSetPageInternal(initialPage);
   }, [onInitialize, onSetPageInternal, initialPage]);
 
-  // on matching to an RP with apps closed
+  // when updating regional partner, determine if we should show
+  // the application closed message
   useEffect(() => {
     if (regionalPartner?.are_apps_closed) {
       setShowApplicationClosedMessage(true);
       scrollToTop();
       return;
+    } else {
+      setShowApplicationClosedMessage(false);
     }
   }, [regionalPartner]);
 

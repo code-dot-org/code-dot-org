@@ -32,6 +32,7 @@ if %w(staging test adhoc).include?(node.chef_environment)
   remote_file pdftk_local_file do
     source "https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/#{pdftk_file}"
     checksum "e14dfd5489e7becb5d825baffc67ce1104e154cd5c8b445e1974ce0397078fdb"
+    action :create_if_missing
   end
   # Dependencies of pdftk-java.
   apt_package %w(
@@ -147,9 +148,6 @@ include_recipe 'cdo-i18n' if node.name == 'i18n'
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
 
 include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
-
-# Patch to fix issue with systemd-resolved: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1805183
-include_recipe 'cdo-apps::resolved'
 
 include_recipe 'cdo-apps::rbspy'
 

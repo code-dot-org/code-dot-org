@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-04-07T19:15:22.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -60,7 +64,7 @@
     "display_name": "Making Sprites",
     "bubble_choice_description": "Practice making sprites.\r\n",
     "project_template_level_name": "courseF_sprites_template_-2022-2",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"sprites_category\",\r\n  \"callout_text\": \"Click here to open the Sprites category.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"sprites_category\",\"callout_text\":\"Click here to open the Sprites category.\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"sprites_category\",\"callout_text\":\"Click here to open the Sprites category.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "encrypted_examples": "rhNoxs1mGcZNiQiuwQmYru/dH9+xV3kDVhLW/Ca61kT6F1RuR/w9E59/a4u1\nkIeSjnWj/y1B5E1ZhsPLinWQCA==\n",
     "hide_pause_button": "false",
     "hint_prompt_attempts_threshold": "1",
@@ -68,10 +72,6 @@
     "instructions_icon": "strawberry",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 64,
-  "created_at": "2022-04-07T19:15:22.000Z",
-  "user_id": 9,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-07T19:15:22.284+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_make_2022_pilot\\\"\"],\"cloned_from\":\"courseF_sprites_make_2022_pilot\"},{\"changed_at\":\"2023-03-07 14:54:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",

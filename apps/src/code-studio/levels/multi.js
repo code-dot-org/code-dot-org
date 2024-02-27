@@ -70,7 +70,9 @@ var Multi = function (
 };
 
 Multi.prototype.enableButton = function (enable) {
-  $('#' + this.id + ' .submitButton').attr('disabled', !enable);
+  var button = $('#' + this.id + ' .submitButton');
+  button.prop('disabled', !enable);
+  button.prop('tagName', 'BUTTON');
 };
 
 Multi.prototype.choiceClicked = function (button) {
@@ -160,22 +162,17 @@ Multi.prototype.ready = function () {
     }
   }
 
-  $('#' + this.id + ' .answerbutton').click(
-    $.proxy(function (event) {
-      this.choiceClicked($(event.currentTarget));
-    }, this)
-  );
+  $('#' + this.id + ' .answerbutton').on('click', event => {
+    this.choiceClicked($(event.currentTarget));
+  });
 
-  $('#' + this.id + ' #voteform img').on(
-    'dragstart',
-    $.proxy(function (event) {
-      // Prevent button images from being dragged, click the button instead.
-      var button = $(event.currentTarget).parent().parent().parent();
-      this.choiceClicked(button);
-      event.preventDefault();
-      event.stopPropagation();
-    }, this)
-  );
+  $('#' + this.id + ' #voteform img').on('dragstart', event => {
+    // Prevent button images from being dragged, click the button instead.
+    var button = $(event.currentTarget).parent().parent().parent();
+    this.choiceClicked(button);
+    event.preventDefault();
+    event.stopPropagation();
+  });
 
   this.enableButton(false);
 
@@ -198,11 +195,11 @@ Multi.prototype.ready = function () {
   }
 
   if (this.standalone) {
-    $('.submitButton').click($.proxy(this.submitButtonClick, this));
+    $('.submitButton').on('click', this.submitButtonClick.bind(this));
   } else {
     var resetButton = $('#reset-predict-progress-button');
     if (resetButton) {
-      resetButton.click(() => resetContainedLevel());
+      resetButton.on('click', () => resetContainedLevel());
     }
   }
 

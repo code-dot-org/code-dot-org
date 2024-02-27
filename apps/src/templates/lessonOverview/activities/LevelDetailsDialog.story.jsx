@@ -127,7 +127,6 @@ const levelWithContainedLevel = {
 };
 
 export default {
-  title: 'LevelDetailsDialog',
   component: LevelDetailsDialog,
 };
 

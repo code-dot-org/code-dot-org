@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Day 2, Asynchronous Part 1
 
-##### Welcome! In this asynchronous module, you will explore the AP CS Principles Course and Exam Description. The activities in this lesson will prepare you to engage in the discussions in synchronous sessions. 
+#### Welcome! In this asynchronous module, you will explore the AP CS Principles Course and Exam Description. The activities in this lesson will prepare you to engage in the discussions in synchronous sessions. 
 
 <img src="https://images.code.org/c56c7549edeaadbdab6a6cad3c3fe444-Screenshot 2023-10-17 at 1.01.35 PM.png" alt="Imgage of the AP CSP Course and Exam Description" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
 

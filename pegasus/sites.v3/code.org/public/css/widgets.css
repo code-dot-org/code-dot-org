@@ -1,5 +1,5 @@
 .block-header {
-  background-color: #7665a0;
+  background-color: var(--brand_secondary_default);
   color: white;
   height: 60px;
   padding-top: 10px;

@@ -11,6 +11,17 @@ const TEST_PROPS = {
   isSignedOut: true,
   studentsCount: '0',
   modernElementaryCoursesAvailable: true,
+  specialAnnouncement: {
+    id: 'id',
+    image: '/image',
+    title: 'title',
+    body: 'body',
+    link: '/link',
+    description: 'description',
+    buttonUrl: '/url',
+    buttonText: 'press me',
+    heading: 'heading',
+  },
 };
 
 describe('Courses', () => {
@@ -32,10 +43,9 @@ describe('Courses', () => {
     it('English', () => {
       const wrapper = mountCourses({isEnglish: true});
       assertComponentsInOrder(wrapper, [
-        'SpecialAnnouncement',
+        'MarketingAnnouncementBanner',
         'CourseBlocksWrapper',
         'CourseBlocksHoc',
-        'LocalClassActionBlock',
       ]);
     });
 
@@ -50,7 +60,7 @@ describe('Courses', () => {
         assertComponentsInOrder(wrapper, [
           'ModernCsfCourses',
           'CourseBlocksHoc',
-          'SpecialAnnouncement',
+          'MarketingAnnouncementBanner',
           'CoursesAToF',
           'LegacyCSFNotification',
           'CourseBlocksWrapper',
@@ -66,7 +76,7 @@ describe('Courses', () => {
         assertComponentsInOrder(wrapper, [
           'AcceleratedAndUnplugged',
           'CourseBlocksHoc',
-          'SpecialAnnouncement',
+          'MarketingAnnouncementBanner',
           'Courses1To4',
           'CourseBlocksWrapper',
           'CourseBlocksWrapper',

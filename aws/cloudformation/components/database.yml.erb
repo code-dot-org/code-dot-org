@@ -149,10 +149,13 @@
   ReportingDBDomainName:
     Type: AWS::Route53::RecordSetGroup
     Properties:
-      HostedZoneName: <%=domain%>.
+      HostedZoneName: !Sub "${BaseDomainName}."
       RecordSets:
-        # The method 'subdomain' returns the fully qualified domain name and 'domain' returns the base domain name.
-        - Name: <%="#{subdomain.delete_suffix('.' + domain)}-db-reporting.#{domain}"%>
+<%   if rack_env?(:production) -%>
+        - Name: !Sub "db-reporting.${BaseDomainName}"
+<%   else -%>
+        - Name: !Sub "${PegasusSubdomainName}-db-reporting.${BaseDomainName}"
+<%   end -%>
           Type: CNAME
           TTL: <%= DNS_TTL %>
           ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.Endpoint ]

@@ -57,6 +57,15 @@ export const translatedCourseOfferingDurations = {
   lesson: i18n.lesson(),
 };
 
+export const translatedCourseOfferingDurationsWithTime = {
+  school_year: `${i18n.schoolYear()} (${i18n.schoolYearDuration()})`,
+  semester: `${i18n.semester()} (${i18n.semesterDuration()})`,
+  quarter: `${i18n.quarter()} (${i18n.quarterDuration()})`,
+  month: `${i18n.month()} (${i18n.monthDuration()})`,
+  week: `${i18n.week()} (${i18n.weekDuration()})`,
+  lesson: `${i18n.lesson()} (${i18n.lessonDuration()})`,
+};
+
 export const translatedCourseOfferingMarketingInitiatives = {
   csa: i18n.marketingInitiativeCSA(),
   csc: i18n.marketingInitiativeCSC(),

@@ -5,15 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Teacher features
 
-### Tracking student progress
+## Tracking student progress
 
-##### The teacher panel can be accessed from any lesson level.
+#### The teacher panel can be accessed from any lesson level once you have set up a class and section in Code.org.
 
-##### From the teacher panel you can:
+#### **From the teacher panel you can:**
 
-* ##### view an example solution for the current level.
-* ##### go to your teacher dashboard.
-* ##### view an individual student's progress by clicking on the student's name.
+* #### view an example solution for the current level.
+* #### go to your teacher dashboard.
+* #### view an individual student's progress by clicking on the student's name.
+
+<br>
 
 <details>
 

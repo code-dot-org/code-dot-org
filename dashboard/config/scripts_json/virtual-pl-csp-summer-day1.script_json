@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-18 20:58:54 UTC",
+    "serialized_at": "2023-10-25 20:43:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -141,12 +141,29 @@
       }
     },
     {
-      "key": "Asynchronous Part 1",
-      "name": "Lesson Planning: Understanding the Lesson",
+      "key": "lesson-5",
+      "name": "Introduction to Asynchronous Activities",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants navigate to the CSP Virtual PL Workshop Course and gain an understanding of how to use it and of what is expected of them regarding submittables. \n\n**Objectives:**\n* Participants are able to navigate to the CSP Virtual PL Workshop Course\n* Participants understand types of asynchronous activities and the variety of ways to submit work in the CSP Virtual PL Workshop Course.\n\n**Suggested time:** 10 minutes\n",
+        "student_overview": "**You will:**\n\n* Participants are able to navigate to the CSP Virtual PL Workshop Course\n* Participants understand types of asynchronous activities and the variety of ways to submit work in the CSP Virtual PL Workshop Course."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Asynchronous Part 1",
+      "name": "Lesson Planning: Understanding the Lesson",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nThe asynchronous session is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Objectives:**\n* Participants explore the lesson plan and additional resources for their assigned TLO lesson.\n* Participants complete the activities from their assigned TLO lesson. \n\n**Suggested Time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n"
@@ -160,10 +177,10 @@
     {
       "key": "Async Debrief",
       "name": "Binary Number Systems",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "**Purpose:**\nWe show that binary numbers don't need to be scary and this doesn't need to be overly math-y. This session puts a bow on the two previous lessons to show how we build on-ramps to content in order to make it more approachable to students.\n\n**Objectives:**\n\n* Participants will be able to use the binary number system to translate between decimal and binary representations of a number.\n* Participants will see how the two model lessons help provide a mental model and motivation for the binary number system.\n\n**Suggested time:** 37 minutes",
         "student_overview": "**You will:**\n\n* Use the binary number system to translate between decimal and binary representations of a number.\n* See how the two model lessons help provide a mental model and motivation for the binary number system.\n"
@@ -177,10 +194,10 @@
     {
       "key": "Lesson Planning: Make a Plan",
       "name": "Plugged and Unplugged",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "**Purpose:** Before we get to lesson planning, we want to introduce different types of lessons and the importance of mental models in both. This approach allows us to be more explicit about the teacher's role in each of these lessons - specifically, that the teacher needs to check for understanding in both of these lessons constantly. This foreshadows tomorrow's topic of “the teacher's role”.\n\n\n\n**Objectives:**\n* Participants can explain the similarities and differences between Unplugged and Plugged lessons.\n* Participants can explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Participants experience joining a section in Code Studio.\n\n**Suggested Time:** 30 minutes",
         "student_overview": "**You will:**\n* Explain the similarities and differences between Unplugged and Plugged lessons.\n* Explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Experience joining a section in Code Studio."
@@ -194,10 +211,10 @@
     {
       "key": "Instructional Strategies",
       "name": "Teacher's Role in the Classroom",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "**Purpose:**\nWe are using this session to kick off the day and proactively discuss the role of the teacher, even in lessons that focus on discovery. We want teachers new to CS to feel comfortable with their role in the room as “lead learner” but also as one who creates classroom experiences for students while building their own CS knowledge.\n\n**Objectives:**\n\n* Participants can describe teaching and learning strategies used in the curriculum.\n* Participants can describe the influence they have over culture and student success in a CS classroom.\n\n\n**Suggested time:** 28 minutes",
         "student_overview": "**You will:**\n\n* Describe teaching and learning strategies used in the curriculum.\n* Describe the influence they have over culture and student success in a CS classroom."
@@ -211,10 +228,10 @@
     {
       "key": "Asynchronous Part 2",
       "name": "Lesson Planning: Prepare Your Lesson",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "**Purpose:**\nIn this session, participants will create a plan for how to teach their lesson during a 40 minute TLO session. This plan should consider contingency plans if the lesson goes faster than expected, and consideration for how the teaching group will use formative assessment throughout the lesson to know that \"learners\" are making the needed progress toward the learning goals.\n\n**Objectives:**\n* Participants have developed a run-of-show and tech plan for their lesson.\n* Participants have developed contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Participants have a plan for formative assessment during the lesson.\n* Participants make sure everyone in the teaching group has a role.\n\n**Suggested time:** 75 minutes",
         "student_overview": "**You will:**\n\n* Develop a run-of-show and tech plan for their lesson.\n* Develop contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Plan for formative assessment during the lesson.\n* Make sure everyone in the teaching group has a role.\n"
@@ -301,6 +318,18 @@
       "seeding_key": {
         "lesson_activity.key": "307430dc-6fa4-4964-babc-44df858eab22",
         "lesson.key": "Navigating the Codeorg Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "32193d68-f5fd-4bd8-adca-78b645f4719f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32193d68-f5fd-4bd8-adca-78b645f4719f",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csp-summer-day1"
       }
@@ -569,6 +598,16 @@
       "seeding_key": {
         "activity_section.key": "a09f9ca2-fe1c-477b-aa8c-067f886564ea",
         "lesson_activity.key": "307430dc-6fa4-4964-babc-44df858eab22"
+      }
+    },
+    {
+      "key": "d36a785b-5ad8-4462-9cae-fe9d3767b43f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d36a785b-5ad8-4462-9cae-fe9d3767b43f",
+        "lesson_activity.key": "32193d68-f5fd-4bd8-adca-78b645f4719f"
       }
     },
     {

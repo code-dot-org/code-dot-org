@@ -4,6 +4,28 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "7c0b3b50-62ba-43c3-bd32-37a58e1622fc",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 3: Interactive Animations and Games. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
+          "link": "https://studio.code.org/courses/self-paced-pl-csd-unit3-2023",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Unit 3 Self-Paced PL"
+        },
+        {
+          "key": "0c8ac90e-1294-48d4-8073-b8009264a631",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -17,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-18 11:28:52 UTC",
+    "serialized_at": "2023-12-12 03:16:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16652,6 +16674,7 @@
       "key": "functions",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -20394,6 +20417,14 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
+    },
+    {
+      "level_name": "CSD U3 L7 mini project_2023",
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
     }
   ],
   "learning_goals": [
@@ -20710,6 +20741,19 @@
       }
     },
     {
+      "key": "a970f852-9ed3-4c5e-b8fc-03349484733a",
+      "position": 3,
+      "learning_goal": "Variables / Storing Information",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "a970f852-9ed3-4c5e-b8fc-03349484733a",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
       "key": "aa66e9b9-1889-4e6d-bfda-ceba0933b50a",
       "position": 2,
       "learning_goal": "Modularity - Sprites and Sprite Properties",
@@ -20762,6 +20806,32 @@
       }
     },
     {
+      "key": "b9ee3940-2621-49ca-ac9c-01db8cac237b",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": ". Sequenced the program well\nIf the program code is not sequenced correctly, some elements, such as shapes, may be unintentionally hidden behind other shapes. \n2. Different types of shapes: \nEach shape listed below would be considered a “different type” of shape. Students should use at least 4 different types of shapes.\nrect(x, y, width, height)\nellipse(x, y, width, height)\nline(x1, y1, x2, y2)\narc(x, y, width, height, start, stop)\npoint(x, y)\nregularPolygon(x, y, sides, size)\nshape(x1, y1, x2, y2, … xN, yN)\n",
+      "seeding_key": {
+        "learning_goal.key": "b9ee3940-2621-49ca-ac9c-01db8cac237b",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "c1bdc1c6-f0e2-47d1-8c6b-d109a35072a1",
+      "position": 2,
+      "learning_goal": "Position - Shapes",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "c1bdc1c6-f0e2-47d1-8c6b-d109a35072a1",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
       "key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
       "position": 1,
       "learning_goal": "Program Development - Program Sequence",
@@ -20796,6 +20866,19 @@
       "seeding_key": {
         "learning_goal.key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
         "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "e03d3d6e-a9f6-418d-8c0e-074e1e1e0b65",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e03d3d6e-a9f6-418d-8c0e-074e1e1e0b65",
+        "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
@@ -22047,6 +22130,54 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "No variables or randomNumbers are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "a970f852-9ed3-4c5e-b8fc-03349484733a",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They created at least 1 variable and used it in the program.\nThey used randomness in the program, but not within a variable. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "a970f852-9ed3-4c5e-b8fc-03349484733a",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "They created at least 4 variables and used them correctly in the program. All variables have descriptive names. Only 2 of the variables use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "a970f852-9ed3-4c5e-b8fc-03349484733a",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The program creates and correctly uses at least 4 variables. All variables have descriptive names and use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "a970f852-9ed3-4c5e-b8fc-03349484733a",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "No sprites are used in the program.",
       "ai_prompt": "",
       "seeding_key": {
@@ -22239,6 +22370,102 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling intended drawing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b9ee3940-2621-49ca-ac9c-01db8cac237b",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Program has significant sequencing errors, resulting in many shapes unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b9ee3940-2621-49ca-ac9c-01db8cac237b",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Program may contain a few incorrectly sequenced code resulting in a few shapes hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b9ee3940-2621-49ca-ac9c-01db8cac237b",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They sequenced the program well1 and all shapes on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b9ee3940-2621-49ca-ac9c-01db8cac237b",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "They used no shapes in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c1bdc1c6-f0e2-47d1-8c6b-d109a35072a1",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They use at least 1 shape and place it correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c1bdc1c6-f0e2-47d1-8c6b-d109a35072a1",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "They only use the ellipse and rect shapes and place them correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c1bdc1c6-f0e2-47d1-8c6b-d109a35072a1",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They used at least 4 different types of shapes2 and placed them correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c1bdc1c6-f0e2-47d1-8c6b-d109a35072a1",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation",
       "ai_prompt": "",
       "seeding_key": {
@@ -22377,6 +22604,54 @@
         "understanding": 3,
         "learning_goal.key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
         "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "They did not fill the project guide out, or it is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e03d3d6e-a9f6-418d-8c0e-074e1e1e0b65",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They used some elements as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e03d3d6e-a9f6-418d-8c0e-074e1e1e0b65",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e03d3d6e-a9f6-418d-8c0e-074e1e1e0b65",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They used elements as described in the project guide and clearly displayed a robot face.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e03d3d6e-a9f6-418d-8c0e-074e1e1e0b65",
+        "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }

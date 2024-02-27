@@ -4,7 +4,6 @@ import {action} from '@storybook/addon-actions';
 import {fakeTeacherSectionsForDropdown} from './sectionAssignmentTestHelper';
 
 export default {
-  title: 'TeacherSectionSelector',
   component: TeacherSectionSelector,
 };
 

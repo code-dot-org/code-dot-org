@@ -769,13 +769,8 @@ Craft.executeUserCode = function () {
   });
 
   // Run user generated code, calling appCodeOrgAPI
-  var code = '';
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-  if (studioApp().initializationBlocks) {
-    codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
-  }
+  const code = Blockly.getWorkspaceCode();
 
-  code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   CustomMarshalingInterpreter.evalWith(
     code,
     {

@@ -23,38 +23,38 @@ Mengambil kira bahawa teknologi pengkomputeran ialah bahagian yang perlu untuk b
 
 Mengambil kira bahawa sains komputer mengubah industri, mencipta bidang perdagangan baharu, memacu inovasi di dalam semua bidang sains dan mengukuhkan produktiviti di dalam sektor ekonomi yang sudah mapan;
 
-Manakala bidang sains komputer adalah subjek asas yang menyokong sektor teknologi maklumat ekonomi kita, yang merupakan penyumbang penting kepada output ekonomi Amerika Syarikat;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Manakala literasi kecerdasan buatan merujuk kepada pengetahuan, kemahiran, dan sikap yang berkaitan dengan bagaimana kecerdasan buatan berfungsi, termasuk konsep asas dalam sains komputer, dan cara menggunakan kecerdasan buatan dengan selamat, bertanggungjawab, dan beretika;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-Manakala bidang sains komputer, termasuk kecerdasan buatan, adalah teknologi dengan kuasa untuk mengubah secara asasnya hampir semua sektor ekonomi Amerika Syarikat;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-Manakala kepimpinan teknologi dalam semua bidang sains komputer, termasuk kecerdasan buatan, adalah penting keselamatan ekonomi dan negara;
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Di mana prospek pekerjaan sains komputer adalah amat cerah dengan lebih daripada 500,000 jawatan kosong pengkomputeran yang ditawarkan di seluruh negara;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Di mana pemberian peluang kepada pelajar untuk menyertai aktiviti sains komputer yang berkualiti tinggi mendedahkan mereka kepada banyak peluang kaya yang ditawarkan oleh bidang ini dan memupuk kemahiran pemikiran kritikal yang akan membantu mereka sepanjang kehidupan mereka;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Di mana semua pelajar memerlukan suatu persediaan yang menyeluruh dalam pendidikan sains komputer, termasuklah akses kepada guru-guru yang berkelayakan, teknologi, dan kurikulum yang bersesuaian dengan umur untuk mempelajari sains komputer di pendidikan peringkat rendah dan menengah;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Manakala pendidikan sains komputer mempunyai cabaran untuk ditangani, termasuk meningkatkan akses kepada kursus sains komputer untuk semua pelajar, dan menyediakan pembangunan profesional untuk guru sains komputer;
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-Di mana penyertaan dalam sebuah Hour of Code semasa Minggu Pendidikan Sains Komputer boleh berfungsi untuk menjadikan subjek sains komputer lebih mudah difahami dan menggalakkan lebih ramai pelajar untuk melanjutkan pelajaran dalam sains komputer;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Manakala bidang sains komputer mempunyai halangan ekuiti yang signifikan untuk ditangani, termasuk menarik dan mengekalkan bidang calon yang pelbagai dalam bangsa, etnik, dan jantina di semua peringkat dan cawangan;
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Di mana Grace Murray Hopper, salah seorang wanita pertama dalam bidang sains komputer, telah mencipta suatu bahasa pengaturcaraan yang baru dan mempelopori piawaian untuk sistem komputer yang menyediakan asas bagi banyak kemajuan dalam bidang sains komputer; dan
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Mengambil kira bahawa {{ campaign_date/start_long }}, sempena ulang tahun Grace Hopper, ditetapkan sebagai ‘Minggu Pendidikan Sains Komputer’: Oleh yang demikian, kini kita menyambutnya <br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-Selesai, Bahawa (DEWAN ATAU SENAT, NEGERI, WILAYAH, BANDAR RAYA ATAU LEMBAGA SEKOLAH) --
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) menyokong penetapan Minggu Pendidikan Sains Komputer ({{ campaign_date/full }});
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) menggalakkan sekolah, warga pendidik, ibu bapa dan penggubal dasar untuk menyertai Minggu Pendidikan Sains Komputer dengan membolehkan pelajar mereka untuk mengambil bahagian dalam Hour of Code;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) menggalakkan sekolah, guru, penyelidik, universiti, pemimpin perniagaan dan penggubal dasar mengenal pasti mekanisme untuk guru menerima pembangunan profesional terkini bertujuan menyediakan pengalaman pembelajaran yang mampan di dalam sains komputer pada semua peringkat pendidikan dan menggalakkan pelajar didedahkan kepada konsep sains komputer;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) mendorong peluang, termasuk melalui program yang ada, untuk pelajar perempuan dan pelajar dari kumpulan kaum dan etnik yang kurang diwakili dalam sains komputer.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

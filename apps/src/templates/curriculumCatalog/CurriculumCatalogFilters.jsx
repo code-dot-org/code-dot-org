@@ -13,7 +13,7 @@ import {
   translatedCourseOfferingCsTopics,
   translatedInterdisciplinary,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDurations,
+  translatedCourseOfferingDurationsWithTime,
   translatedCourseOfferingMarketingInitiatives,
   translatedGradeLevels,
   gradeLevelsMap,
@@ -30,7 +30,7 @@ const filterTypes = {
   duration: {
     name: 'duration',
     label: i18n.duration(),
-    options: translatedCourseOfferingDurations,
+    options: translatedCourseOfferingDurationsWithTime,
   },
   topic: {
     name: 'topic',
@@ -332,12 +332,12 @@ const CurriculumCatalogFilters = ({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
+              <FontAwesome
+                icon="language"
+                className={`fa-solid ${style.iconVerticalCenter}`}
+                title={i18n.courseInYourLanguage()}
+              />
             </BodyTwoText>
-            <FontAwesome
-              icon="language"
-              className="fa-solid"
-              title={i18n.courseInYourLanguage()}
-            />
           </div>
           <Toggle
             name="filterTranslatedToggle"

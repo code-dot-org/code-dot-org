@@ -72,6 +72,7 @@ class SectionLoginInfo extends React.Component {
         ) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
+        {section.loginType === SectionLoginType.lti_v1 && <LtiLogins />}
       </div>
     );
   }
@@ -84,6 +85,18 @@ export default connect(state => ({
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.teacherSections.selectedStudents,
 }))(SectionLoginInfo);
+
+class LtiLogins extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
+        <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody()} />
+        <SignInInstructions loginType={SectionLoginType.lti_v1} />
+      </div>
+    );
+  }
+}
 
 class OAuthLogins extends React.Component {
   static propTypes = {

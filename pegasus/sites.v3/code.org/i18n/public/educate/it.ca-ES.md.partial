@@ -70,16 +70,17 @@ theme: responsive
 
 Per poder gaudir de la millor experiència possible amb el contingut de Code.org, us recomanem que consulteu al vostre departament informàtic per assegurar-vos que teniu accés a les pàgines següents.
 
-| Prioritat                                                                  | URL                                                                                                        |
-| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Necessari**                                                              | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opcional**                                                               | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Per utilitzar vídeos allotjats a YouTube (mode de privacitat millorat)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Per utilitzar els vídeos allotjats a Code.org**                          | `https://videos.code.org`                                                                                  |
-| **Per utilitzar el simulador d'internet**                                  | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Per utilitzar el Laboratori Web**                                        | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Per utilitzar el botó de compartir a Google Classroom**                  | `https://apis.google.com`                                                                                  |
-| **Per utilitzar els conjunts de dades del Laboratori d'Aplicacions**       | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Prioritat                                                                                                             | URL                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Necessari**                                                                                                         | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Per garantir que els sistemes CAPTCHA puguin distingir el seu ús de l'activitat fraudulenta automatitzada (“bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opcional**                                                                                                          | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Per utilitzar vídeos allotjats a YouTube (mode de privacitat millorat)**                                            | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Per utilitzar els vídeos allotjats a Code.org**                                                                     | `https://videos.code.org`                                                                                  |
+| **Per utilitzar el simulador d'internet**                                                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Per utilitzar el Laboratori Web**                                                                                   | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Per utilitzar el botó de compartir a Google Classroom**                                                             | `https://apis.google.com`                                                                                  |
+| **Per utilitzar els conjunts de dades del Laboratori d'Aplicacions**                                                  | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Informació de suport tècnic per a dispositius mòbils i tauletes
 
@@ -104,7 +105,7 @@ Abans de començar els cursos en línia de Code.org, reproduïu el vídeo que tr
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

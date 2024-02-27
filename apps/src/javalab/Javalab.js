@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import javalabMsg from '@cdo/javalab/locale';
 import JavalabView from './JavalabView';
 import javalab, {
   setIsStartMode,
@@ -23,11 +24,12 @@ import javalabConsole, {
   closePhotoPrompter,
   openPhotoPrompter,
 } from './redux/consoleRedux';
-import javalabEditor, {
+import {
   getSources,
   getValidation,
   setAllSourcesAndFileMetadata,
   setAllValidation,
+  setHasCompilationError,
 } from './redux/editorRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -196,7 +198,7 @@ Javalab.prototype.init = function (config) {
     recaptchaSiteKey: config.level.recaptchaSiteKey,
   });
 
-  registerReducers({javalab, javalabConsole, javalabEditor, javalabView});
+  registerReducers({javalab, javalabConsole, javalabView});
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (this.isStartMode) {
@@ -498,6 +500,11 @@ Javalab.prototype.onCommitCode = function (commitNotes, onSuccessCallback) {
 };
 
 Javalab.prototype.onOutputMessage = function (message) {
+  if (message.includes(javalabMsg.compilerError())) {
+    getStore().dispatch(setHasCompilationError(true));
+  } else if (message.includes(javalabMsg.compilationSuccess())) {
+    getStore().dispatch(setHasCompilationError(false));
+  }
   getStore().dispatch(appendOutputLog(message));
 };
 

@@ -7,7 +7,7 @@ export const possibleHeaders = {
   levelBuilderSave: 'levelBuilderSave',
 } as const;
 
-interface HeaderReduxState {
+export interface HeaderReduxState {
   currentHeader: keyof typeof possibleHeaders | undefined;
   // In general, we should not put functions into redux, but in order to
   // maintain existing functionality we have a function here. When we add

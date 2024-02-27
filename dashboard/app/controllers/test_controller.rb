@@ -235,6 +235,7 @@ class TestController < ApplicationController
       previous_yearlong_cdo_pd: ['CS in Science'],
       enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
       program: 'csp',
+      will_teach: 'Yes',
       csp_which_grades: ['11', '12'],
       csp_how_offer: 'As an AP course',
       csd_which_grades: ['6', '7'],
@@ -242,7 +243,6 @@ class TestController < ApplicationController
       csa_how_offer: 'As an AP course',
       csa_phone_screen: 'Yes',
       csa_already_know: 'Yes',
-      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course',
       pay_fee: 'Yes, my school/district would be able to pay the full program fee.'
     }
   end
@@ -331,5 +331,18 @@ class TestController < ApplicationController
     name = params.require(:pilot_name)
     Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
     head :ok
+  end
+
+  def set_single_user_experiment
+    SingleUserExperiment.find_or_create_by!(
+      min_user_id: current_user.id,
+      name: params[:experiment_name]
+    )
+    head :ok
+  end
+
+  def get_validate_rubric_ai_config
+    EvaluateRubricJob.new.validate_ai_config
+    render plain: 'OK'
   end
 end

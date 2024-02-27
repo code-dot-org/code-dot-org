@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
 <h1>Giờ giải lao lập trình</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Hoạt động hàng tuần &amp; các phần trước</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Hoạt động hàng tuần &amp; các phần trước</h1></div>
 <h2>Phần 1 – Thuật toán với Hill Harper</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 3/25</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 3/25</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>Xem trên Youtube</a></i> I <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">Xem trên Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Thuật toán</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Thuật toán</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 2 – Nguyên mẫu với Mark Cuban & Lyndsey Scott</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 4/1</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 4/1</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>Xem trên Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>Xem trên Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Nguyên mẫu</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Nguyên mẫu</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 3 – Mã hóa với Ashton Kutcher & Mia Gil Epner</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 4/8</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 4/8</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>Xem trên Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i>Xem trên Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Mã hóa</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Mã hóa</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -116,12 +116,12 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 4 – Thông tin kỹ thuật số với Mike Krieger & Alice Keeler</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 4/15</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 4/15</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
 ">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Thông tin kỹ thuật số</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Thông tin kỹ thuật số</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -140,11 +140,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 5 – Mô phỏng & Dữ liệu với Bill Gates</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 4/22</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 4/22</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Mô phỏng và dữ liệu</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Mô phỏng và dữ liệu</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -163,11 +163,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 6 – Internet với Keegan-Michael Key & Vint Cerf</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 4/29</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 4/29</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Internet</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Internet</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -186,11 +186,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 7 – Lệnh điều kiện với Sal Khan & Flo Vaughn</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 5/6</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 5/6</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Lệnh điều kiện</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Lệnh điều kiện</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -207,11 +207,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 8 – Biến với Yara Shahidi & Fuzzy Khosrowshahi</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 5/13</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 5/13</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Biến</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Biến</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -228,11 +228,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 9 – Sự kiện với Macklemore & Scott Forstall</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 5/20</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 5/20</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Sự kiện</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Sự kiện</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -249,11 +249,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 10 – Trí tuệ nhân tạo với Kat Graham & Kate Park</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 5/27</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 5/27</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Trí tuệ nhân tạo (AI)</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Trí tuệ nhân tạo (AI)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -270,11 +270,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 11 – Tính trừu tượng với Susan Wojcicki & China Anne McClain</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 6/3</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 6/3</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Tính trừu tượng</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Tính trừu tượng</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -291,11 +291,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Phần 12 – Phần cứng với Aloe Blacc, Bret Taylor & Paola Mejia Minaya</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Xem phần 6/10</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Xem phần 6/10</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>Xem trên Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">Xem trên Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Hoạt động hàng tuần – Phần cứng</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Hoạt động hàng tuần – Phần cứng</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Học sinh nhỏ:</span> Không cần đăng nhập</p>
@@ -315,3 +315,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

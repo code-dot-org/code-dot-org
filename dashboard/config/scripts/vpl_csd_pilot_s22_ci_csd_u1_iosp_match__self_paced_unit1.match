@@ -1,5 +1,5 @@
 name 'VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_-self-paced-unit1'
-title 'Check for understanding'
+title 'Check for Understanding - Test Your Knowledge'
 height '55'
 description 'A group of students is making an app that will help people decide what outfit to wear in the morning. Match four things that the app does with input, output, storage, and processing.'
 question 'Input'

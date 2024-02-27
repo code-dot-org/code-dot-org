@@ -74,6 +74,7 @@ describe('DetailViewContents', () => {
     _.omit(getApplicationStatuses(addAutoEmail), [
       'incomplete',
       'awaiting_admin_approval',
+      'enrolled',
     ]);
 
   const mountDetailView = (overrides = {}) => {

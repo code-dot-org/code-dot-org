@@ -10,7 +10,13 @@ import {connect} from 'react-redux';
 import SessionTime from '../components/session_time';
 import Spinner from '../../components/spinner';
 import SessionAttendance from './session_attendance';
-import {PermissionPropType, WorkshopAdmin, Organizer} from '../permission';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  Organizer,
+  Facilitator,
+  ProgramManager,
+} from '../permission';
 import color from '@cdo/apps/util/color';
 import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
@@ -132,7 +138,12 @@ export class WorkshopAttendance extends React.Component {
 
     const isReadOnly =
       this.hasWorkshopEnded() &&
-      !this.props.permission.hasAny(WorkshopAdmin, Organizer);
+      !this.props.permission.hasAny(
+        WorkshopAdmin,
+        Organizer,
+        Facilitator,
+        ProgramManager
+      );
 
     let intro = null;
     if (isReadOnly) {

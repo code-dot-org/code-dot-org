@@ -3,7 +3,6 @@ import {UnconnectedJoinSection as JoinSection} from './JoinSection';
 import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'JoinSection',
   component: JoinSection,
 };
 
