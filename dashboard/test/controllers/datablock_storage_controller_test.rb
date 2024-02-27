@@ -30,6 +30,22 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     JSON.parse(@response.body)
   end
 
+  def create_record_where_foo_is(value)
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"foo" => value}.to_json,
+    }
+    assert_response :success
+  end
+
+  def create_record_without_foo
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {}.to_json,
+    }
+    assert_response :success
+  end
+
   def set_and_get_key_value(key, value)
     post _url(:set_key_value), params: {
       key: key,
@@ -195,22 +211,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   test "coerce_column converts anything to string" do
     skip "FIXME: create_record_where_foo_is(nil) and create_record_without_foo both fail"
-
-    def create_record_where_foo_is(value)
-      post _url(:create_record), params: {
-        table_name: 'mytable',
-        record_json: {"foo" => value}.to_json,
-      }
-      assert_response :success
-    end
-
-    def create_record_without_foo
-      post _url(:create_record), params: {
-        table_name: 'mytable',
-        record_json: {}.to_json,
-      }
-      assert_response :success
-    end
 
     create_record_where_foo_is(1)
     create_record_where_foo_is('one')
