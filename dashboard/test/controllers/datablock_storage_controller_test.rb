@@ -411,29 +411,31 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_match(/while parsing initial key\/value data: {/, error)
   end
 
-  test "add_shared_table" do
-    skip "FIXME: Not yet implemented"
-    #   describe('copyStaticTable', () => {
-    #     it('Copies the records and counters from shared channel', done => {
-    #       const expectedTableData = {
-    #         1: '{"id":1,"name":"alice","age":7,"male":false}',
-    #         2: '{"id":2,"name":"bob","age":8,"male":true}',
-    #         3: '{"id":3,"name":"charlie","age":9,"male":true}',
-    #       };
-    #       getSharedDatabase()
-    #         .child('counters/tables/mytable')
-    #         .set({lastId: 3, rowCount: 3});
-    #       getSharedDatabase()
-    #         .child('storage/tables/mytable/records')
-    #         .set(expectedTableData);
-    #       FirebaseStorage.copyStaticTable(
-    #         'mytable',
-    #         () => validateTableData(expectedTableData, done),
-    #         () => {
-    #           throw 'error';
-    #         }
-    #       );
-    #     });
+  def create_shared_table
+    expected_records = [
+      {"id" => 1, "name" => "alice", "age" => 7},
+      {"id" => 2, "name" => "bob", "age" => 8},
+      {"id" => 3, "name" => "charlie", "age" => 9},
+    ]
+
+    mysharedtable = DatablockStorageTable.create!(
+      project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID,
+      table_name: 'mysharedtable'
+    )
+    mysharedtable.create_records expected_records
+    mysharedtable.save!
+
+    return expected_records, mysharedtable
+  end
+
+  test "shared_table works with read_records" do
+    expected_records, _mysharedtable = create_shared_table
+
+    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    assert_response :success
+
+    assert_equal expected_records, read_records('mysharedtable')
+  end
   end
 
   test "add_shared_table cannot overwrite an existing table" do
