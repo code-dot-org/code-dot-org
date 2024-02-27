@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import shapes from './shapes';
 import {
   Heading2,
   BodyOneText,
@@ -121,52 +120,6 @@ export class CscInfoActionBlock extends Component {
             text: i18n.learnMore(),
           },
         ]}
-      />
-    );
-  }
-}
-
-export class SpecialAnnouncementActionBlock extends Component {
-  static propTypes = {
-    announcement: shapes.specialAnnouncement,
-    marginBottom: PropTypes.string,
-  };
-
-  state = {
-    buttonList: this.createButtonList(),
-  };
-
-  createButtonList() {
-    const buttonList = [];
-    const {announcement} = this.props;
-    buttonList.push({
-      id: announcement.buttonId
-        ? announcement.buttonId
-        : 'special-announcement-btn-1',
-      url: announcement.buttonUrl,
-      text: announcement.buttonText,
-    });
-    if (announcement.buttonUrl2 && announcement.buttonText2) {
-      buttonList.push({
-        id: announcement.buttonId2
-          ? announcement.buttonId2
-          : 'special-announcement-btn-2',
-        url: announcement.buttonUrl2,
-        text: announcement.buttonText2,
-      });
-    }
-    return buttonList;
-  }
-
-  render() {
-    const {announcement} = this.props;
-    return (
-      <TwoColumnActionBlock
-        imageUrl={pegasus(announcement.image)}
-        subHeading={announcement.title}
-        description={announcement.body}
-        buttons={this.state.buttonList}
-        marginBottom={this.props.marginBottom}
       />
     );
   }
