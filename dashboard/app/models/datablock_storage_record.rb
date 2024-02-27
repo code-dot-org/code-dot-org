@@ -14,6 +14,10 @@
 class DatablockStorageRecord < ApplicationRecord
   self.primary_keys = :project_id, :table_name, :record_id
 
+  # TODO: implement enforcement of MAX_RECORD_LENGTH, we already have a test for it
+  # but we're skipping it until this is implemented.
+  MAX_RECORD_LENGTH = 4096
+
   # Enabling this was adding an extra `SELECT `datablock_storage_tables`.*` query to update_record
   # and we aren't using it, soooo...
   # belongs_to :table, class_name: 'DatablockStorageTable', foreign_key: [:project_id, :table_name]

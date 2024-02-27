@@ -118,9 +118,26 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_ROW_COUNT is not yet implemented so we get :success when :bad_request is desired"
     assert_response :bad_request
+    # Is MAX_ROWS_EXCEEDED the right error? check the JS
     assert_equal 'MAX_ROWS_EXCEEDED', JSON.parse(@response.body)['type']
   ensure
     DatablockStorageTable.const_set(:MAX_TABLE_ROW_COUNT, original_max_table_row_count)
+  end
+
+  test "create_record can't create records over MAX_RECORD_LENGTH" do
+    max_record_length = DatablockStorageRecord::MAX_RECORD_LENGTH
+
+    not_too_many_bees = 'b' * (max_record_length - 20) # 20 less 'b' chars than max
+    post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => not_too_many_bees}.to_json}
+    assert_response :success
+
+    too_many_bees = 'b' * (max_record_length + 1) # 1 more 'b' char than max
+    post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => too_many_bees}.to_json}
+    assert_response :bad_request
+
+    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageRecord::MAX_RECORD_LENGTH is not yet implemented at the DatablockStorage level"
+    # Is MAX_RECORD_LENGTH_EXCEEDED the right error? check the JS
+    assert_equal 'MAX_RECORD_LENGTH_EXCEEDED', JSON.parse(@response.body)['type']
   end
 
   test "create_table" do
