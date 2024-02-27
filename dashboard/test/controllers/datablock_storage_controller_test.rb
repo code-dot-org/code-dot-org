@@ -322,72 +322,45 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "populate_table does not overwrite existing data" do
     skip "FIXME: populate_tables is returning a 500, need to debug, expected behavior is to not return even a warning, and silently fail if the table already exists"
 
-    EXISTING_TABLE_DATA = [
-      {"city" => "New York", "state" => "NY", "id" => 1}
-    ]
+    NYC_RECORD = {"city" => "New York", "state" => "NY", "id" => 1}
+
     post _url(:create_record), params: {
       table_name: 'cities',
-      record_json: EXISTING_TABLE_DATA[0].to_json,
+      record_json: NYC_RECORD.to_json,
     }
 
     put _url(:populate_tables), params: {table_data_json: POPULATE_TABLE_DATA_JSON_STRING}
+    # Expected behavior: silently fail if the `cites` table already exists
+    # Current behavior (wrong): 500 error
     assert_response :success
 
-    assert_equal EXISTING_TABLE_DATA, read_records('cities')
+    assert_equal [NYC_RECORD], read_records('cities')
   end
 
   test "populate_table prints a friendly error message when given bad table json" do
-    skip "FIXME: Not yet implemented"
-    #     it('prints a friendly error message when given bad table json', done => {
-    #       FirebaseStorage.populateTable(BAD_JSON).then(() => {
-    #         throw 'expected JSON error to be reported';
-    #       }, validateError);
+    skip "FIXME: populate_tables is returning a 500, need to debug, expected behavior is to return a 400 with an error message"
 
-    #       function validateError(error) {
-    #         expect(error).to.contain('SyntaxError');
-    #         expect(error).to.contain('while parsing initial table data: {');
-    #         done();
-    #       }
-    #     });
+    BAD_JSON = '{'
+    put _url(:populate_tables), params: {table_data_json: BAD_JSON}
+    assert_response :bad_request
+
+    error = JSON.parse(@response.body)
+    # Error message should be like (form the JS):
+    # `${e}\nwhile parsing initial table data: ${jsonData}`
+    assert_match(/SyntaxError/, error)
+    assert_match(/while parsing initial table data: {/, error)
   end
 
   test "populate_key_values" do
-    skip "FIXME: Not yet implemented"
-    # FIXME: implement test based on this JS
-    #
-    #   describe('populateKeyValue', () => {
-    #     const EXISTING_KEY_VALUE_DATA = {
-    #       click_count: '1',
-    #     };
-    #     const NEW_KEY_VALUE_DATA_JSON = `{
-    #         "click_count": 5
-    #       }`;
-    #     const NEW_KEY_VALUE_DATA = {
-    #       click_count: '5',
-    #     };
-    #     const BAD_JSON = '{';
-    #     function verifyKeyValue(expectedData) {
-    #       return getProjectDatabase()
-    #         .child(`storage/keys`)
-    #         .once('value')
-    #         .then(
-    #           snapshot => {
-    #             expect(snapshot.val()).to.deep.equal(expectedData);
-    #           },
-    #           error => {
-    #             throw error;
-    #           }
-    #         );
-    #     }
-    #     it('loads new key value data when no previous data exists', done => {
-    #       FirebaseStorage.populateKeyValue(
-    #         NEW_KEY_VALUE_DATA_JSON,
-    #         () => verifyKeyValue(NEW_KEY_VALUE_DATA).then(done),
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #     });
+    put _url(:populate_key_values), params: {key_values_json: '{"click_count": 5}'}
+    assert_response :success
+
+    get _url(:get_key_values)
+    assert_response :success
+    assert_equal ({"click_count" => 5}), JSON.parse(@response.body)
+  end
+
+  test "populate_key_values does not overwrite existing data" do
     #     it('does not overwrite existing data', done => {
     #       getProjectDatabase()
     #         .child(`storage/keys`)
@@ -402,6 +375,10 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     #           );
     #         });
     #     });
+    #   });
+  end
+
+  test "populate_key_values prints a friendly error message when given bad key value json" do
     #     it('prints a friendly error message when given bad key value json', done => {
     #       FirebaseStorage.populateKeyValue(
     #         BAD_JSON,
@@ -416,7 +393,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     #         done();
     #       }
     #     });
-    #   });
   end
 
   test "add_shared_table" do
