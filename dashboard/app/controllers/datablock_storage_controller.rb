@@ -26,7 +26,7 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def set_key_value
-    raise StudentFacingError, "value must be less than 4096 bytes" if params[:value].length > 4096
+    raise StudentFacingError, "value must be less than #{DatablockStorageKvp::MAX_VALUE_LENGTH} bytes" if params[:value].length > DatablockStorageKvp::MAX_VALUE_LENGTH
     value = JSON.parse params[:value]
     DatablockStorageKvp.set_kvp @project_id, params[:key], value
     render json: {key: params[:key], value: value}

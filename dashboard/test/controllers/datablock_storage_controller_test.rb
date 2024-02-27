@@ -56,6 +56,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     set_and_get_key_value('key', nil)
   end
 
+  test "set_key_value should enforce MAX_VALUE_LENGTH" do
+    too_many_bees = 'b' * (DatablockStorageKvp::MAX_VALUE_LENGTH + 1) # 1 more 'b' char than max
+    post _url(:set_key_value), params: {
+      key: 'key',
+      value: too_many_bees.to_json,
+    }
+    assert_response :bad_request
+
+    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_VALUE_LENGTH_EXCEEDED is not yet implemented"
+    # Is MAX_VALUE_LENGTH_EXCEEDED the right error? check the JS
+    assert_equal 'MAX_VALUE_LENGTH_EXCEEDED', JSON.parse(@response.body)['type']
+  end
+
   test "creates a record" do
     post _url(:create_record), params: {
       table_name: 'mytable',
@@ -125,13 +138,11 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create_record can't create records over MAX_RECORD_LENGTH" do
-    max_record_length = DatablockStorageRecord::MAX_RECORD_LENGTH
-
-    not_too_many_bees = 'b' * (max_record_length - 20) # 20 less 'b' chars than max
+    not_too_many_bees = 'b' * (DatablockStorageRecord::MAX_RECORD_LENGTH - 20) # 20 less 'b' chars than max
     post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => not_too_many_bees}.to_json}
     assert_response :success
 
-    too_many_bees = 'b' * (max_record_length + 1) # 1 more 'b' char than max
+    too_many_bees = 'b' * (DatablockStorageRecord::MAX_RECORD_LENGTH + 1) # 1 more 'b' char than max
     post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => too_many_bees}.to_json}
     assert_response :bad_request
 
