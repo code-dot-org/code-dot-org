@@ -101,7 +101,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create_record can't create more than MAX_TABLE_COUNT tables" do
-    # Lower the max table count to 3 so its easy to test
+    # Lower the max table count to 3 so it's easy to test
     original_max_table_count = DatablockStorageTable::MAX_TABLE_COUNT
     DatablockStorageTable.const_set(:MAX_TABLE_COUNT, 3)
 
