@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.0]()
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/56683)
 * moved `CheckboxDropdown` to -> `dropdown/checkboxDropdown`
 * reworked `CheckboxDropdown` to use `_CustomDropdown` component
 
