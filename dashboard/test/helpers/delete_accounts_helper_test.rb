@@ -1593,11 +1593,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     num_ai_tutor_interactions = 3
     create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
 
-    assert AiTutorInteraction.where(user_id: student.id).count, num_ai_tutor_interactions
-
-    student.destroy
-
-    assert AiTutorInteraction.where(user_id: student.id).count, 0
+    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
+      student.destroy
+    end
   end
 
   #
