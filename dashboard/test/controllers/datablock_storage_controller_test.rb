@@ -557,6 +557,35 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "import_csv overwrites existing data" do
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"name" => 'tim', "age" => 2}.to_json,
+    }
+    assert_response :success
+
+    IMPORT_CSV_DATA = <<~CSV
+      id,name
+      1,alice
+      2,bob
+      3,charlie
+    CSV
+
+    EXPECTED_RECORDS = [
+      {"id" => 1, "name" => "alice"},
+      {"id" => 2, "name" => "bob"},
+      {"id" => 3, "name" => "charlie"},
+    ]
+
+    post _url(:import_csv), params: {
+      table_name: 'mytable',
+      table_data_csv: CSV_DATA,
+    }
+    assert_response :success
+
+    skip "FIXME: controller bug, test will fail because import_csv doesn't properly overwrite existing data"
+
+    # Tim, age 2 record should be gone:
+    assert_equal EXPECTED_RECORDS, read_records
   end
 
   test "import_csv rejects long inputs" do
