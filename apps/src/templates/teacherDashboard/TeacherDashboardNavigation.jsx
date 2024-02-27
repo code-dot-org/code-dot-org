@@ -19,7 +19,7 @@ export const TeacherDashboardPath = {
   aiTutorChatMessages: '/ai_tutor',
 };
 
-const aiTutor = 'AI Tutor'; 
+const aiTutor = 'AI Tutor';
 
 const teacherDashboardLinks = [
   {
