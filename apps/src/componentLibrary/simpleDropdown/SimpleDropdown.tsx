@@ -61,25 +61,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   color = 'black',
   size = 'm',
 }) => {
-  const selectItems = React.useMemo(() => {
-    if (itemGroups) {
-      return itemGroups.map(({label, groupItems}, index) => (
-        <optgroup key={index} label={label}>
-          {groupItems.map(({value, text}) => (
-            <option value={value} key={value}>
-              {text}
-            </option>
-          ))}
-        </optgroup>
-      ));
-    }
-    return items.map(({value, text}) => (
-      <option value={value} key={value}>
-        {text}
-      </option>
-    ));
-  }, [items, itemGroups]);
-
   return (
     <label
       className={classNames(
