@@ -6,12 +6,13 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
+      "pilot_experiment": "coursee-maker-pilot",
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "coursee-maker",
-    "serialized_at": "2024-02-16 23:16:23 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-02-27 00:11:26 UTC",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -2769,6 +2770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_juicemind_bridging_activity_beginner"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -2816,6 +2820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_juicemind_content_assessment_beginner"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
@@ -3314,6 +3321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_juicemind_bridging_activity_intermediate"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -3361,6 +3371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_juicemind_content_assessment_intermediate"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
@@ -4133,6 +4146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_juicemind_bridging_activity_stretch"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -4180,6 +4196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_e_maker_juicemind_content_assessment_stretch"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:07.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In ArrayPrinter.java:\r\n\r\n1. Convert the `while`(#e7e8ea) loop to a `for`(#e7e8ea) loop in the `getNumbers()`(#e7e8ea) method.\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n\r\nWrite a Boolean expression to establish the condition that the loop should continue.\r\n\r\nChange the `variableName`(#e7e8ea) by some value, like increasing by `1`(#e7e8ea) each time.\r\n:::",
@@ -19,12 +23,9 @@
         "text": "/*\n * Manages and outputs values in an array\n */\npublic class ArrayPrinter {\n\n  private int[] numbers;\n\n  /*\n   * Constructor to create an ArrayPrinter with\n   * a specified array of int values\n   */\n  public ArrayPrinter(int[] numbers) {\n    this.numbers = numbers;\n  }\n\n  /*\n   * Returns the numbers array\n   */\n  public int[] getNumbersArray() {\n    return numbers;\n  }\n\n  /*\n   * Returns a String containing the values in the numbers array\n   */\n  public String getNumbers() {\n    String result = \"\";\n    \n    int index = 0;\n\n    while (index < numbers.length) {\n      result += numbers[index] + \" \";\n      index++;\n    }\n\n    return result;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:07.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:07.197+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L2_2022\\\"\"],\"cloned_from\":\"CSA U3L3-L2_2022\"},{\"changed_at\":\"2022-08-31 13:46:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-31 13:46:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:00:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:00:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:00:45 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

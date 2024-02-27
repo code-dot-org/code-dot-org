@@ -1,6 +1,9 @@
 import React from 'react';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import RubricContainer from './RubricContainer';
+import {reduxStore} from '../../../.storybook/decorators';
+import {Provider} from 'react-redux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export default {
   component: RubricContainer,
@@ -85,14 +88,16 @@ const defaultStudentLevelInfo = {
 };
 
 const Template = args => (
-  <RubricContainer
-    rubric={defaultRubric}
-    teacherHasEnabledAi={false}
-    studentLevelInfo={defaultStudentLevelInfo}
-    currentLevelName={rubricLevelName}
-    open
-    {...args}
-  />
+  <Provider store={reduxStore({teacherSections})}>
+    <RubricContainer
+      rubric={defaultRubric}
+      teacherHasEnabledAi={false}
+      studentLevelInfo={defaultStudentLevelInfo}
+      currentLevelName={rubricLevelName}
+      open
+      {...args}
+    />
+  </Provider>
 );
 
 export const ViewingOwnWorkAiEnabled = Template.bind({});

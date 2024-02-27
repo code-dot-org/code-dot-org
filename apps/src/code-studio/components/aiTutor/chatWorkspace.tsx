@@ -2,7 +2,7 @@ import React from 'react';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import ChatMessage from './chatMessage';
 import UserChatMessageEditor from './userChatMessageEditor';
-import style from './ai-tutor.module.scss';
+import style from './chat-workspace.module.scss';
 import WarningModal from './warningModal';
 
 /**
