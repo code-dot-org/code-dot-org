@@ -16,7 +16,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   def _url(action)
-    return "/projects/applab/#{@channel_id}/datablock_storage/#{action}"
+    return "/datablock_storage/#{@channel_id}/#{action}"
   end
 
   # def snippets
