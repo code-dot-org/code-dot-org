@@ -291,7 +291,7 @@ class DatablockStorageController < ApplicationController
     # channel_id is valid if it decrypts into a valid + loadable project_id
     _, @project_id = storage_decrypt_channel_id(params[:channel_id])
     @project = Project.find(@project_id)
-    unless SUPPORTED_PROJECT_TYPES.includes? @project.project_type
+    unless SUPPORTED_PROJECT_TYPES.include? @project.project_type
       raise "DatablockStorage is only available for applab and gamelab projects"
     end
   end
