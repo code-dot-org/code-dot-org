@@ -172,6 +172,15 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ['id'], JSON.parse(@response.body)
   end
 
+  test "create_table with an emoji name" do
+    post _url(:create_table), params: {table_name: '👁️👄👁️'}
+    assert_response :success
+
+    get _url(:get_table_names)
+    assert_response :success
+    assert_equal ['👁️👄👁️'], JSON.parse(@response.body)
+  end
+
   test "get_key_values" do
     post _url(:set_key_value), params: {
       key: 'name',
