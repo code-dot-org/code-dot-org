@@ -27,7 +27,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       table_name: table_name,
     }
     assert_response :success
-    JSON.parse(@response.body)
+    JSON.parse(@response.body).sort_by {|record| record[:id]}
   end
 
   def set_and_get_key_value(key, value)
