@@ -1078,29 +1078,36 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   #     });
   #   });
 
-  #   describe('importCsv', () => {
-  #     const csvData =
-  #       'id,name,age,male\n' +
-  #       '4,alice,7,false\n' +
-  #       '5,bob,8,true\n' +
-  #       '6,charlie,9,true\n';
+  test "import_csv" do
+    csv_data = <<~CSV
+      id,name,age,male
+      4,alice,7,false
+      5,bob,8,true
+      6,charlie,9,true
+    CSV
 
-  #     const expectedTableData = {
-  #       1: '{"id":1,"name":"alice","age":7,"male":false}',
-  #       2: '{"id":2,"name":"bob","age":8,"male":true}',
-  #       3: '{"id":3,"name":"charlie","age":9,"male":true}',
-  #     };
+    expected_records = [
+      {"id" => 1, "name" => "alice", "age" => 7, "male" => false},
+      {"id" => 2, "name" => "bob", "age" => 8, "male" => true},
+      {"id" => 3, "name" => "charlie", "age" => 9, "male" => true},
+    ]
 
-  #     it('imports a valid csv', done => {
-  #       FirebaseStorage.importCsv(
-  #         'mytable',
-  #         csvData,
-  #         () => validateTableData(expectedTableData, done),
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-  #     });
+    post _url(:import_csv), params: {
+      table_name: 'mytable',
+      table_data_csv: csv_data,
+    }
+    assert_response :success
+    get _url(:read_records), params: {
+      table_name: 'mytable',
+    }
+    assert_response :success
+    val = JSON.parse(@response.body)
+
+    # FIXME FIXME FIXME
+    # this is /expected/ to fail currently because importCSV is not
+    # casting values that can be JSON.parse()d, so everything is a string
+    assert_equal expected_records, val
+  end
 
   #     it('overwrites existing data', done => {
   #       FirebaseStorage.createRecord(
