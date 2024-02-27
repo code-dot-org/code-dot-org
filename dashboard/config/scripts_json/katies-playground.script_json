@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-02-22 22:39:19 UTC",
+    "serialized_at": "2024-02-26 22:53:26 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -183,6 +183,21 @@
       },
       "seeding_key": {
         "lesson.key": "Hello Game Design",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "Hello Game Design Simplified",
+      "name": "Hello Game Design Callouts",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Hello Game Design Simplified",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -428,6 +443,18 @@
       "seeding_key": {
         "lesson_activity.key": "3dc02a06-e5d7-4674-baaa-8f530710282d",
         "lesson.key": "Hello Game Design",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "2dd68c10-b44f-49aa-a368-beed532f5ae9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2dd68c10-b44f-49aa-a368-beed532f5ae9",
+        "lesson.key": "Hello Game Design Simplified",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -1123,6 +1150,61 @@
       "seeding_key": {
         "activity_section.key": "a62a1084-70fd-4600-a2c7-622f187d3700",
         "lesson_activity.key": "3dc02a06-e5d7-4674-baaa-8f530710282d"
+      }
+    },
+    {
+      "key": "19b6295c-0475-4b52-8a87-0302e3ecb67b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Game Design & Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "19b6295c-0475-4b52-8a87-0302e3ecb67b",
+        "lesson_activity.key": "2dd68c10-b44f-49aa-a368-beed532f5ae9"
+      }
+    },
+    {
+      "key": "83af2266-b961-492f-8896-fb0c4c88755a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Game Mechanics - Sprite Behaviors"
+      },
+      "seeding_key": {
+        "activity_section.key": "83af2266-b961-492f-8896-fb0c4c88755a",
+        "lesson_activity.key": "2dd68c10-b44f-49aa-a368-beed532f5ae9"
+      }
+    },
+    {
+      "key": "3f5bc8b3-afce-4c73-8257-e86242ac666f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Game Mechanics - Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f",
+        "lesson_activity.key": "2dd68c10-b44f-49aa-a368-beed532f5ae9"
+      }
+    },
+    {
+      "key": "88b70c39-abb8-4fa9-a0a8-0747b165472c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Game Mechanics - Scoring & Winning"
+      },
+      "seeding_key": {
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c",
+        "lesson_activity.key": "2dd68c10-b44f-49aa-a368-beed532f5ae9"
+      }
+    },
+    {
+      "key": "08485846-8590-49eb-91fd-61f03d8aa8d2",
+      "position": 5,
+      "properties": {
+        "progression_name": "Level Up & Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "08485846-8590-49eb-91fd-61f03d8aa8d2",
+        "lesson_activity.key": "2dd68c10-b44f-49aa-a368-beed532f5ae9"
       }
     }
   ],
@@ -2237,6 +2319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Games are fun!_simplified"
+        ],
         "progression": "Game Design & Setup"
       },
       "bonus": false,
@@ -2259,6 +2344,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_player_sprite_simplified"
+        ],
         "progression": "Game Design & Setup"
       },
       "bonus": false,
@@ -2281,6 +2369,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_rules_say_simplified"
+        ],
         "progression": "Game Design & Setup"
       },
       "bonus": false,
@@ -2303,6 +2394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_mechanics_intro_simplified"
+        ],
         "progression": "Game Mechanics - Sprite Behaviors"
       },
       "bonus": false,
@@ -2325,6 +2419,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_behaviors_simplified"
+        ],
         "progression": "Game Mechanics - Sprite Behaviors"
       },
       "bonus": false,
@@ -2347,6 +2444,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_more_behaviors_simplified"
+        ],
         "progression": "Game Mechanics - Sprite Behaviors"
       },
       "bonus": false,
@@ -2369,6 +2469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_events_intro"
+        ],
         "progression": "Game Mechanics - Events"
       },
       "bonus": false,
@@ -2391,6 +2494,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_click_event_simplified"
+        ],
         "progression": "Game Mechanics - Events"
       },
       "bonus": false,
@@ -2413,6 +2519,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_sounds_simplified"
+        ],
         "progression": "Game Mechanics - Events"
       },
       "bonus": false,
@@ -2435,6 +2544,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_touch_event_simplified"
+        ],
         "progression": "Game Mechanics - Events"
       },
       "bonus": false,
@@ -2457,6 +2569,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_competition_event_simplified"
+        ],
         "progression": "Game Mechanics - Events"
       },
       "bonus": false,
@@ -2479,6 +2594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_variables_intro"
+        ],
         "progression": "Game Mechanics - Scoring & Winning"
       },
       "bonus": false,
@@ -2501,6 +2619,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_scoreboard_simplified"
+        ],
         "progression": "Game Mechanics - Scoring & Winning"
       },
       "bonus": false,
@@ -2523,6 +2644,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_score_variable_simplified"
+        ],
         "progression": "Game Mechanics - Scoring & Winning"
       },
       "bonus": false,
@@ -2545,6 +2669,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_winning_conditional_simple_simplified"
+        ],
         "progression": "Game Mechanics - Scoring & Winning"
       },
       "bonus": false,
@@ -2567,6 +2694,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_skill_choices_simplified"
+        ],
         "progression": "Level Up & Explore"
       },
       "bonus": false,
@@ -2589,6 +2719,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hello_games_choices_simplified"
+        ],
         "progression": "Level Up & Explore"
       },
       "bonus": false,
@@ -2603,6 +2736,380 @@
       },
       "level_keys": [
         "hello_games_choices_simplified"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Design & Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Games are fun!_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "19b6295c-0475-4b52-8a87-0302e3ecb67b"
+      },
+      "level_keys": [
+        "Games are fun!_callouts"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Design & Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_player_sprite_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "19b6295c-0475-4b52-8a87-0302e3ecb67b"
+      },
+      "level_keys": [
+        "hello_games_player_sprite_callouts"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Design & Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_rules_say_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "19b6295c-0475-4b52-8a87-0302e3ecb67b"
+      },
+      "level_keys": [
+        "hello_games_rules_say_callouts"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_mechanics_intro_simplified_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "83af2266-b961-492f-8896-fb0c4c88755a"
+      },
+      "level_keys": [
+        "hello_games_mechanics_intro_simplified_callouts"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_behaviors_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "83af2266-b961-492f-8896-fb0c4c88755a"
+      },
+      "level_keys": [
+        "hello_games_behaviors_callouts"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_more_behaviors_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "83af2266-b961-492f-8896-fb0c4c88755a"
+      },
+      "level_keys": [
+        "hello_games_more_behaviors_callouts"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_events_intro_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      },
+      "level_keys": [
+        "hello_games_events_intro_callouts"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_click_event_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      },
+      "level_keys": [
+        "hello_games_click_event_callouts"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_sounds_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      },
+      "level_keys": [
+        "hello_games_sounds_callouts"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_touch_event_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      },
+      "level_keys": [
+        "hello_games_touch_event_callouts"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_competition_event_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      },
+      "level_keys": [
+        "hello_games_competition_event_callouts"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_variables_intro_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      },
+      "level_keys": [
+        "hello_games_variables_intro_callouts"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_scoreboard_simplified_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      },
+      "level_keys": [
+        "hello_games_scoreboard_simplified_callouts"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_score_variable_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      },
+      "level_keys": [
+        "hello_games_score_variable_callouts"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_winning_conditional_simple_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      },
+      "level_keys": [
+        "hello_games_winning_conditional_simple_callouts"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Level Up & Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_skill_choices_simplified_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "08485846-8590-49eb-91fd-61f03d8aa8d2"
+      },
+      "level_keys": [
+        "hello_games_skill_choices_simplified_callouts"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Level Up & Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_choices_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "08485846-8590-49eb-91fd-61f03d8aa8d2"
+      },
+      "level_keys": [
+        "hello_games_choices_callouts"
       ]
     }
   ],
@@ -3349,6 +3856,210 @@
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "a62a1084-70fd-4600-a2c7-622f187d3700"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Games are fun!_callouts",
+        "script_level.level_keys": [
+          "Games are fun!_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "19b6295c-0475-4b52-8a87-0302e3ecb67b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_player_sprite_callouts",
+        "script_level.level_keys": [
+          "hello_games_player_sprite_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "19b6295c-0475-4b52-8a87-0302e3ecb67b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_rules_say_callouts",
+        "script_level.level_keys": [
+          "hello_games_rules_say_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "19b6295c-0475-4b52-8a87-0302e3ecb67b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_mechanics_intro_simplified_callouts",
+        "script_level.level_keys": [
+          "hello_games_mechanics_intro_simplified_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "83af2266-b961-492f-8896-fb0c4c88755a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_behaviors_callouts",
+        "script_level.level_keys": [
+          "hello_games_behaviors_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "83af2266-b961-492f-8896-fb0c4c88755a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_more_behaviors_callouts",
+        "script_level.level_keys": [
+          "hello_games_more_behaviors_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "83af2266-b961-492f-8896-fb0c4c88755a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_events_intro_callouts",
+        "script_level.level_keys": [
+          "hello_games_events_intro_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_click_event_callouts",
+        "script_level.level_keys": [
+          "hello_games_click_event_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_sounds_callouts",
+        "script_level.level_keys": [
+          "hello_games_sounds_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_touch_event_callouts",
+        "script_level.level_keys": [
+          "hello_games_touch_event_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_competition_event_callouts",
+        "script_level.level_keys": [
+          "hello_games_competition_event_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "3f5bc8b3-afce-4c73-8257-e86242ac666f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_variables_intro_callouts",
+        "script_level.level_keys": [
+          "hello_games_variables_intro_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_scoreboard_simplified_callouts",
+        "script_level.level_keys": [
+          "hello_games_scoreboard_simplified_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_score_variable_callouts",
+        "script_level.level_keys": [
+          "hello_games_score_variable_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_winning_conditional_simple_callouts",
+        "script_level.level_keys": [
+          "hello_games_winning_conditional_simple_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "88b70c39-abb8-4fa9-a0a8-0747b165472c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_skill_choices_simplified_callouts",
+        "script_level.level_keys": [
+          "hello_games_skill_choices_simplified_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "08485846-8590-49eb-91fd-61f03d8aa8d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_choices_callouts",
+        "script_level.level_keys": [
+          "hello_games_choices_callouts"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "08485846-8590-49eb-91fd-61f03d8aa8d2"
       }
     }
   ],

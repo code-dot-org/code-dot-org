@@ -5,10 +5,9 @@ describe I18n::Resources::Apps::Labs::SyncOut do
   let(:described_class) {I18n::Resources::Apps::Labs::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'uk-UA'}
   let(:js_locale) {'uk_ua'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -23,7 +22,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
     let(:process_language) {described_instance.process(language)}
 
     let(:i18n_original_file_path) {CDO.dir("i18n/locales/original/blockly-mooc/#{lab}.json")}
-    let(:crowdin_locale_file_path) {CDO.dir('i18n/locales', crowdin_locale, "blockly-mooc/#{lab}.json")}
+    let(:crowdin_locale_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "blockly-mooc/#{lab}.json")}
     let(:i18n_locale_file_path) {CDO.dir('i18n/locales', i18n_locale, "blockly-mooc/#{lab}.json")}
     let(:apps_i18n_lab_file_path) {CDO.dir('apps/i18n', lab, "#{js_locale}.json")}
     let(:en_apps_i18n_lab_file_path) {CDO.dir('apps/i18n', lab, 'en_us.json')}
@@ -53,7 +52,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
 
     before do
       I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
-      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}])
+      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{locale_s: i18n_locale}])
       I18nScriptUtils.stubs(:to_js_locale).with(i18n_locale).returns(js_locale)
 
       FileUtils.mkdir_p(File.dirname(i18n_original_file_path))
