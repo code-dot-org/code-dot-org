@@ -435,9 +435,9 @@ ActiveRecord::Schema.define(version: 2024_02_16_071353) do
     t.index ["name"], name: "index_data_docs_on_name"
   end
 
-  create_table "datablock_storage_kvps", primary_key: ["project_id", "key"], charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "datablock_storage_kvps", primary_key: ["project_id", "key"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.integer "project_id", null: false
-    t.string "key", limit: 768, null: false
+    t.string "key", limit: 700, null: false
     t.json "value"
   end
 
@@ -449,19 +449,19 @@ ActiveRecord::Schema.define(version: 2024_02_16_071353) do
     t.index ["singleton_guard"], name: "index_datablock_storage_library_manifest_on_singleton_guard", unique: true
   end
 
-  create_table "datablock_storage_records", primary_key: ["project_id", "table_name", "record_id"], charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "datablock_storage_records", primary_key: ["project_id", "table_name", "record_id"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.integer "project_id", null: false
-    t.string "table_name", limit: 768, null: false
+    t.string "table_name", limit: 700, null: false
     t.integer "record_id", null: false
     t.json "record_json"
     t.index ["project_id", "table_name"], name: "index_datablock_storage_records_on_project_id_and_table_name"
   end
 
-  create_table "datablock_storage_tables", primary_key: ["project_id", "table_name"], charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "datablock_storage_tables", primary_key: ["project_id", "table_name"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.integer "project_id", null: false
-    t.string "table_name", limit: 768, null: false
+    t.string "table_name", limit: 700, null: false
     t.json "columns"
-    t.string "is_shared_table", limit: 768
+    t.string "is_shared_table", limit: 700
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
