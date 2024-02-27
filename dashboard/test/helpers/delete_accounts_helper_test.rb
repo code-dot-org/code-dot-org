@@ -1799,12 +1799,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1815,12 +1815,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       purge_user student
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1834,14 +1834,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
     end

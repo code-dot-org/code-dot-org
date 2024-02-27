@@ -21,7 +21,6 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
-import classNames from 'classnames';
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
 
 const applyV1TeacherDashboardWidth = children => {
@@ -155,12 +154,7 @@ function TeacherDashboard({
           <Route
             component={() =>
               applyV1TeacherDashboardWidth(
-                <div
-                  className={classNames(
-                    dashboardStyles.text,
-                    dashboardStyles.dashboardPage
-                  )}
-                >
+                <div className={dashboardStyles.text}>
                   <SafeMarkdown markdown={i18n.noProgressSection()} />
                 </div>
               )

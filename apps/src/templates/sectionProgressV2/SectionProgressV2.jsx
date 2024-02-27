@@ -37,7 +37,7 @@ function SectionProgressV2({
   }, [expandedLessonIds, unitData]);
 
   return (
-    <div>
+    <div className={styles.progressV2Page}>
       <Heading1>Progress</Heading1>
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}

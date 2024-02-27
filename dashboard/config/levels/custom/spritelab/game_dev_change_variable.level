@@ -21,14 +21,10 @@
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "Variables Step 3\r\n\r\nProblem: Score isn’t changing\r\n\r\nFix: Program variable change at sprites touching event",
+    "long_instructions": "##Problems with Variables\r\n\r\nProblem: Score isn’t changing\r\n\r\nFix: **Program variable change** at sprites touching event",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -41,9 +37,13 @@
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
     "mini_toolbox": "false",
-    "hide_pause_button": "false"
+    "hide_pause_button": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-16 00:09:25 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-16 00:09:25 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 17:14:57 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
