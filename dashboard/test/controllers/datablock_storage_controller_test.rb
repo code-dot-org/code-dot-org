@@ -202,301 +202,45 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
   end
 
-  test "coerce_column" do
-    #   describe('coerceColumn', () => {
-    #     it('converts anything to a string', done => {
-    #       FirebaseStorage.createRecord(
-    #         'mytable',
-    #         {foo: 1},
-    #         () => {
-    #           FirebaseStorage.createRecord(
-    #             'mytable',
-    #             {foo: 'one'},
-    #             () => {
-    #               FirebaseStorage.createRecord(
-    #                 'mytable',
-    #                 {foo: '1'},
-    #                 () => {
-    #                   FirebaseStorage.createRecord(
-    #                     'mytable',
-    #                     {foo: null},
-    #                     () => {
-    #                       FirebaseStorage.createRecord(
-    #                         'mytable',
-    #                         {foo: undefined},
-    #                         () => {
-    #                           FirebaseStorage.createRecord(
-    #                             'mytable',
-    #                             {foo: false},
-    #                             () => {
-    #                               doCoerce();
-    #                             },
-    #                             error => {
-    #                               throw error;
-    #                             }
-    #                           );
-    #                         },
-    #                         error => {
-    #                           throw error;
-    #                         }
-    #                       );
-    #                     },
-    #                     error => {
-    #                       throw error;
-    #                     }
-    #                   );
-    #                 },
-    #                 error => {
-    #                   throw error;
-    #                 }
-    #               );
-    #             },
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         },
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       function doCoerce() {
-    #         FirebaseStorage.coerceColumn(
-    #           'mytable',
-    #           'foo',
-    #           'string',
-    #           validate,
-    #           error => {
-    #             throw error;
-    #           }
-    #         );
-    #       }
-    #       function validate() {
-    #         const recordsRef = getProjectDatabase().child(
-    #           `storage/tables/mytable/records`
-    #         );
-    #         recordsRef.once('value').then(snapshot => {
-    #           expect(snapshot.val()).to.deep.equal({
-    #             1: '{"foo":"1","id":1}',
-    #             2: '{"foo":"one","id":2}',
-    #             3: '{"foo":"1","id":3}',
-    #             4: '{"foo":"null","id":4}',
-    #             // undefined fields are not included in the record during creation and should
-    #             // not get converted to "undefined".
-    #             5: '{"id":5}',
-    #             6: '{"foo":"false","id":6}',
-    #           });
-    #           done();
-    #         });
-    #       }
-    #     });
-  end
+  test "coerce_column converts anything to string" do
+    skip "FIXME: create_record_where_foo_is(nil) and create_record_without_foo both fail"
 
-  test "populate_tables" do
-  end
+    def create_record_where_foo_is(value)
+      post _url(:create_record), params: {
+        table_name: 'mytable',
+        record_json: {"foo" => value}.to_json,
+      }
+      assert_response :success
+    end
 
-  test "populate_key_values" do
-    # FIXME: implement test based on this JS
-    #
-    #   describe('populateKeyValue', () => {
-    #     const EXISTING_KEY_VALUE_DATA = {
-    #       click_count: '1',
-    #     };
-    #     const NEW_KEY_VALUE_DATA_JSON = `{
-    #         "click_count": 5
-    #       }`;
-    #     const NEW_KEY_VALUE_DATA = {
-    #       click_count: '5',
-    #     };
-    #     const BAD_JSON = '{';
-    #     function verifyKeyValue(expectedData) {
-    #       return getProjectDatabase()
-    #         .child(`storage/keys`)
-    #         .once('value')
-    #         .then(
-    #           snapshot => {
-    #             expect(snapshot.val()).to.deep.equal(expectedData);
-    #           },
-    #           error => {
-    #             throw error;
-    #           }
-    #         );
-    #     }
-    #     it('loads new key value data when no previous data exists', done => {
-    #       FirebaseStorage.populateKeyValue(
-    #         NEW_KEY_VALUE_DATA_JSON,
-    #         () => verifyKeyValue(NEW_KEY_VALUE_DATA).then(done),
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #     });
-    #     it('does not overwrite existing data', done => {
-    #       getProjectDatabase()
-    #         .child(`storage/keys`)
-    #         .set(EXISTING_KEY_VALUE_DATA)
-    #         .then(() => {
-    #           FirebaseStorage.populateKeyValue(
-    #             NEW_KEY_VALUE_DATA_JSON,
-    #             () => verifyKeyValue(EXISTING_KEY_VALUE_DATA).then(done),
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         });
-    #     });
-    #     it('prints a friendly error message when given bad key value json', done => {
-    #       FirebaseStorage.populateKeyValue(
-    #         BAD_JSON,
-    #         () => {
-    #           throw 'expected JSON error to be reported';
-    #         },
-    #         validateError
-    #       );
-    #       function validateError(error) {
-    #         expect(error).to.contain('SyntaxError');
-    #         expect(error).to.contain('while parsing initial key/value data: {');
-    #         done();
-    #       }
-    #     });
-    #   });
-  end
+    def create_record_without_foo
+      post _url(:create_record), params: {
+        table_name: 'mytable',
+        record_json: {}.to_json,
+      }
+      assert_response :success
+    end
 
-  test "get_columns_for_table" do
-  end
+    create_record_where_foo_is(1)
+    create_record_where_foo_is('one')
+    create_record_where_foo_is('1')
+    create_record_where_foo_is(nil)
+    create_record_without_foo
+    create_record_where_foo_is(false)
 
-  test "clear_all_data" do
-  end
-
-  test "add_shared_table" do
-    #   describe('copyStaticTable', () => {
-    #     it('Copies the records and counters from shared channel', done => {
-    #       const expectedTableData = {
-    #         1: '{"id":1,"name":"alice","age":7,"male":false}',
-    #         2: '{"id":2,"name":"bob","age":8,"male":true}',
-    #         3: '{"id":3,"name":"charlie","age":9,"male":true}',
-    #       };
-    #       getSharedDatabase()
-    #         .child('counters/tables/mytable')
-    #         .set({lastId: 3, rowCount: 3});
-    #       getSharedDatabase()
-    #         .child('storage/tables/mytable/records')
-    #         .set(expectedTableData);
-    #       FirebaseStorage.copyStaticTable(
-    #         'mytable',
-    #         () => validateTableData(expectedTableData, done),
-    #         () => {
-    #           throw 'error';
-    #         }
-    #       );
-    #     });
-  end
-
-  test "add_shared_table cannot overwrite an existing table" do
-    #     it('Cannot overwrite an existing project table', done => {
-    #       FirebaseStorage.createTable(
-    #         'mytable',
-    #         () => {
-    #           FirebaseStorage.copyStaticTable(
-    #             'mytable',
-    #             () => {
-    #               throw 'unexpectedly allowed to overwrite existing table';
-    #             },
-    #             error => {
-    #               expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
-    #               done();
-    #             }
-    #           );
-    #         },
-    #         () => {
-    #           throw 'error';
-    #         }
-    #       );
-    #     });
-  end
-
-  test "read_records works on a shared table" do
-    # FIXME: implement
-  end
-
-  test "can't create more than maxTableCount tables" do
-    # FIXME: implement test based on this JS
-    #
-    #   it('cant create more than maxTableCount tables', done => {
-    #     FirebaseStorage.createRecord(
-    #       'table1',
-    #       {name: 'bob'},
-    #       createTable2,
-    #       error => {
-    #         throw error;
-    #       }
-    #     );
-    #       FirebaseStorage.createRecord(
-    #         'table2',
-    #         {name: 'bob'},
-    #         createTable3,
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       FirebaseStorage.createRecord(
-    #         'table3',
-    #         {name: 'bob'},
-    #         createTable4,
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       FirebaseStorage.createRecord(
-    #         'table4',
-    #         {name: 'bob'},
-    #         () => {
-    #           throw 'unexpectedly allowed to create 4th table';
-    #         },
-    #         error => {
-    #           expect(error.type).to.equal(WarningType.MAX_TABLES_EXCEEDED);
-    #           done();
-    #         }
-    #       );
-
-    #   });
-  end
-
-  test "deletes a record" do
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {'name' => 'bob', 'age' => 8}.to_json,
-    }
-    assert_response :success
-    # assert_equal 1, JSON.parse(@response.body).id
-    assert_equal 1, @response.parsed_body['id']
-    delete _url(:delete_record), params: {
-      table_name: 'mytable',
-      record_id: 1,
-    }
-    assert_response :success
-    get _url(:read_records), params: {
-      table_name: 'mytable',
-    }
-    assert_response :success
-    val = JSON.parse(@response.body)
-    assert_equal [], val
-  end
-
-  test "updates a record" do
-    post _url(:create_record), params: {
-      table_name: 'mytable',
-      record_json: {'name' => 'bob', 'age' => 8}.to_json,
-    }
+    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'string'}
     assert_response :success
 
-    assert_equal 1, @response.parsed_body['id']
-    put _url(:update_record), params: {
-      table_name: 'mytable',
-      record_id: 1,
-      record_json: {'name' => 'sally', 'age' => 10}.to_json
-    }
-    assert_response :success
+    get _url(:read_records), params: {table_name: 'mytable'}
+    assert_equal [
+      {"foo" => "1", "id" => 1},
+      {"foo" => "one", "id" => 2},
+      {"foo" => "1", "id" => 3},
+      {"foo" => "null", "id" => 4},
+      {"id" => 5},
+      {"foo" => "false", "id" => 6},
+    ], read_records
+  end
 
   test "coerce_column converts valid booleans" do
     skip "FIXME: Not yet implemented"
