@@ -1,11 +1,6 @@
 require "test_helper"
 
 class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
-  # factory :user_level do
-  #   user {create :student}
-  #   level {create :applab}
-  # end
-
   setup do
     @student = create :student
     sign_in @student
@@ -18,10 +13,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   def _url(action)
     return "/datablock_storage/#{@channel_id}/#{action}"
   end
-
-  # def snippets
-  #   level_source1a = create :level_source, level: level1, data: 'Here is the answer 1a'
-  # end
 
   def create_bob_record
     post _url(:create_record), params: {
