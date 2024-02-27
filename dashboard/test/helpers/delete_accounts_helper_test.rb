@@ -1585,6 +1585,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.ai_tutor_interactions
+  #
+
+  test "deletes all of a soft-deleted user's ai tutor interactions (chat messages)" do
+    student = create :student_with_ai_tutor_access
+    num_ai_tutor_interactions = 3
+    num_ai_tutor_interactions.times do
+      create :ai_tutor_interaction, user: student
+    end
+
+    assert AiTutorInteraction.where(user_id: student.id).count, num_ai_tutor_interactions
+
+    student.destroy
+
+    assert AiTutorInteraction.where(user_id: student.id).count, 0
+  end
+
+  #
   # Table: dashboard.projects
   #
 
