@@ -65,9 +65,21 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{"name" => 'bob', "age" => 8, "id" => 1}], val
   end
 
-  test "get_table_names" do
-    # FIXME: Implement a test for get_table_names
-    assert_equal true, false
+  test "create_record creates a table if none exists" do
+    get _url(:get_table_names)
+    assert_response :success
+    assert_equal [], JSON.parse(@response.body)
+
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"name" => 'bob', "age" => 8}.to_json,
+    }
+
+    get _url(:get_table_names)
+    assert_response :success
+    assert_equal ['mytable'], JSON.parse(@response.body)
+  end
+
   end
 
   test "get_key_values" do
