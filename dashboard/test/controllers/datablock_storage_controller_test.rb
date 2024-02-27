@@ -71,8 +71,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "get_key_values" do
-    # FIXME: Implement a test for get_key_values
-    assert_equal true, false
+    post _url(:set_key_value), params: {
+      key: 'name',
+      value: 'bob'.to_json,
+    }
+    assert_response :success
+    post _url(:set_key_value), params: {
+      key: 'age',
+      value: 8.to_json,
+    }
+    assert_response :success
+
+    get _url(:get_key_values)
+    assert_response :success
+    assert_equal ({"name" => 'bob', "age" => 8}), JSON.parse(@response.body)
   end
 
   test "create_table" do
