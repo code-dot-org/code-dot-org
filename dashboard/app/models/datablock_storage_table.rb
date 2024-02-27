@@ -20,6 +20,10 @@ class DatablockStorageTable < ApplicationRecord
 
   SHARED_TABLE_PROJECT_ID = 0
 
+  # TODO: implement enforcement of MAX_TABLE_COUNT, we already have a test for it
+  # but we're skipping it until this is implemented.
+  MAX_TABLE_COUNT = 10
+
   def self.get_table_names(project_id)
     DatablockStorageTable.where(project_id: project_id).pluck(:table_name)
   end

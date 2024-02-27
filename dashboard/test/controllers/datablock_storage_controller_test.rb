@@ -82,6 +82,30 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ['mytable'], JSON.parse(@response.body)
   end
 
+  test "create_record can't create more than maxTableCount tables" do
+    skip "FIXME: test will fail, because enforcing max table count is not yet implemented"
+
+    # Lower the max table count to 3 so its easy to test
+    original_max_table_count = DatablockStorageTable::MAX_TABLE_COUNT
+    DatablockStorageTable.const_set(:MAX_TABLE_COUNT, 3)
+
+    post _url(:create_record), params: {table_name: 'table1', record_json: {'name' => 'bob'}.to_json}
+    assert_response :success
+
+    post _url(:create_record), params: {table_name: 'table2', record_json: {'name' => 'bob'}.to_json}
+    assert_response :success
+
+    post _url(:create_record), params: {table_name: 'table3', record_json: {'name' => 'bob'}.to_json}
+    assert_response :success
+
+    post _url(:create_record), params: {table_name: 'table4', record_json: {'name' => 'bob'}.to_json}
+    # test will fail here, currently this returns a 200, but it should be a 400 with a warning:
+    assert_response :bad_request
+    assert_equal 'MAX_TABLES_EXCEEDED', JSON.parse(@response.body)['type']
+  ensure
+    DatablockStorageTable.const_set(:MAX_TABLE_COUNT, original_max_table_count)
+  end
+
   test "create_table" do
     get _url(:get_table_names)
     assert_response :success
@@ -438,48 +462,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   test "read_records works on a shared table" do
     skip "FIXME: Not yet implemented"
-  end
-
-  test "can't create more than maxTableCount tables" do
-    skip "FIXME: Not yet implemented"
-    #   it('cant create more than maxTableCount tables', done => {
-    #     FirebaseStorage.createRecord(
-    #       'table1',
-    #       {name: 'bob'},
-    #       createTable2,
-    #       error => {
-    #         throw error;
-    #       }
-    #     );
-    #       FirebaseStorage.createRecord(
-    #         'table2',
-    #         {name: 'bob'},
-    #         createTable3,
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       FirebaseStorage.createRecord(
-    #         'table3',
-    #         {name: 'bob'},
-    #         createTable4,
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       FirebaseStorage.createRecord(
-    #         'table4',
-    #         {name: 'bob'},
-    #         () => {
-    #           throw 'unexpectedly allowed to create 4th table';
-    #         },
-    #         error => {
-    #           expect(error.type).to.equal(WarningType.MAX_TABLES_EXCEEDED);
-    #           done();
-    #         }
-    #       );
-
-    #   });
   end
 
   test "deletes a record" do
