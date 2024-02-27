@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-require_relative('../config/environment')
+
+require_relative '../../../dashboard/config/environment'
 require 'csv'
 
 # Run using `ruby add_progress_v2_closed_beta_users.rb <path_to_csv>`
