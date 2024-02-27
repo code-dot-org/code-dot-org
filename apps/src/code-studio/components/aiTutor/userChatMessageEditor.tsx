@@ -89,6 +89,8 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
       event = EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION;
     } else if (validation) {
       event = EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION;
+    } else if (generalChat) {
+      event = EVENTS.AI_TUTOR_ASK_GENERAL_CHAT;
     }
     analyticsReporter.sendEvent(event, {
       levelId: level?.id,
