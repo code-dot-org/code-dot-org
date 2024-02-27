@@ -2,10 +2,9 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
-import {EMPTY_OPTION} from './blockly/constants';
+import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
-const DEFAULT_COLOR = [184, 1.0, 0.74];
 
 /**
  * Create the xml for a level's toolbox
@@ -167,7 +166,11 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     helpUrl: helpUrl,
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
@@ -1075,24 +1078,8 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // All Google Blockly blocks must have a style in order to be compatible with themes.
-        // However, blocks with just a color and no style are still permitted.
-        if (style) {
-          // Google Blockly method. No-op for CDO Blockly.
-          this.setStyle(style);
-        }
-        // CDO Blockly uses colors, not styles. However, the color may be determined
-        // automatically based on a block's returnType (e.g. yellow for "Location").
-        if (color) {
-          Blockly.cdoUtils.setHSV(this, ...color);
-        } else if (!returnType) {
-          // CDO Blockly assigns colors to blocks with an output connection based on return type.
-          // See Blockly.Connection.prototype.colorForType
-          // Blocks with neither style or color that do not have a return type can
-          // use the default teal color and style.
-          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-          this.setStyle(style || 'default');
-        }
+        // Apply style or color to block as needed, based on Blockly version.
+        Blockly.cdoUtils.handleColorAndStyle(this, color, style, returnType);
 
         if (returnType) {
           this.setOutput(

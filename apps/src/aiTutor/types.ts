@@ -1,3 +1,8 @@
+import {
+  AiTutorInteractionSaveStatus,
+  AiTutorTypes,
+} from '@cdo/apps/util/sharedConstants';
+
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
@@ -17,10 +22,21 @@ export type AITutorInteraction = {
   aiResponse?: string;
 };
 
+export type StudentChatRow = {
+  id: number;
+  studentName: string;
+  type: TutorType;
+  prompt: string;
+  status: string;
+  aiResponse?: string;
+  createdAt: string;
+};
+
 export type Level = {
   id: number;
   type: string;
   hasValidation: boolean;
+  isAssessment: boolean;
   isProjectBacked: boolean;
 };
 
@@ -38,23 +54,10 @@ export enum Role {
   USER = 'user',
   SYSTEM = 'system',
 }
-
-export enum Status {
-  ERROR = 'error',
-  PROFANITY = 'profanity',
-  PERSONAL = 'personal',
-  INAPPROPRIATE = 'inappropriate',
-  OK = 'ok',
-  UNKNOWN = 'unknown',
-  EMAIL = 'email',
-  ADDRESS = 'address',
-  PHONE = 'phone',
-}
-
+export type Status =
+  (typeof AiTutorInteractionSaveStatus)[keyof typeof AiTutorInteractionSaveStatus];
+export const Status = AiTutorInteractionSaveStatus;
 export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
-export enum TutorType {
-  COMPILATION = 'compilation',
-  VALIDATION = 'validation',
-  GENERAL_CHAT = 'general_chat',
-}
+export type TutorType = (typeof AiTutorTypes)[keyof typeof AiTutorTypes];
+export const TutorType = AiTutorTypes;

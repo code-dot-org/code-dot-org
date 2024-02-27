@@ -64,6 +64,7 @@ const EVENTS = {
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
+  PROGRESS_V2_CHANGE_UNIT: 'Section Progress V2 Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
@@ -142,9 +143,11 @@ const EVENTS = {
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',
 
+  // congrats and certificates
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
-  TEACHER_HOC_CONGRATS_PAGE_VISITED:
-    'Teacher Hour of Code Congrats Page Visited ',
+  TEACHER_VISITED_CONGRATS_PAGE: 'Teacher Visited Congrats Page',
+  CERTIFICATE_SHARED: 'Certificate Shared',
+  CERTIFICATE_PRINT_PAGE_VISITED: 'Certificate Print Page Visited',
 
   // Coteacher
   COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',
@@ -155,6 +158,12 @@ const EVENTS = {
 
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
+
+  // Header Create menu
+  SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
+    'Signed Out User Clicks Create Dropdown',
+  SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed Out User Selects Create Dropdown Option',
 
   // Project sharing
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',

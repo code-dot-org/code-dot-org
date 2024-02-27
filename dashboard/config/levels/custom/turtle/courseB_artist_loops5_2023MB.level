@@ -1,5 +1,6 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
   "game_id": 23,
   "created_at": "2024-02-09T17:35:40.000Z",
   "level_num": "custom",
@@ -46,13 +47,19 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "encrypted": "false",
-    "long_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<B> Teacher Tip:</B> This level scaffolds the concepts of loops by providing the blocks that will be placed in the loop. If students get stuck, remind them that the repeated code is provided, and they need to figure out how many times it repeats. \r\n</p>\r\n</div>\r\n\r\nTime to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
     "mini_rubric": "false",
+    "encrypted_examples": [
+
+    ],
+    "validation_enabled": "false",
+    "enable_download_image": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-02-09T17:35:40.718+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops5_2023\\\"\"],\"cloned_from\":\"courseB_artist_loops5_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-09T17:35:40.718+00:00\",\"changed\":[\"cloned from \\\"courseB_artist_loops5_2023\\\"\"],\"cloned_from\":\"courseB_artist_loops5_2023\"},{\"changed_at\":\"2024-02-14 21:43:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

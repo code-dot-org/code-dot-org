@@ -13,6 +13,7 @@ export const TeacherDashboardPath = {
   manageStudents: '/manage_students',
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
+  aiTutorChatMessages: '/ai_tutor',
 };
 
 const teacherDashboardLinks = [
@@ -42,8 +43,16 @@ const teacherDashboardLinks = [
   },
 ];
 
-export default function TeacherDashboardNavigation({links}) {
-  const renderedLinks = links || teacherDashboardLinks;
+export default function TeacherDashboardNavigation({links, showAITutorTab}) {
+  const aiTutorLinks = showAITutorTab
+    ? [
+        {
+          label: i18n.aiTutor(),
+          url: TeacherDashboardPath.aiTutorChatMessages,
+        },
+      ]
+    : [];
+  const renderedLinks = [...(links || teacherDashboardLinks), ...aiTutorLinks];
 
   return (
     <div id="uitest-teacher-dashboard-nav" className={styles.navContainer}>
@@ -62,6 +71,7 @@ export default function TeacherDashboardNavigation({links}) {
 }
 
 TeacherDashboardNavigation.propTypes = {
+  showAITutorTab: PropTypes.bool,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,

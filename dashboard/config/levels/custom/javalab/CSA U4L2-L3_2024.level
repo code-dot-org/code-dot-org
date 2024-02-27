@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U4L2-Static PBT_2024",
     "teacher_markdown": "Removing the `static` keyword from the method signature will cause the following error:\r\n\r\n```\r\n/ClubRunner.java:8: error: non-static method getNumMembers() cannot be referenced from a static context\r\n    System.out.println(ArtClubMember.getNumMembers());\r\n                                    ^\r\n```\r\n\r\nThe message `\"cannot be referenced from a static context\"` tells us that without the `static` keyword, we cannot call the method on the class.\r\n\r\nIf we call the method on an object instead of the class after adding the `static` keyword back to the method signature, we see that the method still performs as intended. Like static variables, a static method can be called on a class or an object because it is a shared behavior.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:23.423+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L3_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L3_2023\"}]"

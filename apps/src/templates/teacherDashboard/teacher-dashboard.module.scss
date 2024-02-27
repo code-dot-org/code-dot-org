@@ -1,4 +1,5 @@
-@import "color.scss";
+@import 'color.scss';
+@import 'style-constants';
 
 .navContainer {
   background-color: $neutral_dark;
@@ -33,4 +34,13 @@
   }
 }
 
+.dashboardPage {
+  max-width: $content-width;
+  padding: 10px 64px 64px 64px;
+}
 
+.text {
+  font-style: italic;
+  text-align: center;
+  padding-top: 10px;
+}
