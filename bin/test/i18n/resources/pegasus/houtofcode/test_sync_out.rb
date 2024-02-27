@@ -46,7 +46,7 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
       it 'moves the fixed origin i18n file from crowdin locale dir to i18n locale dir' do
         process_language
 
-        refute File.exist?(crowdin_origin_en_file_path)
+        refute File.exist?(File.dirname(crowdin_origin_en_file_path))
         assert File.exist?(i18n_origin_locale_file_path)
         assert_equal "---\nexpected_unique_language_code:\n  i18n_key: i18n_val\n", File.read(i18n_origin_locale_file_path)
       end
@@ -90,7 +90,7 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
       it 'moves the markdown i18n file from crowdin locale dir to i18n locale dir without changes' do
         process_language
 
-        refute File.exist?(crowdin_markdown_file_path)
+        refute File.exist?(File.dirname(crowdin_markdown_file_path))
         assert File.exist?(i18n_markdown_file_path)
       end
     end

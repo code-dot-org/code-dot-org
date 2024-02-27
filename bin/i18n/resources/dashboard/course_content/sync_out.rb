@@ -142,6 +142,8 @@ module I18n
               dashboard_i18n_data = I18nScriptUtils.to_dashboard_i18n_data(language[:locale_s], type, type_i18n_data)
               I18nScriptUtils.sanitize_data_and_write(dashboard_i18n_data, target_i18n_file_path)
             end
+
+            I18nScriptUtils.remove_empty_dir(crowdin_locale_dir)
           end
 
           def distribute_localization_of(type, language)
@@ -153,6 +155,7 @@ module I18n
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
         end
       end

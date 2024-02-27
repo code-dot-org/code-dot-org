@@ -40,6 +40,9 @@ describe I18n::Resources::Apps::Animations::SyncOut do
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+    end
 
     before do
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
@@ -52,6 +55,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
       spritelab_manifest_builder.expects(:initial_animation_metadata).in_sequence(execution_sequence)
       expect_localized_manifest_uploading.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
       process_language
     end
@@ -68,6 +72,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
 
       it 'does not move the Crowdin file to the i18n locale dir' do
         expect_crowdin_file_to_i18n_locale_dir_moving.never
+        expect_crowdin_resource_dir_removing.never
         process_language
       end
     end

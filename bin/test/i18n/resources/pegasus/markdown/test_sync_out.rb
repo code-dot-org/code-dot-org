@@ -36,7 +36,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncOut do
       I18n::Utils::PegasusMarkdown.expects(:restore_file_header).with(origin_markdown_file_path, markdown_i18n_file_path)
     end
     let(:expect_crowdin_locale_resource_dir_removing) do
-      FileUtils.expects(:rm_r).with(crowdin_locale_resource_dir)
+      I18nScriptUtils.expects(:remove_empty_dir).with(crowdin_locale_resource_dir)
     end
 
     before do

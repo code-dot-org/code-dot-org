@@ -17,6 +17,7 @@ module I18n
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, pegasus_i18n_file_poth)
 
             I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH))
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
         end
       end

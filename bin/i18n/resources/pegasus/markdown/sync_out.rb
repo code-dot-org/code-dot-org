@@ -18,7 +18,7 @@ module I18n
 
             distribute(language[:locale_s], crowdin_locale_dir)
 
-            FileUtils.rm_r(crowdin_locale_dir)
+            I18nScriptUtils.remove_empty_dir crowdin_locale_dir
           end
 
           private

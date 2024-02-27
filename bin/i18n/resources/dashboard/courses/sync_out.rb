@@ -22,6 +22,7 @@ module I18n
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH)
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
           private

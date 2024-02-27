@@ -34,6 +34,9 @@ describe I18n::Resources::Dashboard::CourseOfferings::SyncOut do
         crowdin_file_path, CDO.dir('i18n/locales', i18n_locale, 'dashboard/course_offerings.json')
       )
     end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+    end
 
     before do
       described_instance.stubs(:languages).returns([language])
@@ -48,6 +51,7 @@ describe I18n::Resources::Dashboard::CourseOfferings::SyncOut do
 
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
       sync_out
     end
@@ -60,6 +64,7 @@ describe I18n::Resources::Dashboard::CourseOfferings::SyncOut do
       it 'does not try to distribute the localization' do
         expect_localization_distribution.never
         expect_crowdin_file_to_i18n_locale_dir_moving.never
+        expect_crowdin_resource_dir_removing.never
 
         sync_out
       end

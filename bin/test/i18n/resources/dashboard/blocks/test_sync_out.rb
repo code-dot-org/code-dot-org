@@ -46,6 +46,9 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
         crowdin_file_path, CDO.dir('i18n/locales', i18n_locale, 'dashboard/blocks.yml')
       )
     end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+    end
 
     before do
       PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{locale_s: i18n_locale}])
@@ -69,6 +72,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
       # Distribution
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
       process_language
     end
@@ -87,6 +91,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
         # Distribution
         expect_localization_distribution.never
         expect_crowdin_file_to_i18n_locale_dir_moving.never
+        expect_crowdin_resource_dir_removing.never
 
         process_language
       end
@@ -108,6 +113,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
         # Distribution
         expect_localization_distribution.in_sequence(execution_sequence)
         expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+        expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
         process_language
       end

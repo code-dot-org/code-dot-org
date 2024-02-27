@@ -34,12 +34,16 @@ describe I18n::Resources::Dashboard::UnpluggedContent::SyncOut do
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+    end
 
     it 'distributes the localization' do
       execution_sequence = sequence('execution')
 
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
       process_language
     end
@@ -56,6 +60,11 @@ describe I18n::Resources::Dashboard::UnpluggedContent::SyncOut do
 
       it 'does not move Crowdin files to the i18n locale dir' do
         expect_crowdin_file_to_i18n_locale_dir_moving.never
+        process_language
+      end
+
+      it 'does not try to remove the Crowdin resource dir' do
+        expect_crowdin_resource_dir_removing.never
         process_language
       end
     end

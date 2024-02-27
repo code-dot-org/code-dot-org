@@ -19,6 +19,7 @@ module I18n
             distribute_localization(language[:locale_s], crowdin_file_path)
 
             I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH))
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
           private
