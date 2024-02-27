@@ -167,7 +167,7 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def create_record
-    raise StudentFacingError, "record must be less than 4096 bytes" if params[:record_json].length > 4096
+    raise StudentFacingError, "record must be less than #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
     record_json = JSON.parse params[:record_json]
     raise "record must be a hash" unless record_json.is_a? Hash
 
@@ -185,7 +185,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def update_record
-    raise StudentFacingError, "record must be less than 4096 bytes" if params[:record_json].length > 4096
+    raise StudentFacingError, "record must be less than #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
 
     table = find_table
     record_json = table.update_record params[:record_id], JSON.parse(params[:record_json])
