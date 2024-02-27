@@ -267,7 +267,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column warns on invalid booleans" do
-    skip "FIXME: coerce_column does not return a warning, AND it converts invalid booleans whereas it should leave them alone (stay as a string in this case)"
+    skip "FIXME: coerce_column does not return a warning, AND it modifies invalid booleans whereas it should leave them alone (stay as a string in this case)"
 
     create_record_where_foo_is(true)
     create_record_where_foo_is('bar')
@@ -283,56 +283,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column warns on invalid numbers" do
-    skip "FIXME: Not yet implemented"
-    #     it('warns on invalid numbers', done => {
-    #       FirebaseStorage.createRecord(
-    #         'mytable',
-    #         {foo: 1},
-    #         () => {
-    #           FirebaseStorage.createRecord(
-    #             'mytable',
-    #             {foo: '2xyz'},
-    #             () => {
-    #               doCoerce();
-    #             },
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         },
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       function doCoerce() {
-    #         FirebaseStorage.coerceColumn(
-    #           'mytable',
-    #           'foo',
-    #           'number',
-    #           validate,
-    #           validateError
-    #         );
-    #       }
-    #       let onErrorCalled = false;
-    #       function validateError(error) {
-    #         expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
-    #         onErrorCalled = true;
-    #       }
-    #       function validate() {
-    #         const recordsRef = getProjectDatabase().child(
-    #           `storage/tables/mytable/records`
-    #         );
-    #         recordsRef.once('value').then(snapshot => {
-    #           expect(snapshot.val()).to.deep.equal({
-    #             1: '{"foo":1,"id":1}',
-    #             2: '{"foo":"2xyz","id":2}',
-    #           });
-    #           expect(onErrorCalled).to.be.true;
-    #           done();
-    #         });
-    #       }
-    #     });
-    #   });
+    skip "FIXME: coerce_column does not return a warning, AND it modifies invalid numbers whereas it should leave them alone (stay as a string in this case)"
+
+    create_record_where_foo_is(1)
+    create_record_where_foo_is('2xyz')
+
+    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
+    assert_response :bad_request
+    assert_equal 'CANNOT_CONVERT_COLUMN_TYPE', JSON.parse(@response.body)['type']
+
+    assert_equal [
+      {"foo" => 1, "id" => 1},
+      {"foo" => '2xyz', "id" => 2},
+    ], read_records
   end
 
   test "populate_tables" do
