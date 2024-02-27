@@ -113,6 +113,27 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "delete_table" do
+    post _url(:create_table), params: {table_name: 'mytable'}
+    assert_response :success
+
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"name" => 'bob', "age" => 8}.to_json,
+    }
+    assert_response :success
+    get _url(:read_records), params: {table_name: 'mytable'}
+    assert_response :success
+
+    delete _url(:delete_table), params: {table_name: 'mytable'}
+    assert_response :success
+
+    get _url(:get_table_names)
+    assert_response :success
+    assert_equal [], JSON.parse(@response.body)
+
+    assert_response :success
+    get _url(:read_records), params: {table_name: 'mytable'}
+    assert_response :bad_request
   end
 
   test "clear_table" do
