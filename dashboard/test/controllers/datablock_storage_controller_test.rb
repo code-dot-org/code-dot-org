@@ -313,10 +313,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   ]
 
   test "populate_tables" do
-    EXISTING_TABLE_DATA = [
-      {"city" => "New York", "state" => "NY", "id" => 1}
-    ]
-
     put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
     assert_response :success
 
@@ -324,25 +320,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "populate_table does not overwrite existing data" do
-    skip "FIXME: Not yet implemented"
-    #     it('does not overwrite existing data', done => {
-    #       getProjectDatabase()
-    #         .child(`storage/tables`)
-    #         .set(EXISTING_TABLE_DATA)
-    #         .then(() =>
-    #           getProjectDatabase()
-    #             .child('counters/tables')
-    #             .set(EXISTING_COUNTER_DATA)
-    #         )
-    #         .then(() => {
-    #           FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
-    #             () => verifyTable(EXISTING_TABLE_DATA).then(done),
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         });
-    #     });
+    skip "FIXME: populate_tables is returning a 500, need to debug, expected behavior is to not return even a warning, and silently fail if the table already exists"
+
+    EXISTING_TABLE_DATA = [
+      {"city" => "New York", "state" => "NY", "id" => 1}
+    ]
+    post _url(:create_record), params: {
+      table_name: 'cities',
+      record_json: EXISTING_TABLE_DATA[0].to_json,
+    }
+
+    put _url(:populate_tables), params: {table_data_json: POPULATE_TABLE_DATA_JSON_STRING}
+    assert_response :success
+
+    assert_equal EXISTING_TABLE_DATA, read_records('cities')
   end
 
   test "populate_table prints a friendly error message when given bad table json" do
