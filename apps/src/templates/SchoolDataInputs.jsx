@@ -1,22 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import {Heading2, Heading3} from '@cdo/apps/lib/ui/Headings';
+import {Heading1, Heading2, Heading3} from '@cdo/apps/lib/ui/Headings';
 import style from './school-association.module.scss';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SearchBar from './SearchBar';
 
-export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
-
-export const SCHOOL_TYPES_HAVING_NAMES = [
-  'charter',
-  'private',
-  'public',
-  'afterschool',
-  'organization',
-];
-
+const TEST_SCHOOL_DATA = [{value: 'test', text: 'TestSchool'}];
 export default function SchoolDataInputs({
   onCountryChange,
   onSchoolChange,
@@ -49,8 +40,8 @@ export default function SchoolDataInputs({
 
   return (
     <div className={style.outerContainer}>
-      <Heading2>{i18n.censusHeading()}</Heading2>
-      <Heading3>{i18n.findYourSchool()}</Heading3>
+      <Heading1>{i18n.censusHeading()}</Heading1>
+      <Heading2>{i18n.findYourSchool()}</Heading2>
       <div className={style.inputContainer}>
         <Heading3>{i18n.whatCountry()}</Heading3>
         <SimpleDropdown
@@ -68,9 +59,9 @@ export default function SchoolDataInputs({
         />
         <Heading3>{i18n.selectYourSchool()}</Heading3>
         <SimpleDropdown
-          items={[]}
+          items={TEST_SCHOOL_DATA}
           name="schoolDropdown"
-          selectedValue={''}
+          selectedValue={'test'}
           onChange={() => {}}
           size="s"
         />
