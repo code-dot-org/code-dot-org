@@ -56,6 +56,10 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     set_and_get_key_value('key', nil)
   end
 
+  test "sets and gets an emoji key and value" do
+    set_and_get_key_value('👁️👄👁️', 'value is: 🎉')
+  end
+
   test "set_key_value should enforce MAX_VALUE_LENGTH" do
     too_many_bees = 'b' * (DatablockStorageKvp::MAX_VALUE_LENGTH + 1) # 1 more 'b' char than max
     post _url(:set_key_value), params: {
