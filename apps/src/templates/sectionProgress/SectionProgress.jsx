@@ -150,10 +150,7 @@ class SectionProgress extends Component {
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
-      <div
-        className={dashboardStyles.dashboardPage}
-        data-testid="section-progress-v1"
-      >
+      <div className={dashboardStyles.dashboardPage}>
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
