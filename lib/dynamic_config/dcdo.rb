@@ -32,6 +32,7 @@ class DCDOBase < DynamicConfigBase
       clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
       'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'family-name-features-p3': DCDO.get('family-name-features-p3', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),

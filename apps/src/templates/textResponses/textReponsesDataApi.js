@@ -24,13 +24,14 @@ export const loadTextResponsesFromServer = (sectionId, scriptId) => {
 const convertTextResponseServerData = textResponses => {
   let responses = [];
   textResponses.forEach(response => {
-    const {id, name} = response.student;
+    const {id, name, familyName} = response.student;
     delete response.student;
 
     responses.push({
       ...response,
       studentId: id,
       studentName: name,
+      studentFamilyName: familyName,
     });
   });
 
@@ -45,5 +46,6 @@ export const textResponsePropType = PropTypes.shape({
   lesson: PropTypes.string.isRequired,
   studentId: PropTypes.number.isRequired,
   studentName: PropTypes.string.isRequired,
+  studentFamilyName: PropTypes.string,
   url: PropTypes.string.isRequired,
 });

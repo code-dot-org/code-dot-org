@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
@@ -13,6 +15,7 @@ import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
   name: TABLE_WIDTH / 5,
+  familyName: TABLE_WIDTH / 5,
   lesson: TABLE_WIDTH / 5,
   puzzle: TABLE_WIDTH / 6,
   question: TABLE_WIDTH / 5,
@@ -26,6 +29,7 @@ class TextResponsesTable extends Component {
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
     scriptName: PropTypes.string,
+    participantType: PropTypes.string,
   };
 
   state = {};
@@ -41,7 +45,7 @@ class TextResponsesTable extends Component {
     if (studentUrl) {
       return (
         <a
-          className="uitest-name-cell"
+          className="uitest-display-name-cell"
           style={tableLayoutStyles.link}
           href={studentUrl}
           target="_blank"
@@ -51,8 +55,12 @@ class TextResponsesTable extends Component {
         </a>
       );
     } else {
-      return <span className="uitest-name-cell">{name}</span>;
+      return <span className="uitest-display-name-cell">{name}</span>;
     }
+  };
+
+  familyNameFormatter = familyName => {
+    return <span className="uitest-family-name-cell">{familyName}</span>;
   };
 
   responseFormatter = (_, {rowData}) => {
@@ -82,111 +90,164 @@ class TextResponsesTable extends Component {
   };
 
   getColumns = sortable => {
-    return [
-      {
-        property: 'studentName',
-        header: {
-          label: i18n.name(),
-          props: {
-            className: 'uitest-name-header',
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.name},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.studentNameFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'lesson',
-        header: {
-          label: i18n.lesson(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.lesson},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'puzzle',
-        header: {
-          label: i18n.puzzle(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.puzzle},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'question',
-        header: {
-          label: i18n.question(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.question},
-            },
-          },
-          transforms: [sortable],
-        },
-        cell: {
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-      {
-        property: 'response',
-        header: {
-          label: i18n.response(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.response},
-            },
-          },
-        },
-        cell: {
-          formatters: [this.responseFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-            },
-          },
-        },
-      },
-    ];
+    const columns = [this.nameColumn(sortable)];
+
+    if (!!DCDO.get('family-name-features-p3', false)) {
+      if (this.props.participantType === 'student') {
+        columns.push(this.familyNameColumn(sortable));
+      }
+    }
+
+    columns.push(
+      this.lessonColumn(sortable),
+      this.puzzleColumn(sortable),
+      this.questionColumn(sortable),
+      this.responseColumn(sortable)
+    );
+    return columns;
   };
+
+  nameColumn(sortable) {
+    return {
+      property: 'studentName',
+      header: {
+        label: i18n.displayName(),
+        props: {
+          className: 'uitest-display-name-header',
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.name},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.studentNameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  familyNameColumn(sortable) {
+    return {
+      property: 'studentFamilyName',
+      header: {
+        label: i18n.familyName(),
+        props: {
+          className: 'uitest-family-name-header',
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.familyName},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.familyNameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  lessonColumn(sortable) {
+    return {
+      property: 'lesson',
+      header: {
+        label: i18n.lesson(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.lesson},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  puzzleColumn(sortable) {
+    return {
+      property: 'puzzle',
+      header: {
+        label: i18n.puzzle(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.puzzle},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  questionColumn(sortable) {
+    return {
+      property: 'question',
+      header: {
+        label: i18n.question(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.question},
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  responseColumn(sortable) {
+    return {
+      property: 'response',
+      header: {
+        label: i18n.response(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...{width: TABLE_COLUMN_WIDTHS.response},
+          },
+        },
+      },
+      cell: {
+        formatters: [this.responseFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
 
   // The user requested a new sorting column. Adjust the state accordingly.
   onSort = selectedColumn => {
@@ -254,4 +315,9 @@ class TextResponsesTable extends Component {
   }
 }
 
-export default TextResponsesTable;
+export const UnconnectedTextResponsesTable = TextResponsesTable;
+export default connect(state => ({
+  participantType:
+    state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      .participantType,
+}))(TextResponsesTable);

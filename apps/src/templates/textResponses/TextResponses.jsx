@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
@@ -17,12 +18,15 @@ import {
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 
 const CSV_HEADERS = [
-  {label: i18n.name(), key: 'studentName'},
+  {label: i18n.displayName(), key: 'studentName'},
+  !!DCDO.get('family-name-features-p3', false)
+    ? {label: i18n.familyName(), key: 'studentFamilyName'}
+    : null,
   {label: i18n.lesson(), key: 'lesson'},
   {label: i18n.puzzle(), key: 'puzzle'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'},
-];
+].filter(item => item !== null);
 const PADDING = 8;
 
 function TextResponses({
