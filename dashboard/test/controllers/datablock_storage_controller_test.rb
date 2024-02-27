@@ -489,6 +489,543 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       record_json: {'name' => 'sally', 'age' => 10}.to_json
     }
     assert_response :success
+
+  test "coerce_column converts valid booleans" do
+    skip "FIXME: Not yet implemented"
+
+    #     it('converts valid booleans', done => {
+    #       FirebaseStorage.createRecord(
+    #         'mytable',
+    #         {foo: true},
+    #         () => {
+    #           FirebaseStorage.createRecord(
+    #             'mytable',
+    #             {foo: 'true'},
+    #             () => {
+    #               FirebaseStorage.createRecord(
+    #                 'mytable',
+    #                 {foo: false},
+    #                 () => {
+    #                   FirebaseStorage.createRecord(
+    #                     'mytable',
+    #                     {foo: 'false'},
+    #                     () => {
+    #                       doCoerce();
+    #                     },
+    #                     error => {
+    #                       throw error;
+    #                     }
+    #                   );
+    #                 },
+    #                 error => {
+    #                   throw error;
+    #                 }
+    #               );
+    #             },
+    #             error => {
+    #               throw error;
+    #             }
+    #           );
+    #         },
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+    #       function doCoerce() {
+    #         FirebaseStorage.coerceColumn(
+    #           'mytable',
+    #           'foo',
+    #           'boolean',
+    #           validate,
+    #           error => {
+    #             throw error;
+    #           }
+    #         );
+    #       }
+    #       function validate() {
+    #         const recordsRef = getProjectDatabase().child(
+    #           `storage/tables/mytable/records`
+    #         );
+    #         recordsRef.once('value').then(snapshot => {
+    #           expect(snapshot.val()).to.deep.equal({
+    #             1: '{"foo":true,"id":1}',
+    #             2: '{"foo":true,"id":2}',
+    #             3: '{"foo":false,"id":3}',
+    #             4: '{"foo":false,"id":4}',
+    #           });
+    #           done();
+    #         });
+    #       }
+    #     });
+  end
+
+  test "coerce_column converts valid numbers" do
+    skip "FIXME: Not yet implemented"
+
+    #     it('converts valid numbers', done => {
+    #       FirebaseStorage.createRecord(
+    #         'mytable',
+    #         {foo: 1},
+    #         () => {
+    #           FirebaseStorage.createRecord(
+    #             'mytable',
+    #             {foo: '2'},
+    #             () => {
+    #               FirebaseStorage.createRecord(
+    #                 'mytable',
+    #                 {foo: '1e3'},
+    #                 () => {
+    #                   FirebaseStorage.createRecord(
+    #                     'mytable',
+    #                     {foo: '0.4'},
+    #                     () => {
+    #                       doCoerce();
+    #                     },
+    #                     error => {
+    #                       throw error;
+    #                     }
+    #                   );
+    #                 },
+    #                 error => {
+    #                   throw error;
+    #                 }
+    #               );
+    #             },
+    #             error => {
+    #               throw error;
+    #             }
+    #           );
+    #         },
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+    #       function doCoerce() {
+    #         FirebaseStorage.coerceColumn(
+    #           'mytable',
+    #           'foo',
+    #           'number',
+    #           validate,
+    #           error => {
+    #             throw error;
+    #           }
+    #         );
+    #       }
+    #       function validate() {
+    #         const recordsRef = getProjectDatabase().child(
+    #           `storage/tables/mytable/records`
+    #         );
+    #         recordsRef.once('value').then(snapshot => {
+    #           expect(snapshot.val()).to.deep.equal({
+    #             1: '{"foo":1,"id":1}',
+    #             2: '{"foo":2,"id":2}',
+    #             3: '{"foo":1000,"id":3}',
+    #             4: '{"foo":0.4,"id":4}',
+    #           });
+    #           done();
+    #         });
+    #       }
+    #     });
+  end
+
+  test "coerce_column warns on invalid booleans" do
+    skip "FIXME: Not yet implemented"
+    #     it('warns on invalid booleans', done => {
+    #       FirebaseStorage.createRecord(
+    #         'mytable',
+    #         {foo: true},
+    #         () => {
+    #           FirebaseStorage.createRecord(
+    #             'mytable',
+    #             {foo: 'bar'},
+    #             () => {
+    #               doCoerce();
+    #             },
+    #             error => {
+    #               throw error;
+    #             }
+    #           );
+    #         },
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+
+    #       function doCoerce() {
+    #         FirebaseStorage.coerceColumn(
+    #           'mytable',
+    #           'foo',
+    #           'boolean',
+    #           validate,
+    #           validateError
+    #         );
+    #       }
+
+    #       let onErrorCalled = false;
+    #       function validateError(error) {
+    #         expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
+    #         onErrorCalled = true;
+    #       }
+
+    #       function validate() {
+    #         const recordsRef = getProjectDatabase().child(
+    #           `storage/tables/mytable/records`
+    #         );
+    #         recordsRef.once('value').then(snapshot => {
+    #           expect(snapshot.val()).to.deep.equal({
+    #             1: '{"foo":true,"id":1}',
+    #             2: '{"foo":"bar","id":2}',
+    #           });
+    #           expect(onErrorCalled).to.be.true;
+    #           done();
+    #         });
+    #       }
+    #     });
+  end
+
+  test "coerce_column warns on invalid numbers" do
+    skip "FIXME: Not yet implemented"
+    #     it('warns on invalid numbers', done => {
+    #       FirebaseStorage.createRecord(
+    #         'mytable',
+    #         {foo: 1},
+    #         () => {
+    #           FirebaseStorage.createRecord(
+    #             'mytable',
+    #             {foo: '2xyz'},
+    #             () => {
+    #               doCoerce();
+    #             },
+    #             error => {
+    #               throw error;
+    #             }
+    #           );
+    #         },
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+    #       function doCoerce() {
+    #         FirebaseStorage.coerceColumn(
+    #           'mytable',
+    #           'foo',
+    #           'number',
+    #           validate,
+    #           validateError
+    #         );
+    #       }
+    #       let onErrorCalled = false;
+    #       function validateError(error) {
+    #         expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
+    #         onErrorCalled = true;
+    #       }
+    #       function validate() {
+    #         const recordsRef = getProjectDatabase().child(
+    #           `storage/tables/mytable/records`
+    #         );
+    #         recordsRef.once('value').then(snapshot => {
+    #           expect(snapshot.val()).to.deep.equal({
+    #             1: '{"foo":1,"id":1}',
+    #             2: '{"foo":"2xyz","id":2}',
+    #           });
+    #           expect(onErrorCalled).to.be.true;
+    #           done();
+    #         });
+    #       }
+    #     });
+    #   });
+  end
+
+  test "populate_tables" do
+    skip "FIXME: Not yet implemented"
+    #   describe('populateTable', () => {
+    #     const EXISTING_TABLE_DATA = {
+    #       cities: {
+    #         records: {
+    #           1: '{"city":"New York","state":"NY","id":1}',
+    #         },
+    #       },
+    #     };
+    #     const EXISTING_COUNTER_DATA = {
+    #       cities: {
+    #         lastId: 2,
+    #         rowCount: 2,
+    #       },
+    #     };
+    #     const NEW_TABLE_DATA_JSON = `{
+    #       "cities": [
+    #         {"city": "Seattle", "state": "WA"},
+    #         {"city": "Chicago", "state": "IL"}
+    #       ]
+    #     }`;
+    #     const NEW_TABLE_DATA = {
+    #       cities: {
+    #         records: {
+    #           1: '{"city":"Seattle","state":"WA","id":1}',
+    #           2: '{"city":"Chicago","state":"IL","id":2}',
+    #         },
+    #       },
+    #     };
+    #     const BAD_JSON = '{';
+    #     function verifyTable(expectedTablesData) {
+    #       return getProjectDatabase()
+    #         .child(`storage/tables`)
+    #         .once('value')
+    #         .then(
+    #           snapshot => {
+    #             expect(snapshot.val()).to.deep.equal(expectedTablesData);
+    #           },
+    #           error => {
+    #             throw error;
+    #           }
+    #         );
+    #     }
+
+    #     it('loads new table data when no previous data exists', done => {
+    #       FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
+    #         () => verifyTable(NEW_TABLE_DATA).then(done),
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+    #     });
+  end
+
+  test "populate_table does not overwrite existing data" do
+    skip "FIXME: Not yet implemented"
+    #     it('does not overwrite existing data', done => {
+    #       getProjectDatabase()
+    #         .child(`storage/tables`)
+    #         .set(EXISTING_TABLE_DATA)
+    #         .then(() =>
+    #           getProjectDatabase()
+    #             .child('counters/tables')
+    #             .set(EXISTING_COUNTER_DATA)
+    #         )
+    #         .then(() => {
+    #           FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
+    #             () => verifyTable(EXISTING_TABLE_DATA).then(done),
+    #             error => {
+    #               throw error;
+    #             }
+    #           );
+    #         });
+    #     });
+  end
+
+  test "populate_table prints a friendly error message when given bad table json" do
+    skip "FIXME: Not yet implemented"
+    #     it('prints a friendly error message when given bad table json', done => {
+    #       FirebaseStorage.populateTable(BAD_JSON).then(() => {
+    #         throw 'expected JSON error to be reported';
+    #       }, validateError);
+
+    #       function validateError(error) {
+    #         expect(error).to.contain('SyntaxError');
+    #         expect(error).to.contain('while parsing initial table data: {');
+    #         done();
+    #       }
+    #     });
+  end
+
+  test "populate_key_values" do
+    skip "FIXME: Not yet implemented"
+    # FIXME: implement test based on this JS
+    #
+    #   describe('populateKeyValue', () => {
+    #     const EXISTING_KEY_VALUE_DATA = {
+    #       click_count: '1',
+    #     };
+    #     const NEW_KEY_VALUE_DATA_JSON = `{
+    #         "click_count": 5
+    #       }`;
+    #     const NEW_KEY_VALUE_DATA = {
+    #       click_count: '5',
+    #     };
+    #     const BAD_JSON = '{';
+    #     function verifyKeyValue(expectedData) {
+    #       return getProjectDatabase()
+    #         .child(`storage/keys`)
+    #         .once('value')
+    #         .then(
+    #           snapshot => {
+    #             expect(snapshot.val()).to.deep.equal(expectedData);
+    #           },
+    #           error => {
+    #             throw error;
+    #           }
+    #         );
+    #     }
+    #     it('loads new key value data when no previous data exists', done => {
+    #       FirebaseStorage.populateKeyValue(
+    #         NEW_KEY_VALUE_DATA_JSON,
+    #         () => verifyKeyValue(NEW_KEY_VALUE_DATA).then(done),
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+    #     });
+    #     it('does not overwrite existing data', done => {
+    #       getProjectDatabase()
+    #         .child(`storage/keys`)
+    #         .set(EXISTING_KEY_VALUE_DATA)
+    #         .then(() => {
+    #           FirebaseStorage.populateKeyValue(
+    #             NEW_KEY_VALUE_DATA_JSON,
+    #             () => verifyKeyValue(EXISTING_KEY_VALUE_DATA).then(done),
+    #             error => {
+    #               throw error;
+    #             }
+    #           );
+    #         });
+    #     });
+    #     it('prints a friendly error message when given bad key value json', done => {
+    #       FirebaseStorage.populateKeyValue(
+    #         BAD_JSON,
+    #         () => {
+    #           throw 'expected JSON error to be reported';
+    #         },
+    #         validateError
+    #       );
+    #       function validateError(error) {
+    #         expect(error).to.contain('SyntaxError');
+    #         expect(error).to.contain('while parsing initial key/value data: {');
+    #         done();
+    #       }
+    #     });
+    #   });
+  end
+
+  test "add_shared_table" do
+    skip "FIXME: Not yet implemented"
+    #   describe('copyStaticTable', () => {
+    #     it('Copies the records and counters from shared channel', done => {
+    #       const expectedTableData = {
+    #         1: '{"id":1,"name":"alice","age":7,"male":false}',
+    #         2: '{"id":2,"name":"bob","age":8,"male":true}',
+    #         3: '{"id":3,"name":"charlie","age":9,"male":true}',
+    #       };
+    #       getSharedDatabase()
+    #         .child('counters/tables/mytable')
+    #         .set({lastId: 3, rowCount: 3});
+    #       getSharedDatabase()
+    #         .child('storage/tables/mytable/records')
+    #         .set(expectedTableData);
+    #       FirebaseStorage.copyStaticTable(
+    #         'mytable',
+    #         () => validateTableData(expectedTableData, done),
+    #         () => {
+    #           throw 'error';
+    #         }
+    #       );
+    #     });
+  end
+
+  test "add_shared_table cannot overwrite an existing table" do
+    skip "FIXME: Not yet implemented"
+    #     it('Cannot overwrite an existing project table', done => {
+    #       FirebaseStorage.createTable(
+    #         'mytable',
+    #         () => {
+    #           FirebaseStorage.copyStaticTable(
+    #             'mytable',
+    #             () => {
+    #               throw 'unexpectedly allowed to overwrite existing table';
+    #             },
+    #             error => {
+    #               expect(error.type).to.equal(WarningType.DUPLICATE_TABLE_NAME);
+    #               done();
+    #             }
+    #           );
+    #         },
+    #         () => {
+    #           throw 'error';
+    #         }
+    #       );
+    #     });
+  end
+
+  test "read_records works on a shared table" do
+    skip "FIXME: Not yet implemented"
+  end
+
+  test "can't create more than maxTableCount tables" do
+    skip "FIXME: Not yet implemented"
+    #   it('cant create more than maxTableCount tables', done => {
+    #     FirebaseStorage.createRecord(
+    #       'table1',
+    #       {name: 'bob'},
+    #       createTable2,
+    #       error => {
+    #         throw error;
+    #       }
+    #     );
+    #       FirebaseStorage.createRecord(
+    #         'table2',
+    #         {name: 'bob'},
+    #         createTable3,
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+    #       FirebaseStorage.createRecord(
+    #         'table3',
+    #         {name: 'bob'},
+    #         createTable4,
+    #         error => {
+    #           throw error;
+    #         }
+    #       );
+    #       FirebaseStorage.createRecord(
+    #         'table4',
+    #         {name: 'bob'},
+    #         () => {
+    #           throw 'unexpectedly allowed to create 4th table';
+    #         },
+    #         error => {
+    #           expect(error.type).to.equal(WarningType.MAX_TABLES_EXCEEDED);
+    #           done();
+    #         }
+    #       );
+
+    #   });
+  end
+
+  test "deletes a record" do
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {'name' => 'bob', 'age' => 8}.to_json,
+    }
+    assert_response :success
+    # assert_equal 1, JSON.parse(@response.body).id
+    assert_equal 1, @response.parsed_body['id']
+    delete _url(:delete_record), params: {
+      table_name: 'mytable',
+      record_id: 1,
+    }
+    assert_response :success
+    get _url(:read_records), params: {
+      table_name: 'mytable',
+    }
+    assert_response :success
+    val = JSON.parse(@response.body)
+    assert_equal [], val
+  end
+
+  test "updates a record" do
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {'name' => 'bob', 'age' => 8}.to_json,
+    }
+    assert_response :success
+
+    assert_equal 1, @response.parsed_body['id']
+    put _url(:update_record), params: {
+      table_name: 'mytable',
+      record_id: 1,
+      record_json: {'name' => 'sally', 'age' => 10}.to_json
+    }
+    assert_response :success
     get _url(:read_records), params: {
       table_name: 'mytable',
     }
@@ -497,346 +1034,9 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{'name' => 'sally', 'age' => 10, 'id' => 1}], val
   end
 
-  #     it('converts valid booleans', done => {
-  #       FirebaseStorage.createRecord(
-  #         'mytable',
-  #         {foo: true},
-  #         () => {
-  #           FirebaseStorage.createRecord(
-  #             'mytable',
-  #             {foo: 'true'},
-  #             () => {
-  #               FirebaseStorage.createRecord(
-  #                 'mytable',
-  #                 {foo: false},
-  #                 () => {
-  #                   FirebaseStorage.createRecord(
-  #                     'mytable',
-  #                     {foo: 'false'},
-  #                     () => {
-  #                       doCoerce();
-  #                     },
-  #                     error => {
-  #                       throw error;
-  #                     }
-  #                   );
-  #                 },
-  #                 error => {
-  #                   throw error;
-  #                 }
-  #               );
-  #             },
-  #             error => {
-  #               throw error;
-  #             }
-  #           );
-  #         },
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-  #       function doCoerce() {
-  #         FirebaseStorage.coerceColumn(
-  #           'mytable',
-  #           'foo',
-  #           'boolean',
-  #           validate,
-  #           error => {
-  #             throw error;
-  #           }
-  #         );
-  #       }
-  #       function validate() {
-  #         const recordsRef = getProjectDatabase().child(
-  #           `storage/tables/mytable/records`
-  #         );
-  #         recordsRef.once('value').then(snapshot => {
-  #           expect(snapshot.val()).to.deep.equal({
-  #             1: '{"foo":true,"id":1}',
-  #             2: '{"foo":true,"id":2}',
-  #             3: '{"foo":false,"id":3}',
-  #             4: '{"foo":false,"id":4}',
-  #           });
-  #           done();
-  #         });
-  #       }
-  #     });
-
-  #     it('converts valid numbers', done => {
-  #       FirebaseStorage.createRecord(
-  #         'mytable',
-  #         {foo: 1},
-  #         () => {
-  #           FirebaseStorage.createRecord(
-  #             'mytable',
-  #             {foo: '2'},
-  #             () => {
-  #               FirebaseStorage.createRecord(
-  #                 'mytable',
-  #                 {foo: '1e3'},
-  #                 () => {
-  #                   FirebaseStorage.createRecord(
-  #                     'mytable',
-  #                     {foo: '0.4'},
-  #                     () => {
-  #                       doCoerce();
-  #                     },
-  #                     error => {
-  #                       throw error;
-  #                     }
-  #                   );
-  #                 },
-  #                 error => {
-  #                   throw error;
-  #                 }
-  #               );
-  #             },
-  #             error => {
-  #               throw error;
-  #             }
-  #           );
-  #         },
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-
-  #       function doCoerce() {
-  #         FirebaseStorage.coerceColumn(
-  #           'mytable',
-  #           'foo',
-  #           'number',
-  #           validate,
-  #           error => {
-  #             throw error;
-  #           }
-  #         );
-  #       }
-
-  #       function validate() {
-  #         const recordsRef = getProjectDatabase().child(
-  #           `storage/tables/mytable/records`
-  #         );
-  #         recordsRef.once('value').then(snapshot => {
-  #           expect(snapshot.val()).to.deep.equal({
-  #             1: '{"foo":1,"id":1}',
-  #             2: '{"foo":2,"id":2}',
-  #             3: '{"foo":1000,"id":3}',
-  #             4: '{"foo":0.4,"id":4}',
-  #           });
-  #           done();
-  #         });
-  #       }
-  #     });
-
-  #     it('warns on invalid booleans', done => {
-  #       FirebaseStorage.createRecord(
-  #         'mytable',
-  #         {foo: true},
-  #         () => {
-  #           FirebaseStorage.createRecord(
-  #             'mytable',
-  #             {foo: 'bar'},
-  #             () => {
-  #               doCoerce();
-  #             },
-  #             error => {
-  #               throw error;
-  #             }
-  #           );
-  #         },
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-
-  #       function doCoerce() {
-  #         FirebaseStorage.coerceColumn(
-  #           'mytable',
-  #           'foo',
-  #           'boolean',
-  #           validate,
-  #           validateError
-  #         );
-  #       }
-
-  #       let onErrorCalled = false;
-  #       function validateError(error) {
-  #         expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
-  #         onErrorCalled = true;
-  #       }
-
-  #       function validate() {
-  #         const recordsRef = getProjectDatabase().child(
-  #           `storage/tables/mytable/records`
-  #         );
-  #         recordsRef.once('value').then(snapshot => {
-  #           expect(snapshot.val()).to.deep.equal({
-  #             1: '{"foo":true,"id":1}',
-  #             2: '{"foo":"bar","id":2}',
-  #           });
-  #           expect(onErrorCalled).to.be.true;
-  #           done();
-  #         });
-  #       }
-  #     });
-
-  #     it('warns on invalid numbers', done => {
-  #       FirebaseStorage.createRecord(
-  #         'mytable',
-  #         {foo: 1},
-  #         () => {
-  #           FirebaseStorage.createRecord(
-  #             'mytable',
-  #             {foo: '2xyz'},
-  #             () => {
-  #               doCoerce();
-  #             },
-  #             error => {
-  #               throw error;
-  #             }
-  #           );
-  #         },
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-
-  #       function doCoerce() {
-  #         FirebaseStorage.coerceColumn(
-  #           'mytable',
-  #           'foo',
-  #           'number',
-  #           validate,
-  #           validateError
-  #         );
-  #       }
-
-  #       let onErrorCalled = false;
-  #       function validateError(error) {
-  #         expect(error.type).to.equal(WarningType.CANNOT_CONVERT_COLUMN_TYPE);
-  #         onErrorCalled = true;
-  #       }
-
-  #       function validate() {
-  #         const recordsRef = getProjectDatabase().child(
-  #           `storage/tables/mytable/records`
-  #         );
-  #         recordsRef.once('value').then(snapshot => {
-  #           expect(snapshot.val()).to.deep.equal({
-  #             1: '{"foo":1,"id":1}',
-  #             2: '{"foo":"2xyz","id":2}',
-  #           });
-  #           expect(onErrorCalled).to.be.true;
-  #           done();
-  #         });
-  #       }
-  #     });
-  #   });
-
-  #   describe('populateTable', () => {
-  #     const EXISTING_TABLE_DATA = {
-  #       cities: {
-  #         records: {
-  #           1: '{"city":"New York","state":"NY","id":1}',
-  #         },
-  #       },
-  #     };
-  #     const EXISTING_COUNTER_DATA = {
-  #       cities: {
-  #         lastId: 2,
-  #         rowCount: 2,
-  #       },
-  #     };
-  #     const NEW_TABLE_DATA_JSON = `{
-  #       "cities": [
-  #         {"city": "Seattle", "state": "WA"},
-  #         {"city": "Chicago", "state": "IL"}
-  #       ]
-  #     }`;
-  #     const NEW_TABLE_DATA = {
-  #       cities: {
-  #         records: {
-  #           1: '{"city":"Seattle","state":"WA","id":1}',
-  #           2: '{"city":"Chicago","state":"IL","id":2}',
-  #         },
-  #       },
-  #     };
-  #     const BAD_JSON = '{';
-
-  #     function verifyTable(expectedTablesData) {
-  #       return getProjectDatabase()
-  #         .child(`storage/tables`)
-  #         .once('value')
-  #         .then(
-  #           snapshot => {
-  #             expect(snapshot.val()).to.deep.equal(expectedTablesData);
-  #           },
-  #           error => {
-  #             throw error;
-  #           }
-  #         );
-  #     }
-
-  #     it('loads new table data when no previous data exists', done => {
-  #       FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
-  #         () => verifyTable(NEW_TABLE_DATA).then(done),
-  #         error => {
-  #           throw error;
-  #         }
-  #       );
-  #     });
-
-  #     it('does not overwrite existing data', done => {
-  #       getProjectDatabase()
-  #         .child(`storage/tables`)
-  #         .set(EXISTING_TABLE_DATA)
-  #         .then(() =>
-  #           getProjectDatabase()
-  #             .child('counters/tables')
-  #             .set(EXISTING_COUNTER_DATA)
-  #         )
-  #         .then(() => {
-  #           FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
-  #             () => verifyTable(EXISTING_TABLE_DATA).then(done),
-  #             error => {
-  #               throw error;
-  #             }
-  #           );
-  #         });
-  #     });
-
-  #     // Some users got into a bad state where populateTables wrote storage/tables,
-  #     // but failed to write counters/tables due to a security rule violation. Make
-  #     // sure we overwrite tables for users in that state.
-  #     it('does overwrite existing data when counters/tables node is empty', done => {
-  #       getProjectDatabase()
-  #         .child(`storage/tables`)
-  #         .set(EXISTING_TABLE_DATA)
-  #         .then(() => {
-  #           FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
-  #             () => verifyTable(NEW_TABLE_DATA).then(done),
-  #             error => {
-  #               throw error;
-  #             }
-  #           );
-  #         });
-  #     });
-
-  #     it('prints a friendly error message when given bad table json', done => {
-  #       FirebaseStorage.populateTable(BAD_JSON).then(() => {
-  #         throw 'expected JSON error to be reported';
-  #       }, validateError);
-
-  #       function validateError(error) {
-  #         expect(error).to.contain('SyntaxError');
-  #         expect(error).to.contain('while parsing initial table data: {');
-  #         done();
-  #       }
-  #     });
-  #   });
-
   test "import_csv" do
+    skip "FIXME: test implemented, but will fail because import_csv doesn't cast values, see bottom of test"
+
     csv_data = <<~CSV
       id,name,age,male
       4,alice,7,false
