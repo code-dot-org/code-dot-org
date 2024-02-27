@@ -132,7 +132,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
 
     response_json = JSON.parse(response.body)
     assert response_json.length, num_ai_tutor_interactions
-    assert response_json.first["user_id"], @student_with_ai_tutor_access.id
+    assert response_json.first["userId"], @student_with_ai_tutor_access.id
   end
 
   test 'index returns forbidden for section not owned by teacher' do
