@@ -1,6 +1,7 @@
 import color from '@cdo/apps/util/color';
+import {BlocklyWrapperType} from '../types';
 
-export default function initializeCss(blocklyWrapper) {
+export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
   blocklyWrapper.Css.register(
     `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
       width: 32px;
