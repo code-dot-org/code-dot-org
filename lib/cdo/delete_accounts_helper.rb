@@ -311,7 +311,7 @@ class DeleteAccountsHelper
   def delete_ai_tutor_interactions(user_id)
     chat_messages_to_delete = AiTutorInteraction.where(user_id: user_id)
     count = chat_messages_to_delete.count
-    chat_messages_to_delete.destroy_all
+    chat_messages_to_delete.in_batches.destroy_all
     @log.puts "Deleted #{count} AI Tutor Interactions" if count > 0
   end
 
