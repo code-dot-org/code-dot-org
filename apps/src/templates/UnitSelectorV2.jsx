@@ -14,24 +14,25 @@ function UnitSelectorV2({
   className,
   setScriptId,
 }) {
+  const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
     e => {
-      const newScriptId = e.target.value;
-      setScriptId(newScriptId);
-      loadUnitProgress(newScriptId, sectionId);
+      const newUnitId = e.target.value;
+      setScriptId(newUnitId);
+      loadUnitProgress(newUnitId, sectionId);
 
       this.recordEvent('change_script_v2', {
-        old_script_id: scriptId,
-        new_script_id: newScriptId,
+        old_script_id: unitId,
+        new_script_id: newUnitId,
       });
 
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_CHANGE_UNIT, {
         sectionId: sectionId,
-        oldUnitId: scriptId,
-        unitId: newScriptId,
+        oldUnitId: unitId,
+        unitId: newUnitId,
       });
     },
-    [scriptId, setScriptId, sectionId]
+    [unitId, setScriptId, sectionId]
   );
 
   const itemGroups = coursesWithProgress.map(version => ({
@@ -45,7 +46,7 @@ function UnitSelectorV2({
   return (
     <SimpleDropdown
       itemGroups={itemGroups}
-      selectedValue={scriptId}
+      selectedValue={unitId}
       name="unitSelector"
       onChange={onSelectUnit}
       className={className}
