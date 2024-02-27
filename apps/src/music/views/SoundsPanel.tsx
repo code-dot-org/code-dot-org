@@ -4,7 +4,7 @@ import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicLibrary, {SoundData, SoundFolder} from '../player/MusicLibrary';
-
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
  * custom Blockly Field {@link FieldSounds}
@@ -173,6 +173,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const libraryGroupPath = library.libraryJson.id;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(folders[0]);
+  const [filter, setFilter] = useState<string>('all');
+
+  const onFilterChange = (value: string) => {
+    setFilter(value);
+  };
 
   /*
   // Generate a flat list of entries to render.  We need a flat list because
@@ -190,37 +195,69 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   });
   */
 
+  let rightColumnSounds: SoundData[] = [];
+
+  if (filter === 'all') {
+    rightColumnSounds = selectedFolder.sounds;
+  } else {
+    folders.forEach(folder => {
+      folder.sounds.forEach(sound => {
+        if (sound.type === filter) {
+          rightColumnSounds.push(sound);
+        }
+      });
+    });
+  }
+
   return (
     <div id="sounds-panel" className={styles.soundsPanel}>
-      <div id="sounds-panel-left" className={styles.soundsPanelLeft}>
-        {folders.map((folder, folderIndex) => {
-          return (
-            <FolderPanelRow
-              key={folderIndex}
-              libraryGroupPath={libraryGroupPath}
-              playingPreview={playingPreview}
-              folder={folder}
-              currentValue={selectedFolder}
-              onSelect={setSelectedFolder}
-              onPreview={onPreview}
-            />
-          );
-        })}
+      <div id="sounds-panel-top" className={styles.soundsPanelTop}>
+        <SegmentedButtons
+          selectedButtonValue={filter}
+          buttons={[
+            {label: 'All', value: 'all'},
+            {label: 'Beats', value: 'beat'},
+            {label: 'Bass', value: 'bass'},
+            {label: 'Leads', value: 'lead'},
+            {label: 'Effects', value: 'fx'},
+            {label: 'Vocals', value: 'vocal'},
+          ]}
+          onChange={value => onFilterChange(value)}
+        />
       </div>
-      <div id="sounds-panel-right" className={styles.soundsPanelRight}>
-        {selectedFolder.sounds.map((sound, soundIndex) => {
-          return (
-            <SoundsPanelRow
-              key={soundIndex}
-              currentValue={currentValue}
-              playingPreview={playingPreview}
-              folder={selectedFolder}
-              sound={sound}
-              onSelect={onSelect}
-              onPreview={onPreview}
-            />
-          );
-        })}
+      <div id="sounds-panel-body" className={styles.soundsPanelBody}>
+        {filter === 'all' && (
+          <div id="sounds-panel-left" className={styles.leftColumn}>
+            {folders.map((folder, folderIndex) => {
+              return (
+                <FolderPanelRow
+                  key={folderIndex}
+                  libraryGroupPath={libraryGroupPath}
+                  playingPreview={playingPreview}
+                  folder={folder}
+                  currentValue={selectedFolder}
+                  onSelect={setSelectedFolder}
+                  onPreview={onPreview}
+                />
+              );
+            })}
+          </div>
+        )}
+        <div id="sounds-panel-right" className={styles.rightColumn}>
+          {rightColumnSounds.map((sound, soundIndex) => {
+            return (
+              <SoundsPanelRow
+                key={soundIndex}
+                currentValue={currentValue}
+                playingPreview={playingPreview}
+                folder={selectedFolder}
+                sound={sound}
+                onSelect={onSelect}
+                onPreview={onPreview}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

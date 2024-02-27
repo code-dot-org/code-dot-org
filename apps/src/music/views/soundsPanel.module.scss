@@ -5,19 +5,30 @@
   width: 600px;
   height: 290px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 5px;
 
-  &Left {
-    background-color: $neutral_dark;
-    flex: 1;
-    overflow-y: scroll;
+  &Top {
+
   }
 
-  &Right {
-    background-color: $neutral_dark;
-    flex: 1;
-    overflow-y: scroll;
+  &Body {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 5px;
+
+    .leftColumn {
+      background-color: $neutral_dark;
+      flex: 1;
+      overflow-y: scroll;
+    }
+
+    .rightColumn {
+      background-color: $neutral_dark;
+      flex: 1;
+      overflow-y: scroll;
+    }
   }
 
   .folderRow {

@@ -49,7 +49,7 @@ export default class MusicLibrary {
     }
 
     // The fallback is the first non-instrument/kit folder's first sound.
-    const firstFolder = this.libraryJson?.packs.find(group => !group.type);
+    const firstFolder = this.folders.find(group => !group.type);
     return `${firstFolder?.id}/${firstFolder?.sounds[0].src}`;
   }
 
@@ -104,11 +104,9 @@ export default class MusicLibrary {
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
   getAllowedSounds(folderType: string | undefined): SoundFolder[] {
-    const folders = this.libraryJson.packs;
-
     // Let's just do a deep copy and then do filtering in-place.
     let foldersCopy: SoundFolder[] = JSON.parse(
-      JSON.stringify(folders)
+      JSON.stringify(this.folders)
     ) as SoundFolder[];
 
     // Whether or not we have allowedSounds, we need to filter by type.
