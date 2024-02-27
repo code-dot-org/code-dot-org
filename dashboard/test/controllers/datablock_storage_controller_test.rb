@@ -82,7 +82,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ['mytable'], JSON.parse(@response.body)
   end
 
-  test "create_record can't create more than maxTableCount tables" do
+  test "create_record can't create more than MAX_TABLE_COUNT tables" do
     # Lower the max table count to 3 so its easy to test
     original_max_table_count = DatablockStorageTable::MAX_TABLE_COUNT
     DatablockStorageTable.const_set(:MAX_TABLE_COUNT, 3)
@@ -97,11 +97,30 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     post _url(:create_record), params: {table_name: 'table4', record_json: {'name' => 'bob'}.to_json}
-    skip "FIXME: controller bug, test will fail, because enforcing max table count is not yet implemented so we get :success when :bad_request is desired"
+    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_COUNT is not yet implemented so we get :success when :bad_request is desired"
     assert_response :bad_request
     assert_equal 'MAX_TABLES_EXCEEDED', JSON.parse(@response.body)['type']
   ensure
     DatablockStorageTable.const_set(:MAX_TABLE_COUNT, original_max_table_count)
+  end
+
+  test "create_record can't create more than MAX_TABLE_ROW_COUNT rows" do
+    # Lower the max table count to 3 so its easy to test
+    original_max_table_row_count = DatablockStorageTable::MAX_TABLE_ROW_COUNT
+    DatablockStorageTable.const_set(:MAX_TABLE_ROW_COUNT, 3)
+
+    # Create 3 records so we're right at the limit...
+    create_bob_record
+    create_bob_record
+    create_bob_record
+
+    post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => 'bob'}.to_json}
+
+    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_ROW_COUNT is not yet implemented so we get :success when :bad_request is desired"
+    assert_response :bad_request
+    assert_equal 'MAX_ROWS_EXCEEDED', JSON.parse(@response.body)['type']
+  ensure
+    DatablockStorageTable.const_set(:MAX_TABLE_ROW_COUNT, original_max_table_row_count)
   end
 
   test "create_table" do
@@ -581,11 +600,5 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     # Tim, age 2 record should be gone:
     assert_equal EXPECTED_RECORDS, read_records
-  end
-
-  test "import_csv rejects long inputs" do
-  end
-
-  test "import_csv rejects too many rows" do
   end
 end
