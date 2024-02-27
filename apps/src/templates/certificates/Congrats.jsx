@@ -9,7 +9,7 @@ import {
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
 import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
 
@@ -61,6 +61,7 @@ export default function Congrats(props) {
     nextCourseScriptName,
     nextCourseTitle,
     nextCourseDesc,
+    curriculumUrl,
   } = props;
 
   const teacherCourses = [
@@ -354,23 +355,37 @@ export default function Congrats(props) {
     }
   };
 
+  console.log(certificateData);
   return (
     <div className={style.wrapper}>
-      <div className={style.certificateContainer}>
-        <Certificate
-          tutorial={tutorial}
-          certificateId={certificateId}
-          randomDonorTwitter={randomDonorTwitter}
-          randomDonorName={randomDonorName}
-          under13={under13}
-          certificateData={certificateData}
-          isHocTutorial={isHocTutorial}
-          isPlCourse={isPlCourse}
-        >
-          {renderExtraCertificateLinks(language, tutorial)}
-        </Certificate>
-      </div>
-      {renderRecommendedOptions()}
+      {certificateData.length > 0 && (
+        <>
+          <div className={style.certificateContainer}>
+            <Certificate
+              tutorial={tutorial}
+              certificateId={certificateId}
+              randomDonorTwitter={randomDonorTwitter}
+              randomDonorName={randomDonorName}
+              under13={under13}
+              certificateData={certificateData}
+              isHocTutorial={isHocTutorial}
+              isPlCourse={isPlCourse}
+            >
+              {renderExtraCertificateLinks(language, tutorial)}
+            </Certificate>
+          </div>
+          {renderRecommendedOptions()}
+        </>
+      )}
+      {certificateData.length === 0 && (
+        <div>
+          <Heading3>
+            <InlineMarkdown
+              markdown={i18n.noCertificateReturnToCourse({curriculumUrl})}
+            />
+          </Heading3>
+        </div>
+      )}
     </div>
   );
 }
@@ -384,6 +399,7 @@ Congrats.propTypes = {
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
   certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  curriculumUrl: PropTypes.string,
   isHocTutorial: PropTypes.bool,
   isPlCourse: PropTypes.bool,
   isK5PlCourse: PropTypes.bool,

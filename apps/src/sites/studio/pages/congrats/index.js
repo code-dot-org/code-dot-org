@@ -27,6 +27,7 @@ $(document).ready(function () {
   // Extras tutorial if we have problems during Hour of Code.
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
   const certificateData = congratsData.certificate_data;
+  const curriculumUrl = congratsData.curriculum_url;
   const isHocTutorial = congratsData.is_hoc_tutorial;
   const isPlCourse = congratsData.is_pl_course;
   const isK5PlCourse = congratsData.is_k5_pl_course;
@@ -67,6 +68,7 @@ $(document).ready(function () {
         nextCourseScriptName={nextCourseScriptName}
         nextCourseTitle={nextCourseTitle}
         nextCourseDesc={nextCourseDesc}
+        curriculumUrl={curriculumUrl}
       />
     </Provider>,
     document.getElementById('congrats-container')

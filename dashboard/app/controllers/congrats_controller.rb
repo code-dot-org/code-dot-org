@@ -10,37 +10,44 @@ class CongratsController < ApplicationController
     @random_donor_name = DashboardCdoDonor.get_random_donor_name
     begin
       course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
-      unit_group = UnitGroup.get_from_cache(course_name)
-      if unit_group
-        units = unit_group.units_for_user(current_user)
-        completed_units = UserScript.where(user: current_user, script: units).where.not(completed_at: nil).map(&:script)
-        @certificate_data =
-          if completed_units.length == units.length
-            [{
-              courseName: course_name,
-              coursePath: course_path(unit_group),
-            }]
-          else
-            completed_units.map do |unit|
-              {
-                courseName: unit.name,
-                coursePath: script_path(unit),
-              }
-            end
-          end
-
-      else
-        unit = Script.get_from_cache(course_name)
-        # The order of this conditional is important. During HoC, we generally want to avoid
-        # hitting the database, so we check if the unit is an HoC unit first.
-        if unit&.hoc? || UserScript.where(user: current_user, script: unit).where.not(completed_at: nil).exists?
-          @certificate_data = [{
-            courseName: course_name
-          }]
-        end
-      end
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
+    end
+
+    course_name = 'hourofcode' if course_name.blank?
+
+    curriculum = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
+    if curriculum.is_a?(UnitGroup)
+      @curriculum_url = course_path(curriculum)
+      units = curriculum.units_for_user(current_user)
+      completed_units = UserScript.where(user: current_user, script: units).where.not(completed_at: nil).map(&:script)
+      @certificate_data =
+        if completed_units.length == units.length
+          [{
+            courseName: course_name,
+            coursePath: course_path(curriculum),
+          }]
+        else
+          completed_units.map do |unit|
+            {
+              courseName: unit.name,
+              coursePath: script_path(unit),
+            }
+          end
+        end
+
+    else
+      @curriculum_url = script_path(curriculum)
+      # The order of this conditional is important. During HoC, we generally want to avoid
+      # hitting the database, so we check if the unit is an HoC unit first.
+      @certificate_data =
+        if curriculum&.hoc? || UserScript.where(user: current_user, script: curriculum).where.not(completed_at: nil).exists?
+          [{
+            courseName: course_name
+          }]
+        else
+          []
+        end
     end
 
     course_type = CertificateImage.course_type(@course_name)
