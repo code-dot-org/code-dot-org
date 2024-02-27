@@ -8292,7 +8292,6 @@ __metadata:
     grunt-newer: ^1.3.0
     grunt-notify: 0.4.5
     grunt-sass: 3.1.0
-    grunt-ts: ^6.0.0-beta.22
     grunt-webpack: ^4.0.3
     hammerjs: ^2.0.8
     history: ^2.0.1
@@ -9545,7 +9544,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^2.0.4, chokidar@npm:^2.1.8":
+"chokidar@npm:^2.1.8":
   version: 2.1.8
   resolution: "chokidar@npm:2.1.8"
   dependencies:
@@ -10589,18 +10588,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"csproj2ts@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "csproj2ts@npm:1.1.0"
-  dependencies:
-    es6-promise: ^4.1.1
-    lodash: ^4.17.4
-    semver: ^5.4.1
-    xml2js: ^0.4.19
-  checksum: 79659760f01c7db01e2ef8394329397782c91c556ff6102e2dd3b6a87ddfb7bddaf6a26fa000fafa00e9217e3e11e48ad3fc0fadeaa6a6d761eb525fffeb79a0
-  languageName: node
-  linkType: hard
-
 "css-box-model@npm:^1.2.0":
   version: 1.2.1
   resolution: "css-box-model@npm:1.2.1"
@@ -11359,13 +11346,6 @@ canvg@gabelerner/canvg:
   bin:
     detect-libc: ./bin/detect-libc.js
   checksum: daaaed925ffa7889bd91d56e9624e6c8033911bb60f3a50a74a87500680652969dbaab9526d1e200a4c94acf80fc862a22131841145a0a8482d60a99c24f4a3e
-  languageName: node
-  linkType: hard
-
-"detect-newline@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "detect-newline@npm:2.1.0"
-  checksum: c55146fd5b97a9ce914f17f85a01466c9e8679289e2d390588b027a58f2e090dbc38457923072369c603b8904f982f87b78fee17e48d5706f35571642f4599f8
   languageName: node
   linkType: hard
 
@@ -12559,20 +12539,6 @@ canvg@gabelerner/canvg:
   version: 4.0.5
   resolution: "es6-promise@npm:4.0.5"
   checksum: 6dadd398c2aab4319360279d252cbbafd7e5b57fe4097765bb3d5549abdceab6b786dba23a7e41927e6bfa98f53f5ee9862a43e012ebef859e27fc233fd70dca
-  languageName: node
-  linkType: hard
-
-"es6-promise@npm:^4.1.1":
-  version: 4.2.8
-  resolution: "es6-promise@npm:4.2.8"
-  checksum: 95614a88873611cb9165a85d36afa7268af5c03a378b35ca7bda9508e1d4f1f6f19a788d4bc755b3fd37c8ebba40782018e02034564ff24c9d6fa37e959ad57d
-  languageName: node
-  linkType: hard
-
-"es6-promise@npm:~0.1.1":
-  version: 0.1.2
-  resolution: "es6-promise@npm:0.1.2"
-  checksum: b96dfe28aa8afda48ea5913f0515891e726d9e2824c3953e5794e04e60959c36b9fd9af65734105f8d4ae04f96e58c1e70a9ea182f842622ce3f031a95af0b81
   languageName: node
   linkType: hard
 
@@ -15247,28 +15213,6 @@ es6-shim@latest:
   peerDependencies:
     grunt: ">=1"
   checksum: c96ceedeb3af64162d23ca6c62fac64fb91fbf6aff90398f55ee30d733103d6b8f6d2b81095f446e25f27db4ab4bbcaf42667466ac996cf3012fc0c3035ff3dc
-  languageName: node
-  linkType: hard
-
-"grunt-ts@npm:^6.0.0-beta.22":
-  version: 6.0.0-beta.22
-  resolution: "grunt-ts@npm:6.0.0-beta.22"
-  dependencies:
-    chokidar: ^2.0.4
-    csproj2ts: ^1.1.0
-    detect-indent: ^4.0.0
-    detect-newline: ^2.1.0
-    es6-promise: ~0.1.1
-    jsmin2: ^1.2.1
-    lodash: ~4.17.10
-    ncp: 0.5.1
-    rimraf: 2.2.6
-    semver: ^5.3.0
-    strip-bom: ^2.0.0
-  peerDependencies:
-    grunt: ^1.0.0 || ^0.4.0
-    typescript: ">=1"
-  checksum: b030ee4c5efcae0e8cea245951c3782575959e623ffb5a4561cfa8e237bb3a7e12cd7784bab4134fa0e7318f77588c1ddd047ed5514893fc54f360cd3ce20da4
   languageName: node
   linkType: hard
 
@@ -18317,13 +18261,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"jsmin2@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "jsmin2@npm:1.2.1"
-  checksum: b2e45afb9a5e8041b28678ecff399aefe860244ab66828f8a95ad4715e35ec0bded1a08c73f0c7bf16d727dbbe95cdc2e3f8162abccb5cf228957142ea3528eb
-  languageName: node
-  linkType: hard
-
 "json-parse-better-errors@npm:^1.0.1":
   version: 1.0.1
   resolution: "json-parse-better-errors@npm:1.0.1"
@@ -19156,7 +19093,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.0.1, lodash@npm:^4.15.0, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.2.0, lodash@npm:^4.5.0, lodash@npm:~4.17.10, lodash@npm:~4.17.19, lodash@npm:~4.17.21":
+"lodash@npm:^4.0.1, lodash@npm:^4.15.0, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4, lodash@npm:^4.2.0, lodash@npm:^4.5.0, lodash@npm:~4.17.19, lodash@npm:~4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -20568,15 +20505,6 @@ es6-shim@latest:
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
   checksum: 23ad088b08f898fc9b53011d7bb78ec48e79de7627e01ab5518e806033861bef68d5b0cd0e2205c2f36690ac9571ff6bcb05eb777ced2eeda8d4ac5b44592c3d
-  languageName: node
-  linkType: hard
-
-"ncp@npm:0.5.1":
-  version: 0.5.1
-  resolution: "ncp@npm:0.5.1"
-  bin:
-    ncp: ./bin/ncp
-  checksum: 54b3e1c936d86fe88b46d571a67d80fac44b6ed883ce7e922d24a6106770c53faae986619feb84e7198835d8bb2c12ec30fbd03f555d8d25db737f2b2c983208
   languageName: node
   linkType: hard
 
@@ -25484,15 +25412,6 @@ es6-shim@latest:
   dependencies:
     align-text: ^0.1.1
   checksum: 7011dc8c0eb2ee04daab45d1251b5efff9956607e130b4a4005ed76e48bddf97c1de3cc70463ca0476949fce5d0af7d652619a538c1b9105b6eff6a59f15c4b9
-  languageName: node
-  linkType: hard
-
-"rimraf@npm:2.2.6":
-  version: 2.2.6
-  resolution: "rimraf@npm:2.2.6"
-  bin:
-    rimraf: ./bin.js
-  checksum: 8344ce1ea4e948800df2859993bb3534e1a4707ce702e8d562275ab2ade2002e1c079916ab6fbe0943abd6234bf2f78841176afaed14114d2b1dd1aef4f8e4f8
   languageName: node
   linkType: hard
 
@@ -30596,16 +30515,6 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"xml2js@npm:^0.4.19":
-  version: 0.4.23
-  resolution: "xml2js@npm:0.4.23"
-  dependencies:
-    sax: ">=0.6.0"
-    xmlbuilder: ~11.0.0
-  checksum: ca0cf2dfbf6deeaae878a891c8fbc0db6fd04398087084edf143cdc83d0509ad0fe199b890f62f39c4415cf60268a27a6aed0d343f0658f8779bd7add690fa98
-  languageName: node
-  linkType: hard
-
 "xml2js@npm:^0.4.4":
   version: 0.4.15
   resolution: "xml2js@npm:0.4.15"
@@ -30627,13 +30536,6 @@ temporal@latest:
   version: 8.2.2
   resolution: "xmlbuilder@npm:8.2.2"
   checksum: 6e07fcee91aa77186302961e882c94a58d0a8d26f6cdeb637d2bc2cf9fb228a03d3214a6f9380846265c89a8536c19424468373f9e3f551c3be7a74819bd0777
-  languageName: node
-  linkType: hard
-
-"xmlbuilder@npm:~11.0.0":
-  version: 11.0.1
-  resolution: "xmlbuilder@npm:11.0.1"
-  checksum: 7152695e16f1a9976658215abab27e55d08b1b97bca901d58b048d2b6e106b5af31efccbdecf9b07af37c8377d8e7e821b494af10b3a68b0ff4ae60331b415b0
   languageName: node
   linkType: hard
 
