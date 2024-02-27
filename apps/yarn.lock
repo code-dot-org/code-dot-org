@@ -6355,7 +6355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ace-builds@npm:^1.4.12, ace-builds@npm:^1.4.6":
+"ace-builds@npm:^1.4.6":
   version: 1.4.12
   resolution: "ace-builds@npm:1.4.12"
   checksum: 009f999a2518abef33057b17f461d1a776ef6ad88baa3dde6d4437f19bcf5588f416349e526a9e3a29658c173bc4bad9df23d9d96e5e56fb569e12be27a09ef3
@@ -8228,7 +8228,6 @@ __metadata:
     "@types/sinon": ^10.0.14
     "@typescript-eslint/eslint-plugin": ^7.0.2
     "@typescript-eslint/parser": ^7.0.2
-    ace-builds: ^1.4.12
     aws-sdk: 2.1231.0
     babel-loader: ^8.2.2
     babel-plugin-add-module-exports: ^0.2.1
