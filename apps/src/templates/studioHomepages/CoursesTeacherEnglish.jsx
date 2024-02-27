@@ -3,10 +3,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import {
-  AdministratorResourcesActionBlock,
-  CscInfoActionBlock,
-} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
@@ -56,8 +52,6 @@ class CoursesTeacherEnglish extends Component {
             cards={TeacherGradeBandCards}
           />
 
-          <CscInfoActionBlock />
-
           <CourseBlocksHoc />
 
           <div id="uitest-course-blocks-tools">
@@ -71,8 +65,6 @@ class CoursesTeacherEnglish extends Component {
               }
             />
           </div>
-
-          <AdministratorResourcesActionBlock />
         </div>
       </div>
     );

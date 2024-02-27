@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   Heading2,
   BodyOneText,
@@ -78,49 +76,3 @@ TwoColumnActionBlock.propTypes = {
 
   marginBottom: PropTypes.string,
 };
-
-export class AdministratorResourcesActionBlock extends Component {
-  render() {
-    return (
-      <TwoColumnActionBlock
-        imageUrl={pegasus(
-          '/images/fill-540x300/2015AR/newcsteacherstrained.png'
-        )}
-        heading={i18n.administratorResourcesHeading()}
-        description={i18n.administratorResourcesDescription()}
-        buttons={[
-          {
-            id: 'your_school_professional_learning',
-            url: pegasus('/educate/professional-learning'),
-            text: i18n.yourSchoolProfessionalLearningProgramsButton(),
-          },
-          {
-            id: 'your_school_administrators',
-            url: pegasus('/administrators'),
-            text: i18n.yourSchoolAdminButton(),
-            color: Button.ButtonColor.neutralDark,
-          },
-        ]}
-      />
-    );
-  }
-}
-
-export class CscInfoActionBlock extends Component {
-  render() {
-    return (
-      <TwoColumnActionBlock
-        imageUrl={'/shared/images/fit-970/banners/csc-banner.png'}
-        heading={i18n.courseInfoCscHeading()}
-        description={i18n.courseInfoCscDescription()}
-        buttons={[
-          {
-            id: 'course_info_csc',
-            url: pegasus('/educate/csc'),
-            text: i18n.learnMore(),
-          },
-        ]}
-      />
-    );
-  }
-}
