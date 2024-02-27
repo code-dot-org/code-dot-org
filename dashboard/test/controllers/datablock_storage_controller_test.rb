@@ -250,72 +250,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "coerce_column converts valid numbers" do
-    skip "FIXME: Not yet implemented"
+    create_record_where_foo_is(1)
+    create_record_where_foo_is('2')
+    create_record_where_foo_is('1e3')
+    create_record_where_foo_is('0.4')
 
-    #     it('converts valid numbers', done => {
-    #       FirebaseStorage.createRecord(
-    #         'mytable',
-    #         {foo: 1},
-    #         () => {
-    #           FirebaseStorage.createRecord(
-    #             'mytable',
-    #             {foo: '2'},
-    #             () => {
-    #               FirebaseStorage.createRecord(
-    #                 'mytable',
-    #                 {foo: '1e3'},
-    #                 () => {
-    #                   FirebaseStorage.createRecord(
-    #                     'mytable',
-    #                     {foo: '0.4'},
-    #                     () => {
-    #                       doCoerce();
-    #                     },
-    #                     error => {
-    #                       throw error;
-    #                     }
-    #                   );
-    #                 },
-    #                 error => {
-    #                   throw error;
-    #                 }
-    #               );
-    #             },
-    #             error => {
-    #               throw error;
-    #             }
-    #           );
-    #         },
-    #         error => {
-    #           throw error;
-    #         }
-    #       );
-    #       function doCoerce() {
-    #         FirebaseStorage.coerceColumn(
-    #           'mytable',
-    #           'foo',
-    #           'number',
-    #           validate,
-    #           error => {
-    #             throw error;
-    #           }
-    #         );
-    #       }
-    #       function validate() {
-    #         const recordsRef = getProjectDatabase().child(
-    #           `storage/tables/mytable/records`
-    #         );
-    #         recordsRef.once('value').then(snapshot => {
-    #           expect(snapshot.val()).to.deep.equal({
-    #             1: '{"foo":1,"id":1}',
-    #             2: '{"foo":2,"id":2}',
-    #             3: '{"foo":1000,"id":3}',
-    #             4: '{"foo":0.4,"id":4}',
-    #           });
-    #           done();
-    #         });
-    #       }
-    #     });
+    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
+    assert_response :success
+
+    assert_equal [
+      {"foo" => 1, "id" => 1},
+      {"foo" => 2, "id" => 2},
+      {"foo" => 1000, "id" => 3},
+      {"foo" => 0.4, "id" => 4},
+    ], read_records
   end
 
   test "coerce_column warns on invalid booleans" do
