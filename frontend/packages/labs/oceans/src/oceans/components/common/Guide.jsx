@@ -54,6 +54,7 @@ let UnwrappedGuide = class Guide extends React.Component {
           <img
             src={currentGuide.image}
             style={[styles.guideImage, currentGuide.imageStyle || {}]}
+            alt=""
           />
         )}
         {!!currentGuide && (
