@@ -15,7 +15,6 @@ class CertificateImagesController < ApplicationController
 
     begin
       data = JSON.parse(Base64.urlsafe_decode64(filename))
-      puts filename, data.inspect
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
     end

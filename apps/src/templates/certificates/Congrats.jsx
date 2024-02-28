@@ -355,7 +355,6 @@ export default function Congrats(props) {
     }
   };
 
-  console.log(certificateData);
   return (
     <div className={style.wrapper}>
       {certificateData.length > 0 && (
