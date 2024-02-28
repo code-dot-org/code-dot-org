@@ -17,8 +17,11 @@ const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
     >
       <LessonTitleTooltip lesson={lesson} />
       {lesson.numberedLesson && lesson.relative_position}
-      {!lesson.numberedLesson && (
-        <FontAwesome icon={allLocked ? 'lock' : 'lock-open'} />
+      {(!lesson.numberedLesson || allLocked) && (
+        <FontAwesome
+          icon={allLocked ? 'lock' : 'lock-open'}
+          className={styles.lockIcon}
+        />
       )}
     </div>
   );
@@ -50,7 +53,7 @@ export default function LessonProgressColumnHeader({
   if (lesson.isFake) {
     return getSkeletonLessonHeader(lesson.id);
   }
-  if (!lessonHasLevels(lesson) || !lesson.numberedLesson) {
+  if (!lessonHasLevels(lesson) || !lesson.numberedLesson || allLocked) {
     return getUninteractiveLessonColumnHeader(lesson, allLocked);
   }
   return (
