@@ -53,9 +53,7 @@ export default function RunAIAssessmentButton({
   );
 
   const studentButtonText = () => {
-    return i18n.runAiAssessment({
-      studentName: studentName,
-    });
+    return i18n.runAiAssessment();
   };
 
   useEffect(() => {
