@@ -216,8 +216,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   };
 
   useEffect(() => {
-    currentFolderRef.current?.scrollIntoView();
-    currentSoundRef.current?.scrollIntoView();
+    // This timeout allows the scrolling to work when wrapping the content with FocusLock.
+    setTimeout(() => {
+      currentFolderRef.current?.scrollIntoView();
+      currentSoundRef.current?.scrollIntoView();
+    }, 0);
   }, []);
 
   const currentFolderRefCallback = (ref: HTMLDivElement) => {
@@ -227,22 +230,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const currentSoundRefCallback = (ref: HTMLDivElement) => {
     currentSoundRef.current = ref;
   };
-
-  /*
-  // Generate a flat list of entries to render.  We need a flat list because
-  // we will make the headers sticky.
-  const entries: {
-    type: 'folder' | 'sound';
-    folder: SoundFolder;
-    sound?: SoundData;
-  }[] = [];
-  folders.forEach(folder => {
-    entries.push({type: 'folder', folder: folder});
-    folder.sounds.forEach(sound => {
-      entries.push({type: 'sound', folder: folder, sound: sound});
-    });
-  });
-  */
 
   let possibleSounds: SoundData[] = [];
   let rightColumnSounds: SoundData[] = [];
@@ -332,37 +319,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       </div>
     </FocusLock>
   );
-  /*
-  return (
-    <div id="sounds-panel" className={styles.soundsPanel}>
-      {entries.map((entry, entryIndex) => {
-        if (entry.type === 'folder') {
-          return (
-            <FolderPanelRow
-              key={entryIndex}
-              libraryGroupPath={libraryGroupPath}
-              playingPreview={playingPreview}
-              folder={entry.folder}
-              onPreview={onPreview}
-            />
-          );
-        } else if (entry.sound && !entry.sound.preview) {
-          return (
-            <SoundsPanelRow
-              key={entryIndex}
-              currentValue={currentValue}
-              playingPreview={playingPreview}
-              folder={entry.folder}
-              sound={entry.sound}
-              onSelect={onSelect}
-              onPreview={onPreview}
-            />
-          );
-        }
-      })}
-    </div>
-  );
-  */
 };
 
 export default SoundsPanel;
