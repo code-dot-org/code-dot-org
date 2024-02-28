@@ -13,7 +13,7 @@ And(/^callout "([^"]*)" is hidden$/) do |callout_id|
 end
 
 And(/^I close callout "([^"]*)"$/) do |callout_id|
-  xpath = "(//*[contains(@class, 'cdo-qtips')])[#{callout_id.to_i + 1}]/button"
+  xpath = "(//*[contains(@class, 'cdo-qtips')])[#{callout_id.to_i + 1}]/div[3]"
   @button = @browser.find_element(:xpath, xpath)
   @button.click
   short_wait.until {!callout_visible?(callout_id)}
