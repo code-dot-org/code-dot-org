@@ -15,7 +15,8 @@
     ],
     "project_template_level_name": "CSA U2L1-Attributes PBT_2024",
     "long_instructions": "**Short one-sentence description of problem to solve.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nalgorithm for method to write\r\n```\r\n:::\r\n&nbsp;\r\n\r\n💡 **TIP:** Check out the documentation for the `ClassName`(#e7e8ea) class in the **Documentation** tab ⬆️ for a thing to look for!\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:49:02.203+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L1_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L1_2023\"}]"

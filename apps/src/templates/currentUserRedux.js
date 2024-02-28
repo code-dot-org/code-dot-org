@@ -166,6 +166,7 @@ export default function currentUser(state = initialState, action) {
       over_21,
       sort_by_family_name,
       show_progress_table_v2,
+      progress_table_v2_closed_beta,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -182,6 +183,7 @@ export default function currentUser(state = initialState, action) {
       over21: over_21,
       isSortedByFamilyName: sort_by_family_name,
       showProgressTableV2: show_progress_table_v2,
+      progressTableV2ClosedBeta: progress_table_v2_closed_beta,
     };
   }
 

@@ -57,13 +57,23 @@
 }
 
 .labelText {
+  height: 22px;
+  line-height: 22px;
   margin-bottom: 0;
 }
 
 .fontAwesomeIcon {
-  width: 20px;
-  height: 20px;
-  font-size: 16px;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.legendIcon {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
 }
 
 .cornerBox {
