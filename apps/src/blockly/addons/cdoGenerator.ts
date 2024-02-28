@@ -1,5 +1,10 @@
-export default function initializeGenerator(blocklyWrapper) {
-  blocklyWrapper.JavaScript.translateVarName = function (name) {
+import {BlocklyWrapperType, ExtendedBlock} from '@cdo/apps/blockly/types';
+import {Block} from 'blockly';
+
+export default function initializeGenerator(
+  blocklyWrapper: BlocklyWrapperType
+) {
+  blocklyWrapper.JavaScript.translateVarName = function (name: string) {
     return Blockly.JavaScript.nameDB_.getName(
       name,
       Blockly.VARIABLE_CATEGORY_NAME
@@ -8,11 +13,9 @@ export default function initializeGenerator(blocklyWrapper) {
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
-  blocklyWrapper.Generator.xmlToBlocks = function (name, xml) {
+  blocklyWrapper.Generator.xmlToBlocks = function (_name, xml) {
     const div = document.createElement('div');
-    const workspace = blocklyWrapper.createEmbeddedWorkspace(div, xml, {
-      disableEventBindings: true,
-    });
+    const workspace = blocklyWrapper.createEmbeddedWorkspace(div, xml, {});
     return workspace.getTopBlocks(true);
   };
 
@@ -29,22 +32,22 @@ export default function initializeGenerator(blocklyWrapper) {
         opt_typeFilter = [opt_typeFilter];
       }
       blocksToGenerate = blocksToGenerate.filter(block =>
-        opt_typeFilter.includes(block.type)
+        (opt_typeFilter as string[]).includes(block.type)
       );
     }
-    let code = [];
+    const code: string[] = [];
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));
     });
-    code = code.join('\n');
-    code = generator.finish(code);
-    return code;
+    let result = code.join('\n');
+    result = generator.finish(code);
+    return result;
   };
 
   const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;
   blocklyWrapper.Generator.prototype.blockToCode = function (
-    block,
-    opt_thisOnly
+    block: Block | null,
+    opt_thisOnly?: boolean
   ) {
     // Skip disabled block check for non-rendered workspaces. Non-rendered workspaces
     // do not have an unused concept.
@@ -54,7 +57,7 @@ export default function initializeGenerator(blocklyWrapper) {
     return originalBlockToCode.call(
       this,
       block,
-      block?.skipNextBlockGeneration || opt_thisOnly
+      (block as ExtendedBlock)?.skipNextBlockGeneration || opt_thisOnly
     );
   };
 
