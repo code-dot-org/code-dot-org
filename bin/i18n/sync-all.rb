@@ -86,15 +86,15 @@ class I18nSync
   end
 
   def sync_up
-    I18n::SyncUp.perform(options.slice(:testing))
+    I18n::SyncUp.perform(options)
   end
 
   def sync_down
-    I18n::SyncDown.perform(options.slice(:testing))
+    I18n::SyncDown.perform(options)
   end
 
   def sync_out
-    I18n::SyncOut.perform
+    I18n::SyncOut.perform(options)
   end
 
   def parse_options(args)
