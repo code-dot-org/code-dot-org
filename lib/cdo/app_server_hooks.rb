@@ -29,6 +29,10 @@ module Cdo
     def self.after_fork(host:)
       require 'cdo/aws/metrics'
       Cdo::Metrics.put('App Server/WorkerBoot', 1, Host: host)
+      # Initialize Statsig
+      require 'statsig'
+      options = StatsigOptions.new({'tier' => CDO.rack_env}, network_timeout: 5, local_mode: false)
+      Statsig.initialize(CDO.statsig_server_secret_key, options)
     end
   end
 end
