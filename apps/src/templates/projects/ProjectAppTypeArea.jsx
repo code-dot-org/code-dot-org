@@ -17,26 +17,26 @@ class ProjectAppTypeArea extends React.Component {
   static propTypes = {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
-    labViewMoreString: PropTypes.string.isRequired,
+    labViewMoreString: PropTypes.string,
     // Ability to hide link for Applab and Gamelab
     hideViewMoreLink: PropTypes.bool,
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    navigateFunction: PropTypes.func.isRequired,
+    navigateFunction: PropTypes.func,
 
     // Only show one project type.
-    isDetailView: PropTypes.bool.isRequired,
+    isDetailView: PropTypes.bool,
 
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
     // from redux state
-    hasOlderProjects: PropTypes.bool.isRequired,
+    hasOlderProjects: PropTypes.bool,
 
     // from redux dispatch
-    appendProjects: PropTypes.func.isRequired,
-    setHasOlderProjects: PropTypes.func.isRequired,
+    appendProjects: PropTypes.func,
+    setHasOlderProjects: PropTypes.func,
   };
 
   constructor(props) {
