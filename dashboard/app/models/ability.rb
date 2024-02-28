@@ -404,6 +404,8 @@ class Ability
           can?(:view_as_user_for_code_review, script_level, user_to_assume, sublevel_to_view)
       end
 
+      # make sure levelbuilders do not have this permission outside of javalab
+      cannot :view_as_user_for_code_review, ScriptLevel
       can :view_as_user_for_code_review, ScriptLevel do |script_level, user_to_assume, level_to_view|
         can_view_as_user_for_code_review = false
 
