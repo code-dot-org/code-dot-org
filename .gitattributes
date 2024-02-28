@@ -9,7 +9,7 @@
 # In contrast, if a text file is accidentally included in LFS, adding it back to
 # the git tree is easy, see: https://stackoverflow.com/a/54119191.
 
-# Include these dirs in Git LFS:
+# Include these "large static asset" and i18n dirs in Git LFS:
 apps/i18n/** filter=lfs diff=lfs merge=lfs -text
 dashboard/config/locales/** filter=lfs diff=lfs merge=lfs -text
 i18n/locales/** filter=lfs diff=lfs merge=lfs -text
