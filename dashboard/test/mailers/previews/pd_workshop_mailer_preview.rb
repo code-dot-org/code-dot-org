@@ -53,6 +53,18 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     end
   end
 
+  [3, 10].each do |days_before|
+    course = Pd::Workshop::COURSE_CSD
+    (1..4).each do |workshop_number|
+      # subject = "csd_ayw_#{workshop_number}"
+      subject = "Academic Year Workshop #{workshop_number}"
+      define_method("teacher_enrollment_reminder__#{subject}_#{days_before}_day") do
+        mail :teacher_enrollment_reminder, course, subject, options: {days_before: days_before}
+      end
+    end
+  end
+  # def teacher_enrollment_reminder__csd_ayw
+
   def teacher_enrollment_receipt__admin
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
