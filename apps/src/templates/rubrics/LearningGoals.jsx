@@ -17,6 +17,7 @@ import {
   OverlineThreeText,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import EvidenceLevels from './EvidenceLevels';
@@ -407,7 +408,12 @@ export default function LearningGoals({
             stroke={4}
           />
           <div className={style.learningGoalsHeaderText}>
-            <Heading5 className={[style.learningGoalsHeaderTextBody, 'uitest-learning-goal-title']}>
+            <Heading5
+              className={[
+                style.learningGoalsHeaderTextBody,
+                'uitest-learning-goal-title',
+              ]}
+            >
               <span>{learningGoals[currentLearningGoal].learningGoal}</span>
               {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
                 <AiToken />
