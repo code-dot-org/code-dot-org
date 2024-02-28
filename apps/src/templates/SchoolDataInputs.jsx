@@ -3,7 +3,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {
   Heading2,
-  BodyOneText,
+  BodyTwoText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
@@ -44,7 +44,7 @@ export default function SchoolDataInputs({
   return (
     <div className={style.outerContainer}>
       <Heading2 className={style.topPadding}>{i18n.censusHeading()}</Heading2>
-      <BodyOneText>{i18n.findYourSchool()}</BodyOneText>
+      <BodyTwoText>{i18n.findYourSchool()}</BodyTwoText>
       <div className={style.inputContainer}>
         <Heading6 className={style.padding}>{i18n.whatCountry()}</Heading6>
         <SimpleDropdown

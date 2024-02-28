@@ -4,6 +4,11 @@
 .outerContainer {
   text-align: center;
   display: grid;
+  padding: 10px;
+
+  h2 {
+    margin-bottom: 5px;
+  }
 }
 
 .inputContainer {
