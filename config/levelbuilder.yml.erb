@@ -18,3 +18,9 @@ custom_error_response: false
 
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_client_id:     '4fa6b522-6e6d-44c6-b023-98816b54566d'
+
+# Statsig keys, these are dummy values for levelbuilder. The Statsig SDK expects
+# the prefixed key type in the string, otherwise it will throw an error on 
+# initialization, even in local_mode.
+statsig_server_secret_key: 'secret-00000'
+statsig_api_client_key: 'client-00000'

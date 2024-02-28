@@ -294,7 +294,7 @@ GEM
     composite_primary_keys (13.0.4)
       activerecord (~> 6.1.0)
     concurrent-ruby (1.2.2)
-    connection_pool (2.2.1)
+    connection_pool (2.4.1)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -412,6 +412,9 @@ GEM
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
     ffi (1.16.3)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
     firebase (0.2.6)
       httpclient
       json
@@ -473,8 +476,16 @@ GEM
     hashie (3.6.0)
     highline (1.6.21)
     honeybadger (4.12.1)
+    http (4.4.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      http-parser (~> 1.2.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    http-parser (1.2.3)
+      ffi-compiler (>= 1.0, < 2.0)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -487,6 +498,7 @@ GEM
       sprockets
     image_size (1.5.0)
     in_threads (1.4.0)
+    ip3country (0.2.1)
     jmespath (1.6.2)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
@@ -609,9 +621,6 @@ GEM
       actionpack (>= 4.2)
       omniauth (>= 1.3.1)
     open-uri (0.1.0)
-      stringio
-      time
-      uri
     open_uri_redirections (0.2.1)
     openid_connect (1.0.3)
       activemodel
@@ -844,8 +853,13 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machine (1.2.0)
+    statsig (1.33.0)
+      concurrent-ruby (~> 1.1)
+      connection_pool (~> 2.4, >= 2.4.1)
+      http (>= 4.4, < 6.0)
+      ip3country (~> 0.2.1)
+      user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
-    stringio (3.1.0)
     swd (1.0.1)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
@@ -868,8 +882,6 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
-    time (0.3.0)
-      date
     timecop (0.8.1)
     timeout (0.3.2)
     tod (2.1.1)
@@ -889,8 +901,7 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
-    uri (0.13.0)
-    user_agent_parser (2.3.0)
+    user_agent_parser (2.15.0)
     uuid (2.3.9)
       macaddr (~> 1.0)
     validate_email (0.1.6)
@@ -1098,6 +1109,7 @@ DEPENDENCIES
   sprockets!
   sprockets-rails (= 3.3.0)
   sshkit
+  statsig (~> 1.33)
   stringex (~> 2.5.2)
   thin
   thwait
