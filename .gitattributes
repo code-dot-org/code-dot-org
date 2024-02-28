@@ -63,3 +63,4 @@ pegasus/sites/**/*.redirect !text !filter !merge !diff
 pegasus/sites/**/*.scss !text !filter !merge !diff
 
 # Exclude these file types from Git LFS no matter where they occur:
+*.css !text !filter !merge !diff
