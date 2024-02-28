@@ -48,7 +48,10 @@
     <% } else if (options.saveToProjectGallery && !options.disableSaveToGallery) { %>
       <button id="save-to-project-gallery-button">
         <%= msg.addToProjects() %>
-      </button>     
+      </button>
+      <button id="publish-to-project-gallery-button">
+          <%= msg.publish() %>
+      </button>
     <% } %>
    <button id="sharing-phone">
       <i class="fa fa-mobile fa-lg"></i>
