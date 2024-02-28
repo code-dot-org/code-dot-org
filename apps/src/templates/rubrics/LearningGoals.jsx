@@ -463,7 +463,6 @@ export default function LearningGoals({
         </div>
       </div>
 
-      {/*TODO: Pass through data to child component*/}
       <div className={style.learningGoalOuterBlock}>
         <div className={style.learningGoalExpanded}>
           <AiAssessmentFeedbackContext.Provider
