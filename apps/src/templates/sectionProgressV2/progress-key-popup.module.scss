@@ -1,18 +1,8 @@
 @import 'color.scss';
 @import 'font';
 
-.iconDefinitions {
-  align-items: flex-start;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-}
-
 .item {
-  align-items: flex-start;
   display: inline-flex;
-  flex: 0 0 auto;
   gap: 12px;
   margin-top: 20px;
 
