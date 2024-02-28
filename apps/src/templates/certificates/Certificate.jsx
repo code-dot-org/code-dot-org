@@ -119,6 +119,7 @@ function Certificate(props) {
 
   const swiperRef = useRef(null);
 
+  const [currentCertificateIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
     if (swiperRef.current) {
       const swiperParams = {
@@ -145,30 +146,17 @@ function Certificate(props) {
       };
       Object.assign(swiperRef.current, swiperParams);
       swiperRef.current.initialize();
+
+      swiperRef.current.addEventListener('swiperslidechange', e => {
+        const [swiper] = e.detail;
+        setCurrentImageIndex(swiper.activeIndex);
+      });
     }
   }, []);
 
-  const [currentCertificateIndex, setCurrentImageIndex] = useState(0);
-  useEffect(() => {
-    // listen for Swiper events using addEventListener
-    swiperRef.current.addEventListener('swiperprogress', e => {
-      const [swiper, progress] = e.detail;
-      console.log(swiper, progress);
-      console.log(swiper.activeIndex);
-    });
-
-    swiperRef.current.addEventListener('swiperslidechange', e => {
-      const [swiper] = e.detail;
-      /*console.log('slide changed', e);
-      console.log(swiper, progress);
-      console.log(swiper.activeIndex);
- */
-      console.log('Swiper slide changed to active index' + swiper.activeIndex);
-      setCurrentImageIndex(swiper.activeIndex);
-    });
-  }, []);
-
   const courseName = certificateData[currentCertificateIndex]?.courseName;
+  const coursePath =
+    certificateData[currentCertificateIndex]?.coursePath || `s/${courseName}`;
 
   const externalCertificateShareLink =
     getExternalCertificateSharePath(courseName);
@@ -204,18 +192,12 @@ function Certificate(props) {
         </Heading1>
       </div>
       {courseName && (
-        <LargeChevronLink
-          link={`/s/${courseName}`}
-          linkText={i18n.backToActivity()}
-        />
+        <LargeChevronLink link={coursePath} linkText={i18n.backToActivity()} />
       )}
       <div className={style.certificateContainer}>
         <div
           id="uitest-certificate"
-          style={{
-            width: '50%',
-            display: 'flex',
-          }}
+          className={style.certificateImageContainer}
         >
           {
             <BackToFrontConfetti
