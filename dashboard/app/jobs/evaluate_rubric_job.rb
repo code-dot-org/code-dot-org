@@ -348,7 +348,7 @@ class EvaluateRubricJob < ApplicationJob
     # from the S3 release directory
     get_openai_params(lesson_s3_name, code)
   rescue Aws::S3::Errors::NoSuchKey => exception
-    raise "Error validating AI config for lesson #{lesson_s3_name}: #{e.message}\n request params: #{exception.context.params.to_h}"
+    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
 
   private def get_openai_evaluations(openai_params)
