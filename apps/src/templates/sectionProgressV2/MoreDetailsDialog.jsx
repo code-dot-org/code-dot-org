@@ -60,6 +60,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             <BodyThreeText>
               <StrongText>{i18n.submitted() + ': '}</StrongText>
               <SafeMarkdown
+                className={styles.firstMarkdown}
                 markdown={i18n.progressLegendDetailsSubmittedForLessons()}
               />
               <SafeMarkdown
