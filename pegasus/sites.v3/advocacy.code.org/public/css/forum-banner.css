@@ -4,9 +4,9 @@
   background-color: #293555;
   margin-top: 20px;
   margin-bottom: 20px;
-  overflow:hidden;
-  padding: 10px;
-  border-radius: 5px
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
 .announcement .left {
