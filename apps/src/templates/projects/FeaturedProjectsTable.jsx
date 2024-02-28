@@ -463,9 +463,7 @@ class FeaturedProjectsTable extends React.Component {
     return (
       <div>
         {this.renderStatusFilterDropdown()}
-        <span style={styles.tableMessage}>
-          {mustBePulishedMessage}
-        </span>
+        <span style={styles.tableMessage}>{mustBePulishedMessage}</span>
         <Table.Provider columns={columns} style={tableLayoutStyles.table}>
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="channel" />
