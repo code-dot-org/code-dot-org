@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-16 05:19:28 UTC",
+    "serialized_at": "2024-02-19 07:42:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -370,16 +370,21 @@
       }
     },
     {
-      "key": "lesson-2",
+      "key": "Substrings",
       "name": "Implementing String Algorithms",
       "absolute_position": 16,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 16,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "overview": "**What methods can I use to write algorithms for parsing String objects?**\n\nIn this lesson, students are exposed to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. Students first investigate reversing a `String` object in order to determine if a sentence is a palindrome. Then, students practice using the `substring()` method and conditional expressions to determine if a `String` object meets a certain criteria. Finally, they practice creating algorithms to count how many `String` objects meet a certain criteria.\n",
+        "preparation": "* **(Optional)** Print copies of the U6L2 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I implement algorithms for parsing String objects?**\n\nIn this lesson, you will be introduced to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. You will start by exploring how to reverse a `String` object to determine if a sentence is a palindrome. Next, you will practice using the `substring()` method along with conditional expressions to evaluate whether a `String` object meets a specific criteria. Finally, you will develop algorithms to count the occurrences of `String` objects that meet certain criteria.",
+        "unplugged": true
       },
       "seeding_key": {
-        "lesson.key": "lesson-2",
+        "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025"
       }
@@ -410,25 +415,6 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Neighborhood",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025"
-      }
-    },
-    {
-      "key": "Substrings",
-      "name": "Substrings",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 19,
-      "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, students revisit the `String` class and learn how to use the `substring()` method. They discover that `String` objects are immutable and are not modified when calling methods in the `String` class. Students also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. They then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters.",
-        "preparation": "* **(Optional)** Print copies of the U6L2 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I analyze parts of a `String` object?**\n\nIn this lesson, you revisit the `String` class and learn how to use the `substring()` method. You discover that `String` objects are immutable and are not modified when calling methods in the `String` class. You also explore how the `substring()` method can be combined with other methods in the `String` class to find the location of a specific character or substring within a `String` and compare substrings for equality. You then practice using the `substring()` method to retrieve a substring of a `String` object and to find and replace specific characters."
-      },
-      "seeding_key": {
-        "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025"
       }
@@ -1034,6 +1020,48 @@
       }
     },
     {
+      "key": "86de34ea-a4b9-49f8-906f-5a99687ec946",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86de34ea-a4b9-49f8-906f-5a99687ec946",
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "f79c047c-9100-4a53-a9b9-3983e178209d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d",
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "cc53851c-af76-48ac-8c45-967351db8bf7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7",
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
       "key": "81d8d51a-57fb-4074-96cc-204105eb67c5",
       "position": 1,
       "properties": {
@@ -1053,48 +1081,6 @@
       "seeding_key": {
         "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1",
         "lesson.key": "Sandbox: The Neighborhood",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025"
-      }
-    },
-    {
-      "key": "86de34ea-a4b9-49f8-906f-5a99687ec946",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "86de34ea-a4b9-49f8-906f-5a99687ec946",
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025"
-      }
-    },
-    {
-      "key": "f79c047c-9100-4a53-a9b9-3983e178209d",
-      "position": 2,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f79c047c-9100-4a53-a9b9-3983e178209d",
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025"
-      }
-    },
-    {
-      "key": "cc53851c-af76-48ac-8c45-967351db8bf7",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7",
-        "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025"
       }
@@ -4823,38 +4809,6 @@
       }
     },
     {
-      "key": "1326569d-a3c6-4750-b5c7-006a5d9d71e3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1326569d-a3c6-4750-b5c7-006a5d9d71e3",
-        "lesson_activity.key": "81d8d51a-57fb-4074-96cc-204105eb67c5"
-      }
-    },
-    {
-      "key": "4305f94c-0dfb-457a-8aa0-3d721903718c",
-      "position": 1,
-      "properties": {
-        "progression_name": "With Paint Bucket"
-      },
-      "seeding_key": {
-        "activity_section.key": "4305f94c-0dfb-457a-8aa0-3d721903718c",
-        "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1"
-      }
-    },
-    {
-      "key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc",
-      "position": 2,
-      "properties": {
-        "progression_name": "No Paint Bucket"
-      },
-      "seeding_key": {
-        "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc",
-        "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1"
-      }
-    },
-    {
       "key": "b535d28b-119d-4b46-9c79-3a81dda42e2b",
       "position": 1,
       "properties": {
@@ -5052,6 +5006,38 @@
       "seeding_key": {
         "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61",
         "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7"
+      }
+    },
+    {
+      "key": "1326569d-a3c6-4750-b5c7-006a5d9d71e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1326569d-a3c6-4750-b5c7-006a5d9d71e3",
+        "lesson_activity.key": "81d8d51a-57fb-4074-96cc-204105eb67c5"
+      }
+    },
+    {
+      "key": "4305f94c-0dfb-457a-8aa0-3d721903718c",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "4305f94c-0dfb-457a-8aa0-3d721903718c",
+        "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1"
+      }
+    },
+    {
+      "key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc",
+        "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1"
       }
     }
   ],
@@ -7088,6 +7074,231 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSA U6L2-L1_-modular"
+        ],
+        "progression": "Predict and Run: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L1_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b"
+      },
+      "level_keys": [
+        "CSA U6L2-L1_-modular"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L2_-modular"
+        ],
+        "progression": "Investigate and Modify: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L2_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      },
+      "level_keys": [
+        "CSA U6L2-L2_-modular"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L3_-modular"
+        ],
+        "progression": "Investigate and Modify: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L3_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      },
+      "level_keys": [
+        "CSA U6L2-L3_-modular"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L4_-modular"
+        ],
+        "progression": "Investigate and Modify: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L4_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      },
+      "level_keys": [
+        "CSA U6L2-L4_-modular"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L5_-modular"
+        ],
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L5_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L5_-modular"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L6_-modular"
+        ],
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L6_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L6_-modular"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L7_-modular"
+        ],
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L7_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L7_-modular"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L8_-modular"
+        ],
+        "progression": "Practice: The substring() Method"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L8_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      },
+      "level_keys": [
+        "CSA U6L2-L8_-modular"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U6L2-L9_-modular"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L2-L9_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
+      },
+      "level_keys": [
+        "CSA U6L2-L9_-modular"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSA 2023 Console Sandbox_2025"
         ]
       },
@@ -7106,7 +7317,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7131,7 +7342,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7153,204 +7364,6 @@
       },
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 85,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Predict and Run: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L1_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b"
-      },
-      "level_keys": [
-        "CSA U6L2-L1_-modular"
-      ]
-    },
-    {
-      "chapter": 86,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate and Modify: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L2_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      },
-      "level_keys": [
-        "CSA U6L2-L2_-modular"
-      ]
-    },
-    {
-      "chapter": 87,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate and Modify: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L3_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      },
-      "level_keys": [
-        "CSA U6L2-L3_-modular"
-      ]
-    },
-    {
-      "chapter": 88,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate and Modify: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L4_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      },
-      "level_keys": [
-        "CSA U6L2-L4_-modular"
-      ]
-    },
-    {
-      "chapter": 89,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Practice: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L5_-modular"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L6_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L6_-modular"
-      ]
-    },
-    {
-      "chapter": 91,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L7_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L7_-modular"
-      ]
-    },
-    {
-      "chapter": 92,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L8_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L8_-modular"
-      ]
-    },
-    {
-      "chapter": 93,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L9_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
-      },
-      "level_keys": [
-        "CSA U6L2-L9_-modular"
       ]
     }
   ],
@@ -8329,6 +8342,114 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U6L2-L1_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L1_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L2_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L2_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L3_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L3_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L4_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L4_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L5_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L5_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L6_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L6_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L7_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L7_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L8_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L8_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L2-L9_-modular",
+        "script_level.level_keys": [
+          "CSA U6L2-L9_-modular"
+        ],
+        "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA 2023 Console Sandbox_2025",
         "script_level.level_keys": [
           "CSA 2023 Console Sandbox_2025"
@@ -8361,114 +8482,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025",
         "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L1_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L1_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L2_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L2_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L3_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L3_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L4_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L4_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L5_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L6_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L6_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L7_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L7_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L8_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L8_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L9_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L9_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-2025",
-        "activity_section.key": "24831753-a936-492a-a6ad-44b0b83f6b61"
       }
     }
   ],

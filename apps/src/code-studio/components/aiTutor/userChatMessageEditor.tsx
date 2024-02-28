@@ -1,49 +1,134 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {
-  AITutorState,
-  submitChatMessage,
-} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {useSelector} from 'react-redux';
+import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {TutorType} from '@cdo/apps/aiTutor/types';
 import CopyButton from './copyButton';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 /**
  * Renders the AI Tutor user chat message editor component.
  */
+
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
-  const isWaitingForChatResponse = useSelector(
-    (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
+  const isWaitingForChatResponse = useAppSelector(
+    state => state.aiTutor.isWaitingForChatResponse
   );
+
+  const tutorType = useAppSelector(state => state.aiTutor.selectedTutorType);
+
+  const level = useAppSelector(state => state.aiTutor.level);
+
+  const sources = useAppSelector(state => state.javalabEditor.sources);
+  const fileMetadata = useAppSelector(
+    state => state.javalabEditor.fileMetadata
+  );
+  const activeTabKey = useAppSelector(
+    state => state.javalabEditor.activeTabKey
+  );
+  const studentCode = sources[fileMetadata[activeTabKey]].text;
+
+  const hasCompilationError = useAppSelector(
+    state => state.javalabEditor.hasCompilationError
+  );
+  const hasRunOrTestedCode = useAppSelector(
+    state => state.javalab.hasRunOrTestedCode
+  );
+  const isRunning = useAppSelector(state => state.javalab.isRunning);
+  const validationPassed = useAppSelector(
+    state => state.javalab.validationPassed
+  );
+
+  const generalChat = tutorType === TutorType.GENERAL_CHAT;
+  const compilation = tutorType === TutorType.COMPILATION;
+  const validation = tutorType === TutorType.VALIDATION;
 
   const dispatch = useAppDispatch();
 
+  const canSubmit = () => {
+    if (compilation) {
+      return !isRunning && hasRunOrTestedCode && hasCompilationError;
+    } else if (validation) {
+      return hasRunOrTestedCode && !hasCompilationError && !validationPassed;
+    } else {
+      return generalChat;
+    }
+  };
+
+  const showSubmitButton = canSubmit();
+
+  const getButtonText = () => {
+    if (compilation) {
+      return 'Submit code';
+    } else if (validation) {
+      return 'Submit code and tests';
+    } else {
+      return 'Submit';
+    }
+  };
+
+  const buttonText = getButtonText();
+
   const handleSubmit = useCallback(() => {
+    const studentInput = generalChat ? userMessage : studentCode;
     if (!isWaitingForChatResponse) {
-      dispatch(submitChatMessage(userMessage));
+      const chatContext = {
+        studentInput: studentInput,
+        tutorType: tutorType,
+      };
+      dispatch(askAITutor(chatContext));
       setUserMessage('');
     }
-  }, [userMessage, dispatch, isWaitingForChatResponse]);
+
+    let event;
+    if (compilation) {
+      event = EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION;
+    } else if (validation) {
+      event = EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION;
+    } else if (generalChat) {
+      event = EVENTS.AI_TUTOR_ASK_GENERAL_CHAT;
+    }
+    analyticsReporter.sendEvent(event, {
+      levelId: level?.id,
+    });
+  }, [
+    generalChat,
+    userMessage,
+    studentCode,
+    isWaitingForChatResponse,
+    compilation,
+    validation,
+    level?.id,
+    tutorType,
+    dispatch,
+  ]);
 
   return (
     <div className={style.UserChatMessageEditor}>
-      <textarea
-        className={style.textArea}
-        onChange={e => setUserMessage(e.target.value)}
-        value={userMessage}
-      />
-      <Button
-        key="submit"
-        text="Submit"
-        icon="arrow-up"
-        onClick={() => handleSubmit()}
-        color={Button.ButtonColor.brandSecondaryDefault}
-        disabled={isWaitingForChatResponse}
-      />
-      <CopyButton />
+      {generalChat && (
+        <textarea
+          className={style.textArea}
+          onChange={e => setUserMessage(e.target.value)}
+          value={userMessage}
+        />
+      )}
+      {showSubmitButton && (
+        <Button
+          key="submit"
+          text={buttonText}
+          icon="arrow-up"
+          onClick={() => handleSubmit()}
+          color={Button.ButtonColor.brandSecondaryDefault}
+          disabled={isWaitingForChatResponse}
+        />
+      )}
+      <div>
+        <CopyButton />
+      </div>
     </div>
   );
 };

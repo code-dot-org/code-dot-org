@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import style from './ai-tutor.module.scss';
+import style from './chat-workspace.module.scss';
 import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aiTutor/types';
 
 interface ChatMessageProps {

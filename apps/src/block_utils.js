@@ -2,7 +2,7 @@ import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
-import {EMPTY_OPTION} from './blockly/constants';
+import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 
@@ -166,7 +166,11 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
     helpUrl: helpUrl,
     init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
       var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
@@ -760,29 +764,6 @@ const STANDARD_INPUT_TYPES = {
             block.getFieldValue(inputConfig.name),
           ],
         };
-      };
-
-      // The following functions make sure that the variable naming/renaming options work for this block
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue, block);
-        }
-        block.superSetTitleValue(newValue, name);
       };
 
       // Add the variable field to the block

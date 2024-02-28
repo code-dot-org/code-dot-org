@@ -8,8 +8,8 @@ theme: responsive_full_width
 %section
   .wrapper
     %h1=hoc_s(:districts_page_top_heading)
-    %p=hoc_s(:districts_page_top_desc)
-
+    %p.body-one{style: "margin-bottom: 3rem;"}
+      =hoc_s(:districts_page_top_desc)
     = view :district_partners_list
 
 = view :section_divider_line

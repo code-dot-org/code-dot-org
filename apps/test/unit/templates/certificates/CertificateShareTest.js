@@ -38,7 +38,7 @@ describe('CertificateShare', () => {
     const image = printLink.find('img');
     expect(image.prop('src')).to.equal('/certificate-image');
 
-    const block = wrapper.find('Connect(UnconnectedTwoColumnActionBlock)');
+    const block = wrapper.find('TwoColumnActionBlock');
     expect(block.prop('imageUrl')).to.equal('//code.org/announcement-image');
   });
 
@@ -52,7 +52,7 @@ describe('CertificateShare', () => {
     const printLink = wrapper.find('a');
     expect(printLink.length).to.equal(1);
 
-    const block = wrapper.find('Connect(UnconnectedTwoColumnActionBlock)');
+    const block = wrapper.find('TwoColumnActionBlock');
     expect(block.length).to.equal(0);
   });
 });

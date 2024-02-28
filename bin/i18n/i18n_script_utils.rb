@@ -8,7 +8,9 @@ require 'psych'
 require 'ruby-progressbar'
 require 'parallel'
 
-I18N_LOCALES_DIR = 'i18n/locales'.freeze
+I18N_DIR = 'i18n'.freeze
+I18N_CROWDIN_DIR = File.join(I18N_DIR, 'crowdin').freeze
+I18N_LOCALES_DIR = File.join(I18N_DIR, 'locales').freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
 I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
@@ -374,6 +376,10 @@ class I18nScriptUtils
     FileUtils.mkdir_p(to_dir)
     FileUtils.cp_r File.join(from_dir, '.'), to_dir
     FileUtils.rm_r(from_dir)
+  end
+
+  def self.crowdin_locale_dir(locale, *paths)
+    CDO.dir(I18N_CROWDIN_DIR, locale, *paths.compact)
   end
 
   def self.locale_dir(locale, *paths)
