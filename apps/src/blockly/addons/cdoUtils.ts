@@ -112,7 +112,6 @@ function parseSource(source: string, embedded: boolean) {
   } else {
     parsedSource = JSON.parse(source);
   }
-  console.log({parsedSource});
   return parsedSource;
 }
 
@@ -145,7 +144,7 @@ export function moveHiddenBlocks(
   hiddenDefinitionSource.blocks.blocks = [];
   hiddenDefinitionSource.procedures = [];
 
-  source.blocks.blocks.forEach((block: JsonBlockConfig) => {
+  source.blocks.blocks.forEach(block => {
     const {invisible, procedureId} = block.extraState || {};
     const hideBlock = procedureTypesToHide.includes(block.type) || invisible;
     const destination = hideBlock ? hiddenDefinitionSource : mainSource;
@@ -244,10 +243,10 @@ export function workspaceSvgResize(workspace: WorkspaceSvg) {
   return Blockly.svgResize(workspace);
 }
 
-// We use Object and Function here because they are what Blockly uses.
 export function bindBrowserEvent(
   element: EventTarget,
   name: string,
+  // We use Object and Function here because those are what Blockly uses.
   // eslint-disable-next-line @typescript-eslint/ban-types
   thisObject: Object | null,
   // eslint-disable-next-line @typescript-eslint/ban-types
@@ -426,13 +425,13 @@ export function getSimplifiedStateForFlyout(
   serialization: WorkspaceSerialization
 ) {
   const variableMap: {[key: string]: string} = {};
-  const variables = serialization.variables as {id: string; name: string}[];
+  const variables = serialization.variables;
   variables?.forEach(variable => {
     variableMap[variable.id] = variable.name;
   });
 
   const blocksList = hasBlocks(serialization)
-    ? (serialization.blocks.blocks as JsonBlockConfig[]).map(block =>
+    ? serialization.blocks.blocks.map(block =>
         simplifyBlockState(block, variableMap)
       )
     : [];
@@ -512,6 +511,7 @@ export function appendSharedFunctions(
 ) {
   let startBlocks;
   if (stringIsXml(startBlocksSource)) {
+    // TODO: define a type for blockUtils
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     startBlocks = (blockUtils as any).appendNewFunctions(
       startBlocksSource,

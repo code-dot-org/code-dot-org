@@ -30,7 +30,6 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {Abstract} from 'blockly/core/events/events_abstract';
-//import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
@@ -274,7 +273,7 @@ export type WorkspaceSerialization =
   | {
       blocks: {blocks: JsonBlockConfig[]};
       procedures?: ProcedureDefinitionConfig[];
-      variables?: {name: string; id: string}[];
+      variables?: VariableConfig[];
     }
   | Record<string, never>; // empty object
 
@@ -283,6 +282,11 @@ export interface ProcedureDefinitionConfig {
   name: string;
   // As of now we only use null. Will we ever use return types?
   returnTypes: null;
+}
+
+export interface VariableConfig {
+  name: string;
+  id: string;
 }
 
 export interface ProcedureBlockConfiguration {

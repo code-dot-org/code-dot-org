@@ -439,9 +439,7 @@ export function convertFunctionsXmlToJson(functionsXml: string) {
  * TODO: define a type for projectState and proceduresState. Blockly defines these as any.
  */
 export function appendProceduresToState(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   projectState: WorkspaceSerialization,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   proceduresState: WorkspaceSerialization
 ) {
   console.log({projectState, proceduresState});
@@ -472,8 +470,7 @@ export function appendProceduresToState(
 
 // Function to check if a block with the given behaviorId exists in the project
 // TODO: define type for projectBlocks.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function blockExists(behaviorId: string, projectBlocks: any[]) {
+function blockExists(behaviorId: string, projectBlocks: JsonBlockConfig[]) {
   return projectBlocks.some(
     block =>
       block.type === BLOCK_TYPES.behaviorDefinition &&
