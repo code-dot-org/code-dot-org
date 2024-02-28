@@ -23,7 +23,7 @@
             .required-message.state-required= t('activerecord.errors.messages.required')
           .field
             = f.label :gender_student_input, t('gender'), class: 'label-title'
-            = f.text_field :gender_student_input, placeholder: t('type_here')
+            = f.text_field :gender_student_input
         - haml_tag :hr, class: 'header-divider'
         .form-group#information_form_buttons
           = f.button t('nav.user.logout'), type: 'button', class: 'btn primary-button', disabled: false, id: 'sign-out-btn'
