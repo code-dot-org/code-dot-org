@@ -28,12 +28,7 @@ export default function ExpandedProgressColumnHeader({
             styles.expandedHeaderExpandedLevelCell
           )}
         >
-          {level.sublevels?.length > 0 && (
-            <FontAwesome
-              icon="caret-down"
-              className={styles.expandedHeaderLevelCaret}
-            />
-          )}
+          {level.sublevels?.length > 0 && <FontAwesome icon="caret-down" />}
           {lesson.relative_position + '.' + level.bubbleText}
           {level.kind === 'assessment' && (
             <FontAwesome
@@ -70,12 +65,7 @@ export default function ExpandedProgressColumnHeader({
         key={lesson.id + '.' + level.id + '-h'}
         onClick={() => toggleExpandedChoiceLevel(level)}
       >
-        {level.sublevels?.length > 0 && (
-          <FontAwesome
-            icon="caret-right"
-            className={styles.expandedHeaderLevelCaret}
-          />
-        )}
+        {level.sublevels?.length > 0 && <FontAwesome icon="caret-right" />}
         <div>{lesson.relative_position + '.' + level.bubbleText}</div>
         {level.kind === 'assessment' && (
           <FontAwesome
