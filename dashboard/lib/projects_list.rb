@@ -132,6 +132,17 @@ module ProjectsList
       end
       return featured
     end
+  
+    def fetch_active_published_featured_projects(project_group, limit:)
+      unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
+        raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
+      end
+      if project_group == 'all'
+        return fetch_featured_published_projects
+      end
+      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
+      fetch_featured_projects_by_type([project_group.to_sym])
+    end
 
     def fetch_featured_published_projects
       featured_published_projects = {}
@@ -236,6 +247,7 @@ module ProjectsList
           project_type: project_type.to_s,
           state: 'active'
         ).
+        exclude(featured_at: nil).
         exclude(published_at: nil).
         exclude(abuse_score: 0...).
         order(Sequel.desc(:published_at)).limit(8).all.shuffle!
