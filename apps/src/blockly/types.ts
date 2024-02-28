@@ -244,7 +244,7 @@ export interface JsonBlockConfig {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
   type: string;
-  fields: {[key: string]: {name: string; type: string; id: string}};
+  fields: {[key: string]: {name: string; type: string; id?: string}};
   inputs: {[key: string]: {block: JsonBlockConfig}};
   next: {block: JsonBlockConfig};
   kind: string;
@@ -267,9 +267,23 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
 }
 
-// Blockly uses any here. We may be able to define this better.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type WorkspaceSerialization = {[key: string]: any};
+// Blockly uses {[key: string]: any} to define workspace serialization.
+// We have defined this more specifically, and therefore need to cast
+// to this value when getting the serialzation of a workspace.
+export type WorkspaceSerialization =
+  | {
+      blocks: {blocks: JsonBlockConfig[]};
+      procedures?: ProcedureDefinitionConfig[];
+      variables?: {name: string; id: string}[];
+    }
+  | Record<string, never>; // empty object
+
+export interface ProcedureDefinitionConfig {
+  id: string;
+  name: string;
+  // As of now we only use null. Will we ever use return types?
+  returnTypes: null;
+}
 
 export interface ProcedureBlockConfiguration {
   kind: 'block';

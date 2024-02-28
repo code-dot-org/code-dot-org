@@ -112,7 +112,7 @@ function parseSource(source: string, embedded: boolean) {
   } else {
     parsedSource = JSON.parse(source);
   }
-
+  console.log({parsedSource});
   return parsedSource;
 }
 
@@ -154,10 +154,13 @@ export function moveHiddenBlocks(
     // Also copy the procedure model for blocks to that need to be hidden
     // Equality check works because hiddenDefinitionSource and mainSource are different object references
     if (destination === hiddenDefinitionSource && procedureId) {
-      const procedureModel = (source.procedures as {id: string}[]).find(
+      const procedureModel = source.procedures?.find(
         procedure => procedure.id === procedureId
       );
       if (procedureModel) {
+        if (!hiddenDefinitionSource.procedures) {
+          hiddenDefinitionSource.procedures = [];
+        }
         hiddenDefinitionSource.procedures.push(procedureModel);
       }
     }
