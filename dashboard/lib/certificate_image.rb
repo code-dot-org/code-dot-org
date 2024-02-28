@@ -275,7 +275,8 @@ class CertificateImage
       end
 
       if template_file == 'self_paced_pl_certificate.png'
-        total_hours_to_half_hour = (unit_or_unit_group.duration_in_minutes / 30).round / 2.0
+        total_minutes = unit_or_unit_group&.duration_in_minutes || 0
+        total_hours_to_half_hour = (total_minutes / 30).round / 2.0
         hours_string = format('%<duration>g', duration: total_hours_to_half_hour)
         apply_text(image, hours_string, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
       end
