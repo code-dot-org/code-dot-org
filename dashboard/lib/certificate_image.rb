@@ -164,53 +164,122 @@ class CertificateImage
     else
       unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
       image = Magick::Image.read(path).first
+
+      text_constants = {
+        'self_paced_pl_certificate.png': {
+          name: {
+            font_size: 62,
+            x_offset: 0,
+            y_offset: -248,
+            height: 70,
+            width: CERT_NAME_AREA_WIDTH,
+          },
+          two_titles: {
+            unit_group_height: 85,
+            unit_group_font_size: 62,
+            unit_group_x_offset: 0,
+            unit_group_y_offset: -57,
+            unit_height: 71,
+            unit_font_size: 57,
+            unit_x_offset: 0,
+            unit_y_offset: 36,
+          },
+          one_title: {
+            font_size: 62,
+            x_offset: 0,
+            y_offset: 0,
+            height: 171,
+          },
+          course_title_width: 1400,
+          donor_text_y_offset: 611,
+        },
+        'blank_certificate.png': {
+          name: {
+            font_size: 75,
+            x_offset: 0,
+            y_offset: -135,
+            height: CERT_NAME_AREA_HEIGHT,
+            width: CERT_NAME_AREA_WIDTH,
+          },
+          two_titles: {
+            unit_group_width: 1000,
+            unit_group_height: 50,
+            unit_group_font_size: 40,
+            unit_group_x_offset: 0,
+            unit_group_y_offset: 0,
+            unit_width: 800,
+            unit_height: 40,
+            unit_font_size: 32,
+            unit_x_offset: 0,
+            unit_y_offset: 47,
+          },
+          one_title: {
+            font_size: 47,
+            x_offset: 0,
+            y_offset: 15,
+            height: 60,
+            width: 1000,
+          },
+          donor_text_y_offset: 447,
+        },
+      }
+      cert_text_constants = text_constants[template_file.to_sym]
+
+      name_constants = cert_text_constants[:name]
+      apply_text(image, name, name_constants[:font_size], 'Helvetica bold', 'rgb(118,101,160)', name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
+
+      # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
+      # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
+      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
+        unit = unit_or_unit_group
+        unit_group = unit.unit_group
+
+        course_titles_constants = cert_text_constants[:two_titles]
+
+        apply_text(
+          image,
+          unit_group.localized_title,
+          course_titles_constants[:unit_group_font_size],
+          'Helvetica bold',
+          'rgb(29,173,186)',
+          course_titles_constants[:unit_group_x_offset],
+          course_titles_constants[:unit_group_y_offset],
+          cert_text_constants[:course_title_width],
+          course_titles_constants[:unit_group_height]
+        )
+
+        apply_text(
+          image,
+          unit.localized_title,
+          course_titles_constants[:unit_font_size],
+          'Helvetica bold',
+          'rgb(29,173,186)',
+          course_titles_constants[:unit_x_offset],
+          course_titles_constants[:unit_y_offset],
+          cert_text_constants[:course_title_width],
+          course_titles_constants[:unit_height]
+        )
+      else
+        course_titles_constants = cert_text_constants[:one_title]
+        apply_text(
+          image,
+          course_title,
+          course_titles_constants[:font_size],
+          'Helvetica bold',
+          'rgb(29,173,186)',
+          course_titles_constants[:x_offset],
+          course_titles_constants[:y_offset],
+          cert_text_constants[:course_title_width],
+          course_titles_constants[:height]
+        )
+      end
+
       if template_file == 'self_paced_pl_certificate.png'
-        apply_text(image, name, 62, 'Helvetica bold', 'rgb(118,101,160)', 0, -248, CERT_NAME_AREA_WIDTH, 70)
-
-        course_title_width = 1400
-        # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
-        # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
-        if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
-          unit = unit_or_unit_group
-          unit_group = unit.unit_group
-
-          unit_group_height = 85
-          apply_text(image, unit_group.localized_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, -57, course_title_width, unit_group_height)
-
-          unit_height = 71
-          apply_text(image, unit.localized_title, 57, 'Helvetica bold', 'rgb(29,173,186)', 0, 36, course_title_width, unit_height)
-        else
-          course_title_height = 171
-          apply_text(image, course_title, 62, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, course_title_width, course_title_height)
-        end
-
         total_minutes = unit_or_unit_group&.duration_in_minutes || 0
         total_hours = (total_minutes / 60).floor
         apply_text(image, total_hours.to_s, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
-        donor_text_y_offset = 611
-      else # all other courses use a certificate image where the course name is also blank
-        apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
-        # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
-        # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
-        if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
-          unit = unit_or_unit_group
-          unit_group = unit.unit_group
-
-          unit_group_width = 1000
-          unit_group_height = 50
-          apply_text(image, unit_group.localized_title, 40, 'Helvetica bold', 'rgb(29,173,186)', 0, 0, unit_group_width, unit_group_height)
-
-          unit_width = 800
-          unit_height = 40
-          apply_text(image, unit.localized_title, 32, 'Helvetica bold', 'rgb(29,173,186)', 0, 47, unit_width, unit_height)
-        else
-          course_title_width = 1000
-          course_title_height = 60
-          apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
-        end
-
-        donor_text_y_offset = 447
       end
+      donor_text_y_offset = cert_text_constants[:donor_text_y_offset]
     end
 
     if default_random_donor && !donor_name
