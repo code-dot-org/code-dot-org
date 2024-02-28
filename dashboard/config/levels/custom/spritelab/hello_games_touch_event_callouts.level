@@ -49,7 +49,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-26T20:51:18.238+00:00\",\"changed\":[\"cloned from \\\"hello_games_touch_event_b\\\"\"],\"cloned_from\":\"hello_games_touch_event_b\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-26T20:51:18.238+00:00\",\"changed\":[\"cloned from \\\"hello_games_touch_event_b\\\"\"],\"cloned_from\":\"hello_games_touch_event_b\"},{\"changed_at\":\"2024-02-27 20:31:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1250,8 +1250,10 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_playSoundOptions" id="r]@;I*UoB$$mehD@)#n9" x="116" y="182">
-          <field name="SOUND">'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'</field>
+        <block type="gamelab_destroy" id="IN#PS7cfL%L;^9}G2N?_" x="371" y="156">
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer" id="nzB{1ZOZ]3%kmgj`SF;R"/>
+          </value>
         </block>
         <block type="adaptations_toggleBehaviorSimple" id="Aq4=9rT%U|r::$T(tO/h" x="342" y="212">
           <field name="TOGGLE">"begins"</field>
@@ -1261,9 +1263,9 @@
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get" id="cX2HN/vp@B!BS|~?E:SH">
-              <mutation behaviorId="wandering" name="wandering"/>
-              <field name="NAME">wandering</field>
+            <block type="gamelab_behavior_get" id="kV$e+C[}WdhjLvNXBkj?">
+              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+              <field name="NAME">moving with arrow keys</field>
             </block>
           </value>
         </block>
