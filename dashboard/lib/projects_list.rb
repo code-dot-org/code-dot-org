@@ -132,7 +132,7 @@ module ProjectsList
       end
       return featured
     end
-  
+
     def fetch_active_published_featured_projects(project_group, limit:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"

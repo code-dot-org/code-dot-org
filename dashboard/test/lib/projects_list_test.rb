@@ -266,7 +266,7 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal JSON.parse(fake_project_value)["name"], returned_project["name"]
     assert_nil returned_project["thumbnailUrl"]
   end
-  
+
   test "include_featured combines featured project data and published projects data correctly" do
     fake_featured_projects = {
       applab: [
