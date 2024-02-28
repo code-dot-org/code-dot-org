@@ -13,9 +13,9 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import Button from '@cdo/apps/templates/Button';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 
-export function submitAiFeedback(value) {
+export function submitAiFeedback(values) {
   const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
-  HttpClient.post(baseUrl, value, true, {
+  HttpClient.post(baseUrl, JSON.stringify(values), true, {
     'Content-Type': 'application/json',
   });
 }
@@ -33,7 +33,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
   const [aiFeedbackReceived, setAIFeedbackReceived] = useState(false);
 
   const submitAiFeedbackCallback = () => {
-    const bodyData = JSON.stringify({
+    const bodyData = {
       learningGoalAiEvaluationId: aiEvalInfo.id,
       aiFeedbackApproval: aiFeedback,
       falsePositive: aiFalsePos,
@@ -43,7 +43,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
       Vague: aiVague,
       feedbackOther: aiFeedbackOther,
       otherContent: aiOtherContent,
-    });
+    };
 
     submitAiFeedback(bodyData);
 
@@ -66,10 +66,6 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
 
   return (
     <div>
-      <p>hi: {aiFeedbackReceived ? 'true' : 'false'}</p>
-      <p>hi: {aiSubmitted ? 'true' : 'false'}</p>
-      <p>hi: {aiFeedback ? 'true' : 'false'}</p>
-      <p>hi: {aiFeedback === thumbsdownval ? 'true' : 'false'}</p>
       {aiFeedbackReceived && (
         <EmText className={style.aiFeedbackReceived}>
           <FontAwesome icon="circle-check" />
