@@ -307,7 +307,8 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def read_examples(lesson_s3_name)
+  private def read_examples(lesson_s3_name, response_type)
+    raise "invalid response type #{response_type.inspect}" unless ['tsv', 'json'].include?(response_type)
     prefix = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/examples/"
     response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
     file_names = response.contents.map(&:key)
@@ -316,7 +317,7 @@ class EvaluateRubricJob < ApplicationJob
     js_files.map do |file_name|
       base_name = file_name.gsub('.js', '')
       code = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{file_name}")[:body].read
-      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.tsv")[:body].read
+      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.#{response_type}")[:body].read
       [code, response]
     end
   end
@@ -325,7 +326,8 @@ class EvaluateRubricJob < ApplicationJob
     params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    examples = read_examples(lesson_s3_name)
+    response_type = params['response-type'] || 'tsv'
+    examples = read_examples(lesson_s3_name, response_type)
     params.merge(
       'code' => code,
       'prompt' => prompt,
