@@ -54,12 +54,13 @@ describe('Certificate', () => {
         JSON.stringify(data),
       ]);
 
-      const initialCertificateImageUrl =
-        'https://code.org/images/placeholder-hoc-image.jpg';
       const wrapper = wrapperWithParams({
-        tutorial: 'dance',
+        certificateData: [
+          {
+            courseName: 'dance',
+          },
+        ],
         certificateId: 'sessionId',
-        initialCertificateImageUrl,
         isHocTutorial: true,
       });
       let image = wrapper.find('#uitest-certificate img');
@@ -95,12 +96,13 @@ describe('Certificate', () => {
     });
 
     it('passes down full urls to SocialShare', () => {
-      const initialCertificateImageUrl =
-        'https://code.org/images/placeholder-hoc-image.jpg';
       const wrapper = wrapperWithParams({
-        tutorial: 'dance',
+        certificateData: [
+          {
+            courseName: 'dance',
+          },
+        ],
         certificateId: 'sessionId',
-        initialCertificateImageUrl,
         isHocTutorial: true,
       });
       const socialShare = wrapper.find('SocialShare');

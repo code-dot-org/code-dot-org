@@ -7,22 +7,27 @@ import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNext
 
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];
-  const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
+  const certificateData = [
+    {
+      courseName: 'dance',
+    },
+  ];
+
   const defaultProps = {
     language: 'en',
-    initialCertificateImageUrl,
+    certificateData,
     isHocTutorial: false,
   };
 
   const hocProps = {
     language: 'en',
-    initialCertificateImageUrl,
+    certificateData,
     isHocTutorial: true,
   };
 
   const plProps = {
     language: 'en',
-    initialCertificateImageUrl,
+    certificateData,
     isHocTutorial: false,
     isPlCourse: true,
     userType: 'teacher',
