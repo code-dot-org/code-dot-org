@@ -262,7 +262,6 @@ class ProjectsListTest < ActionController::TestCase
     returned_project = ProjectsList.send(
       :extract_data_for_featured_project_cards, fake_project_featured_project_user_combo_data
     ).first
-    fake_project = fake_project_featured_project_user_combo_data.first
 
     assert_equal JSON.parse(fake_project_value)["name"], returned_project["name"]
     assert_nil returned_project["thumbnailUrl"]
