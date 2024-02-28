@@ -16,7 +16,6 @@ const queryPromise = (connection, query) => {
   });
 };
 
-
 /*
   To utilize this SQLUser custom CloudFormation Resource in a Stack:
   * Ensure the Stack has published 3 Secrets that store the following credentials/configuration settings:
