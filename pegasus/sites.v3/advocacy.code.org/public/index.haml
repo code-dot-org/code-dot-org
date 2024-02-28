@@ -51,7 +51,7 @@ video_player: false
 
     -# .clear{style: "clear:both"}
 
-    %h2
+    %h2.centered
       Drive the change in your state
 
     =inline_css 'homepage.css'
@@ -62,7 +62,6 @@ video_player: false
         .block
           - if block[:type] == "block"
             = view :homepage_quarterslot_links, entry: block, desktop_column_width: 50, layout_class: 'quarterslot-links-large'
-
     .clear
 
     .teach-ai-container{style: "margin-top: 3rem"}

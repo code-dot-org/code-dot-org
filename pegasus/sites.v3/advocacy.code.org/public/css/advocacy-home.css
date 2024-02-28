@@ -89,12 +89,6 @@
   margin-top: 20px;
 }
 
-h2 {
-  font-size: 32px;
-  color: grey;
-  text-align: center;
-}
-
 .centered {
   text-align: center;
 }
@@ -109,6 +103,10 @@ h2 {
 #audienceblocks {
   text-align: center;
   margin-top: 0px;
+}
+
+#homepage .quarterslot-links .headerbox .sentence {
+  display: none;
 }
 
 .teach-ai-container {
