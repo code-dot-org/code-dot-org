@@ -47,6 +47,7 @@ cron-pii:
 - dashboard.peer_reviews
 - dashboard.projects
 - dashboard.foorm_%
+- dashboard.potential_teachers
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
