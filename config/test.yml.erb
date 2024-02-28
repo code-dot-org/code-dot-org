@@ -54,10 +54,3 @@ firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
 ai_proxy_origin:
 
 openai_evaluate_rubric_api_key: 'stub-api-key'
-
-
-# Statsig keys, these are dummy values for test. The Statsig SDK expects
-# the prefixed key type in the string, otherwise it will throw an error on 
-# initialization, even in local_mode.
-statsig_server_secret_key: 'secret-00000'
-statsig_api_client_key: 'client-00000'
