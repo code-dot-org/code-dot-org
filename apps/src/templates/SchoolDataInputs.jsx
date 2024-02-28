@@ -10,7 +10,7 @@ import style from './school-association.module.scss';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 
-const TEST_SCHOOL_DATA = [{value: 'test', text: 'TestSchool'}];
+const TEST_SCHOOL_DATA = [{value: 'test', text: 'VeryLongNameTestSchool'}];
 export default function SchoolDataInputs({
   onCountryChange,
   onSchoolChange,
@@ -43,35 +43,35 @@ export default function SchoolDataInputs({
 
   return (
     <div className={style.outerContainer}>
-      <Heading2>{i18n.censusHeading()}</Heading2>
+      <Heading2 className={style.topPadding}>{i18n.censusHeading()}</Heading2>
       <BodyOneText>{i18n.findYourSchool()}</BodyOneText>
       <div className={style.inputContainer}>
-        <Heading6 className={style.topPadding}>{i18n.whatCountry()}</Heading6>
+        <Heading6 className={style.padding}>{i18n.whatCountry()}</Heading6>
         <SimpleDropdown
+          className={style.dropdown}
           items={COUNTRY_ITEMS}
           name="countryDropdown"
           selectedValue={country}
           onChange={onCountryChange}
-          size="s"
+          size="m"
         />
-        <Heading6 className={style.topPadding}>
+        <Heading6 className={style.padding}>
           {i18n.enterYourSchoolZip()}
         </Heading6>
         <input
           type="text"
           placeholder={'i.e. 98104'}
           onChange={() => {}}
-          value={null}
+          value={''}
         />
-        <Heading6 className={style.topPadding}>
-          {i18n.selectYourSchool()}
-        </Heading6>
+        <Heading6 className={style.padding}>{i18n.selectYourSchool()}</Heading6>
         <SimpleDropdown
+          className={style.dropdown}
           items={TEST_SCHOOL_DATA}
           name="schoolDropdown"
           selectedValue={'test'}
           onChange={() => {}}
-          size="s"
+          size="m"
         />
       </div>
     </div>

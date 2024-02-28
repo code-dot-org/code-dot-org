@@ -1,17 +1,38 @@
-@import "color.scss";
-@import "font.scss";
+@import 'color.scss';
+@import 'font.scss';
 
 .outerContainer {
-    text-align: center;
-    display: grid;
+  text-align: center;
+  display: grid;
 }
 
 .inputContainer {
-    justify-self: center;
-    text-align: left;
-    width: 400px;
+  justify-self: center;
+  text-align: left;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
 
-    .topPadding {
-        padding-top: 10px;
+  & > * {
+    width: 100%;
+  }
+
+  & > input {
+    width: initial;
+    margin-top: 5px !important;
+  }
+
+  .padding {
+    padding-top: 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.dropdown {
+  & > div {
+    select {
+      font-weight: 400 !important;
+      width: 100% !important;
     }
+  }
 }
