@@ -198,7 +198,6 @@ const MultipleSectionsAssigner = ({
         role="region"
         aria-label={i18n.directionsForAssigningSections()}
         className={moduleStyle.information}
-        tabIndex="0"
       >
         <div className={moduleStyle.modalHeader}>
           <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>

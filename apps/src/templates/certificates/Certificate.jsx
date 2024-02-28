@@ -112,14 +112,10 @@ function Certificate(props) {
     randomDonorTwitter,
     under13,
     children,
-    initialCertificateImageUrl,
     isHocTutorial,
   } = props;
 
-  const personalizedCertificate = getCertificateImagePath();
-  const imgSrc = personalized
-    ? personalizedCertificate
-    : initialCertificateImageUrl;
+  const imgSrc = getCertificateImagePath();
   const certificateShareLink = getCertificateSharePath();
   const externalCertificateShareLink = getExternalCertificateSharePath();
   const desktop =
@@ -138,6 +134,10 @@ function Certificate(props) {
     text: randomDonorTwitter
       ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
       : i18n.justDidHourOfCode(),
+  });
+
+  const linkedin = queryString.stringify({
+    url: externalCertificateShareLink,
   });
 
   const print = getPrintPath();
@@ -207,11 +207,14 @@ function Certificate(props) {
           <BodyThreeText>
             {i18n.congratsCertificateShareMessage()}
           </BodyThreeText>
+          {/* TODO(ACQ-1342): determine whether certificate is for pl course  */}
           <SocialShare
             facebook={facebook}
             twitter={twitter}
+            linkedin={linkedin}
             print={print}
             under13={under13}
+            isPlCourse={false}
           />
         </div>
       </div>
@@ -228,7 +231,6 @@ Certificate.propTypes = {
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
-  initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
 };
 

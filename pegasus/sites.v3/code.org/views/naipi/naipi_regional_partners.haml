@@ -1,0 +1,23 @@
+:ruby
+  naipi_partners = [
+    "Alaska Staff Development Network",
+    "Arizona Science Center",
+    "AVID",
+    "Code Savvy",
+    "Computer Science Alliance",
+    "Contra Costa County Office of Education",
+    "Fresno County Superintendent of Schools",
+    "Los Angeles Unified School District",
+    "Mouse",
+    "NDIT-EduTech",
+    "New Mexico CS Alliance",
+    "Oklahoma Public School Resource Center",
+    "Sacramento County Office of Education",
+    "Small School Districts' Association",
+    "The Friday Institute",
+    "University of California San Diego CREATE"
+  ];
+
+%ul.naipi-partners.clear-styles
+  - naipi_partners.each do |partner|
+    %li= partner

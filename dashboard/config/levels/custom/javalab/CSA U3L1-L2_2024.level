@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U3L1-Array_2024",
     "teacher_markdown": "1. After adding the code segment, students will see the following error:\r\n\r\n```\r\n/ArrayRunner.java:9: error: incompatible types: int cannot be converted to int[]\r\n    int[] secondValues = 5;\r\n                         ^\r\n```\r\n\r\nThis is because an `int` value cannot be assigned to a one-dimensional (1D) array. The value assigned to the `secondValues` variable must be a 1D array.\r\n\r\n2. When attempting to assign a 1D array of type `double` to the variable `secondValues`, students will see the following error:\r\n\r\n```\r\n/ArrayRunner.java:9: error: incompatible types: double[] cannot be converted to int[]\r\n    int[] secondValues = new double[5];\r\n                         ^\r\n```\r\n\r\nThis is because a 1D array of type `double` cannot be assigned to a 1D array of type `int`. The 1D array assigned to `secondValues` must be of type `int`.\r\n\r\n3. When assigning a 1D array of type `int` to the variable `secondValues`, students will see the following printed to the console:\r\n\r\n```\r\nNumber of Integers in firstValues: 10\r\nNumber of Integers in secondValues: 5\r\n```\r\n\r\nThis displays the length of the 1D array `firstValues` and the length of the 1D array `secondValues`.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:51:44.715+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L2_2023\\\"\"],\"cloned_from\":\"CSA U3L1-L2_2023\"}]"

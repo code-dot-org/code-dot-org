@@ -1,11 +1,6 @@
 {
   "category": "Sprites",
   "config": {
-    "color": [
-      184,
-      1,
-      0.74
-    ],
     "func": "destroy",
     "docFunc": "gamelab_destroy",
     "blockText": "remove {THIS}",

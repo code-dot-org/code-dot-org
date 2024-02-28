@@ -135,7 +135,6 @@ module Pd
         white_percent: 'Percent of student enrollment by race: White',
         other_races_percent: 'Percent of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{YEAR} Professional Learning Program?",
-        principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{YEAR} if <Teacher Name> is accepted into the program?",
       }
     }.freeze
 
@@ -238,12 +237,7 @@ module Pd
       principal_role: {teacher: :principal_role, principal: :principal_response_role},
       principal_email: {teacher: :principal_email, principal: :principal_response_email},
 
-      replace_existing: {teacher: :replace_existing, principal: :principal_wont_replace_existing_course},
-
       pay_fee: {teacher: :pay_fee, principal: :principal_pay_fee},
-
-      contact_invoicing: {principal: :principal_contact_invoicing},
-      contact_invoicing_detail: {principal: :principal_contact_invoicing_detail},
 
       title_i_status: {stats: :title_i_status},
       rural_status: {stats: :rural_status},
@@ -296,7 +290,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
@@ -304,7 +297,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ],
       criteria_score_questions_csa: [
         :csa_already_know,
@@ -314,7 +306,6 @@ module Pd
         :committed,
         :previous_yearlong_cdo_pd,
         :principal_approval,
-        :principal_schedule_confirmed,
       ]
     }
 

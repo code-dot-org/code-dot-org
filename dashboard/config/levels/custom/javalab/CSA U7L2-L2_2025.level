@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U7L2-Parameters PBT_2025",
     "teacher_markdown": "1. When an object reference is passed into a method as an argument, it does not make a copy of the object. Instead, a copy of the reference to the object is passed, making the reference variable and the parameter aliases.\r\n\r\n2. When this code is added, the output is as follows:\r\n\r\n```\r\nBetsy\r\nComputer Science: Enrolled\r\nBetsy\r\nComputer Science: Dropped\r\nComputer Science: Dropped\r\n```\r\n\r\nBy calling `betsy.dropCourse(csCourse);`, we are setting `status` within the `Course` object to `false`. This will indicate that the `Student` is dropped from the course when we print the object to the console using the `toString()` method. The reason that `Computer Science: Dropped` appears twice is because the `toString()` method within the `Course` class is called within the `Student` class and within the `StudentRunner` class with the following line: `System.out.println(\"\\n\" + csCourse);`.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:19.591+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L2_2023\\\"\"],\"cloned_from\":\"CSA U7L2-L2_2023\"}]"

@@ -15,7 +15,7 @@ interface PermissionResponse {
 }
 
 const PythonEditor: React.FunctionComponent = () => {
-  const code = useAppSelector(state => state.pythonlab.code);
+  const code = useAppSelector(state => state.pythonlab.code); // eslint-disable-line @typescript-eslint/no-unused-vars
   const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();

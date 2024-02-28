@@ -311,27 +311,6 @@ const customInputTypes = {
           ],
         };
       };
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue, block);
-        }
-        block.superSetTitleValue(newValue, name);
-      };
 
       currentInputRow
         .appendField(inputConfig.label)
@@ -429,6 +408,24 @@ const customInputTypes = {
         }
       }
       return '';
+    },
+  },
+  // Custom input for a variable field that generates the name of the variable
+  // rather than the value of the variable.
+  variableFieldNamePicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(new Blockly.FieldVariable(), inputConfig.name);
+    },
+
+    generateCode(block, arg) {
+      const id = block.getFieldValue(arg.name);
+      const label = Blockly.getMainWorkspace()
+        .getVariableMap()
+        .getVariableById(id).name;
+      const name = Blockly.JavaScript.getVariableName(id);
+      return [`"${label}"`, `"${name}"`];
     },
   },
 };
@@ -529,6 +526,8 @@ export default {
       !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
+      // This is only used by CDO Blockly. When we are ready to remove support
+      // for CDO Blockly we can remove this call.
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {
