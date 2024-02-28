@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, memo} from 'react';
 import classNames from 'classnames';
 
 import {
@@ -23,6 +23,13 @@ import {
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 
+export interface IconDropdownOption {
+  value: string;
+  label: string;
+  isOptionDisabled?: boolean;
+  icon: FontAwesomeV6IconProps;
+}
+
 export interface IconDropdownProps {
   /** CheckboxDropdown name */
   name: string;
@@ -35,16 +42,11 @@ export interface IconDropdownProps {
   /** CheckboxDropdown label */
   labelText: string;
   /** CheckboxDropdown options */
-  options: {
-    value: string;
-    label: string;
-    isOptionDisabled?: boolean;
-    icon: FontAwesomeV6IconProps;
-  }[];
+  options: IconDropdownOption[];
   /** CheckboxDropdown checked options */
-  checkedOptions: string[];
+  selectedOption: IconDropdownOption;
   /** CheckboxDropdown onChange handler */
-  onChange: (args: React.MouseEvent<HTMLLIElement>) => void;
+  onChange: (option: IconDropdownOption) => void;
 }
 
 /**
@@ -57,14 +59,14 @@ export interface IconDropdownProps {
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: Checkbox Dropdown Component.
- * Used to render checkbox (multiple choice) dropdowns.
+ * Design System: Icon Dropdown Component.
+ * Used to render dropdowns with a list of options with icons.
  */
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   labelText,
   options,
-  checkedOptions = [],
+  selectedOption = {},
   onChange,
   disabled = false,
   color = dropdownColors.black,
@@ -72,24 +74,35 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
-    (args: React.MouseEvent<HTMLLIElement>) => {
-      onChange(args);
+    (option: IconDropdownOption) => {
+      onChange(option);
+      // console.log(
+      //   option
+      //   // args.target,
+      //   // args.target.value,
+      //   // args.target.dataValue,
+      //   // args.target['data-value']
+      // );
       setActiveDropdownName('');
     },
     [onChange, setActiveDropdownName]
   );
+
+  console.log('rerender');
   return (
     <CustomDropdown
       name={name}
       labelText={labelText}
       disabled={disabled}
       color={color}
+      // isSomeValueSelected={true}
+      icon={selectedOption?.icon}
       size={size}
     >
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>
-          {options.map(
-            ({
+          {options.map(option => {
+            const {
               value,
               label,
               isOptionDisabled,
@@ -99,13 +112,15 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
                 title: iconTitle,
                 className: iconClassName,
               },
-            }) => (
-              <li key={value} onClick={onOptionClick}>
+            } = option;
+            return (
+              <li key={value} onClick={() => onOptionClick(option)}>
                 <div
                   className={classNames(
                     moduleStyles.dropdownMenuItem,
                     isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
-                    false && moduleStyles.selectedDropdownMenuItem
+                    selectedOption.value === value &&
+                      moduleStyles.selectedDropdownMenuItem
                   )}
                 >
                   <FontAwesomeV6Icon
@@ -117,8 +132,8 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
                   <span>{label}</span>
                 </div>
               </li>
-            )
-          )}
+            );
+          })}
         </ul>
       </form>
     </CustomDropdown>
@@ -131,4 +146,4 @@ const WrappedIconDropdown = (props: IconDropdownProps) => (
   </DropdownProviderWrapper>
 );
 
-export default WrappedIconDropdown;
+export default memo(WrappedIconDropdown);

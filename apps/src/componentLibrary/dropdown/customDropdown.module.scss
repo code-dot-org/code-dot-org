@@ -111,6 +111,11 @@
           .dropdownMenuItem {
             pointer-events: none;
             cursor: not-allowed;
+
+            i::before {
+              background-color: unset;
+              color: $light_gray_200;
+            }
           }
 
           span, .dropdownMenuItem span {

@@ -13,7 +13,9 @@ import {
 } from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './customDropdown.module.scss';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 
@@ -28,10 +30,10 @@ export interface CustomDropdownProps {
   disabled?: boolean;
   /** CheckboxDropdown label */
   labelText: string;
-  /** Does custom dropdown hase a selected value */
+  /** Does custom dropdown hase a selected value (Renders a checkmark icon in the dropdown button if true) */
   isSomeValueSelected?: boolean;
-  /** Whether to close dropdown on click */
-  isCloseOnClick?: boolean;
+  /** Custom icon to show for the dropdown button*/
+  icon?: FontAwesomeV6IconProps;
   /** Children */
   children: React.ReactNode;
 }
@@ -46,9 +48,9 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   labelText,
   children,
   isSomeValueSelected = false,
+  icon,
   disabled = false,
   color = dropdownColors.black,
-  isCloseOnClick = false,
   size = 'm',
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
@@ -124,6 +126,14 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       >
         {isSomeValueSelected && (
           <FontAwesomeV6Icon iconName="check-circle" iconStyle="solid" />
+        )}
+        {icon && (
+          <FontAwesomeV6Icon
+            iconName={icon.iconName}
+            iconStyle={icon.iconStyle}
+            title={icon.title}
+            className={icon.className}
+          />
         )}
         <span className={moduleStyles.dropdownLabel}>{labelText}</span>
         <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />

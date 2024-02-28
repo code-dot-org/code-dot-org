@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import IconDropdown, {IconDropdownProps} from './index';
+import IconDropdown, {IconDropdownProps, IconDropdownOption} from './index';
 import {Meta, Story} from '@storybook/react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
@@ -13,25 +13,27 @@ export default {
 // TEMPLATE
 //
 const SingleTemplate: Story<IconDropdownProps> = args => {
-  const [selectedValues, setValues] = useState(
-    (args.checkedOptions = [] as string[])
+  const [selectedValue, setValue] = useState(
+    args.selectedOption as IconDropdownOption
   );
+  console.log(args.selectedOption);
   const onChange = useCallback(
-    (e: React.MouseEvent<HTMLLIElement>) => {
+    (option: IconDropdownOption) => {
+      setValue(option);
       // if (e.target.checked) {
       //   setValues([...selectedValues, e.target.value]);
       // } else {
       //   setValues(selectedValues.filter(value => value !== e.target.value));
       // }
-      args.onChange(e);
+      args.onChange(option);
     },
-    [args, selectedValues, setValues]
+    [args, setValue]
   );
 
   return (
     <IconDropdown
       {...args}
-      checkedOptions={selectedValues}
+      selectedOption={selectedValue}
       onChange={onChange}
     />
   );
@@ -40,7 +42,9 @@ const SingleTemplate: Story<IconDropdownProps> = args => {
 const MultipleTemplate: Story<{
   components: IconDropdownProps[];
 }> = args => {
-  const [values, setValues] = useState({} as Record<string, string[]>);
+  const [values, setValues] = useState(
+    {} as Record<string, IconDropdownOption>
+  );
 
   return (
     <>
@@ -54,11 +58,15 @@ const MultipleTemplate: Story<{
           if (values[componentArg.name] === undefined) {
             setValues({
               ...values,
-              [componentArg.name]: componentArg.checkedOptions,
+              [componentArg.name]: componentArg.selectedOption,
             });
           }
 
-          const onChange = (e: React.MouseEvent<HTMLLIElement>) => {
+          const onChange = (option: IconDropdownOption) => {
+            setValues({
+              ...values,
+              [componentArg.name]: option,
+            });
             // if (e.target.checked) {
             //   setValues({
             //     ...values,
@@ -75,7 +83,7 @@ const MultipleTemplate: Story<{
             //     ),
             //   });
             // }
-            componentArg.onChange(e);
+            componentArg.onChange(option);
           };
 
           return componentArg.color === 'white' ? (
@@ -83,7 +91,7 @@ const MultipleTemplate: Story<{
               <IconDropdown
                 key={`${componentArg.name}`}
                 {...componentArg}
-                checkedOptions={values[componentArg.name]}
+                selectedOption={values[componentArg.name]}
                 onChange={onChange}
               />
             </div>
@@ -91,9 +99,7 @@ const MultipleTemplate: Story<{
             <IconDropdown
               key={`${componentArg.name}`}
               {...componentArg}
-              checkedOptions={
-                values[componentArg.name] || componentArg.checkedOptions
-              }
+              selectedOption={values[componentArg.name]}
               onChange={onChange}
             />
           );
@@ -119,7 +125,11 @@ DefaultIconDropdown.args = {
     },
   ],
   labelText: 'Default Dropdown',
-  checkedOptions: ['option-1'],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
   disabled: false,
   color: dropdownColors.black,
   onChange: args => null,
@@ -141,7 +151,11 @@ DisabledIconDropdown.args = {
       icon: {iconName: 'xmark', iconStyle: 'solid'},
     },
   ],
-  checkedOptions: ['option-1'],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'check', iconStyle: 'solid'},
+  },
   labelText: 'Disabled Dropdown',
   onChange: args => null,
   disabled: true,
@@ -172,7 +186,11 @@ WithDisabledOptionIconDropdown.args = {
   ],
   disabled: false,
   color: dropdownColors.black,
-  checkedOptions: ['option-1'],
+  selectedOption: {
+    value: 'option-1',
+    label: 'Option 1',
+    icon: {iconName: 'xmark', iconStyle: 'solid'},
+  },
   labelText: 'Dropdown with disabled option',
   onChange: args => null,
   size: 'm',
@@ -195,7 +213,11 @@ GroupOfIconDropdownColors.args = {
           icon: {iconName: 'xmark', iconStyle: 'solid'},
         },
       ],
-      checkedOptions: ['option-1'],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
       labelText: 'White Dropdown',
       onChange: args => null,
       size: 'm',
@@ -216,7 +238,11 @@ GroupOfIconDropdownColors.args = {
           icon: {iconName: 'xmark', iconStyle: 'solid'},
         },
       ],
-      checkedOptions: ['option-1'],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
       labelText: 'Black Dropdown',
       onChange: args => null,
       size: 'm',
@@ -242,7 +268,11 @@ GroupOfSizesOfIconDropdown.args = {
           icon: {iconName: 'xmark', iconStyle: 'solid'},
         },
       ],
-      checkedOptions: ['option-1'],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
       labelText: 'XS Dropdown',
       onChange: args => null,
       size: 'xs',
@@ -263,7 +293,11 @@ GroupOfSizesOfIconDropdown.args = {
           icon: {iconName: 'xmark', iconStyle: 'solid'},
         },
       ],
-      checkedOptions: ['option-1'],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
       labelText: 'S Dropdown',
       onChange: args => null,
       size: 's',
@@ -284,7 +318,11 @@ GroupOfSizesOfIconDropdown.args = {
           icon: {iconName: 'xmark', iconStyle: 'solid'},
         },
       ],
-      checkedOptions: ['option-1'],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
       labelText: 'M Dropdown',
       onChange: args => null,
       size: 'm',
@@ -305,7 +343,11 @@ GroupOfSizesOfIconDropdown.args = {
           icon: {iconName: 'xmark', iconStyle: 'solid'},
         },
       ],
-      checkedOptions: ['option-1'],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
       labelText: 'L Dropdown',
       onChange: args => null,
       size: 'l',
