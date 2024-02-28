@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import {Heading1, Heading2, Heading3} from '@cdo/apps/lib/ui/Headings';
+import {
+  Heading2,
+  BodyOneText,
+  Heading6,
+} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
-import SearchBar from './SearchBar';
 
 const TEST_SCHOOL_DATA = [{value: 'test', text: 'TestSchool'}];
 export default function SchoolDataInputs({
@@ -40,10 +43,10 @@ export default function SchoolDataInputs({
 
   return (
     <div className={style.outerContainer}>
-      <Heading1>{i18n.censusHeading()}</Heading1>
-      <Heading2>{i18n.findYourSchool()}</Heading2>
+      <Heading2>{i18n.censusHeading()}</Heading2>
+      <BodyOneText>{i18n.findYourSchool()}</BodyOneText>
       <div className={style.inputContainer}>
-        <Heading3>{i18n.whatCountry()}</Heading3>
+        <Heading6 className={style.topPadding}>{i18n.whatCountry()}</Heading6>
         <SimpleDropdown
           items={COUNTRY_ITEMS}
           name="countryDropdown"
@@ -51,13 +54,18 @@ export default function SchoolDataInputs({
           onChange={onCountryChange}
           size="s"
         />
-        <Heading3>{i18n.enterYourSchoolZip()}</Heading3>
-        <SearchBar
-          placeholderText={''}
+        <Heading6 className={style.topPadding}>
+          {i18n.enterYourSchoolZip()}
+        </Heading6>
+        <input
+          type="text"
+          placeholder={'i.e. 98104'}
           onChange={() => {}}
-          clearButton={true}
+          value={null}
         />
-        <Heading3>{i18n.selectYourSchool()}</Heading3>
+        <Heading6 className={style.topPadding}>
+          {i18n.selectYourSchool()}
+        </Heading6>
         <SimpleDropdown
           items={TEST_SCHOOL_DATA}
           name="schoolDropdown"
