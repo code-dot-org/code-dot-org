@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import {
   BodyThreeText,
   BodyTwoText,
+  Heading3,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -109,12 +110,12 @@ export default function RubricContent({
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
-        <Heading5>
+        <Heading3>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
             lessonName: lesson.name,
           })}
-        </Heading5>
+        </Heading3>
 
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} requireSelection={false} />
