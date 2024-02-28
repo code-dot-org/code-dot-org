@@ -1,13 +1,13 @@
 require 'test_helper'
 
 class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCase
-setup do
-  published_applab_project = {storage_id: 22, id: 33, name: "Applab1_to_be_featured", thumbnailUrl: "/v3/files/thumbnail.png", type: "applab", publishedAt: "2023-02-14T02:14:51.000+00:00", studentName: "A", studentAgeRange: "18+", isFeatured: true}
-  all_featured_projects = {applab: [published_applab_project], gamelab: [], spritelab: [], playlab: [], artist: [], minecraft: [], events: [], k1: [], dance: [], poetry: [], library: []}
-  applab_featured_projects = {applab: [published_applab_project]}
-  ProjectsList.stubs(:fetch_featured_published_projects).returns(all_featured_projects)
-  ProjectsList.stubs(:fetch_featured_projects_by_type).returns(applab_featured_projects)
-end
+  setup do
+    published_applab_project = {storage_id: 22, id: 33, name: "Applab1_to_be_featured", thumbnailUrl: "/v3/files/thumbnail.png", type: "applab", publishedAt: "2023-02-14T02:14:51.000+00:00", studentName: "A", studentAgeRange: "18+", isFeatured: true}
+    all_featured_projects = {applab: [published_applab_project], gamelab: [], spritelab: [], playlab: [], artist: [], minecraft: [], events: [], k1: [], dance: [], poetry: [], library: []}
+    applab_featured_projects = {applab: [published_applab_project]}
+    ProjectsList.stubs(:fetch_featured_published_projects).returns(all_featured_projects)
+    ProjectsList.stubs(:fetch_featured_projects_by_type).returns(applab_featured_projects)
+  end
 
   test_user_gets_response_for(
     :index,
@@ -67,7 +67,7 @@ end
   test 'project details are correct listing applab published featured projects' do
     Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new('production'))
     get :index, params: {project_type: 'applab', limit: 1}
-  
+
     assert_response :success
     assert_equal "max-age=5, public", @response.headers["Cache-Control"]
     categories_list = JSON.parse(@response.body)
