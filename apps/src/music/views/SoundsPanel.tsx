@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useRef} from 'react';
 import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
@@ -40,9 +40,9 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =
     folder.imageSrc &&
-    `${getBaseAssetUrl()}${libraryGroupPath}/${folder.id}/${folder.imageSrc}`;
+    `${getBaseAssetUrl()}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
 
-  const isSelected = folder === currentValue;
+  const isSelected = folder.id === currentValue.id;
 
   const onPreviewClick = useCallback(
     (e: Event) => {
@@ -173,7 +173,17 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const libraryGroupPath = library.libraryJson.id;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(folders[0]);
+  const [mode, setMode] = useState<string>('packs');
   const [filter, setFilter] = useState<string>('all');
+
+  const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
+  useRef(null);
+  const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
+  useRef(null);
+
+  const onModeChange = (value: string) => {
+    setMode(value);
+  };
 
   const onFilterChange = (value: string) => {
     setFilter(value);
@@ -195,23 +205,40 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   });
   */
 
+  let possibleSounds: SoundData[] = [];
   let rightColumnSounds: SoundData[] = [];
 
-  if (filter === 'all') {
-    rightColumnSounds = selectedFolder.sounds;
+  if (mode === 'packs') {
+    possibleSounds = selectedFolder.sounds;
   } else {
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
-        if (sound.type === filter) {
-          rightColumnSounds.push(sound);
-        }
+        possibleSounds.push(sound);
       });
     });
+  }
+
+  if (filter === 'all') {
+    rightColumnSounds = possibleSounds;
+  } else {
+    rightColumnSounds = possibleSounds.filter(
+      sound => filter === 'all' || sound.type === filter
+    );
   }
 
   return (
     <div id="sounds-panel" className={styles.soundsPanel}>
       <div id="sounds-panel-top" className={styles.soundsPanelTop}>
+        <SegmentedButtons
+          selectedButtonValue={mode}
+          buttons={[
+            {label: 'Packs', value: 'packs'},
+            {label: 'Sounds', value: 'sounds'},
+          ]}
+          onChange={value => onModeChange(value)}
+          className={styles.segmentedButtons}
+        />
+
         <SegmentedButtons
           selectedButtonValue={filter}
           buttons={[
@@ -223,10 +250,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             {label: 'Vocals', value: 'vocal'},
           ]}
           onChange={value => onFilterChange(value)}
+          className={styles.segmentedButtons}
         />
       </div>
       <div id="sounds-panel-body" className={styles.soundsPanelBody}>
-        {filter === 'all' && (
+        {mode === 'packs' && (
           <div id="sounds-panel-left" className={styles.leftColumn}>
             {folders.map((folder, folderIndex) => {
               return (

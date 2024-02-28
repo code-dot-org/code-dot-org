@@ -9,7 +9,14 @@
   gap: 5px;
 
   &Top {
+    display: flex;
+    justify-content: space-around;
 
+    .segmentedButtons {
+      span {
+        font-size: 12px !important;
+      }
+    }
   }
 
   &Body {
