@@ -2,7 +2,8 @@
  * A TypeScript wrapper for the AichatLocale object which casts
  * it to the {@link AichatLocale} type.
  */
-import {AichatLocale} from './types';
-const aichatLocale = require('@cdo/aichat/locale');
+import {Locale} from '@cdo/apps/types/locale';
 
-export default aichatLocale as AichatLocale;
+export default require('@cdo/aichat/locale') as Locale<
+  typeof import('@cdo/i18n/aichat/en_us.json')
+>;

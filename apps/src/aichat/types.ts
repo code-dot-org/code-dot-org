@@ -1,16 +1,6 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {AiTutorInteractionSaveStatus} from '@cdo/apps/util/sharedConstants';
 
-// TODO: Ideally this type would only contain keys present in
-// translated string JSON files (ex. apps/i18n/aichat/en_us.json).
-// However, this requires depending on files outside of apps/src,
-// so this approach is still being investigated. For now, this type
-// is an object whose keys are all functions which return strings,
-// matching what we expect for a locale object.
-export type AichatLocale = {
-  [key: string]: () => string;
-};
-
 export type ChatCompletionMessage = {
   id: number;
   role: Role;
@@ -31,7 +21,52 @@ export const Status = AiTutorInteractionSaveStatus;
 export const PII = [Status.EMAIL, Status.ADDRESS, Status.PHONE];
 
 export interface AichatLevelProperties extends LevelProperties {
+  // --- DEPRECATED - used for old AI Chat
   systemPrompt: string;
   botTitle?: string;
   botDescription?: string;
+  // ---
+
+  /** Initial AI customizations set by the level. */
+  initialAiCustomizations?: LevelAiCustomizations;
 }
+
+/** AI customizations for student chat bots */
+export interface AiCustomizations {
+  botName: string;
+  temperature: number;
+  systemPrompt: string;
+  retrievalContexts: string[];
+  modelCardInfo?: ModelCardInfo;
+}
+
+/** Chat bot Model Card information */
+export interface ModelCardInfo {
+  description: string;
+  intendedUse: string;
+  limitationsAndWarnings: string;
+  testingAndEvaluation: string;
+  askAboutTopics: string[];
+}
+
+// Visibility for AI customization fields set by levelbuilders.
+type Visibility = 'hidden' | 'readonly' | 'editable';
+
+/**
+ * Level-defined AI customizations for student chat bots set by levelbuilders on the level's properties.
+ * Each field is the same as AiCustomizations, but with an additional visibility property.
+ */
+export type LevelAiCustomizations = {
+  [key in keyof AiCustomizations]: {
+    value: AiCustomizations[key];
+    visibility: Visibility;
+  };
+} & {
+  /** The initial panel to show when displaying the level */
+  initialPanel?: 'edit' | 'presentation';
+  /**
+   * If the student can go back to the editing panel after starting on the presentation panel.
+   * Only applies if initialPanel is 'presentation'.
+   */
+  canGoBackToEditing?: boolean;
+};
