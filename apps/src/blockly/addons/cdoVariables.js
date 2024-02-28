@@ -1,3 +1,5 @@
+import {VARIABLE_BLOCK_TYPES} from '../constants';
+
 export default function initializeVariables(blocklyWrapper) {
   blocklyWrapper.Variables.DEFAULT_CATEGORY = 'Default';
 
@@ -29,6 +31,17 @@ export default function initializeVariables(blocklyWrapper) {
     vars[category] = [this.getFieldValue('VAR')];
     return vars;
   };
+
+  // Add serialization hooks to allow these blocks to be hidden on the
+  // hidden definition workspace. Previously they were used to pre-populate
+  // variable dropdown blocks in the toolbox.
+  VARIABLE_BLOCK_TYPES.forEach(blockType => {
+    if (blocklyWrapper.Blocks[blockType]) {
+      blocklyWrapper.customBlocks.addSerializationHooksToBlock(
+        blocklyWrapper.Blocks[blockType]
+      );
+    }
+  });
 
   /**
    * Note: We should be able to remove this post-migration: https://codedotorg.atlassian.net/browse/CT-215

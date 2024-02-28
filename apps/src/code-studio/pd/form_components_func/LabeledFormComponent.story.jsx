@@ -23,7 +23,6 @@ import {action} from '@storybook/addon-actions';
 const OTHER = 'Other (please specify):';
 
 export default {
-  title: 'LabeledFormComponents',
   component: LabelsContext,
   decorators: [reactBootstrapStoryDecorator],
 };

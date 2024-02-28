@@ -10,7 +10,7 @@
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
-  "instructor_audience": "universal_instructor",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-csd",
     "has_verified_resources": true,

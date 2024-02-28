@@ -9,7 +9,6 @@ import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
 
 function ExpandedProgressDataColumn({
   lesson,
-  sectionId,
   levelProgressByStudent,
   sortedStudents,
   removeExpandedLesson,
@@ -50,7 +49,7 @@ function ExpandedProgressDataColumn({
 
   const getExpandedChoiceLevel = React.useCallback(
     level => [
-      getSingleLevelColumn(level, {overrideIcon: 'split'}),
+      getSingleLevelColumn(level, {expandedChoiceLevel: true}),
       ...level.sublevels.map(sublevel => getSingleLevelColumn(sublevel)),
     ],
     [getSingleLevelColumn]
@@ -88,7 +87,6 @@ function ExpandedProgressDataColumn({
 
 ExpandedProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
-  sectionId: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,

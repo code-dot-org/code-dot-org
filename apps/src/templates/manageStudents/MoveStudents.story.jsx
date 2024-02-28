@@ -34,7 +34,7 @@ const errorTransferStatus = {
 };
 
 export default {
-  title: 'ManageStudents/MoveStudents',
+  title: 'ManageStudents/MoveStudents', // eslint-disable-line storybook/no-title-property-in-meta
   component: MoveStudents,
 };
 

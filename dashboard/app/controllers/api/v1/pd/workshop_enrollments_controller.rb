@@ -130,7 +130,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       csf_course_experience: params[:csf_course_experience],
       csf_courses_planned: params[:csf_courses_planned],
       previous_courses: params[:previous_courses],
-      replace_existing: params[:replace_existing],
       csf_intro_intent: params[:csf_intro_intent],
       csf_intro_other_factors: params[:csf_intro_other_factors],
       # params only collected in CSP returning teachers workshop

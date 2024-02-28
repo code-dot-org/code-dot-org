@@ -333,7 +333,8 @@ class ScriptLevel < ApplicationRecord
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
         app: level.game&.app,
-        uses_lab2: level.uses_lab2?
+        uses_lab2: level.uses_lab2?,
+        is_validated: level.validated?
       }
 
       if progression

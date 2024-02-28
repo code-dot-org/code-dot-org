@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U6L9-NLP PBT_2024",
     "teacher_markdown": "Students notice that the overall sentiment of the second song is also negative but is higher than the first song. If students look at the text files for each song, they'll likely conclude that neither song sounds negative overall. They should notice that specific words on their own may be considered negative, which contributes to the overall scoring by the program, but looking at the words within the context of the sentence or overall song changes their sentiment.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:54.213+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L3_2023\\\"\"],\"cloned_from\":\"CSA U6L9-L3_2023\"}]"

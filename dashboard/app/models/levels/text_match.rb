@@ -42,4 +42,8 @@ class TextMatch < DSLDefined
   def icon
     'fa fa-list-ul'
   end
+
+  def validated?
+    true
+  end
 end

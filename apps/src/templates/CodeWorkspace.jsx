@@ -43,6 +43,7 @@ class CodeWorkspace extends React.Component {
     workspaceAlert: PropTypes.object,
     isProjectTemplateLevel: PropTypes.bool,
     hasIncompatibleSources: PropTypes.bool,
+    failedToGenerateCode: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -53,16 +54,14 @@ class CodeWorkspace extends React.Component {
     Object.keys(nextProps).forEach(
       function (key) {
         // isRunning and style only affect style, and can be updated
-        // workspaceAlert is involved in displaying or closing workspace alert
-        // therefore this key can be updated
-        // hasIncompatibleSources is involved in displaying an alert for invalid Blockly
-        // sources. This key can be updated because it will only be set once, and it will
-        // be set after the initial render.
+        // workspaceAlert, hasIncompatibleSources and failedToGenerateCode
+        // are involved in displaying or closing workspace alert and therefore can be updated.
         if (
           key === 'isRunning' ||
           key === 'style' ||
           key === 'workspaceAlert' ||
-          key === 'hasIncompatibleSources'
+          key === 'hasIncompatibleSources' ||
+          key === 'failedToGenerateCode'
         ) {
           return;
         }
@@ -298,9 +297,17 @@ class CodeWorkspace extends React.Component {
         {this.props.hasIncompatibleSources && (
           <div
             id="incompatibleSourcesBanner"
-            style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
+            style={{...styles.topBanner, ...styles.errorBanner}}
           >
             {i18n.jsonInCdoBlockly()}
+          </div>
+        )}
+        {this.props.failedToGenerateCode && (
+          <div
+            id="failedToGenerateCodeBanner"
+            style={{...styles.topBanner, ...styles.errorBanner}}
+          >
+            {i18n.failedToGenerateBlocklyCode()}
           </div>
         )}
         {props.showDebugger && (
@@ -344,7 +351,7 @@ const styles = {
     position: 'relative',
     height: 'fit-content',
   },
-  incompatibleCodeBanner: {
+  errorBanner: {
     backgroundColor: color.lightest_red,
   },
   chevronButton: {
@@ -391,6 +398,7 @@ export default connect(
     workspaceAlert: state.project.workspaceAlert,
     isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
     hasIncompatibleSources: state.blockly.hasIncompatibleSources,
+    failedToGenerateCode: state.blockly.failedToGenerateCode,
   }),
   dispatch => ({
     closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),

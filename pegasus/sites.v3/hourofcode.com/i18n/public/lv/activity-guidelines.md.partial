@@ -1,5 +1,5 @@
 ---
-title: Darbības vadlīnijas
+title: Activity Guidelines
 layout: wide
 ---
 
@@ -104,23 +104,23 @@ Kas tev būs nepieciešams:
 * Primārās kontaktpersonas vārds un e-pasta adrese, kas pārstāv iesniegto darbību
 * Darbības nosaukums (nosaukumā nevar iekļaut “Kodēšanas stunda”)
 * URL saite uz darbību
-* Vai šī darbība ietver AI: Jā vai Nē
-* Aktivitātes apraksts (maks. rakstzīmju skaits: 400) 
-    * Lūdzu, norādiet vai apraksts ir pārsvarā skolēnu veidots vai skolotāju sekmēts. Pie tam, dažas skolas ir ieinteresētas noskaidrot vai "Programmēšanas stundas" aktivitātes atbilst mūsdienās noteiktiem tehnoloģiju apmācību standartiem. Ja aktivitāte atbilst noteiktiem standartiem, pieļaujiet iespēju iekļaut šo informāciju.
-* Ieteicamais (-ie) pakāpes līmenis (-i) paredzētajiem lietotājiem. Jūs varat atsaukties uz \[Computer Skolotāju asociācijas K-12 standarti\] (https://k12cs.org/framework-statements-by-grade-band/) par pakāpei atbilstošu datorzinātņu koncepcijas. Piemēri pakāpju līmeņi ir šādi: 
-    * Bērnudārzs - 1. pakāpe (vecums 4-6)
-    * 2.-5. Klases (7-10 gadi)
-    * 6.—8. pakāpe (11-13 gadu vecums)
-    * Klases 9+ (vecums 14+)
-* Programmēšanas valodu saraksts, ko māca jūsu darbība. Ti. C/C++, Java, JavaScript utt. vai neatkarīgi no valodas (stundu plāniem, kurus var mācīt vairākās valodās) izvēlēties valodu mākslu.
-* Atbalstīto dabisko valodu saraksts. Piezīme: Valodas noteikšana ir atbildīga par darbību nodrošinātāju; mēs novirzīsim visus lietotājus uz norādīto vienoto URL. vai neatkarīgi no valodas (stundu plāniem, kurus var mācīt vairākās valodās)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Programmēšanas valodu saraksts, ko māca jūsu darbība. Ti. C/C++, Java, JavaScript utt. vai neatkarīgi no valodas (stundu plāniem, kurus var mācīt vairākās valodās) choose language arts.
+* Atbalstīto dabisko valodu saraksts. Piezīme: Valodas noteikšana ir atbildīga par darbību nodrošinātāju; mēs novirzīsim visus lietotājus uz norādīto vienoto URL. or language independent (for lesson plans that can be taught in multiple languages)
 * Kādam pieredzes līmenim pedagogam vajadzētu izmantot jūsu darbību? (Piemēram, iesācējs vai ērts.) Un kādam pieredzes līmenim vajadzētu būt studentiem?
-* Kādam pieredzes līmenim pedagogam vajadzētu izmantot jūsu darbību? (Piemēram, iesācējs vai ērts.) Un kādam pieredzes līmenim vajadzētu būt studentiem? Ja vēlaties sagatavot pilnīgākas Programmēšanas stundas™ aktivitātes, lūdzu, norādiet savas darbības aprakstā nepieciešamās iepriekšējās zināšanas.
-* Jūsu darbības ilgums 
-    * Tikai 1 stunda
-    * 1 stunda ar pēckursu
-    * 2-6 stundas (var būt vairākas nodarbības)
-* Pieejamības naktsmītņu saraksts, ja tās ir jūsu aktivitātēs. Tie ietver ekrāna lasītāja saderību, teksta-runas iespējas, augsta kontrasta krāsu izmantošanu vai jebkādas citas naktsmītnes, kas paredzētas mācību dalībniekiem ar īpašām vajadzībām.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Papildu lietas, kas jums būs nepieciešamas, iesniedzot stundu plānus
 
@@ -139,7 +139,7 @@ Kas tev būs nepieciešams:
         * iOS mobilais Safari (pielāgots mobilajām ierīcēm)
         * Android Chrome (pielāgots mobilajām ierīcēm)
     * Ne tīmeklī: norādiet platformu vietējam kodam (Mac, Win, iOS, Android, XBox, citi)
-    * Atslēgtas
+    * Unplugged
 * Programmēšanas stundas aktivitātes ekrānuzņēmums vai mārketinga attēls. Lūdzu, sūtiet vismaz vienu attēlu ar 4:3 izmēriem. Tam jābūt vismaz 520px ar 390px. Šim attēlam uz tā jābūt NO teksta (izņemot jūsu logotipu), lai padarītu to pieejamāku tiem, kas nav angļu valodā runājošie. Ja nepieciešamais attēls netiks nodrošināts, mēs izmantosim savu ekrānuzņēmumu no jūsu apmācībām VAI mēs varam to neizmantot. Visi attēli ir jāiesniedz kā URL saite uz .jpg, .jpeg vai .png.
 * Lai precīzāk izsekotu līdzdalību, trešo pušu apmācības partneriem ir jāiekļauj 1 pikseļa izsekošanas attēli savā Programēšanas stundas pamācību pirmajā lapā. Skatiet [izsekošanas pikseļu](#pixel) sadaļu zemāk, lai iegūtu sīkāku informāciju.
 * Kad esat pabeidzis savu darbību, lietotāji ir jānovirza uz [code.org/api/hour/finish](https://code.org/api/hour/finish) , kur viņi varēs: 
@@ -170,7 +170,7 @@ Kas tev būs nepieciešams:
 
 Daudzveidīga datorzinātņu pedagogu komiteja ierindos iesniegumus, pamatojoties uz kvalitatīviem un kvantitatīviem kritērijiem. Tiks uzskaitītas visas darbības, kas atbilst pamatkritērijiem.
 
-Tradicionālajām kodēšanas aktivitātēm daudzveidīga datorzinātņu pedagogu komiteja ierindos iesniegumus, pamatojoties uz kvalitatīviem un kvantitatīviem kritērijiem. Tiks uzskaitītas visas darbības, kas atbilst pamatkritērijiem. Skolotāji varēs filtrēt un kārtot, lai atrastu labākās aktivitātes savai klasei.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Ja pārskata komiteja novērtē darbību nulles līmenī ražošanas kvalitātē (sliktu kļūdu vai instrukciju dēļ, kas padara to ļoti grūti izmantot), veicinot mācīšanos nepietiekami pārstāvētās grupās (rasistu/seksisma materiālu dēļ), izglītības vērtībā (nemāca CS koncepcijas) vai jautri/iesaistoties (sakarā ar grūtību/atturēšanu skolēniem strādāt), darbība netiks uzskaitīta.
 
@@ -188,13 +188,13 @@ Jaunajiem skolotājiem un skolēniem pašorientētām aktivitātēm pārskata ko
 - Nepieciešama reģistrēšanās
 - Nepieciešama nekāda samaksa (izņēmums robotikas darbībām, kuras var prasīt robota/komplekta iegādi)
 
-Jaunajiem skolotājiem un skolēniem pašorientētām aktivitātēm pārskata komiteja meklēs, vai:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Skolotāji var izmantot pamācību vai darbību bez fona datorzinātnēs
 - Studenti var būt veiksmīgi bez fona datorzinātnēs
 - Studenti var vadīt sevi caur pamācību bez vecāku vai skolotāju norādījumiem
 
-Skolotāji un skolēni varēs meklēt un filtrēt mūsu darbību sarakstu, balstoties uz tādiem filtriem kā pakāpe, pieredzes līmenis, priekšmets, aparatūra utt. Pēc noklusējuma mēs vispirms parādīsim stundu plānus un aktivitātes:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Saņemiet augstākos vērtējumus no izskatīšanas komitejas
 - Ir viena stunda pašorientētas aktivitātes, kas paredzētas iesācējiem (skolēniem un skolotājiem)
@@ -208,7 +208,7 @@ Skolotāji un skolēni varēs meklēt un filtrēt mūsu darbību sarakstu, balst
 
 ## Ieteikumi vienas stundas pašapkalpošanās konsultāciju projektēšanai
 
-Darbībās nav jāiekļauj AI, lai gan mēs vēlamies piedāvāt vairāk ar mākslīgo intelektu saistītu darbību.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Iekļaut skolotāju piezīmes.** Lielākajai daļai aktivitāšu jābūt studentiem, bet, ja darbību veicina vai vada skolotājs, lūdzu, iekļaujiet skaidrus un vienkāršus norādījumus skolotāja piezīmju veidā ar atsevišķu URL, kas iesniegts ar savu darbību. Ne tikai studenti iesācēji, daži no skolotājiem ir arī. Iekļaut informāciju, piemēram:
 
@@ -221,15 +221,15 @@ Darbībās nav jāiekļauj AI, lai gan mēs vēlamies piedāvāt vairāk ar māk
 - Vai jūs ieteiktu pāra programmēšanu?
 - Apsvērumi izmantošanai klasē? Piemēram, ja ir videoklipi, ieteikt skolotājiem rādīt videoklipus projicētā ekrānā visai klasei, lai tos skatītu kopā
 
-**Iekļaut atgriezenisko saiti darbības beigās.** (Piemēram, “Jūs pabeidzāt 10 līmeņus un uzzinājāt par cilpām! Lielisks darbs!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Mudiniet skolēnus publicēt sociālajos medijos (ja nepieciešams), kad viņi ir pabeidzuši.** Piemēram, “Es esmu darījusi Programmēšanas stunda ar ________ Vai jums? #HourOfCode” vai “Es esmu darījusi #HourOfCode kā daļu no #CSEdWeek. Vai tu esi? @Scratch.” Izmantojiet hashtag **#HourOfCode** (ar lielajiem burtiem H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Izveidojiet savu darbību spāņu valodā vai citās valodās, izņemot angļu valodu.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Paskaidrojiet vai savienojiet darbību ar sociāli nozīmīgu kontekstu.** Datorprogrammēšana kļūst par lielvalsti, kad studenti redz, kā tā var mainīt pasauli uz labo pusi!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Pārliecinieties, ka jūsu apmācība var izmantot [Pair Programmēšana](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigma.** Tas ir īpaši noderīgi programmēšanas stundai, jo daudzās klasēs nav 1:1 aparatūras visiem studentiem.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Atgriezties sākumā**](#top)
 
@@ -237,7 +237,7 @@ Darbībās nav jāiekļauj AI, lai gan mēs vēlamies piedāvāt vairāk ar māk
 
 ## Preču zīmes vadlīnijas
 
-Kodēšanas stunda® un Hora del Código® ir reģistrētas preču zīmes Code.org. Daudzi no mūsu apmācības partneriem ir izmantojuši mūsu “Programmēšanas stundas” preču zīmes savās tīmekļa vietnēs saistībā ar programmēšanas stundas aktivitātēm. Mēs negribam, lai novērstu šo izmantošanu, bet mēs vēlamies, lai pārliecinātos, ka izmantošana ietilpst pāris ierobežojumi:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Izmantot “Programmēšanas stunda” tikai saistībā ar nekomerciālām CS izglītības darbībām Programmēšanas stundas kampaņas kontekstā un nekādiem citiem mērķiem.
 2. Jebkura atsauce uz “Programmēšanas stundu” jāizmanto tādā veidā, kas neliecina, ka tas ir jūsu zīmola nosaukums, bet tas drīzāk atsaucas uz Programmēšanas stundu kā tautas kustību. Labs piemērs: “Piedalieties Programēšanas stundā® vietnē AcmeCorp.com”. Slikts piemērs: “Izmēģiniet kodēšanas stundu pēc ACME Corp”.
@@ -253,15 +253,15 @@ Kodēšanas stunda® un Hora del Código® ir reģistrētas preču zīmes Code.o
 
 ## Enkura punkts
 
-Ja jūsu apmācība ir apstiprināta un iekļauta pēdējā apmācības lapā, Code.org sniegs jums unikālu izsekošanas pikseli, lai jūs varētu integrēties savā apmācībā. Skatiet piemēru zemāk. Neiekļaujiet savā apmācībā nekādās pagaidu lapās.
+Ja jūsu apmācība ir apstiprināta un iekļauta pēdējā apmācības lapā, Code.org sniegs jums unikālu izsekošanas pikseli, lai jūs varētu integrēties savā apmācībā. Skatiet piemēru zemāk. Do not include on any interim pages of your tutorial.
 
-Tas ļaus mums saskaitīt lietotājus, kuri veic jūsu kodēšanas stundas pamācību. Tas novedīs pie precīzākas līdzdalības skaita jūsu apmācībai.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Ja jūsu apmācība ir apstiprināta un iekļauta pēdējā apmācības lapā, Code.org sniegs jums unikālu izsekošanas pikseli, lai jūs varētu integrēties savā apmācībā. Skatiet piemēru zemāk.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-PIEZĪME.: Tas nav svarīgi, lai veiktu instalējamas programmas (iOS vai Android lietojumprogrammas vai datora instalēšanas programmas)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Piemērs sekošanas pikseļi Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Jūsu aktivitāšu veicināšana, CSEDWeek un Programmēšanas stunda
 
-Lūdzu, veiciniet savu darbību savā tīklā! Novirziet tos uz jūsu Programmēšanas stundas lapu. Jūsu lietotājiem ir daudz lielāka iespēja reaģēt uz pasta sūtīšanu no jums par jūsu darbību. Izmantojiet starptautisko Programmēšanas stundas kampaņu Datorzinātnes izglītības nedēļas laikā kā attaisnojumu, lai mudinātu lietotājus uzaicināt citus pievienoties un palīdzēt mums sasniegt vairāk studentu!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Feature Programmēšanas stunda un CSedWeek savā mājas lapā. Piemērs: <http://www.tynker.com/hour-of-code>
 - Veicināt Programmēšanas stundu, izmantojot sociālos medijus, tradicionālos medijus, adresātu sarakstus utt., izmantojot hashtag #HourOfCode (ar lielajiem burtiem H, O, C)

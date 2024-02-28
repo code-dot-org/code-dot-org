@@ -44,6 +44,20 @@ class Policies::Lti
       jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
     },
+    canvas_beta_cloud: {
+      name: 'Canvas - Beta'.freeze,
+      issuer: 'https://canvas.beta.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token'.freeze,
+    },
+    canvas_test_cloud: {
+      name: 'Canvas - Test'.freeze,
+      issuer: 'https://canvas.test.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token'.freeze,
+    },
     schoology: {
       name: 'Schoology'.freeze,
       issuer: 'https://schoology.schoology.com'.freeze,
@@ -97,5 +111,10 @@ class Policies::Lti
   # a Code.org account from an LTI supporting LMS?
   def self.show_email_input?(user)
     user.teacher? && Policies::Lti.lti?(user)
+  end
+
+  # Whether or not a roster sync can be performed for a user.
+  def self.roster_sync_enabled?(user)
+    user.teacher? && user.lti_roster_sync_enabled
   end
 end
