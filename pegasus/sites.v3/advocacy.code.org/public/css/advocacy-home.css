@@ -60,11 +60,10 @@
 }
 
 .banner-shade {
-  background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.4416141456582633) 0%,
-    rgba(0, 0, 0, 0.33237044817927175) 57%,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 57%,
     rgba(0, 0, 0, 0) 76%
   );
   height: 400px;
@@ -83,12 +82,6 @@
 
 .learn-more {
   margin-top: 10px;
-}
-
-.banner-container .link-button {
-  background-color: initial;
-  border-color: white;
-  border-width: 2px;
 }
 
 .non-banner {
