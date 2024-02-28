@@ -69,6 +69,9 @@ class ToneJSPlayer implements AudioPlayer {
     sampleMap: {[note: number]: string},
     callbacks?: SoundLoadCallbacks
   ) {
+    if (this.samplers[instrumentName]) {
+      return;
+    }
     const urls: {[note: number]: AudioBuffer} = {};
     await this.soundCache.loadSounds(Object.values(sampleMap), callbacks);
     Object.keys(sampleMap).forEach(note => {
@@ -80,6 +83,10 @@ class ToneJSPlayer implements AudioPlayer {
 
     const sampler = new Sampler(urls).toDestination();
     this.samplers[instrumentName] = sampler;
+  }
+
+  isInstrumentLoaded(instrumentName: string): boolean {
+    return this.samplers[instrumentName] !== undefined;
   }
 
   async playSampleImmediately(sample: SampleEvent, onStop?: () => void) {
@@ -116,6 +123,12 @@ class ToneJSPlayer implements AudioPlayer {
 
     player.start();
     this.currentPreview = {id: sample.sampleId, player};
+  }
+
+  async playSamplesImmediately() {
+    console.log(
+      'Not supported. Use playSequenceImmediately for previewing note sequences.'
+    );
   }
 
   async playSequenceImmediately({instrument, events}: SamplerSequence) {
@@ -197,7 +210,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.stopAllPlayers();
   }
 
-  cancelAllEvents() {
+  cancelPendingEvents() {
     this.stopAllPlayers();
     Transport.cancel();
   }

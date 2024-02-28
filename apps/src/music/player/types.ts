@@ -1,12 +1,15 @@
 import {SoundLoadCallbacks} from '../types';
 import {Effects} from './interfaces/Effects';
 
-/** Common interface for the internal audio player */
+/**
+ * Common interface for the internal audio player
+ */
 export interface AudioPlayer {
-  // TODO: Fill in as we align ToneJSPlayer and SamplePlayer
-
   /** If this player supports samplers */
   supportsSamplers(): boolean;
+
+  /** Set the current BPM */
+  setBpm(bpm: number): void;
 
   /** Get the current playback position in 1-based measures */
   getCurrentPlaybackPosition(): number;
@@ -24,9 +27,17 @@ export interface AudioPlayer {
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
 
+  /** If the given instrument has been loaded */
+  isInstrumentLoaded(instrumentName: string): boolean;
+
   /** Play a sample immediately (used for previews) */
   playSampleImmediately(
     sample: SampleEvent,
+    onStop?: () => void
+  ): Promise<void>;
+
+  playSamplesImmediately(
+    samples: SampleEvent[],
     onStop?: () => void
   ): Promise<void>;
 
@@ -47,6 +58,9 @@ export interface AudioPlayer {
 
   /** Stop playback */
   stop(): void;
+
+  /** Cancel pending audio events */
+  cancelPendingEvents(): void;
 }
 
 /** A single sound played on the timeline */
@@ -63,8 +77,8 @@ export interface SampleEvent {
   pitchShift: number;
   // Effects to apply
   effects?: Effects;
-  // Length to play the sample for
-  lengthSeconds?: number;
+  // Length in measures to play the sample for
+  length?: number;
 }
 
 /** A sequence of notes played on a sampler instrument */

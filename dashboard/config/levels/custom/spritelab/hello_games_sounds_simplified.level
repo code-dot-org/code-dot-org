@@ -8,7 +8,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -38,7 +39,7 @@
     "start_in_animation_tab": "false",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
-    "long_instructions": "##Did you hear that?\r\n*Sounds make the game more fun!*\r\n- Connect a `play sound` block under the event `when sprite clicked`\r\n\r\n- Press `run`, turn up your volume and try it out!",
+    "long_instructions": "##Sounds make the game more fun!\r\n**Any of the code blocks under the event will happen when the event is triggered.**\r\n1.  Add code that will `play a sound` and `remove the object` `when sprite clicked`\r\n\r\n- Press `Run`, turn up your volume and try it out!",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -51,7 +52,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-22T19:07:24.847+00:00\",\"changed\":[\"cloned from \\\"hello_games_sounds_b\\\"\"],\"cloned_from\":\"hello_games_sounds_b\"},{\"changed_at\":\"2024-02-22 20:19:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:20:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:21:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:21:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-22T19:07:24.847+00:00\",\"changed\":[\"cloned from \\\"hello_games_sounds_b\\\"\"],\"cloned_from\":\"hello_games_sounds_b\"},{\"changed_at\":\"2024-02-22 20:19:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:20:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:21:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:21:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-23 17:27:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:55:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:55:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:57:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:30:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:46:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:36:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:36:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:37:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -79,23 +80,6 @@
                   </next>
                 </block>
               </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked" x="25" y="252">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_spriteClicked"/>
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"gameplay_purplediamond"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_destroy">
-              <value name="THIS">
-                <block type="gamelab_clickedSpritePointer"/>
-              </value>
             </block>
           </next>
         </block>
@@ -1239,8 +1223,64 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_playSoundOptions" id="Pw|kKw:vD-1q8=+r,f~`" x="42" y="49">
-          <field name="SOUND">'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'</field>
+        <block type="gamelab_spriteClicked" id="YGp%Md#+s:(,)5i9rO01" x="62" y="42">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_spriteClicked"/>
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="b,hWn.Q~$x`Vdch?W]y|">
+              <field name="ANIMATION">"gameplay_purplediamond"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_destroy" id="eT2}W1l7@O%C?lx.HN16" x="57" y="139">
+          <value name="THIS">
+            <block type="gamelab_clickedSpritePointer" id=":TY9$42rng(;jA^ldvSI"/>
+          </value>
+        </block>
+        <block type="gamelab_playSoundOptions" id="s2r~DoU*PmqiU-xa8=Oo" x="56" y="245">
+          <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="82" y="314">
+          <field name="IMG">"gradient_01"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="80" y="409">
+          <field name="ANIMATION_NAME">"gameplayfaces_02"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeSpritesWithSize" id="i7un3aYBL45hjvHzqp.2" x="80" y="491">
+          <field name="SIZE">100</field>
+          <field name="COSTUME">"gameplayfaces_04"</field>
+          <value name="NUM">
+            <block type="math_number" id="EKJk`3k6C600iIDzG(0i">
+              <field name="NUM">3</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay" id="Av.+^|l[j{:15v.p~~qV" x="69" y="590">
+          <field name="SPEECH">On your mark, get set...GO!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="w7Q]*TrNRj3RsdJUgtFf">
+              <field name="ANIMATION">"gameplayfaces_04"</field>
+            </block>
+          </value>
+        </block>
+        <block type="adaptations_toggleBehaviorSimple" id="(%fc^x3rQu2?Hlb5:=t)" x="76" y="691">
+          <field name="TOGGLE">"begins"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="-/v9+H$w%?jB*),J)!Pi">
+              <field name="ANIMATION">"gameplayfaces_04"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behaviorPicker" id="(v`B^Sq4[nrgk6#$2[eP">
+              <field name="BEHAVIOR">driving with arrow keys</field>
+            </block>
+          </value>
         </block>
       </xml>
     </toolbox_blocks>

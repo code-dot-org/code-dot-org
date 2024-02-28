@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 22:19:46 UTC",
+    "serialized_at": "2024-02-23 17:40:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -323,6 +323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "intro to loops_1"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -345,6 +348,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_artistLoops_2023MB_1"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -367,6 +373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops2_2023MB_1"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -389,6 +398,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops3_2023MB_1"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -411,6 +423,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops5_2023MB_1"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -433,6 +448,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops6_2023MB_1"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -455,6 +473,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023MB_1"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,

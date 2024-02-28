@@ -54,7 +54,6 @@ export default function Congrats(props) {
     language,
     randomDonorTwitter,
     randomDonorName,
-    initialCertificateImageUrl,
     isHocTutorial,
     isPlCourse,
     isK5PlCourse,
@@ -363,7 +362,6 @@ export default function Congrats(props) {
           randomDonorTwitter={randomDonorTwitter}
           randomDonorName={randomDonorName}
           under13={under13}
-          initialCertificateImageUrl={initialCertificateImageUrl}
           isHocTutorial={isHocTutorial}
           isPlCourse={isPlCourse}
         >
@@ -383,7 +381,6 @@ Congrats.propTypes = {
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
-  initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
   isPlCourse: PropTypes.bool,
   isK5PlCourse: PropTypes.bool,

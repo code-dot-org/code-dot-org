@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-02-15T22:56:28.000Z",
   "level_num": "custom",
@@ -10,18 +11,17 @@
     "level_data": {
       "panels": [
         {
-          "imageUrl": "https://images.code.org/e8cf0ed0263af03d3bed73749081b995-musiclab_intro_function_0.png",
-          "text": "A cool feature in Project Beats is that you can take a set of blocks and put them into your own block.  In coding, this is called making a *function*."
+          "imageUrl": "https://images.code.org/1e98a3f611800130f566676c1f699136-function1.gif",
+          "text": "You can make your own blocks that play a chunk of code whenever you call it. In coding, this is called a *function*. First, build your function with the sound you want. Then, name your function."
         },
         {
-          "imageUrl": "https://images.code.org/79cffd279632872b91b162a1fe460e15-musiclab_intro_function_1.png",
-          "text": "You can \"call\" your new function by using the block with the matching name, like this."
+          "imageUrl": "https://images.code.org/c904b4d5b311b8d08d7d0b60b468738d-function2.gif",
+          "text": "You can \"call\" your new function by using the block with the matching name."
         }
       ]
     },
     "name_suffix": "_elementary"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-15T22:56:28.181+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_function\\\"\"],\"cloned_from\":\"musiclab_intro_panels_function\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-15T22:56:28.181+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_function\\\"\"],\"cloned_from\":\"musiclab_intro_panels_function\"},{\"changed_at\":\"2024-02-23 17:26:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-02-23 17:28:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

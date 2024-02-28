@@ -114,6 +114,8 @@ export enum BLOCK_TYPES {
   behaviorGet = 'gamelab_behavior_get',
   spriteParameterGet = 'sprite_parameter_get',
   procedureCall = 'procedures_callnoreturn',
+  variableGet = 'variables_get',
+  variableSet = 'variables_set',
 }
 
 // A list of block types that are procedure definitions. These are sorted
@@ -124,6 +126,11 @@ export const PROCEDURE_DEFINITION_TYPES: string[] = [
   BLOCK_TYPES.procedureDefinition,
 ];
 
+// A list of blocks for getting and setting variables.
+export const VARIABLE_BLOCK_TYPES: string[] = [
+  BLOCK_TYPES.variableGet,
+  BLOCK_TYPES.variableSet,
+];
 // A list of block types associated with the Run button.
 export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.danceWhenSetup];
 

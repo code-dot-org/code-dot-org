@@ -1,0 +1,17 @@
+@import "color.scss";
+@import "font.scss";
+
+.outerContainer {
+    text-align: center;
+    display: grid;
+}
+
+.inputContainer {
+    justify-self: center;
+    text-align: left;
+    width: 400px;
+
+    .topPadding {
+        padding-top: 10px;
+    }
+}
