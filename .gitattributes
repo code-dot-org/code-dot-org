@@ -22,16 +22,16 @@ pegasus/sites/** filter=lfs diff=lfs merge=lfs -text
 
 # Include these file types in Git LFS no matter where they occur:
 
-# HOW TO EXCLUDE A FILE/FILES FROM LFS:
+# HOW TO EXCLUDE A FILE/FILES FROM AN LFS DIR:
 #
-# 1. Add a new exclusion pattern in the section below
+# 1. Add a new exclusion pattern in THIS section
 # 2. Run `git add --renormalize .` from the root of the repo
 # 3. All files matching the pattern should show up new and uncommitted
 # 4. Commit your .gitattributes changes and the new files.
 #
 # 🙏 be thoughtful when adding new files/patterns: once the files
 # are in our git history, they take up space forever.
-
+#
 # Exclude these files from our Git LFS dirs:
 dashboard/app/assets/stylesheets/** !text !filter !merge !diff
 dashboard/app/assets/javascripts/** !text !filter !merge !diff
@@ -64,7 +64,7 @@ pegasus/sites/**/*.moved !text !filter !merge !diff
 pegasus/sites/**/*.redirect !text !filter !merge !diff
 pegasus/sites/**/*.scss !text !filter !merge !diff
 
-# Exclude these file types from Git LFS no matter where they occur:
+# Small list of very common text file types to exclude from all LFS dirs:
 *.css !text !filter !merge !diff
 *.js !text !filter !merge !diff
 *.html !text !filter !merge !diff
