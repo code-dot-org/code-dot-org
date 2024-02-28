@@ -1,6 +1,6 @@
 /**
  * A TypeScript wrapper for the AichatLocale object which casts
- * it to the {@link AichatLocale} type.
+ * it to the {@link Locale} type.
  */
 import {Locale} from '@cdo/apps/types/locale';
 
