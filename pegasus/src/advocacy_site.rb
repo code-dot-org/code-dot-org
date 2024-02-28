@@ -36,10 +36,6 @@ class AdvocacySite
         links:
           [
             {
-              text_actual: "Letter to teacher or principal",
-              url: CDO.code_org_url("/promote/letter"),
-            },
-            {
               text_actual: "Bring CS to your school or district",
               url: CDO.code_org_url("/yourschool"),
               new_tab: true
