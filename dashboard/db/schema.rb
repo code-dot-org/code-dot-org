@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_01_22_193916) do
+ActiveRecord::Schema.define(version: 2024_02_28_195613) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_tutor_interactions", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "ai_tutor_interactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id"
     t.integer "script_id"
@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(version: 2024_01_22_193916) do
     t.string "type"
     t.string "project_id"
     t.string "project_version_id"
-    t.text "prompt"
+    t.text "prompt", size: :medium
     t.string "status"
-    t.text "ai_response"
+    t.text "ai_response", size: :medium
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["level_id"], name: "index_ai_tutor_interactions_on_level_id"
