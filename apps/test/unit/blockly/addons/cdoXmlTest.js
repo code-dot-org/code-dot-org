@@ -1,5 +1,8 @@
 import {expect} from '../../../util/reconfiguredChai';
-import {addMutationToMiniToolboxBlocks} from '@cdo/apps/blockly/addons/cdoXml';
+import {
+  addMutationToMiniToolboxBlocks,
+  processBlockAndChildren,
+} from '@cdo/apps/blockly/addons/cdoXml';
 
 const parser = new DOMParser();
 
@@ -48,5 +51,26 @@ describe('addMutationToMiniToolboxBlocks', function () {
 
     // Compare the modified blockElement with the original copy
     expect(blockElement.isEqualNode(originalBlockElement)).to.be.true;
+  });
+});
+
+describe('processBlockAndChildren', function () {
+  it('handles deeply nested blocks', function () {
+    // We expect can_disconnect_from_parent to be removed and replaced with movable
+    const xmlData = `
+      <block type="level_0">
+        <block type="level_1">
+          <block type="level_2" can_disconnect_from_parent="true">
+          </block>
+        </block>
+      </block>
+      `;
+
+    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
+    processBlockAndChildren(xmlDoc.documentElement);
+    const nestedNode = xmlDoc.documentElement.querySelector(
+      'block[type="level_2"]'
+    );
+    expect(nestedNode.getAttribute('movable')).to.equal('true');
   });
 });

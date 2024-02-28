@@ -1,0 +1,42 @@
+<Weblab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2024-02-26T18:39:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "long_instructions": "# User: Ken\r\n\r\nKen has a soccer club and would like you to style his \"Lightining Strikers FC\" page to look like the sketch on page [__] of your project guide.\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Add class names to elements that will need to be styled differently from others of the same kind.\r\n\r\n**In the CSS file:**\r\n1. Add needed rules for your div containers to establish Flex layout where needed to meet your user's requests.\r\n2. Add needed Flex properties to achieve your user's desired layout.\r\n3. Add your user's requested styles to images and/or paragraphs.\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n<head>\\n  <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  \\n  <!-- container for ALL content - needed to put all content into a single column on the page -->\\n  <div class=\\\"page-content\\\">\\n    <!-- page header title & images -->\\n    <div>\\n      <img src=\\\"logo2.jpg\\\" alt=\\\"LSFC Crest\\\">\\n      <img src=\\\"logo2.jpg\\\" alt=\\\"LSFC Crest\\\">\\n      <h1>Lightning Strikers FC</h1>\\n    </div>\\n    <hr>\\n\\n    <!-- sign up info -->  \\n    <div>\\n      <img src=\\\"logo.jpg\\\" alt=\\\"Strikers FC logo\\\">\\n      <h2>Sign Up</h2>\\n      <p>Join Lightning Strikers FC today and be part of our exciting soccer family! Email us at </p>\\n      <p>strikersFC@lightning.com</p>\\n      <!-- Placeholder for Sign Up form or information -->\\n    </div>\\n  \\n  <!-- \\\"About the club\\\" section -->\\n    <div>\\n      <h2>About the Club</h2>\\n      <p>We are a youth soccer club focused on developing skills, teamwork, and sportsmanship.</p>\\n      <!-- Placeholder for About Us content -->\\n      <hr>\\n    </div>\\n  \\n  <!-- Age groups section - list & images -->\\n    \\n    <h2>Age Groups</h2>\\n    \\n    <!-- ul \\\"container\\\" for age groups -->\\n      <ul>\\n        <li><h3>Under 8</h3></li>\\n        <li><h3>Under 10</h3></li>\\n        <li><h3>Under 12</h3></li>\\n        <li><h3>Under 14</h3></li>\\n        <li><h3>Under 16</h3></li>\\n      </ul>\\n      \\n    <!-- container for soccer image gallery -->\\n      <div>\\n        <img src=\\\"header.jpg\\\" alt=\\\"a girl heading a soccer ball\\\">\\n        <img src=\\\"keeper.jpg\\\" alt=\\\"a goalkeeper making a save\\\">\\n        <img src=\\\"tackle.jpg\\\" alt=\\\"a soccer player making a tackle\\\">\\n        <img src=\\\"header2.jpg\\\" alt=\\\"two soccers players battling for a header\\\">\\n      </div>\\n\\n    \\n    <!-- container for reasons to join -->\\n    <div>\\n      <h2>Reasons to Join</h2>\\n      <ol>\\n        <li>Professional coaching and training.</li>\\n        <li>Friendly and competitive environment.</li>\\n        <li>Opportunities for personal growth and development.</li>\\n        <li>Access to state-of-the-art facilities.</li>\\n      </ol>\\n    </div>\\n  \\n    <!-- footer w/image citation -->\\n    <div>\\n      <hr>\\n      <p>&copy; 2024 Lightning Strikers FC. All rights reserved. All photo images courtesy of Free-Images.com. Logos created with ChatGPT.</p>\\n    </div>\\n    \\n  </div>\\n  \\n</body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* ADD NEEDED RULE SETS AND PROPERTIES BELOW */\\n\\n/* body layout style */\\nbody {\\n  font-family: Arial, sans-serif;\\n  background-color: #7492cd;\\n\\n  \\n}\\n\\n\\n/* header title & image layout */\\n\\n\\n\\n/* header image style */\\n\\n\\n\\n/* large logo image style */\\n\\n\\n\\n/* style for email address */\\n\\n\\n\\n/* age groups unordered list/container layout */\\n\\n\\n\\n/* list item style */\\n\\n\\n\\n/* soccer image gallery layout */\\n\\n\\n\\n/* gallery images style */\\n\\n\\n\\n/* footer citation style */\\n\\n\\n\\n\\n/* DO NOT EDIT CODE BELOW */\\n\\n/* heading * sub-heading styles */\\nh1 {\\n  color: #333;\\n  font-size: 40px;\\n}\\n\\nh2 {\\n  color:#f1d997;\\n  text-decoration: underline;\\n}\\n\\nh3 {\\n  color: #1D428A;\\n  text-shadow: #333333 1px 1px;\\n  margin: 0;\\n}\\n\\n/* max width for content */\\n.page-content {\\n  width: 80%;\\n  max-width: 1200px;\\n}\\n\\n/* basic div margin */\\ndiv {\\n  margin-bottom: 20px;\\n}\\n\\n/* basic image style */\\nimg {\\n  width:150px;\\n}\"\r\n    },\r\n    {\r\n      \"name\": \"logo.jpg\",\r\n      \"url\": \"https://images.code.org/a5e8a780c7a7e56121c12050b1813248-logo.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"tackle.jpg\",\r\n      \"url\": \"https://images.code.org/8f62862f9d7c8073c07fbd4be3f27dcc-tackle.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"header.jpg\",\r\n      \"url\": \"https://images.code.org/f462fbe98a67b5bad1664060ff1b1c63-header.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"soccer_ball.jpg\",\r\n      \"url\": \"https://images.code.org/a6f463ef8e31d4934e65776e6f2790ad-soccer_ball.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"logo2.jpg\",\r\n      \"url\": \"https://images.code.org/965b619e8510082803b08d9e1e864446-logo2.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"keeper.jpg\",\r\n      \"url\": \"https://images.code.org/bfbc7a4c75a9900ea986abeb5b6a5d31-keeper.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"header2.jpg\",\r\n      \"url\": \"https://images.code.org/7d700d4a087147b71f31af34f4829590-header2.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"dribble.jpg\",\r\n      \"url\": \"https://images.code.org/3e0ab18d951c6d5c2eb28d24dc7fa8c0-dribble.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"ball2.jpg\",\r\n      \"url\": \"https://images.code.org/b6430630a7032c306ae728bbc84e64b9-ball2.jpg\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "true",
+    "reference_links": [
+      "/courses/csd-2022/guides/flexbox",
+      "/courses/csd-2022/guides/html-selectors",
+      "/courses/csd-2022/guides/div",
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/flex-children",
+    "display_name": "User: Ken",
+    "bubble_choice_description": "Ken would like you to style his page about his soccer club.",
+    "thumbnail_url": "https://images.code.org/c93eee9091ed6570941c9ff40faca0fe-football.png",
+    "encrypted_examples": "44XbzXhtsRka71ycA7hay++lj8MEDo51pfbb3iZLoLfu62hP8447z27EffE8\nwMoe8Zyn79JX/y4GORVxi6wK7Q==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-26T18:39:52.206+00:00\",\"changed\":[\"cloned from \\\"CSD U2L14 Option 1-1\\\"\"],\"cloned_from\":\"CSD U2L14 Option 1-1\"},{\"changed_at\":\"2024-02-26 18:41:49 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-26 20:33:26 +0000\",\"changed\":[\"start_sources\",\"thumbnail_url\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-26 21:36:34 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 00:44:58 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 00:49:29 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab>

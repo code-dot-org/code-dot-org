@@ -1,0 +1,18 @@
+.left-main {
+  background-color: #eee;
+}
+.left-main ul {
+  padding-left: 10px;
+}
+.left-main ul li span.label {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.files-toolbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 75%;
+  padding: 5px;
+}

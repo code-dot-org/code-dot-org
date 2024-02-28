@@ -28,6 +28,8 @@ $(document).ready(function () {
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
   const certificateImageUrl = congratsData.certificate_image_url;
   const isHocTutorial = congratsData.is_hoc_tutorial;
+  const isPlCourse = congratsData.is_pl_course;
+  const isK5PlCourse = congratsData.is_k5_pl_course;
 
   let certificateId = '';
   let tutorial = '';
@@ -41,7 +43,11 @@ $(document).ready(function () {
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');
 
   userType === 'teacher' &&
-    analyticsReporter.sendEvent(EVENTS.TEACHER_HOC_CONGRATS_PAGE_VISITED);
+    analyticsReporter.sendEvent(EVENTS.TEACHER_VISITED_CONGRATS_PAGE, {
+      isHocTutorial,
+      isPlCourse,
+      isK5PlCourse,
+    });
 
   ReactDOM.render(
     <Provider store={store}>
@@ -57,6 +63,8 @@ $(document).ready(function () {
         hideDancePartyFollowUp={hideDancePartyFollowUp}
         initialCertificateImageUrl={certificateImageUrl}
         isHocTutorial={isHocTutorial}
+        isPlCourse={isPlCourse}
+        isK5PlCourse={isK5PlCourse}
         nextCourseScriptName={nextCourseScriptName}
         nextCourseTitle={nextCourseTitle}
         nextCourseDesc={nextCourseDesc}

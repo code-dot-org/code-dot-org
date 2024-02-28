@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L8-Compound PBT_2024",
     "teacher_markdown": "The code segment will display the following in the console:\r\n\r\n```\r\nfirst % second = 1\r\n```\r\n\r\nSince the value assigned to `first` is `5`, and the value assigned to `second` is `2`, the remainder after dividing `5` by `2` is `1`.\r\n\r\nWhen the value of `first` is changed to `0`, the result is `0`. This is because the remainder after dividing `4` by `2` is `0`.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:49:44.892+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L6_2023\\\"\"],\"cloned_from\":\"CSA U2L8-L6_2023\"}]"

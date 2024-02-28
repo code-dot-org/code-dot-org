@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -314,33 +314,6 @@ describe('LearningGoals', () => {
     sendEventSpy.restore();
   });
 
-  it('displays Evaluate when AI is disabled and no understanding has been selected', () => {
-    const wrapper = mount(
-      <LearningGoals
-        learningGoals={learningGoals}
-        teacherHasEnabledAi
-        canProvideFeedback
-      />
-    );
-    wrapper.update();
-    wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('BodyThreeText').at(1).text()).to.include('Evaluate');
-    wrapper.unmount();
-  });
-
-  it('displays Approve when AI is enabled and no understanding has been selected', () => {
-    const wrapper = mount(
-      <LearningGoals
-        learningGoals={learningGoals}
-        teacherHasEnabledAi
-        canProvideFeedback
-      />
-    );
-    wrapper.update();
-    expect(wrapper.find('BodyThreeText').at(1).text()).to.include('Approve');
-    wrapper.unmount();
-  });
-
   it('shows feedback in disabled textbox when available', () => {
     const wrapper = shallow(
       <LearningGoals
@@ -353,7 +326,6 @@ describe('LearningGoals', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', () => {
@@ -365,36 +337,6 @@ describe('LearningGoals', () => {
       />
     );
     expect(wrapper.find('textarea').props().disabled).to.equal(false);
-  });
-
-  it('shows understanding in header if submittedEvaluation contains understand', () => {
-    const wrapper = shallow(
-      <LearningGoals
-        learningGoals={learningGoals}
-        submittedEvaluation={{
-          feedback: 'test feedback',
-          understanding: RubricUnderstandingLevels.LIMITED,
-        }}
-      />
-    );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
-      'Limited Evidence'
-    );
-  });
-
-  it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
-    const wrapper = shallow(
-      <LearningGoals
-        learningGoals={learningGoals}
-        submittedEvaluation={{
-          feedback: 'test feedback',
-          understanding: RubricUnderstandingLevels.NONE,
-        }}
-      />
-    );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
-      'No Evidence'
-    );
   });
 
   it('passes isStudent down to EvidenceLevels', () => {

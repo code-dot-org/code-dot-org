@@ -107,3 +107,5 @@ theme: responsive_full_width
     %p.centered
       =hoc_s(:admins_page_resources_desc)
     = view :"administrators/admins_additional_resources"
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::ADMIN_PAGE_VISITED_EVENT

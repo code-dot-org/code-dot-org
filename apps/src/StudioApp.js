@@ -1235,6 +1235,8 @@ StudioApp.prototype.inject = function (div, options) {
   } else if (experiments.isEnabled('geras')) {
     options.renderer = Renderers.GERAS;
   }
+
+  options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -2841,7 +2843,13 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // replace it with a full toolbox. I think some levels may depend on this
   // behavior. We want a way to specify no toolbox, which is <xml></xml>
   if (config.level.toolbox) {
-    var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // (Nothing is changed if we are using CDO Blockly.)
+    config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
+      config.level.toolbox
+    );
+
+    const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
     if (
       toolboxWithoutWhitespace === '<xml></xml>' ||
       toolboxWithoutWhitespace === '<xml/>'

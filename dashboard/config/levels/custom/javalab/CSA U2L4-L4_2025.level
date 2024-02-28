@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U2L4-this Keyword PBT_2025",
     "teacher_markdown": "Since the `this` keyword is used to refer to the current object, using `this` in this way tells Java to pass the values to *this* object's constructor that has a constructor signature that matches the data types.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:50:09.958+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L4_2023\\\"\"],\"cloned_from\":\"CSA U2L4-L4_2023\"}]"

@@ -1,11 +1,6 @@
 {
   "category": "CSC",
   "config": {
-    "color": [
-      184,
-      1,
-      0.74
-    ],
     "func": "catchMe",
     "docFunc": "gamelab_destroy",
     "blockText": "catch {THIS}",

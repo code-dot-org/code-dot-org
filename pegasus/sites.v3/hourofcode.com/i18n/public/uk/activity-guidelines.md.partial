@@ -104,23 +104,23 @@ Code.org розміщує різноманітні заходи, уроки та
 * Ім'я та електронна пошта основного контакту, що представляє подану діяльність
 * Назва діяльності (не можна включити в назву «Година коду»)
 * URL посилання на діяльність
-* Чи включає ця діяльність AI: Так чи Ні
-* Опис діяльності (максимальна кількість символів: 400) 
-    * Будь ласка, додайте опис того, чи діяльність є самостійною, чи потребує керівництва вчителя. Додатково, деякі школи хотіли б знати, чи вправи з Години коду відповідають новим державним стандартам освіти (Common Core чи Next Generation Science Standards). Якщо завдання відповідають певним державним стандартам, додайте інформацію про це.
-* Рекомендований рівень (и) оцінок для передбачуваних користувачів. Ви можете звернутися до \[Стандарти K-12 Асоціації вчителів комп'ютерних наук\] (https://k12cs.org/framework-statements-by-grade-band/) щодо концепцій комп'ютерних наук, що відповідають класу. Приклади рівнів оцінок включають: 
-    * Дитячий садок - 1 клас (4-6 років)
-    * 2-5 класи (7-10 років)
-    * 6-8 класи (віком 11-13 років)
-    * Класи 9+ (вік 14+)
-* Список мов програмування, яких навчає ваша діяльність. Тобто C/C++, Java, JavaScript і т.д. або незалежний від мови (для планів уроків, які можна викладати кількома мовами) Виберіть мову мистецтв.
-* Список підтримуваних природних мов. Примітка: Виявлення мови є обов'язком постачальника активності; ми перенаправимо всіх користувачів на одну надану URL-адресу. або незалежний від мови (для планів уроків, які можна викладати кількома мовами)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Список мов програмування, яких навчає ваша діяльність. Тобто C/C++, Java, JavaScript і т.д. або незалежний від мови (для планів уроків, які можна викладати кількома мовами) choose language arts.
+* Список підтримуваних природних мов. Примітка: Виявлення мови є обов'язком постачальника активності; ми перенаправимо всіх користувачів на одну надану URL-адресу. or language independent (for lesson plans that can be taught in multiple languages)
 * Який рівень досвіду повинен мати вихователь, щоб використовувати вашу діяльність? (наприклад, для початківців або зручних.) І який рівень досвіду повинні мати учні?
-* Який рівень досвіду повинен мати вихователь, щоб використовувати вашу діяльність? (наприклад, для початківців або зручних.) І який рівень досвіду повинні мати учні? Якщо ви хочете підготувати більш просунуті заходи Години коду™, будь ласка, включіть попередні знання, необхідні в опис вашої діяльності.
-* Тривалість вашої діяльності 
-    * Тільки 1 година
-    * 1 година з подальшою курсом
-    * 2-6 годин (може бути кілька занять)
-* Список доступних приміщень, якщо вони є у вашій діяльності. Вони включають сумісність зчитувача з екрана, можливості перетворення тексту в мовлення, використання висококонтрастних кольорів або будь-які інші умови, створені для учнів з обмеженими можливостями.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Додаткові речі, які вам знадобляться під час надсилання планів уроків
 
@@ -170,7 +170,7 @@ Code.org розміщує різноманітні заходи, уроки та
 
 Різноманітний комітет вчителів інформатики оцінюватиме подання на основі якісних та кількісних критеріїв. Будуть перераховані всі види діяльності, які відповідають основним критеріям.
 
-Для традиційної діяльності з кодування різноманітний комітет вчителів інформатики оцінюватиме подання на основі якісних та кількісних критеріїв. Будуть перераховані всі види діяльності, які відповідають основним критеріям. Вчителі зможуть фільтрувати та сортувати, щоб знайти найкращі заняття для свого класу.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Якщо комітет з огляду оцінює діяльність як нуль у якості виробництва (через погані помилки або інструкції, які ускладнюють її використання), у сприянні навчанню в недостатньо представлених групах (через расистський/сексистський матеріал), в освітній цінності (не викладає концепцій CS) або веселі/залучення (через важку/відлякування учнів до роботи), діяльність не буде перерахована.
 
@@ -188,13 +188,13 @@ Code.org розміщує різноманітні заходи, уроки та
 - Не потрібно реєструватися
 - Не вимагайте оплати (виняток для діяльності з робототехніки, це може вимагати придбання робота/комплекту)
 
-Для самостійних заходів для нових вчителів та учнів комісія з огляду шукатиме, чи:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Вчителі можуть використовувати підручник або діяльність без досвіду в інформатиці
 - учні можуть бути успішними, не маючи досвіду в інформатиці
 - учні можуть керувати собою через підручник без батьківського або вчительного керівництва
 
-Вчителі та учні зможуть шукати та фільтрувати наш список заходів на основі таких фільтрів, як оцінка, рівень досвіду, предмет, обладнання тощо. За замовчуванням ми спочатку покажемо плани уроків та заходи, які:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Отримайте найвищі оцінки від рецензійної комісії
 - Чи є одногодинні самостійні заняття, призначені для початківців (учнів та вчителів)
@@ -208,7 +208,7 @@ Code.org розміщує різноманітні заходи, уроки та
 
 ## Пропозиції щодо розробки одногодинних самокерованих навчальних посібників
 
-Діяльність не повинна включати AI, хоча ми прагнемо запропонувати більше заходів, пов'язаних з штучним інтелектом.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Додайте рекомендації для вчителів.** Більшість завдань мають бути спрямованими на самостійну роботу учнів, але якщо завдання потребує допомоги чи супроводу вчителя, додайте чіткі та прості вказівки у формі рекомендацій за окремим посиланням. Новачками будуть не лише учні, але й деякі вчителі. Включіть наступну інформацію:
 
@@ -221,15 +221,15 @@ Code.org розміщує різноманітні заходи, уроки та
 - Ви рекомендуєте парне програмування?
 - Міркування щодо використання в класі? Наприклад, якщо є відео, порадьте вчителям показувати відео на проектованому екрані для всього класу для перегляду разом.
 
-**Включіть зворотний зв'язок наприкінці діяльності.** (Наприклад, «Ви закінчили 10 рівнів і дізналися про петлі! Чудова робота!»)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Заохочуйте учнів публікувати повідомлення в соціальних мережах (де це доречно), коли вони закінчать.** Наприклад «Я зробив Годину коду з ________ Чи є у вас? #HourOfCode» або «Я зробив #HourOfCode як частину #CSEdWeek. А ви? @Scratch.” Використовуйте хеш-тег **#HourOfCode** (з великими літерами H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Створіть свою діяльність іспанською або іншими мовами, крім англійської.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Поясніть або прив'яжіть своє завдання до соціально значущого контексту.** Програмування стає суперсилою, коли учні бачать, як вони можуть змінити світ на краще!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Переконайтеся, що ваш підручник можна використовувати в парадигмі програмування [пара](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** Це особливо корисно для Години коду, оскільки у багатьох класах немає обладнання 1:1 для всіх учнів.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**На початок**](#top)
 
@@ -237,7 +237,7 @@ Code.org розміщує різноманітні заходи, уроки та
 
 ## Рекомендації щодо торгової марки
 
-Година коду® і Hora del Código® є зареєстрованими торговими марками Code.org. Багато наших партнерів з навчальних посібників використовували наші торгові марки «Година коду» на своїх веб-сайтах у зв'язку зі своєю діяльністю «Година коду». Ми не хочемо запобігати цьому використанню, але ми хочемо переконатися, що використання потрапляє в кілька обмежень:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Використовуйте «Годину коду» тільки у зв'язку з некомерційною діяльністю CS Education в контексті кампанії «Година коду» і ні з якою іншою метою.
 2. Будь-яке посилання на «Годину коду» слід використовувати таким чином, щоб не припускати, що це ваша власна торгова марка, а що воно скоріше посилається на Годину коду як низовий рух. Хороший приклад: «Беріть участь у Годині коду® на Acmecorp.com». Поганий приклад: «Спробуйте годину коду від ACME Corp».
@@ -253,15 +253,15 @@ Code.org розміщує різноманітні заходи, уроки та
 
 ## Точка стеження
 
-Якщо ваш підручник затверджений і включений на остаточну сторінку підручника, Code.org надасть вам унікальний піксель відстеження, який ви можете інтегрувати у ваш підручник. Дивіться приклад нижче. Не включайте на жодних проміжних сторінках вашого підручника.
+Якщо ваш підручник затверджений і включений на остаточну сторінку підручника, Code.org надасть вам унікальний піксель відстеження, який ви можете інтегрувати у ваш підручник. Дивіться приклад нижче. Do not include on any interim pages of your tutorial.
 
-Це дозволить нам підраховувати користувачів, які виконують ваш підручник «Година коду». Це призведе до більш точного підрахунку участі у вашому підручнику.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Якщо ваш підручник затверджений і включений на остаточну сторінку підручника, Code.org надасть вам унікальний піксель відстеження, який ви можете інтегрувати у ваш підручник. Дивіться приклад нижче.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-Примітка: для встановлюваних додатків це робити не обов'язково (для iOS/Android додатків або комп'ютерних програм)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Приклад пікселів відстеження для Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Просування вашої діяльності, CSEDWeek та Година коду
 
-Будь ласка, просувайте свою діяльність у своїй мережі! Направте їх на свою сторінку «Година коду». Ваші користувачі набагато частіше реагують на розсилку від вас про вашу активність. Використовуйте міжнародну кампанію «Година коду» під час Тижня освіти з комп'ютерних наук як привід, щоб заохотити користувачів запросити інших приєднатися та допомогти нам охопити більше учнів!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Функція Година коду та CSEDWeek на вашому веб-сайті. Приклад: <http://www.tynker.com/hour-of-code>
 - Просувайте Годину коду за допомогою соціальних медіа, традиційних медіа, списків розсилки тощо, використовуючи хештег #HourOfCode (з великими літерами H, O, C)

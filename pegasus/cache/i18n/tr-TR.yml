@@ -253,6 +253,7 @@ tr-TR:
   class_submission_out_of_school_summer_camp: Yaz kampı
   classicmaze_name: Klasik Labirent
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
+  code_org_logo_alt: Code.org Ana Sayfası
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   codea_beyond_gradelevel: Lise +
   codea_beyond_longdescription: Koduna iPad için Java Oyunlar ve simülasyonlar oluşturmayı
@@ -1173,6 +1174,7 @@ tr-TR:
   header_project_gallery: Projeler
   header_report_abuse: Hata Rapor Et
   header_report_bug: Hata bildir
+  header_schools: Okullar
   header_screen_reader_hamburger: 'Menü
 
     '

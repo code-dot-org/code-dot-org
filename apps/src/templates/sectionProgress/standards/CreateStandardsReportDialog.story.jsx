@@ -11,7 +11,7 @@ export default {
   component: CreateStandardsReportDialog,
 };
 
-export const overview = () => {
+export const Overview = () => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,

@@ -1,0 +1,28 @@
+.left-pane-outer {
+  display: grid;
+
+  height: 100%;
+  width: 100%;
+}
+
+.left-pane-inner {
+  display: grid;
+  grid-template-rows: 32px auto;
+}
+
+.left-side-bar {
+  background-color: lightgray;
+}
+
+.left-nav {
+  background-color: black;
+  color: white;
+}
+
+.left-main {
+  padding: 5px;
+}
+
+.left-main ul {
+  list-style: none;
+}

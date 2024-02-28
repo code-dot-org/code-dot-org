@@ -104,23 +104,23 @@ Wat u nodig heeft:
 * Naam en e-mailadres van de primaire contactpersoon die de ingezonden activiteit vertegenwoordigt
 * Naam van de activiteit (mag „Hour of Code” niet in de naam opnemen)
 * URL-link naar de activiteit
-* Omvat deze activiteit AI: Ja of Nee
-* Een beschrijving van de activiteit (maximaal aantal tekens: 400) 
-    * Vermeld in de beschrijving of het een voornamelijk student-geleide of leraar-begeleide opgave is. Bovendien, zijn sommige scholen er in geïnteresseerd of de Uur Code activiteiten aansluiten bij gemeenschappelijke basis Science Standards. Als de activiteit specifieke normen ondersteunt, kunt u overwegen deze informatie toe te voegen.
-* Aanbevolen niveau (s) voor beoogde gebruikers. U kunt de \[K-12-normen van de Computer Science Teachers' Association\] (https://k12cs.org/framework-statements-by-grade-band/) raadplegen voor computerwetenschappelijke concepten die bij de klas passen. Voorbeelden van cijferniveaus zijn onder meer: 
-    * Kleuterschool - Graad 1 (4-6 jaar)
-    * Graden 2-5 (7-10 jaar)
-    * Graad 6-8 (leeftijd 11-13 jaar)
-    * Graad 9+ (14 jaar en ouder)
-* Een lijst met programmeertalen die je activiteit leert. Dat wil zeggen C/C++, Java, JavaScript, enz. of taalonafhankelijk (voor lesplannen die in meerdere talen kunnen worden gegeven) kies voor taalkunsten.
-* Een lijst van ondersteunde natuurlijke talen. Opmerking: Taaldetectie valt onder de verantwoordelijkheid van de aanbieder van de activiteit; we zullen alle gebruikers doorverwijzen naar de enkele opgegeven URL. of taalonafhankelijk (voor lesplannen die in meerdere talen kunnen worden gegeven)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Een lijst met programmeertalen die je activiteit leert. Dat wil zeggen C/C++, Java, JavaScript, enz. of taalonafhankelijk (voor lesplannen die in meerdere talen kunnen worden gegeven) choose language arts.
+* Een lijst van ondersteunde natuurlijke talen. Opmerking: Taaldetectie valt onder de verantwoordelijkheid van de aanbieder van de activiteit; we zullen alle gebruikers doorverwijzen naar de enkele opgegeven URL. or language independent (for lesson plans that can be taught in multiple languages)
 * Welk ervaringsniveau moet een opvoeder hebben om uw activiteit te gebruiken? (bijv. Beginner of Comfortabel.) En welk ervaringsniveau moeten de studenten hebben?
-* Welk ervaringsniveau moet een opvoeder hebben om uw activiteit te gebruiken? (bijv. Beginner of Comfortabel.) En welk ervaringsniveau moeten de studenten hebben? Als je meer geavanceerde Hour of Code™ -activiteiten wilt voorbereiden, vermeld dan de vereiste voorkennis in de beschrijving van je activiteit.
-* De duur van je activiteit 
-    * Slechts 1 uur
-    * 1 uur met vervolgcursus
-    * 2-6 uur (dit kunnen meerdere lessen zijn)
-* Een lijst met toegankelijkheidsaccommodaties, als je activiteit die heeft. Deze omvatten compatibiliteit met schermlezers, tekst-naar-spraakmogelijkheden, het gebruik van contrastrijke kleuren of andere aanpassingen die zijn gemaakt voor leerlingen met een handicap.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Aanvullende dingen die je nodig hebt bij het indienen van lesplannen
 
@@ -170,7 +170,7 @@ Wat u nodig heeft:
 
 Een diverse commissie van informaticadocenten zal de inzendingen rangschikken op basis van kwalitatieve en kwantitatieve criteria. Alle activiteiten die voldoen aan de basiscriteria worden vermeld.
 
-Voor traditionele coderingsactiviteiten zal een diverse commissie van informaticadocenten de inzendingen rangschikken op basis van kwalitatieve en kwantitatieve criteria. Alle activiteiten die voldoen aan de basiscriteria worden vermeld. Leerkrachten kunnen filteren en sorteren om de beste activiteiten voor hun klas te vinden.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Als de beoordelingscommissie de activiteit als nul beoordeelt wat betreft productiekwaliteit (vanwege slechte bugs of instructies waardoor de activiteit erg moeilijk te gebruiken is), wat betreft het bevorderen van leren in ondervertegenwoordigde groepen (vanwege racistisch/seksistisch materiaal), in educatieve waarde (leert geen CS-concepten) of leuk/boeiend (omdat het voor studenten moeilijk/ontmoedigend is om door te werken), wordt de activiteit niet vermeld.
 
@@ -188,13 +188,13 @@ Voor zelfsturende activiteiten voor nieuwe docenten en leerlingen zal de toetsin
 - Geen aanmelding vereist
 - Geen betaling vereist (behalve voor robotica-activiteiten, hiervoor kan de aankoop van een robot/kit vereist zijn)
 
-Voor zelfsturende activiteiten voor nieuwe docenten en leerlingen zal de toetsingscommissie onderzoeken of:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Docenten kunnen de tutorial of activiteit gebruiken zonder achtergrond in informatica
 - Studenten kunnen succesvol zijn zonder achtergrond in informatica
 - Leerlingen kunnen zichzelf door de tutorial leiden zonder begeleiding van ouders of leerkracht
 
-Docenten en studenten kunnen onze lijst met activiteiten doorzoeken en filteren op basis van filters zoals cijfer, ervaringsniveau, onderwerp, hardware, enz. Standaard tonen we eerst lesplannen en activiteiten die:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Ontvang de hoogste beoordelingen van de beoordelingscommissie
 - Zijn zelfgestuurde activiteiten van een uur bedoeld voor beginners (studenten en docenten)
@@ -208,7 +208,7 @@ Docenten en studenten kunnen onze lijst met activiteiten doorzoeken en filteren 
 
 ## Suggesties voor het ontwerpen van zelfgeleide tutorials van een uur
 
-Activiteiten hoeven geen AI te bevatten, maar we willen wel meer AI-gerelateerde activiteiten aanbieden.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Leraar aanbevelingen opnemen.** De meeste activiteiten zouden student-gestuurd moeten zijn, maar als een activiteit wordt ondersteund door een leerkracht, geef dan duidelijke en eenvoudige aanwijzingen voor de leraar in de vorm van leraar-opmerkingen, biedt deze aan via een afzonderlijke URL bij uw activiteit. Niet alleen de studenten zijn beginners, sommige van de leraren zijn dat net zo goed. Voeg info toe zoals:
 
@@ -221,13 +221,13 @@ Activiteiten hoeven geen AI te bevatten, maar we willen wel meer AI-gerelateerde
 - Raadt u het programmeren in groepjes van twee leerlingen aan?
 - Overwegingen voor gebruik in een klaslokaal? Als er bijvoorbeeld video's zijn, raad de leerkrachten dan aan om de video's op een geprojecteerd scherm te laten zien zodat de hele klas ze samen kan bekijken
 
-**Voeg feedback toe aan het einde van de activiteit.** (Bijvoorbeeld: „Je hebt 10 levels voltooid en hebt over loops geleerd! Geweldig gedaan!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Moedig de leerlingen aan om te posten op sociale media (in voorkomend geval) wanneer ze klaar.** Bijvoorbeeld "Ik heb meegedaan aan een CodeUur met ________, Doe jij ook mee? #HourOfCode” of „Ik heb een #HourOfCode gedaan als onderdeel van #CSEdWeek. En jij? @Scratch." Gebruik de hashtag **#HourOfCode** (met hoofdletters H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Creëer je activiteit in het Spaans of in andere talen dan Engels.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Verbind de activiteit aan een maatschappelijk relevante context.** Leerlingen zullen programmeren als een machtig middel ervaren als ze zien dat het problemen in de wereld kan helpen oplossen!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
 **Zorg ervoor dat je tutorial kan worden gebruikt in een [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigma.** Dit is vooral handig voor het Hour of Code, omdat veel klaslokalen niet beschikken over 1:1 -hardware voor alle leerlingen.
 
@@ -237,7 +237,7 @@ Activiteiten hoeven geen AI te bevatten, maar we willen wel meer AI-gerelateerde
 
 ## Richtlijnen voor gebruik van het handelsmerk
 
-Hour of Code® en Hora de Código® zijn geregistreerde handelsmerken van Code.org. Veel van onze instructiepartners hebben onze handelsmerken „Hour of Code” op hun websites gebruikt in verband met hun Hour of Code-activiteiten. We willen dit gebruik niet voorkomen, maar we willen er wel voor zorgen dat het gebruik binnen een aantal limieten valt:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Gebruik „Hour of Code” alleen in verband met niet-commerciële CS Education-activiteiten in het kader van de Hour of Code-campagne, en voor geen enkel ander doel.
 2. Elke verwijzing naar „Hour of Code” moet worden gebruikt op een manier die niet suggereert dat het je eigen merknaam is, maar dat het eerder verwijst naar Hour of Code als een volksbeweging. Goed voorbeeld: „Neem deel aan de Hour of Code® op AcmeCorp.com”. Slecht voorbeeld: "Probeer CodeUur door ACME Corp".
@@ -253,15 +253,15 @@ Hour of Code® en Hora de Código® zijn geregistreerde handelsmerken van Code.o
 
 ## Bijhouden van Pixel
 
-Als je tutorial is goedgekeurd en op de uiteindelijke instructiepagina is opgenomen, zal Code.org je een unieke trackingpixel geven die je kunt integreren in je tutorial. Zie het voorbeeld hieronder. Voeg dit niet toe aan tussenliggende pagina's van je tutorial.
+Als je tutorial is goedgekeurd en op de uiteindelijke instructiepagina is opgenomen, zal Code.org je een unieke trackingpixel geven die je kunt integreren in je tutorial. Zie het voorbeeld hieronder. Do not include on any interim pages of your tutorial.
 
-Dit stelt ons in staat om gebruikers te tellen die jouw Hour of Code-tutorial hebben gedaan. Het zal leiden tot nauwkeurigere deelnametellingen voor je tutorial.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Als je tutorial is goedgekeurd en op de uiteindelijke instructiepagina is opgenomen, zal Code.org je een unieke trackingpixel geven die je kunt integreren in je tutorial. Zie het voorbeeld hieronder.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-Opmerking: dit is niet belangrijk voor installeerbare apps (iOS/Android apps of desktop-install apps)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Voorbeelden van trackingpixels voor Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Het promoten van uw activiteiten, CSEDweek en Hour of Code
 
-Promoot alstublieft uw activiteit in uw netwerk! Stuur ze naar je Hour of Code-pagina. Uw gebruikers reageren veel sneller op een mailing van u over uw activiteit. Gebruik de internationale Hour of Code-campagne tijdens de Computer Science Education Week als excuus om gebruikers aan te moedigen anderen uit te nodigen om mee te doen, en help ons meer studenten te bereiken!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Vermeld Hour of Code en CSEDweek op uw website. Bijv.: <http://www.tynker.com/hour-of-code>
 - Promoot Hour of Code via sociale media, traditionele media, mailinglijsten, enz., met de hashtag #HourOfCode (met hoofdletters H, O, C)

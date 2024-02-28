@@ -17,7 +17,6 @@ const getPendingPill = () => {
         data-event="mouseenter focus"
         data-event-off="mouseleave blur"
         data-for={'pending-tooltip'}
-        tabIndex="0"
       >
         <StrongText>
           <FontAwesome icon={'ellipsis'} className={styles.tablePillIcon} />
