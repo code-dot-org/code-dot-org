@@ -12,6 +12,7 @@ import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 import styles from './progress-key-popup.module.scss';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
   const validatedLevelsContent = () => (
@@ -58,8 +59,12 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />
             <BodyThreeText>
               <StrongText>{i18n.submitted() + ': '}</StrongText>
-              <p>{i18n.progressLegendDetailsSubmittedForLessons()}</p>
-              <p>{i18n.progressLegendDetailsSubmittedForLevels()}</p>
+              <SafeMarkdown
+                markdown={i18n.progressLegendDetailsSubmittedForLessons()}
+              />
+              <SafeMarkdown
+                markdown={i18n.progressLegendDetailsSubmittedForLevels()}
+              />
             </BodyThreeText>
           </div>
           {hasValidation && validatedLevelsContent()}
