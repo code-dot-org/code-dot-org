@@ -34,6 +34,7 @@ import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
+import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 
 export interface BlockDefinition {
   category: string;
@@ -86,7 +87,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   levelBlockIds: string[];
   isStartMode: boolean;
   isToolboxMode: boolean;
-  toolboxBlocks: string | undefined;
+  toolboxBlocks: ToolboxDefinition | undefined;
   useModalFunctionEditor: boolean;
   functionEditor: FunctionEditor;
   mainBlockSpace: ExtendedWorkspaceSvg;

@@ -695,7 +695,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
-    blocklyWrapper.toolboxBlocks = options.toolbox as string;
+    blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(
       container,
       options

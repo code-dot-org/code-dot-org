@@ -380,7 +380,8 @@ export function registerCustomProcedureBlocks() {
  */
 export function getLevelToolboxBlocks(customCategory: string) {
   const parser = new DOMParser();
-  if (!Blockly.toolboxBlocks) {
+  // This method only works for string toolboxes.
+  if (!Blockly.toolboxBlocks || typeof Blockly.toolboxBlocks !== 'string') {
     return;
   }
   // TODO: Update this to support JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
