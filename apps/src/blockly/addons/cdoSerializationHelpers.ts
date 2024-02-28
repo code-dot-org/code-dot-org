@@ -98,7 +98,7 @@ export function convertXmlToJson(xml: Element, embedded: boolean) {
     // Create a map of ids (key) and block serializations (value).
     const blockIdMap = stateToLoad.blocks.blocks.reduce(
       (map: Map<string, JsonBlockConfig>, blockJson: JsonBlockConfig) =>
-        map.set(blockJson.id, blockJson),
+        map.set(blockJson.id || '', blockJson),
       new Map()
     );
 

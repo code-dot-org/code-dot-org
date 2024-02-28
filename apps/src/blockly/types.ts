@@ -30,7 +30,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {Abstract} from 'blockly/core/events/events_abstract';
-import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
+//import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
@@ -87,7 +87,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   levelBlockIds: string[];
   isStartMode: boolean;
   isToolboxMode: boolean;
-  toolboxBlocks: Element | ToolboxDefinition | undefined;
+  toolboxBlocks: string | undefined;
   useModalFunctionEditor: boolean;
   functionEditor: FunctionEditor;
   mainBlockSpace: ExtendedWorkspaceSvg;
@@ -235,7 +235,7 @@ export interface XmlBlockConfig {
 // This type is likely incomplete. We should add to it if we discover
 // more properties it contains.
 export interface JsonBlockConfig {
-  id: string;
+  id?: string;
   x?: number;
   y?: number;
   movable?: boolean;
@@ -244,6 +244,10 @@ export interface JsonBlockConfig {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
   type: string;
+  fields: {[key: string]: {name: string; type: string; id: string}};
+  inputs: {[key: string]: {block: JsonBlockConfig}};
+  next: {block: JsonBlockConfig};
+  kind: string;
 }
 
 export interface Collider {
@@ -283,3 +287,5 @@ export interface ProcedureBlockConfiguration {
 export type ProcedureType =
   | BLOCK_TYPES.procedureDefinition
   | BLOCK_TYPES.behaviorDefinition;
+
+export type BlockColor = [number, number, number];
