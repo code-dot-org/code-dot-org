@@ -2,6 +2,14 @@ import _ from 'lodash';
 import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
 import {shouldSkipHiddenWorkspace} from '../utils';
+import {Block, WorkspaceSvg} from 'blockly';
+import {
+  Collider,
+  ExtendedBlockSvg,
+  JsonBlockConfig,
+  WorkspaceSerialization,
+  XmlBlockConfig,
+} from '../types';
 
 const {
   BLOCK_HEADER_HEIGHT,
@@ -14,7 +22,9 @@ const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
 const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
 
-export function hasBlocks(workspaceSerialization) {
+export function hasBlocks(
+  workspaceSerialization: WorkspaceSerialization | null
+) {
   return (
     !_.isEmpty(workspaceSerialization) &&
     _.has(workspaceSerialization, 'blocks.blocks')
@@ -28,20 +38,20 @@ export function hasBlocks(workspaceSerialization) {
  * @param {Blockly.Workspace} workspace - The current Blockly workspace
  * @returns {number} Desired coordinate (as far left/right as possible depending on whether we are in LTR or RTL)
  */
-function getXCoordinate(block, workspace) {
+function getXCoordinate(block: ExtendedBlockSvg, workspace: WorkspaceSvg) {
   const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
   const width = viewWidth || contentWidth;
 
   // SVG frames need additional padding so their edges don't touch the edge of the workspace
-  let horizontalOffset = block.functionalSvg_
+  const horizontalOffset = block.functionalSvg_
     ? SVG_FRAME_SIDE_PADDING + padding
     : padding;
   // If the workspace is RTL, horizontally mirror the starting position
   return workspace.RTL ? width - horizontalOffset : horizontalOffset;
 }
 
-function getYCoordinate(block) {
+function getYCoordinate(block: ExtendedBlockSvg) {
   return block.functionalSvg_
     ? WORKSPACE_PADDING + SVG_FRAME_TOP_PADDING
     : WORKSPACE_PADDING;
@@ -53,7 +63,7 @@ function getYCoordinate(block) {
  * @param {Blockly.Block} block - The block for which to determine vertical spacing
  * @returns {number} Vertical space in pixels; either the default or the default plus extra to accomodate an SVG frame.
  */
-function getSpaceBetweenBlocks(block) {
+function getSpaceBetweenBlocks(block: ExtendedBlockSvg) {
   let verticalSpace = VERTICAL_SPACE_BETWEEN_BLOCKS;
   if (block.functionalSvg_) {
     verticalSpace += SVG_FRAME_TOP_PADDING;
@@ -68,7 +78,7 @@ function getSpaceBetweenBlocks(block) {
  * for an embedded workspace for not.
  * @returns {json} stateToLoad - modern workspace serialization
  */
-export function convertXmlToJson(xml, embedded) {
+export function convertXmlToJson(xml: Document, embedded: boolean) {
   const tempWorkspace = new Blockly.Workspace();
 
   // The temporary workspace should mirror the embedded state of the workspace
@@ -87,7 +97,8 @@ export function convertXmlToJson(xml, embedded) {
   if (xmlBlocks.length && hasBlocks(stateToLoad)) {
     // Create a map of ids (key) and block serializations (value).
     const blockIdMap = stateToLoad.blocks.blocks.reduce(
-      (map, blockJson) => map.set(blockJson.id, blockJson),
+      (map: Map<string, JsonBlockConfig>, blockJson: JsonBlockConfig) =>
+        map.set(blockJson.id, blockJson),
       new Map()
     );
 
@@ -102,7 +113,10 @@ export function convertXmlToJson(xml, embedded) {
  * @param {Array<Object>} xmlBlocks - an array of "block" objects containing a block and x/y coordinates
  * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and serialized blocks (values)
  */
-export function addPositionsToState(xmlBlocks, blockIdMap) {
+export function addPositionsToState(
+  xmlBlocks: XmlBlockConfig[],
+  blockIdMap: Map<string, JsonBlockConfig>
+) {
   xmlBlocks.forEach(xmlBlock => {
     const blockJson = blockIdMap.get(xmlBlock.blockly_block.id);
     if (blockJson) {
@@ -117,12 +131,14 @@ export function addPositionsToState(xmlBlocks, blockIdMap) {
  * Position blocks on a workspace (if they do not already have positions)
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
  */
-export function positionBlocksOnWorkspace(workspace) {
+export function positionBlocksOnWorkspace(workspace: WorkspaceSvg) {
   if (!workspace.rendered) {
     return;
   }
 
-  const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
+  const topBlocks = workspace.getTopBlocks(
+    SORT_BY_POSITION
+  ) as ExtendedBlockSvg[];
   // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
   const orderedBlocksSetupFirst = partitionJsonBlocksByType(
     topBlocks,
@@ -138,11 +154,14 @@ export function positionBlocksOnWorkspace(workspace) {
  * @param {Array<Blockly.Block>} blocks - The blocks to position
  * @param {Blockly.Workspace} workspace - The current Blockly workspace
  */
-function adjustBlockPositions(blocks, workspace) {
+function adjustBlockPositions(
+  blocks: ExtendedBlockSvg[],
+  workspace: WorkspaceSvg
+) {
   // Ordered colliders tracks the areas occupied by existing blocks; new blocks
   // are added to maintain top-to-bottom ordering
-  let orderedColliders = [];
-  let blocksToPlace = [];
+  const orderedColliders: Collider[] = [];
+  const blocksToPlace: ExtendedBlockSvg[] = [];
   blocks.forEach(block => {
     if (isBlockAtEdge(block)) {
       blocksToPlace.push(block);
@@ -166,7 +185,7 @@ function adjustBlockPositions(blocks, workspace) {
 
     // Set initial position; collision area must be updated to account for new position
     // every time block is moved
-    block.moveTo({x, y});
+    block.moveTo(new Blockly.utils.Coordinate(x, y));
     let collider = getCollider(block);
 
     orderedColliders.forEach(orderedCollider => {
@@ -175,7 +194,7 @@ function adjustBlockPositions(blocks, workspace) {
           orderedCollider.y +
           orderedCollider.height +
           getSpaceBetweenBlocks(block);
-        block.moveTo({x, y});
+        block.moveTo(new Blockly.utils.Coordinate(x, y));
         collider = getCollider(block);
       }
     });
@@ -192,7 +211,7 @@ function adjustBlockPositions(blocks, workspace) {
  * @property {number} height - The height of the block, including the SVG frame height
  * @property {number} width - The width of the block, accounting for SVG frame width on either side
  */
-function getCollider(block) {
+function getCollider(block: ExtendedBlockSvg): Collider {
   const position = block.getRelativeToSurfaceXY();
   const size = block.getHeightWidth();
 
@@ -218,7 +237,7 @@ function getCollider(block) {
  * @param {Collider} item - A new collider to add to the array in its sorted position
  * NOTE: This method mutates the input array.
  */
-export function insertCollider(colliders, newCollider) {
+export function insertCollider(colliders: Collider[], newCollider: Collider) {
   const newColliderBottom = newCollider.y + newCollider.height;
   // Returns the index of the first element whose bottom edge is below this one
   const index = colliders.findIndex(currentCollider => {
@@ -235,7 +254,7 @@ export function insertCollider(colliders, newCollider) {
  * @param {Collider} collider2
  * @returns {boolean} True if the two colliders (representing blocks) overlap
  */
-export function isOverlapping(collider1, collider2) {
+export function isOverlapping(collider1: Collider, collider2: Collider) {
   // Checks if the left edge of collider1 is to the left of the right edge of the other block
   // and the right edge of collider1 is to the right of the left edge of collider2
   const overlapX =
@@ -255,13 +274,15 @@ export function isOverlapping(collider1, collider2) {
  * @param {Blockly.Block} block - the block being considered
  * @returns {boolean} - true if the block is at the edge of the workspace
  */
-export function isBlockAtEdge(block) {
-  const {defaultX, defaultY} = getDefaultLocation(block.workspace);
+export function isBlockAtEdge(block: Block) {
+  const {defaultX, defaultY} = getDefaultLocation(
+    block.workspace as WorkspaceSvg
+  );
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   return x === defaultX || y === defaultY;
 }
 
-export const getDefaultLocation = workspaceOverride => {
+export const getDefaultLocation = (workspaceOverride?: WorkspaceSvg) => {
   const workspace = workspaceOverride || Blockly.getMainWorkspace();
   const isRTL = workspace.RTL;
 
@@ -274,7 +295,9 @@ export const getDefaultLocation = workspaceOverride => {
 
 // See addEditorWorkspaceBlockConfig on the FunctionEditor for
 // the list of properties to undo here
-export const resetEditorWorkspaceBlockConfig = (blocks = []) =>
+export const resetEditorWorkspaceBlockConfig = (
+  blocks: JsonBlockConfig[] = []
+) =>
   blocks.forEach(block => {
     const {defaultX, defaultY} = getDefaultLocation();
     block.x = defaultX;
@@ -295,11 +318,11 @@ export const resetEditorWorkspaceBlockConfig = (blocks = []) =>
  * @returns {Object[]} A new array of JSON blocks partitioned based on their types.
  */
 export function partitionJsonBlocksByType(
-  blocks = [],
-  prioritizedBlockTypes = []
+  blocks: ExtendedBlockSvg[] = [],
+  prioritizedBlockTypes: string[] = []
 ) {
-  const prioritizedBlocks = [];
-  const remainingBlocks = [];
+  const prioritizedBlocks: ExtendedBlockSvg[] = [];
+  const remainingBlocks: ExtendedBlockSvg[] = [];
 
   blocks.forEach(block => {
     const blockType = block.type;
@@ -317,7 +340,7 @@ export function partitionJsonBlocksByType(
  * @param {Blockly.Workspace} workspace - The workspace to serialize
  * @returns {Object} The combined JSON serialization of the workspace and the hidden definition workspace.
  */
-export function getProjectSerialization(workspace) {
+export function getProjectSerialization(workspace: WorkspaceSvg) {
   const workspaceSerialization =
     Blockly.serialization.workspaces.save(workspace);
 
@@ -331,7 +354,7 @@ export function getProjectSerialization(workspace) {
 
   // Blocks rendered in the hidden workspace get extra properties that need to be
   // removed so they don't apply if the block moves to the main workspace on subsequent loads
-  if (hasBlocks(hiddenWorkspaceSerialization)) {
+  if (hiddenWorkspaceSerialization && hasBlocks(hiddenWorkspaceSerialization)) {
     resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
   }
 
@@ -352,10 +375,11 @@ export function getProjectSerialization(workspace) {
  * necessarily mutually exclusive.)
  */
 export function getCombinedSerialization(
-  primaryWorkspaceSerialization,
-  secondaryWorkspaceSerialization
+  primaryWorkspaceSerialization: WorkspaceSerialization,
+  secondaryWorkspaceSerialization: WorkspaceSerialization | null
 ) {
   if (
+    !secondaryWorkspaceSerialization ||
     !hasBlocks(secondaryWorkspaceSerialization) ||
     !hasBlocks(primaryWorkspaceSerialization)
   ) {
@@ -386,7 +410,7 @@ export function getCombinedSerialization(
  * @param {string} functionsXml - The XML representation of functions to convert.
  * @returns {Object} - JSON representation of the functions.
  */
-export function convertFunctionsXmlToJson(functionsXml) {
+export function convertFunctionsXmlToJson(functionsXml: string) {
   const parser = new DOMParser();
   const xml = parser.parseFromString(`<xml>${functionsXml}</xml>`, 'text/xml');
   const tempWorkspace = new Blockly.Workspace();
@@ -405,13 +429,21 @@ export function convertFunctionsXmlToJson(functionsXml) {
  * @param {Object} projectState - The saved project in JSON (blocks and procedures).
  * @param {Object} proceduresState - The shared procedures in JSON (blocks and procedures).
  * @returns {Object} - The updated project state with shared procedures appended.
+ * TODO: define a type for projectState and proceduresState. Blockly defines these as any.
  */
-export function appendProceduresToState(projectState, proceduresState) {
+export function appendProceduresToState(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  projectState: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  proceduresState: any
+) {
   const projectBlocks = projectState.blocks?.blocks || [];
   const projectProcedures = projectState.procedures || [];
 
-  const sharedBlocks = proceduresState.blocks?.blocks || [];
-  const sharedProcedures = proceduresState.procedures || [];
+  // TODO: define these types better.
+  const sharedBlocks =
+    (proceduresState.blocks?.blocks as JsonBlockConfig[]) || [];
+  const sharedProcedures = (proceduresState.procedures as {id: string}[]) || [];
 
   sharedBlocks.forEach(block => {
     const {behaviorId, procedureId} = block.extraState;
@@ -430,7 +462,9 @@ export function appendProceduresToState(projectState, proceduresState) {
 }
 
 // Function to check if a block with the given behaviorId exists in the project
-function blockExists(behaviorId, projectBlocks) {
+// TODO: define type for projectBlocks.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function blockExists(behaviorId: string, projectBlocks: any[]) {
   return projectBlocks.some(
     block =>
       block.type === BLOCK_TYPES.behaviorDefinition &&
