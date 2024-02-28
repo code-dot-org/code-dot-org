@@ -18,9 +18,11 @@ video_player: false
 - banner_body = capture_haml do
   Bringing together 100 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make computer science a fundamental part of K-12 education.
 
-  .join-now
-    %a.link-button{href: "https://bit.ly/joinadvocacycoalition", target: "_blank"}
+  .button-wrapper
+    %a.link-button{href: "https://bit.ly/joinadvocacycoalition", target: "_blank", rel: "noopener noreferrer"}
       Join now
+    %a.link-button{href: "/coalition"}
+      See current members
 
 #homepage
 
@@ -74,8 +76,4 @@ video_player: false
         =hoc_s(:teach_ai_button_label)
 
     .coalition
-      %h2 Our Coalition
-      .centered
 
-      = view :about_logos, logos: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacy')
-      = view :about_people, people: DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'advocacylist')
