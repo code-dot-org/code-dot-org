@@ -2,6 +2,7 @@ import {
   IMPORTANT_TOPICS,
   UTC_PUBLISHED_DATE_FORMAT,
   TEST_RECOMMENDER_SCORING,
+  SIMILAR_RECOMMENDER_SCORING,
 } from './curriculumRecommenderConstants';
 import moment from 'moment';
 
@@ -14,6 +15,62 @@ const now = moment().utc();
  * have been scored, the recommender returns an array of the passed-in curricula sorted in descending order by score (ties are broken by
  * prioritizing featured curricula and more recently published curricula).
  */
+export const getSimilarRecommendations = (
+  curricula,
+  duration,
+  marketingInitiative,
+  schoolSubjects,
+  csTopics
+) => {
+  const curriculaScores = [];
+  curricula.forEach(curriculum => {
+    let score = 0;
+    // Add points if given curriculum has the desired duration.
+    score += hasDesiredDuration(curriculum, duration)
+      ? SIMILAR_RECOMMENDER_SCORING['hasDesiredDuration']
+      : 0;
+    // Add points if given curriculum has the desired marketing initiative.
+    score += hasDesiredMarketingInitiative(curriculum, marketingInitiative)
+      ? SIMILAR_RECOMMENDER_SCORING['hasDesiredMarketingInitiative']
+      : 0;
+    // Add points for each overlapping desired school subject. If no overlapping school
+    // subjects, then add points if the given curriculum has any school subjects.
+    const numOverlappingSubjects = numOverlappingDesiredSchoolSubjects(
+      curriculum,
+      schoolSubjects
+    );
+    if (numOverlappingSubjects === 0) {
+      score += hasAnySchoolSubject(curriculum)
+        ? SIMILAR_RECOMMENDER_SCORING['hasAnySchoolSubject']
+        : 0;
+    } else {
+      score +=
+        SIMILAR_RECOMMENDER_SCORING['overlappingDesiredSchoolSubject'] *
+        numOverlappingSubjects;
+    }
+    // Add points for each overlapping desired CS topic.
+    score +=
+      numOverlappingDesiredTopics(curriculum, csTopics) *
+      SIMILAR_RECOMMENDER_SCORING['overlappingDesiredTopic'];
+    // Add points if given curriculum has an important topic that isn't one of the
+    // desired ones.
+    score += hasImportantButNotDesiredTopic(curriculum, csTopics)
+      ? SIMILAR_RECOMMENDER_SCORING['hasImportantButNotDesiredTopic']
+      : 0;
+    // Add points if given curriculum was published within 2 years ago, and add more
+    // points if it was published within 1 year ago.
+    const publishedYearsAgo = publishedNumYearsAgo(curriculum);
+    if (publishedYearsAgo < 2) {
+      score +=
+        publishedYearsAgo < 1
+          ? SIMILAR_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
+          : SIMILAR_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo'];
+    }
+    curriculaScores.push([curriculum, score]);
+  });
+  return sortRecommendations(curriculaScores).map(curr => curr[0]);
+};
+
 export const getTestRecommendations = (
   curricula,
   duration,
@@ -59,12 +116,12 @@ export const getTestRecommendations = (
     // Add points if given curriculum was published within 2 years ago, and add more
     // points if it was published within 1 year ago.
     const publishedYearsAgo = publishedNumYearsAgo(curriculum);
-    score +=
-      publishedYearsAgo < 2
-        ? publishedYearsAgo < 1
+    if (publishedYearsAgo < 2) {
+      score +=
+        publishedYearsAgo < 1
           ? TEST_RECOMMENDER_SCORING['publishedWithinOneYearAgo']
-          : TEST_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo']
-        : 0;
+          : TEST_RECOMMENDER_SCORING['publishedWithinTwoYearsAgo'];
+    }
     curriculaScores.push([curriculum, score]);
   });
   return sortRecommendations(curriculaScores).map(curr => curr[0]);

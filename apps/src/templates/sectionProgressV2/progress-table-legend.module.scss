@@ -8,10 +8,18 @@
   margin-inline-end: 12px;
 }
 
+.iconKeyHeader {
+  display: flex;
+}
+
 .iconKeyTitle {
   cursor: pointer;
   width: fit-content;
   padding-inline-end: 8px;
+}
+
+.iconKeyMoreDetailsLink {
+  margin: 0 0 0.5em 20px;
 }
 
 .legend {
@@ -57,6 +65,8 @@
 }
 
 .labelText {
+  height: 22px;
+  line-height: 22px;
   margin-bottom: 0;
 }
 
@@ -68,9 +78,9 @@
 }
 
 .legendIcon {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
   text-align: center;
 }
 

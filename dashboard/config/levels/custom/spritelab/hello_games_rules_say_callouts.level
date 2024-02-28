@@ -24,7 +24,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Program the player to say the rules & add more sprites.**\r\n\r\n- Make sure to select the correct costume on the <code style=\"color:black; background-color:#99CEDB\">say</code> block\r\n- You can choose how many extra sprites to add",
+    "long_instructions": "**Program the player to say how to play & add more sprites.**\r\n\r\n- Make sure to select the correct costume on the <code style=\"color:black; background-color:#99CEDB\">say</code> block\r\n- You can choose how many extra sprites to add",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -45,7 +45,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-26T20:51:15.705+00:00\",\"changed\":[\"cloned from \\\"hello_games_rules_say_b\\\"\"],\"cloned_from\":\"hello_games_rules_say_b\"},{\"changed_at\":\"2024-02-26 22:38:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-26T20:51:15.705+00:00\",\"changed\":[\"cloned from \\\"hello_games_rules_say_b\\\"\"],\"cloned_from\":\"hello_games_rules_say_b\"},{\"changed_at\":\"2024-02-26 22:38:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 17:23:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:33:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
