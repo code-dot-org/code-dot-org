@@ -168,6 +168,8 @@ class CertificateImage
         apply_text(image, name, 62, 'Helvetica bold', 'rgb(118,101,160)', 0, -248, CERT_NAME_AREA_WIDTH, 70)
 
         course_title_width = 1400
+        # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
+        # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
         if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
           unit = unit_or_unit_group
           unit_group = unit.unit_group
@@ -188,7 +190,8 @@ class CertificateImage
         donor_text_y_offset = 611
       else # all other courses use a certificate image where the course name is also blank
         apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
-        # The area in pixels which will display the course title.
+        # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
+        # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
         if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
           unit = unit_or_unit_group
           unit_group = unit.unit_group
