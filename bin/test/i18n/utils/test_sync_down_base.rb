@@ -262,26 +262,30 @@ describe I18n::Utils::SyncDownBase do
       _(crowdin_client).must_equal expected_i18n_utils_crowdin_client_instance
     end
   end
-  # This test fails in the test environment while passing locally and in Drone.
-  # For some reason, the test environment is not loading the CdoLanguages class.
-  # describe '#cdo_languages' do
-  #   let(:cdo_languages) {described_instance.send(:cdo_languages)}
-  #
-  #   let(:crowdin_client) {stub(:crowdin_client)}
-  #
-  #   before do
-  #     described_instance.stubs(:crowdin_client).returns(crowdin_client)
-  #   end
-  #
-  #   it 'returns CDO languages supported by the Crowdin project' do
-  #     available_crowdin_lang_id = 'uk'
-  #
-  #     crowdin_client.expects(:get_project).returns('targetLanguages' => [{'id' => available_crowdin_lang_id}])
-  #
-  #     _(cdo_languages.first&.class&.name).must_equal 'CdoLanguages'
-  #     _(cdo_languages.map {|lang| lang[:crowdin_code_s]}).must_equal [available_crowdin_lang_id]
-  #   end
-  # end
+
+  describe '#cdo_languages' do
+    let(:cdo_languages) {described_instance.send(:cdo_languages)}
+
+    let(:crowdin_client) {stub(:crowdin_client)}
+
+    before do
+      described_instance.stubs(:crowdin_client).returns(crowdin_client)
+    end
+
+    it 'returns CDO languages supported by the Crowdin project' do
+      available_crowdin_lang_id = 'uk'
+
+      crowdin_client.
+        expects(:get_project).
+        returns('targetLanguages' => [{'id' => available_crowdin_lang_id}])
+
+      I18nScriptUtils.
+        expects(:cdo_languages).
+        returns([{crowdin_code_s: 'unavailable_crowdin_lang_id'}, {crowdin_code_s: available_crowdin_lang_id}])
+
+      _(cdo_languages).must_equal [{crowdin_code_s: available_crowdin_lang_id}]
+    end
+  end
 
   describe '#source_files' do
     let(:source_files) {described_instance.send(:source_files, crowdin_src)}
@@ -295,11 +299,12 @@ describe I18n::Utils::SyncDownBase do
     end
 
     it 'returns data of all the source files in the root dir' do
-      source_files_data = ['expected_source_file_data']
+      source_file1_data = {'path' => 'expected_source_file1_path'}
+      source_file2_data = {'path' => 'expected_source_file2_path'}
 
-      crowdin_client.expects(:list_source_files).with(crowdin_src).returns(source_files_data)
+      crowdin_client.expects(:list_source_files).with(crowdin_src).returns([source_file2_data, source_file1_data])
 
-      _(source_files).must_equal source_files_data
+      _(source_files).must_equal [source_file1_data, source_file2_data]
     end
 
     context 'when the download source is a file' do
@@ -318,7 +323,7 @@ describe I18n::Utils::SyncDownBase do
       let(:crowdin_src) {'/expected_crowdin_source_path'}
 
       it 'returns data of all the source files in the dir' do
-        source_files_data = ['expected_source_file_data']
+        source_files_data = ['path' => 'expected_source_file_data']
 
         crowdin_client.expects(:list_source_files).with(crowdin_src).returns(source_files_data)
 

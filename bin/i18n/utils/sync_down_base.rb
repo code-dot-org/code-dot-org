@@ -63,7 +63,7 @@ module I18n
           source_files = source_files(download_path[:crowdin_src])
 
           progress_bar = I18nScriptUtils.create_progress_bar(
-            title: "#{self.class.name}[#{File.join(crowdin_project, download_path[:crowdin_src])}]",
+            title: "#{self.class.name}[#{File.join(crowdin_project, download_path[:crowdin_src].to_s)}]",
             total: cdo_languages.size * source_files.size,
             format: '%t: |%W| %c/%C %a',
           )
@@ -121,7 +121,7 @@ module I18n
 
       def source_files(crowdin_src)
         if crowdin_src.nil? || File.extname(crowdin_src).empty?
-          crowdin_client.list_source_files(crowdin_src)
+          crowdin_client.list_source_files(crowdin_src).sort_by {|source_file| source_file['path']}
         else
           [crowdin_client.get_source_file(crowdin_src)]
         end

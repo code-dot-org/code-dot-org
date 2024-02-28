@@ -6,9 +6,6 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/languages'
 
-require 'cdo/crowdin/legacy_utils'
-require 'cdo/crowdin/project'
-
 require 'fileutils'
 require 'json'
 require 'parallel'

@@ -98,7 +98,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'behavior_caller_get_def_block_mixin',
-      'modal_procedures_no_destroy',
       'behavior_create_def_mixin',
     ],
     mutator: 'behavior_get_mutator',
