@@ -766,29 +766,6 @@ const STANDARD_INPUT_TYPES = {
         };
       };
 
-      // The following functions make sure that the variable naming/renaming options work for this block
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue, block);
-        }
-        block.superSetTitleValue(newValue, name);
-      };
-
       // Add the variable field to the block
       currentInputRow
         .appendField(inputConfig.label)
