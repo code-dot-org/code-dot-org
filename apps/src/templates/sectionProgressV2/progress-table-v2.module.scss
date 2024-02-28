@@ -41,6 +41,7 @@ $level-cell-width: 52;
 .gridBox {
   border-top: 1px solid $light_gray_200;
   border-left: 1px solid $light_gray_200;
+  background-color: white;
 
   &Student {
     height: 47px;
@@ -103,10 +104,13 @@ $level-cell-width: 52;
   }
   
   &UnitSelector {
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    line-height: 32px;
+
+    &Dropdown {
+      margin-inline-start: 8px;
+    }
   }
 }
 
