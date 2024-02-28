@@ -122,7 +122,7 @@
 - if current_user.teacher? && Policies::Lti.lti?(current_user)
   %div#lti-sync-settings{
     data: {
-      lti_roster_sync_enabled: current_user.lti_roster_sync_enabled,
+      lti_roster_sync_enabled: current_user.lti_roster_sync_enabled.to_s,
     }
   }
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, id: 'lti-sync-settings-form'}) do |f|

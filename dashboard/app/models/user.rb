@@ -305,6 +305,10 @@ class User < ApplicationRecord
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
 
+  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
+    self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  end
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(
