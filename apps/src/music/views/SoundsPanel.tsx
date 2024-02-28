@@ -1,4 +1,4 @@
-import React, {useCallback, useState, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
@@ -25,6 +25,7 @@ interface FolderPanelRowProps {
   currentValue: SoundFolder;
   onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
+  currentFolderRefCallback: (ref: HTMLDivElement) => void;
 }
 
 const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
@@ -34,6 +35,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
   currentValue,
   onSelect,
   onPreview,
+  currentFolderRefCallback,
 }) => {
   const previewSound = folder.sounds.find(sound => sound.preview);
   const soundPath = previewSound && folder.id + '/' + previewSound.src;
@@ -61,6 +63,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
         classNames(styles.folderRow, isSelected && styles.folderRowSelected)
       )}
       onClick={() => onSelect(folder)}
+      ref={isSelected ? currentFolderRefCallback : null}
     >
       <div className={styles.folderRowLeft}>
         {imageSrc && (
@@ -97,6 +100,7 @@ interface SoundsPanelRowProps {
   sound: SoundData;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
+  currentSoundRefCallback: (ref: HTMLDivElement) => void;
 }
 
 const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
@@ -106,6 +110,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   sound,
   onSelect,
   onPreview,
+  currentSoundRefCallback,
 }) => {
   const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
@@ -129,6 +134,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         isSelected && styles.soundRowSelected
       )}
       onClick={() => onSelect(folder.id + '/' + sound.src)}
+      ref={isSelected ? currentSoundRefCallback : null}
     >
       <div className={styles.soundRowLeft}>
         <img src={typeIconPath} className={styles.typeIcon} alt="" />
@@ -172,14 +178,16 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const folders = library.getAllowedSounds(undefined);
   const libraryGroupPath = library.libraryJson.id;
 
-  const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(folders[0]);
+  const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
+    library.getFolderForId(currentValue) || folders[0]
+  );
   const [mode, setMode] = useState<string>('packs');
   const [filter, setFilter] = useState<string>('all');
 
   const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
-  useRef(null);
+    useRef(null);
   const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
-  useRef(null);
+    useRef(null);
 
   const onModeChange = (value: string) => {
     setMode(value);
@@ -187,6 +195,19 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   const onFilterChange = (value: string) => {
     setFilter(value);
+  };
+
+  useEffect(() => {
+    currentFolderRef.current?.scrollIntoView();
+    currentSoundRef.current?.scrollIntoView();
+  }, []);
+
+  const currentFolderRefCallback = (ref: HTMLDivElement) => {
+    currentFolderRef.current = ref;
+  };
+
+  const currentSoundRefCallback = (ref: HTMLDivElement) => {
+    currentSoundRef.current = ref;
   };
 
   /*
@@ -266,6 +287,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                   currentValue={selectedFolder}
                   onSelect={setSelectedFolder}
                   onPreview={onPreview}
+                  currentFolderRefCallback={currentFolderRefCallback}
                 />
               );
             })}
@@ -282,6 +304,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 sound={sound}
                 onSelect={onSelect}
                 onPreview={onPreview}
+                currentSoundRefCallback={currentSoundRefCallback}
               />
             );
           })}
