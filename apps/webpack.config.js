@@ -287,7 +287,7 @@ const WEBPACK_BASE_CONFIG = {
         },
       },
       {
-        test: /\.[jt]sx?$/,
+        test: /\.tsx?$/,
         use: [
           {
             loader: 'ts-loader',

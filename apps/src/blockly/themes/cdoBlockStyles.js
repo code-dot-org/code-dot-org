@@ -77,6 +77,4 @@ const cdoBlockStyles = {
   ...labBlockStyles,
 };
 
-export default cdoBlockStyles;
-
-export const styleTypes = Object.keys(cdoBlockStyles);
+module.exports = cdoBlockStyles;

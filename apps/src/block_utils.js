@@ -1,9 +1,10 @@
 import _ from 'lodash';
-import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
+import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
 import xml from './xml';
 import MetricsReporter from './lib/metrics/MetricsReporter';
 import {EMPTY_OPTION} from './blockly/constants';
 
+const styleTypes = Object.keys(cdoBlockStyles);
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 
 /**

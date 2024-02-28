@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import EmojiIcon from '@cdo/apps/dance/ai/EmojiIcon';
+window.EmojiIcon = require('@cdo/apps/dance/ai/EmojiIcon');
 
-const HomeTest: React.FunctionComponent = () => {
-  const [count, setCount] = useState<number>(0);
+const HomeTest = () => {
+  // const HomeTest: React.FunctionComponent = () => {
+  //   const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -12,7 +15,7 @@ const HomeTest: React.FunctionComponent = () => {
           setCount(count + 1);
         }}
       />
-      <h1>Ben {count}</h1>
+      <h1>Seth {count}</h1>
       <EmojiIcon item={{id: 'cyclone', emoji: '🌀'}} />
     </>
   );
