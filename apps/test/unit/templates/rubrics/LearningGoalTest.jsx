@@ -227,7 +227,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Evaluate');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Evaluate');
     wrapper.unmount();
   });
 
@@ -244,7 +244,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Approve');
     wrapper.unmount();
   });
 
