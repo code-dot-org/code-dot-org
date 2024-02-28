@@ -89,6 +89,7 @@ class ProjectCardGrid extends Component {
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
+              hideViewMoreLink={true}
               hideWithoutThumbnails={true}
             />
           </div>
