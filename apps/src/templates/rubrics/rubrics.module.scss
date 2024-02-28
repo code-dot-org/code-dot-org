@@ -330,30 +330,8 @@ button.rubricHeaderTab {
   }
 }
 
-// TODO: figure out if this makes sense and how to merge it with aiTokenText below
-.aiToken {
-  display: flex;
-  height: 20px;
-  padding: 3px 8px 0;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-  border-radius: 30px;
-  background: $ai_rubric_cyan;
-}
-
-p.aiTokenText {
-  font-size: 0.7rem;
-  margin-bottom: 0;
-}
-
 p.feedbackIndicatorText {
   margin-bottom: 0;
-}
-
-.aiTokenText {
-  color: $product_affirmative_default;
 }
 
 h2.studentName {
@@ -533,6 +511,12 @@ p.errorMessage {
 
   p {
     margin: 0;
+  }
+}
+
+.aiAssessmentScoreText {
+  strong::after {
+    content: ' ';
   }
 }
 
@@ -777,7 +761,6 @@ p.aiFeedbackRadioBoxText {
   background: $neutral_light;
   width: 100%;
   min-width: 100%;
-  padding-top: 16px;
 }
 
 .learningGoalButton {
@@ -884,19 +867,20 @@ h5.learningGoalsHeaderTextBody {
 .aiToken {
   display: flex;
   height: 20px;
-  margin: 0;
   padding: 2px 12px 2px 12px;
   justify-content: center;
   align-items: center;
   gap: 4px;
   white-space: nowrap;
   border-radius: 30px;
-  background: #3CFFF8;
+  background: $ai_rubric_cyan;
 }
 
 p.aiTokenText {
-  margin-bottom: 0;
+  color: $product_affirmative_default;
+  font-size: 0.7rem;
   line-height: 1rem;
+  margin-bottom: 0;
 }
 
 .progressRing {
@@ -974,8 +958,7 @@ p.evidenceLevelHeaderText {
   }
 }
 
-// TODO: update to .evidenceLevelSuggested
-.aiEvalSuggestion {
+.evidenceLevelSuggested {
   border-radius: 100px;
   border: 1px solid $light_black;
   background: $neutral_white;

@@ -74,7 +74,7 @@ export default function EvidenceLevelsForTeachersV2({
                     ? style.evidenceLevelSelected
                     : passFail.includes(evidenceLevel.understanding)
                     ? classnames(
-                        style.evidenceLevelHighlighted,
+                        style.evidenceLevelSuggested,
                         style.evidenceLevelUnselected
                       )
                     : style.evidenceLevelUnselected,

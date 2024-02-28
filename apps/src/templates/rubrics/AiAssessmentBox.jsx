@@ -41,8 +41,9 @@ export default function AiAssessmentBox({
     <div className={style.aiAssessmentInfoBlock}>
       {isAiAssessed && (
         <div className={style.aiAssessmentInfoRow}>
-          <BodyFourText>
-            <StrongText>Score:</StrongText>
+          <BodyFourText className={style.aiAssessmentScoreText}>
+            {/* Score: */}
+            <StrongText>{i18n.aiAssessmentScore()}</StrongText>
             <span>{studentAchievement()}</span>
           </BodyFourText>
           {aiConfidence && <AiConfidenceBox aiConfidence={aiConfidence} />}
@@ -58,14 +59,30 @@ export default function AiAssessmentBox({
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
         <div>
           <BodyFourText className={style.aiAssessmentEvidenceBlock}>
-            <StrongText>Evidence:</StrongText>
+            {/* Evidence: */}
+            <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>
           </BodyFourText>
           <ul>
-            {aiEvidence.map((info, i) => (
-              <li key={i}>
-                Lines {info.firstLine}-{info.lastLine}: {info.message}
-              </li>
-            ))}
+            {aiEvidence.map(
+              (info, i) =>
+                info &&
+                info.firstLine && (
+                  <li key={i}>
+                    {/* Lines [firstLine]-[lastLine]: [message] */}
+                    {info.firstLine === info.lastLine &&
+                      i18n.aiAssessmentEvidenceLine({
+                        lineNumber: info.firstLine,
+                        feedbackForLine: info.message,
+                      })}
+                    {info.firstLine !== info.lastLine &&
+                      i18n.aiAssessmentEvidenceLines({
+                        firstLineNumber: info.firstLine,
+                        lastLineNumber: info.lastLine,
+                        feedbackForLines: info.message,
+                      })}
+                  </li>
+                )
+            )}
           </ul>
         </div>
       )}
