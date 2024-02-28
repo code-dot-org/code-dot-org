@@ -106,26 +106,41 @@ export function stripUserCreated(xmlString: string) {
   return xmlString.replace(/usercreated="true"/gi, '');
 }
 
-export const BLOCK_TYPES = {
-  behaviorDefinition: 'behavior_definition',
-  danceWhenSetup: 'Dancelab_whenSetup',
-  procedureDefinition: 'procedures_defnoreturn',
-  whenRun: 'when_run',
-  behaviorGet: 'gamelab_behavior_get',
-  spriteParameterGet: 'sprite_parameter_get',
-  procedureCall: 'procedures_callnoreturn',
-};
+export enum BLOCK_TYPES {
+  behaviorDefinition = 'behavior_definition',
+  danceWhenSetup = 'Dancelab_whenSetup',
+  procedureDefinition = 'procedures_defnoreturn',
+  whenRun = 'when_run',
+  behaviorGet = 'gamelab_behavior_get',
+  spriteParameterGet = 'sprite_parameter_get',
+  procedureCall = 'procedures_callnoreturn',
+  variableGet = 'variables_get',
+  variableSet = 'variables_set',
+}
 
 // A list of block types that are procedure definitions. These are sorted
 // first when loading blocks so that we can set up the procedure map
 // correctly while using the shareable procedure blocks plugin.
-export const PROCEDURE_DEFINITION_TYPES = [
+export const PROCEDURE_DEFINITION_TYPES: string[] = [
   BLOCK_TYPES.behaviorDefinition,
   BLOCK_TYPES.procedureDefinition,
 ];
 
+// A list of blocks for getting and setting variables.
+export const VARIABLE_BLOCK_TYPES: string[] = [
+  BLOCK_TYPES.variableGet,
+  BLOCK_TYPES.variableSet,
+];
 // A list of block types associated with the Run button.
 export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.danceWhenSetup];
+
+export const WORKSPACE_EVENTS = {
+  MAIN_BLOCK_SPACE_CREATED: 'mainBlockSpaceCreated',
+  EVENT_BLOCKS_IMPORTED: 'blocksImported',
+  BLOCK_SPACE_CHANGE: 'blockSpaceChange',
+  BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
+  RUN_BUTTON_CLICKED: 'runButtonClicked',
+};
 
 // A map of user locales supported by Code.org to locales provided by Google Blockly.
 // For more information, see: https://github.com/google/blockly/tree/master/msg/json

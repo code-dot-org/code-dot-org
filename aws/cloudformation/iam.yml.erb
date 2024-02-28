@@ -306,8 +306,8 @@ roles = {
     GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref EngineerSecretsPolicy',
       '!Ref AthenaCloudwatchLogsQueryPolicy',
-      '!Ref DenySecretsPolicy',
     ]
   },
   EngineeringFullAccessRole: {
@@ -316,6 +316,8 @@ roles = {
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/PowerUserAccess',
       'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref EngineerSecretsPolicy',
+      '!Ref CloudformationPassRolePolicy',
     ]
   },
   EngineeringContributorRole: {
@@ -406,6 +408,32 @@ roles.each do |name, config| %>
         - Key: sqlworkbench-team
           Value: codedotorg
 <%- end -%>
+ 
+  CloudformationPassRolePolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: CloudformationPassRolePolicy
+      Path: /admin/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: iam:PassRole
+            Resource: '*'
+            Condition:
+              StringEquals:
+                iam:PassedToService: cloudformation.amazonaws.com
+          # Require CloudFormation Service Role on all stack operations.
+          - Effect: Deny
+            Action:
+              - cloudformation:CreateStack
+              - cloudformation:UpdateStack
+              - cloudformation:DeleteStack
+              - cloudformation:CreateChangeSet
+            NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
+            Condition:
+              StringNotEquals:
+                cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
 
   NoS3ForYouPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -592,16 +620,18 @@ roles.each do |name, config| %>
               - arn:aws:s3:::cdo-animation-library/*
               - arn:aws:s3:::cdo-sound-library/*
 
-  DenySecretsPolicy:
+  EngineerSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: DenySecretsPolicy
+      ManagedPolicyName: EngineerSecretsPolicy
       Path: /engineering/
       PolicyDocument:
         Version: 2012-10-17
         Statement:
           - Effect: Deny
-            Action: secretsmanager:GetSecretValue
+            Action:
+              - secretsmanager:GetSecretValue
+              - secretsmanager:DeleteSecret
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:production/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:levelbuilder/cdo/*
@@ -612,7 +642,6 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
-              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/adhoc-*
 
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy

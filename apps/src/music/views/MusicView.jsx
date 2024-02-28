@@ -381,8 +381,7 @@ class UnconnectedMusicView extends React.Component {
       this.executeCompiledSong().then(() => {
         // If code has changed mid-playback, clear and re-queue all events in the player
         if (this.props.isPlaying) {
-          this.player.stopAllSoundsStillToPlay();
-          this.player.playEvents(this.sequencer.getPlaybackEvents());
+          this.player.playEvents(this.sequencer.getPlaybackEvents(), true);
         }
       });
 

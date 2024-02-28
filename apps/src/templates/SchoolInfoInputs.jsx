@@ -125,6 +125,8 @@ export default class SchoolInfoInputs extends Component {
 
     return (
       <div style={{width: 600, ...this.props.styles}}>
+        <h5>{i18n.schoolInformationHeader()}</h5>
+        <hr />
         <CountryAutocompleteDropdown
           onChange={this.props.onCountryChange}
           value={this.props.country}
