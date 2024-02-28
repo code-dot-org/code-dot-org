@@ -442,7 +442,6 @@ export function appendProceduresToState(
   projectState: WorkspaceSerialization,
   proceduresState: WorkspaceSerialization
 ) {
-  console.log({projectState, proceduresState});
   const projectBlocks = projectState.blocks?.blocks || [];
   const projectProcedures = projectState.procedures || [];
 
