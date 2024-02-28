@@ -67,6 +67,7 @@ cron:
 - dashboard.plc_learning_module_tasks
 - dashboard.plc_tasks
 - dashboard.plc_user_course_enrollments
+- dashboard.potential_teachers
 - dashboard.channel_tokens
 - dashboard.schools
 - dashboard.school_infos
