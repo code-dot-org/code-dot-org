@@ -79,6 +79,10 @@ export default function RubricContainer({
       })}
     >
       <div className={style.rubricHeaderRedesign}>
+        <div className={style.rubricHeaderLeftSide}>
+          <FontAwesome icon="house" />
+          AI Teaching Assistant
+        </div>
         <div className={style.rubricHeaderRightSide}>
           <button
             type="button"
