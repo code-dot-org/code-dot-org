@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import HeaderBanner from '../HeaderBanner';
-import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 
 class Incubator extends Component {

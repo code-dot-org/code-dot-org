@@ -12,13 +12,13 @@
 
 %div.editorial-cards-wrapper
   - bring_cs_to_school_index.times do |index|
-    %div.flex-container.align-content-baseline.wrap
-      %figure
-        %img{src: bring_cs_to_school_img_src[index], alt: ""}
+    .flex-container.justify-space-between.align-content-baseline.wrap
       .content-wrapper
+        %img{src: bring_cs_to_school_img_src[index], alt: ""}
         %h3.heading-sm
           = bring_cs_to_school_title[index]
-        %p
+        %p.no-margin-bottom
           = bring_cs_to_school_desc[index]
+      .content-footer
         %a.link-button{href: bring_cs_to_school_url[index]}
           = bring_cs_to_school_button_label[index]
