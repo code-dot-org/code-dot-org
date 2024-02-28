@@ -6,7 +6,7 @@ import {
   BodyThreeText,
   BodyTwoText,
   Heading3,
-  Heading5,
+  Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -165,7 +165,7 @@ export default function RubricContent({
         )}
       </div>
       <div className={style.learningGoalsWrapper}>
-        <Heading5>{i18n.rubric()}</Heading5>
+        <Heading4>{i18n.rubric()}</Heading4>
         <LearningGoals
           open={open}
           learningGoals={rubric.learningGoals}
