@@ -303,7 +303,11 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'string'}
     assert_response :success
 
-    skip "FIXME: controller bug, create_record_where_foo_is(nil) and create_record_without_foo both fail to produce the expected value"
+    # skip "FIXME: controller bug, create_record_where_foo_is(nil) and create_record_without_foo both fail to produce the expected value"
+    # -[{"foo"=>"1", "id"=>1}, {"foo"=>"one", "id"=>2}, {"foo"=>"1", "id"=>3}, {"foo"=>"null", "id"=>4}, {"id"=>5},            {"foo"=>"false", "id"=>6}]
+    # +[{"id"=>1, "foo"=>"1"}, {"id"=>2, "foo"=>"one"}, {"id"=>3, "foo"=>"1"}, {"id"=>4, "foo"=>""},     {"id"=>5, "foo"=>""}, {"id"=>6, "foo"=>"false"}]
+    # -[{"foo"=>"1", "id"=>1}, {"foo"=>"one", "id"=>2}, {"foo"=>"1", "id"=>3}, {"foo"=>"null", "id"=>4}, {"id"=>5},                {"foo"=>"false", "id"=>6}]
+    # +[{"id"=>1, "foo"=>"1"}, {"id"=>2, "foo"=>"one"}, {"id"=>3, "foo"=>"1"}, {"id"=>4, "foo"=>"null"}, {"id"=>5, "foo"=>"null"}, {"id"=>6, "foo"=>"false"}]
     assert_equal [
       {"foo" => "1", "id" => 1},
       {"foo" => "one", "id" => 2},

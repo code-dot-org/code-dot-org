@@ -194,7 +194,11 @@ class DatablockStorageTable < ApplicationRecord
   def _coerce_type(value, column_type)
     case column_type
     when 'string'
-      value.to_s
+      if value.nil?
+        'null'
+      else
+        value.to_s
+      end
     when 'number'
       value.to_f
     when 'boolean'
@@ -211,7 +215,10 @@ class DatablockStorageTable < ApplicationRecord
 
     records.each do |record|
       # column type is one of: string, number, boolean, date
-      record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
+      # check if the ruby thing has the foo
+      unless column_type == 'string' && !record.key?(column_name)
+        record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
+      end
     end
   end
 
