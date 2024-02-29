@@ -27,7 +27,12 @@ export interface AichatLevelProperties extends LevelProperties {
   botDescription?: string;
   // ---
 
-  /** Initial AI customizations set by the level. */
+  /**
+   * Initial AI customizations set by the level.
+   * For each field, levelbuilders may define the initial default value,
+   * and visibility (hidden, readonly, or editable).
+   * Visibility is not editable by the student; students can only change the value if it is set to editable.
+   */
   initialAiCustomizations?: LevelAiCustomizations;
 }
 
