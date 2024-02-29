@@ -76,12 +76,6 @@ class Policies::Lti
     return User::TYPE_STUDENT
   end
 
-  def self.get_email(id_token)
-    custom_variables = id_token[Policies::Lti::LTI_CUSTOM_CLAIMS]
-
-    return custom_variables && custom_variables[:email]
-  end
-
   def self.generate_auth_id(id_token)
     "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
   end

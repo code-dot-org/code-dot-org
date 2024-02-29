@@ -1439,7 +1439,5 @@ en:
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"
     upgrade_to_teacher_account:
-      heading: "Upgrade to a teacher account"
-      description: "Looks like you are logging in as a teacher. Please fill out the following information to finish creating your teacher account. Code.org will never rent, sell, or share this information with any third parties."
       error:
         missing_email: "Missing required parameter: Email"

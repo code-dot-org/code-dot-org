@@ -55,16 +55,6 @@ class Policies::LtiTest < ActiveSupport::TestCase
     refute Policies::Lti.lti?(@user)
   end
 
-  test 'get_email should return the :email stored in the LTI custom fields' do
-    assert_equal 'test@code.org', Policies::Lti.get_email(@id_token)
-  end
-
-  test 'get_email should return nil if :email is NOT stored in the LTI custom fields' do
-    @id_token.delete(Policies::Lti::LTI_CUSTOM_CLAIMS)
-
-    assert_nil Policies::Lti.get_email(@id_token)
-  end
-
   test 'lti_provided_email should return the :email stored in the LTI option given LTI user' do
     user = create :teacher, :with_lti_auth
     assert_equal user.email, Policies::Lti.lti_provided_email(user)

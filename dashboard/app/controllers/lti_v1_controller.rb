@@ -144,7 +144,7 @@ class LtiV1Controller < ApplicationController
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
           @form_data = {
-            email: Policies::Lti.get_email(decoded_jwt),
+            email: Services::Lti.get_claim(decoded_jwt, :email),
             destination_url: destination_url
           }
 
