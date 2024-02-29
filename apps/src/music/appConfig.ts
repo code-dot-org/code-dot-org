@@ -1,6 +1,5 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {BlockMode} from './constants';
-import {baseAssetUrl} from './constants';
+import {BlockMode, baseAssetUrl} from './constants';
 
 type ConfigValues = {[key: string]: string};
 

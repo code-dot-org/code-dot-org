@@ -43,8 +43,9 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     selectedNotes.length >= MAX_NOTES
   );
 
-  const instruments: [string, string][] = library.libraryJson.instruments
-    .map(folder => [folder.name, folder.id]);
+  const instruments: [string, string][] = library.libraryJson.instruments.map(
+    folder => [folder.name, folder.id]
+  );
 
   const onPressKey = useCallback(
     (note: number) => {

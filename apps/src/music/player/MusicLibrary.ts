@@ -54,9 +54,9 @@ export default class MusicLibrary {
   }
 
   getSoundForId(id: string): SoundData | null {
-    var lastSlashIndex = id.lastIndexOf('/');
-    var folderId = id.substring(0, lastSlashIndex);
-    var src = id.substring(lastSlashIndex + 1);
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+    const src = id.substring(lastSlashIndex + 1);
 
     const folder = this.getFolderForFolderId(folderId);
 
@@ -68,9 +68,9 @@ export default class MusicLibrary {
   }
 
   getSoundForPath(id: string): SoundData | null {
-    var lastSlashIndex = id.lastIndexOf('/');
-    var folderPath = id.substring(0, lastSlashIndex);
-    var src = id.substring(lastSlashIndex + 1);
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderPath = id.substring(0, lastSlashIndex);
+    const src = id.substring(lastSlashIndex + 1);
 
     const folder = this.getFolderForFolderPath(folderPath);
 
@@ -82,8 +82,8 @@ export default class MusicLibrary {
   }
 
   getFolderForId(id: string): SoundFolder | null {
-    var lastSlashIndex = id.lastIndexOf('/');
-    var folderId = id.substring(0, lastSlashIndex);
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
 
     return this.getFolderForFolderId(folderId);
   }
