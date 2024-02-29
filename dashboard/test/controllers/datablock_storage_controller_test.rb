@@ -599,7 +599,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    skip "FIXME: controller bug, test will fail because import_csv doesn't cast values, see bottom of test"
     assert_equal EXPECTED_RECORDS, read_records
   end
 

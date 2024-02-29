@@ -156,6 +156,22 @@ class DatablockStorageTable < ApplicationRecord
 
   def import_csv(table_data_csv)
     records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
+
+    # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
+    same_as_undefined = ['', 'undefined']
+    records.map! do |record|
+      # This is equivalent to setting the value to be 'undefined' in JS: it deletes the key
+      record.reject! {|_key, value| same_as_undefined.include? value}
+      record.transform_values! do |string_value|
+        # Attempt to parse as JSON, fall back to original string on error
+        json_value = JSON.parse(string_value)
+        raise TypeError, 'Invalid entry type: object' if json_value.is_a?(Hash) || json_value.is_a?(Array)
+        json_value
+      rescue JSON::ParserError, TypeError
+        string_value
+      end
+    end
+
     create_records(records)
   end
 
