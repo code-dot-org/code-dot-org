@@ -26,15 +26,15 @@ export default function ExpandedProgressColumnHeader({
   // Add (numLevels + 1)px to account for borders.
   // Also count expanded lessons and account for larger borders
   const width = React.useMemo(() => {
-    const levelWidth = parseInt(styles.levelCellWidth);
+    const levelWidth = parseInt(styles.levelCellWidth) + 1;
     const lessonHeaderWidth = lesson.levels.reduce((acc, level) => {
       if (
         level.sublevels?.length > 0 &&
         expandedChoiceLevels.includes(level.id)
       ) {
-        return acc + ((level.sublevels.length + 1) * levelWidth + 4);
+        return acc + (level.sublevels.length + 1) * levelWidth;
       }
-      return acc + levelWidth + 1;
+      return acc + levelWidth;
     }, 0);
     return lessonHeaderWidth + 1 + 'px';
   }, [lesson, expandedChoiceLevels]);

@@ -64,6 +64,7 @@ const EVENTS = {
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
+  PROGRESS_V2_CHANGE_UNIT: 'Section Progress V2 Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
@@ -115,6 +116,7 @@ const EVENTS = {
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
   AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
   AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
+  AI_TUTOR_ASK_GENERAL_CHAT: 'AI Tutor was asked a question in general chat',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
@@ -142,9 +144,11 @@ const EVENTS = {
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',
 
+  // congrats and certificates
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
-  TEACHER_HOC_CONGRATS_PAGE_VISITED:
-    'Teacher Hour of Code Congrats Page Visited ',
+  TEACHER_VISITED_CONGRATS_PAGE: 'Teacher Visited Congrats Page',
+  CERTIFICATE_SHARED: 'Certificate Shared',
+  CERTIFICATE_PRINT_PAGE_VISITED: 'Certificate Print Page Visited',
 
   // Coteacher
   COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',

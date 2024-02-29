@@ -5,13 +5,25 @@ describe I18n::Utils::SyncOutBase do
   let(:described_class) {SyncOutBaseTest = Class.new(I18n::Utils::SyncOutBase)}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: 'expected_locale_s'}}
+  let(:locale) {'expected_locale'}
+  let(:language) {{locale_s: locale}}
 
-  let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
+  let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', locale)}
 
   before do
     I18nScriptUtils.stubs(:remove_empty_dir)
+  end
+
+  describe '.parse_options' do
+    let(:parse_options) {described_class.parse_options}
+
+    it 'returns parsed options' do
+      parsed_options = {parsed: 'options'}
+
+      I18nScriptUtils.expects(:parse_options).returns(parsed_options)
+
+      _(parse_options).must_equal parsed_options
+    end
   end
 
   describe '.perform' do

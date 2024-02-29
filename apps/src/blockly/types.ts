@@ -2,11 +2,14 @@ import {
   Block,
   BlockSvg,
   BlocklyOptions,
+  CodeGenerator,
   Input,
+  Procedures,
   Theme,
   VariableMap,
   Workspace,
   WorkspaceSvg,
+  Xml,
 } from 'blockly';
 import GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -31,6 +34,7 @@ import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
+import BlockSvgFrame from './addons/blockSvgFrame';
 
 export interface BlockDefinition {
   category: string;
@@ -94,6 +98,11 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   // TODO: better define this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   cdoUtils: any;
+  Generator: ExtendedGenerator;
+  Xml: ExtendedXml;
+  Procedures: ExtendedProcedures;
+  BlockValueType: {[key: string]: string};
+  SNAP_RADIUS: number;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -108,8 +117,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     handler: (e: Abstract) => void
   ) => void;
   getGenerator: () => typeof javascriptGenerator;
-  addEmbeddedWorkspace: (workspace: WorkspaceSvg) => void;
-  isEmbeddedWorkspace: (workspace: WorkspaceSvg) => boolean;
+  addEmbeddedWorkspace: (workspace: Workspace) => void;
+  isEmbeddedWorkspace: (workspace: Workspace) => boolean;
   findEmptyContainerBlock: () => void;
   createEmbeddedWorkspace: (
     container: HTMLElement,
@@ -142,6 +151,8 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  // used for function blocks
+  functionalSvg_?: BlockSvgFrame;
 }
 
 export interface ExtendedInput extends Input {
@@ -156,6 +167,7 @@ export interface ExtendedBlock extends Block {
   // Blockly uses any for value.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
+  skipNextBlockGeneration?: boolean;
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
@@ -195,9 +207,64 @@ export interface ExtendedWorkspace extends Workspace {
   noFunctionBlockFrame: boolean;
 }
 
+type CodeGeneratorType = typeof CodeGenerator;
+export interface ExtendedGenerator extends CodeGeneratorType {
+  xmlToBlocks: (name: string, xml: Node) => Block[];
+  blockSpaceToCode: (
+    name: string,
+    opt_typeFilter?: string | string[]
+  ) => string;
+  prefixLines: (text: string, prefix: string) => string;
+}
+
+type XmlType = typeof Xml;
+export interface ExtendedXml extends XmlType {
+  textToDom: (text: string) => Element;
+  blockSpaceToDom: (workspace: Workspace, opt_noId?: boolean) => Element;
+  domToBlockSpace: (workspace: Workspace, xml: Document) => XmlBlockConfig[];
+}
+
+// This type is likely incomplete. We should add to it if we discover
+// more properties it contains.
+export interface XmlBlockConfig {
+  blockly_block: Block;
+  x: number;
+  y: number;
+}
+
+// This type is likely incomplete. We should add to it if we discover
+// more properties it contains.
+export interface JsonBlockConfig {
+  id: string;
+  x?: number;
+  y?: number;
+  movable?: boolean;
+  deletable?: boolean;
+  // extraState can be any object. We may be able to define this better.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  extraState?: any;
+}
+
+export interface Collider {
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+}
+
+type ProceduresType = typeof Procedures;
+
+export interface ExtendedProcedures extends ProceduresType {
+  DEFINITION_BLOCK_TYPES: string[];
+}
+
 export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
 }
+
+// Blockly uses any here. We may be able to define this better.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type WorkspaceSerialization = {[key: string]: any};
 
 export interface ProcedureBlockConfiguration {
   kind: 'block';

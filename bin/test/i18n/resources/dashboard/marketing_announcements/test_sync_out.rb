@@ -5,13 +5,12 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncOut do
   let(:described_class) {I18n::Resources::Dashboard::MarketingAnnouncements::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:lang_crowdin_name) {'expected_crowdin_name'}
   let(:lang_locale) {'expected_locale'}
-  let(:language) {{crowdin_name_s: lang_crowdin_name, locale_s: lang_locale}}
+  let(:language) {{locale_s: lang_locale}}
 
   let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "marketing_announcements.#{lang_locale}.json")}
   let(:i18n_file_path) {CDO.dir('i18n/locales', lang_locale, "dashboard/marketing_announcements.json")}
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', lang_crowdin_name, "dashboard/marketing_announcements.json")}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', lang_locale, "dashboard/marketing_announcements.json")}
   let(:crowdin_file_data) do
     {
       'banners' => {
@@ -48,6 +47,9 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncOut do
     let(:expect_moving_crowdin_file_to_i18n_locale_dir) do
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+    end
 
     it 'distributes the localization' do
       execution_sequence = sequence('execution')
@@ -70,6 +72,11 @@ describe I18n::Resources::Dashboard::MarketingAnnouncements::SyncOut do
 
       it 'does not move Crowdin files to the i18n locale dir' do
         expect_moving_crowdin_file_to_i18n_locale_dir.never
+        process_language
+      end
+
+      it 'does not try to remove the Crowdin resource dir' do
+        expect_crowdin_resource_dir_removing.never
         process_language
       end
     end

@@ -16,7 +16,7 @@ const SelectCompilationButton: React.FunctionComponent = () => {
       color={Button.ButtonColor.brandSecondaryDefault}
       icon={'exclamation-triangle'}
       key="compilation"
-      onClick={onClick}
+      onClick={() => onClick()}
       size={Button.ButtonSize.default}
       text="Code errors"
     />

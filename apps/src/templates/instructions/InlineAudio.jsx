@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {md5} from '@cdo/apps/util/crypto';
+import md5 from 'md5';
 import moduleStyles from './inline-audio.module.scss';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';

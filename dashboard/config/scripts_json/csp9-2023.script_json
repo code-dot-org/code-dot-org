@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 19:34:14 UTC",
+    "serialized_at": "2024-02-28 21:26:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1488,6 +1488,18 @@
       }
     },
     {
+      "name": "Create PT Unit Slides",
+      "url": "https://docs.google.com/presentation/d/1PuVYRZOfWyXzdFDK6Uan8WJnfo02Qz6oUACG4WNUekg/template/preview",
+      "key": "create_pt_unit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_unit_slides"
+      }
+    },
+    {
       "name": "CSP Unit 9 - Lesson 1 - Deep Dive",
       "url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/copy",
       "key": "csp_unit_9_-_lesson_2_-_deep_dive",
@@ -1524,6 +1536,42 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_9_-_lesson_4_-_complete_the_task_1"
+      }
+    },
+    {
+      "name": "Digital Portfolio Guide (Students)",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-digital-portfolio-student-user-guide.pdf",
+      "key": "digital_portfolio_guide_students_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "digital_portfolio_guide_students_"
+      }
+    },
+    {
+      "name": "Digital Portfolio Guide (Teachers)",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-digital-portfolio-teacher-user-guide.pdf",
+      "key": "digital_portfolio_guide_teachers_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "digital_portfolio_guide_teachers_"
+      }
+    },
+    {
+      "name": " Personalized Project Reference Tip Sheet",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-csp-personalized-project-reference-tip-sheet.pdf",
+      "key": "personalized_project_reference_tip_sheet",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "personalized_project_reference_tip_sheet"
       }
     },
     {
@@ -1614,6 +1662,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "resource.key": "digital_portfolio_guide_students_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "resource.key": "digital_portfolio_guide_teachers_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "resource.key": "personalized_project_reference_tip_sheet"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
         "resource.key": "_key_create_pt_survival_guide_23-24"
       }
@@ -1628,6 +1694,12 @@
       "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
         "resource.key": "create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "create_pt_unit_slides"
       }
     },
     {
@@ -1695,6 +1767,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp9-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "create_pt_unit_slides",
         "script.name": "csp9-2023"
       }
     },

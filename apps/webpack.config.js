@@ -135,7 +135,7 @@ const nodePolyfillConfig = {
       'process/browser': require.resolve('process/browser'),
       stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
-      crypto: require.resolve('crypto-browserify'),
+      crypto: false,
       vm: require.resolve('vm-browserify'),
     },
   },

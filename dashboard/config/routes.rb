@@ -179,7 +179,7 @@ Dashboard::Application.routes.draw do
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
-      patch '/users/set_age', to: 'registrations#set_age'
+      patch '/users/set_student_information', to: 'registrations#set_student_information'
       patch '/users/email', to: 'registrations#set_email'
       patch '/users/parent_email', to: 'registrations#set_parent_email'
       patch '/users/user_type', to: 'registrations#set_user_type'
@@ -226,6 +226,7 @@ Dashboard::Application.routes.draw do
     delete '/featured_projects/:project_id', to: 'featured_projects#destroy'
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
+    put '/featured_projects/:project_id/bookmark', to: 'featured_projects#bookmark'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do

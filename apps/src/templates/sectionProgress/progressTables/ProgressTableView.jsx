@@ -16,7 +16,6 @@ import {
   getCurrentUnitData,
   jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import styleConstants from '@cdo/apps/styleConstants';
 import ProgressTableStudentList from './ProgressTableStudentList';
 import ProgressTableContentView from './ProgressTableContentView';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
@@ -401,7 +400,7 @@ class ProgressTableView extends React.Component {
 
 const styles = {
   container: {
-    width: styleConstants['content-width'],
+    width: parseInt(progressTableStyleConstants.TABLE_WIDTH),
   },
   studentList: {
     display: 'inline-block',
