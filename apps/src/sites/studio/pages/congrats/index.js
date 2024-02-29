@@ -46,7 +46,7 @@ $(document).ready(function () {
       isHocTutorial,
       isPlCourse,
       isK5PlCourse,
-      courseNames: [courseName],
+      courseNames: certificateData.map(data => data.courseName),
     });
 
   ReactDOM.render(
