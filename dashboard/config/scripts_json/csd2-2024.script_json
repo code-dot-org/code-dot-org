@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-27 21:17:29 UTC",
+    "serialized_at": "2024-02-28 18:58:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4375,7 +4375,13 @@
       "key": "8b4ef7f7-510b-4416-add3-0132465f985f",
       "position": 12,
       "properties": {
-        "progression_name": "Challenge Levels"
+        "progression_name": "Challenge Levels",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is **highly advisable** to have your **students complete Challenge Level 9e** at least. The gallery product cards they will learn to build using `div` containers and Flexbox properties will come in **very** handy in the Chapter 1 project. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8b4ef7f7-510b-4416-add3-0132465f985f",
@@ -8495,6 +8501,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 - Option 2 Choices_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8516,6 +8525,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 - Option 3 Choices_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -10757,11 +10769,10 @@
     },
     {
       "name": "Body Styling",
-      "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
+      "url": "https://drive.google.com/file/d/1litE09XshxkmQDw2OjhhmdHyvCDLyup4/view",
       "key": "body_styling",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource Page"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "body_styling"
@@ -10769,7 +10780,7 @@
     },
     {
       "name": "Classes",
-      "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view",
+      "url": "https://drive.google.com/file/d/1KuGv9v91lGFLjQ5stnkmk0ZW82WRsCag/view",
       "key": "classes",
       "properties": {
         "audience": "Teacher",
@@ -10806,7 +10817,7 @@
     },
     {
       "name": "Creative Commons Search",
-      "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1W7c3XSlxyL-JuqHiwkn8kzlFZcwZ9xke/view",
       "key": "creative_commons_search",
       "properties": {
         "audience": "Teacher",
@@ -10814,6 +10825,18 @@
       },
       "seeding_key": {
         "resource.key": "creative_commons_search"
+      }
+    },
+    {
+      "name": "Creative Commons Search",
+      "url": "https://drive.google.com/file/d/1W7c3XSlxyL-JuqHiwkn8kzlFZcwZ9xke/view",
+      "key": "creative_commons_search_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "creative_commons_search_1"
       }
     },
     {
@@ -10929,6 +10952,102 @@
       }
     },
     {
+      "name": "Div Containers",
+      "url": "https://drive.google.com/file/d/1sBolIQvf2GvnigqaOeQXXSqFlXx9DYYV/view",
+      "key": "div_containers",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "div_containers"
+      }
+    },
+    {
+      "name": "Exemplar - Alana's Resume",
+      "url": "https://codeprojects.org/projects/weblab/ezs3kDRYhA-hzOlSeuZG5nV2NXoI7bUge77Bl3rUNJY/",
+      "key": "exemplar_-_alana",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_alana"
+      }
+    },
+    {
+      "name": "Exemplar - Alana's Resume",
+      "url": "https://codeprojects.org/projects/weblab/I6JdBMhpRr36Zr_RVBndMwExuaJqdO7u6laf3ogbryo",
+      "key": "exemplar_-_alana_s_resume",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_alana_s_resume"
+      }
+    },
+    {
+      "name": "Exemplar - Denzel's Delights",
+      "url": "https://codeprojects.org/projects/weblab/2UXVEnNdlh_3fgtuwOgXpGEQHZu6O6FgU4wD3n2Jylo/",
+      "key": "exemplar_-_denzel",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_denzel"
+      }
+    },
+    {
+      "name": "Exemplar - Denzel's Delights",
+      "url": "https://codeprojects.org/projects/weblab/IrcDiKJa9r7ksCPpnGZC8jYsHf_6YqAfskv4nyewx6g",
+      "key": "exemplar_-_denzel_s_delights",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_denzel_s_delights"
+      }
+    },
+    {
+      "name": "Exemplar - Kiri's Kitchen",
+      "url": "https://codeprojects.org/projects/weblab/gl7SgNMfs2n5LXbT3rP36JyrgqDD-jpHnM0hDRp9tls",
+      "key": "exemplar_-_kiri",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_kiri"
+      }
+    },
+    {
+      "name": "Exemplar - Kiri's Kitchen",
+      "url": "https://codeprojects.org/projects/weblab/0sFfu5ogtBL45pnbcDoqmpMEZScOSZ1GbYu3kgd8n8w",
+      "key": "exemplar_-_kiri_s_kitchen",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_kiri_s_kitchen"
+      }
+    },
+    {
+      "name": "Exemplar - Pedro's Makeup Line",
+      "url": "https://codeprojects.org/projects/weblab/5W2UlrhDMtM87YiOTRUYshzEqnxsDtaHFEmRkeRIKuQ",
+      "key": "exemplar_-_pedro_s_makeup_line",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_pedro_s_makeup_line"
+      }
+    },
+    {
       "name": "Exemplar - Peer Review",
       "url": "https://docs.google.com/document/d/13ebsmCxnOJkQGvK2VpYik6ISu3yTzuK1BsGyUFs_a8E/view",
       "key": "exemplar_-_peer_review",
@@ -10938,6 +11057,30 @@
       },
       "seeding_key": {
         "resource.key": "exemplar_-_peer_review"
+      }
+    },
+    {
+      "name": "Exemplar - Savannah's Animal Shelter",
+      "url": "https://codeprojects.org/projects/weblab/Hv-AJd2OMTuMunGqx_sMbA0UQzf8N4nDJHXF5hWTz_0",
+      "key": "exemplar_-_savannah_s_animal_shelter",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_savannah_s_animal_shelter"
+      }
+    },
+    {
+      "name": "Exemplar - Sofia's TechSavvy Solutions",
+      "url": "https://codeprojects.org/projects/weblab/rm5VsOJlu3KNDDC6dNB4KbRECImXyo7RumgTfqc-GSc",
+      "key": "exemplar_-_sofia_s_techsavvy_solutions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_sofia_s_techsavvy_solutions"
       }
     },
     {
@@ -10977,6 +11120,18 @@
       }
     },
     {
+      "name": "Flexbox",
+      "url": "https://drive.google.com/file/d/1aLyYXq7unwWWLGFtmoj8PI-6jotzf_Y8/view",
+      "key": "flexbox",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "flexbox"
+      }
+    },
+    {
       "name": "Flexbox Cheat Sheet",
       "url": "https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/view",
       "key": "flexbox_cheat_sheet",
@@ -11003,8 +11158,20 @@
       }
     },
     {
+      "name": "Flexbox Children Properties",
+      "url": "https://drive.google.com/file/d/1ccde4pyrCZnH3OsTkk-KJl6wX0YCMxlh/view",
+      "key": "flexbox_children_properties",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "flexbox_children_properties"
+      }
+    },
+    {
       "name": "Formatting HTML",
-      "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
+      "url": "https://drive.google.com/file/d/1d7hCWlSlvRtPognyhoHssoATapVeUySs/view",
       "key": "formatting_html",
       "properties": {
         "audience": "Teacher",
@@ -11028,7 +11195,7 @@
     },
     {
       "name": "Headings and Paragraphs",
-      "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view",
+      "url": "https://drive.google.com/file/d/1hF52QJCswfaE4IBf2sUlg7q5fh_q74mu/view",
       "key": "headings_and_paragraphs",
       "properties": {
         "audience": "Teacher",
@@ -11053,7 +11220,7 @@
     },
     {
       "name": "HTML Tags",
-      "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view",
+      "url": "https://drive.google.com/file/d/1orGIRkr4_M3YrU9VfvDrZgUCy8cmLmqw/view?usp=drive_link",
       "key": "html_tags",
       "properties": {
         "audience": "Teacher",
@@ -11104,7 +11271,7 @@
     },
     {
       "name": "Hyperlinks",
-      "url": "https://drive.google.com/file/d/1x8rGBJ8EDZ07TasatQlu5wRM8Z7-M5e8/view",
+      "url": "https://drive.google.com/file/d/1h0lMgCUdMiqQxtNmzTZVaWql5Lz03Hh-/view",
       "key": "hyperlinks",
       "properties": {
         "audience": "Teacher",
@@ -11116,7 +11283,7 @@
     },
     {
       "name": "Images in HTML",
-      "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view",
+      "url": "https://drive.google.com/file/d/1qd50f20T10vhLdc81x0CQlNu7EEX6_fo/view",
       "key": "images_in_html",
       "properties": {
         "audience": "Teacher",
@@ -11291,7 +11458,7 @@
     },
     {
       "name": "Lists",
-      "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view",
+      "url": "https://drive.google.com/file/d/1o68ZiSXvIZ2pHoTVgii2KD1XakWnJoY8/view",
       "key": "lists",
       "properties": {
         "audience": "Teacher",
@@ -11326,6 +11493,18 @@
       }
     },
     {
+      "name": "Option 1 - Chapter 1 Project",
+      "url": "https://docs.google.com/presentation/d/1pjCeguRFkqafZWL3BmDfzkxhoEdTtyNa2DzeMEe92cU/template/preview",
+      "key": "option_1_-_chapter_1_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "option_1_-_chapter_1_project"
+      }
+    },
+    {
       "name": "Option 1 - Project Rubric",
       "url": "https://docs.google.com/document/d/1MEan92ixZ7aLrRMjUu1h8L0bJg2DfeHf1KX_rWANYmo/view",
       "key": "option_1_-_project_rubric",
@@ -11349,6 +11528,18 @@
       },
       "seeding_key": {
         "resource.key": "option_1_chapter_1_project_guide"
+      }
+    },
+    {
+      "name": "Option 2 - Chapter 1 Project",
+      "url": "https://docs.google.com/presentation/d/1sfb-ZfsWdijqn7nKFfnSoC8jAxQZ6AdikLG8eLNr5tQ/template/preview",
+      "key": "option_2_-_chapter_1_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "option_2_-_chapter_1_project"
       }
     },
     {
@@ -11388,6 +11579,18 @@
       },
       "seeding_key": {
         "resource.key": "option_2_chapter_1_project_guide"
+      }
+    },
+    {
+      "name": "Option 3 - Chapter 1 Project",
+      "url": "https://docs.google.com/presentation/d/1AmoMjMhkEqquuQVjFRX8DOOxKpGlRF5CKZYWc4afiUY/template/preview",
+      "key": "option_3_-_chapter_1_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "option_3_-_chapter_1_project"
       }
     },
     {
@@ -11601,6 +11804,18 @@
       }
     },
     {
+      "name": "Pseudo-classes",
+      "url": "https://drive.google.com/file/d/1XYDMpDsWDnCFZePYMX2-hWb0KtjkMA7h/view",
+      "key": "pseudo-classes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "pseudo-classes"
+      }
+    },
+    {
       "name": "Publishing Your Website",
       "url": "https://youtu.be/2qcIlRtdpgE",
       "key": "publishing_your_website",
@@ -11652,7 +11867,7 @@
     },
     {
       "name": "Style Sheets",
-      "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view",
+      "url": "https://drive.google.com/file/d/1Tm6ZJ6lM_XmmgRn_e6HeVVyh4ukqkBiA/view",
       "key": "style_sheets",
       "properties": {
         "audience": "Teacher",
@@ -12153,6 +12368,12 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
+        "resource.key": "creative_commons_search_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
         "resource.key": "intellectual_property"
       }
     },
@@ -12219,6 +12440,24 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "exemplar_-_alana"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "exemplar_-_denzel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "exemplar_-_kiri"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "html_web_page"
       }
     },
@@ -12250,6 +12489,42 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_alana_s_resume"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_denzel_s_delights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_kiri_s_kitchen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_pedro_s_makeup_line"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_savannah_s_animal_shelter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_sofia_s_techsavvy_solutions"
       }
     },
     {
@@ -12375,6 +12650,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_1_-_chapter_1_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
         "resource.key": "option_1_-_project_rubric"
       }
     },
@@ -12387,6 +12668,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_2_-_chapter_1_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
         "resource.key": "option_2_-_project_rubric"
       }
     },
@@ -12394,6 +12681,12 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "option_2_chapter_1_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_3_-_chapter_1_project"
       }
     },
     {
@@ -12591,6 +12884,18 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for Expression",
+        "resource.key": "div_containers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "resource.key": "flexbox"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
         "resource.key": "flexbox_cheat_sheet"
       }
     },
@@ -12598,6 +12903,12 @@
       "seeding_key": {
         "lesson.key": "Websites for Expression",
         "resource.key": "organizing_my_content"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "resource.key": "pseudo-classes"
       }
     },
     {
@@ -12616,6 +12927,12 @@
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
         "resource.key": "flexbox_children_cheat_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "flexbox_children_properties"
       }
     },
     {

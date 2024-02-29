@@ -16,8 +16,8 @@ const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
       data-for={getTooltipId(lesson)}
     >
       <LessonTitleTooltip lesson={lesson} />
-      {lesson.numberedLesson && lesson.relative_position}
-      {!lesson.numberedLesson && (
+      {!lesson.lockable && lesson.relative_position}
+      {lesson.lockable && (
         <FontAwesome icon={allLocked ? 'lock' : 'lock-open'} />
       )}
     </div>
@@ -50,7 +50,7 @@ export default function LessonProgressColumnHeader({
   if (lesson.isFake) {
     return getSkeletonLessonHeader(lesson.id);
   }
-  if (!lessonHasLevels(lesson) || !lesson.numberedLesson) {
+  if (!lessonHasLevels(lesson) || lesson.lockable) {
     return getUninteractiveLessonColumnHeader(lesson, allLocked);
   }
   return (

@@ -69,3 +69,6 @@ export const vaildationError = {
   chatMessageText:
     'Your tests are failing. Submit your code and tests, and I will try to help.',
 };
+
+export const genericCompilation = `"Why doesn't my code compile?"`;
+export const genericValidation = `"Why are my tests failing?"`;
