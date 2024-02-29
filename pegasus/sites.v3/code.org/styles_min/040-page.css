@@ -616,7 +616,7 @@ aside.top-skinny-banner {
 
   & > button {
     all: unset;
-    padding: 1rem;
+    padding: 1rem 1.1rem;
     margin-top: 2px;
     cursor: pointer;
     text-align: center;
