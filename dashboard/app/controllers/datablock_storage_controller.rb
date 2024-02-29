@@ -113,6 +113,8 @@ class DatablockStorageController < ApplicationController
     tables_json = JSON.parse params[:tables_json]
     DatablockStorageTable.populate_tables @project_id, tables_json
     render json: true
+  rescue JSON::ParserError => exception
+    raise StudentFacingError, "SyntaxError #{exception.message}\n while parsing initial table data: #{params[:tables_json]}"
   end
 
   ##########################################################

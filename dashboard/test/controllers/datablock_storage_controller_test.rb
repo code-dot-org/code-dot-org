@@ -415,15 +415,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "populate_table prints a friendly error message when given bad table json" do
     BAD_JSON = '{'
     put _url(:populate_tables), params: {tables_json: BAD_JSON}
-
-    skip "FIXME: controller bug, populate_tables is returning a 500, desired behavior is to return a 400 with an error message"
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
-    # Error message should be like (from the JS):
-    # `${e}\nwhile parsing initial table data: ${jsonData}`
-    assert_match(/SyntaxError/, error)
-    assert_match(/while parsing initial table data: {/, error)
+
+    assert_match(/SyntaxError/, error['msg'])
+    assert_match(/while parsing initial table data: {/, error['msg'])
   end
 
   test "populate_key_values" do
