@@ -56,32 +56,12 @@ describe I18n::Utils::SyncDownBase do
   describe '.parse_options' do
     let(:parse_options) {described_class.parse_options}
 
-    it 'returns default options' do
-      _(parse_options).must_equal({testing: false})
-    end
+    it 'returns parsed options' do
+      parsed_options = {parsed: 'options'}
 
-    describe ':testing' do
-      let(:option_testing) {parse_options[:testing]}
+      I18nScriptUtils.expects(:parse_options).returns(parsed_options)
 
-      context 'when "-t" command line option is set' do
-        before do
-          ARGV << '-t'
-        end
-
-        it 'returns true' do
-          _(option_testing).must_equal true
-        end
-      end
-
-      context 'when "--testing" command line option is set' do
-        before do
-          ARGV << '--testing'
-        end
-
-        it 'returns true' do
-          _(option_testing).must_equal true
-        end
-      end
+      _(parse_options).must_equal parsed_options
     end
   end
 
@@ -219,7 +199,7 @@ describe I18n::Utils::SyncDownBase do
     let(:crowdin_test_project) {'expected_crowdin_test_project'}
 
     let(:config) {stub(crowdin_project: crowdin_prod_project)}
-    let(:options) {stub(testing: is_testing)}
+    let(:options) {{testing: is_testing}}
 
     let(:is_testing) {false}
 
