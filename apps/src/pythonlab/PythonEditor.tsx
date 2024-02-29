@@ -3,12 +3,13 @@ import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
 import {useDispatch} from 'react-redux';
-import {appendOutput, resetOutput, setCode} from './pythonlabRedux';
+import {appendOutput, resetOutput} from './pythonlabRedux';
 import Button from '@cdo/apps/templates/Button';
 // import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import CollabManager from './collabManager';
 
 interface PermissionResponse {
   permissions: string[];
@@ -20,8 +21,8 @@ const PythonEditor: React.FunctionComponent = () => {
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
 
-  const onCodeUpdate = (code: string) => dispatch(setCode(code));
-  const editorExtensions = [python(), darkMode];
+  //const onCodeUpdate = (code: string) => dispatch(setCode(code));
+  const editorExtensions = [python(), darkMode, CollabManager.getExtension()];
 
   const handleRun = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
@@ -43,8 +44,8 @@ const PythonEditor: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.editorContainer}>
       <CodeEditor
-        onCodeChange={onCodeUpdate}
-        startCode={'print("Hello world!")'}
+        onCodeChange={() => {}}
+        startCode={''}
         editorConfigExtensions={editorExtensions}
       />
       <div>
