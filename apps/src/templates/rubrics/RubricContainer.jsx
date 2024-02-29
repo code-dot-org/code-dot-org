@@ -12,6 +12,7 @@ import {
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
+import i18n from '@cdo/locale';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -79,6 +80,10 @@ export default function RubricContainer({
       })}
     >
       <div className={style.rubricHeaderRedesign}>
+        <div className={style.rubricHeaderLeftSide}>
+          <FontAwesome icon="house" />
+          {i18n.rubricAiHeaderText()}
+        </div>
         <div className={style.rubricHeaderRightSide}>
           <button
             type="button"
