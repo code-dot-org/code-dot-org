@@ -1,11 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import {
-  Heading2,
-  BodyTwoText,
-  Heading6,
-} from '@cdo/apps/componentLibrary/typography';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
@@ -46,7 +42,9 @@ export default function SchoolDataInputs({
       <Heading2 className={style.topPadding}>{i18n.censusHeading()}</Heading2>
       <BodyTwoText>{i18n.findYourSchool()}</BodyTwoText>
       <div className={style.inputContainer}>
-        <Heading6 className={style.padding}>{i18n.whatCountry()}</Heading6>
+        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
+          {i18n.whatCountry()}
+        </BodyTwoText>
         <SimpleDropdown
           className={style.dropdown}
           items={COUNTRY_ITEMS}
@@ -55,16 +53,18 @@ export default function SchoolDataInputs({
           onChange={onCountryChange}
           size="m"
         />
-        <Heading6 className={style.padding}>
+        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
           {i18n.enterYourSchoolZip()}
-        </Heading6>
+        </BodyTwoText>
         <input
           type="text"
           placeholder={'i.e. 98104'}
           onChange={() => {}}
           value={''}
         />
-        <Heading6 className={style.padding}>{i18n.selectYourSchool()}</Heading6>
+        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
+          {i18n.selectYourSchool()}
+        </BodyTwoText>
         <SimpleDropdown
           className={style.dropdown}
           items={TEST_SCHOOL_DATA}
