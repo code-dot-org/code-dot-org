@@ -9,7 +9,7 @@ import Button from '@cdo/apps/templates/Button';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import CollabManager from './collabManager';
+import CollabManager from './CollabManager';
 
 interface PermissionResponse {
   permissions: string[];
