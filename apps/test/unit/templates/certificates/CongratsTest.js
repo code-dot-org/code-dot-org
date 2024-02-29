@@ -134,4 +134,20 @@ describe('Congrats', () => {
     expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
       .true;
   });
+
+  it('renders a message when there is no certificateData', () => {
+    const wrapper = shallow(
+      <Congrats
+        {...plProps}
+        certificateData={[]}
+        curriculumUrl="/s/self-paced-pl3-2023"
+      />
+    );
+    expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
+      'You must complete the course to earn a certificate.'
+    );
+    expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
+      '/s/self-paced-pl3-2023'
+    );
+  });
 });
