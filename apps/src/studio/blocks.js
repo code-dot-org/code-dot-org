@@ -3209,7 +3209,7 @@ exports.install = function (blockly, blockInstallOptions) {
       "', " +
       (this.getFieldValue('SPRITE') || '0') +
       ', ' +
-      JSON.stringify(String(this.getFieldValue('VALUE')) || ' ') +
+      JSON.stringify(this.getFieldValue('VALUE') || ' ') +
       ');\n'
     );
   };
