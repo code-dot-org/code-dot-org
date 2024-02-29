@@ -59,7 +59,7 @@ class DatablockStorageController < ApplicationController
   def populate_key_values
     key_values_json = JSON.parse params[:key_values_json]
     raise "key_values_json must be a hash" unless key_values_json.is_a? Hash
-    DatablockStorageKvp.set_kvps(@project_id, key_values_json)
+    DatablockStorageKvp.set_kvps(@project_id, key_values_json, upsert: false)
     render json: true
   end
 

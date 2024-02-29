@@ -449,14 +449,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "populate_key_values prints a friendly error message when given bad key value json" do
     put _url(:populate_key_values), params: {key_values_json: '{'}
 
-    skip "FIXME: controller bug, populate_key_values is returning a 500, expected behavior is to return a 400 with an error message"
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
-    # Error message should be like (from the JS):
-    # `${e}\nwhile parsing initial key/value data: ${jsonData}`
-    assert_match(/SyntaxError/, error)
-    assert_match(/while parsing initial key\/value data: {/, error)
+
+    assert_match(/SyntaxError/, error['msg'])
+    assert_match(/while parsing initial key\/value data: {/, error['msg'])
   end
 
   def create_shared_table
