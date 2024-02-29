@@ -100,6 +100,24 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ['mytable'], JSON.parse(@response.body)
   end
 
+  test "create_record wont create objects or arrays" do
+    create_bob_record
+
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: '{"name": "badbob", "badval": {"key":"value"}}',
+    }
+    assert_response :bad_request
+    assert_equal [{"name" => 'bob', "age" => 8, "id" => 1}], read_records
+
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: '{"name": "badbob", "badval": [1,2,3]}',
+    }
+    assert_response :bad_request
+    assert_equal [{"name" => 'bob', "age" => 8, "id" => 1}], read_records
+  end
+
   test "create_record can't create more than MAX_TABLE_COUNT tables" do
     # Lower the max table count to 3 so it's easy to test
     original_max_table_count = DatablockStorageTable::MAX_TABLE_COUNT

@@ -114,6 +114,10 @@ class DatablockStorageTable < ApplicationRecord
 
       cols_in_records = Set.new
       record_jsons.each do |record_json|
+        record_json.each do |_key, json_value|
+          raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if json_value.is_a?(Hash) || json_value.is_a?(Array)
+        end
+
         # We write the record_id into the JSON as well as storing it in its own column
         # only create_record and update_record should be at risk of modifying this
         record_json['id'] = next_record_id
