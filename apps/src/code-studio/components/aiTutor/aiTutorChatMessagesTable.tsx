@@ -32,6 +32,9 @@ const AITutorChatMessagesTable: React.FunctionComponent<
       <table>
         <thead>
           <tr>
+          <td>
+              <div className={style.header}>Id</div>
+            </td>
             <td>
               <div className={style.header}>Student</div>
             </td>
