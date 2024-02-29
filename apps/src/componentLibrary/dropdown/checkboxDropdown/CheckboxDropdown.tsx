@@ -11,7 +11,7 @@ import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-// import i18n from '@cdo/apps/locale';
+import i18n from '@cdo/locale';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
@@ -93,14 +93,14 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
         <div className={moduleStyles.bottomButtonsContainer}>
           <Button
             type="button"
-            // text={i18n.selectAll()}
+            text={i18n.selectAll()}
             onClick={onSelectAll}
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}
           />
           <Button
             type="button"
-            // text={i18n.clearAll()}
+            text={i18n.clearAll()}
             onClick={onClearAll}
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}

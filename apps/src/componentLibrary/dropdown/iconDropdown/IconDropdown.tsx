@@ -80,7 +80,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
         setActiveDropdownName('');
       }
     },
-    [onChange, setActiveDropdownName]
+    [disabled, onChange, setActiveDropdownName]
   );
 
   return (
@@ -108,14 +108,16 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
               },
             } = option;
             return (
-              <li key={value} onClick={() => onOptionClick(option)}>
-                <div
+              <li key={value}>
+                <button
                   className={classNames(
                     moduleStyles.dropdownMenuItem,
                     isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
                     selectedOption.value === value &&
                       moduleStyles.selectedDropdownMenuItem
                   )}
+                  type="button"
+                  onClick={() => onOptionClick(option)}
                 >
                   <FontAwesomeV6Icon
                     iconName={iconName}
@@ -124,7 +126,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
                     className={iconClassName}
                   />
                   <span>{label}</span>
-                </div>
+                </button>
               </li>
             );
           })}

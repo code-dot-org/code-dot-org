@@ -63,9 +63,26 @@
         align-self: stretch;
 
         .dropdownMenuItem {
+          /*Reset's every elements apperance*/
+          background: none repeat scroll 0 0 transparent;
+          border: none !important;
+          border-radius: 0;
+          border-spacing: 0;
+          list-style: none outside none;
+          margin: 0;
+          padding: 0;
+          text-decoration: none;
+          text-indent: 0;
+          box-shadow: none;
+
           display: flex;
           align-items: center;
           cursor: pointer;
+
+          &:focus-visible {
+            outline: 2px solid $light_primary_500;
+            outline-offset: -2px;
+          }
         }
 
         label, .dropdownMenuItem {
@@ -295,6 +312,12 @@
 
         .dropdownMenuItem {
           i {
+            font-size: 1.1875rem;
+            line-height: 125%;
+            width: 1.5rem;
+          }
+
+          i::before {
             font-size: 1.1875rem;
             line-height: 125%;
             width: 1.5rem;

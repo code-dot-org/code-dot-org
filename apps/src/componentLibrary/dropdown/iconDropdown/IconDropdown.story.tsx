@@ -315,7 +315,7 @@ GroupOfSizesOfIconDropdown.args = {
         {
           value: 'option-2',
           label: 'Option 2',
-          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          icon: {iconName: 'smile', iconStyle: 'solid'},
         },
       ],
       selectedOption: {
@@ -340,7 +340,7 @@ GroupOfSizesOfIconDropdown.args = {
         {
           value: 'option-2',
           label: 'Option 2',
-          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          icon: {iconName: 'smile', iconStyle: 'solid'},
         },
       ],
       selectedOption: {
