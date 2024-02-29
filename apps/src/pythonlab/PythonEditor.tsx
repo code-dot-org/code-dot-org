@@ -10,7 +10,7 @@ import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Connection, getDocument, peerExtension} from './collab';
-import {getCollabWorker} from './collabWorkerManager';
+import {collabWorker} from './collabWorkerManager';
 
 interface PermissionResponse {
   permissions: string[];
@@ -30,6 +30,8 @@ const PythonEditor: React.FunctionComponent = () => {
   // const editor2Extensions = [...baseExtensions, collabCompartment2];
   const [editor1, setEditor1] = useState<JSX.Element | null>(null);
   const [editor2, setEditor2] = useState<JSX.Element | null>(null);
+  const [editor1Setup, setEditor1Setup] = useState(false);
+  const [editor2Setup, setEditor2Setup] = useState(false);
 
   const handleRun = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
@@ -48,15 +50,18 @@ const PythonEditor: React.FunctionComponent = () => {
     dispatch(resetOutput());
   };
 
-  const createEditor = async () => {
+  const createEditor = async (
+    inProgressCallback: (inProgress: boolean) => void
+  ) => {
     console.log('creating editor...');
-    const collabWorker = getCollabWorker();
+    inProgressCallback(true);
     const {version, doc} = await getDocument(
       new Connection(collabWorker, () => 0)
     );
     const connection = new Connection(collabWorker);
     const extensions = [python(), darkMode, peerExtension(version, connection)];
     console.log('returning editor?');
+    inProgressCallback(false);
     return (
       <CodeEditor
         onCodeChange={onCodeUpdate}
@@ -66,11 +71,11 @@ const PythonEditor: React.FunctionComponent = () => {
     );
   };
 
-  if (!editor1) {
-    createEditor().then(editor => setEditor1(editor));
+  if (!editor1 && !editor1Setup) {
+    createEditor(setEditor1Setup).then(editor => setEditor1(editor));
   }
-  if (!editor2) {
-    createEditor().then(editor => setEditor2(editor));
+  if (!editor2 && !editor2Setup) {
+    createEditor(setEditor2Setup).then(editor => setEditor2(editor));
   }
 
   return (

@@ -113,6 +113,7 @@ export function peerExtension(startVersion: number, connection: Connection) {
       }
 
       async push() {
+        console.log('got update!');
         const updates = sendableUpdates(this.view.state);
         if (this.pushing || !updates.length) return;
         this.pushing = true;
