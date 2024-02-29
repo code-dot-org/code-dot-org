@@ -14,15 +14,16 @@ import ProgressIcon from './ProgressIcon';
 import styles from './progress-key-popup.module.scss';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
-  const validatedLevelsContent = () => (
+  const renderItem = (itemType, itemTitle, itemDetails) => (
     <div className={styles.item}>
-      <ProgressIcon itemType={ITEM_TYPE.VALIDATED} />
+      <ProgressIcon itemType={itemType} />
       <BodyThreeText>
-        <StrongText>{i18n.validated() + ': '}</StrongText>
-        {i18n.progressLegendDetailsValidated()}
+        <StrongText>{itemTitle + ': '}</StrongText>
+        {itemDetails}
       </BodyThreeText>
     </div>
   );
+
   return (
     <AccessibleDialog onClose={onClose}>
       <div role="region" className={styles.dialog}>
@@ -32,27 +33,21 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         </button>
         <hr />
         <Heading6>{i18n.assignmentCompletionStates()}</Heading6>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.NOT_STARTED} />
-          <BodyThreeText>
-            <StrongText>{i18n.notStarted() + ': '}</StrongText>
-            {i18n.progressLegendDetailsNotStarted()}
-          </BodyThreeText>
-        </div>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.NO_ONLINE_WORK} />
-          <BodyThreeText>
-            <StrongText>{i18n.noOnlineWork() + ': '}</StrongText>
-            {i18n.progressLegendDetailsNoOnlineWork()}
-          </BodyThreeText>
-        </div>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />
-          <BodyThreeText>
-            <StrongText>{i18n.inProgress() + ': '}</StrongText>
-            {i18n.progressLegendDetailsInProgress()}
-          </BodyThreeText>
-        </div>
+        {renderItem(
+          ITEM_TYPE.NOT_STARTED,
+          i18n.notStarted(),
+          i18n.progressLegendDetailsNotStarted()
+        )}
+        {renderItem(
+          ITEM_TYPE.NO_ONLINE_WORK,
+          i18n.noOnlineWork(),
+          i18n.progressLegendDetailsNoOnlineWork()
+        )}
+        {renderItem(
+          ITEM_TYPE.IN_PROGRESS,
+          i18n.inProgress(),
+          i18n.progressLegendDetailsInProgress()
+        )}
         <div className={styles.item}>
           <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />
           <div>
@@ -68,51 +63,44 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             />
           </div>
         </div>
-        {hasValidation && validatedLevelsContent()}
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.KEEP_WORKING} />
-          <BodyThreeText>
-            <StrongText>{i18n.markedAsKeepWorking() + ': '}</StrongText>
-            {i18n.progressLegendDetailsKeepGoing()}
-          </BodyThreeText>
-        </div>
+        {hasValidation &&
+          renderItem(
+            ITEM_TYPE.VALIDATED,
+            i18n.validated(),
+            i18n.progressLegendDetailsValidated()
+          )}
+        {renderItem(
+          ITEM_TYPE.KEEP_WORKING,
+          i18n.markedAsKeepWorking(),
+          i18n.progressLegendDetailsKeepGoing()
+        )}
         <Heading6>{i18n.teacherActions()}</Heading6>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.NEEDS_FEEDBACK} />
-          <BodyThreeText>
-            <StrongText>{i18n.needsFeedback() + ': '}</StrongText>
-            {i18n.progressLegendDetailsNeedsFeedback()}
-          </BodyThreeText>
-        </div>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.VIEWED} />
-          <BodyThreeText>
-            <StrongText>{i18n.viewed() + ': '}</StrongText>
-            {i18n.progressLegendDetailsViewed()}
-          </BodyThreeText>
-        </div>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.FEEDBACK_GIVEN} />
-          <BodyThreeText>
-            <StrongText>{i18n.feedbackGiven() + ': '}</StrongText>
-            {i18n.progressLegendDetailsFeedbackGiven()}
-          </BodyThreeText>
-        </div>
+        {renderItem(
+          ITEM_TYPE.NEEDS_FEEDBACK,
+          i18n.needsFeedback(),
+          i18n.progressLegendDetailsNeedsFeedback()
+        )}
+        {renderItem(
+          ITEM_TYPE.VIEWED,
+          i18n.viewed(),
+          i18n.progressLegendDetailsViewed()
+        )}
+        {renderItem(
+          ITEM_TYPE.FEEDBACK_GIVEN,
+          i18n.feedbackGiven(),
+          i18n.progressLegendDetailsFeedbackGiven()
+        )}
         <Heading6>{i18n.levelTypes()}</Heading6>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.ASSESSMENT_LEVEL} />
-          <BodyThreeText>
-            <StrongText>{i18n.assessmentLevel() + ': '}</StrongText>
-            {i18n.progressLegendDetailsAssessmentLevels()}
-          </BodyThreeText>
-        </div>
-        <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.CHOICE_LEVEL} />
-          <BodyThreeText>
-            <StrongText>{i18n.choiceLevel() + ': '}</StrongText>
-            {i18n.progressLegendDetailsChoiceLevels()}
-          </BodyThreeText>
-        </div>
+        {renderItem(
+          ITEM_TYPE.ASSESSMENT_LEVEL,
+          i18n.assessmentLevel(),
+          i18n.progressLegendDetailsAssessmentLevels()
+        )}
+        {renderItem(
+          ITEM_TYPE.CHOICE_LEVEL,
+          i18n.choiceLevel(),
+          i18n.progressLegendDetailsChoiceLevels()
+        )}
       </div>
     </AccessibleDialog>
   );
