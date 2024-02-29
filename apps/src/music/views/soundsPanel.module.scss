@@ -10,7 +10,8 @@
 
   &Top {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 5px 0;
 
     .segmentedButtons {
       span {
