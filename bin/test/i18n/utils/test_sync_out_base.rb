@@ -14,6 +14,18 @@ describe I18n::Utils::SyncOutBase do
     I18nScriptUtils.stubs(:remove_empty_dir)
   end
 
+  describe '.parse_options' do
+    let(:parse_options) {described_class.parse_options}
+
+    it 'returns parsed options' do
+      parsed_options = {parsed: 'options'}
+
+      I18nScriptUtils.expects(:parse_options).returns(parsed_options)
+
+      _(parse_options).must_equal parsed_options
+    end
+  end
+
   describe '.perform' do
     before do
       described_class.any_instance.stubs(:process)
