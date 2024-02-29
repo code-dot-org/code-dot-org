@@ -21,6 +21,7 @@ self.onmessage = event => {
   function resp(value: any) {
     event.ports[0].postMessage(JSON.stringify(value));
   }
+  console.log(event.data);
   const data = JSON.parse(event.data);
   if (data.type === 'pullUpdates') {
     if (data.version < updates.length) resp(updates.slice(data.version));

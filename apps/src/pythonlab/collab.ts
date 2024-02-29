@@ -16,7 +16,7 @@ function pause(time: number) {
 
 function currentLatency() {
   //const base = +(document.querySelector('#latency') as HTMLInputElement).value;
-  return 50 * (1 + (Math.random() - 0.5));
+  return 100 * (1 + (Math.random() - 0.5));
 }
 
 export class Connection {
@@ -113,7 +113,6 @@ export function peerExtension(startVersion: number, connection: Connection) {
       }
 
       async push() {
-        console.log('got update!');
         const updates = sendableUpdates(this.view.state);
         if (this.pushing || !updates.length) return;
         this.pushing = true;
