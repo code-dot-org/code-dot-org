@@ -368,7 +368,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
 
-    skip "FIXME: controller bug, coerce_column does not return a warning, AND it modifies invalid numbers whereas it should leave them alone (stay as a string in this case)"
     assert_response :bad_request
     assert_equal 'CANNOT_CONVERT_COLUMN_TYPE', JSON.parse(@response.body)['type']
 
