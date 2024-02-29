@@ -287,10 +287,11 @@ const ExpandedCurriculumCatalogCard = ({
                 <hr className={style.thickDivider} />
                 <img
                   src={recommendedSimilarCurriculum.image}
-                  alt=""
+                  alt={recommendedSimilarCurriculum.display_name}
                   style={{height: '100%'}}
                 />
                 <TextLink
+                  id="similarCurriculumLink"
                   className={style.relatedTextlink}
                   text={recommendedSimilarCurriculum.display_name}
                   href={`${

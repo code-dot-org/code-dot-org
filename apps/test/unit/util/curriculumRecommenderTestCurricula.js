@@ -218,7 +218,7 @@ const FULL_TEST_COURSES = [
     key: 'fullTestCourse1',
     display_name: 'Full Test Course 1',
     display_name_with_latest_year: 'Full Test Course 1 (6 months ago)',
-    description: 'desc',
+    description: 'Full Test Course 1 description',
     is_featured: true,
     duration: 'week',
     marketing_initiative: 'markInit1',
@@ -231,13 +231,13 @@ const FULL_TEST_COURSES = [
       .format(UTC_PUBLISHED_DATE_FORMAT),
     device_compatibility:
       '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
-    course_version_path: '/',
+    course_version_path: '/fullTestCourse1-path',
   },
   {
     key: 'fullTestCourse2',
     display_name: 'Full Test Course 2',
     display_name_with_latest_year: 'Full Test Course 2 (1 year ago)',
-    description: 'desc',
+    description: 'Full Test Course 2 description',
     is_featured: false,
     duration: 'month',
     marketing_initiative: 'markInit1',
@@ -250,13 +250,13 @@ const FULL_TEST_COURSES = [
       .format(UTC_PUBLISHED_DATE_FORMAT),
     device_compatibility:
       '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
-    course_version_path: '/',
+    course_version_path: '/fullTestCourse2-path',
   },
   {
     key: 'fullTestCourse3',
     display_name: 'Full Test Course 3',
     display_name_with_latest_year: 'Full Test Course 3 (1.5 years ago)',
-    description: 'desc',
+    description: 'Full Test Course 3 description',
     is_featured: false,
     duration: 'month',
     marketing_initiative: 'markInit2',
@@ -269,13 +269,13 @@ const FULL_TEST_COURSES = [
       .format(UTC_PUBLISHED_DATE_FORMAT),
     device_compatibility:
       '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
-    course_version_path: '/',
+    course_version_path: '/fullTestCourse3-path',
   },
   {
     key: 'fullTestCourse4',
     display_name: 'Full Test Course 4',
     display_name_with_latest_year: 'Full Test Course 4 (2 years ago)',
-    description: 'desc',
+    description: 'Full Test Course 4 description',
     is_featured: false,
     duration: 'month',
     marketing_initiative: 'markInit2',
@@ -288,13 +288,13 @@ const FULL_TEST_COURSES = [
       .format(UTC_PUBLISHED_DATE_FORMAT),
     device_compatibility:
       '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
-    course_version_path: '/',
+    course_version_path: '/fullTestCourse4-path',
   },
   {
     key: 'fullTestCourse5',
     display_name: 'Full Test Course 5',
     display_name_with_latest_year: 'Full Test Course 5 (2.5 years ago)',
-    description: 'desc',
+    description: 'Full Test Course 5 description',
     is_featured: true,
     duration: 'month',
     marketing_initiative: 'markInit2',
@@ -307,7 +307,7 @@ const FULL_TEST_COURSES = [
       .format(UTC_PUBLISHED_DATE_FORMAT),
     device_compatibility:
       '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
-    course_version_path: '/',
+    course_version_path: '/fullTestCourse5-path',
   },
 ];
 

@@ -36,6 +36,8 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sections} from '../studioHomepages/fakeSectionUtils';
+import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -648,6 +650,42 @@ describe('CurriculumCatalog', () => {
       fireEvent.click(translatedToggle);
       assert(!translatedToggle.checked);
       assert(replacedLocation.includes('translated=false'));
+    });
+  });
+
+  describe('with recommender test curricula', () => {
+    it('renders image and link of similar recommended curriculum', () => {
+      const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+
+      // Get the Similar Recommended Curriculum for the first test curriculum
+      const [firstCurriculum, ...recommendableCurricula] = FULL_TEST_COURSES;
+      const recommendedSimilarCurriculum = getSimilarRecommendations(
+        recommendableCurricula,
+        firstCurriculum.duration,
+        firstCurriculum.marketing_initiative,
+        firstCurriculum.school_subject,
+        firstCurriculum.cs_topic
+      )[0];
+
+      // Open expanded card of the first test curriculum
+      const firstQuickViewButton = screen.getAllByText('Quick View', {
+        exact: false,
+      })[0];
+      fireEvent.click(firstQuickViewButton);
+      screen.getByText(firstCurriculum.description);
+
+      // Check that the recommended similar curriculum's image and link are present
+      screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
+      assert(
+        document
+          .querySelector('#similarCurriculumLink')
+          .href.includes(recommendedSimilarCurriculum.course_version_path)
+      );
     });
   });
 });
