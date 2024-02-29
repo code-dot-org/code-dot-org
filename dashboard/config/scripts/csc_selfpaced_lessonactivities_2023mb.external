@@ -3,9 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson Activities
+# Teaching CS Fundamentals Maker with micro:bit
 
-#### CS Fundamentals Maker with micro:bit offers different types of activities to better support students with learning computer science. Students build their skills and confidence to ultimately work with the micro:bit. 
+#### CS Fundamentals Maker with micro:bit offers different pathways and activities to better support students with learning computer science. Students build their skills and confidence to ultimately work with the micro:bit. 
+
+## Pathway Overview 
+
+<img src="https://images.code.org/ac371a6cdc9961e9f3544dd44411d340-image-1708641631801.org colors maker pathways courses.jpg" alt="diagram of course pathway" width="800px">
 
 ## Types of Activities
 
