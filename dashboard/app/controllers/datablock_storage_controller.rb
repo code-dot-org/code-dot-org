@@ -27,7 +27,7 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def set_key_value
-    raise StudentFacingError, "value must be less than 4096 bytes" if params[:value].length > 4096
+    raise StudentFacingError, "value must be less than #{DatablockStorageKvp::MAX_VALUE_LENGTH} bytes" if params[:value].length > DatablockStorageKvp::MAX_VALUE_LENGTH
     value = JSON.parse params[:value]
     DatablockStorageKvp.set_kvp @project_id, params[:key], value
     render json: {key: params[:key], value: value}
@@ -168,7 +168,7 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def create_record
-    raise StudentFacingError, "record must be less than 4096 bytes" if params[:record_json].length > 4096
+    raise StudentFacingError, "record must be less than #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
     record_json = JSON.parse params[:record_json]
     raise "record must be a hash" unless record_json.is_a? Hash
 
@@ -186,7 +186,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def update_record
-    raise StudentFacingError, "record must be less than 4096 bytes" if params[:record_json].length > 4096
+    raise StudentFacingError, "record must be less than #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
 
     table = find_table
     record_json = table.update_record params[:record_id], JSON.parse(params[:record_json])

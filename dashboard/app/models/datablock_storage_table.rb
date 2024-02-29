@@ -20,6 +20,14 @@ class DatablockStorageTable < ApplicationRecord
 
   SHARED_TABLE_PROJECT_ID = 0
 
+  # TODO: implement enforcement of MAX_TABLE_COUNT, we already have a test for it
+  # but we're skipping it until this is implemented.
+  MAX_TABLE_COUNT = 10
+
+  # TODO: implement enforcement of MAX_TABLE_ROW_COUNT, we already have a test for it
+  # but we're skipping it until this is implemented.
+  MAX_TABLE_ROW_COUNT = 20000
+
   def self.get_table_names(project_id)
     DatablockStorageTable.where(project_id: project_id).pluck(:table_name)
   end
@@ -129,6 +137,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def delete_record(record_id)
+    if_shared_table_copy_on_write
+
     records.find_by!(record_id: record_id).delete
   end
 
@@ -184,7 +194,11 @@ class DatablockStorageTable < ApplicationRecord
   def _coerce_type(value, column_type)
     case column_type
     when 'string'
-      value.to_s
+      if value.nil?
+        'null'
+      else
+        value.to_s
+      end
     when 'number'
       value.to_f
     when 'boolean'
@@ -201,7 +215,9 @@ class DatablockStorageTable < ApplicationRecord
 
     records.each do |record|
       # column type is one of: string, number, boolean, date
-      record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
+      if record.record_json.key?(column_name)
+        record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
+      end
     end
   end
 
