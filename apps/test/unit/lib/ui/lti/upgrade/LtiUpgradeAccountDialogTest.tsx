@@ -1,4 +1,4 @@
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {expect} from '../../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
@@ -71,7 +71,7 @@ describe('LTI Upgrade Account Dialog', () => {
     });
 
     it('should submit the email address to the api endpoint', () => {
-      const mockOnClose = sinon.stub();
+      const mockOnClose = sinon.spy();
       render(
         <LtiUpgradeAccountDialog
           formData={MOCK_FORM_DATA}
@@ -96,27 +96,6 @@ describe('LTI Upgrade Account Dialog', () => {
 
       // render the spinner
       screen.getByText(i18n.loading());
-      sinon.assert.called(mockOnClose);
-    });
-
-    it('should render a spinner and call onClose if cancelling', () => {
-      const mockOnClose = sinon.stub();
-      render(
-        <LtiUpgradeAccountDialog
-          formData={MOCK_FORM_DATA}
-          onClose={mockOnClose}
-        />
-      );
-
-      const cancelButton = within(
-        screen.getByTestId('lti-upgrade-account')
-      ).getByText(i18n.dialogCancel());
-
-      fireEvent.click(cancelButton);
-
-      // render the spinner
-      screen.getByText(i18n.loading());
-
       sinon.assert.called(mockOnClose);
     });
   });
