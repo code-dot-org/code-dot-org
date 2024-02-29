@@ -3208,9 +3208,9 @@ exports.install = function (blockly, blockInstallOptions) {
       this.id +
       "', " +
       (this.getFieldValue('SPRITE') || '0') +
-      ", '" +
-      (this.getFieldValue('VALUE') || ' ') +
-      "');\n"
+      ', ' +
+      JSON.stringify(this.getFieldValue('VALUE') || ' ') +
+      ');\n'
     );
   };
 
