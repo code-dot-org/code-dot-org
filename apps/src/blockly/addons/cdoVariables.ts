@@ -1,5 +1,6 @@
 import {Block} from 'blockly';
 import {BlocklyWrapperType} from '../types';
+import {VARIABLE_BLOCK_TYPES} from '../constants';
 
 export default function initializeVariables(
   blocklyWrapper: BlocklyWrapperType
@@ -38,9 +39,11 @@ export default function initializeVariables(
   // Add serialization hooks to allow these blocks to be hidden on the
   // hidden definition workspace. Previously they were used to pre-populate
   // variable dropdown blocks in the toolbox.
-  if (blocklyWrapper.Blocks.variables_get) {
-    blocklyWrapper.customBlocks.addSerializationHooksToBlock(
-      blocklyWrapper.Blocks.variables_get
-    );
-  }
+  VARIABLE_BLOCK_TYPES.forEach(blockType => {
+    if (blocklyWrapper.Blocks[blockType]) {
+      blocklyWrapper.customBlocks.addSerializationHooksToBlock(
+        blocklyWrapper.Blocks[blockType]
+      );
+    }
+  });
 }

@@ -38,6 +38,7 @@ markdown <<MARKDOWN
     	<td> <img src="https://images.code.org/87616895ad471157e472551c69510059-image-1707415334218.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
       </tr>
 </table>
+
 <table  border="1" width="850px">
     <!-- First row with two columns -->
     <tr bgcolor="#F7F8F8">
@@ -100,5 +101,5 @@ markdown <<MARKDOWN
     </tr>
 </table>
 
-![](https://images.code.org/165c5aea9578abe4421d02edae31af7f-image-1708710065774.png)
+
 MARKDOWN
