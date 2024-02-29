@@ -146,7 +146,7 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
   return libraryJson;
 };
 
-export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocals';
+export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal';
 
 /**
  * A single event in a {@link SampleSequence}
