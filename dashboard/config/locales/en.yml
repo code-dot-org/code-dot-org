@@ -1439,3 +1439,6 @@ en:
       success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"
+    upgrade_to_teacher_account:
+      error:
+        missing_email: "Missing required parameter: Email"
