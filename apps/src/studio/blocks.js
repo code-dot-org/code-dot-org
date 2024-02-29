@@ -3202,7 +3202,7 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.studio_saySpriteChoices = function () {
-    const sprite = JSON.stringify(String(this.getFieldValue('SPRITE') || '0'));
+    const sprite = this.getFieldValue('SPRITE') || '0';
     const value = JSON.stringify(String(this.getFieldValue('VALUE') || ' '));
 
     // Generate JavaScript for saying (choices version).
