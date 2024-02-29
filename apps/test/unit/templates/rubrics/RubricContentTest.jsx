@@ -140,7 +140,7 @@ describe('RubricContent', () => {
 
   it('shows level title when teacher is viewing student work', () => {
     const wrapper = shallow(<RubricContent {...defaultProps} />);
-    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+    expect(wrapper.find('Heading3').at(0).props().children).to.equal(
       'Lesson 3: Data Structures'
     );
   });
@@ -149,7 +149,7 @@ describe('RubricContent', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
-    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+    expect(wrapper.find('Heading3').at(0).props().children).to.equal(
       'Lesson 3: Data Structures'
     );
   });
