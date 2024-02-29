@@ -211,12 +211,12 @@ class DatablockStorageTable < ApplicationRecord
     when 'number'
       value.to_f
     when 'boolean'
-      if value == true
+      if [true, 'true'].include? value
         true
-      elsif value == false
+      elsif [false, 'false'].include? value
         false
       else
-        raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert '#{value}' to boolean"
+        raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to boolean"
       end
     end
   end
