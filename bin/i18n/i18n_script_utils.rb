@@ -28,6 +28,24 @@ class I18nScriptUtils
     @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
   end
 
+  # Parses sync options from the command line
+  #
+  # @param options [Hash] the default options to populate
+  # @return [Hash] the parsed options
+  def self.parse_options(argv = ARGV, options: {})
+    options[:testing] = TESTING_BY_DEFAULT if options[:testing].nil?
+
+    OptionParser.new do |parser|
+      parser.on('-t', '--testing', 'Run in testing mode') do
+        options[:testing] = true
+      end
+
+      yield(parser, options) if block_given?
+    end.parse!(argv)
+
+    options
+  end
+
   # List of supported CDO Languages
   # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0 Supported CDO languages doc
   # @return [Array<CdoLanguage>] Supported CDO languages
