@@ -32,7 +32,7 @@ const AITutorChatMessagesTable: React.FunctionComponent<
       <table>
         <thead>
           <tr>
-          <td>
+            <td>
               <div className={style.header}>Id</div>
             </td>
             <td>
