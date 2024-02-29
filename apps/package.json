@@ -320,7 +320,10 @@
     "vm-browserify": "^1.1.2",
     "vmsg": "^0.3.6",
     "wgxpath": "^1.2.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "y-codemirror.next": "^0.3.2",
+    "y-websocket": "^1.5.4",
+    "yjs": "^13.6.13"
   },
   "packageManager": "yarn@3.6.3"
 }
