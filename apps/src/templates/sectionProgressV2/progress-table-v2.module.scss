@@ -202,6 +202,12 @@ $level-cell-width: 52;
       text-align: center;
       height: 32px;
       line-height: 32px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      overflow-x: hidden;
+      flex-wrap: nowrap;
     }
 
     &ExpandedLevel {
@@ -220,10 +226,6 @@ $level-cell-width: 52;
 
     &ExpandedLevelCell {
       width: $level-cell-width + 1 + px;
-    }
-
-    &LevelCaret {
-      margin-inline-end: 4px;
     }
   }
   &Column {
@@ -265,4 +267,9 @@ $level-cell-width: 52;
 
 .pointerMouse {
   cursor: pointer;
+}
+
+.assessmentLevelIcon {
+  font-size: 12px;
+  color: $neutral_dark60;
 }
