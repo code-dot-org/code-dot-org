@@ -418,12 +418,18 @@ Applab.init = function (config) {
   Applab.channelId = config.channel;
 
   if (!!config.useDatablockStorage) {
-    console.error('Initializing DATABLOCK_STORAGE');
+    console.log(
+      '%cInitializing DATABLOCK_STORAGE',
+      'background:yellow; font-size: 30px'
+    );
     Applab.storage = initStorage(DATABLOCK_STORAGE, {
       channelId: config.channel,
     });
   } else {
-    console.error('Initializing FIREBASE_STORAGE');
+    console.log(
+      '%cInitializing FIREBASE_STORAGE',
+      'background: pink; font-size 30px'
+    );
     Applab.storage = initStorage(FIREBASE_STORAGE, {
       // TODO: unfirebase
       channelId: config.channel,
