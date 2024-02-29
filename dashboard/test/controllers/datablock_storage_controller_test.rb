@@ -406,9 +406,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       record_json: NYC_RECORD.to_json,
     }
 
-    put _url(:populate_tables), params: {table_data_json: POPULATE_TABLE_DATA_JSON_STRING}
-
-    skip "FIXME: controller bug, populate_tables is returning a 500, desired behavior is to not return even a warning, and silently fail if the table already exists"
+    put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
     assert_response :success
 
     assert_equal [NYC_RECORD], read_records('cities')
@@ -416,7 +414,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   test "populate_table prints a friendly error message when given bad table json" do
     BAD_JSON = '{'
-    put _url(:populate_tables), params: {table_data_json: BAD_JSON}
+    put _url(:populate_tables), params: {tables_json: BAD_JSON}
 
     skip "FIXME: controller bug, populate_tables is returning a 500, desired behavior is to return a 400 with an error message"
     assert_response :bad_request
