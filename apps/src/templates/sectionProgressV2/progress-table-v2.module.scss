@@ -46,7 +46,11 @@ $level-cell-width: 52;
   &Student {
     height: 47px;
     line-height: 47px;
-    padding-left: 12px;
+    padding-inline-start: 12px;
+    padding-inline-end: .5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &Lesson {
