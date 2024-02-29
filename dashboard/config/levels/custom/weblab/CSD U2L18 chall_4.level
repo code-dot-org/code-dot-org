@@ -1,0 +1,43 @@
+<Weblab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2024-02-29T01:07:41.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n       \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n\\n    <!-- photo gallery of popular ramen -->\\n    <h1>🥢 Ramen Gallery 🥢</h1>\\n    \\n    <!-- 1) Add a div with a \\\"gallery\\\" class around ALL content below -->\\n    \\n      <!-- 2) Add a child div with a \\\"ramen-card\\\" class around EACH set of image, h3 tag and paragraph -->\\n      <!-- ramen card - Tonkotsu Ramen -->\\n      \\n        <img src=\\\"Tonkotsu_Ramen.jpg\\\" alt=\\\"Tonkotsu Ramen\\\">\\n        <h3>Tonkotsu Ramen</h3>\\n        <p>Originating from modern-day Fukuoka and lending its mouthwatering fragrance to Tokyo’s Asakusa region, tonkotsu ramen is made from boiling pork bones for hours until it brings a creamy cloudy look to the tonkotsu broth.</p>\\n      \\n\\n      <!-- ramen card - Miso Ramen -->\\n      \\n        <img src=\\\"Miso_Ramen.jpg\\\" alt=\\\"Miso Ramen\\\">\\n        <h3>Miso Ramen</h3>\\n        <p>Coming from the Sapporo region of Hokkaido, miso ramen takes its name from its main ingredient. This broth is strong and savory and has an opaque appearance</p>\\n      \\n\\n      <!-- ramen card - Shoyu Ramen -->\\n      \\n        <img src=\\\"Shoyu_Ramen.jpg\\\" alt=\\\"Shoyu Ramen\\\">\\n        <h3>Shoyu Ramen</h3>\\n        <p>Shoyu means soy sauce in Japanese and this style of noodle dish was actually the first type of ramen and is still going strong. There’s lots of different varieties of shoyu ramen but the taste is normally salty and tangy.</p>\\n      \\n\\n      <!-- ramen card - Shio Ramen -->\\n      \\n        <img src=\\\"Shio_Ramen.jpg\\\" alt=\\\"Shio Ramen\\\">\\n        <h3>Shio Ramen</h3>\\n        <p>Shio means salt and this style of ramen tends to be light and transparent. It’s often made by boiling down chicken bones and flavored with seafood based products like dried sardines, dashi stock, and bonito flakes.</p>\\n     \\n      \\n      <!-- ramen card - Tsukemen -->\\n      \\n        <img src=\\\"Tsukemen.jpg\\\" alt=\\\"Tsukemen\\\">\\n        <h3>Tsukemen</h3>\\n        <p>These thick and hearty ramen noodles are cooked, plunged into cool water, and then served alongside a bowl of tare ramen broth. You dip the noodles and let the thick soup coat each strand in tasty moisture.</p>\\n      \\n   \\n\\n\\n\\n\\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* body style */\\nbody {\\n  font-family: Verdana, sans-serif;\\n}\\n\\n/* 1) Add the listed styles to the \\\"gallery\\\" rule set */\\n.gallery {\\n\\n  \\n}\\n\\n/* 2) Add the listed styles to the \\\"ramen-card\\\" rule set */\\n.ramen-card {\\n\\n  \\n}\\n\\n/* Add the listed styles to the paragraphs in the \\\"ramen-card\\\" container */\\n.ramen-card p {\\n\\n  \\n}\\n\\n/* Add the listed styles to the h3 headings */\\nh3 {\\n\\n  \\n}\\n\\n/* Add the listed styles to the images */\\nimg {\\n\\n  \\n}\"\r\n    },\r\n    {\r\n      \"name\": \"Tsukemen.jpg\",\r\n      \"url\": \"https://images.code.org/93950072bc30b3d3800f819d64a8c2eb-Tsukemen.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"Shio_Ramen.jpg\",\r\n      \"url\": \"https://images.code.org/54923878f4096f345b4851ab7ea84749-Shio_Ramen.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"Miso_Ramen.jpg\",\r\n      \"url\": \"https://images.code.org/45fff5f40fac6539fc65eb518c9b7f6e-Miso_Ramen.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"Tonkotsu_Ramen.jpg\",\r\n      \"url\": \"https://images.code.org/6f5269c51ee9780aa9a943cf20b2f360-Tonkotsu_Ramen.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"Shoyu_Ramen.jpg\",\r\n      \"url\": \"https://images.code.org/9b682cfd22af2fbbd121eef1244d9da5-Shoyu_Ramen.jpg\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "# Image Gallery Cards\r\n\r\nBack in Chapter 1, you learned how to create \"product cards\" - an image gallery with information about each image underneath. With our \"hover\" pseudo-class, we can make these cards even more visually appealing and responsive to our users! Let's see how!\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1) Add a div with a \"gallery\" class around ALL content after the main page title.\r\n2) Add a child div with a \"ramen-card\" class around EACH set of image, h3 tag and paragraph.\r\n   \r\n   :::details [*Click Me To See An Example*]\r\n   ```\r\n   <div class=\"ramen-card\">\r\n   \t\t<img>\r\n        \t<h3> </h3>\r\n     \t<p> </p>\r\n   </div>\r\n   ```\r\n   :::\r\n\r\n<br>\r\n\r\n**In the CSS file:**\r\n1) Add the following styles to the \"gallery\" rule set:\r\n\r\n   :::details [**Click Me To See The List of \"gallery\" Class Styles**]\r\n   - Establish flex layout\r\n   - Set the flex content to wrap\r\n   - Define the items to have space around them horizontally\r\n   - Set a margin of 20px to keep the items within from getting too close to the edge of the screen\r\n   :::\r\n\r\n<br>\r\n\r\n2) Add the following styles to the \"ramen-card\" rule set:\r\n\r\n\t:::details [**Click Me To See The List of \"ramen-card\" Class Styles**]\r\n   - Set the width to 300px and the height to 350px\r\n   - Set the margin and padding of each card to be 10px\r\n   - Define the border to be solid, 2px wide, and a color of your choice\r\n   - Align the text in the center\r\n   - Define the background color to a color of your choice\r\n   - Establish flex layout for the image, heading and paragraph within \r\n   - Set the layout direction to be in a column\r\n   :::\r\n   \r\n<br>\r\n\r\n3) Add the following style to apply to all paragraphs within containers with the \"ramen-card\" class:\r\n\r\n\r\n   :::details [**Click Me To See The List of Paragraph Styles**]\r\n   - Set the font size to be 14px\r\n   - Set the top margin and the top padding to be 0px\r\n   - Set the bottom margin to be 5px\r\n   :::\r\n\r\n<br>\r\n\r\n4) Add the following styles to the `h3` headings:\r\n\r\n   :::details [**Click Me To See The List of `h3` Styles**]\r\n   - Set the bottom margin to be 10px (or less)\r\n   - Set the color of the font to a color of your choice\r\n   :::\r\n\r\n<br>\r\n\r\n5) Add the following styles to the images:\r\n\r\n   :::details [**Click Me To See The List of Image Styles**]\r\n   - Set the width to auto (this will keep them contained within the ramen card)\r\n   - Set the height to 200px\r\n   - Set the border style to be solid, 2px wide and a color of your choice\r\n   :::",
+    "thumbnail_url": "https://images.code.org/b3232cf03e53104e29d8b23cbf6fd088-css.png",
+    "display_name": "Responsive Page Elements",
+    "bubble_choice_description": "Learn how to create a responsive image gallery!",
+    "reference_links": [
+      "/courses/csd-2022/guides/flexbox",
+      "/courses/csd-2022/guides/div",
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/html-selectors"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-29T01:07:41.056+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12 Div Flex CH_4\\\"\"],\"cloned_from\":\"CSD U2L12 Div Flex CH_4\"},{\"changed_at\":\"2024-02-29 01:22:29 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"thumbnail_url\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab>
