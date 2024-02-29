@@ -3202,16 +3202,11 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.studio_saySpriteChoices = function () {
+    const sprite = JSON.stringify(String(this.getFieldValue('SPRITE') || '0'));
+    const value = JSON.stringify(String(this.getFieldValue('VALUE') || ' '));
+
     // Generate JavaScript for saying (choices version).
-    return (
-      "Studio.saySprite('block_id_" +
-      this.id +
-      "', " +
-      (this.getFieldValue('SPRITE') || '0') +
-      ', ' +
-      JSON.stringify(String(this.getFieldValue('VALUE') || ' ')) +
-      ');\n'
-    );
+    return `Studio.saySprite('block_id_${this.id}', ${sprite}, ${value});\n`;
   };
 
   generator.studio_saySpriteParams = function () {
