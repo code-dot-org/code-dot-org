@@ -6,6 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MusicLibrary, {SoundData, SoundFolder} from '../player/MusicLibrary';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+const AppConfig = require('../appConfig').default;
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -252,34 +253,39 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     );
   }
 
+  const showSoundFilters = AppConfig.getValue('show-sound-filters') === 'true';
+
   return (
     <FocusLock>
       <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
-        <div id="sounds-panel-top" className={styles.soundsPanelTop}>
-          <SegmentedButtons
-            selectedButtonValue={mode}
-            buttons={[
-              {label: 'Packs', value: 'packs'},
-              {label: 'Sounds', value: 'sounds'},
-            ]}
-            onChange={value => onModeChange(value)}
-            className={styles.segmentedButtons}
-          />
+        <div id="hidden-item" tabIndex={0} role="button" />
+        {showSoundFilters && (
+          <div id="sounds-panel-top" className={styles.soundsPanelTop}>
+            <SegmentedButtons
+              selectedButtonValue={mode}
+              buttons={[
+                {label: 'Packs', value: 'packs'},
+                {label: 'Sounds', value: 'sounds'},
+              ]}
+              onChange={value => onModeChange(value)}
+              className={styles.segmentedButtons}
+            />
 
-          <SegmentedButtons
-            selectedButtonValue={filter}
-            buttons={[
-              {label: 'All', value: 'all'},
-              {label: 'Beats', value: 'beat'},
-              {label: 'Bass', value: 'bass'},
-              {label: 'Leads', value: 'lead'},
-              {label: 'Effects', value: 'fx'},
-              {label: 'Vocals', value: 'vocal'},
-            ]}
-            onChange={value => onFilterChange(value)}
-            className={styles.segmentedButtons}
-          />
-        </div>
+            <SegmentedButtons
+              selectedButtonValue={filter}
+              buttons={[
+                {label: 'All', value: 'all'},
+                {label: 'Beats', value: 'beat'},
+                {label: 'Bass', value: 'bass'},
+                {label: 'Leads', value: 'lead'},
+                {label: 'Effects', value: 'fx'},
+                {label: 'Vocals', value: 'vocal'},
+              ]}
+              onChange={value => onFilterChange(value)}
+              className={styles.segmentedButtons}
+            />
+          </div>
+        )}
         <div id="sounds-panel-body" className={styles.soundsPanelBody}>
           {mode === 'packs' && (
             <div id="sounds-panel-left" className={styles.leftColumn}>

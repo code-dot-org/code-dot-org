@@ -41,11 +41,15 @@
 
   .folderRow {
     padding: 6px 0;
-    margin-bottom: 6px;
+    margin: 1px 1px 6px 1px;
     overflow: hidden;
 
     &:hover {
       background-color: $neutral_dark90;
+    }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
     }
 
     &Selected {
@@ -53,7 +57,7 @@
     }
 
     &:first-child {
-      margin-top: 0;
+      margin-top: 1px;
     }
     &:not(:first-child) {
       margin-top: 14px;
@@ -90,9 +94,14 @@
     overflow: hidden;
     padding: 4px 0;
     font-size: 14px;
+    margin: 1px;
 
     &:hover {
       background-color: $neutral_dark90;
+    }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
     }
 
     &Selected {

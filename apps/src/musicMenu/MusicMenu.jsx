@@ -44,6 +44,14 @@ const optionsList = [
     description: 'Use a specific music library file.',
   },
   {
+    name: 'show-sound-filters',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Hide sound filters.'},
+      {value: 'true', description: 'Show sound filters.'},
+    ],
+  },
+  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',
