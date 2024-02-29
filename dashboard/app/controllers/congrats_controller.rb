@@ -9,13 +9,13 @@ class CongratsController < ApplicationController
     @random_donor_twitter = DashboardCdoDonor.get_random_donor_twitter
     @random_donor_name = DashboardCdoDonor.get_random_donor_name
     begin
-      course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
+      @course_name = params[:s] && Base64.urlsafe_decode64(params[:s])
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    course_name = 'hourofcode' if course_name.blank?
-    curriculum = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
+    @course_name = 'hourofcode' if @course_name.blank?
+    curriculum = CurriculumHelper.find_matching_unit_or_unit_group(@course_name)
 
     if curriculum.is_a?(UnitGroup)
       @curriculum_url = course_path(curriculum)
@@ -24,7 +24,7 @@ class CongratsController < ApplicationController
       @certificate_data =
         if completed_units.length == units.length
           [{
-            courseName: course_name,
+            courseName: @course_name,
             coursePath: course_path(curriculum),
           }]
         else
@@ -39,7 +39,7 @@ class CongratsController < ApplicationController
       # This occurs when the user completes a third party tutorial
       @curriculum_url = script_path('hourofcode')
       @certificate_data = [{
-        courseName: course_name,
+        courseName: @course_name,
         coursePath: @curriculum_url,
       }]
     else
@@ -49,7 +49,8 @@ class CongratsController < ApplicationController
       @certificate_data =
         if curriculum&.hoc? || UserScript.where(user: current_user, script: curriculum).where.not(completed_at: nil).exists?
           [{
-            courseName: course_name
+            courseName: @course_name,
+            coursePath: @curriculum_url,
           }]
         else
           []
