@@ -58,9 +58,12 @@ class DatablockStorageTable < ApplicationRecord
 
   def self.populate_tables(project_id, tables_json)
     tables_json.each do |table_name, records|
-      table = DatablockStorageTable.where(project_id: project_id, table_name: table_name).first_or_create
+      table = DatablockStorageTable.create!(project_id: project_id, table_name: table_name)
       table.create_records records
       table.save!
+    rescue ActiveRecord::RecordNotUnique
+      # Its ok if the table already exists, but we won't re-populate it
+      logger.warn "Table already exists: not populating project_id=#{project_id}, table_name=#{table_name}"
     end
   end
 

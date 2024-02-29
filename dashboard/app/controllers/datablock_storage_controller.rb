@@ -47,20 +47,19 @@ class DatablockStorageController < ApplicationController
   end
 
   def get_key_values
-    # SELECT key, value FROM datablock_storage_kvps WHERE project_id='{@project_id}';
-    kvps = DatablockStorageKvp.
-      where(project_id: @project_id).
-      select(:key, :value).
-      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
-
+    kvps = DatablockStorageKvp.get_kvps(@project_id)
     render json: kvps
   end
 
   def populate_key_values
     key_values_json = JSON.parse params[:key_values_json]
     raise "key_values_json must be a hash" unless key_values_json.is_a? Hash
-    DatablockStorageKvp.set_kvps(@project_id, key_values_json)
+
+    DatablockStorageKvp.set_kvps(@project_id, key_values_json, upsert: false)
+
     render json: true
+  rescue JSON::ParserError => exception
+    raise StudentFacingError, "SyntaxError #{exception.message}\n while parsing initial key/value data: #{params[:key_values_json]}"
   end
 
   ##########################################################
@@ -77,10 +76,16 @@ class DatablockStorageController < ApplicationController
     DatablockStorageTable.add_shared_table @project_id, params[:table_name]
 
     render json: true
+  rescue ActiveRecord::RecordNotUnique
+    raise StudentFacingError.new(:DUPLICATE_TABLE_NAME), "There is already a table with name #{params[:table_name].inspect}"
   end
 
   def import_csv
     table = table_or_create
+
+    # import_csv should overwrite existing data:
+    table.records.delete_all
+
     table.import_csv params[:table_data_csv]
     table.save!
 
@@ -111,10 +116,10 @@ class DatablockStorageController < ApplicationController
 
   def populate_tables
     tables_json = JSON.parse params[:tables_json]
-    # FIXME: unfirebase - Why are json encoding a string that's already a json encoded object?
-    tables_json = JSON.parse tables_json unless tables_json.is_a? Hash
     DatablockStorageTable.populate_tables @project_id, tables_json
     render json: true
+  rescue JSON::ParserError => exception
+    raise StudentFacingError, "SyntaxError #{exception.message}\n while parsing initial table data: #{params[:tables_json]}"
   end
 
   ##########################################################

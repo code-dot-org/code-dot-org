@@ -406,9 +406,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       record_json: NYC_RECORD.to_json,
     }
 
-    put _url(:populate_tables), params: {table_data_json: POPULATE_TABLE_DATA_JSON_STRING}
-
-    skip "FIXME: controller bug, populate_tables is returning a 500, desired behavior is to not return even a warning, and silently fail if the table already exists"
+    put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
     assert_response :success
 
     assert_equal [NYC_RECORD], read_records('cities')
@@ -416,16 +414,13 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   test "populate_table prints a friendly error message when given bad table json" do
     BAD_JSON = '{'
-    put _url(:populate_tables), params: {table_data_json: BAD_JSON}
-
-    skip "FIXME: controller bug, populate_tables is returning a 500, desired behavior is to return a 400 with an error message"
+    put _url(:populate_tables), params: {tables_json: BAD_JSON}
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
-    # Error message should be like (from the JS):
-    # `${e}\nwhile parsing initial table data: ${jsonData}`
-    assert_match(/SyntaxError/, error)
-    assert_match(/while parsing initial table data: {/, error)
+
+    assert_match(/SyntaxError/, error['msg'])
+    assert_match(/while parsing initial table data: {/, error['msg'])
   end
 
   test "populate_key_values" do
@@ -447,21 +442,18 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     get _url(:get_key_values)
     assert_response :success
 
-    skip "FIXME: controller bug, populate_key_values is overwriting the existing key value"
     assert_equal ({"click_count" => 1}), JSON.parse(@response.body)
   end
 
   test "populate_key_values prints a friendly error message when given bad key value json" do
     put _url(:populate_key_values), params: {key_values_json: '{'}
 
-    skip "FIXME: controller bug, populate_key_values is returning a 500, expected behavior is to return a 400 with an error message"
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
-    # Error message should be like (from the JS):
-    # `${e}\nwhile parsing initial key/value data: ${jsonData}`
-    assert_match(/SyntaxError/, error)
-    assert_match(/while parsing initial key\/value data: {/, error)
+
+    assert_match(/SyntaxError/, error['msg'])
+    assert_match(/while parsing initial key\/value data: {/, error['msg'])
   end
 
   def create_shared_table
@@ -527,6 +519,8 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "add_shared_table cannot overwrite an existing table" do
+    _shared_records, _mysharedtable = create_shared_table
+
     post _url(:create_record), params: {
       table_name: 'mysharedtable',
       record_json: {"name" => 'bob', "age" => 8}.to_json,
@@ -534,12 +528,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
-
-    skip "FIXME: controller bug, add_shared_table is returning a 500, expected behavior is to not return even a warning, and silently fail if the table already exists"
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
     assert_equal 'DUPLICATE_TABLE_NAME', error['type']
+
+    assert_equal [{"id" => 1, "name" => 'bob', "age" => 8}], read_records('mysharedtable')
   end
 
   test "deletes a record" do
@@ -616,7 +610,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    IMPORT_CSV_DATA = <<~CSV
+    CSV_DATA = <<~CSV
       id,name
       1,alice
       2,bob
@@ -634,8 +628,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       table_data_csv: CSV_DATA,
     }
     assert_response :success
-
-    skip "FIXME: controller bug, test will fail because import_csv doesn't properly overwrite existing data"
 
     # Tim, age 2 record should be gone:
     assert_equal EXPECTED_RECORDS, read_records
