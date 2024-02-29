@@ -13,10 +13,12 @@ class DatablockStorageKvp < ApplicationRecord
   # but we're skipping it until this is implemented.
   MAX_VALUE_LENGTH = 4096
 
-  def self.set_kvps(project_id, key_value_hashmap)
-    # [
-    #   {project_id: project_id, key: key, value: value.to_json}
-    # ]
+  def self.get_kvps(project_id)
+    where(project_id: project_id).
+      select(:key, :value).
+      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
+  end
+
     kvps = key_value_hashmap.map do |key, value|
       {project_id: project_id, key: key, value: value.to_json}
     end

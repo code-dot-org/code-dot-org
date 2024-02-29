@@ -47,12 +47,7 @@ class DatablockStorageController < ApplicationController
   end
 
   def get_key_values
-    # SELECT key, value FROM datablock_storage_kvps WHERE project_id='{@project_id}';
-    kvps = DatablockStorageKvp.
-      where(project_id: @project_id).
-      select(:key, :value).
-      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
-
+    kvps = DatablockStorageKvp.get_kvps(@project_id)
     render json: kvps
   end
 
