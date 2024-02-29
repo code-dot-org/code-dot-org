@@ -287,7 +287,7 @@ export default class MusicPlayer {
 
       return [
         {
-          sampleId: soundEvent.id,
+          sampleId: `${folder.path}/${soundData.src}`,
           playbackPosition: event.when,
           triggered: soundEvent.triggered,
           effects: soundEvent.effects,
@@ -447,7 +447,7 @@ export default class MusicPlayer {
     }
 
     const kit = patternEvent.value.kit;
-    const folder = library.getFolderForPath(kit);
+    const folder = library.getFolderForFolderId(kit);
     if (folder === null) {
       this.metricsReporter.logWarning(`No instrument ${kit}`);
       return null;
@@ -503,7 +503,7 @@ export default class MusicPlayer {
       return;
     }
 
-    const folder = library.getFolderForPath(instrument);
+    const folder = library.getFolderForFolderId(instrument);
     if (folder === null) {
       return;
     }
