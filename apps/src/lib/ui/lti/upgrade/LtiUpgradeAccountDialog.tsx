@@ -69,7 +69,7 @@ export const LtiUpgradeAccountDialog = ({
     }
 
     return (
-      <div>
+      <div data-testid="lti-upgrade-account">
         <h2 style={styles.dialogHeader}>
           {i18n.ltiUpgradeAccountDialogTitle()}
         </h2>
@@ -78,7 +78,7 @@ export const LtiUpgradeAccountDialog = ({
         <form>
           <div>
             <label>
-              <strong>{i18n.email()}</strong>
+              <strong style={styles.formLabel}>{i18n.email()}</strong>
               <input
                 type={'text'}
                 value={emailAddress}
@@ -132,6 +132,9 @@ const styles: {[styleKey: string]: CSSProperties} = {
   },
   error: {
     color: color.red,
+  },
+  formLabel: {
+    padding: 8,
   },
   spinnerContainer: {
     textAlign: 'center',

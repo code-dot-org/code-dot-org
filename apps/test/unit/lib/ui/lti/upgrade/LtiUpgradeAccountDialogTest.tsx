@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {expect} from '../../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
@@ -108,7 +108,9 @@ describe('LTI Upgrade Account Dialog', () => {
         />
       );
 
-      const cancelButton = screen.getByText(i18n.cancel());
+      const cancelButton = within(
+        screen.getByTestId('lti-upgrade-account')
+      ).getByText(i18n.dialogCancel());
 
       fireEvent.click(cancelButton);
 
