@@ -296,6 +296,23 @@ DatablockStorage.coerceColumn = function (
   }).then(onSuccess, onError);
 };
 
+async function getColumn({tableName, columnName}) {
+  const response = await _fetch('get_column', 'GET', {
+    table_name: tableName,
+    column_name: columnName,
+  });
+  return await response.json();
+}
+
+DatablockStorage.getColumn = function (
+  tableName,
+  columnName,
+  onSuccess,
+  onError
+) {
+  return getColumn({tableName, columnName}).then(onSuccess, onError);
+};
+
 DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
   _fetch('delete_key_value', 'DELETE', {
     key,
