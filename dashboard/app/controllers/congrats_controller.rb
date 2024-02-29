@@ -15,8 +15,8 @@ class CongratsController < ApplicationController
     end
 
     course_name = 'hourofcode' if course_name.blank?
-
     curriculum = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
+
     if curriculum.is_a?(UnitGroup)
       @curriculum_url = course_path(curriculum)
       units = curriculum.units_for_user(current_user)
@@ -35,7 +35,13 @@ class CongratsController < ApplicationController
             }
           end
         end
-
+    elsif curriculum.nil?
+      # This occurs when the user completes a third party tutorial
+      @curriculum_url = script_path('hourofcode')
+      @certificate_data = [{
+        courseName: course_name,
+        coursePath: @curriculum_url,
+      }]
     else
       @curriculum_url = script_path(curriculum)
       # The order of this conditional is important. During HoC, we generally want to avoid
