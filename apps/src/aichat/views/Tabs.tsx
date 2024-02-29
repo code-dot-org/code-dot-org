@@ -1,0 +1,74 @@
+import React, {useState} from 'react';
+import classNames from 'classnames';
+
+import styles from './tabs.module.scss';
+import TabPanel from './TabPanel';
+
+type Tab = {
+  title: string;
+  content: React.ReactNode;
+};
+
+interface TabsProps {
+  tabs: Tab[];
+}
+
+const Tabs: React.FunctionComponent<TabsProps> = ({tabs}) => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  const handleTabClick = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  return (
+    <div>
+      <div className={styles.tabsContainer}>
+        <ul
+          style={{display: 'flex', listStyleType: 'none', margin: 0}}
+          role="tablist"
+          className="tab-list"
+        >
+          {tabs.map((tab, index) => {
+            return (
+              <li
+                role="presentation"
+                className={classNames(
+                  styles.tabContainer,
+                  index === activeIndex && styles.active
+                )}
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={activeIndex === index}
+                  aria-controls={`panel-${index}`}
+                  id={`tab-${index}`}
+                  onClick={() => handleTabClick(index)}
+                  // tabIndex={activeIndex === index ? 0 : -1}
+                  className={classNames(
+                    styles.button,
+                    index === activeIndex && styles.active
+                  )}
+                >
+                  {tab.title}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      {tabs.map((tab, index) => {
+        return (
+          <TabPanel
+            content={tab.content}
+            isActive={index === activeIndex}
+            id={`panel-${index}`}
+            labelledby={`tab-${index}`}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+export default Tabs;

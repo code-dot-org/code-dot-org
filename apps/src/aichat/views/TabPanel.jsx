@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TabPanel = ({isActive, id, labelledby, children}) => (
+const TabPanel = ({content, isActive, id, labelledby}) => (
   <div
     role="tabpanel"
     id={id}
@@ -8,7 +8,7 @@ const TabPanel = ({isActive, id, labelledby, children}) => (
     hidden={!isActive}
     tabIndex="0" // Make the panel focusable
   >
-    {children}
+    {content}
   </div>
 );
 
