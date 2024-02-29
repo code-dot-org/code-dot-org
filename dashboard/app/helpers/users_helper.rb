@@ -176,7 +176,7 @@ module UsersHelper
       script: unit,
       users: users,
       user_levels_by_level: User.user_levels_by_user_by_level(users, unit),
-      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit),
+      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit, current_user.id),
       paired_user_levels: PairedUserLevel.pairs_by_user(users),
       include_timestamp: true
     )
@@ -205,10 +205,10 @@ module UsersHelper
   #   },
   #   3: {}
   # }
-  private def teacher_feedbacks_by_student_by_level(users, unit)
+  private def teacher_feedbacks_by_student_by_level(users, unit, teacher_id = nil)
     initial_hash = users.map {|user| [user.id, {}]}.to_h
     TeacherFeedback.
-      get_latest_feedbacks_received(users.map(&:id), nil, unit.id).
+      get_latest_feedbacks_received(users.map(&:id), nil, unit.id, teacher_id).
       group_by(&:student_id).
       inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
         memo[student_id] = teacher_feedbacks.index_by(&:level_id)
@@ -288,6 +288,7 @@ module UsersHelper
     include_timestamp: false
   )
     progress = users.map {|user| [user.id, {}]}.to_h
+
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
