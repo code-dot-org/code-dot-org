@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
@@ -9,6 +9,8 @@ import Button from '@cdo/apps/templates/Button';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {Connection, getDocument, peerExtension} from './collab';
+import {getCollabWorker} from './collabWorkerManager';
 
 interface PermissionResponse {
   permissions: string[];
@@ -21,7 +23,13 @@ const PythonEditor: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   const onCodeUpdate = (code: string) => dispatch(setCode(code));
-  const editorExtensions = [python(), darkMode];
+  // const collabCompartment1 = new Compartment();
+  // const collabCompartment2 = new Compartment();
+  // const baseExtensions = [python(), darkMode];
+  // const editor1Extensions = [...baseExtensions, collabCompartment1];
+  // const editor2Extensions = [...baseExtensions, collabCompartment2];
+  const [editor1, setEditor1] = useState<JSX.Element | null>(null);
+  const [editor2, setEditor2] = useState<JSX.Element | null>(null);
 
   const handleRun = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
@@ -40,13 +48,35 @@ const PythonEditor: React.FunctionComponent = () => {
     dispatch(resetOutput());
   };
 
-  return (
-    <div className={moduleStyles.editorContainer}>
+  const createEditor = async () => {
+    console.log('creating editor...');
+    const collabWorker = getCollabWorker();
+    const {version, doc} = await getDocument(
+      new Connection(collabWorker, () => 0)
+    );
+    const connection = new Connection(collabWorker);
+    const extensions = [python(), darkMode, peerExtension(version, connection)];
+    console.log('returning editor?');
+    return (
       <CodeEditor
         onCodeChange={onCodeUpdate}
-        startCode={'print("Hello world!")'}
-        editorConfigExtensions={editorExtensions}
+        startCode={doc}
+        editorConfigExtensions={extensions}
       />
+    );
+  };
+
+  if (!editor1) {
+    createEditor().then(editor => setEditor1(editor));
+  }
+  if (!editor2) {
+    createEditor().then(editor => setEditor2(editor));
+  }
+
+  return (
+    <div className={moduleStyles.editorContainer}>
+      {editor1}
+      {editor2}
       <div>
         <Button
           type={'button'}

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
-import {EditorState, Extension} from '@codemirror/state';
+import {EditorState, Extension, Text} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 import PanelContainer from '../PanelContainer';
 import {useDispatch} from 'react-redux';
@@ -11,7 +11,7 @@ import {autocompletion} from '@codemirror/autocomplete';
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
   editorConfigExtensions: Extension[];
-  startCode: string;
+  startCode: string | Text;
   darkMode?: boolean;
 }
 
