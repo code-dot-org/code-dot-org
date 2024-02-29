@@ -314,7 +314,8 @@ DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
  */
 DatablockStorage.populateTable = function (jsonData) {
   return _fetch('populate_tables', 'PUT', {
-    tables_json: JSON.stringify(jsonData),
+    tables_json:
+      typeof jsonData === 'string' ? jsonData : JSON.stringify(jsonData),
   });
 };
 

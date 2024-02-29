@@ -111,8 +111,6 @@ class DatablockStorageController < ApplicationController
 
   def populate_tables
     tables_json = JSON.parse params[:tables_json]
-    # FIXME: unfirebase - Why are json encoding a string that's already a json encoded object?
-    tables_json = JSON.parse tables_json unless tables_json.is_a? Hash
     DatablockStorageTable.populate_tables @project_id, tables_json
     render json: true
   end
