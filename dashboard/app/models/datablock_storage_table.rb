@@ -18,6 +18,15 @@ class DatablockStorageTable < ApplicationRecord
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
+  class StudentFacingError < StandardError
+    attr_reader :type
+
+    def initialize(type=nil)
+      super
+      @type = type
+    end
+  end
+
   SHARED_TABLE_PROJECT_ID = 0
 
   # TODO: implement enforcement of MAX_TABLE_COUNT, we already have a test for it
@@ -202,7 +211,13 @@ class DatablockStorageTable < ApplicationRecord
     when 'number'
       value.to_f
     when 'boolean'
-      ActiveRecord::Type::Boolean.new.cast(value)
+      if value == true
+        true
+      elsif value == false
+        false
+      else
+        raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert '#{value}' to boolean"
+      end
     end
   end
 
