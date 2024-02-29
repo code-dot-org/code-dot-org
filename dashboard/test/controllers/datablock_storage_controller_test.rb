@@ -442,7 +442,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     get _url(:get_key_values)
     assert_response :success
 
-    skip "FIXME: controller bug, populate_key_values is overwriting the existing key value"
     assert_equal ({"click_count" => 1}), JSON.parse(@response.body)
   end
 
