@@ -1,88 +1,175 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import $ from 'jquery';
+import {render, screen, fireEvent} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedSectionProgressSelector} from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
+import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
 import DCDO from '@cdo/apps/dcdo';
-import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
-import SectionProgressV2 from '@cdo/apps/templates/sectionProgressV2/SectionProgressV2';
 import sinon from 'sinon';
+import currentUser, {
+  setShowProgressTableV2,
+  setProgressTableV2ClosedBeta,
+} from '@cdo/apps/templates/currentUserRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Provider} from 'react-redux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 
-const DEFAULT_PROPS = {
-  showProgressTableV2: false,
-  setShowProgressTableV2: () => {},
-};
+const V1_PAGE_LINK_TEXT = 'Switch to new progress view';
+const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
+const V1_TEST_ID = 'section-progress-v1';
+const V2_TEST_ID = 'section-progress-v2';
 
-const setUp = overrideProps => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<UnconnectedSectionProgressSelector {...props} />);
-};
+const DEFAULT_PROPS = {};
 
 describe('SectionProgressSelector', () => {
+  let store;
+
   beforeEach(() => {
+    stubRedux();
+    registerReducers({
+      currentUser,
+      sectionProgress,
+      unitSelection,
+      teacherSections,
+    });
+
+    store = getStore();
+    store.dispatch(setShowProgressTableV2(false));
+    store.dispatch(setScriptId(1));
+
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);
+    DCDO.set('progress-table-v2-closed-beta-enabled', false);
   });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  function renderDefault(propOverrides = {}) {
+    render(
+      <Provider store={store}>
+        <SectionProgressSelector {...DEFAULT_PROPS} {...propOverrides} />
+      </Provider>
+    );
+  }
+
   it('does not show toggle link if disabled', () => {
     DCDO.set('progress-table-v2-enabled', false);
-    const wrapper = setUp({showProgressTableV2: true});
+    renderDefault();
+    store.dispatch(setShowProgressTableV2(true));
 
-    expect(wrapper.find('Link')).to.have.length(0);
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
   });
 
   it('shows v1 if disabled', () => {
     DCDO.set('progress-table-v2-enabled', false);
-    const wrapper = setUp({showProgressTableV2: true});
+    renderDefault();
+    store.dispatch(setShowProgressTableV2(true));
 
-    expect(wrapper.find(SectionProgress)).to.have.length(1);
-    expect(wrapper.find(SectionProgressV2)).to.have.length(0);
+    screen.getByTestId(V1_TEST_ID);
+
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
   });
 
   it('shows v1', () => {
-    const wrapper = setUp();
+    renderDefault();
 
-    expect(wrapper.find(SectionProgress)).to.have.length(1);
-    expect(wrapper.find(SectionProgressV2)).to.have.length(0);
-    expect(wrapper.find('Link')).to.have.length(1);
-    expect(wrapper.find('Link').at(0).props().children).to.equal(
-      'Switch to new progress view'
-    );
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
+
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
   });
 
   it('shows v2', () => {
-    const wrapper = setUp({showProgressTableV2: true});
+    renderDefault();
+    store.dispatch(setShowProgressTableV2(true));
 
-    expect(wrapper.find(SectionProgress)).to.have.length(0);
-    expect(wrapper.find(SectionProgressV2)).to.have.length(1);
-    expect(wrapper.find('Link')).to.have.length(1);
-    expect(wrapper.find('Link').at(0).props().children).to.equal(
-      'Switch to old progress view'
-    );
+    screen.getByText(V2_PAGE_LINK_TEXT);
+    screen.getByTestId(V2_TEST_ID);
+
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V1_TEST_ID)).to.not.exist;
   });
 
-  it('shows default if no user preference', () => {
-    const wrapper = setUp({showProgressTableV2: undefined});
+  it('shows default v1 if no user preference', () => {
+    renderDefault();
+    store.dispatch(setShowProgressTableV2(undefined));
 
-    expect(wrapper.find(SectionProgress)).to.have.length(1);
-    expect(wrapper.find(SectionProgressV2)).to.have.length(0);
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
 
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+  });
+
+  it('shows default v2 if no user preference', () => {
     DCDO.set('progress-table-v2-default-v2', true);
-    const wrapper_1 = setUp({showProgressTableV2: undefined});
+    store.dispatch(setShowProgressTableV2(undefined));
+    renderDefault();
 
-    expect(wrapper_1.find(SectionProgress)).to.have.length(0);
-    expect(wrapper_1.find(SectionProgressV2)).to.have.length(1);
+    screen.getByText(V2_PAGE_LINK_TEXT);
+    screen.getByTestId(V2_TEST_ID);
+
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V1_TEST_ID)).to.not.exist;
   });
 
   it('sets user preference when link clicked', () => {
-    const stub = sinon.stub();
-    const wrapper = setUp({
-      showProgressTableV2: false,
-      setShowProgressTableV2: stub,
+    const stub = sinon.stub($, 'post');
+    renderDefault();
+
+    const link = screen.getByText(V1_PAGE_LINK_TEXT);
+    fireEvent.click(link);
+
+    expect(stub).calledOnceWith('/api/v1/users/show_progress_table_v2', {
+      show_progress_table_v2: true,
     });
 
-    expect(wrapper.find(SectionProgress)).to.have.length(1);
-    expect(wrapper.find(SectionProgressV2)).to.have.length(0);
-    const link = wrapper.find('Link');
-    link.simulate('click', {preventDefault: () => {}});
-    expect(stub).calledOnceWith(true);
+    stub.reset();
+  });
+
+  it('shows v1 only if user not in closed beta', () => {
+    DCDO.set('progress-table-v2-enabled', false);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    renderDefault();
+
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+
+    screen.getByTestId(V1_TEST_ID);
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+  });
+
+  it('shows toggle if user is in closed beta', () => {
+    DCDO.set('progress-table-v2-enabled', false);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    store.dispatch(setProgressTableV2ClosedBeta(true));
+    renderDefault();
+
+    screen.getByText(V1_PAGE_LINK_TEXT);
+
+    screen.getByTestId(V1_TEST_ID);
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+  });
+
+  it('shows toggle if user not in closed beta, but v2 enabled', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    renderDefault();
+
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
+
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
   });
 });

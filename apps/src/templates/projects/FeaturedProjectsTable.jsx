@@ -29,7 +29,7 @@ export const COLUMNS = {
   APP_TYPE: 2,
   STATUS: 3,
   LAST_FEATURED: 4,
-  LAST_UNFEATURED: 5,
+  LAST_PUBLISHED: 5,
   ACTIONS: 6,
 };
 
@@ -71,6 +71,9 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  tableMessage: {
+    marginLeft: 10,
+  },
 };
 
 // Cell formatters.
@@ -109,6 +112,13 @@ const nameFormatter = (projectName, {rowData}) => {
 
 const unfeature = channel => {
   const url = `/featured_projects/${channel}/unfeature`;
+  HttpClient.put(url, undefined, true)
+    .then(handleSuccess)
+    .catch(handleUnfeatureFailure);
+};
+
+const bookmark = channel => {
+  const url = `/featured_projects/${channel}/bookmark`;
   HttpClient.put(url, undefined, true)
     .then(handleSuccess)
     .catch(handleUnfeatureFailure);
@@ -157,6 +167,11 @@ const actionsFormatter = (actions, {rowData}) => {
           Unfeature
         </PopUpMenu.Item>
       )}
+      {status === FeaturedProjectStatus.archived && (
+        <PopUpMenu.Item onClick={() => bookmark(rowData.channel)}>
+          Bookmark
+        </PopUpMenu.Item>
+      )}
       <MenuBreak />
       <PopUpMenu.Item
         onClick={() => onDelete(rowData.channel)}
@@ -185,10 +200,13 @@ const statusFormatter = status => {
   return status;
 };
 
+const publishedFormatter = time => {
+  return time ? 'yes' : 'no';
+};
+
 const topicFormatter = topic => {
   return topic;
 };
-
 class FeaturedProjectsTable extends React.Component {
   static propTypes = {
     activeList: PropTypes.arrayOf(featuredProjectDataPropType).isRequired,
@@ -346,14 +364,14 @@ class FeaturedProjectsTable extends React.Component {
         },
       },
       {
-        property: 'unfeaturedAt',
+        property: 'publishedAt',
         header: {
-          label: i18n.unfeatured(),
+          label: i18n.published(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
         cell: {
-          formatters: [dateFormatter],
+          formatters: [publishedFormatter],
           props: {style: tableLayoutStyles.cell},
         },
       },
@@ -439,9 +457,13 @@ class FeaturedProjectsTable extends React.Component {
       sort: orderBy,
     })(this.getProjectList());
 
+    const mustBePulishedMessage =
+      '* Featured projects must be published in order to be displayed in the public featured projects gallery.';
+
     return (
       <div>
         {this.renderStatusFilterDropdown()}
+        <span style={styles.tableMessage}>{mustBePulishedMessage}</span>
         <Table.Provider columns={columns} style={tableLayoutStyles.table}>
           <Table.Header />
           <Table.Body rows={sortedRows} rowKey="channel" />

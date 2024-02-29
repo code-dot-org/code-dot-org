@@ -6,7 +6,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
-import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
@@ -57,8 +57,6 @@ export const LastWorkshopSurveyBanner = ({
   surveyUrl,
 }) => (
   <TwoColumnActionBlock
-    isRtl={false}
-    responsiveSize="lg"
     imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
     subHeading={subHeading}
     description={description}

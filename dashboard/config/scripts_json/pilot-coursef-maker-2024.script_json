@@ -6,12 +6,13 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
+      "pilot_experiment": "coursef-maker-pilot",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "pilot-coursef-maker-2024",
-    "serialized_at": "2024-02-22 23:36:39 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-02-27 23:50:14 UTC",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -2252,6 +2253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_dance_party_unplugged_2024"
+        ],
         "progression": "Dance Party: Unplugged"
       },
       "bonus": false,
@@ -2274,6 +2278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1_2024"
+        ],
         "progression": "Video: Warm Up"
       },
       "bonus": false,
@@ -2296,6 +2303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2318,6 +2328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2_2024"
+        ],
         "progression": "Video: Events"
       },
       "bonus": false,
@@ -2340,6 +2353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2362,6 +2378,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03_2024"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2384,6 +2403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3_2024"
+        ],
         "progression": "Video: Measures"
       },
       "bonus": false,
@@ -2406,6 +2428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04_2024"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2428,6 +2453,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05_2024"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2450,6 +2478,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06_2024"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2472,6 +2503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4_2024"
+        ],
         "progression": "Video: Properties"
       },
       "bonus": false,
@@ -2494,6 +2528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07_2024"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2516,6 +2553,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08_2024"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2538,6 +2578,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09_2024"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2560,6 +2603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5_2024"
+        ],
         "progression": "Video: Wrap-up"
       },
       "bonus": false,
@@ -2582,6 +2628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10_2024"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2604,6 +2653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1_2024"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2626,6 +2678,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3_2024"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2648,6 +2703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2670,6 +2728,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict2_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2692,6 +2753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2714,6 +2778,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2736,6 +2803,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2758,6 +2828,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore_2024"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -2780,6 +2853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_2024"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2802,6 +2878,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_2024"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2824,6 +2903,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_2024"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2846,6 +2928,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_2024"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2868,6 +2953,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_2024"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2890,6 +2978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_meet_your_microbit_2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -2912,6 +3003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_juicemind_bridging_activity_beginner_2024"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -2934,6 +3028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_step_counter_2024"
+        ],
         "progression": "Step Counter"
       },
       "bonus": false,
@@ -2956,6 +3053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_juicemind_content_assessment_beginner_2024"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
@@ -2978,6 +3078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged2022_maker_2024"
+        ],
         "progression": "Conditionals with Cards - Unplugged Activity"
       },
       "bonus": false,
@@ -3000,6 +3103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_2024"
+        ],
         "progression": "Video: Conditionals: If Statements"
       },
       "bonus": false,
@@ -3022,6 +3128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3044,6 +3153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3066,6 +3178,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3088,6 +3203,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3110,6 +3228,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3132,6 +3253,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3154,6 +3278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_2024"
+        ],
         "progression": "Video: Conditionals: If and If/Else Statements"
       },
       "bonus": false,
@@ -3176,6 +3303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3198,6 +3328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3221,6 +3354,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3243,6 +3379,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3265,6 +3404,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3287,6 +3429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3309,6 +3454,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3331,6 +3479,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra14a_2024"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3353,6 +3504,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra14b_2024"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3375,6 +3529,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3397,6 +3554,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1_2024"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -3419,6 +3579,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3441,6 +3604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3463,6 +3629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2_2024"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -3485,6 +3654,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3507,6 +3679,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3529,6 +3704,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3551,6 +3729,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay_2024"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3573,6 +3754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_meet_your_microbit_2_2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -3595,6 +3779,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_juicemind_bridging_activity_intermediate_2024"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -3617,6 +3804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_microbit_pet_2024"
+        ],
         "progression": "Micro:bit Pet"
       },
       "bonus": false,
@@ -3639,6 +3829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_juicemind_content_assessment_intermediate_2024"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
@@ -3661,6 +3854,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_predict_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3683,6 +3879,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts_2024"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -3705,6 +3904,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3727,6 +3929,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3749,6 +3954,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3771,6 +3979,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3793,6 +4004,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3815,6 +4029,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3837,6 +4054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice2022_2022_pilot_-2022-2_maker_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3859,6 +4079,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_samples_2022_pilot_-2022-2_maker_2024"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -3881,6 +4104,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_player_move_2024"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3903,6 +4129,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_items_2024"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3925,6 +4154,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_variable_2024"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3947,6 +4179,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_remove_2024"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3969,6 +4204,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_more_sprites_2024"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -3991,6 +4229,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_2024"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -4013,6 +4254,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_freeplay_2024"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -4035,6 +4279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_meet_your_microbit_3_2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -4057,6 +4304,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_juicemind_bridging_activity_stretch_2024"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -4079,6 +4329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_max_min_thermometer_2024"
+        ],
         "progression": "Max-min Thermometer"
       },
       "bonus": false,
@@ -4101,6 +4354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_juicemind_content_assessment_stretch_2024"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,

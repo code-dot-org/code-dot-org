@@ -42,6 +42,10 @@ class SamplePlayerWrapper implements AudioPlayer {
     console.log('Not supported');
   }
 
+  isInstrumentLoaded(): boolean {
+    return false;
+  }
+
   async playSampleImmediately(
     sample: SampleEvent,
     onStop?: () => void
