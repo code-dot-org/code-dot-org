@@ -610,7 +610,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    IMPORT_CSV_DATA = <<~CSV
+    CSV_DATA = <<~CSV
       id,name
       1,alice
       2,bob
@@ -628,8 +628,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       table_data_csv: CSV_DATA,
     }
     assert_response :success
-
-    skip "FIXME: controller bug, test will fail because import_csv doesn't properly overwrite existing data"
 
     # Tim, age 2 record should be gone:
     assert_equal EXPECTED_RECORDS, read_records
