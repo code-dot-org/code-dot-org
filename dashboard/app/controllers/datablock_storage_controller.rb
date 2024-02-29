@@ -76,6 +76,8 @@ class DatablockStorageController < ApplicationController
     DatablockStorageTable.add_shared_table @project_id, params[:table_name]
 
     render json: true
+  rescue ActiveRecord::RecordNotUnique
+    raise StudentFacingError.new(:DUPLICATE_TABLE_NAME), "There is already a table with name #{params[:table_name].inspect}"
   end
 
   def import_csv

@@ -519,6 +519,8 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "add_shared_table cannot overwrite an existing table" do
+    _shared_records, _mysharedtable = create_shared_table
+
     post _url(:create_record), params: {
       table_name: 'mysharedtable',
       record_json: {"name" => 'bob', "age" => 8}.to_json,
@@ -526,12 +528,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
-
-    skip "FIXME: controller bug, add_shared_table is returning a 500, expected behavior is to not return even a warning, and silently fail if the table already exists"
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
     assert_equal 'DUPLICATE_TABLE_NAME', error['type']
+
+    assert_equal [{"id" => 1, "name" => 'bob', "age" => 8}], read_records('mysharedtable')
   end
 
   test "deletes a record" do
