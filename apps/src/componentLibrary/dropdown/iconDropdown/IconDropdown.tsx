@@ -31,21 +31,21 @@ export interface IconDropdownOption {
 }
 
 export interface IconDropdownProps {
-  /** CheckboxDropdown name */
+  /** IconDropdown name */
   name: string;
-  /** CheckboxDropdown color */
+  /** IconDropdown color */
   color?: DropdownColor;
-  /** CheckboxDropdown size */
+  /** IconDropdown size */
   size: ComponentSizeXSToL;
-  /** CheckboxDropdown disabled state */
+  /** IconDropdown disabled state */
   disabled?: boolean;
-  /** CheckboxDropdown label */
+  /** IconDropdown label */
   labelText: string;
-  /** CheckboxDropdown options */
+  /** IconDropdown options */
   options: IconDropdownOption[];
-  /** CheckboxDropdown checked options */
+  /** IconDropdown checked options */
   selectedOption: IconDropdownOption;
-  /** CheckboxDropdown onChange handler */
+  /** IconDropdown onChange handler */
   onChange: (option: IconDropdownOption) => void;
 }
 
@@ -75,20 +75,14 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
     (option: IconDropdownOption) => {
-      onChange(option);
-      // console.log(
-      //   option
-      //   // args.target,
-      //   // args.target.value,
-      //   // args.target.dataValue,
-      //   // args.target['data-value']
-      // );
-      setActiveDropdownName('');
+      if (!disabled && !option.isOptionDisabled) {
+        onChange(option);
+        setActiveDropdownName('');
+      }
     },
     [onChange, setActiveDropdownName]
   );
 
-  console.log('rerender');
   return (
     <CustomDropdown
       name={name}
