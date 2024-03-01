@@ -11,6 +11,8 @@ type Tab = {
 
 interface TabsProps {
   tabs: Tab[];
+  // Identifier used for ARIA properties
+  // to differentiate between uses of this component on the page.
   name: string;
   initialActiveIndex?: number;
 }
