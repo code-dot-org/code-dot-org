@@ -20,10 +20,7 @@ export const loadLibrary = async (
   libraryName: string
 ): Promise<MusicLibrary> => {
   const libraryParameter = AppConfig.getValue('library') || libraryName;
-  const libraryFilename =
-    libraryParameter !== DEFAULT_LIBRARY
-      ? `music-library-${libraryParameter}`
-      : 'music-library';
+  const libraryFilename = `music-library-${libraryParameter}`;
 
   if (AppConfig.getValue('local-library') === 'true') {
     const localLibrary = require(`@cdo/static/music/${libraryFilename}.json`);
