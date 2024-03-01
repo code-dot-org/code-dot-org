@@ -132,7 +132,7 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.6'
 gem 'puma_worker_killer'
 gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
@@ -208,7 +208,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
+gem 'mini_racer'
 
 gem 'jwt', '~> 2.7.0'
 
@@ -349,6 +349,8 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.2.1'
+gem 'crowdin-api', '~> 1.8.1'
 
 gem "delayed_job_active_record", "~> 4.1"
+
+gem 'rack-cors', '~> 2.0.1'

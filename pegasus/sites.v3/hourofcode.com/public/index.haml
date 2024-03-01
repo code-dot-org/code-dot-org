@@ -69,13 +69,13 @@ social:
       .text-wrapper.centered
         %p.body-two.no-margin-bottom
           =hoc_s(:hoc_homepage_registration_desc)
-        - if hoc_mode != "false"
+        - if hoc_mode != false
           %a.link-button{href: resolve_url("/events"), style: "margin-top: 2rem"}
             =hoc_s(:call_to_action_register_your_hoc)
 
   -# Off season interest form
   -# This is only shown when hoc_mode is false
-  - if hoc_mode == "false"
+  - if hoc_mode == false
     %section.no-padding-bottom
       .wrapper
         = view :off_season_interest_form

@@ -10,3 +10,9 @@
     #
     # Set false to prevent gc --auto from being interrupted by server shutdown, leaving behind large temp files.
     autoDetach = false
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true

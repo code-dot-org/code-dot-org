@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 5: User Interfaces - User Testing Activity
 
-##### The previous level showed you this rules for user testing. Let's take a look at what students should be getting out of this activity. Generally, the goal of user testing to **collect feedback so we can make recommendations and improve the app**.
+##### The previous level showed you the rules for user testing. Let's take a look at what students should be getting out of this activity. Generally, the goal of user testing is to **collect feedback so we can make recommendations and improve the app**.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">❓ How does the activity work?</summary>
@@ -21,7 +21,7 @@ markdown <<MARKDOWN
     * ##### *Get help on how to use the app*
     * ##### *Find out when Suzette’s birthday is*
 
-3.  ##### The User attempts to complete the tasking by "clicking" on the paper prototype screen in front of them.
+3.  ##### The User attempts to complete the task by "clicking" on the paper prototype screen in front of them.
 4. ##### Every time the User clicks on the screen, the Computer consults the Navigation Diagram on their activity guide.
 	* ##### If the Navigation Diagram shows a line connected to the element that was clicked, find the screen at the other end of the line and place it in front of the user.
 	* ##### If the Navigation Diagram doesn't show a line connected to the element that was clicked, do nothing.
@@ -30,7 +30,7 @@ markdown <<MARKDOWN
 
 | Task                           	| What I Tried                                                                     	| My Reaction                                                                                                             	|
 |--------------------------------	|----------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------	|
-| View Suzette's information     	| Clicked on each of the faces until I found one that changed to Suzette's screen. 	| It wasn't really clear who was who on the home screen. It would be nice if it showed each kid's name below their below. 	|
+| View Suzette's information     	| Clicked on each of the faces until I found one that changed to Suzette's screen. 	| It wasn't really clear who was who on the home screen. It would be nice if it showed each kid's name below their name. 	|
 | Get help on how to use the app 	|                                                                                  	|                                                                                                                         	|
 
 </p></div>

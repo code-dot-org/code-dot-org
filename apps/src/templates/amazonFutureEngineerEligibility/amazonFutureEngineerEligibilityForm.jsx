@@ -1,4 +1,3 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import PropTypes from 'prop-types';
@@ -138,12 +137,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       ...consentCSTA,
       ...roleCSTA,
     };
-
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'continue',
-      data_json: JSON.stringify(submitData),
-    });
     analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
       submitData: JSON.stringify(submitData),
       isSignedIn: this.props.isSignedIn,
@@ -208,7 +201,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       <div>
         <div style={styles.standardPadding}>
           <ValidationStep
-            stepStatus={Status.SUCCEEDED}
+            stepStatus={Status.SUCCEEDEDTEAL}
             stepName="You teach at an eligible school!"
           />
           {i18n.afeCompleteTheFormBelow()}
@@ -401,11 +394,10 @@ const styles = {
     textAlign: 'right',
   },
   sectionBreak: {
-    borderColor: color.teal,
+    borderColor: color.neutral_dark20,
     margin: '1rem 0',
   },
   button: {
-    backgroundColor: color.orange,
     color: color.white,
   },
   standardPadding: {

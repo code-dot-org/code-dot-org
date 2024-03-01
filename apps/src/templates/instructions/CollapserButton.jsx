@@ -84,6 +84,10 @@ const styles = {
       backgroundColor: color.neutral_dark20,
       boxShadow: 'none',
     },
+    ':focus': {
+      backgroundColor: color.neutral_dark20,
+      boxShadow: 'none',
+    },
   },
   collapseIcon: {
     marginRight: 5,

@@ -108,12 +108,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     assert_manage_response :success, workshop: @other_workshop, user: @other_teacher
   end
 
-  test 'facilitators can read, but cannot manage, attendance for ended workshops' do
+  test 'facilitators can manage attendance for ended workshops' do
     @workshop.end!
     sign_in @facilitator
 
     assert_read_response :success
-    assert_manage_response :forbidden
+    assert_manage_response :success
   end
 
   test 'organizers can read, but cannot manage, attendance for ended workshops' do
@@ -124,12 +124,12 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     assert_manage_response :forbidden, workshop: @organizer_workshop
   end
 
-  test 'program manager organizers can read, but cannot manage, attendance for ended workshops' do
+  test 'program manager organizers can manage attendance for ended workshops' do
     @workshop.end!
     sign_in @organizer
 
     assert_read_response :success
-    assert_manage_response :forbidden
+    assert_manage_response :success
   end
 
   test 'admins can manage attendance for ended workshops' do

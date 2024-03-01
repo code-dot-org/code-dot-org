@@ -9,7 +9,6 @@ const DEFAULT_PROPS = {
 };
 
 export default {
-  title: 'ChangeEmailModal',
   component: ChangeEmailModal,
 };
 

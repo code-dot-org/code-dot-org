@@ -11,7 +11,6 @@ import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 
 export default {
-  title: 'ProgressLesson',
   component: ProgressLesson,
 };
 

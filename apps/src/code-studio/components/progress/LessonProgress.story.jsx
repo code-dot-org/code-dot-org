@@ -90,7 +90,6 @@ const bonus = {
 };
 
 export default {
-  title: 'LessonProgress',
   component: LessonProgress,
 };
 

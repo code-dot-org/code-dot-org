@@ -1,3 +1,6 @@
+// Disabling this rule because we are generating stories in a loop,
+// which doesn't play nicely with Storybook's expected behavior around named/default exports.
+/* eslint-disable storybook/default-exports */
 import React from 'react';
 import ProgressBubble from './ProgressBubble';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
@@ -5,7 +8,6 @@ import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 const statuses = Object.values(LevelStatus);
 
 const defaultExport = {
-  title: 'ProgressBubble',
   component: ProgressBubble,
 };
 

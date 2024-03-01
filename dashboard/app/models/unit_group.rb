@@ -691,4 +691,8 @@ class UnitGroup < ApplicationRecord
       default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
   end
+
+  def duration_in_minutes
+    default_units.sum(&:duration_in_minutes)
+  end
 end

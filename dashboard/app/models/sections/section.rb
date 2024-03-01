@@ -413,6 +413,11 @@ class Section < ApplicationRecord
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
 
+      login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
+      if login_type == LOGIN_TYPE_LTI_V1
+        issuer = lti_course.lti_integration.issuer
+        login_type_name = Policies::Lti.issuer_name(issuer)
+      end
       {
         id: id,
         name: name,
@@ -433,6 +438,7 @@ class Section < ApplicationRecord
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
         login_type: login_type,
+        login_type_name: login_type_name,
         participant_type: participant_type,
         course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,

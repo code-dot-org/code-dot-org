@@ -44,6 +44,7 @@ describe('SyncOmniAuthSectionControl', () => {
       sectionCode: 'G-123456',
       sectionName: 'Test Google Classroom Section',
       sectionProvider: OAuthSectionTypes.google_classroom,
+      sectionProviderName: 'Google Classroom',
       updateRoster: updateRoster,
     };
   });
@@ -60,6 +61,7 @@ describe('SyncOmniAuthSectionControl', () => {
       wrapper.containsMatchingElement(
         <SyncOmniAuthSectionButton
           provider={defaultProps.sectionProvider}
+          providerName={defaultProps.sectionProviderName}
           buttonState={READY}
         />
       )
@@ -121,6 +123,7 @@ describe('SyncOmniAuthSectionControl', () => {
       wrapper.containsMatchingElement(
         <SyncOmniAuthSectionButton
           provider={defaultProps.sectionProvider}
+          providerName={defaultProps.sectionProviderName}
           buttonState={IN_PROGRESS}
         />
       )
@@ -148,6 +151,7 @@ describe('SyncOmniAuthSectionControl', () => {
         wrapper.containsMatchingElement(
           <SyncOmniAuthSectionButton
             provider={defaultProps.sectionProvider}
+            providerName={defaultProps.sectionProviderName}
             buttonState={SUCCESS}
           />
         )

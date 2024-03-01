@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import color from '../../util/color';
+import classNames from 'classnames';
 import FontAwesome from '../../templates/FontAwesome';
+import moduleStyles from './scroll-buttons.module.scss';
 
 import {addMouseUpTouchEvent} from '../../dom';
 import {getOuterHeight, scrollBy} from './utils';
@@ -52,15 +52,23 @@ class ScrollButtons extends React.Component {
     return scrollButtonsHeight + this.getMargin() * 2;
   }
 
-  scrollStartUp = () => {
-    this.scrollStart(DIRECTIONS.UP);
+  continuousScrollStartUp = () => {
+    this.continuousScrollStart(DIRECTIONS.UP);
   };
 
-  scrollStartDown = () => {
-    this.scrollStart(DIRECTIONS.DOWN);
+  continuousScrollStartDown = () => {
+    this.continuousScrollStart(DIRECTIONS.DOWN);
   };
 
-  scrollStart(dir) {
+  singleScrollUp = () => {
+    this.singleScroll(DIRECTIONS.UP);
+  };
+
+  singleScrollDown = () => {
+    this.singleScroll(DIRECTIONS.DOWN);
+  };
+
+  singleScroll(dir) {
     // initial scroll in response to button click
     const contentContainer = this.props.getScrollTarget();
     let initialScroll = SCROLL_BY;
@@ -68,9 +76,12 @@ class ScrollButtons extends React.Component {
       initialScroll *= -1;
     }
     scrollBy(contentContainer, initialScroll);
+  }
 
+  continuousScrollStart(dir) {
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
+    const contentContainer = this.props.getScrollTarget();
     this.scrollTimeout = setTimeout(
       function () {
         this.scrollInterval = setInterval(
@@ -107,29 +118,6 @@ class ScrollButtons extends React.Component {
       ? this.props.height > 100
       : this.props.height > 60;
 
-    let upStyle = {
-      opacity: this.props.visible ? 1 : 0,
-      top: '10px',
-      margin: '0 0 3px 0',
-      left: centerItems ? '50%' : 25,
-      transform: 'translateX(-50%)',
-    };
-
-    const downStyle = {
-      opacity: this.props.visible ? 1 : 0,
-      bottom: '10px',
-      right: centerItems ? '50%' : 25,
-      transform: 'translateX(50%)',
-    };
-
-    const minecraftButton = {
-      width: 40,
-    };
-
-    const containerStyle = {
-      height: this.props.height,
-    };
-
     // for most tutorials, we have minimalist arrow elements. For
     // minecraft, we use a special button element to stylistically align
     // with the other buttons on the screen.
@@ -137,65 +125,96 @@ class ScrollButtons extends React.Component {
     const upButton = this.props.isMinecraft ? (
       <button
         type="button"
-        className="arrow"
+        className={classNames(
+          moduleStyles.up,
+          this.props.visible && moduleStyles.visible,
+          centerItems && moduleStyles.upCenter,
+          moduleStyles.minecraftButton,
+          'arrow'
+        )}
         ref={c => {
           this.scrollUp = c;
         }}
         key="scrollUp"
-        onMouseDown={this.scrollStartUp}
-        style={[styles.all, upStyle, minecraftButton]}
+        onClick={this.singleScrollUp}
+        onMouseDown={this.continuousScrollStartUp}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
       </button>
     ) : (
-      <div
+      <button
+        type="button"
         ref={c => {
           this.scrollUp = c;
         }}
         key="scrollUp"
-        onMouseDown={this.scrollStartUp}
-        style={[styles.all, styles.arrowGlyph, upStyle]}
+        onClick={this.singleScrollUp}
+        onMouseDown={this.continuousScrollStartUp}
+        className={classNames(
+          moduleStyles.up,
+          this.props.visible && moduleStyles.visible,
+          centerItems && moduleStyles.upCenter,
+          moduleStyles.arrowGlyph,
+          moduleStyles.removeButtonStyles
+        )}
       >
         <FontAwesome
           icon="caret-up"
           style={{lineHeight: '22px', pointerEvents: 'none'}}
         />
-      </div>
+      </button>
     );
 
     const downButton = this.props.isMinecraft ? (
       <button
         type="button"
-        className="arrow"
+        className={classNames(
+          moduleStyles.down,
+          this.props.visible && moduleStyles.visible,
+          centerItems && moduleStyles.downCenter,
+          moduleStyles.minecraftButton,
+          'arrow'
+        )}
         ref={c => {
           this.scrollDown = c;
         }}
         key="scrollDown"
-        onMouseDown={this.scrollStartDown}
-        style={[styles.all, downStyle, minecraftButton]}
+        onClick={this.singleScrollDown}
+        onMouseDown={this.continuousScrollStartDown}
       >
         <img src="/blockly/media/1x1.gif" className="scroll-down-btn" alt="" />
       </button>
     ) : (
-      <div
+      <button
+        type="button"
         ref={c => {
           this.scrollDown = c;
         }}
-        className="uitest-scroll-button-down"
+        className={classNames(
+          moduleStyles.down,
+          this.props.visible && moduleStyles.visible,
+          centerItems && moduleStyles.downCenter,
+          moduleStyles.arrowGlyph,
+          moduleStyles.removeButtonStyles,
+          'uitest-scroll-button-down'
+        )}
         key="scrollDown"
-        onMouseDown={this.scrollStartDown}
-        style={[styles.all, styles.arrowGlyph, downStyle]}
+        onClick={this.singleScrollDown}
+        onMouseDown={this.continuousScrollStartDown}
       >
         <FontAwesome
           icon="caret-down"
           style={{lineHeight: '22px', pointerEvents: 'none'}}
         />
-      </div>
+      </button>
     );
 
     return (
       showItems && (
-        <div style={[containerStyle, this.props.style]}>
+        <div
+          className={moduleStyles.container}
+          style={{height: this.props.height, ...this.props.style}}
+        >
           {upButton}
           {downButton}
         </div>
@@ -204,17 +223,4 @@ class ScrollButtons extends React.Component {
   }
 }
 
-const styles = {
-  all: {
-    position: 'absolute',
-    transition: 'opacity 200ms',
-    margin: 0,
-  },
-  arrowGlyph: {
-    fontSize: 50,
-    color: color.neutral_dark,
-    cursor: 'pointer',
-  },
-};
-
-export default Radium(ScrollButtons);
+export default ScrollButtons;

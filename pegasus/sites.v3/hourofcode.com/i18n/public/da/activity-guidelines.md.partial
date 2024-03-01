@@ -104,23 +104,23 @@ Hvad du skal bruge:
 * Navn og e-mail på den primære kontaktperson, der repræsenterer den indsendte aktivitet
 * Aktivitetsnavn (kan ikke medtage „Hour of Code“ i navnet)
 * URL-link til aktiviteten
-* Omfatter denne aktivitet AI: Ja eller Nej
-* En aktivitetsbeskrivelse (maks. Antal tegn: 400) 
-    * Vedlæg i beskrivelsen om det hovedsagligt er elev-styret eller lærer-styret. Derudover er nogle skoler interesseret i at vide om Hour of Code aktiviteten vedrører Common Core eller Next Generation Science Standards. Hvis aktiviteten omhandler specifikke standarder, overvej at medtage dette i informationen.
-* Anbefalet karakterniveau (r) for tilsigtede brugere. Du kan henvise til \[Computer Science Teachers' Association's K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for karakterrelevante datalogiske begreber. Eksempel på karakterniveauer inkluderer: 
-    * Børnehave - 1. klasse (4-6 år)
-    * Karakterer 2-5 (7-10 år)
-    * Karakterer 6-8 (i alderen 11-13)
-    * Grader 9+ (aldre 14+)
-* En liste over programmeringssprog, som din aktivitet lærer. Dvs. C/C ++, Java, JavaScript osv. eller sproguafhængig (for lektionsplaner, der kan undervises på flere sprog) Vælg sprogkunst.
-* En liste over understøttede naturlige sprog. Bemærk: Sprogregistrering er aktivitetsudbyderens ansvar; vi omdirigerer alle brugere til den angivne enkeltadresse. eller sproguafhængig (for lektionsplaner, der kan undervises på flere sprog)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* En liste over programmeringssprog, som din aktivitet lærer. Dvs. C/C ++, Java, JavaScript osv. eller sproguafhængig (for lektionsplaner, der kan undervises på flere sprog) choose language arts.
+* En liste over understøttede naturlige sprog. Bemærk: Sprogregistrering er aktivitetsudbyderens ansvar; vi omdirigerer alle brugere til den angivne enkeltadresse. or language independent (for lesson plans that can be taught in multiple languages)
 * Hvilket erfaringsniveau skal en underviser have for at bruge din aktivitet? (f.eks. Begynder eller Komfortabel.) Og, hvilket niveau af erfaring skal eleverne have?
-* Hvilket erfaringsniveau skal en underviser have for at bruge din aktivitet? (f.eks. Begynder eller Komfortabel.) Og, hvilket niveau af erfaring skal eleverne have? Hvis du gerne vil forberede mere avancerede Hour of Code™ -aktiviteter, bedes du medtage den nødvendige forudgående viden i beskrivelsen af din aktivitet.
-* Længden af din aktivitet 
-    * Kun 1 time
-    * 1 time med opfølgningskursus
-    * 2-6 timer (kan være flere lektioner)
-* En liste over tilgængelighedsboliger, hvis din aktivitet har dem. Disse inkluderer skærmlæserkompatibilitet, tekst-til-tale-funktioner, brug af farver med høj kontrast, eller andre boliger, der er lavet til elever med handicap.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Yderligere ting, du har brug for, når du indsender lektionsplaner
 
@@ -170,7 +170,7 @@ Hvad du skal bruge:
 
 Et mangfoldigt udvalg af datalogiske undervisere vil rangordne indsendelser baseret på kvalitative og kvantitative kriterier. Alle aktiviteter, der passer til de grundlæggende kriterier, vil blive opført.
 
-For traditionelle kodningsaktiviteter vil et mangfoldigt udvalg af datalogiske undervisere rangere indsendelser baseret på kvalitative og kvantitative kriterier. Alle aktiviteter, der passer til de grundlæggende kriterier, vil blive opført. Lærere vil være i stand til at filtrere og sortere for at finde de bedste aktiviteter til deres klasseværelse.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Hvis bedømmelsesudvalget vurderer aktiviteten til nul i produktionskvalitet (på grund af dårlige fejl eller instruktioner, der gør det meget svært at bruge), ved at fremme læring i underrepræsenterede grupper (på grund af racistisk/sexistisk materiale), i uddannelsesmæssig værdi (underviser ikke CS-koncepter) eller sjov/engagerende (på grund af at være vanskelig/nedslående for studerende at arbejde igennem), vil aktiviteten ikke blive opført.
 
@@ -188,13 +188,13 @@ For selvstyrede aktiviteter for nye lærere og studerende vil bedømmelsesudvalg
 - Kræver ingen tilmelding
 - Kræver ingen betaling (undtagelse for robotaktiviteter, disse kan kræve køb af robot/kit)
 
-For selvstyrede aktiviteter for nye lærere og studerende vil bedømmelsesudvalget lede efter, om:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Lærere kan bruge selvstudiet eller aktiviteten uden baggrund i datalogi
 - Studerende kan få succes uden baggrund i datalogi
 - Studerende kan lede sig gennem selvstudiet uden forældre- eller lærervejledning
 
-Lærere og studerende vil være i stand til at søge igennem og filtrere vores liste over aktiviteter baseret på filtre som karakter, erfaringsniveau, emne, hardware, etc. Som standard viser vi lektionsplaner og aktiviteter først, der:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Modtag de højeste vurderinger fra bedømmelsesudvalget
 - Er en times selvstyrede aktiviteter designet til begyndere (studerende og lærere)
@@ -208,7 +208,7 @@ Lærere og studerende vil være i stand til at søge igennem og filtrere vores l
 
 ## Forslag til design af en times selvguidede tutorials
 
-Aktiviteter behøver ikke at omfatte AI, selvom vi ønsker at tilbyde flere AI-relaterede aktiviteter.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Vedhæft lærernoter.** De fleste aktiviteter bør være elev-rettet, men hvis en aktivitet skal ledes af en lærer, så inkluder tydelige og enkle anvisninger til læreren i form af lærer-noter på en separat URL indsendt med din aktivitet. Det er ikke kun eleverne der er nybegyndere, det er mange af lærerne også. Medtage også information om:
 
@@ -221,15 +221,15 @@ Aktiviteter behøver ikke at omfatte AI, selvom vi ønsker at tilbyde flere AI-r
 - Vil du anbefale parvis kodning?
 - Overvejelser til brug i et klasseværelse? Hvis der f.eks. er videoer, skal du rådgive lærerne om at vise videoerne på en projiceret skærm, så hele klasseværelset kan ses sammen
 
-**Indarbejd feedback i slutningen af aktiviteten.** (f.eks. „Du afsluttede 10 niveauer og lærte om sløjfer! Godt arbejde!“)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Opmuntr eleverne til at skrive på sociale medier (hvor det er relevant), når de er færdige.** For eksempel „Jeg har lavet en Hour of Code med ________ Har du? #HourOfCode“ eller „Jeg har gjort en #HourOfCode som en del af #CSEdWeek. Har du? @Scratch." Brug hashtag **#HourOfCode** (med store bogstaver H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Opret din aktivitet på spansk eller på andre sprog udover engelsk.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Forklaring eller tilslutning til en socialt signifikant sammenhængs aktivitet.** Programmering bliver en supermagt, når eleverne ser, hvordan det kan ændre verden til det bedre!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Sørg for, at din tutorial kan bruges i et [Par Programmering](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigme.** Dette er især nyttigt til Hour of Code, fordi mange klasseværelser ikke har 1:1-hardware til alle elever.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Tilbage til toppen**](#top)
 
@@ -237,7 +237,7 @@ Aktiviteter behøver ikke at omfatte AI, selvom vi ønsker at tilbyde flere AI-r
 
 ## Retningslinjer for varemærker
 
-Hour of Code® og Hora del Código® er registrerede varemærker tilhørende Code.org. Mange af vores vejledningspartnere har brugt vores „Hour of Code“ -varemærker på deres websteder i forbindelse med deres Hour of Code-aktiviteter. Vi ønsker ikke at forhindre denne brug, men vi vil sikre os, at brugen falder inden for et par grænser:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Brug kun „Hour of Code“ i forbindelse med ikke-kommercielle CS-uddannelsesaktiviteter i forbindelse med Hour of Code-kampagnen, og til intet andet formål.
 2. Enhver henvisning til „Hour of Code“ skal bruges på en måde, der ikke antyder, at det er dit eget mærke, men at det snarere henviser til Hour of Code som en græsrodsbevægelse. Godt eksempel: „Deltag i Hour of Code® på Acmecorp.com“. Dårligt eksempel: „Prøv Hour of Code af ACME Corp“.
@@ -253,15 +253,15 @@ Hour of Code® og Hora del Código® er registrerede varemærker tilhørende Cod
 
 ## Sporings Pixel
 
-Hvis din tutorial er godkendt og inkluderet på den sidste vejledningsside, vil Code.org give dig en unik sporingspixel, som du kan integrere i din tutorial. Se eksemplet nedenfor. Medtag ikke på nogen midlertidige sider i din tutorial.
+Hvis din tutorial er godkendt og inkluderet på den sidste vejledningsside, vil Code.org give dig en unik sporingspixel, som du kan integrere i din tutorial. Se eksemplet nedenfor. Do not include on any interim pages of your tutorial.
 
-Dette giver os mulighed for at tælle brugere, der laver din Hour of Code-tutorial. Det vil føre til mere nøjagtige deltagelsestællinger for din tutorial.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Hvis din tutorial er godkendt og inkluderet på den sidste vejledningsside, vil Code.org give dig en unik sporingspixel, som du kan integrere i din tutorial. Se eksemplet nedenfor.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-Bemærk: Dette er ikke vigtigt at gøre for installerbare programmer (iOS/Android apps eller desktop-installere apps)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Eksempel på sporingspixel til Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Fremme af dine aktiviteter, CSEDWeek og Hour of Code
 
-Venligst promover din aktivitet til dit netværk! Direkte dem til din Hour of Code-side. Dine brugere er meget mere tilbøjelige til at reagere på en mailing fra dig om din aktivitet. Brug den internationale Hour of Code-kampagne under Computer Science Education Week som en undskyldning for at opfordre brugerne til at invitere andre til at deltage, og hjælpe os med at nå flere studerende!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Feature Hour of Code og CSEDWeek på dit websted. Eks: <http://www.tynker.com/hour-of-code>
 - Fremme Hour of Code ved hjælp af sociale medier, traditionelle medier, mailinglister osv. Ved hjælp af hashtag #HourOfCode (med store bogstaver H, O, C)

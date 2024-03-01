@@ -25,15 +25,15 @@ social:
 <br>
 
 <a id="apprenticeships"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Apprenticeships</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="apprenti" href="https://apprenticareers.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/apprenti.png" alt="Apprenti logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="apprenti" href="https://apprenticareers.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Apprenti</strong></h3></a>
+  <a class="linktag" id="apprenti" href="https://apprenticareers.org/" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>Apprenti</strong></h3></a>
   <p>Technical training and year-long paid apprenticeships at tech companies for students looking for an alternative to college</p>
   <p><i>Application period: Rolling</i></p>
 </div>
@@ -44,7 +44,7 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/multiverse.png" alt="Multiverse.io logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="multiverse" href="https://www.multiverse.io/en-US/young-adults" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Multiverse.io</strong></h3></a>
+  <a class="linktag" id="multiverse" href="https://www.multiverse.io/en-US/young-adults" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>Multiverse.io</strong></h3></a>
   <p>Paid CS apprenticeships at top companies and career development for students looking for an alternative to college</p>
   <p><i>Application period: Rolling</i></p>
 </div>
@@ -55,7 +55,7 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/npower.png" alt="NPower logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="npower" href="https://www.npower.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>NPower</strong></h3></a>
+  <a class="linktag" id="npower" href="https://www.npower.org/" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>NPower</strong></h3></a>
   <p>Work-study program in select states for military veterans and students from underserved communities</p>
   <p><i>Application period: Rolling</i></p>
 </div>
@@ -66,7 +66,7 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/year-up.png" alt="Year Up logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="year-up" href="https://www.yearup.org/students" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Year Up</strong></h3></a>
+  <a class="linktag" id="year-up" href="https://www.yearup.org/students" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>Year Up</strong></h3></a>
   <p>Year-long program includes six months of technical training and a six-month corporate internship</p>
   <p><i>Application period: Rolling</i></p>
 </div>
@@ -76,16 +76,16 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="college"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Internships for students entering or in college</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 
 <a class="linktag" id="code2040" href="https://www.code2040.org/fellows-program" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/code2040.png" alt="Code2040 logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="code2040" href="https://www.code2040.org/fellows-program" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Code2040 Fellows Program</strong></h3></a>
+  <a class="linktag" id="code2040" href="https://www.code2040.org/fellows-program" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>Code2040 Fellows Program</strong></h3></a>
   <p>Summer internships at tech companies for Black and Hispanic/Latino college students</p>
   <p><i>Application period: June-July</i></p>
 </div>
@@ -96,7 +96,7 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/infosys-instep.png" alt="InStep from Infosys logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="infosys-instep" href="https://www.infosys.com/instep.html" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>InStep from Infosys</strong></h3></a>
+  <a class="linktag" id="infosys-instep" href="https://www.infosys.com/instep.html" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>InStep from Infosys</strong></h3></a>
   <p>Internships across the globe with opportunities spanning artificial intelligence, sustainability, big data, and more</p>
   <p><i>Application period: Year-round</i></p>
 </div>
@@ -107,7 +107,7 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.png" alt="Microsoft logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="microsoft-internship-college" href="https://careers.microsoft.com/students/us/en/usuniversityinternship" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Microsoft internships</strong></h3></a>
+  <a class="linktag" id="microsoft-internship-college" href="https://careers.microsoft.com/students/us/en/usuniversityinternship" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>Microsoft internships</strong></h3></a>
   <p>Paid internship opportunities in software engineering, UX design, data science, and more</p>
   <p><i>Application period: Varies</i></p>
 </div>
@@ -120,15 +120,15 @@ social:
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="highschool"></a>
-<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+<div class="col-100" style="padding:25px; background-color: var(--brand_primary_default); border-radius:15px 15px 0 0">
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Internships for high school students</h2>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<div class="col-100" style="padding:25px; border: 1px solid var(--brand_primary_default); border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="genesys-works" href="https://genesysworks.org/for-students/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/genesys-works.png" alt="Genesys Works logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="genesys-works" href="https://genesysworks.org/for-students/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Genesys Works</strong></h3></a>
+  <a class="linktag" id="genesys-works" href="https://genesysworks.org/for-students/" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>Genesys Works</strong></h3></a>
   <p>Year-long program for high school students includes technical training and a paid corporate internship</p>
   <p><i>Application period: January-March</i></p>
 </div>
@@ -139,7 +139,7 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.png" alt="Microsoft logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="microsoft-internship-highschool" href="https://careers.microsoft.com/students/us/en/ushighschoolprogram" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Microsoft internships for high school students</strong></h3></a>
+  <a class="linktag" id="microsoft-internship-highschool" href="https://careers.microsoft.com/students/us/en/ushighschoolprogram" target="_blank"><h3 style="margin-top:0; color:var(--brand_secondary_default)"><strong>Microsoft internships for high school students</strong></h3></a>
   <p>On-the-job learning and opportunities to contribute to real-world technology projects at Microsoft</p>
   <p><i>Application period: Varies</i></p>
 </div>

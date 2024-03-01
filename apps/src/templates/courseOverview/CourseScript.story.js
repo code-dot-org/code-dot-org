@@ -6,7 +6,6 @@ import {reduxStore} from '../../../.storybook/decorators';
 import {Provider} from 'react-redux';
 
 export default {
-  title: 'CourseScript',
   component: CourseScript,
 };
 

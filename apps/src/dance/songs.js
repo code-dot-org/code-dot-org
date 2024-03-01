@@ -16,6 +16,8 @@ const DEPRECATED_SONGS = [
   'ymca_villagepeople',
   'firework_katyperry',
   'showdaspoderosas_anitta',
+  'savagelove_jasonderulo',
+  'astronautintheocean_maskedwolf',
 ];
 
 /**

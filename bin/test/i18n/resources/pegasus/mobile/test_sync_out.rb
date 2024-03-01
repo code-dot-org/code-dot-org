@@ -5,17 +5,11 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
   let(:described_class) {I18n::Resources::Pegasus::Mobile::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'Test'}
   let(:i18n_locale) {'te-ST'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
-  let(:is_source_language) {false}
+  let(:language) {{locale_s: i18n_locale}}
 
   around do |test|
     FakeFS.with_fresh {test.call}
-  end
-
-  before do
-    I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
   end
 
   it 'inherits from I18n::Utils::SyncOutBase' do
@@ -25,7 +19,7 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
   describe '#process' do
     let(:process_language) {described_instance.process(language)}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale)}
     let(:crowdin_resource_dir) {File.join(crowdin_locale_dir, 'pegasus')}
     let(:crowdin_file_path) {File.join(crowdin_resource_dir, 'mobile.yml')}
     let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'pegasus/mobile.yml')}
@@ -36,6 +30,9 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
     end
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
+    end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
     end
 
     before do
@@ -48,21 +45,9 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
 
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
       process_language
-    end
-
-    context 'when the language is the source language' do
-      let(:is_source_language) {true}
-
-      it 'does not distribute the localization' do
-        execution_sequence = sequence('execution')
-
-        expect_localization_distribution.never
-        expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-
-        process_language
-      end
     end
 
     context 'when the Crowdin file does not exist' do
@@ -73,6 +58,7 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
       it 'does not distribute the localization' do
         expect_localization_distribution.never
         expect_crowdin_file_to_i18n_locale_dir_moving.never
+        expect_crowdin_resource_dir_removing.never
 
         process_language
       end

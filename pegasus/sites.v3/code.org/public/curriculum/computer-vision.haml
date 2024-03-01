@@ -33,6 +33,8 @@ theme: responsive_full_width
         =hoc_s(:call_to_action_explore_course)
     .clear
 
+= view :professional_learning_skinny_banner
+
 %section.bg-neutral-light
   .wrapper
     = view :curriculum_glance_section, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s(:module_grade_9_12), duration: hoc_s(:module_duration_2_weeks), level: hoc_s(:module_level_advanced), tools: hoc_s(:csa_ai_page_programming_tools), devices: hoc_s(:csa_page_curriculum_glance_devices), professional_learning: hoc_s(:csa_ai_page_professional_learning), topics: hoc_s(:csa_ai_page_curriculum_topics), accessibility_features: hoc_s(:csa_ai_page_curriculum_accessibility_features), languages: hoc_s(:csa_ai_page_curriculum_languages_support)
@@ -45,7 +47,7 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper
     .hide-tab
-      = view :"tabs_section/resources/resources_tabs"
+      = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
 
 %section
   .wrapper

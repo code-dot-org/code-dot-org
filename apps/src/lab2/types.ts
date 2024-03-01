@@ -8,6 +8,8 @@
 // The library data should definitely live elsewhere.
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {PanelsLevelData} from '@cdo/apps/panels/types';
+
 export interface Channel {
   id: string;
   name: string;
@@ -90,11 +92,7 @@ export interface LevelProperties {
   // Not a complete list; add properties as needed.
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
-  // TODO: Rework this field into an "enableProjects" or more complex list of
-  // "enabledFeatures" that is calculated on the back end. For now, since
-  // the only labs we support have projects enabled, it's easier to make this a
-  // disabled flag for specific exceptions.
-  disableProjects?: boolean;
+  usesProjects?: boolean;
   levelData?: LevelData;
   appName: AppName;
   longInstructions?: string;
@@ -123,7 +121,7 @@ export interface VideoLevelData {
 
 // TODO: Add AichatLevelData.
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+export type LevelData = ProjectLevelData | VideoLevelData | PanelsLevelData;
 
 // A validation condition.
 export interface Condition {
@@ -196,7 +194,9 @@ export type AppName =
   | 'poetry'
   | 'pythonlab'
   | 'spritelab'
-  | 'standalone_video';
+  | 'standalone_video'
+  | 'panels'
+  | 'weblab2';
 
 export type StandaloneAppName =
   | 'spritelab'

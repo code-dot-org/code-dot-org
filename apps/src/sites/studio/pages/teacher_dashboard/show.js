@@ -12,6 +12,7 @@ import teacherSections, {
   setSections,
   selectSection,
   setRosterProvider,
+  setRosterProviderName,
   setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
@@ -40,6 +41,7 @@ const {
   localeCode,
   hasSeenStandardsReportInfo,
   coursesWithProgress,
+  canViewStudentAIChatMessages,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -63,6 +65,7 @@ $(document).ready(function () {
   store.dispatch(selectSection(section.id));
   store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
+  store.dispatch(setRosterProviderName(section.login_type_name));
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setCourseOfferings(validCourseOfferings));
   store.dispatch(setLocaleCode(localeCode));
@@ -90,6 +93,8 @@ $(document).ready(function () {
   ].reverse();
   store.dispatch(setCoursesWithProgress(reorderedCourses));
 
+  const showAITutorTab = canViewStudentAIChatMessages;
+
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
@@ -103,6 +108,7 @@ $(document).ready(function () {
               sectionName={section.name}
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
+              showAITutorTab={showAITutorTab}
             />
           )}
         />

@@ -16,7 +16,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &51 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &52 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: user_id
     sql_type_metadata: &2 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: *1
@@ -26,7 +26,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &13 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &6 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: level_id
     sql_type_metadata: *2
     'null': true
@@ -49,7 +49,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &44 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &45 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: url
     sql_type_metadata: *3
     'null': true
@@ -57,7 +57,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &17 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &21 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
     sql_type_metadata: &4 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -72,7 +72,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &18 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &22 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: updated_at
     sql_type_metadata: *4
     'null': true
@@ -80,7 +80,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &9 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &13 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: attempt
     sql_type_metadata: *2
     'null': true
@@ -96,7 +96,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &10 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &14 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: test_result
     sql_type_metadata: *2
     'null': true
@@ -130,7 +130,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &6 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &9 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: key
     sql_type_metadata: *3
     'null': false
@@ -138,7 +138,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &41 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &42 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: position
     sql_type_metadata: *2
     'null': false
@@ -146,9 +146,9 @@ columns:
     default_function:
     collation:
     comment:
-  - &43 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &44 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: properties
-    sql_type_metadata: &11 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+    sql_type_metadata: &15 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: text
         type: :text
@@ -161,7 +161,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &7 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &10 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
     sql_type_metadata: *4
     'null': false
@@ -169,7 +169,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &8 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &11 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: updated_at
     sql_type_metadata: *4
     'null': false
@@ -177,20 +177,22 @@ columns:
     default_function:
     collation:
     comment:
-  ar_internal_metadata:
-  - *6
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: value
-    sql_type_metadata: *3
-    'null': true
+  ai_tutor_interactions:
+  - &18 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: &29 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint(20)
+        type: :integer
+        limit: 8
+        precision:
+        scale:
+      extra: auto_increment
+    'null': false
     default:
     default_function:
-    collation: utf8mb4_unicode_ci
+    collation:
     comment:
-  - *7
-  - *8
-  assessment_activities:
-  - *5
   - &12 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: user_id
     sql_type_metadata: *2
@@ -199,7 +201,117 @@ columns:
     default_function:
     collation:
     comment:
-  - &22 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - *6
+  - &16 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: script_id
+    sql_type_metadata: *2
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_model_version
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: type
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: project_id
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: project_version_id
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: prompt
+    sql_type_metadata: &7 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: mediumtext
+        type: :text
+        limit: 16777215
+        precision:
+        scale:
+      extra: ''
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: status
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_response
+    sql_type_metadata: *7
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - &27 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    sql_type_metadata: &8 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: datetime(6)
+        type: :datetime
+        limit:
+        precision: 6
+        scale:
+      extra: ''
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - &28 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    sql_type_metadata: *8
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  ar_internal_metadata:
+  - *9
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: value
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - *10
+  - *11
+  assessment_activities:
+  - *5
+  - *12
+  - &26 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: level_id
     sql_type_metadata: *2
     'null': false
@@ -207,7 +319,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &28 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &31 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: script_id
     sql_type_metadata: *2
     'null': false
@@ -217,7 +329,7 @@ columns:
     comment:
   - &59 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: level_source_id
-    sql_type_metadata: &14 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+    sql_type_metadata: &17 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: &129 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: bigint(20) unsigned
         type: :integer
@@ -230,10 +342,10 @@ columns:
     default_function:
     collation:
     comment:
-  - *9
+  - *13
+  - *14
   - *10
-  - *7
-  - *8
+  - *11
   authentication_options:
   - *5
   - &135 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -270,13 +382,13 @@ columns:
     comment:
   - &60 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: data
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &15 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &19 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: deleted_at
     sql_type_metadata: *4
     'null': true
@@ -285,20 +397,13 @@ columns:
     collation:
     comment:
   - *12
-  - *7
-  - *8
+  - *10
+  - *11
   authored_hint_view_requests:
   - *5
   - *12
-  - &23 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: script_id
-    sql_type_metadata: *2
-    'null': true
-    default:
-    default_function:
-    collation:
-    comment:
-  - *13
+  - *16
+  - *6
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: hint_id
     sql_type_metadata: *3
@@ -349,7 +454,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: prev_level_source_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': true
     default:
     default_function:
@@ -381,7 +486,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: next_level_source_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': true
     default:
     default_function:
@@ -413,32 +518,18 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: final_level_source_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': true
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   backpacks:
-  - &24 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: id
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: &26 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20)
-        type: :integer
-        limit: 8
-        precision:
-        scale:
-      extra: auto_increment
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
+  - *18
   - *12
-  - &21 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &25 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: storage_app_id
     sql_type_metadata: *2
     'null': false
@@ -446,11 +537,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   blocks:
   - *5
-  - &46 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &47 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: name
     sql_type_metadata: *3
     'null': false
@@ -476,7 +567,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: config
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -484,20 +575,20 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: helper_code
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
-  - *15
+  - *10
+  - *11
+  - *19
   callouts:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: element_id
-    sql_type_metadata: &16 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+    sql_type_metadata: &20 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: varchar(1024)
         type: :string
@@ -512,14 +603,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: localization_key
-    sql_type_metadata: *16
+    sql_type_metadata: *20
     'null': false
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: script_level_id
     sql_type_metadata: *2
@@ -530,7 +621,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: qtip_config
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -570,11 +661,11 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   census_submission_form_maps:
   - *5
-  - &20 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &24 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: census_submission_id
     sql_type_metadata: *2
     'null': false
@@ -590,11 +681,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   census_submissions:
   - *5
-  - &47 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &48 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: type
     sql_type_metadata: *3
     'null': false
@@ -668,8 +759,8 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: other_classes_under_20_hours
-    sql_type_metadata: &19 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: &35 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+    sql_type_metadata: &23 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: &36 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: tinyint(1)
         type: :boolean
         limit:
@@ -683,7 +774,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_blocks
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -691,7 +782,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_text
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -699,7 +790,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_robots
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -707,7 +798,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_internet
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -715,7 +806,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_security
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -723,7 +814,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_data
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -731,7 +822,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_web_design
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -739,7 +830,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_game_design
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -747,7 +838,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_other
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -763,7 +854,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_do_not_know
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -779,7 +870,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tell_us_more
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -787,17 +878,17 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pledged
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: share_with_regional_partners
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -805,7 +896,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: topic_ethical_social
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -813,7 +904,7 @@ columns:
     comment: Survey option for school courses including ethical and social issues
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: inaccuracy_reported
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -821,14 +912,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: inaccuracy_comment
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
   census_submissions_school_infos:
-  - *20
+  - *24
   - &131 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: school_info_id
     sql_type_metadata: *2
@@ -837,8 +928,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   census_summaries:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -888,21 +979,21 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: audit_data
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   channel_tokens:
   - *5
+  - *25
+  - *26
   - *21
   - *22
-  - *17
-  - *18
-  - &33 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &34 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: storage_id
     sql_type_metadata: *2
     'null': false
@@ -910,10 +1001,10 @@ columns:
     default_function:
     collation:
     comment:
-  - *23
-  - *15
+  - *16
+  - *19
   code_review_comments:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: code_review_id
     sql_type_metadata: *2
@@ -932,7 +1023,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: is_resolved
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default:
     default_function:
@@ -940,48 +1031,20 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: comment
-    sql_type_metadata: &53 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: mediumtext
-        type: :text
-        limit: 16777215
-        precision:
-        scale:
-      extra: ''
+    sql_type_metadata: *7
     'null': true
     default:
     default_function:
     collation: utf8mb4_unicode_520_ci
     comment:
-  - *15
-  - &29 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: created_at
-    sql_type_metadata: &25 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: datetime(6)
-        type: :datetime
-        limit:
-        precision: 6
-        scale:
-      extra: ''
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
-  - &30 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: updated_at
-    sql_type_metadata: *25
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
+  - *19
+  - *27
+  - *28
   code_review_group_members:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: code_review_group_id
-    sql_type_metadata: &27 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: *26
+    sql_type_metadata: &30 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: *29
       extra: ''
     'null': false
     default:
@@ -990,25 +1053,25 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: follower_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   code_review_groups:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: section_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - &37 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &38 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: name
     sql_type_metadata: *3
     'null': true
@@ -1016,14 +1079,14 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   code_review_requests:
-  - *24
+  - *18
   - *12
-  - *28
-  - *22
-  - &31 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - *31
+  - *26
+  - &32 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: project_id
     sql_type_metadata: *2
     'null': false
@@ -1031,7 +1094,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &32 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &33 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: project_version
     sql_type_metadata: *3
     'null': false
@@ -1039,7 +1102,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &34 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &35 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: closed_at
     sql_type_metadata: *4
     'null': true
@@ -1047,15 +1110,15 @@ columns:
     default_function:
     collation:
     comment:
-  - *15
-  - *29
-  - *30
-  code_reviews:
-  - *24
-  - *12
-  - *31
+  - *19
+  - *27
   - *28
-  - *22
+  code_reviews:
+  - *18
+  - *12
+  - *32
+  - *31
+  - *26
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: project_level_id
     sql_type_metadata: *2
@@ -1064,16 +1127,16 @@ columns:
     default_function:
     collation:
     comment:
-  - *32
   - *33
   - *34
-  - *15
-  - *29
-  - *30
+  - *35
+  - *19
+  - *27
+  - *28
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: active
-    sql_type_metadata: &36 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: *35
+    sql_type_metadata: &37 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: *36
       extra: VIRTUAL GENERATED
     'null': true
     default:
@@ -1082,7 +1145,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: open
-    sql_type_metadata: *36
+    sql_type_metadata: *37
     'null': true
     default:
     default_function:
@@ -1090,9 +1153,9 @@ columns:
     comment:
   concepts:
   - *5
-  - *37
-  - *17
-  - *18
+  - *38
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: video_key
     sql_type_metadata: *3
@@ -1111,10 +1174,10 @@ columns:
     default_function:
     collation:
     comment:
-  - *13
+  - *6
   contact_rollups_final:
   - *5
-  - &38 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &39 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: email
     sql_type_metadata: *3
     'null': false
@@ -1122,9 +1185,9 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &40 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &41 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: data
-    sql_type_metadata: &39 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+    sql_type_metadata: &40 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: json
         type: :json
@@ -1137,11 +1200,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   contact_rollups_pardot_memory:
   - *5
-  - *38
+  - *39
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pardot_id
     sql_type_metadata: *2
@@ -1160,7 +1223,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: data_synced
-    sql_type_metadata: *39
+    sql_type_metadata: *40
     'null': true
     default:
     default_function:
@@ -1198,17 +1261,17 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   contact_rollups_processed:
   - *5
-  - *38
-  - *40
-  - *7
-  - *8
+  - *39
+  - *41
+  - *10
+  - *11
   contact_rollups_raw:
   - *5
-  - *38
+  - *39
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: sources
     sql_type_metadata: *3
@@ -1219,7 +1282,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: data
-    sql_type_metadata: *39
+    sql_type_metadata: *40
     'null': true
     default:
     default_function:
@@ -1233,13 +1296,13 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   contained_level_answers:
   - *5
-  - *7
-  - *8
-  - *22
+  - *10
+  - *11
+  - *26
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: answer_number
     sql_type_metadata: *2
@@ -1250,7 +1313,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: answer_text
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -1258,7 +1321,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: correct
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -1266,8 +1329,8 @@ columns:
     comment:
   contained_levels:
   - *5
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: level_group_level_id
     sql_type_metadata: *2
@@ -1310,7 +1373,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: contained_level_text
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -1318,8 +1381,8 @@ columns:
     comment:
   course_offerings:
   - *5
-  - *6
-  - &42 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - *9
+  - &43 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: display_name
     sql_type_metadata: *3
     'null': false
@@ -1327,8 +1390,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: category
     sql_type_metadata: *3
@@ -1339,7 +1402,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: is_featured
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -1347,7 +1410,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: assignable
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '1'
     default_function:
@@ -1467,8 +1530,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *28
-  - *41
+  - *31
+  - *42
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: experiment_name
     sql_type_metadata: *3
@@ -1490,9 +1553,9 @@ columns:
       (those that show up without experiments).
   course_versions:
   - *5
-  - *6
-  - *42
+  - *9
   - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: content_root_type
     sql_type_metadata: *3
@@ -1509,8 +1572,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: course_offering_id
     sql_type_metadata: *2
@@ -1529,26 +1592,26 @@ columns:
     comment:
   courses:
   - *5
-  - *37
-  - *43
-  - *7
-  - *8
+  - *38
+  - *44
+  - *10
+  - *11
   data_docs:
-  - *24
-  - *6
-  - *37
+  - *18
+  - *9
+  - *38
   - &61 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: content
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   delayed_jobs:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: priority
     sql_type_metadata: *2
@@ -1567,7 +1630,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: handler
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': false
     default:
     default_function:
@@ -1575,7 +1638,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: last_error
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -1623,7 +1686,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
-    sql_type_metadata: *25
+    sql_type_metadata: *8
     'null': true
     default:
     default_function:
@@ -1631,7 +1694,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: updated_at
-    sql_type_metadata: *25
+    sql_type_metadata: *8
     'null': true
     default:
     default_function:
@@ -1639,7 +1702,7 @@ columns:
     comment:
   donor_schools:
   - *5
-  - *37
+  - *38
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: nces_id
     sql_type_metadata: *3
@@ -1648,12 +1711,12 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   donors:
   - *5
-  - *37
-  - *44
+  - *38
+  - *45
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: show
     sql_type_metadata: *3
@@ -1680,7 +1743,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: weight
-    sql_type_metadata: &45 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+    sql_type_metadata: &46 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
         sql_type: float
         type: :float
@@ -1695,20 +1758,20 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: twitter_weight
-    sql_type_metadata: *45
+    sql_type_metadata: *46
     'null': true
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   email_preferences:
   - *5
-  - *38
+  - *39
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: opt_in
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default:
     default_function:
@@ -1738,14 +1801,14 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   experiments:
   - *5
-  - *7
-  - *8
-  - *46
+  - *10
+  - *11
   - *47
+  - *48
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: start_at
     sql_type_metadata: *4
@@ -1762,7 +1825,7 @@ columns:
     default_function:
     collation:
     comment:
-  - &48 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &49 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: section_id
     sql_type_metadata: *2
     'null': true
@@ -1810,7 +1873,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *23
+  - *16
   featured_projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -1855,14 +1918,14 @@ columns:
     default_function:
     collation:
     comment:
-  - *17
-  - *18
-  - *48
-  - *15
+  - *21
+  - *22
+  - *49
+  - *19
   foorm_forms:
   - *5
-  - *46
-  - &49 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - *47
+  - &50 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: version
     sql_type_metadata: *2
     'null': false
@@ -1872,36 +1935,36 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: questions
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': false
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
-  - &50 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - *10
+  - *11
+  - &51 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: published
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '1'
     default_function:
     collation:
     comment:
   foorm_libraries:
-  - *24
-  - *46
-  - *49
+  - *18
+  - *47
+  - *50
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: published
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   foorm_library_questions:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -1930,17 +1993,17 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: question
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': false
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
-  - *50
+  - *10
+  - *11
+  - *51
   foorm_simple_survey_forms:
-  - *24
+  - *18
   - &115 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: path
     sql_type_metadata: *3
@@ -1965,7 +2028,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &52 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &53 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: form_version
     sql_type_metadata: *2
     'null': false
@@ -1973,9 +2036,9 @@ columns:
     default_function:
     collation:
     comment:
-  - *43
-  - *7
-  - *8
+  - *44
+  - *10
+  - *11
   foorm_simple_survey_submissions:
   - *5
   - &87 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -1986,10 +2049,10 @@ columns:
     default_function:
     collation:
     comment:
-  - *51
+  - *52
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: simple_survey_form_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': true
     default:
     default_function:
@@ -2003,8 +2066,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   foorm_submissions:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -2015,19 +2078,19 @@ columns:
     default_function:
     collation: utf8mb4_bin
     comment:
-  - *52
+  - *53
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: answers
-    sql_type_metadata: *53
+    sql_type_metadata: *7
     'null': false
     default:
     default_function:
     collation: utf8mb4_bin
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   frameworks:
-  - *24
+  - *18
   - &119 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: shortcode
     sql_type_metadata: *3
@@ -2036,15 +2099,15 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *46
-  - *43
-  - *7
-  - *8
+  - *47
+  - *44
+  - *10
+  - *11
   games:
   - *5
-  - *37
-  - *17
-  - *18
+  - *38
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: app
     sql_type_metadata: *3
@@ -2105,7 +2168,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: weight_f
-    sql_type_metadata: *45
+    sql_type_metadata: *46
     'null': true
     default:
     default_function:
@@ -2113,7 +2176,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: twitter_weight_f
-    sql_type_metadata: *45
+    sql_type_metadata: *46
     'null': true
     default:
     default_function:
@@ -2171,7 +2234,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: supported_codeorg_b
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2179,7 +2242,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: supported_hoc_b
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2203,7 +2266,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: csf_b
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2211,7 +2274,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: frozen_b
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2219,7 +2282,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: starwars_b
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2227,7 +2290,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: minecraft_adventurer_b
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2235,7 +2298,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: minecraft_designer_b
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2243,9 +2306,9 @@ columns:
     comment:
   hint_view_requests:
   - *5
-  - *51
-  - *23
-  - *13
+  - *52
+  - *16
+  - *6
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: feedback_type
     sql_type_metadata: *2
@@ -2256,19 +2319,19 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: feedback_xml
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   learning_goal_ai_evaluation_feedbacks:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: learning_goal_ai_evaluation_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2276,7 +2339,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: teacher_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2284,7 +2347,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ai_feedback_approval
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default:
     default_function:
@@ -2292,7 +2355,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: false_positive
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2300,7 +2363,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: false_negative
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2308,7 +2371,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: vague
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2316,7 +2379,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: feedback_other
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2324,19 +2387,19 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: other_content
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   learning_goal_ai_evaluations:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: rubric_ai_evaluation_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2344,7 +2407,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: learning_goal_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2366,10 +2429,18 @@ columns:
     default_function:
     collation:
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: observations
+    sql_type_metadata: *15
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
   learning_goal_evidence_levels:
-  - *24
+  - *18
   - &54 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: learning_goal_id
     sql_type_metadata: *2
@@ -2388,7 +2459,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: teacher_description
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -2396,16 +2467,16 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ai_prompt
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   learning_goal_teacher_evaluations:
-  - *24
+  - *18
   - *12
   - &122 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: teacher_id
@@ -2435,7 +2506,7 @@ columns:
   - *55
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: feedback
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -2449,11 +2520,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   learning_goals:
-  - *24
-  - *6
+  - *18
+  - *9
   - &56 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: position
     sql_type_metadata: *2
@@ -2480,7 +2551,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ai_enabled
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2488,14 +2559,14 @@ columns:
     comment:
   - &92 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tips
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   lesson_activities:
   - *5
   - &58 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -2506,31 +2577,31 @@ columns:
     default_function:
     collation:
     comment:
-  - *6
-  - *41
-  - *43
-  - *7
-  - *8
+  - *9
+  - *42
+  - *44
+  - *10
+  - *11
   lesson_groups:
   - *5
-  - *6
-  - *28
+  - *9
+  - *31
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: user_facing
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '1'
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - *56
-  - *43
+  - *44
   lessons_opportunity_standards:
   - &57 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lesson_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2538,18 +2609,18 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: standard_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - *24
+  - *18
   lessons_programming_expressions:
   - *57
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: programming_expression_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2569,7 +2640,7 @@ columns:
   - *57
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: vocabulary_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2577,9 +2648,9 @@ columns:
     comment:
   level_concept_difficulties:
   - *5
-  - *13
-  - *7
-  - *8
+  - *6
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: sequencing
     sql_type_metadata: *2
@@ -2678,8 +2749,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   level_sources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
@@ -2696,7 +2767,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *13
+  - *6
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: md5
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -2727,11 +2798,11 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: hidden
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default: '0'
     default_function:
@@ -2741,13 +2812,13 @@ columns:
   - *5
   - &89 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: level_source_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - *22
+  - *26
   - *60
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: md5
@@ -2759,7 +2830,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: hidden
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -2775,9 +2846,9 @@ columns:
     default_function:
     collation:
     comment:
-  - *46
-  - *17
-  - *18
+  - *47
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: level_num
     sql_type_metadata: *3
@@ -2788,13 +2859,13 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ideal_level_source_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': true
     default:
     default_function:
     collation:
     comment:
-  - *51
+  - *52
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: properties
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -2828,7 +2899,7 @@ columns:
     comment:
   - &93 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: published
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -2836,7 +2907,7 @@ columns:
     comment:
   - &68 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: notes
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -2844,14 +2915,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: audit_log
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
   levels_script_levels:
-  - *22
+  - *26
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: script_level_id
     sql_type_metadata: *2
@@ -2862,15 +2933,15 @@ columns:
     comment:
   libraries:
   - *5
-  - *46
+  - *47
   - *61
-  - *7
-  - *8
+  - *10
+  - *11
   lti_courses:
-  - *24
+  - *18
   - &62 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lti_integration_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2878,7 +2949,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lti_deployment_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -2916,11 +2987,11 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *29
-  - *30
-  - *15
+  - *27
+  - *28
+  - *19
   lti_deployments:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: deployment_id
     sql_type_metadata: *3
@@ -2930,11 +3001,11 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - *62
-  - *29
-  - *30
+  - *27
+  - *28
   lti_integrations:
-  - *24
-  - *37
+  - *18
+  - *38
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: platform_id
     sql_type_metadata: &65 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -3006,13 +3077,13 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   lti_sections:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lti_course_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -3034,11 +3105,11 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *29
-  - *30
-  - *15
+  - *27
+  - *28
+  - *19
   lti_user_identities:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: subject
     sql_type_metadata: *3
@@ -3049,13 +3120,13 @@ columns:
     comment:
   - *62
   - *12
-  - *29
-  - *30
-  - *15
+  - *27
+  - *28
+  - *19
   metrics:
   - *5
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: computed_on
     sql_type_metadata: &63 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -3114,7 +3185,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: value
-    sql_type_metadata: *45
+    sql_type_metadata: *46
     'null': false
     default:
     default_function:
@@ -3122,7 +3193,7 @@ columns:
     comment:
   objectives:
   - *5
-  - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lesson_id
     sql_type_metadata: *2
@@ -3131,14 +3202,14 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
-  - *6
+  - *10
+  - *11
+  - *9
   paired_user_levels:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: driver_user_level_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': true
     default:
     default_function:
@@ -3146,14 +3217,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: navigator_user_level_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': true
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   parent_levels_child_levels:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3182,7 +3253,7 @@ columns:
     collation: utf8_unicode_ci
     comment:
   parental_permission_requests:
-  - *24
+  - *18
   - *12
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: parent_email
@@ -3208,8 +3279,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: resends_sent
     sql_type_metadata: *2
@@ -3220,8 +3291,8 @@ columns:
     comment:
   pd_accepted_programs:
   - *5
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: workshop_name
     sql_type_metadata: *3
@@ -3281,7 +3352,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
+  - *10
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: sent_at
     sql_type_metadata: *4
@@ -3292,9 +3363,9 @@ columns:
     comment:
   pd_application_tags:
   - *5
-  - *46
-  - *7
-  - *8
+  - *47
+  - *10
+  - *11
   pd_application_tags_applications:
   - *66
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3305,12 +3376,12 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   pd_applications:
   - *5
-  - *51
-  - *47
+  - *52
+  - *48
   - &81 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: application_year
     sql_type_metadata: *3
@@ -3347,18 +3418,18 @@ columns:
   - *68
   - &72 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: form_data
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': false
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - *64
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: response_scores
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -3380,11 +3451,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *43
-  - *15
+  - *44
+  - *19
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: status_timestamp_change_log
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -3399,10 +3470,10 @@ columns:
     collation:
     comment:
   pd_applications_status_logs:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pd_application_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -3424,7 +3495,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *41
+  - *42
   pd_attendances:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3443,9 +3514,9 @@ columns:
     default_function:
     collation:
     comment:
-  - *17
-  - *18
-  - *15
+  - *21
+  - *22
+  - *19
   - &82 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pd_enrollment_id
     sql_type_metadata: *2
@@ -3510,8 +3581,8 @@ columns:
     comment:
   pd_enrollment_notifications:
   - *5
-  - *7
-  - *8
+  - *10
+  - *11
   - &77 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pd_enrollment_id
     sql_type_metadata: *2
@@ -3520,7 +3591,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *37
+  - *38
   pd_enrollments:
   - *5
   - &84 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3531,7 +3602,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *37
+  - *38
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: first_name
     sql_type_metadata: *3
@@ -3548,9 +3619,9 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *38
-  - *17
-  - *18
+  - *39
+  - *21
+  - *22
   - &138 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: school
     sql_type_metadata: *3
@@ -3567,7 +3638,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *51
+  - *52
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: survey_sent_at
     sql_type_metadata: *4
@@ -3592,8 +3663,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *15
-  - *43
+  - *19
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: application_id
     sql_type_metadata: *2
@@ -3607,14 +3678,14 @@ columns:
   - *12
   - &70 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: form_data
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: teachercon
     sql_type_metadata: *2
@@ -3757,8 +3828,8 @@ columns:
     collation:
     comment:
   - *70
-  - *7
-  - *8
+  - *10
+  - *11
   pd_fit_weekend_registrations:
   - *5
   - *71
@@ -3771,14 +3842,14 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - *70
-  - *7
-  - *8
+  - *10
+  - *11
   pd_international_opt_ins:
   - *5
   - *12
   - *72
-  - *7
-  - *8
+  - *10
+  - *11
   pd_legacy_survey_summaries:
   - *5
   - &88 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3799,13 +3870,13 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - *60
-  - *7
-  - *8
+  - *10
+  - *11
   pd_misc_surveys:
   - *5
   - &74 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: form_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -3813,7 +3884,7 @@ columns:
     comment:
   - &75 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: submission_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -3821,15 +3892,15 @@ columns:
     comment:
   - &76 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: answers
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *51
-  - *7
-  - *8
+  - *52
+  - *10
+  - *11
   pd_payment_terms:
   - *5
   - &79 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3858,9 +3929,9 @@ columns:
     comment:
   - *64
   - *73
-  - *43
-  - *7
-  - *8
+  - *44
+  - *10
+  - *11
   pd_post_course_surveys:
   - *5
   - *74
@@ -3883,14 +3954,14 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment: csd or csp
-  - *7
-  - *8
+  - *10
+  - *11
   pd_pre_workshop_surveys:
   - *5
   - *77
   - *72
-  - *7
-  - *8
+  - *10
+  - *11
   pd_regional_partner_cohorts:
   - *5
   - *78
@@ -3936,8 +4007,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   pd_regional_partner_cohorts_users:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pd_regional_partner_cohort_id
@@ -3950,11 +4021,11 @@ columns:
   - *12
   pd_regional_partner_contacts:
   - *5
-  - *51
+  - *52
   - *78
   - *70
-  - *7
-  - *8
+  - *10
+  - *11
   pd_regional_partner_mappings:
   - *5
   - *79
@@ -3967,16 +4038,16 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
-  - *15
+  - *10
+  - *11
+  - *19
   pd_regional_partner_mini_contacts:
   - *5
-  - *51
+  - *52
   - *78
   - *70
-  - *7
-  - *8
+  - *10
+  - *11
   pd_regional_partner_program_registrations:
   - *5
   - *12
@@ -3989,8 +4060,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   pd_scholarship_infos:
   - *5
   - *12
@@ -4005,8 +4076,8 @@ columns:
     comment:
   - *71
   - *82
-  - *7
-  - *8
+  - *10
+  - *11
   - *69
   pd_sessions:
   - *5
@@ -4034,15 +4105,15 @@ columns:
     default_function:
     collation:
     comment:
-  - *17
-  - *18
-  - *15
+  - *21
+  - *22
+  - *19
   - *83
   pd_survey_questions:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: form_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': true
     default:
     default_function:
@@ -4050,17 +4121,17 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: questions
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': false
     default:
     default_function:
     collation: utf8_unicode_ci
     comment: JSON Question data for this JotForm form.
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: last_submission_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': true
     default:
     default_function:
@@ -4069,8 +4140,8 @@ columns:
       with ids greater than this value.
   pd_teacher_applications:
   - *5
-  - *7
-  - *8
+  - *10
+  - *11
   - *12
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: primary_email
@@ -4090,7 +4161,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: application
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': false
     default:
     default_function:
@@ -4117,16 +4188,16 @@ columns:
   - *5
   - *71
   - *70
-  - *7
-  - *8
+  - *10
+  - *11
   - *78
-  - *51
+  - *52
   pd_teachercon_surveys:
   - *5
   - *77
   - *72
-  - *7
-  - *8
+  - *10
+  - *11
   pd_workshop_daily_surveys:
   - *5
   - *74
@@ -4150,8 +4221,8 @@ columns:
     default_function:
     collation:
     comment: Day of the workshop (1-based), or zero for the pre-workshop survey
-  - *7
-  - *8
+  - *10
+  - *11
   pd_workshop_facilitator_daily_surveys:
   - *5
   - *74
@@ -4169,8 +4240,8 @@ columns:
     default_function:
     collation:
     comment: Day of the workshop (1-based)
-  - *7
-  - *8
+  - *10
+  - *11
   pd_workshop_survey_foorm_submissions:
   - *5
   - *87
@@ -4185,8 +4256,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - *88
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: workshop_agenda
@@ -4224,7 +4295,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: processed_location
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -4241,7 +4312,7 @@ columns:
     collation:
     comment:
   - *68
-  - *48
+  - *49
   - &132 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: started_at
     sql_type_metadata: *4
@@ -4258,8 +4329,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: processed_at
     sql_type_metadata: *4
@@ -4268,11 +4339,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *15
+  - *19
   - *78
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: on_map
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -4280,7 +4351,7 @@ columns:
     comment: Should this workshop appear on the 'Find a Workshop' map?
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: funded
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -4294,7 +4365,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: module
     sql_type_metadata: *3
@@ -4326,14 +4397,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: from_instructor
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
     collation:
     comment:
-  - *28
-  - *22
+  - *31
+  - *26
   - *89
   - *60
   - &101 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -4344,11 +4415,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: audit_trail
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -4356,19 +4427,19 @@ columns:
     comment: Human-readable (never machine-parsed) audit trail of assignments and
       status changes with timestamps for the life of the peer review.
   pilots:
-  - *24
-  - *46
-  - *42
+  - *18
+  - *47
+  - *43
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: allow_joining_via_url
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   plc_course_units:
   - *5
   - &91 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -4389,7 +4460,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: unit_description
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -4403,12 +4474,12 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
-  - *23
+  - *10
+  - *11
+  - *16
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: started
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -4416,8 +4487,8 @@ columns:
     comment:
   plc_courses:
   - *5
-  - *7
-  - *8
+  - *10
+  - *11
   - &117 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: course_id
     sql_type_metadata: *2
@@ -4444,9 +4515,9 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
-  - *51
+  - *10
+  - *11
+  - *52
   plc_enrollment_unit_assignments:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -4466,14 +4537,14 @@ columns:
     collation:
     comment:
   - *90
-  - *7
-  - *8
-  - *51
+  - *10
+  - *11
+  - *52
   plc_learning_modules:
   - *5
-  - *37
-  - *7
-  - *8
+  - *38
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: plc_course_unit_id
     sql_type_metadata: *2
@@ -4502,26 +4573,26 @@ columns:
   - *5
   - *90
   - *91
-  - *51
-  - *7
-  - *8
+  - *52
+  - *10
+  - *11
   potential_teachers:
-  - *24
-  - *46
-  - *38
-  - *23
-  - *29
-  - *30
+  - *18
+  - *47
+  - *39
+  - *16
+  - *27
+  - *28
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: receives_marketing
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
     collation:
     comment:
   programming_classes:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: programming_environment_id
     sql_type_metadata: *2
@@ -4546,11 +4617,11 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *37
+  - *38
   - *61
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: fields
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -4558,7 +4629,7 @@ columns:
     comment:
   - &97 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: examples
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -4581,10 +4652,10 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   programming_environment_categories:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: programming_environment_id
     sql_type_metadata: *2
@@ -4593,8 +4664,8 @@ columns:
     default_function:
     collation:
     comment:
-  - *6
-  - *37
+  - *9
+  - *38
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: color
     sql_type_metadata: *3
@@ -4603,35 +4674,35 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - *56
   programming_environments:
-  - *24
-  - *46
-  - *43
-  - *7
-  - *8
+  - *18
+  - *47
+  - *44
+  - *10
+  - *11
   - *93
   programming_expressions:
-  - *24
-  - *46
+  - *18
+  - *47
   - *94
-  - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: programming_environment_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
-  - *6
+  - *10
+  - *11
+  - *9
   - *95
   programming_methods:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: programming_class_id
     sql_type_metadata: *2
@@ -4642,11 +4713,11 @@ columns:
     comment:
   - *96
   - *56
-  - *37
+  - *38
   - *61
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: parameters
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -4662,8 +4733,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: overload_of
     sql_type_metadata: *3
@@ -4681,8 +4752,8 @@ columns:
     collation: utf8_unicode_ci
     comment:
   project_commits:
-  - *24
-  - *21
+  - *18
+  - *25
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: object_version_id
     sql_type_metadata: *3
@@ -4693,14 +4764,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: comment
-    sql_type_metadata: *53
+    sql_type_metadata: *7
     'null': true
     default:
     default_function:
     collation: utf8mb4_bin
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -4713,13 +4784,13 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: value
-    sql_type_metadata: *53
+    sql_type_metadata: *7
     'null': true
     default:
     default_function:
     collation: utf8mb4_general_ci
     comment:
-  - *8
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: updated_ip
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -4750,7 +4821,7 @@ columns:
     default_function:
     collation: utf8mb4_general_ci
     comment:
-  - *17
+  - *21
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: abuse_score
     sql_type_metadata: *2
@@ -4777,7 +4848,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: standalone
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default: '1'
     default_function:
@@ -4793,7 +4864,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: skip_content_moderation
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -4801,9 +4872,9 @@ columns:
     comment:
   puzzle_ratings:
   - *5
-  - *51
-  - *23
-  - *13
+  - *52
+  - *16
+  - *6
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: rating
     sql_type_metadata: *2
@@ -4812,27 +4883,27 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   queued_account_purges:
   - *5
   - *12
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: reason_for_review
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   reference_guides:
-  - *24
-  - *6
+  - *18
+  - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: course_version_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
@@ -4855,9 +4926,9 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - *61
-  - *41
-  - *7
-  - *8
+  - *42
+  - *10
+  - *11
   regional_partner_program_managers:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -4871,7 +4942,7 @@ columns:
   - *79
   regional_partners:
   - *5
-  - *46
+  - *47
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: group
     sql_type_metadata: *2
@@ -4882,7 +4953,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: urban
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -4931,13 +5002,13 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - *68
-  - *7
-  - *8
-  - *15
-  - *43
+  - *10
+  - *11
+  - *19
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: is_active
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default:
     default_function:
@@ -4971,7 +5042,7 @@ columns:
     comment: Days that the workshop will take place
   resources:
   - *5
-  - *37
+  - *38
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: url
     sql_type_metadata: *3
@@ -4980,7 +5051,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *6
+  - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: properties
     sql_type_metadata: *3
@@ -4989,8 +5060,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - &176 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: course_version_id
     sql_type_metadata: *2
@@ -5000,7 +5071,7 @@ columns:
     collation:
     comment:
   rubric_ai_evaluations:
-  - *24
+  - *18
   - *12
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: requester_id
@@ -5012,23 +5083,23 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: rubric_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': false
     default:
     default_function:
     collation:
     comment:
-  - *31
+  - *32
   - *100
   - *101
-  - *29
-  - *30
+  - *27
+  - *28
   rubrics:
-  - *24
+  - *18
   - *58
-  - *22
-  - *29
-  - *30
+  - *26
+  - *27
+  - *28
   schema_migrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: version
@@ -5040,7 +5111,7 @@ columns:
     comment:
   school_districts:
   - *5
-  - *46
+  - *47
   - &106 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: city
     sql_type_metadata: *3
@@ -5080,8 +5151,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   school_infos:
   - *5
   - &126 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5112,7 +5183,7 @@ columns:
   - *102
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: school_district_other
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default: '0'
     default_function:
@@ -5136,7 +5207,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: school_other
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default: '0'
     default_function:
@@ -5162,8 +5233,8 @@ columns:
     comment: This column appears to be redundant with users.full_address, therefore
       validation rules must be used to ensure that any user with a school_info has
       its school address stored in the correct place.
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: validation_type
     sql_type_metadata: *3
@@ -5207,7 +5278,7 @@ columns:
     comment: Grades Offered - Highest
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_pk_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5215,7 +5286,7 @@ columns:
     comment: PK Grade Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_kg_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5223,7 +5294,7 @@ columns:
     comment: KG Grade Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_01_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5231,7 +5302,7 @@ columns:
     comment: Grade 01 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_02_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5239,7 +5310,7 @@ columns:
     comment: Grade 02 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_03_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5247,7 +5318,7 @@ columns:
     comment: Grade 03 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_04_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5255,7 +5326,7 @@ columns:
     comment: Grade 04 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_05_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5263,7 +5334,7 @@ columns:
     comment: Grade 05 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_06_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5271,7 +5342,7 @@ columns:
     comment: Grade 06 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_07_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5279,7 +5350,7 @@ columns:
     comment: Grade 07 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_08_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5287,7 +5358,7 @@ columns:
     comment: Grade 08 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_09_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5295,7 +5366,7 @@ columns:
     comment: Grade 09 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_10_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5303,7 +5374,7 @@ columns:
     comment: Grade 10 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_11_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5311,7 +5382,7 @@ columns:
     comment: Grade 11 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_12_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5319,7 +5390,7 @@ columns:
     comment: Grade 12 Offered
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade_13_offered
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5427,8 +5498,8 @@ columns:
     default_function:
     collation:
     comment: Total of free and reduced-price lunch eligible
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: community_type
     sql_type_metadata: &137 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -5454,7 +5525,7 @@ columns:
     collation: utf8_unicode_ci
     comment: NCES public school ID
   - *102
-  - *46
+  - *47
   - *106
   - *107
   - *108
@@ -5466,8 +5537,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: address_line1
     sql_type_metadata: *109
@@ -5540,7 +5611,7 @@ columns:
   - *111
   script_levels:
   - *5
-  - *28
+  - *31
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: chapter
     sql_type_metadata: *2
@@ -5549,22 +5620,22 @@ columns:
     default_function:
     collation:
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   - *112
   - *56
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: assessment
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
     collation:
     comment:
-  - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: named_level
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5572,7 +5643,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: bonus
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -5604,9 +5675,9 @@ columns:
     comment:
   scripts:
   - *5
-  - *46
-  - *17
-  - *18
+  - *47
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: wrapup_video_id
     sql_type_metadata: *2
@@ -5615,16 +5686,16 @@ columns:
     default_function:
     collation:
     comment:
-  - *51
+  - *52
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: login_required
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
     collation:
     comment:
-  - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: new_name
     sql_type_metadata: *3
@@ -5667,7 +5738,7 @@ columns:
     collation: utf8_unicode_ci
     comment:
   scripts_resources:
-  - *23
+  - *16
   - &114 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: resource_id
     sql_type_metadata: *2
@@ -5677,15 +5748,15 @@ columns:
     collation:
     comment:
   scripts_student_resources:
-  - *24
-  - *23
+  - *18
+  - *16
   - *114
   secret_pictures:
   - *5
-  - *46
+  - *47
   - *115
-  - *17
-  - *18
+  - *21
+  - *22
   secret_words:
   - *5
   - &175 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5696,12 +5767,12 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   section_hidden_scripts:
   - *5
   - *116
-  - *28
+  - *31
   section_hidden_stages:
   - *5
   - *116
@@ -5714,7 +5785,7 @@ columns:
     collation:
     comment:
   section_instructors:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: instructor_id
     sql_type_metadata: *2
@@ -5732,7 +5803,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *15
+  - *19
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: status
     sql_type_metadata: *2
@@ -5741,16 +5812,16 @@ columns:
     default_function:
     collation:
     comment:
-  - *29
-  - *30
+  - *27
+  - *28
   sections:
   - *5
   - *12
-  - *37
-  - *17
-  - *18
+  - *38
+  - *21
+  - *22
   - *83
-  - *23
+  - *16
   - *117
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: grade
@@ -5768,10 +5839,10 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *15
+  - *19
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: stage_extras
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -5795,7 +5866,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pairing_allowed
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '1'
     default_function:
@@ -5803,7 +5874,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: sharing_disabled
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -5812,7 +5883,7 @@ columns:
       to determine students share setting when adding a new student to the section.
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: hidden
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -5820,7 +5891,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: tts_autoplay_enabled
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -5828,13 +5899,13 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: restrict_section
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default: '0'
     default_function:
     collation:
     comment:
-  - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: participant_type
     sql_type_metadata: *3
@@ -5845,7 +5916,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lti_integration_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': true
     default:
     default_function:
@@ -5853,14 +5924,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ai_tutor_enabled
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default: '0'
     default_function:
     collation:
     comment:
   seed_info:
-  - *24
+  - *18
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: table
     sql_type_metadata: *3
@@ -5896,11 +5967,11 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   shared_blockly_functions:
   - *5
-  - *46
+  - *47
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: level_type
     sql_type_metadata: *3
@@ -5927,7 +5998,7 @@ columns:
     comment:
   - &120 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: description
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -5935,7 +6006,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: arguments
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -5943,7 +6014,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: stack
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -5970,7 +6041,7 @@ columns:
     comment:
   stages:
   - *5
-  - *46
+  - *47
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: absolute_position
     sql_type_metadata: *2
@@ -5979,12 +6050,12 @@ columns:
     default_function:
     collation:
     comment:
-  - *28
-  - *17
-  - *18
+  - *31
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lockable
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '0'
     default_function:
@@ -5998,7 +6069,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *43
+  - *44
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lesson_group_id
     sql_type_metadata: *2
@@ -6007,10 +6078,10 @@ columns:
     default_function:
     collation:
     comment:
-  - *6
+  - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: has_lesson_plan
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default:
     default_function:
@@ -6026,10 +6097,10 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   standard_categories:
-  - *24
+  - *18
   - *119
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: framework_id
@@ -6055,15 +6126,15 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *43
-  - *7
-  - *8
+  - *44
+  - *10
+  - *11
   standards:
   - *5
   - *120
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: category_id
-    sql_type_metadata: *27
+    sql_type_metadata: *30
     'null': true
     default:
     default_function:
@@ -6087,8 +6158,8 @@ columns:
     comment:
   studio_people:
   - *5
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: emails
     sql_type_metadata: *3
@@ -6099,16 +6170,16 @@ columns:
     comment:
   survey_results:
   - *5
-  - *51
+  - *52
   - *121
-  - *43
-  - *7
-  - *8
+  - *44
+  - *10
+  - *11
   teacher_feedbacks:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: comment
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -6122,11 +6193,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *22
+  - *26
   - *122
-  - *7
-  - *8
-  - *15
+  - *10
+  - *11
+  - *19
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: performance
     sql_type_metadata: *3
@@ -6167,7 +6238,7 @@ columns:
     default_function:
     collation:
     comment:
-  - *28
+  - *31
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: analytics_section_id
     sql_type_metadata: *2
@@ -6194,12 +6265,12 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - *69
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: facilitator
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -6207,7 +6278,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: teaching
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -6237,12 +6308,12 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *43
+  - *44
   teacher_scores:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: user_level_id
-    sql_type_metadata: *14
+    sql_type_metadata: *17
     'null': true
     default:
     default_function:
@@ -6257,14 +6328,14 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   unit_groups:
   - *5
-  - *37
-  - *43
-  - *7
-  - *8
+  - *38
+  - *44
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: published_state
     sql_type_metadata: *3
@@ -6308,14 +6379,14 @@ columns:
     comment:
   - *114
   unit_groups_student_resources:
-  - *24
+  - *18
   - *124
   - *114
   user_geos:
   - *5
   - *12
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: indexed_at
     sql_type_metadata: *4
@@ -6371,10 +6442,10 @@ columns:
     collation:
     comment:
   - *12
-  - *22
+  - *26
   - *130
-  - *17
-  - *18
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: best_result
     sql_type_metadata: *2
@@ -6383,11 +6454,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *23
+  - *16
   - *59
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: submitted
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -6395,7 +6466,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: readonly_answers
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -6417,11 +6488,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *15
-  - *43
+  - *19
+  - *44
   user_ml_models:
-  - *24
-  - *51
+  - *18
+  - *52
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: model_id
     sql_type_metadata: *3
@@ -6430,8 +6501,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *37
-  - *15
+  - *38
+  - *19
   - &140 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: purged_at
     sql_type_metadata: *4
@@ -6440,11 +6511,11 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: metadata
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': true
     default:
     default_function:
@@ -6480,13 +6551,13 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   user_proficiencies:
   - *5
   - *12
-  - *7
-  - *8
+  - *10
+  - *11
   - &133 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: last_progress_at
     sql_type_metadata: *4
@@ -6905,7 +6976,7 @@ columns:
     comment:
   user_project_storage_ids:
   - *5
-  - *51
+  - *52
   user_school_infos:
   - *5
   - *12
@@ -6934,12 +7005,12 @@ columns:
     default_function:
     collation:
     comment:
-  - *7
-  - *8
+  - *10
+  - *11
   user_scripts:
   - *5
   - *12
-  - *28
+  - *31
   - *132
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: completed_at
@@ -6958,10 +7029,10 @@ columns:
     collation:
     comment:
   - *133
-  - *17
-  - *18
-  - *43
-  - *15
+  - *21
+  - *22
+  - *44
+  - *19
   users:
   - *5
   - *134
@@ -7046,8 +7117,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   - &152 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: username
     sql_type_metadata: *3
@@ -7074,7 +7145,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: admin
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -7088,7 +7159,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *37
+  - *38
   - &155 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: locale
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
@@ -7123,7 +7194,7 @@ columns:
   - *138
   - &158 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: full_address
-    sql_type_metadata: *16
+    sql_type_metadata: *20
     'null': true
     default:
     default_function:
@@ -7148,7 +7219,7 @@ columns:
     comment:
   - &161 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: active
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': false
     default: '1'
     default_function:
@@ -7162,7 +7233,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *15
+  - *19
   - *140
   - &163 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: secret_words
@@ -7172,7 +7243,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *43
+  - *44
   - &164 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: invitation_token
     sql_type_metadata: *3
@@ -7240,7 +7311,7 @@ columns:
     comment:
   - &172 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: urm
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
@@ -7290,8 +7361,8 @@ columns:
   - *149
   - *150
   - *151
-  - *17
-  - *18
+  - *21
+  - *22
   - *152
   - *153
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -7304,14 +7375,14 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ADMIN
-    sql_type_metadata: *19
+    sql_type_metadata: *23
     'null': true
     default:
     default_function:
     collation:
     comment:
   - *154
-  - *37
+  - *38
   - *155
   - *156
   - *157
@@ -7322,10 +7393,10 @@ columns:
   - *160
   - *161
   - *162
-  - *15
+  - *19
   - *140
   - *163
-  - *43
+  - *44
   - *164
   - *165
   - *166
@@ -7349,8 +7420,8 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - *17
-  - *18
+  - *21
+  - *22
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: download
     sql_type_metadata: *3
@@ -7368,24 +7439,25 @@ columns:
     collation: utf8_unicode_ci
     comment:
   vocabularies:
-  - *24
-  - *6
+  - *18
+  - *9
   - *175
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: definition
-    sql_type_metadata: *11
+    sql_type_metadata: *15
     'null': false
     default:
     default_function:
     collation: utf8_unicode_ci
     comment:
   - *176
-  - *7
-  - *8
-  - *43
+  - *10
+  - *11
+  - *44
 primary_keys:
   activities: id
   activity_sections: id
+  ai_tutor_interactions: id
   ar_internal_metadata: key
   assessment_activities: id
   authentication_options: id
@@ -7575,6 +7647,7 @@ primary_keys:
 data_sources:
   activities: true
   activity_sections: true
+  ai_tutor_interactions: true
   ar_internal_metadata: true
   assessment_activities: true
   authentication_options: true
@@ -7808,6 +7881,61 @@ indexes:
     unique: false
     columns:
     - lesson_activity_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  ai_tutor_interactions:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: ai_tutor_interactions
+    name: index_ai_tutor_interactions_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: ai_tutor_interactions
+    name: index_ai_tutor_interactions_on_level_id
+    unique: false
+    columns:
+    - level_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: ai_tutor_interactions
+    name: index_ai_tutor_interactions_on_script_id
+    unique: false
+    columns:
+    - script_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: ai_tutor_interactions
+    name: index_ati_user_level_script
+    unique: false
+    columns:
+    - user_id
+    - level_id
+    - script_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -12911,7 +13039,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240104215831
+version: 20240228195613
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

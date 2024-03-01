@@ -15,7 +15,4 @@ Examples:
   | http://code.org/minecraft                                         | minecraft tutorial landing |
   | http://code.org/playlab                                           | playlab tutorial landing   |
   | http://code.org/starwars                                          | starwars tutorial landing  |
-  | http://code.org/athletes                                          | athletes tutorial landing  |
-  | http://code.org/educate/applab                                    | app lab tutorial landing   |
-  | http://code.org/dance                                             | dance tutorial landing     |
   | http://code.org/oceans                                            | oceans tutorial landing    |

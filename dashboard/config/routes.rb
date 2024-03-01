@@ -59,9 +59,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/google_oauth_login_code', to: 'maker#login_code'
-    get 'maker/display_google_oauth_code', to: 'maker#display_code'
-    get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
 
     # Media proxying
     get 'media', to: 'media_proxy#get', format: false
@@ -182,7 +179,7 @@ Dashboard::Application.routes.draw do
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
-      patch '/users/set_age', to: 'registrations#set_age'
+      patch '/users/set_student_information', to: 'registrations#set_student_information'
       patch '/users/email', to: 'registrations#set_email'
       patch '/users/parent_email', to: 'registrations#set_parent_email'
       patch '/users/user_type', to: 'registrations#set_user_type'
@@ -194,7 +191,6 @@ Dashboard::Application.routes.draw do
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
-      post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
       get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
@@ -227,8 +223,10 @@ Dashboard::Application.routes.draw do
     get "/gallery", to: redirect("/projects/public")
 
     get 'projects/featured', to: 'projects#featured'
+    delete '/featured_projects/:project_id', to: 'featured_projects#destroy'
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
+    put '/featured_projects/:project_id/bookmark', to: 'featured_projects#bookmark'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -572,10 +570,12 @@ Dashboard::Application.routes.draw do
     post '/admin/account_repair', to: 'admin_users#account_repair',  as: 'account_repair'
     get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
     post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
+    post '/admin/delete_user', to: 'admin_users#delete_user', as: 'delete_user'
     post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
     get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
     post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
     get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+    get '/admin/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
     post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
     get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
     post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
@@ -599,6 +599,9 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
+    post '/lti/v1/integrations', to: 'lti_v1#create_integration'
+    get '/lti/v1/integrations', to: 'lti_v1#new_integration'
+    post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -625,6 +628,8 @@ Dashboard::Application.routes.draw do
 
     get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
     get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
+    get '/deeper-learning', to: 'plc/user_course_enrollments#index'
 
     namespace :plc do
       root to: 'plc#index'
@@ -890,6 +895,7 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
         get 'users/:user_id/contact_details', to: 'users#get_contact_details'
         get 'users/current', to: 'users#current'
+        get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
@@ -1098,6 +1104,8 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+
+    resources :ai_tutor_interactions, only: [:create, :index]
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

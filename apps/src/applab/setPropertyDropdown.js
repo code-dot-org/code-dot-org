@@ -167,12 +167,6 @@ var PROP_INFO = {
     type: 'string',
     defaultValue: '"red"',
   },
-  iconSize: {
-    friendlyName: 'icon-size',
-    internalName: 'fontSize',
-    type: 'number',
-    defaultValue: '32',
-  },
   groupId: {
     friendlyName: 'group-id',
     internalName: 'groupId',
@@ -423,7 +417,6 @@ PROPERTIES[ElementType.PHOTO_SELECT] = {
     'y',
     'iconColor',
     'backgroundColor',
-    'iconSize',
     'hidden',
     'borderWidth',
     'borderColor',

@@ -36,7 +36,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: '',
       },
       {
-        type: 'input_dummy',
+        type: 'input_end_row',
         name: 'TOP',
       },
     ],
@@ -48,7 +48,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     style: 'procedure_blocks',
     helpUrl: '/docs/spritelab/codestudio_definingFunction',
-    tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
       'procedure_def_get_def_mixin',
       'procedure_def_var_mixin',
@@ -88,7 +87,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
-      'modal_procedures_no_destroy',
+      'procedure_call_do_update',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -107,14 +106,12 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
   // If we are in the modal function editor, don't add the button, due to an issue with Blockly
   // not being able to handle us clearing the block right after it has been clicked.
-  // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
-  // remove the check on functionEditor workspace id.
   if (
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId() &&
-    toolboxConfigurationSupportsEditButton(this)
+    toolboxConfigurationSupportsEditButton(this) &&
+    !Blockly.isEmbeddedWorkspace(this.workspace)
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
@@ -142,7 +139,7 @@ GoogleBlockly.Extensions.register(
 GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
   let miniToolboxBlocks = [];
-  if (this.type === 'behavior_definition') {
+  if (this.type === BLOCK_TYPES.behaviorDefinition) {
     miniToolboxBlocks.push('sprite_parameter_get');
   }
 
@@ -165,10 +162,14 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   flyoutToggleButton.setIcon(false);
 });
 
-// This extension adds an SVG frame around procedures definition blocks.
-// Not used in Music Lab or wherever the modal function is enabled.
+// Adds an SVG frame to procedure definition blocks when they're on the main workspace.
+// Not used in Music Lab, the editor workspace, or embedded workspaces.
+// Note: The workspace frame used in the modal function editor is added there.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
-  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (
+    this.workspace === Blockly.getMainWorkspace() &&
+    !this.workspace.noFunctionBlockFrame
+  ) {
     const getColor = () => {
       return Blockly.cdoUtils.getBlockColor(this);
     };
@@ -187,15 +188,43 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
   }
 });
 
-// Override the destroy function to not destroy the procedure. We need to do this
-// so that when we clear the modal function editor we don't remove the procedure
-// from the procedure map.
+// Override the destroy function to not destroy the procedure if we're using the
+// modal function editor. We need to do this so that when we clear its workspace
+// we don't remove the procedure from the procedure map. Insertion markers also
+// get this destroy function and they should not cause us to delete a procedure
+// either.
 GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
+  const originalDestroy = this.destroy.bind(this);
   const mixin = {
     destroy: function () {
-      // no-op
-      // this overrides the destroy hook registered
-      // in the procedure_def_get_def_mixin
+      if (!Blockly.useModalFunctionEditor && !this.isInsertionMarker()) {
+        originalDestroy();
+      }
+    },
+  };
+  // We can't register this as a mixin since we're overwriting existing methods
+  Object.assign(this, mixin);
+});
+
+// Override the doProcedureUpdate function to heal the stack. Without this,
+// any child blocks connected to a call block would also get deleted.
+// Copied directly from
+// https://github.com/BeksOmega/blockly-samples/blob/7954a8fff50e41fa7c0f891e957bf9ed616361d6/plugins/block-shareable-procedures/src/blocks.ts#L1068
+GoogleBlockly.Extensions.register('procedure_call_do_update', function () {
+  const mixin = {
+    /**
+     * Updates the shape of this block to reflect the state of the data model.
+     */
+    doProcedureUpdate: function () {
+      if (!this.getProcedureModel()) return;
+      const id = this.getProcedureModel().getId();
+      if (!this.getTargetWorkspace_().getProcedureMap().has(id)) {
+        this.dispose(/* Begin Customization*/ true /* End Customization*/);
+        return;
+      }
+      this.updateName_();
+      this.updateEnabled_();
+      this.updateParameters_();
     },
   };
   // We can't register this as a mixin since we're overwriting existing methods
@@ -252,10 +281,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   if (functionEditorOpen) {
     // No-op - cannot create new functions while the modal editor is open
   } else if (Blockly.useModalFunctionEditor) {
-    const newFunctionButton = getNewFunctionButtonWithCallback(
-      workspace,
-      functionDefinitionBlock
-    );
+    const newFunctionButton = getNewFunctionButtonWithCallback(workspace);
     blockList.push(newFunctionButton);
   } else {
     blockList.push(functionDefinitionBlock);
@@ -283,7 +309,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   allFunctions.sort(nameComparator).forEach(({name, id}) => {
     blockList.push({
       kind: 'block',
-      type: 'procedures_callnoreturn',
+      type: BLOCK_TYPES.procedureCall,
       extraState: {
         name: name,
         id: id,
@@ -297,17 +323,16 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewFunctionButtonWithCallback = (
-  workspace,
-  functionDefinitionBlock
-) => {
+const getNewFunctionButtonWithCallback = workspace => {
   let callbackKey, callback;
 
   callbackKey = 'newProcedureCallback';
-  callback = () =>
+  callback = () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(
       BLOCK_TYPES.procedureDefinition
     );
+  };
 
   workspace.registerButtonCallback(callbackKey, callback);
 

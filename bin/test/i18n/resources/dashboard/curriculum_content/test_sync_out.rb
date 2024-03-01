@@ -5,11 +5,10 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
   let(:described_class) {I18n::Resources::Dashboard::CurriculumContent::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
-  let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'curriculum_content')}
+  let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'curriculum_content')}
   let(:i18n_locale_dir) {CDO.dir('i18n/locales', i18n_locale, 'curriculum_content')}
 
   let(:type) {'expected_type'}
@@ -36,7 +35,6 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     end
 
     before do
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
       FileUtils.mkdir_p(crowdin_locale_dir)
     end
 
@@ -61,22 +59,6 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
 
       it 'does not move Crowdin files to the i18n locale dir' do
         expect_crowdin_files_to_i18n_locale_dir_moving.never
-        process_language
-      end
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization' do
-        expect_localization_distribution.never
-        process_language
-      end
-
-      it 'moves Crowdin files to the i18n locale dir' do
-        expect_crowdin_files_to_i18n_locale_dir_moving.once
         process_language
       end
     end

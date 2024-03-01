@@ -1,11 +1,11 @@
 {
   "key": "self-paced-pl-k5",
-  "display_name": "self-paced-pl-k5",
-  "category": "other",
+  "display_name": "Computer Science Basics for K-5 Teachers",
+  "category": "pl_self_paced",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
-  "marketing_initiative": null,
+  "marketing_initiative": "CSF",
   "grade_levels": null,
   "header": null,
   "image": null,
@@ -16,6 +16,6 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_id": 497,
+  "self_paced_pl_course_offering_key": "self-paced-pl-k5"
 }

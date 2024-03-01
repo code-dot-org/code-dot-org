@@ -17,7 +17,6 @@ const DEFAULT_PROPS = {
 };
 
 export default {
-  title: 'ChangeUserTypeForm',
   component: ChangeUserTypeForm,
 };
 

@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {evidenceLevelShape, submittedEvaluationShape} from './rubricShapes';
+import {
+  aiEvaluationShape,
+  evidenceLevelShape,
+  submittedEvaluationShape,
+} from './rubricShapes';
 import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
-import EvidenceLevelsForTeachers from './EvidenceLevelsForTeachers';
+import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 
 export default function EvidenceLevels({
   evidenceLevels,
@@ -13,6 +17,7 @@ export default function EvidenceLevels({
   submittedEvaluation,
   isStudent,
   isAutosaving,
+  aiEvalInfo,
 }) {
   const sortedEvidenceLevels = () => {
     const newArray = [...evidenceLevels];
@@ -27,9 +32,10 @@ export default function EvidenceLevels({
     );
   } else {
     return (
-      <EvidenceLevelsForTeachers
+      <EvidenceLevelsForTeachersV2
+        aiEvalInfo={aiEvalInfo}
         learningGoalKey={learningGoalKey}
-        evidenceLevels={sortedEvidenceLevels()}
+        evidenceLevels={sortedEvidenceLevels().reverse()}
         understanding={understanding}
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}
@@ -48,4 +54,5 @@ EvidenceLevels.propTypes = {
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   isAutosaving: PropTypes.bool,
+  aiEvalInfo: aiEvaluationShape,
 };

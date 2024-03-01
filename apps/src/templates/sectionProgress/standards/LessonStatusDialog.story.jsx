@@ -9,11 +9,10 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
 export default {
-  title: 'LessonStatusDialog',
   component: LessonStatusDialog,
 };
 
-export const overview = () => {
+export const Overview = () => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,

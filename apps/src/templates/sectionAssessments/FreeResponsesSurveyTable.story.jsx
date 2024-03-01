@@ -3,7 +3,6 @@ import FreeResponsesSurveyTable from './FreeResponsesSurveyTable';
 import {surveyOne} from './assessmentsTestHelpers';
 
 export default {
-  title: 'FreeResponsesSurveyTable',
   component: FreeResponsesSurveyTable,
 };
 

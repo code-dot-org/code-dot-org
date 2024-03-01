@@ -5,7 +5,7 @@ def color_string(key)
     passed: 'rgb(159, 212, 159)',       # $level_passed
     not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
     lighter_gray: 'rgb(198, 202, 205)',
-    assessment: 'rgb(118, 101, 160)'
+    assessment: 'rgb(140, 82, 186)'
   }[key.to_sym]
 end
 

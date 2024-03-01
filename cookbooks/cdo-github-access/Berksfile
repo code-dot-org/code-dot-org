@@ -1,0 +1,4 @@
+source 'https://supermarket.chef.io'
+
+metadata
+instance_eval File.read('../local_cookbooks.rb'), __FILE__

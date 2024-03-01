@@ -10,10 +10,8 @@ describe('MakerSetupGuide', () => {
   beforeEach(() => {
     // Stub i18n function before translation tests.
     const i18n = {
-      makerSetupCircuitPlaygroundTitle: 'i18n-CP-title',
-      makerSetupCircuitPlaygroundDescription: 'i18n-CP-description',
-      makerSetupMicrobitTitle: 'i18n-MB-title',
-      makerSetupMicrobitDescription: 'i18n-MB-description',
+      makerSetupGeneralTitle: 'i18n-general-title',
+      makerSetupGeneralDescription: 'i18n-general-description',
     };
 
     for (const key in i18n) {
@@ -25,19 +23,11 @@ describe('MakerSetupGuide', () => {
     sinon.restore();
   });
 
-  describe('Device descriptions displayed correctly', () => {
-    it('uses localized circuit playground description', () => {
-      let [description, markdown] = getGuideContent(
-        '#circuit-playground-description'
-      );
-      expect(description.prop('title')).to.contain('i18n-CP-title');
-      expect(markdown.prop('markdown')).to.contain('i18n-CP-description');
-    });
-
-    it('uses localized microbit description', () => {
-      let [description, markdown] = getGuideContent('#microbit-description');
-      expect(description.prop('title')).to.contain('i18n-MB-title');
-      expect(markdown.prop('markdown')).to.contain('i18n-MB-description');
+  describe('General description displayed correctly', () => {
+    it('uses localized general description', () => {
+      let [description, markdown] = getGuideContent('#general-description');
+      expect(description.prop('title')).to.contain('i18n-general-title');
+      expect(markdown.prop('markdown')).to.contain('i18n-general-description');
     });
   });
 

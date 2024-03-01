@@ -1,8 +1,8 @@
 module Pd::Application
   class TeacherApplicationMailer < ApplicationMailer
     # This should be kept consistent with the signature in _partner_signature.html.haml
-    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Nikki Navta <teacher@code.org>'
-    default from: 'Code.org <noreply@code.org>'
+    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = email_address_with_name('teacher@code.org', 'Nikki Navta')
+    default from: email_address_with_name('noreply@code.org', 'Code.org')
     default bcc: MailerConstants::PLC_EMAIL_LOG
 
     def confirmation(teacher_application)

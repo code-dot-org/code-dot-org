@@ -1,0 +1,242 @@
+{
+  "ar-SA": {
+    "/dashboard/shared_functions.yml": "afac593ed00b8ab07c69e0b990baf04b"
+  },
+  "az-AZ": {
+    "/dashboard/shared_functions.yml": "1ef4b16fbcfd35045e8c53b25bc91a79"
+  },
+  "bg-BG": {
+    "/dashboard/shared_functions.yml": "5085da8b77b467f10a4fa58bee02c845"
+  },
+  "bn-BD": {
+    "/dashboard/shared_functions.yml": "001571b87dd45c0f3cd0cc1e8f58f07b"
+  },
+  "bs-BA": {
+    "/dashboard/shared_functions.yml": "bdb85033c5603c32769ac433d673b164"
+  },
+  "ca-ES": {
+    "/dashboard/shared_functions.yml": "34687a80a1ef24ffce82a677601e681e"
+  },
+  "co-CO": {
+    "/dashboard/shared_functions.yml": "f37026e5c7c5ddc8acfd1fadb6f36df9"
+  },
+  "cs-CZ": {
+    "/dashboard/shared_functions.yml": "b6dab73be7fc1e5c10a7e1b230c67541"
+  },
+  "da-DK": {
+    "/dashboard/shared_functions.yml": "4c238c01143c45e10c54ec43f170c0c7"
+  },
+  "de-DE": {
+    "/dashboard/shared_functions.yml": "4cd882c7f29350caabdb62c07e3d77fb"
+  },
+  "dv-MV": {
+    "/dashboard/shared_functions.yml": "28569a7e4dc2c876277e6c60d94541d0"
+  },
+  "el-GR": {
+    "/dashboard/shared_functions.yml": "d3ec4375a280ff3c667f4623fa5a4db2"
+  },
+  "en-GB": {
+    "/dashboard/shared_functions.yml": "331d4780ee277663955fc5d1559680cd"
+  },
+  "es-ES": {
+    "/dashboard/shared_functions.yml": "752c1231c87b6130e68d2b6615ccbee1"
+  },
+  "es-MX": {
+    "/dashboard/shared_functions.yml": "1bbcc17b025f8b10423e90b4b43b807d"
+  },
+  "et-EE": {
+    "/dashboard/shared_functions.yml": "2564432274ff13ef9c95c877903bf825"
+  },
+  "eu-ES": {
+    "/dashboard/shared_functions.yml": "729ce284d5e4b5f51e14ea81805f0b8b"
+  },
+  "fa-AF": {
+    "/dashboard/shared_functions.yml": "ab72dfe342694c98d1fc4659d2126cde"
+  },
+  "fa-IR": {
+    "/dashboard/shared_functions.yml": "2b83e6e52cfb84a2138d847d6dcd3ddd"
+  },
+  "fi-FI": {
+    "/dashboard/shared_functions.yml": "5e6bcb3bebb69ec460650756e6e4d9af"
+  },
+  "fil-PH": {
+    "/dashboard/shared_functions.yml": "8af3765ee034e5c55b367b8727cc447f"
+  },
+  "fr-FR": {
+    "/dashboard/shared_functions.yml": "e38fb59b72b287e9fe9b4c83034101d2"
+  },
+  "ga-IE": {
+    "/dashboard/shared_functions.yml": "d2ccdf765ccd9c65e0823719134d4812"
+  },
+  "gl-ES": {
+    "/dashboard/shared_functions.yml": "8b4df595ef4c3be1af44da299881a979"
+  },
+  "haw-HI": {
+    "/dashboard/shared_functions.yml": "126b1d84adf5e3b33d3214113931056d"
+  },
+  "he-IL": {
+    "/dashboard/shared_functions.yml": "420aacddc36209dec0f86dd823b7a79f"
+  },
+  "hi-IN": {
+    "/dashboard/shared_functions.yml": "0d76431ee8c604f0b8168b33092ebfb3"
+  },
+  "hr-HR": {
+    "/dashboard/shared_functions.yml": "58b166baeb14a0419bea4e20acd75641"
+  },
+  "hu-HU": {
+    "/dashboard/shared_functions.yml": "cd72ad6f802b27ad09fd05c1e86eddc1"
+  },
+  "hy-AM": {
+    "/dashboard/shared_functions.yml": "51ac7f641ef0de8f2f67732ac55eaefc"
+  },
+  "id-ID": {
+    "/dashboard/shared_functions.yml": "ef54d4af261a7f20ffab022b4e40a195"
+  },
+  "is-IS": {
+    "/dashboard/shared_functions.yml": "364c10125e09e8dd69ac339ed2144e6c"
+  },
+  "it-IT": {
+    "/dashboard/shared_functions.yml": "652c8303e8a55d7c25ffb4d2f7ec1015"
+  },
+  "ja-JP": {
+    "/dashboard/shared_functions.yml": "c25da46158004961b1893ffe58bd91a7"
+  },
+  "ka-GE": {
+    "/dashboard/shared_functions.yml": "d02f585fea9e262213509d9f18ea89be"
+  },
+  "kk-KZ": {
+    "/dashboard/shared_functions.yml": "e41e7ad28dab3ef970002c6bf120ad40"
+  },
+  "kn-IN": {
+    "/dashboard/shared_functions.yml": "109ea04787c6b5fc06235fe435ad9a1c"
+  },
+  "km-KH": {
+    "/dashboard/shared_functions.yml": "6bca368c254d3fe8ce98bc2df1170444"
+  },
+  "ko-KR": {
+    "/dashboard/shared_functions.yml": "0c72fd14245b02695a8db2c9f4e5b5fc"
+  },
+  "ku-IQ": {
+    "/dashboard/shared_functions.yml": "807219e7a9bd5fadf6706043d9de2a9e"
+  },
+  "ky-KG": {
+    "/dashboard/shared_functions.yml": "ff14c906c18aa4e24f744b21d4d3f62d"
+  },
+  "lt-LT": {
+    "/dashboard/shared_functions.yml": "240e47dc81824e1579cf53bba5d989a5"
+  },
+  "lv-LV": {
+    "/dashboard/shared_functions.yml": "cf12581ae0593352f4d71b8d5bb42a30"
+  },
+  "mi-NZ": {
+    "/dashboard/shared_functions.yml": "988288a30485bc7c0ed35b80846c2526"
+  },
+  "mk-MK": {
+    "/dashboard/shared_functions.yml": "a992677aa54da6b25ea7bbf47cfdab77"
+  },
+  "mn-MN": {
+    "/dashboard/shared_functions.yml": "37fdf47c2dbfdb94df28c96d43af5337"
+  },
+  "mr-IN": {
+    "/dashboard/shared_functions.yml": "1f83114c353ea17935f460d2e3391abb"
+  },
+  "ms-MY": {
+    "/dashboard/shared_functions.yml": "a11b5553bda22a8d5921777e81d36cf5"
+  },
+  "mt-MT": {
+    "/dashboard/shared_functions.yml": "766aa291030cc50bfb2f9136f92df195"
+  },
+  "my-MM": {
+    "/dashboard/shared_functions.yml": "5c4f257aa90d84a4d35c9de6c9249531"
+  },
+  "ne-NP": {
+    "/dashboard/shared_functions.yml": "8207e3359e5ac01f253c88cfb3c596b8"
+  },
+  "nl-NL": {
+    "/dashboard/shared_functions.yml": "5b7c2387aa646c2ad032918173cf5fc2"
+  },
+  "nn-NO": {
+    "/dashboard/shared_functions.yml": "9aa42b423aa9618044d8487bc8cf5b92"
+  },
+  "no-NO": {
+    "/dashboard/shared_functions.yml": "a187bbe930c9eacf002498698baae900"
+  },
+  "pl-PL": {
+    "/dashboard/shared_functions.yml": "c223dae684c7baa01049d4d31f44424e"
+  },
+  "ps-AF": {
+    "/dashboard/shared_functions.yml": "da6013c82dfd5230a485e73a17571e01"
+  },
+  "pt-BR": {
+    "/dashboard/shared_functions.yml": "c426616021bf33174401fe49fce91438"
+  },
+  "pt-PT": {
+    "/dashboard/shared_functions.yml": "897f9280574cc2a9a56a5ac2c9e86840"
+  },
+  "ro-RO": {
+    "/dashboard/shared_functions.yml": "fac9f93e5c40845544aaa25b44432144"
+  },
+  "ru-RU": {
+    "/dashboard/shared_functions.yml": "054abd0bd9d42ecb605d17f83650417f"
+  },
+  "se-FI": {
+    "/dashboard/shared_functions.yml": "19d1b6aec904b931829fe8eaa1f62653"
+  },
+  "sm-WS": {
+    "/dashboard/shared_functions.yml": "86be563ac46278858d6a94e7140491cc"
+  },
+  "si-LK": {
+    "/dashboard/shared_functions.yml": "48dc774912a41907e19cdbf39b9ace41"
+  },
+  "sk-SK": {
+    "/dashboard/shared_functions.yml": "47925ce40ccedcafdb4ccaad6eb97022"
+  },
+  "sl-SI": {
+    "/dashboard/shared_functions.yml": "84cec722410b1e97bd713b9c957f03d1"
+  },
+  "sq-AL": {
+    "/dashboard/shared_functions.yml": "3802cf27a9a1074441ba83febc34c9a6"
+  },
+  "sr-SP": {
+    "/dashboard/shared_functions.yml": "be9a8bfcec603dc09b670b84d6f42801"
+  },
+  "sv-SE": {
+    "/dashboard/shared_functions.yml": "887cdc6a17708af78de8f68cd8b9c125"
+  },
+  "ta-IN": {
+    "/dashboard/shared_functions.yml": "921d5b3597e04ab0fd1be8835d5b0b53"
+  },
+  "te-IN": {
+    "/dashboard/shared_functions.yml": "25dcb148d4cd6b5f63a53d1c73c5f471"
+  },
+  "tg-TJ": {
+    "/dashboard/shared_functions.yml": "4a3faf746329860d559e2a170f0d554b"
+  },
+  "th-TH": {
+    "/dashboard/shared_functions.yml": "ff7dc71fc1f54ca16262b394222bdd59"
+  },
+  "tr-TR": {
+    "/dashboard/shared_functions.yml": "c553095d8b7933cb9889e53ceb4e30c4"
+  },
+  "uk-UA": {
+    "/dashboard/shared_functions.yml": "437dc1d435cf6cfaca4e5eeb6ddd63e8"
+  },
+  "ur-PK": {
+    "/dashboard/shared_functions.yml": "c5320ee21b67b6eba9b33c101c750a51"
+  },
+  "uz-UZ": {
+    "/dashboard/shared_functions.yml": "54be2cffe17bec744dea6718628bb232"
+  },
+  "vi-VN": {
+    "/dashboard/shared_functions.yml": "fda54f23ab4305b7add1c88f46210cca"
+  },
+  "zh-CN": {
+    "/dashboard/shared_functions.yml": "d33d6773829adbbcdb8d8d821a3a3805"
+  },
+  "zh-TW": {
+    "/dashboard/shared_functions.yml": "d1223980c3b64374c97a4202b481e818"
+  },
+  "zu-ZA": {
+    "/dashboard/shared_functions.yml": "fa087b39db468b6248ef1ed3cce5887e"
+  }
+}

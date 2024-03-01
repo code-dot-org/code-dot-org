@@ -1,0 +1,23 @@
+.debugger-pane {
+  display: grid;
+  grid-template-rows: 40px auto;
+  height: 100%;
+}
+
+.debugger-title-bar {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.debugger-title {
+  text-align: center;
+  width: 100%;
+}
+
+.debugger-view {
+  background-color: #eee;
+}

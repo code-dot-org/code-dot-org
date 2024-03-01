@@ -3,7 +3,6 @@ import DropdownButton from './DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 
 export default {
-  title: 'DropdownButton',
   component: DropdownButton,
 };
 

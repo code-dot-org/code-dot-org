@@ -70,16 +70,17 @@ theme: responsive
 
 Untuk mendapatkan pengalaman terbaik dengan semua kandungan Code.org, kami mengesyorkan agar anda berunding dengan jabatan IT sekolah atau daerah anda untuk memastikan tapak berikut dibenarkan dan tidak disekat.
 
-| Keutamaan                                                                    | URL                                                                                                        |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Memerlukan**                                                               | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Pilihan**                                                                  | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Untuk menggunakan video yang dihoskan YouTube (Mod Privasi Dipertingkat)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Untuk menggunakan video yang dihoskan Code.org**                           | `https://videos.code.org`                                                                                  |
-| **Untuk menggunakan Simulator Internet**                                     | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Untuk menggunakan Makmal Web**                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Untuk menggunakan Butang Kongsi Bilik Darjah Google**                      | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                  | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Keutamaan                                                                                                         | URL                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Memerlukan**                                                                                                    | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Untuk memastikan sistem CAPTCHA dapat membezakan penggunaan anda daripada aktiviti penipuan automatik (“bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Pilihan**                                                                                                       | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Untuk menggunakan video yang dihoskan YouTube (Mod Privasi Dipertingkat)**                                      | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Untuk menggunakan video yang dihoskan Code.org**                                                                | `https://videos.code.org`                                                                                  |
+| **Untuk menggunakan Simulator Internet**                                                                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Untuk menggunakan Makmal Web**                                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Untuk menggunakan Butang Kongsi Bilik Darjah Google**                                                           | `https://apis.google.com`                                                                                  |
+| **Untuk menggunakan set data App Lab**                                                                            | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Butiran Sokongan Mudah Alih dan Tablet
 
@@ -104,7 +105,7 @@ Sebelum anda memulakan kursus dalam talian Code.org, uji main balik untuk video 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

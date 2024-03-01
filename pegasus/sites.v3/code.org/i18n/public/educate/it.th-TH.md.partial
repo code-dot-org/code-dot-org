@@ -70,16 +70,17 @@ theme: responsive
 
 เพื่อประสบการณ์ที่ดีที่สุดในการใช้งานเนื้อหา Code.org เราขอแนะนำให้ปรึกษากับแผนกไอทีของโรงเรียนหรือเขตของคุณเพื่อให้แน่ใจว่าเว็บไซต์ต่อไปนี้ได้รับอนุญาตและไม่ถูกบล็อก
 
-| ระดับความสำคัญ                                                  | ลิงค์เว็บไซต์                                                                                              |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **จำเป็น**                                                      | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **ไม่บังคับ**                                                   | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **เพื่อวางสื่อวิดีโอบน YouTube (ในโหมดความเป็นส่วนตัวขั้นสูง)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **เพื่อใช้ Code.org ในการวางสื่อวิดีโอ**                        | `https://videos.code.org`                                                                                  |
-| **เพื่อใช้โปรแกรมจำลองอินเทอร์เน็ต**                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **เพื่อใช้งาน Web Lab**                                         | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **เพื่อใช้งานปุ่มแชร์ในโปรแกรม Google Classroom**               | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                     | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| ระดับความสำคัญ                                                                                   | ลิงค์เว็บไซต์                                                                                              |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| **จำเป็น**                                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **เพื่อให้แน่ใจว่าระบบ CAPTCHA สามารถแยกแยะการใช้งานของคุณจากกิจกรรมการฉ้อโกงอัตโนมัติ (“บอท”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **ไม่บังคับ**                                                                                    | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **เพื่อวางสื่อวิดีโอบน YouTube (ในโหมดความเป็นส่วนตัวขั้นสูง)**                                  | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **เพื่อใช้ Code.org ในการวางสื่อวิดีโอ**                                                         | `https://videos.code.org`                                                                                  |
+| **เพื่อใช้โปรแกรมจำลองอินเทอร์เน็ต**                                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **เพื่อใช้งาน Web Lab**                                                                          | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **เพื่อใช้งานปุ่มแชร์ในโปรแกรม Google Classroom**                                                | `https://apis.google.com`                                                                                  |
+| **วิธีใช้ชุดข้อมูลแอพแล็บ**                                                                      | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## รายละเอียดกอุปกรณ์มือถือและแท็บเล็ตที่รองรับ
 
@@ -104,7 +105,7 @@ All other content, such as K-5 courses (Computer Science Fundamentals) and Hour 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

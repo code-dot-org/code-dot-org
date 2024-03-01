@@ -1,0 +1,74 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2024-02-22T19:07:23.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Game setup!  \r\n**Game design starts with choosing the background and the players.**\r\n1. Connect a `set background` block to `when run`\r\n\r\n- Add a new sprite and choose a costume for player one\r\n\r\n- Press `Run`\r\n\r\n\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "start_animations": "                {\r\n  \"orderedKeys\": [\r\n    \"fd3e93f5-33df-4091-b6c5-873e25349977\",\r\n    \"0aed6f6c-efcc-440f-8b21-dcb5a7a5e871\",\r\n    \"499a7b16-032c-46d7-82e8-0fcd915f63f9\",\r\n    \"2f9f44a8-4f6d-417f-836d-81ec44e92591\",\r\n    \"a47fadf0-64fa-4608-89e9-db8707f76ce4\",\r\n    \"6a89546e-5d7f-4c7b-a237-e49432419159\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"fd3e93f5-33df-4091-b6c5-873e25349977\": {\r\n      \"name\": \"gameplayfaces_04\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:55:56 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:55:49 UTC\",\r\n      \"version\": \"nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb/category_faces/gameplayfaces_04.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"0aed6f6c-efcc-440f-8b21-dcb5a7a5e871\": {\r\n      \"name\": \"gameplayfaces_02\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:55:53 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:56:13 UTC\",\r\n      \"version\": \"zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ/category_faces/gameplayfaces_02.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"499a7b16-032c-46d7-82e8-0fcd915f63f9\": {\r\n      \"name\": \"emoji_11\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:56:25 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:56:53 UTC\",\r\n      \"version\": \"zTm226AsxpxmE9JW38wudcsQbYGMwkoY\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/zTm226AsxpxmE9JW38wudcsQbYGMwkoY/category_emoji/emoji_11.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      }\r\n    },\r\n    \"2f9f44a8-4f6d-417f-836d-81ec44e92591\": {\r\n      \"name\": \"emoji_09\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:57:14 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:57:01 UTC\",\r\n      \"version\": \"7MCmxi.hV60CdFhxZ388QvO.anutA7us\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/7MCmxi.hV60CdFhxZ388QvO.anutA7us/category_emoji/emoji_09.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      }\r\n    },\r\n    \"a47fadf0-64fa-4608-89e9-db8707f76ce4\": {\r\n      \"name\": \"gradient_01\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"jsonLastModified\": \"2020-12-01 23:21:13 UTC\",\r\n      \"pngLastModified\": \"2020-12-01 23:21:13 UTC\",\r\n      \"version\": \"Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A/category_backgrounds/gradient_01.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"6a89546e-5d7f-4c7b-a237-e49432419159\": {\r\n      \"name\": \"gradient_11\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:53:09 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:53:10 UTC\",\r\n      \"version\": \"xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t/category_backgrounds/gradient_11.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    }\r\n  }\r\n}\r\n                \r\n              ",
+    "name_suffix": "_simplified",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-02-22T19:07:23.750+00:00\",\"changed\":[\"cloned from \\\"hello_games_player_sprite_b\\\"\"],\"cloned_from\":\"hello_games_player_sprite_b\"},{\"changed_at\":\"2024-02-27 23:37:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:51:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:39:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:40:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:57:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 22:26:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" id="]eIURrgosu6R4],gz:Ty" deletable="false" movable="false" x="16" y="16"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="66" y="28">
+          <field name="IMG">"gradient_02"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="15" y="112">
+          <field name="ANIMATION_NAME">"gameplayfaces_02"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

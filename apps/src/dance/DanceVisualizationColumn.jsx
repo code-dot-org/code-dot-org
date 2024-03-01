@@ -13,6 +13,11 @@ import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog'
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import DanceAiModal from './ai/DanceAiModal';
 import SongSelector from '@cdo/apps/dance/SongSelector';
+import DCDO from '@cdo/apps/dcdo';
+
+const isHocEmailTimeOfYear = ['soon-hoc', 'actual-hoc'].includes(
+  DCDO.get('hoc_mode', false)
+);
 
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
@@ -70,6 +75,7 @@ class DanceVisualizationColumn extends React.Component {
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
         {(this.props.over21 || this.props.userType === 'teacher') &&
+          isHocEmailTimeOfYear &&
           cookies.get('HourOfCodeGuideEmailDialogSeen') !== 'true' && (
             <HourOfCodeGuideEmailDialog
               isSignedIn={isSignedIn}

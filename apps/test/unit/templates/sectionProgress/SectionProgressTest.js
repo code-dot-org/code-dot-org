@@ -18,7 +18,7 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadScriptProgress');
+    sinon.stub(progressLoader, 'loadUnitProgress');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},
@@ -53,7 +53,7 @@ describe('SectionProgress', () => {
   });
 
   afterEach(() => {
-    progressLoader.loadScriptProgress.restore();
+    progressLoader.loadUnitProgress.restore();
   });
 
   const setUp = (overrideProps = {}) => {

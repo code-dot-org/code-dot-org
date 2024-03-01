@@ -48,11 +48,14 @@ theme: responsive_full_width
         %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 2.5rem;"}
     .clear
 
-%section.bg-primary-light
-  .wrapper
-    %p.heading-xs.no-margin-bottom
-      =hoc_s(:self_paced_pl_callout)
-      %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
+= view :professional_learning_skinny_banner
+
+-# Hiding this section for now, but leaving it here until after Teacher Application season
+-# %section.bg-primary-light
+-#   .wrapper
+-#     %p.heading-xs.no-margin-bottom
+-#       =hoc_s(:self_paced_pl_callout)
+-#       %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
 
 %section{id: "modules"}
   .wrapper
@@ -64,178 +67,7 @@ theme: responsive_full_width
       %li=hoc_s(:self_paced_pl_modules_list_01)
       %li=hoc_s(:self_paced_pl_modules_list_02)
       %li=hoc_s(:self_paced_pl_modules_list_03)
-    .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_k_5_teachers)
-          %h3=hoc_s(:module_label_teaching_csf)
-          %img{src: "/images/self-paced-pl-tile-csf.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_csf_02)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_8_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/s/k5-onlinepd-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csf)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: "/csf", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csf)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_k_5_teachers)
-          %h3=hoc_s(:module_label_teaching_csc)
-          %img{src: "/images/self-paced-pl-tile-csc.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_csc_02)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_2_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csc)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: "/educate/csc", aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csc)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_6_10_teachers)
-          %h3=hoc_s(:module_label_teaching_csd)
-          %img{src: "/images/self-paced-pl-tile-csd.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_csd)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_3_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csd)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/courses/csd-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csd)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_6_10_teachers)
-          %h3=hoc_s(:module_label_teaching_ai)
-          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_ai)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_2_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_ai)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/s/aiml-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_ai)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_6_10_teachers)
-          %h3=hoc_s(:module_label_teaching_maker_cp)
-          %img{src: "/images/self-paced-pl-tile-maker-cp.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_maker_cp)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_3_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_maker_cp)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-physical-computing"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_maker_cp)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/s/devices-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_maker_cp)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_6_10_teachers)
-          %h3=hoc_s(:module_label_teaching_maker_microbit)
-          %img{src: "/images/maker/maker-curriculum-microbit.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_maker_microbit)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_3_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_maker_microbit)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-microbit"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_maker_microbit)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_maker_microbit)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_9_12_teachers)
-          %h3=hoc_s(:module_label_teaching_csp)
-          %img{src: "/images/self-paced-pl-tile-csp.png", alt: "", style: "width: 100%"}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_csp)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_3_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_csp)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_csp)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_6_10_teachers)
-          %h3=hoc_s(:module_label_teaching_problem_solving)
-          %img{src: "/images/problem-solving-course-banner.png", alt: ""}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:curriculum_name_problem_solving)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_2_hrs)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-unit1-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_problem_solving)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/s/problem-solving-computing"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_problem_solving)}}
-            =hoc_s(:call_to_action_explore_curriculum)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:module_grade_6_10_teachers)
-          %h3=hoc_s(:curriculum_name_teaching_animation)
-          %img{src: "/images/csd-unit-interactive-animations-games.png", alt: ""}
-          %p
-            %strong=hoc_s(:module_label_curriculum)
-            =hoc_s(:module_label_teaching_animations)
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_3_hrs_20_minutes)
-          %p
-            %strong=hoc_s(:module_label_prerequisites)
-            =hoc_s(:module_prerequisites_none)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-unit3-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_interactive_animations_games)}}
-            =hoc_s(:call_to_action_start_pl)
-          %a.link-button.secondary{href: CDO.studio_url("/s/interactive-games-animations"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_interactive_animations_games)}}
-            =hoc_s(:call_to_action_explore_curriculum)
+    = view :self_paced_pl_modules_carousel
 
 %section.bg-neutral-light
   .wrapper

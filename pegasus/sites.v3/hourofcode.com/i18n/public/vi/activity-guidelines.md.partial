@@ -104,23 +104,23 @@ Những gì bạn cần:
 * Tên và email của người liên hệ chính đại diện cho hoạt động đã gửi
 * Tên hoạt động (không thể bao gồm “Giờ mã” trong tên)
 * Liên kết URL đến hoạt động
-* Hoạt động này có bao gồm AI: Có hay Không
-* Mô tả hoạt động (số ký tự tối đa: 400) 
-    * Xin vui lòng bao gồm trong các mô tả cho dù đó là chủ yếu là hướng dẫn sinh viên hoặc giáo viên tạo điều kiện. Ngoài ra, một số trường quan tâm đến việc biết nếu hoạt động giờ Mã địa chỉ phổ biến cốt lõi hoặc tiếp theo thế hệ khoa học tiêu chuẩn. Nếu các hoạt động địa chỉ tiêu chuẩn cụ thể, hãy xem xét bao gồm thông tin này.
-* (Các) cấp lớp được đề xuất cho người dùng dự định. Bạn có thể tham khảo \[Tiêu chuẩn K-12 của Hiệp hội Giáo viên Khoa học Máy tính\] (https://k12cs.org/framework-statements-by-grade-band/) để biết các khái niệm khoa học máy tính phù hợp với lớp. Các cấp lớp ví dụ bao gồm: 
-    * Mẫu giáo - Lớp 1 (4-6 tuổi)
-    * Lớp 2-5 (7-10 tuổi)
-    * Lớp 6-8 (lứa tuổi 11-13)
-    * Lớp 9+ (từ 14 tuổi trở lên)
-* Một danh sách các ngôn ngữ lập trình mà hoạt động của bạn dạy. Tức là C/C ++, Java, JavaScript, v.v. hoặc ngôn ngữ độc lập (đối với các kế hoạch bài học có thể được dạy bằng nhiều ngôn ngữ) Chọn ngôn ngữ nghệ thuật.
-* Một danh sách các ngôn ngữ tự nhiên được hỗ trợ. Lưu ý: Phát hiện ngôn ngữ là trách nhiệm của nhà cung cấp hoạt động; chúng tôi sẽ chuyển hướng tất cả người dùng đến URL duy nhất được cung cấp. hoặc ngôn ngữ độc lập (đối với các kế hoạch bài học có thể được dạy bằng nhiều ngôn ngữ)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Một danh sách các ngôn ngữ lập trình mà hoạt động của bạn dạy. Tức là C/C ++, Java, JavaScript, v.v. hoặc ngôn ngữ độc lập (đối với các kế hoạch bài học có thể được dạy bằng nhiều ngôn ngữ) choose language arts.
+* Một danh sách các ngôn ngữ tự nhiên được hỗ trợ. Lưu ý: Phát hiện ngôn ngữ là trách nhiệm của nhà cung cấp hoạt động; chúng tôi sẽ chuyển hướng tất cả người dùng đến URL duy nhất được cung cấp. or language independent (for lesson plans that can be taught in multiple languages)
 * Một nhà giáo dục nên có mức độ kinh nghiệm nào để sử dụng hoạt động của bạn? (Ví dụ: Người mới bắt đầu hoặc Thoải mái.) Và, học sinh nên có mức độ kinh nghiệm nào?
-* Một nhà giáo dục nên có mức độ kinh nghiệm nào để sử dụng hoạt động của bạn? (Ví dụ: Người mới bắt đầu hoặc Thoải mái.) Và, học sinh nên có mức độ kinh nghiệm nào? Nếu bạn muốn chuẩn bị các Hoạt động Hour of Code™ nâng cao hơn, vui lòng bao gồm kiến thức trước cần thiết trong phần mô tả hoạt động của bạn.
-* Độ dài hoạt động của bạn 
-    * Chỉ 1 giờ
-    * 1 giờ với khóa học tiếp theo
-    * 2-6 giờ (có thể là nhiều bài học)
-* Danh sách các tiện ích hỗ trợ tiếp cận, nếu hoạt động của bạn có chúng. Chúng bao gồm khả năng tương thích với trình đọc màn hình, khả năng chuyển văn bản thành giọng nói, sử dụng màu sắc có độ tương phản cao hoặc bất kỳ tiện nghi nào khác dành cho người học khuyết tật.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Những điều bổ sung bạn sẽ cần khi gửi Kế hoạch bài học
 
@@ -170,7 +170,7 @@ Những gì bạn cần:
 
 Một ủy ban đa dạng của các nhà giáo dục khoa học máy tính sẽ xếp hạng các bài nộp dựa trên các tiêu chí định tính và định lượng. Tất cả các hoạt động phù hợp với các tiêu chí cơ bản sẽ được liệt kê.
 
-Đối với các hoạt động mã hóa truyền thống, một ủy ban đa dạng của các nhà giáo dục khoa học máy tính sẽ xếp hạng các bài nộp dựa trên các tiêu chí định tính và định lượng. Tất cả các hoạt động phù hợp với các tiêu chí cơ bản sẽ được liệt kê. Giáo viên sẽ có thể lọc và sắp xếp để tìm các hoạt động tốt nhất cho lớp học của họ.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Nếu ủy ban đánh giá hoạt động bằng 0 về chất lượng sản xuất (do lỗi hoặc hướng dẫn xấu khiến nó rất khó sử dụng), trong việc thúc đẩy việc học ở các nhóm ít được đại diện (do tài liệu phân biệt chủng tộc/phân biệt giới tính), về giá trị giáo dục (không dạy các khái niệm CS) hoặc vui vẻ/hấp dẫn (do khó khăn/không khuyến khích học sinh làm việc), hoạt động sẽ không được liệt kê.
 
@@ -188,13 +188,13 @@ Ngoài ra, để được liệt kê, tất cả các hoạt động phải:
 - Không cần đăng ký
 - Không yêu cầu thanh toán (ngoại trừ các hoạt động robot, những hoạt động này có thể yêu cầu mua robot/bộ dụng cụ)
 
-Đối với các hoạt động tự định hướng cho giáo viên và học sinh mới, ủy ban đánh giá sẽ tìm kiếm liệu:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Giáo viên có thể sử dụng hướng dẫn hoặc hoạt động không có nền tảng về khoa học máy tính
 - Học sinh có thể thành công mà không có nền tảng về khoa học máy tính
 - Học sinh có thể tự hướng dẫn mình thông qua hướng dẫn mà không cần sự hướng dẫn của phụ huynh hoặc giáo viên
 
-Giáo viên và học sinh sẽ có thể tìm kiếm và lọc danh sách các hoạt động của chúng tôi dựa trên các bộ lọc như lớp, cấp độ kinh nghiệm, môn học, phần cứng, v.v. Theo mặc định, trước tiên chúng tôi sẽ hiển thị các kế hoạch và hoạt động bài học:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Nhận được đánh giá cao nhất từ ủy ban đánh giá
 - Là các hoạt động tự định hướng một giờ được thiết kế cho người mới bắt đầu (học sinh và giáo viên)
@@ -208,7 +208,7 @@ Giáo viên và học sinh sẽ có thể tìm kiếm và lọc danh sách các 
 
 ## Những đề xuất để thiết kế hoạt động của bạn
 
-Các hoạt động không nhất thiết phải bao gồm AI, mặc dù chúng tôi đang tìm cách cung cấp nhiều hoạt động liên quan đến AI hơn.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Bao gồm giáo viên ghi chú.** Phần lớn các hoạt động tập trung vào học sinh, nhưng nếu hoạt động được tạo ra và quản lý bởi giáo viên, xin vui lòng thêm vào các chỉ dẫn đơn giản theo cấu trúc giáo viên-ghi chú trong URL riêng biệt gửi cùng hoạt động của bạn. Không chỉ có học sinh mới là người chưa có kinh nghiệm, một số giáo viên cũng vậy. Bao gồm thông tin như:
 
@@ -221,15 +221,15 @@ Các hoạt động không nhất thiết phải bao gồm AI, mặc dù chúng 
 - Do you nghị cặp lập trình?
 - Cân nhắc sử dụng trong lớp học? Ví dụ: nếu có video, khuyên giáo viên hiển thị video trên màn hình chiếu để toàn bộ lớp học xem cùng nhau
 
-**Kết hợp phản hồi vào cuối hoạt động.** (Ví dụ: “Bạn đã hoàn thành 10 cấp độ và tìm hiểu về các vòng lặp! Làm tốt lắm!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Khuyến khích sinh viên đăng lên phương tiện truyền thông xã hội (nếu thích hợp) khi họ đã hoàn thành.** Ví dụ: “Tôi đã thực hiện một Giờ Lập trình với ________ Bạn có không? #HourOfCode” hoặc “Tôi đã thực hiện #HourOfCode như một phần của #CSEdWeek. Phải không? @Scratch." Sử dụng hashtag **#HourOfCode** (với chữ H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Tạo hoạt động của bạn bằng tiếng Tây Ban Nha hoặc bằng các ngôn ngữ khác ngoài tiếng Anh.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Giải thích hoặc kết nối hoạt động với một bối cảnh xã hội cụ thể.** Lập trình máy tính sẽ trở thành một siêu công cụ khi mà học sinh hiểu được tầm quan trọng của nó trong việc góp phần thay đổi thế giới!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Hãy chắc chắn rằng hướng dẫn của bạn có thể được sử dụng trong một mô hình [cặp lập trình](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** Điều này đặc biệt hữu ích cho Giờ Lập trình vì nhiều lớp học không có phần cứng 1:1 cho tất cả học sinh.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Quay lại đầu trang**](#top)
 
@@ -237,7 +237,7 @@ Các hoạt động không nhất thiết phải bao gồm AI, mặc dù chúng 
 
 ## Nguyên tắc nhãn hiệu
 
-Hour of Code® và Hora del Código® là các nhãn hiệu đã đăng ký của Code.org. Nhiều đối tác hướng dẫn của chúng tôi đã sử dụng nhãn hiệu “Hour of Code” của chúng tôi trên trang web của họ liên quan đến các hoạt động Hour of Code của họ. Chúng tôi không muốn ngăn chặn việc sử dụng này, nhưng chúng tôi muốn đảm bảo việc sử dụng nằm trong một vài giới hạn:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Chỉ sử dụng “Giờ lập trình” liên quan đến các hoạt động Giáo dục CS phi thương mại trong bối cảnh chiến dịch Giờ lập trình và không cho mục đích nào khác.
 2. Bất kỳ tham chiếu nào về “Hour of Code” nên được sử dụng theo cách không gợi ý rằng đó là tên thương hiệu của riêng bạn, mà nó đề cập đến Giờ lập trình như một phong trào cơ sở. Ví dụ điển hình: “Tham gia Hour of Code® tại Acmecorp.com”. Ví dụ xấu: "Hãy thử giờ của mã bởi ACME Corp".
@@ -253,15 +253,15 @@ Hour of Code® và Hora del Código® là các nhãn hiệu đã đăng ký củ
 
 ## Theo dõi Pixel
 
-Nếu hướng dẫn của bạn được chấp thuận và đưa vào trang hướng dẫn cuối cùng, Code.org sẽ cung cấp cho bạn một pixel theo dõi duy nhất để bạn tích hợp vào hướng dẫn của mình. Xem ví dụ dưới đây. Không bao gồm trên bất kỳ trang tạm thời nào của hướng dẫn của bạn.
+Nếu hướng dẫn của bạn được chấp thuận và đưa vào trang hướng dẫn cuối cùng, Code.org sẽ cung cấp cho bạn một pixel theo dõi duy nhất để bạn tích hợp vào hướng dẫn của mình. Xem ví dụ dưới đây. Do not include on any interim pages of your tutorial.
 
-Điều này sẽ cho phép chúng tôi đếm số người dùng thực hiện hướng dẫn Hour of Code của bạn. Nó sẽ dẫn đến số lượng tham gia chính xác hơn cho hướng dẫn của bạn.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Nếu hướng dẫn của bạn được chấp thuận và đưa vào trang hướng dẫn cuối cùng, Code.org sẽ cung cấp cho bạn một pixel theo dõi duy nhất để bạn tích hợp vào hướng dẫn của mình. Xem ví dụ dưới đây.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-Lưu ý: điều này không quan trọng trong các ứng dụng cài đặt (ứng dụng trong iOS/Android, hoặc ứng dụng dành riêng cho máy tính để bàn)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Ví dụ về các pixel theo dõi cho Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Thúc đẩy hoạt động của bạn, CSEdWeek, và Giờ học mật mã
 
-Hãy quảng bá hoạt động của bạn lên mạng của bạn! Hướng họ đến trang Hour of Code của bạn. Người dùng của bạn có nhiều khả năng phản ứng với việc gửi thư từ bạn về hoạt động của bạn. Sử dụng chiến dịch Giờ lập trình quốc tế trong Tuần lễ Giáo dục Khoa học Máy tính như một cái cớ để khuyến khích người dùng mời những người khác tham gia và giúp chúng tôi tiếp cận nhiều sinh viên hơn!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Tính năng Hour of Code và CsedWeek trên trang web của bạn. Ví dụ: <http://www.tynker.com/hour-of-code>
 - Quảng bá Giờ lập trình bằng cách sử dụng phương tiện truyền thông xã hội, phương tiện truyền thống, danh sách gửi thư, v.v., sử dụng hashtag #HourOfCode (với chữ in hoa H, O, C)

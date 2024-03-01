@@ -2,6 +2,7 @@
  * Defines blocks useful in multiple blockly apps
  */
 var commonMsg = require('@cdo/locale');
+var blockly = require('@code-dot-org/blockly');
 
 export const blocks = {
   installJoinBlock(blockly) {
@@ -106,4 +107,12 @@ export const blocks = {
       return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     };
   },
+  copyBlockGenerator(generator, type1, type2) {
+    generator[type1] = generator[type2];
+  },
+  defineNewBlockGenerator(generator, type, generatorFunction) {
+    generator[type] = generatorFunction;
+  },
+  addSerializationHooksToBlock() {},
+  mathRandomIntGenerator: blockly.JavaScript.math_random_int,
 };
