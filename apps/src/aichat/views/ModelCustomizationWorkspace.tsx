@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Tabs from './Tabs';
+import Tabs from './tabs/Tabs';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   return (
@@ -12,6 +12,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
           {title: 'Fine Tuning', content: 'content 3'},
           {title: 'Publish', content: 'content 4'},
         ]}
+        name="model-customization"
       />
     </div>
   );

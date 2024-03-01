@@ -1,6 +1,6 @@
-@import 'color.scss';
-@import 'font.scss';
-@import '../../mixins.scss';
+@import 'color';
+@import 'font';
+@import '../../../mixins.scss';
 
 .tabsContainer {
   background-color: $neutral_dark;
