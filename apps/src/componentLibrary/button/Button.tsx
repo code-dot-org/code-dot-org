@@ -91,7 +91,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
 export default memo(Button);
 
 //
-// 
 // /**
 //  * New style button.
 //  * This particular button is designed to operate in contexts where we have a solid
