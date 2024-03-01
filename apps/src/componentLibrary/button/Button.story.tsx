@@ -1,53 +1,69 @@
-/* eslint-disable storybook/default-exports */
-// TODO: Once start working on Button component - uncomment the code and use it as a template for Button component stories
+import React from 'react';
+import Button, {ButtonProps} from './index';
+import {Meta, Story} from '@storybook/react';
 
-// import React from 'react';
-// import Button, {ButtonProps} from './index';
-// import {Meta, Story} from '@storybook/react';
-// import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+export default {
+  title: 'DesignSystem/Button', // eslint-disable-line storybook/no-title-property-in-meta
+  /**
+   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
+   * This workaround (component: Component.type instead of component: Component) is taken from
+   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
+   * Feel free to remove this workaround when storybook fixes this issue.
+   */
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore-next-line
+  component: Button.type,
+} as Meta;
+
 //
-// export default {
-//   title: 'DesignSystem/Button Component',
-//   component: Button,
-// } as Meta;
+// TEMPLATE
 //
-// //
-// // TEMPLATE
-// //
-// // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// // eslint-disable-next-line
-// const SingleTemplate: Story<ButtonProps> = args => <Button {...args} />;
-//
-// const MultipleTemplate: Story<{
-//   components: ButtonProps[];
-// }> = args => (
-//   <>
-//     {args.components?.map(componentArg => (
-//       // TODO: fix key
-//       <Button key={componentArg.size} {...componentArg} />
-//     ))}
-//   </>
-// );
-//
-// export const DefaultButton = SingleTemplate.bind({});
-// DefaultButton.args = {
-//   size: 'm',
-// };
-//
-// export const GroupOfSizesOfButtons = MultipleTemplate.bind({});
-// GroupOfSizesOfButtons.args = {
-//   components: [
-//     {
-//       size: 'xs',
-//     },
-//     {
-//       size: 's',
-//     },
-//     {
-//       size: 'm',
-//     },
-//     {
-//       size: 'l',
-//     },
-//   ],
-// };
+// This is needed to fix children type error (passing string instead of React.ReactNode type)
+// eslint-disable-next-line
+const SingleTemplate: Story<ButtonProps> = args => <Button {...args} />;
+
+const MultipleTemplate: Story<{
+  components: ButtonProps[];
+}> = args => (
+  <>
+    {args.components?.map(componentArg => (
+      // TODO: fix key
+      <Button key={componentArg.size} {...componentArg} />
+    ))}
+  </>
+);
+
+export const DefaultButton = SingleTemplate.bind({});
+DefaultButton.args = {
+  text: 'Button',
+  size: 'm',
+};
+
+export const DisabledButton = SingleTemplate.bind({});
+DisabledButton.args = {
+  text: 'Button',
+  disabled: true,
+  size: 'm',
+};
+
+export const GroupOfSizesOfButtons = MultipleTemplate.bind({});
+GroupOfSizesOfButtons.args = {
+  components: [
+    {
+      text: 'Button xs',
+      size: 'xs',
+    },
+    {
+      text: 'Button s',
+      size: 's',
+    },
+    {
+      text: 'Button m',
+      size: 'm',
+    },
+    {
+      text: 'Button l',
+      size: 'l',
+    },
+  ],
+};

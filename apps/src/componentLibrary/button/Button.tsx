@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {memo} from 'react';
 import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
 import moduleStyles from './button.module.scss';
 
 export interface ButtonProps {
   /** Button type */
-  type: string;
+  type?: string;
   /** Custom class name */
   className?: string;
   /** Button id */
@@ -27,11 +29,10 @@ export interface ButtonProps {
   ariaLabel?: string;
   /** Size of button */
   size?: ComponentSizeXSToL;
-
-  // TODO: Add iconLeft and iconRight props
-  iconLeft?: string;
-  iconRight?: string;
-
+  /** Left Button icon */
+  iconLeft?: FontAwesomeV6IconProps;
+  /** Left Button icon */
+  iconRight?: FontAwesomeV6IconProps;
   /** Button onClick target (when used as link) */
   target?: string;
   /** Button href */
@@ -40,17 +41,39 @@ export interface ButtonProps {
   download?: boolean | string;
   /** Button title */
   title?: string;
-
   /** Button onClick */
-  // TODO: Do we need event here?
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   /** Button value */
-  value: string;
-
+  value?: string;
   /** Button tabIndex */
-  // TODO: Do we need this prop?
   tabIndex?: number;
 }
+
+const Button: React.FunctionComponent<ButtonProps> = ({
+  className,
+  id,
+  color,
+  text,
+  disabled = false,
+  styleAsText = false,
+  isPending = false,
+  pendingText,
+  ariaLabel,
+  iconLeft,
+  iconRight,
+  size = 'm',
+  type = 'button',
+}) => {
+  return (
+    <button
+      type="button"
+      className={classNames(moduleStyles.link, moduleStyles[`link-${size}`])}
+      disabled={disabled}
+    >
+      {text}
+    </button>
+  );
+};
 
 /**
  * ### Production-ready Checklist:
@@ -65,18 +88,7 @@ export interface ButtonProps {
  * Design System: Button Component.
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
-const Button: React.FunctionComponent<ButtonProps> = ({size = 'm'}) => {
-  return (
-    <button
-      type="button"
-      className={classNames(moduleStyles.link, moduleStyles[`link-${size}`])}
-    >
-      someText
-    </button>
-  );
-};
-
-export default Button;
+export default memo(Button);
 
 //
 // /**
@@ -299,4 +311,3 @@ export default Button;
 // Button.ButtonHeight = ButtonHeight;
 //
 // export default Button;
-
