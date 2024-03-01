@@ -75,6 +75,7 @@ en:
         finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Fill out the following information to finish creating a Code.org account with **%{provider}** for **%{email}**.'
+        required: "Required"
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
@@ -1438,3 +1439,6 @@ en:
       success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"
+    upgrade_to_teacher_account:
+      error:
+        missing_email: "Missing required parameter: Email"
