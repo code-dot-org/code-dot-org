@@ -32,6 +32,7 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
+  setExpandedCardKey,
   isInUS,
   imageSrc,
   imageAltText,
@@ -290,21 +291,15 @@ const ExpandedCurriculumCatalogCard = ({
                   alt={recommendedSimilarCurriculum.display_name}
                   style={{height: '100%'}}
                 />
-                <TextLink
-                  id="similarCurriculumLink"
-                  className={style.relatedTextlink}
+                <Button
+                  id="similarCurriculumButton"
+                  name={recommendedSimilarCurriculum.display_name}
+                  type="button"
+                  styleAsText
+                  className={style.relatedCurriculaLink}
                   text={recommendedSimilarCurriculum.display_name}
-                  href={`${
-                    isSignedOut || isTeacher
-                      ? recommendedSimilarCurriculum.course_version_path +
-                        '?viewAs=Instructor'
-                      : recommendedSimilarCurriculum.course_version_path
-                  }`}
-                  icon={
-                    <FontAwesome
-                      icon="arrow-up-right-from-square"
-                      className="fa-solid"
-                    />
+                  onClick={() =>
+                    setExpandedCardKey(recommendedSimilarCurriculum.key)
                   }
                 />
               </div>
@@ -331,6 +326,7 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
+  setExpandedCardKey: PropTypes.func.isRequired,
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,

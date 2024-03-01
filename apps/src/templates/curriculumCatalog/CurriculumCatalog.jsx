@@ -182,6 +182,7 @@ const CurriculumCatalog = ({
                     self_paced_pl_course_offering_path
                   }
                   isExpanded={expandedCardKey === key}
+                  setExpandedCardKey={setExpandedCardKey}
                   onQuickViewClick={() => handleExpandedCardChange(key)}
                   isInUS={isInUS}
                   availableResources={available_resources}

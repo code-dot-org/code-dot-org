@@ -49,6 +49,7 @@ const CurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
+  setExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
@@ -97,6 +98,7 @@ const CurriculumCatalogCard = ({
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
+    setExpandedCardKey={setExpandedCardKey}
     isInUS={isInUS}
     availableResources={availableResources}
     isSignedOut={isSignedOut}
@@ -137,6 +139,7 @@ CurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
+  setExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
@@ -174,6 +177,7 @@ const CustomizableCurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
+  setExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
@@ -342,6 +346,7 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
+          setExpandedCardKey={setExpandedCardKey}
           isInUS={isInUS}
           imageSrc={imageSrc}
           imageAltText={imageAltText}
@@ -390,6 +395,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
+  setExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
