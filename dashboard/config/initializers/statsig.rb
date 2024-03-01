@@ -1,8 +1,6 @@
-require 'statsig'
-
+require "cdo/statsig"
 # Statsig is initialized here for the development environment. In managed
-# environments, it is initialized in config/puma.rb
+# environments, it is initialized in lib/cdo/app_server_hooks
 if CDO.rack_env?(:development)
-  options = StatsigOptions.new({'tier' => :development}, network_timeout: 5, local_mode: true)
-  Statsig.initialize(CDO.statsig_server_secret_key, options)
+  Cdo::StatsigInitializer.init
 end
