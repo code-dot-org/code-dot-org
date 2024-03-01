@@ -21,6 +21,7 @@ const CurriculumCatalog = ({
   isInUS,
   isSignedOut,
   isTeacher,
+  curriculaTaught,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -94,6 +95,13 @@ const CurriculumCatalog = ({
         ?.split(',')
         ?.some(grade => currCurriculumGrades.includes(grade))
     );
+
+    // (if signed-in teacher) Filter out curricula the user has taught before
+    if (curriculaTaught) {
+      recommendableCurricula = recommendableCurricula.filter(
+        curr => !curriculaTaught.includes(curr.course_offering_id)
+      );
+    }
 
     // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
@@ -252,6 +260,7 @@ CurriculumCatalog.propTypes = {
   isInUS: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
+  curriculaTaught: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default CurriculumCatalog;

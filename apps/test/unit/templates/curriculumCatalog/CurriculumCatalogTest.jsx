@@ -47,6 +47,7 @@ describe('CurriculumCatalog', () => {
     isSignedOut: true,
     isInUS: true,
     isTeacher: false,
+    curriculaTaught: null,
   };
   let store;
 
@@ -682,6 +683,59 @@ describe('CurriculumCatalog', () => {
         screen.getByText(currCurriculum.description);
 
         // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card
+        screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
+        assert(
+          document
+            .querySelector('#similarCurriculumLink')
+            .href.includes(recommendedSimilarCurriculum.course_version_path)
+        );
+      }
+    });
+
+    it('does not recommend similar curriculum the user has already taught', () => {
+      const curriculaTaughtBefore = [FULL_TEST_COURSES[0].course_offering_id]; // fullTestCourse1 is the top-ranked similar curriculum for 2 other curricula
+      const props = {
+        ...defaultProps,
+        curriculaData: FULL_TEST_COURSES,
+        curriculaTaught: curriculaTaughtBefore,
+      };
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const quickViewButtons = screen.getAllByText('Quick View', {
+        exact: false,
+      });
+
+      for (let i = 0; i < 2; i++) {
+        // Get the Similar Recommended Curriculum for the current test curriculum
+        const recommendableCurricula = [...FULL_TEST_COURSES];
+        const currCurriculum = recommendableCurricula.splice(i, 1)[0];
+        const similarCurriculumRecommendations = getSimilarRecommendations(
+          recommendableCurricula,
+          currCurriculum.duration,
+          currCurriculum.marketing_initiative,
+          currCurriculum.school_subject,
+          currCurriculum.cs_topic
+        );
+
+        // Open expanded card of the current test curriculum
+        fireEvent.click(quickViewButtons[i]);
+        screen.getByText(currCurriculum.description);
+
+        // Check that the top-recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
+        // If the top-recommended similar curriculum was previously taught by the user, then check that the image and link are of the
+        // next-most-recommended similar curriculum.
+        let recommendedSimilarCurriculum = similarCurriculumRecommendations[0];
+        if (
+          curriculaTaughtBefore.includes(
+            recommendedSimilarCurriculum.course_offering_id
+          )
+        ) {
+          recommendedSimilarCurriculum = similarCurriculumRecommendations[1];
+        }
+
         screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
         assert(
           document

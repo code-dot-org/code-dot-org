@@ -216,6 +216,7 @@ const PUBLISHED_DATE_TEST_COURSES = [
 const FULL_TEST_COURSES = [
   {
     key: 'fullTestCourse1',
+    course_offering_id: 1,
     display_name: 'Full Test Course 1',
     display_name_with_latest_year: 'Full Test Course 1 (6 months ago)',
     description: 'Full Test Course 1 description',
@@ -235,6 +236,7 @@ const FULL_TEST_COURSES = [
   },
   {
     key: 'fullTestCourse2',
+    course_offering_id: 2,
     display_name: 'Full Test Course 2',
     display_name_with_latest_year: 'Full Test Course 2 (1 year ago)',
     description: 'Full Test Course 2 description',
@@ -254,6 +256,7 @@ const FULL_TEST_COURSES = [
   },
   {
     key: 'fullTestCourse3',
+    course_offering_id: 3,
     display_name: 'Full Test Course 3',
     display_name_with_latest_year: 'Full Test Course 3 (1.5 years ago)',
     description: 'Full Test Course 3 description',
@@ -273,6 +276,7 @@ const FULL_TEST_COURSES = [
   },
   {
     key: 'fullTestCourse4',
+    course_offering_id: 4,
     display_name: 'Full Test Course 4',
     display_name_with_latest_year: 'Full Test Course 4 (2 years ago)',
     description: 'Full Test Course 4 description',
@@ -292,6 +296,7 @@ const FULL_TEST_COURSES = [
   },
   {
     key: 'fullTestCourse5',
+    course_offering_id: 5,
     display_name: 'Full Test Course 5',
     display_name_with_latest_year: 'Full Test Course 5 (2.5 years ago)',
     description: 'Full Test Course 5 description',
