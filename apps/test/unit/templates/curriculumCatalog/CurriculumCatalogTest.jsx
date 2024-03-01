@@ -661,31 +661,34 @@ describe('CurriculumCatalog', () => {
           <CurriculumCatalog {...props} />
         </Provider>
       );
-
-      // Get the Similar Recommended Curriculum for the first test curriculum
-      const [firstCurriculum, ...recommendableCurricula] = FULL_TEST_COURSES;
-      const recommendedSimilarCurriculum = getSimilarRecommendations(
-        recommendableCurricula,
-        firstCurriculum.duration,
-        firstCurriculum.marketing_initiative,
-        firstCurriculum.school_subject,
-        firstCurriculum.cs_topic
-      )[0];
-
-      // Open expanded card of the first test curriculum
-      const firstQuickViewButton = screen.getAllByText('Quick View', {
+      const quickViewButtons = screen.getAllByText('Quick View', {
         exact: false,
-      })[0];
-      fireEvent.click(firstQuickViewButton);
-      screen.getByText(firstCurriculum.description);
+      });
 
-      // Check that the recommended similar curriculum's image and link are present
-      screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
-      assert(
-        document
-          .querySelector('#similarCurriculumLink')
-          .href.includes(recommendedSimilarCurriculum.course_version_path)
-      );
+      for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        // Get the Similar Recommended Curriculum for the current test curriculum
+        const recommendableCurricula = [...FULL_TEST_COURSES];
+        const currCurriculum = recommendableCurricula.splice(i, 1)[0];
+        const recommendedSimilarCurriculum = getSimilarRecommendations(
+          recommendableCurricula,
+          currCurriculum.duration,
+          currCurriculum.marketing_initiative,
+          currCurriculum.school_subject,
+          currCurriculum.cs_topic
+        )[0];
+
+        // Open expanded card of the current test curriculum
+        fireEvent.click(quickViewButtons[i]);
+        screen.getByText(currCurriculum.description);
+
+        // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card
+        screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
+        assert(
+          document
+            .querySelector('#similarCurriculumLink')
+            .href.includes(recommendedSimilarCurriculum.course_version_path)
+        );
+      }
     });
   });
 });
