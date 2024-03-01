@@ -13,6 +13,7 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 function RubricFloatingActionButton({
   rubric,
@@ -22,7 +23,10 @@ function RubricFloatingActionButton({
   aiEnabled,
   sectionId,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const sessionStorageKey = 'RubricFabOpenStateKey';
+  const [isOpen, setIsOpen] = useState(
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
+  );
 
   const eventData = useMemo(() => {
     return {
@@ -59,6 +63,10 @@ function RubricFloatingActionButton({
       };
     }
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
+
+  useEffect(() => {
+    trySetSessionStorage(sessionStorageKey, isOpen);
+  }, [isOpen]);
 
   const icon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
