@@ -198,7 +198,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const libraryGroupPath = library.libraryJson.id;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getFolderForId(currentValue) || folders[0]
+    library.getFolderForSoundId(currentValue) || folders[0]
   );
   const [mode, setMode] = useState<string>('packs');
   const [filter, setFilter] = useState<string>('all');

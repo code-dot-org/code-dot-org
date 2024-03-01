@@ -53,6 +53,7 @@ export default class MusicLibrary {
     return `${firstFolder?.id}/${firstFolder?.sounds[0].src}`;
   }
 
+  // Given a sound ID (e.g. "pack1/sound1"), return the SoundData.
   getSoundForId(id: string): SoundData | null {
     const lastSlashIndex = id.lastIndexOf('/');
     const folderId = id.substring(0, lastSlashIndex);
@@ -67,6 +68,7 @@ export default class MusicLibrary {
     return null;
   }
 
+  // Given a sound path (e.g. "packs/pack1/sound1"), return the SoundData.
   getSoundForPath(id: string): SoundData | null {
     const lastSlashIndex = id.lastIndexOf('/');
     const folderPath = id.substring(0, lastSlashIndex);
@@ -81,17 +83,20 @@ export default class MusicLibrary {
     return null;
   }
 
-  getFolderForId(id: string): SoundFolder | null {
+  // Given a sound ID (e.g. "pack1/sound1"), return the SoundFolder.
+  getFolderForSoundId(id: string): SoundFolder | null {
     const lastSlashIndex = id.lastIndexOf('/');
     const folderId = id.substring(0, lastSlashIndex);
 
     return this.getFolderForFolderId(folderId);
   }
 
+  // Given a folder ID (e.g. "pack1") return the SoundFolder.
   getFolderForFolderId(folderId: string): SoundFolder | null {
     return this.folders.find(folder => folder.id === folderId) || null;
   }
 
+  // Given a folder path (e.g. "packs/pack1") return a SoundFolder.
   getFolderForFolderPath(folderPath: string): SoundFolder | null {
     return this.folders.find(folder => folder.path === folderPath) || null;
   }

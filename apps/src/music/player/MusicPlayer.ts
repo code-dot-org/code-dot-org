@@ -278,7 +278,7 @@ export default class MusicPlayer {
         );
       }
 
-      const folder = library.getFolderForId(soundEvent.id);
+      const folder = library.getFolderForSoundId(soundEvent.id);
 
       if (folder === null) {
         this.metricsReporter.logWarning(`No folder for ${soundEvent.id}`);
