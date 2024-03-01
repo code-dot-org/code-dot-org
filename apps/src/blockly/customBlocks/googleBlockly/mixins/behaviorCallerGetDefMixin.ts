@@ -6,9 +6,8 @@
 
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
-import {Block} from 'blockly';
 
-export const behaviorCallerGetDefMixin = function (this: Block) {
+export const behaviorCallerGetDefMixin = function (this: ProcedureBlock) {
   const mixin = {
     /**
      * Returns the procedure model that was found.

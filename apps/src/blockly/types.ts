@@ -269,6 +269,12 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   behaviorId?: string;
   getTargetWorkspace_(): Workspace;
   hasReturn_: boolean;
+  renameProcedure(
+    oldName: string,
+    newName: string,
+    userCreated?: boolean
+  ): void;
+  defType_: string;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.
