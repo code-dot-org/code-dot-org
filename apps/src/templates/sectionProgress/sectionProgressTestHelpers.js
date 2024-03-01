@@ -133,7 +133,7 @@ function randomProgress(level) {
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
         teacherFeedbackReviewState: randomReviewState(),
-        teacherFeedbackNew, false,
+        teacherFeedbackNew: false,
       };
     default:
       return null;
