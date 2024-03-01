@@ -11,7 +11,6 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
           {title: 'Retrieval', content: 'content 2'},
           {title: 'Fine Tuning', content: 'content 3'},
           {title: 'Publish', content: 'content 4'},
-          {title: 'A very long tab name', content: 'content 5'},
         ]}
       />
     </div>

@@ -23,11 +23,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({tabs}) => {
   return (
     <div>
       <div className={styles.tabsContainer}>
-        <ul
-          role="tablist"
-          // className="tab-list"
-          className={styles.tabsList}
-        >
+        <ul role="tablist" className={styles.tabsList}>
           {tabs.map((tab, index) => {
             return (
               <li
@@ -44,7 +40,6 @@ const Tabs: React.FunctionComponent<TabsProps> = ({tabs}) => {
                   aria-controls={`panel-${index}`}
                   id={`tab-${index}`}
                   onClick={() => handleTabClick(index)}
-                  // tabIndex={activeIndex === index ? 0 : -1}
                   className={classNames(
                     styles.tabButton,
                     index === activeIndex && styles.active
@@ -63,7 +58,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({tabs}) => {
             content={tab.content}
             isActive={index === activeIndex}
             id={`panel-${index}`}
-            labelledby={`tab-${index}`}
+            labelledBy={`tab-${index}`}
           />
         );
       })}
