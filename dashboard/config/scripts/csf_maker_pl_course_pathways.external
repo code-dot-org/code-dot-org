@@ -1,35 +1,14 @@
-name 'How this curriculum works'
+name 'csf_maker_PL_course pathways'
 title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Navigating the Professional Learning Module
-
-#### This professional learning module is divided into **three units:**
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Unit 1: Intro to Code.org</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-<p style ="font-size: 14pt"> This unit is designed to help you get started with Code.org. You will learn how to set up a class, navigate the platform, and other important tools needed for successully implementing courses with Code.org.<br><br> <b>Skip this unit if</b> you have experience using Code.org in your class. </p>
-</div>
-</details>
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;"> Unit 2: Courses Content (Courses C, D, E, and F) </summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-<p style ="font-size: 14pt"> These units are separated by grade-level / course-level. Choose the course that is most relevant to you. <br><br> <b>If you teach more than one level...</b> you are welcome to complete each unit or, select the unit you feel will most help you get you started. </p>
-</div>
-</details>
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Unit 3: Physical Computing with micro:bit</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-<p style ="font-size: 14pt"> This unit supports you getting started teaching with micro:bit. The course content in the previous unit will build the skills necessary for coding the micro:bit. We recommend to have a micro:bit on hand to practice the projects. </p>
-</div>
-</details>
+# Overview of Course Projects and Skills 
 
 
-## Course projects and skills
+#### Take a look at this chart to get an overview of the skills and projects covered in each course to help you decide which course bets fits your needs. On the next page, you will look at the different pathways.  
 
-#### Take a look at this chart to get an overview of the skills and projects covered in each course to help you decide what path to take. 
+<br>
 
 <table width="850px">
 	<tr> 
