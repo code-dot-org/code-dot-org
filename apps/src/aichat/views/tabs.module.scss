@@ -20,18 +20,18 @@
   margin: 0;
 }
 
-.tabContainer {
+.tab {
   white-space: nowrap;
   background-color: $neutral_dark70;
   margin: 5px 8px 0 0;
   padding: 0 10px;
   border-radius: 4px 4px 0 0;
-}
 
-.tabButton {
-  @include remove-button-styles;
-  height: 30px;
-  font-size: 16px;
-  font-weight: $medium-font-weight;
-  color: $neutral_white;
+  button {
+    @include remove-button-styles;
+    height: 30px;
+    font-size: 16px;
+    font-weight: $medium-font-weight;
+    color: $neutral_white;
+  }
 }

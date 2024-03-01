@@ -29,7 +29,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({tabs}) => {
               <li
                 role="presentation"
                 className={classNames(
-                  styles.tabContainer,
+                  styles.tab,
                   index === activeIndex && styles.active
                 )}
               >

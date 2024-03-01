@@ -11,15 +11,9 @@ const TabPanel: React.FunctionComponent<TabPanelProps> = ({
   content,
   isActive,
   id,
-  labelledby,
+  labelledBy,
 }) => (
-  <div
-    role="tabpanel"
-    id={id}
-    aria-labelledby={labelledBy}
-    hidden={!isActive}
-    tabIndex="0" // Make the panel focusable
-  >
+  <div role="tabpanel" id={id} aria-labelledby={labelledBy} hidden={!isActive}>
     {content}
   </div>
 );
