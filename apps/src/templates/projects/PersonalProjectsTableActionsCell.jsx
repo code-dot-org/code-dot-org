@@ -82,14 +82,12 @@ export class PersonalProjectsTableActionsCell extends Component {
             <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
+            <MenuBreak />
             {!this.props.isFrozen && (
-              <div style={styles.deleteOption}>
-                <MenuBreak />
-                <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-                  <FontAwesome icon="times-circle" style={styles.xIcon} />
-                  {i18n.delete()}
-                </PopUpMenu.Item>
-              </div>
+              <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+                <FontAwesome icon="times-circle" style={styles.xIcon} />
+                {i18n.delete()}
+              </PopUpMenu.Item>
             )}
           </QuickActionsCell>
         )}
