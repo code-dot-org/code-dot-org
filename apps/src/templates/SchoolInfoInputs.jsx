@@ -5,6 +5,7 @@ import SchoolTypeDropdown from '@cdo/apps/templates/SchoolTypeDropdown';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 import i18n from '@cdo/locale';
+import {Heading2, BodyOneText} from '@cdo/apps/componentLibrary/typography';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
 
@@ -125,8 +126,8 @@ export default class SchoolInfoInputs extends Component {
 
     return (
       <div style={{width: 600, ...this.props.styles}}>
-        <h5>{i18n.schoolInformationHeader()}</h5>
-        <hr />
+        <Heading2>{i18n.censusHeading()}</Heading2>
+        <BodyOneText>{i18n.schoolInfoInterstitialTitle()}</BodyOneText>
         <CountryAutocompleteDropdown
           onChange={this.props.onCountryChange}
           value={this.props.country}

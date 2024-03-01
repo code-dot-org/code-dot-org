@@ -323,16 +323,12 @@ export default class SchoolInfoInterstitial extends React.Component {
           overflow={'visible'}
         >
           <div style={styles.container}>
-            <div style={styles.heading}>
-              {i18n.schoolInfoInterstitialTitle()}
-            </div>
             {this.state.showSchoolInfoUnknownError && (
               <p style={styles.error}>
                 {i18n.schoolInfoInterstitialUnknownError()}
               </p>
             )}
             <div style={styles.middle}>
-              <p>{i18n.schoolInfoInterstitialDescription()}</p>
               <SchoolInfoInputs
                 ref={ref => (this.schoolInfoInputs = ref)}
                 onCountryChange={this.onCountryChange}

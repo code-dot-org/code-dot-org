@@ -44,7 +44,7 @@ export default function SchoolDataInputs({
   return (
     <div className={style.outerContainer}>
       <Heading2>{i18n.censusHeading()}</Heading2>
-      <BodyOneText>{i18n.findYourSchool()}</BodyOneText>
+      <BodyOneText>{i18n.schoolInfoInterstitialTitle()}</BodyOneText>
       <div className={style.inputContainer}>
         <Heading6 className={style.topPadding}>{i18n.whatCountry()}</Heading6>
         <SimpleDropdown

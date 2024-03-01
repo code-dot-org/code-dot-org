@@ -28,41 +28,34 @@ describe('SchoolInfoInterstitial', () => {
     expect(wrapper).to.containMatchingElement(
       <BaseDialog>
         <div>
-          <div>
-            We want to bring Computer Science to every student - help us track
-            our progress!
-          </div>
-          <div>
-            <p>Please enter your school information below.</p>
-            <SchoolInfoInputs
-              country={''}
-              schoolType={''}
-              ncesSchoolId={''}
-              schoolName={''}
-              schoolLocation={''}
-              useLocationSearch={true}
-              showErrors={false}
-              showRequiredIndicator={true}
-              onCountryChange={wrapper.instance().onCountryChange}
-              onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-              onSchoolChange={wrapper.instance().onSchoolChange}
-              onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-            />
-          </div>
-          <div>
-            <Button
-              __useDeprecatedTag
-              text={i18n.dismiss()}
-              onClick={wrapper
-                .find('Button[id="dismiss-button"]')
-                .prop('onClick')}
-            />
-            <Button
-              __useDeprecatedTag
-              text={i18n.save()}
-              onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
-            />
-          </div>
+          <SchoolInfoInputs
+            country={''}
+            schoolType={''}
+            ncesSchoolId={''}
+            schoolName={''}
+            schoolLocation={''}
+            useLocationSearch={true}
+            showErrors={false}
+            showRequiredIndicator={true}
+            onCountryChange={wrapper.instance().onCountryChange}
+            onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
+            onSchoolChange={wrapper.instance().onSchoolChange}
+            onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
+          />
+        </div>
+        <div>
+          <Button
+            __useDeprecatedTag
+            text={i18n.dismiss()}
+            onClick={wrapper
+              .find('Button[id="dismiss-button"]')
+              .prop('onClick')}
+          />
+          <Button
+            __useDeprecatedTag
+            text={i18n.save()}
+            onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
+          />
         </div>
       </BaseDialog>
     );
