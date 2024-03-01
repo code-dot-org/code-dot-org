@@ -9,10 +9,6 @@ import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.mod
 
 import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// import i18n from '@cdo/apps/locale';
-
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -116,6 +112,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
                     selectedOption.value === value &&
                       moduleStyles.selectedDropdownMenuItem
                   )}
+                  disabled={isOptionDisabled || disabled}
                   type="button"
                   onClick={() => onOptionClick(option)}
                 >
