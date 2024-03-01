@@ -38,6 +38,11 @@
     i {
       display: inline-block;
     }
+
+    span {
+      /* Manually center dropdown button label */
+      margin-top: 2px;
+    }
   }
 
   .dropdownMenuContainer {

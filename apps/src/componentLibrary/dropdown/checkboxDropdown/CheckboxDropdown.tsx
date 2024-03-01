@@ -73,6 +73,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       color={color}
       disabled={disabled}
       size={size}
+      isSomeValueSelected={checkedOptions.length > 0}
     >
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>
