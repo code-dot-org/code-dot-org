@@ -37,6 +37,10 @@ function RubricFloatingActionButton({
   }, [reportingData, studentLevelInfo, rubric.level.name, currentLevelName]);
 
   const handleClick = () => {
+    const eventName = isOpen
+      ? EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT
+      : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
+    analyticsReporter.sendEvent(eventName, eventData);
     setIsOpen(!isOpen);
   };
 
@@ -61,12 +65,8 @@ function RubricFloatingActionButton({
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
   useEffect(() => {
-    const eventName = isOpen
-      ? EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT
-      : EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT;
-    analyticsReporter.sendEvent(eventName, eventData);
     trySetSessionStorage(sessionStorageKey, isOpen);
-  }, [isOpen, eventData]);
+  }, [isOpen]);
 
   const icon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
