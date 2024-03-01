@@ -76,6 +76,7 @@ class PersonalProjectsTable extends React.Component {
   };
 
   actionsFormatter = (actions, {rowData}) => {
+    console.log('rowData', rowData);
     return (
       <PersonalProjectsTableActionsCell
         projectId={rowData.channel}
@@ -83,6 +84,7 @@ class PersonalProjectsTable extends React.Component {
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
         projectNameFailure={rowData.projectNameFailure}
+        isFrozen={rowData.frozen}
       />
     );
   };

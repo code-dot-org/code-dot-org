@@ -21,6 +21,9 @@ export const styles = {
   xIcon: {
     paddingRight: 5,
   },
+  deleteOption: {
+    paddingBottom: 10,
+  },
 };
 
 export class PersonalProjectsTableActionsCell extends Component {
@@ -37,6 +40,7 @@ export class PersonalProjectsTableActionsCell extends Component {
     remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     unsetNameFailure: PropTypes.func.isRequired,
+    isFrozen: PropTypes.bool,
   };
 
   onDelete = () => {
@@ -70,17 +74,23 @@ export class PersonalProjectsTableActionsCell extends Component {
       <div>
         {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item onClick={this.onRename}>
-              {i18n.rename()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && (
+              <PopUpMenu.Item onClick={this.onRename}>
+                {i18n.rename()}
+              </PopUpMenu.Item>
+            )}
             <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
-            <MenuBreak />
-            <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-              <FontAwesome icon="times-circle" style={styles.xIcon} />
-              {i18n.delete()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && (
+              <div style={styles.deleteOption}>
+                <MenuBreak />
+                <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+                  <FontAwesome icon="times-circle" style={styles.xIcon} />
+                  {i18n.delete()}
+                </PopUpMenu.Item>
+              </div>
+            )}
           </QuickActionsCell>
         )}
         {isEditing && (
