@@ -11,6 +11,7 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import style from './rubrics.module.scss';
 import {
   BodyThreeText,
+  EmText,
   OverlineThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 
@@ -57,7 +58,11 @@ function StudentSelector({
         : [
             {
               value: NO_SELECTED_SECTION_VALUE,
-              label: i18n.selectStudentOption(),
+              label: (
+                <BodyThreeText className={style.submitStatusText}>
+                  <EmText>{i18n.selectStudentOption()}</EmText>
+                </BodyThreeText>
+              ),
             },
           ]
       ).concat(

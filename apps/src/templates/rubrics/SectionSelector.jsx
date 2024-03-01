@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
+import {BodyThreeText, EmText} from '@cdo/apps/componentLibrary/typography';
 
 // Exported for unit testing
 export const NO_SELECTED_SECTION_VALUE = '';
@@ -57,12 +58,25 @@ function SectionSelector({
       value={selectedSectionId || NO_SELECTED_SECTION_VALUE}
       onChange={handleSelectChange}
       options={(!selectedSectionId
-        ? [{value: NO_SELECTED_SECTION_VALUE, label: i18n.selectSection()}]
+        ? [
+            {
+              value: NO_SELECTED_SECTION_VALUE,
+              label: (
+                <BodyThreeText className={style.submitStatusText}>
+                  <EmText>{i18n.selectSectionOption()}</EmText>
+                </BodyThreeText>
+              ),
+            },
+          ]
         : []
       ).concat(
         sections.map(({id, name}) => ({
           value: id,
-          label: name,
+          label: (
+            <BodyThreeText className={style.submitStatusText}>
+              {name}
+            </BodyThreeText>
+          ),
         }))
       )}
     />
