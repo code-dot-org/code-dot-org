@@ -5,10 +5,8 @@ import MoreDetailsDialog from '@cdo/apps/templates/sectionProgressV2/MoreDetails
 import sinon from 'sinon';
 
 describe('MoreDetailsDialog', () => {
-  const onCloseMock = sinon.spy();
-
   it('renders the dialog with required elements', () => {
-    render(<MoreDetailsDialog hasValidation={true} onClose={onCloseMock} />);
+    render(<MoreDetailsDialog hasValidation={true} onClose={() => {}} />);
 
     expect(screen.getByText('Progress Tracking Icon Key')).be.visible;
     expect(screen.getByRole('button')).be.visible;
@@ -18,6 +16,7 @@ describe('MoreDetailsDialog', () => {
   });
 
   it('calls onClose when the close button is clicked', () => {
+    const onCloseMock = sinon.spy();
     render(<MoreDetailsDialog hasValidation={false} onClose={onCloseMock} />);
 
     const closeButton = screen.getByRole('button');
@@ -28,11 +27,11 @@ describe('MoreDetailsDialog', () => {
 
   it('conditionally renders the validated item based on hasValidation prop', () => {
     const {rerender} = render(
-      <MoreDetailsDialog hasValidation={false} onClose={onCloseMock} />
+      <MoreDetailsDialog hasValidation={false} onClose={() => {}} />
     );
     expect(screen.queryByText('Validated')).not.be.visible;
 
-    rerender(<MoreDetailsDialog hasValidation={true} onClose={onCloseMock} />);
+    rerender(<MoreDetailsDialog hasValidation={true} onClose={() => {}} />);
     expect(screen.queryByText('Validated')).be.visible;
   });
 });
