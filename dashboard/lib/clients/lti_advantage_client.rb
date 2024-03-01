@@ -22,7 +22,6 @@ class LtiAdvantageClient
       },
     }
     options[:query][:rlid] = resource_link_id unless url.include?("schoology")
-
     res = make_request(url, options)
     next_page = next_page_url(res[:headers])
     parsed_res = res[:body]
