@@ -26,12 +26,12 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
 
   return (
     <AccessibleDialog onClose={onClose}>
+      <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
+      <button type="button" onClick={onClose} className={styles.xCloseButton}>
+        <i id="x-close" className="fa-solid fa-xmark" />
+      </button>
+      <hr />
       <div role="region" className={styles.dialog}>
-        <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
-        <button type="button" onClick={onClose} className={styles.xCloseButton}>
-          <i id="x-close" className="fa-solid fa-xmark" />
-        </button>
-        <hr />
         <Heading6>{i18n.assignmentCompletionStates()}</Heading6>
         {renderItem(
           ITEM_TYPE.NOT_STARTED,
