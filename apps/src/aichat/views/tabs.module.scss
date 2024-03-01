@@ -5,37 +5,33 @@
 .tabsContainer {
   background-color: $neutral_dark;
   display: flex;
-  position: relative;
   padding-left: 5px;
   overflow-x: auto;
+
+  .active {
+    background-color: $neutral_light;
+    color: #007785;
+  }
+}
+
+.tabsList {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
 }
 
 .tabContainer {
   white-space: nowrap;
-  text-decoration: none;
   background-color: $neutral_dark70;
   margin: 5px 8px 0 0;
   padding: 0 10px;
   border-radius: 4px 4px 0 0;
 }
 
-.button {
+.tabButton {
   @include remove-button-styles;
   height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   font-size: 16px;
   font-weight: $medium-font-weight;
   color: $neutral_white;
-
-  &.active {
-    background-color: $neutral_light;
-    color: #007785;
-  }
-}
-
-.active {
-  background-color: $neutral_light;
-  color: #007785;
 }

@@ -24,9 +24,9 @@ const Tabs: React.FunctionComponent<TabsProps> = ({tabs}) => {
     <div>
       <div className={styles.tabsContainer}>
         <ul
-          style={{display: 'flex', listStyleType: 'none', margin: 0}}
           role="tablist"
-          className="tab-list"
+          // className="tab-list"
+          className={styles.tabsList}
         >
           {tabs.map((tab, index) => {
             return (
@@ -46,7 +46,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({tabs}) => {
                   onClick={() => handleTabClick(index)}
                   // tabIndex={activeIndex === index ? 0 : -1}
                   className={classNames(
-                    styles.button,
+                    styles.tabButton,
                     index === activeIndex && styles.active
                   )}
                 >
