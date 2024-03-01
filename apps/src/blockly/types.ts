@@ -2,12 +2,14 @@ import {
   Block,
   BlockSvg,
   BlocklyOptions,
+  CodeGenerator,
   Input,
   Procedures,
   Theme,
   VariableMap,
   Workspace,
   WorkspaceSvg,
+  Xml,
 } from 'blockly';
 import GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -28,10 +30,11 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {Abstract} from 'blockly/core/events/events_abstract';
-import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
+import BlockSvgFrame from './addons/blockSvgFrame';
+import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 
 export interface BlockDefinition {
   category: string;
@@ -84,7 +87,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   levelBlockIds: string[];
   isStartMode: boolean;
   isToolboxMode: boolean;
-  toolboxBlocks: Element | ToolboxDefinition | undefined;
+  toolboxBlocks: ToolboxDefinition | undefined;
   useModalFunctionEditor: boolean;
   functionEditor: FunctionEditor;
   mainBlockSpace: ExtendedWorkspaceSvg;
@@ -95,6 +98,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   // TODO: better define this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   cdoUtils: any;
+  Generator: ExtendedGenerator;
+  Xml: ExtendedXml;
   Procedures: ExtendedProcedures;
   BlockValueType: {[key: string]: string};
   SNAP_RADIUS: number;
@@ -112,8 +117,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     handler: (e: Abstract) => void
   ) => void;
   getGenerator: () => typeof javascriptGenerator;
-  addEmbeddedWorkspace: (workspace: WorkspaceSvg) => void;
-  isEmbeddedWorkspace: (workspace: WorkspaceSvg) => boolean;
+  addEmbeddedWorkspace: (workspace: Workspace) => void;
+  isEmbeddedWorkspace: (workspace: Workspace) => boolean;
   findEmptyContainerBlock: () => void;
   createEmbeddedWorkspace: (
     container: HTMLElement,
@@ -146,6 +151,8 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  // used for function blocks
+  functionalSvg_?: BlockSvgFrame;
 }
 
 export interface ExtendedInput extends Input {
@@ -160,6 +167,7 @@ export interface ExtendedBlock extends Block {
   // Blockly uses any for value.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setTitleValue: (newValue: any, name: string) => void;
+  skipNextBlockGeneration?: boolean;
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
@@ -199,6 +207,56 @@ export interface ExtendedWorkspace extends Workspace {
   noFunctionBlockFrame: boolean;
 }
 
+type CodeGeneratorType = typeof CodeGenerator;
+export interface ExtendedGenerator extends CodeGeneratorType {
+  xmlToBlocks: (name: string, xml: Node) => Block[];
+  blockSpaceToCode: (
+    name: string,
+    opt_typeFilter?: string | string[]
+  ) => string;
+  prefixLines: (text: string, prefix: string) => string;
+}
+
+type XmlType = typeof Xml;
+export interface ExtendedXml extends XmlType {
+  textToDom: (text: string) => Element;
+  blockSpaceToDom: (workspace: Workspace, opt_noId?: boolean) => Element;
+  domToBlockSpace: (workspace: Workspace, xml: Element) => XmlBlockConfig[];
+}
+
+// This type is likely incomplete. We should add to it if we discover
+// more properties it contains.
+export interface XmlBlockConfig {
+  blockly_block: Block;
+  x: number;
+  y: number;
+}
+
+// This type is likely incomplete. We should add to it if we discover
+// more properties it contains.
+export interface JsonBlockConfig {
+  id?: string;
+  x?: number;
+  y?: number;
+  movable?: boolean;
+  deletable?: boolean;
+  // extraState can be any object. We may be able to define this better.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  extraState?: any;
+  type: string;
+  fields: {[key: string]: {name: string; type: string; id?: string}};
+  inputs: {[key: string]: {block: JsonBlockConfig}};
+  next: {block: JsonBlockConfig};
+  kind: string;
+}
+
+export interface Collider {
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+}
+
 type ProceduresType = typeof Procedures;
 
 export interface ExtendedProcedures extends ProceduresType {
@@ -207,6 +265,29 @@ export interface ExtendedProcedures extends ProceduresType {
 
 export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
+}
+
+// Blockly uses {[key: string]: any} to define workspace serialization.
+// We have defined this more specifically, and therefore need to cast
+// to this value when getting the serialzation of a workspace.
+export type WorkspaceSerialization =
+  | {
+      blocks: {blocks: JsonBlockConfig[]};
+      procedures?: ProcedureDefinitionConfig[];
+      variables?: VariableConfig[];
+    }
+  | Record<string, never>; // empty object
+
+export interface ProcedureDefinitionConfig {
+  id: string;
+  name: string;
+  // As of now we only use null. Will we ever use return types?
+  returnTypes: null;
+}
+
+export interface VariableConfig {
+  name: string;
+  id: string;
 }
 
 export interface ProcedureBlockConfiguration {
@@ -225,3 +306,5 @@ export interface ProcedureBlockConfiguration {
 export type ProcedureType =
   | BLOCK_TYPES.procedureDefinition
   | BLOCK_TYPES.behaviorDefinition;
+
+export type BlockColor = [number, number, number];

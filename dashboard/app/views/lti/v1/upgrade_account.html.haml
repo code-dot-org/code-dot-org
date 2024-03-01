@@ -1,0 +1,5 @@
+- script_data = {}
+- script_data[:lti_upgrade_account_form_data] = @form_data
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/lti/v1/upgrade_account.js'), data: {ltiUpgradeAccountFormData: script_data.to_json}}

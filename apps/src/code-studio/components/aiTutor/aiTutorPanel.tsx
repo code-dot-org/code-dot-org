@@ -3,11 +3,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {commonI18n} from '@cdo/apps/types/locale';
 import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
-import CompilationTutor from './compilationTutor';
-import ValidationTutor from './validationTutor';
-import GeneralChatTutor from './generalChatTutor';
+import AITutor from './aiTutor';
 import TutorTypeSelector from './tutorTypeSelector';
-import {TutorType} from '@cdo/apps/aiTutor/types';
 const icon = require('@cdo/static/ai-bot.png');
 
 interface AITutorPanelProps {
@@ -16,14 +13,7 @@ interface AITutorPanelProps {
 
 const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const level = useAppSelector(state => state.aiTutor.level);
-  const selectedTutorType = useAppSelector(
-    state => state.aiTutor.selectedTutorType
-  );
   const isAssessmentLevel = level?.isAssessment;
-
-  const compilationSelected = selectedTutorType === TutorType.COMPILATION;
-  const validationSelected = selectedTutorType === TutorType.VALIDATION;
-  const questionSelected = selectedTutorType === TutorType.GENERAL_CHAT;
 
   return (
     <div
@@ -38,13 +28,11 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
           <h4>You don't have access on this level.</h4>
         ) : (
           <div>
+            <AITutor />
             <h4> What would you like AI Tutor to help you with?</h4>
             <TutorTypeSelector />
           </div>
         )}
-        {compilationSelected && <CompilationTutor />}
-        {validationSelected && <ValidationTutor />}
-        {questionSelected && <GeneralChatTutor />}
       </div>
     </div>
   );
