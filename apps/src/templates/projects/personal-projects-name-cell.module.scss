@@ -14,3 +14,7 @@
 .infoButton:hover {
   box-shadow: none;
 }
+
+.infoButton:focus {
+  border: solid;
+}
