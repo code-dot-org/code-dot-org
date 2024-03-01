@@ -176,7 +176,7 @@ module UsersHelper
       script: unit,
       users: users,
       user_levels_by_level: User.user_levels_by_user_by_level(users, unit),
-      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit, current_user.id),
+      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit, current_user&.id),
       paired_user_levels: PairedUserLevel.pairs_by_user(users),
       include_timestamp: true
     )
