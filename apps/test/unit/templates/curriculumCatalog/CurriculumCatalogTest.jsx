@@ -685,8 +685,8 @@ describe('CurriculumCatalog', () => {
         screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
         assert(
           document
-            .querySelector('#similarCurriculumLink')
-            .href.includes(recommendedSimilarCurriculum.course_version_path)
+            .querySelector('#similarCurriculumButton')
+            .innerHTML.includes(recommendedSimilarCurriculum.display_name)
         );
       }
     });
