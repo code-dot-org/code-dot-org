@@ -16,7 +16,12 @@ end
 
 count = 0
 CSV.table(teacher_id_csv).each do |row|
-  user = User.find(id: row[:id])
+  begin
+    user = User.find(row[:id])
+  rescue ActiveRecord::RecordNotFound
+    next
+  end
+
   if user.teacher?
     user.update!(progress_table_v2_closed_beta: true)
     count += 1
