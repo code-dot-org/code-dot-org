@@ -246,11 +246,15 @@ export default function LearningGoals({
             if (json.understanding >= 0 && json.understanding !== null) {
               understandingLevels.current[index] = json.understanding;
             }
+            if (index === currentLearningGoal) {
+              setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
+              setDisplayUnderstanding(
+                understandingLevels.current[currentLearningGoal]
+              );
+            }
           })
           .catch(error => console.error(error));
       });
-      setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
-      setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal, open]);
 
