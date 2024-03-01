@@ -674,7 +674,7 @@ i.infoAlertIcon {
 }
 
 .studentSelector {
-  width: 180px;
+  width: 240px;
 }
 
 .learningGoalsContainer {
@@ -845,6 +845,10 @@ i.infoAlertIcon {
   }
 }
 
+.sectionSelector {
+  width: 180px;
+}
+
 .rubricTabGroup {
   padding-bottom: 8px;
   justify-content: space-between;
@@ -911,4 +915,62 @@ i.infoAlertIcon {
 
 .detailsHidden {
   display: none;
+}
+
+.studentDropdownOptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.studentDropdownOption {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 3px;
+}
+
+.greenStatusBlob {
+  background-color: $light_affirmative_100;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  display:inline;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.yellowStatusBlob {
+  background-color: $lighter_yellow;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  display:inline;
+  p {
+    margin: 0,0,0,0;
+  }
+}
+
+.grayStatusBlob {
+  background-color: $light_gray_100;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  display:inline;
+  p {
+    margin: 0,0,0,0;
+  }
+}
+
+.submitStatusText {
+  display:inline;
+  padding-top: 2px;
+  p {
+    margin-bottom: 0;
+  }
 }
