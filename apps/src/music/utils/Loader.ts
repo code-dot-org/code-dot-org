@@ -5,7 +5,6 @@ import MusicLibrary, {
   LibraryJson,
   LibraryValidator,
 } from '../player/MusicLibrary';
-import {DEFAULT_LIBRARY} from '../constants';
 const AppConfig = require('../appConfig').default;
 import {getBaseAssetUrl} from '../appConfig';
 
