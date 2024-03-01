@@ -110,7 +110,8 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        reviewState: randomReviewState(),
+        teacherFeedbackReviewState: randomReviewState(),
+        teacherFeedbackNew: false,
       };
     case 1:
       return {
@@ -120,7 +121,8 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        reviewState: randomReviewState(),
+        teacherFeedbackReviewState: randomReviewState(),
+        teacherFeedbackNew: true,
       };
     case 2:
       return {
@@ -130,7 +132,8 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        reviewState: randomReviewState(),
+        teacherFeedbackReviewState: randomReviewState(),
+        teacherFeedbackNew, false,
       };
     default:
       return null;
