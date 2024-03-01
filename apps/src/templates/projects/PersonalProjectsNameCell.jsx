@@ -23,6 +23,7 @@ class PersonalProjectsNameCell extends Component {
   };
 
   showProjectInfo = () => {
+    console.log('showProjectInfo');
     this.props.showProjectInfoDialog();
   };
 
@@ -51,10 +52,12 @@ class PersonalProjectsNameCell extends Component {
               {projectName + ' '}
             </a>
             {isFrozen && (
-              <FontAwesome
-                icon="circle-exclamation"
-                className={styles.cautionIcon}
-              />
+              <button type="button" onClick={this.showProjectInfo}>
+                <FontAwesome
+                  icon="circle-exclamation"
+                  className={styles.cautionIcon}
+                />
+              </button>
             )}
           </div>
         )}

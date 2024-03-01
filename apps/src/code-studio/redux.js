@@ -13,6 +13,7 @@ import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 import projects from '../templates/projects/projectsRedux';
+import projectInfoDialog from '../templates/projects/infoDialog/projectInfoDialogRedux';
 import verifiedInstructor from './verifiedInstructorRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
@@ -36,6 +37,7 @@ registerReducers({
   isRtl,
   responsive,
   publishDialog,
+  projectInfoDialog,
   projects,
   verifiedInstructor,
   currentUser,

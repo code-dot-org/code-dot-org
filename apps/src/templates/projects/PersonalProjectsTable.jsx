@@ -21,6 +21,7 @@ import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
+import ProjectInfoDialog from '@cdo/apps/templates/projects/infoDialog/ProjectInfoDialog';
 import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -280,6 +281,7 @@ class PersonalProjectsTable extends React.Component {
         )}
         <PublishDialog />
         <DeleteProjectDialog />
+        <ProjectInfoDialog />
       </div>
     );
   }
