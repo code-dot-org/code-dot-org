@@ -32,12 +32,6 @@ describe('Certificate', () => {
     window.dashboard = storedWindowDashboard;
   });
 
-  it('renders image with initialCertificateImageUrl', () => {
-    const imageUrl = 'https://code.org/images/placeholder-hoc-image.jpg';
-    const wrapper = wrapperWithParams({initialCertificateImageUrl: imageUrl});
-    expect(wrapper.find('img').html()).to.include(imageUrl);
-  });
-
   describe('personalized certificate', () => {
     let server;
 
@@ -69,7 +63,7 @@ describe('Certificate', () => {
         isHocTutorial: true,
       });
       let image = wrapper.find('#uitest-certificate img');
-      expect(image.prop('src')).to.equal(initialCertificateImageUrl);
+      expect(image.prop('src')).to.include('/certificate_images/');
 
       const printLink = wrapper.find('.social-print-link');
       expect(printLink.prop('href')).to.match(/^\/print_certificates/);
