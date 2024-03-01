@@ -9,7 +9,7 @@ module I18n
     module Dashboard
       module RestrictedContent
         class SyncUp < I18n::Utils::SyncUpBase
-          config.crowdin_project = 'codeorg-restricted'
+          config.crowdin_project = CROWDIN_PROJECT
           config.source_paths << I18N_SOURCE_FILE_PATH
         end
       end

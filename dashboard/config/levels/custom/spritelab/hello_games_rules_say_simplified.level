@@ -1,0 +1,95 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-02-22T19:07:23.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "##More Players!  \r\n**Add more sprites and set their location.**\r\n1. Make another new sprite and choose a costume for player two<img src=\"https://images.code.org/51ad72f6ba72c16b8094566622e310ab-image-1683905416875.gif\" style=\"width: 20%; float: right; padding-top: 20px\">\r\n\r\n\r\n- Click the <code style=\"color:black; background-color:#EBD546\">location pin</code> to move the sprites on the play space\r\n- Press `Run`\r\n\r\n\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "start_animations": "                {\r\n  \"orderedKeys\": [\r\n    \"fd3e93f5-33df-4091-b6c5-873e25349977\",\r\n    \"0aed6f6c-efcc-440f-8b21-dcb5a7a5e871\",\r\n    \"499a7b16-032c-46d7-82e8-0fcd915f63f9\",\r\n    \"2f9f44a8-4f6d-417f-836d-81ec44e92591\",\r\n    \"a47fadf0-64fa-4608-89e9-db8707f76ce4\",\r\n    \"6a89546e-5d7f-4c7b-a237-e49432419159\",\r\n    \"ba661210-b58f-4116-96a7-9b2fa2c2aaa1\",\r\n    \"965883d8-d912-47cd-9942-96fb62311cea\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"fd3e93f5-33df-4091-b6c5-873e25349977\": {\r\n      \"name\": \"gameplayfaces_04\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:55:56 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:55:49 UTC\",\r\n      \"version\": \"nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb/category_faces/gameplayfaces_04.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"0aed6f6c-efcc-440f-8b21-dcb5a7a5e871\": {\r\n      \"name\": \"gameplayfaces_02\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:55:53 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:56:13 UTC\",\r\n      \"version\": \"zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ/category_faces/gameplayfaces_02.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"499a7b16-032c-46d7-82e8-0fcd915f63f9\": {\r\n      \"name\": \"emoji_11\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:56:25 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:56:53 UTC\",\r\n      \"version\": \"zTm226AsxpxmE9JW38wudcsQbYGMwkoY\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/zTm226AsxpxmE9JW38wudcsQbYGMwkoY/category_emoji/emoji_11.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      }\r\n    },\r\n    \"2f9f44a8-4f6d-417f-836d-81ec44e92591\": {\r\n      \"name\": \"emoji_09\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:57:14 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:57:01 UTC\",\r\n      \"version\": \"7MCmxi.hV60CdFhxZ388QvO.anutA7us\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/7MCmxi.hV60CdFhxZ388QvO.anutA7us/category_emoji/emoji_09.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      }\r\n    },\r\n    \"a47fadf0-64fa-4608-89e9-db8707f76ce4\": {\r\n      \"name\": \"gradient_01\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"jsonLastModified\": \"2020-12-01 23:21:13 UTC\",\r\n      \"pngLastModified\": \"2020-12-01 23:21:13 UTC\",\r\n      \"version\": \"Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A/category_backgrounds/gradient_01.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"6a89546e-5d7f-4c7b-a237-e49432419159\": {\r\n      \"name\": \"gradient_11\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:53:09 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:53:10 UTC\",\r\n      \"version\": \"xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t/category_backgrounds/gradient_11.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"ba661210-b58f-4116-96a7-9b2fa2c2aaa1\": {\r\n      \"name\": \"gameplay_greendiamond2\",\r\n      \"categories\": [\r\n        \"video_games\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 281,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-03-29 19:26:20 UTC\",\r\n      \"pngLastModified\": \"2021-03-29 19:25:55 UTC\",\r\n      \"version\": \"tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx/category_video_games/gameplay_greendiamond2.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 281,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"965883d8-d912-47cd-9942-96fb62311cea\": {\r\n      \"name\": \"sticker_14\",\r\n      \"categories\": [\r\n        \"stickers\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 246,\r\n        \"y\": 192\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-20 00:32:09 UTC\",\r\n      \"pngLastModified\": \"2021-01-20 00:32:09 UTC\",\r\n      \"version\": \"vFruVXE3kOZCtWT8DthByHlR7Vz5wSth\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/vFruVXE3kOZCtWT8DthByHlR7Vz5wSth/category_stickers/sticker_14.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 246,\r\n        \"y\": 192\r\n      }\r\n    }\r\n  }\r\n}\r\n                \r\n              ",
+    "name_suffix": "_simplified",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-02-22T19:07:23.956+00:00\",\"changed\":[\"cloned from \\\"hello_games_rules_say_b\\\"\"],\"cloned_from\":\"hello_games_rules_say_b\"},{\"changed_at\":\"2024-02-22 20:07:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:08:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:33:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:33:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:33:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:34:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:34:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-26 20:36:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:33:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:54:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:54:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:16:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:17:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:18:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:21:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:40:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:30:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:48:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:49:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:51:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:51:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:51:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 04:00:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 22:30:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 22:33:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 22:48:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 22:48:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" id="p^*k`)UrkWLyI6e5Evxk" deletable="false" movable="false" editable="false" x="83" y="45">
+          <next>
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"gradient_11"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon" id="zj[nhFd;m({=X,l5yMQF">
+                  <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" id="JmLs8H8DLINm4l|.G7,v">
+                      <field name="LOCATION">{"x":200,"y":200}</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="55" y="258">
+          <field name="IMG">"gradient_01"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="45" y="360">
+          <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="RHG;z-siac|i2op`}]e{" x="45" y="448">
+          <field name="ANIMATION_NAME">"emoji_11"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="Eke~L.=nG4w_$vWe.zC.">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

@@ -16,8 +16,25 @@
     "encrypted_examples": "tgtMj87hark+Ez/hf2jQR1168DsLOo4mekmP+EjtExTshW0wGOP7cH8MLaom\neayVPZucvPe2uyqgcvH7wSuD3g==\n",
     "display_name": "Which Properties?",
     "bubble_choice_description": "Can you figure out which Flex properties were used with each container?",
-    "thumbnail_url": "https://images.code.org/39ee7a000662132c698fef9303e5739b-which-properties.png"
+    "thumbnail_url": "https://images.code.org/39ee7a000662132c698fef9303e5739b-which-properties.png",
+    "reference_links": [
+      "/courses/csd-2022/guides/div",
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/flexbox"
   },
-  "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:09 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"},{\"changed_at\":\"2024-01-05 18:02:53 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-11 00:01:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-11 00:09:53 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-19 21:02:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-19 21:02:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 01:15:49 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 01:20:57 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 19:20:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 17:05:24 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-17 18:20:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:09 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"},{\"changed_at\":\"2024-01-05 18:02:53 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-11 00:01:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-11 00:09:53 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-19 21:02:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-19 21:02:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 01:15:49 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 01:20:57 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-20 19:20:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 17:05:24 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-17 18:20:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 18:50:06 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

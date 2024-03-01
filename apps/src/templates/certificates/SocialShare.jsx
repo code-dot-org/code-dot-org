@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import testImageAccess from '@cdo/apps/code-studio/url_test';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function SocialShare({
   facebook,
@@ -35,11 +37,14 @@ export default function SocialShare({
     );
   }, []);
 
+  const onShare = (e, platform) => {
+    analyticsReporter.sendEvent(EVENTS.CERTIFICATE_SHARED, {platform});
+    window.dashboard?.popupWindow(e);
+  };
+
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?${facebook}`;
   const twitterShareUrl = `https://twitter.com/share?${twitter}`;
   const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${linkedin}`;
-
-  const dashboard = window.dashboard;
 
   return (
     <div>
@@ -49,7 +54,7 @@ export default function SocialShare({
           href={linkedShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={dashboard?.popupWindow}
+          onClick={e => onShare(e, 'linkedin')}
         >
           <button
             type="button"
@@ -66,7 +71,7 @@ export default function SocialShare({
           href={facebookShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={dashboard?.popupWindow}
+          onClick={e => onShare(e, 'facebook')}
         >
           <button
             type="button"
@@ -82,7 +87,7 @@ export default function SocialShare({
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={dashboard?.popupWindow}
+          onClick={e => onShare(e, 'twitter')}
         >
           <button
             type="button"

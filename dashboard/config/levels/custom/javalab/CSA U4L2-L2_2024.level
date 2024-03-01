@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U4L2-Static PBT_2024",
     "teacher_markdown": "When students add this line of code to the program, they should see the value `3` printed to the console. This is the same result as the call to the `getNumMembers()` method.\r\n\r\nStudents should realize that the `numMembers` variable is keeping track of the number of `ArtClubMember` objects that have been created. The value is shared by all objects of the class, which is why we get the same result if we access the variable using the class or an object.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:23.239+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L2_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L2_2023\"}]"

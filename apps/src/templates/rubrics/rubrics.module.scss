@@ -89,7 +89,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 28px;
 }
 
 .hiddenRubricContent {
@@ -132,6 +132,7 @@
   align-items: flex-start;
   gap: 1.5rem;
   align-self: stretch;
+  justify-content: center;
 }
 
 .levelAndStudentDetails {
@@ -182,7 +183,7 @@
 
   display: flex;
   height: 40px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   align-self: stretch;
 }
@@ -190,14 +191,14 @@
 .rubricHeaderLeftSide {
   display: flex;
   gap: 4px;
-  //height: 40px;
-  align-items: center;
+  align-items: flex-start;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .rubricHeaderRightSide {
   display: flex;
-  // height: 40px;
-  // justify-content: flex-end;
   align-items: flex-start;
   align-self: stretch;
 }
@@ -332,23 +333,17 @@ button.rubricHeaderTab {
 .aiToken {
   display: flex;
   height: 20px;
-  padding: 4px 8px;
+  padding: 3px 8px 0;
   justify-content: center;
   align-items: center;
   gap: 4px;
-
   border-radius: 30px;
-  border: 1px solid $product_information_default;
-  background: $lightest_cyan;
+  background: $ai_rubric_cyan;
 }
 
 p.aiTokenText {
-  color: $product_information_default;
+  font-size: 0.7rem;
   margin-bottom: 0;
-}
-
-.aiTokenText {
-  color: $product_affirmative_default;
 }
 
 h2.studentName {
@@ -372,6 +367,7 @@ h2.studentName {
 }
 
 .learningGoalTips {
+  display: none;
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid $neutral_dark50;
@@ -663,26 +659,22 @@ i.infoAlertIcon {
   align-items: flex-start;
   align-self: stretch;
   gap: 15px;
-  padding: 10px;
 }
 
 .studentInfoGroup {
   display: flex;
-  align-self: stretch;
+  align-self: center;
+  justify-content: space-around;
   flex-direction: column;
+  text-align: center;
+}
+
+.learningGoalsWrapper {
+  width: 100%;
 }
 
 .studentSelector {
   width: 180px;
-}
-
-// Start of rubrics redesign
-
-//TODO: remove tempContainer style when redesign is ready to roll out
-.tempContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
 .learningGoalsContainer {
@@ -696,20 +688,26 @@ i.infoAlertIcon {
   background: $neutral_light;
   width: 100%;
   min-width: 100%;
+  padding-top: 16px;
 }
 
 .learningGoalButton {
   background: none;
   border: none;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    box-shadow: none;
+    background-color: $light_gray_200;
+  }
 }
 
 .learningGoalsHeader {
   display: flex;
   flex-direction: row;
   height: 60px;
-  padding: 0.5rem 1rem 0 1rem;
   justify-content: space-between;
-  align-items: center;
   align-self: stretch;
   line-height: 154%;
   position: relative;
@@ -818,18 +816,20 @@ i.infoAlertIcon {
   padding: 3px 16px 0;
   font-size: 0.875rem;
   height: 32px;
-  box-shadow: 0 0 0 2px #3cfff8;
+  box-shadow: 0 0 0 2px $ai_rubric_cyan;
 
   &:hover {
-    box-shadow: 0 0 0 2px #3cfff8;
+    box-shadow: 0 0 0 2px $ai_rubric_cyan;
     background-color: $light_gray_100;
   }
 }
 
 .fabBackground {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   width: 724px;
   padding: 16px 16px 32px 16px;
-  gap: 16px;
   border-radius: 0 0 4px 4px;
   border-right: 2px solid $neutral_dark;
   border-bottom: 2px solid $neutral_dark;
@@ -912,5 +912,3 @@ i.infoAlertIcon {
 .detailsHidden {
   display: none;
 }
-
-// End of rubrics redesign

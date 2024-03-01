@@ -146,6 +146,7 @@ class User < ApplicationRecord
     ai_rubrics_disabled
     sort_by_family_name
     show_progress_table_v2
+    progress_table_v2_closed_beta
     lti_roster_sync_enabled
   )
 
@@ -285,7 +286,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state, on: :create
+  validate :validate_us_state, if: -> {us_state.present?}
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -1496,6 +1497,11 @@ class User < ApplicationRecord
     !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
+  end
+
+  def can_view_student_ai_chat_messages?
+    sections.any?(&:assigned_csa?) &&
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
   # Students

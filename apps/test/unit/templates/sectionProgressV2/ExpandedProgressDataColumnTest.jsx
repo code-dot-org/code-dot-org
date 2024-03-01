@@ -83,10 +83,10 @@ describe('ExpandedProgressDataColumn', () => {
     renderDefault();
 
     expect(
-      screen.getByText(
+      screen.getAllByText(
         'Lesson ' + LESSON.relative_position + ': ' + LESSON.name
       )
-    ).to.exist;
+    ).to.have.length(2);
 
     LESSON.levels.forEach(level => {
       expect(
@@ -131,7 +131,7 @@ describe('ExpandedProgressDataColumn', () => {
     );
 
     expect(
-      screen.queryAllByTitle(PROGRESS_ICON_TITLE_PREFIX + 'split')
+      screen.queryAllByLabelText(PROGRESS_ICON_TITLE_PREFIX + 'split')
     ).to.have.length(STUDENTS.length);
   });
 

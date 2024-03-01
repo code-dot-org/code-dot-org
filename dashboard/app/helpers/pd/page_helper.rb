@@ -7,7 +7,7 @@ module Pd::PageHelper
   # @param collection_name [String] Name to be displayed in the page header, e.g. "Applications"
   # @param collection [ActiveRecord::Relation] collection of models with paging applied
   # @param permitted_params [Array<String, Symbol>] params to be preserved in paging urls
-  def page_header(collection_name, collection, permitted_params: [])
+  def page_header(collection_name, collection, permitted_params: [], extra_buttons: [])
     current_page = collection.current_page
 
     base_params = params.permit(permitted_params + [:page_size])
@@ -16,10 +16,10 @@ module Pd::PageHelper
       new_page_button('<', base_params.merge(page: current_page - 1), disabled: collection.first_page?),
       new_page_button('>', base_params.merge(page: current_page + 1), disabled: collection.last_page?),
       new_page_button('>>', base_params.merge(page: collection.total_pages), disabled: collection.last_page?)
-    ]
+    ] + extra_buttons
 
     page_size = params[:page_size] || collection.limit_value
-    page_size_buttons = %w(25 50 All).map do |page_size_option|
+    page_size_buttons = %w(25 50 100 500 1000 5000 10000).map do |page_size_option|
       new_page_size_button page_size_option, base_params
     end
 
