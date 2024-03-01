@@ -32,7 +32,7 @@ import {
 import {Abstract} from 'blockly/core/events/events_abstract';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import {IProcedureBlock} from 'blockly/core/procedures';
+import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 
@@ -275,6 +275,14 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
     userCreated?: boolean
   ): void;
   defType_: string;
+  model_: IProcedureModel;
+  paramsFromSerializedState_: string[];
+  updateArgsMap_: () => void;
+  eventIsCreatingThisBlockDuringPaste_: (event: Abstract) => boolean;
+  defMatches_: (defBlock: ProcedureBlock) => boolean;
+  createDef_: (name: string, params?: string[]) => IProcedureModel;
+  findProcedureModel_: (name: string, params?: string[]) => IProcedureModel;
+  initBlockWithProcedureModel_: () => void;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.
