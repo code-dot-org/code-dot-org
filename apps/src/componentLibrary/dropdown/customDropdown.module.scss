@@ -135,12 +135,10 @@
         &:has(input[type="checkbox"]:disabled), &:has(.disabledDropdownMenuItem) {
           color: $light_gray_200;
           background-color: unset;
-          pointer-events: none;
           cursor: not-allowed;
 
 
           .dropdownMenuItem {
-            pointer-events: none;
             cursor: not-allowed;
 
             i::before {
