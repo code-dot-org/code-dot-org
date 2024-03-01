@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-02-22T22:05:11.000Z",
   "level_num": "custom",
@@ -25,7 +24,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##More movement!\r\n**One behavior block will tell all sprites with the same costume to move the same way.**\r\n1.  Connect another `sprite begins behavior` block\r\n\t- You can try out the different behaviors if you want\r\n\r\n\r\n2.  Press `Run` to get moving!",
+    "long_instructions": "##More movement!\r\n**Set up a game of chase.**\r\n1.  Program one sprite to `wander` and the other to `move with arrow keys`.\r\n\r\n\r\n\r\n2.  Press `Run` to get moving!",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -47,12 +46,10 @@
       "downButton"
     ],
     "name_suffix": "_simplified",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-22T22:05:11.870+00:00\",\"changed\":[\"cloned from \\\"hello_games_behaviors_simplified\\\"\"],\"cloned_from\":\"hello_games_behaviors_simplified\"},{\"changed_at\":\"2024-02-22 22:13:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:16:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:16:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:17:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:17:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-23 17:18:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:47:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:48:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:49:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:50:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:51:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:44:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:27:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:28:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:43:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:34:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 04:02:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-02-22T22:05:11.870+00:00\",\"changed\":[\"cloned from \\\"hello_games_behaviors_simplified\\\"\"],\"cloned_from\":\"hello_games_behaviors_simplified\"},{\"changed_at\":\"2024-02-22 22:13:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:16:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:16:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:17:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 22:17:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-23 17:18:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:47:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:48:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:49:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:50:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 20:51:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:44:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:27:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:28:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:43:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:34:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 04:02:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 23:09:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 23:10:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 23:11:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 23:12:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 23:12:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 23:14:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 23:14:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,34 +58,22 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="54" y="22">
           <next>
-            <block type="gamelab_makeNewSpriteAnon" id="D.wB/V9`I,!x%OUC0r~d">
-              <field name="ANIMATION_NAME">"sticker_12"</field>
-              <value name="LOCATION">
-                <block type="gamelab_location_picker" id="_B!^#-dpOB/%aE$W/09V">
-                  <field name="LOCATION">{"x":192,"y":347}</field>
-                </block>
-              </value>
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"gradient_11"</field>
               <next>
-                <block type="adaptations_toggleBehaviorSimple">
-                  <field name="TOGGLE">"begins"</field>
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"sticker_12"</field>
-                    </block>
-                  </value>
-                  <value name="BEHAVIOR">
-                    <block type="gamelab_behavior_get">
-                      <mutation behaviorId="swimming left and right" name="swimming left and right"/>
-                      <field name="NAME">swimming left and right</field>
+                <block type="gamelab_makeNewSpriteAnon" id="D.wB/V9`I,!x%OUC0r~d">
+                  <field name="ANIMATION_NAME">"emoji_09"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" id="_B!^#-dpOB/%aE$W/09V">
+                      <field name="LOCATION">{"x":192,"y":347}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeSpritesWithSize">
-                      <field name="SIZE">30</field>
-                      <field name="COSTUME">"sticker_14"</field>
-                      <value name="NUM">
-                        <block type="math_number">
-                          <field name="NUM">5</field>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <field name="ANIMATION_NAME">"gameplay_purplediamond"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <field name="LOCATION">{"x":312,"y":64}</field>
                         </block>
                       </value>
                     </block>
@@ -1238,64 +1223,42 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="adaptations_toggleBehaviorSimple" id="Aq4=9rT%U|r::$T(tO/h" x="16" y="16">
+        <block type="adaptations_toggleBehaviorSimple" id="Aq4=9rT%U|r::$T(tO/h" x="14" y="85">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="t0W!3R@~{dtD4GL+tNly">
-              <field name="ANIMATION">"sticker_14"</field>
+              <field name="ANIMATION">"emoji_09"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get" id="k=YBk7]Tt[?g@*ecEWvc">
-              <mutation behaviorId="moving south and looping" name="moving south and looping"/>
-              <field name="NAME">moving south and looping</field>
+            <block type="gamelab_behavior_get" id=":5K=:TT46A3HO-qX+NT/">
+              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+              <field name="NAME">moving with arrow keys</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_behavior_get" id=":5K=:TT46A3HO-qX+NT/" x="59" y="124">
-          <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-          <field name="NAME">moving with arrow keys</field>
-        </block>
-        <block type="gamelab_behavior_get" id="9$Ct0#~o6|ph(@aVC;cx" x="60" y="168">
-          <mutation behaviorId="spinning right" name="spinning right"/>
-          <field name="NAME">spinning right</field>
-        </block>
-        <block type="gamelab_behavior_get" id="5UEO.2Hv{/ChdBr-o(i*" x="69" y="209">
-          <mutation behaviorId="wandering" name="wandering"/>
-          <field name="NAME">wandering</field>
-        </block>
-        <block type="gamelab_behavior_get" id="{Vy5)CxGlkjg_+jKh[Z9" x="41" y="243">
-          <mutation behaviorId="swimming left and right" name="swimming left and right"/>
-          <field name="NAME">swimming left and right</field>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="93" y="304">
-          <field name="IMG">"gradient_01"</field>
-        </block>
-        <block type="controls_whileUntil" id=":vqW^DBXFHNa[KS|`vHh" x="287" y="305">
-          <field name="MODE">WHILE</field>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="PKIu$+Ld/(p8rzCFaWD%" x="55" y="377">
-          <field name="ANIMATION_NAME">"gameplayfaces_02"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="gI5UPJ|(-g`J;hesR(f^">
-              <field name="LOCATION">{"x":200,"y":200}</field>
+        <block type="adaptations_toggleBehaviorSimple" id="X.8qxy3}lkb=KKJJ2[6^" x="71" y="187">
+          <field name="TOGGLE">"begins"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="hQtF3~l$K05N~-j-ZzxB">
+              <field name="ANIMATION">"gameplay_purplediamond"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get" id="5UEO.2Hv{/ChdBr-o(i*">
+              <mutation behaviorId="wandering" name="wandering"/>
+              <field name="NAME">wandering</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_makeSpritesWithSize" id="i7un3aYBL45hjvHzqp.2" x="96" y="448">
-          <field name="SIZE">100</field>
-          <field name="COSTUME">"gameplayfaces_04"</field>
-          <value name="NUM">
-            <block type="math_number" id="EKJk`3k6C600iIDzG(0i">
-              <field name="NUM">3</field>
-            </block>
-          </value>
+        <block type="gamelab_setBackgroundImageAs" id="$)4_hd{uTsUZsDDzN-WO" x="68" y="330">
+          <field name="IMG">"gradient_11"</field>
         </block>
-        <block type="gamelab_spriteSay" id="Av.+^|l[j{:15v.p~~qV" x="97" y="529">
-          <field name="SPEECH">On your mark, get set...GO!</field>
+        <block type="gamelab_spriteSay" id="Av.+^|l[j{:15v.p~~qV" x="33" y="431">
+          <field name="SPEECH">Catch me if you can!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="w7Q]*TrNRj3RsdJUgtFf">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
+              <field name="ANIMATION">"gameplay_purplediamond"</field>
             </block>
           </value>
         </block>
