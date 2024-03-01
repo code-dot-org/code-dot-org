@@ -177,6 +177,8 @@ $container-width: 960px;
   margin-top: 32px;
 
   .relatedCurriculaLink {
+    width: 100%;
+    text-wrap: wrap;
     margin-top: 8px;
     color: $brand_secondary_default
   }
