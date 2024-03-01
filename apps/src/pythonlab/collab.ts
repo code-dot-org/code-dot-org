@@ -9,6 +9,7 @@ import {
 import {ChangeSet, Text} from '@codemirror/state';
 import {EditorView, ViewPlugin, ViewUpdate} from '@codemirror/view';
 //(document.querySelector('#addpeer') as HTMLButtonElement).onclick = addPeer;
+let connectionIdCounter = 0;
 
 function pause(time: number) {
   return new Promise<void>(resolve => setTimeout(resolve, time));
@@ -22,11 +23,14 @@ function currentLatency() {
 export class Connection {
   private disconnected: null | {wait: Promise<void>; resolve: () => void} =
     null;
+  public id: number;
 
   constructor(
     private worker: Worker,
     private getLatency: () => number = currentLatency
-  ) {}
+  ) {
+    this.id = connectionIdCounter++;
+  }
 
   private _request(value: any): Promise<any> {
     return new Promise(resolve => {
@@ -72,28 +76,37 @@ function pushUpdates(
     clientID: u.clientID,
     changes: u.changes.toJSON(),
   }));
-  return connection.request({type: 'pushUpdates', version, updates});
+  return connection.request({
+    type: 'pushUpdates',
+    version,
+    updates,
+    connectionId: connection.id,
+  });
 }
 
 function pullUpdates(
   connection: Connection,
   version: number
 ): Promise<readonly Update[]> {
-  return connection.request({type: 'pullUpdates', version}).then(updates =>
-    updates.map((u: any) => ({
-      changes: ChangeSet.fromJSON(u.changes),
-      clientID: u.clientID,
-    }))
-  );
+  return connection
+    .request({type: 'pullUpdates', version, connectionId: connection.id})
+    .then(updates =>
+      updates.map((u: any) => ({
+        changes: ChangeSet.fromJSON(u.changes),
+        clientID: u.clientID,
+      }))
+    );
 }
 
 export function getDocument(
   connection: Connection
 ): Promise<{version: number; doc: Text}> {
-  return connection.request({type: 'getDocument'}).then(data => ({
-    version: data.version,
-    doc: Text.of(data.doc.split('\n')),
-  }));
+  return connection
+    .request({type: 'getDocument', connectionId: connection.id})
+    .then(data => ({
+      version: data.version,
+      doc: Text.of(data.doc.split('\n')),
+    }));
 }
 
 //!peerExtension

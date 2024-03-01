@@ -23,11 +23,6 @@ const PythonEditor: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   const onCodeUpdate = (code: string) => dispatch(setCode(code));
-  // const collabCompartment1 = new Compartment();
-  // const collabCompartment2 = new Compartment();
-  // const baseExtensions = [python(), darkMode];
-  // const editor1Extensions = [...baseExtensions, collabCompartment1];
-  // const editor2Extensions = [...baseExtensions, collabCompartment2];
   const [editor1, setEditor1] = useState<JSX.Element | null>(null);
   const [editor2, setEditor2] = useState<JSX.Element | null>(null);
   const [editor1Setup, setEditor1Setup] = useState(false);
