@@ -375,7 +375,8 @@ module UsersHelper
       last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
       time_spent: user_level.time_spent&.to_i,
       teacher_feedback_review_state: teacher_feedback&.review_state,
-      teacher_feedback_new: (teacher_feedback&.updated_at&.to_i || 0) > (user_level.updated_at&.to_i || 0)
+      teacher_feedback_new:
+        ((teacher_feedback&.updated_at&.to_i || 0) > (user_level.updated_at&.to_i || 0)) || nil
     }.compact
   end
 
