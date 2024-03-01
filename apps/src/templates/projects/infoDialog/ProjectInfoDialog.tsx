@@ -8,7 +8,10 @@ import {
   ProjectInfoDialogState,
   hideProjectInfoDialog,
 } from './projectInfoDialogRedux';
-// import i18n from '@cdo/locale';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import i18n from '@cdo/locale';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const ProjectInfoDialog: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -29,23 +32,16 @@ const ProjectInfoDialog: React.FunctionComponent = () => {
       style={styles.dialog}
     >
       <h3>Project Info</h3>
-      <p>
-        Congratulations! This project has been selected to be a featured project
-        or an exemplar project!
-      </p>
-      <p>
-        This project is now view-only and is unable to be edited. However, you
-        can remix this project and edit the remixed version.
-      </p>
-      <p>
-        If you have any questions or if you would like to request that your
-        project no longer be displayed in the featured gallery at
-        https://studio.code.org/projects/public, please reach out to us at
-        support@code.org.
-      </p>
+      <p>{i18n.congratsProjectSelected()}</p>
+      <p>{i18n.projectFrozenNotice()}</p>
+      <SafeMarkdown
+        markdown={i18n.requestProjectUnfeatured({
+          url: 'https://studio.code.org/projects/public',
+        })}
+      />
       <DialogFooter>
         <Button
-          text={'Close'}
+          text={i18n.closeDialog()}
           onClick={onClose}
           color={Button.ButtonColor.gray}
           style={{margin: 0}}
@@ -59,9 +55,6 @@ export default ProjectInfoDialog;
 
 const styles = {
   dialog: {
-    paddingLeft: 25,
-    paddingRight: 25,
-    paddingBottom: 25,
-    paddingTop: 25,
+    padding: 25,
   },
 };
