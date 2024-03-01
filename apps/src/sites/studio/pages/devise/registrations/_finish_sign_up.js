@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import i18n from '@cdo/locale';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
@@ -231,8 +230,6 @@ $(document).ready(() => {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
         <div style={{padding: 10}}>
-          <h5>{i18n.schoolInformationHeader()}</h5>
-          <hr />
           <SchoolInfoInputs
             schoolType={schoolData.schoolType}
             country={schoolData.country}

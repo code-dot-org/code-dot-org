@@ -49,7 +49,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = useCallback(
-    (sound: SoundData, tick: number) => {
+    (sound: SoundData, tick: number, note: number) => {
       const index = currentValue.events.findIndex(
         event => event.src === sound.src && event.tick === tick
       );
@@ -58,7 +58,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
         currentValue.events.splice(index, 1);
       } else {
         // Not found, so add.
-        currentValue.events.push({src: sound.src, tick});
+        currentValue.events.push({src: sound.src, tick, note});
         previewSound(`${currentValue.kit}/${sound.src}`);
       }
 
@@ -117,7 +117,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
           </option>
         ))}
       </select>
-      {currentFolder.sounds.map(sound => {
+      {currentFolder.sounds.map((sound, index) => {
         return (
           <div className={styles.row} key={sound.src}>
             <div className={styles.nameContainer}>
@@ -135,7 +135,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
                     styles.outerCell,
                     tick === currentPreviewTick && styles.outerCellPlaying
                   )}
-                  onClick={() => toggleEvent(sound, tick)}
+                  onClick={() => toggleEvent(sound, tick, index)}
                   key={tick}
                 >
                   <div className={getCellClasses(sound, tick)} />

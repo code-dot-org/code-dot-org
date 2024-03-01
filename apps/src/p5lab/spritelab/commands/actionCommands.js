@@ -78,6 +78,9 @@ export const commands = {
         }
       },
       y: sprite => (sprite.y -= val),
+      velocityY: sprite => {
+        sprite.velocityY -= val;
+      },
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {
@@ -88,6 +91,14 @@ export const commands = {
     });
   },
 
+  collide(collisionType, spriteArg, targetArg) {
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+
+    sprites.forEach(sprite => {
+      targets.forEach(target => sprite[collisionType](target));
+    });
+  },
   edgesDisplace(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
@@ -258,6 +269,7 @@ export const commands = {
       width: sprite =>
         (sprite.width = (sprite.animation.getWidth() * val) / 100),
       y: sprite => (sprite.y = 400 - val),
+      velocityY: sprite => (sprite.velocityY = -val),
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {

@@ -6,13 +6,12 @@ import ProgressIcon, {
 } from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 
-describe('ProgressIcon Component', () => {
+describe('ProgressIconComponent', () => {
   it('renders the FontAwesome icon for a specific itemType represented with a FontAwesomeIcon', () => {
     const testType = ITEM_TYPE.VALIDATED;
-    console.log(testType);
     render(<ProgressIcon itemType={testType} />);
 
-    const iconElement = screen.getByTitle(
+    const iconElement = screen.getByLabelText(
       new RegExp(`^${PROGRESS_ICON_TITLE_PREFIX}${testType[0]}$`)
     );
     expect(iconElement).to.be.visible;

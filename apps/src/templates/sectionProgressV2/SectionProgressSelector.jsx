@@ -36,22 +36,22 @@ function SectionProgressSelector({
     return <SectionProgress />;
   }
 
-  const toggleV1OrV2Link = () => (
-    <div className={styles.toggleViews}>
-      <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
-        {showProgressTableV2
-          ? i18n.switchToOldProgressView()
-          : i18n.switchToNewProgressView()}
-      </Link>
-    </div>
-  );
-
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
   // If a user has selected manually, show that version.
   const isPreferenceSet = showProgressTableV2 !== undefined;
   const displayV2 = isPreferenceSet
     ? showProgressTableV2
     : DCDO.get('progress-table-v2-default-v2', false);
+
+  const toggleV1OrV2Link = () => (
+    <div className={styles.toggleViews}>
+      <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
+        {displayV2
+          ? i18n.switchToOldProgressView()
+          : i18n.switchToNewProgressView()}
+      </Link>
+    </div>
+  );
   return (
     <div>
       {toggleV1OrV2Link()}
