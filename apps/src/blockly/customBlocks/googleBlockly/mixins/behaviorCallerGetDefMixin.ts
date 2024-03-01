@@ -5,11 +5,13 @@
 // a behavior for which there is a static behavior getter in the toolbox.
 
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
+import {Block} from 'blockly';
 
-export const behaviorCallerGetDefMixin = function () {
+export const behaviorCallerGetDefMixin = function (this: Block) {
   const mixin = {
     /**
-     * Returns the procedure model tha was found.
+     * Returns the procedure model that was found.
      *
      * @param name The name of the procedure model to find.
      * @param params The param names of the procedure model
@@ -17,7 +19,11 @@ export const behaviorCallerGetDefMixin = function () {
      * @returns The procedure model that was found.
      * @override
      */
-    findProcedureModel_(name, params = []) {
+    findProcedureModel_(
+      this: ProcedureBlock,
+      name: string,
+      params: string[] = []
+    ) {
       if (Blockly.isEmbeddedWorkspace(this.workspace)) {
         return null;
       }
@@ -36,7 +42,9 @@ export const behaviorCallerGetDefMixin = function () {
           const definitionBlock = hiddenWorkspace
             .getTopBlocks()
             .filter(block => block.type === BLOCK_TYPES.behaviorDefinition)
-            .find(block => block.behaviorId === this.behaviorId);
+            .find(
+              block => (block as ProcedureBlock).behaviorId === this.behaviorId
+            ) as ProcedureBlock;
           if (definitionBlock) {
             model = definitionBlock.getProcedureModel();
           }

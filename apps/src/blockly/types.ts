@@ -265,6 +265,10 @@ export interface ExtendedProcedures extends ProceduresType {
 
 export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
+  // used for behavior blocks
+  behaviorId?: string;
+  getTargetWorkspace_(): Workspace;
+  hasReturn_: boolean;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.
