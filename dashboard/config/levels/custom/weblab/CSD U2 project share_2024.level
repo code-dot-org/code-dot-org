@@ -36,14 +36,14 @@
     "validation_enabled": "false",
     "mini_rubric": "false",
     "video_key": "csd_weblab_intro_3",
+    "display_name": "Step 5: Publish The Page",
+    "bubble_choice_description": "It's finished! Time to publish the page you made for your user!",
+    "thumbnail_url": "https://images.code.org/f4d58edfa90def61c03c086a95aa6a15-web.png",
     "encrypted_examples": [
 
-    ],
-    "display_name": "Publish The Finished Page",
-    "bubble_choice_description": "It's finished! Time to publish the page you made for your user!",
-    "thumbnail_url": "https://images.code.org/f4d58edfa90def61c03c086a95aa6a15-web.png"
+    ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:00.340+00:00\",\"changed\":[\"cloned from \\\"CSD U2 project share_2023\\\"\"],\"cloned_from\":\"CSD U2 project share_2023\"},{\"changed_at\":\"2024-02-27 18:00:50 +0000\",\"changed\":[\"long_instructions\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:00.340+00:00\",\"changed\":[\"cloned from \\\"CSD U2 project share_2023\\\"\"],\"cloned_from\":\"CSD U2 project share_2023\"},{\"changed_at\":\"2024-02-27 18:00:50 +0000\",\"changed\":[\"long_instructions\",\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-29 19:27:54 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
