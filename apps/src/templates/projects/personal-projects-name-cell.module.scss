@@ -1,0 +1,17 @@
+@import "color.scss";
+@import "font.scss";
+
+.infoButton {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 7px;
+  padding: 1px;
+}
+
+.infoButton:hover {
+  background-color: $product_negative_light;
+  box-shadow: none;
+}

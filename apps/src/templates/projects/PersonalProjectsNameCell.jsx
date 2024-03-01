@@ -5,6 +5,7 @@ import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {showProjectInfoDialog} from '@cdo/apps/templates/projects/infoDialog/projectInfoDialogRedux';
+import moduleStyles from './personal-projects-name-cell.module.scss';
 
 class PersonalProjectsNameCell extends Component {
   static propTypes = {
@@ -49,14 +50,15 @@ class PersonalProjectsNameCell extends Component {
               rel="noopener noreferrer"
               className="ui-projects-table-project-name"
             >
-              {projectName + ' '}
+              {projectName}
             </a>
             {isFrozen && (
-              <button type="button" onClick={this.showProjectInfo}>
-                <FontAwesome
-                  icon="circle-exclamation"
-                  className={styles.cautionIcon}
-                />
+              <button
+                type="button"
+                className={moduleStyles.infoButton}
+                onClick={this.showProjectInfo}
+              >
+                <FontAwesome icon="circle-exclamation" className="infoIcon" />
               </button>
             )}
           </div>

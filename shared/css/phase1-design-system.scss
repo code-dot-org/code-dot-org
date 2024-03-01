@@ -170,10 +170,21 @@ p {
 
       i {
         color: $neutral_dark !important;
-      }
+      }      
     }
   }
+  .infoIcon {
+    color: $neutral_dark60 !important;
+    font-size: 1rem;  
+  }
+
+  .infoIcon:hover {
+    color: $product_negative_default !important;
+    font-size: 1rem;  
+  }
 }
+
+
 
 .courseexplorer {
   .grouprow {
