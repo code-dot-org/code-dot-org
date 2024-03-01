@@ -133,7 +133,7 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".edit-section-details-link" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
-    And I press the first "#uitest-save-section-changes" element
+    And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "#classroom-sections" is visible 
 
     # TODO: TEACH-537 If we add in this confirmation dialogue later, uncomment this test
@@ -170,7 +170,7 @@ Feature: Using the teacher homepage sections feature
     And element "#assignment-version-year" contains text "2017"
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2019)" once I see it
-    And I press the first "#uitest-save-section-changes" element
+    And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "#classroom-sections" is visible
     And the section table row at index 0 has primary assignment path "/s/coursea-2019"
 

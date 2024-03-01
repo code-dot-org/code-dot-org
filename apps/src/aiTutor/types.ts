@@ -15,7 +15,7 @@ export type AITutorInteraction = {
   userId?: number;
   levelId?: number;
   scriptId?: number;
-  type: TutorType;
+  type: TutorType | undefined;
   isProjectBacked?: boolean;
   prompt: string;
   status: string;
@@ -41,13 +41,11 @@ export type Level = {
   isAssessment: boolean;
 };
 
-export interface GeneralChatContext {
-  message: string;
-}
-
-export interface ValidationCompilationContext {
-  studentCode: string;
-  tutorType: TutorType;
+export interface ChatContext {
+  // studentInput is the last user message for general chat
+  // or the student's code for compilation and validaiton.
+  studentInput: string;
+  tutorType: TutorType | undefined;
 }
 
 export enum Role {

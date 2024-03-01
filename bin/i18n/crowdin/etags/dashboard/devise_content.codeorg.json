@@ -1,0 +1,242 @@
+{
+  "ar-SA": {
+    "/dashboard/devise.yml": "0b0f1b3f781e49fe184a625dc0a10e1a"
+  },
+  "az-AZ": {
+    "/dashboard/devise.yml": "54c7dbca20241df9a938d7bfc28fd9f3"
+  },
+  "bg-BG": {
+    "/dashboard/devise.yml": "212264451ad548d5d2ad9771a39d6358"
+  },
+  "bn-BD": {
+    "/dashboard/devise.yml": "69952f663da78f30aa4981de2202376c"
+  },
+  "bs-BA": {
+    "/dashboard/devise.yml": "cfa6c4efef597045dedcc28e15799b96"
+  },
+  "ca-ES": {
+    "/dashboard/devise.yml": "aeb433629f4dbaca4cf846a6992e2f26"
+  },
+  "co-CO": {
+    "/dashboard/devise.yml": "32fa65961884857b98bf4538130af07c"
+  },
+  "cs-CZ": {
+    "/dashboard/devise.yml": "61844e932ce4858b97863745c511837c"
+  },
+  "da-DK": {
+    "/dashboard/devise.yml": "92d79c0ee73dad46ee86ab364a505064"
+  },
+  "de-DE": {
+    "/dashboard/devise.yml": "6b314baa08481dab763ad7074c3d85ab"
+  },
+  "dv-MV": {
+    "/dashboard/devise.yml": "fdbc9382a18e0c1c8be0705c4d2e75a7"
+  },
+  "el-GR": {
+    "/dashboard/devise.yml": "34e421e7d08d56f4d59cf8126279555c"
+  },
+  "en-GB": {
+    "/dashboard/devise.yml": "5b37a683e460bd8706fa5a097f291ee8"
+  },
+  "es-ES": {
+    "/dashboard/devise.yml": "84d2070a47dd9793164811af5e8834fa"
+  },
+  "es-MX": {
+    "/dashboard/devise.yml": "15a2980ab3839c563bf583971eec7284"
+  },
+  "et-EE": {
+    "/dashboard/devise.yml": "910263fa9357971137ee4f3924c901c0"
+  },
+  "eu-ES": {
+    "/dashboard/devise.yml": "24fc04d16e3b8c3088e7ec2bb0fedd15"
+  },
+  "fa-AF": {
+    "/dashboard/devise.yml": "79f360affe8060b24404182b49e5034d"
+  },
+  "fa-IR": {
+    "/dashboard/devise.yml": "93dd141b9b5cad570e1a5ac42eec967e"
+  },
+  "fi-FI": {
+    "/dashboard/devise.yml": "6573675f4221b8b0383cd919883e91d6"
+  },
+  "fil-PH": {
+    "/dashboard/devise.yml": "bbef3403e6e4ad4f4a7b4a7dae4501fe"
+  },
+  "fr-FR": {
+    "/dashboard/devise.yml": "c4a1d84a8a62a0b6a531042c00204795"
+  },
+  "ga-IE": {
+    "/dashboard/devise.yml": "82079f75dec1f72c7e1e36d1012a7c08"
+  },
+  "gl-ES": {
+    "/dashboard/devise.yml": "d205f6a04ec82276534674aebf0d7cc2"
+  },
+  "haw-HI": {
+    "/dashboard/devise.yml": "2005ee42b9c139dd452f70b175328073"
+  },
+  "he-IL": {
+    "/dashboard/devise.yml": "57b07956a3de4954e2e2fd351c055db3"
+  },
+  "hi-IN": {
+    "/dashboard/devise.yml": "e76700dc300adc408c3f1c4980dccdb6"
+  },
+  "hr-HR": {
+    "/dashboard/devise.yml": "806916c7c392715ecd84bba60cf522cc"
+  },
+  "hu-HU": {
+    "/dashboard/devise.yml": "e754033770b2305d36f989724c88787e"
+  },
+  "hy-AM": {
+    "/dashboard/devise.yml": "debd6f01e5210e87cbe7e9d65d57a077"
+  },
+  "id-ID": {
+    "/dashboard/devise.yml": "ccab13e34262e70349875aed247884de"
+  },
+  "is-IS": {
+    "/dashboard/devise.yml": "43b08cacd39af6ad0486acd27152d730"
+  },
+  "it-IT": {
+    "/dashboard/devise.yml": "03ebbdc1690b93115c9099a6a0696f3a"
+  },
+  "ja-JP": {
+    "/dashboard/devise.yml": "cddfde55ce38c2c63407d1d3650044c0"
+  },
+  "ka-GE": {
+    "/dashboard/devise.yml": "64d4c4a3112ee2ab48b3a0b75b426a81"
+  },
+  "kk-KZ": {
+    "/dashboard/devise.yml": "02d1adff87e8ab3992fe7b72ff3f33ae"
+  },
+  "kn-IN": {
+    "/dashboard/devise.yml": "7573de0090bb55c650cb2b6719313731"
+  },
+  "km-KH": {
+    "/dashboard/devise.yml": "c2bfcdf561c617b312532f1f2763ea26"
+  },
+  "ko-KR": {
+    "/dashboard/devise.yml": "4c10b858cf37f6baf95caa4756422ee5"
+  },
+  "ku-IQ": {
+    "/dashboard/devise.yml": "86f9035adf3b96cb4de330dc2ff933fc"
+  },
+  "ky-KG": {
+    "/dashboard/devise.yml": "32fd211ad88bf4c98a646f4fa4fc3910"
+  },
+  "lt-LT": {
+    "/dashboard/devise.yml": "abdee912253775c085b23ef50a6b018d"
+  },
+  "lv-LV": {
+    "/dashboard/devise.yml": "6db2522021dde2db8352e4de66593bd6"
+  },
+  "mi-NZ": {
+    "/dashboard/devise.yml": "debc1c40abd81cea829e36e4c5b197ac"
+  },
+  "mk-MK": {
+    "/dashboard/devise.yml": "565427ea52a8e0e39a9fe48441d7a8bc"
+  },
+  "mn-MN": {
+    "/dashboard/devise.yml": "306827a94fec2b8e447e1f426989b980"
+  },
+  "mr-IN": {
+    "/dashboard/devise.yml": "712c0ea56eb29e8982337ffbab13ab6c"
+  },
+  "ms-MY": {
+    "/dashboard/devise.yml": "aad5bbc2f70dc3c94f555bd58fc31d15"
+  },
+  "mt-MT": {
+    "/dashboard/devise.yml": "3055df5a693ec7fba49162e56c600aa5"
+  },
+  "my-MM": {
+    "/dashboard/devise.yml": "92e2167cd5309798a1536ee637f11620"
+  },
+  "ne-NP": {
+    "/dashboard/devise.yml": "83ae4741f7da7427a8f9c6aeebce98be"
+  },
+  "nl-NL": {
+    "/dashboard/devise.yml": "c099497ed4f2c013cc1e93a30278c585"
+  },
+  "nn-NO": {
+    "/dashboard/devise.yml": "2a329bbd82f46c726a9c54f229aa7d46"
+  },
+  "no-NO": {
+    "/dashboard/devise.yml": "be5b629a8aaa2121b6f17d125cc69050"
+  },
+  "pl-PL": {
+    "/dashboard/devise.yml": "c47f4258276a901b5a7e277cf02f5ee9"
+  },
+  "ps-AF": {
+    "/dashboard/devise.yml": "5008b97e97dcdadaccc7dee31f6ddee9"
+  },
+  "pt-BR": {
+    "/dashboard/devise.yml": "3fe5e8872791ddd360f6643e67801061"
+  },
+  "pt-PT": {
+    "/dashboard/devise.yml": "ae3bc7dc76972948b70cd48e1898b930"
+  },
+  "ro-RO": {
+    "/dashboard/devise.yml": "a747af5ceda71542e5f15b9c8e5bd079"
+  },
+  "ru-RU": {
+    "/dashboard/devise.yml": "4df608938a589416bfd446bbdecdb4f4"
+  },
+  "se-FI": {
+    "/dashboard/devise.yml": "89ebbb7fd6b9af9a77e97b8e1973c508"
+  },
+  "sm-WS": {
+    "/dashboard/devise.yml": "068c828ec94fb0ae000d1d29c9adb569"
+  },
+  "si-LK": {
+    "/dashboard/devise.yml": "49331b2d416e493798402162911f7a2a"
+  },
+  "sk-SK": {
+    "/dashboard/devise.yml": "2d2432b3f994b440c4e8269f9a89819f"
+  },
+  "sl-SI": {
+    "/dashboard/devise.yml": "aaaa3de09910047e86967c245f0f51f0"
+  },
+  "sq-AL": {
+    "/dashboard/devise.yml": "0acbd8cf458aec2b2ba7c36bfefc2afe"
+  },
+  "sr-SP": {
+    "/dashboard/devise.yml": "e8067ab6552bf8cb235856d13fb05ed2"
+  },
+  "sv-SE": {
+    "/dashboard/devise.yml": "c60e5e6a5e65d20d77be9f22dd6f9b62"
+  },
+  "ta-IN": {
+    "/dashboard/devise.yml": "7ed6b09e87dd1a32317a669fdbec2555"
+  },
+  "te-IN": {
+    "/dashboard/devise.yml": "a18e01ae440080d469c8e47e4ad13384"
+  },
+  "tg-TJ": {
+    "/dashboard/devise.yml": "9da150b697f4ac674e4b07e91dff0d1e"
+  },
+  "th-TH": {
+    "/dashboard/devise.yml": "063ee787993793060f621ecf0137c70f"
+  },
+  "tr-TR": {
+    "/dashboard/devise.yml": "51d38a133c9c3eea8d6d5ee09aa4b50b"
+  },
+  "uk-UA": {
+    "/dashboard/devise.yml": "36cf533b58328d33451866ff0a5d7731"
+  },
+  "ur-PK": {
+    "/dashboard/devise.yml": "e906166fab947abda3f5659989fe48b2"
+  },
+  "uz-UZ": {
+    "/dashboard/devise.yml": "1acdcae688b0f5f2867c6611bb8dddbf"
+  },
+  "vi-VN": {
+    "/dashboard/devise.yml": "653869bf070e19ecbbaab745216af5da"
+  },
+  "zh-CN": {
+    "/dashboard/devise.yml": "604fb347c1e94f0f6edcf7f588b588d6"
+  },
+  "zh-TW": {
+    "/dashboard/devise.yml": "ac3335b3eef3f1e7e03e1c23b738e464"
+  },
+  "zu-ZA": {
+    "/dashboard/devise.yml": "8727ddec5a200fb6aa17f0c4f10a7b45"
+  }
+}

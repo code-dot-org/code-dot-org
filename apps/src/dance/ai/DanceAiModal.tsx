@@ -538,7 +538,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
       blocksSvg.forEach(blockSvg => {
         blockSvg.initSvg();
-        blockSvg.render();
+        blockSvg.queueRender();
       });
 
       origBlock.dispose(false);

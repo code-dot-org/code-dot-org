@@ -52,6 +52,38 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.parse_options' do
+    let(:parse_options) {described_class.parse_options}
+
+    describe ':testing' do
+      let(:option_testing) {parse_options[:testing]}
+
+      it 'returns false by default' do
+        _(option_testing).must_equal false
+      end
+
+      context 'when "-t" command line option is set' do
+        before do
+          ARGV << '-t'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
+        end
+      end
+
+      context 'when "--testing" command line option is set' do
+        before do
+          ARGV << '--testing'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
+        end
+      end
+    end
+  end
+
   describe '.unit_directory_change?' do
     let(:unit_directory_change?) {I18nScriptUtils.unit_directory_change?(content_dir, unit_i18n_filepath)}
 

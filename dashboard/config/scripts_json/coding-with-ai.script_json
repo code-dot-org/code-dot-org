@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-02-26 18:38:36 UTC",
+    "serialized_at": "2024-02-29 01:00:37 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1428,7 +1428,7 @@
       "key": "27812833-1c7d-4c5d-a1f7-ce2e6326901a",
       "position": 1,
       "properties": {
-        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the Navigating Algorithms with AI Strategies activity guide.\n",
+        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the [r navigating_algorithms_with_ai_strategies/coding-with-ai/unversioned] activity guide.\n\n",
         "duration": "20",
         "name": "Algorithms & AI Strategies",
         "tips": [
@@ -2600,6 +2600,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson1-survey-2024"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2622,6 +2625,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson2-survey-2024"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2769,6 +2775,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson3-survey-2024"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2866,6 +2875,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson4-survey-2024"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3063,6 +3075,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson5-survey-2024"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3666,12 +3681,12 @@
     },
     {
       "name": "Navigating Algorithms with AI Strategies",
-      "url": "https://docs.google.com/presentation/d/1gVlgf6VC7f8rMHI2RqSsBa3zCrjHogMkIq23ybd0MYw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1oOM9A2jcEFHt7VMLqIznE3KVCkPZFDee8pI9LxryFbk/edit?usp=sharing",
       "key": "navigating_algorithms_with_ai_strategies",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Handout"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "navigating_algorithms_with_ai_strategies"
