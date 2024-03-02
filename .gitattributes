@@ -1,9 +1,10 @@
 # Git LFS inclusion / exclusion is controlled by this file. Our approach is to:
 # INCLUDE dirs in Git LFS broadly, and then EXCLUDE text file-types narrowly.
 #
-# Why whitelist? Once a large binary file is committed to LFS, it is VERY
-# hard to remove it from the git history as it requires a history rewrite.
-# Once merged to `staging`, that NNN MB file makes our git repo that much
+# Why include in LFS broadly? Once a large binary file is comitted without lfs,
+# it is VERY hard to remove it from the git history as it requires a history
+# rewrite. This cannot be done without major disruption to all devs. Thus,
+# once merged to `staging`, that NNN MB file makes our git repo that much
 # bigger forever".
 #
 # In contrast, if a text file is accidentally included in LFS, adding it back to
