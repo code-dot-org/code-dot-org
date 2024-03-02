@@ -38,5 +38,13 @@
       "type": "shell",
       "command": "bundle install",
     },
+    {
+      "label": "rails db:migrate",
+      "type": "shell",
+      "command": "bundle exec rails db:migrate",
+      "options": {
+        "cwd": "${workspaceFolder}/dashboard",
+      }
+    },
   ]
 }
