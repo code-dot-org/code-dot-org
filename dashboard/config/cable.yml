@@ -1,11 +1,6 @@
 development:
-  # async is an in-memory async adapter
-  adapter: async
-
-  # We could also use the redis adapter for development, to match prod
-  # in fact this is the rails 7 default:
-  # adapter: redis
-  # url: redis://localhost:6379/1
+  adapter: redis
+  url: redis://localhost:6379/1
 
 test:
   adapter: test
