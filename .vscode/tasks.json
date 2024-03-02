@@ -20,5 +20,13 @@
         "isDefault": true
       },
     },
+    {
+      "label": "yarn install",
+      "type": "shell",
+      "command": "yarn install",
+      "options": {
+        "cwd": "${workspaceFolder}/apps",
+      }
+    },
   ]
 }
