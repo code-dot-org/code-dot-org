@@ -158,5 +158,24 @@
     var navbar = document.getElementById('navbar');
     navbar.appendChild(ul);
   });
-#navbar{style: "position: fixed; top: 0; left: 0; width: 10%; height: 100%; color: #8c52ba; padding: 30px 15px; overflow-wrap: break-word; border-right: 3px solid rgb(231, 232, 234)"}
+#navbar.navbar
   %h2 Navigation
+
+:css
+  .navbar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    color: #8c52ba;
+    padding: 0px 15px;
+    overflow-wrap: break-word;
+    border-right: 3px solid rgb(231, 232, 234);
+  }
+
+  @media screen and (max-width: 1300px) {
+    .navbar {
+      display: none;
+    }
+  }
