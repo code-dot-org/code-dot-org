@@ -33,5 +33,10 @@
         "cwd": "${workspaceFolder}/apps",
       }
     },
+    {
+      "label": "bundle install",
+      "type": "shell",
+      "command": "bundle install",
+    },
   ]
 }
