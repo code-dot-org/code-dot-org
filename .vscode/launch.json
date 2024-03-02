@@ -20,5 +20,23 @@
       "webRoot": "${workspaceFolder}/apps",
       "smartStep": true,
     },
+    // TODO: THESE ruby_lsp LAUNCHES ARE NOT CURRENTLY WORKING
+    {
+      "type": "ruby_lsp",
+      "name": "Debug dashboard-server",
+      "request": "launch",
+      "program": "bin/rails server -p 3000",
+    },
+    {
+      "type": "ruby_lsp",
+      "request": "attach",
+      "name": "Attach to existing dashboard-server",
+    },
+    {
+      "type": "ruby_lsp",
+      "request": "launch",
+      "name": "Debug current ruby minitest",
+      "program": "ruby -Itest ${relativeFile}"
+    },
   ]
 }
