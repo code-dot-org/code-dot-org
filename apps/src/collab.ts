@@ -47,13 +47,20 @@ enum Action {
   PUSH_UPDATES = 'push_updates',
 }
 class CollabChannel {
-  channel: ActionCable.Channel;
+  channel!: ActionCable.Channel;
 
   constructor(
     public clientID: string,
     public collabID: string,
-    onReceive: (action: Action, data: any) => void
+    public onReceive: (action: Action, data: any) => void,
+    public onConnect = () => {},
+    public onDisconnect = () => {}
   ) {
+    this.connect();
+    console.log('CollabChannel created', this.channel);
+  }
+
+  connect() {
     const consumer = ActionCable.createConsumer();
     this.channel = consumer.subscriptions.create(
       {
@@ -64,31 +71,35 @@ class CollabChannel {
       {
         received: (rawMsg: any) => {
           const {action, data, ...extra} = rawMsg;
-          this.log('receive', action, data);
-          if (!action || Object.keys(extra).length > 0) {
-            console.warn(`receive(${action}): message malformed`, rawMsg);
-          }
+          this.log('receive', action, data, extra);
 
-          onReceive(action, data);
+          this.onReceive(action, data);
         },
-        connected: () => console.log('Connected to collab channel'),
-        disconnected: () => console.log('Disconnected from collab channel'),
+        connected: () => {
+          console.log('Connected to collab channel');
+          this.onConnect();
+        },
+        disconnected: () => {
+          // TODO: try to reconnect with exponential backoff
+          // to handle stuff like: the server is restarting
+          console.log('Disconnected from collab channel');
+          this.onDisconnect();
+        },
       }
     );
-    console.log('CollabChannel created', consumer, this.channel);
   }
 
-  log(verb: 'send' | 'receive', action: Action, data: any) {
+  log(verb: 'send' | 'receive', action: Action, data: any, extra?: any) {
     if (data?.updates?.version) {
-      console.log(`${verb}(${action}, ${data.updates.version})`, data);
+      console.log(`${verb}(${action}, ${data.updates.version})`, data, extra);
     } else {
-      console.log(`${verb}(${action})`, data);
+      console.log(`${verb}(${action})`, data, extra);
     }
   }
 
   send(action: Action, data: any) {
     this.log('send', action, data);
-    this.channel.perform(action, {data});
+    this.channel.perform(action, {data, clientID: this.clientID});
   }
 
   unsubscribe() {
@@ -104,8 +115,9 @@ function boo() {
 
 function collabChannel(clientID: string, collabID: string) {
   class CollabChannelPlugin {
-    private pushing = false;
+    private pushInProgress = false;
     private done = false;
+    private connected = false;
     private channel: CollabChannel;
 
     constructor(private view: EditorView) {
@@ -113,7 +125,9 @@ function collabChannel(clientID: string, collabID: string) {
         this.channel = new CollabChannel(
           clientID,
           collabID,
-          this.receive.bind(this)
+          this.onReceive.bind(this),
+          this.onConnect.bind(this),
+          this.onDisconnect.bind(this)
         );
         // TODO: pull current version from collab channel
       } catch (e) {
@@ -128,14 +142,22 @@ function collabChannel(clientID: string, collabID: string) {
       this.channel.send(Action.PUSH_UPDATES, updatesJSON);
     }
 
-    receive(action: Action, data: any) {
+    onReceive(action: Action, data: any) {
       if (action === Action.PUSH_UPDATES) {
         const updates = Updates.fromJSON(data);
         console.log('dispatch', updates);
         this.view.dispatch(receiveUpdates(this.view.state, updates.updates));
       } else {
-        console.error(`received(${action}): unknown action`, data);
+        console.error(`receive(${action}): unknown action`, data);
       }
+    }
+
+    onConnect() {
+      this.connected = true;
+    }
+
+    onDisconnect() {
+      this.connected = false;
     }
 
     update(update: ViewUpdate) {
@@ -143,13 +165,14 @@ function collabChannel(clientID: string, collabID: string) {
     }
 
     async push() {
+      if (!this.connected || this.pushInProgress) return;
       const updates = sendableUpdates(this.view.state);
-      if (this.pushing || !updates.length) return;
-      this.pushing = true;
+      if (!updates.length) return;
+      this.pushInProgress = true;
 
       const version = getSyncedVersion(this.view.state);
       this.sendPushUpdates(new Updates(version, updates));
-      this.pushing = false;
+      this.pushInProgress = false;
 
       // Regardless of whether the push failed or new updates came in
       // while it was running, try again if there's updates remaining
