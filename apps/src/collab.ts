@@ -63,7 +63,11 @@ class CollabChannel {
   }
 
   send(version: Version): void {
-    this.channel.send(version.toJSON());
+    // Not clear on what the differences are, but we may want to do:
+    // this.channel.perform('say_hello', {message: 'Hello, World!'});
+    // or:
+    // this.channel.send(version.toJSON());
+    this.channel.perform('receive_version', {version: version.toJSON()});
   }
 
   unsubscribe() {

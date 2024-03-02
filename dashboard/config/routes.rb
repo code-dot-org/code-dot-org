@@ -1,6 +1,8 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # /cable is used for ActionCable websocket connections
+  mount ActionCable.server => '/cable'
   get '/collab/:id', to: 'collab#collab'
 
   # Override Error Codes
