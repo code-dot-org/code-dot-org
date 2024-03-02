@@ -19,7 +19,7 @@ import ActionCable from 'actioncable';
 // TODO: remove this debug cruft
 (window as any).ActionCable = ActionCable;
 
-class Version {
+class Updates {
   constructor(readonly version: number, readonly updates: readonly Update[]) {}
 
   toJSON(): any {
@@ -32,8 +32,8 @@ class Version {
     };
   }
 
-  static fromJSON(json: any): Version {
-    return new Version(
+  static fromJSON(json: any): Updates {
+    return new Updates(
       json.version,
       json.updates.map((update: any) => ({
         changes: ChangeSet.fromJSON(update.changes),
@@ -43,25 +43,33 @@ class Version {
   }
 }
 
+enum Action {
+  PUSH_UPDATES = 'push_updates',
+}
 class CollabChannel {
   channel: ActionCable.Channel;
 
-  constructor(public collabID: string, onReceive: (version: Version) => void) {
+  constructor(
+    public clientID: string,
+    public collabID: string,
+    onReceive: (action: Action, data: any) => void
+  ) {
     const consumer = ActionCable.createConsumer();
     this.channel = consumer.subscriptions.create(
-      {channel: 'CollabChannel', collab_id: this.collabID},
       {
-        received: (json: any) => {
-          if (json.action === 'version') {
-            const version = Version.fromJSON(json.version);
-            console.log("received('version')", version);
-            onReceive(version);
-          } else {
-            console.log(
-              `Received message with unknown action ${json.action}:`,
-              json
-            );
+        channel: 'CollabChannel',
+        collab_id: this.collabID,
+        client_id: this.clientID,
+      },
+      {
+        received: (rawMsg: any) => {
+          const {action, data, ...extra} = rawMsg;
+          this.log('receive', action, data);
+          if (!action || Object.keys(extra).length > 0) {
+            console.warn(`receive(${action}): message malformed`, rawMsg);
           }
+
+          onReceive(action, data);
         },
         connected: () => console.log('Connected to collab channel'),
         disconnected: () => console.log('Disconnected from collab channel'),
@@ -70,9 +78,17 @@ class CollabChannel {
     console.log('CollabChannel created', consumer, this.channel);
   }
 
-  send(version: Version): void {
-    console.log("send('version')", version.toJSON());
-    this.channel.perform('version', {version: version.toJSON()});
+  log(verb: 'send' | 'receive', action: Action, data: any) {
+    if (data?.updates?.version) {
+      console.log(`${verb}(${action}, ${data.updates.version})`, data);
+    } else {
+      console.log(`${verb}(${action})`, data);
+    }
+  }
+
+  send(action: Action, data: any) {
+    this.log('send', action, data);
+    this.channel.perform(action, {data});
   }
 
   unsubscribe() {
@@ -93,15 +109,32 @@ function collabChannel(clientID: string, collabID: string) {
     private channel: CollabChannel;
 
     constructor(private view: EditorView) {
-      // TODO: pull current version from collab channel
       try {
-        this.channel = new CollabChannel(collabID, newVersion =>
-          view.dispatch(receiveUpdates(view.state, newVersion.updates))
+        this.channel = new CollabChannel(
+          clientID,
+          collabID,
+          this.receive.bind(this)
         );
+        // TODO: pull current version from collab channel
       } catch (e) {
         // ViewPlugin.fromClass silently consumes errors, so we log them here
         console.error('Error creating CollabChannel', e);
         throw e;
+      }
+    }
+
+    sendPushUpdates(updates: Updates): void {
+      const updatesJSON = updates.toJSON();
+      this.channel.send(Action.PUSH_UPDATES, updatesJSON);
+    }
+
+    receive(action: Action, data: any) {
+      if (action === Action.PUSH_UPDATES) {
+        const updates = Updates.fromJSON(data);
+        console.log('dispatch', updates);
+        this.view.dispatch(receiveUpdates(this.view.state, updates.updates));
+      } else {
+        console.error(`received(${action}): unknown action`, data);
       }
     }
 
@@ -115,8 +148,7 @@ function collabChannel(clientID: string, collabID: string) {
       this.pushing = true;
 
       const version = getSyncedVersion(this.view.state);
-      this.channel.send(new Version(version, updates));
-
+      this.sendPushUpdates(new Updates(version, updates));
       this.pushing = false;
 
       // Regardless of whether the push failed or new updates came in
