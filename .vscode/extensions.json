@@ -1,0 +1,28 @@
+{
+  "recommendations": [
+    // Shopify's recommended Ruby extensions (particularly: Ruby LSP)
+    "shopify.ruby-extensions-pack",
+
+    // CodeTour
+    "vsls-contrib.codetour",
+
+    // ESLint
+    "dbaeumer.vscode-eslint",
+
+    // GitHub Pull Requests
+    "github.vscode-pull-request-github",
+
+    // Live Share
+    "ms-vsliveshare.vsliveshare",
+
+    // Prettier
+    "esbenp.prettier-vscode",
+
+    // Tasks: launch `yarn start` etc from the status bar
+    "actboy168.tasks",
+
+    // YAML
+    "redhat.vscode-yaml"
+  ],
+  "unwantedRecommendations": []
+}
