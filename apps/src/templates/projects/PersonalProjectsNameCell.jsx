@@ -67,7 +67,7 @@ class PersonalProjectsNameCell extends Component {
           <div>
             <input
               required
-              style={styles.inputBox}
+              style={{width: 200}}
               value={updatedName}
               onChange={this.onChangeName}
               className="ui-project-rename-input"
@@ -78,12 +78,6 @@ class PersonalProjectsNameCell extends Component {
     );
   }
 }
-
-const styles = {
-  inputBox: {
-    width: 225,
-  },
-};
 
 export default connect(
   state => ({}),
