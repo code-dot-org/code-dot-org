@@ -67,7 +67,7 @@ export interface AudioPlayer {
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
-  // ID of the sample
+  // URL of the sample
   sampleId: string;
   // Whether the sound was triggered
   triggered: boolean;
