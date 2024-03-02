@@ -4,7 +4,7 @@ import {
   collab,
   getSyncedVersion,
 } from '@codemirror/collab';
-import {basicSetup} from 'codemirror';
+import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
 import {ChangeSet, EditorState} from '@codemirror/state';
 import {EditorView, ViewPlugin, ViewUpdate} from '@codemirror/view';
 
@@ -69,7 +69,7 @@ function peerExtension() {
 async function addPeer() {
   const state = EditorState.create({
     doc: '',
-    extensions: [basicSetup, peerExtension()],
+    extensions: [...editorConfig, peerExtension()],
   });
   new EditorView({state, parent: document.body});
 }
