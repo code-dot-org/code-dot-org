@@ -10,7 +10,15 @@ import {
   getSyncedVersion,
   Update,
 } from '@codemirror/collab';
-import {createConsumer, Channel} from 'actioncable';
+
+// We don't use named imports because we're using actioncable 5, which
+// fails with named imports. We'd rather using a newer actioncable 7, from the
+// @rails/actioncable package, but this is the newest version that has 3rd party
+// TS types available (the @types/actionable package)
+import ActionCable from 'actioncable';
+
+// TODO: remove this debug cruft
+(window as any).ActionCable = ActionCable;
 
 class Version {
   constructor(readonly version: number, readonly updates: readonly Update[]) {}
@@ -37,12 +45,10 @@ class Version {
 }
 
 class CollabChannel {
-  channel: Channel;
+  channel: ActionCable.Channel;
 
   constructor(public collabID: string, onReceive: (version: Version) => void) {
-    console.log("HERE I AM");
-    debugger;
-    const consumer = createConsumer();
+    const consumer = ActionCable.createConsumer();
     this.channel = consumer.subscriptions.create(
       {channel: 'CollabChannel', collab_id: this.collabID},
       {
@@ -125,7 +131,7 @@ export function setupEditor(
   clientID: string,
   collabID: string
 ): EditorView {
-  console.log(`Init collaborative editor with collabId: ${collabID}`);
+  console.log(`Initialzing collaborative editor with collabId: ${collabID}`);
 
   const startState: EditorState = EditorState.create({
     doc: INITIAL_DOC,
