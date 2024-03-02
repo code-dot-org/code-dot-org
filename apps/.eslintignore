@@ -1,6 +1,7 @@
 /src/**/*.min.js*
 /src/code-studio/vendor/**/*.js
 /src/third-party/**/*.js
+/src/sites/studio/pages/collab/collab.js
 
 /lib
 /build

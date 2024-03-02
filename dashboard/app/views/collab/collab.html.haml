@@ -1,6 +1,9 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/collab/collab.js')}
 
+:javascript
+  window.collabId = '#{@collab_id}';
 
-%h1 Collab#show
-%p Find me in app/views/collab/show.html.haml
+%h1 Collab #{@collab_id}
+
+#editor hi
