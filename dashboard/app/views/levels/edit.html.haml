@@ -131,3 +131,31 @@
 = link_to t('crud.back'), levels_path
 = '|' unless @level.new_record?
 = link_to t('crud.destroy'), @level, method: :delete, data: { confirm: t('crud.confirm') } unless @level.new_record?
+
+:javascript
+  document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('h1.control-legend');
+    var targetValues = Array.from(elements).map(function(element) {
+      return element.getAttribute('data-target');
+    });
+
+    var ul = document.createElement('ul');
+    targetValues.forEach(function(targetValue) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      console.log(targetValue);
+      a.href = targetValue;
+      a.textContent = targetValue.substring(1);
+      li.appendChild(a);
+      ul.appendChild(li);
+      console.log(ul);
+
+    });
+
+    // Append the ul to the body or another element
+    var navbar = document.getElementById('navbar');
+    navbar.appendChild(ul);
+  });
+#navbar{style: "position: fixed; top: 0; left: 0; width: 10%; height: 100%; color: #8c52ba; padding: 30px; overflow-wrap: break-word"}
+  %h2 Navigation
+  
