@@ -7,8 +7,8 @@ import {collab, receiveUpdates, sendableUpdates} from '@codemirror/collab';
 import {createConsumer} from '@rails/actioncable';
 
 class ActionCableConnection {
-  constructor(documentId, onReceived) {
-    this.documentId = documentId;
+  constructor(collabId, onReceived) {
+    this.collabId = collabId;
     this.onReceived = onReceived;
     this.setupChannel();
   }
@@ -17,7 +17,7 @@ class ActionCableConnection {
     const consumer = createConsumer(); // Ensure you've correctly configured your Action Cable consumer
 
     this.channel = consumer.subscriptions.create(
-      {channel: 'DocumentsChannel', document_id: this.documentId},
+      {channel: 'CollabsChannel', collab_id: this.collabId},
       {
         received: this.onReceived,
       }
@@ -35,10 +35,10 @@ function boo() {
 }
 `;
 
-function setupEditor(domSelector, documentId) {
-  console.log(`Initializing collaborative editor with collabId: ${documentId}`);
+function setupEditor(domSelector, collabId) {
+  console.log(`Initializing collaborative editor with collabId: ${collabId}`);
 
-  const connection = new ActionCableConnection(documentId, data => {
+  const connection = new ActionCableConnection(collabId, data => {
     if (data.updates) {
       const updates = data.updates.map(u => Update.fromJSON(u));
       view.dispatch(receiveUpdates(view.state, updates, data.clientID));
@@ -64,7 +64,7 @@ function setupEditor(domSelector, documentId) {
       let updates = sendableUpdates(newState);
       if (updates.length) {
         connection.send({
-          document_id: documentId,
+          collab_id: collabId, // Updated to match the new naming convention
           updates: updates.map(u => u.toJSON()),
           clientID: newState.facet(collab).clientID,
         });
@@ -78,5 +78,5 @@ function setupEditor(domSelector, documentId) {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
-  setupEditor("#editor1", window.collabId);
+  setupEditor('#editor1', window.collabId);
 });
