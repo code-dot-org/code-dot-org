@@ -19,6 +19,23 @@
         "kind": "build",
         "isDefault": true
       },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+    },
+    {
+      "label": "dashboard-server",
+      "type": "shell",
+      "command": "bin/dashboard-server",
+      "options": {
+        "statusbar": {
+          "color" : "#a0195f",
+        }
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": [],
     },
     {
       "label": "rake build",
