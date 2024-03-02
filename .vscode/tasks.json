@@ -17,7 +17,6 @@
       "problemMatcher": [],
       "group": {
         "kind": "build",
-        "isDefault": true
       },
       "runOptions": {
         "runOn": "folderOpen"
@@ -41,6 +40,10 @@
       "label": "rake build",
       "type": "shell",
       "command": "bundle exec rake build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
     },
     {
       "label": "yarn install",
