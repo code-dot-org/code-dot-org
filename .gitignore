@@ -11,10 +11,10 @@
 *~
 **/.bundle
 .vscode/*
-#!.vscode/settings.json
-#!.vscode/tasks.json
+!.vscode/settings.json
+!.vscode/tasks.json
 !.vscode/launch.json
-#!.vscode/extensions.json
+!.vscode/extensions.json
 dashboard/brakeman_security_report.htm
 .DS_Store
 .dropbox
