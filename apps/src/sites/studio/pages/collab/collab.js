@@ -29,7 +29,13 @@ class ActionCableConnection {
   }
 }
 
-function setupEditor(documentId) {
+const INITIAL_DOC = `
+function boo() {
+  console.log('boo');
+}
+`;
+
+function setupEditor(domSelector, documentId) {
   console.log(`Initializing collaborative editor with collabId: ${documentId}`);
 
   const connection = new ActionCableConnection(documentId, data => {
@@ -40,7 +46,7 @@ function setupEditor(documentId) {
   });
 
   const startState = EditorState.create({
-    doc: '',
+    doc: INITIAL_DOC,
     extensions: [
       ...editorConfig,
       javascript(),
@@ -50,7 +56,7 @@ function setupEditor(documentId) {
 
   const view = new EditorView({
     state: startState,
-    parent: document.querySelector('#editor'),
+    parent: document.querySelector(domSelector),
     dispatchTransaction(transaction) {
       let newState = view.state.apply(transaction);
       view.updateState(newState);
@@ -72,5 +78,5 @@ function setupEditor(documentId) {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
-  setupEditor(window.collabId);
+  setupEditor("#editor1", window.collabId);
 });
