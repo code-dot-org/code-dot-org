@@ -73,8 +73,6 @@ function boo() {
 `;
 
 function collabChannel(clientID: string, collabID: string) {
-  console.log('Creating collabChannel');
-
   class CollabChannelPlugin {
     private pushing = false;
     private done = false;
@@ -82,10 +80,15 @@ function collabChannel(clientID: string, collabID: string) {
 
     constructor(private view: EditorView) {
       // TODO: pull current version from collab channel
-      console.log('HI');
-      this.channel = new CollabChannel(collabID, newVersion =>
-        view.dispatch(receiveUpdates(view.state, newVersion.updates))
-      );
+      try {
+        this.channel = new CollabChannel(collabID, newVersion =>
+          view.dispatch(receiveUpdates(view.state, newVersion.updates))
+        );
+      } catch (e) {
+        // ViewPlugin.fromClass silently consumes errors, so we log them here
+        console.error('Error creating CollabChannel', e);
+        throw e;
+      }
     }
 
     update(update: ViewUpdate) {
