@@ -4,3 +4,21 @@
 .header {
     font-weight: bold;
 }
+
+.row {
+    border: 1px solid;
+}
+
+.cell {
+    padding: 8px;
+    border-right: 1px solid;
+}
+
+.lastCell {
+    padding: 8px;
+}
+
+.response {
+    float: right;
+    width: 90%;
+}

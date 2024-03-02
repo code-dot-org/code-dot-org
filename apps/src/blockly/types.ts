@@ -30,11 +30,11 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {Abstract} from 'blockly/core/events/events_abstract';
-import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
+import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 
 export interface BlockDefinition {
   category: string;
@@ -87,7 +87,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   levelBlockIds: string[];
   isStartMode: boolean;
   isToolboxMode: boolean;
-  toolboxBlocks: Element | ToolboxDefinition | undefined;
+  toolboxBlocks: ToolboxDefinition | undefined;
   useModalFunctionEditor: boolean;
   functionEditor: FunctionEditor;
   mainBlockSpace: ExtendedWorkspaceSvg;
@@ -221,7 +221,7 @@ type XmlType = typeof Xml;
 export interface ExtendedXml extends XmlType {
   textToDom: (text: string) => Element;
   blockSpaceToDom: (workspace: Workspace, opt_noId?: boolean) => Element;
-  domToBlockSpace: (workspace: Workspace, xml: Document) => XmlBlockConfig[];
+  domToBlockSpace: (workspace: Workspace, xml: Element) => XmlBlockConfig[];
 }
 
 // This type is likely incomplete. We should add to it if we discover
@@ -235,7 +235,7 @@ export interface XmlBlockConfig {
 // This type is likely incomplete. We should add to it if we discover
 // more properties it contains.
 export interface JsonBlockConfig {
-  id: string;
+  id?: string;
   x?: number;
   y?: number;
   movable?: boolean;
@@ -243,6 +243,11 @@ export interface JsonBlockConfig {
   // extraState can be any object. We may be able to define this better.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
+  type: string;
+  fields: {[key: string]: {name: string; type: string; id?: string}};
+  inputs: {[key: string]: {block: JsonBlockConfig}};
+  next: {block: JsonBlockConfig};
+  kind: string;
 }
 
 export interface Collider {
@@ -262,9 +267,28 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
 }
 
-// Blockly uses any here. We may be able to define this better.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type WorkspaceSerialization = {[key: string]: any};
+// Blockly uses {[key: string]: any} to define workspace serialization.
+// We have defined this more specifically, and therefore need to cast
+// to this value when getting the serialzation of a workspace.
+export type WorkspaceSerialization =
+  | {
+      blocks: {blocks: JsonBlockConfig[]};
+      procedures?: ProcedureDefinitionConfig[];
+      variables?: VariableConfig[];
+    }
+  | Record<string, never>; // empty object
+
+export interface ProcedureDefinitionConfig {
+  id: string;
+  name: string;
+  // As of now we only use null. Will we ever use return types?
+  returnTypes: null;
+}
+
+export interface VariableConfig {
+  name: string;
+  id: string;
+}
 
 export interface ProcedureBlockConfiguration {
   kind: 'block';
@@ -282,3 +306,5 @@ export interface ProcedureBlockConfiguration {
 export type ProcedureType =
   | BLOCK_TYPES.procedureDefinition
   | BLOCK_TYPES.behaviorDefinition;
+
+export type BlockColor = [number, number, number];
