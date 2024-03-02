@@ -8,7 +8,8 @@ class CollabChannel < ApplicationCable::Channel
     Rails.logger.info "User disconnected from CollabChannel with collab_id=#{params[:collab_id]}"
   end
 
-  def receive_version(data)
+  def version(data)
+    puts "DATA IS: #{data}"
     ActionCable.server.broadcast("collab_channel_#{params[:collab_id]}", data)
   end
 end

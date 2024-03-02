@@ -52,8 +52,16 @@ class CollabChannel {
       {channel: 'CollabChannel', collab_id: this.collabID},
       {
         received: (json: any) => {
-          console.log('Received change message: ', json);
-          onReceive(Version.fromJSON(json));
+          if (json.action === 'version') {
+            const version = Version.fromJSON(json.version);
+            console.log("received('version')", version);
+            onReceive(version);
+          } else {
+            console.log(
+              `Received message with unknown action ${json.action}:`,
+              json
+            );
+          }
         },
         connected: () => console.log('Connected to collab channel'),
         disconnected: () => console.log('Disconnected from collab channel'),
@@ -63,11 +71,8 @@ class CollabChannel {
   }
 
   send(version: Version): void {
-    // Not clear on what the differences are, but we may want to do:
-    // this.channel.perform('say_hello', {message: 'Hello, World!'});
-    // or:
-    // this.channel.send(version.toJSON());
-    this.channel.perform('receive_version', {version: version.toJSON()});
+    console.log("send('version')", version.toJSON());
+    this.channel.perform('version', {version: version.toJSON()});
   }
 
   unsubscribe() {
