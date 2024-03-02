@@ -4,8 +4,8 @@
 # Why include in LFS broadly? Once a large binary file is comitted without lfs,
 # it is VERY hard to remove it from the git history as it requires a history
 # rewrite. This cannot be done without major disruption to all devs. Thus,
-# once merged to `staging`, that NNN MB file makes our git repo that much
-# bigger forever".
+# once merged to `staging`, that NNN MB file that missed LFS makes our git repo
+# that much bigger forever.
 #
 # In contrast, if a text file is accidentally included in LFS, adding it back to
 # git is easy, see: "HOW TO EXCLUDE A FILE/FILES THATS IN AN LFS DIR" below.
