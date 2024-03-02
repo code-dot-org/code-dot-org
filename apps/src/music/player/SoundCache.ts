@@ -1,11 +1,8 @@
 import {fetchSignedCookies} from '@cdo/apps/utils';
-import {getBaseAssetUrl} from '../appConfig';
-import MusicLibrary from './MusicLibrary';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LoadFinishedCallback} from '../types';
-
-const restrictedSoundUrlPath = '/restricted/musiclab/';
+import {baseAssetUrlRestricted} from '../constants';
 
 class SoundCache {
   private readonly audioContext: AudioContext;
@@ -116,7 +113,7 @@ class SoundCache {
   }
 
   private async verifyUrl(path: string): Promise<boolean | null> {
-    const restricted = path.startsWith(restrictedSoundUrlPath);
+    const restricted = path.startsWith(baseAssetUrlRestricted);
 
     let canLoadRestrictedContent = this.hasLoadedSignedCookies;
     if (restricted && !this.hasLoadedSignedCookies) {
