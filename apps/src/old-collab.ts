@@ -1,12 +1,11 @@
 import {
-  Update,
   receiveUpdates,
   sendableUpdates,
   collab,
   getSyncedVersion,
 } from '@codemirror/collab';
 import {basicSetup} from 'codemirror';
-import {ChangeSet, EditorState} from '@codemirror/state'; 
+import {ChangeSet, EditorState} from '@codemirror/state';
 import {EditorView, ViewPlugin, ViewUpdate} from '@codemirror/view';
 
 function peerExtension() {
@@ -15,16 +14,18 @@ function peerExtension() {
   function request(worker: Worker, data: object): Promise<Array<Change>> {
     return new Promise(resolve => {
       const channel = new MessageChannel();
-      channel.port2.onmessage = event => resolve(JSON.parse(event.data));
+      channel.port2.onmessage = event =>
+        resolve(
+          JSON.parse(event.data).map(
+            (update: {changes: object; clientID: string}) => ({
+              changes: ChangeSet.fromJSON(update.changes),
+              clientID: update.clientID,
+            })
+          )
+        );
       worker.postMessage(JSON.stringify(data), [channel.port1]); // Corrected
     });
   }
-
-  // const rawData = await request(worker, {type: 'getDocument'});
-  // const {startVersion, doc} = {
-  //   version: rawData.version,
-  //   doc: Text.of(rawData.doc.split('\n')),
-  // };
 
   type Change = {changes: ChangeSet; clientID: string};
 
@@ -36,15 +37,10 @@ function peerExtension() {
 
       async pull() {
         const version = getSyncedVersion(this.view.state);
-        const rawUpdates = await request(worker, {
+        const updates = await request(worker, {
           type: 'pullUpdates',
           version,
         });
-
-        const updates = rawUpdates.map(update => ({
-          changes: ChangeSet.fromJSON(update.changes),
-          clientID: update.clientID,
-        }));
         this.view.dispatch(receiveUpdates(this.view.state, updates));
       }
 
