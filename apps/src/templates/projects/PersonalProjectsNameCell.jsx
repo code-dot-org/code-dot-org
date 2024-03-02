@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {showProjectInfoDialog} from '@cdo/apps/templates/projects/infoDialog/projectInfoDialogRedux';
+import {showProjectInfoDialog} from '@cdo/apps/templates/projects/projectInfoDialog/projectInfoDialogRedux';
 import moduleStyles from './personal-projects-name-cell.module.scss';
 
 class PersonalProjectsNameCell extends Component {
