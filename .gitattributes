@@ -7,8 +7,9 @@
 # once merged to `staging`, that NNN MB file that missed LFS makes our git repo
 # that much bigger forever.
 #
-# In contrast, if a text file is accidentally included in LFS, adding it back to
-# git is easy, see: "HOW TO EXCLUDE A FILE/FILES THATS IN AN LFS DIR" below.
+# In contrast, if a text file (= a file that you want to be able to diff)
+# is accidentally included in LFS, adding it back to git is easy,
+# see: "HOW TO EXCLUDE A FILE/FILES THATS IN AN LFS DIR" below.
 
 # INCLUDE these "large static asset" and localisation dirs in Git LFS:
 apps/i18n/** filter=lfs diff=lfs merge=lfs -text
