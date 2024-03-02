@@ -2,4 +2,5 @@
   "rubyLsp.bundleGemfile": "Gemfile",
   "rubyLsp.rubyVersionManager": "rbenv",
   "rdbg.rubyVersionManager": "rbenv",
+  "npm.packageManager": "yarn",
 }
