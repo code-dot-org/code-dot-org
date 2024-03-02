@@ -1,0 +1,1 @@
+alert('collab.js loaded!');

@@ -23,6 +23,7 @@ const ALL_APPS = [
 
 // prettier-ignore
 const CODE_STUDIO_ENTRIES = {
+  'collab/collab': './src/sites/studio/pages/collab/collab.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
