@@ -3636,13 +3636,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^7.1.3-2":
-  version: 7.1.3
-  resolution: "@rails/actioncable@npm:7.1.3"
-  checksum: 848911da8855ee649d96006cb580d58f6e619d2f7fcb86a488d058a15b02eef80208eb3f4e47c8c31e8772665a68a3e484b26ade7099b0688bec6465f1234989
-  languageName: node
-  linkType: hard
-
 "@reach/router@npm:^1.2.1":
   version: 1.3.4
   resolution: "@reach/router@npm:1.3.4"
@@ -5302,6 +5295,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/actioncable@npm:^5.2.11":
+  version: 5.2.11
+  resolution: "@types/actioncable@npm:5.2.11"
+  checksum: f9357a6099ff1cb1679530656ea4c15439761ba4d6f9865a17508490f6b35e822f7200e8938ac47fdf5e388672e98a3a2c64d09026230d4b71a6cbe259d40702
+  languageName: node
+  linkType: hard
+
 "@types/aria-query@npm:^5.0.1":
   version: 5.0.1
   resolution: "@types/aria-query@npm:5.0.1"
@@ -6561,6 +6561,13 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 76d8e7d559512566b43ab4aadc374f11f563f0a9e21626dd59cb2888444e9445923ae9f3699972767f18af61df89cd89f5eaaf772d1327b055b45cb829b4a88c
+  languageName: node
+  linkType: hard
+
+"actioncable@npm:^5.2.8-1":
+  version: 5.2.8
+  resolution: "actioncable@npm:5.2.8"
+  checksum: 808902fd88a815b2124e4602c45477be4cf0bb7fde2edf7792c1e8bcf69793d00b684df952e91d38b7c96520a122af4785b2bbd3839ea562ac151fb13d000ed3
   languageName: node
   linkType: hard
 
@@ -8319,7 +8326,6 @@ __metadata:
     "@lezer/highlight": ^1.2.0
     "@microsoft/immersive-reader-sdk": ^1.1.0
     "@pyodide/webpack-plugin": ^1.3.2
-    "@rails/actioncable": ^7.1.3-2
     "@react-bootstrap/pagination": ^1.0.0
     "@reduxjs/toolkit": ^1.9.3
     "@storybook/addon-a11y": 6.5.17-alpha.0
@@ -8330,6 +8336,7 @@ __metadata:
     "@storybook/react": 6.5.17-alpha.0
     "@testing-library/react": ^12.1.5
     "@testing-library/user-event": ^14.4.3
+    "@types/actioncable": ^5.2.11
     "@types/chai": ^4.3.5
     "@types/htmlhint": ^1.1.5
     "@types/jquery": ^3.5.16
@@ -8339,6 +8346,7 @@ __metadata:
     "@types/sinon": ^10.0.14
     "@typescript-eslint/eslint-plugin": ^7.0.2
     "@typescript-eslint/parser": ^7.0.2
+    actioncable: ^5.2.8-1
     aws-sdk: 2.1231.0
     babel-loader: ^8.2.2
     babel-plugin-add-module-exports: ^0.2.1
