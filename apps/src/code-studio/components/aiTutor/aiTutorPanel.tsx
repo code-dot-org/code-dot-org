@@ -5,8 +5,6 @@ import style from './ai-tutor.module.scss';
 import classnames from 'classnames';
 import AITutor from './aiTutor';
 import TutorTypeSelector from './tutorTypeSelector';
-import {TutorType} from '@cdo/apps/aiTutor/types';
-import {is} from 'immutable';
 const icon = require('@cdo/static/ai-bot.png');
 
 interface AITutorPanelProps {
@@ -21,10 +19,6 @@ const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   if (isAssessmentLevel || !isLevelbuilderChecked) {
     aiTutorAvailable = false;
   }
-
-  const compilationSelected = selectedTutorType === TutorType.COMPILATION;
-  const validationSelected = selectedTutorType === TutorType.VALIDATION;
-  const questionSelected = selectedTutorType === TutorType.GENERAL_CHAT;
 
   return (
     <div
