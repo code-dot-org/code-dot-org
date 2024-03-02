@@ -6,7 +6,7 @@ import {
   getSyncedVersion,
 } from '@codemirror/collab';
 import {basicSetup} from 'codemirror';
-import {ChangeSet, EditorState} from '@codemirror/state';
+import {ChangeSet, EditorState} from '@codemirror/state'; 
 import {EditorView, ViewPlugin, ViewUpdate} from '@codemirror/view';
 
 function peerExtension() {
@@ -16,7 +16,7 @@ function peerExtension() {
     return new Promise(resolve => {
       const channel = new MessageChannel();
       channel.port2.onmessage = event => resolve(JSON.parse(event.data));
-      worker.postMessage(JSON.stringify(data));
+      worker.postMessage(JSON.stringify(data), [channel.port1]); // Corrected
     });
   }
 
