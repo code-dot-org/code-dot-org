@@ -137,15 +137,17 @@
     var elements = document.querySelectorAll('h1.control-legend');
     var targetValues = Array.from(elements).map(function(element) {
       return element.getAttribute('data-target');
+    })
+    var textValues = Array.from(elements).map(function(element) {
+      return element.textContent;
     });
 
     var ul = document.createElement('ul');
-    targetValues.forEach(function(targetValue) {
+    targetValues.forEach(function(targetValue, index) {
       var li = document.createElement('li');
       var a = document.createElement('a');
-      console.log(targetValue);
       a.href = targetValue;
-      a.textContent = targetValue.substring(1);
+      a.textContent = textValues[index];
       li.appendChild(a);
       ul.appendChild(li);
       console.log(ul);
