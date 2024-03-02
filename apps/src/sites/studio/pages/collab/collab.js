@@ -17,7 +17,7 @@ class ActionCableConnection {
     const consumer = createConsumer(); // Ensure you've correctly configured your Action Cable consumer
 
     this.channel = consumer.subscriptions.create(
-      {channel: 'CollabsChannel', collab_id: this.collabId},
+      {channel: 'CollabChannel', collab_id: this.collabId},
       {
         received: this.onReceived,
       }
