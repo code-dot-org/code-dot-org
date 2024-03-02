@@ -3,4 +3,8 @@
   "rubyLsp.rubyVersionManager": "rbenv",
   "rdbg.rubyVersionManager": "rbenv",
   "npm.packageManager": "yarn",
+  // This is required to resolve ruby, since by default VSCode does /not/ launch an interactive terminal
+  // thus it doesn't load .zshrc, and therefore it uses /usr/bin/ruby instead of ~/.rbenv/shims/ruby
+  // TODO: is this required on Windows? Ubuntu?
+  "terminal.integrated.profiles.osx": { "zsh": { "path": "/bin/zsh", "args": ["-l", "-i"] } },
 }

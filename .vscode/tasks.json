@@ -21,6 +21,11 @@
       },
     },
     {
+      "label": "rake build",
+      "type": "shell",
+      "command": "bundle exec rake build",
+    },
+    {
       "label": "yarn install",
       "type": "shell",
       "command": "yarn install",
