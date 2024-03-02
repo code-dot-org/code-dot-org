@@ -11,10 +11,9 @@ import {
   Update,
 } from '@codemirror/collab';
 
-// We don't use named imports because we're using actioncable 5, which
-// fails with named imports. We'd rather using a newer actioncable 7, from the
-// @rails/actioncable package, but this is the newest version that has 3rd party
-// TS types available (the @types/actionable package)
+// We don't use named imports because we're using the old actioncable npm, which
+// fails with named imports. We'd rather using the newer @rails/actioncable npm
+// but the old NPM has 3rd party TS types available (the @types/actioncable package)
 import ActionCable from 'actioncable';
 
 // TODO: remove this debug cruft
