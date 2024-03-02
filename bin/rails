@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+# Shortcut for running dashboard/bin/rails from any directory
+DASHBOARD_DIR = File.expand_path('../../dashboard', __FILE__)
+Dir.chdir(DASHBOARD_DIR)
+load 'bin/rails'
