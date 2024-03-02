@@ -73,6 +73,8 @@ group :development do
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
+  # Improves VSCOde Ruby LSP support
+  gem 'ruby-lsp-rails'
 end
 
 # Rack::Cache middleware used in development/test;
