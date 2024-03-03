@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {ChangeSet, Extension} from '@codemirror/state';
+import {ChangeSet, Extension, Compartment} from '@codemirror/state';
 import {EditorView, ViewPlugin, ViewUpdate} from '@codemirror/view';
 import {
   receiveUpdates,
@@ -173,6 +173,12 @@ export function collaborativeEditorExtension(
   clientID: string,
   documentID: string
 ): Extension[] {
+  // Before we can initialize the collab() extension, we need to have run the
+  // async sendGetDoc() and gotten its as initialDoc and initialVersion. Since
+  // this function runs sync, we can't do that inline here. The solution is to
+  // setup a CodeMirror Compartment:
+  // https://codemirror.net/examples/config/#private-compartments
+  const collabCompartment = new Compartment();
   class CollaborativeEditorChannelPlugin {
     private pushInProgress = false;
     private done = false;
@@ -230,16 +236,41 @@ export function collaborativeEditorExtension(
       }
     }
 
+    createCollabExtension(startVersion: number) {
+      console.log(
+        'Creating the @codemirror/collab extension at version: ',
+        startVersion
+      );
+      return collab({clientID, startVersion});
+    }
+
+    setDoc(doc: string | null, docVersion: number = 0) {
+      if (doc === null && docVersion !== 0) {
+        throw new Error(
+          `setDoc(): what do we do? doc is null but docVersion is ${docVersion}`
+        );
+      }
+
+      this.view.dispatch({
+        // Replace the editor contents if we loaded a new doc:
+        changes:
+          doc !== null
+            ? {from: 0, to: this.view.state.doc.length, insert: doc}
+            : undefined,
+        // Replace the @codemirror/collab extension with a new instance that
+        // starts at the version of the doc we just loaded:
+        effects: collabCompartment.reconfigure([
+          this.createCollabExtension(docVersion),
+        ]),
+      });
+    }
+
     async onConnect() {
       this.connected = true;
-      const {version: docVersion, doc} = await this.sendGetDoc();
-      console.log('getDoc =>', docVersion, doc);
 
-      // TODO: what do we do with the docVersion and the doc?
-      // see comment near `const startVersion = 0` below.
-      console.warn(
-        'Warning, not implemented: not seeding the doc or the initial version yet'
-      );
+      const {doc, version} = await this.sendGetDoc();
+      console.log('getDoc =>', version, String(doc));
+      this.setDoc(doc, version);
 
       const data: any = await this.sendPullUpdates();
       console.log('done waiting for sendPullUpdates', data);
@@ -282,16 +313,8 @@ export function collaborativeEditorExtension(
     }
   }
 
-  // FIXME: we need to seed our doc and crucial startVersion using Action.GET_DOC
-  // Awkward: how do we block on waiting for the initial version from Action.GET_DOC?
-  // any chance CodeMirror extension creation functions can be async?
-  const startVersion = 0;
-
   return [
-    collab({
-      clientID,
-      startVersion: startVersion,
-    }),
     ViewPlugin.fromClass(CollaborativeEditorChannelPlugin),
+    collabCompartment.of([]),
   ];
 }
