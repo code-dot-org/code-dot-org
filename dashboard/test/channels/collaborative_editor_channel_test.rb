@@ -1,6 +1,6 @@
 require "test_helper"
 
-class CollabChannelTest < ActionCable::Channel::TestCase
+class CollaborativeEditorChannelTest < ActionCable::Channel::TestCase
   # test "subscribes" do
   #   subscribe
   #   assert subscription.confirmed?
