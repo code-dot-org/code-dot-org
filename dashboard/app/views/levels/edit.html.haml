@@ -132,7 +132,11 @@
 = '|' unless @level.new_record?
 = link_to t('crud.destroy'), @level, method: :delete, data: { confirm: t('crud.confirm') } unless @level.new_record?
 
+-# Navigation sidebar
 :javascript
+  var heading = document.createElement('h2');
+  heading.textContent = 'Navigation';
+  
   document.addEventListener('DOMContentLoaded', function() {
     var elements = document.querySelectorAll('h1.control-legend');
     var targetValues = Array.from(elements).map(function(element) {
@@ -141,28 +145,53 @@
     var textValues = Array.from(elements).map(function(element) {
       return element.textContent;
     });
-
+    
     var ul = document.createElement('ul');
-    targetValues.forEach(function(targetValue, index) {
+    ul.id = 'navList';
+    elements.forEach(function(element) {
       var li = document.createElement('li');
       var a = document.createElement('a');
-      a.href = targetValue;
-      a.textContent = textValues[index];
+      a.href = '#';
+      a.textContent = element.textContent;
+      a.addEventListener('click', function(event) {
+            event.preventDefault();
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+      });
       li.appendChild(a);
       ul.appendChild(li);
-      console.log(ul);
-
     });
 
-    // Append the ul to the body or another element
-    var navbar = document.getElementById('navbar');
-    navbar.appendChild(ul);
+    var chevron = document.createElement('i');
+    chevron.className = 'fas fa-chevron-left fa-2x';
+    chevron.style.marginLeft = '5px';
+    chevron.style.marginRight = '5px';
+
+    chevron.addEventListener('click', function() {
+      if (navList.style.display !== 'none') {
+          navList.style.display = 'none';
+          chevron.className = 'fas fa-chevron-right fa-2x';
+          nav.style.width = '2%';
+          heading.textContent = '';
+      } else {
+          navList.style.display = 'block';
+          chevron.className = 'fas fa-chevron-left fa-2x';
+          nav.style.width = '10%';
+          heading.textContent = 'Navigation';
+      }
+    });
+
+    var nav = document.getElementById('navbar');
+    nav.appendChild(heading);
+    nav.appendChild(ul);
+    nav.appendChild(chevron);
   });
-#navbar.navbar
-  %h2 Navigation
+
+#navbar
 
 :css
-  .navbar {
+  #navbar {
     position: fixed;
     top: 50px;
     left: 0;
@@ -174,8 +203,8 @@
     border-right: 3px solid rgb(231, 232, 234);
   }
 
-  @media screen and (max-width: 1300px) {
-    .navbar {
+  @media screen and (max-width: 1090px) {
+    #navbar {
       display: none;
     }
   }
