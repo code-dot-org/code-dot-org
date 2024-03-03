@@ -186,6 +186,21 @@ export function collaborativeEditorExtension(
 
       this.pushInProgress = true;
       const version = getSyncedVersion(this.view.state);
+
+      // FIXME: does the web worker version block on this.sendPushUpdates()?
+      // I feel like it must, because otherwise sendableUpdates() contains
+      // the same changes, and the server loses sync from repeatedly transmitting
+      // the same version. We can't directly block on ActionCable, but we could
+      // probably figure out how to make it return a promise that blocks on the
+      // next broadcast received of `push_updates` with the same version sent here.
+      //
+      // The effect of this difference is that if push is ever called while
+      // waiting for the previous sendPushUpdates to be received (and thereby
+      // this.view.dispatch(receiveUpdates(this.view.state, updates.updates))
+      // will be called, which means that update won't show up in sendableUpdates()
+      // anymore), then sync will be totally lost, versions will diverge, and
+      // everything will freak out and usually break. i.e. typing fast-ish
+      // breaks everything and I think this section is to blame.
       this.sendPushUpdates(new Updates(version, updates));
       this.pushInProgress = false;
 
