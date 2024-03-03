@@ -3,7 +3,7 @@
 Dashboard::Application.routes.draw do
   # /cable is used for ActionCable websocket connections
   mount ActionCable.server => '/cable'
-  get '/collab_demo/:document_id', to: 'collab_demo#demo'
+  get '/collab/:document_id', to: 'collab_demo#demo'
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
