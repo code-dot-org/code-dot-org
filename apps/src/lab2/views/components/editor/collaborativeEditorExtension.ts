@@ -228,7 +228,7 @@ export function collaborativeEditorExtension(
       if (action === Action.PUSH_UPDATES) {
         this.receiveUpdates(Updates.fromJSON(data));
       } else if (action === Action.PULL_UPDATES) {
-        this.receiveUpdates(Updates.fromJSON(data));
+        // nothing to do: results received directly by sendPullUpdates() caller
       } else if (action === Action.GET_DOC) {
         // nothing to do: results received directly by sendGetDoc() caller
       } else {
@@ -254,9 +254,9 @@ export function collaborativeEditorExtension(
       this.view.dispatch({
         // Replace the editor contents if we loaded a new doc:
         changes:
-          doc !== null
-            ? {from: 0, to: this.view.state.doc.length, insert: doc}
-            : undefined,
+          doc === null
+            ? undefined
+            : {from: 0, to: this.view.state.doc.length, insert: doc},
         // Replace the @codemirror/collab extension with a new instance that
         // starts at the version of the doc we just loaded:
         effects: collabCompartment.reconfigure([
@@ -274,6 +274,7 @@ export function collaborativeEditorExtension(
 
       const data: any = await this.sendPullUpdates();
       console.log('done waiting for sendPullUpdates', data);
+      this.receiveUpdates(Updates.fromJSON(data));
     }
 
     onDisconnect() {
