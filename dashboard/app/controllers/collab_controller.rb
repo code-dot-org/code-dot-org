@@ -1,5 +1,5 @@
 class CollabController < ApplicationController
-  def collab
-    @collab_id = params[:id]
+  def demo
+    @document_id = params[:document_id]
   end
 end

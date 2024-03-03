@@ -1,9 +1,0 @@
-- content_for(:head) do
-  %script{src: webpack_asset_path('js/collab/collab.js')}
-
-:javascript
-  window.collabID = '#{@collab_id}';
-
-%h1 Collab #{@collab_id}
-
-#editor1 Editor 1:

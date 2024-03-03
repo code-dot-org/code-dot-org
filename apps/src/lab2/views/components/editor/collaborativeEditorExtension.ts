@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {EditorState, ChangeSet} from '@codemirror/state';
+import {ChangeSet} from '@codemirror/state';
 import {EditorView, ViewPlugin, ViewUpdate} from '@codemirror/view';
-import {javascript} from '@codemirror/lang-javascript';
-import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
 import {
   receiveUpdates,
   sendableUpdates,
@@ -49,12 +47,14 @@ enum Action {
   PUSH_UPDATES = 'push_updates',
   PULL_UPDATES = 'pull_updates',
 }
+
+// Handles the low-level details of maintaining the ActionCable connection
 class CollabChannel {
   channel!: Channel;
 
   constructor(
     public clientID: string,
-    public collabID: string,
+    public documentID: string,
     public onReceive: (action: Action, data: any) => void,
     public onConnect = () => {},
     public onDisconnect = () => {}
@@ -68,7 +68,7 @@ class CollabChannel {
     this.channel = consumer.subscriptions.create(
       {
         channel: 'CollabChannel',
-        collab_id: this.collabID,
+        document_id: this.documentID,
         client_id: this.clientID,
       },
       {
@@ -110,13 +110,12 @@ class CollabChannel {
   }
 }
 
-const INITIAL_DOC: string = `
-function boo() {
-  console.log('boo');
-}
-`;
-
-export function collabChannelExtension(clientID: string, collabID: string) {
+// Creates a CodeMirror extension that can be used in the EditorState's list
+// of extensions. Its backed by an ActionCable channel, which stores to redis.
+export function collaborativeEditorExtension(
+  clientID: string,
+  documentID: string
+) {
   class CollabChannelPlugin {
     private pushInProgress = false;
     private done = false;
@@ -127,12 +126,11 @@ export function collabChannelExtension(clientID: string, collabID: string) {
       try {
         this.channel = new CollabChannel(
           clientID,
-          collabID,
+          documentID,
           this.onReceive.bind(this),
           this.onConnect.bind(this),
           this.onDisconnect.bind(this)
         );
-        // TODO: pull current version from collab channel
       } catch (e) {
         // ViewPlugin.fromClass silently consumes errors, so we log them here
         console.error('Error creating CollabChannel', e);
@@ -184,8 +182,8 @@ export function collabChannelExtension(clientID: string, collabID: string) {
       if (!this.connected || this.pushInProgress) return;
       const updates = sendableUpdates(this.view.state);
       if (!updates.length) return;
-      this.pushInProgress = true;
 
+      this.pushInProgress = true;
       const version = getSyncedVersion(this.view.state);
       this.sendPushUpdates(new Updates(version, updates));
       this.pushInProgress = false;
@@ -203,30 +201,4 @@ export function collabChannelExtension(clientID: string, collabID: string) {
   }
 
   return [collab({clientID}), ViewPlugin.fromClass(CollabChannelPlugin)];
-}
-
-export function setupEditor(
-  domSelector: string,
-  clientID: string,
-  collabID: string
-): EditorView {
-  console.log(`setupEditor(): creating collab editor, collabId: ${collabID}`);
-
-  const startState: EditorState = EditorState.create({
-    doc: INITIAL_DOC,
-    extensions: [
-      ...editorConfig,
-      javascript(),
-      collabChannelExtension(clientID, collabID),
-    ],
-  });
-
-  const view: EditorView = new EditorView({
-    state: startState,
-    parent: document.querySelector(domSelector) as HTMLElement,
-  });
-
-  console.log('setupEditor(): success');
-
-  return view;
 }
