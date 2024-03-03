@@ -216,6 +216,7 @@ export function collaborativeEditorExtension(
     }
   }
 
+  // FIXME: we need to seed our doc and crucial startVersion using Action.GET_DOC
   // Awkward: how do we block on waiting for the initial version from Action.GET_DOC?
   // any chance CodeMirror extension creation functions can be async?
   const startVersion = 0;
