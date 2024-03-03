@@ -140,10 +140,10 @@ class CollaborativeEditorChannel {
     }
   }
 
-  waitForReply(messageID: string): Promise<void> {
+  waitForReply(messageID: string): Promise<any> {
     let onReplyReceived = (data: any) => {};
     let onReplyFailed = (e: Error) => {};
-    const reply = new Promise<void>((resolve, reject) => {
+    const reply = new Promise((resolve, reject) => {
       onReplyReceived = resolve;
       onReplyFailed = reject;
     });
