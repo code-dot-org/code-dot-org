@@ -27,6 +27,8 @@ class CollaborativeEditorChannel < ApplicationCable::Channel
       #
       # pending.push(resp)
     end
+  rescue PendingNotImplementedError
+    Rails.logger.error "Warning in pull_updates: #{$!}"
   end
 
   def push_updates(data)
@@ -109,15 +111,17 @@ class CollaborativeEditorChannel < ApplicationCable::Channel
     # }
 
     return doc
-  rescue DocNotImplementedError
-    ""
   end
 
   def cache_updates(updates, version)
     if updates
       redis.rpush(redis_updates_key, updates.map(&:to_json))
       redis.set(redis_updates_version_key, version)
-      redis.set(redis_doc_key, update_doc(updates, version))
+      begin
+        redis.set(redis_doc_key, update_doc(updates, version))
+      rescue DocNotImplementedError
+        Rails.logger.error "Warning in cache_updates: #{$!}"
+      end
     end
   end
 
