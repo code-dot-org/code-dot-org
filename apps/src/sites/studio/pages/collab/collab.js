@@ -1,6 +1,6 @@
-import {setupEditor} from '@cdo/apps/collab';
+import {collaborativeEditor} from '@cdo/apps/collab';
 
 document.addEventListener('DOMContentLoaded', event => {
   const clientID = Math.random().toString(36).substring(4);
-  setupEditor('#editor1', clientID, window.collabID);
+  collaborativeEditor('#editor1', clientID, window.collabID);
 });

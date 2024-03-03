@@ -29,16 +29,25 @@ class Updates {
   static fromJSON(json: any): Updates {
     return new Updates(
       json.version,
-      json.updates.map((update: any) => ({
-        changes: ChangeSet.fromJSON(update.changes),
-        clientID: update.clientID,
-      }))
+      json.updates.map((update: any) => {
+        // We accept JSON or stringified JSON here, because redis stores data
+        // as strings, and parsing JSON on the server is quite expensive and
+        // slow (~1s for 100MB). At other times, when we already have to
+        // manipulate the updates on the server, its faster to return JSON.
+        update = typeof update === 'string' ? JSON.parse(update) : update;
+
+        return {
+          changes: ChangeSet.fromJSON(update.changes),
+          clientID: update.clientID,
+        };
+      })
     );
   }
 }
 
 enum Action {
   PUSH_UPDATES = 'push_updates',
+  PULL_UPDATES = 'pull_updates',
 }
 class CollabChannel {
   channel!: Channel;
@@ -91,7 +100,7 @@ class CollabChannel {
     }
   }
 
-  send(action: Action, data: any) {
+  send(action: Action, data?: any) {
     this.log('send', action, data);
     this.channel.perform(action, {data, clientID: this.clientID});
   }
@@ -107,7 +116,7 @@ function boo() {
 }
 `;
 
-function collabChannel(clientID: string, collabID: string) {
+export function collabChannelExtension(clientID: string, collabID: string) {
   class CollabChannelPlugin {
     private pushInProgress = false;
     private done = false;
@@ -131,16 +140,28 @@ function collabChannel(clientID: string, collabID: string) {
       }
     }
 
-    sendPushUpdates(updates: Updates): void {
+    sendPullUpdates() {
+      this.channel.send(Action.PULL_UPDATES);
+    }
+
+    sendPushUpdates(updates: Updates) {
       const updatesJSON = updates.toJSON();
       this.channel.send(Action.PUSH_UPDATES, updatesJSON);
+    }
+
+    receiveUpdates(updates: readonly Update[]) {
+      console.log('dispatch', updates);
+      this.view.dispatch(receiveUpdates(this.view.state, updates));
     }
 
     onReceive(action: Action, data: any) {
       if (action === Action.PUSH_UPDATES) {
         const updates = Updates.fromJSON(data);
-        console.log('dispatch', updates);
-        this.view.dispatch(receiveUpdates(this.view.state, updates.updates));
+        this.receiveUpdates(updates.updates);
+      } else if (action === Action.PULL_UPDATES) {
+        console.log('pull updates!!!', data);
+        const updates = Updates.fromJSON(data);
+        this.receiveUpdates(updates.updates);
       } else {
         console.error(`receive(${action}): unknown action`, data);
       }
@@ -148,6 +169,7 @@ function collabChannel(clientID: string, collabID: string) {
 
     onConnect() {
       this.connected = true;
+      this.sendPullUpdates();
     }
 
     onDisconnect() {
@@ -188,14 +210,14 @@ export function setupEditor(
   clientID: string,
   collabID: string
 ): EditorView {
-  console.log(`Initialzing collaborative editor with collabId: ${collabID}`);
+  console.log(`setupEditor(): creating collab editor, collabId: ${collabID}`);
 
   const startState: EditorState = EditorState.create({
     doc: INITIAL_DOC,
     extensions: [
       ...editorConfig,
       javascript(),
-      collabChannel(clientID, collabID),
+      collabChannelExtension(clientID, collabID),
     ],
   });
 
@@ -204,7 +226,7 @@ export function setupEditor(
     parent: document.querySelector(domSelector) as HTMLElement,
   });
 
-  console.log('Done with setupEditor(): success');
+  console.log('setupEditor(): success');
 
   return view;
 }
