@@ -11,13 +11,7 @@ import {
   Update,
 } from '@codemirror/collab';
 
-// We don't use named imports because we're using the old actioncable npm, which
-// fails with named imports. We'd rather using the newer @rails/actioncable npm
-// but the old NPM has 3rd party TS types available (the @types/actioncable package)
-import ActionCable from 'actioncable';
-
-// TODO: remove this debug cruft
-(window as any).ActionCable = ActionCable;
+import {createConsumer, Channel} from '@rails/actioncable';
 
 class Updates {
   constructor(readonly version: number, readonly updates: readonly Update[]) {}
@@ -47,7 +41,7 @@ enum Action {
   PUSH_UPDATES = 'push_updates',
 }
 class CollabChannel {
-  channel!: ActionCable.Channel;
+  channel!: Channel;
 
   constructor(
     public clientID: string,
@@ -61,7 +55,7 @@ class CollabChannel {
   }
 
   connect() {
-    const consumer = ActionCable.createConsumer();
+    const consumer = createConsumer();
     this.channel = consumer.subscriptions.create(
       {
         channel: 'CollabChannel',
