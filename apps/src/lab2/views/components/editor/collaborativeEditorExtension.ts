@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {ChangeSet} from '@codemirror/state';
+import {ChangeSet, Extension} from '@codemirror/state';
 import {EditorView, ViewPlugin, ViewUpdate} from '@codemirror/view';
 import {
   receiveUpdates,
@@ -46,10 +46,11 @@ class Updates {
 enum Action {
   PUSH_UPDATES = 'push_updates',
   PULL_UPDATES = 'pull_updates',
+  GET_DOC = 'get_doc',
 }
 
 // Handles the low-level details of maintaining the ActionCable connection
-class CollabChannel {
+class CollaborativeEditorChannel {
   channel!: Channel;
 
   constructor(
@@ -60,14 +61,14 @@ class CollabChannel {
     public onDisconnect = () => {}
   ) {
     this.connect();
-    console.log('CollabChannel created', this.channel);
+    console.log('CollaborativeEditorChannel created', this.channel);
   }
 
   connect() {
     const consumer = createConsumer();
     this.channel = consumer.subscriptions.create(
       {
-        channel: 'CollabChannel',
+        channel: 'CollaborativeEditorChannel',
         document_id: this.documentID,
         client_id: this.clientID,
       },
@@ -115,16 +116,18 @@ class CollabChannel {
 export function collaborativeEditorExtension(
   clientID: string,
   documentID: string
-) {
-  class CollabChannelPlugin {
+): Extension[] {
+  class CollaborativeEditorChannelPlugin {
     private pushInProgress = false;
     private done = false;
     private connected = false;
-    private channel: CollabChannel;
+    private channel: CollaborativeEditorChannel;
+    private currentVersion: number;
 
     constructor(private view: EditorView) {
       try {
-        this.channel = new CollabChannel(
+        this.currentVersion = 0;
+        this.channel = new CollaborativeEditorChannel(
           clientID,
           documentID,
           this.onReceive.bind(this),
@@ -133,13 +136,13 @@ export function collaborativeEditorExtension(
         );
       } catch (e) {
         // ViewPlugin.fromClass silently consumes errors, so we log them here
-        console.error('Error creating CollabChannel', e);
+        console.error('Error creating CollaborativeEditorChannel', e);
         throw e;
       }
     }
 
     sendPullUpdates() {
-      this.channel.send(Action.PULL_UPDATES);
+      this.channel.send(Action.PULL_UPDATES, {version: this.currentVersion});
     }
 
     sendPushUpdates(updates: Updates) {
@@ -147,19 +150,17 @@ export function collaborativeEditorExtension(
       this.channel.send(Action.PUSH_UPDATES, updatesJSON);
     }
 
-    receiveUpdates(updates: readonly Update[]) {
-      console.log('dispatch', updates);
-      this.view.dispatch(receiveUpdates(this.view.state, updates));
+    receiveUpdates(updates: Updates) {
+      console.log('dispatch updates for version', updates.version, updates);
+      this.view.dispatch(receiveUpdates(this.view.state, updates.updates));
+      this.currentVersion = updates.version;
     }
 
     onReceive(action: Action, data: any) {
       if (action === Action.PUSH_UPDATES) {
-        const updates = Updates.fromJSON(data);
-        this.receiveUpdates(updates.updates);
+        this.receiveUpdates(Updates.fromJSON(data));
       } else if (action === Action.PULL_UPDATES) {
-        console.log('pull updates!!!', data);
-        const updates = Updates.fromJSON(data);
-        this.receiveUpdates(updates.updates);
+        this.receiveUpdates(Updates.fromJSON(data));
       } else {
         console.error(`receive(${action}): unknown action`, data);
       }
@@ -200,5 +201,15 @@ export function collaborativeEditorExtension(
     }
   }
 
-  return [collab({clientID}), ViewPlugin.fromClass(CollabChannelPlugin)];
+  // Awkward: how do we block on waiting for the initial version from Action.GET_DOC?
+  // any chance CodeMirror extension creation functions can be async?
+  const startVersion = 0;
+
+  return [
+    collab({
+      clientID,
+      startVersion: startVersion,
+    }),
+    ViewPlugin.fromClass(CollaborativeEditorChannelPlugin),
+  ];
 }
