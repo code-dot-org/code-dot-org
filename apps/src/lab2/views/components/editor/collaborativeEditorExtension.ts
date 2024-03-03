@@ -49,9 +49,29 @@ enum Action {
   GET_DOC = 'get_doc',
 }
 
+// TODO: how long should we wait for replies to timeout?
+const WAITING_FOR_REPLY_TIMEOUT_MS = 5000;
+
+class TimeoutError extends Error {
+  constructor(public messageID: string) {
+    super(
+      `Timed out waiting for a reply to ${messageID}: exceeded ${WAITING_FOR_REPLY_TIMEOUT_MS} ms`
+    );
+    this.name = 'TimeoutError';
+  }
+}
+
+interface WaitingForReply {
+  onReplyReceived: (data?: any) => void;
+  onReplyFailed: (e: Error) => void;
+  when: number;
+}
+
 // Handles the low-level details of maintaining the ActionCable connection
 class CollaborativeEditorChannel {
   channel!: Subscription;
+  waitingForReplies: Record<string, WaitingForReply> = {};
+  nextMessageID = 0;
 
   constructor(
     public clientID: string,
@@ -74,18 +94,17 @@ class CollaborativeEditorChannel {
       },
       {
         received: (rawMsg: any): void => {
-          const {action, data, ...extra} = rawMsg;
-          this.log('receive', action, data, extra);
-
+          const {action, data, messageID, clientID} = rawMsg;
+          this.log('receive', action, data, rawMsg);
           this.onReceive(action, data);
+          this.checkIfWaitingForReply(messageID, clientID, data);
         },
         connected: (): void => {
           console.log('Connected to collab channel');
           this.onConnect();
         },
         disconnected: (): void => {
-          // TODO: try to reconnect with exponential backoff
-          // to handle stuff like: the server is restarting
+          // TODO: should we fail all waitingForReplies with a DisconnectError?
           console.log('Disconnected from collab channel');
           this.onDisconnect();
         },
@@ -93,17 +112,54 @@ class CollaborativeEditorChannel {
     );
   }
 
-  log(verb: 'send' | 'receive', action: Action, data: any, extra?: any) {
+  log(verb: 'send' | 'receive', action: Action, data: any, rawMsg?: any) {
     if (data?.updates?.version) {
-      console.log(`${verb}(${action}, ${data.updates.version})`, data, extra);
+      console.log(`${verb}(${action}, ${data.updates.version})`, data, rawMsg);
     } else {
-      console.log(`${verb}(${action})`, data, extra);
+      console.log(`${verb}(${action})`, data, rawMsg);
     }
   }
 
-  send(action: Action, data?: any) {
+  checkIfWaitingForReply(messageID: string, clientID: string, data: any) {
+    const waitingForReply = this.waitingForReplies[messageID];
+    if (waitingForReply && clientID === this.clientID) {
+      waitingForReply.onReplyReceived(data);
+      delete this.waitingForReplies[messageID];
+    }
+    this.failTimedOutReplies();
+  }
+
+  failTimedOutReplies() {
+    const now = Date.now();
+    for (const messageID in this.waitingForReplies) {
+      const waitingForReply = this.waitingForReplies[messageID];
+      if (now - waitingForReply.when > WAITING_FOR_REPLY_TIMEOUT_MS) {
+        waitingForReply.onReplyFailed(new TimeoutError(messageID));
+        delete this.waitingForReplies[messageID];
+      }
+    }
+  }
+
+  waitForReply(messageID: string): Promise<void> {
+    let onReplyReceived = (data: any) => {};
+    let onReplyFailed = (e: Error) => {};
+    const reply = new Promise<void>((resolve, reject) => {
+      onReplyReceived = resolve;
+      onReplyFailed = reject;
+    });
+    this.waitingForReplies[messageID] = {
+      onReplyReceived,
+      onReplyFailed,
+      when: Date.now(),
+    };
+    return reply;
+  }
+
+  async send(action: Action, data?: any, waitForReply = true) {
     this.log('send', action, data);
-    this.channel.perform(action, {data, clientID: this.clientID});
+    const messageID = String(this.nextMessageID++);
+    this.channel.perform(action, {data, clientID: this.clientID, messageID});
+    if (waitForReply) return this.waitForReply(messageID);
   }
 
   unsubscribe() {
@@ -142,12 +198,14 @@ export function collaborativeEditorExtension(
     }
 
     sendPullUpdates() {
-      this.channel.send(Action.PULL_UPDATES, {version: this.currentVersion});
+      return this.channel.send(Action.PULL_UPDATES, {
+        version: this.currentVersion,
+      });
     }
 
     sendPushUpdates(updates: Updates) {
       const updatesJSON = updates.toJSON();
-      this.channel.send(Action.PUSH_UPDATES, updatesJSON);
+      return this.channel.send(Action.PUSH_UPDATES, updatesJSON, true);
     }
 
     receiveUpdates(updates: Updates) {
@@ -166,9 +224,10 @@ export function collaborativeEditorExtension(
       }
     }
 
-    onConnect() {
+    async onConnect() {
       this.connected = true;
-      this.sendPullUpdates();
+      const data: any = await this.sendPullUpdates();
+      console.log('done waiting for sendPullUpdates', data);
     }
 
     onDisconnect() {
@@ -187,21 +246,13 @@ export function collaborativeEditorExtension(
       this.pushInProgress = true;
       const version = getSyncedVersion(this.view.state);
 
-      // FIXME: does the web worker version block on this.sendPushUpdates()?
-      // I feel like it must, because otherwise sendableUpdates() contains
-      // the same changes, and the server loses sync from repeatedly transmitting
-      // the same version. We can't directly block on ActionCable, but we could
-      // probably figure out how to make it return a promise that blocks on the
-      // next broadcast received of `push_updates` with the same version sent here.
-      //
-      // The effect of this difference is that if push is ever called while
-      // waiting for the previous sendPushUpdates to be received (and thereby
-      // this.view.dispatch(receiveUpdates(this.view.state, updates.updates))
-      // will be called, which means that update won't show up in sendableUpdates()
-      // anymore), then sync will be totally lost, versions will diverge, and
-      // everything will freak out and usually break. i.e. typing fast-ish
-      // breaks everything and I think this section is to blame.
-      this.sendPushUpdates(new Updates(version, updates));
+      try {
+        await this.sendPushUpdates(new Updates(version, updates));
+      } catch (e) {
+        console.error("Couldn't sendPushUpdates(): ", e, version, updates);
+      }
+
+      console.log('done waiting for sendPushUpdates', version);
       this.pushInProgress = false;
 
       // Regardless of whether the push failed or new updates came in
