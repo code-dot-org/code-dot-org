@@ -14,7 +14,7 @@ class CollaborativeEditorChannel < ApplicationCable::Channel
   def pull_updates(data)
     version = data.dig("data", "version").to_i
 
-    if version < redis_version
+    if version < redis_updates_version
       data[:data] = fetch_updates_from_cache(version)
       # FIXME: this broadcasts to everyone, but we should only broadcast to the client that requested it
       # that will require another channel
@@ -42,13 +42,8 @@ class CollaborativeEditorChannel < ApplicationCable::Channel
   rescue PendingNotImplementedError
   end
 
-  def get_doc
-    raise DocNotImplementedError, "get_doc is semi-implemented, but update_doc is not implemented so its not tested yet"
-
-    data[:data] = {
-      doc: fetch_cached_doc,
-      version: redis_version
-    }
+  def get_doc(data)
+    data[:data] = fetch_cached_doc
     ActionCable.server.broadcast(collaborative_editor_channel, data)
   end
 
@@ -67,20 +62,31 @@ class CollaborativeEditorChannel < ApplicationCable::Channel
     "#{redis_base_key}:updates"
   end
 
-  def redis_version_key
-    "#{redis_base_key}:version"
+  def redis_updates_version_key
+    "#{redis_base_key}:updates:version"
   end
 
   def redis_doc_key
     "#{redis_base_key}:doc"
   end
 
-  def redis_version
-    redis.get(redis_version_key).to_i
+  def redis_doc_version_key
+    "#{redis_base_key}:doc:version"
+  end
+
+  def redis_doc_version
+    redis.get(redis_doc_version_key).to_i
+  end
+
+  def redis_updates_version
+    redis.get(redis_updates_version_key).to_i
   end
 
   def fetch_cached_doc
-    redis.get(redis_doc_key)
+    {
+      doc: redis.get(redis_doc_key),
+      version: redis_doc_version,
+    }
   end
 
   def update_doc(updates, version)
@@ -110,7 +116,7 @@ class CollaborativeEditorChannel < ApplicationCable::Channel
   def cache_updates(updates, version)
     if updates
       redis.rpush(redis_updates_key, updates.map(&:to_json))
-      redis.set(redis_version_key, version)
+      redis.set(redis_updates_version_key, version)
       redis.set(redis_doc_key, update_doc(updates, version))
     end
   end

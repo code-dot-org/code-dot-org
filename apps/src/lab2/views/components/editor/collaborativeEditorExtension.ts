@@ -205,7 +205,11 @@ export function collaborativeEditorExtension(
 
     sendPushUpdates(updates: Updates) {
       const updatesJSON = updates.toJSON();
-      return this.channel.send(Action.PUSH_UPDATES, updatesJSON, true);
+      return this.channel.send(Action.PUSH_UPDATES, updatesJSON);
+    }
+
+    sendGetDoc() {
+      return this.channel.send(Action.GET_DOC);
     }
 
     receiveUpdates(updates: Updates) {
@@ -219,6 +223,8 @@ export function collaborativeEditorExtension(
         this.receiveUpdates(Updates.fromJSON(data));
       } else if (action === Action.PULL_UPDATES) {
         this.receiveUpdates(Updates.fromJSON(data));
+      } else if (action === Action.GET_DOC) {
+        // nothing to do: results received directly by sendGetDoc() caller
       } else {
         console.error(`receive(${action}): unknown action`, data);
       }
@@ -226,6 +232,15 @@ export function collaborativeEditorExtension(
 
     async onConnect() {
       this.connected = true;
+      const {version: docVersion, doc} = await this.sendGetDoc();
+      console.log('getDoc =>', docVersion, doc);
+
+      // TODO: what do we do with the docVersion and the doc?
+      // see comment near `const startVersion = 0` below.
+      console.warn(
+        'Warning, not implemented: not seeding the doc or the initial version yet'
+      );
+
       const data: any = await this.sendPullUpdates();
       console.log('done waiting for sendPullUpdates', data);
     }
