@@ -9,7 +9,7 @@ import {
   Update,
 } from '@codemirror/collab';
 
-import {createConsumer, Channel} from '@rails/actioncable';
+import {createConsumer, Subscription} from '@rails/actioncable';
 
 class Updates {
   constructor(readonly version: number, readonly updates: readonly Update[]) {}
@@ -51,7 +51,7 @@ enum Action {
 
 // Handles the low-level details of maintaining the ActionCable connection
 class CollaborativeEditorChannel {
-  channel!: Channel;
+  channel!: Subscription;
 
   constructor(
     public clientID: string,
@@ -73,17 +73,17 @@ class CollaborativeEditorChannel {
         client_id: this.clientID,
       },
       {
-        received: (rawMsg: any) => {
+        received: (rawMsg: any): void => {
           const {action, data, ...extra} = rawMsg;
           this.log('receive', action, data, extra);
 
           this.onReceive(action, data);
         },
-        connected: () => {
+        connected: (): void => {
           console.log('Connected to collab channel');
           this.onConnect();
         },
-        disconnected: () => {
+        disconnected: (): void => {
           // TODO: try to reconnect with exponential backoff
           // to handle stuff like: the server is restarting
           console.log('Disconnected from collab channel');
