@@ -12,11 +12,31 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 import styles from './progress-key-popup.module.scss';
+import classNames from 'classnames';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
-  const renderItem = (itemType, itemTitle, itemDetails) => (
-    <div className={styles.item}>
-      <ProgressIcon itemType={itemType} />
+  const renderBoxedItem = (itemType, size) => (
+    <div className={styles.boxedItem}>
+      <ProgressIcon itemType={itemType} iconSizeClass={size} />
+    </div>
+  );
+
+  const renderItem = (itemType, itemTitle, itemDetails, hasBox, size) => (
+    <div
+      className={classNames(styles.item, {
+        [styles.alignTop]:
+          itemType === ITEM_TYPE.NEEDS_FEEDBACK ||
+          itemType === ITEM_TYPE.CHOICE_LEVEL ||
+          itemType === ITEM_TYPE.ASSESSMENT_LEVEL ||
+          itemType === ITEM_TYPE.KEEP_WORKING ||
+          itemType === ITEM_TYPE.SUBMITTED,
+      })}
+    >
+      {hasBox ? (
+        renderBoxedItem(itemType)
+      ) : (
+        <ProgressIcon itemType={itemType} iconSizeClass={size} />
+      )}
       <BodyThreeText>
         <StrongText>{itemTitle + ': '}</StrongText>
         {itemDetails}
@@ -36,20 +56,24 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.NOT_STARTED,
           i18n.notStarted(),
-          i18n.progressLegendDetailsNotStarted()
+          i18n.progressLegendDetailsNotStarted(),
+          false,
+          'large'
         )}
         {renderItem(
           ITEM_TYPE.NO_ONLINE_WORK,
           i18n.noOnlineWork(),
-          i18n.progressLegendDetailsNoOnlineWork()
+          i18n.progressLegendDetailsNoOnlineWork(),
+          true
         )}
         {renderItem(
           ITEM_TYPE.IN_PROGRESS,
           i18n.inProgress(),
-          i18n.progressLegendDetailsInProgress()
+          i18n.progressLegendDetailsInProgress(),
+          true
         )}
         <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />
+          {renderBoxedItem(ITEM_TYPE.SUBMITTED)}
           <div>
             <BodyThreeText>
               <StrongText>{i18n.submitted() + ': '}</StrongText>
@@ -67,39 +91,51 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           renderItem(
             ITEM_TYPE.VALIDATED,
             i18n.validated(),
-            i18n.progressLegendDetailsValidated()
+            i18n.progressLegendDetailsValidated(),
+            true
           )}
-        {renderItem(
-          ITEM_TYPE.KEEP_WORKING,
-          i18n.markedAsKeepWorking(),
-          i18n.progressLegendDetailsKeepGoing()
-        )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
           ITEM_TYPE.NEEDS_FEEDBACK,
           i18n.needsFeedback(),
-          i18n.progressLegendDetailsNeedsFeedback()
+          i18n.progressLegendDetailsNeedsFeedback(),
+          false,
+          'large'
         )}
         {renderItem(
           ITEM_TYPE.VIEWED,
           i18n.viewed(),
-          i18n.progressLegendDetailsViewed()
+          i18n.progressLegendDetailsViewed(),
+          false,
+          'large'
         )}
         {renderItem(
           ITEM_TYPE.FEEDBACK_GIVEN,
           i18n.feedbackGiven(),
-          i18n.progressLegendDetailsFeedbackGiven()
+          i18n.progressLegendDetailsFeedbackGiven(),
+          false,
+          'large'
+        )}
+        {renderItem(
+          ITEM_TYPE.KEEP_WORKING,
+          i18n.markedAsKeepWorking(),
+          i18n.progressLegendDetailsKeepGoing(),
+          true
         )}
         <Heading6>{i18n.levelTypes()}</Heading6>
         {renderItem(
           ITEM_TYPE.ASSESSMENT_LEVEL,
           i18n.assessmentLevel(),
-          i18n.progressLegendDetailsAssessmentLevels()
+          i18n.progressLegendDetailsAssessmentLevels(),
+          false,
+          'large'
         )}
         {renderItem(
           ITEM_TYPE.CHOICE_LEVEL,
           i18n.choiceLevel(),
-          i18n.progressLegendDetailsChoiceLevels()
+          i18n.progressLegendDetailsChoiceLevels(),
+          false,
+          'large'
         )}
       </div>
     </AccessibleDialog>

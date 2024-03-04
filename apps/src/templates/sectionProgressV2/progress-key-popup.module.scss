@@ -2,7 +2,8 @@
 @import 'font';
 
 .item {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   gap: 12px;
   margin-top: 20px;
 
@@ -13,6 +14,10 @@
 
   .firstMarkdown {
     margin-bottom: 1.25em;
+  }
+
+  &.alignTop {
+    align-items: flex-start; // Vertically center (if .item's flex-direction is row)
   }
 }
 
@@ -33,6 +38,15 @@
   h6 {
     margin-bottom: 0;
   }
+}
+
+.boxedItem {
+  height: 28px;
+  width: 28px !important;
+  border: 1px solid $light_gray_500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .xCloseButton {

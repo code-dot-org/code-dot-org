@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
-const PROGRESS_BOX_SIZE = 20;
+export const REGULAR_PROGRESS_BOX_SIZE = 20;
 
 export default class ProgressBox extends Component {
   static propTypes = {
@@ -15,6 +15,7 @@ export default class ProgressBox extends Component {
     lessonIsAllAssessment: PropTypes.bool,
     lessonNumber: PropTypes.number,
     viewed: PropTypes.bool,
+    progressBoxSize: PropTypes.number,
   };
 
   render() {
@@ -25,17 +26,20 @@ export default class ProgressBox extends Component {
       perfect,
       lessonIsAllAssessment,
       viewed,
+      progressBoxSize,
     } = this.props;
 
     const viewedStyle = {
       ...styles.filler,
       backgroundColor: color.neutral_dark20,
-      height: PROGRESS_BOX_SIZE,
-      width: PROGRESS_BOX_SIZE,
+      height: progressBoxSize ? progressBoxSize : REGULAR_PROGRESS_BOX_SIZE,
+      width: progressBoxSize ? progressBoxSize : REGULAR_PROGRESS_BOX_SIZE,
     };
 
     const boxWithBorderStyle = {
       ...styles.box,
+      height: progressBoxSize,
+      width: progressBoxSize,
       borderColor: started
         ? lessonIsAllAssessment
           ? color.level_submitted
@@ -48,14 +52,14 @@ export default class ProgressBox extends Component {
       ...styles.filler,
       backgroundColor: color.level_perfect,
       height: perfect,
-      top: PROGRESS_BOX_SIZE - perfect,
+      top: progressBoxSize - perfect,
     };
 
     const assessmentLevels = {
       ...styles.filler,
       backgroundColor: color.level_submitted,
       height: perfect,
-      top: PROGRESS_BOX_SIZE - perfect,
+      top: progressBoxSize - perfect,
     };
 
     const incompleteLevels = {
@@ -99,15 +103,15 @@ export default class ProgressBox extends Component {
 
 const styles = {
   box: {
-    height: PROGRESS_BOX_SIZE,
-    width: PROGRESS_BOX_SIZE,
+    height: REGULAR_PROGRESS_BOX_SIZE,
+    width: REGULAR_PROGRESS_BOX_SIZE,
     borderWidth: 1,
     borderStyle: 'solid',
     boxSizing: 'content-box',
     position: 'relative',
   },
   filler: {
-    width: PROGRESS_BOX_SIZE,
+    width: REGULAR_PROGRESS_BOX_SIZE,
     position: 'absolute',
   },
   lessonNumber: {
@@ -115,7 +119,7 @@ const styles = {
     zIndex: 2,
     paddingTop: 2,
     textAlign: 'center',
-    width: PROGRESS_BOX_SIZE,
+    width: REGULAR_PROGRESS_BOX_SIZE,
     ...fontConstants['main-font-regular'],
   },
 };

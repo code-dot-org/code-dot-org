@@ -70,6 +70,13 @@
   margin-bottom: 0;
 }
 
+.largeFontAwesomeIcon {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
 .fontAwesomeIcon {
   font-size: 18px;
   display: inline-block;
@@ -92,9 +99,31 @@
   border-color: $neutral_dark40;
 }
 
+.largeCornerBox {
+  width: 28px;
+  height: 28px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color: $neutral_dark40;
+}
+
 .needsFeedback {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M7.4152 2L18 2L18 12.5858L7.4152 2Z' stroke='%238C52BA' stroke-width='2'%3E%3C/path%3E%3C/svg%3E");
   background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.largeNeedsFeedback {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M7.4152 2L18 2L18 12.5858L7.4152 2Z' stroke='%238C52BA' stroke-width='2'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 28px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.largeFeedbackGiven {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M19 1L19 15L5 1L19 1Z' fill='%23292F36'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 28px;
   background-repeat: no-repeat;
   background-position: top right;
 }
