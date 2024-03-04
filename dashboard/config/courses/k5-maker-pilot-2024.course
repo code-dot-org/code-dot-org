@@ -9,9 +9,9 @@
     "self-paced-pl-microbit-2024-6"
   ],
   "published_state": "in_development",
-  "instruction_type": "teacher_led",
-  "participant_audience": "student",
-  "instructor_audience": "teacher",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "universal_instructor",
   "properties": {
     "family_name": "k5-maker-pilot",
     "has_numbered_units": true,
