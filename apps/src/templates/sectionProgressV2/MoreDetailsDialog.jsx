@@ -103,13 +103,6 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           'large'
         )}
         {renderItem(
-          ITEM_TYPE.VIEWED,
-          i18n.viewed(),
-          i18n.progressLegendDetailsViewed(),
-          false,
-          'large'
-        )}
-        {renderItem(
           ITEM_TYPE.FEEDBACK_GIVEN,
           i18n.feedbackGiven(),
           i18n.progressLegendDetailsFeedbackGiven(),

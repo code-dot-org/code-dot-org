@@ -7,6 +7,11 @@
   gap: 12px;
   margin-top: 20px;
 
+  > :first-child {
+    width: 28px;
+    flex-shrink: 0;
+  }
+
   p {
     margin-bottom: 0;
     font-size: 0.875rem;
@@ -42,7 +47,7 @@
 
 .boxedItem {
   height: 28px;
-  width: 28px !important;
+  width: 28px;
   border: 1px solid $light_gray_500;
   display: flex;
   justify-content: center;
