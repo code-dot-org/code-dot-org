@@ -86,6 +86,10 @@ function ProgressTableV2({
       // TODO: add no lesson state
       return null;
     }
+    console.log(
+      'lfm',
+      lessons.map(lesson => lesson.id)
+    );
     const tableStyles = isSkeleton
       ? classNames(styles.table, styles.tableLoading)
       : styles.table;
@@ -104,8 +108,6 @@ function ProgressTableV2({
     </div>
   );
 }
-
-export const UnconnectedProgressTableV2 = ProgressTableV2;
 
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,

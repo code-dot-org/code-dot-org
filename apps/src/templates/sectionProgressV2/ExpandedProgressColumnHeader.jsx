@@ -57,7 +57,11 @@ export default function ExpandedProgressColumnHeader({
         onClick={() => removeExpandedLesson(lesson.id)}
         aria-label={headerText}
       >
-        <FontAwesome icon="caret-down" className={styles.expandedHeaderCaret} />
+        <FontAwesome
+          icon="caret-down"
+          className={styles.expandedHeaderCaret}
+          title={i18n.unexpand()}
+        />
         <div className={styles.expandedHeaderLessonText}>{headerText}</div>
       </div>
       <div className={styles.expandedHeaderSecondRow}>
