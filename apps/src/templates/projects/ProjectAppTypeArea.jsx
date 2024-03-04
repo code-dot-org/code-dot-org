@@ -109,7 +109,9 @@ class ProjectAppTypeArea extends React.Component {
    *   completed and the done handler has been run (if successful).
    */
   fetchOlderProjects() {
-    const {projectList, labKey: projectType} = this.props;
+    const projectType =
+      this.props.labKey === 'featured' ? 'all' : this.props.labKey;
+    const {projectList} = this.props;
     const oldestProject = projectList[projectList.length - 1];
     const oldestPublishedAt =
       oldestProject && oldestProject.projectData.publishedAt;
@@ -166,6 +168,7 @@ class ProjectAppTypeArea extends React.Component {
   };
 
   render() {
+    console.log('fetchOlderProjects', this.fetchOlderProjects());
     return (
       <div
         style={styles.grid}
