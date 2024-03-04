@@ -43,6 +43,9 @@ const DEFAULT_PROPS = {
   isSkeleton: false,
 };
 
+// ID 722 set by createStore
+const LESSON_ID_1 = 722;
+
 describe('ProgressTableV2', () => {
   let store;
 
@@ -86,6 +89,16 @@ describe('ProgressTableV2', () => {
     expect(s1.compareDocumentPosition(s2)).to.equal(
       Node.DOCUMENT_POSITION_FOLLOWING
     );
+
+    const cell1 = screen.getByTestId(
+      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id
+    );
+    const cell2 = screen.getByTestId(
+      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id
+    );
+    expect(cell1.compareDocumentPosition(cell2)).to.equal(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
   });
 
   it('sorts by family name if toggled', () => {
@@ -94,6 +107,22 @@ describe('ProgressTableV2', () => {
     const s1 = screen.getByText(STUDENT_1.name + ' ' + STUDENT_1.familyName);
     const s2 = screen.getByText(STUDENT_2.name + ' ' + STUDENT_2.familyName);
     expect(s1.compareDocumentPosition(s2)).to.equal(
+      Node.DOCUMENT_POSITION_PRECEDING
+    );
+
+    const cell1 = screen.getByTestId(
+      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id,
+      {
+        exact: false,
+      }
+    );
+    const cell2 = screen.getByTestId(
+      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id,
+      {
+        exact: false,
+      }
+    );
+    expect(cell1.compareDocumentPosition(cell2)).to.equal(
       Node.DOCUMENT_POSITION_PRECEDING
     );
   });
@@ -153,9 +182,8 @@ describe('ProgressTableV2', () => {
   });
 
   it('one lesson expanded', () => {
-    // ID 722 set by createStore
     renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
-      expandedLessonIds: [722],
+      expandedLessonIds: [LESSON_ID_1],
     });
 
     expect(screen.getAllByTitle('Expand')).to.have.lengthOf(3);
@@ -164,9 +192,9 @@ describe('ProgressTableV2', () => {
 
   it('multiple lessons expanded', () => {
     store = createStore(2, 5);
-    // ID 722 & 1558 set by createStore
+    // ID 1558 set by createStore
     renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
-      expandedLessonIds: [722, 1558],
+      expandedLessonIds: [LESSON_ID_1, 1558],
     });
 
     expect(screen.getAllByTitle('Expand')).to.have.lengthOf(2);
