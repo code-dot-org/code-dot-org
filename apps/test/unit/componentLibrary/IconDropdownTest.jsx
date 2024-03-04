@@ -98,8 +98,6 @@ describe('Design System - Icon Dropdown Component', () => {
 
     expect(spyOnChange).to.have.been.calledTwice;
     expect(selectedValue.value).to.equal('option-2');
-    // expect(option1.checked).to.be.true;
-    // expect(option2.checked).to.be.true;
   });
 
   it("Icon Dropdown - renders disabled dropdown, doesn't change on click", async () => {
@@ -145,61 +143,5 @@ describe('Design System - Icon Dropdown Component', () => {
 
     expect(spyOnChange).to.have.not.been.called;
     expect(selectedValue.value).to.equal(undefined);
-    // expect(option1.checked).to.be.false;
-    // expect(option2.checked).to.be.false;
   });
-
-  // it('Icon Dropdown - handles Select all and Clear all clicks', async () => {
-  //   const user = userEvent.setup();
-  //   const spyOnChange = sinon.spy();
-  //   const onChange = e => {
-  //     onCheckboxDropdownChange(e.target.value, e.target.checked);
-  //     spyOnChange(e.target.value, e.target.checked);
-  //   };
-  //
-  //   const DropdownToRender = () => (
-  //     <CheckboxDropdown
-  //       name="test2-dropdown"
-  //       disabled={true}
-  //       allOptions={allOptions}
-  //       checkedOptions={selectedValues}
-  //       onChange={onChange}
-  //       onSelectAll={handleSelectAll}
-  //       onClearAll={handleClearAll}
-  //       labelText="Dropdown2 label"
-  //     />
-  //   );
-  //
-  //   const {rerender} = render(<DropdownToRender />);
-  //
-  //   const label = screen.getByText('Dropdown2 label');
-  //   const option1 = screen.getByDisplayValue('option-1');
-  //   const option2 = screen.getByDisplayValue('option-2');
-  //   const option3 = screen.getByDisplayValue('option-3');
-  //   const selectAll = screen.getByText('Select all');
-  //   const clearAll = screen.getByText('Clear all');
-  //
-  //   expect(label).to.exist;
-  //   expect(option1).to.exist;
-  //   expect(option2).to.exist;
-  //   expect(option3).to.exist;
-  //   expect(selectAll).to.exist;
-  //   expect(clearAll).to.exist;
-  //
-  //   await user.click(selectAll);
-  //
-  //   rerender(<DropdownToRender />);
-  //   expect(selectedValues.length).to.equal(3);
-  //   expect(option1.checked).to.be.true;
-  //   expect(option2.checked).to.be.true;
-  //   expect(option3.checked).to.be.true;
-  //
-  //   await user.click(clearAll);
-  //
-  //   rerender(<DropdownToRender />);
-  //   expect(selectedValues.length).to.equal(0);
-  //   expect(option1.checked).to.be.false;
-  //   expect(option2.checked).to.be.false;
-  //   expect(option3.checked).to.be.false;
-  // });
 });

@@ -20,11 +20,6 @@ const SingleTemplate: Story<IconDropdownProps> = args => {
   const onChange = useCallback(
     (option: IconDropdownOption) => {
       setValue(option);
-      // if (e.target.checked) {
-      //   setValues([...selectedValues, e.target.value]);
-      // } else {
-      //   setValues(selectedValues.filter(value => value !== e.target.value));
-      // }
       args.onChange(option);
     },
     [args, setValue]
@@ -67,22 +62,6 @@ const MultipleTemplate: Story<{
               ...values,
               [componentArg.name]: option,
             });
-            // if (e.target.checked) {
-            //   setValues({
-            //     ...values,
-            //     [componentArg.name]: [
-            //       ...values[componentArg.name],
-            //       e.target.value,
-            //     ],
-            //   });
-            // } else {
-            //   setValues({
-            //     ...values,
-            //     [componentArg.name]: values[componentArg.name].filter(
-            //       value => value !== e.target.value
-            //     ),
-            //   });
-            // }
             componentArg.onChange(option);
           };
 

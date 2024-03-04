@@ -100,8 +100,6 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     }
   };
 
-  // TODO: CustomDropdown (private), CheckboxDropdown and IconDropdown (public)
-  // TODO: update locales logic
   return (
     <div
       id={`${name}-dropdown`}

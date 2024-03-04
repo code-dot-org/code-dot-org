@@ -85,7 +85,6 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       labelText={labelText}
       disabled={disabled}
       color={color}
-      // isSomeValueSelected={true}
       icon={selectedOption?.icon}
       size={size}
     >
