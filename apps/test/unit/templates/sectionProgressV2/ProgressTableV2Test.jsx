@@ -1,21 +1,13 @@
 import React from 'react';
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
 
-import {
-  getStore,
-  registerReducers,
-  restoreRedux,
-  stubRedux,
-} from '@cdo/apps/redux';
-import sectionProgress, {
-  addDataByUnit,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import teacherSections, {
   setStudentsForCurrentSection,
-  selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser, {
   setSortByFamilyName,
