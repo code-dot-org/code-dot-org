@@ -6,7 +6,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {NavigationController} from '@blockly/keyboard-navigation';
+import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -81,7 +81,7 @@ import {
   GoogleBlocklyInstance,
 } from './types';
 import {FieldProto} from 'blockly/core/field';
-import {Options, Theme} from 'blockly';
+import {Cursor, Options, Theme} from 'blockly';
 
 const options = {
   contextMenu: true,
@@ -208,6 +208,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
+  blocklyWrapper.wrapReadOnlyProperty('BasicCursor');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
@@ -226,6 +227,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('createBlockDefinitionsFromJsonArray');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
+  blocklyWrapper.wrapReadOnlyProperty('Cursor');
   blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
@@ -423,9 +425,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
 
   blocklyWrapper.JavaScript = javascriptGenerator;
+  blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
   blocklyWrapper.navigationController.init();
+  blocklyWrapper.navigationController.cursorType = cdoUtils.getUserCursorType();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -705,6 +709,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
+
+    blocklyWrapper.getNewCursor = function (type) {
+      switch (type) {
+        case 'basic':
+          return new blocklyWrapper.BasicCursor() as Cursor;
+        case 'line':
+          return new blocklyWrapper.LineCursor() as Cursor;
+        case 'default':
+        default:
+          return new blocklyWrapper.Cursor() as Cursor;
+      }
+    };
 
     if (!blocklyWrapper.isStartMode && !optOptionsExtended.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);

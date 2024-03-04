@@ -28,6 +28,7 @@ import {
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {Block, BlockSvg, Field, WorkspaceSvg} from 'blockly';
 import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Loads blocks to a workspace.
@@ -310,7 +311,12 @@ export function getUserTheme(themeOption: string | undefined) {
  * @returns {string} one of 'default', 'basic', or 'line'
  */
 export function getUserCursorType() {
-  return localStorage.blocklyCursor || 'default';
+  const defaultCursorType = experiments.isEnabled(
+    experiments.KEYBOARD_NAVIGATION
+  )
+    ? 'line'
+    : 'default';
+  return localStorage.blocklyCursor || defaultCursorType;
 }
 
 /**
