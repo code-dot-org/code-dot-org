@@ -431,6 +431,7 @@ en:
       logout: 'Sign out'
       signin: 'Sign in'
       signup: 'Create an account'
+      create_account: 'Create Account'
       already_registered: 'Already registered?'
       pair_programming: 'Pair programming'
       team: 'Team'
