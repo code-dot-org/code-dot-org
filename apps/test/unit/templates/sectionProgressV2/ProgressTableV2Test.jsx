@@ -54,27 +54,23 @@ describe('ProgressTableV2', () => {
       unitSelection,
       teacherSections,
     });
-
-    store = getStore();
-    store.dispatch(setScriptId(UNIT_DATA.id));
-    store.dispatch(
-      setSortByFamilyName(false, SECTION_ID, UNIT_DATA.name, 'test')
-    );
-    store.dispatch(
-      setStudentsForCurrentSection(SECTION_ID, [
-        SERVER_STUDENT_1,
-        SERVER_STUDENT_2,
-      ])
-    );
-    store.dispatch(selectSection(SECTION_ID));
-    store.dispatch(addDataByUnit(UNIT_DATA));
   });
 
   afterEach(() => {
     restoreRedux();
   });
 
-  function renderDefault(propOverrides = {}) {
+  function renderDefault(
+    sortByFamilyName = false,
+    students = [SERVER_STUDENT_1, SERVER_STUDENT_2],
+    propOverrides = {}
+  ) {
+    store = createStore(null, 5, students);
+    store.dispatch(
+      setSortByFamilyName(sortByFamilyName, SECTION_ID, UNIT_DATA.name, 'test')
+    );
+    store.dispatch(setStudentsForCurrentSection(SECTION_ID, students));
+
     render(
       <Provider store={store}>
         <ProgressTableV2 {...DEFAULT_PROPS} {...propOverrides} />
@@ -93,10 +89,7 @@ describe('ProgressTableV2', () => {
   });
 
   it('sorts by family name if toggled', () => {
-    renderDefault();
-    store.dispatch(
-      setSortByFamilyName(true, SECTION_ID, UNIT_DATA.name, 'test')
-    );
+    renderDefault(true);
 
     const s1 = screen.getByText(STUDENT_1.name + ' ' + STUDENT_1.familyName);
     const s2 = screen.getByText(STUDENT_2.name + ' ' + STUDENT_2.familyName);
@@ -106,17 +99,11 @@ describe('ProgressTableV2', () => {
   });
 
   it('sorts null family names last', () => {
-    store.dispatch(
-      setStudentsForCurrentSection(SECTION_ID, [
-        SERVER_STUDENT_1,
-        {id: 3, name: 'Student 3'},
-        SERVER_STUDENT_2,
-      ])
-    );
-    renderDefault();
-    store.dispatch(
-      setSortByFamilyName(true, SECTION_ID, UNIT_DATA.name, 'test')
-    );
+    renderDefault(true, [
+      SERVER_STUDENT_1,
+      {id: 3, name: 'Student 3'},
+      SERVER_STUDENT_2,
+    ]);
 
     const s1 = screen.getByText(STUDENT_1.name + ' ' + STUDENT_1.familyName);
     const s2 = screen.getByText(STUDENT_2.name + ' ' + STUDENT_2.familyName);
@@ -130,19 +117,12 @@ describe('ProgressTableV2', () => {
   });
 
   it('includes non-alphabetic characters in sorting', () => {
-    store.dispatch(
-      setStudentsForCurrentSection(SECTION_ID, [
-        {id: 1, name: 'Student 1', family_name: '2Brown'},
-        {id: 2, name: 'Student 2', family_name: 'Delta'},
-        {id: 3, name: 'Student 3', family_name: '1Adams'},
-        {id: 4, name: 'Student 4', family_name: '!Charles'},
-      ])
-    );
-    renderDefault();
-    store.dispatch(
-      setSortByFamilyName(true, SECTION_ID, UNIT_DATA.name, 'test')
-    );
-
+    renderDefault(true, [
+      {id: 1, name: 'Student 1', family_name: '2Brown'},
+      {id: 2, name: 'Student 2', family_name: 'Delta'},
+      {id: 3, name: 'Student 3', family_name: '1Adams'},
+      {id: 4, name: 'Student 4', family_name: '!Charles'},
+    ]);
     const sortedStudents = screen.getAllByText('Student', {exact: false});
 
     const expectedOrder = [4, 3, 1, 2];
@@ -152,17 +132,11 @@ describe('ProgressTableV2', () => {
   });
 
   it('sorts by name when family names are equivalent', () => {
-    store.dispatch(
-      setStudentsForCurrentSection(SECTION_ID, [
-        {id: 1, name: 'C Student 1', familyName: 'Carlson'},
-        {id: 2, name: 'A Student 2', familyName: 'Carlson'},
-        {id: 3, name: 'B Student 3', familyName: 'Carlson'},
-      ])
-    );
-    renderDefault();
-    store.dispatch(
-      setSortByFamilyName(true, SECTION_ID, UNIT_DATA.name, 'test')
-    );
+    renderDefault(true, [
+      {id: 1, name: 'C Student 1', familyName: 'Carlson'},
+      {id: 2, name: 'A Student 2', familyName: 'Carlson'},
+      {id: 3, name: 'B Student 3', familyName: 'Carlson'},
+    ]);
 
     const sortedStudents = screen.getAllByText('Student', {exact: false});
     const expectedOrder = [2, 3, 1];
@@ -172,7 +146,6 @@ describe('ProgressTableV2', () => {
   });
 
   it('nothing expanded', () => {
-    store = createStore(2, 5);
     renderDefault();
 
     expect(screen.getAllByTitle('Expand')).to.have.lengthOf(4);
@@ -180,9 +153,10 @@ describe('ProgressTableV2', () => {
   });
 
   it('one lesson expanded', () => {
-    store = createStore(2, 5);
     // ID 722 set by createStore
-    renderDefault({expandedLessonIds: [722]});
+    renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
+      expandedLessonIds: [722],
+    });
 
     expect(screen.getAllByTitle('Expand')).to.have.lengthOf(3);
     screen.getByTitle('Unexpand');
@@ -191,7 +165,9 @@ describe('ProgressTableV2', () => {
   it('multiple lessons expanded', () => {
     store = createStore(2, 5);
     // ID 722 & 1558 set by createStore
-    renderDefault({expandedLessonIds: [722, 1558]});
+    renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
+      expandedLessonIds: [722, 1558],
+    });
 
     expect(screen.getAllByTitle('Expand')).to.have.lengthOf(2);
     expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(2);
