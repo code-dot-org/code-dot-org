@@ -16,10 +16,14 @@
   cursor: pointer;
   width: fit-content;
   padding-inline-end: 8px;
+
+  h6 {
+    margin-bottom: 0;
+  }
 }
 
 .iconKeyMoreDetailsLink {
-  margin: 0 0 0.5em 20px;
+  margin: 0 0 0 20px;
 }
 
 .legend {
@@ -30,6 +34,7 @@
   flex-direction: column;
   white-space: nowrap;
   margin-right: 16px;
+  margin-top: 16px;
 }
 
 .legend .headerContainer {
