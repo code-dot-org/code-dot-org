@@ -22,7 +22,6 @@ class ProjectAppTypeArea extends React.Component {
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    navigateFunction: PropTypes.func,
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
@@ -31,6 +30,7 @@ class ProjectAppTypeArea extends React.Component {
     // However, there are plans to update the featured projects public gallery with
     // sections and use the view more links in the future. See https://docs.google.com/document/d/1vU68tzXG72Z80MvM6xYEDwF5hLDf7V097P-0dDfpouc/edit?disco=AAABGLQtJe0.
     labViewMoreString: PropTypes.string,
+    navigateFunction: PropTypes.func,
     // Only show one project type.
     isDetailView: PropTypes.bool,
     // from redux state
