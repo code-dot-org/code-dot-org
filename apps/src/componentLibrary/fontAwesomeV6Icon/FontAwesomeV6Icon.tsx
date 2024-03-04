@@ -38,7 +38,7 @@ export interface FontAwesomeV6IconProps {
  * Can can be used in any component in/out of the scope of Design System.
  */
 const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
-  iconStyle,
+  iconStyle = 'regular',
   iconName,
   className,
   title,
