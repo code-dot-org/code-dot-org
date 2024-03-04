@@ -71,6 +71,7 @@ describe('CurriculumCatalog', () => {
   afterEach(() => {
     restoreRedux();
     resetWindowLocation();
+    localStorage.removeItem('similarRecommenderResults');
     window.history.replaceState = replaceStateOrig;
   });
 
