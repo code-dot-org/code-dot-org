@@ -74,11 +74,13 @@ function StudentSelector({
                 <BodyThreeText className={style.submitStatusText}>{`${
                   student.name
                 } ${student.familyName || ''}`}</BodyThreeText>
-                <StudentProgressStatus
-                  level={levelsWithProgress.find(
-                    userLevel => student.id === userLevel.userId
-                  )}
-                />
+                {!!levelsWithProgress && (
+                  <StudentProgressStatus
+                    level={levelsWithProgress.find(
+                      userLevel => student.id === userLevel.userId
+                    )}
+                  />
+                )}
               </div>
             </div>
           ),
