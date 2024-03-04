@@ -825,6 +825,7 @@ en:
         dance_ai_intro_to_ai_v3: 'Dance Party AI Edition - An Intro to AI '
         PL_CSD_Unit4_Chapter1Project: 'Unit 4: The Design Process Chapter 1 Project'
         PL_CSD_Unit4_Chapter2Project: 'Unit 4: The Design Process Chapter 2 Project'
+        maker_with_microbit_PL_overview: Introduction to CSF Maker with micro:bit Professional Learning
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

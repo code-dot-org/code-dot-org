@@ -38,11 +38,9 @@
     "display_name": "User: Savannah",
     "bubble_choice_description": "Choose this level if you previously styled Savannah's Animal Shelter web page!",
     "thumbnail_url": "https://images.code.org/7b3bdf570503fbf216e055c0355f7af6-animal-shelter.png",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "mMneLdjtXY9T11XthhEmznuUsx8CyjLerMzIqoBy3tOZvDeSwpXjyjIZILON\nxUJnSfihfR6eNcvJQSmBS/rr+Q==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-02-27T18:57:43.058+00:00\",\"changed\":[\"cloned from \\\"CSD L10_Savannah-4_2024\\\"\"],\"cloned_from\":\"CSD L10_Savannah-4_2024\"},{\"changed_at\":\"2024-02-27 18:58:11 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 19:11:53 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"map_reference\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-02-27T18:57:43.058+00:00\",\"changed\":[\"cloned from \\\"CSD L10_Savannah-4_2024\\\"\"],\"cloned_from\":\"CSD L10_Savannah-4_2024\"},{\"changed_at\":\"2024-02-27 18:58:11 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 19:11:53 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"map_reference\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-01 22:07:13 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
