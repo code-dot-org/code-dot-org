@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
@@ -7,35 +6,37 @@ import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 
 const TEST_SCHOOL_DATA = [{value: 'test', text: 'VeryLongNameTestSchool'}];
-export default function SchoolDataInputs({
-  onCountryChange,
-  onSchoolChange,
-  onSchoolNotFoundChange,
-  country = '',
-  schoolType = '',
-  ncesSchoolId = '',
-  schoolName = '',
-  schoolCity = '',
-  schoolState = '',
-  schoolZip = '',
-  schoolLocation = '',
-  useLocationSearch = false,
-  fieldNames = {
-    schoolType: 'user[school_info_attributes][school_type]',
-    country: 'user[school_info_attributes][country]',
-    ncesSchoolId: 'user[school_info_attributes][school_id]',
-    schoolName: 'user[school_info_attributes][school_name]',
-    schoolState: 'user[school_info_attributes][school_state]',
-    schoolZip: 'user[school_info_attributes][school_zip]',
-    googleLocation: 'user[school_info_attributes][full_address]',
-  },
-  showErrors,
-  showRequiredIndicator,
-}) {
+
+export default function SchoolDataInputs() {
+  const [country, setCountry] = useState('');
+  const [zip, setZip] = useState('');
+  const [schoolData, setSchoolData] = useState({
+    ncesSchoolId: '',
+    schoolName: '',
+    schoolCity: '',
+    schoolState: '',
+    schoolLocation: '',
+    displayData: '',
+  });
   let COUNTRY_ITEMS = [];
   for (const item of Object.values(COUNTRIES)) {
     COUNTRY_ITEMS.push({value: item.label, text: item.value});
   }
+
+  const onCountryChange = e => {
+    const newCountry = e.target.value;
+    setCountry(newCountry);
+  };
+
+  const onZipChange = e => {
+    const newZip = e.target.value;
+    setZip(newZip);
+  };
+
+  const onSchoolChange = e => {
+    const newSchool = e.target.value;
+    setSchoolData(newSchool);
+  };
 
   return (
     <div className={style.outerContainer}>
@@ -59,8 +60,8 @@ export default function SchoolDataInputs({
         <input
           type="text"
           placeholder={'i.e. 98104'}
-          onChange={() => {}}
-          value={''}
+          onChange={onZipChange}
+          value={zip}
         />
         <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
           {i18n.selectYourSchool()}
@@ -69,31 +70,11 @@ export default function SchoolDataInputs({
           className={style.dropdown}
           items={TEST_SCHOOL_DATA}
           name="schoolDropdown"
-          selectedValue={'test'}
-          onChange={() => {}}
+          selectedValue={schoolData.displayData}
+          onChange={onSchoolChange}
           size="m"
         />
       </div>
     </div>
   );
 }
-
-SchoolDataInputs.propTypes = {
-  onCountryChange: PropTypes.func.isRequired,
-  onSchoolTypeChange: PropTypes.func.isRequired,
-  onSchoolChange: PropTypes.func.isRequired,
-  onSchoolNotFoundChange: PropTypes.func.isRequired,
-  country: PropTypes.string,
-  schoolType: PropTypes.string,
-  ncesSchoolId: PropTypes.string,
-  schoolName: PropTypes.string,
-  schoolCity: PropTypes.string,
-  schoolState: PropTypes.string,
-  schoolZip: PropTypes.string,
-  schoolLocation: PropTypes.string,
-  useLocationSearch: PropTypes.bool,
-  fieldNames: PropTypes.object,
-  showErrors: PropTypes.bool,
-  showRequiredIndicator: PropTypes.bool,
-  styles: PropTypes.object,
-};
