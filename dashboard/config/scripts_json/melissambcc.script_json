@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-28 20:47:17 UTC",
+    "serialized_at": "2024-03-01 22:26:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -126,6 +126,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Course_C"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -353,7 +356,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Outro to Course_C_CSFmaker"
+          "CSF_maker_microbit_PL_end_naviagtion_C"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "",
@@ -361,7 +364,7 @@
         "activity_section.key": "ba9e17a4-bcea-4f3a-ab9e-c4da8cbc561d"
       },
       "level_keys": [
-        "Outro to Course_C_CSFmaker"
+        "CSF_maker_microbit_PL_end_naviagtion_C"
       ]
     }
   ],
@@ -476,9 +479,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Outro to Course_C_CSFmaker",
+        "level.key": "CSF_maker_microbit_PL_end_naviagtion_C",
         "script_level.level_keys": [
-          "Outro to Course_C_CSFmaker"
+          "CSF_maker_microbit_PL_end_naviagtion_C"
         ],
         "lesson.key": "Events",
         "lesson_group.key": "",

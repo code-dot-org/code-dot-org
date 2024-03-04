@@ -13952,7 +13952,7 @@ en:
               display_name: 'Chapter 1: Creating Webpages'
             lessonGroup-3:
               display_name: 'Chapter 2: Multi-page Websites'
-          title: Unit 2 - Web Development ('23-'24)
+          title: Web Development ('23-'24)
           description: |-
             In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
 
@@ -14596,6 +14596,8 @@ en:
           student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
+          lessons: {}
+          name: csp9-2024
         csp10-2024:
           lesson_groups:
             csp_unit10_2020:
@@ -15085,6 +15087,12 @@ en:
         self-paced-pl-microbit-2024-6:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-microbit-2024-6
+          title: 'Physical Computing with micro:bit '
+          description_audience: ''
+          description_short: ''
+          description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes"
+          student_description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes"
         pilot-coursee-maker-2024:
           lesson_groups:
             lessonGroup-2:
@@ -15133,18 +15141,62 @@ en:
         k5-maker-pilot-2024-1:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-1
+          title: Intro to Code.org
+          description_audience: ''
+          description_short: ''
+          description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
         k5-maker-pilot-2024-2:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-2
+          title: Course C (2nd-3rd Grade)
+          description_audience: ''
+          description_short: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n"
         k5-maker-pilot-2024-3:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-3
+          title: Course D (3rd-4th Grade)
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+
+            #### **You will:**
+            * #### Code using loops and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 40 minutes
+          student_description: |-
+            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+
+            #### **You will:**
+            * #### Code using loops and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 40 minutes
         k5-maker-pilot-2024-4:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-4
+          title: Course E (4th-5th) Grade
+          description_audience: ''
+          description_short: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes"
         k5-maker-pilot-2024-5:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-5
+          title: Course F (5th-6th Grade)
+          description_audience: ''
+          description_short: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes"
         k5-maker-pilot-2024-6:
           lessons: {}
           lesson_groups: {}
@@ -15159,4 +15211,3 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-...

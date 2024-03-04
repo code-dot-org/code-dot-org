@@ -25,7 +25,7 @@ export function getPointerBlockImageUrl(
   let imageSourceBlock: ExtendedBlockSvg | null = null;
   const mainWorkspace = Blockly.getMainWorkspace();
   if (imageSourceId !== undefined) {
-    imageSourceBlock = mainWorkspace.getBlockById(
+    imageSourceBlock = mainWorkspace?.getBlockById(
       imageSourceId
     ) as ExtendedBlockSvg;
   }
@@ -38,7 +38,12 @@ export function getPointerBlockImageUrl(
       // If this block has itself as a root and is in a flyout workspace,
       // it is a in a mini toolbox. A block can't be moved from one flyout to
       // another, so if it's in a flyout, it is in its original flyout.
-      if (blockWorkspace && blockWorkspace.isFlyout && block.imageSourceId) {
+      if (
+        mainWorkspace &&
+        blockWorkspace &&
+        blockWorkspace.isFlyout &&
+        block.imageSourceId
+      ) {
         imageSourceBlock = mainWorkspace.getBlockById(
           block.imageSourceId
         ) as ExtendedBlockSvg;
@@ -95,8 +100,8 @@ function getImageUrlFromImageSource(
     // picker dropdown).
     // imageElement is a private property on FieldDropdown.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const imageElement = (sourceBlock.inputList[0].fieldRow[0] as any)
-      .imageElement as SVGImageElement;
+    const imageElement = (sourceBlock.getField('ANIMATION') as any)
+      ?.imageElement as SVGImageElement;
     return imageElement?.getAttribute('xlink:href') || '';
   } else {
     return '';

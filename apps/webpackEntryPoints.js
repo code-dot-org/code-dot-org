@@ -87,6 +87,7 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
+  'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -200,8 +201,6 @@ const PEGASUS_ENTRIES = {
 
 // prettier-ignore
 const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
-  'code.org/public/learn/local': './src/sites/code.org/pages/public/learn/local.js',
-
   'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
   'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
