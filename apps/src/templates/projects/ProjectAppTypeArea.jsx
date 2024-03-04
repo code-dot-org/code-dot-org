@@ -17,23 +17,24 @@ class ProjectAppTypeArea extends React.Component {
   static propTypes = {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
-    labViewMoreString: PropTypes.string,
     // Ability to hide link for Applab and Gamelab
     hideViewMoreLink: PropTypes.bool,
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     navigateFunction: PropTypes.func,
-
-    // Only show one project type.
-    isDetailView: PropTypes.bool,
-
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
+    // We are temporarily not using the following props since we are not using the 'View more' link
+    // in the updated featured projects public gallery.
+    // However, there are plans to update the featured projects public gallery with
+    // sections and use the view more links in the future. See https://docs.google.com/document/d/1vU68tzXG72Z80MvM6xYEDwF5hLDf7V097P-0dDfpouc/edit?disco=AAABGLQtJe0.
+    labViewMoreString: PropTypes.string,
+    // Only show one project type.
+    isDetailView: PropTypes.bool,
     // from redux state
     hasOlderProjects: PropTypes.bool,
-
     // from redux dispatch
     appendProjects: PropTypes.func,
     setHasOlderProjects: PropTypes.func,
