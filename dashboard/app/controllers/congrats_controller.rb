@@ -14,6 +14,49 @@ class CongratsController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
+    @course_name = 'hourofcode' if @course_name.blank?
+    curriculum = CurriculumHelper.find_matching_unit_or_unit_group(@course_name)
+
+    if curriculum.is_a?(UnitGroup)
+      @curriculum_url = course_path(curriculum)
+      units = curriculum.units_for_user(current_user)
+      completed_units = UserScript.where(user: current_user, script: units).where.not(completed_at: nil).map(&:script)
+      @certificate_data =
+        if completed_units.length == units.length
+          [{
+            courseName: @course_name,
+            coursePath: course_path(curriculum),
+          }]
+        else
+          completed_units.map do |unit|
+            {
+              courseName: unit.name,
+              coursePath: script_path(unit),
+            }
+          end
+        end
+    elsif curriculum.nil?
+      # This occurs when the user completes a third party tutorial
+      @curriculum_url = script_path('hourofcode')
+      @certificate_data = [{
+        courseName: @course_name,
+        coursePath: @curriculum_url,
+      }]
+    else
+      @curriculum_url = script_path(curriculum)
+      # The order of this conditional is important. During HoC, we generally want to avoid
+      # hitting the database, so we check if the unit is an HoC unit first.
+      @certificate_data =
+        if curriculum&.hoc? || UserScript.where(user: current_user, script: curriculum).where.not(completed_at: nil).exists?
+          [{
+            courseName: @course_name,
+            coursePath: @curriculum_url,
+          }]
+        else
+          []
+        end
+    end
+
     course_type = CertificateImage.course_type(@course_name)
     @is_hoc_tutorial = course_type == 'hoc'
     @is_pl_course = course_type == 'pl'
