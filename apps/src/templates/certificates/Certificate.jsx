@@ -113,6 +113,7 @@ function Certificate(props) {
     under13,
     children,
     isHocTutorial,
+    userType,
   } = props;
 
   const imgSrc = getCertificateImagePath();
@@ -215,6 +216,7 @@ function Certificate(props) {
             print={print}
             under13={under13}
             isPlCourse={false}
+            userType={userType}
           />
         </div>
       </div>
@@ -232,6 +234,7 @@ Certificate.propTypes = {
   under13: PropTypes.bool,
   children: PropTypes.node,
   isHocTutorial: PropTypes.bool,
+  userType: PropTypes.string,
 };
 
 export default connect(state => ({

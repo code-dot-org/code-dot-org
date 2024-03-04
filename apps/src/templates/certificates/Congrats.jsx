@@ -364,6 +364,7 @@ export default function Congrats(props) {
           under13={under13}
           isHocTutorial={isHocTutorial}
           isPlCourse={isPlCourse}
+          userType={userType}
         >
           {renderExtraCertificateLinks(language, tutorial)}
         </Certificate>
