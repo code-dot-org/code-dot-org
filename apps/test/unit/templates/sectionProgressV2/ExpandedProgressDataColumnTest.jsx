@@ -10,7 +10,6 @@ import sectionProgress, {
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import teacherSections, {
   selectSection,
-  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
@@ -34,10 +33,6 @@ const STUDENTS = [STUDENT_1, STUDENT_2];
 const NUM_LEVELS = 4;
 const LESSON = fakeLessonWithLevels({}, NUM_LEVELS);
 const LEVEL_PROGRESS = fakeStudentLevelProgress(LESSON.levels, STUDENTS);
-const SECTION = {
-  name: 'My Section',
-  id: 1,
-};
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
