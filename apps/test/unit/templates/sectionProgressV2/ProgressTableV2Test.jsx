@@ -144,7 +144,7 @@ describe('ProgressTableV2', () => {
       {id: 3, name: 'Student 3', family_name: '1Adams'},
       {id: 4, name: 'Student 4', family_name: '!Charles'},
     ]);
-    const sortedStudents = screen.getAllByText('Student', {exact: false});
+    const sortedStudents = screen.getAllByText(/Student [1-4]/);
 
     const expectedOrder = [4, 3, 1, 2];
     expectedOrder.forEach((id, index) => {
@@ -159,7 +159,7 @@ describe('ProgressTableV2', () => {
       {id: 3, name: 'B Student 3', familyName: 'Carlson'},
     ]);
 
-    const sortedStudents = screen.getAllByText('Student', {exact: false});
+    const sortedStudents = screen.getAllByText(/Student [1-3]/);
     const expectedOrder = [2, 3, 1];
     expectedOrder.forEach((id, index) => {
       expect(sortedStudents[index].textContent).to.contain(`Student ${id}`);
