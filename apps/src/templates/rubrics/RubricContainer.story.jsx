@@ -2,10 +2,21 @@ import React from 'react';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import RubricContainer from './RubricContainer';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
 
 export default {
   component: RubricContainer,
+};
+
+const createRubricContainerStore = () => {
+  registerReducers({
+    teacherPanel,
+    teacherSections,
+  });
+  const store = createStoreWithReducers();
+  return store;
 };
 
 const rubricLevelName = 'free_play_level';
@@ -87,7 +98,7 @@ const defaultStudentLevelInfo = {
 };
 
 const Template = args => (
-  <Provider store={getStore()}>
+  <Provider store={createRubricContainerStore()}>
     <RubricContainer
       rubric={defaultRubric}
       teacherHasEnabledAi={false}
