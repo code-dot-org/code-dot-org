@@ -57,6 +57,11 @@ cron:
 - dashboard.contained_level_answers
 - dashboard.contained_levels
 - dashboard.level_sources_multi_types
+- dashboard.lti_integrations
+- dashboard.lti_deployments
+- dashbaord.lti_courses
+- dashboard.lti_sections
+- dashboard.lti_user_identities
 - dashboard.paired_user_levels
 - dashboard.parental_permission_requests:
     remove_column: [parent_email]
