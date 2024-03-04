@@ -32,17 +32,6 @@ export default function ProgressIcon({itemType}) {
     />
   );
 
-  const viewedBox = () => (
-    <ProgressBox
-      started={false}
-      incomplete={20}
-      imperfect={0}
-      perfect={0}
-      lessonIsAllAssessment={false}
-      viewed={true}
-    />
-  );
-
   return (
     <div data-testid="progress-icon">
       {itemType?.length && (
