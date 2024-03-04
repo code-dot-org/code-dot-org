@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-29 20:39:10 UTC",
+    "serialized_at": "2024-03-01 21:33:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -99,6 +99,7 @@
       "key": "ed41fe67-5492-4f18-ac53-c659b0700432",
       "position": 1,
       "properties": {
+        "progression_name": "Getting Started "
       },
       "seeding_key": {
         "activity_section.key": "ed41fe67-5492-4f18-ac53-c659b0700432",
@@ -148,7 +149,8 @@
       "properties": {
         "level_keys": [
           "PLGuide_L1_Opening1MB"
-        ]
+        ],
+        "progression": "Getting Started "
       },
       "bonus": false,
       "seeding_key": {
@@ -172,7 +174,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod1-welcome-vid_202"
-        ]
+        ],
+        "progression": "Getting Started "
       },
       "bonus": false,
       "seeding_key": {
@@ -196,7 +199,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-mod1-CSisFoundational_2022MB"
-        ]
+        ],
+        "progression": "Getting Started "
       },
       "bonus": false,
       "seeding_key": {
@@ -218,14 +222,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "How this curriculum works"
-        ]
+        "progression": "Getting Started "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "How this curriculum works"
+          "csf_maker_microbit_pl_introVideo"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
@@ -233,7 +235,7 @@
         "activity_section.key": "ed41fe67-5492-4f18-ac53-c659b0700432"
       },
       "level_keys": [
-        "How this curriculum works"
+        "csf_maker_microbit_pl_introVideo"
       ]
     },
     {
@@ -242,30 +244,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csf_maker_PL_course pathways"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-microbit-2024-1",
-        "activity_section.key": "ed41fe67-5492-4f18-ac53-c659b0700432"
-      },
-      "level_keys": [
-        "csf_maker_PL_course pathways"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
         "level_keys": [
           "CSC-SelfPaced-lessonactivities_2023MB"
-        ]
+        ],
+        "progression": "Getting Started "
       },
       "bonus": false,
       "seeding_key": {
@@ -282,19 +264,20 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSC-SelfPaced-introVideo"
-        ]
+          "csf_maker_PL_course pathways"
+        ],
+        "progression": "Getting Started "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSC-SelfPaced-introVideo"
+          "csf_maker_PL_course pathways"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
@@ -302,7 +285,32 @@
         "activity_section.key": "ed41fe67-5492-4f18-ac53-c659b0700432"
       },
       "level_keys": [
-        "CSC-SelfPaced-introVideo"
+        "csf_maker_PL_course pathways"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "How this curriculum works"
+        ],
+        "progression": "Getting Started "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "How this curriculum works"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ed41fe67-5492-4f18-ac53-c659b0700432"
+      },
+      "level_keys": [
+        "How this curriculum works"
       ]
     },
     {
@@ -654,6 +662,28 @@
       "level_keys": [
         "MBSP-VPL-21-mod2-JoinTheTeacherCommunity_2022"
       ]
+    },
+    {
+      "chapter": 22,
+      "position": 15,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Navigating Support"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_certificate"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "cff0f4f8-d58d-46b2-a32f-61b5b2fb4ae5"
+      },
+      "level_keys": [
+        "CSF_maker_microbit_PL_end_naviagtion_certificate"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -695,21 +725,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "How this curriculum works",
+        "level.key": "csf_maker_microbit_pl_introVideo",
         "script_level.level_keys": [
-          "How this curriculum works"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-microbit-2024-1",
-        "activity_section.key": "ed41fe67-5492-4f18-ac53-c659b0700432"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csf_maker_PL_course pathways",
-        "script_level.level_keys": [
-          "csf_maker_PL_course pathways"
+          "csf_maker_microbit_pl_introVideo"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
@@ -731,9 +749,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSC-SelfPaced-introVideo",
+        "level.key": "csf_maker_PL_course pathways",
         "script_level.level_keys": [
-          "CSC-SelfPaced-introVideo"
+          "csf_maker_PL_course pathways"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "ed41fe67-5492-4f18-ac53-c659b0700432"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "How this curriculum works",
+        "script_level.level_keys": [
+          "How this curriculum works"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
@@ -902,6 +932,18 @@
         "level.key": "MBSP-VPL-21-mod2-JoinTheTeacherCommunity_2022",
         "script_level.level_keys": [
           "MBSP-VPL-21-mod2-JoinTheTeacherCommunity_2022"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-microbit-2024-1",
+        "activity_section.key": "cff0f4f8-d58d-46b2-a32f-61b5b2fb4ae5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSF_maker_microbit_PL_end_naviagtion_certificate",
+        "script_level.level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_certificate"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
