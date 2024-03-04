@@ -147,6 +147,9 @@ module ProjectsList
     def fetch_featured_published_projects
       featured_published_projects = {}
       PUBLISHED_PROJECT_TYPE_GROUPS.each do |project_group, project_types|
+        if project_group == :library
+          next
+        end
         featured_published_projects[project_group] = []
         project_types.each do |project_type|
           featured_published_projects[project_group] <<

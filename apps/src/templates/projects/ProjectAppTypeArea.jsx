@@ -169,7 +169,6 @@ class ProjectAppTypeArea extends React.Component {
   };
 
   render() {
-    console.log('fetchOlderProjects', this.fetchOlderProjects());
     return (
       <div
         style={styles.grid}

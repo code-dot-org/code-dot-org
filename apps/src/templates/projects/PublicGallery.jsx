@@ -44,9 +44,6 @@ class PublicGallery extends Component {
   mapProjectData(projectLists) {
     let allFeaturedProjects = [];
     for (const projectListName in projectLists) {
-      if (projectListName === 'library') {
-        continue;
-      }
       projectLists[projectListName].forEach(projectData => {
         allFeaturedProjects.push({
           projectData: {
