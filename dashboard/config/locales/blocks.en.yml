@@ -1224,6 +1224,33 @@ en:
         text: "[testing] represent {NUM} new {ANIMATION_NAME} sprites"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}say{TEXT1}"
+      GameDev_collide:
+        text: colliding {SPRITE} {INTERACTION} {TARGET}
+        options:
+          INTERACTION:
+            '"bounceOff"': bounces off
+            '"bounce"': bumps
+            '"collide"': is blocked by
+            '"displace"': pushes
+      GameDev_getVelocity:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"velocityX"': horizontal velocity
+            '"velocityY"': vertical velocity
+      GameDev_gravity:
+        text: "{SPRITE} falls with {VELOCITY} gravity"
+        options:
+          SIZE:
+            "-0.25": low
+            "-0.5": medium
+            "-1": high
+      GameDev_setVelocity:
+        text: set {SPRITE} {PROPERTY} to {VALUE}
+        options:
+          PROPERTY:
+            '"velocityX"': horizontal velocity
+            '"velocityY"': vertical speed
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       gamelab_addTarget:
@@ -1895,12 +1922,13 @@ en:
       gamelab_yLocationOf:
         text: y coordinate of {SPRITE}
       KatiesBlocks_changeVelocity:
-        text: change {SPRITE} {PROPERTY} by {VAL}
+        text: "{SPRITE} jump {PROPERTY} and {PROPERTY}"
         options:
           PROPERTY:
-            '"velocityX"': velocityX
-            '"velocityY"': velocityY
-            '"rotationSpeed"': rotationSpeed
+            '"velocityX"': short
+            '"velocityY"': long
+      KatiesBlocks_collide:
+        text: "{SPRITE} blocks {TARGET}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} glide to {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1914,6 +1942,8 @@ en:
             '"gas"': gas
       KatiesBlocks_katieCollide:
         text: "{SPRITE} collides {TARGET}"
+      KatiesBlocks_katiePushes:
+        text: "{SPRITE} bumps {TARGET}"
       KatiesBlocks_makeNumSpritesNear:
         text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
       KatiesBlocks_setVelocity:
