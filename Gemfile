@@ -354,3 +354,6 @@ gem 'crowdin-api', '~> 1.8.1'
 gem "delayed_job_active_record", "~> 4.1"
 
 gem 'rack-cors', '~> 2.0.1'
+
+# A gem for writing different versions of Common Cartridges.
+gem 'multi_version_common_cartridge', github: 'vhl/multi_version_common_cartridge', tag: '1.0.2'

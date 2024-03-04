@@ -94,6 +94,10 @@ class UnitGroup < ApplicationRecord
     I18n.t("data.course.name.#{name}.version_title", default: version_year)
   end
 
+  def localized_description_short
+    I18n.t('description_short', scope: [:data, :course, :name, name], default: '')
+  end
+
   # Any course with a plc_course is considered stable.
   # All other courses must specify a published_state.
   def stable?
@@ -307,7 +311,7 @@ class UnitGroup < ApplicationRecord
         instructor_audience: instructor_audience,
         participant_audience: participant_audience,
         pilot_experiment: pilot_experiment,
-        description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
+        description_short: localized_description_short,
         description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
         description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
         version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
@@ -351,7 +355,7 @@ class UnitGroup < ApplicationRecord
     {
       name: name,
       title: I18n.t("data.course.name.#{name}.title", default: ''),
-      description: I18n.t("data.course.name.#{name}.description_short", default: ''),
+      description: localized_description_short,
       link: link,
     }
   end
