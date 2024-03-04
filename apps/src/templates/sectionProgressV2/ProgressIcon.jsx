@@ -32,6 +32,20 @@ export default function ProgressIcon({itemType}) {
     />
   );
 
+  /*   Note that we decided not to have a viewedBox icon in this iteration
+  of the icon key.  However, this may be part of a future iteration
+  of the IconKey. If so, this is the approach we took to rendering it
+  const viewedBox = () => (
+    <ProgressBox
+      started={false}
+      incomplete={20}
+      imperfect={0}
+      perfect={0}
+      lessonIsAllAssessment={false}
+      viewed={true}
+    />
+  ); */
+
   return (
     <div data-testid="progress-icon">
       {itemType?.length && (
