@@ -3,7 +3,6 @@ import color from '@cdo/apps/util/color';
 
 export const ITEM_TYPE = Object.freeze({
   NOT_STARTED: 1,
-  VIEWED: 2,
   NEEDS_FEEDBACK: 3,
   FEEDBACK_GIVEN: 4,
   ASSESSMENT_LEVEL: ['star', color.neutral_dark],

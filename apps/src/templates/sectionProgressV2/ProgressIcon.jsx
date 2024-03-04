@@ -55,7 +55,6 @@ export default function ProgressIcon({itemType}) {
         />
       )}
       {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}
-      {itemType === ITEM_TYPE.VIEWED && viewedBox()}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
     </div>
