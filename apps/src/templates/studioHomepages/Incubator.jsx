@@ -45,11 +45,11 @@ class Incubator extends Component {
             buttons={[
               {
                 url: '/s/music-intro-2024/reset',
-                text: 'Get started',
+                text: 'Get Started: learn how to use Project Beats in a step by step intro',
               },
               {
                 url: '/projectbeats',
-                text: 'Skip to project',
+                text: 'Make Music: skip direct to a Project Beats project',
                 color: Button.ButtonColor.neutralDark,
               },
             ]}
