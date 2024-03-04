@@ -4,6 +4,7 @@ interface TabPanelProps {
   content: React.ReactNode;
   isActive: boolean;
   id: string;
+  /* The ID of the button element that controls this panel's visibility. */
   labelledBy: string;
 }
 
