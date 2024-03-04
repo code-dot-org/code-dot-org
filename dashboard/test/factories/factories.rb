@@ -985,9 +985,14 @@ FactoryBot.define do
     end
 
     factory :hoc_script do
+      is_course {true}
+      sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
+      sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
       after(:create) do |hoc_script|
         hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
+        course_offering = CourseOffering.add_course_offering(hoc_script)
+        course_offering.update!(category: 'hoc')
       end
     end
 

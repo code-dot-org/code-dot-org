@@ -14,6 +14,8 @@ import DCDO from '@cdo/apps/dcdo';
 const queryString = require('query-string');
 
 const experiments = module.exports;
+// Needed to support TypeScript usage.
+export default experiments;
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
