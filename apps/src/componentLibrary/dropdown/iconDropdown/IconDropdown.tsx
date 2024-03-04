@@ -45,19 +45,6 @@ export interface IconDropdownProps {
   onChange: (option: IconDropdownOption) => void;
 }
 
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/DropdownMenuTest.jsx)
- * * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Icon Dropdown Component.
- * Used to render dropdowns with a list of options with icons.
- */
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   labelText,
@@ -132,6 +119,19 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   );
 };
 
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/IconDropdownTest.jsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Icon Dropdown Component.
+ * Used to render dropdowns with a list of options with icons.
+ */
 const WrappedIconDropdown = (props: IconDropdownProps) => (
   <DropdownProviderWrapper>
     <IconDropdown {...props} />

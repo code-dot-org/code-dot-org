@@ -6,7 +6,7 @@ import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
 
 export default {
   title: 'DesignSystem/Dropdown/Icon Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
-  component: IconDropdown,
+  component: IconDropdown.type,
 } as Meta;
 
 //
