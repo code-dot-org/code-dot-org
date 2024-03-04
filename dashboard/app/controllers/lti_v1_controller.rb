@@ -123,6 +123,8 @@ class LtiV1Controller < ApplicationController
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
+      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
+
       if deployment.nil?
         deployment = Services::Lti.create_lti_deployment(integration.id, deployment_id)
       end
@@ -134,9 +136,22 @@ class LtiV1Controller < ApplicationController
         nrps_url: nrps_url,
       }
 
+      destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+
       if user
         sign_in user
-        redirect_to "#{target_link_uri}?#{redirect_params.to_query}"
+
+        # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
+        if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
+          @form_data = {
+            email: Services::Lti.get_claim(decoded_jwt, :email),
+            destination_url: destination_url
+          }
+
+          render 'lti/v1/upgrade_account' and return
+        end
+
+        redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
@@ -310,6 +325,20 @@ class LtiV1Controller < ApplicationController
     end
 
     render lti_v1_integrations_path
+  end
+
+  # POST /lti/v1/upgrade_account
+  def confirm_upgrade_account
+    return unauthorized_status unless current_user
+
+    begin
+      params.require([:email])
+    rescue
+      render(status: :bad_request, json: {error: I18n.t('lti.upgrade_to_teacher_account.error.missing_email')}) and return
+    end
+
+    current_user.upgrade_to_teacher(params[:email])
+    render status: :ok, json: {}
   end
 
   private

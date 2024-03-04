@@ -18,6 +18,9 @@ class Policies::LtiTest < ActiveSupport::TestCase
       sub: @ids[2],
       aud: @ids[1],
       iss: @ids[0],
+      Policies::Lti::LTI_CUSTOM_CLAIMS => {
+        email: 'test@code.org'
+      }
     }
 
     @user = create :user
@@ -29,12 +32,12 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
   test 'get_account_type should return a teacher if id_token has TEACHER_ROLES' do
     @id_token[@roles_key] = @teacher_roles
-    assert_equal Policies::Lti.get_account_type(@id_token), User::TYPE_TEACHER
+    assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_TEACHER
   end
 
   test 'get_account_type should return a student if id_token does not have TEACHER_ROLES' do
     @id_token[@roles_key] = ['not-a-teacher-role']
-    assert_equal Policies::Lti.get_account_type(@id_token), User::TYPE_STUDENT
+    assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_STUDENT
   end
 
   test 'generate_auth_id should create authentication_id string' do

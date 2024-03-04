@@ -265,6 +265,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       exp: 7.days.from_now.to_i,
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
+      sub: 'LTI-AUTH',
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
       'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
@@ -273,6 +274,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         full_name: 'Han Solo',
         given_name: 'Han',
         family_name: 'Solo',
+        email: 'test@code.org'
       },
       roles_key => teacher_roles,
       nrps_url_key => {
@@ -449,6 +451,39 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal @integration.lti_deployments.count, 1
   end
 
+  test 'auth - should render the upgrade account page if the LTI has the same user as an instructor' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+
+    user = create :student
+
+    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao.save!
+
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    assert deployment
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_response :ok
+    assert_template 'lti/v1/upgrade_account'
+  end
+
+  test 'auth - should NOT upgrade if student and LTI informs that this is a learner' do
+    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
+    jwt = create_jwt_and_stub(payload)
+
+    user = create :student
+
+    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao.save!
+
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    assert deployment
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_response :redirect
+  end
+
   test 'sync - should redirect students to homepage without syncing' do
     user = create :student
     sign_in user
@@ -587,5 +622,29 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     bad_params = {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
     get '/lti/v1/sync_course', params: bad_params
     assert_response :bad_request
+  end
+
+  test 'upgrade_account - throws unauthorized if user is not logged in' do
+    post '/lti/v1/upgrade_account'
+
+    assert_response :unauthorized
+  end
+
+  test 'upgrade_account - throws bad request if missing email' do
+    user = create :student
+    sign_in user
+
+    post '/lti/v1/upgrade_account'
+    assert_response :bad_request
+  end
+
+  test 'upgrade_account - upgrades current user to teacher' do
+    user = create :student
+    sign_in user
+    post '/lti/v1/upgrade_account', params: {email: 'test-teacher@code.org'}
+
+    assert_response :ok
+    user.reload
+    assert_equal User::TYPE_TEACHER, user.user_type
   end
 end

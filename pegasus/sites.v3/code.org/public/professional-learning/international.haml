@@ -64,3 +64,5 @@ set_dir: true
         %p
           %strong
             =hoc_s("intl_pl_page.contact.cta", markdown: :inline, locals: {email_url: "mailto:international@code.org"})
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::INTL_PL_PAGE_VISIT_EVENT
