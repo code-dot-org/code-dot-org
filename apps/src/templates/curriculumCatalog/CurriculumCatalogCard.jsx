@@ -144,7 +144,7 @@ CurriculumCatalogCard.propTypes = {
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
-  getRecommendedSimilarCurriculum: PropTypes.func,
+  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
 };
 
@@ -399,7 +399,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
-  getRecommendedSimilarCurriculum: PropTypes.func,
+  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
 };
 
 export default connect(
