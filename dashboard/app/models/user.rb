@@ -146,6 +146,8 @@ class User < ApplicationRecord
     ai_rubrics_disabled
     sort_by_family_name
     show_progress_table_v2
+    progress_table_v2_closed_beta
+    lti_roster_sync_enabled
   )
 
   attr_accessor(
@@ -212,6 +214,7 @@ class User < ApplicationRecord
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
+  has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
@@ -283,7 +286,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state, on: :create
+  validate :validate_us_state, if: -> {us_state.present?}
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -533,7 +536,7 @@ class User < ApplicationRecord
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
+  validates_format_of :username, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
   validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
@@ -1496,6 +1499,11 @@ class User < ApplicationRecord
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
+  def can_view_student_ai_chat_messages?
+    sections.any?(&:assigned_csa?) &&
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
   # Students
   def has_ai_tutor_access?
     !DCDO.get('ai-tutor-disabled', false) && (
@@ -1876,6 +1884,34 @@ class User < ApplicationRecord
     user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
 
     user_course_data + user_script_data
+  end
+
+  def pl_units_started
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self)
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+    pl_scripts = pl_user_scripts.map(&:script)
+
+    user_levels = UserLevel.where(user: self, script: pl_scripts)
+    return [] if user_levels.empty?
+    user_levels_by_script = user_levels.group_by(&:script_id)
+    percent_completed_by_script = {}
+    pl_scripts.each do |pl_script|
+      levels_completed = (user_levels_by_script[pl_script.id] || []).count(&:passing?)
+      total_levels = pl_script.levels.count
+      next if total_levels == 0
+      percent_completed_by_script[pl_script.id] = ((levels_completed.to_f / total_levels) * 100).round
+    end
+
+    pl_scripts.map do |script|
+      percent_completed = percent_completed_by_script[script.id] || 0
+      {
+        name: script.name,
+        title: script.title_for_display,
+        percent_completed: percent_completed,
+        finish_url: percent_completed == 100 ? script.finish_url : nil,
+        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name
+      }
+    end
   end
 
   # Return a collection of courses and scripts for the user.

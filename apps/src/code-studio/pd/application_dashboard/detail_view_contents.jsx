@@ -491,7 +491,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    let statusesToHide = [];
+    let statusesToHide = ['enrolled'];
     // Hide "Awaiting Admin Approval" status if it is not currently "awaiting_admin_approval"
     if (this.state.status !== 'awaiting_admin_approval') {
       statusesToHide.push('awaiting_admin_approval');

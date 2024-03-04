@@ -2,6 +2,7 @@
 - require 'cpa'
 - require 'policies/child_account'
 - require 'policies/lti'
+- require 'queries/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
@@ -44,7 +45,7 @@
   - if resource.username.present?
     .field
       = f.label :username, class: "label-bold"
-      = f.object.username
+      = f.text_field :username, autofocus: false, maxlength: 20, minlength: 5
   - if f.object.can_edit_password? && f.object.encrypted_password.present?
     %div
       = f.label :password, maxlength: 255, class: "label-bold"
@@ -265,8 +266,7 @@
       authenticationOptions: current_user.authentication_options.map(&:summarize),
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
-      dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count,
+      dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
     }.to_json
   }

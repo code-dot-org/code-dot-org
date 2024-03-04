@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
 <h1>코드 브레이크 선택</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">주간 활동 &amp; 과거 에피스드</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">주간 활동 &amp; 과거 에피스드</h1></div>
 <h2>에피소드 1 - 힐 하퍼와 함께 하는 알고리즘</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">3/25 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">3/25 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>유튜브로 보기 </a></i> I <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">페이스북으로 보기</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 알고리즘</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 알고리즘</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 2 - 마크 큐반 및 린제이 스콧과 함께 하는 프로토타입</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">4/1 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">4/1 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>유튜브로 보기</i></a> I <a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>페이스북으로 보기</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 프로토타입</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 프로토타입</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 3: 애쉬튼 커쳐와 미아 길 엡손 암호화</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">4/8 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">4/8 에피소드 시청</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>유튜브 보기</i></a> I <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i>페이스북 보기</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 암호화</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 암호화</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -116,12 +116,12 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 4 - 마이크 크리거와 앨리스 켈러 디지털 정보</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">4/15 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">4/15 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
 ">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 디지털 정보</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 디지털 정보</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -140,11 +140,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 5 - 빌 게이츠 시뮬레이션과 데이터</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">4/22 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">4/22 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 시뮬레이션과 데이터</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 시뮬레이션과 데이터</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -163,11 +163,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 6: 키건 마이클 키와 빈트 서프 인터넷</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">4/29 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">4/29 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 인터넷</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 인터넷</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -186,11 +186,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 7 - 살만 칸과 플로 반 조건문</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">5/6 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">5/6 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 조건문</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 조건문</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -207,11 +207,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 8 - 야라 샤히디와 퍼지 코스로샤히와 함께 하는 변수</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">5/13 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">5/13 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 변수</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 변수</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -228,11 +228,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 9 - 맥클모어와 스콧 포스톨 이벤트</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">5/20 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">5/20 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 이벤트</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 이벤트</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -249,11 +249,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 10 - 캣 그레이엄과 케이트 파크 인공지능</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">5/27 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">5/27 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 인공지능 (AI)</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 인공지능 (AI)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -270,11 +270,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 11 - 수잔 보이치키 및 차이나 앤 맥클레인과 함께 하는 추상</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">6/3 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">6/3 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 추상</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 추상</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -291,11 +291,11 @@ social:
 <div style="clear: both;"></div>
 <h2>에피소드 12.0: 알로에 블라크, 브렛 테일러, 파울라 메이아와 함께 하는 하드웨어</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">6/10 에피소드 시청</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">6/10 에피소드 시청</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>유튜브로 보기</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">페이스북으로 보기</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">주간 활동 - 하드웨어</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">주간 활동 - 하드웨어</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">저학년:</span> 로그인 필요 없음</p>
@@ -315,3 +315,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

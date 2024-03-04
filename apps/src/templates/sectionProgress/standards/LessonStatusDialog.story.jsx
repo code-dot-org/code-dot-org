@@ -12,7 +12,7 @@ export default {
   component: LessonStatusDialog,
 };
 
-export const overview = () => {
+export const Overview = () => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,

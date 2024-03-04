@@ -104,23 +104,23 @@ Perkara yang anda akan perlukan
 * Nama dan e-mel hubungan utama yang mewakili aktiviti yang dihantar
 * Nama aktiviti (tidak boleh memasukkan "Jam Kod" dalam namanya)
 * Pautan URL kepada aktiviti tersebut
-* Adakah aktiviti ini termasuk AI: Ya atau Tidak
-* Huraian aktiviti (bilangan aksara maksimum: 400) 
-    * Sila sertakan dalam huraian sama ada ia terutamanya dipimpin pelajar atau dikendalikan oleh guru. Selain itu, sebilangan sekolah berminat untuk mengetahui sama ada aktiviti Jam Kod menekankan Teras Umum atau Standard Sains Generasi Akan Datang. Jika aktivitinya memenuhi standard khusus, pertimbangkan untuk memasukkan maklumat ini.
-* Tahap gred yang disarankan untuk pengguna yang dimaksudkan. Anda boleh merujuk kepada \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) untuk konsep sains komputer yang sesuai mengikut gred. Contoh tahap gred termasuk: 
-    * Tadika - Gred 1 (umur 4-6)
-    * Gred 2-5 (umur 7-10)
-    * Gred 6-8 (umur 11-13)
-    * Gred 9+ (umur 14+)
-* Senarai bahasa pengaturcaraan yang diajar oleh aktiviti anda. Iaitu C/C++, Java, JavaScript dan sebagainya. atau bebas bahasa (untuk rancangan pelajaran yang boleh diajar dalam pelbagai bahasa) pilih seni bahasa.
-* Senarai bahasa semula jadi yang disokong. Catatan: Pengesanan bahasa ialah tanggungjawab penyedia aktiviti; kami akan mengarahkan semua pengguna pergi ke URL tunggal yang disediakan. atau bebas bahasa (untuk rancangan pelajaran yang boleh diajar dalam pelbagai bahasa)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Senarai bahasa pengaturcaraan yang diajar oleh aktiviti anda. Iaitu C/C++, Java, JavaScript dan sebagainya. atau bebas bahasa (untuk rancangan pelajaran yang boleh diajar dalam pelbagai bahasa) choose language arts.
+* Senarai bahasa semula jadi yang disokong. Catatan: Pengesanan bahasa ialah tanggungjawab penyedia aktiviti; kami akan mengarahkan semua pengguna pergi ke URL tunggal yang disediakan. or language independent (for lesson plans that can be taught in multiple languages)
 * Apakah tahap pengalaman yang mesti dimiliki oleh pendidik untuk menggunakan aktiviti anda? (misalnya Baru Bermula atau Selesa.) Dan, apakah tahap pengalaman yang perlu dimiliki oleh pelajar?
-* Apakah tahap pengalaman yang mesti dimiliki oleh pendidik untuk menggunakan aktiviti anda? (misalnya Baru Bermula atau Selesa.) Dan, apakah tahap pengalaman yang perlu dimiliki oleh pelajar? Jika anda ingin menyediakan Aktiviti Hour of Code™ (Jam Kod) yang lebih canggih, sila sertakan pengetahuan sebelum ini yang diperlukan dalam huraian aktiviti anda.
-* Tempoh aktiviti anda 
-    * I jam sahaja
-    * 1 jam dengan kursus susulan
-    * 2-6 jam (mungkin pelbagai pelajaran)
-* Senarai kemudahan yang boleh diakses, jika aktiviti anda memilikinya. Ini termasuk keserasian pembaca skrin, keupayaan teks kepada pertuturan, penggunaan warna kontras tinggi, atau kemudahan lain yang disediakan untuk pelajar kurang upaya.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Perkara tambahan yang anda perlukan semasa menghantar Rancangan Pelajaran
 
@@ -170,7 +170,7 @@ Perkara yang anda akan perlukan
 
 Jawatankuasa pendidik sains komputer yang pelbagai akan menetapkan kedudukan berdasarkan kriteria kualitatif dan kuantitatif. Semua aktiviti yang sesuai dengan kriteria asas akan disenaraikan.
 
-Untuk aktiviti pengekodan tradisional, jawatankuasa pendidik sains komputer yang pelbagai akan menilai penyerahan berdasarkan kriteria kualitatif dan kuantitatif. Semua aktiviti yang sesuai dengan kriteria asas akan disenaraikan. Guru akan boleh menyaring dan mengisih bagi mencari aktiviti terbaik untuk kelas mereka.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Jika jawatankuasa penilaian mengadarkan aktiviti tersebut sebagai sifar dalam kualiti pengeluaran (disebabkan pepijat atau arahan yang teruk serta menjadikannya sangat sukar digunakan), dalam mempromosikan pembelajaran bagi kumpulan yang terpencil (disebabkan berkaitan dengan perkauman/seksis), dalam nilai pendidikan (tidak mengajar Konsep CS), atau menyeronokkan/menarik (disebabkan sukar/tawar hati untuk pelajar menyelesaikannya), aktiviti tersebut tidak akan disenaraikan.
 
@@ -188,13 +188,13 @@ Untuk aktiviti kendiri untuk guru dan pelajar baru jawatankuasa semakan akan men
 - Tidak perlu mendaftar
 - Tidak memerlukan bayaran (pengecualian untuk aktiviti robotik yang memerlukan pembelian robot/kit) Untuk aktiviti terarah kendiri untuk guru dan pelajar baharu, jawatankuasa penilaian akan mencari sama ada:
 
-Untuk aktiviti kendiri untuk guru dan pelajar baru jawatankuasa semakan akan mencari sama ada:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Terima penilaian tertinggi daripada jawatankuasa penilaian
 - Aktiviti satu jam terarah kendiri direka bentuk untuk mereka yang baru bermula (pelajar dan guru)
 - Menarik kepada pelbagai pengguna (di seluruh platform, bahasa dan peringkat umur)
 
-Guru dan pelajar boleh mencari dan menyaring senarai aktiviti kami berdasarkan saringan seperti gred, tahap pengalaman, subjek, perkakasan dan sebagainya. Secara lalai, kami akan menunjukkan rancangan dan aktiviti pelajaran terlebih dahulu yang:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Maklum balas positif - Apakah yang berfungsi dengan baik?
 - Maklum balas kritikal - Apakah yang boleh diperbaiki?
@@ -208,7 +208,7 @@ Guru dan pelajar boleh mencari dan menyaring senarai aktiviti kami berdasarkan s
 
 ## Garis panduan menghantar untuk semakan kualitatif awal
 
-Aktiviti tidak perlu termasuk AI, walaupun kami ingin menawarkan lebih banyak aktiviti berkaitan AI.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Sertakan catatan guru.** Kebanyakan besar aktiviti hendaklah terarah pelajar, tetapi jika aktiviti dikendalikan atau diuruskan oleh guru, sila sertakan arahan yang jelas dan mudah untuk guru dalam bentuk catatan guru di URL berasingan yang dihantar dengan aktiviti anda. Bukan sahaja pelajar baharu, malah sebilangan guru juga begitu. Sertakan maklumat seperti:
 
@@ -221,15 +221,15 @@ Setiap aktiviti yang dihantar sebelum 1 Oktober akan menerima penilaian standard
 - Adakah anda menyarankan pengaturcaraan berpasangan?
 - Pertimbangan untuk digunakan di dalam kelas? Misalnya, jika terdapat video, nasihatkan guru untuk menunjukkan video tersebut pada skrin tayangan supaya seluruh kelas dapat menonton bersama
 
-**Gabungkan maklum balas pada akhir aktiviti.** (Misalnya “Anda berjaya menyelesaikan 10 tahap dan mempelajari tentang gelung! Syabas!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Galakkan pelajar untuk menyiarkan di dalam media sosial (sekiranya wajar) apabila mereka telah selesai.** Sebagai contoh “Saya telah melakukan Jam Kod dengan ________ Sudahkah anda? #HourOfCode” atau “Saya telah lengkapkan #HourOfCode sebagai sebahagian daripada #CSEdWeek. Sudahkah anda? @Scratch.” Gunakan tanda pagar **#HourOfCode** (dengan huruf besar H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Cipta aktiviti anda dalam bahasa Sepanyol atau dalam bahasa lain selain Bahasa Inggeris.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Terangkan atau hubungkan aktiviti dengan konteks yang ketara secara sosial.** Pengaturcaraan komputer menjadi kuasa besar apabila pelajar melihat cara ia boleh mengubah dunia menjadi lebih baik!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Pastikan tutorial anda boleh digunakan dalam paradigma [Pengaturcaraan Berpasangan](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning).** Ini sangat berguna, terutamanya untuk Jam Kod kerana banyak kelas tidak mempunyai perkakasan 1:1 untuk semua pelajar.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Kembali ke bahagian atas**](#top)
 
@@ -237,7 +237,7 @@ Setiap aktiviti yang dihantar sebelum 1 Oktober akan menerima penilaian standard
 
 ## Cadangan untuk mereka bentuk tutorial pandu diri selama sejam
 
-Hour of Code® dan Hora del Código® adalah tanda dagangan berdaftar Code.org. Banyak rakan tutorial kami telah menggunakan tanda dagangan “Hour of Code” kami di laman web mereka berkaitan dengan aktiviti Hour of Code mereka. Kami tidak mahu menghalang penggunaan ini, tetapi kami ingin memastikan penggunaannya berada dalam beberapa had:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Gunakan “Hour of Code” hanya berkaitan dengan aktiviti CS Education bukan komersial dalam konteks kempen Hour of Code, dan tanpa tujuan lain.
 2. Mana-mana rujukan kepada "Hour of Code" sepatutnya digunakan di dalam fesyen yang tidak menunjukkan ia merupakan nama jenama anda, tetapi lebih merujuk kepada Jam Kod sebagai pergerakan akar umbi. Contoh yang baik: “Mengambil bahagian dalam Hour of Code® di AcmeCorp.com”. Contoh yang kurang baik: "Cubalah Hour of Code oleh ACME Corp".
@@ -253,15 +253,15 @@ Hour of Code® dan Hora del Código® adalah tanda dagangan berdaftar Code.org. 
 
 ## Garis Panduan Tanda Dagangan
 
-Jika tutorial anda diluluskan dan disertakan pada halaman tutorial terakhir, Code.org akan memberikan anda piksel penjejak yang unik untuk anda integrasikan dalam tutorial anda. Lihat contoh di bawah. Jangan sertakannya pada mana-mana halaman sementara tutorial anda.
+Jika tutorial anda diluluskan dan disertakan pada halaman tutorial terakhir, Code.org akan memberikan anda piksel penjejak yang unik untuk anda integrasikan dalam tutorial anda. Lihat contoh di bawah. Do not include on any interim pages of your tutorial.
 
-Ini akan membolehkan kami mengira pengguna yang melakukan tutorial Jam Kod anda. Ini akan membawa kepada jumlah penyertaan yang lebih tepat untuk tutorial anda.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Jika tutorial anda diluluskan dan disertakan pada halaman tutorial terakhir, Code.org akan memberikan anda piksel penjejak yang unik untuk anda integrasikan dalam tutorial anda. Lihat contoh di bawah.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
-Contoh piksel penjejak untuk Majlis Tari-Menari:
+Example tracking pixels for Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -272,7 +272,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Piksel Penjejak
 
-Sila promosikan aktiviti anda kepada rangkaian anda! Minta mereka pergi ke halaman Jam Kod anda. Pengguna anda lebih cenderung untuk bertindak balas terhadap e-mel daripada anda tentang aktiviti anda. Gunakan kempen Jam Kod antarabangsa semasa Minggu Pendidikan Sains Komputer sebagai alasan untuk menggalakkan pengguna menjemput individu lain untuk turut serta dan membantu kami menjangkau lebih ramai pelajar!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Paparkan Jam Kod and CSEdWeek pada laman web anda. Contoh: <http://www.tynker.com/hour-of-code>
 - Promosikan Jam Kod dengan menggunakan media sosial, media tradisional, senarai e-mel dan sebagainya, gunakan tanda pagar #HourOfCode (dengan huruf besar H, O, C)

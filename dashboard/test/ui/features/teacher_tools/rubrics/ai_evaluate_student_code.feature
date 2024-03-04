@@ -1,6 +1,12 @@
 @skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 Feature: Evaluate student code against rubrics using AI
+  # Make sure AI config files in S3 are parseable. Do this in a UI test because
+  # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
+  @chrome
+  Scenario: Validate Rubric AI Config
+    Given I validate rubric ai config for all lessons
+
   Scenario: Student code is evaluated by AI when student submits project
     Given I create a teacher-associated student named "Aiden"
     And I am on "http://studio.code.org/home"
@@ -33,22 +39,18 @@ Feature: Evaluate student code against rubrics using AI
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
-    # Teacher views AI evaluation status in settings tab
+    # Teacher views AI evaluation status in rubric header
     When I click selector "#ui-floatingActionButton"
-    And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
-    And I click selector ".uitest-rubric-header-tab:contains('Settings')"
-    And I wait until element ".uitest-rubric-settings" is visible
+    And I wait until element "#uitest-rubric-content" is visible
     And element ".uitest-run-ai-assessment" is disabled
-    And element ".uitest-eval-status-text" is visible
-    Then I wait until element ".uitest-eval-status-text" contains text "AI analysis already completed for this project."
-    # Make settings tab visible to the human eye
-    And I wait for 1 second
+    And element ".uitest-info-alert" is visible
+    Then I wait until element ".uitest-info-alert" contains text "AI analysis already completed for this project."
 
-    # Teacher views AI evaluation results in rubric tab
-    When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
-    And I wait until element ".uitest-learning-goal-row" is visible
-    And element ".uitest-uses-ai" is visible
-    And I click selector ".uitest-uses-ai:eq(0)"
+    # Teacher views AI evaluation results in rubric
+    And I wait until element "#uitest-next-goal" is visible
+    And I click selector "#uitest-next-goal"
+    And I wait until element ".uitest-learning-goal-title" is visible
+    Then element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
@@ -83,22 +85,18 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views AI evaluation status in settings tab
     When I click selector "#ui-floatingActionButton"
-    And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
-    And I click selector ".uitest-rubric-header-tab:contains('Settings')"
-    And I wait until element ".uitest-rubric-settings" is visible
-    Then element ".uitest-run-ai-assessment" is enabled
-    And element ".uitest-eval-status-text" is visible
-    And element ".uitest-eval-status-text" contains text ""
+    And I wait until element "#uitest-rubric-content" is visible
+    And element ".uitest-run-ai-assessment" is enabled
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
-    And I wait until element ".uitest-eval-status-text" is visible
-    Then I wait until element ".uitest-eval-status-text" contains text "AI analysis complete."
+    Then I wait until element ".uitest-info-alert" is visible
+    And element ".uitest-info-alert" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in rubric tab
-    When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
-    And I wait until element ".uitest-learning-goal-row" is visible
-    And element ".uitest-uses-ai" is visible
-    And I click selector ".uitest-uses-ai:eq(0)"
+    And I wait until element "#uitest-next-goal" is visible
+    And I click selector "#uitest-next-goal"
+    And I wait until element ".uitest-learning-goal-title" is visible
+    Then element ".uitest-learning-goal-title" contains text "Sprites"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"

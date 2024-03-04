@@ -24,6 +24,7 @@ import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import styleConstants from './progressTables/progress-table-constants.module.scss';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
 
@@ -149,7 +150,10 @@ class SectionProgress extends Component {
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
-      <div>
+      <div
+        className={dashboardStyles.dashboardPage}
+        data-testid="section-progress-v1"
+      >
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
@@ -175,12 +179,13 @@ class SectionProgress extends Component {
         </div>
         <div style={styles.topRowContainer}>
           {showProgressTable && (
-            <SortByNameDropdown
-              selectStyles={styles.sortOrderSelect}
-              sectionId={sectionId}
-              unitName={scriptData?.title}
-              source={SECTION_PROGRESS}
-            />
+            <div style={styles.sortOrderSelect}>
+              <SortByNameDropdown
+                sectionId={sectionId}
+                unitName={scriptData?.title}
+                source={SECTION_PROGRESS}
+              />
+            </div>
           )}
           {levelDataInitialized && <ProgressViewHeader />}
         </div>
@@ -217,6 +222,7 @@ const styles = {
     display: 'flex',
     alignItems: 'flex-end',
     marginBottom: 10,
+    width: '100%',
   },
   chevronLink: {
     display: 'flex',

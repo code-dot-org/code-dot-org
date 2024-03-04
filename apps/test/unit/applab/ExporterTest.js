@@ -220,8 +220,8 @@ describe('Applab Exporter,', function () {
       isUS: true,
       send_to_phone_url: 'http://localhost-studio.code.org:3000/sms/send',
       copyrightStrings: {
-        thank_you:
-          'We%20thank%20our%20%3Ca%20href=%22https://code.org/about/donors%22%3Edonors%3C/a%3E,%20%3Ca%20href=%22https://code.org/about/partners%22%3Epartners%3C/a%3E,%20our%20%3Ca%20href=%22https://code.org/about/team%22%3Eextended%20team%3C/a%3E,%20our%20video%20cast,%20and%20our%20%3Ca%20href=%22https://code.org/about/advisors%22%3Eeducation%20advisors%3C/a%3E%20for%20their%20support%20in%20creating%20Code%20Studio.',
+        thanks:
+          'We%20thank%20our%20%3Ca%20href=%22https://code.org/about/donors%22%3Edonors%3C/a%3E,%20%3Ca%20href=%22https://code.org/about/partners%22%3Epartners%3C/a%3E,%20our%20%3Ca%20href=%22https://code.org/about/team%22%3Eextended%20team%3C/a%3E,%20and%20our%20video%20cast%20for%20their%20support%20in%20creating%20Code%20Studio.',
         help_from_html:
           'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.',
         art_from_html:

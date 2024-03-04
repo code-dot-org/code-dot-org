@@ -58,7 +58,11 @@ module Curriculum
         CSP_virtual_pl: 'CSP Virtual PL',
         CSD_virtual_pl: 'CSD Virtual PL',
         CSA_virtual_pl: 'CSA Virtual PL',
-        student_self_paced: 'Student Self Paced Courses'
+        student_self_paced: 'Student Self Paced Courses',
+        pd_workshop_activity_csf: 'PD Workshop Activity CSF',
+        pd_workshop_activity_csd: 'PD Workshop Activity CSD',
+        pd_workshop_activity_csp: 'PD Workshop Activity CSP',
+        pd_workshop_activity_csa: 'PD Workshop Activity CSA'
       }
     ).freeze
 

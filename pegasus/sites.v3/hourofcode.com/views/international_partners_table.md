@@ -38,7 +38,7 @@
 |India|Nirmaan|Swati Vempati|contact@nirmaan.org<br>https://www.nirmaan.org|
 |India|Pi Jam Foundation|Shoaib Dar|shoaib.dar@thepijam.org<br>http://www.thepijam.org|
 |India|upEducators|Ankush Bhandari|ankushb@upeducators.com<br>https://www.upeducators.com/|
-|Indonesia|Coding Bee Academy|Eko Haripin|hello@codingbee.org<br>http://www.codingbee.org|
+|Indonesia|Coding Bee Academy|Eko Haripin|hello@codingbee.org<br>https://codingbee.id/|
 |Indonesia|Diginusa Kompas Gramedia||marketingdiginusa@gmail.com<br>www.diginusa.com|
 |Indonesia|KodeKiddo|Meilani|meilani@kodekiddo.com<br>www.kodekiddo.com|
 |Iraq|ABCode|Batool Hussain|ABcode.global@gmail.com|

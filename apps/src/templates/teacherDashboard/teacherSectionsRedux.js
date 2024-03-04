@@ -214,7 +214,7 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * Removes null values from stringified object before sending firehose record
  */
 function removeNullValues(key, val) {
-  if (val === null || typeof val === undefined) {
+  if (val === null || typeof val === 'undefined') {
     return undefined;
   }
   return val;

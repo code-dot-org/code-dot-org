@@ -16,7 +16,7 @@ class OpenaiChatController < ApplicationController
     # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
 
-    if has_level_id_param?
+    if validated_level?
       level_id = params[:levelId]
       test_file_contents = get_validated_level_test_file_contents(level_id)
       messages = params[:messages]
@@ -35,10 +35,8 @@ class OpenaiChatController < ApplicationController
     params[:messages].present?
   end
 
-  # levelId will be present if we need to get the level's validation files to send along with the
-  # request to openai
-  def has_level_id_param?
-    params[:levelId].present?
+  def validated_level?
+    params[:type].present? && params[:type] == 'validation'
   end
 
   def get_validated_level_test_file_contents(level_id)

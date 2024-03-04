@@ -37,7 +37,7 @@ And /^I create a new "([^"]*)" student section named "([^"]*)" assigned to "([^"
   end
 
   individual_steps <<~GHERKIN
-    And I press the first "#uitest-save-section-changes" element
+    And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "#classroom-sections" is visible
   GHERKIN
 end

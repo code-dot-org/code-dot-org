@@ -1,0 +1,13 @@
+@import 'color.scss';
+@import "style-constants";
+
+.dashboardPage {
+  max-width: $content-width;
+  padding: 10px 64px 64px 64px;
+}
+
+.text {
+  font-style: italic;
+  text-align: center;
+  padding-top: 10px;
+}

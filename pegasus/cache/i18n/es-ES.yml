@@ -271,6 +271,7 @@ es-ES:
   class_submission_out_of_school_summer_camp: Campamento de verano
   classicmaze_name: Laberinto clásico
   code_hoc_coming: "¡La Hora de Code está aquí: del 8 al 14 de diciembre!"
+  code_org_logo_alt: Inicio de Code.org
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Informática
   codea_beyond_gradelevel: Secundaria
   codea_beyond_longdescription: Codea códigos para iPad te permite crear juegos y
@@ -1257,6 +1258,7 @@ es-ES:
   header_project_gallery: Proyectos
   header_report_abuse: Denunciar abuso
   header_report_bug: Reporte los errores
+  header_schools: Escuelas
   header_screen_reader_hamburger: Menú
   header_screen_reader_help: Menú de Ayuda
   header_sections: Secciones

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-16T16:47:35.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263NCqpzIhCKBkm5JVyDA\nmf0zNz5bXp52OT549zjjTWy/soEep+iMzzlxnB/Be1FiPPI=\n",
@@ -8,13 +12,10 @@
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "playground"
+    "csa_view_mode": "playground",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-09-16T16:47:35.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-09-16 16:47:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:50:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-08 16:37:41 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

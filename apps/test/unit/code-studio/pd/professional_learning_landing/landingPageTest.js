@@ -20,13 +20,15 @@ describe('Tests for Professional Learning Landing Page', () => {
         deeperLearningCourseData: [{data: 'oh yeah'}],
       });
 
-      expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
-      expect(landingPage.childAt(2).prop('subHeading')).to.equal(
+      const mainWrapper = landingPage.find('main');
+      expect(mainWrapper.childAt(0).is('LastWorkshopSurveyBanner')).to.be.true;
+      expect(mainWrapper.childAt(0).prop('subHeading')).to.equal(
         'Submit your feedback'
       );
-      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
-      expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
+      expect(mainWrapper.childAt(1).is('EnrolledWorkshops')).to.be.true;
+      expect(
+        mainWrapper.find('ProfessionalLearningCourseProgress')
+      ).to.have.length(1);
     });
 
     it('page is as expected for a CSD/CSP teacher with a pending survey', () => {
@@ -36,13 +38,15 @@ describe('Tests for Professional Learning Landing Page', () => {
         deeperLearningCourseData: [{data: 'oh yeah'}],
       });
 
-      expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
+      const mainWrapper = landingPage.find('main');
+      expect(mainWrapper.childAt(0).is('LastWorkshopSurveyBanner')).to.be.true;
       expect(
-        landingPage.childAt(2).shallow().text().indexOf('Submit your feedback')
+        mainWrapper.childAt(0).shallow().text().indexOf('Submit your feedback')
       ).to.equal(-1);
-      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
-      expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
+      expect(mainWrapper.childAt(1).is('EnrolledWorkshops')).to.be.true;
+      expect(
+        mainWrapper.find('ProfessionalLearningCourseProgress')
+      ).to.have.length(1);
     });
 
     it('page is as expected for a teacher with no pending survey but upcoming workshops and plc enrollments', () => {
@@ -50,9 +54,11 @@ describe('Tests for Professional Learning Landing Page', () => {
         deeperLearningCourseData: [{data: 'oh yeah'}],
       });
 
-      expect(landingPage.childAt(2).is('EnrolledWorkshops')).to.be.true;
-      expect(landingPage.childAt(3).is('ProfessionalLearningCourseProgress')).to
-        .be.true;
+      const mainWrapper = landingPage.find('main');
+      expect(mainWrapper.childAt(0).is('EnrolledWorkshops')).to.be.true;
+      expect(
+        mainWrapper.find('ProfessionalLearningCourseProgress')
+      ).to.have.length(1);
     });
   });
 });

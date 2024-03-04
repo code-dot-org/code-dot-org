@@ -3,7 +3,7 @@ import Link, {LinkProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Link',
+  title: 'DesignSystem/Link', // eslint-disable-line storybook/no-title-property-in-meta
   component: Link,
 } as Meta;
 

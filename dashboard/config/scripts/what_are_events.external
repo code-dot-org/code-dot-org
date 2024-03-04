@@ -3,11 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What Are Events? 
 
-#### Events are actions that cause something to happen. In code, events allow user interaction, like the arrow button being clicked to cause a sprite to move.
-
-#### An event block is a block that, when triggered, causes a specific chunk of code to run. In Sprite Lab, these blocks are green. You will notice event blocks are not connected to the main section of your code.
 
 
 

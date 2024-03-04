@@ -3,7 +3,7 @@ import SimpleDropdown, {SimpleDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Simple Dropdown',
+  title: 'DesignSystem/Simple Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
   component: SimpleDropdown,
 } as Meta;
 
@@ -104,6 +104,26 @@ DisabledDropdown.args = {
   labelText: 'Disabled Dropdown',
   onChange: args => console.log(args),
   disabled: true,
+  size: 'm',
+};
+
+export const GroupedOptionsDropdown = SingleTemplate.bind({});
+GroupedOptionsDropdown.args = {
+  name: 'grouped-options-dropdown',
+  itemGroups: [
+    {
+      label: 'Group 1',
+      groupItems: [
+        {value: 'option-1', text: 'Option 1'},
+        {value: 'option-2', text: 'Option 2'},
+      ],
+    },
+    {label: 'Group 2', groupItems: [{value: 'option-3', text: 'Option 3'}]},
+  ],
+  labelText: 'Grouped Options Dropdown',
+  isLabelVisible: false,
+  selectedValue: 'option-1',
+  onChange: args => console.log(args, args.target.value),
   size: 'm',
 };
 

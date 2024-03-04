@@ -359,7 +359,8 @@
       ]
     ],
     "long_instructions": "##Style and Documentation\r\n\r\n1. What do you notice about the way this code is written? Is it easier to read than the previous one? Why or why not?\r\n\r\n2. What is the purpose of the `//`(#e7e8ea) and `/* */`(#e7e8ea) lines? Are they displayed in the **Console** when the program is run?",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:32.954+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L2_2022\"}]"

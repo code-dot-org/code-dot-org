@@ -17,6 +17,6 @@ $(() => {
       lastWorkshopSurveyCourse={landingPageData['last_workshop_survey_course']}
       deeperLearningCourseData={landingPageData['summarized_plc_enrollments']}
     />,
-    document.getElementById('landing-page-container')
+    document.getElementById('pl-landing-page-container')
   );
 });

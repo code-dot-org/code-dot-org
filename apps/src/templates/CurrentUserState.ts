@@ -23,4 +23,6 @@ export interface CurrentUserState {
   isSortedByFamilyName: boolean;
   under13: boolean;
   over21: boolean;
+  showProgressTableV2: boolean;
+  progressTableV2ClosedBeta: boolean;
 }

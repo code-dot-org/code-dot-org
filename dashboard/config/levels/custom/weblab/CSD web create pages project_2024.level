@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:59:22.000Z",
   "level_num": "custom",
@@ -13,7 +14,12 @@
     "name_suffix": "_2024",
     "long_instructions": "# Your Group Project\r\n\r\n\r\nHere is your group project.  It already has an index page, but you'll need to create all of the other pages.\r\n\r\n# Do This\r\n1) Double check all of the page names in your website plan to make sure they follow good naming conventions.\r\n   * Check with the rest of your group if you need to change a page name.\r\n* Create a new page for each of the pages in your website plan.\r\n* Inside each new page, create a temporary paragraph tag that describes the page and who is in charge of it.\r\n* Check to make sure everyone in your group has the exact same list of HTML pages.",
     "reference_links": [
+      "/courses/csd-2022/guides/pseudo-classes",
       "/courses/csd-2022/guides/hyperlinks",
+      "/courses/csd-2022/guides/flex-children",
+      "/courses/csd-2022/guides/flexbox",
+      "/courses/csd-2022/guides/html-selectors",
+      "/courses/csd-2022/guides/div",
       "/courses/csd-2022/guides/classes",
       "/courses/csd-2022/guides/layout-properties",
       "/courses/csd-2022/guides/body-styling",
@@ -21,19 +27,21 @@
       "/courses/csd-2022/guides/creative-commons-search",
       "/courses/csd-2022/guides/style-sheets",
       "/courses/csd-2022/guides/text-properties",
-      "/courses/csd-2022/guides/debugging-html",
       "/courses/csd-2022/guides/formatting-html",
       "/courses/csd-2022/guides/lists",
       "/courses/csd-2022/guides/headings-and-paragraphs",
       "/courses/csd-2022/guides/html-tags",
-      "/courses/csd-2022/guides/web-lab"
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
-    "validation_enabled": "true"
+    "validation_enabled": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:22.394+00:00\",\"changed\":[\"cloned from \\\"CSD web create pages project_2023\\\"\"],\"cloned_from\":\"CSD web create pages project_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:22.394+00:00\",\"changed\":[\"cloned from \\\"CSD web create pages project_2023\\\"\"],\"cloned_from\":\"CSD web create pages project_2023\"},{\"changed_at\":\"2024-02-20 19:13:29 +0000\",\"changed\":[\"reference_links\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
