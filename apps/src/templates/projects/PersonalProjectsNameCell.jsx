@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {showProjectInfoDialog} from '@cdo/apps/templates/projects/projectInfoDialog/projectInfoDialogRedux';
 import moduleStyles from './personal-projects-name-cell.module.scss';
 
@@ -58,7 +58,12 @@ class PersonalProjectsNameCell extends Component {
                 className={moduleStyles.infoButton}
                 onClick={this.showProjectInfo}
               >
-                <FontAwesome icon="circle-exclamation" className="infoIcon" />
+                <FontAwesomeV6Icon
+                  iconName="circle-exclamation"
+                  iconStyle="solid"
+                  title="project-info-icon"
+                  className="infoIcon"
+                />
               </button>
             )}
           </div>
