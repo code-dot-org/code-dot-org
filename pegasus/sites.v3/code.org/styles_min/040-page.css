@@ -406,6 +406,11 @@ td {
   padding: 15px;
 }
 
+/*Centers a block-level element */
+.centered {
+  text-align: center !important;
+}
+
 /* Styles for the "OR" divider line between paragraphs
   - see code.org/afe for an example */
 .or-divider-line {
