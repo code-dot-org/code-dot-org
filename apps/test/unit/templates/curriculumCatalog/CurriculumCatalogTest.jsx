@@ -709,7 +709,7 @@ describe('CurriculumCatalog', () => {
         exact: false,
       });
 
-      for (let i = 0; i < 2; i++) {
+      for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
         // Get the Similar Recommended Curriculum for the current test curriculum
         const recommendableCurricula = [...FULL_TEST_COURSES];
         const currCurriculum = recommendableCurricula.splice(i, 1)[0];
