@@ -26,6 +26,7 @@ const defaultArgs = {
   isSignedOut: false,
   isTeacher: true,
   onQuickViewClick: () => {},
+  setExpandedCardKey: () => {},
 };
 
 export const AllOptionsCard = Template.bind({});
