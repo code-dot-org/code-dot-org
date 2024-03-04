@@ -38,6 +38,7 @@ import teacherSections, {
 import {sections} from '../studioHomepages/fakeSectionUtils';
 import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
+import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -743,6 +744,41 @@ describe('CurriculumCatalog', () => {
             .innerHTML.includes(recommendedSimilarCurriculum.display_name)
         );
       }
+    });
+
+    it('sets localStorage for Similar Curriculum Recommender result', () => {
+      const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const firstQuickViewButton = screen.getAllByText('Quick View', {
+        exact: false,
+      })[0];
+
+      // Get the Similar Recommended Curriculum for the first test curriculum
+      const recommendableCurricula = [...FULL_TEST_COURSES];
+      const firstTestCurriculum = recommendableCurricula.splice(0, 1)[0];
+      const recommendedSimilarCurriculum = getSimilarRecommendations(
+        recommendableCurricula,
+        firstTestCurriculum.duration,
+        firstTestCurriculum.marketing_initiative,
+        firstTestCurriculum.school_subject,
+        firstTestCurriculum.cs_topic
+      )[0];
+
+      // Open expanded card of the first test curriculum
+      fireEvent.click(firstQuickViewButton);
+      screen.getByText(firstTestCurriculum.description);
+
+      // Check that localStorage has result of Similar Curriculum Recommender
+      const similarRecommenderResults = JSON.parse(
+        tryGetLocalStorage('similarRecommenderResults', '{}')
+      );
+      expect(similarRecommenderResults[firstTestCurriculum.key].key).to.equal(
+        recommendedSimilarCurriculum.key
+      );
     });
   });
 });

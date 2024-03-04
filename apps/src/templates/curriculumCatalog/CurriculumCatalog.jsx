@@ -13,6 +13,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {getSimilarRecommendations} from '../../util/curriculumRecommender/curriculumRecommender';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -76,6 +77,16 @@ const CurriculumCatalog = ({
   // Get the top recommended similar curriculum based on the curriculum with the given
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
+    // Check if Similar Curriculum Recommender has already been run with this curriculumKey and cached in localStorage
+    const similarRecommenderResults =
+      JSON.parse(tryGetLocalStorage('similarRecommenderResults', '{}')) || {};
+    const similarRecommenderCurrKeyResult =
+      similarRecommenderResults[curriculumKey];
+    if (similarRecommenderCurrKeyResult) {
+      return similarRecommenderCurrKeyResult;
+    }
+
+    // If result is not already in localStorage, then get recommendation and save to localStorage
     let recommendableCurricula = [...curriculaData];
 
     // Get current curricula the others are being compared against and filter it out of the
@@ -110,6 +121,13 @@ const CurriculumCatalog = ({
       currCurriculum.marketing_initiative,
       currCurriculum.school_subject,
       currCurriculum.cs_topic
+    );
+
+    // Update localStorage with new recommendation result
+    similarRecommenderResults[curriculumKey] = recommendations[0];
+    trySetLocalStorage(
+      'similarRecommenderResults',
+      JSON.stringify(similarRecommenderResults)
     );
 
     return recommendations[0];
