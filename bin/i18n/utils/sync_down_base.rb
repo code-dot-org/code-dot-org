@@ -10,9 +10,6 @@ module I18n
     class SyncDownBase
       Config = Struct.new :crowdin_project, :download_paths, keyword_init: true
       DownloadPath = Struct.new :crowdin_src, :dest_subdir, keyword_init: true
-      Options = Struct.new :testing, keyword_init: true do
-        def initialize(testing: I18nScriptUtils::TESTING_BY_DEFAULT, **) super end
-      end
 
       def self.config
         @config ||= Config.new(
@@ -22,15 +19,7 @@ module I18n
       end
 
       def self.parse_options
-        options = Options.new
-
-        OptionParser.new do |opts|
-          opts.on('-t', '--testing', 'Run in testing mode') do
-            options[:testing] = true
-          end
-        end.parse!
-
-        options.to_h
+        I18nScriptUtils.parse_options
       end
 
       # Sync-down an i18n resource.
@@ -52,7 +41,7 @@ module I18n
 
       def initialize(**options)
         @config = self.class.config.freeze
-        @options = Options.new(**options).freeze
+        @options = options.freeze
       end
 
       def perform
@@ -63,7 +52,7 @@ module I18n
           source_files = source_files(download_path[:crowdin_src])
 
           progress_bar = I18nScriptUtils.create_progress_bar(
-            title: "#{self.class.name}[#{File.join(crowdin_project, download_path[:crowdin_src])}]",
+            title: "#{self.class.name}[#{File.join(crowdin_project, download_path[:crowdin_src].to_s)}]",
             total: cdo_languages.size * source_files.size,
             format: '%t: |%W| %c/%C %a',
           )
@@ -99,7 +88,7 @@ module I18n
 
       def crowdin_project
         @crowdin_project ||=
-          if options.testing
+          if options[:testing]
             # When testing, use a set of test Crowdin projects that mirrors our regular set of projects.
             CDO.crowdin_project_test_mapping[config.crowdin_project]
           else

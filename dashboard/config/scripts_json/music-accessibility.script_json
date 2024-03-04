@@ -1,0 +1,221 @@
+{
+  "script": {
+    "name": "music-accessibility",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "music-accessibility",
+    "serialized_at": "2024-02-28 15:37:30 UTC",
+    "published_state": "in_development",
+    "instruction_type": "self_paced",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "music-accessibility"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "music-accessibility"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Keyboard Navigation Testing",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "69ca9b47-a489-482a-b3b5-f8fbd83eb15f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69ca9b47-a489-482a-b3b5-f8fbd83eb15f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "93e8c26f-b171-431d-95bf-19e21aa7340a",
+      "position": 1,
+      "properties": {
+        "name": "Keyboard Navigation Testing "
+      },
+      "seeding_key": {
+        "activity_section.key": "93e8c26f-b171-431d-95bf-19e21aa7340a",
+        "lesson_activity.key": "69ca9b47-a489-482a-b3b5-f8fbd83eb15f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_add_play_to_sequence"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility",
+        "activity_section.key": "93e8c26f-b171-431d-95bf-19e21aa7340a"
+      },
+      "level_keys": [
+        "musiclab_add_play_to_sequence"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_play_sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility",
+        "activity_section.key": "93e8c26f-b171-431d-95bf-19e21aa7340a"
+      },
+      "level_keys": [
+        "musiclab_play_sound"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_set_volume"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility",
+        "activity_section.key": "93e8c26f-b171-431d-95bf-19e21aa7340a"
+      },
+      "level_keys": [
+        "musiclab_set_volume"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "musiclab_add_play_to_sequence",
+        "script_level.level_keys": [
+          "musiclab_add_play_to_sequence"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility",
+        "activity_section.key": "93e8c26f-b171-431d-95bf-19e21aa7340a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_play_sound",
+        "script_level.level_keys": [
+          "musiclab_play_sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility",
+        "activity_section.key": "93e8c26f-b171-431d-95bf-19e21aa7340a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_set_volume",
+        "script_level.level_keys": [
+          "musiclab_set_volume"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-accessibility",
+        "activity_section.key": "93e8c26f-b171-431d-95bf-19e21aa7340a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:59dbb41ae4a012641f3e8ee0e3ac63119cda6ba35e994fefff62c9e097a9bb3c
-size 86
+{
+  "page_default_title": "Anybody can learn",
+  "page_default_tagline": "Code.org"
+}

@@ -5,10 +5,9 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
   let(:described_class) {I18n::Resources::Apps::ExternalSources::SyncOut}
   let(:described_instance) {described_class.new}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'uk-UA'}
   let(:js_locale) {'uk_ua'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
   around do |test|
     FakeFS.with_fresh {test.call}
@@ -63,7 +62,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
     end
 
     describe 'ml-playground localization distribution' do
-      let(:crowdin_ml_playground_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'external-sources/ml-playground/mlPlayground.json')}
+      let(:crowdin_ml_playground_file_path) {CDO.dir('i18n/crowdin', i18n_locale, 'external-sources/ml-playground/mlPlayground.json')}
       let(:crowdin_ml_playground_file_data) do
         {
           'ml_playground_i18n_key' => 'new_ml_playground_i18n_val'
@@ -85,11 +84,11 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
 
         I18nScriptUtils.expects(:sanitize_data_and_write).with(expected_i18n_data, target_i18n_file_path).in_sequence(execution_sequence)
         I18nScriptUtils.expects(:rename_dir).with(
-          CDO.dir('i18n/locales', crowdin_locale, 'external-sources/ml-playground'),
+          CDO.dir('i18n/crowdin', i18n_locale, 'external-sources/ml-playground'),
           CDO.dir('i18n/locales', i18n_locale, 'external-sources/ml-playground')
         ).in_sequence(execution_sequence)
         I18nScriptUtils.expects(:remove_empty_dir).with(
-          CDO.dir('i18n/locales', crowdin_locale, 'external-sources')
+          CDO.dir('i18n/crowdin', i18n_locale, 'external-sources')
         ).in_sequence(execution_sequence)
 
         distribute_ml_playground_l10n
@@ -122,7 +121,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
     end
 
     describe 'ml-playground dataset localizations distribution' do
-      let(:crowdin_dataset_file_path) {CDO.dir('i18n/locales', crowdin_locale, "external-sources/ml-playground/datasets/#{dataset_id}.json")}
+      let(:crowdin_dataset_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "external-sources/ml-playground/datasets/#{dataset_id}.json")}
       let(:crowdin_dataset_file_data) do
         {
           'dataset_i18n_key' => 'new_dataset_i18n_val',
@@ -187,7 +186,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
       }
     end
 
-    let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'blockly-core/core.json')}
+    let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, 'blockly-core/core.json')}
     let(:crowdin_file_data) do
       {
         'a' => '',
@@ -233,7 +232,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
     let(:distribute_blockly_core_l10n) {described_instance.send(:distribute_blockly_core, language)}
 
     let(:target_i18n_file_path) {CDO.dir("apps/lib/blockly/#{js_locale}.js")}
-    let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'blockly-core/core.json')}
+    let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, 'blockly-core/core.json')}
     let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'blockly-core/core.json')}
     let(:blockly_core_i18n_data) do
       {
@@ -259,7 +258,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
 
       I18nScriptUtils.expects(:write_file).with(target_i18n_file_path, expected_blockly_js_i18n_data).in_sequence(execution_sequence)
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path).in_sequence(execution_sequence)
-      I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale, 'blockly-core')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/crowdin', i18n_locale, 'blockly-core')).in_sequence(execution_sequence)
 
       distribute_blockly_core_l10n
     end
