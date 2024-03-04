@@ -100,8 +100,8 @@ function getImageUrlFromImageSource(
     // picker dropdown).
     // imageElement is a private property on FieldDropdown.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const imageElement = (sourceBlock.inputList[0].fieldRow[0] as any)
-      .imageElement as SVGImageElement;
+    const imageElement = (sourceBlock.getField('ANIMATION') as any)
+      ?.imageElement as SVGImageElement;
     return imageElement?.getAttribute('xlink:href') || '';
   } else {
     return '';

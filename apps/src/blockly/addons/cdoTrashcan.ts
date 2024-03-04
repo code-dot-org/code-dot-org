@@ -180,7 +180,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       let trashcanVisibility = 'hidden';
       let toolboxVisibility = 'visible';
       // Don't show the trashcan if the block is being dragged out of the toolbox.
-      // This property is private, but this is the only way to find out this information.
+      // The flyout field is private, but this is the only way to find out this information.
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const isDraggingFromToolbox = !!(this.workspace.currentGesture_ as any)
         ?.flyout;
