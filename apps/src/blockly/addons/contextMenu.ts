@@ -174,9 +174,12 @@ const registerKeyboardNavigation = function (weight: number) {
     },
     callback: function (scope: ContextMenuRegistry.Scope) {
       const controller = Blockly.navigationController;
-      scope.workspace?.keyboardAccessibilityMode
-        ? controller.disable(scope.workspace)
-        : controller.enable(scope.workspace);
+      if (scope.workspace?.keyboardAccessibilityMode) {
+        controller.disable(scope.workspace);
+      } else {
+        controller.enable(scope.workspace);
+        Blockly.navigationController.navigation.focusWorkspace(scope.workspace);
+      }
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'keyboardNavigation',
