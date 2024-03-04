@@ -150,6 +150,16 @@
       }
     },
     {
+      "name": "Help Students Sign Up For The AP Exam",
+      "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
+      "key": "help_students_sign_up_the_ap_exam",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_the_ap_exam"
+      }
+    },
+    {
       "name": "Journaling",
       "url": "https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/view",
       "key": "journaling",
@@ -223,6 +233,17 @@
     }
   ],
   "student_resources": [
-
+    {
+      "name": "Why Take The AP CSP Exam?",
+      "url": "https://drive.google.com/file/d/1g5t9kBhrNgXcM2US67CJy17f4JEfTevW/view?usp=drive_link",
+      "key": "why_take_the_ap_csp_exam_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "why_take_the_ap_csp_exam_"
+      }
+    }
   ]
 }
