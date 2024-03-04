@@ -196,6 +196,7 @@ export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
   return {
     id: lessonId++,
     name: `Lesson - ${position}`,
+    title: `Lesson ${position}: Lesson - ${position}`,
     lockable: false,
     relative_position: position,
     position: position,

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
 import FontAwesome from '../FontAwesome';
-import i18n from '@cdo/locale';
 import LevelProgressHeader from './LevelProgressHeader';
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import i18n from '@cdo/locale';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -17,10 +17,7 @@ export default function ExpandedProgressColumnHeader({
   const headerText =
     lesson.levels.length < 3 && expandedChoiceLevels.length === 0
       ? lesson.relative_position
-      : i18n.lessonNumbered({
-          lessonNumber: lesson.relative_position,
-          lessonName: lesson.name,
-        });
+      : lesson.title;
 
   // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
   // Add (numLevels + 1)px to account for borders.
@@ -40,13 +37,7 @@ export default function ExpandedProgressColumnHeader({
   }, [lesson, expandedChoiceLevels]);
 
   return (
-    <div
-      className={styles.expandedHeader}
-      key={lesson.id}
-      data-tip
-      data-for={getTooltipId(lesson)}
-    >
-      <LessonTitleTooltip lesson={lesson} />
+    <div className={styles.expandedHeader} key={lesson.id}>
       <div
         className={classNames(
           styles.gridBox,
@@ -56,7 +47,10 @@ export default function ExpandedProgressColumnHeader({
         style={{width}}
         onClick={() => removeExpandedLesson(lesson.id)}
         aria-label={headerText}
+        data-tip
+        data-for={getTooltipId(lesson)}
       >
+        <LessonTitleTooltip lesson={lesson} />
         <FontAwesome
           icon="caret-down"
           className={styles.expandedHeaderCaret}
