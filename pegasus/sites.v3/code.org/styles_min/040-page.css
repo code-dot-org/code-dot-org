@@ -196,7 +196,7 @@ em {
 }
 
 /* Text link styles */
-a:is(:link, :visited) {
+a:any-link {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
