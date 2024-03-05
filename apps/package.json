@@ -136,7 +136,6 @@
     "react-addons-test-utils": "~15.4.0",
     "redux-mock-store": "^1.2.3",
     "sass": "^1.51.0",
-    "sass-loader": "^12.1.0",
     "script-loader": "^0.7.2",
     "sinon": "^11.0.0",
     "sinon-chai": "^3.1.0",

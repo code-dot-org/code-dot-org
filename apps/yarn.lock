@@ -8705,7 +8705,6 @@ __metadata:
     rosie: ^2.0.1
     sanitize-html: ^1.11.3
     sass: ^1.51.0
-    sass-loader: ^12.1.0
     save-csv: ^4.0.6
     script-loader: ^0.7.2
     seedrandom: 2.4.2
@@ -25988,31 +25987,6 @@ es6-shim@latest:
     regexp-quote: 0.0.0
     xtend: ^4.0.0
   checksum: a6a1769b9ab04c48586a593cd858514c26d9e8bee67afec51df1892b28741251c15460c6a899c989d312d11825c78f1ac5eb7b4b08ca2ea8ad940e460551fd00
-  languageName: node
-  linkType: hard
-
-"sass-loader@npm:^12.1.0":
-  version: 12.6.0
-  resolution: "sass-loader@npm:12.6.0"
-  dependencies:
-    klona: ^2.0.4
-    neo-async: ^2.6.2
-  peerDependencies:
-    fibers: ">= 3.1.0"
-    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
-    sass: ^1.3.0
-    sass-embedded: "*"
-    webpack: ^5.0.0
-  peerDependenciesMeta:
-    fibers:
-      optional: true
-    node-sass:
-      optional: true
-    sass:
-      optional: true
-    sass-embedded:
-      optional: true
-  checksum: 5d73a428588150f704016aa27397941bb9246cecd2ee083b573e95d969fc080ac6a16f2fe1cc64aca08f6e70da6f3c586ee68f0efc9f527fecc360e5f1c299ec
   languageName: node
   linkType: hard
 
