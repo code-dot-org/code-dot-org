@@ -280,7 +280,7 @@ const themes = [
 /**
  * Change workspace theme to specified theme
  */
-const registerTheme = function (name: Themes, label: string, index: number) {
+const registerTheme = function (name: Themes, label: string, weight: number) {
   const themeOption = {
     displayText: function (scope: ContextMenuRegistry.Scope) {
       return (
@@ -304,7 +304,7 @@ const registerTheme = function (name: Themes, label: string, index: number) {
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: name + 'ThemeOption',
-    weight: 13 + index,
+    weight,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(themeOption);
 };
@@ -501,13 +501,13 @@ function registerCustomBlockOptions() {
   let nextWeight = 7;
 
   // Custom block options. We increment the weight for each so they are automatically
-  // sorted in the order listed here.
+  // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
   registerHelp(nextWeight++);
   registerDeletable(nextWeight++);
   registerMovable(nextWeight++);
   registerEditable(nextWeight++);
   registerShadow(nextWeight++);
-  registerUnshadow(nextWeight);
+  registerUnshadow(nextWeight); // Last option; no incrementing needed.
 }
 
 function registerCustomWorkspaceOptions() {
@@ -523,12 +523,12 @@ function registerCustomWorkspaceOptions() {
   let nextWeight = 3;
 
   // Custom workspace options. We increment the weight for each so they are automatically
-  // sorted in the order listed here. Cursors and Themes have multiple options so we need to adjust
-  // the weight accordingly.
+  // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
+  // Cursors and Themes have multiple options so we need to increment multiple times afterwards.
   registerKeyboardNavigation(nextWeight++);
   registerAllCursors(nextWeight, NAVIGATION_CURSOR_TYPES);
   nextWeight += NAVIGATION_CURSOR_TYPES.length;
   registerDarkMode(nextWeight++);
-  registerThemes(nextWeight, themes);
+  registerThemes(nextWeight, themes); // Last option; no incrementing needed.
   // If additional options are added here, we would want to increment the weight by themes.length.
 }
