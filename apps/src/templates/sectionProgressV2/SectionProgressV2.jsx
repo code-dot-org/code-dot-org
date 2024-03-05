@@ -38,13 +38,13 @@ function SectionProgressV2({
 
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
-      <Heading1>Progress</Heading1>
+      <Heading1>{i18n.progress() + ' (' + i18n.beta() + ')'}</Heading1>
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
       />
       <div className={styles.title}>
-        <Heading6 className={styles.titleStudents}>Students</Heading6>
+        <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>
         <Heading6 className={styles.titleUnitSelector}>
           {i18n.lessonsIn()}
 
@@ -67,8 +67,6 @@ SectionProgressV2.propTypes = {
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
 };
-
-export const UnconnectedSectionProgressV2 = SectionProgressV2;
 
 export default connect(state => ({
   scriptId: state.unitSelection.scriptId,
