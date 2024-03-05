@@ -14,6 +14,39 @@ exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
+/**
+ * Converts a comma-separated string to a 2D array of integers.
+ * @param {string} inputString - The input string representing the bitmap.
+ * @param {number} height - The height of the bitmap.
+ * @param {number} width - The width of the bitmap.
+ * @returns {number[][]} The 2D array representation of the bitmap.
+ * @throws {Error} If the height and width are incompatible with the input string.
+ */
+exports.stringTo2DArray = function (inputString, height, width) {
+  const elements = inputString.split(',');
+  const totalElements = elements.length;
+
+  // Check if height and width are compatible with the total number of elements
+  if (height * width !== totalElements) {
+    throw new Error('Invalid height and width for the given input string.');
+  }
+
+  const array2D = [];
+
+  for (let i = 0; i < height; i++) {
+    const row = [];
+
+    for (let j = 0; j < width; j++) {
+      const index = i * width + j;
+      row.push(parseInt(elements[index]));
+    }
+
+    array2D.push(row);
+  }
+
+  return array2D;
+};
+
 const appendBlocks = function (toolboxDom, blockTypes) {
   const root = toolboxDom.firstChild;
   blockTypes.forEach(blockName => {

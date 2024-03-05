@@ -428,6 +428,29 @@ const customInputTypes = {
       return [`"${label}"`, `"${name}"`];
     },
   },
+
+  bitmap: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const config = {
+        height: 8,
+        width: 8,
+      };
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldBitmap(null, null, config),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      const field = block.getField(arg.name);
+      return [
+        `[${block.getFieldValue(arg.name)}]`,
+        `${field.getImageWidth()}`,
+        `${field.getImageHeight()}`,
+      ];
+    },
+  },
 };
 
 export default {

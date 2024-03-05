@@ -2,6 +2,8 @@ import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import {layoutSpriteGroup} from '../../layoutUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
+import * as blockUtils from '../../../block_utils';
+import {APP_HEIGHT} from '../../constants';
 
 export const commands = {
   countByAnimation(spriteArg) {
@@ -79,6 +81,20 @@ export const commands = {
         animation,
         location: locationCommands.randomLocation(),
       });
+    }
+  },
+
+  makeEnvironmentSprites(animation, layout, width, height) {
+    const bitmap = blockUtils.stringTo2DArray(layout.toString(), height, width);
+    const scale = APP_HEIGHT / height;
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < width; j++) {
+        const location = {
+          x: scale / 2 + scale * i,
+          y: scale / 2 + scale * j,
+        };
+        bitmap[j][i] && this.addSprite({animation, location, scale});
+      }
     }
   },
 
