@@ -11,8 +11,6 @@ import moduleStyles from './button.module.scss';
 export interface ButtonProps {
   /** Button Component type */
   type?: 'primary' | 'secondary' | 'tertiary' | 'iconBorder' | 'iconOnly';
-  /** Button html element type */
-  buttonType?: 'submit' | 'button';
   /** Custom class name */
   className?: string;
   /** Button id */
@@ -39,18 +37,16 @@ export interface ButtonProps {
   iconLeft?: FontAwesomeV6IconProps;
   /** Left Button icon */
   iconRight?: FontAwesomeV6IconProps;
-
-  /** Button onClick target (when used as link) */
+  /** Whether we use \<a> (when set to true) or \<button> (when false) html tag for Button component.
+   * If we want button to redirect to another page or download some file we should use \<a> tag.
+   * If we want button to call some function or submit some form we should use \<button> tag.
+   * */
   useAsLink?: boolean;
-  /** Button onClick target (when used as link) */
-  target?: string;
-  /** Button href */
-  href?: string;
-  /** Button download (when used as link) */
-  download?: boolean | string;
-  /** Button title */
-  title?: string;
-  /** Button onClick */
+  /** (\<button> specific prop)
+   * Button html element type */
+  buttonType?: 'submit' | 'button';
+  /** (\<button> specific prop)
+   *  Button onClick */
   onClick?: (
     event:
       | React.MouseEvent<HTMLButtonElement>
@@ -58,10 +54,24 @@ export interface ButtonProps {
       //   onClick Should only be applied to <button> elements, but not to <a> elements.
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
-  /** Button value */
+  /** (\<button> specific prop)
+   *  Button value */
   value?: string;
-  /** Button name */
+  /** (\<button> specific prop)
+   *  Button name */
   name?: string;
+  /** (\<a> specific prop)
+   *  Button target (when used as link) */
+  target?: string;
+  /** (\<a> specific prop)
+   * Button href */
+  href?: string;
+  /** (\<a> specific prop)
+   * Button download (when used as link) */
+  download?: boolean | string;
+  /** (\<a> specific prop)
+   * Button title */
+  title?: string;
 }
 
 const Button: React.FunctionComponent<ButtonProps> = ({
@@ -70,9 +80,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   color,
   text,
   disabled = false,
-  // styleAsText = false,
-  // isPending = false,
-  // pendingText,
   ariaLabel,
   iconLeft,
   iconRight,
