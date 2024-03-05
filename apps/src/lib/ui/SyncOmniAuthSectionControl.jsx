@@ -241,15 +241,20 @@ export function SyncOmniAuthSectionButton({
       onClick={onClick}
       {...iconProps(buttonState)}
       style={{float: 'left'}}
-      title={buttonState === DISABLED && i18n.ltiSectionSyncButtonDisabledAltText()}
-      aria-label={buttonState === DISABLED && i18n.ltiSectionSyncButtonDisabledAltText()}
+      title={
+        buttonState === DISABLED && i18n.ltiSectionSyncButtonDisabledAltText()
+      }
+      aria-label={
+        buttonState === DISABLED && i18n.ltiSectionSyncButtonDisabledAltText()
+      }
     />
   );
 }
 SyncOmniAuthSectionButton.propTypes = {
   provider: PropTypes.oneOf(SYNC_PROVIDERS).isRequired,
   providerName: PropTypes.string.isRequired,
-  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, DISABLED]).isRequired,
+  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, DISABLED])
+    .isRequired,
   onClick: PropTypes.func,
 };
 
