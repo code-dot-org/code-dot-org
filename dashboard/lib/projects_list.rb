@@ -135,10 +135,7 @@ module ProjectsList
       return featured
     end
 
-    def fetch_active_published_featured_projects(project_group, limit:)
-      unless limit && limit.to_i >= 1 && limit.to_i <= FEATURED_MAX_LIMIT
-        raise ArgumentError, "limit must be between 1 and #{FEATURED_MAX_LIMIT}"
-      end
+    def fetch_active_published_featured_projects(project_group, featured_before: nil)
       if project_group == 'all'
         return fetch_featured_published_projects
       end
@@ -255,7 +252,7 @@ module ProjectsList
         exclude(featured_at: nil).
         exclude(published_at: nil).
         exclude(abuse_score: 0...).
-        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
+        order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 

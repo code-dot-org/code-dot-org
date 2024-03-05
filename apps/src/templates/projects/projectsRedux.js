@@ -456,7 +456,7 @@ export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/all/${FeaturedProjectConstants.MAX_REQUESTS_PER_CATEGORY}`,
+      url: `/api/v1/projects/gallery/public/all`,
       dataType: 'json',
     }).done(projectLists => {
       dispatch(setProjectLists(projectLists));
