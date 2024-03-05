@@ -118,6 +118,7 @@
   "aiTrainedModelsDeleteModelConfirm": "Are you sure you would like to delete this model?",
   "aiTrainedModelsDeleteModelMessage": "This model will be permanently deleted, and you will not be able to use this model in any App Lab projects.",
   "aiTrainedModelsDeleteModelFailed": "Model with id {id} could not be deleted.",
+  "aiTutor": "AI Tutor",
   "all": "All",
   "allHandouts": "All Handouts",
   "allowEditing": "Allow editing",

@@ -106,6 +106,7 @@ const studentLevelProgressShape = {
   timeSpent: PropTypes.number,
   lastTimestamp: PropTypes.number,
   teacherFeedbackReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
+  teacherFeedbackNew: PropTypes.bool.isRequired,
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition

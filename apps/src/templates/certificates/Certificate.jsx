@@ -115,6 +115,7 @@ function Certificate(props) {
     children,
     certificateData,
     isHocTutorial,
+    userType,
   } = props;
 
   const swiperRef = useRef(null);
@@ -269,6 +270,7 @@ function Certificate(props) {
             print={print}
             under13={under13}
             isPlCourse={false}
+            userType={userType}
           />
         </div>
       </div>
@@ -286,6 +288,7 @@ Certificate.propTypes = {
   children: PropTypes.node,
   certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
   isHocTutorial: PropTypes.bool,
+  userType: PropTypes.string,
 };
 
 export default connect(state => ({
