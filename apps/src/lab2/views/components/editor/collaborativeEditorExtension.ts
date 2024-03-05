@@ -20,7 +20,7 @@ import throttle from 'throttleit';
  * @type {number}
  * To disable throttling, set MAX_FPS to 0.
  */
-const DEFAULT_MAX_FPS = 30;
+const DEFAULT_MAX_FPS = 0;
 
 class Updates {
   constructor(readonly version: number, readonly updates: readonly Update[]) {}
@@ -183,31 +183,28 @@ class CollaborativeEditorChannel {
  * via ActionCable for real-time updates and data persistence in Redis. This extension enables
  * collaborative interactions within any CodeMirror editor setup.
  *
- * @param {string} clientID - A unique identifier for the client.
- * @param {string} documentID - Could be channel_id, project_id, or similar. Editors using the same documentID will have shared updates.
- * @param {Object} options - Configuration options for update speed.
- * @param {number} [options.maxFPS=DEFAULT_MAX_FPS] - Maximum frames per second to update. If 0 or less, the max FPS feature is disabled.
- *
+ * @param {string} documentID - collaborative editors with the same documentID will be working on the same document, sharing updates with each other
+ * @param {Object} options -
+ * @param {number} [options.maxFPS] - optional, max frames per second for shared editor updates (reduces server load), or set to 0 to disable throttling (default, smoothest sharing).
+ * @param {string} [options.prefixClientID] - optional username or other string you associate with the user, useful for debugging, will be suffixed with a random ID to ensure uniqueness between all instances
+
+*
  * @example
  * const state = EditorState.create({
  *   extensions: [
- *     collaborativeEditorExtension(clientID, documentID),
+ *     collaborativeEditorExtension(documentID, { clientID, maxFPS }),
  *   ],
  * });
  */
 export function collaborativeEditorExtension(
-  clientID: string,
   documentID: string,
-  {maxFPS}: {maxFPS: number} = {
-    maxFPS: DEFAULT_MAX_FPS,
-  }
+  {
+    prefixClientID = undefined,
+    maxFPS = DEFAULT_MAX_FPS,
+  }: {prefixClientID?: string; maxFPS?: number} = {}
 ): Extension[] {
-  // Before we can initialize the collab() extension, we need to have run the
-  // async sendGetDoc() and gotten its as initialDoc and initialVersion. Since
-  // this function runs sync, we can't do that inline here. The solution is to
-  // setup a CodeMirror Compartment:
-  // https://codemirror.net/examples/config/#private-compartments
-  const collabCompartment = new Compartment();
+  const suffix = Math.random().toString(36).substring(6);
+  const clientID = prefixClientID ? `${prefixClientID}-${suffix}` : suffix;
   class CollaborativeEditorChannelPlugin {
     private pushInProgress = false;
     private done = false;
@@ -221,6 +218,7 @@ export function collaborativeEditorExtension(
     constructor(private view: EditorView) {
       try {
         this.currentVersion = 0;
+
         this.channel = new CollaborativeEditorChannel(
           clientID,
           documentID,
@@ -354,6 +352,13 @@ export function collaborativeEditorExtension(
       this.done = true;
     }
   }
+
+  // Before we can initialize the collab() extension, we need to have run the
+  // async sendGetDoc() and gotten its as initialDoc and initialVersion. Since
+  // this function runs sync, we can't do that inline here. The solution is to
+  // setup a CodeMirror Compartment:
+  // https://codemirror.net/examples/config/#private-compartments
+  const collabCompartment = new Compartment();
 
   return [
     ViewPlugin.fromClass(CollaborativeEditorChannelPlugin),

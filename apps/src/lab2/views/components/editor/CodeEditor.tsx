@@ -36,7 +36,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       }
     );
 
-    const clientID = Math.random().toString(36).substring(6);
     const documentID = 'FIXME'; // @molly-moen what should this be? channelID? - @snickell
 
     const editorExtensions = [
@@ -46,7 +45,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       autocompletion(),
 
       // @molly-moen totally untested because I'm not sure how to test CodeEditor.tsx - @snickell
-      collaborativeEditorExtension(clientID, documentID),
+      collaborativeEditorExtension(documentID),
       ...editorConfigExtensions,
     ];
     if (darkMode) {

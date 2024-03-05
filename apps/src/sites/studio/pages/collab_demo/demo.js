@@ -17,12 +17,9 @@ function boo() {
 `;
 
 function collaborativeEditorDemo(domSelector) {
-  const clientID = Math.random().toString(36).substring(6);
   const documentID = window.documentID; // we inject this in demo.html.haml for the demo
 
-  console.log(
-    `collaborativeEditor(): clientID: ${clientID}, documentID: ${documentID}`
-  );
+  console.log(`collaborativeEditor(documentID: ${documentID})`);
 
   const startState = EditorState.create({
     doc: INITIAL_DOC,
@@ -33,7 +30,6 @@ function collaborativeEditorDemo(domSelector) {
       // collaborativeEditorExtension DOES THE REAL WORK and is better than demo-ware
       // it can be added to any CodeMirror editor in the extensions list
       collaborativeEditorExtension(
-        clientID, // this should be a unique per-browser window ID
         documentID // this could be the documentID, projectID or something like that
       ),
     ],
