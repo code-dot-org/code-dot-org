@@ -12,10 +12,15 @@ import {
 import {createConsumer, Subscription} from '@rails/actioncable';
 import throttle from 'throttleit';
 
-// Throttle how frequently we send editor updates to the server. This creates a lower
-// 'framerate' between pair programming partners, but it reduces server load and thereby cost.
-const THROTTLE_EDITOR_UPDATES = false;
-const THROTTLE_EDITOR_UPDATES_MS = 2000;
+/**
+ * Default maximuum frames per second for shared editors. Setting this greater
+ * than 0 will throttle how frequently we transmit edits to the server. Lowering
+ * this value will reduce server load, but make for choppy pair programming.
+ * @const
+ * @type {number}
+ * To disable throttling, set MAX_FPS to 0.
+ */
+const DEFAULT_MAX_FPS = 30;
 
 class Updates {
   constructor(readonly version: number, readonly updates: readonly Update[]) {}
@@ -173,11 +178,29 @@ class CollaborativeEditorChannel {
   }
 }
 
-// Creates a CodeMirror extension that can be used in the EditorState's list
-// of extensions. Its backed by an ActionCable channel, which stores to redis.
+/**
+ * Creates a CodeMirror extension for collaborative editing, leveraging the CollaborativeEditorChannel
+ * via ActionCable for real-time updates and data persistence in Redis. This extension enables
+ * collaborative interactions within any CodeMirror editor setup.
+ *
+ * @param {string} clientID - A unique identifier for the client.
+ * @param {string} documentID - Could be channel_id, project_id, or similar. Editors using the same documentID will have shared updates.
+ * @param {Object} options - Configuration options for update speed.
+ * @param {number} [options.maxFPS=DEFAULT_MAX_FPS] - Maximum frames per second to update. If 0 or less, the max FPS feature is disabled.
+ *
+ * @example
+ * const state = EditorState.create({
+ *   extensions: [
+ *     collaborativeEditorExtension(clientID, documentID),
+ *   ],
+ * });
+ */
 export function collaborativeEditorExtension(
   clientID: string,
-  documentID: string
+  documentID: string,
+  {maxFPS}: {maxFPS: number} = {
+    maxFPS: DEFAULT_MAX_FPS,
+  }
 ): Extension[] {
   // Before we can initialize the collab() extension, we need to have run the
   // async sendGetDoc() and gotten its as initialDoc and initialVersion. Since
@@ -206,10 +229,10 @@ export function collaborativeEditorExtension(
           this.onDisconnect.bind(this)
         );
 
-        this.throttledPush = throttle(
-          this.push.bind(this),
-          THROTTLE_EDITOR_UPDATES_MS
-        );
+        // If maxFPS > 0, throttle the push() method to reduce server load
+        this.throttledPush = maxFPS
+          ? throttle(this.push.bind(this), 1000.0 / maxFPS)
+          : this.push;
       } catch (e) {
         // ViewPlugin.fromClass silently consumes errors, so we log them here
         console.error('Error creating CollaborativeEditorChannel', e);
@@ -297,13 +320,9 @@ export function collaborativeEditorExtension(
 
     update(update: ViewUpdate) {
       if (update.docChanged) {
-        if (THROTTLE_EDITOR_UPDATES) {
-          // Call this.push() to transmit doc changes, but throttle the updates/s
-          // to reduce server load and thereby cost.
-          this.throttledPush();
-        } else {
-          this.push();
-        }
+        // Call this.push() to transmit doc changes, but throttle the updates/s
+        // to reduce server load and thereby cost.
+        this.throttledPush();
       }
     }
 
