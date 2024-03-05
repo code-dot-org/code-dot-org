@@ -175,6 +175,7 @@ export default function LearningGoals({
   const [aiFeedback, setAiFeedback] = useState(-1);
   const [aiEvidence, setAiEvidence] = useState([]);
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
+  const currentLearningGoalRef = useRef(0);
   const learningGoalEvalIds = useRef(Array(learningGoals.length).fill(null));
   const teacherFeedbacks = useRef(Array(learningGoals.length).fill(''));
   const teacherFeedbacksLoaded = useRef(
@@ -253,39 +254,48 @@ export default function LearningGoals({
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
 
-      learningGoals.forEach((learningGoal, index) => {
-        const body = JSON.stringify({
-          userId: studentLevelInfo.user_id,
-          learningGoalId: learningGoal.id,
+      // Only load prior learning goal feedback once
+      learningGoals
+        .filter((learningGoal, index) => {
+          return !teacherFeedbacksLoaded.current[index];
+        })
+        .forEach((learningGoal, index) => {
+          const body = JSON.stringify({
+            userId: studentLevelInfo.user_id,
+            learningGoalId: learningGoal.id,
+          });
+          HttpClient.post(
+            `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
+            body,
+            true,
+            {
+              'Content-Type': 'application/json',
+            }
+          )
+            .then(response => response.json())
+            .then(json => {
+              learningGoalEvalIds.current[index] = json.id;
+              if (json.feedback) {
+                teacherFeedbacks.current[index] = json.feedback;
+              }
+              teacherFeedbacksLoaded.current[index] = true;
+              if (json.understanding >= 0 && json.understanding !== null) {
+                understandingLevels.current[index] = json.understanding;
+              }
+              if (index === currentLearningGoalRef.current) {
+                setDisplayFeedback(
+                  teacherFeedbacks.current[currentLearningGoalRef.current]
+                );
+                setLoaded(
+                  teacherFeedbacksLoaded.current[currentLearningGoalRef.current]
+                );
+                setDisplayUnderstanding(
+                  understandingLevels.current[currentLearningGoalRef.current]
+                );
+              }
+            })
+            .catch(error => console.error(error));
         });
-        HttpClient.post(
-          `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
-          body,
-          true,
-          {
-            'Content-Type': 'application/json',
-          }
-        )
-          .then(response => response.json())
-          .then(json => {
-            learningGoalEvalIds.current[index] = json.id;
-            if (json.feedback) {
-              teacherFeedbacks.current[index] = json.feedback;
-            }
-            teacherFeedbacksLoaded.current[index] = true;
-            if (json.understanding >= 0 && json.understanding !== null) {
-              understandingLevels.current[index] = json.understanding;
-            }
-            if (index === currentLearningGoal) {
-              setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
-              setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
-              setDisplayUnderstanding(
-                understandingLevels.current[currentLearningGoal]
-              );
-            }
-          })
-          .catch(error => console.error(error));
-      });
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal, open]);
 
@@ -365,6 +375,7 @@ export default function LearningGoals({
     } else if (currentIndex >= learningGoals.length) {
       currentIndex = 0;
     }
+    currentLearningGoalRef.current = currentIndex;
     setCurrentLearningGoal(currentIndex);
 
     // Clear feedback (without sending it)
