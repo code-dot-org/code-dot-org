@@ -2,7 +2,8 @@
 import {combineReducers} from 'redux';
 import $ from 'jquery';
 import _ from 'lodash';
-import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
+import {Galleries} from './projectConstants';
+import {FeaturedProjectConstants} from '@cdo/apps/util/sharedConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
@@ -450,10 +451,12 @@ const reducer = combineReducers({
 export default reducer;
 
 export const setPublicProjects = () => {
+  console.log('setPublishProjects');
+  console.log('limit', FeaturedProjectConstants.MAX_REQUESTS_PER_CATEGORY);
   return dispatch => {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+      url: `/api/v1/projects/gallery/public/all/${FeaturedProjectConstants.MAX_REQUESTS_PER_CATEGORY}`,
       dataType: 'json',
     }).done(projectLists => {
       dispatch(setProjectLists(projectLists));
