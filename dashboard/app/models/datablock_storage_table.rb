@@ -11,7 +11,9 @@
 #
 class DatablockStorageTable < ApplicationRecord
   self.primary_keys = :project_id, :table_name
-  has_many :records, autosave: true,
+  has_many :records,
+    -> {order(record_id: :asc)},
+    autosave: true,
     class_name: 'DatablockStorageRecord',
     foreign_key: [:project_id, :table_name],
     dependent: :delete_all
@@ -201,13 +203,13 @@ class DatablockStorageTable < ApplicationRecord
     self.columns.delete column_name
   end
 
-  # TODO: What is the current behavior if the column doesn't exist?
-  # This will return Nil. What happens in AppLab today?
   def get_column(column_name)
-    if columns.include? column_name
+    if get_columns.include? column_name
       read_records.map do |record|
         record.record_json[column_name]
       end
+    else
+      [] # javascript expects a list with every element undefined to indicate column doesn't exists error
     end
   end
 
