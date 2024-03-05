@@ -1105,7 +1105,11 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
-    resources :ai_tutor_interactions, only: [:create, :index]
+    resources :ai_tutor_interactions, only: [:create, :index] do
+      collection do
+        get :get_for_student
+      end
+    end
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

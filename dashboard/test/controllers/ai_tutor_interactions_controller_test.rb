@@ -160,6 +160,71 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'get_for_student returns not found for invalid userId' do
+    sign_in @student_with_ai_tutor_access
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :get_for_student, params: {
+        userId: '123',
+      }
+    end
+  end
+
+  test 'get_for_student returns AI Tutor Interactions when student owns chats' do
+    sign_in @student_with_ai_tutor_access
+    num_ai_tutor_interactions = 2
+    num_ai_tutor_interactions.times do
+      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    end
+    get :get_for_student, params: {
+      userId: @student_with_ai_tutor_access.id,
+    }
+    assert_response :success
+
+    response_json = JSON.parse(response.body)
+    assert response_json.length, num_ai_tutor_interactions
+    assert response_json.first["userId"], @student_with_ai_tutor_access.id
+  end
+
+  test 'get_for_student returns forbidden when student is not in teacher section' do
+    random_teacher = create :teacher
+    sign_in random_teacher
+    User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
+    create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    get :get_for_student, params: {
+      userId: @student_with_ai_tutor_access.id,
+    }
+    assert_response :forbidden
+  end
+
+  test 'get_for_student returns forbidden when teacher does not have access to view chats' do
+    teacher = @student_with_ai_tutor_access.teachers.first
+    sign_in teacher
+    User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(false)
+    create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    get :get_for_student, params: {
+      userId: @student_with_ai_tutor_access.id,
+    }
+    assert_response :forbidden
+  end
+
+  test 'get_for_student returns AI Tutor Interactions for student in teacher section' do
+    teacher = @student_with_ai_tutor_access.teachers.first
+    sign_in teacher
+    User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
+    num_ai_tutor_interactions = 3
+    num_ai_tutor_interactions.times do
+      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    end
+    get :get_for_student, params: {
+      userId: @student_with_ai_tutor_access.id,
+    }
+    assert_response :success
+
+    response_json = JSON.parse(response.body)
+    assert response_json.length, num_ai_tutor_interactions
+    assert response_json.first["userId"], @student_with_ai_tutor_access.id
+  end
+
   private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
     fake_main_json = {source: code}.to_json
     fake_source_data = {

@@ -81,4 +81,21 @@ class AiTutorInteractionsController < ApplicationController
     end
     render json: student_chats
   end
+
+  # GET /ai_tutor_interactions/get_for_student
+  def get_for_student
+    params.require([:userId])
+    student = User.find(params[:userId])
+    return render(status: :not_found, json: {error: 'Student not found'}) unless student
+    teacher_can_view_chats = current_user.students.include?(student)
+    student_can_view_own_chats = student.id == current_user.id
+    return render(status: :forbidden, json: {error: 'This user does not have access to these chats'}) unless teacher_can_view_chats || student_can_view_own_chats
+    ai_tutor_interactions = AiTutorInteraction.where(user_id: student.id).map(&:attributes)
+    student_chats = []
+    ai_tutor_interactions.each do |interaction|
+      student_chat = interaction.transform_keys {|key| key.camelize(:lower)}
+      student_chats << student_chat
+    end
+    render json: student_chats
+  end
 end
