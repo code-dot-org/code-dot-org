@@ -88,8 +88,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
-    teacher = create :teacher
-    teacher.lti_roster_sync_enabled = true
+    teacher = create :teacher, lti_roster_sync_enabled: true
     sign_in(teacher)
 
     assert teacher.lti_roster_sync_enabled

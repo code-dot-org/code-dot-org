@@ -18,7 +18,7 @@ import $ from 'jquery';
 export default function LtiSectionSyncDialog({
   syncResult,
   onClose,
-  disableRosterSyncEnabled,
+  disableRosterSyncButtonEnabled,
 }: LtiSectionSyncDialogProps) {
   const initialView = syncResult.error ? SubView.ERROR : SubView.SYNC_RESULT;
   const [currentView, setCurrentView] = useState<SubView>(initialView);
@@ -120,8 +120,8 @@ export default function LtiSectionSyncDialog({
           <SafeMarkdown markdown={dialogDescription} />
           <ul aria-labelledby={'roster-sync-status'}> {sectionListItems} </ul>
         </div>
-        <DialogFooter rightAlign={!disableRosterSyncEnabled}>
-          {disableRosterSyncEnabled && (
+        <DialogFooter rightAlign={!disableRosterSyncButtonEnabled}>
+          {disableRosterSyncButtonEnabled && (
             <Button
               color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.ltiSectionSyncDisableRosterSyncButtonLabel()}

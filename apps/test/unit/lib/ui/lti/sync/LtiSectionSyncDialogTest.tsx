@@ -71,7 +71,7 @@ describe('LTI Section Sync Dialog', () => {
         <LtiSectionSyncDialog
           isOpen
           syncResult={MOCK_SYNC_RESULT}
-          disableRosterSyncEnabled
+          disableRosterSyncButtonEnabled
           onClose={mockOnClose}
         />
       );
@@ -111,7 +111,7 @@ describe('LTI Section Sync Dialog', () => {
         <LtiSectionSyncDialog
           isOpen
           syncResult={MOCK_SYNC_RESULT}
-          disableRosterSyncEnabled
+          disableRosterSyncButtonEnabled
         />
       );
 

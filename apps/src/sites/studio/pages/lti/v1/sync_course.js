@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       isOpen
       syncResult={result}
       onClose={onClose}
-      disableRosterSyncEnabled
+      disableRosterSyncButtonEnabled
     />,
     mountPoint
   );
