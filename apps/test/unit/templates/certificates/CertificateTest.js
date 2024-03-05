@@ -54,12 +54,13 @@ describe('Certificate', () => {
         JSON.stringify(data),
       ]);
 
-      const initialCertificateImageUrl =
-        'https://code.org/images/placeholder-hoc-image.jpg';
       const wrapper = wrapperWithParams({
-        tutorial: 'dance',
+        certificateData: [
+          {
+            courseName: 'dance',
+          },
+        ],
         certificateId: 'sessionId',
-        initialCertificateImageUrl,
         isHocTutorial: true,
       });
       let image = wrapper.find('#uitest-certificate img');
@@ -95,17 +96,41 @@ describe('Certificate', () => {
     });
 
     it('passes down full urls to SocialShare', () => {
-      const initialCertificateImageUrl =
-        'https://code.org/images/placeholder-hoc-image.jpg';
       const wrapper = wrapperWithParams({
-        tutorial: 'dance',
+        certificateData: [
+          {
+            courseName: 'dance',
+          },
+        ],
         certificateId: 'sessionId',
-        initialCertificateImageUrl,
         isHocTutorial: true,
       });
       const socialShare = wrapper.find('SocialShare');
       expect(socialShare.props().facebook).to.include('studio.code.org');
       expect(socialShare.props().twitter).to.include('studio.code.org');
     });
+  });
+
+  it('renders swiper for multiple certificates', () => {
+    const wrapper = wrapperWithParams({
+      certificateData: [
+        {
+          courseName: 'csd1-2023',
+          coursePath: '/s/csd1-2023',
+        },
+        {
+          courseName: 'csd2-2023',
+          coursePath: '/s/csd2-2023',
+        },
+      ],
+      certificateId: 'sessionId',
+      isHocTutorial: false,
+    });
+    expect(wrapper.find('swiper-container').exists()).to.be.true;
+    expect(wrapper.find('swiper-slide').length).to.equal(2);
+
+    expect(wrapper.find('LargeChevronLink').props().link).to.equal(
+      '/s/csd1-2023'
+    );
   });
 });

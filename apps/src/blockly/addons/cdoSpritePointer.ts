@@ -2,6 +2,9 @@
 // mini toolbox blocks) we "shadow" the image on the block from a source block.
 // This file contains functions to get and set the image on the pointer block.
 
+import {ExtendedBlockSvg, PointerMetadataMap} from '../types';
+import CdoFieldImage from './cdoFieldImage';
+
 /**
  * Get the image url for the given pointer block.
  * @param {Block} block pointer block to get the image url for
@@ -11,18 +14,20 @@
  * @returns {string} The url of the image that the pointer block should display, or an empty string if the block should display no image
  */
 export function getPointerBlockImageUrl(
-  block,
-  pointerMetadataMap,
-  imageSourceId
+  block: ExtendedBlockSvg,
+  pointerMetadataMap: PointerMetadataMap,
+  imageSourceId: string
 ) {
   const pointerData = pointerMetadataMap[block.type];
   if (!pointerData || !block.inputList || block.inputList.length === 0) {
     return '';
   }
-  let imageSourceBlock = undefined;
+  let imageSourceBlock: ExtendedBlockSvg | null = null;
   const mainWorkspace = Blockly.getMainWorkspace();
   if (imageSourceId !== undefined) {
-    imageSourceBlock = mainWorkspace.getBlockById(imageSourceId);
+    imageSourceBlock = mainWorkspace?.getBlockById(
+      imageSourceId
+    ) as ExtendedBlockSvg;
   }
   if (!imageSourceBlock) {
     const rootBlock = block.getRootBlock();
@@ -33,8 +38,15 @@ export function getPointerBlockImageUrl(
       // If this block has itself as a root and is in a flyout workspace,
       // it is a in a mini toolbox. A block can't be moved from one flyout to
       // another, so if it's in a flyout, it is in its original flyout.
-      if (blockWorkspace && blockWorkspace.isFlyout && block.imageSourceId) {
-        imageSourceBlock = mainWorkspace.getBlockById(block.imageSourceId);
+      if (
+        mainWorkspace &&
+        blockWorkspace &&
+        blockWorkspace.isFlyout &&
+        block.imageSourceId
+      ) {
+        imageSourceBlock = mainWorkspace.getBlockById(
+          block.imageSourceId
+        ) as ExtendedBlockSvg;
       }
     }
   }
@@ -51,9 +63,9 @@ export function getPointerBlockImageUrl(
 // on the pointer block to match the image selected in the image source block. See getPointerBlockImageUrl
 // for details on how we find the image source block.
 export function updatePointerBlockImage(
-  block,
-  pointerMetadataMap,
-  imageSourceId
+  block: ExtendedBlockSvg,
+  pointerMetadataMap: PointerMetadataMap,
+  imageSourceId: string
 ) {
   const url = getPointerBlockImageUrl(block, pointerMetadataMap, imageSourceId);
   changePointerImage(url, block);
@@ -68,26 +80,29 @@ export function updatePointerBlockImage(
  *  should have a connection to a block of type gamelab_allSpritesWithAnimation, or we will return an empty string.
  * @returns Image url or empty string if the image source block does not have an image at the given index.
  */
-function getImageUrlFromImageSource(imageSourceBlock, imageIndexOnSource) {
+function getImageUrlFromImageSource(
+  imageSourceBlock: ExtendedBlockSvg,
+  imageIndexOnSource: number
+) {
   const targetConnection =
     imageSourceBlock.inputList[imageIndexOnSource]?.connection
       ?.targetConnection;
   // We only want to get the image from a connection block that is not an insertion marker.
   // If the block is an insertion marker that means the block is being dragged
   // and is not yet connected to the image source block.
+  const sourceBlock = targetConnection?.getSourceBlock();
   if (
-    targetConnection &&
-    targetConnection.sourceBlock_ &&
-    targetConnection.sourceBlock_.type === 'gamelab_allSpritesWithAnimation' &&
-    !targetConnection.sourceBlock_.isInsertionMarker()
+    sourceBlock &&
+    sourceBlock.type === 'gamelab_allSpritesWithAnimation' &&
+    !sourceBlock.isInsertionMarker()
   ) {
     // Blocks of type gamelab_allSpritesWithAnimation have an input with one field (the costume
     // picker dropdown).
-    return (
-      targetConnection.sourceBlock_.inputList[0].fieldRow[0].imageElement.getAttribute(
-        'xlink:href'
-      ) || ''
-    );
+    // imageElement is a private property on FieldDropdown.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const imageElement = (sourceBlock.getField('ANIMATION') as any)
+      ?.imageElement as SVGImageElement;
+    return imageElement?.getAttribute('xlink:href') || '';
   } else {
     return '';
   }
@@ -95,26 +110,42 @@ function getImageUrlFromImageSource(imageSourceBlock, imageIndexOnSource) {
 
 // Set the given block's image input to the given imageUrl,
 // or reset the image input to the default long text if the imageUrl is empty.
-function changePointerImage(imageUrl, block) {
+function changePointerImage(
+  imageUrl: string | undefined,
+  block: ExtendedBlockSvg
+) {
   if (!imageUrl || imageUrl.length === 0) {
     resetPointerImageToLongString(block);
     return;
   }
-  const textInput = block.inputList[0].fieldRow[0];
-  const previewInput = block.inputList[0].fieldRow[1];
-  textInput.setValue(block.shortString);
-  previewInput.setValue(imageUrl);
-  previewInput.updateDimensions(block.thumbnailSize, block.thumbnailSize);
-  previewInput.getSize();
+  updatePointerImageHelper(
+    block,
+    block.shortString,
+    imageUrl,
+    block.thumbnailSize,
+    block.thumbnailSize
+  );
 }
 
 // Reset the block to no longer have an image input, and only
 // show the long text input.
-function resetPointerImageToLongString(block) {
+function resetPointerImageToLongString(block: ExtendedBlockSvg) {
+  updatePointerImageHelper(block, block.longString, '', 1, block.thumbnailSize);
+}
+
+function updatePointerImageHelper(
+  block: ExtendedBlockSvg,
+  textInputValue: string | undefined,
+  imageUrl: string,
+  width: number | undefined,
+  height: number | undefined
+) {
   const textInput = block.inputList[0].fieldRow[0];
-  const previewInput = block.inputList[0].fieldRow[1];
-  textInput.setValue(block.longString);
-  previewInput.setValue('');
-  previewInput.updateDimensions(1, block.thumbnailSize);
+  const previewInput = block.inputList[0].fieldRow[1] as CdoFieldImage;
+  textInput.setValue(textInputValue);
+  previewInput.setValue(imageUrl);
+  if (width !== undefined && height !== undefined) {
+    previewInput.updateDimensions(width, height);
+  }
   previewInput.getSize();
 }
