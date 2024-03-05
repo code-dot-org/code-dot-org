@@ -1684,6 +1684,9 @@
     support:
       heading: "Educator support at every level"
       desc: "Our comprehensive support network caters to educators at all stages, offering year-round assistance, additional programming, and access to vibrant teacher communities. Stay connected, continually develop your skills, and find inspiration within a supportive peer network."
+    share:
+      heading: "Share your accomplishment"
+      desc: "All of our professional learning offerings provide a certificate of completion to share with your network or share with your administrator. Check with your school to find out if you can use the certificates to get professional development credits."
     resources:
       heading: "Additional resources and support for educators"
       intl:
