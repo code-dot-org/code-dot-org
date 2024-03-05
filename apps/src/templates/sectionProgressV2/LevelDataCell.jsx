@@ -3,6 +3,7 @@ import React from 'react';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
+import legendStyles from './progress-table-legend.module.scss';
 import queryString from 'query-string';
 import {Link} from '@dsco_/link';
 import ProgressIcon from './ProgressIcon';
@@ -72,7 +73,13 @@ export default function LevelDataCell({
       href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
       openInNewTab
       external
-      className={classNames(styles.gridBox, styles.gridBoxLevel)}
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxLevel,
+        studentLevelProgress?.teacherFeedbackReviewState !== 'keepWorking' &&
+          studentLevelProgress?.teacherFeedbackNew &&
+          legendStyles.feedbackGiven
+      )}
     >
       {itemType && <ProgressIcon itemType={itemType} />}
     </Link>
