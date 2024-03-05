@@ -22,7 +22,6 @@ import classnames from 'classnames';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StudentSelector from './StudentSelector';
-// import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import SectionSelector from './SectionSelector';
 
 const formatTimeSpent = timeSpent => {
