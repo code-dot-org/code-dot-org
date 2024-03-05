@@ -46,7 +46,8 @@ class Incubator extends Component {
               {
                 url: '/s/music-intro-2024/reset',
                 text: 'Get Started',
-                extraText: 'Learn how to use Project Beats in a step by step intro.',
+                extraText:
+                  'Learn how to use Project Beats in a step by step intro.',
               },
               {
                 url: '/projectbeats',
