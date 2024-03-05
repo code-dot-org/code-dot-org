@@ -70,6 +70,15 @@ class LtiV1Controller < ApplicationController
   end
 
   def authenticate
+    unless params[:open_in_new_tab]
+      puts "OPEN IN NEW TAB #{params[:open_in_new_tab]}"
+      id_token = params[:id_token]
+      state = params[:state]
+      token_hash = {id_token: id_token, state: state}
+      # url = "#{lti_v1_iframe_url}?#{token_hash.to_query}"
+      redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
+      return
+    end
     id_token = params[:id_token]
     return log_unauthorized('Missing LTI ID token') unless id_token
     begin
@@ -188,6 +197,70 @@ class LtiV1Controller < ApplicationController
       end
       format.json {render json: @lti_section_sync_result, status: status}
     end
+  end
+
+  # GET /lti/v1/iframe
+  # Detects if LMS is trying open Code.org in an iframe, prompt user to open in
+  # new tab. Non-iframe experience is opaq to user
+  def iframe
+    render html: <<~HTML.html_safe, layout: false
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Opening Code.org in New Tab</title>
+      <script>
+        window.onload = function() {
+          // Get the current URL
+          const fullUrl = `${window.location.protocol}//${window.location.host}/lti/v1/authenticate`;
+          const urlParams = new URLSearchParams(window.location.search);
+          const idTokenParam = `id_token=${urlParams.get('id_token')}`;
+          const stateParam = `state=${urlParams.get('state')}`;
+          var newTabParam = "open_in_new_tab=true";
+
+          // Append the new query parameter appropriately
+          const auth_url = `${fullUrl}?${idTokenParam}&${stateParam}&${newTabParam}`
+          console.log(`Auth URL: ${auth_url}`)
+          // Check if the current window is the top-level window
+          if (window !== window.top) {
+            // Create a div to hold the message and button
+            var messageDiv = document.createElement("div");
+            messageDiv.style.position = "fixed";
+            messageDiv.style.left = "0";
+            messageDiv.style.top = "0";
+            messageDiv.style.width = "100%";
+            messageDiv.style.height = "100%";
+            messageDiv.style.backgroundColor = "white";
+            messageDiv.style.zIndex = "10000";
+            messageDiv.style.display = "flex";
+            messageDiv.style.justifyContent = "center";
+            messageDiv.style.alignItems = "center";
+            messageDiv.style.flexDirection = "column";
+            messageDiv.style.textAlign = "center";
+            messageDiv.innerHTML = `
+              <p>Code.org cannot be run in an embeded window. Please open it in a new tab.</p>
+              <button onclick="openInNewTab()">Open in New Tab</button>
+            `;
+
+            // Function to open the current URL in a new tab
+            window.openInNewTab = function(url) {
+              // Open the new URL in a new tab
+              window.open(auth_url, '_blank');
+            };
+            // Append the message div to the body
+            document.body.appendChild(messageDiv);
+          } else {
+            // Redirect to auth_url endpoint
+            window.location.replace(auth_url);
+          }
+        };
+      </script>
+      </head>
+      <body>
+      </body>
+      </html>
+    HTML
   end
 
   # GET /lti/v1/sync_course
