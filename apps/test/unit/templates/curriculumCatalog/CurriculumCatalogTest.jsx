@@ -695,7 +695,7 @@ describe('CurriculumCatalog', () => {
 
     it('does not recommend similar curriculum the user has already taught', () => {
       // fullTestCourse1 is the top-ranked similar curriculum for 2 other curricula
-      const curriculaTaughtBefore = [FULL_TEST_COURSES[0].id];
+      const curriculaTaughtBefore = [FULL_TEST_COURSES[0].course_offering_id];
       const props = {
         ...defaultProps,
         curriculaData: FULL_TEST_COURSES,
@@ -730,7 +730,11 @@ describe('CurriculumCatalog', () => {
         // If the top-recommended similar curriculum was previously taught by the user, then check that the image and link are of the
         // next-most-recommended similar curriculum.
         let recommendedSimilarCurriculum = similarCurriculumRecommendations[0];
-        if (curriculaTaughtBefore.includes(recommendedSimilarCurriculum.id)) {
+        if (
+          curriculaTaughtBefore.includes(
+            recommendedSimilarCurriculum.course_offering_id
+          )
+        ) {
           recommendedSimilarCurriculum = similarCurriculumRecommendations[1];
         }
 
