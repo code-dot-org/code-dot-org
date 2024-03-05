@@ -32,8 +32,8 @@ function ProgressTableV2({
       return STUDENT_SKELETON_IDS.map(id => ({id}));
     }
     return isSortedByFamilyName
-      ? students.sort(stringKeyComparator(['familyName', 'name']))
-      : students.sort(stringKeyComparator(['name', 'familyName']));
+      ? [...students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
 
   const getRenderedColumn = React.useCallback(
@@ -104,8 +104,6 @@ function ProgressTableV2({
     </div>
   );
 }
-
-export const UnconnectedProgressTableV2 = ProgressTableV2;
 
 ProgressTableV2.propTypes = {
   isSortedByFamilyName: PropTypes.bool,

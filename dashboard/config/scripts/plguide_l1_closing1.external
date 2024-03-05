@@ -4,10 +4,12 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Closing a Lesson 
+
 #### This page should include: 
-* #### Congratulate the Learner
- * #### Review the objectives
- * #### Let the learner know what is up next 
+
+* #### A congratulations for the Learner
+* #### A review of the objectives
+* #### What's up next for the learner
 
 ___
 
