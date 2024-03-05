@@ -215,7 +215,7 @@ export const fakeStudents = studentCount => {
     }));
 };
 
-export const fakeScriptData = (overrideFields = {}) => {
+export const fakeUnitData = (overrideFields = {}) => {
   return {
     id: 1,
     name: 'csd1-2020',
@@ -270,7 +270,7 @@ export const fakeProgressTableReduxInitialState = (
     lessons = [lesson1, lesson2];
   }
   if (!scriptData) {
-    scriptData = fakeScriptData({lessons: lessons});
+    scriptData = fakeUnitData({lessons: lessons});
   }
   const levelProgressData = fakeStudentLevelProgress(
     scriptData.lessons[0].levels,
