@@ -1,8 +1,18 @@
 @import "color";
 
-// Link common styles
+// Button common styles
 .button {
-  display: block;
+  display: inline-flex;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 // Sizes

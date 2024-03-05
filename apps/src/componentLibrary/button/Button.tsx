@@ -2,13 +2,17 @@ import React, {memo} from 'react';
 import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './button.module.scss';
 
 export interface ButtonProps {
-  /** Button type */
-  type?: string;
+  /** Button Component type */
+  type?: 'primary' | 'secondary' | 'tertiary' | 'iconBorder' | 'iconOnly';
+  /** Button html element type */
+  buttonType?: 'submit' | 'button';
   /** Custom class name */
   className?: string;
   /** Button id */
@@ -19,12 +23,14 @@ export interface ButtonProps {
   text: string;
   /** Is button disabled */
   disabled?: boolean;
-  /** Is button pending */
-  isPending?: boolean;
-  /** Button pending text */
-  pendingText?: string;
-  /** Is Button styled as text */
-  styleAsText?: boolean;
+  //
+  // /** Is button pending */
+  // isPending?: boolean;
+  // /** Button pending text */
+  // pendingText?: string;
+  // /** Is Button styled as text */
+  // styleAsText?: boolean;
+
   /** Button aria-label */
   ariaLabel?: string;
   /** Size of button */
@@ -33,6 +39,9 @@ export interface ButtonProps {
   iconLeft?: FontAwesomeV6IconProps;
   /** Left Button icon */
   iconRight?: FontAwesomeV6IconProps;
+
+  /** Button onClick target (when used as link) */
+  useAsLink?: boolean;
   /** Button onClick target (when used as link) */
   target?: string;
   /** Button href */
@@ -42,11 +51,17 @@ export interface ButtonProps {
   /** Button title */
   title?: string;
   /** Button onClick */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (
+    event:
+      | React.MouseEvent<HTMLButtonElement>
+      // This is a workaround to fix TS error not allowing us to use Tag and tagSpecificProps logic.
+      //   onClick Should only be applied to <button> elements, but not to <a> elements.
+      | React.MouseEvent<HTMLAnchorElement>
+  ) => void;
   /** Button value */
   value?: string;
-  /** Button tabIndex */
-  tabIndex?: number;
+  /** Button name */
+  name?: string;
 }
 
 const Button: React.FunctionComponent<ButtonProps> = ({
@@ -55,23 +70,51 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   color,
   text,
   disabled = false,
-  styleAsText = false,
-  isPending = false,
-  pendingText,
+  // styleAsText = false,
+  // isPending = false,
+  // pendingText,
   ariaLabel,
   iconLeft,
   iconRight,
   size = 'm',
-  type = 'button',
+  type = 'primary',
+  buttonType = 'button',
+  /** <a> specific props */
+  useAsLink = false,
+  href,
+  target,
+  download,
+  title,
+  /** <button> specific props */
+  onClick,
+  value,
+  name,
 }) => {
+  const Tag = useAsLink ? 'a' : 'button';
+
+  const tagSpecificProps =
+    Tag === 'a'
+      ? {href, target, download, title}
+      : {type: buttonType, onClick, value, name};
+  console.log(Tag, tagSpecificProps);
   return (
-    <button
-      type="button"
-      className={classNames(moduleStyles.link, moduleStyles[`link-${size}`])}
+    <Tag
+      className={classNames(
+        moduleStyles.button,
+        moduleStyles[`button-${type}`],
+        moduleStyles[`button-${color}`],
+        moduleStyles[`button-${size}`],
+        className
+      )}
+      id={id}
       disabled={disabled}
+      aria-label={ariaLabel}
+      {...tagSpecificProps}
     >
+      {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
       {text}
-    </button>
+      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+    </Tag>
   );
 };
 

@@ -34,6 +34,7 @@ const MultipleTemplate: Story<{
 export const DefaultButton = SingleTemplate.bind({});
 DefaultButton.args = {
   text: 'Button',
+  onClick: () => console.log('Button clicked'),
   size: 'm',
 };
 
