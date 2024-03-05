@@ -163,8 +163,18 @@ frontend_device_name ||= '/dev/sda1'
 
           STACK=${AWS::StackName}
           REGION=${AWS::Region}
+          AUTO_SCALING_GROUP=Frontends-${AWS::StackName}
+          ENVIRONMENT=<%=environment%>
 
           INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+
+          # Tag the new EC2 instance's Name and environment for easy recognition in the AWS console
+          aws ec2 create-tags --resources $INSTANCE_ID \
+            --tags  Key=Name,Value="${AUTO_SCALING_GROUP}-${INSTANCE_ID}" \
+                    Key=environment,Value="$ENVIRONMENT" \
+            --region $REGION \
+            || true
+
           <%=indent(build_frontend, 10)%>
           if [ $? -eq 0 ]
           then
@@ -177,7 +187,6 @@ frontend_device_name ||= '/dev/sda1'
 
           # Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
           LIFECYCLE_HOOK=WebServerHook-${AWS::StackName}
-          AUTO_SCALING_GROUP=Frontends-${AWS::StackName}
           if [ -n "$LIFECYCLE_HOOK" ] && [ -n "$AUTO_SCALING_GROUP" ]; then
             aws autoscaling complete-lifecycle-action \
               --lifecycle-action-result $LIFECYCLE_ACTION \
