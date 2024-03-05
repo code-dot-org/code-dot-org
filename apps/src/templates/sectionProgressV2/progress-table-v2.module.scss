@@ -58,7 +58,7 @@ $level-cell-width: 52;
     min-width: 80px;
     max-width: 80px;  
     height: 47px;
-    line-height: 47px;
+    line-height: 47px !important;
   }
 
   &Skeleton {

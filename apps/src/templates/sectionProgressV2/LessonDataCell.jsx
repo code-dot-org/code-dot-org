@@ -8,7 +8,7 @@ import {lessonHasLevels} from '../progress/progressHelpers';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 import {Link} from '@dsco_/link';
-import {navigateToLevelOverviewUrl} from './levelUrlUtils';
+import {teacherDashboardUrl} from '../teacherDashboard/urlHelpers';
 
 function LessonDataCell({
   lesson,
@@ -22,12 +22,10 @@ function LessonDataCell({
   const finished = studentLessonProgress?.completedPercent === 100;
   const partiallyComplete = studentLessonProgress && !finished;
 
-  const linkToFirstLesson = lesson.lockable && lesson.assessment;
-
-  const interactive = !noLevels || (lesson.lockable && !linkToFirstLesson);
+  const interactive = !noLevels;
 
   const getCellComponent = children => {
-    if (linkToFirstLesson && interactive) {
+    if (lesson.lockable && interactive) {
       return (
         <Link
           className={classNames(
@@ -35,11 +33,7 @@ function LessonDataCell({
             styles.gridBoxLesson,
             locked && styles.littleLock
           )}
-          href={navigateToLevelOverviewUrl(
-            lesson.levels[0].url,
-            studentId,
-            sectionId
-          )}
+          href={teacherDashboardUrl(sectionId, '/assessments')}
           openInNewTab
           external
           data-testid={'lesson-data-cell-' + lesson.id + '-' + studentId}
