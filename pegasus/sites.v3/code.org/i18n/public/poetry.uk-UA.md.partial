@@ -16,7 +16,7 @@ social:
 
 # Кодування поезії
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Мистецтво поезії", left_description: "Поєднайте мистецтво та анімацію з класичним віршуванням у цій вправі «Година коду».!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Розпочати", right_heading: "Поетичний код", right_description: "Поєднайте інформатику та поезію з цією серією уроків.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Переглянути модуль" }}
+{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg «, alt_text: «Симпатичний рожевий восьминіг у фіолетовій шапці виконує вірш під прожектором на сцені з табуретом і мікрофоном», text_color: «білий», box_background_color: «rgb (0,0,0,0.4)», left_heading: «Мистецтво поеми», left_description: «Додати мистецтво та анімацію до класичного вірша в цій діяльності «Година коду»! , left_specs: «», left_button_url: "https://studio.code.org/s/poem-art-2021/reset «, left_button_text: «Початок», right_heading: «Кодування з поезією», right_description: «Підключіть інформатику та поезію у своєму класі за допомогою цієї серії уроків. «, right_специфікації: «», right_button_url: "https://studio.code.org/s/poetry?viewAs=Instructor «, right_button_text: «Переглянути модуль»}}
 
 ## Дізнайтеся більше про кодування за допомогою поезії
 
