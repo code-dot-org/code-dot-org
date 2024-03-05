@@ -12,6 +12,7 @@ export default function LessonDataCell({
   locked,
   studentLessonProgress,
   addExpandedLesson,
+  studentId,
 }) {
   const noLevels = !lessonHasLevels(lesson);
   const finished = studentLessonProgress?.completedPercent === 100;
@@ -32,6 +33,7 @@ export default function LessonDataCell({
         interactive && styles.lessonInteractive
       )}
       onClick={expandLesson}
+      data-testid={'lesson-data-cell-' + lesson.id + '-' + studentId}
     >
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
       {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}
@@ -45,4 +47,5 @@ LessonDataCell.propTypes = {
   studentLessonProgress: studentLessonProgressType,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
+  studentId: PropTypes.number.isRequired,
 };
