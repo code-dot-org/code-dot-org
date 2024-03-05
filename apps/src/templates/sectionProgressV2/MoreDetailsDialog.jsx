@@ -81,11 +81,6 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           i18n.progressLegendDetailsNeedsFeedback()
         )}
         {renderItem(
-          ITEM_TYPE.VIEWED,
-          i18n.viewed(),
-          i18n.progressLegendDetailsViewed()
-        )}
-        {renderItem(
           ITEM_TYPE.FEEDBACK_GIVEN,
           i18n.feedbackGiven(),
           i18n.progressLegendDetailsFeedbackGiven()

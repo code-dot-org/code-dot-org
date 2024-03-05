@@ -345,4 +345,11 @@ class TestController < ApplicationController
     EvaluateRubricJob.new.validate_ai_config
     render plain: 'OK'
   end
+
+  def complete_unit
+    unit_name = params.require(:unit_name)
+    unit = Unit.find_by!(name: unit_name)
+    UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
+    head :ok
+  end
 end
