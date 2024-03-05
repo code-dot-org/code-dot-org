@@ -9,14 +9,21 @@ import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
-import React, {useContext, useEffect, useState} from 'react';
+import React, {
+  ComponentType,
+  LazyExoticComponent,
+  Suspense,
+  lazy,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import {useSelector} from 'react-redux';
 import {LabState} from '../lab2Redux';
 import ProgressContainer from '../progress/ProgressContainer';
 import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
-import PythonlabView from '@cdo/apps/pythonlab/PythonlabView';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 
@@ -31,6 +38,8 @@ interface AppProperties {
   backgroundMode: boolean;
   /** React View for the Lab */
   node: React.ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  renderNode?: LazyExoticComponent<ComponentType<any>>;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults
@@ -67,7 +76,12 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   },
   pythonlab: {
     backgroundMode: false,
-    node: <PythonlabView />,
+    node: <div />,
+    renderNode: lazy(() =>
+      import('../../pythonlab/index.js').then(({PythonlabView}) => ({
+        default: PythonlabView,
+      }))
+    ),
     theme: Theme.LIGHT,
   },
   panels: {
@@ -134,6 +148,9 @@ const LabViewsRenderer: React.FunctionComponent = () => {
             {!properties.backgroundMode && currentAppName === appName && (
               <VisibilityContainer appName={appName} visible={true}>
                 {properties.node}
+                <Suspense fallback={<div />}>
+                  {properties.renderNode && <properties.renderNode />}
+                </Suspense>
               </VisibilityContainer>
             )}
           </ProgressContainer>
