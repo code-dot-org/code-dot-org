@@ -55,7 +55,7 @@ export interface ModelCardInfo {
 }
 
 // Visibility for AI customization fields set by levelbuilders.
-type Visibility = 'hidden' | 'readonly' | 'editable';
+export type Visibility = 'hidden' | 'readonly' | 'editable';
 
 /**
  * Level-defined AI customizations for student chat bots set by levelbuilders on the level's properties.
