@@ -131,7 +131,7 @@ describe('ExpandedProgressDataColumn', () => {
     );
 
     expect(
-      screen.queryAllByTitle(PROGRESS_ICON_TITLE_PREFIX + 'split')
+      screen.queryAllByLabelText(PROGRESS_ICON_TITLE_PREFIX + 'split')
     ).to.have.length(STUDENTS.length);
   });
 

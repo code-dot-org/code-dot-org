@@ -22,14 +22,6 @@
   }
 }
 
-.tight-layout {
-  padding: 0;
-  margin: 0;
-  background-color: white;
-  border-color: white;
-  color: $dark_gray;
-}
-
 .primary {
   @include button-with-color($orange);
 }
@@ -43,4 +35,3 @@
 .secondary:hover {
   box-shadow: none;
 }
-

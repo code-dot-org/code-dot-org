@@ -21,3 +21,5 @@ set_dir: true
   .wrapper
     %h2=hoc_s("intl_pl_partners_page.join.heading")
     %p=hoc_s("intl_pl_partners_page.join.desc", markdown: :inline, locals: {apply_url: "/international/apply"})
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::INTL_PL_PARTNERS_PAGE_VISIT_EVENT

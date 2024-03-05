@@ -1,7 +1,7 @@
 import React from 'react';
 import {LOCAL_STORAGE, REMOTE_STORAGE} from '../music/constants';
 
-const baseUrl = window.location.origin + '/musiclab';
+const baseUrl = window.location.origin + '/projectbeats';
 
 const optionsList = [
   {
@@ -96,6 +96,14 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Disable keyboard shortcuts.'},
       {value: 'true', description: 'Enable keyboard shortcuts.'},
+    ],
+  },
+  {
+    name: 'player',
+    type: 'radio',
+    values: [
+      {value: 'sample', description: 'Use the sample player (default).'},
+      {value: 'tonejs', description: 'Use the ToneJS player.'},
     ],
   },
 ];

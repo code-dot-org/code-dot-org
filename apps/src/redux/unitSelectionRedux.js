@@ -51,7 +51,7 @@ export const doesCurrentCourseUseFeedback = state => {
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
-  coursesWithProgress: {},
+  coursesWithProgress: [],
 };
 
 export default function unitSelection(state = initialState, action) {

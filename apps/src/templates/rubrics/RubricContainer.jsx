@@ -12,6 +12,8 @@ import {
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -30,8 +32,12 @@ export default function RubricContainer({
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
+  const rubricTabSessionKey = 'rubricFABTabSessionKey';
 
-  const [selectedTab, setSelectedTab] = useState(TAB_NAMES.RUBRIC);
+  const [selectedTab, setSelectedTab] = useState(
+    tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
+      TAB_NAMES.RUBRIC
+  );
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
   const tabSelectCallback = tabSelection => {
@@ -67,6 +73,10 @@ export default function RubricContainer({
     fetchAiEvaluations();
   }, [fetchAiEvaluations]);
 
+  useEffect(() => {
+    trySetSessionStorage(rubricTabSessionKey, selectedTab);
+  }, [selectedTab]);
+
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
@@ -79,6 +89,10 @@ export default function RubricContainer({
       })}
     >
       <div className={style.rubricHeaderRedesign}>
+        <div className={style.rubricHeaderLeftSide}>
+          <FontAwesome icon="house" />
+          {i18n.rubricAiHeaderText()}
+        </div>
         <div className={style.rubricHeaderRightSide}>
           <button
             type="button"

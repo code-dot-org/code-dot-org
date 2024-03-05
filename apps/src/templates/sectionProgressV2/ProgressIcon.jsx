@@ -51,7 +51,7 @@ export default function ProgressIcon({itemType}) {
           icon={itemType[0]}
           style={{color: itemType[1]}}
           className={styles.fontAwesomeIcon}
-          title={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
+          aria-label={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
       )}
       {itemType === ITEM_TYPE.NOT_STARTED && notStartedBox()}

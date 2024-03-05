@@ -372,7 +372,7 @@ export function showGenericQtip(targetElement, title, message, position) {
         <p>${message}</p>
       `,
         title: {
-          button: $('<button class="tooltip-x-close"/>'),
+          button: $('<div class="tooltip-x-close"/>'),
         },
       },
       position,

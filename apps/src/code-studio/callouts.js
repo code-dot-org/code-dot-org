@@ -113,7 +113,7 @@ export function addCallouts(callouts) {
       content: {
         text: callout.localized_text,
         title: {
-          button: $('<button class="tooltip-x-close"/>'),
+          button: $('<div class="tooltip-x-close"/>'),
         },
       },
       style: {
