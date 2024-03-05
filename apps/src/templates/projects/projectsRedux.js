@@ -451,8 +451,6 @@ const reducer = combineReducers({
 export default reducer;
 
 export const setPublicProjects = () => {
-  console.log('setPublishProjects');
-  console.log('limit', FeaturedProjectConstants.MAX_REQUESTS_PER_CATEGORY);
   return dispatch => {
     $.ajax({
       method: 'GET',

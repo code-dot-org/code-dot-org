@@ -22,39 +22,37 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   test_user_gets_response_for(
     :index,
     name: 'anonymous user can list applab projects',
-    params: -> {{project_type: 'applab', limit: 1}},
+    params: -> {{project_type: 'applab'}},
   )
 
   test_user_gets_response_for(
     :index,
     name: 'anonymous user can list all published projects',
-    params: -> {{project_type: 'all', limit: 1}},
+    params: -> {{project_type: 'all'}},
   )
 
   test_user_gets_response_for(
     :index,
     name: 'bad request when project type is invalid',
-    params: -> {{project_type: 'bogus', limit: 1}},
+    params: -> {{project_type: 'bogus'}},
     response: :bad_request,
   )
 
   test_user_gets_response_for(
     :index,
-    name: 'bad request when limit is less than 1',
-    params: -> {{project_type: 'gamelab', limit: 0}},
-    response: :bad_request,
+    name: 'anonymous user can specify featured_before',
+    params: -> {{project_type: 'applab', featured_before: '2017-02-17T13:59:11.000-08:00'}},
   )
 
   test_user_gets_response_for(
     :index,
-    name: 'bad request when limit exceeds 100',
-    params: -> {{project_type: 'gamelab', limit: 101}},
-    response: :bad_request,
+    name: 'anonymous user can specify featured_before for project type all',
+    params: -> {{project_type: 'all', featured_before: '2017-02-17T13:59:11.000-08:00'}},
   )
 
   test 'project details are correct listing all published featured projects' do
     Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new('production'))
-    get :index, params: {project_type: 'all', limit: 1}
+    get :index, params: {project_type: 'all'}
 
     assert_response :success
     assert_equal "max-age=5, public", @response.headers["Cache-Control"]
@@ -76,7 +74,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
 
   test 'project details are correct listing applab published featured projects' do
     Rails.stubs(:env).returns(ActiveSupport::StringInquirer.new('production'))
-    get :index, params: {project_type: 'applab', limit: 1}
+    get :index, params: {project_type: 'applab'}
 
     assert_response :success
     assert_equal "max-age=5, public", @response.headers["Cache-Control"]
