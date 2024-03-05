@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-02-22T19:07:25.000Z",
   "level_num": "custom",
@@ -24,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##How do you win?\r\n**Check if the player has a winning score.**\r\n\r\n- Connect the `if Score = 5` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` then click on the monsters. Can you win?",
+    "long_instructions": "##How do you win?\r\n**Check if the player has a winning score.**\r\n\r\n1.  Connect the `if Score = 5` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` then click on the monsters. Can you win?",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -46,10 +47,12 @@
       "downButton"
     ],
     "name_suffix": "_simplified",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-22T19:07:25.587+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional_simple_b\\\"\"],\"cloned_from\":\"hello_games_winning_conditional_simple_b\"},{\"changed_at\":\"2024-02-22 20:30:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:30:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:31:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:49:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:45:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-22T19:07:25.587+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional_simple_b\\\"\"],\"cloned_from\":\"hello_games_winning_conditional_simple_b\"},{\"changed_at\":\"2024-02-22 20:30:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:30:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-22 20:31:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 00:49:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-28 03:45:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-01 23:08:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-01 23:10:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1279,116 +1282,124 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
+      <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
           <variable id="@-=S@3O,n:QRq]zW8kK+">Score</variable>
         </variables>
-        <block type="gamelab_ifVarEquals" id="`kUb%OM1icUG[7n:kdsV" x="296" y="27">
-          <field name="NUM" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
-          <value name="VAL">
-            <block type="gamelab_int10" id="2t8E!7{*h:db_buZJ|3I">
-              <field name="VALUE">5</field>
-            </block>
-          </value>
-        </block>
-        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="334" y="116">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
-          <value name="DELTA">
-            <shadow type="math_number" id="Dsygy)_vgya%_J|C?^+(">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr" x="353" y="175">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="MTpyz3~[)2]e-cv8R$w!">
-              <field name="LOCATION">{"x":200,"y":100}</field>
-            </block>
-          </value>
-        </block>
-        <block type="variables_set" id=")R,JJO#7$==Alm:brx|2" x="352" y="231">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
-          <value name="VALUE">
-            <block type="math_number" id="O+Q2TbpteuZ$tH8?#oZT">
-              <field name="NUM">0</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="181" y="300">
-          <field name="IMG">"gradient_11"</field>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="JIw3/AZ92eD,iyz@QMI#" x="178" y="399">
-          <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="D=bbm,uR`M;-R6eXQ:/)">
-              <field name="LOCATION">{"x":100,"y":300}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeSpritesWithSize" id="lHTaF[tAmtGL7uK{uv}P" x="344" y="478">
-          <field name="SIZE">50</field>
-          <field name="COSTUME">"gameplayfaces_04"</field>
-          <value name="NUM">
-            <block type="math_number" id="xV^Q?m?#|8HS3Vm$w6y?">
-              <field name="NUM">3</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_destroy" id="xQ/wpru?0[0$?`L4o`jA" x="454" y="561">
-          <value name="THIS">
-            <block type="gamelab_clickedSpritePointer" id="GiqIOWlixMd.c]@;p2sp"/>
-          </value>
-        </block>
-        <block type="gamelab_playSoundOptions" id="`nxg2C!0cUq29SoV|V7e" x="431" y="747">
-          <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
-        </block>
-        <block type="gamelab_spriteSay" id="Uy!nH~6(28Uo8#{Sxzt," x="506" y="784">
-          <field name="SPEECH">So many gems!</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="B/b~avEQD[j--46ij;ST">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
-            </block>
-          </value>
-        </block>
-        <block type="adaptations_toggleBehaviorSimple" id="cnz]3|b^vOQ{V+s)oGGA" x="340" y="869">
-          <field name="TOGGLE">"begins"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="-V6TJ)EJ_*9x!O89DRU:">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
-            </block>
-          </value>
-          <value name="BEHAVIOR">
-            <block type="gamelab_behaviorPicker" id="S+c}L(HuU3~VbZDv1;FB">
-              <field name="BEHAVIOR">driving with arrow keys</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteClicked" id=":aBjWj/38+C7mrk=u~Mi" x="280" y="946">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_spriteClicked"/>
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="9NoN6C[hdFFEG87A^JLm">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_checkTouching" id="CC`VNe$c*yH%IX_*v{?;" x="301" y="1034">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_checkTouching"/>
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation" id="R!mm:ah`$eN]$3UPrsYY">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation" id="tyt,mE*d=;)fG0tiQ(n2">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
-            </block>
-          </value>
-        </block>
+        <category name="Variables" custom="VARIABLE">
+          <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr">
+            <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker" id="MTpyz3~[)2]e-cv8R$w!">
+                <field name="LOCATION">{"x":200,"y":100}</field>
+              </block>
+            </value>
+          </block>
+          <block type="variables_set" id=")R,JJO#7$==Alm:brx|2">
+            <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+            <value name="VALUE">
+              <block type="math_number" id="O+Q2TbpteuZ$tH8?#oZT">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F">
+            <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="Dsygy)_vgya%_J|C?^+(">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="gamelab_ifVarEquals" id="`kUb%OM1icUG[7n:kdsV">
+            <field name="NUM" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+            <value name="VAL">
+              <block type="gamelab_int10" id="2t8E!7{*h:db_buZJ|3I">
+                <field name="VALUE">5</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="World">
+          <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R">
+            <field name="IMG">"gradient_11"</field>
+          </block>
+          <block type="gamelab_playSoundOptions" id="`nxg2C!0cUq29SoV|V7e">
+            <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon" id="JIw3/AZ92eD,iyz@QMI#">
+            <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker" id="D=bbm,uR`M;-R6eXQ:/)">
+                <field name="LOCATION">{"x":100,"y":300}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_makeSpritesWithSize" id="lHTaF[tAmtGL7uK{uv}P">
+            <field name="SIZE">50</field>
+            <field name="COSTUME">"gameplayfaces_04"</field>
+            <value name="NUM">
+              <block type="math_number" id="xV^Q?m?#|8HS3Vm$w6y?">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_destroy" id="xQ/wpru?0[0$?`L4o`jA">
+            <value name="THIS">
+              <block type="gamelab_clickedSpritePointer" id="GiqIOWlixMd.c]@;p2sp"/>
+            </value>
+          </block>
+          <block type="gamelab_spriteSay" id="Uy!nH~6(28Uo8#{Sxzt,">
+            <field name="SPEECH">So many gems!</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="B/b~avEQD[j--46ij;ST">
+                <field name="ANIMATION">"gameplayfaces_04"</field>
+              </block>
+            </value>
+          </block>
+          <block type="adaptations_toggleBehaviorSimple" id="cnz]3|b^vOQ{V+s)oGGA">
+            <field name="TOGGLE">"begins"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="-V6TJ)EJ_*9x!O89DRU:">
+                <field name="ANIMATION">"gameplayfaces_04"</field>
+              </block>
+            </value>
+            <value name="BEHAVIOR">
+              <block type="gamelab_behaviorPicker" id="S+c}L(HuU3~VbZDv1;FB">
+                <field name="BEHAVIOR">driving with arrow keys</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_spriteClicked" id=":aBjWj/38+C7mrk=u~Mi">
+            <mutation useDefaultIcon="true"/>
+            <field name="button_gamelab_spriteClicked"/>
+            <field name="CONDITION">"when"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="9NoN6C[hdFFEG87A^JLm">
+                <field name="ANIMATION">"gameplayfaces_04"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_checkTouching" id="CC`VNe$c*yH%IX_*v{?;">
+            <mutation useDefaultIcon="true"/>
+            <field name="button_gamelab_checkTouching"/>
+            <field name="CONDITION">"when"</field>
+            <value name="SPRITE1">
+              <block type="gamelab_allSpritesWithAnimation" id="R!mm:ah`$eN]$3UPrsYY">
+                <field name="ANIMATION">"gameplayfaces_04"</field>
+              </block>
+            </value>
+            <value name="SPRITE2">
+              <block type="gamelab_allSpritesWithAnimation" id="tyt,mE*d=;)fG0tiQ(n2">
+                <field name="ANIMATION">"gameplayfaces_04"</field>
+              </block>
+            </value>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>

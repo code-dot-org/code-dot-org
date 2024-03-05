@@ -34,8 +34,8 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element "p:contains(Feedback submitted at)" is visible
 
   # Check that the teacher can see submitted feedback
+  # FAB should be sticky and be open when page loads
   Then I reload the page
-  And I click selector "#ui-floatingActionButton" once I see it
   And I wait until element "h6:contains(Code Quality)" is visible
   And I wait until element "textarea:contains(Nice work Lillian!)" is visible
 
