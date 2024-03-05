@@ -91,22 +91,28 @@ class Services::Lti
     user
   end
 
-  def self.parse_nrps_response(nrps_response)
+  def self.parse_nrps_response(nrps_response, issuer)
     sections = {}
     members = nrps_response[:members]
     context_title = nrps_response.dig(:context, :title)
     members.each do |member|
       next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
-      message = member[:message].first
+      if issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
+        member_section_ids = [nrps_response.dig(:context, :id)]
+        member_section_names = [context_title]
+      else
+        message = member[:message].first
 
-      # Custom variables substitutions must be configured in the LMS.
-      custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
+        # Custom variables substitutions must be configured in the LMS.
+        custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
 
-      # Handles the possibility of the LMS not having sectionId variable substitution configured.
-      member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
-      # :section_names from Canvas is a stringified JSON array
-      member_section_names = JSON.parse(custom_variables[:section_names])
+        # Handles the possibility of the LMS not having sectionId variable substitution configured.
+        member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
+        # :section_names from Canvas is a stringified JSON array
+        member_section_names = JSON.parse(custom_variables[:section_names])
+
+      end
       member_section_ids.each_with_index do |section_id, index|
         if sections[section_id].present?
           sections[section_id][:members] << member
