@@ -17,3 +17,15 @@ export function arrayEquals(a, b) {
 
   return true;
 }
+
+// Creates and returns a helper object that represents the outer bounds of a sprite.
+// Used for comparing the positions of sprites. For example, checking whether
+// one sprite is "standing" on top of another.
+export function createSpriteCollider(sprite) {
+  return {
+    top: sprite.y - sprite.height * sprite.scale,
+    bottom: sprite.y + sprite.height * sprite.scale,
+    left: sprite.x - sprite.width * sprite.scale,
+    right: sprite.x + sprite.width * sprite.scale,
+  };
+}

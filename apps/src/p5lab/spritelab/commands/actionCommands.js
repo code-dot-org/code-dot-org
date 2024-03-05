@@ -1,5 +1,7 @@
 import {commands as behaviorCommands} from './behaviorCommands';
 import {layoutSpriteGroup} from '../../layoutUtils';
+import {APP_HEIGHT} from '../../constants';
+import {createSpriteCollider} from '../../utils';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -107,6 +109,14 @@ export const commands = {
     sprites.forEach(sprite => this.p5.edges.displace(sprite));
   },
 
+  edgesCollide(spriteArg) {
+    if (!this.p5.edges) {
+      this.p5.createEdgeSprites();
+    }
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => sprite.collide(this.p5.edges));
+  },
+
   glideTo(spriteArg, location) {
     if (!location) {
       return;
@@ -165,6 +175,32 @@ export const commands = {
           touching = true;
         }
       });
+    });
+    return touching;
+  },
+
+  isDirectlyAbove(spriteArg, targetArg) {
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+    let touching = false;
+    sprites.forEach(sprite => {
+      const spriteCollider = createSpriteCollider(sprite);
+      if (spriteCollider.bottom >= APP_HEIGHT) {
+        touching = true;
+      } else {
+        for (const target of targets) {
+          const targetCollider = createSpriteCollider(target);
+
+          if (
+            spriteCollider.bottom === targetCollider.top &&
+            spriteCollider.left <= targetCollider.right &&
+            spriteCollider.right >= targetCollider.left
+          ) {
+            touching = true;
+            break;
+          }
+        }
+      }
     });
     return touching;
   },

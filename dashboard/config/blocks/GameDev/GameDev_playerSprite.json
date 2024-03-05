@@ -1,0 +1,10 @@
+{
+  "category": "Sprites",
+  "config": {
+    "expression": "{group: \"players\"}",
+    "name": "playerSprite",
+    "blockText": "player sprite",
+    "returnType": "Sprite",
+    "style": "sprite_blocks"
+  }
+}
