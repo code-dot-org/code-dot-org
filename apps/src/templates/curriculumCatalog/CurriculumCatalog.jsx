@@ -99,7 +99,7 @@ const CurriculumCatalog = ({
     // (if signed-in teacher) Filter out curricula the user has taught before
     if (curriculaTaught) {
       recommendableCurricula = recommendableCurricula.filter(
-        curr => !curriculaTaught.includes(curr.course_offering_id)
+        curr => !curriculaTaught.includes(curr.id)
       );
     }
 

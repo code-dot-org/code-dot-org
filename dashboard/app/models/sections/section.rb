@@ -214,6 +214,10 @@ class Section < ApplicationRecord
     UnitGroup.get_from_cache(course_id) if course_id
   end
 
+  def course_offering_id
+    unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id
+  end
+
   def workshop_section?
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
@@ -440,7 +444,7 @@ class Section < ApplicationRecord
         login_type: login_type,
         login_type_name: login_type_name,
         participant_type: participant_type,
-        course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
+        course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,

@@ -682,8 +682,9 @@ describe('CurriculumCatalog', () => {
         fireEvent.click(quickViewButtons[i]);
         screen.getByText(currCurriculum.description);
 
-        // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card
-        screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
+        // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
+        // Image's alt text is the curriculum's display name.
+        screen.getByAltText(recommendedSimilarCurriculum.display_name);
         assert(
           document
             .querySelector('#similarCurriculumButton')
@@ -693,7 +694,8 @@ describe('CurriculumCatalog', () => {
     });
 
     it('does not recommend similar curriculum the user has already taught', () => {
-      const curriculaTaughtBefore = [FULL_TEST_COURSES[0].course_offering_id]; // fullTestCourse1 is the top-ranked similar curriculum for 2 other curricula
+      // fullTestCourse1 is the top-ranked similar curriculum for 2 other curricula
+      const curriculaTaughtBefore = [FULL_TEST_COURSES[0].id];
       const props = {
         ...defaultProps,
         curriculaData: FULL_TEST_COURSES,
@@ -728,15 +730,12 @@ describe('CurriculumCatalog', () => {
         // If the top-recommended similar curriculum was previously taught by the user, then check that the image and link are of the
         // next-most-recommended similar curriculum.
         let recommendedSimilarCurriculum = similarCurriculumRecommendations[0];
-        if (
-          curriculaTaughtBefore.includes(
-            recommendedSimilarCurriculum.course_offering_id
-          )
-        ) {
+        if (curriculaTaughtBefore.includes(recommendedSimilarCurriculum.id)) {
           recommendedSimilarCurriculum = similarCurriculumRecommendations[1];
         }
 
-        screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
+        //Image's alt text is the curriculum's display name
+        screen.getByAltText(recommendedSimilarCurriculum.display_name);
         assert(
           document
             .querySelector('#similarCurriculumButton')
