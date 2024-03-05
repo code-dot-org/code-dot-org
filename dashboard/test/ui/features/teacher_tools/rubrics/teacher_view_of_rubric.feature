@@ -27,9 +27,8 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element "h5:contains(Code Quality)" is visible
   And I wait until element "button:contains(Extensive)" is visible
   Then I click selector "button:contains(Extensive)"
+  And I wait until element "#ui-teacherFeedback" is enabled
   And I click selector "#ui-teacherFeedback" once I see it
-
-  When I wait for 3 seconds
   And I press keys "Nice work Lillian!" for element "#ui-teacherFeedback"
   And I wait to see "#ui-autosaveConfirm"
   And I click selector "#ui-submitFeedbackButton" once I see it

@@ -168,6 +168,7 @@ export default function LearningGoals({
   });
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [displayFeedback, setDisplayFeedback] = useState('');
+  const [loaded, setLoaded] = useState(false);
   const [displayUnderstanding, setDisplayUnderstanding] = useState(
     INVALID_UNDERSTANDING
   );
@@ -176,6 +177,9 @@ export default function LearningGoals({
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
   const learningGoalEvalIds = useRef(Array(learningGoals.length).fill(null));
   const teacherFeedbacks = useRef(Array(learningGoals.length).fill(''));
+  const teacherFeedbacksLoaded = useRef(
+    Array(learningGoals.length).fill(false)
+  );
   const understandingLevels = useRef(
     Array(learningGoals.length).fill(INVALID_UNDERSTANDING)
   );
@@ -245,6 +249,10 @@ export default function LearningGoals({
 
   useEffect(() => {
     if (studentLevelInfo && learningGoals) {
+      // Set our current idea of the feedback immediately
+      setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
+      setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
+
       learningGoals.forEach((learningGoal, index) => {
         const body = JSON.stringify({
           userId: studentLevelInfo.user_id,
@@ -264,11 +272,13 @@ export default function LearningGoals({
             if (json.feedback) {
               teacherFeedbacks.current[index] = json.feedback;
             }
+            teacherFeedbacksLoaded.current[index] = true;
             if (json.understanding >= 0 && json.understanding !== null) {
               understandingLevels.current[index] = json.understanding;
             }
             if (index === currentLearningGoal) {
               setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
+              setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
               setDisplayUnderstanding(
                 understandingLevels.current[currentLearningGoal]
               );
@@ -310,7 +320,7 @@ export default function LearningGoals({
             name="teacherFeedback"
             value={displayFeedback}
             onChange={handleFeedbackChange}
-            disabled={!canProvideFeedback}
+            disabled={!canProvideFeedback || !loaded}
           />
         </label>
         {autosaveStatus === STATUS.IN_PROGRESS ? (
