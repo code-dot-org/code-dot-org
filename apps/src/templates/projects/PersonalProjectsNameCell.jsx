@@ -72,10 +72,11 @@ class PersonalProjectsNameCell extends Component {
           <div>
             <input
               required
-              style={{width: 200}}
+              className={moduleStyles.inputBox}
               value={updatedName}
               onChange={this.onChangeName}
-              className="ui-project-rename-input"
+              name="ui-project-rename-input"
+              id="ui-project-rename-input"
             />
           </div>
         )}
