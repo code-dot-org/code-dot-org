@@ -5,6 +5,7 @@ import {
   Heading2,
   BodyOneText,
   BodyThreeText,
+  BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
 import styles from './twoColumnActionBlock.module.scss';
 import classNames from 'classnames';
@@ -56,7 +57,9 @@ export default function TwoColumnActionBlock({
                   id={button.id}
                   onClick={button.onClick}
                 />
-                {button.extraText && <div>{button.extraText}</div>}
+                {button.extraText && (
+                  <BodyFourText>{button.extraText}</BodyFourText>
+                )}
               </div>
             ))}
           </div>

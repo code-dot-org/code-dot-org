@@ -52,7 +52,7 @@ class Incubator extends Component {
               {
                 url: '/projectbeats',
                 text: 'Make Music',
-                extraText: 'Skip direct to a Project Beats project.',
+                extraText: 'Skip directly to creating a Project Beats project.',
                 color: Button.ButtonColor.neutralDark,
               },
             ]}
