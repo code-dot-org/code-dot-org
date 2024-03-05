@@ -60,7 +60,7 @@ function LessonDataCell({
   };
 
   const expandLesson = interactive
-    ? () => addExpandedLesson(lesson.id)
+    ? () => addExpandedLesson(lesson)
     : undefined;
 
   return getCellComponent(
