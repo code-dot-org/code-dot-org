@@ -162,6 +162,8 @@ class DatablockStorageController < ApplicationController
     table = find_table
     column = table.get_column params[:column_name]
     render json: column
+  rescue StudentFacingError
+    render json: nil # javascript expects null returned to indicate a table doesn't exists error
   end
 
   def get_columns_for_table

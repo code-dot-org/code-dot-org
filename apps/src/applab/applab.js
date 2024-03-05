@@ -419,12 +419,18 @@ Applab.init = function (config) {
 
   // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
   if (!!config.useDatablockStorage) {
-    console.error('Initializing DATABLOCK_STORAGE');
+    console.log(
+      '%cInitializing DATABLOCK_STORAGE',
+      'background:yellow; font-size: 30px'
+    );
     Applab.storage = initStorage(DATABLOCK_STORAGE, {
       channelId: config.channel,
     });
   } else {
-    console.error('Initializing FIREBASE_STORAGE');
+    console.log(
+      '%cInitializing FIREBASE_STORAGE',
+      'background: pink; font-size 30px'
+    );
     Applab.storage = initStorage(FIREBASE_STORAGE, {
       channelId: config.channel,
       firebaseName: config.firebaseName,

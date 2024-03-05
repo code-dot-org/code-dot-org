@@ -150,15 +150,6 @@ DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
 
-async function getColumnsForTable({tableName, isSharedTable = false}) {
-  const response = await _fetch('get_columns_for_table', 'GET', {
-    table_name: tableName,
-    is_shared_table: isSharedTable,
-  });
-  const json = await response.json();
-  return json;
-}
-
 function loadTableAndColumns({
   tableName,
   isSharedTable,
@@ -296,6 +287,23 @@ DatablockStorage.coerceColumn = function (
   }).then(onSuccess, onError);
 };
 
+async function getColumn({tableName, columnName}) {
+  const response = await _fetch('get_column', 'GET', {
+    table_name: tableName,
+    column_name: columnName,
+  });
+  return await response.json();
+}
+
+DatablockStorage.getColumn = function (
+  tableName,
+  columnName,
+  onSuccess,
+  onError
+) {
+  return getColumn({tableName, columnName}).then(onSuccess, onError);
+};
+
 DatablockStorage.deleteKeyValue = function (key, onSuccess, onError) {
   _fetch('delete_key_value', 'DELETE', {
     key,
@@ -332,6 +340,15 @@ DatablockStorage.getLibraryManifest = function () {
     response.json()
   );
 };
+
+async function getColumnsForTable({tableName, isSharedTable = false}) {
+  const response = await _fetch('get_columns_for_table', 'GET', {
+    table_name: tableName,
+    is_shared_table: isSharedTable,
+  });
+  const json = await response.json();
+  return json;
+}
 
 // returns an array of strings for each of the columns in the table
 // Note this diverges a little from the F*rebase version, which takes a tableType param

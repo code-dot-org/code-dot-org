@@ -382,6 +382,24 @@ FirebaseStorage.readRecords = function (
   });
 };
 
+FirebaseStorage.getColumn = function (
+  tableName,
+  columnName,
+  onSuccess,
+  onError
+) {
+  this.readRecords(
+    tableName,
+    {},
+    records => {
+      let columnValues = [];
+      records.forEach(row => columnValues.push(row[columnName]));
+      onSuccess(columnValues);
+    },
+    onError
+  );
+};
+
 /**
  * Updates a record in a table, accessible to all users.
  * @param {string} tableName The name of the table to update.
