@@ -285,6 +285,7 @@ Resources:
         ContainerPort: 80
         TargetGroupArn: !Ref DroneMasterTargetGroup
       TaskDefinition: !Ref DroneMasterTaskDefinition
+      PropagateTags: SERVICE
 
   DroneAutoscalerCloudwatchLogsGroup:
     Type: AWS::Logs::LogGroup
@@ -400,6 +401,7 @@ Resources:
           ContainerPort: 8080
           TargetGroupArn: !Ref DroneAutoscalerTargetGroup
       TaskDefinition: !Ref DroneAutoscalerTaskDefinition
+      PropagateTags: SERVICE
 
   DroneAutoscalerECSCluster:
     Type: AWS::ECS::Cluster
