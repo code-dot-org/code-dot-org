@@ -1,3 +1,4 @@
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {studentLevelProgressType} from '../progress/progressTypes';
@@ -10,7 +11,7 @@ import ProgressIcon from './ProgressIcon';
 import {ITEM_TYPE} from './ItemType';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
-const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
+export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
     return null;
   }
@@ -28,7 +29,7 @@ const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   return levelUrl;
 };
 
-export default function LevelDataCell({
+function LevelDataCell({
   level,
   studentId,
   sectionId,
@@ -85,6 +86,12 @@ export default function LevelDataCell({
     </Link>
   );
 }
+
+export const UnconnectedLevelDataCell = LevelDataCell;
+
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+}))(LevelDataCell);
 
 LevelDataCell.propTypes = {
   studentId: PropTypes.number,
