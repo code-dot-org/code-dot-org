@@ -2437,6 +2437,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codemirror/collab@npm:^6.1.1":
+  version: 6.1.1
+  resolution: "@codemirror/collab@npm:6.1.1"
+  dependencies:
+    "@codemirror/state": ^6.0.0
+  checksum: d29c6e44cfc4df60497fb88a4bf96f776b32861914469a082bbb48972edd84574d3587ece17e10640dcd47bfb29fb212deb5bc466fb85a3302a58251048c6de6
+  languageName: node
+  linkType: hard
+
 "@codemirror/commands@npm:^6.3.2":
   version: 6.3.2
   resolution: "@codemirror/commands@npm:6.3.2"
@@ -3506,6 +3515,13 @@ __metadata:
   peerDependencies:
     pyodide: ">=0.21.3"
   checksum: 3ba27f95af12eec1e9d25d7f5fe0c6e7be63367a2fbe6bd04d5814a592116ceb2e75902424427a62d637cff134108e5ae64496bd2036806f8b52d359211625e4
+  languageName: node
+  linkType: hard
+
+"@rails/actioncable@npm:^7.1.3-2":
+  version: 7.1.3
+  resolution: "@rails/actioncable@npm:7.1.3"
+  checksum: 848911da8855ee649d96006cb580d58f6e619d2f7fcb86a488d058a15b02eef80208eb3f4e47c8c31e8772665a68a3e484b26ade7099b0688bec6465f1234989
   languageName: node
   linkType: hard
 
@@ -5467,6 +5483,13 @@ __metadata:
   version: 6.9.7
   resolution: "@types/qs@npm:6.9.7"
   checksum: 7fd6f9c25053e9b5bb6bc9f9f76c1d89e6c04f7707a7ba0e44cc01f17ef5284adb82f230f542c2d5557d69407c9a40f0f3515e8319afd14e1e16b5543ac6cdba
+  languageName: node
+  linkType: hard
+
+"@types/rails__actioncable@npm:^6.1.10":
+  version: 6.1.10
+  resolution: "@types/rails__actioncable@npm:6.1.10"
+  checksum: 10ef9ab9104d90f09db0954896393af56d3c76237af07a24f6561f179c7d70e971805655c678abf2207f36de6b4bf627b9b15d784b57c77bb3f797963b1f7fb8
   languageName: node
   linkType: hard
 
@@ -8162,6 +8185,7 @@ __metadata:
     "@code-dot-org/redactable-markdown": 0.4.0
     "@code-dot-org/remark-plugins": 1.3.1
     "@codemirror/autocomplete": ^6.11.1
+    "@codemirror/collab": ^6.1.1
     "@codemirror/commands": ^6.3.2
     "@codemirror/lang-html": ^6.4.8
     "@codemirror/lang-java": ^6.0.1
@@ -8175,6 +8199,7 @@ __metadata:
     "@lezer/highlight": ^1.2.0
     "@microsoft/immersive-reader-sdk": ^1.1.0
     "@pyodide/webpack-plugin": ^1.3.2
+    "@rails/actioncable": ^7.1.3-2
     "@react-bootstrap/pagination": ^1.0.0
     "@reduxjs/toolkit": ^1.9.3
     "@storybook/addon-a11y": 6.5.17-alpha.0
@@ -8189,6 +8214,7 @@ __metadata:
     "@types/htmlhint": ^1.1.5
     "@types/jquery": ^3.5.16
     "@types/mocha": ^10.0.1
+    "@types/rails__actioncable": ^6.1.10
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     "@types/sinon": ^10.0.14
@@ -8380,6 +8406,7 @@ __metadata:
     survey-react: ^1.9.28
     swiper: ^11.0.5
     terser-webpack-plugin: ^5.3.6
+    throttleit: ^2.0.0
     timers-browserify: ^2.0.12
     tone: 14.7.77
     ts-loader: ^9.4.2
@@ -27803,6 +27830,13 @@ temporal@latest:
   version: 3.0.1
   resolution: "throttle-debounce@npm:3.0.1"
   checksum: e34ef638e8df3a9154249101b68afcbf2652a139c803415ef8a2f6a8bc577bcd4d79e4bb914ad3cd206523ac78b9fb7e80885bfa049f64fbb1927f99d98b5736
+  languageName: node
+  linkType: hard
+
+"throttleit@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "throttleit@npm:2.0.0"
+  checksum: 3581da22fb025e6317d0f6fc6c314f173448706d2d9d6ca53ce6b742e22006499feca17462ad09ff66aff61f1f6fe09cad58773c33893e7b9f596d0be4d1a4fd
   languageName: node
   linkType: hard
 

@@ -7,7 +7,7 @@ import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
 import {autocompletion} from '@codemirror/autocomplete';
-
+import {collaborativeEditorExtension} from './collaborativeEditorExtension';
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
   editorConfigExtensions: Extension[];
@@ -36,11 +36,16 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       }
     );
 
+    const documentID = 'FIXME'; // @molly-moen what should this be? channelID? - @snickell
+
     const editorExtensions = [
       ...editorConfig,
 
       onEditorUpdate,
       autocompletion(),
+
+      // @molly-moen totally untested because I'm not sure how to test CodeEditor.tsx - @snickell
+      collaborativeEditorExtension(documentID),
       ...editorConfigExtensions,
     ];
     if (darkMode) {

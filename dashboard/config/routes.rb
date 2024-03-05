@@ -1,6 +1,10 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # /cable is used for ActionCable websocket connections
+  mount ActionCable.server => '/cable'
+  get '/collab/:document_id', to: 'collab_demo#demo'
+
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 

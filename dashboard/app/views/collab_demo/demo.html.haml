@@ -1,0 +1,15 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/collab_demo/demo.js')}
+
+:javascript
+  window.documentID = '#{@document_id}';
+  window.editorNum = 1;
+
+%h1 collaborativeEditorExtension() demo
+
+%h2 documentID=#{@document_id}
+
+#editors
+  #editor1 Editor 1:
+
+%button#create-another-editor Create Another Editor
