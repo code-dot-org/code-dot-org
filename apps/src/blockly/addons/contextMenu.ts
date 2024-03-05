@@ -367,7 +367,7 @@ function registerHelp(weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
 }
 
-function registerAllCursors(startingWeight: number, cursorTypes: any[]) {
+function registerAllCursors(startingWeight: number, cursorTypes: string[]) {
   cursorTypes.forEach((cursorType, index) => {
     const weight = startingWeight + index;
     registerCursor(cursorType, weight);

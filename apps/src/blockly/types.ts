@@ -3,6 +3,7 @@ import {
   BlockSvg,
   BlocklyOptions,
   CodeGenerator,
+  Cursor,
   Input,
   Procedures,
   Theme,
@@ -36,7 +37,6 @@ import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
-import {Cursor} from 'blockly';
 
 export interface BlockDefinition {
   category: string;
