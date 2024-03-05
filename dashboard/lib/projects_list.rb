@@ -3,6 +3,8 @@ require_relative '../legacy/middleware/helpers/user_helpers'
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
   MAX_LIMIT = 100
+  # Maximum number of featured projects of each type that can be requested.
+  FEATURED_MAX_LIMIT = SharedConstants::FEATURED_PROJECT_CONSTANTS.MAX_REQUESTS_PER_CATEGORY
 
   # A hash map from project group name to a list of publishable project types in
   # that group.
@@ -134,8 +136,8 @@ module ProjectsList
     end
 
     def fetch_active_published_featured_projects(project_group, limit:)
-      unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
-        raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
+      unless limit && limit.to_i >= 1 && limit.to_i <= FEATURED_MAX_LIMIT
+        raise ArgumentError, "limit must be between 1 and #{FEATURED_MAX_LIMIT}"
       end
       if project_group == 'all'
         return fetch_featured_published_projects
