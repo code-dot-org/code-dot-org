@@ -12,7 +12,7 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '../../util/curriculumRecommender/curriculumRecommender';
+import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 
 const CurriculumCatalog = ({
   curriculaData,

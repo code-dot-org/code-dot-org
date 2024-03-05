@@ -37,7 +37,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sections} from '../studioHomepages/fakeSectionUtils';
 import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
-import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
+import {FULL_TEST_COURSES} from '@cdo/apps/test/unit/util/curriculumRecommenderTestCurricula';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
