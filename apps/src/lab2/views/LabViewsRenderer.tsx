@@ -38,8 +38,13 @@ interface AppProperties {
   backgroundMode: boolean;
   /** React View for the Lab */
   node: React.ReactNode;
+  /**
+   * A lazy loaded view for the lab. If this is specified, it will be used
+   * over the node property. This is useful for lab views that load extra
+   * dependencies that we don't want loaded for every lab.
+   */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  renderNode?: LazyExoticComponent<ComponentType<any>>;
+  lazyNode?: LazyExoticComponent<ComponentType<any>>;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults
@@ -77,8 +82,10 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   pythonlab: {
     backgroundMode: false,
     node: <div />,
-    renderNode: lazy(() =>
-      import('../../pythonlab/index.js').then(({PythonlabView}) => ({
+    lazyNode: lazy(() =>
+      import(
+        /* webpackChunkName: "pythonlab" */ '../../pythonlab/index.js'
+      ).then(({PythonlabView}) => ({
         default: PythonlabView,
       }))
     ),
@@ -120,6 +127,16 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     }
   }, [currentAppName, setTheme]);
 
+  const renderApp = (appProperties: AppProperties) => {
+    return appProperties.lazyNode ? (
+      <Suspense fallback={<div />}>
+        <appProperties.lazyNode />
+      </Suspense>
+    ) : (
+      appProperties.node
+    );
+  };
+
   // Iterate through appsToRender and render Lab views for each. If
   // backgroundMode is true, the Lab view will always be rendered, but
   // visibility will be toggled based on whether the app is active. If
@@ -141,16 +158,13 @@ const LabViewsRenderer: React.FunctionComponent = () => {
                 appName={appName}
                 visible={currentAppName === appName}
               >
-                {properties.node}
+                {renderApp(properties)}
               </VisibilityContainer>
             )}
 
             {!properties.backgroundMode && currentAppName === appName && (
               <VisibilityContainer appName={appName} visible={true}>
-                {properties.node}
-                <Suspense fallback={<div />}>
-                  {properties.renderNode && <properties.renderNode />}
-                </Suspense>
+                {renderApp(properties)}
               </VisibilityContainer>
             )}
           </ProgressContainer>
