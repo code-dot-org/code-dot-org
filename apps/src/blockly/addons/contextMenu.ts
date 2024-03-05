@@ -1,3 +1,7 @@
+//When a user right-clicks (or long presses) on a block or workspace, a context menu
+// with additional actions is shown. We configure this context menu to show
+// additional options or to remove some default options.
+
 import GoogleBlockly, {
   Block,
   ContextMenuRegistry,
@@ -10,7 +14,7 @@ import {
   MenuOptionStates,
   BLOCKLY_CURSOR,
   BLOCKLY_THEME,
-  NAVIGATION_CURSORS,
+  NAVIGATION_CURSOR_TYPES,
 } from '../constants';
 import LegacyDialog from '../../code-studio/LegacyDialog';
 import experiments from '@cdo/apps/util/experiments';
@@ -318,7 +322,7 @@ function registerThemes(
 /**
  * Option to open help for a block.
  */
-export function registerHelp(weight: number) {
+function registerHelp(weight: number) {
   const helpOption = {
     displayText() {
       return commonI18n.getBlockDocs();
@@ -456,34 +460,48 @@ function setAllWorkspacesTheme(
     }
   });
 }
-
+/**
+ * Unregister some default options. We do this either because the options are needlessly
+ * advanced for our target users or because the options have undesired impacts.
+ */
 function unregisterDefaultOptions() {
-  // Remove some default context menu options, if they are present.
   // This needs to be wrapped in a try for now because our GoogleBlocklyWrapperTest.js
   // is not correctly cleaning up its state.
   try {
+    // Option to collapse or expand a block.
     GoogleBlockly.ContextMenuRegistry.registry.unregister(
       'blockCollapseExpand'
     );
+    // Option to open help for a block. Overrided to use our documentation.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('blockHelp');
+    // Option to use inline inputs .
     GoogleBlockly.ContextMenuRegistry.registry.unregister('blockInline');
-    // cleanUp() doesn't currently account for immovable blocks.
+    // Option to clean up blocks. cleanUp() doesn't currently account for immovable blocks.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
+    // Option to collapse all blocks on a workspace.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('collapseWorkspace');
+    // Option to expand all blocks on a workspace.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('expandWorkspace');
+    // Option to delete all blocks on a workspace.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('workspaceDelete');
   } catch (error) {}
 }
 
 function registerCustomBlockOptions() {
+  // Each option has a "weight": a number that determines the sort order of the option.
+  // Options with higher weights appear later in the context menu.
+
   // Expected registered block options (from Core and plugins):
   // 0: blockCopyToStorage
   // 2: blockComment
   // 5: blockDisable
   // 6: blockDelete
+
+  // Our custom options should show below the registered default options.
   let nextWeight = 7;
 
-  // Custom block options
+  // Custom block options. We increment the weight for each so they are automatically
+  // sorted in the order listed here.
   registerHelp(nextWeight++);
   registerDeletable(nextWeight++);
   registerMovable(nextWeight++);
@@ -493,16 +511,24 @@ function registerCustomBlockOptions() {
 }
 
 function registerCustomWorkspaceOptions() {
+  // Each option has a "weight": a number that determines the sort order of the option.
+  // Options with higher weights appear later in the context menu.
+
   // Expected registered workspace options (from Core and plugins):
   // 0: blockPasteFromStorage
   // 1: undoWorkspace
   // 2: redoWorkspace
+
+  // Our custom options should show below the registered default options.
   let nextWeight = 3;
 
-  // Custom workspace options
+  // Custom workspace options. We increment the weight for each so they are automatically
+  // sorted in the order listed here. Cursors and Themes have multiple options so we need to adjust
+  // the weight accordingly.
   registerKeyboardNavigation(nextWeight++);
-  registerAllCursors(nextWeight, NAVIGATION_CURSORS);
-  nextWeight += NAVIGATION_CURSORS.length;
+  registerAllCursors(nextWeight, NAVIGATION_CURSOR_TYPES);
+  nextWeight += NAVIGATION_CURSOR_TYPES.length;
   registerDarkMode(nextWeight++);
   registerThemes(nextWeight, themes);
+  // If additional options are added here, we would want to increment the weight by themes.length.
 }

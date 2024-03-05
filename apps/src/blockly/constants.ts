@@ -66,7 +66,7 @@ export const Renderers = {
   DEFAULT: 'cdo_renderer_thrasos',
 };
 
-export const NAVIGATION_CURSORS = ['default', 'basic', 'line'];
+export const NAVIGATION_CURSOR_TYPES = ['default', 'basic', 'line'];
 // Used for custom field type ClampedNumber(,)
 // Captures two optional arguments from the type string
 // Allows:
