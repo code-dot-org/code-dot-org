@@ -107,7 +107,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
     @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
-    puts @pre_workshop_survey_url
     @is_first_pre_survey_email = options.nil? ? true : options[:days_before] == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
     # Facilitator training workshops use a different email address

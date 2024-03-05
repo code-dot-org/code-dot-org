@@ -22,48 +22,27 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
                notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
              }
       end
-
-      define_method("teacher_enrollment_reminder__#{partial}_3_day") do
-        mail :teacher_enrollment_reminder, course, subject, options: {days_before: 3}
-      end
-
-      define_method("teacher_enrollment_reminder__#{partial}_3_day_virtual") do
-        mail :teacher_enrollment_reminder, course, subject, options: {days_before: 3},
-             workshop_params: {
-               virtual: true,
-               location_name: 'zoom_link',
-               location_address: nil,
-               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
-             }
-      end
-
-      define_method("teacher_enrollment_reminder__#{partial}_10_day") do
-        mail :teacher_enrollment_reminder, course, subject, options: {days_before: 10}
-      end
-
-      define_method("teacher_enrollment_reminder__#{partial}_10_day_virtual") do
-        mail :teacher_enrollment_reminder, course, subject, options: {days_before: 10},
-             workshop_params: {
-               virtual: true,
-               location_name: 'zoom_link',
-               location_address: nil,
-               notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
-             }
-      end
     end
   end
 
   [3, 10].each do |days_before|
-    course = Pd::Workshop::COURSE_CSD
-    (1..4).each do |workshop_number|
-      # subject = "csd_ayw_#{workshop_number}"
-      subject = "Academic Year Workshop #{workshop_number}"
-      define_method("teacher_enrollment_reminder__#{subject}_#{days_before}_day") do
-        mail :teacher_enrollment_reminder, course, subject, options: {days_before: days_before}
+    [Pd::Workshop::COURSE_CSF, Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA].each do |course|
+      Pd::SharedWorkshopConstants::SUBJECTS[course].each do |subject|
+        define_method("teacher_enrollment_reminder__#{course}__#{subject}_#{days_before}_day") do
+          mail :teacher_enrollment_reminder, course, subject, options: {days_before: days_before}
+        end
+        define_method("teacher_enrollment_reminder__#{course}__#{subject}_#{days_before}_day_virtual") do
+          mail :teacher_enrollment_reminder, course, subject, options: {days_before: days_before},
+               workshop_params: {
+                 virtual: true,
+                 location_name: 'zoom_link',
+                 location_address: nil,
+                 notes: 'Please join the webinar using zoom_link. The webinar will take place at 8 pm ET/ 5 pm PT.'
+               }
+        end
       end
     end
   end
-  # def teacher_enrollment_reminder__csd_ayw
 
   def teacher_enrollment_receipt__admin
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
