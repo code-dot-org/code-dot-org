@@ -3,7 +3,6 @@ import {combineReducers} from 'redux';
 import $ from 'jquery';
 import _ from 'lodash';
 import {Galleries} from './projectConstants';
-import {FeaturedProjectConstants} from '@cdo/apps/util/sharedConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
