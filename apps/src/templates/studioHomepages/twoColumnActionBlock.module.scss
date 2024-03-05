@@ -44,5 +44,9 @@ $breakpoint: 993px;
     display: flex;
     flex-wrap: wrap;
     gap: 1.25rem;
+
+    &VerticalButtons {
+      flex-direction: column;
+    }
   }
 }
