@@ -114,15 +114,15 @@ class ProjectAppTypeArea extends React.Component {
       this.props.labKey === 'featured' ? 'all' : this.props.labKey;
     const {projectList} = this.props;
     const oldestProject = projectList[projectList.length - 1];
-    const oldestPublishedAt =
-      oldestProject && oldestProject.projectData.publishedAt;
+    const oldestFeaturedAt =
+      oldestProject && oldestProject.projectData.featuredAt;
 
     return $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
+      url: `/api/v1/projects/gallery/public/${projectType}/${oldestFeaturedAt}`,
       dataType: 'json',
     }).done(data => {
-      // olderProjects all have an older publishedAt date than oldestProject.
+      // olderProjects all have an older featuredAt date than oldestProject.
       const olderProjects = data[projectType];
 
       // Don't try to fetch projects of this projectType again in the future if we

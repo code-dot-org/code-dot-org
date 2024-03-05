@@ -135,15 +135,20 @@ module ProjectsList
       return featured
     end
 
+    # @param project_group [String] Project group to retrieve. Must be one of
+    #   PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
+    # @param featured_before [string] String representing a DateTime before
+    #   which to search for the requested featured projects. Optional.
+    # @return [Hash<Array<Hash>>] A hash of lists of active published feature projects.
     def fetch_active_published_featured_projects(project_group, featured_before: nil)
-      if project_group == 'all'
-        return fetch_featured_published_projects
+      if project_group == 'all'        
+        return fetch_featured_published_projects(featured_before: featured_before)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      fetch_featured_projects_by_type([project_group.to_sym])
+      fetch_featured_projects_by_type([project_group.to_sym], featured_before: featured_before)
     end
 
-    def fetch_featured_published_projects
+    def fetch_featured_published_projects(featured_before: nil)
       featured_published_projects = {}
       PUBLISHED_PROJECT_TYPE_GROUPS.each do |project_group, project_types|
         if project_group == :library
@@ -152,7 +157,7 @@ module ProjectsList
         featured_published_projects[project_group] = []
         project_types.each do |project_type|
           featured_published_projects[project_group] <<
-            fetch_featured_projects_by_type(project_type)
+            fetch_featured_projects_by_type(project_type, featured_before: featured_before)
         end
         featured_published_projects[project_group].flatten!
       end
@@ -235,7 +240,7 @@ module ProjectsList
       ]
     end
 
-    def fetch_featured_projects_by_type(project_type)
+    def fetch_featured_projects_by_type(project_type, featured_before: nil)
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
@@ -249,10 +254,11 @@ module ProjectsList
           project_type: project_type.to_s,
           state: 'active'
         ).
+        where {featured_before.nil? || featured_at < DateTime.parse(featured_before)}.
         exclude(featured_at: nil).
         exclude(published_at: nil).
         exclude(abuse_score: 0...).
-        order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT).all.shuffle!
+        order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 

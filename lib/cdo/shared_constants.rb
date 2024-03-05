@@ -135,7 +135,6 @@ module SharedConstants
     }
   )
 
-  # Projects with an abuse score over this threshold will be blocked.
   FEATURED_PROJECT_CONSTANTS = OpenStruct.new(
     {MAX_REQUESTS_PER_CATEGORY: 15}
   )
