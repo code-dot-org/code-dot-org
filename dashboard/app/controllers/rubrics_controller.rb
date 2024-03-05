@@ -1,9 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
-  load_resource only: [:get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_feedback, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  load_resource only: [:get_teacher_evaluations, :get_teacher_feedback, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_feedback, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -45,7 +45,7 @@ class RubricsController < ApplicationController
   # POST /rubrics/:id/submit_evaluations
   def submit_evaluations
     return head :forbidden unless current_user&.teacher?
-    permitted_params = params.permit(:id, :student_id)
+    permitted_params = params.permit(:id, :student_id, :keep_working)
     rubric = Rubric.find(permitted_params[:id])
     learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
     evaluations = LearningGoalTeacherEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
@@ -67,6 +67,16 @@ class RubricsController < ApplicationController
         version_id = source_data[:version_id]
       end
     end
+
+    # Update the main TeacherFeedback
+    teacher_feedback = TeacherFeedback.find_or_create_by!(student_id: permitted_params[:student_id], teacher_id: current_user.id, script: rubric.get_script_level.script, level: rubric.level)
+
+    if permitted_params[:keep_working]
+      teacher_feedback.update(review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
+    else
+      teacher_feedback.update(review_state: nil)
+    end
+    teacher_feedback.save!
 
     submitted_at = Time.now
     if evaluations.update_all(submitted_at: submitted_at, project_id: project_id, project_version: version_id)
@@ -106,6 +116,23 @@ class RubricsController < ApplicationController
         group_by(&:learning_goal_id).
         map {|_, eval_list| eval_list.max_by(&:submitted_at)}
     render json: teacher_evaluations.map(&:summarize_for_participant)
+  end
+
+  def get_teacher_feedback
+    return head :bad_request unless current_user
+
+    permitted_params = params.permit(:id, :student_id)
+    teacher_feedback = TeacherFeedback.get_latest_feedback_given(
+      permitted_params[:student_id],
+      @rubric.level.id,
+      current_user.id,
+      @rubric.get_script_level.script.id
+    )
+    summarization = {}
+    [:created_at, :updated_at, :review_state].each do |k|
+      summarization[k] = teacher_feedback[k]
+    end
+    render json: summarization.compact
   end
 
   def run_ai_evaluations_for_user

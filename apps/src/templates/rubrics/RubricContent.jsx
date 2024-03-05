@@ -179,7 +179,7 @@ export default function RubricContent({
           aiEvaluations={aiEvaluations}
         />
       </div>
-      {canProvideFeedback && (
+      {false && canProvideFeedback && (
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>
             <Button
