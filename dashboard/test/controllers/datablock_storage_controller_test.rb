@@ -294,6 +294,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
   end
 
+  test "get_column" do
+    create_bob_record
+    get _url(:get_column), params: {table_name: 'mytable', column_name: 'name'}
+    assert_response :success
+    val = JSON.parse(@response.body)
+    assert_equal ['bob'], val
+  end
+
   def create_record_where_foo_is(value)
     post _url(:create_record), params: {
       table_name: 'mytable',
