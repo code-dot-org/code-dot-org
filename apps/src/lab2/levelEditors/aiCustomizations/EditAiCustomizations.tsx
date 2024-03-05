@@ -5,8 +5,12 @@ import {
 } from '@cdo/apps/aichat/types';
 import React, {useCallback, useState} from 'react';
 import {AppName} from '../../types';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyOneText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';
+import moduleStyles from './edit-ai-customizations.module.scss';
 
 interface EditAiCustomizationsProps {
   initialCustomizations: LevelAiCustomizations;
@@ -41,25 +45,41 @@ const EditAiCustomizations: React.FunctionComponent<
         name="level[initial_ai_customizations]"
         value={JSON.stringify(aiCustomizations)}
       />
-      <div>
-        <Heading3>Bot Name</Heading3>
-        <input
-          type="text"
-          value={aiCustomizations.botName?.value || ''}
-          onChange={e =>
-            setAiCustomizations({
-              ...aiCustomizations,
-              botName: {
-                value: e.target.value,
-                visibility: aiCustomizations.botName?.visibility,
-              },
-            })
-          }
-        />
-        <VisibilityDropdown
-          property="botName"
-          setVisibility={setPropertyVisiblity}
-        />
+      <BodyThreeText>
+        Set the initial values and visibility for AI model customizations.
+        <br />
+        <br />
+        <b>Editable:</b> students can change the value.
+        <br />
+        <b>Readonly:</b> students can see the value but cannot change it.
+        <br />
+        <b>Hidden:</b> the field is not shown on the customization panel.
+      </BodyThreeText>
+      <div className={moduleStyles.fieldSection}>
+        <BodyOneText>Bot Name</BodyOneText>
+        <div className={moduleStyles.fieldRow}>
+          <div className={moduleStyles.fieldValue}>
+            <label htmlFor="botName">Initial Value</label>
+            <input
+              id="botName"
+              type="text"
+              value={aiCustomizations.botName?.value || ''}
+              onChange={e =>
+                setAiCustomizations({
+                  ...aiCustomizations,
+                  botName: {
+                    value: e.target.value,
+                    visibility: aiCustomizations.botName?.visibility,
+                  },
+                })
+              }
+            />
+          </div>
+          <VisibilityDropdown
+            property="botName"
+            setVisibility={setPropertyVisiblity}
+          />
+        </div>
       </div>
     </div>
   );
@@ -78,9 +98,9 @@ const VisibilityDropdown: React.FunctionComponent<{
       name="bot_name_visibility"
       size="s"
       items={[
-        {value: 'hidden', text: 'Hidden'},
-        {value: 'readonly', text: 'Readonly'},
         {value: 'editable', text: 'Editable'},
+        {value: 'readonly', text: 'Read Only'},
+        {value: 'hidden', text: 'Hidden'},
       ]}
       onChange={e => {
         setVisibility(property, e.target.value as Visibility);

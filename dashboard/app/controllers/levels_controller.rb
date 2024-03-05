@@ -286,7 +286,6 @@ class LevelsController < ApplicationController
   # PATCH/PUT /levels/1
   # PATCH/PUT /levels/1.json
   def update
-    puts "Updating level"
     if level_params[:name] &&
         @level.name != level_params[:name] &&
         @level.name.casecmp?(level_params[:name])
@@ -298,16 +297,13 @@ class LevelsController < ApplicationController
     end
 
     update_level_params = level_params.to_h
-    p update_level_params
 
-    # Parse the incoming level_data JSON so that it's stored in the database as a
-    # first-order member of the properties JSON, rather than simply as a string of
-    # JSON belonging to a single property.
+    # Parse a few specific JSON fields used by modern (Lab2) labs so that they are
+    # stored in the database as a first-order member of the properties JSON, rather
+    # than simply as a string of JSON belonging to a single property.
     [:level_data, :initial_ai_customizations].each do |key|
       update_level_params[key] = JSON.parse(update_level_params[key]) if update_level_params[key]
     end
-    #update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
-    #update_level_params[:initial_ai_customizations] = JSON.parse(level_params[:initial_ai_customizations]) if level_params[:initial_ai_customizations]
     # Update level data with validations, and remove from level properties.
     # We can remove this once validations are read from level properties directly.
     update_level_params[:level_data]["validations"] = JSON.parse(update_level_params[:validations]) if update_level_params[:validations]
