@@ -713,12 +713,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.getNewCursor = function (type) {
       switch (type) {
         case 'basic':
-          return new blocklyWrapper.BasicCursor() as Cursor;
+          return new blocklyWrapper.BasicCursor();
         case 'line':
-          return new blocklyWrapper.LineCursor() as Cursor;
+          return new blocklyWrapper.LineCursor();
         case 'default':
         default:
-          return new blocklyWrapper.Cursor() as Cursor;
+          return new blocklyWrapper.Cursor();
       }
     };
 

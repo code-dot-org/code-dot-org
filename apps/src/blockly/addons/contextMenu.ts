@@ -310,11 +310,10 @@ const registerTheme = function (name: Themes, label: string, weight: number) {
 };
 
 function registerThemes(
-  startingWeight: number,
+  weight: number,
   themes: {name: Themes; label: string}[]
 ) {
-  themes.forEach((theme, index) => {
-    const weight = startingWeight + index;
+  themes.forEach(theme => {
     registerTheme(theme.name, theme.label, weight);
   });
 }
@@ -367,9 +366,8 @@ function registerHelp(weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
 }
 
-function registerAllCursors(startingWeight: number, cursorTypes: string[]) {
+function registerAllCursors(weight: number, cursorTypes: string[]) {
   cursorTypes.forEach((cursorType, index) => {
-    const weight = startingWeight + index;
     registerCursor(cursorType, weight);
   });
 }
@@ -524,11 +522,8 @@ function registerCustomWorkspaceOptions() {
 
   // Custom workspace options. We increment the weight for each so they are automatically
   // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
-  // Cursors and Themes have multiple options so we need to increment multiple times afterwards.
   registerKeyboardNavigation(nextWeight++);
-  registerAllCursors(nextWeight, NAVIGATION_CURSOR_TYPES);
-  nextWeight += NAVIGATION_CURSOR_TYPES.length;
+  registerAllCursors(nextWeight++, NAVIGATION_CURSOR_TYPES);
   registerDarkMode(nextWeight++);
   registerThemes(nextWeight, themes); // Last option; no incrementing needed.
-  // If additional options are added here, we would want to increment the weight by themes.length.
 }
