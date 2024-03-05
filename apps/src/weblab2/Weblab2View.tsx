@@ -56,7 +56,7 @@ const defaultProject: ProjectType = {
       name: 'index.html',
       language: 'html',
       contents: `<!DOCTYPE html><html>
-  <link rel="stylesheet" href="styles.css"></style>
+  <link rel="stylesheet" href="styles.css"/>
   <body>
     Content goes here!
     <div class="foo">Foo class!</div>

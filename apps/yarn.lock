@@ -8557,7 +8557,7 @@ __metadata:
     browser-process-hrtime: 0.1.2
     buffer: ^6.0.3
     canvg: gabelerner/canvg
-    cdo-ide-poc: "git+https://github.com/code-dot-org/cdo-ide-poc.git#82c542eeb5b685c0ce4c97b8f596ef4de3157c3e"
+    cdo-ide-poc: "git+https://github.com/code-dot-org/cdo-ide-poc.git#6099cf73db90ece2212df5217033ed1a33addf79"
     chai: 3.5.0
     chai-as-promised: ^7.1.1
     chai-enzyme: ^1.0.0-beta.1
@@ -9568,9 +9568,9 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"cdo-ide-poc@git+https://github.com/code-dot-org/cdo-ide-poc.git#82c542eeb5b685c0ce4c97b8f596ef4de3157c3e":
+"cdo-ide-poc@git+https://github.com/code-dot-org/cdo-ide-poc.git#6099cf73db90ece2212df5217033ed1a33addf79":
   version: 0.0.0
-  resolution: "cdo-ide-poc@https://github.com/code-dot-org/cdo-ide-poc.git#commit=82c542eeb5b685c0ce4c97b8f596ef4de3157c3e"
+  resolution: "cdo-ide-poc@https://github.com/code-dot-org/cdo-ide-poc.git#commit=6099cf73db90ece2212df5217033ed1a33addf79"
   dependencies:
     "@codemirror/lang-css": ^6.2.1
     "@codemirror/lang-html": ^6.4.8
@@ -9590,7 +9590,7 @@ canvg@gabelerner/canvg:
     "@codemirror/lang-json": ^6.0.1
     react: ^16.14.0
     react-dom: ^16.14.0
-  checksum: f4e923e83817583dd90b31b6285f429235d43d30afc053cfa6ba2981e8a82b60537276d1fd646eee15895ec0955a5af3e1c2f1f953983ade2b899d87ecf6852b
+  checksum: c10b4c1985dfb0cb5403d65e3b128fc1f9c857205722a74d98ae598594422f7a515208907a9940341fe5c27e7a8e4592986e41f9da199b70a3212f14c85a351b
   languageName: node
   linkType: hard
 

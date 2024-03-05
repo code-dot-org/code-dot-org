@@ -1,6 +1,6 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 
-import {useCDOIDEContext, editableFileType} from 'cdo-ide-poc';
+import {useCDOIDEContext, editableFileType, prettify} from 'cdo-ide-poc';
 
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
@@ -17,31 +17,15 @@ const codeMirrorLangMapping: {[key: string]: LanguageSupport} = {
   js: js(),
 };
 
-const prettify = async (val: string /* language: string */) => {
-  alert(
-    `Unfortunately, prettier/standalone doesn't seem to work as of yet in the cdo environment.
-
-    So this button is off for now.
-
-    Maybe we need to use a different library?`
-  );
-
-  return val;
-
-  /*const formatted = await prettier.format(val, {
-    parser: language,
-    plugins: [cssParser, htmlParser],
-    tabWidth: 2,
-    htmlWhitespaceSensitivity: 'ignore',
-  });
-
-  return formatted;
-  */
-};
-
 const Editor = () => {
   const {project, saveFile} = useCDOIDEContext();
   const file = Object.values(project.files).filter(f => f.active)?.[0];
+  // this is a stupid hack. the low level code-mirror editor won't update itself
+  // automatically if the doc is changed externally. So in lieu of doing it better,
+  // for now we just key the component off of the file ID + an incrementing value that
+  // hits every time the format button is pressed. That'll force a re-render and make it work.
+  // let's swap this out with something better.
+  const [formats, setFormats] = useState(1);
 
   const onChange = useCallback(
     (value: string) => {
@@ -51,8 +35,9 @@ const Editor = () => {
   );
 
   const format = async () => {
-    const prettified = await prettify(file.contents /*, file.language*/);
+    const prettified = await prettify(file.contents, file.language);
     saveFile(file.id, prettified);
+    setFormats(f => f + 1);
   };
 
   if (!editableFileType(file.language)) {
@@ -66,7 +51,7 @@ const Editor = () => {
       </button>
       {file && (
         <CodeEditor
-          key={file.id}
+          key={`${file.id}/${formats}`}
           darkMode={false}
           onCodeChange={onChange}
           startCode={file.contents}
