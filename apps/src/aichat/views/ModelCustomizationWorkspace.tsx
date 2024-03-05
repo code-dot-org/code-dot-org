@@ -2,6 +2,7 @@ import React from 'react';
 
 import PromptCustomization from './modelCustomization/PromptCustomization';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
+import PublishNotes from './modelCustomization/PublishNotes';
 import Tabs from './tabs/Tabs';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
@@ -20,8 +21,8 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
           tabs={[
             {title: 'Prompt', content: <PromptCustomization />},
             {title: 'Retrieval', content: <RetrievalCustomization />},
-            {title: 'Fine Tuning', content: 'content 3'},
-            {title: 'Publish', content: 'content 4'},
+            {title: 'Fine Tuning', content: 'fine tuning content TBD'},
+            {title: 'Publish', content: <PublishNotes />},
           ]}
           name="model-customization"
         />
