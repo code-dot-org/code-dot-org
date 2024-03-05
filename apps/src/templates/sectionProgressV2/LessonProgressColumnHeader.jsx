@@ -64,7 +64,7 @@ export default function LessonProgressColumnHeader({
         )}
         data-tip
         data-for={getTooltipId(lesson)}
-        onClick={() => addExpandedLesson(lesson.id)}
+        onClick={() => addExpandedLesson(lesson)}
       >
         <LessonTitleTooltip lesson={lesson} />
         <FontAwesome

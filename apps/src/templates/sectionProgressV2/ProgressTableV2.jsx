@@ -11,6 +11,7 @@ import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
 import classNames from 'classnames';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
+import {lessonHasLevels} from '../progress/progressHelpers';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
@@ -65,9 +66,11 @@ function ProgressTableV2({
           <LessonProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
-            addExpandedLesson={lessonId =>
-              setExpandedLessons([...expandedLessonIds, lessonId])
-            }
+            addExpandedLesson={lesson => {
+              if (!lesson.lockable && lessonHasLevels(lesson)) {
+                setExpandedLessons([...expandedLessonIds, lesson.id]);
+              }
+            }}
             key={index}
           />
         );
