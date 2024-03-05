@@ -25,6 +25,7 @@ export default class GetColumnParamPicker extends React.Component {
   componentDidMount() {
     if (this.props.param === ParamType.COLUMN) {
       const reduxState = getStore().getState();
+      // TODO: post-firebase-cleanup, remove this conditional: #56994
       // Only firebase needs tableType, datablock storage checks on the backend
       const tableType = isFirebaseStorage()
         ? reduxState.data.tableListMap[this.props.table]

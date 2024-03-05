@@ -1111,6 +1111,8 @@ Dashboard::Application.routes.draw do
     post '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent_request'
 
+    # DatablockStorageController powers the datasets feature of applab,
+    # and the key/value pair store feature of gamelab
     resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
       collection do
         # Datablock Storage: Key-Value-Pair API

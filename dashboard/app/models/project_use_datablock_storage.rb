@@ -15,8 +15,7 @@ class ProjectUseDatablockStorage < ApplicationRecord
   # This allows us to progressively migrate between Firebase
   # and Datablock storage.
   #
-  # TODO: post-firebase-cleanup, remove this table once 100%
-  # of projects are use_datablock_storage=true.
+  # TODO: post-firebase-cleanup, #56994 remove this table once 100% of projects are use_datablock_storage=true.
 
   def self.use_data_block_storage_for?(channel_id)
     project = Project.find_by_channel_id(channel_id)

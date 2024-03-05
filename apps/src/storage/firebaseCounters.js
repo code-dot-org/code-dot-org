@@ -1,3 +1,5 @@
+// TODO: post-firebase-cleanup, remove this file #56994
+
 import Firebase from 'firebase';
 import {
   loadConfig,
@@ -27,7 +29,7 @@ import {WarningType} from './constants';
  * @returns {Promise}
  */
 export function enforceTableCount(config, tableName) {
-  const tablesRef = getPathRef(getProjectDatabase(), 'counters/tables'); // TODO: unfirebase
+  const tablesRef = getPathRef(getProjectDatabase(), 'counters/tables');
   return tablesRef.once('value').then(snapshot => {
     if (
       snapshot.numChildren() >= config.maxTableCount &&

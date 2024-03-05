@@ -1,3 +1,5 @@
+// TODO: post-firebase-cleanup, remove this file #56994
+
 import {
   ColumnType,
   castValue,
@@ -555,13 +557,12 @@ FirebaseStorage.resetForTesting = function () {
 
 // Current tables are live updated, the data is NOT copied into
 // the student project, instead a new type of firebase node is created
-// like /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/current_tables/Daily Weather
+// like /v3/channels/{channelId}/current_tables/Daily Weather
 // as opposed to a normal table that would be like
-// /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/storage/tables/Daily Weather
+// /v3/channels/{channelId}/storage/tables/Daily Weather
 //
 // Current tables can be found in https://console.firebase.google.com/project/cdo-v3-shared/database/cdo-v3-shared/data/~2Fv3~2Fchannels~2Fshared~2Fmetadata~2Fmanifest~2Ftables
 // where the table has `current: true` set in the manifest object
-// FIXME: unfirebase, this method is not found in DatablockStorage
 FirebaseStorage.addCurrentTableToProject = function (
   tableName,
   onSuccess,
@@ -579,7 +580,7 @@ FirebaseStorage.addCurrentTableToProject = function (
     .then(onSuccess, onError);
 };
 
-// FIXME: unfirebase, this method is not found in DatablockStorage
+// TODO: unfirebase, this method is not found in DatablockStorage
 FirebaseStorage.copyStaticTable = function (tableName, onSuccess, onError) {
   return enforceUniqueTableNames(tableName)
     .then(incrementRateLimitCounters)
@@ -678,7 +679,7 @@ FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
  * @param {function ()} onSuccess
  * @param {function (string)} onError
  */
-// FIXME: unfirebase, note that this diverges from DatablockStorage.deleteTable
+// TODO: unfirebase, note that this diverges from DatablockStorage.deleteTable
 // which doesn't take a `type` parameter, since that's handled on the backend
 FirebaseStorage.deleteTable = function (tableName, type, onSuccess, onError) {
   if (type === tableType.SHARED) {
@@ -1096,7 +1097,7 @@ function overwriteTableData(tableName, recordsData) {
 
 // Initialize redux's list of tables from firebase, and keep it up to date as
 // new tables are added and removed.
-// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
+// TODO: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.subscribeToListOfProjectTables = function (
   onTableAdded,
   onTableRemoved
@@ -1213,7 +1214,7 @@ FirebaseStorage.previewSharedTable = function (
 };
 
 // Unsubscribe Firebase from a table
-// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
+// TODO: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.unsubscribeFromTable = function (tableName) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
@@ -1226,7 +1227,7 @@ FirebaseStorage.unsubscribeFromTable = function (tableName) {
   getColumnsRef(getProjectDatabase(), tableName).off();
 };
 
-// FIXME: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
+// TODO: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
 FirebaseStorage.unsubscribeFromKeyValuePairs = function () {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   getPathRef(projectStorageRef, 'keys').off('value');

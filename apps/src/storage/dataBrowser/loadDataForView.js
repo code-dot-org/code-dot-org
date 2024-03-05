@@ -16,7 +16,7 @@ let lastTableName;
 let lastStorage;
 
 export function refreshCurrentDataView() {
-  // TODO: post-firebase-cleanup, remove if guard, but keep the contents
+  // TODO: post-firebase-cleanup, remove if guard, but keep the contents: #56994
   if (isDatablockStorage()) {
     loadDataForView(lastStorage, lastView, null, lastTableName);
   }
@@ -66,6 +66,7 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
       // Initialize redux's list of tables from firebase, and keep it up to date as
       // new tables are added and removed.
 
+      // TODO: post-firebase-cleanup, remove this conditional: #56994
       if (isFirebaseStorage()) {
         // Firebase
         storage.subscribeToListOfProjectTables(

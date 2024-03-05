@@ -2,7 +2,8 @@
 # including the datasets, and the library manifest.
 #
 # TODO: post-firebase-cleanup, remove this migration (=turn it into a NoOp)
-# as soon as firebase is outdated, we shouldn't be running this anymore.
+# as soon as firebase is outdated, we shouldn't be running this anymore. We
+# may require anothe way to seed this data at that point: #56994
 class SeedDatasetsFromFirebase < ActiveRecord::Migration[6.1]
   def up
     seed_manifest_from_firebase

@@ -50,7 +50,7 @@ class Projects
     }
     row[:id] = @table.insert(row)
 
-    # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
+    # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage: #56994
     set_use_datablock_storage row[:id], project_type
 
     storage_encrypt_channel_id(row[:storage_id], row[:id])

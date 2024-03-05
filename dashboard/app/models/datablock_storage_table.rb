@@ -29,11 +29,11 @@ class DatablockStorageTable < ApplicationRecord
 
   SHARED_TABLE_PROJECT_ID = 0
 
-  # TODO: implement enforcement of MAX_TABLE_COUNT, we already have a test for it
-  # but we're skipping it until this is implemented.
+  # TODO: #57003, implement enforcement of MAX_TABLE_COUNT, we already have
+  # a test for it but we're skipping it until this is implemented.
   MAX_TABLE_COUNT = 10
 
-  # TODO: implement enforcement of MAX_TABLE_ROW_COUNT, we already have a test for it
+  # TODO: #57002, enforce MAX_TABLE_ROW_COUNT, we already have a test for it
   # but we're skipping it until this is implemented.
   MAX_TABLE_ROW_COUNT = 20000
 

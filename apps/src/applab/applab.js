@@ -417,6 +417,7 @@ Applab.init = function (config) {
   }
   Applab.channelId = config.channel;
 
+  // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
   if (!!config.useDatablockStorage) {
     console.error('Initializing DATABLOCK_STORAGE');
     Applab.storage = initStorage(DATABLOCK_STORAGE, {
@@ -425,7 +426,6 @@ Applab.init = function (config) {
   } else {
     console.error('Initializing FIREBASE_STORAGE');
     Applab.storage = initStorage(FIREBASE_STORAGE, {
-      // TODO: unfirebase
       channelId: config.channel,
       firebaseName: config.firebaseName,
       firebaseAuthToken: config.firebaseAuthToken,
@@ -830,6 +830,7 @@ async function initDataTab(levelOptions) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
         } else {
+          // TODO: post-firebase-cleanup, remove this conditional when we're done with firebase: #56994
           if (isFirebaseStorage()) {
             if (datasetInfo.current) {
               Applab.storage.addCurrentTableToProject(

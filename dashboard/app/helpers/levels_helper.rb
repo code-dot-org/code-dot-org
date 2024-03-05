@@ -2,7 +2,7 @@ require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
-require 'firebase_token_generator' # TODO: unfirebase
+require 'firebase_token_generator' # TODO: post-firebase-cleanup, remove this code: #56994
 require 'image_size'
 require 'cdo/firehose'
 require 'cdo/languages'
@@ -583,8 +583,11 @@ module LevelsHelper
 
     if @level.game.use_datablock_storage?
       channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-      # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage
+
+      # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage: #56994
       storage_options[:useDatablockStorage] = ProjectUseDatablockStorage.use_data_block_storage_for?(channel_id)
+
+      # TODO: post-firebase-cleanup, remove all code in this unless block: #56994
       unless storage_options[:useDatablockStorage]
         storage_options[:firebaseName] = CDO.firebase_name
         storage_options[:firebaseAuthToken] = firebase_auth_token
@@ -907,7 +910,8 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
-  # TODO: post-firebase-cleanup, remove this method
+  #
+  # TODO: post-firebase-cleanup, remove this method: #56994
   def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
@@ -934,7 +938,8 @@ module LevelsHelper
   # Today, anyone can edit the data in any channel, so this meets our current needs.
   # In the future, if we need to assign special privileges to channel owners,
   # we could include the storage_id associated with the user id (if one exists).
-  # TODO: post-firebase-cleanup, remove this method
+  #
+  # TODO: post-firebase-cleanup, remove this method: #56994
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 

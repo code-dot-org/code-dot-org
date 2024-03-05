@@ -11,9 +11,15 @@ class DatablockStorageKvp < ApplicationRecord
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
-  # TODO: implement enforcement of MAX_VALUE_LENGTH, we already have a test for it
-  # but we're skipping it until this is implemented.
+  # TODO: #56999, implement enforcement of MAX_VALUE_LENGTH, we already have
+  # a test for it, but we're skipping it until this is implemented.
   MAX_VALUE_LENGTH = 4096
+
+  # TODO: #57000, implement encforement of MAX_NUM_KVPS. We didn't find enfocrement
+  # of this in Firebase in our initial exploration, so we may need to partly pick
+  # a value here and start enforcing it, previous exploration:
+  # https://github.com/code-dot-org/code-dot-org/issues/55554#issuecomment-1876143286
+  MAX_NUM_KVPS = 20000 # does firebase already have a  limit? this matches max num table rows
 
   def self.get_kvps(project_id)
     where(project_id: project_id).
@@ -27,10 +33,7 @@ class DatablockStorageKvp < ApplicationRecord
     end
 
     if upsert
-      # This should generate a single MySQL insert statement using the `ON DUPLICATE KEY UPDATE`
-      # syntax. Should be faster than a find round-trip followed by an update or insert.
-      # But we should check the SQL output to make sure its what we expect, since this is
-      # mainly designed Rails-wise as a bulk insert method.
+      # This should generate a single MySQL insert statement using `ON DUPLICATE KEY UPDATE`
       DatablockStorageKvp.upsert_all(kvps)
     else
       DatablockStorageKvp.insert_all(kvps)

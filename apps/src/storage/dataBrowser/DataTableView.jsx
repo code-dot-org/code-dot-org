@@ -71,7 +71,7 @@ class DataTableView extends React.Component {
       this.props.tableListMap[this.props.tableName] === tableType.SHARED;
     const tableName = encodeURIComponent(this.props.tableName);
     const channelId = isSharedTable ? 'shared' : Applab.channelId;
-    // FIXME: unfirebase
+    // TODO: unfirebase, this should be a call to datablock_storage_controller, see: #56996
     location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
   };
 

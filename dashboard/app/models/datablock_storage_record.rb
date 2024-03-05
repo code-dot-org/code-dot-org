@@ -14,8 +14,9 @@
 class DatablockStorageRecord < ApplicationRecord
   self.primary_keys = :project_id, :table_name, :record_id
 
-  # TODO: implement enforcement of MAX_RECORD_LENGTH, we already have a test for it
-  # but we're skipping it until this is implemented.
+  # TODO: #57001, implement enforcement of MAX_RECORD_LENGTH, we already have
+  # a test for this, but we're skipping it until this is implemented. This
+  # should ensure the string form of .json is less than 4096 bytes.
   MAX_RECORD_LENGTH = 4096
 
   # Enabling this was adding an extra `SELECT `datablock_storage_tables`.*` query to update_record

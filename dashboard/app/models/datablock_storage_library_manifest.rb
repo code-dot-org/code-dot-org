@@ -14,7 +14,7 @@
 
 class DatablockStorageLibraryManifest < ApplicationRecord
   # A one-row table storing a singleton JSON `library_manifest`` that
-  # describes all Data Library datasets and categories:
+  # describes all Data Library datasets and categories, example data:
   #
   # library_manifest = {
   #   categories: [
@@ -39,7 +39,7 @@ class DatablockStorageLibraryManifest < ApplicationRecord
   #   ],
   # };
   #
-  # See: `DatasetController`(Ruby) and `DatablockStorage.getLibraryManifest` (JS)
+  # See: `DatasetController` (Ruby) and `DatablockStorage.getLibraryManifest` (JS)
 
   self.table_name = 'datablock_storage_library_manifest'
 

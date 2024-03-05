@@ -20,6 +20,7 @@ class EditTableListRow extends React.Component {
   };
 
   handleDelete = () => {
+    // TODO: post-firebase-cleanup, remove this conditional: #56994
     if (isFirebaseStorage()) {
       storageBackend().deleteTable(
         this.props.tableName,

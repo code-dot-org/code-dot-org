@@ -238,13 +238,11 @@ class DatablockStorageController < ApplicationController
   # deletes the entire channel in firebase
   # used only one place, applab.js config.afterClearPuzzle()
   def clear_all_data
-    # FIXME: unfirebase, do we have an index on project_id alone?
+    # TODO: unfirebase, do we have an index on project_id alone?
     DatablockStorageTable.where(project_id: @project_id).delete_all
-    # FIXME: unfirebase, do we have an index on project_id alone?
+    # TODO: unfirebase, is it worth adding an index on project_id? #56997
     DatablockStorageKvp.where(project_id: @project_id).delete_all
-    # FIXME: unfirebase, do we have an index on project_id alone?
     DatablockStorageRecord.where(project_id: @project_id).delete_all
-
     render json: true
   end
 
@@ -252,13 +250,13 @@ class DatablockStorageController < ApplicationController
   #   Project Use Datablock Storage API                    #
   ##########################################################
 
-  # TODO: post-firebase-cleanup, remove
+  # TODO: post-firebase-cleanup, remove this code: #56994
   def use_datablock_storage
     ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], true)
     render json: true
   end
 
-  # TODO: post-firebase-cleanup, remove
+  # TODO: post-firebase-cleanup, remove this code: #56994
   def use_firebase_storage
     ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], false)
     render json: true

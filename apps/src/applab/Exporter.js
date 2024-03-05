@@ -89,9 +89,9 @@ const APP_OPTIONS_ALLOWLIST = {
   hideSource: true,
   share: true,
   labUserId: false,
-  firebaseName: false, // TODO: unfirebase
-  firebaseAuthToken: false, // TODO: unfirebase
-  firebaseChannelIdSuffix: false, // TODO: unfirebase
+  firebaseName: false, // TODO: post-firebase-cleanup: #56994
+  firebaseAuthToken: false, // TODO: post-firebase-cleanup: #56994
+  firebaseChannelIdSuffix: false, // TODO: post-firebase-cleanup: #56994
   isSignedIn: true,
   pinWorkspaceToBottom: true,
   hasVerticalScrollbars: true,

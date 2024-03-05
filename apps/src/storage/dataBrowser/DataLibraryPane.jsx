@@ -36,10 +36,10 @@ class DataLibraryPane extends React.Component {
   };
 
   importTable = datasetInfo => {
+    // TODO: post-firebase-cleanup, remove this conditional: #56994
     if (isFirebaseStorage()) {
       if (datasetInfo.current) {
         storageBackend().addCurrentTableToProject(
-          // TODO: unfirebase
           datasetInfo.name,
           () => {},
           this.onError

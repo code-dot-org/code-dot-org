@@ -351,38 +351,6 @@ DatablockStorage.clearAllData = function (onSuccess, onError) {
   _fetch('clear_all_data', 'DELETE', {}).then(onSuccess, onError);
 };
 
-// FIXME: unfirebase, remove this before merging PR
-//
-// See issue about implementing the library manifest system here:
-// https://github.com/code-dot-org/code-dot-org/issues/56472
-//
-// Current tables are live updated, the data is NOT copied into
-// the student project, instead a new type of f*rebase node is created
-// like /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/current_tables/Daily Weather
-// as opposed to a normal table that would be like
-// /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/storage/tables/Daily Weather
-//
-// Current tables can be found in https://console.firebase.google.com/project/cdo-v3-shared/database/cdo-v3-shared/data/~2Fv3~2Fchannels~2Fshared~2Fmetadata~2Fmanifest~2Ftables
-// where the table has `current: true` set in the manifest object
-// DatablockStorage.addCurrentTableToProject = function (
-//   tableName,
-//   onSuccess,
-//   onError
-// ) {
-//   _fetch('add_shared_table', 'POST', {
-//     table_name: tableName,
-//   }).then(onSuccess, onError);
-// };
-//
-// Makes a project-local copy of one of the tables stored at /v3/channels/shared/storage/tables
-// DatablockStorage.copyStaticTable = function (tableName, onSuccess, onError) {
-//   // We don't differentiate between static and current shared tables
-//   // they are both just pointers to the 'shared' channel's tables.
-//   _fetch('add_shared_table', 'POST', {
-//     table_name: tableName,
-//   }).then(onSuccess, onError);
-// };
-
 // This is a new method for DatablockStorage which replaces the above APIs
 DatablockStorage.addSharedTable = function (tableName, onSuccess, onError) {
   _fetch('add_shared_table', 'POST', {
@@ -403,11 +371,5 @@ export function initDatablockStorage({channelId: _channelId}) {
   channelId = _channelId;
   return DatablockStorage;
 }
-
-// FIXME: unfirebase, remove this before merging PR
-console.warn(
-  'Setting window.DatablockStorage for easier debugging, turn off before merging PR'
-);
-window.DatablockStorage = DatablockStorage;
 
 export default DatablockStorage;
