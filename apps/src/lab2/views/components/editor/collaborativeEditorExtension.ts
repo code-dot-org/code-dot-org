@@ -10,6 +10,12 @@ import {
 } from '@codemirror/collab';
 
 import {createConsumer, Subscription} from '@rails/actioncable';
+import throttle from 'throttleit';
+
+// Throttle how frequently we send editor updates to the server. This creates a lower
+// 'framerate' between pair programming partners, but it reduces server load and thereby cost.
+const THROTTLE_EDITOR_UPDATES = false;
+const THROTTLE_EDITOR_UPDATES_MS = 2000;
 
 class Updates {
   constructor(readonly version: number, readonly updates: readonly Update[]) {}
@@ -186,6 +192,9 @@ export function collaborativeEditorExtension(
     private channel: CollaborativeEditorChannel;
     private currentVersion: number;
 
+    // Throttle how many updates/s we send to the server
+    private throttledPush: () => void;
+
     constructor(private view: EditorView) {
       try {
         this.currentVersion = 0;
@@ -195,6 +204,11 @@ export function collaborativeEditorExtension(
           this.onReceive.bind(this),
           this.onConnect.bind(this),
           this.onDisconnect.bind(this)
+        );
+
+        this.throttledPush = throttle(
+          this.push.bind(this),
+          THROTTLE_EDITOR_UPDATES_MS
         );
       } catch (e) {
         // ViewPlugin.fromClass silently consumes errors, so we log them here
@@ -282,7 +296,15 @@ export function collaborativeEditorExtension(
     }
 
     update(update: ViewUpdate) {
-      if (update.docChanged) this.push();
+      if (update.docChanged) {
+        if (THROTTLE_EDITOR_UPDATES) {
+          // Call this.push() to transmit doc changes, but throttle the updates/s
+          // to reduce server load and thereby cost.
+          this.throttledPush();
+        } else {
+          this.push();
+        }
+      }
     }
 
     async push() {

@@ -8416,6 +8416,7 @@ __metadata:
     survey-react: ^1.9.28
     swiper: ^11.0.5
     terser-webpack-plugin: ^5.3.6
+    throttleit: ^2.0.0
     timers-browserify: ^2.0.12
     tone: 14.7.77
     ts-loader: ^9.4.2
@@ -27888,6 +27889,13 @@ temporal@latest:
   version: 3.0.1
   resolution: "throttle-debounce@npm:3.0.1"
   checksum: e34ef638e8df3a9154249101b68afcbf2652a139c803415ef8a2f6a8bc577bcd4d79e4bb914ad3cd206523ac78b9fb7e80885bfa049f64fbb1927f99d98b5736
+  languageName: node
+  linkType: hard
+
+"throttleit@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "throttleit@npm:2.0.0"
+  checksum: 3581da22fb025e6317d0f6fc6c314f173448706d2d9d6ca53ce6b742e22006499feca17462ad09ff66aff61f1f6fe09cad58773c33893e7b9f596d0be4d1a4fd
   languageName: node
   linkType: hard
 
