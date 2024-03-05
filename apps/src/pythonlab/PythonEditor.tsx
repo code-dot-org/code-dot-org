@@ -3,7 +3,7 @@ import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
 import {useDispatch} from 'react-redux';
-import {resetOutput, setCode} from './pythonlabRedux';
+import {appendOutput, resetOutput, setCode} from './pythonlabRedux';
 import Button from '@cdo/apps/templates/Button';
 import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
@@ -27,6 +27,7 @@ const PythonEditor: React.FunctionComponent = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
+      dispatch(appendOutput('Running code...'));
       runPythonCode(code);
     } else {
       alert('You do not have permission to run python code.');
