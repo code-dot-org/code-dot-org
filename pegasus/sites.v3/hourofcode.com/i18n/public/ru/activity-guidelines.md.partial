@@ -19,7 +19,7 @@ layout: wide
 
 Несколько советов:
 
-1. **Добавьте несколько заданий**: Если вы создали задания для разных уровней, разных возрастов или других категорий, мы перечислим ваши задания отдельно, чтобы каждый учитель мог найти то, что подходит для своего класса. Отправляйте каждое учебное пособие или задание по отдельности. Учитывая количество заявок, полученных за последние годы, у нас будет время рассмотреть от **до 5 мероприятий по** на каждого партнера. После этого мы приложим все усилия, чтобы проверить как можно больше материалов до начала «Часа кода».
+1. **Добавьте несколько заданий**: Если вы создали задания для разных уровней, разных возрастов или других категорий, мы перечислим ваши задания отдельно, чтобы каждый учитель мог найти то, что подходит для своего класса. Отправляйте каждое учебное пособие или задание по отдельности. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. После этого мы приложим все усилия, чтобы проверить как можно больше материалов до начала «Часа кода».
 
 2. **Помимо уроков для начинающих**: Помимо уроков для учителей и учащихся, впервые изучающих информатику, мы перечисляем учебный опыт для классов, разбирающихся в компьютерных науках, которые хотят пойти немного дальше! Помогите нам, отправив уроки для классов, которые уже знакомы с основами.
 
@@ -97,30 +97,30 @@ layout: wide
 
 ## Как отправить заявку
 
-Посетите страницу</a> раздела «Активность и отправка заявок на искусственный интеллект», посвященную часам кода™, и ответьте на вопросы, чтобы отправить свое задание.</p> 
+Visit the [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) and complete the questions to submit your activity.
 
 Что вам понадобится:
 
 * Имя и адрес электронной почты основного контактного лица, представляющего отправленное действие
 * Название мероприятия (в названии нельзя указать «Час кода»)
 * URL-ссылка на мероприятие
-* Включает ли это занятие искусственный интеллект: да или нет
-* Описание действия (максимальное количество символов: 400) 
-    * Пожалуйста, укажите в описании, осуществляется ли оно в основном под руководством учащихся или под руководством учителя. Кроме того, некоторым школам интересно узнать, соответствуют ли мероприятия «Часа кода» научным стандартам Common Core или научным стандартам нового поколения. Если мероприятие соответствует конкретным стандартам, рассмотрите возможность включения этой информации.
-* Рекомендуемые уровни оценки для предполагаемых пользователей. Вы можете обратиться к \[Стандартам K-12 Ассоциации учителей компьютерных наук\] (https://k12cs.org/framework-statements-by-grade-band/), чтобы ознакомиться с концепциями информатики, подходящими для класса. Примеры уровней оценок включают в себя: 
-    * Детский сад — 1 класс (4-6 лет)
-    * 2-5 классы (7-10 лет)
-    * 6-8 классы (11-13 лет)
-    * 9+ классы (старше 14 лет)
-* Список языков программирования, которым вы обучаете. Например, C/C++, Java, JavaScript и т. д. или независимый от языка (для планов уроков, которые можно преподавать на нескольких языках) выберите языковое искусство.
-* Список поддерживаемых естественных языков. Примечание. За определение языка отвечает поставщик активности; мы перенаправим всех пользователей на предоставленный единственный URL-адрес. или независимый от языка (для планов уроков, которые можно преподавать на нескольких языках)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Список языков программирования, которым вы обучаете. Например, C/C++, Java, JavaScript и т. д. или независимый от языка (для планов уроков, которые можно преподавать на нескольких языках) choose language arts.
+* Список поддерживаемых естественных языков. Примечание. За определение языка отвечает поставщик активности; мы перенаправим всех пользователей на предоставленный единственный URL-адрес. or language independent (for lesson plans that can be taught in multiple languages)
 * Каким опытом должен обладать педагог, чтобы использовать вашу деятельность? (например, для начинающих или для удобных пользователей.) И какой уровень опыта должен быть у студентов?
-* Каким опытом должен обладать педагог, чтобы использовать вашу деятельность? (например, для начинающих или для удобных пользователей.) И какой уровень опыта должен быть у студентов? Если вы хотите подготовить более сложные задания Hour of Code™, включите необходимые предварительные знания в описание вашего занятия.
-* Продолжительность вашей активности 
-    * Только 1 час
-    * 1 час с последующим курсом
-    * 2-6 часов (может быть несколько уроков)
-* Список приспособлений для людей с ограниченными возможностями, если они есть в вашем активе. К ним относятся совместимость программ чтения с экрана, возможность преобразования текста в речь, использование высококонтрастных цветов или любые другие приспособления, предназначенные для учащихся с ограниченными возможностями.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Дополнительные сведения, которые вам понадобятся при отправке планов уроков
 
@@ -170,7 +170,7 @@ layout: wide
 
 Разнообразный комитет преподавателей компьютерных наук будет оценивать заявки на основе качественных и количественных критериев. Будут перечислены все виды деятельности, соответствующие основным критериям.
 
-Что касается традиционных занятий по программированию, то разнообразный комитет преподавателей компьютерных наук будет оценивать заявки на основе качественных и количественных критериев. Будут перечислены все виды деятельности, соответствующие основным критериям. Учителя смогут фильтровать и сортировать, чтобы найти лучшие занятия для своего класса.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Если комитет по обзору оценит мероприятие как нулевую оценку качества производства (из-за ошибок или инструкций, которые сильно затрудняют его использование), поощрения обучения в недостаточно представленных группах (из-за расистских или сексистских материалов), образовательной ценности (не преподает концепций CS) или увлекательного/увлекательного (поскольку учащимся трудно или мешает работать), задание не будет включено в список.
 
@@ -188,13 +188,13 @@ layout: wide
 - Не требуется регистрация
 - Не требует оплаты (за исключением занятий робототехникой, для которых может потребоваться покупка робота/комплекта)
 
-Что касается самостоятельных занятий для новых учителей и учащихся, комитет по обзору рассмотрит следующие вопросы:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Учителя могут использовать учебное пособие или задание, не имея опыта в области компьютерных наук
 - Студенты могут добиться успеха, не имея опыта в области компьютерных наук
 - Учащиеся могут самостоятельно изучать учебное пособие без помощи родителей или учителей.
 
-Учителя и учащиеся смогут искать и фильтровать наш список занятий на основе таких фильтров, как оценка, уровень опыта, предмет, оборудование и т. д. По умолчанию мы сначала покажем планы уроков и задания, которые:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Получите самые высокие оценки от комитета по рецензированию
 - Предназначены ли одночасовые самостоятельные занятия для новичков (учащихся и учителей)
@@ -208,28 +208,28 @@ layout: wide
 
 ## Рекомендации по разработке одночасовых самостоятельных учебных пособий
 
-Мероприятия не обязательно должны включать искусственный интеллект, хотя мы планируем предложить больше мероприятий, связанных с искусственным интеллектом.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Включите заметки для учителя.** Большинство заданий должно быть ориентировано на учеников, но если требуется помощь или надзор учителя, пожалуйста, включите в урок понятные и простые указания для учителя в форме заметок-для-учителя на отдельном URL-адресе. Не только ученики, но и некоторые учителя являются новичками. Включите в урок следующую информацию:
 
 **Добавьте отзыв в конце задания.** (Например: «Вы прошли 10 уровней и изучили циклы! Отличная работа!»)
 
-**Включите заметки для учителя.** Большинство заданий должно быть ориентировано на учеников, но если требуется помощь или надзор учителя, пожалуйста, включите в урок понятные и простые указания для учителя в форме заметок-для-учителя на отдельном URL-адресе. #HourOfCode» или «Я сделал #HourOfCode как часть #CSEdWeek. А ты?
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. #HourOfCode» или «Я сделал #HourOfCode как часть #CSEdWeek. А ты?
 
 - На каких платформах и браузерах учебник работает лучше всего?
 - Работает ли это на смартфонах? Таблетки?
 - Рекомендуете ли вы парное программирование?
 - Рекомендации по использованию в классе? Например, если есть видеоролики, посоветуйте учителям показывать их на проецируемом экране для совместного просмотра всем классом.
 
-**Добавьте отзыв в конце задания.** (Например: «Вы прошли 10 уровней и изучили циклы! Отличная работа!»)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Поощряйте учащихся публиковать сообщения в социальных сетях (при необходимости) по окончании обучения.** Например: «Я провел час кода вместе с ________ Have you? #HourOfCode» или «Я сделал #HourOfCode как часть #CSEdWeek. А ты? Используйте хэштег **#HourOfCode# (с заглавными H, O, C)</p> 
+**Поощряйте учащихся публиковать сообщения в социальных сетях (при необходимости) по окончании обучения.** Например: «Я провел час кода вместе с ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Создайте свое мероприятие на испанском или на других языках, кроме английского.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Объясните значение урока для общества.** Программирование становится суперсилой, когда ученики видят, как оно может изменить мир к лучшему!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Убедитесь, что учебное пособие можно использовать в парадигме «Программирование [пара](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) ».** Это особенно полезно во время «Часа программирования», поскольку во многих классах нет оборудования, рассчитанного на одного учащегося.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**К началу**](#top)
 
@@ -237,7 +237,7 @@ layout: wide
 
 ## Правила использования товарных знаков
 
-Час кода® и Hora del Código® являются зарегистрированными товарными знаками Code.org. Многие из наших партнеров по обучению использовали наши товарные знаки «Час кода» на своих веб-сайтах в связи с мероприятиями «Час кода». Мы не хотим предотвращать такое использование, но хотим убедиться, что оно используется в нескольких пределах:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Используйте «Час кода» только в связи с некоммерческими мероприятиями CS Education в рамках кампании «Час кода» и ни для каких других целей.
 2. Любое упоминание «Часа кода» следует использовать не так, чтобы оно подразумевало, что это ваш собственный бренд, а скорее отсылает «Час кода» к массовому движению. Хороший пример: «Примите участие в акции «Час кода®» на сайте Acmecorp.com». Плохой пример: "Попробуйте Час кода от корпорации ACME".
@@ -253,15 +253,15 @@ layout: wide
 
 ## Пиксель отслеживания
 
-Если ваше руководство будет одобрено и включено на финальную страницу учебного пособия, Code.org предоставит вам уникальный пиксель трекинга, который вы сможете интегрировать в свое учебное пособие. См. пример ниже. Не включайте ни на какие промежуточные страницы вашего руководства.
+Если ваше руководство будет одобрено и включено на финальную страницу учебного пособия, Code.org предоставит вам уникальный пиксель трекинга, который вы сможете интегрировать в свое учебное пособие. См. пример ниже. Do not include on any interim pages of your tutorial.
 
-Это позволит нам подсчитать количество пользователей, которые проведут ваш урок «Час кода». Это приведет к более точному подсчету участников в вашем учебном пособии.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Если ваше руководство будет одобрено и включено на финальную страницу учебного пособия, Code.org предоставит вам уникальный пиксель трекинга, который вы сможете интегрировать в свое учебное пособие. См. пример ниже.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-ПРИМЕЧАНИЕ: это не важно делать для устанавливаемых приложений (приложений для iOS/Android или приложений для настольных ПК)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Пример пикселей трекинга для Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Реклама ваших мероприятий, CSEDweek и «Час кода»
 
-Пожалуйста, рекламируйте свою активность в своей сети! Направьте их на страницу «Час кода». Ваши пользователи с гораздо большей вероятностью отреагируют на ваше письмо о вашей активности. Используйте международную кампанию «Час кода» во время Недели образования в области компьютерных наук как предлог, чтобы побудить пользователей приглашать других присоединиться к нам и помочь нам привлечь больше студентов!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Добавьте «Час кода» и CSEDweek на своем сайте. Пример: <http://www.tynker.com/hour-of-code>
 - Рекламируйте «Час кода», используя социальные сети, традиционные СМИ, списки рассылки и т. д., используя хэштег #HourOfCode (с заглавными буквами H, O, C)

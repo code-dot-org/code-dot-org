@@ -1,15 +1,19 @@
 require_relative 'test_helper'
+# rubocop:disable CustomCops/PegasusRequires
 require_relative '../../pegasus/test/sequel_test_case'
+# rubocop:enable CustomCops/PegasusRequires
 require 'mocha/mini_test'
 require 'cdo/poste'
 require 'digest/md5'
 
+# rubocop:disable CustomCops/PegasusDbUsage
 class PosteTest < SequelTestCase
   STUDENT_EMAIL = 'student@example.net'.freeze
   STUDENT_EMAIL_HASH = Digest::MD5.hexdigest(STUDENT_EMAIL).freeze
   TEACHER_EMAIL = 'teacher@example.net'.freeze
   TEACHER_EMAIL_HASH = Digest::MD5.hexdigest(TEACHER_EMAIL).freeze
 
+  # rubocop:disable CustomCops/DashboardDbUsage
   def setup
     DASHBOARD_DB[:users].insert(
       {
@@ -30,6 +34,7 @@ class PosteTest < SequelTestCase
       }
     )
   end
+  # rubocop:enable CustomCops/DashboardDbUsage
 
   def test_unsubscribe_for_existing_contact
     email = 'existing@example.net'
@@ -280,6 +285,7 @@ class Poste2Test < SequelTestCase
   def test_create_recipient_for_dashboard_student
     email = 'student@example.com'
     hashed_email = Digest::MD5.hexdigest(email)
+    # rubocop:disable CustomCops/DashboardDbUsage
     DASHBOARD_DB[:users].insert(
       email: email,
       hashed_email: hashed_email,
@@ -287,6 +293,7 @@ class Poste2Test < SequelTestCase
       user_type: 'student',
       birthday: '2000-01-02'
     )
+    # rubocop:enable CustomCops/DashboardDbUsage
 
     Poste2.create_recipient(email, {ip_address: '1.2.3.4'})
     assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
@@ -296,6 +303,7 @@ class Poste2Test < SequelTestCase
   def test_create_recipient_for_dashboard_teacher
     email = 'teacher@example.com'
     hashed_email = Digest::MD5.hexdigest(email)
+    # rubocop:disable CustomCops/DashboardDbUsage
     DASHBOARD_DB[:users].insert(
       email: email,
       hashed_email: hashed_email,
@@ -303,6 +311,7 @@ class Poste2Test < SequelTestCase
       user_type: 'teacher',
       birthday: '2000-01-02'
     )
+    # rubocop:enable CustomCops/DashboardDbUsage
 
     Poste2.create_recipient(email, {ip_address: '1.2.3.4'})
     assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
@@ -348,3 +357,4 @@ class Poste2Test < SequelTestCase
       POSTE_DB[:contacts].where(hashed_email: hashed_email).first[:created_ip]
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

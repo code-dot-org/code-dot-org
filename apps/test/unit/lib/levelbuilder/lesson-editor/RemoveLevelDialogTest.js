@@ -33,7 +33,7 @@ describe('RemoveLevelDialog', () => {
     expect(wrapper.find('.modal-body')).to.have.lengthOf(1);
 
     const body = wrapper.find('.modal-body');
-    const deleteButton = body.find('button').at(1);
+    const deleteButton = body.find('button').at(2);
     expect(deleteButton.text()).to.include('Delete');
     deleteButton.simulate('click');
     expect(removeLevel).to.have.been.calledWith(1, 3, 1);
@@ -44,7 +44,7 @@ describe('RemoveLevelDialog', () => {
     expect(wrapper.find('.modal-body')).to.have.lengthOf(1);
 
     const body = wrapper.find('.modal-body');
-    const cancelButton = body.find('button').at(0);
+    const cancelButton = body.find('button').at(1);
     expect(cancelButton.text()).to.include('Cancel');
     cancelButton.simulate('click');
     expect(removeLevel).not.to.have.been.called;

@@ -32,7 +32,7 @@
       %a.whitefooterlink{:href=>"/tos"}
         !=I18n.t(:footer_terms)
       %small.dim
-        !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
+        !=I18n.t(:footer_trademark, current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;")
         %br
         !=I18n.t(:footer_built_on_github)
       %div.powered-by-aws

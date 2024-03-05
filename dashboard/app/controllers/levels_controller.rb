@@ -48,9 +48,11 @@ class LevelsController < ApplicationController
     Music,
     NetSim,
     Odometer,
+    Panels,
     Pixelation,
     Poetry,
     PublicKeyCryptography,
+    Pythonlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -58,7 +60,8 @@ class LevelsController < ApplicationController
     TextMatch,
     Unplugged,
     Vigenere,
-    Weblab
+    Weblab,
+    Weblab2
   ]
 
   # GET /levels
@@ -144,7 +147,7 @@ class LevelsController < ApplicationController
   # Get a JSON summary of a level's properties, used in modern labs that don't
   # reload the page between level views.
   def level_properties
-    render json: @level.summarize_for_lab2_properties
+    render json: @level.summarize_for_lab2_properties(nil)
   end
 
   # GET /levels/1/edit
@@ -448,6 +451,12 @@ class LevelsController < ApplicationController
         @game = Game.music
       elsif @type_class == Aichat
         @game = Game.aichat
+      elsif @type_class == Pythonlab
+        @game = Game.pythonlab
+      elsif @type_class == Panels
+        @game = Game.panels
+      elsif @type_class == Weblab2
+        @game = Game.weblab2
       end
       @level = @type_class.new
       render :edit

@@ -102,6 +102,9 @@ describe('RubricsContainerTest', () => {
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
       defaultProps.submittableLevels.length
     );
+    expect(wrapper.find(RubricEditor).prop('learningGoalList')).to.equal(
+      rubricInfo.learningGoals
+    );
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       rubricInfo.learningGoals.length
     );

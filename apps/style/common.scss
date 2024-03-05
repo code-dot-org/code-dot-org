@@ -87,14 +87,11 @@ em strong {
   clear: both;
 }
 
-html[dir="rtl"] #visualizationColumn {
-  right: 0;
-}
-
 #visualizationColumn {
   position: relative;
   top: 0;
-  left: 0;
+  left: auto;
+  right: auto;
   overflow: visible;
 }
 
@@ -239,9 +236,6 @@ button.arrow {
 button.arrow > img {
   opacity: 1;
   vertical-align: text-bottom;
-}
-button.arrow:focus {
-  outline-style: none;
 }
 button.arrow:disabled {
   border: 1px solid $neutral_dark20;

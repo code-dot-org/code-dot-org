@@ -108,7 +108,7 @@ style_min: true
     =hoc_s(:about_page_section_more_description_3, markdown: :inline, locals: {efforts_url: "https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub", partners_url: "https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924"})
   %ul
     %li
-      =hoc_s(:about_page_section_more_list_1, markdown: :inline, locals: {report_url: "/about/2021", past_url_1: "/about/2020", past_url_2: "/about/2019", past_url_3: "/about/2018", past_url_4: "/about/2017", past_url_5: "/about/2016", past_url_6: "/about/2015", past_url_7: "/about/2014"})
+      =hoc_s(:about_page_annual_report_2022, markdown: :inline, locals: {report_url_2022: "/about/2022", report_url_2021: "/about/2021", report_url_2020: "/about/2020", report_url_2019: "/about/2019", report_url_2018: "/about/2018", report_url_2017: "/about/2017", report_url_2016: "/about/2016", report_url_2015: "/about/2015", report_url_2014: "/about/2014"})
     %li
       =hoc_s(:about_page_section_more_list_2, markdown: :inline, locals: {core_url: "/about/values"})
     %li
@@ -159,13 +159,13 @@ style_min: true
     %a
       =hoc_s(:about_page_donors_link_2, markdown: :inline, locals: {donors_url: "/about/donors"})
   %p
-    =hoc_s(:about_page_section_specific_description_6, markdown: :inline, locals: {irs_url_1: "/files/irs-form.pdf", irs_url_2: "/files/irs-form-2015.pdf", irs_url_3: "/files/irs-form-2016.pdf", irs_url_4: "/files/irs-form-2017.pdf", irs_url_5: "/files/irs-form-2018.pdf", irs_url_6: "/files/irs-form-2019.pdf", irs_url_7: "/files/irs-form-2020.pdf", irs_url_8: "/files/irs-form-2021.pdf", donation_policy_url: "/about/donation-policy"})
+    =hoc_s(:about_page_section_specific_description_6, markdown: :inline, locals: {irs_url_2014: "/files/irs-form.pdf", irs_url_2015: "/files/irs-form-2015.pdf", irs_url_2016: "/files/irs-form-2016.pdf", irs_url_2017: "/files/irs-form-2017.pdf", irs_url_2018: "/files/irs-form-2018.pdf", irs_url_2019: "/files/irs-form-2019.pdf", irs_url_2020: "/files/irs-form-2020.pdf", irs_url_2021: "/files/irs-form-2021.pdf", irs_url_2022: "/files/irs-form-2022.pdf", donation_policy_url: "/about/donation-policy"})
   = view :section_divider_line
 
 %h2
   =hoc_s(:about_page_section_specific_title_7)
 %p
   =hoc_s(:about_page_section_specific_description_7, markdown: :inline, locals: {sign_up_url: "https://code.org/about/hear-from-us"})
-= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg"
+= view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg", tiktok: 'code.org'
 = view :section_divider_line
 = view :about_seals

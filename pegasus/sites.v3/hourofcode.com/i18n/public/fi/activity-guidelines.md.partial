@@ -104,23 +104,23 @@ Mitä tarvitset:
 * Lähetettyä toimintaa edustavan ensisijaisen yhteyshenkilön nimi ja sähköpostiosoite
 * Toiminnan nimi (nimessä ei voi olla ”Hour of Code”)
 * URL-linkki aktiviteettiin
-* Sisältääkö tämä toiminta AI: Kyllä vai Ei
-* Aktiviteetin kuvaus (merkkien enimmäismäärä: 400) 
-    * Liitä kuvaukseen myös tieto siitä, onko se lähinnä opiskelija-ohjattu vai opettaja-helpotettava. Lisäksi jotkut koulut ovat kiinnostuneita tietämään, käsittelevätkö Koodaustunnin toiminnat yhteisiä perustietoja vai seuraavan sukupolven tiedestandardeja. Jos toiminta käsittelee erityisiä standardeja, harkitse tämän tiedon lisäämistä.
-* Suositeltu arvosanataso (t) tarkoitetuille käyttäjille. Voit viitata \[Computer Science Teachers' Associationin K-12-standardeihin\] (https://k12cs.org/framework-statements-by-grade-band/) luokelle sopivista tietojenkäsittelytieteen käsitteistä. Esimerkkejä arvosanoista ovat: 
-    * Lastentarha - luokka 1 (4-6-vuotiaat)
-    * Luokat 2-5 (iät 7-10)
-    * Luokat 6-8 (11—13-vuotiaat)
-    * Arvosanat 9+ (ikä 14+)
-* Luettelo ohjelmointikielistä, joita aktiviteettisi opettaa. Eli C/C ++, Java, JavaScript jne. tai kielestä riippumaton (tuntisuunnitelmille, joita voidaan opettaa useilla kielillä) Valitse kielitaide.
-* Luettelo tuetuista luonnollisista kielistä. Huomautus: Kielen tunnistus on toiminnan tarjoajan vastuulla; ohjaamme kaikki käyttäjät annettuun yhteen URL-osoitteeseen. tai kielestä riippumaton (tuntisuunnitelmille, joita voidaan opettaa useilla kielillä)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Luettelo ohjelmointikielistä, joita aktiviteettisi opettaa. Eli C/C ++, Java, JavaScript jne. tai kielestä riippumaton (tuntisuunnitelmille, joita voidaan opettaa useilla kielillä) choose language arts.
+* Luettelo tuetuista luonnollisista kielistä. Huomautus: Kielen tunnistus on toiminnan tarjoajan vastuulla; ohjaamme kaikki käyttäjät annettuun yhteen URL-osoitteeseen. or language independent (for lesson plans that can be taught in multiple languages)
 * Minkä tason kokemusta kouluttajalla tulisi olla käyttääkseen toimintaasi? (esim. Aloittelija tai Mukava.) Ja mikä kokemus opiskelijoilla pitäisi olla?
-* Minkä tason kokemusta kouluttajalla tulisi olla käyttääkseen toimintaasi? (esim. Aloittelija tai Mukava.) Ja mikä kokemus opiskelijoilla pitäisi olla? Jos haluat valmistella edistyneempiä Hour of Code™ -aktiviteetteja, sisällytä tarvittavat tiedot toiminnan kuvaukseen.
-* Toimintasi pituus 
-    * Vain 1 tunti
-    * 1 tunti jatkokurssilla
-    * 2-6 tuntia (voi olla useita oppitunteja)
-* Luettelo esteettömyysmajoituksista, jos toiminnassasi on niitä. Näitä ovat näytönlukijan yhteensopivuus, tekstistä puheeksi -ominaisuudet, korkean kontrastin värien käyttö, tai muut vammaisille oppijoille tehdyt majoitukset.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Muita asioita, joita tarvitset lähetettäessä oppituntisuunnitelmia
 
@@ -139,7 +139,7 @@ Mitä tarvitset:
         * iOS mobiili-Safari (mobiilille optimoitu)
         * Android Chrome (mobiilille optimoitu)
     * Ei verkkopohjainen: määritä alusta alkuperäiselle koodille (Mac, Win, iOS, Android, XBox, muut)
-    * Sähköä tarvitsematon
+    * Unplugged
 * Kuvakaappaus tai markkinointikuva Hour of Code -toiminnasta. Lähetä vähintään yksi kuva, jonka mitat ovat 4:3. Sen pitäisi olla vähintään 520px x 390px. Tässä kuvassa ei saa olla tekstiä (muuta kuin logosi), jotta se olisi helpommin saatavilla muille kuin englanninkielisille. Jos sopivaa kuvaa ei toimiteta, saatamme ottaa oman kuvakaappauksemme oppaastasi TAI saatamme päättää olla listaamatta sitä. Kaikki kuvat on lähetettävä URL-linkkinä tiedostoon.jpg, .jpeg tai .png.
 * Osallistumisen seuraamiseksi tarkemmin, kolmannen osapuolen opetuskumppaneiden on sisällytettävä 1 pikselin seurantakuvat Hour of Code -opetusohjelmiensa ensimmäiselle sivulle. Katso lisätietoja alla olevasta [Tracking Pixel](#pixel) -osiosta.
 * Kun olet lopettanut toimintasi, käyttäjät tulee ohjata osoitteeseen [code.org/api/hour/finish](https://code.org/api/hour/finish) , jossa he voivat: 
@@ -170,7 +170,7 @@ Mitä tarvitset:
 
 Monipuolinen tietojenkäsittelytieteen opettajien komitea luokittelee ehdotukset laadullisten ja määrällisten kriteerien perusteella. Kaikki toiminnot, jotka sopivat peruskriteereihin, luetellaan.
 
-Perinteiseen koodaustoimintaan, monipuolinen tietojenkäsittelytieteen opettajien komitea luokittelee ehdotukset laadullisten ja määrällisten kriteerien perusteella. Kaikki toiminnot, jotka sopivat peruskriteereihin, luetellaan. Opettajat voivat suodattaa ja lajitella löytääkseen parhaat aktiviteetit luokkahuoneelleen.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Jos arviointikomitea arvioi toiminnan nollaksi tuotannon laadussa (huonojen virheiden tai ohjeiden vuoksi, jotka vaikeuttavat sen käyttöä), oppimisen edistämisessä aliedustetuissa ryhmissä (rasistisen/seksistisen materiaalin vuoksi), koulutusarvossa (ei opeta CS -käsitteitä) tai hauskaa/kiinnostavaa (koska opiskelijat ovat vaikeita/lannistavia työskennellä läpi), toimintaa ei luetella.
 
@@ -188,13 +188,13 @@ Uusien opettajien ja opiskelijoiden itseohjautuvaa toimintaa varten arviointikom
 - Ei vaadi rekisteröitymistä
 - Ei vaadi maksua (lukuun ottamatta robotiikkatoimintoja, jotka voivat edellyttää robotin/paketin ostamista)
 
-Uusien opettajien ja opiskelijoiden itseohjautuvaa toimintaa varten arviointikomitea etsii, onko:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - Opettajat voivat käyttää opetusohjelmaa tai toimintaa ilman tietojenkäsittelytieteen taustaa
 - Opiskelijat voivat menestyä ilman tietojenkäsittelytieteen taustaa
 - Opiskelijat voivat ohjata itseään opetusohjelman kautta ilman vanhempien tai opettajien ohjausta
 
-Opettajat ja opiskelijat voivat etsiä ja suodattaa toimintaluettelomme suodattimien perusteella, kuten arvosana, kokemustaso, aihe, laitteisto, jne. Oletusarvoisesti näytämme ensin tuntisuunnitelmat ja aktiviteetit, jotka:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Saat korkeimmat arvosanat arviointikomitealta
 - Ovat yhden tunnin itseohjautuvia aktiviteetteja, jotka on suunniteltu aloittelijoille (opiskelijoille ja opettajille)
@@ -208,7 +208,7 @@ Opettajat ja opiskelijat voivat etsiä ja suodattaa toimintaluettelomme suodatti
 
 ## Ehdotuksia yhden tunnin itseohjattujen opetusohjelmien suunnitteluun
 
-Aktiviteetteihin ei tarvitse sisältyä tekoälyä, vaikka pyrimme tarjoamaan enemmän tekoälyyn liittyviä toimintoja.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Sisällytä opettajan materiaalia.** Useimmat toiminnat tulisi olla opiskelija-ohjattuja, mutta jos toiminnan täytyy olla helpotettu tai johdettu opettajan toimesta, sisällytä selkeät ja yksinkertaiset ohjeet opettajalle opettaja-muistiinpanojen muodossa erillisessä linkissä toiminnassasi. Eivät ainoastaan opiskelijat ole aloittelijoita, jotkut opettajat ovat myös. Sisällytä tietoa kuten:
 
@@ -221,15 +221,15 @@ Aktiviteetteihin ei tarvitse sisältyä tekoälyä, vaikka pyrimme tarjoamaan en
 - Suositteletko parityöskentelyä?
 - Huomioita luokkahuoneessa käytettäväksi? Esim. jos videoita on, kehota opettajia näyttämään videot projisoidulla näytöllä koko luokkahuoneen katseluun yhdessä
 
-**Sisällytä palaute toiminnan loppuun.** (Esim. ”Olet suorittanut 10 tasoa ja oppinut silmukoista! Hienoa työtä!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Kannusta oppilaita julkaisemaan sosiaaliseen mediaan (tarvittaessa), kun he ovat lopettaneet.** Esimerkiksi ”Olen tehnyt Hour of Code ________ : n kanssa Oletko? #HourOfCode ”tai ”Olen tehnyt #HourOfCode osana #CSEdWeek. Oletko sinä? @Scratch." Käytä hashtagia **#HourOfCode** (isoilla H, O ja C -kirjaimilla)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Luo aktiviteettisi espanjaksi tai muilla kielillä englannin lisäksi.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Selitä tai yhdistä toiminta yhteiskunnallisesti merkittävään yhteyteen.** Ohjelmoinnista tulee supervoima, kun opiskelijat näkevät, miten se voi muuttaa maailmaa paremmaksi!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**Varmista, että opetusohjelmaasi voidaan käyttää [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) -paradigmassa.** Tämä on erityisen hyödyllistä Hour of Code -tapahtumalle, koska monissa luokkahuoneissa ei ole 1:1 -laitteistoa kaikille opiskelijoille.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**Palaa alkuun**](#top)
 
@@ -237,7 +237,7 @@ Aktiviteetteihin ei tarvitse sisältyä tekoälyä, vaikka pyrimme tarjoamaan en
 
 ## Tavaramerkkisäännöt
 
-Hour of Code® ja Hora del Código® ovat Code.orgin rekisteröityjä tavaramerkkejä. Monet tutoriaalikumppaneistamme ovat käyttäneet ”Hour of Code” -tavaramerkkejämme verkkosivuillaan Hour of Code -toimintojensa yhteydessä. Emme halua estää tätä käyttöä, mutta haluamme varmistaa, että käyttö on muutamien rajojen sisällä:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Käytä ”Hour of Code” vain ei-kaupallisen CS Education -toiminnan yhteydessä Hour of Code -kampanjan yhteydessä, eikä mihinkään muuhun tarkoitukseen.
 2. Kaikkia viittauksia ”Hour of Code” -kohtaan tulisi käyttää tavalla, joka ei viittaa siihen, että se on oma tuotemerkkisi, vaan että se viittaa pikemminkin Hour of Code -tuotteeseen ruohonjuuritason liikkeenä. Hyvä esimerkki: ”Osallistu Hour of Code® -tapahtumaan osoitteessa AcmeCorp.com”. Huono esimerkki: ”Kokeile Hour of Code by ACME Corp”.
@@ -253,15 +253,15 @@ Hour of Code® ja Hora del Código® ovat Code.orgin rekisteröityjä tavaramerk
 
 ## Pikselin seuraaminen
 
-Jos opetusohjelmasi on hyväksytty ja sisällytetty viimeiseen opetusohjelmasivulle, Code.org tarjoaa sinulle ainutlaatuisen seurantapikselin, jonka voit integroida opetusohjelmaasi. Katso esimerkki alla. Älä sisällytä opetusohjelmasi väliaikaisille sivuille.
+Jos opetusohjelmasi on hyväksytty ja sisällytetty viimeiseen opetusohjelmasivulle, Code.org tarjoaa sinulle ainutlaatuisen seurantapikselin, jonka voit integroida opetusohjelmaasi. Katso esimerkki alla. Do not include on any interim pages of your tutorial.
 
-Tämän avulla voimme laskea käyttäjät, jotka tekevät Hour of Code -opetusohjelmasi. Se johtaa tarkempiin osallistumismääriin opetusohjelmassasi.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Jos opetusohjelmasi on hyväksytty ja sisällytetty viimeiseen opetusohjelmasivulle, Code.org tarjoaa sinulle ainutlaatuisen seurantapikselin, jonka voit integroida opetusohjelmaasi. Katso esimerkki alla.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-HUOMAUTUS: tämä ei ole tärkeää asennettavissa sovelluksissa (iOS/Android-sovellukset tai työpöydän asennussovellukset)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Esimerkki Dance Party -seurantapikselistä:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Toimintasi mainostaminen, CSEDWeek, ja Hour of Code
 
-Mainosta toimintaasi verkostossasi! Ohjaa ne Hour of Code -sivullesi. Käyttäjäsi reagoivat paljon todennäköisemmin lähettämiisi postituksiin toiminnastasi. Käytä kansainvälistä Hour of Code -kampanjaa Computer Science Education Week -viikolla tekosyynä kannustaaksesi käyttäjiä kutsumaan muita mukaan, ja auttaa meitä tavoittamaan enemmän opiskelijoita!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Esitele Hour of Code ja CSEDWeek verkkosivustollasi. Esim: <http://www.tynker.com/hour-of-code>
 - Mainosta Hour of Code sosiaalisen median, perinteisen median, postituslistojen jne. avulla hashtag #HourOfCode (isoilla kirjaimilla H, O, C)

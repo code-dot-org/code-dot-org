@@ -37,14 +37,16 @@ const workshops = [
   },
 ];
 
-export default storybook => {
-  storybook
-    .storiesOf('EnrolledWorkshopsTable', module)
-    .addDecorator(reactBootstrapStoryDecorator)
-    .addStoryTable([
-      {
-        name: 'EnrolledWorkshopsTable',
-        story: () => <EnrolledWorkshopsTable workshops={workshops} />,
-      },
-    ]);
+export default {
+  component: EnrolledWorkshopsTable,
+  decorators: [reactBootstrapStoryDecorator],
+};
+
+const Template = args => {
+  return <EnrolledWorkshopsTable {...args} />;
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  workshops: workshops,
 };

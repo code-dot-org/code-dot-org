@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2023-03-14T20:50:57.000Z",
   "level_num": "custom",
@@ -53,11 +54,11 @@
     "mini_toolbox": "false",
     "hide_pause_button": "true",
     "instructions_icon": "rikki",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:50:57.495+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_42022\\\"\"],\"cloned_from\":\"courseE_aboutme_42022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:50:57.495+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_42022\\\"\"],\"cloned_from\":\"courseE_aboutme_42022\"},{\"changed_at\":\"2023-11-28 18:46:38 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "debugging": 1,

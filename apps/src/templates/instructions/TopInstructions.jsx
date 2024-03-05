@@ -667,7 +667,7 @@ class TopInstructions extends Component {
       mapReference || (referenceLinks && referenceLinks.length > 0);
 
     const displayHelpTab =
-      (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
+      (levelVideos && levelVideos.length > 0) || !!levelResourcesAvailable;
 
     const displayFeedbackTab =
       !taRubric &&

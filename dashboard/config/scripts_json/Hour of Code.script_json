@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "hour-of-code",
-    "serialized_at": "2022-04-08 15:40:27 UTC",
+    "serialized_at": "2024-01-05 15:48:10 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -829,6 +829,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

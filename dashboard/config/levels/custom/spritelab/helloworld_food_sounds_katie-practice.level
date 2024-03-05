@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-08-12T18:37:16.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -61,7 +65,7 @@
     "hide_pause_button": "false",
     "display_name": "Sounds",
     "bubble_choice_description": "Learn how to play sounds.",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_new\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"4\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"4\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"4\\\"]\",\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/D9I677s9Rz4Ww_Znrcm36XWuz8WA0Kh8/category_food/face_apple.png",
     "instructions_icon": "alien",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel10();",
@@ -69,11 +73,7 @@
     "encrypted_examples": "Be5GY+LxN9VCpJ9TJjRuSzVp5RfUb7UgLC5LSfUjWEkRRoxrmyG+1cRcFOnE\nxeMHIbGVbJhG/qR9L7/m7qI/27lwmtcLHHj+2ug+kSn90wDJiAmYHfgLyU/C\nsGqLs4iw315tqcduvXGehSuZluxDYQ==\n",
     "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-08-12T18:37:16.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-08-12T18:37:16.922+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2022-08-15 22:18:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-15 22:19:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-16 19:41:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-16 19:41:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-24 20:18:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
@@ -2736,7 +2736,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_playSoundOptions">
+        <block type="gamelab_playSoundOptions" id="4">
           <title name="SOUND" config="'sound://category_accent/puzzle_game_accent_a_01.mp3', 'sound://category_digital/boing_2.mp3', 'sound://category_pop/bubble_pop_cluster_airy_1.mp3', 'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3', 'sound://category_app/app_button_1.mp3', 'sound://category_collect/clicky_crunch.mp3', 'sound://category_swish/quick_swing.mp3'">'sound://category_accent/puzzle_game_accent_a_01.mp3'</title>
         </block>
         <block type="gamelab_makeNewSpriteAnon">

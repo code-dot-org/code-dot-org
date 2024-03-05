@@ -11,7 +11,7 @@ apt_repository 'mysql' do
   components ['mysql-5.7']
 
   # https://dev.mysql.com/doc/refman/5.7/en/checking-gpg-signature.html
-  key '3A79BD29'
+  key 'B7B3B788A8D3785C'
   keyserver 'keyserver.ubuntu.com'
   retries 3
 end

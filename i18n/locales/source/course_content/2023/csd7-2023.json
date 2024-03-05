@@ -678,7 +678,7 @@
       },
       "ml-customize apps-choice5_2023": {
         "display_name": "Read Home Screen Out-Loud",
-        "bubble_choice_description": "Use the playSpech() block to read text out loud",
+        "bubble_choice_description": "Use the playSpeech() block to read text out loud",
         "long_instructions": "# Read Home Screen Out-Loud\r\n\r\nWe can use the `playSpeech()` block to read the text on our home page out loud. This is a great way to make our app more accessible for folks with vision impairments.\r\n\r\n# Do This:\r\n\r\n- Drag out a `playSpeech()` block to the very top of your code [(Show Me Where)](#triggercallout=top)\r\n- In the first blank, type in the text we want to read out loud. It's a good idea to include the name of the app and it's purpose.\r\n- You can customize the block more with the other two options. Choose the gender and language that you prefer.\r\n\r\nWhen you finish, return to the previous Choice level and select a different challenge",
         "callouts": {
           "CSD_AI_L11_top": "Put block above this line"

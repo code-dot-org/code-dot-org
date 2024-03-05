@@ -5,11 +5,7 @@
     "blockText": "{BEHAVIOR}",
     "returnType": "Behavior",
     "expression": "VALUE",
-    "color": [
-      136,
-      ".84",
-      ".80"
-    ],
+    "docFunc": "spritelab_adding-and-removing-behaviors",
     "style": "behavior_blocks",
     "args": [
       {

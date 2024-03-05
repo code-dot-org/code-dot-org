@@ -3,7 +3,6 @@ import {action} from '@storybook/addon-actions';
 import PopUpMenu from './PopUpMenu';
 
 export default {
-  title: 'PopUpMenu',
   component: PopUpMenu,
 };
 

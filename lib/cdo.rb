@@ -224,7 +224,7 @@ module Cdo
       return @@curriculum_languages
     end
 
-    def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
+    def curriculum_url(locale, uri = '', autocomplete_partial_path: true)
       return unless uri
       uri = URI::DEFAULT_PARSER.escape(uri)
       uri = URI::DEFAULT_PARSER.parse(uri)

@@ -1,13 +1,9 @@
 {
   "category": "Events",
   "config": {
-    "color": [
-      140,
-      1,
-      0.74
-    ],
     "style": "event_blocks",
     "func": "checkTouching",
+    "docFunc": "gamelab_whenTouching",
     "blockText": "{CONDITION} {SPRITE1} touches {SPRITE2}",
     "miniToolboxBlocks": [
       "gamelab_subjectSpritePointer",

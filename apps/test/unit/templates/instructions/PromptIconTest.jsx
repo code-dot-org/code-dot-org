@@ -16,6 +16,7 @@ describe('PromptIcon', () => {
           maxWidth: 50,
           marginLeft: 5,
         }}
+        alt=""
       />
     );
   });

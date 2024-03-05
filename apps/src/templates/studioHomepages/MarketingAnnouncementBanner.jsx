@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
-import {TwoColumnActionBlock} from './TwoColumnActionBlock';
+import TwoColumnActionBlock from './TwoColumnActionBlock';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import color from '../../util/color';
@@ -8,7 +8,7 @@ import shapes from './shapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-// MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock
+// MarketingAnnouncementBanner is a wrapper around TwoColumnActionBlock
 // which adds a button to dismiss the banner.
 const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   const [displayBanner, setDisplayBanner] = useState(true);
@@ -69,7 +69,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
         event: eventLabel,
         data_json: JSON.stringify({
           banner_title: bannerRef.current.querySelector(
-            '#two-column-action-block--sub-heading'
+            '.two-column-action-block--sub-heading'
           ).innerText,
         }),
       },
@@ -113,7 +113,6 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
           subHeading={announcement.title}
           description={announcement.body}
           buttons={[button]}
-          backgroundColor={announcement.backgroundColor}
           marginBottom={marginBottom}
         />
       </div>
@@ -136,10 +135,10 @@ const styles = {
   dismissButtonStyle: {
     position: 'absolute',
     top: '6px',
-    right: '10px',
-    color: color.neutral_dark60,
-    fontSize: '22px',
-    fontWeight: 'bold',
+    right: '6px',
+    color: color.neutral_dark40,
+    fontSize: '24px',
+    fontWeight: '300',
   },
 };
 

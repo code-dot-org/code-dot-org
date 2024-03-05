@@ -40,6 +40,12 @@ describe('LearningGoal', () => {
         aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
+        aiEvalInfo={{
+          id: 2,
+          learning_goal_id: 2,
+          understanding: 2,
+          ai_confidence: 2,
+        }}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
@@ -81,7 +87,7 @@ describe('LearningGoal', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('Heading6')).to.have.lengthOf(2);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).to.equal('Tips');
   });
@@ -98,7 +104,7 @@ describe('LearningGoal', () => {
         isStudent={true}
       />
     );
-    expect(wrapper.find('Heading6')).to.have.lengthOf(0);
+    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
   });
 
@@ -113,7 +119,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -128,7 +136,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -143,7 +153,9 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('StrongText').props().children).to.equal('Testing');
+    expect(wrapper.find('Heading6').first().props().children).to.equal(
+      'Testing'
+    );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 

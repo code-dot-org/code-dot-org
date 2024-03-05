@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-03-29T09:30:06.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -59,21 +63,17 @@
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hw_background_location\",\r\n  \"callout_text\": \"Use this block to set a new background.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hw_background_location\",\"callout_text\":\"Use this block to set a new background.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"1\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"1\\\"]\",\"localization_key\":\"hw_background_location\",\"callout_text\":\"Use this block to set a new background.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "instructions_icon": "pizza",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel6();",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"You can change the background by connecting a `set background` block under a `when clicked` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_avocado_1\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_setBackgroundImageAs\\\">\\n        <title name=\\\"IMG\\\">\\\"gradient_25_1\\\"</title>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"hello_world_background\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b220d889d60cca00de3866ba03f8785b/generic_storyboard_choices_backgrounds.mp3\"}]",
     "skip_autosave": true,
     "encrypted_examples": "M0uLULmNhXaU8Ut3rdrP5NIb+gfthRG8+IkcRUgCfD2MWtiAP8+oOlSky0Mo\n0onbyI/NciaLYkLgR2ZU4EP5lVn5dkcrHD55UPW0i0KSURawxB7ROFjIAiMm\n94tybwDWlFTIEIRSbhbJl7oXsGL5Gw==\n",
-    "preload_asset_list": null,
     "display_name": "When Key Pressed Event",
-    "thumbnail_url": "https://images.code.org/4ea4fff4aae82bd1f1de0f79f685c4f3-image-1648497084803.50.13 PM.png"
+    "thumbnail_url": "https://images.code.org/4ea4fff4aae82bd1f1de0f79f685c4f3-image-1648497084803.50.13 PM.png",
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-03-26T20:02:02.000Z",
-  "level_num": "custom",
-  "user_id": 182,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-26T20:02:02.329+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_backgrounds\\\"\"],\"cloned_from\":\"helloworld_food_backgrounds\"},{\"changed_at\":\"2022-03-26 20:03:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-03-26 20:13:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-03-26 20:16:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-03-26 20:16:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-03-26 20:54:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-03-26 20:56:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-03-28 19:51:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
@@ -117,7 +117,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs">
+        <block type="gamelab_setBackgroundImageAs" id="1">
           <field name="IMG">"gradient_25_1"</field>
         </block>
         <block type="gamelab_setBackground">

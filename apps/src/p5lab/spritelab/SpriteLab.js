@@ -30,7 +30,7 @@ export default class SpriteLab extends P5Lab {
       console.warn('cannot create SpriteLab library without p5 instance');
       return;
     }
-    return new CoreLibrary(args.p5);
+    return new CoreLibrary(args.p5, this.JSInterpreter);
   }
 
   async preloadSpriteImages_() {

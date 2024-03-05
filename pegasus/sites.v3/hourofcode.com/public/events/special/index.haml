@@ -12,12 +12,13 @@ nav: events_nav
 
   events = Forms.events_by_country(kind, review_approved: true)
   us_events = Forms.events_by_state(kind, review_approved: true)
+  us_events_count = us_events.inject(0) {|result, element| result + element[:count]}
 
 %h1= hoc_s(:events_special_title)
 
 %ul
   %li{class: "hoc-event-country"}
-    %span{style: "font-weight: bold;"}= "United States (#{us_events.count rescue '0'} #{hoc_s(:events)})"
+    %span{style: "font-weight: bold;"}= "United States (#{us_events_count rescue '0'} #{hoc_s(:events)})"
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
       -us_events.each do |event|
         %li{class: "hoc-event-state"}

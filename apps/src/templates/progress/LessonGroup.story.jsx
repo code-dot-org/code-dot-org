@@ -51,7 +51,6 @@ const groupedLesson = {
 };
 
 export default {
-  name: 'LessonGroup',
   compoent: LessonGroup,
 };
 

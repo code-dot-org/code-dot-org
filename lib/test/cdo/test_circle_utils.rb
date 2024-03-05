@@ -7,49 +7,49 @@ class CircleUtilsTest < Minitest::Test
   end
 
   def test_knows_when_tag_is_present
-    CircleUtils.stub :circle_commit_message, 'message [foo]' do
-      assert CircleUtils.tagged? 'foo'
-      refute CircleUtils.tagged? 'bar'
-    end
+    CircleUtils.stubs(:circle_commit_message).returns('message [foo]')
+
+    assert CircleUtils.tagged? 'foo'
+    refute CircleUtils.tagged? 'bar'
   end
 
   def test_tags_are_case_insensitive
-    CircleUtils.stub :circle_commit_message, 'message [Foo]' do
-      assert CircleUtils.tagged? 'foo'
-      assert CircleUtils.tagged? 'Foo'
-      assert CircleUtils.tagged? 'FOO'
-    end
+    CircleUtils.stubs(:circle_commit_message).returns('message [Foo]')
+
+    assert CircleUtils.tagged? 'foo'
+    assert CircleUtils.tagged? 'Foo'
+    assert CircleUtils.tagged? 'FOO'
   end
 
   def test_does_not_see_commit_message_as_a_tag
-    CircleUtils.stub :circle_commit_message, 'message [foo] suffix' do
-      refute CircleUtils.tagged? 'message'
-      refute CircleUtils.tagged? 'suffix'
-    end
+    CircleUtils.stubs(:circle_commit_message).returns('message [foo] suffix')
+
+    refute CircleUtils.tagged? 'message'
+    refute CircleUtils.tagged? 'suffix'
   end
 
   def test_sees_multiple_tags
-    CircleUtils.stub :circle_commit_message, 'message [foo] [bar]' do
-      assert CircleUtils.tagged? 'foo'
-      assert CircleUtils.tagged? 'bar'
-      refute CircleUtils.tagged? 'baz'
-    end
+    CircleUtils.stubs(:circle_commit_message).returns('message [foo] [bar]')
+
+    assert CircleUtils.tagged? 'foo'
+    assert CircleUtils.tagged? 'bar'
+    refute CircleUtils.tagged? 'baz'
   end
 
   def test_multi_word_tags
-    CircleUtils.stub :circle_commit_message, 'message [foo bar]' do
-      # Detects correct word combination
-      assert CircleUtils.tagged? 'foo bar'
-      refute CircleUtils.tagged? 'bar baz'
+    CircleUtils.stubs(:circle_commit_message).returns('message [foo bar]')
 
-      # Is whitespace-agnostic
-      assert CircleUtils.tagged? 'foo   bar'
+    # Detects correct word combination
+    assert CircleUtils.tagged? 'foo bar'
+    refute CircleUtils.tagged? 'bar baz'
 
-      # Is word-order agnostic
-      assert CircleUtils.tagged? 'bar foo'
+    # Is whitespace-agnostic
+    assert CircleUtils.tagged? 'foo   bar'
 
-      # Ignores repeated words (a tag is a Set)
-      assert CircleUtils.tagged? 'foo foo bar bar bar'
-    end
+    # Is word-order agnostic
+    assert CircleUtils.tagged? 'bar foo'
+
+    # Ignores repeated words (a tag is a Set)
+    assert CircleUtils.tagged? 'foo foo bar bar bar'
   end
 end

@@ -13,7 +13,7 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNbdileYNenivhpx3ry\nrDQTWEJZz3IS7VND0m4Gm/IQnsOLc/NXOrKJLsHTts/tGZs=\n",
-    "contained_level_names": null
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-09-22 17:59:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-15 14:07:28 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-15 14:43:42 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

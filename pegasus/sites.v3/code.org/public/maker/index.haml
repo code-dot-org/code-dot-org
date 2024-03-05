@@ -35,7 +35,7 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
-%section
+%section#explore_devices_link
   .wrapper
     %h2 Explore devices
     %p We have curriculum options that support two different devices — see available options below. <strong>Need a device?</strong> Learn more about the devices below.
@@ -44,7 +44,7 @@ theme: responsive_full_width
 %section.bg-neutral-light.why-physical-computing
   .wrapper
     %h2 Why physical computing?
-    %p Learning about physical computing requires time on and off the computer. As a result of this different learning dynamic, there are some unique benefits of learning computer science through physical computing.
+    %p Learning about physical computing requires time on and off the computer. As a result of this different learning dynamic, there are some unique benefits of learning computer science through physical computing. <a class="has-external-link" href="https://www.fieldsofcs.org/physicalcomputing" target="_blank" rel="noopener noreferrer">Learn more about why physical computing is important</a>.
     %div.flex-container
       %ul.icon-bullet-list.full-width.col-45
         %li
@@ -73,7 +73,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2 Curriculum using the Circuit Playground
-    = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices-2023?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
+    = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
 
 = view :section_divider_line
 
@@ -82,7 +82,7 @@ theme: responsive_full_width
   .wrapper
     %h2 Curriculum using the micro:bit
     %p Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
-    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit-2023?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit", self_paced_pl_link: CDO.studio_url("/courses/self-paced-pl-microbit-2023")
+    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit", self_paced_pl_link: CDO.studio_url("/courses/self-paced-pl-microbit")
 
 %section.bg-neutral-light
   .wrapper

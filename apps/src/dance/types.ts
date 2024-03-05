@@ -9,9 +9,9 @@ export type SongData = {
 };
 
 type Analysis = {
-  beats: [boolean, boolean, boolean];
+  beats: boolean[];
   centroid: number;
-  energy: [number, number, number];
+  energy: number[];
   time: number;
   volume: number;
 };
@@ -34,10 +34,4 @@ export interface DanceProjectSources extends ProjectSources {
 export interface DanceLevelProperties extends LevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
-}
-
-export enum AiOutput {
-  AI_BLOCK = 'ai_block',
-  GENERATED_BLOCKS = 'generated_blocks',
-  BOTH = 'both',
 }

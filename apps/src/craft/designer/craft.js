@@ -764,11 +764,7 @@ Craft.executeUserCode = function () {
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
   // Run user generated code, calling appCodeOrgAPI
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-  if (studioApp().initializationBlocks) {
-    codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
-  }
-  const code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+  const code = Blockly.getWorkspaceCode();
 
   const evalApiMethods = {
     moveForward: function (blockID) {

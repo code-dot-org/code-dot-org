@@ -2,7 +2,7 @@ import React from 'react';
 import {UnconnectedControlProjectSharingDialog as ControlProjectSharingDialog} from './ControlProjectSharingDialog';
 
 export default {
-  title: 'ManageStudents/ControlProjectSharingDialog',
+  title: 'ManageStudents/ControlProjectSharingDialog', // eslint-disable-line storybook/no-title-property-in-meta
   component: ControlProjectSharingDialog,
 };
 

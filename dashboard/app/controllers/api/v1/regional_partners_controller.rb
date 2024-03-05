@@ -53,28 +53,13 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
     partner, state = RegionalPartner.find_by_zip(zip_code)
 
-    result = nil
-
     if partner
       render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
-      result = 'partner-found'
     elsif state
       render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
-      result = 'no-partner'
     else
       render json: {error: WORKSHOP_SEARCH_ERRORS[:no_state]}
-      result = 'no-state'
     end
-
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'regional-partner-search-log',
-        event: result,
-        data_string: zip_code,
-        source_page_id: params[:source_page_id]
-      }
-    )
   end
 
   # Get the regional partner's cohort capacity for a specific role

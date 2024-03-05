@@ -24,7 +24,6 @@ const courses = [
 ];
 
 export default {
-  title: 'SeeMoreCourse',
   component: SeeMoreCourses,
 };
 

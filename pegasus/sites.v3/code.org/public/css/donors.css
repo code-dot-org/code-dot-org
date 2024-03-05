@@ -195,7 +195,7 @@ section.lists h3 {
     }
 
   h5 {
-    color: #00adbc;
+    color: var(--brand_primary_default);
     font-family: var(--main-font);
     font-weight: var(--bold-font-weight);
     margin: 1.5em 1em 0;

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2023-03-02 22:55:56 UTC",
+    "serialized_at": "2024-02-28 23:40:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -122,6 +122,51 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Matching Levels",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "Hello Game Design Simplified",
+      "name": "Hello Game Design Simplified",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "AI Draft Levels",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -193,6 +238,42 @@
       "seeding_key": {
         "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "d3fc9cb6-5c5e-4647-991d-d3842148534a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d3fc9cb6-5c5e-4647-991d-d3842148534a",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "3b42fb3c-2bc8-4185-b495-1e78a7ab499b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3b42fb3c-2bc8-4185-b495-1e78a7ab499b",
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad",
+        "lesson.key": "lesson-9",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -325,6 +406,93 @@
       "seeding_key": {
         "activity_section.key": "aba33c40-fc0e-4008-9872-7480eb1e19eb",
         "lesson_activity.key": "0d7c39b2-e0fa-4275-bae5-2d46cb5b4563"
+      }
+    },
+    {
+      "key": "feac1b71-8b42-4e4e-bfd9-7be4312c600c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "feac1b71-8b42-4e4e-bfd9-7be4312c600c",
+        "lesson_activity.key": "d3fc9cb6-5c5e-4647-991d-d3842148534a"
+      }
+    },
+    {
+      "key": "04e96728-1a77-4680-b173-0f9093bb684b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Game Design & Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "04e96728-1a77-4680-b173-0f9093bb684b",
+        "lesson_activity.key": "3b42fb3c-2bc8-4185-b495-1e78a7ab499b"
+      }
+    },
+    {
+      "key": "d8887d2e-2910-41ef-af5c-904f854b3640",
+      "position": 2,
+      "properties": {
+        "progression_name": "Game Mechanics - Sprite Behaviors"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8887d2e-2910-41ef-af5c-904f854b3640",
+        "lesson_activity.key": "3b42fb3c-2bc8-4185-b495-1e78a7ab499b"
+      }
+    },
+    {
+      "key": "f81a665b-e11a-4393-8617-07ce6cfc21b5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Game Mechanics - Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5",
+        "lesson_activity.key": "3b42fb3c-2bc8-4185-b495-1e78a7ab499b"
+      }
+    },
+    {
+      "key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Game Mechanics - Scoring & Winning"
+      },
+      "seeding_key": {
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6",
+        "lesson_activity.key": "3b42fb3c-2bc8-4185-b495-1e78a7ab499b"
+      }
+    },
+    {
+      "key": "2b3aec83-a5d9-4c32-b166-471b7ebac2c1",
+      "position": 5,
+      "properties": {
+        "progression_name": "Level Up & Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b3aec83-a5d9-4c32-b166-471b7ebac2c1",
+        "lesson_activity.key": "3b42fb3c-2bc8-4185-b495-1e78a7ab499b"
+      }
+    },
+    {
+      "key": "e83a2349-abca-4f67-8036-82ff0bc6d280",
+      "position": 1,
+      "properties": {
+        "progression_name": "Item Sorting"
+      },
+      "seeding_key": {
+        "activity_section.key": "e83a2349-abca-4f67-8036-82ff0bc6d280",
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
+      }
+    },
+    {
+      "key": "efff6bf6-a6bf-431f-818a-b19daaae2b35",
+      "position": 2,
+      "properties": {
+        "progression_name": "Feature Vector"
+      },
+      "seeding_key": {
+        "activity_section.key": "efff6bf6-a6bf-431f-818a-b19daaae2b35",
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
       }
     }
   ],
@@ -960,6 +1128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma_ecosystems_ocean_algae_2023"
+        ],
         "progression": "Remove Algae"
       },
       "bonus": false,
@@ -982,6 +1153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma_ecosystems_ocean_boat_2023"
+        ],
         "progression": "Remove Fish"
       },
       "bonus": false,
@@ -1004,6 +1178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma_ecosystems_inequalities_markdown_2023"
+        ],
         "progression": "Conditionals Markdown"
       },
       "bonus": false,
@@ -1026,6 +1203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma_matching_ecosystems_test"
+        ],
         "progression": "Matching"
       },
       "bonus": false,
@@ -1048,6 +1228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emmasw_ecosystems_ocean_coral_2023"
+        ],
         "progression": "Conditionals Practice"
       },
       "bonus": false,
@@ -1070,6 +1253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emmasw_ecosystems_ocean_simulation_2023"
+        ],
         "progression": "Simulation"
       },
       "bonus": false,
@@ -1084,6 +1270,502 @@
       },
       "level_keys": [
         "emmasw_ecosystems_ocean_simulation_2023"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "K-1 Maze Match 1-test"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "K-1 Maze Match 1-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "feac1b71-8b42-4e4e-bfd9-7be4312c600c"
+      },
+      "level_keys": [
+        "K-1 Maze Match 1-test"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Games are fun!_b"
+        ],
+        "progression": "Game Design & Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Games are fun!_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "04e96728-1a77-4680-b173-0f9093bb684b"
+      },
+      "level_keys": [
+        "Games are fun!_b"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_player_sprite_b"
+        ],
+        "progression": "Game Design & Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_player_sprite_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "04e96728-1a77-4680-b173-0f9093bb684b"
+      },
+      "level_keys": [
+        "hello_games_player_sprite_b"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_rules_say_b"
+        ],
+        "progression": "Game Design & Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_rules_say_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "04e96728-1a77-4680-b173-0f9093bb684b"
+      },
+      "level_keys": [
+        "hello_games_rules_say_b"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_mechanics_intro_simplified_b"
+        ],
+        "progression": "Game Mechanics - Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_mechanics_intro_simplified_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d8887d2e-2910-41ef-af5c-904f854b3640"
+      },
+      "level_keys": [
+        "hello_games_mechanics_intro_simplified_b"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_behaviors_b"
+        ],
+        "progression": "Game Mechanics - Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_behaviors_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d8887d2e-2910-41ef-af5c-904f854b3640"
+      },
+      "level_keys": [
+        "hello_games_behaviors_b"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_more_behaviors_b"
+        ],
+        "progression": "Game Mechanics - Sprite Behaviors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_more_behaviors_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d8887d2e-2910-41ef-af5c-904f854b3640"
+      },
+      "level_keys": [
+        "hello_games_more_behaviors_b"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_events_intro_b"
+        ],
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_events_intro_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      },
+      "level_keys": [
+        "hello_games_events_intro_b"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_click_event_b"
+        ],
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_click_event_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      },
+      "level_keys": [
+        "hello_games_click_event_b"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_sounds_b"
+        ],
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_sounds_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      },
+      "level_keys": [
+        "hello_games_sounds_b"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_touch_event_b"
+        ],
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_touch_event_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      },
+      "level_keys": [
+        "hello_games_touch_event_b"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_competition_event_b"
+        ],
+        "progression": "Game Mechanics - Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_competition_event_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      },
+      "level_keys": [
+        "hello_games_competition_event_b"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_variables_intro_b"
+        ],
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_variables_intro_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      },
+      "level_keys": [
+        "hello_games_variables_intro_b"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_scoreboard_simplified_b"
+        ],
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_scoreboard_simplified_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      },
+      "level_keys": [
+        "hello_games_scoreboard_simplified_b"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_score_variable_b"
+        ],
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_score_variable_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      },
+      "level_keys": [
+        "hello_games_score_variable_b"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_winning_conditional_simple_b"
+        ],
+        "progression": "Game Mechanics - Scoring & Winning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_winning_conditional_simple_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      },
+      "level_keys": [
+        "hello_games_winning_conditional_simple_b"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_skill_choices_simplified_b"
+        ],
+        "progression": "Level Up & Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_skill_choices_simplified_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2b3aec83-a5d9-4c32-b166-471b7ebac2c1"
+      },
+      "level_keys": [
+        "hello_games_skill_choices_simplified_b"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "hello_games_choices_b"
+        ],
+        "progression": "Level Up & Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_games_choices_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2b3aec83-a5d9-4c32-b166-471b7ebac2c1"
+      },
+      "level_keys": [
+        "hello_games_choices_b"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "emmaplayground_helloworld_freeplay"
+        ],
+        "progression": "Item Sorting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emmaplayground_helloworld_freeplay"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "e83a2349-abca-4f67-8036-82ff0bc6d280"
+      },
+      "level_keys": [
+        "emmaplayground_helloworld_freeplay"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Feature Vector"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emmaplayground_helloworld_freeplay_food"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "efff6bf6-a6bf-431f-818a-b19daaae2b35"
+      },
+      "level_keys": [
+        "emmaplayground_helloworld_freeplay_food"
       ]
     }
   ],
@@ -1471,6 +2153,246 @@
         "script.name": "emmas-playground",
         "activity_section.key": "aba33c40-fc0e-4008-9872-7480eb1e19eb"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "K-1 Maze Match 1-test",
+        "script_level.level_keys": [
+          "K-1 Maze Match 1-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "feac1b71-8b42-4e4e-bfd9-7be4312c600c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Games are fun!_b",
+        "script_level.level_keys": [
+          "Games are fun!_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "04e96728-1a77-4680-b173-0f9093bb684b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_player_sprite_b",
+        "script_level.level_keys": [
+          "hello_games_player_sprite_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "04e96728-1a77-4680-b173-0f9093bb684b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_rules_say_b",
+        "script_level.level_keys": [
+          "hello_games_rules_say_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "04e96728-1a77-4680-b173-0f9093bb684b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_mechanics_intro_simplified_b",
+        "script_level.level_keys": [
+          "hello_games_mechanics_intro_simplified_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d8887d2e-2910-41ef-af5c-904f854b3640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_behaviors_b",
+        "script_level.level_keys": [
+          "hello_games_behaviors_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d8887d2e-2910-41ef-af5c-904f854b3640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_more_behaviors_b",
+        "script_level.level_keys": [
+          "hello_games_more_behaviors_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d8887d2e-2910-41ef-af5c-904f854b3640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_events_intro_b",
+        "script_level.level_keys": [
+          "hello_games_events_intro_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_click_event_b",
+        "script_level.level_keys": [
+          "hello_games_click_event_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_sounds_b",
+        "script_level.level_keys": [
+          "hello_games_sounds_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_touch_event_b",
+        "script_level.level_keys": [
+          "hello_games_touch_event_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_competition_event_b",
+        "script_level.level_keys": [
+          "hello_games_competition_event_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "f81a665b-e11a-4393-8617-07ce6cfc21b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_variables_intro_b",
+        "script_level.level_keys": [
+          "hello_games_variables_intro_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_scoreboard_simplified_b",
+        "script_level.level_keys": [
+          "hello_games_scoreboard_simplified_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_score_variable_b",
+        "script_level.level_keys": [
+          "hello_games_score_variable_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_winning_conditional_simple_b",
+        "script_level.level_keys": [
+          "hello_games_winning_conditional_simple_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "16dd5a32-4fb1-4cc4-be10-b2e1c479e7f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_skill_choices_simplified_b",
+        "script_level.level_keys": [
+          "hello_games_skill_choices_simplified_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2b3aec83-a5d9-4c32-b166-471b7ebac2c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hello_games_choices_b",
+        "script_level.level_keys": [
+          "hello_games_choices_b"
+        ],
+        "lesson.key": "Hello Game Design Simplified",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "2b3aec83-a5d9-4c32-b166-471b7ebac2c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emmaplayground_helloworld_freeplay",
+        "script_level.level_keys": [
+          "emmaplayground_helloworld_freeplay"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "e83a2349-abca-4f67-8036-82ff0bc6d280"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emmaplayground_helloworld_freeplay_food",
+        "script_level.level_keys": [
+          "emmaplayground_helloworld_freeplay_food"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "efff6bf6-a6bf-431f-818a-b19daaae2b35"
+      }
     }
   ],
   "resources": [
@@ -1501,6 +2423,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

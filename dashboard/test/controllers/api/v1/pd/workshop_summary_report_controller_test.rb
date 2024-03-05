@@ -82,7 +82,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     assert_payment_fields response.first
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers do not get payment info' do
     sign_in @organizer
 
@@ -116,7 +115,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     assert_equal 3, response.count
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers only see their own workshops' do
     sign_in @organizer
 

@@ -15,7 +15,7 @@ module ScriptLevelsHelper
         enabled_for_user = current_user&.section_for_script(script_level.script) &&
           current_user.section_for_script(script_level.script).lesson_extras
         enabled_for_teacher = current_user.try(:teacher?) &&
-          current_user.sections.where(
+          current_user.sections_instructed.where(
             script_id: script_level.script_id,
             lesson_extras: true
           ).any?

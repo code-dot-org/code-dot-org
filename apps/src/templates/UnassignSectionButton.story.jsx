@@ -6,7 +6,6 @@ import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboa
 const assignedSection = fakeTeacherSectionsForDropdown[1];
 
 export default {
-  name: 'UnassignSectionButton',
   component: UnassignSectionButton,
 };
 

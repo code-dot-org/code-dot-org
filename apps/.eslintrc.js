@@ -1,15 +1,45 @@
+// There are some rules that we would like to have enabled, but which have
+// existing violations that need to be fixed (or individually ignored) before
+// we can do so.
+//
+// Adding them here separately from the other, intentionally-disabled rules
+// below, so that we can more easily track fixing violations and eventually
+// reenabling.
+const rulesToEventuallyReenable = {
+  'jsx-a11y/anchor-is-valid': 'off',
+  'jsx-a11y/click-events-have-key-events': 'off',
+  'jsx-a11y/label-has-associated-control': 'off',
+  'jsx-a11y/mouse-events-have-key-events': 'off',
+  'jsx-a11y/no-noninteractive-element-interactions': 'off',
+  'jsx-a11y/no-static-element-interactions': 'off',
+  'jsx-a11y/tabindex-no-positive': 'off',
+};
+
 // This config defines globals available especially in apps,
 // enables es6, and enables apps-specific plugins and rules.
 // See the root .eslintrc.js for generic eslint linting rules.
 module.exports = {
   parser: '@babel/eslint-parser',
-  plugins: ['cdo-custom-rules', 'react', 'react-hooks', 'mocha', 'babel'],
+  plugins: [
+    'cdo-custom-rules',
+    'react',
+    'react-hooks',
+    'mocha',
+    'babel',
+    'jsx-a11y',
+    'storybook',
+  ],
   parserOptions: {
     babelOptions: {
       presets: ['@babel/preset-react'],
     },
   },
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:storybook/recommended',
+  ],
   env: {
     es6: true,
   },
@@ -55,11 +85,14 @@ module.exports = {
     SerialPort: 'readonly',
     signupErrorMessage: 'readonly',
     Studio: 'readonly',
+    // Only used in Web Lab 2.
+    stylelint: 'readonly',
     thanksUrl: 'readonly',
     Turtle: 'readonly',
     YT: 'readonly',
   },
   rules: {
+    ...rulesToEventuallyReenable,
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
     'mocha/no-exclusive-tests': 'error',
@@ -96,10 +129,17 @@ module.exports = {
       rules: {
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', {args: 'none'}],
         // TODO: We are temporarily disabling this rule to allow using require() to import
         // JavaScript files in TypeScript. Instead, we should add 'allowJs': true to our
         // tsconfig.json file, but this is currently causing some build issues (SL-791)
         '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.story.@(ts|tsx|js|jsx)'],
+      rules: {
+        'storybook/no-title-property-in-meta': 'error',
       },
     },
   ],

@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Certificate from './Certificate';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import style from './certificate_batch.module.scss';
 import i18n from '@cdo/locale';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import {
   BodyTwoText,
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
 
 export default function Congrats(props) {
   /**
@@ -24,23 +27,6 @@ export default function Congrats(props) {
    */
   const renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
-    // In order to remove the certificate links remove or comment the following section -------------------------------
-    if (language === 'ko') {
-      extraLinkText =
-        '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
-      if (/oceans/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-oceans.png');
-      } else if (/dance/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-dance.png');
-      } else if (/frozen/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-frozen.png');
-      } else if (/hero/.test(tutorial)) {
-        extraLinkUrl = pegasus('/files/online-coding-party-2023-2-hero.png');
-      } else {
-        extraLinkText = null;
-      }
-    }
-    // End of section to be removed or commented ----------------------------------------------------------------------
     // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
@@ -68,8 +54,14 @@ export default function Congrats(props) {
     language,
     randomDonorTwitter,
     randomDonorName,
-    initialCertificateImageUrl,
+    certificateData,
     isHocTutorial,
+    isPlCourse,
+    isK5PlCourse,
+    nextCourseScriptName,
+    nextCourseTitle,
+    nextCourseDesc,
+    curriculumUrl,
   } = props;
 
   const teacherCourses = [
@@ -182,95 +174,151 @@ export default function Congrats(props) {
     },
   ];
 
-  return (
-    <div className={style.wrapper}>
-      <div className={style.certificateContainer}>
-        <Certificate
-          tutorial={tutorial}
-          certificateId={certificateId}
-          randomDonorTwitter={randomDonorTwitter}
-          randomDonorName={randomDonorName}
-          under13={under13}
-          initialCertificateImageUrl={initialCertificateImageUrl}
-          isHocTutorial={isHocTutorial}
-        >
-          {renderExtraCertificateLinks(language, tutorial)}
-        </Certificate>
-      </div>
+  const selfPacedPlLink = {
+    title: i18n.congratsSelfPacedPlTitle(),
+    description: i18n.congratsSelfPacedPlDescription(),
+    buttonText: i18n.exploreSelfPacedLearning(),
+    image: selfPacedPlBanner,
+    link: 'https://code.org/educate/professional-development-online',
+  };
 
-      <div className={style.continueBeyond}>
-        <Heading3 className={style.textCenter}>
-          {i18n.continueBeyondHourOfCode()}
-        </Heading3>
-        <div
-          className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
-        >
-          {curriculaData.map((item, index) => (
+  const professionalLearningNextOptionsK5 = [
+    {
+      title: i18n.learnAboutFacilitatorLeadProfessionalWorkshops(),
+      description:
+        i18n.learnAboutFacilitatorLeadProfessionalWorkshopsDescription(),
+      buttonText: i18n.discoverFacilitatorLedWorkshops(),
+      image: facilitatorLedPlBanner,
+      link: 'https://code.org/professional-development-workshops',
+    },
+    selfPacedPlLink,
+  ];
+
+  const professionalLearningNextOptions612 = [
+    {
+      title: i18n.learnAboutFacilitatorLeadProfessionalWorkshops(),
+      description:
+        i18n.learnAboutFacilitatorLeadProfessionalWorkshopsDescription(),
+      buttonText: i18n.discoverFacilitatorLedWorkshops(),
+      image: facilitatorLedPlBanner,
+      link: 'https://code.org/apply',
+    },
+    selfPacedPlLink,
+  ];
+
+  const professionalLearningNextOptions = isK5PlCourse
+    ? professionalLearningNextOptionsK5
+    : professionalLearningNextOptions612;
+
+  const renderRecommendedOptions = () => {
+    if (isHocTutorial) {
+      return (
+        <div>
+          <div className={style.continueBeyond}>
+            <Heading3 className={style.textCenter}>
+              {i18n.continueBeyondHourOfCode()}
+            </Heading3>
             <div
-              className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
-              key={index}
+              className={`${style.actionBlockWrapper} ${style.actionBlockWrapperThreeCol} ${style.courseContainer}`}
             >
-              <div className={style.contentWrapper}>
-                <BodyTwoText className={style.overline}>
-                  {item.grade}
-                </BodyTwoText>
-                <Heading3>{item.title}</Heading3>
-                <img src={item.image} alt="" />
-                <BodyTwoText>{item.description}</BodyTwoText>
-              </div>
-              <div className={style.contentFooter}>
-                <a className={style.linkButton} href={item.link}>
-                  {item.buttonText}
-                </a>
-              </div>
+              {curriculaData.map((item, index) => (
+                <div
+                  className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+                  key={index}
+                >
+                  <div className={style.contentWrapper}>
+                    <BodyTwoText className={style.overline}>
+                      {item.grade}
+                    </BodyTwoText>
+                    <Heading3>{item.title}</Heading3>
+                    <img src={item.image} alt="" />
+                    <BodyTwoText>{item.description}</BodyTwoText>
+                  </div>
+                  <div className={style.contentFooter}>
+                    <a className={style.linkButton} href={item.link}>
+                      {item.buttonText}
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <hr />
+            <hr />
 
-        <div className={style.textCenter}>
-          <Heading4>{i18n.discoverMore()}</Heading4>
-          <BodyTwoText>{i18n.discoverMoreCatalogText()}</BodyTwoText>
-          <div className={style.imageContainer}>
-            {curriculumCatalogImages.map((item, index) => (
-              <img key={index} src={item} alt="" />
-            ))}
-          </div>
-          {userType === 'student' ? (
-            <div className={style.studentButtonsContainer}>
-              <a
-                className={`${style.linkButton} ${style.catalogButton}`}
-                href={'https://code.org/student/elementary'}
-              >
-                {i18n.learningForAgesRange({
-                  youngestAge: '5',
-                  oldestAge: '11',
-                })}
-              </a>
-              <a
-                className={`${style.linkButton} ${style.catalogButton}`}
-                href={'https://code.org/student/middle-high'}
-              >
-                {i18n.learningForAgesPlus({age: '11'})}
-              </a>
+            <div className={style.textCenter}>
+              <Heading4>{i18n.discoverMore()}</Heading4>
+              <BodyTwoText>{i18n.discoverMoreCatalogText()}</BodyTwoText>
+              <div className={style.imageContainer}>
+                {curriculumCatalogImages.map((item, index) => (
+                  <img key={index} src={item} alt="" />
+                ))}
+              </div>
+              {userType === 'student' ? (
+                <div className={style.studentButtonsContainer}>
+                  <a
+                    className={`${style.linkButton} ${style.catalogButton}`}
+                    href={'https://code.org/student/elementary'}
+                  >
+                    {i18n.learningForAgesRange({
+                      youngestAge: '5',
+                      oldestAge: '11',
+                    })}
+                  </a>
+                  <a
+                    className={`${style.linkButton} ${style.catalogButton}`}
+                    href={'https://code.org/student/middle-high'}
+                  >
+                    {i18n.learningForAgesPlus({age: '11'})}
+                  </a>
+                </div>
+              ) : (
+                <a
+                  className={`${style.linkButton} ${style.catalogButton}`}
+                  href={'/catalog'}
+                >
+                  {i18n.viewCurriculumCatalog()}
+                </a>
+              )}
             </div>
-          ) : (
-            <a
-              className={`${style.linkButton} ${style.catalogButton}`}
-              href={'/catalog'}
-            >
-              {i18n.viewCurriculumCatalog()}
-            </a>
+          </div>
+
+          {userType !== 'student' && (
+            <div className={style.professionalLearning}>
+              <div
+                className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
+              >
+                {professionalLearning.map((item, index) => (
+                  <div
+                    className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
+                    key={index}
+                  >
+                    <div className={style.contentWrapper}>
+                      <img
+                        src={item.image}
+                        alt=""
+                        className={style.professionalLearningImage}
+                      />
+                      <Heading3>{item.title}</Heading3>
+                      <BodyTwoText>{item.description}</BodyTwoText>
+                    </div>
+                    <div className={style.contentFooter}>
+                      <a className={style.linkButton} href={item.link}>
+                        {item.buttonText}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
         </div>
-      </div>
-
-      {userType !== 'student' && (
+      );
+    } else if (isPlCourse) {
+      return (
         <div className={style.professionalLearning}>
           <div
             className={`${style.actionBlockWrapper} ${style.actionBlockTwoCol}`}
           >
-            {professionalLearning.map((item, index) => (
+            {professionalLearningNextOptions.map((item, index) => (
               <div
                 className={`${style.actionBlock} ${style.actionBlockOneCol} ${style.flexSpaceBetween}`}
                 key={index}
@@ -279,7 +327,7 @@ export default function Congrats(props) {
                   <img
                     src={item.image}
                     alt=""
-                    className={style.professionalLearningImage}
+                    className={style.professionalLearningNextStepsImage}
                   />
                   <Heading3>{item.title}</Heading3>
                   <BodyTwoText>{item.description}</BodyTwoText>
@@ -292,6 +340,49 @@ export default function Congrats(props) {
               </div>
             ))}
           </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <GraduateToNextLevel
+            scriptName={nextCourseScriptName}
+            courseTitle={nextCourseTitle}
+            courseDesc={nextCourseDesc}
+          />
+        </div>
+      );
+    }
+  };
+
+  return (
+    <div className={style.wrapper}>
+      {certificateData.length > 0 && (
+        <>
+          <div className={style.certificateContainer}>
+            <Certificate
+              tutorial={tutorial}
+              certificateId={certificateId}
+              randomDonorTwitter={randomDonorTwitter}
+              randomDonorName={randomDonorName}
+              under13={under13}
+              certificateData={certificateData}
+              isHocTutorial={isHocTutorial}
+              isPlCourse={isPlCourse}
+            >
+              {renderExtraCertificateLinks(language, tutorial)}
+            </Certificate>
+          </div>
+          {renderRecommendedOptions()}
+        </>
+      )}
+      {certificateData.length === 0 && (
+        <div>
+          <Heading3>
+            <InlineMarkdown
+              markdown={i18n.noCertificateReturnToCourse({curriculumUrl})}
+            />
+          </Heading3>
         </div>
       )}
     </div>
@@ -306,6 +397,12 @@ Congrats.propTypes = {
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
-  initialCertificateImageUrl: PropTypes.string.isRequired,
+  certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  curriculumUrl: PropTypes.string,
   isHocTutorial: PropTypes.bool,
+  isPlCourse: PropTypes.bool,
+  isK5PlCourse: PropTypes.bool,
+  nextCourseScriptName: PropTypes.string,
+  nextCourseTitle: PropTypes.string,
+  nextCourseDesc: PropTypes.string,
 };

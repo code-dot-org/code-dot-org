@@ -41,8 +41,10 @@ const CODE_STUDIO_ENTRIES = {
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
+  'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
+  'print_certificates/show': './src/sites/studio/pages/print_certificates/show.js',
   'programming_classes/show': './src/sites/studio/pages/programming_classes/show.js',
   'programming_environments/index': './src/sites/studio/pages/programming_environments/index.js',
   'programming_environments/show': './src/sites/studio/pages/programming_environments/show.js',
@@ -84,10 +86,13 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
+  'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
+  'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
+  'regional_partners/regional_partner_search': './src/sites/studio/pages/regional_partners/regional_partner_search.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
@@ -169,12 +174,10 @@ const INTERNAL_ENTRIES = {
 const PEGASUS_ENTRIES = {
   // code.org
   'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-  'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
   'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
-  'code.org/views/regional_partner_search': './src/sites/code.org/pages/views/regional_partner_search.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
@@ -183,6 +186,8 @@ const PEGASUS_ENTRIES = {
   'code.org/views/amazon_future_engineer_eligibility': './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
+  'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
+  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
 
   // hourofcode.com
   'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
@@ -196,8 +201,6 @@ const PEGASUS_ENTRIES = {
 
 // prettier-ignore
 const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
-  'code.org/public/learn/local': './src/sites/code.org/pages/public/learn/local.js',
-
   'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
   'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 
@@ -224,12 +227,15 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
   'foorm/libraries/editor': './src/sites/studio/pages/foorm/libraries/editor.js',
   'foorm/simple_survey_forms/show': './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
+
+  'plc/user_course_enrollments/index': './src/sites/studio/pages/plc/user_course_enrollments/index.js',
 };
 
 // Entries which are shared between dashboard and pegasus, which are included
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
+  userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
 };
 
 // prettier-ignore

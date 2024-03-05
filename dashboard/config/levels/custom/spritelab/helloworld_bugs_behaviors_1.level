@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-11-01T23:04:47.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -61,7 +65,7 @@
     "validation_enabled": "true",
     "mini_toolbox": "false",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel9();",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_behavior_blocks\",\r\n  \"callout_text\": \"Use this block with one of the behaviors below.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"19\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_behavior_blocks\",\"callout_text\":\"Use this block with one of the behaviors below.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"19\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"19\\\"]\",\"localization_key\":\"hello_world_behavior_blocks\",\"callout_text\":\"Use this block with one of the behaviors below.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Let's learn to animate sprites using behaviors. ",
@@ -69,14 +73,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"*Note:* To give a sprite a behavior, you need to use a `sprite begins` block with one of the green behavior blocks, such as `spinning right`.\\n\\n<xml><block type=\\\"gamelab_addBehaviorSimple\\\">\\n            <value name=\\\"SPRITE\\\">\\n              <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n                <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n              </block>\\n            </value>\\n            <value name=\\\"BEHAVIOR\\\">\\n              <block type=\\\"gamelab_behavior_get\\\">\\n                <mutation></mutation>\\n                <title name=\\\"VAR\\\" id=\\\"spinning right\\\">spinning right</title>\\n              </block>\\n              </value></block></xml>\",\"hint_id\":\"storyboard_behavior_example\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8c3cc5caca0ba69be58ce14d9fd7a983/generic_storyboard_choices_behaviors.mp3\"}]",
     "skip_autosave": true,
     "encrypted_examples": "57TMWHCqtDvxbkFAzGIXwIOORjqBKOO+pvMq0CVZ+3csUX0+Z9KlTyetBkVj\nYAhChuEaeucvFS+e5wklXokmVTIMZ45dRZs4RcEXPh90TSaYosLSAZckYsyN\nkSHn/2ycylPtdy8vY/19MrbJyBrapw==\n",
-    "preload_asset_list": null,
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-11-01T23:04:47.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:47.324+00:00\",\"changed\":[\"cloned from \\\"helloworld_bugs_behaviors_2022\\\"\"],\"cloned_from\":\"helloworld_bugs_behaviors_2022\"},{\"changed_at\":\"2022-11-30 19:25:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-02-03 22:10:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
@@ -2834,7 +2834,7 @@
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false" id="19">
               <title name="ANIMATION">"face_croissant_1"</title>
             </block>
           </value>

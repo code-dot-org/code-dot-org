@@ -2,13 +2,8 @@
   "category": "Validation",
   "config": {
     "func": "changeVarBy",
-    "docFunc": "gamelab_changeVarBy",
+    "docFunc": "codestudio_changeVariable",
     "blockText": "change {VARIABLE} by {VAL}",
-    "color": [
-      312,
-      0.32,
-      0.62
-    ],
     "args": [
       {
         "name": "VARIABLE",

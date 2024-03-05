@@ -18,6 +18,8 @@ const CurriculumCatalog = ({
   isEnglish,
   languageNativeName,
   isInUS,
+  isSignedOut,
+  isTeacher,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -139,6 +141,8 @@ const CurriculumCatalog = ({
                   onQuickViewClick={() => handleExpandedCardChange(key)}
                   isInUS={isInUS}
                   availableResources={available_resources}
+                  isSignedOut={isSignedOut}
+                  isTeacher={isTeacher}
                   {...props}
                 />
               )
@@ -173,17 +177,19 @@ const CurriculumCatalog = ({
         imageUrl={CourseCatalogIllustration01}
       />
       {showAssignSuccessMessage && (
-        <div className={style.assignSuccessMessageContainer}>
-          <BodyTwoText className={style.assignSuccessMessage}>
-            {assignSuccessMessage}
-          </BodyTwoText>
-          <button
-            aria-label="close success message"
-            onClick={handleCloseAssignSuccessMessage}
-            type="button"
-          >
-            <strong>X</strong>
-          </button>
+        <div className={style.assignSuccessMessageCenter}>
+          <div className={style.assignSuccessMessageContainer}>
+            <BodyTwoText className={style.assignSuccessMessage}>
+              {assignSuccessMessage}
+            </BodyTwoText>
+            <button
+              aria-label="close success message"
+              onClick={handleCloseAssignSuccessMessage}
+              type="button"
+            >
+              <strong>X</strong>
+            </button>
+          </div>
         </div>
       )}
       <CurriculumCatalogFilters
@@ -205,6 +211,8 @@ CurriculumCatalog.propTypes = {
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
   isInUS: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
+  isTeacher: PropTypes.bool.isRequired,
 };
 
 export default CurriculumCatalog;

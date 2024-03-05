@@ -116,23 +116,23 @@ Bir neçə ipucu:
         * Təqdim olunan fəaliyyəti təmsil edən əsas əlaqənin adı və e-poçtu
         * Fəaliyyət Adı (adına “Kod Saatı” daxil edilə bilməz)
         * Fəaliyyətə URL bağlantısı
-        * Bu fəaliyyətə AI daxildir: Bəli və ya Xeyr
-        * Fəaliyyət təsviri (maksimum xarakter sayı: 400) 
-            * Zəhmət olmasa təsvirə əsasən tələbə rəhbərliyi və ya müəllimi asanlaşdırdığını daxil edin. Əlavə olaraq, bəzi məktəblər Kod Saatı fəaliyyətlərinin Ümumi Core və ya Növbəti Nəsil Elm Standartlarına uyğun olub olmadığını bilməkdə maraqlıdırlar. Fəaliyyət xüsusi standartlara cavab verərsə, bu məlumatları daxil etməyi düşünün.
-        * Nəzərdə tutulan istifadəçilər üçün tövsiyə olunan sinif səviyyələri. Sinifə uyğun kompüter elmləri anlayışları üçün \[Kompüter Elmləri Müəllimləri Dərnəyinin K-12 Standartlarına\] (https://k12cs.org/framework-statements-by-grade-band/) müraciət edə bilərsiniz. Nümunə sinif səviyyələrinə aşağıdakılar daxildir: 
-            * Uşaq bağçası - 1-ci sinif (4-6 yaş)
-            * 2-5-ci siniflər (7-10 yaş)
-            * 6-8-ci siniflər (11-13 yaş)
-            * 9+ siniflər (14+ yaş)
-        * Fəaliyyətinizin öyrətdiyi proqramlaşdırma dillərinin siyahısı. Yəni C/C ++, Java, JavaScript və s. və ya dildən asılı olmayaraq (birdən çox dildə tədris oluna bilən dərs planları üçün) dil sənətini seçin.
-        * Dəstəklənən təbii dillərin siyahısı. Qeyd: Dil aşkarlama fəaliyyət təminatçısının məsuliyyətidir; bütün istifadəçiləri təqdim olunan tək URL-ə yönləndirəcəyik. və ya dildən asılı olmayaraq (birdən çox dildə tədris oluna bilən dərs planları üçün)
+        * Does this activity include AI: Yes or No
+        * An activity description (max character count: 400) 
+            * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+        * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+            * Kindergarten - Grade 1 (ages 4-6)
+            * Grades 2-5 (ages 7-10)
+            * Grades 6-8 (ages 11-13)
+            * Grades 9+ (ages 14+)
+        * Fəaliyyətinizin öyrətdiyi proqramlaşdırma dillərinin siyahısı. Yəni C/C ++, Java, JavaScript və s. və ya dildən asılı olmayaraq (birdən çox dildə tədris oluna bilən dərs planları üçün) choose language arts.
+        * Dəstəklənən təbii dillərin siyahısı. Qeyd: Dil aşkarlama fəaliyyət təminatçısının məsuliyyətidir; bütün istifadəçiləri təqdim olunan tək URL-ə yönləndirəcəyik. or language independent (for lesson plans that can be taught in multiple languages)
         * Bir pedaqoq fəaliyyətinizdən istifadə etmək üçün hansı səviyyədə təcrübəyə sahib olmalıdır? (məsələn, Başlanğıc və ya Rahat.) Və tələbələr hansı səviyyədə təcrübəyə sahib olmalıdırlar?
-        * Bir pedaqoq fəaliyyətinizdən istifadə etmək üçün hansı səviyyədə təcrübəyə sahib olmalıdır? (məsələn, Başlanğıc və ya Rahat.) Və tələbələr hansı səviyyədə təcrübəyə sahib olmalıdırlar? Daha qabaqcıl Kod Saatı™ Fəaliyyətləri hazırlamaq istəyirsinizsə, zəhmət olmasa fəaliyyətinizin təsvirinə lazım olan əvvəlki bilikləri daxil edin.
-        * Fəaliyyətinizin uzunluğu 
-            * Yalnız 1 saat
-            * İzləmə kursu ilə 1 saat
-            * 2-6 saat (birdən çox dərs ola bilər)
-        * Fəaliyyətiniz varsa, əlçatanlıq yerlərinin siyahısı. Bunlara ekran oxucu uyğunluğu, mətndən nitqə imkanları, yüksək kontrastlı rənglərin istifadəsi və ya əlilliyi olan şagirdlər üçün hazırlanmış hər hansı digər yaşayış yerləri daxildir.
+        * What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+        * The length of your activity 
+            * 1 hour only
+            * 1 hour with follow-on course
+            * 2-6 hours (can be multiple lessons)
+        * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
         
         #### Dərs Planlarını təqdim edərkən sizə lazım olacaq əlavə şeylər
         
@@ -151,7 +151,7 @@ Bir neçə ipucu:
                 * iOS mobil Safari (mobil optimallaşdırılmış)
                 * Android Chrome (mobil optimallaşdırılmış)
             * Qeyri-web-based: doğma kodu üçün platforma müəyyən (Mac, Win, iOS, Android, XBox, digər)
-            * Ayrılmış
+            * Unplugged
         * Kod Saatı fəaliyyətinin ekran görüntüsü və ya marketinq görüntüsü. Zəhmət olmasa 4:3 ölçülü ən azı bir şəkil göndərin. Ən azı 520px 390px olmalıdır. İngilis dilində danışmayanlar üçün daha əlçatan olması üçün bu görüntünün üzərində heç bir mətn (loqotipinizdən başqa) olmamalıdır. Müvafiq bir şəkil təqdim edilmirsə, təlimatınızın öz ekran görüntüsünü çəkə bilərik və ya siyahıya salmamağı seçə bilərik. Bütün şəkillər bir .jpg, .jpeg və ya.png ünvanına URL bağlantısı olaraq təqdim edilməlidir.
         * İştirakçılığı daha dəqiq izləmək üçün üçüncü tərəf dərslik tərəfdaşları Kod Saatı dərsliklərinin ilk səhifəsinə 1 piksel izləmə şəkillərini daxil etməlidirlər. Daha ətraflı məlumat üçün aşağıdakı [İzləmə Pixel](#pixel) bölməsinə baxın.
         * Fəaliyyətinizi bitirdikdən sonra istifadəçilər aşağıdakıları edə biləcəkləri [](https://code.org/api/hour/finish) code.org/api/hour/finish ünvanına yönəldilməlidir: 
@@ -185,7 +185,7 @@ Bir neçə ipucu:
         
         Kompüter elmləri müəllimlərindən ibarət müxtəlif komitə təqdimatları keyfiyyət və kəmiyyət meyarlarına əsasən sıralaya bilər. Əsas meyarlara uyğun olan bütün fəaliyyətlər sadalanacaqdır.
         
-        Ənənəvi kodlaşdırma fəaliyyətləri üçün müxtəlif kompüter elmləri müəllimləri komitəsi təqdimatları keyfiyyət və kəmiyyət meyarlarına əsasən sıralaya bilər. Əsas meyarlara uyğun olan bütün fəaliyyətlər sadalanacaqdır. Müəllimlər sinifləri üçün ən yaxşı fəaliyyətləri tapmaq üçün süzgəcdən keçirə və çeşidləyə biləcəklər.
+        For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
         
         Baxış komitəsi fəaliyyəti istehsal keyfiyyətində sıfır qiymətləndirirsə (pis səhvlər və ya istifadəni çox çətinləşdirən təlimatlar səbəbindən), az təmsil olunan qruplarda öyrənməni təşviq etməkdə (irqçi/cinsiyyətçi material səbəbiylə), təhsil dəyərində (CS anlayışlarını öyrətmir) və ya əyləncəli/cəlbedici (şagirdlərin işləməsi çətin/ruhdan düşməsi səbəbindən), fəaliyyət siyahıya alınmayacaq.
         
@@ -203,13 +203,13 @@ Bir neçə ipucu:
         - Qeydiyyatdan keçməyin
         - Ödəniş tələb olunmur (robototexnika fəaliyyəti istisna olmaqla, bunlar robot/dəst almağı tələb edə bilər)
         
-        Yeni müəllimlər və tələbələr üçün özünü idarə edən fəaliyyətlər üçün araşdırma komitəsi aşağıdakıları axtaracaq:
+        For self-directed activities for new teachers and students the review committee will be looking for whether:
         
         - Müəllimlər dərslikdən və ya fəaliyyətdən kompüter elmində heç bir məlumatı olmayan istifadə edə bilərlər
         - Tələbələr kompüter elmləri sahəsində heç bir məlumat olmadan uğur qazana bilərlər
         - Şagirdlər valideyn və ya müəllim rəhbərliyi olmadan özlərini dərslik vasitəsi ilə yönəldə bilərlər
         
-        Müəllimlər və tələbələr sinif, təcrübə səviyyəsi, fənn, aparat və s. kimi filtrlər əsasında fəaliyyət siyahımızı axtarıb süzgəcdən keçirə biləcəklər. Varsayılan olaraq əvvəlcə dərs planlarını və fəaliyyətlərini göstərəcəyik:
+        Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
         
         - Baxış komitəsindən ən yüksək reytinqləri əldə edin
         - Başlayanlar (tələbələr və müəllimlər) üçün nəzərdə tutulmuş bir saatlıq özünü idarə edən fəaliyyətlərdir
@@ -226,7 +226,7 @@ Bir neçə ipucu:
         
         ## Bir saatlıq özünü idarə edən dərsliklər hazırlamaq üçün təkliflər
         
-        Fəaliyyətlərə AI daxil etmək məcburiyyətində deyil, baxmayaraq ki, biz daha çox AI ilə əlaqəli fəaliyyətlər təklif etmək istəyirik.
+        Activities do not have to include AI, though we are looking to offer more AI related activities.
         
         **Müəllim qeydlərini daxil edin.** Əksər fəaliyyətlər tələbə yönümlü olmalıdır, lakin bir fəaliyyət müəllim tərəfindən asanlaşdırılırsa və ya idarə olunarsa, xahiş edirəm fəaliyyətinizlə birlikdə təqdim olunan ayrı bir URL-də müəllim qeydləri şəklində müəllim üçün aydın və sadə istiqamətləri daxil edin. Tələbələr nəinki təcrübəsizdirlər, bəzi müəllimlər də var. Kimi məlumatları daxil edin:
         
@@ -239,15 +239,15 @@ Bir neçə ipucu:
         - Cüt proqramlaşdırma tövsiyə edirsiniz?
         - Sinifdə istifadə üçün mülahizələr? Məsələn, videolar varsa, müəllimlərə videoları bütün sinif otağının birlikdə keçirməsi üçün proqnozlaşdırılan ekranda göstərmələrini tövsiyə edin
         
-        **Fəaliyyətin sonunda rəy daxil edin.** (Məsələn, “10 səviyyəni bitirdiniz və döngələr haqqında öyrəndiniz! Əla iş!”)
+        **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
         
-        **Tələbələri bitirdikdən sonra sosial mediaya göndərməyə təşviq edin (lazım olduqda).** Məsələn, “ ________ ilə bir saat Kod etdim varmı? #HourOfCode” və ya “#CSEdWeek hissəsinin bir hissəsi olaraq #HourOfCode etdim. Sən var? @Scratch.” **#HourOfCode** hashtagından istifadə edin (böyük hərflərlə H, O, C)
+        **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
         
-        **Fəaliyyətinizi ispan dilində və ya ingilis dilindən başqa digər dillərdə yaradın.**
+        **Create your activity in Spanish or in other languages besides English.**
         
-        **Fəaliyyəti sosial cəhətdən əhəmiyyətli bir kontekstə izah edin və ya əlaqələndirin.** Kompüter proqramlaşdırma tələbələr dünyanı yaxşılığa doğru necə dəyişə biləcəyini görəndə super gücə çevrilir!
+        **Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
         
-        **Dərsliyinizin [Cüt Proqramlaşdırma](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradiqmasında istifadə oluna biləcəyinə əmin olun.** Bu, Kod Saatı üçün xüsusilə faydalıdır, çünki bir çox sinifdə bütün tələbələr üçün 1:1 avadanlıq yoxdur.
+        **Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
         
         [**Yuxarıya qayıt**](#top)
         
@@ -258,7 +258,7 @@ Bir neçə ipucu:
         
         ## Ticarət markası qaydaları
         
-        Hour of Code® və Hora del Código® Code.org şirkətinin qeydiyyatdan keçmiş ticarət nişanlarıdır. Dərslik tərəfdaşlarımızın bir çoxu, Kod Saatı fəaliyyətləri ilə əlaqədar olaraq veb saytlarında “Kod Saatı” ticarət nişanlarımızı istifadə etdilər. Bu istifadənin qarşısını almaq istəmirik, amma istifadənin bir neçə məhdudiyyətə düşdüyünə əmin olmaq istəyirik:
+        Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
         
         1. “Kod Saatı” ndan yalnız Kod Saatı kampaniyası kontekstində qeyri-kommersiya CS Təhsil fəaliyyəti ilə əlaqədar olaraq və başqa məqsədlər üçün istifadə edin.
         2. “Kod Saatı” na hər hansı bir istinad, öz marka adınız olduğunu düşünməyən, əksinə Kod Saatına bir xalq hərəkəti olaraq istinad edən bir şəkildə istifadə edilməlidir. Yaxşı nümunə: “AcmeCorp.com saytında Kod Saatı® -da iştirak edin”. Pis nümunə: “ACME Corp tərəfindən Kod Saatını sınayın”.
@@ -277,15 +277,15 @@ Bir neçə ipucu:
         
         ## İzləmə Pixel
         
-        Dərsliyiniz təsdiqlənərsə və son dərs səhifəsinə daxil edilərsə, Code.org sizə təlimatınıza inteqrasiya etməyiniz üçün unikal izləmə pikseli təqdim edəcəkdir. Aşağıdakı nümunəyə baxın. Dərsliyinizin heç bir aralıq səhifəsinə daxil etməyin.
+        Dərsliyiniz təsdiqlənərsə və son dərs səhifəsinə daxil edilərsə, Code.org sizə təlimatınıza inteqrasiya etməyiniz üçün unikal izləmə pikseli təqdim edəcəkdir. Aşağıdakı nümunəyə baxın. Do not include on any interim pages of your tutorial.
         
-        Bu, Kod Saatı təlimatınızı edən istifadəçiləri saymağa imkan verəcək. Bu, təlimatınız üçün daha dəqiq iştirak sayına səbəb olacaqdır.
+        This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
         
-        Dərsliyiniz təsdiqlənərsə və son dərs səhifəsinə daxil edilərsə, Code.org sizə təlimatınıza inteqrasiya etməyiniz üçün unikal izləmə pikseli təqdim edəcəkdir. Aşağıdakı nümunəyə baxın.
+        If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
         
-        QEYD: quraşdırıla bilən tətbiqlər (iOS/Android tətbiqləri və ya masa üstü quraşdırma tətbiqləri) üçün bunu etmək vacib deyil
+        NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
         
-        Dance Party üçün nümunə izləmə pikselləri:
+        Example tracking pixels for Dance Party:
         
         IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
         
@@ -299,7 +299,7 @@ Bir neçə ipucu:
         
         ## Fəaliyyətlərinizi təşviq etmək, CSEDWeek və Kod Saatı
         
-        Zəhmət olmasa fəaliyyətinizi şəbəkənizə təbliğ edin! Onları Kod Saatı səhifənizə yönləndirin. İstifadəçilərinizin fəaliyyətinizlə bağlı sizdən göndərdiyi bir poçtla reaksiya vermə ehtimalı daha yüksəkdir. İstifadəçiləri başqalarını qoşulmağa dəvət etməyə təşviq etmək və daha çox tələbə əldə etməyimizə kömək etmək üçün Kompüter Elmləri Təhsil Həftəsi zamanı beynəlxalq Kod Saatı kampaniyasından istifadə edin!
+        Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
         
         - Veb saytınızda Kod Saatı və CSEDWeek xüsusiyyəti. Məsələn: <http://www.tynker.com/hour-of-code>
         - #HourOfCode hashtag istifadə edərək sosial media, ənənəvi media, poçt siyahıları və s. İstifadə edərək Kod Saatını təşviq edin (böyük hərflərlə H, O, C)

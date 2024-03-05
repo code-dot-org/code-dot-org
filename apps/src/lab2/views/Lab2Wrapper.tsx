@@ -13,12 +13,16 @@ import moduleStyles from './Lab2Wrapper.module.scss';
 import ErrorBoundary from '../ErrorBoundary';
 import {LabState, isLabLoading, hasPageError} from '../lab2Redux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Lab2MetricsReporter from '../Lab2MetricsReporter';
 const i18n = require('@cdo/locale');
+
+import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import Lab2Registry from '../Lab2Registry';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
 }
+
+const noFade = window.location.href.includes('lab2-no-fade');
 
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
@@ -27,17 +31,24 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
-  const overlayStyle: string = isLoading
-    ? moduleStyles.showingBlock
-    : moduleStyles.fadeInBlock;
+
+  const overlayStyle: string = noFade
+    ? isLoading
+      ? moduleStyles.noFadeLoading
+      : moduleStyles.noFadeLoaded
+    : isLoading
+    ? moduleStyles.fadeLoading
+    : moduleStyles.fadeLoaded;
 
   return (
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
       onError={(error, componentStack) =>
-        Lab2MetricsReporter.logError('Uncaught React Error', error, {
-          componentStack,
-        })
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Uncaught React Error', error, {
+            componentStack,
+          })
       }
     >
       <div
@@ -73,30 +84,5 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     </ErrorBoundary>
   );
 };
-
-export interface ErrorUIProps {
-  message?: string;
-}
-
-export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
-  <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
-    <div id="page-error" className={moduleStyles.pageError}>
-      <img
-        className={moduleStyles.pageErrorImage}
-        src="/shared/images/sad-bee-avatar.png"
-      />
-      <div>{i18n.loadingError()}</div>
-      {message && (
-        <div className={moduleStyles.pageErrorMessage}>({message})</div>
-      )}
-    </div>
-  </div>
-);
-
-export const ErrorFallbackPage = () => (
-  <div id="lab-container" className={moduleStyles.labContainer}>
-    <ErrorUI />
-  </div>
-);
 
 export default Lab2Wrapper;

@@ -1,5 +1,5 @@
 ---
-title: Linji Gwida tal-Attività
+title: Activity Guidelines
 layout: wide
 ---
 
@@ -15,7 +15,7 @@ Code.org tospita varjetà ta 'attivitajiet ta' Hour of Code™, lezzjonijiet, u 
 
 Trid tissottometti t-tutorja awto-gwidata tiegħek stess, lezzjoni mmexxija mill-għalliem, jew attività robotika/maker li tispjega prinċipju tax-xjenza tal-kompjuter? Ingħaqad ma 'dan il-moviment globali u għin lill-parteċipanti madwar id-dinja jibdew b'siegħa ta' kodiċi jew imorru lil hinn b'attivitajiet multi-lezzjoni, ta 'ġurnata, jew ta' ġimgħa.
 
-**Wara li taqra l-linji gwida, tista 'tissottometti l-attività tiegħek permezz ta' [Hour of Code™ Attività tagħna u Sottomissjoni AI paġna](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Tista 'tissottometti attività fi kwalunkwe ħin, iżda l-iskadenza għall-inklużjoni fi kwalunkwe sena kalendarja partikolari hija l-1 ta' Ottubru. (Pereżempju, kwalunkwe attività riċevuta wara l-1 ta 'Ottubru, 2023, mhix se tkun elenkata għas-Siegħa tal-Kodiċi tal-2023.)** Jekk għandek xi mistoqsijiet dwar is-sottomissjoni tal-attività tiegħek, jekk jogħġbok ikkuntattjana fuq support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Tista 'tissottometti attività fi kwalunkwe ħin, iżda l-iskadenza għall-inklużjoni fi kwalunkwe sena kalendarja partikolari hija l-1 ta' Ottubru. (Pereżempju, kwalunkwe attività riċevuta wara l-1 ta 'Ottubru, 2023, mhix se tkun elenkata għas-Siegħa tal-Kodiċi tal-2023.)** Jekk għandek xi mistoqsijiet dwar is-sottomissjoni tal-attività tiegħek, jekk jogħġbok ikkuntattjana fuq support@code.org.
 
 Xi ftit pariri:
 
@@ -104,23 +104,23 @@ Dak li għandek bzonn:
 * L-isem u l-email tal-kuntatt primarju li jirrappreżenta l-attività sottomessa
 * Isem tal-Attività (ma jistax jinkludi “Siegħa tal-Kodiċi” fl-isem)
 * Rabta tal-URL għall-attività
-* Din l-attività tinkludi AI: Iva jew Le
-* Deskrizzjoni tal-attività (għadd massimu tal-karattru: 400) 
-    * Jekk jogħġbok inkludi fid-deskrizzjoni jekk hux prinċipalment iggwidat mill-istudenti jew iffaċilitat mill-għalliema. Barra minn hekk, xi skejjel huma interessati li jkunu jafu jekk l-attivitajiet tas-Siegħa tal-Kodiċi jindirizzawx l-Istandards tax-Xjenza tal-Qofol Komuni jew tal-Ġenerazzjoni li Jmiss. Jekk l-attività tindirizza standards speċifiċi, ikkunsidra li tinkludi din l-informazzjoni.
-* Livell (i) ta' grad rakkomandat (i) għall-utenti maħsuba. Inti tista' tirreferi għall- \[Istandards K-12 tal-Assoċjazzjoni tal-Għalliema tax-Xjenza tal-Kompjuter\] (https://k12cs.org/framework-statements-by-grade-band/) għal kunċetti tax-xjenza tal-kompjuter xierqa għall-grad. Livelli ta 'grad ta' eżempju jinkludu: 
-    * Kindergarten - Grad 1 (etajiet 4-6)
-    * Gradi 2-5 (etajiet 7-10)
-    * Gradi 6-8 (etajiet 11-13)
-    * Gradi 9+ (etajiet 14+)
-* Lista ta 'lingwi ta' programmazzjoni l-attività tiegħek tgħallem. Jiġifieri C/C ++, Java, JavaScript, eċċ. jew lingwa indipendenti (għal pjanijiet ta 'lezzjoni li jistgħu jiġu mgħallma f'lingwi multipli) agħżel l-arti tal-lingwa.
-* Lista ta 'lingwi naturali appoġġjati. Nota: Id-detezzjoni tal-lingwa hija r-responsabbiltà tal-fornitur tal-attività; aħna nidderieġu mill-ġdid lill-utenti kollha lejn il-URL uniku pprovdut. jew lingwa indipendenti (għal pjanijiet ta 'lezzjoni li jistgħu jiġu mgħallma f'lingwi multipli)
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
+    * Kindergarten - Grade 1 (ages 4-6)
+    * Grades 2-5 (ages 7-10)
+    * Grades 6-8 (ages 11-13)
+    * Grades 9+ (ages 14+)
+* Lista ta 'lingwi ta' programmazzjoni l-attività tiegħek tgħallem. Jiġifieri C/C ++, Java, JavaScript, eċċ. jew lingwa indipendenti (għal pjanijiet ta 'lezzjoni li jistgħu jiġu mgħallma f'lingwi multipli) choose language arts.
+* Lista ta 'lingwi naturali appoġġjati. Nota: Id-detezzjoni tal-lingwa hija r-responsabbiltà tal-fornitur tal-attività; aħna nidderieġu mill-ġdid lill-utenti kollha lejn il-URL uniku pprovdut. or language independent (for lesson plans that can be taught in multiple languages)
 * X'livell ta' esperjenza għandu jkollu edukatur biex juża l-attività tiegħek? (eż. Bidu jew Komdu.) U, liema livell ta 'esperjenza għandu jkollhom l-istudenti?
-* X'livell ta' esperjenza għandu jkollu edukatur biex juża l-attività tiegħek? (eż. Bidu jew Komdu.) U, liema livell ta 'esperjenza għandu jkollhom l-istudenti? Jekk tixtieq tipprepara Hour of Code™ Activities aktar avvanzati, jekk jogħġbok inkludi l-għarfien minn qabel meħtieġ fid-deskrizzjoni tal-attività tiegħek.
-* It-tul tal-attività tiegħek 
-    * Siegħa 1 biss
-    * Siegħa bil-kors ta 'segwitu
-    * 2-6 sigħat (jistgħu jkunu lezzjonijiet multipli)
-* Lista ta 'akkomodazzjonijiet ta' aċċessibilità, jekk l-attività tiegħek ikollha magħhom. Dawn jinkludu kompatibilità tal-qarrej tal-iskrin, kapaċitajiet minn test għal diskors, użu ta 'kuluri b'kuntrast għoli, jew kwalunkwe akkomodazzjonijiet oħra magħmula għal studenti b'diżabilità.
+* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Affarijiet addizzjonali li jkollok bżonn meta tissottometti Pjanijiet ta 'Lezzjoni
 
@@ -139,7 +139,7 @@ Dak li għandek bzonn:
         * Safari mobbli tal-iOS (ottimizzat bil-mowbajl)
         * Android Chrome (ottimizzat bil-mowbajl)
     * Mhux ibbażat fuq il-web: speċifika pjattaforma għal kodiċi nattiv (Mac, Win, iOS, Android, XBox, oħrajn)
-    * Mhux ipplaggjat
+    * Unplugged
 * Screenshot jew immaġni tal-kummerċjalizzazzjoni tal-attività tas-Siegħa tal-Kodiċi. Jekk jogħġbok ibgħat mill-inqas immaġni waħda b'4:3 dimensjonijiet. Għandu jkun mill-inqas 520px minn 390px. Din id-dehra m'għandux ikollha test fuqha (minbarra l-logo tiegħek), sabiex tagħmilha aktar aċċessibbli għal kelliema mhux Ingliżi. Jekk ma tingħatax immaġni xierqa, nistgħu nieħdu l-screenshot tagħna stess tat-tutorja tiegħek JEW nistgħu nagħżlu li ma nelenkawhx. L-immaġini kollha għandhom jiġu sottomessi bħala link URL għal .jpg, .jpeg, jew.png.
 * Sabiex issegwi b'mod aktar preċiż il-parteċipazzjoni, l-imsieħba tutorja ta 'partijiet terzi għandhom jinkludu immaġini ta' traċċar ta '1-pixel fl-ewwel paġna tat-tutorials tas-Siegħa tal-Kodiċi tagħhom. Ara l- [Traċċar Pixel](#pixel) taqsima hawn taħt għal aktar dettalji.
 * Malli tispiċċa l-attività tiegħek, l-utenti għandhom ikunu diretti lejn [](https://code.org/api/hour/finish) code.org/api/hour/finish fejn ikunu jistgħu: 
@@ -170,7 +170,7 @@ Dak li għandek bzonn:
 
 Kumitat divers ta 'edukaturi tax-xjenza tal-kompjuter se jikklassifika sottomissjonijiet ibbażati fuq kriterji kwalitattivi u kwantitattivi. L-attivitajiet kollha li jaqblu mal-kriterji bażiċi se jiġu elenkati.
 
-Għal attivitajiet ta 'kodifikazzjoni tradizzjonali, kumitat divers ta' edukaturi tax-xjenza tal-kompjuter se jikklassifika sottomissjonijiet ibbażati fuq kriterji kwalitattivi u kwantitattivi. L-attivitajiet kollha li jaqblu mal-kriterji bażiċi se jiġu elenkati. L-għalliema se jkunu jistgħu jiffiltraw u jissortjaw biex isibu l-aħjar attivitajiet għall-klassi tagħhom.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 Jekk il-kumitat ta 'reviżjoni jivvaluta l-attività żero fil-kwalità tal-produzzjoni (minħabba bugs ħżiena jew struzzjonijiet li jagħmluha diffiċli ħafna biex tużah), fil-promozzjoni tat-tagħlim fi gruppi sottorappreżentati (minħabba materjal razzist/sessist), f'valur edukattiv (ma jgħallimx kunċetti CS), jew gost/involviment (minħabba li huma diffiċli/skoraġġanti għall-istudenti biex jaħdmu), l-attività ma tiġix elenkata.
 
@@ -188,13 +188,13 @@ Għal attivitajiet awtodiretti għal għalliema u studenti ġodda, il-kumitat ta
 - Jeħtieġu l-ebda sinjal
 - Ma teħtieġ l-ebda ħlas (eċċezzjoni għall-attivitajiet tar-robotika li dawn jistgħu jeħtieġu xiri ta 'robot/kit)
 
-Għal attivitajiet awtodiretti għal għalliema u studenti ġodda, il-kumitat ta 'reviżjoni se jkun qed ifittex jekk:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - L-għalliema jistgħu jużaw it-tutorja jew l-attività mingħajr sfond fix-xjenza tal-kompjuter
 - L-istudenti jistgħu jirnexxu mingħajr sfond fix-xjenza tal-kompjuter
 - L-istudenti jistgħu jidderieġu lilhom infushom permezz tat-tutorja mingħajr gwida tal-ġenituri jew tal-għalliema
 
-L-għalliema u l-istudenti jkunu jistgħu jfittxu permezz ta 'u jiffiltraw il-lista ta' attivitajiet tagħna bbażati fuq filtri bħal grad, livell ta 'esperjenza, suġġett, ħardwer, eċċ. B'mod awtomatiku, aħna se nuru pjanijiet u attivitajiet tal-lezzjonijiet l-ewwel li:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
 - Irċievi l-ogħla klassifikazzjonijiet mill-kumitat ta' reviżjoni
 - Huma siegħa attivitajiet awto-diretti ddisinjati għal dawk li jibdew (studenti u għalliema)
@@ -208,7 +208,7 @@ L-għalliema u l-istudenti jkunu jistgħu jfittxu permezz ta 'u jiffiltraw il-li
 
 ## Suġġerimenti għat-tfassil ta 'siegħa tutorials iggwidati minnhom infushom
 
-L-attivitajiet m'għandhomx għalfejn jinkludu l-AI, għalkemm qed infittxu li noffru aktar attivitajiet relatati mal-AI.
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 **Inkludi noti tal-għalliema.** Ħafna mill-attivitajiet għandhom ikunu diretti mill-istudenti, imma jekk attività hija ffaċilitata jew ġestita minn għalliem, jekk jogħġbok inkludi direzzjonijiet ċari u sempliċi għall-għalliem fil-forma ta 'noti għall-għalliema f'URL separat sottomess mal-attività tiegħek. Mhux biss l-istudenti huma novizzi, uħud mill-għalliema huma wkoll. Inkludi informazzjoni bħal:
 
@@ -221,13 +221,13 @@ L-attivitajiet m'għandhomx għalfejn jinkludu l-AI, għalkemm qed infittxu li n
 - Do you jirrakkomandaw ipprogrammar par?
 - Konsiderazzjonijiet għall-użu fi klassi? Eż jekk hemm vidjows, avża lill-għalliema biex juru l-vidjows fuq skrin ipproġettat għall-klassi kollha biex jaraw flimkien
 
-**Inkorpora feedback fi tmiem l-attività.** (Eż. “Inti lest 10 livelli u tgħallmu dwar loops! Xogħol kbir!”)
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
 
-**Jinkoraġġixxu lill-istudenti biex post għall-midja soċjali (fejn xieraq) meta ħadthom lest.** Per eżempju “I ghamilt Siegħa ta 'Kodiċi ma ________ Have you? #HourOfCode” jew “Jien għamilt #HourOfCode bħala parti minn #CSEdWeek. Have you? @Scratch.” Uża l-hashtag **#HourOfCode** (bl-ittri kapitali H, O, C)
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Oħloq l-attività tiegħek bl-Ispanjol jew f'lingwi oħra minbarra l-Ingliż.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**Spjega jew qabbad l-attività ma 'kuntest soċjalment sinifikanti.** L-ipprogrammar tal-kompjuter isir superpotenza meta l-istudenti jaraw kif tista 'tbiddel id-dinja għall-aħjar!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
 **Kun żgur li t-tutorja tiegħek tista 'tintuża</a> f'paradigma ta' Programmazzjoni ta 'Pair.</strong> Dan huwa partikolarment utli għas-Siegħa tal-Kodiċi minħabba li ħafna klassijiet m'għandhomx 1:1 hardware għall-istudenti kollha.</p> 
 
@@ -237,7 +237,7 @@ L-attivitajiet m'għandhomx għalfejn jinkludu l-AI, għalkemm qed infittxu li n
 
 ## Linji Gwida tat-Tradem
 
-Siegħa ta 'Code® u Hora del Código® huma trademarks irreġistrati ta' Code.org. Ħafna mill-imsieħba tutorja tagħna użaw it-trademarks tagħna “Siegħa tal-Kodiċi” fuq is-siti web tagħhom b'rabta mal-attivitajiet tas-Siegħa tal-Kodiċi tagħhom. Ma rridux nipprevjenu dan l-użu, imma rridu niżguraw li l-użu jaqa 'fi ftit limiti:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
 1. Uża “Siegħa ta 'Kodiċi” biss b'konnessjoni ma' attivitajiet mhux kummerċjali CS Edukazzjoni fil-kuntest tal-kampanja Siegħa ta 'Kodiċi, u għall-ebda skop ieħor.
 2. Kwalunkwe referenza għal “Siegħa tal-Kodiċi” għandha tintuża b'mod li ma jissuġġerixxix li huwa l-isem tad-ditta tiegħek stess, iżda li pjuttost jirreferi l-Hour of Code bħala moviment bażiku. Eżempju tajjeb: “Ipparteċipa fis-Siegħa ta 'Code® fuq Acmecorp.com”. Eżempju ħażin: “Ipprova Siegħa tal-Kodiċi minn ACME Corp”.
@@ -253,15 +253,15 @@ Siegħa ta 'Code® u Hora del Código® huma trademarks irreġistrati ta' Code.o
 
 ## Traċċar tal-Pixel
 
-Jekk it-tutorja tiegħek hija approvata u inkluża fuq il-paġna tat-tutorja finali, Code.org jagħtik pixel ta 'traċċar uniku għalik biex tintegra fit-tutorja tiegħek. Ara l-eżempju hawn taħt. Tinkludix fuq xi paġni interim tat-tutorja tiegħek.
+Jekk it-tutorja tiegħek hija approvata u inkluża fuq il-paġna tat-tutorja finali, Code.org jagħtik pixel ta 'traċċar uniku għalik biex tintegra fit-tutorja tiegħek. Ara l-eżempju hawn taħt. Do not include on any interim pages of your tutorial.
 
-Dan jippermettilna ngħoddu l-utenti li jagħmlu t-tutorja tas-Siegħa tal-Kodiċi tiegħek. Dan iwassal għal għadd ta 'parteċipazzjoni aktar preċiż għat-tutorja tiegħek.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-Jekk it-tutorja tiegħek hija approvata u inkluża fuq il-paġna tat-tutorja finali, Code.org jagħtik pixel ta 'traċċar uniku għalik biex tintegra fit-tutorja tiegħek. Ara l-eżempju hawn taħt.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-NOTA: dan mhux importanti li tagħmel għal apps li jistgħu jiġu installati (apps IOS/Android, jew apps desktop jinstallaw)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-Eżempju ta 'traċċar ta' pixel għal Dance Party:
+Example tracking pixels for Dance Party:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
@@ -272,7 +272,7 @@ IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/b
 
 ## Promozzjoni tal-attivitajiet tiegħek, CSEDWeek, u Hour of Code
 
-Jekk jogħġbok tippromwovi l-attività tiegħek għan-netwerk tiegħek! Idderieġihom lejn il-paġna tas-Siegħa tal-Kodiċi tiegħek. L-utenti tiegħek huma ħafna iktar probabbli li jirreaġixxu għal posta mingħandek dwar l-attività tiegħek. Uża l-kampanja internazzjonali tas-Siegħa tal-Kodiċi matul il-Ġimgħa tal-Edukazzjoni tax-Xjenza tal-Kompjuter bħala skuża biex tħeġġeġ lill-utenti jistiednu lil ħaddieħor biex jissieħeb fih, u jgħinna nilħqu aktar studenti!
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Siegħa tal-Karatteristika tal-Kodiċi u CSEDWeek fuq il-websajt tiegħek. Ex: <http://www.tynker.com/hour-of-code>
 - Tippromwovi Siegħa ta 'Kodiċi billi tuża midja soċjali, midja tradizzjonali, listi tal-posta, eċċ, billi tuża hashtag #HourOfCode (b'ittri kbar H, O, C)

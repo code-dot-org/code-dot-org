@@ -993,7 +993,7 @@ module.exports = {
         '<button id="button1" data-canonical-image-url="yellow.png" style="padding: 0px; margin: 0px; height: 120px; width: 120px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 120px; top: 130px; ' +
         'background-image: url(http://localhost-studio.code.org:3000/v3/assets/Adks1c9Ko6WdR2PuwkA6cw/yellow.png); background-color: rgb(26, 188, 156); background-size: 120px 120px;">Button</button>' +
         '<img src="" id="image2" style="height: 100px; width: 100px; position: absolute; left: 20px; top: 20px; margin: 0px;" />' +
-        '<img src="/blockly/media/1x1.gif" id="image3" data-canonical-image-url="" style="height: 100px; width: 100px; position: absolute; left: 30px; top: 155px; margin: 0px;" />' +
+        '<img src="/blockly/media/1x1.gif" alt="" id="image3" data-canonical-image-url="" style="height: 100px; width: 100px; position: absolute; left: 30px; top: 155px; margin: 0px;" />' +
         '</div>' +
         '</div>',
       runBeforeClick: function (assert) {

@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require_relative '../../../shared/test/test_helper'
-require_relative '../../cdo/pegasus'
 require_relative '../../cdo/web_purify'
 
 class WebPurifyTest < Minitest::Test

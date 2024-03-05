@@ -10,7 +10,7 @@ import {
   Col,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
-import {styles} from './TeacherApplicationConstants';
+import {getProgramInfo, styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders,
@@ -41,6 +41,8 @@ const FindYourRegion = props => {
   const resetCountry = () => onChange({country: US});
   const [regionalPartner] = useRegionalPartner(data);
   const [lastRPLogged, setLastRPLogged] = useState(regionalPartner?.name);
+
+  const programInfo = getProgramInfo(data.program);
 
   useEffect(() => {
     onChange({
@@ -140,11 +142,8 @@ const FindYourRegion = props => {
           </p>
           <p>
             Code.org will review your application and contact you with options
-            for joining the program hosted by a Regional Partner from a
-            different region. Please note that we are not able to guarantee a
-            space for you with another Regional Partner, and you will be
-            responsible for the costs associated with traveling to that location
-            if a virtual option is not available.
+            for joining a virtual cohort of {programInfo.name} teachers from
+            another region.
           </p>
         </>
       );

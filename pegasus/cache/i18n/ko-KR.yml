@@ -216,6 +216,7 @@ ko-KR:
   class_submission_out_of_school_summer_camp: 여름 캠프
   classicmaze_name: 고전 미로게임
   code_hoc_coming: Hour of Code 가 여기있습니다. - 12월8일-14일!
+  code_org_logo_alt: Cord.org 홈
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   codea_beyond_gradelevel: 고등학생 이상
   codea_beyond_longdescription: 아이패드용 코디아(Codea)는 게임, 시뮬레이션 &mdash; 또는 자신이 가진 비주얼적
@@ -984,6 +985,7 @@ ko-KR:
   header_home: 홈
   header_learn: 학습
   header_legal: 개인정보 보호 및 법률
+  header_legal_cookie_notice: 쿠키 방침
   header_legal_privacy: 개인정보보호 정책
   header_legal_tos: 이용 약관
   header_my_dashboard: 내 대시보드
@@ -991,6 +993,7 @@ ko-KR:
   header_project_gallery: 프로젝트
   header_report_abuse: 학대 사례 신고
   header_report_bug: 문제 신고
+  header_schools: 학교
   header_screen_reader_hamburger: 메뉴
   header_screen_reader_help: 도움말 메뉴
   header_sections: 섹션
@@ -1708,7 +1711,7 @@ ko-KR:
   pre-express_name: 프리 리더 익스프레스 과정
   previous: 이전
   print_all: 모두 인쇄
-  print_batch_certificates: 한 묶음의 인증서 인쇄
+  print_batch_certificates: 인증서 일괄 인쇄하기
   print_certificates: 인증서 인쇄하기
   print_ice_art: 내가 만든 얼음 아트 인쇄하기
   print_ice_art_from_frozen: 겨울 왕국 튜토리얼에서 아이스 아트 인쇄

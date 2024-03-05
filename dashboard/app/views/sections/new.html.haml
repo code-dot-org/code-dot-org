@@ -1,4 +1,4 @@
-%script{src: webpack_asset_path('js/sections/new.js'), data: {isUsersFirstSection: @is_users_first_section.to_json}}
+%script{src: webpack_asset_path('js/sections/new.js'), data: {isUsersFirstSection: @is_users_first_section.to_json, canEnableAITutor: current_user.can_enable_ai_tutor?.to_json}}
 
 #form
 

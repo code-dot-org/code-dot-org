@@ -29,13 +29,16 @@
   display: flex;
   align-content: baseline;
 
+  &.white {
+    background: var(--neutral_white);
+  }
+
   h3 {
     width: 100%;
     margin-top: 0;
   }
 
   figure {
-
     &.video-responsive {
       margin-bottom: 1rem;
     }
@@ -59,6 +62,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding: 1.25rem;
+  text-align: initial;
 
   // Align copy or button(s) to the bottom of a block when
   // blocks are vastly different heights due to content length
@@ -105,40 +109,10 @@
   }
 
   @media screen and (max-width: $width-sm) {
-    a.link-button, button {
+    a.link-button,
+    button {
       width: 100%;
       text-align: center;
     }
-  }
-}
-
-// Editorial cards
-// See code.org/teach and code.org/help for examples
-.editorial-cards-wrapper {
-  display: grid;
-  margin-top: 4rem;
-  gap: 2.5rem;
-
-  @media screen and (min-width: $width-sm) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .flex-container {
-    gap: 1.5rem;
-    flex-direction: column;
-
-    &.self-paced-english {
-      gap: 1.3rem;
-
-      @media screen and (max-width: $width-md) {
-        gap: 0;
-      }
-    }
-  }
-
-  img {
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
   }
 }

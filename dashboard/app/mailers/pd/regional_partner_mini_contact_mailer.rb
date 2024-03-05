@@ -1,6 +1,6 @@
 class Pd::RegionalPartnerMiniContactMailer < ApplicationMailer
   NO_REPLY = 'Code.org <noreply@code.org>'
-  default from: 'Dave Frye <partner@code.org>'
+  default from: 'Sam Morris <partner@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
   def matched(form, rp_pm)

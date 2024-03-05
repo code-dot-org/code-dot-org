@@ -1,34 +1,18 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
-
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../mobile'
 
 module I18n
   module Resources
     module Pegasus
       module Mobile
-        class SyncIn
-          def self.perform
-            new.execute
-          end
-
-          def execute
-            progress_bar.start
-
+        class SyncIn < I18n::Utils::SyncInBase
+          def process
             # TODO: fix `i18n/locales/source/pegasus/mobile.yml` instead of the original file `pegasus/cache/i18n/en-US.yml`
-            pegasus_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, 'en-US.yml')
-            I18nScriptUtils.fix_yml_file(pegasus_i18n_file_path)
-            I18nScriptUtils.copy_file(pegasus_i18n_file_path, CDO.dir(I18N_SOURCE_DIR, DIR_NAME, FILE_NAME))
-
-            progress_bar.finish
-          end
-
-          private
-
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(title: 'Pegasus/mobile sync-in')
+            I18nScriptUtils.fix_yml_file(ORIGINAL_I18N_FILE_PATH)
+            I18nScriptUtils.copy_file(ORIGINAL_I18N_FILE_PATH, I18N_SOURCE_FILE_PATH)
           end
         end
       end

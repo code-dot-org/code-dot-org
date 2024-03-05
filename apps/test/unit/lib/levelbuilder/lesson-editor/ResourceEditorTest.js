@@ -37,7 +37,7 @@ describe('ResourcesEditor', () => {
       .first();
     removeResourceButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
     expect(removeResource).to.have.been.calledOnce;
   });

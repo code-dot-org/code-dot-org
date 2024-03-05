@@ -21,11 +21,11 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   test 'urls are escaped' do
     script = create(:script, name: "test-escapes-script", seeded_from: Time.at(0))
     lesson = create(:lesson, script: script, name: "Some!name_with?special/characters")
-    Services::CurriculumPdfs.expects(:lesson_plan_pdf_exists_for?).with(lesson, false).returns(true)
+    Services::CurriculumPdfs.expects(:lesson_plan_pdf_exists_for?).with(lesson, student_facing: false).returns(true)
     assert_equal Pathname.new("test-escapes-script/19700101000000/teacher-lesson-plans/Some-name_with-special-characters.pdf"),
-      Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, false)
+      Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, student_facing: false)
     assert_equal "https://lesson-plans.code.org/test-escapes-script/19700101000000/teacher-lesson-plans/Some-name_with-special-characters.pdf",
-      Services::CurriculumPdfs.get_lesson_plan_url(lesson, false)
+      Services::CurriculumPdfs.get_lesson_plan_url(lesson, student_facing: false)
   end
 
   test 'pathnames are differentiated by audience' do
@@ -34,7 +34,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
     assert_equal Pathname.new("test-pathnames-script/19700101000000/teacher-lesson-plans/test-pathnames-lesson.pdf"),
       Services::CurriculumPdfs.get_lesson_plan_pathname(lesson)
     assert_equal Pathname.new("test-pathnames-script/19700101000000/student-lesson-plans/test-pathnames-lesson-Student.pdf"),
-      Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, true)
+      Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, student_facing: true)
   end
 
   test 'Lesson PDFs are generated into the given directory' do
@@ -56,10 +56,10 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
     Dir.mktmpdir('curriculum_pdfs_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
       url = Rails.application.routes.url_helpers.script_lesson_student_url(script, lesson)
-      filename = File.join(tmpdir, Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, true))
+      filename = File.join(tmpdir, Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, student_facing: true))
       PDF.expects(:generate_from_url).with(url, filename)
       FileUtils.stubs(:cp)
-      Services::CurriculumPdfs.generate_lesson_pdf(lesson, tmpdir, true)
+      Services::CurriculumPdfs.generate_lesson_pdf(lesson, tmpdir, student_facing: true)
     end
   end
 end

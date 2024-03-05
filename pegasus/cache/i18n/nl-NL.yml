@@ -1178,6 +1178,7 @@ nl-NL:
   header_home: Home
   header_learn: Leren
   header_legal: Privacy & juridisch
+  header_legal_cookie_notice: Cookiebeleid
   header_legal_privacy: Privacybeleid
   header_legal_tos: Gebruiksvoorwaarden
   header_my_dashboard: Mijn Dashboard
@@ -1185,6 +1186,7 @@ nl-NL:
   header_project_gallery: Projecten overzicht
   header_report_abuse: Misbruik melden
   header_report_bug: Rapporteer bugs
+  header_schools: Scholen
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Help-menu
   header_sections: Secties
