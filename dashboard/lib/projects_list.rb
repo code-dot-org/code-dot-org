@@ -141,7 +141,7 @@ module ProjectsList
     #   which to search for the requested featured projects. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of active published feature projects.
     def fetch_active_published_featured_projects(project_group, featured_before: nil)
-      if project_group == 'all'        
+      if project_group == 'all'
         return fetch_featured_published_projects(featured_before: featured_before)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
