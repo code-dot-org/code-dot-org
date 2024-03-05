@@ -41,7 +41,7 @@ const EditAiCustomizations: React.FunctionComponent<
     <div>
       <input
         type="hidden"
-        id="level_validations"
+        id="level_initial_ai_customizations"
         name="level[initial_ai_customizations]"
         value={JSON.stringify(aiCustomizations)}
       />
@@ -51,7 +51,7 @@ const EditAiCustomizations: React.FunctionComponent<
         <br />
         <b>Editable:</b> students can change the value.
         <br />
-        <b>Readonly:</b> students can see the value but cannot change it.
+        <b>Read Only:</b> students can see the value but cannot change it.
         <br />
         <b>Hidden:</b> the field is not shown on the customization panel.
       </BodyThreeText>
