@@ -80,10 +80,9 @@ end
 gem 'rack-cache'
 
 group :development, :test do
+  gem 'debug', '>= 1.0.0'
   gem 'rerun'
   gem 'thin'
-  # Use debugger
-  #gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
