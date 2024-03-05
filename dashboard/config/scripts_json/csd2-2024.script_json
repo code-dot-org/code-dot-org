@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-27 21:17:29 UTC",
+    "serialized_at": "2024-03-01 18:26:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -307,6 +307,28 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "announcements": [
+          {
+            "key": "699e4f96-ff75-4a93-afea-89f9f883b2e5",
+            "notice": "Let us know how it went!",
+            "details": "We'd love to hear your thoughts about this chapter! Your feedback will help us understand the effectiveness of these changes and guide future improvements. Click the Feedback form button to let us know your thoughts and suggestions.",
+            "link": "https://forms.gle/Do9kWWHNsGw2M1bv9",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Feedback Form"
+          },
+          {
+            "key": "d55dbe13-403b-4cd1-8271-3c85dae18757",
+            "notice": "What did you think?",
+            "details": "We'd love to hear your thoughts about this chapter! Your feedback will help us understand the effectiveness of these changes and guide future improvements. Click the Feedback form button to let us know your thoughts and suggestions.",
+            "link": "https://forms.gle/FgFHYqsC9VrBtmvj7",
+            "type": "information",
+            "visibility": "Student-only",
+            "dismissible": true,
+            "buttonText": "Feedback Form"
+          }
+        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this chapter project, students use what they have learned to style and organize a web page for a user. Students begin their project by using the Problem Solving Process to help them determine how they will organize the content of a user’s web page. Students then use CSS classes and flexbox to organize their user’s web page in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process.\n\n**Question of the Day:** How can I use CSS classes and Flexbox to organize webpage content for a user?\n",
         "preparation": "* Ensure students have access to the Project Guide from the last lesson.\n* Print copies of the reflection and peer feedback documents.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
@@ -442,13 +464,24 @@
       "properties": {
         "announcements": [
           {
-            "notice": "End of Unit Survey",
-            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
-            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2",
+            "key": "6cc70a73-e037-4bb8-942d-6544c10b1b67",
+            "notice": "Let us know how it went!",
+            "details": "We'd love to hear your thoughts about this chapter! Your feedback will help us understand the effectiveness of these changes and guide future improvements. Click the Feedback form button to let us know your thoughts and suggestions.",
+            "link": "https://forms.gle/yYNYnbdRSgKLTM1t9",
             "type": "feedback",
             "visibility": "Teacher-only",
             "dismissible": false,
-            "buttonText": "Teacher Survey"
+            "buttonText": "Feedback Form"
+          },
+          {
+            "key": "c452f52b-d129-4daa-82b7-63af082f26db",
+            "notice": "What did you think?",
+            "details": "We'd love to hear your thoughts about this chapter! Your feedback will help us understand the effectiveness of these changes and guide future improvements. Click the Feedback form button to let us know your thoughts and suggestions.",
+            "link": "https://forms.gle/z2nDHUTdwsSqb6dg8",
+            "type": "feedback",
+            "visibility": "Student-only",
+            "dismissible": false,
+            "buttonText": "Feedback Form"
           }
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -4375,7 +4408,13 @@
       "key": "8b4ef7f7-510b-4416-add3-0132465f985f",
       "position": 12,
       "properties": {
-        "progression_name": "Challenge Levels"
+        "progression_name": "Challenge Levels",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is **highly advisable** to have your **students complete Challenge Level 9e** at least. The gallery product cards they will learn to build using `div` containers and Flexbox properties will come in **very** handy in the Chapter 1 project. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8b4ef7f7-510b-4416-add3-0132465f985f",
@@ -4640,7 +4679,13 @@
       "key": "9a67fb96-ba3b-46ab-bb0b-404dabfcf4a0",
       "position": 1,
       "properties": {
-        "description": "This chapter project assesses knowledge and skills of utilizing CSS Classes and flexbox concepts. Adding Flexbox concepts to an already created web page can often require the web developer to shift and move around the HTML content for the page to look as expected. As a result, this project has 3 options for you to choose from depending on the difficulty level and time constraints. \n\n**Option 1 - Easy:** Students add classes and flexbox to web page content that is already organized with `<div>` elements. Choose this option if you don’t have time available to allow your students to either alter the code that will be brought over from the Lesson 10 mini-project or build a new web page for a new user from scratch.\n\n**Option 2 - Intermediate:** Students add `div` tags, classes, and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (_possibly 2 days_) to allow students to shift their HTML code, iterating on their HTML to make their page look as their user requests.\n\n**Option 3 - Challenging:** Students create a webpage for a new user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process.\n\n**Select the Chapter Project Guide, Scoring Rubric, and Presentation Slides corresponding to your chosen option.**\n"
+        "description": "This chapter project assesses knowledge and skills of utilizing CSS Classes and flexbox concepts. Adding Flexbox concepts to an already created web page can often require the web developer to shift and move around the HTML content for the page to look as expected. As a result, this project has 3 options for you to choose from depending on the difficulty level and time constraints. \n\n**Option 1 - Easy:** Students add classes and flexbox to web page content that is already organized with `<div>` elements. Choose this option if you don’t have time available to allow your students to either alter the code that will be brought over from the Lesson 10 mini-project or build a new web page for a new user from scratch.\n\n**Option 2 - Intermediate:** Students add `div` tags, classes, and Flexbox to the webpage they styled for Lesson 10. Choose this option if your students are up for the challenge and you have the extra time (_possibly 2 days_) to allow students to shift their HTML code, iterating on their HTML to make their page look as their user requests.\n\n**Option 3 - Challenging:** Students create a webpage for a new user from scratch. Choose this option if you have at least 2-3 days to dedicate to this project and would like students to have the experience of building a webpage from beginning to end without breaks in between the process.\n\n**Select the Chapter Project Guide, Scoring Rubric, and Presentation Slides corresponding to your chosen option.**\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on a teacher's specific timing and students, you _could_ further differentiate this project for your students by allowing them to pick the option they feel they are ready for. However, remember that students choosing Option 3 may require more time to complete their project than those choosing Option 1."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9a67fb96-ba3b-46ab-bb0b-404dabfcf4a0",
@@ -4664,7 +4709,7 @@
       "key": "fe679963-2834-4607-93ca-813941d0d96b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Use the slide to display the 3 discussion questions:\n- What are the top **3** bugs you have seen so far when making web pages? \n- What are **2** things you can do while coding to make bugs easier to find and fix? \n- What is the **1** piece of advice you'd give someone who has a bug?\n\n**Discussion Goal:** The purpose of this discussion is both to normalize debugging and to make sure students start the coding part of the project with some good strategies that will help them to debug. The following are possible student responses:\n\n* **Common bugs** they may have seen might include:\n  * Spelling errors\n  * Forgetting to link the style sheet\n  * Not properly nesting tags\n  * *This will vary from class to class, but most students will have encountered multiple bugs in the chapter.*\n* Things they can do while coding to **make bugs easier to find and fix** might include:\n  * Use proper formatting to help them to read their code\n  * Code small bits at a time and check as they go\n  * Use good naming conventions\n  * *Again, this will vary from class to class.*\n* For **debugging advice**, students may give the following types of advice:\n  * Dispositional advice (\"Don't give up!\", \"Remember that it's normal\")\n  * Recommended resources (\"Ask a friend to look at it\", \"look at the map levels\")\n  * Process-based advice (\"describe the bug first, then look for it before you change stuff\", \"look at what's messed up and check the spelling in that part\")\n  * Tools based advice (\"look above where the pink is\", \"use the inspector tool\"). \n  * *Give students time to share their advice, and make sure that they are referencing the Debugging Process.*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Use the slide to display the 3 discussion questions:\n- What are the top **3** bugs you have seen so far when making web pages? \n- What are **2** things you can do while coding to make bugs easier to find and fix? \n- What is the **1** piece of advice you'd give someone who has a bug?\n\n**Discussion Goal:** The purpose of this discussion is both to normalize debugging and to make sure students start the coding part of the project with some good strategies that will help them to debug. The following are possible student responses:\n\n* **Common bugs** they may have seen might include:\n  * Spelling errors\n  * Forgetting to link the style sheet\n  * Syntax errors such as forgetting the \".\" in the stylesheet when styling a class\n  * *This will vary from class to class, but most students will have encountered multiple bugs in the chapter.*\n* Things they can do while coding to **make bugs easier to find and fix** might include:\n  * Use proper formatting to help them to read their code\n  * Code small bits at a time and check as they go\n  * Use good naming conventions\n  * *Again, this will vary from class to class.*\n* For **debugging advice**, students may give the following types of advice:\n  * Dispositional advice (\"Don't give up!\", \"Remember that it's normal\")\n  * Recommended resources (\"Ask a friend to look at it\", \"look at the map levels\")\n  * Process-based advice (\"describe the bug first, then look for it before you change stuff\", \"look at what's messed up and check the spelling in that part\")\n  * Tools based advice (\"look above where the pink is\", \"use the inspector tool\"). \n  * *Give students time to share their advice, and make sure that they are referencing the Debugging Process.*"
       },
       "seeding_key": {
         "activity_section.key": "fe679963-2834-4607-93ca-813941d0d96b",
@@ -4787,7 +4832,7 @@
       "key": "63f7ebbc-9565-48ec-bf45-f57e61daaa84",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to start working on the web page for their user. \n\n**Transition:** Send students to Code Studio Lesson 14. The level they will work on will correspond to the project option you chose for them. \n* If your students are doing project option 1, they will go to Level 1\n* If your students are doing project option 2, they will go to Level 2\n* If your students are doing project option 3, they will go to Level 3 \n\nEnsure students are selecting the correct level for the project option they are working on, Option 1 - Easy, Option 2 - Intermediate, or Option 3 - Challenging. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to start working on the web page for their user. \n\n**Transition:** Send students to Code Studio Lesson 14. The level they will work on will correspond to the project option you chose for them. \n* If your students are doing project option 1, they will go to Level 1 and pick the option for the user they chose.\n* If your students are doing project option 2, they will go to Level 2 and pick the option for the user they've been working with in previous mini-projects.\n* If your students are doing project option 3, they will go to Level 3  and _complete each_ level a-e.\n\nEnsure students are selecting the correct level for the project option they are working on, Option 1 - Easy, Option 2 - Intermediate, or Option 3 - Challenging. ",
         "progression_name": "Chapter 1 Project"
       },
       "seeding_key": {
@@ -8495,6 +8540,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 - Option 2 Choices_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8516,6 +8564,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 - Option 3 Choices_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -10757,11 +10808,10 @@
     },
     {
       "name": "Body Styling",
-      "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
+      "url": "https://drive.google.com/file/d/1litE09XshxkmQDw2OjhhmdHyvCDLyup4/view",
       "key": "body_styling",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource Page"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "body_styling"
@@ -10769,7 +10819,7 @@
     },
     {
       "name": "Classes",
-      "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view",
+      "url": "https://drive.google.com/file/d/1KuGv9v91lGFLjQ5stnkmk0ZW82WRsCag/view",
       "key": "classes",
       "properties": {
         "audience": "Teacher",
@@ -10806,7 +10856,7 @@
     },
     {
       "name": "Creative Commons Search",
-      "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1W7c3XSlxyL-JuqHiwkn8kzlFZcwZ9xke/view",
       "key": "creative_commons_search",
       "properties": {
         "audience": "Teacher",
@@ -10814,6 +10864,18 @@
       },
       "seeding_key": {
         "resource.key": "creative_commons_search"
+      }
+    },
+    {
+      "name": "Creative Commons Search",
+      "url": "https://drive.google.com/file/d/1W7c3XSlxyL-JuqHiwkn8kzlFZcwZ9xke/view",
+      "key": "creative_commons_search_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "creative_commons_search_1"
       }
     },
     {
@@ -10929,6 +10991,102 @@
       }
     },
     {
+      "name": "Div Containers",
+      "url": "https://drive.google.com/file/d/1sBolIQvf2GvnigqaOeQXXSqFlXx9DYYV/view",
+      "key": "div_containers",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "div_containers"
+      }
+    },
+    {
+      "name": "Exemplar - Alana's Resume",
+      "url": "https://codeprojects.org/projects/weblab/ezs3kDRYhA-hzOlSeuZG5nV2NXoI7bUge77Bl3rUNJY/",
+      "key": "exemplar_-_alana",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_alana"
+      }
+    },
+    {
+      "name": "Exemplar - Alana's Resume",
+      "url": "https://codeprojects.org/projects/weblab/I6JdBMhpRr36Zr_RVBndMwExuaJqdO7u6laf3ogbryo",
+      "key": "exemplar_-_alana_s_resume",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_alana_s_resume"
+      }
+    },
+    {
+      "name": "Exemplar - Denzel's Delights",
+      "url": "https://codeprojects.org/projects/weblab/2UXVEnNdlh_3fgtuwOgXpGEQHZu6O6FgU4wD3n2Jylo/",
+      "key": "exemplar_-_denzel",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_denzel"
+      }
+    },
+    {
+      "name": "Exemplar - Denzel's Delights",
+      "url": "https://codeprojects.org/projects/weblab/IrcDiKJa9r7ksCPpnGZC8jYsHf_6YqAfskv4nyewx6g",
+      "key": "exemplar_-_denzel_s_delights",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_denzel_s_delights"
+      }
+    },
+    {
+      "name": "Exemplar - Kiri's Kitchen",
+      "url": "https://codeprojects.org/projects/weblab/gl7SgNMfs2n5LXbT3rP36JyrgqDD-jpHnM0hDRp9tls",
+      "key": "exemplar_-_kiri",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_kiri"
+      }
+    },
+    {
+      "name": "Exemplar - Kiri's Kitchen",
+      "url": "https://codeprojects.org/projects/weblab/0sFfu5ogtBL45pnbcDoqmpMEZScOSZ1GbYu3kgd8n8w",
+      "key": "exemplar_-_kiri_s_kitchen",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_kiri_s_kitchen"
+      }
+    },
+    {
+      "name": "Exemplar - Pedro's Makeup Line",
+      "url": "https://codeprojects.org/projects/weblab/5W2UlrhDMtM87YiOTRUYshzEqnxsDtaHFEmRkeRIKuQ",
+      "key": "exemplar_-_pedro_s_makeup_line",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_pedro_s_makeup_line"
+      }
+    },
+    {
       "name": "Exemplar - Peer Review",
       "url": "https://docs.google.com/document/d/13ebsmCxnOJkQGvK2VpYik6ISu3yTzuK1BsGyUFs_a8E/view",
       "key": "exemplar_-_peer_review",
@@ -10938,6 +11096,30 @@
       },
       "seeding_key": {
         "resource.key": "exemplar_-_peer_review"
+      }
+    },
+    {
+      "name": "Exemplar - Savannah's Animal Shelter",
+      "url": "https://codeprojects.org/projects/weblab/Hv-AJd2OMTuMunGqx_sMbA0UQzf8N4nDJHXF5hWTz_0",
+      "key": "exemplar_-_savannah_s_animal_shelter",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_savannah_s_animal_shelter"
+      }
+    },
+    {
+      "name": "Exemplar - Sofia's TechSavvy Solutions",
+      "url": "https://codeprojects.org/projects/weblab/rm5VsOJlu3KNDDC6dNB4KbRECImXyo7RumgTfqc-GSc",
+      "key": "exemplar_-_sofia_s_techsavvy_solutions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_sofia_s_techsavvy_solutions"
       }
     },
     {
@@ -10977,6 +11159,18 @@
       }
     },
     {
+      "name": "Flexbox",
+      "url": "https://drive.google.com/file/d/1aLyYXq7unwWWLGFtmoj8PI-6jotzf_Y8/view",
+      "key": "flexbox",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "flexbox"
+      }
+    },
+    {
       "name": "Flexbox Cheat Sheet",
       "url": "https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/view",
       "key": "flexbox_cheat_sheet",
@@ -11003,8 +11197,20 @@
       }
     },
     {
+      "name": "Flexbox Children Properties",
+      "url": "https://drive.google.com/file/d/1ccde4pyrCZnH3OsTkk-KJl6wX0YCMxlh/view",
+      "key": "flexbox_children_properties",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "flexbox_children_properties"
+      }
+    },
+    {
       "name": "Formatting HTML",
-      "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
+      "url": "https://drive.google.com/file/d/1d7hCWlSlvRtPognyhoHssoATapVeUySs/view",
       "key": "formatting_html",
       "properties": {
         "audience": "Teacher",
@@ -11028,7 +11234,7 @@
     },
     {
       "name": "Headings and Paragraphs",
-      "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view",
+      "url": "https://drive.google.com/file/d/1hF52QJCswfaE4IBf2sUlg7q5fh_q74mu/view",
       "key": "headings_and_paragraphs",
       "properties": {
         "audience": "Teacher",
@@ -11053,7 +11259,7 @@
     },
     {
       "name": "HTML Tags",
-      "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view",
+      "url": "https://drive.google.com/file/d/1orGIRkr4_M3YrU9VfvDrZgUCy8cmLmqw/view?usp=drive_link",
       "key": "html_tags",
       "properties": {
         "audience": "Teacher",
@@ -11104,7 +11310,7 @@
     },
     {
       "name": "Hyperlinks",
-      "url": "https://drive.google.com/file/d/1x8rGBJ8EDZ07TasatQlu5wRM8Z7-M5e8/view",
+      "url": "https://drive.google.com/file/d/1h0lMgCUdMiqQxtNmzTZVaWql5Lz03Hh-/view",
       "key": "hyperlinks",
       "properties": {
         "audience": "Teacher",
@@ -11116,7 +11322,7 @@
     },
     {
       "name": "Images in HTML",
-      "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view",
+      "url": "https://drive.google.com/file/d/1qd50f20T10vhLdc81x0CQlNu7EEX6_fo/view",
       "key": "images_in_html",
       "properties": {
         "audience": "Teacher",
@@ -11291,7 +11497,7 @@
     },
     {
       "name": "Lists",
-      "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view",
+      "url": "https://drive.google.com/file/d/1o68ZiSXvIZ2pHoTVgii2KD1XakWnJoY8/view",
       "key": "lists",
       "properties": {
         "audience": "Teacher",
@@ -11326,6 +11532,18 @@
       }
     },
     {
+      "name": "Option 1 - Chapter 1 Project",
+      "url": "https://docs.google.com/presentation/d/1pjCeguRFkqafZWL3BmDfzkxhoEdTtyNa2DzeMEe92cU/template/preview",
+      "key": "option_1_-_chapter_1_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "option_1_-_chapter_1_project"
+      }
+    },
+    {
       "name": "Option 1 - Project Rubric",
       "url": "https://docs.google.com/document/d/1MEan92ixZ7aLrRMjUu1h8L0bJg2DfeHf1KX_rWANYmo/view",
       "key": "option_1_-_project_rubric",
@@ -11349,6 +11567,31 @@
       },
       "seeding_key": {
         "resource.key": "option_1_chapter_1_project_guide"
+      }
+    },
+    {
+      "name": "Option 1 Student Checklist - Chapter 1 Project",
+      "url": "https://docs.google.com/document/d/1T0-5a1gYerxs4rfu6ktlZpzBnp2NaN341CHPUP0KZQs/view",
+      "key": "option_1_student_checklist_-_chapter_1_project",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "option_1_student_checklist_-_chapter_1_project"
+      }
+    },
+    {
+      "name": "Option 2 - Chapter 1 Project",
+      "url": "https://docs.google.com/presentation/d/1sfb-ZfsWdijqn7nKFfnSoC8jAxQZ6AdikLG8eLNr5tQ/template/preview",
+      "key": "option_2_-_chapter_1_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "option_2_-_chapter_1_project"
       }
     },
     {
@@ -11391,6 +11634,31 @@
       }
     },
     {
+      "name": "Option 2 Student Checklist - Chapter 1 Project",
+      "url": "https://docs.google.com/document/d/1Rxz-8GAoLLJn8zsy_NmwZ5UJ7WND1qzKKxefbxa6zbg/view",
+      "key": "option_2_student_checklist_-_chapter_1_project",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "option_2_student_checklist_-_chapter_1_project"
+      }
+    },
+    {
+      "name": "Option 3 - Chapter 1 Project",
+      "url": "https://docs.google.com/presentation/d/1AmoMjMhkEqquuQVjFRX8DOOxKpGlRF5CKZYWc4afiUY/template/preview",
+      "key": "option_3_-_chapter_1_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "option_3_-_chapter_1_project"
+      }
+    },
+    {
       "name": "Option 3 - Project Rubric",
       "url": "https://docs.google.com/document/d/1ACaiFhEAMabueHNVEYQKz8YRVHOXqKPHjpOKej8XvHU/view",
       "key": "option_3_-_project_rubric",
@@ -11414,6 +11682,32 @@
       },
       "seeding_key": {
         "resource.key": "option_3_chapter_1_project_guide"
+      }
+    },
+    {
+      "name": "Option 3 Student Checklist - Chapter 1 Project",
+      "url": "https://docs.google.com/document/d/1xb5xJyp2QjOrHAkm5bMMGexJWPosC-Off32-mwwL-Fg/view",
+      "key": "option_3_student_checklist_-_chapter_1_project",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "option_3_student_checklist_-_chapter_1_project"
+      }
+    },
+    {
+      "name": "Option 3 User Web Page Content",
+      "url": "https://docs.google.com/document/d/1Wv1Fe6h9JOaIUxU3FY4oWz1lnPkeEM35oHVb-toIXwI/view",
+      "key": "option_3_user_web_page_content",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "option_3_user_web_page_content"
       }
     },
     {
@@ -11475,19 +11769,6 @@
       },
       "seeding_key": {
         "resource.key": "peer_review_and_final_touches"
-      }
-    },
-    {
-      "name": "Chapter 1 Project - Student Checklist",
-      "url": "https://docs.google.com/document/d/1T0-5a1gYerxs4rfu6ktlZpzBnp2NaN341CHPUP0KZQs/view",
-      "key": "personal_web_page_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "personal_web_page_-_student_checklist"
       }
     },
     {
@@ -11601,6 +11882,18 @@
       }
     },
     {
+      "name": "Pseudo-classes",
+      "url": "https://drive.google.com/file/d/1XYDMpDsWDnCFZePYMX2-hWb0KtjkMA7h/view",
+      "key": "pseudo-classes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "pseudo-classes"
+      }
+    },
+    {
       "name": "Publishing Your Website",
       "url": "https://youtu.be/2qcIlRtdpgE",
       "key": "publishing_your_website",
@@ -11652,7 +11945,7 @@
     },
     {
       "name": "Style Sheets",
-      "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view",
+      "url": "https://drive.google.com/file/d/1Tm6ZJ6lM_XmmgRn_e6HeVVyh4ukqkBiA/view",
       "key": "style_sheets",
       "properties": {
         "audience": "Teacher",
@@ -12153,6 +12446,12 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
+        "resource.key": "creative_commons_search_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
         "resource.key": "intellectual_property"
       }
     },
@@ -12219,6 +12518,24 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "exemplar_-_alana"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "exemplar_-_denzel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "exemplar_-_kiri"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "html_web_page"
       }
     },
@@ -12250,6 +12567,42 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_alana_s_resume"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_denzel_s_delights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_kiri_s_kitchen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_pedro_s_makeup_line"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_savannah_s_animal_shelter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "exemplar_-_sofia_s_techsavvy_solutions"
       }
     },
     {
@@ -12375,6 +12728,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_1_-_chapter_1_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
         "resource.key": "option_1_-_project_rubric"
       }
     },
@@ -12382,6 +12741,18 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "option_1_chapter_1_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_1_student_checklist_-_chapter_1_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_2_-_chapter_1_project"
       }
     },
     {
@@ -12399,6 +12770,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_2_student_checklist_-_chapter_1_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "option_3_-_chapter_1_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
         "resource.key": "option_3_-_project_rubric"
       }
     },
@@ -12411,13 +12794,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
-        "resource.key": "peer_review_-_chapter_1_project"
+        "resource.key": "option_3_student_checklist_-_chapter_1_project"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
-        "resource.key": "personal_web_page_-_student_checklist"
+        "resource.key": "option_3_user_web_page_content"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "peer_review_-_chapter_1_project"
       }
     },
     {
@@ -12591,6 +12980,18 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for Expression",
+        "resource.key": "div_containers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "resource.key": "flexbox"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
         "resource.key": "flexbox_cheat_sheet"
       }
     },
@@ -12598,6 +12999,12 @@
       "seeding_key": {
         "lesson.key": "Websites for Expression",
         "resource.key": "organizing_my_content"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "resource.key": "pseudo-classes"
       }
     },
     {
@@ -12616,6 +13023,12 @@
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
         "resource.key": "flexbox_children_cheat_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "flexbox_children_properties"
       }
     },
     {

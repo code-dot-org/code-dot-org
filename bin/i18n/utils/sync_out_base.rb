@@ -4,15 +4,27 @@ require_relative '../metrics'
 module I18n
   module Utils
     class SyncOutBase
-      def self.perform
+      def self.parse_options
+        I18nScriptUtils.parse_options
+      end
+
+      def self.perform(options = parse_options)
+        sync_out = new(**options)
+
         resource_class = name[/^.*::(\w+::\w+)::SyncOut/, 1] || name
 
         I18n::Metrics.report_runtime(resource_class, 'sync-out') do
-          new.send(:perform)
+          sync_out.send(:perform)
         end
       end
 
       protected
+
+      attr_reader :options
+
+      def initialize(**options)
+        @options = options.freeze
+      end
 
       def process(_language)
         raise NotImplementedError

@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-22 22:03:17 UTC",
+    "serialized_at": "2024-03-01 22:41:20 UTC",
     "published_state": null,
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-microbit-2024-2"
     }
@@ -73,6 +73,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes\n",
+        "student_overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
