@@ -544,6 +544,18 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal shared_records.drop(1), read_records('mysharedtable')
   end
 
+  test "shared_table works with get_column" do
+    _expected_records, _mysharedtable = create_shared_table
+
+    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    assert_response :success
+
+    get _url(:get_column), params: {table_name: 'mysharedtable', column_name: 'name'}
+    assert_response :success
+    val = JSON.parse(@response.body)
+    assert_equal ['alice', 'bob', 'charlie'], val
+  end
+
   test "add_shared_table cannot overwrite an existing table" do
     _shared_records, _mysharedtable = create_shared_table
 
