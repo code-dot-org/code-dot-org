@@ -11,7 +11,9 @@
 #
 class DatablockStorageTable < ApplicationRecord
   self.primary_keys = :project_id, :table_name
-  has_many :records, autosave: true,
+  has_many :records,
+    -> {order(record_id: :asc)},
+    autosave: true,
     class_name: 'DatablockStorageRecord',
     foreign_key: [:project_id, :table_name],
     dependent: :delete_all
