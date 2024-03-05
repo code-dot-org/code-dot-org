@@ -505,7 +505,7 @@ function registerCustomBlockOptions() {
   registerMovable(nextWeight++);
   registerEditable(nextWeight++);
   registerShadow(nextWeight++);
-  registerUnshadow(nextWeight); // Last option; no incrementing needed.
+  registerUnshadow(nextWeight++);
 }
 
 function registerCustomWorkspaceOptions() {
@@ -525,5 +525,5 @@ function registerCustomWorkspaceOptions() {
   registerKeyboardNavigation(nextWeight++);
   registerAllCursors(nextWeight++, NAVIGATION_CURSOR_TYPES);
   registerDarkMode(nextWeight++);
-  registerThemes(nextWeight, themes); // Last option; no incrementing needed.
+  registerThemes(nextWeight++, themes);
 }
