@@ -6809,13 +6809,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"agent-base@npm:~1.0.1":
-  version: 1.0.2
-  resolution: "agent-base@npm:1.0.2"
-  checksum: 7d3f1d894e03665fbe9bb27c8556ca94782f369ba013a3e03ea6b09636d2f98e5d9e6f77fb15f408f5101dcb033c57e268c1cc7d081518594d42c8458472d491
-  languageName: node
-  linkType: hard
-
 "agentkeepalive@npm:^4.2.1":
   version: 4.5.0
   resolution: "agentkeepalive@npm:4.5.0"
@@ -8622,7 +8615,6 @@ __metadata:
     jquery: 1.12.1
     jquery-ui: ^1.12.1
     js-cookie: ^2.1.2
-    js-yaml: ^3.6.0
     jshint: ^2.9.5
     json-parse-better-errors: ^1.0.1
     jsonic: ^0.3.0
@@ -8646,7 +8638,6 @@ __metadata:
     mocha: ^4.1.0
     mock-firmata: 0.2.0
     moment: ^2.29.4
-    newrelic: ^1.27.2
     node-js-marker-clusterer: ^1.0.0
     object-fit-images: ^3.2.3
     pa11y-ci: ^2.3.0
@@ -11259,15 +11250,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"debug@npm:2, debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.3.3, debug@npm:^2.6.0, debug@npm:^2.6.9":
-  version: 2.6.9
-  resolution: "debug@npm:2.6.9"
-  dependencies:
-    ms: 2.0.0
-  checksum: d2f51589ca66df60bf36e1fa6e4386b318c3f1e06772280eea5b1ae9fd3d05e9c2b7fd8a7d862457d00853c75b00451aa2d7459b924629ee385287a650f58fe6
-  languageName: node
-  linkType: hard
-
 "debug@npm:2.2.0":
   version: 2.2.0
   resolution: "debug@npm:2.2.0"
@@ -11301,6 +11283,15 @@ canvg@gabelerner/canvg:
   dependencies:
     ms: 2.0.0
   checksum: 8b1627d6d8dd770305413a454af79d670b2890b8b5213bfcae42fb739ecdcaa12ea00068dda7dc9a829b58b308bfaa0934544d55a76b554974983c52c7adfc61
+  languageName: node
+  linkType: hard
+
+"debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.3.3, debug@npm:^2.6.0, debug@npm:^2.6.9":
+  version: 2.6.9
+  resolution: "debug@npm:2.6.9"
+  dependencies:
+    ms: 2.0.0
+  checksum: d2f51589ca66df60bf36e1fa6e4386b318c3f1e06772280eea5b1ae9fd3d05e9c2b7fd8a7d862457d00853c75b00451aa2d7459b924629ee385287a650f58fe6
   languageName: node
   linkType: hard
 
@@ -13324,16 +13315,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"esprima@npm:^2.6.0":
-  version: 2.7.3
-  resolution: "esprima@npm:2.7.3"
-  bin:
-    esparse: ./bin/esparse.js
-    esvalidate: ./bin/esvalidate.js
-  checksum: 55584508dca0551885e62c3369bc4a783bd948b43e2f034f05c2a37f3ca398db99f072ab228234e9cab09af8dc8c65d6ca7de3a975f2a296b34d1a3aba7e89f1
-  languageName: node
-  linkType: hard
-
 "esprima@npm:^4.0.0, esprima@npm:^4.0.1":
   version: 4.0.1
   resolution: "esprima@npm:4.0.1"
@@ -13683,7 +13664,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"extend@npm:3, extend@npm:^3.0.0":
+"extend@npm:^3.0.0":
   version: 3.0.1
   resolution: "extend@npm:3.0.1"
   checksum: 8997833501611e19f5474ae1c3edfa2439de16c90c98fbee01cc50657f70a71693373ae7a1d05e103f2c2e59366f7a58a6007588e2eb9fe5b14a5096b0b1618c
@@ -16685,17 +16666,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"https-proxy-agent@npm:^0.3.5":
-  version: 0.3.6
-  resolution: "https-proxy-agent@npm:0.3.6"
-  dependencies:
-    agent-base: ~1.0.1
-    debug: 2
-    extend: 3
-  checksum: 0f45965bced75b1a018c7af1370945512fac2fbc236def9e326b3cee59e9d3b7dab2405774e18c2bd2784908dc857f8d685e291ac2c497f70357e59e17e922bb
-  languageName: node
-  linkType: hard
-
 "https-proxy-agent@npm:^2.2.1":
   version: 2.2.1
   resolution: "https-proxy-agent@npm:2.2.1"
@@ -18501,18 +18471,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.6.0":
-  version: 3.6.1
-  resolution: "js-yaml@npm:3.6.1"
-  dependencies:
-    argparse: ^1.0.7
-    esprima: ^2.6.0
-  bin:
-    js-yaml: bin/js-yaml.js
-  checksum: b0283ee0b3c30ff4b3ba183392b3bdc78ad25696e30797390dfc4b7ccc403a5ec2cf7fe0b8bdfc2f8c4612052eb81bf55aa792511fc00cd8ed5e8884f9ace768
-  languageName: node
-  linkType: hard
-
 "js-yaml@npm:^4.1.0":
   version: 4.1.0
   resolution: "js-yaml@npm:4.1.0"
@@ -18680,7 +18638,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"json-stringify-safe@npm:^5.0.0, json-stringify-safe@npm:~5.0.1":
+"json-stringify-safe@npm:~5.0.1":
   version: 5.0.1
   resolution: "json-stringify-safe@npm:5.0.1"
   checksum: 48ec0adad5280b8a96bb93f4563aa1667fd7a36334f79149abd42446d0989f2ddc58274b479f4819f1f00617957e6344c886c55d05a4e15ebb4ab931e4a6a8ee
@@ -20940,22 +20898,6 @@ es6-shim@latest:
   version: 2.1.1
   resolution: "nested-error-stacks@npm:2.1.1"
   checksum: 5f452fad75db8480b4db584e1602894ff5977f8bf3d2822f7ba5cb7be80e89adf1fffa34dada3347ef313a4288850b4486eb0635b315c32bdfb505577e8880e3
-  languageName: node
-  linkType: hard
-
-"newrelic@npm:^1.27.2":
-  version: 1.33.0
-  resolution: "newrelic@npm:1.33.0"
-  dependencies:
-    concat-stream: ^1.5.0
-    https-proxy-agent: ^0.3.5
-    json-stringify-safe: ^5.0.0
-    readable-stream: ^1.1.13
-    semver: ^5.3.0
-    yakaa: ^1.0.1
-  bin:
-    newrelic-naming-rules: ./bin/test-naming-rules.js
-  checksum: 2873967dabb4a31844906c14d5b9cbce72c59cea9683b33cae76fb47d2f44fa6cbb7ac1893c725d5f1ae2b3f44a616ba8e5bf69d9ee441403f9791fd4b0a7c1b
   languageName: node
   linkType: hard
 
@@ -24812,7 +24754,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:1.1, readable-stream@npm:^1.1.13":
+"readable-stream@npm:1.1":
   version: 1.1.14
   resolution: "readable-stream@npm:1.1.14"
   dependencies:
@@ -31115,13 +31057,6 @@ temporal@latest:
   version: 5.0.8
   resolution: "y18n@npm:5.0.8"
   checksum: 54f0fb95621ee60898a38c572c515659e51cc9d9f787fb109cef6fde4befbe1c4602dc999d30110feee37456ad0f1660fa2edcfde6a9a740f86a290999550d30
-  languageName: node
-  linkType: hard
-
-"yakaa@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "yakaa@npm:1.0.1"
-  checksum: 257cdff825c9e5bab6ad9f80daeb9523ce225a9af95adee3473ab290499cf2a7bffbd986e79ac2dedab5c8385d3149e3acc1772f792de1a7e01f07c23376783f
   languageName: node
   linkType: hard
 

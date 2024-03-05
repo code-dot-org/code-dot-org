@@ -1585,6 +1585,7 @@
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
+  user_header_create_account: "Create Account"
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '

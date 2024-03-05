@@ -198,7 +198,7 @@ export const blocks = {
         this.imageSourceId = state['imageSourceId'];
         if (this.imageSourceId) {
           updatePointerBlockImage(this, spriteLabPointers, this.imageSourceId);
-          const imageSourceBlock = Blockly.getMainWorkspace().getBlockById(
+          const imageSourceBlock = Blockly.getMainWorkspace()?.getBlockById(
             this.imageSourceId
           );
           if (imageSourceBlock) {
