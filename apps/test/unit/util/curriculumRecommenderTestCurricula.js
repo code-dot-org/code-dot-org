@@ -223,7 +223,7 @@ const FULL_TEST_COURSES = [
     is_featured: true,
     duration: 'week',
     marketing_initiative: 'markInit1',
-    grade_levels: '1,2,3,4,5',
+    grade_levels: '1,2,3',
     cs_topic: `art_and_design,${IMPORTANT_TOPICS[0]}`,
     school_subject: 'math',
     published_date: moment
@@ -303,7 +303,7 @@ const FULL_TEST_COURSES = [
     is_featured: true,
     duration: 'month',
     marketing_initiative: 'markInit2',
-    grade_levels: '3,4,5,6',
+    grade_levels: '4,5,6',
     cs_topic: 'app_design',
     school_subject: 'science',
     published_date: moment

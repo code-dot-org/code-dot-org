@@ -12,7 +12,7 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '../../util/curriculumRecommender/curriculumRecommender';
+import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -76,42 +76,18 @@ const CurriculumCatalog = ({
   // Get the top recommended similar curriculum based on the curriculum with the given
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
-    let recommendableCurricula = [...curriculaData];
-
-    // Get current curricula the others are being compared against and filter it out of the
-    // recommendable curriculum
-    const currCurriculumIndex = recommendableCurricula.findIndex(
-      e => e.key === curriculumKey
-    );
-    const currCurriculum = recommendableCurricula.splice(
-      currCurriculumIndex,
-      1
-    )[0];
-
-    // Filter out curricula that don't support any of the same grade levels
-    const currCurriculumGrades = currCurriculum.grade_levels;
-    recommendableCurricula = recommendableCurricula.filter(curr =>
-      curr.grade_levels
-        ?.split(',')
-        ?.some(grade => currCurriculumGrades.includes(grade))
-    );
-
     // (if signed-in teacher) Filter out curricula the user has taught before
-    if (curriculaTaught) {
-      recommendableCurricula = recommendableCurricula.filter(
-        curr => !curriculaTaught.includes(curr.course_offering_id)
-      );
-    }
+    // if (curriculaTaught) {
+    //   recommendableCurricula = recommendableCurricula.filter(
+    //     curr => !curriculaTaught.includes(curr.course_offering_id)
+    //   );
+    // }
 
     // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
-      recommendableCurricula,
-      currCurriculum.duration,
-      currCurriculum.marketing_initiative,
-      currCurriculum.school_subject,
-      currCurriculum.cs_topic
+      curriculaData,
+      curriculumKey
     );
-
     return recommendations[0];
   };
 

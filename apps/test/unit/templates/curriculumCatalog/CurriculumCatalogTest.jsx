@@ -667,15 +667,12 @@ describe('CurriculumCatalog', () => {
       });
 
       for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        const currCurriculum = FULL_TEST_COURSES[i];
+
         // Get the Similar Recommended Curriculum for the current test curriculum
-        const recommendableCurricula = [...FULL_TEST_COURSES];
-        const currCurriculum = recommendableCurricula.splice(i, 1)[0];
         const recommendedSimilarCurriculum = getSimilarRecommendations(
-          recommendableCurricula,
-          currCurriculum.duration,
-          currCurriculum.marketing_initiative,
-          currCurriculum.school_subject,
-          currCurriculum.cs_topic
+          FULL_TEST_COURSES,
+          currCurriculum.key
         )[0];
 
         // Open expanded card of the current test curriculum
@@ -711,15 +708,12 @@ describe('CurriculumCatalog', () => {
       });
 
       for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        const currCurriculum = FULL_TEST_COURSES[i];
+
         // Get the Similar Recommended Curriculum for the current test curriculum
-        const recommendableCurricula = [...FULL_TEST_COURSES];
-        const currCurriculum = recommendableCurricula.splice(i, 1)[0];
         const similarCurriculumRecommendations = getSimilarRecommendations(
-          recommendableCurricula,
-          currCurriculum.duration,
-          currCurriculum.marketing_initiative,
-          currCurriculum.school_subject,
-          currCurriculum.cs_topic
+          FULL_TEST_COURSES,
+          currCurriculum.key
         );
 
         // Open expanded card of the current test curriculum
