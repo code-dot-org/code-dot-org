@@ -26,7 +26,7 @@ describe('SignInOrAgeDialog', () => {
 
   afterEach(() => {
     restoreOnWindow('dashboard');
-    cleanup;
+    cleanup();
   });
 
   function renderDefault(propOverrides = {}) {
