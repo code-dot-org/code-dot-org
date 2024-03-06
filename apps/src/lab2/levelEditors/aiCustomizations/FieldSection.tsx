@@ -39,7 +39,7 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
         </BodyFourText>
       )}
       <div className={moduleStyles.fieldRow}>
-        <div className={moduleStyles.fieldValue}>
+        <div className={moduleStyles['field-value']}>
           <label htmlFor={fieldName}>Initial Value(s)</label>
           {inputType === 'custom' && inputNode ? (
             inputNode

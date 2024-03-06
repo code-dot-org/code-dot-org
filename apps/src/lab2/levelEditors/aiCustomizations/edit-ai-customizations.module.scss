@@ -16,15 +16,15 @@
   margin-right: 10px;
 }
 
-.fieldValue {
+%field-value,
+.field-value {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
 }
 
-%model-card-fields,
 .model-card-fields {
-  @extend .fieldValue;
+  @extend %field-value;
   border: 1px dashed $neutral_dark;
   border-radius: 5px;
   padding: 15px;
