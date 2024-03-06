@@ -44,7 +44,7 @@ Scenario: Signed out courses, learn
   And I wait to see "#headerlinks"
   And I see "#header-learn"
   And I press "header-learn"
-  Then I am on "http://studio.code.org/courses"
+  Then I am on "http://code.org/students"
   And I see no difference for "signed-out courses page, learn"
   And I close my eyes
 
@@ -66,7 +66,7 @@ Scenario: Signed out courses, non-english
   And I wait to see ".headerlinks"
   And I see "#header-learn"
   And I press "header-learn"
-  Then I am on "http://studio.code.org/courses"
+  Then I am on "http://code.org/students"
   And I wait to see "#uitest-course-blocks-tools"
   And I see no difference for "signed-out courses page, non-english"
   And I close my eyes
