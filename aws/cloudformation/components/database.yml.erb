@@ -119,26 +119,47 @@
       Description: !Sub "Aurora Cluster DB Parameters for ${AWS::StackName}."
       Family: aurora-mysql8.0
       Parameters:
-        # TODO: separate the Static and Dynamic Parameters, so we know which template updates will trigger db restart.
+        # BEGIN: Static configuration settings.
+        # WARNING - Changing these settings triggers restart of each database instance in the cluster during Stack Update.
+
+        # In conjunction with GTID, enabling binary logging causes Pegasus tests that utilize fake dashboard to fail
+        # because they create/drop temporary tables within a transaction:
+        # https://github.com/code-dot-org/code-dot-org/blob/654d0cf90dd65848fdd045df3b9e4f85903d9f68/pegasus/test/fixtures/fake_dashboard.rb#L257-L271
+        # Disable binary logging to improve write performance.
         binlog_format: 'OFF'
         gtid-mode: ON_PERMISSIVE
+        innodb_autoinc_lock_mode: 2
+        #END: Static configuration settings.
+
+        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
         slow_query_log: 1
         innodb_monitor_enable: all
-        innodb_autoinc_lock_mode: 2
+
+        # Favor write performance over durability. In the event of a database server crash
+        # we could lose roughly 1 second of transactions.
+        # https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
         innodb_flush_log_at_trx_commit: 0
         innodb_trx_commit_allow_data_loss: 1
+        # END: Dynamic configuration settings.
   AuroraWriterDBParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:
       Description: !Sub "Aurora Writer DB Parameters for ${AWS::StackName}."
       Family: aurora-mysql8.0
       Parameters:
-        # TODO: separate the Static and Dynamic Parameters, so we know which template updates will trigger db restart.
-        max_execution_time: 30000
+        # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
         performance_schema: 1
-        # TODO: Uh, oh. We've been using READ-COMMITTED, but that's not permitted on read replicas anymore.
-        # And we configure our read replicas so that they can be promoted to be a writer.
-        # tx_isolation: REPEATABLE-READ
+        #END: Static configuration settings.
+
+        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
+
+        # TODO: Is READ-COMMITTED not permitted o read replica database instance in Aurora Engine 3 / MySQL 8?
+        transaction_isolation: READ-COMMITTED
+
+        # Prevent a slow query from degrading instance or cluster performance.
+        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
+        max_execution_time: 30000
+        # END: Dynamic configuration settings.
   DBProxyRole:
     Type: AWS::IAM::Role
     Properties:
