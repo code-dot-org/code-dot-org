@@ -143,19 +143,19 @@ frontend_device_name ||= '/dev/sda1'
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     DependsOn: FastSnapshotRestore
-    Tags:
-      - Key: "Name"
-        Value: !Sub "Frontend-${AWS::StackName}"
-        PropagateAtLaunch: true
-      - Key: "environment"
-        Value: <%=environment%>
-        PropagateAtLaunch: true
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
       InstanceType: <%=instance_type%>
       IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
       KeyName: <%=ssh_key_name%>
+      Tags:
+        - Key: "Name"
+          Value: !Sub "Frontend-${AWS::StackName}"
+          PropagateAtLaunch: true
+        - Key: "environment"
+          Value: <%=environment%>
+          PropagateAtLaunch: true
       BlockDeviceMappings:
         - DeviceName: <%=frontend_device_name%>
           Ebs:
