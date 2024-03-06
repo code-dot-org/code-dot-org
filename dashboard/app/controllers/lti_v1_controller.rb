@@ -71,7 +71,6 @@ class LtiV1Controller < ApplicationController
 
   def authenticate
     unless params[:open_in_new_tab]
-      puts "OPEN IN NEW TAB #{params[:open_in_new_tab]}"
       id_token = params[:id_token]
       state = params[:state]
       token_hash = {id_token: id_token, state: state}
