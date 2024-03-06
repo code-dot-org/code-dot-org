@@ -81,7 +81,7 @@ import {
   GoogleBlocklyInstance,
 } from './types';
 import {FieldProto} from 'blockly/core/field';
-import {Cursor, Options, Theme} from 'blockly';
+import {Options, Theme} from 'blockly';
 
 const options = {
   contextMenu: true,
