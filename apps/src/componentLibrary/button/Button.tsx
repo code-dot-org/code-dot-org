@@ -16,7 +16,7 @@ export interface ButtonProps {
   /** Button id */
   id?: string;
   /** Button color */
-  color?: string;
+  color?: 'purple' | 'black' | 'white';
   /** Button text */
   text: string;
   /** Is button disabled */
@@ -77,7 +77,6 @@ export interface ButtonProps {
 const Button: React.FunctionComponent<ButtonProps> = ({
   className,
   id,
-  color,
   text,
   disabled = false,
   ariaLabel,
@@ -85,6 +84,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   iconRight,
   size = 'm',
   type = 'primary',
+  color = 'purple',
   buttonType = 'button',
   /** <a> specific props */
   useAsLink = false,
@@ -119,7 +119,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       {...tagSpecificProps}
     >
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      {text}
+      <span>{text}</span>
       {iconRight && <FontAwesomeV6Icon {...iconRight} />}
     </Tag>
   );

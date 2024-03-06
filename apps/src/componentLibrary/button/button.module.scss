@@ -1,33 +1,264 @@
 @import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 // Button common styles
 .button {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
 
   margin: 0;
   padding: 0;
   border: none;
-  border-radius: 0;
   background-color: transparent;
+  color: unset;
+  text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     box-shadow: none;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $light_primary_500;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }
 
-// Sizes
+// Button Colors
+.button-primary {
+  &.button-purple {
+    background-color: $light_secondary_500;
+    color: $light_white;
+
+    &:hover {
+      background-color: $light_secondary_700;
+    }
+
+    &:disabled {
+      background-color: $light_gray_200;
+      color: $light_white;
+    }
+  }
+
+  &.button-black {
+    background-color: $light_black;
+    color: $light_white;
+
+    &:hover {
+      background-color: $light_gray_800;
+    }
+
+    &:disabled {
+      background-color: $light_gray_200;
+      color: $light_white;
+    }
+  }
+
+  &.button-white {
+    background-color: $light_white;
+    color: $light_black;
+
+    &:hover {
+      background-color: $light_gray_200;
+    }
+
+    &:disabled {
+      background-color: $light_gray_800;
+      color: $light_gray_900;
+    }
+  }
+}
+
+.button-secondary {
+  &.button-purple {
+    border: 1px solid $light_secondary_500;
+    color: $light_secondary_500;
+
+    &:hover {
+      background-color: $light_secondary_100;
+      border: 1px solid $light_secondary_500;
+      color: $light_secondary_500;
+    }
+
+    &:disabled {
+      background-color: $light_gray_200;
+      color: $light_gray_200;
+    }
+  }
+
+  &.button-black {
+    border: 1px solid $light_black;
+    color: $light_black;
+
+    &:hover {
+      background-color: $light_gray_100;
+      border: 1px solid $light_black;
+      color: $light_black;
+    }
+
+    &:disabled {
+      border-color: $light_gray_200;
+      color: $light_gray_200;
+    }
+  }
+
+  &.button-white {
+    border: 1px solid $light_white;
+    color: $light_white;
+
+    &:hover {
+      background-color: $light_gray_800;
+      border: 1px solid $light_white;
+      color: $light_white;
+    }
+
+    &:disabled {
+      border-color: $light_gray_800;
+      color: $light_gray_800;
+    }
+  }
+}
+
+.button-tertiary {
+  &.button-purple {
+    color: $light_secondary_500;
+
+    &:hover {
+      background-color: $light_secondary_100;
+      color: $light_secondary_500;
+    }
+
+    &:active {
+      background-color: $light_secondary_100;
+      color: $light_secondary_700;
+    }
+
+    &:disabled {
+      color: $light_gray_200;
+    }
+  }
+
+  &.button-black {
+    color: $light_black;
+
+    &:hover {
+      background-color: $light_gray_200;
+      color: $light_black;
+    }
+
+    &:active {
+      background-color: $light_gray_200;
+      color: $light_gray_800;
+    }
+
+    &:disabled {
+      color: $light_gray_200;
+    }
+  }
+
+  &.button-white {
+    color: $light_gray_200;
+
+    &:hover {
+      background-color: $light_gray_800;
+      color: $light_gray_200;
+    }
+
+    &:active {
+      background-color: $light_gray_800;
+      color: $light_gray_50;
+    }
+
+    &:disabled {
+      color: $light_gray_800;
+    }
+  }
+}
+
+.button-iconBorder, .button-iconOnly {
+  &.button-purple {
+
+  }
+
+  &.button-black {
+
+  }
+
+  &.button-white {
+
+  }
+}
+
+.button-iconOnly {
+  &.button-purple {
+
+  }
+
+  &.button-black {
+
+  }
+
+  &.button-white {
+
+  }
+}
+
+.button-iconBorder {
+  &.button-purple {
+
+  }
+
+  &.button-black {
+
+  }
+
+  &.button-white {
+
+  }
+}
+
+// Button Sizes
 .button-l {
-  font-size: 1.25rem;
+  padding: 0.625rem 1rem;
+
+  span {
+    @include button-one-text;
+    margin: 0;
+  }
 }
 
 .button-m {
-  font-size: 1rem;
+  padding: 0.5rem 1rem;
+
+  span {
+    @include button-two-text;
+    margin: 0;
+  }
 }
 
 .button-s {
-  font-size: 0.75rem;
+  padding: 0.3125rem 1rem;
+
+  span {
+    @include button-three-text;
+    margin: 0;
+  }
 }
 
 .button-xs {
-  font-size: 0.625rem;
+  padding: 0.125rem 0.5rem;
+
+  span {
+    @include button-four-text;
+    margin: 0;
+  }
 }
