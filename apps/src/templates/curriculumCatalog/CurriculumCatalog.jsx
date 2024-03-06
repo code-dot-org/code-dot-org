@@ -76,17 +76,10 @@ const CurriculumCatalog = ({
   // Get the top recommended similar curriculum based on the curriculum with the given
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
-    // (if signed-in teacher) Filter out curricula the user has taught before
-    // if (curriculaTaught) {
-    //   recommendableCurricula = recommendableCurricula.filter(
-    //     curr => !curriculaTaught.includes(curr.course_offering_id)
-    //   );
-    // }
-
-    // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
       curriculaData,
-      curriculumKey
+      curriculumKey,
+      curriculaTaught
     );
     return recommendations[0];
   };

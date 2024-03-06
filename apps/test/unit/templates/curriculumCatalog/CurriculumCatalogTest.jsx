@@ -672,7 +672,8 @@ describe('CurriculumCatalog', () => {
         // Get the Similar Recommended Curriculum for the current test curriculum
         const recommendedSimilarCurriculum = getSimilarRecommendations(
           FULL_TEST_COURSES,
-          currCurriculum.key
+          currCurriculum.key,
+          null
         )[0];
 
         // Open expanded card of the current test curriculum
@@ -691,8 +692,8 @@ describe('CurriculumCatalog', () => {
     });
 
     it('does not recommend similar curriculum the user has already taught', () => {
-      // fullTestCourse1 is the top-ranked similar curriculum for 2 other curricula
-      const curriculaTaughtBefore = [FULL_TEST_COURSES[0].course_offering_id];
+      // fullTestCourse5 is the top-ranked similar curriculum for 2 other curricula
+      const curriculaTaughtBefore = [FULL_TEST_COURSES[4].course_offering_id];
       const props = {
         ...defaultProps,
         curriculaData: FULL_TEST_COURSES,
@@ -711,28 +712,22 @@ describe('CurriculumCatalog', () => {
         const currCurriculum = FULL_TEST_COURSES[i];
 
         // Get the Similar Recommended Curriculum for the current test curriculum
-        const similarCurriculumRecommendations = getSimilarRecommendations(
+        const recommendedSimilarCurriculum = getSimilarRecommendations(
           FULL_TEST_COURSES,
-          currCurriculum.key
-        );
+          currCurriculum.key,
+          curriculaTaughtBefore
+        )[0];
 
         // Open expanded card of the current test curriculum
         fireEvent.click(quickViewButtons[i]);
         screen.getByText(currCurriculum.description);
 
-        // Check that the top-recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
-        // If the top-recommended similar curriculum was previously taught by the user, then check that the image and link are of the
-        // next-most-recommended similar curriculum.
-        let recommendedSimilarCurriculum = similarCurriculumRecommendations[0];
-        if (
-          curriculaTaughtBefore.includes(
-            recommendedSimilarCurriculum.course_offering_id
-          )
-        ) {
-          recommendedSimilarCurriculum = similarCurriculumRecommendations[1];
-        }
+        // Ensure none of the recommendations are ones the user has taught before
+        assert(
+          curriculaTaughtBefore[0].key !== recommendedSimilarCurriculum.key
+        );
 
-        //Image's alt text is the curriculum's display name
+        // Image's alt text is the curriculum's display name
         screen.getByAltText(recommendedSimilarCurriculum.display_name);
         assert(
           document

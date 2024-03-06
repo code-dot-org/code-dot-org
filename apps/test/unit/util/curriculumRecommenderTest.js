@@ -182,7 +182,8 @@ describe('similarRecommender', () => {
   it('similar curriculum recommender scores relevant test curricula', () => {
     const recommendedCurricula = getSimilarRecommendations(
       FULL_TEST_COURSES,
-      'fullTestCourse1'
+      'fullTestCourse1',
+      null
     ).map(curr => curr.key);
 
     // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
