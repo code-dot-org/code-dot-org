@@ -21,7 +21,7 @@ $level-cell-width: 52;
 
 .table {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
@@ -40,16 +40,19 @@ $level-cell-width: 52;
 
 .scrollingTable {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .topScrollBar {
   height: 20px;
   width: 100%;
   overflow-x: scroll;
+  position: sticky;
+  bottom: 0;
+  margin-right: 64px;
 
   &Div {
-    width: 10000px;
+    width: 3000px;
   }
 }
 
