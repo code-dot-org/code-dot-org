@@ -10,25 +10,17 @@
  * This will allow us to get rid of duplicated code.
  */
 
-import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {
+  ObservableParameterModel,
+  isProcedureBlock,
+} from '@blockly/block-shareable-procedures';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {
   getBlockDescription,
   setBlockDescription,
 } from './functionMutatorHelpers';
-
-/**
- * A type guard which checks if the given block is a procedure block.
- * @param block The block to check for procedure-y-ness.
- * @returns Whether this block is a procedure block or not.
- */
-function isProcedureBlock(block) {
-  return (
-    block.getProcedureModel !== undefined &&
-    block.doProcedureUpdate !== undefined &&
-    block.isProcedureDef !== undefined
-  );
-}
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
+import {Block} from 'blockly';
 
 export const procedureDefMutator = {
   hasStatements_: true,
@@ -39,9 +31,10 @@ export const procedureDefMutator = {
    * @returns XML storage element.
    * @this {Blockly.Block}
    */
-  mutationToDom: function () {
+  mutationToDom: function (this: ProcedureBlock) {
     const container = Blockly.utils.xml.createElement('mutation');
-    const params = this.getProcedureModel().getParameters();
+    const params =
+      this.getProcedureModel().getParameters() as ObservableParameterModel[];
     for (let i = 0; i < params.length; i++) {
       const parameter = Blockly.utils.xml.createElement('arg');
       const varModel = params[i].getVariableModel();
@@ -63,18 +56,18 @@ export const procedureDefMutator = {
    * @param xmlElement XML storage element.
    * @this {Blockly.Block}
    */
-  domToMutation: function (xmlElement) {
+  domToMutation: function (this: ProcedureBlock, xmlElement: Element) {
     for (let i = 0; i < xmlElement.childNodes.length; i++) {
       const node = xmlElement.childNodes[i];
       const nodeName = node.nodeName.toLowerCase();
       if (nodeName === 'arg') {
-        const varId = node.getAttribute('varid');
+        const varId = (node as Element).getAttribute('varid');
         this.getProcedureModel().insertParameter(
           new ObservableParameterModel(
             this.workspace,
-            node.getAttribute('name'),
+            (node as Element).getAttribute('name') || '',
             undefined,
-            varId
+            varId || ''
           ),
           i
         );
@@ -100,7 +93,7 @@ export const procedureDefMutator = {
    * Returns a JSON serializable value which represents the extra state of the block.
    * @returns The state of this block, e.g. the parameters and statements.
    */
-  saveExtraState: function () {
+  saveExtraState: function (this: ProcedureBlock) {
     const state = Object.create(null);
     state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
@@ -109,7 +102,8 @@ export const procedureDefMutator = {
     state['initialMoveConfig'] = this.isMovable();
     state['userCreated'] = this.userCreated;
 
-    const params = this.getProcedureModel().getParameters();
+    const params =
+      this.getProcedureModel().getParameters() as ObservableParameterModel[];
     if (!params.length && this.hasStatements_) return state;
 
     if (params.length) {
@@ -133,19 +127,21 @@ export const procedureDefMutator = {
    * Accepts a JSON serializable state value and applies it to the block.
    * @param state The state to apply to this block (see saveExtraState above).
    */
-  loadExtraState: function (state) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
+    const procedureFromMap = map.get(procedureId);
     if (
       procedureId &&
       procedureId !== this.model_.getId() &&
-      map.has(procedureId) &&
+      procedureFromMap &&
       (this.isInsertionMarker() || this.noBlockHasClaimedModel_(procedureId))
     ) {
       if (map.has(this.model_.getId())) {
         map.delete(this.model_.getId());
       }
-      this.model_ = map.get(procedureId);
+      this.model_ = procedureFromMap;
     }
 
     if (state['params'] && !this.getProcedureModel().getParameters().length) {
@@ -175,7 +171,7 @@ export const procedureDefMutator = {
    * @returns True if there is no definition block currently associated
    *     with the given procedure ID. False otherwise.
    */
-  noBlockHasClaimedModel_(procedureId) {
+  noBlockHasClaimedModel_(this: ProcedureBlock, procedureId: string) {
     const model = this.workspace.getProcedureMap().get(procedureId);
     return this.workspace
       .getAllBlocks(false)
@@ -192,8 +188,13 @@ export const procedureDefMutator = {
    * parameter blocks in the mutator.
    * @param containerBlock Root block in the mutator.
    */
-  deleteParamsFromModel_: function (containerBlock) {
-    const ids = new Set(containerBlock.getDescendants().map(b => b.id));
+  deleteParamsFromModel_: function (
+    this: ProcedureBlock,
+    containerBlock: Block
+  ) {
+    const ids = new Set(
+      containerBlock.getDescendants(/*ordered*/ false).map(b => b.id)
+    );
     const model = this.getProcedureModel();
     const count = model.getParameters().length;
     for (let i = count - 1; i >= 0; i--) {
@@ -208,7 +209,7 @@ export const procedureDefMutator = {
    * blocks have been renamed.
    * @param containerBlock Root block in the mutator.
    */
-  renameParamsInModel_: function (containerBlock) {
+  renameParamsInModel_: function (this: ProcedureBlock, containerBlock: Block) {
     const model = this.getProcedureModel();
 
     let i = 0;
@@ -233,7 +234,7 @@ export const procedureDefMutator = {
    * blocks.
    * @param containerBlock Root block in the mutator.
    */
-  addParamsToModel_: function (containerBlock) {
+  addParamsToModel_: function (this: ProcedureBlock, containerBlock: Block) {
     const model = this.getProcedureModel();
 
     let i = 0;
