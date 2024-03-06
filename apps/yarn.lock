@@ -4449,58 +4449,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-webpack5@npm:6.5.17-alpha.0":
-  version: 6.5.17-alpha.0
-  resolution: "@storybook/builder-webpack5@npm:6.5.17-alpha.0"
-  dependencies:
-    "@babel/core": ^7.12.10
-    "@storybook/addons": 6.5.17-alpha.0
-    "@storybook/api": 6.5.17-alpha.0
-    "@storybook/channel-postmessage": 6.5.17-alpha.0
-    "@storybook/channels": 6.5.17-alpha.0
-    "@storybook/client-api": 6.5.17-alpha.0
-    "@storybook/client-logger": 6.5.17-alpha.0
-    "@storybook/components": 6.5.17-alpha.0
-    "@storybook/core-common": 6.5.17-alpha.0
-    "@storybook/core-events": 6.5.17-alpha.0
-    "@storybook/node-logger": 6.5.17-alpha.0
-    "@storybook/preview-web": 6.5.17-alpha.0
-    "@storybook/router": 6.5.17-alpha.0
-    "@storybook/semver": ^7.3.2
-    "@storybook/store": 6.5.17-alpha.0
-    "@storybook/theming": 6.5.17-alpha.0
-    "@types/node": ^14.0.10 || ^16.0.0
-    babel-loader: ^8.0.0
-    babel-plugin-named-exports-order: ^0.0.2
-    browser-assert: ^1.2.1
-    case-sensitive-paths-webpack-plugin: ^2.3.0
-    core-js: ^3.8.2
-    css-loader: ^5.0.1
-    fork-ts-checker-webpack-plugin: ^6.0.4
-    glob: ^7.1.6
-    glob-promise: ^3.4.0
-    html-webpack-plugin: ^5.0.0
-    path-browserify: ^1.0.1
-    process: ^0.11.10
-    stable: ^0.1.8
-    style-loader: ^2.0.0
-    terser-webpack-plugin: ^5.0.3
-    ts-dedent: ^2.0.0
-    util-deprecate: ^1.0.2
-    webpack: ^5.9.0
-    webpack-dev-middleware: ^4.1.0
-    webpack-hot-middleware: ^2.25.1
-    webpack-virtual-modules: ^0.4.1
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 49c2f37b27eb441b151656f87e2bf9443848341aa6ac418de8bb1042bd5f5c59cf30b0cca010ba448bbf0d6b72254b23f24835a763360d66a7bf971034def555
-  languageName: node
-  linkType: hard
-
 "@storybook/channel-postmessage@npm:6.5.17-alpha.0":
   version: 6.5.17-alpha.0
   resolution: "@storybook/channel-postmessage@npm:6.5.17-alpha.0"
@@ -8067,13 +8015,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-named-exports-order@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "babel-plugin-named-exports-order@npm:0.0.2"
-  checksum: d918390a09c0148893ea93bdc9c4fc6a03447c688eaf40bed0f0682d036e985ecee830b90fec2ab149b8dc0cb3220a2c0ac5054e42626bdfe0b436b505b7ef22
-  languageName: node
-  linkType: hard
-
 "babel-plugin-polyfill-corejs2@npm:^0.3.2":
   version: 0.3.2
   resolution: "babel-plugin-polyfill-corejs2@npm:0.3.2"
@@ -8525,7 +8466,6 @@ __metadata:
     "@storybook/addon-a11y": 6.5.17-alpha.0
     "@storybook/addon-essentials": 6.5.17-alpha.0
     "@storybook/addon-options": ^5.3.21
-    "@storybook/builder-webpack5": 6.5.17-alpha.0
     "@storybook/manager-webpack5": 6.5.17-alpha.0
     "@storybook/react": 6.5.17-alpha.0
     "@testing-library/react": ^12.1.5
@@ -9006,13 +8946,6 @@ __metadata:
   version: 1.1.0
   resolution: "brorand@npm:1.1.0"
   checksum: 8a05c9f3c4b46572dec6ef71012b1946db6cae8c7bb60ccd4b7dd5a84655db49fe043ecc6272e7ef1f69dc53d6730b9e2a3a03a8310509a3d797a618cbee52be
-  languageName: node
-  linkType: hard
-
-"browser-assert@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "browser-assert@npm:1.2.1"
-  checksum: 8b2407cd04c1ed592cf892dec35942b7d72635829221e0788c9a16c4d2afa8b7156bc9705b1c4b32c30d88136c576fda3cbcb8f494d6f865264c706ea8798d92
   languageName: node
   linkType: hard
 
