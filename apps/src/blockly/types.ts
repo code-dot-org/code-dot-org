@@ -36,6 +36,7 @@ import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
+import { StringStream } from '@codemirror/language';
 
 export interface BlockDefinition {
   category: string;
@@ -297,6 +298,8 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   initBlockWithProcedureModel_: () => void;
   noBlockHasClaimedModel_: (procedureId: string) => boolean;
   setStatements_: (hasStatements: boolean) => void;
+  deserialize_: (name: string, params: string[]) => void;
+  createArgInputs_: (params: string[]) => void;
   hasStatements_: boolean;
   description?: string | null;
   // used for behavior blocks

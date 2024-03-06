@@ -122,6 +122,7 @@ export const behaviorDefMutator = {
    * @param state The state to apply to this block, eg the parameters and
    *     statements.
    */
+  // TODO: define a better type for state.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     this.behaviorId = state['behaviorId'];

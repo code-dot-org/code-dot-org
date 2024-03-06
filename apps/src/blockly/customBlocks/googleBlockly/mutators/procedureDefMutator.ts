@@ -127,6 +127,7 @@ export const procedureDefMutator = {
    * Accepts a JSON serializable state value and applies it to the block.
    * @param state The state to apply to this block (see saveExtraState above).
    */
+  // TODO: define a better type for state.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     const map = this.workspace.getProcedureMap();
