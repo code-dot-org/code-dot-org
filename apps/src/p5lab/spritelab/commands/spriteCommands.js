@@ -2,7 +2,6 @@ import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import {layoutSpriteGroup} from '../../layoutUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
-import * as blockUtils from '../../../block_utils';
 import {APP_HEIGHT} from '../../constants';
 
 export const commands = {
@@ -84,7 +83,7 @@ export const commands = {
     }
   },
 
-  makeEnvironmentSprites(animation, bitmap) {
+  makeEnvironmentSprites(animation, group, bitmap) {
     const scale = APP_HEIGHT / bitmap.length;
     for (let i = 0; i < bitmap.length; i++) {
       for (let j = 0; j < bitmap[0].length; j++) {
@@ -92,7 +91,7 @@ export const commands = {
           x: scale / 2 + scale * i,
           y: scale / 2 + scale * j,
         };
-        bitmap[j][i] && this.addSprite({animation, location, scale});
+        bitmap[j][i] && this.addSprite({animation, group, location, scale});
       }
     }
   },

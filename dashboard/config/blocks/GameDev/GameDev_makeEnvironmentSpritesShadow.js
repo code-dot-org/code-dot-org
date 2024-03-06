@@ -1,5 +1,5 @@
-function makeEnvironmentSpritesShadow(animation, layout) {
+function makeEnvironmentSpritesShadow(animation, group, layout) {
   if(layout !== undefined && layout.constructor === Array) {
-    makeEnvironmentSprites(animation, layout);
+    makeEnvironmentSprites(animation, group, layout);
   }
 }
