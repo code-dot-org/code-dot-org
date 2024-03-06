@@ -36,6 +36,8 @@ export const commands = {
         return sprite.getAnimationLabel();
       } else if (prop === 'y') {
         return 400 - sprite.y;
+      } else if (prop === 'velocityY') {
+        return -sprite.velocityY;
       } else {
         return sprite[prop];
       }

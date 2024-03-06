@@ -7,13 +7,13 @@ interface ColorOverrides {
 }
 
 interface CdoFieldButtonOptions {
-  value: string | undefined;
-  validator: FieldValidator<string> | null;
+  value?: string;
+  validator?: FieldValidator<string> | null;
   onClick: () => void;
-  transformText: ((text: string) => string) | undefined;
-  icon: SVGElement | undefined;
-  colorOverrides: ColorOverrides | undefined;
-  allowReadOnlyClick: boolean | undefined;
+  transformText?: (text: string) => string;
+  icon?: SVGElement;
+  colorOverrides?: ColorOverrides;
+  allowReadOnlyClick?: boolean;
 }
 
 export default class CdoFieldButton extends GoogleBlockly.Field {

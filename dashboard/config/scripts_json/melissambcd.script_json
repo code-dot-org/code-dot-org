@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-28 20:45:42 UTC",
+    "serialized_at": "2024-03-01 22:33:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -175,6 +175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Course_D_CSFmaker"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -527,7 +530,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Outro to Course_D_CSFmaker"
+          "CSF_maker_microbit_PL_end_naviagtion_D"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
@@ -535,7 +538,7 @@
         "activity_section.key": "e1c81ee6-fbd0-46f7-8689-8cda5fef2d9c"
       },
       "level_keys": [
-        "Outro to Course_D_CSFmaker"
+        "CSF_maker_microbit_PL_end_naviagtion_D"
       ]
     }
   ],
@@ -710,9 +713,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Outro to Course_D_CSFmaker",
+        "level.key": "CSF_maker_microbit_PL_end_naviagtion_D",
         "script_level.level_keys": [
-          "Outro to Course_D_CSFmaker"
+          "CSF_maker_microbit_PL_end_naviagtion_D"
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",

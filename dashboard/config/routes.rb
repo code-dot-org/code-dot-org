@@ -575,6 +575,7 @@ Dashboard::Application.routes.draw do
     get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
     post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
     get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+    get '/admin/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
     post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
     get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
     post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
@@ -600,6 +601,7 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
+    post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -887,6 +889,7 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'

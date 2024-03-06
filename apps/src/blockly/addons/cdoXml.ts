@@ -450,7 +450,7 @@ function makeLockedBlockImmovable(block: Element) {
  * @param {Element} xml - The XML element containing block elements.
  * @returns {Element[]} An array of block elements or an empty array if no blocks are present.
  */
-export function getBlockElements(xml: Document) {
+export function getBlockElements(xml: Element) {
   // Convert XML to an array of block elements
   return Array.from(xml.querySelectorAll('xml > block'));
 }
