@@ -31,6 +31,7 @@
   white-space: nowrap;
   margin-right: 16px;
   margin-bottom: 16px;
+  background-color: white;
 }
 
 .legend .headerContainer {
@@ -57,6 +58,7 @@
   padding: 16px;
   align-items: flex-start;
   gap: 28px;
+  min-height: 60px;
 }
 
 .legendItem {
