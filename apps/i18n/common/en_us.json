@@ -1934,6 +1934,7 @@
   "professionalLearningParticipantQuestion": "Who will be the participants in this section?",
   "programmingEnvironmentDocumentation": "{programmingEnvironmentTitle} Documentation",
   "progress": "Progress",
+  "progressBeta": "Progress (beta)",
   "progressLegendDetailsNotStarted": "The student has not done any work on this lesson or level.",
   "progressLegendDetailsNoOnlineWork": "This level is an activity that doesn't require online work.",
   "progressLegendDetailsInProgress": "The student has begun working on this level.",
