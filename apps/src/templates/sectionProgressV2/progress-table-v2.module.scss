@@ -58,7 +58,7 @@ $level-cell-width: 52;
     min-width: 80px;
     max-width: 80px;  
     height: 47px;
-    line-height: 47px;
+    line-height: 47px !important;
   }
 
   &Skeleton {
@@ -111,6 +111,8 @@ $level-cell-width: 52;
     display: flex;
     flex-direction: row;
     line-height: 32px;
+    min-width: fit-content;
+    max-height: 32px;
 
     &Dropdown {
       margin-inline-start: 8px;
