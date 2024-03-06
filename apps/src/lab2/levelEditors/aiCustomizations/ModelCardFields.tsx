@@ -1,9 +1,9 @@
 import {ModelCardInfo} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
-import {UpdateContext} from './EditAiCustomizations';
 import MultiItemInput from './MultiItemInput';
 import moduleStyles from './edit-ai-customizations.module.scss';
 import {MAX_ASK_ABOUT_TOPICS} from '@cdo/apps/aichat/constants';
+import {UpdateContext} from './UpdateContext';
 
 const modelCardFieldsAndLabels: [keyof ModelCardInfo, string][] = [
   ['description', 'Description'],
