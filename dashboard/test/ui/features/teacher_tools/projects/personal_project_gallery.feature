@@ -51,7 +51,7 @@ Scenario: Can Remix a Project
   And I press the child number 1 of class ".pop-up-menu-item"
   And I wait until current URL contains "/edit"
 
-  Scenario: Can Delete a Project
+Scenario: Can Delete a Project
   Given I make a "playlab" project named "To Be Deleted"
   Given I am on "http://studio.code.org/projects"
   And I wait until element "#uitest-personal-projects" is visible
