@@ -921,20 +921,20 @@ i.infoAlertIcon {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .studentDropdownOption {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  margin-top: 4px;
+  margin-top: 3px;
+  height: 26px;
 }
 
 .greenStatusBlob {
   background-color: $light_affirmative_100;
   border-radius: 20px;
-  padding: 5px 10px 0;
+  padding: 4px 10px 0;
   height: 22px;
   display:inline;
   p {
@@ -966,7 +966,7 @@ i.infoAlertIcon {
 
 .submitStatusText {
   display:inline;
-  padding-top: 2px;
+  padding-top: 3px;
   p {
     margin-bottom: 0;
   }
