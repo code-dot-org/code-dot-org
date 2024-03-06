@@ -5,7 +5,11 @@ module MailJet
   SECRET_KEY = CDO.mailjet_secret_key.freeze
 
   def self.create_contact(email, name)
-    configure
+    Mailjet.configure do |config|
+      config.api_key = API_KEY
+      config.secret_key = SECRET_KEY
+    end
+
     variable = Mailjet::Contact.create(
       is_excluded_from_campaigns: "true",
       email: email,
@@ -15,7 +19,12 @@ module MailJet
   end
 
   def self.send_template_email(to_email, template_id)
-    configure
+    Mailjet.configure do |config|
+      config.api_key = API_KEY
+      config.secret_key = SECRET_KEY
+      config.api_version = "v3.1"
+    end
+
     variable = Mailjet::Send.create(messages:
       [{
         From: {
@@ -34,13 +43,5 @@ module MailJet
       }]
     )
     p variable.attributes['Messages']
-  end
-
-  def self.configure
-    Mailjet.configure do |config|
-      config.api_key = API_KEY
-      config.secret_key = SECRET_KEY
-      config.api_version = "v3.1"
-    end
   end
 end
