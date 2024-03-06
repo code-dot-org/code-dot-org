@@ -149,6 +149,7 @@ class User < ApplicationRecord
     show_progress_table_v2
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
+    ai_tutor_access_denied
   )
 
   attr_accessor(
@@ -1511,7 +1512,8 @@ class User < ApplicationRecord
 
   # Students
   def has_ai_tutor_access?
-    !DCDO.get('ai-tutor-disabled', false) && (
+    !ai_tutor_access_denied &&
+      !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
       (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
       sections_as_student.any?(&:ai_tutor_enabled)))
@@ -2201,6 +2203,7 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
+      ai_tutor_access_denied: ai_tutor_access_denied
     }
   end
 

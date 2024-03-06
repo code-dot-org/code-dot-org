@@ -32,6 +32,12 @@ export type StudentChatRow = {
   createdAt: string;
 };
 
+export type StudentAccessData = {
+  id: number;
+  name: string;
+  aiTutorAccessDenied: boolean;
+};
+
 export type Level = {
   id: number;
   type: string;

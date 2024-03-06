@@ -22,6 +22,7 @@ import i18n from '@cdo/locale';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
+import AITutorTeacherDashboard from '@cdo/apps/code-studio/components/aiTutor/aiTutorTeacherDashboard';
 
 const applyV1TeacherDashboardWidth = children => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;
@@ -182,7 +183,7 @@ function TeacherDashboard({
             path={TeacherDashboardPath.aiTutorChatMessages}
             component={props =>
               applyV1TeacherDashboardWidth(
-                <AITutorChatMessagesTable sectionId={sectionId} />
+                <AITutorTeacherDashboard sectionId={sectionId} />
               )
             }
           />
