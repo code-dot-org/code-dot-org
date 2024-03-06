@@ -1,5 +1,4 @@
 import {FieldBitmap} from '@blockly/field-bitmap';
-import * as blockUtils from '../../block_utils';
 
 /**
  * Custom FieldBitmap class with additional hooks for XML serialization.
