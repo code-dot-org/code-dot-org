@@ -295,8 +295,12 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   createDef_: (name: string, params?: string[]) => IProcedureModel;
   findProcedureModel_: (name: string, params?: string[]) => IProcedureModel;
   initBlockWithProcedureModel_: () => void;
+  noBlockHasClaimedModel_: (procedureId: string) => boolean;
+  setStatements_: (hasStatements: boolean) => void;
+  hasStatements_: boolean;
+  description?: string | null;
   // used for behavior blocks
-  behaviorId?: string;
+  behaviorId?: string | null;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.

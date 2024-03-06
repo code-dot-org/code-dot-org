@@ -9,25 +9,17 @@
  * `behaviorDefMutator` file might need to stick around.
  */
 
-import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {
+  ObservableParameterModel,
+  isProcedureBlock,
+} from '@blockly/block-shareable-procedures';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {
   getBlockDescription,
   setBlockDescription,
 } from './functionMutatorHelpers';
-
-/**
- * A type guard which checks if the given block is a procedure block.
- * @param block The block to check for procedure-y-ness.
- * @returns Whether this block is a procedure block or not.
- */
-function isProcedureBlock(block) {
-  return (
-    block.getProcedureModel !== undefined &&
-    block.doProcedureUpdate !== undefined &&
-    block.isProcedureDef !== undefined
-  );
-}
+import {Block} from 'blockly';
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
 export const behaviorDefMutator = {
   hasStatements_: true,
@@ -38,9 +30,10 @@ export const behaviorDefMutator = {
    * @returns XML storage element.
    * @this {Blockly.Block}
    */
-  mutationToDom: function () {
+  mutationToDom: function (this: ProcedureBlock) {
     const container = Blockly.utils.xml.createElement('mutation');
-    const params = this.getProcedureModel().getParameters();
+    const params =
+      this.getProcedureModel().getParameters() as ObservableParameterModel[];
     for (let i = 0; i < params.length; i++) {
       const parameter = Blockly.utils.xml.createElement('arg');
       const varModel = params[i].getVariableModel();
@@ -49,7 +42,9 @@ export const behaviorDefMutator = {
       container.appendChild(parameter);
     }
 
-    container.setAttribute('behaviorId', this.behaviorId);
+    if (this.behaviorId) {
+      container.setAttribute('behaviorId', this.behaviorId);
+    }
     // Save whether the statement input is visible.
     if (!this.hasStatements_) {
       container.setAttribute('statements', 'false');
@@ -62,7 +57,7 @@ export const behaviorDefMutator = {
    * @param xmlElement XML storage element.
    * @this {Blockly.Block}
    */
-  domToMutation: function (xmlElement) {
+  domToMutation: function (this: ProcedureBlock, xmlElement: Element) {
     // We do not copy parameters because behavior parameters are a special case.
     // We manually create the "this sprite" parameter for each behavior,
     // (and don't want to treat it as a Blockly parameter).
@@ -78,7 +73,7 @@ export const behaviorDefMutator = {
     }
     this.behaviorId =
       xmlElement.getAttribute('behaviorId') ||
-      xmlElement.nextElementSibling.getAttribute('id');
+      xmlElement.nextElementSibling?.getAttribute('id');
     this.userCreated = readBooleanAttribute(
       xmlElement,
       'userCreated',
@@ -94,14 +89,15 @@ export const behaviorDefMutator = {
    * Returns the state of this block as a JSON serializable object.
    * @returns The state of this block, eg the parameters and statements.
    */
-  saveExtraState: function () {
+  saveExtraState: function (this: ProcedureBlock) {
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
     state['userCreated'] = this.userCreated;
     state['description'] = getBlockDescription(this);
 
-    const params = this.getProcedureModel().getParameters();
+    const params =
+      this.getProcedureModel().getParameters() as ObservableParameterModel[];
     if (!params.length && this.hasStatements_) return state;
 
     if (params.length) {
@@ -126,21 +122,23 @@ export const behaviorDefMutator = {
    * @param state The state to apply to this block, eg the parameters and
    *     statements.
    */
-  loadExtraState: function (state) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     this.behaviorId = state['behaviorId'];
     this.userCreated = state['userCreated'];
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
+    const procedureFromMap = map.get(procedureId);
     if (
       procedureId &&
       procedureId !== this.model_.getId() &&
-      map.has(procedureId) &&
+      procedureFromMap &&
       (this.isInsertionMarker() || this.noBlockHasClaimedModel_(procedureId))
     ) {
       if (map.has(this.model_.getId())) {
         map.delete(this.model_.getId());
       }
-      this.model_ = map.get(procedureId);
+      this.model_ = procedureFromMap;
     }
 
     if (state['params'] && !this.getProcedureModel().getParameters().length) {
@@ -166,7 +164,7 @@ export const behaviorDefMutator = {
    * @returns True if there is no definition block currently associated
    *     with the given procedure ID. False otherwise.
    */
-  noBlockHasClaimedModel_(procedureId) {
+  noBlockHasClaimedModel_(this: ProcedureBlock, procedureId: string) {
     const model = this.workspace.getProcedureMap().get(procedureId);
     return this.workspace
       .getAllBlocks(false)
@@ -183,8 +181,13 @@ export const behaviorDefMutator = {
    * parameter blocks in the mutator.
    * @param containerBlock Root block in the mutator.
    */
-  deleteParamsFromModel_: function (containerBlock) {
-    const ids = new Set(containerBlock.getDescendants().map(b => b.id));
+  deleteParamsFromModel_: function (
+    this: ProcedureBlock,
+    containerBlock: Block
+  ) {
+    const ids = new Set(
+      containerBlock.getDescendants(/*ordered*/ false).map(b => b.id)
+    );
     const model = this.getProcedureModel();
     const count = model.getParameters().length;
     for (let i = count - 1; i >= 0; i--) {
@@ -199,7 +202,7 @@ export const behaviorDefMutator = {
    * blocks have been renamed.
    * @param containerBlock Root block in the mutator.
    */
-  renameParamsInModel_: function (containerBlock) {
+  renameParamsInModel_: function (this: ProcedureBlock, containerBlock: Block) {
     const model = this.getProcedureModel();
 
     let i = 0;
@@ -224,7 +227,7 @@ export const behaviorDefMutator = {
    * blocks.
    * @param containerBlock Root block in the mutator.
    */
-  addParamsToModel_: function (containerBlock) {
+  addParamsToModel_: function (this: ProcedureBlock, containerBlock: Block) {
     const model = this.getProcedureModel();
 
     let i = 0;
