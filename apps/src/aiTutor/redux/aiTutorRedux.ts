@@ -70,6 +70,9 @@ export const askAITutor = createAsyncThunk(
     } else {
       systemPrompt = generalChatSystemPrompt;
     }
+    if (state.aiTutor.level?.levelSpecificPrompt) {
+      systemPrompt += state.aiTutor.level?.levelSpecificPrompt;
+    }
 
     const storedMessages = state.aiTutor.chatMessages;
 

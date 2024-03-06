@@ -38,6 +38,7 @@ export type Level = {
   hasValidation: boolean;
   isAssessment: boolean;
   isProjectBacked: boolean;
+  levelSpecificPrompt: string;
 };
 
 export interface ChatContext {
