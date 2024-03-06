@@ -215,7 +215,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
 
-  const onModeChange = useCallback( (value: Mode) => {
+  const onModeChange = useCallback((value: Mode) => {
     setMode(value);
   }, []);
 
@@ -255,9 +255,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   if (filter === 'all') {
     rightColumnSounds = possibleSounds;
   } else {
-    rightColumnSounds = possibleSounds.filter(
-      sound => sound.type === filter
-    );
+    rightColumnSounds = possibleSounds.filter(sound => sound.type === filter);
   }
 
   const showSoundFilters = AppConfig.getValue('show-sound-filters') === 'true';
