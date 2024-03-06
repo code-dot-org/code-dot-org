@@ -7,7 +7,7 @@ export const ITEM_TYPE = Object.freeze({
   NEEDS_FEEDBACK: 3,
   FEEDBACK_GIVEN: 4,
   ASSESSMENT_LEVEL: ['star', color.neutral_dark],
-  CHOICE_LEVEL: ['split', color.neutral_dark60],
+  CHOICE_LEVEL: ['split', color.neutral_dark60, color.neutral_dark],
   KEEP_WORKING: ['rotate-left', color.neutral_dark],
   NO_ONLINE_WORK: ['dash', color.neutral_dark],
   IN_PROGRESS: ['circle-o', color.neutral_dark],

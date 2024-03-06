@@ -9,7 +9,10 @@ export default function LegendItem({itemType, labelText}) {
   return (
     <div className={styles.legendItem}>
       <div className={styles.legendIcon}>
-        <ProgressIcon itemType={itemType} />
+        <ProgressIcon
+          itemType={itemType}
+          className={styles.fontAwesomeIconInLegend}
+        />
       </div>
       <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
     </div>

@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
-export default function ProgressIcon({itemType}) {
+export default function ProgressIcon({itemType, className}) {
   const needsFeedbackTriangle = () => (
     <div
       className={classNames(styles.needsFeedback, styles.cornerBox)}
@@ -52,8 +52,12 @@ export default function ProgressIcon({itemType}) {
         <FontAwesome
           id={'uitest-' + itemType[0]}
           icon={itemType[0]}
-          style={{color: itemType[1]}}
-          className={styles.fontAwesomeIcon}
+          style={
+            className && itemType === ITEM_TYPE.CHOICE_LEVEL
+              ? {color: itemType[2]}
+              : {color: itemType[1]}
+          }
+          className={className ? className : styles.fontAwesomeIcon}
           aria-label={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
       )}

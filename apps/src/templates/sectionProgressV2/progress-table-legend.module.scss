@@ -72,11 +72,16 @@
 }
 
 .fontAwesomeIcon {
-  font-size: 16px;
+  font-size: 18px;
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
+}
+
+.fontAwesomeIconInLegend {
+  font-size: 16px;
   padding: 0 2px 0 2px;
+  vertical-align: middle;
 }
 
 .legendIcon {

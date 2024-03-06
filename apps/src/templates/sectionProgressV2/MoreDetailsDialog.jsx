@@ -12,11 +12,12 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 import styles from './progress-key-popup.module.scss';
+import iconStyles from './progress-table-legend.module.scss';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
-  const renderItem = (itemType, itemTitle, itemDetails) => (
+  const renderItem = (itemType, itemTitle, itemDetails, className) => (
     <div className={styles.item}>
-      <ProgressIcon itemType={itemType} />
+      <ProgressIcon itemType={itemType} className={className} />
       <BodyThreeText>
         <StrongText>{itemTitle + ': '}</StrongText>
         {itemDetails}
@@ -41,15 +42,20 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.NO_ONLINE_WORK,
           i18n.noOnlineWork(),
-          i18n.progressLegendDetailsNoOnlineWork()
+          i18n.progressLegendDetailsNoOnlineWork(),
+          iconStyles.fontAwesomeIconInLegend
         )}
         {renderItem(
           ITEM_TYPE.IN_PROGRESS,
           i18n.inProgress(),
-          i18n.progressLegendDetailsInProgress()
+          i18n.progressLegendDetailsInProgress(),
+          iconStyles.fontAwesomeIconInLegend
         )}
         <div className={styles.item}>
-          <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />
+          <ProgressIcon
+            itemType={ITEM_TYPE.SUBMITTED}
+            className={iconStyles.fontAwesomeIconInLegend}
+          />
           <div>
             <BodyThreeText>
               <StrongText>{i18n.submitted() + ': '}</StrongText>
@@ -67,12 +73,14 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           renderItem(
             ITEM_TYPE.VALIDATED,
             i18n.validated(),
-            i18n.progressLegendDetailsValidated()
+            i18n.progressLegendDetailsValidated(),
+            iconStyles.fontAwesomeIconInLegend
           )}
         {renderItem(
           ITEM_TYPE.KEEP_WORKING,
           i18n.markedAsKeepWorking(),
-          i18n.progressLegendDetailsKeepGoing()
+          i18n.progressLegendDetailsKeepGoing(),
+          iconStyles.fontAwesomeIconInLegend
         )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
@@ -89,12 +97,14 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.ASSESSMENT_LEVEL,
           i18n.assessmentLevel(),
-          i18n.progressLegendDetailsAssessmentLevels()
+          i18n.progressLegendDetailsAssessmentLevels(),
+          iconStyles.fontAwesomeIconInLegend
         )}
         {renderItem(
           ITEM_TYPE.CHOICE_LEVEL,
           i18n.choiceLevel(),
-          i18n.progressLegendDetailsChoiceLevels()
+          i18n.progressLegendDetailsChoiceLevels(),
+          iconStyles.fontAwesomeIconInLegend
         )}
       </div>
     </AccessibleDialog>
