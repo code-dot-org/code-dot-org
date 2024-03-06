@@ -27,6 +27,7 @@ export default class LandingPage extends Component {
           backgroundColor={color.light_gray_50}
         />
         <main className={style.wrapper}>
+          <GettingStartedBanner />
           {this.props.lastWorkshopSurveyUrl && (
             <LastWorkshopSurveyBanner
               subHeading={i18n.plLandingSubheading()}
@@ -74,3 +75,20 @@ LastWorkshopSurveyBanner.propTypes = {
   description: PropTypes.string,
   surveyUrl: PropTypes.string,
 };
+
+export const GettingStartedBanner = () => (
+  <TwoColumnActionBlock
+    imageUrl={pegasus(
+      '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
+    )}
+    heading={i18n.plLandingGettingStartedHeading()}
+    subHeading={i18n.plLandingGettingStartedSubHeading()}
+    description={i18n.plLandingGettingStartedDescription()}
+    buttons={[
+      {
+        url: pegasus('/educate/professional-learning'),
+        text: i18n.plLandingGettingStartedButton(),
+      },
+    ]}
+  />
+);
