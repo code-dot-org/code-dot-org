@@ -242,10 +242,14 @@ export function SyncOmniAuthSectionButton({
       {...iconProps(buttonState)}
       style={{float: 'left'}}
       title={
-        buttonState === DISABLED && i18n.ltiSectionSyncButtonDisabledAltText()
+        buttonState === DISABLED
+          ? i18n.ltiSectionSyncButtonDisabledAltText()
+          : undefined
       }
       aria-label={
-        buttonState === DISABLED && i18n.ltiSectionSyncButtonDisabledAltText()
+        buttonState === DISABLED
+          ? i18n.ltiSectionSyncButtonDisabledAltText()
+          : undefined
       }
     />
   );
