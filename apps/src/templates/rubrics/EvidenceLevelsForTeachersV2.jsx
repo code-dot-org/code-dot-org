@@ -13,6 +13,7 @@ import {
   UNDERSTANDING_LEVEL_STRINGS,
   UNDERSTANDING_LEVEL_STRINGS_V2,
 } from './rubricHelpers';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 
 const INVALID_UNDERSTANDING = -1;
 
@@ -34,10 +35,16 @@ export default function EvidenceLevelsForTeachersV2({
       if (understanding !== INVALID_UNDERSTANDING || !isAiAssessed) {
         return [];
       }
-      if (aiEvalInfo.understanding > 1) {
-        return [2, 3];
-      } else if (aiEvalInfo.understanding >= 0) {
-        return [0, 1];
+      if (aiEvalInfo.understanding > RubricUnderstandingLevels.LIMITED) {
+        return [
+          RubricUnderstandingLevels.CONVINCING,
+          RubricUnderstandingLevels.EXTENSIVE,
+        ];
+      } else if (aiEvalInfo.understanding >= RubricUnderstandingLevels.NONE) {
+        return [
+          RubricUnderstandingLevels.LIMITED,
+          RubricUnderstandingLevels.NONE,
+        ];
       }
     } else return [];
   }, [aiEvalInfo, isAiAssessed, understanding]);
