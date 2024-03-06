@@ -8,12 +8,19 @@ export interface LoadingProps {
   isLoading: boolean;
 }
 
+const noFade = window.location.href.includes('lab2-no-fade');
+
 const Loading: React.FunctionComponent<LoadingProps> = ({
   isLoading,
 }: LoadingProps) => {
-  const overlayStyle = isLoading
+  const overlayStyle: string = noFade
+    ? isLoading
+      ? moduleStyles.noFadeLoading
+      : moduleStyles.noFadeLoaded
+    : isLoading
     ? moduleStyles.fadeLoading
     : moduleStyles.fadeLoaded;
+
   return (
     <div
       id="fade-overlay"
