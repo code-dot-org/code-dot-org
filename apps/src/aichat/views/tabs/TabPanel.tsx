@@ -14,7 +14,13 @@ const TabPanel: React.FunctionComponent<TabPanelProps> = ({
   id,
   labelledBy,
 }) => (
-  <div role="tabpanel" id={id} aria-labelledby={labelledBy} hidden={!isActive}>
+  <div
+    role="tabpanel"
+    id={id}
+    aria-labelledby={labelledBy}
+    hidden={!isActive}
+    style={{height: '100%'}}
+  >
     {content}
   </div>
 );

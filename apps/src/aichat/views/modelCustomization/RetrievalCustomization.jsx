@@ -23,7 +23,7 @@ const RetrievalCustomization = () => {
       <label htmlFor="system-prompt">System prompt</label>
       <textarea
         id="retrieval-input"
-        style={{width: 'calc(100% - 20px)', resize: 'vertical'}}
+        style={{width: 'calc(100% - 20px)', height: 100, resize: 'vertical'}}
         onChange={event => setNewMessage(event.target.value)}
         value={newMessage}
       />

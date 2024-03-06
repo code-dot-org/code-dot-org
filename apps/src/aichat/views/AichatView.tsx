@@ -30,7 +30,7 @@ const AichatView: React.FunctionComponent = () => {
           <Instructions beforeNextLevel={beforeNextLevel} />
         </PanelContainer>
       </div>
-      <div>
+      <div className={moduleStyles.customizationArea}>
         <PanelContainer
           id="aichat-model-customization-panel"
           headerText="Model Customization"
