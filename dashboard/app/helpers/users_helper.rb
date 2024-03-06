@@ -176,7 +176,7 @@ module UsersHelper
       script: unit,
       users: users,
       user_levels_by_level: User.user_levels_by_user_by_level(users, unit),
-      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit),
+      teacher_feedback_by_level: teacher_feedbacks_by_student_by_level(users, unit, current_user&.id),
       paired_user_levels: PairedUserLevel.pairs_by_user(users),
       include_timestamp: true
     )
@@ -205,10 +205,10 @@ module UsersHelper
   #   },
   #   3: {}
   # }
-  private def teacher_feedbacks_by_student_by_level(users, unit)
+  private def teacher_feedbacks_by_student_by_level(users, unit, teacher_id = nil)
     initial_hash = users.map {|user| [user.id, {}]}.to_h
     TeacherFeedback.
-      get_latest_feedbacks_received(users.map(&:id), nil, unit.id).
+      get_latest_feedbacks_received(users.map(&:id), nil, unit.id, teacher_id).
       group_by(&:student_id).
       inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
         memo[student_id] = teacher_feedbacks.index_by(&:level_id)
@@ -288,6 +288,7 @@ module UsersHelper
     include_timestamp: false
   )
     progress = users.map {|user| [user.id, {}]}.to_h
+
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
@@ -315,8 +316,7 @@ module UsersHelper
             level_progress = get_level_progress(
               user_id: user.id,
               user_level: user_levels_by_level[user.id][level_for_progress_id],
-              feedback_review_state:
-                teacher_feedback_by_level[user.id][level_for_progress_id]&.review_state,
+              teacher_feedback: teacher_feedback_by_level[user.id][level_for_progress_id],
               script_level: sl,
               paired_user_levels: paired_user_levels[user.id],
               include_timestamp: include_timestamp
@@ -344,7 +344,7 @@ module UsersHelper
   private def get_level_progress(
     user_id:,
     user_level:,
-    feedback_review_state:,
+    teacher_feedback:,
     script_level:,
     paired_user_levels:,
     include_timestamp:
@@ -356,10 +356,11 @@ module UsersHelper
     if user_level.nil?
       if script_level.lesson.lockable?
         return {locked: true}
-      elsif feedback_review_state.present?
+      elsif teacher_feedback&.review_state&.present?
         return {
           status: LEVEL_STATUS.not_tried,
-          teacher_feedback_review_state: feedback_review_state
+          teacher_feedback_review_state: teacher_feedback.review_state,
+          teacher_feedback_new: true
         }
       else
         return nil
@@ -373,7 +374,9 @@ module UsersHelper
       paired: (paired_user_levels.include? user_level.id) || nil,
       last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
       time_spent: user_level.time_spent&.to_i,
-      teacher_feedback_review_state: feedback_review_state
+      teacher_feedback_review_state: teacher_feedback&.review_state,
+      teacher_feedback_new:
+        ((teacher_feedback&.updated_at&.to_i || 0) > (user_level.updated_at&.to_i || 0)) || nil
     }.compact
   end
 
@@ -411,7 +414,7 @@ module UsersHelper
       sublevel_progress = get_level_progress(
         user_id: user.id,
         user_level: user_levels_by_level[level_for_progress.id],
-        feedback_review_state: teacher_feedback_by_level[sublevel.id]&.review_state,
+        teacher_feedback: teacher_feedback_by_level[sublevel.id],
         script_level: script_level,
         paired_user_levels: paired_user_levels,
         include_timestamp: include_timestamp

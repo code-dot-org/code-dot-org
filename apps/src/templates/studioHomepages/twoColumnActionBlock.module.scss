@@ -22,7 +22,6 @@ $breakpoint: 993px;
   .image {
     margin: 1.25rem;
     width: calc(50% - 1.25rem);
-    height: fit-content;
 
     @media (max-width: $breakpoint) {
       display: none;

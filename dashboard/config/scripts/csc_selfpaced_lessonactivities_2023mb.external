@@ -7,27 +7,18 @@ markdown <<MARKDOWN
 
 #### CS Fundamentals Maker with micro:bit offers different pathways and activities to better support students with learning computer science. Students build their skills and confidence to ultimately work with the micro:bit. 
 
+#### **First,** choose the course you want to teach. **Then,** decide the challenge level you want your students to try.
+
+#### Remember, these courses are designed with flexibility in mind. You can chose to work your way through an entire course, or assign different pathways to different students. The choice is yours. 
+
 ## Pathway Overview 
 
-<img src="https://images.code.org/ac371a6cdc9961e9f3544dd44411d340-image-1708641631801.org colors maker pathways courses.jpg" alt="diagram of course pathway" width="800px">
+<img src="https://images.code.org/006af9054bff767c964aa692f50f9470-image-1709240322194.org colors maker pathways.png" alt="diagram of course pathway" width="800px">
 
-## Types of Activities
 
-### **Off the computer** <img src="https://images.code.org/e6be160511c661e117a54e32f2b8b1c0-image-1699392745224.png" alt="An icon of a an electric outlet being unplugged to signial this portion of the module does not use a computer." width="30px" style="border-radius:10px; float:left; margin: 5px 0 0 0px;">
-* #### **Unplugged Activity** - Students tie the concepts of events to a dance experience.  
-	* #### *You are encouraged to customize this lesson to fit within the context of topics or standards currently being taught.*
-
-### **On the computer** <img src="https://images.code.org/bfc84a3ecdf44395ca5e5177738eb80d-image-1699392681086.png" alt="An icon of a computer screen to signial this portion of the module uses a computer." width="30px" style="border-radius:10px; float:left; margin: 0 0 0 0px;">
-* #### **Skill-building** - Students learn new concepts through guided lessons.
-<br> 
-
-### 🤖 **With micro:bit** 
-* #### **Physical Computing** - Students apply coding concepts to program a physical device.
 
 
 ## Let's keep learning! 
-
-
 
 
 MARKDOWN

@@ -182,7 +182,7 @@ For traditional coding activities, a diverse committee of computer science educa
 
 또한, 등재되기 위해 모든 활동은 다음과 같아야 합니다.
 
-신입 교사와 학생을 위한 자기 주도적 활동을 위해 검토 위원회는 다음 사항을 검토합니다.
+In addition, in order to be listed, all activities must:
 
 - 공립학교 수업에 적절 (총기, 성적으로 노골적인/성인물, 종교적 내용 등이 없어야 합니다)
 - 가입할 필요가 없습니다.
@@ -198,9 +198,9 @@ Teachers and students will be able to search through and filter our list of acti
 
 - 긍정적인 피드백 - 무엇이 잘 되고 있는지?
 - 비판적 피드백 - 개선해야 할 점은?
-- 광범위한 사용자에게서 주목을 받음 (플랫폼과 언어, 연령을 망라하여).
+- Appeal to a wide range of users (across platforms, languages, and ages)
 - 이 활동이 학생들에게 독창적인 것을 만들도록 북돋아 줍니까?
-- 올해 새 레슨 플랜/활동임.
+- Are new this year
 
 [**맨 위로**](#top)
 
@@ -210,7 +210,7 @@ Teachers and students will be able to search through and filter our list of acti
 
 Activities do not have to include AI, though we are looking to offer more AI related activities.
 
-**선생님용 설명을 포함해서** 대부분의 활동들은 학생들 스스로 자기주도적으로 가능해야합니다. 하지만 선생님의 도움이나 지도를 통해서 이루어지는 활동들에는, 반드시 선생님들을 위해 여러분의 활동에 대한 명확하고 간단한 지도사항/방법/내용을 별도의 URL 주소 형태로 함께 제공해 주세요. 대부분의 학생들이 초보자인것과 같이, 많은 선생님들도 별로 다르지 않습니다. 다음과 같은 정보를 포함시켜주세요:
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
 조기 검토를 위해 제출된 모든 활동은 9월 1일까지 피드백을 받을 것입니다. 또한 피드백에 대한 반응으로 수정한 경우, 수정 사항을 설명하기 위해 사용할 양식을 링크로 제공할 것입니다.
 
@@ -239,13 +239,13 @@ Activities do not have to include AI, though we are looking to offer more AI rel
 
 Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. “아워오브코드”는 아워오브코드 캠페인과 관련하여 비상업적 CS Education 활동과 관련해서만 사용하고 다른 용도로는 사용하지 마십시오.
-2. 패션 제품에는 "아워오브코드" 라는 참조 표시를 사용해야 한다는 것은 그것이 귀사의 고유 브랜드명임을 나타내는 것이 아니라 "아워오브코드"를 풀뿌리 운동으로서 지칭하는 것입니다. 좋은 예: “AcmeCorp.com의 아워 오브 코드® 에 참여하세요.” 나쁜 예시: "ACME Corp 가 만든 Hour of Code를 해보세요".
-3. 웹사이트와 앱 설명에서 “Hour of Code”를 언급한 가장 눈에 잘 띄는 곳에 “®” 위 첨자를 사용하세요.
-4. 페이지 (또는 바닥글) 에 아워오브코드, CSEDWeek 및 Code.org 웹 사이트로 연결되는 링크를 포함하여 다음 내용을 모두 공개하는 언어를 포함하십시오. a. 아워오브코드® 및 호라 델 코디고® 는 Code.org의 등록 상표이며, b. “['Hour of Code](http://hourofcode.com/) ® '는 [](http://code.org/) Code.org가 수백만 명의 학생들에게 한 시간 분량의 컴퓨터 과학 및 컴퓨터 프로그래밍을 소개하는 전국적인 이니셔티브입니다.”
-5. 앱 이름에 “아워오브코드”를 사용하지 마세요.
-6. 상업적 용도나 목적 (예: 아워오브코드 활동을 페이월 뒤에 배치, 아워오브코드 활동의 일환으로 다른 유료 서비스 홍보, 아워오브코드 상품 판매) 과 관련하여 “아워오브코드”를 사용하지 마십시오.
-7. 로그인이나 계정 생성이 필요한 활동과 관련하여 “Hour of Code”를 사용하지 마십시오.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “['Hour of Code](http://hourofcode.com/) ® '는 [](http://code.org/) Code.org가 수백만 명의 학생들에게 한 시간 분량의 컴퓨터 과학 및 컴퓨터 프로그래밍을 소개하는 전국적인 이니셔티브입니다.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**맨 위로**](#top)
 
@@ -253,13 +253,13 @@ Hour of Code® and Hora del Código® are registered trademarks of Code.org. Man
 
 ## 상표 가이드라인
 
-튜토리얼이 승인되어 최종 튜터리얼 페이지에 포함되면, Code.org는 튜토리얼에 통합시킬 고유 추적 픽셀을 제공할 것입니다. 아래 예 참조. Do not include on any interim pages of your tutorial.
+In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
 This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
 If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
 Example tracking pixels for Dance Party:
 

@@ -104,6 +104,12 @@ cron:
 - dashboard.standard_categories
 - dashboard.frameworks
 - dashboard.user_project_storage_ids
+- dashboard.lti_integrations:
+    remove_column: [admin_email]
+- dashboard.lti_deployments
+- dashboard.lti_courses
+- dashboard.lti_sections
+- dashboard.lti_user_identities
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
