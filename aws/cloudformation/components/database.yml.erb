@@ -165,7 +165,6 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretAdmin}
               - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretWriter}
               - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretReader}
       PermissionsBoundary: !ImportValue IAM-DevPermissions
@@ -320,7 +319,6 @@
       EngineFamily: MYSQL
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretAdmin, IAMAuth: DISABLED}
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretWriter, IAMAuth: DISABLED}
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
       VpcSubnetIds: <%=subnets.to_json%>
