@@ -253,7 +253,8 @@ class EvaluateRubricJob < ApplicationJob
     validate_evaluations(ai_evaluations, rubric)
 
     ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
-    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail)
+    ai_confidence_levels_exact_match = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence-exact.json'))
+    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
   end
@@ -390,11 +391,16 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail)
+  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
     ai_evaluations.map do |evaluation|
       learning_goal = evaluation['Key Concept']
-      confidence_level = ai_confidence_levels_pass_fail[learning_goal]
-      evaluation.merge('Confidence' => confidence_s_to_i(confidence_level))
+      label = evaluation['Label']
+      confidence_pass_fail = ai_confidence_levels_pass_fail[learning_goal]
+      confidence_exact_match = ai_confidence_levels_exact_match[learning_goal][label]
+      evaluation.merge(
+        'Confidence-Pass-Fail' => confidence_s_to_i(confidence_pass_fail),
+        'Confidence-Exact-Match' => confidence_s_to_i(confidence_exact_match)
+      )
     end
   end
 
@@ -422,7 +428,8 @@ class EvaluateRubricJob < ApplicationJob
           learning_goal_id: lg.id,
           rubric_ai_evaluation_id: rubric_ai_evaluation.id,
           understanding: understanding_s_to_i(label),
-          ai_confidence: ai_evaluation['Confidence'],
+          ai_confidence: ai_evaluation['Confidence-Pass-Fail'],
+          ai_confidence_exact_match: ai_evaluation['Confidence-Exact-Match'],
           observations: ai_evaluation['Observations'] || '',
         )
       end
@@ -449,7 +456,7 @@ class EvaluateRubricJob < ApplicationJob
 
   private def confidence_s_to_i(confidence_level)
     confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
-    raise "Unexpected confidence level: #{confidence_level}" unless confidence_levels.include?(confidence_level)
+    raise "Unexpected confidence level: #{confidence_level.inspect}" unless confidence_levels.include?(confidence_level)
     LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 end
