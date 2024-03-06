@@ -40,6 +40,7 @@ function ProgressTableV2({
   const [tableWidth, setTableWidth] = React.useState(0);
 
   const tableRef = React.useRef();
+  const scrollRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -104,9 +105,17 @@ function ProgressTableV2({
       tableRef.current.scrollLeft = scroll.target.scrollLeft;
     };
 
+    const scrollScrollBar = scroll => {
+      scrollRef.current.scrollLeft = scroll.target.scrollLeft;
+    };
+
     return (
       <div className={styles.scrollingTable}>
-        <div className={styles.topScrollBar} onScroll={scrollTable}>
+        <div
+          className={styles.topScrollBar}
+          onScroll={scrollTable}
+          ref={scrollRef}
+        >
           <div style={{width: tableWidth + 'px'}} />
         </div>
         <div
@@ -115,6 +124,7 @@ function ProgressTableV2({
             isSkeleton && styles.tableLoading
           )}
           ref={tableRef}
+          onScroll={scrollScrollBar}
         >
           {lessons.map(getRenderedColumn)}
         </div>
