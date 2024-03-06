@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
-export default function ProgressIcon({itemType, className}) {
+export default function ProgressIcon({itemType, colorOverride}) {
   const needsFeedbackTriangle = () => (
     <div
       className={classNames(styles.needsFeedback, styles.cornerBox)}
