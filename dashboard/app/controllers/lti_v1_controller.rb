@@ -74,7 +74,6 @@ class LtiV1Controller < ApplicationController
       id_token = params[:id_token]
       state = params[:state]
       token_hash = {id_token: id_token, state: state}
-      # url = "#{lti_v1_iframe_url}?#{token_hash.to_query}"
       redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
       return
     end
@@ -200,7 +199,7 @@ class LtiV1Controller < ApplicationController
 
   # GET /lti/v1/iframe
   # Detects if LMS is trying open Code.org in an iframe, prompt user to open in
-  # new tab. Non-iframe experience is opaq to user
+  # new tab. The experience is unchanged to non-iframe users.
   def iframe
     render html: <<~HTML.html_safe, layout: false
       <!DOCTYPE html>
