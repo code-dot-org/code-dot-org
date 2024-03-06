@@ -115,6 +115,8 @@ function Certificate(props) {
     children,
     certificateData,
     isHocTutorial,
+    isPlCourse,
+    userType,
   } = props;
 
   const swiperRef = useRef(null);
@@ -261,14 +263,14 @@ function Certificate(props) {
           <BodyThreeText>
             {i18n.congratsCertificateShareMessage()}
           </BodyThreeText>
-          {/* TODO(ACQ-1342): determine whether certificate is for pl course  */}
           <SocialShare
             facebook={facebook}
             twitter={twitter}
             linkedin={linkedin}
             print={print}
             under13={under13}
-            isPlCourse={false}
+            isPlCourse={isPlCourse}
+            userType={userType}
           />
         </div>
       </div>
@@ -286,6 +288,8 @@ Certificate.propTypes = {
   children: PropTypes.node,
   certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
   isHocTutorial: PropTypes.bool,
+  isPlCourse: PropTypes.bool,
+  userType: PropTypes.string,
 };
 
 export default connect(state => ({

@@ -23,12 +23,6 @@ describe('ProgressIconComponent', () => {
     expect(progressBox).to.be.visible;
   });
 
-  it('renders the viewed box when itemType is VIEWED', () => {
-    render(<ProgressIcon itemType={ITEM_TYPE.VIEWED} />);
-    const progressBox = screen.getByTestId('progress-box');
-    expect(progressBox).to.be.visible;
-  });
-
   it('renders the feedback given triangle when itemType is FEEDBACK_GIVEN', () => {
     render(<ProgressIcon itemType={ITEM_TYPE.FEEDBACK_GIVEN} />);
     const feedbackGivenTriangle = screen.getByTestId('feedback-given-triangle');

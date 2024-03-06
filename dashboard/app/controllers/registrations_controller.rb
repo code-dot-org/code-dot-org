@@ -111,7 +111,6 @@ class RegistrationsController < Devise::RegistrationsController
       end
       super
     end
-
     should_send_new_teacher_email = current_user&.teacher?
     TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
     should_send_parent_email = current_user && current_user.parent_email.present?
@@ -477,6 +476,7 @@ class RegistrationsController < Devise::RegistrationsController
       :us_state,
       :country_code,
       :ai_rubrics_disabled,
+      :lti_roster_sync_enabled,
       school_info_attributes: [
         :country,
         :school_type,

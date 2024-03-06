@@ -13,6 +13,7 @@ class Services::Lti
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
       user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
+      user.lti_roster_sync_enabled = true
     else
       user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
       user.family_name = get_claim(id_token, :family_name)
