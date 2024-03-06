@@ -40,7 +40,7 @@ def check_for_cdo_keys
 
   puts <<~EOS.unindent
 
-    Missing required CDO keys: #{missing_cdo_keys.map {|msg| "\n  - #{msg}"}.join}
+    Error, missing required CDO keys: #{missing_cdo_keys.map {|msg| "\n  - #{msg}"}.join}
 
     Please fix the required CDO keys and rerun the script.
   EOS
@@ -517,6 +517,11 @@ end
 
 # The main method of the script, responsible for dispatching control flow to other methods.
 def main
+  puts
+  puts "👋, if you run into trouble or have questions, consult the DotD guide:"
+  puts "https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit#heading=h.mf5058xaezl2"
+  puts
+
   check_for_cdo_keys
   check_github_token
 
