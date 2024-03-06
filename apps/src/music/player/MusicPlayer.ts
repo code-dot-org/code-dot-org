@@ -18,9 +18,6 @@ import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
 import SamplePlayerWrapper from './SamplePlayerWrapper';
 import {DEFAULT_PATTERN_LENGTH, DEFAULT_CHORD_LENGTH} from '../constants';
 
-// Using require() to import JS in TS files
-const constants = require('../constants');
-
 const DEFAULT_BPM = 120;
 const DEFAULT_KEY = Key.C;
 
@@ -89,16 +86,16 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       events = events.filter(event => event.type === 'sound');
     }
-    const sampleIds = Array.from(
+    const sampleUrls = Array.from(
       new Set(
         events
           .map(event => this.convertEventToSamples(event))
           .flat()
-          .map(sampleEvent => sampleEvent.sampleId)
+          .map(sampleEvent => sampleEvent.sampleUrl)
       )
     );
 
-    return this.audioPlayer.loadSounds(sampleIds, {
+    return this.audioPlayer.loadSounds(sampleUrls, {
       onLoadFinished,
       updateLoadProgress: this.updateLoadProgress,
     });
@@ -290,7 +287,7 @@ export default class MusicPlayer {
 
       return [
         {
-          sampleId: url,
+          sampleUrl: url,
           playbackPosition: event.when,
           triggered: soundEvent.triggered,
           effects: soundEvent.effects,
@@ -321,7 +318,7 @@ export default class MusicPlayer {
         const url = library.generateSoundUrl(folder, soundData);
 
         const resultEvent = {
-          sampleId: url,
+          sampleUrl: url,
           playbackPosition: patternEvent.when + (event.tick - 1) / 16,
           triggered: patternEvent.triggered,
           effects: patternEvent.effects,
@@ -357,12 +354,12 @@ export default class MusicPlayer {
     );
 
     generatedNotes.forEach(note => {
-      const sampleId = this.getSampleForNote(note.note, instrument);
-      if (sampleId !== null) {
+      const sampleUrl = this.getSampleForNote(note.note, instrument);
+      if (sampleUrl !== null) {
         const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
         results.push({
-          sampleId,
+          sampleUrl,
           playbackPosition: noteWhen,
           originalBpm: this.bpm,
           pitchShift: 0,
@@ -410,11 +407,11 @@ export default class MusicPlayer {
 
     events.forEach(event => {
       const tranposedNote = getTranposedNote(this.key, event.noteOffset);
-      const sampleId = this.getSampleForNote(tranposedNote, instrument);
-      if (sampleId !== null) {
+      const sampleUrl = this.getSampleForNote(tranposedNote, instrument);
+      if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
-          sampleId,
+          sampleUrl,
           playbackPosition: eventWhen,
           length: event.length,
           triggered,
