@@ -37,7 +37,7 @@ export type Level = {
   type: string;
   hasValidation: boolean;
   isProjectBacked: boolean;
-  levelbuilderTutorChecked: boolean;
+  aiTutorAvailable: boolean;
   isAssessment: boolean;
 };
 

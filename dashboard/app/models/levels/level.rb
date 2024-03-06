@@ -514,7 +514,7 @@ class Level < ApplicationRecord
     unplugged? || properties["display_as_unplugged"] == "true"
   end
 
-  def levelbuilder_ai_tutor_available?
+  def ai_tutor_available?
     properties["ai_tutor_available"] == "true"
   end
 

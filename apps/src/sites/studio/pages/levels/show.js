@@ -66,7 +66,7 @@ function initPage() {
       type,
       hasValidation,
       isProjectBacked,
-      levelbuilderTutorChecked,
+      aiTutorAvailable,
       isAssessment,
     } = aiTutorData;
     const level = {
@@ -74,7 +74,7 @@ function initPage() {
       type: type,
       hasValidation: hasValidation,
       isProjectBacked: isProjectBacked,
-      levelbuilderTutorChecked: levelbuilderTutorChecked,
+      aiTutorAvailable,
       isAssessment: isAssessment,
     };
     getStore().dispatch(setLevel(level));

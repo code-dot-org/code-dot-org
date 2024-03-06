@@ -14,9 +14,9 @@ interface AITutorPanelProps {
 const AITutorPanel: React.FunctionComponent<AITutorPanelProps> = ({open}) => {
   const level = useAppSelector(state => state.aiTutor.level);
   const isAssessmentLevel = level?.isAssessment;
-  const isLevelbuilderChecked = level?.levelbuilderTutorChecked;
+  const isAvailable = level?.aiTutorAvailable;
   let aiTutorAvailable = true;
-  if (isAssessmentLevel || !isLevelbuilderChecked) {
+  if (isAssessmentLevel || !isAvailable) {
     aiTutorAvailable = false;
   }
 
