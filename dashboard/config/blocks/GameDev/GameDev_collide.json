@@ -1,5 +1,5 @@
 {
-  "category": "sprites",
+  "category": "Sprites",
   "config": {
     "func": "collide",
     "blockText": "colliding {SPRITE} {INTERACTION} {TARGET}",

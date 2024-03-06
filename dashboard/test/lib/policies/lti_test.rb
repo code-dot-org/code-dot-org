@@ -79,4 +79,76 @@ class Policies::LtiTest < ActiveSupport::TestCase
       assert_equal expected, actual, failure_msg
     end
   end
+
+  class EarlyAccessTest < ActiveSupport::TestCase
+    setup do
+      @lti_early_access_limit = DCDO.stubs(:get).with('lti_early_access_limit', false)
+    end
+
+    test 'returns false when DCDO `lti_early_access_limit` is false' do
+      @lti_early_access_limit.returns(false)
+
+      assert_equal false, Policies::Lti.early_access?
+    end
+
+    test 'returns true when DCDO `lti_early_access_limit` is true' do
+      @lti_early_access_limit.returns(true)
+
+      assert_equal true, Policies::Lti.early_access?
+    end
+
+    test 'returns true when DCDO `lti_early_access_limit` is an integer' do
+      @lti_early_access_limit.returns(100)
+
+      assert_equal true, Policies::Lti.early_access?
+    end
+  end
+
+  class EarlyAccessClosedTest < ActiveSupport::TestCase
+    setup do
+      @lti_early_access_limit = DCDO.stubs(:get).with('lti_early_access_limit', false)
+      @early_access = Policies::Lti.stubs(:early_access?)
+    end
+
+    test 'returns nil unless early access' do
+      @early_access.returns(false)
+
+      assert_equal nil, Policies::Lti.early_access_closed?
+    end
+
+    test 'returns true when DCDO `lti_early_access_limit` is true' do
+      @early_access.returns(true)
+      @lti_early_access_limit.returns(true)
+
+      assert_equal false, Policies::Lti.early_access_closed?
+    end
+
+    test 'returns false when DCDO `lti_early_access_limit` is false' do
+      @early_access.returns(true)
+      @lti_early_access_limit.returns(false)
+
+      assert_equal false, Policies::Lti.early_access_closed?
+    end
+
+    test 'returns false when LTI integration count is less than DCDO `lti_early_access_limit`' do
+      @early_access.returns(true)
+      @lti_early_access_limit.returns(LtiIntegration.count.next)
+
+      assert_equal false, Policies::Lti.early_access_closed?
+    end
+
+    test 'returns true when LTI integration count is greater than DCDO `lti_early_access_limit`' do
+      @early_access.returns(true)
+      @lti_early_access_limit.returns(LtiIntegration.count.pred)
+
+      assert_equal true, Policies::Lti.early_access_closed?
+    end
+
+    test 'returns true when LTI integration count is equal to DCDO `lti_early_access_limit`' do
+      @early_access.returns(true)
+      @lti_early_access_limit.returns(LtiIntegration.count)
+
+      assert_equal true, Policies::Lti.early_access_closed?
+    end
+  end
 end

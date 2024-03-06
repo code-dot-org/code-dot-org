@@ -494,7 +494,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'sync - should sync and show the confirmation page' do
     had_changes = true
-    user = create :teacher
+    user = create :teacher, :with_lti_auth
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
@@ -508,7 +508,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'sync - should not sync given no changes' do
     had_changes = false
-    user = create :teacher
+    user = create :teacher, :with_lti_auth
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
@@ -521,7 +521,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'sync - should be able to sync from a section code' do
-    user = create :teacher
+    user = create :teacher, :with_lti_auth
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
@@ -535,7 +535,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'transaction prevents partial sync from creating a partially-synced state' do
-    user = create :teacher
+    user = create :teacher, :with_lti_auth
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
@@ -553,6 +553,22 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :internal_server_error
   end
 
+  test 'integration form - renders the integration template' do
+    Policies::Lti.stubs(:early_access?).returns(false)
+
+    get '/lti/v1/integrations'
+
+    assert_template 'lti/v1/integrations'
+  end
+
+  test 'integration form - renders the early access template when early access is enabled' do
+    Policies::Lti.stubs(:early_access?).returns(true)
+
+    get '/lti/v1/integrations'
+
+    assert_template 'lti/v1/integrations/early_access'
+  end
+
   test 'integration - given valid inputs, creates a new integration if one does not exist' do
     name = "Fake School"
     client_id = "1234canvas"
@@ -567,6 +583,22 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
     assert_response :ok
+  end
+
+  test 'integration - redirects to the form without integration creation when early access is closed' do
+    Policies::Lti.expects(:early_access_closed?).returns(true)
+
+    name = 'Fake School'
+    client_id = '1234canvas'
+    lms = 'canvas_cloud'
+    email = 'fake@email.com'
+
+    assert_no_difference 'LtiIntegration.count' do
+      post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
+    end
+
+    assert_redirected_to lti_v1_integrations_path
+    assert_match /Learning Management System Integrations have been claimed/, flash[:alert]
   end
 
   test 'integration - given missing inputs, does not create a new integration' do
@@ -609,7 +641,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'attempting to sync a section with no LTI course should return a 400' do
-    user = create :teacher
+    user = create :teacher, :with_lti_auth
     sign_in user
 
     get '/lti/v1/sync_course', params: {section_code: 'bad-section-code'}
@@ -617,7 +649,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'attempting to sync a section with a missing LTI integration should return a 400' do
-    user = create :teacher
+    user = create :teacher, :with_lti_auth
     sign_in user
     bad_params = {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
     get '/lti/v1/sync_course', params: bad_params
@@ -646,5 +678,20 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :ok
     user.reload
     assert_equal User::TYPE_TEACHER, user.user_type
+  end
+
+  test 'should not sync if the user has roster sync disabled' do
+    user = create :teacher, :with_lti_auth
+    user.lti_roster_sync_enabled = false
+    user.save!
+    sign_in user
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).never
+    Services::Lti.expects(:parse_nrps_response).never
+    Services::Lti.expects(:sync_course_roster).never
+
+    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    assert_response :redirect
   end
 end

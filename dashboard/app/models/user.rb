@@ -107,6 +107,7 @@ class User < ApplicationRecord
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
+  #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -303,6 +304,10 @@ class User < ApplicationRecord
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
+
+  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
+    self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  end
 
   def save_email_preference
     if teacher?

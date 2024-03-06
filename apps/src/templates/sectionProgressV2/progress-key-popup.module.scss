@@ -19,6 +19,8 @@
 .dialog {
   margin-left: 8px;
   margin-right: 8px;
+  overflow-y: scroll;
+  max-height: 70vh;
 
   hr {
     margin-top: 0;

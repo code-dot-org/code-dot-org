@@ -1,0 +1,15 @@
+.fieldSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.fieldValue {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}

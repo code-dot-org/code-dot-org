@@ -143,7 +143,7 @@ Both boys and girls care about making the world a better place and may not be aw
 
 You can help by showing examples of CS careers that blend academic skills such as problem solving with intrinsic social causes like conservation or medical care. When students see that a career in CS can be rewarding in a variety of ways, they’re more likely to continue pursuing their interest.
 
-Take a look at some <a href="https://code.org/careers-in-tech">great examples</a> of how everyday people use CS in their careers.
+Take a look at some <a href="https://code.org/careers-with-cs">great examples</a> of how everyday people use CS in their careers.
 
 
 [col-50]
@@ -174,7 +174,7 @@ Take a look at some <a href="https://code.org/careers-in-tech">great examples</a
 
 Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/educate/resources/inspire), many of which feature women in a variety of creative and impactful industries!
 
-Students have positive attitudes about science careers when they’re able to see what a day in the life really looks like, especially if it’s highly collaborative. In addition to [videos that dive deep into potential careers](https://code.org/careers-in-tech), it’s a great idea to connect with a local university or college’s CS department to coordinate a school visit or guest speaker.
+Students have positive attitudes about science careers when they’re able to see what a day in the life really looks like, especially if it’s highly collaborative. In addition to [videos that dive deep into potential careers](https://code.org/careers-with-cs), it’s a great idea to connect with a local university or college’s CS department to coordinate a school visit or guest speaker.
 
 [breakoutquote]
 

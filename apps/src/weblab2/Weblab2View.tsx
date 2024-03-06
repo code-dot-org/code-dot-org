@@ -4,8 +4,17 @@ import './styles/Weblab2View.css';
 
 import {Config} from './Config';
 
-import {CDOIDE} from './CDOIDE/CDOIDE';
-import {ConfigType, ProjectType} from './CDOIDE/types';
+import {CDOIDE, ConfigType, ProjectType} from 'cdo-ide-poc';
+
+import CDOEditor from './Editor';
+
+const instructions = `Add html pages and preview them in the right pane.
+
+Add css pages (and link them to your html).
+
+Add javascript files (ending in .js) and execute javascript code in the right pane.
+
+Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
 
 const defaultConfig: ConfigType = {
   showSideBar: true,
@@ -13,50 +22,94 @@ const defaultConfig: ConfigType = {
   showRunBar: true,
   showDebug: true,
   activeLeftNav: 'Files',
+  EditorComponent: CDOEditor,
   leftNav: [
     {
       icon: 'fa-square-check',
       component: 'Instructions',
     },
     {
-      icon: 'fa-files',
+      icon: 'fa-file',
       component: 'Files',
     },
     {
-      icon: 'fa-magnifying-glass',
+      icon: 'fa-solid fa-magnifying-glass',
       component: 'Search',
     },
   ],
-  sideBar: ['fa-circle-question', 'fa-folders'],
-  instructions:
-    'This is where some sort of instructions would go for this lesson',
+  sideBar: ['fa-circle-question', 'fa-folder'],
+  instructions,
 };
 
 const defaultProject: ProjectType = {
   folders: {
-    '1': {id: '1', name: 'foo'},
+    '1': {id: '1', name: 'foo', parentId: '0'},
     '2': {id: '2', name: 'bar', parentId: '1'},
-    '3': {id: '3', name: 'baz'},
+    '3': {id: '3', name: 'baz', parentId: '0'},
+    '4': {id: '4', name: 'f1', parentId: '1'},
+    '5': {id: '5', name: 'f2', parentId: '1'},
+    '6': {id: '6', name: 'b1', parentId: '2'},
   },
   files: {
-    'index.html': {
+    '1': {
+      id: '1',
       name: 'index.html',
       language: 'html',
-      contents: '<html><body>Content goes here!</body></html>',
+      contents: `<!DOCTYPE html><html>
+  <link rel="stylesheet" href="styles.css"/>
+  <body>
+    Content goes here!
+    <div class="foo">Foo class!</div>
+  </body>
+</html>
+`,
       open: true,
       active: true,
+      folderId: '0',
     },
-    'styles.css': {
+    '2': {
+      id: '2',
       name: 'styles.css',
       language: 'css',
       contents: '.foo { color : red}',
       open: true,
+      folderId: '0',
     },
-    'page.html': {
+    '3': {
+      id: '3',
       name: 'page.html',
       language: 'html',
-      contents: '<html><body>This is a separate html page</body></html>',
+      contents:
+        '<!DOCTYPE html><html><body>This is a separate html page</body></html>',
       open: false,
+      folderId: '0',
+    },
+    '4': {
+      id: '4',
+      name: 'test4.html',
+      language: 'html',
+      contents:
+        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
+      open: false,
+      folderId: '2',
+    },
+    '5': {
+      id: '5',
+      name: 'test5.html',
+      language: 'html',
+      contents:
+        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
+      open: false,
+      folderId: '4',
+    },
+    '6': {
+      id: '6',
+      name: 'test6-1.html',
+      language: 'html',
+      contents:
+        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
+      open: false,
+      folderId: '1',
     },
   },
 };
