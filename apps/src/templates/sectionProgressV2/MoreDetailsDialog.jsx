@@ -17,7 +17,7 @@ import iconStyles from './progress-table-legend.module.scss';
 export default function MoreDetailsDialog({hasValidation, onClose}) {
   const renderItem = (itemType, itemTitle, itemDetails, colorOverride) => (
     <div className={styles.item}>
-      <ProgressIcon itemType={itemType} className={className} />
+      <ProgressIcon itemType={itemType} colorOverride={colorOverride} />
       <BodyThreeText>
         <StrongText>{itemTitle + ': '}</StrongText>
         {itemDetails}
