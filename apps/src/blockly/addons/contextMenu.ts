@@ -380,7 +380,6 @@ function isCurrentCursor(cursorType: string) {
 function setNewCursor(type: string, scope: ContextMenuRegistry.Scope) {
   localStorage.setItem(BLOCKLY_CURSOR, type);
   Blockly.navigationController.cursorType = type;
-  const markerManager = Blockly.getMainWorkspace().getMarkerManager();
   Blockly.getMainWorkspace()
     .getMarkerManager()
     .setCursor(Blockly.getNewCursor(type));
