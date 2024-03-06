@@ -928,15 +928,14 @@ i.infoAlertIcon {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 .greenStatusBlob {
   background-color: $light_affirmative_100;
   border-radius: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 4px;
+  padding: 5px 10px 0;
+  height: 22px;
   display:inline;
   p {
     margin-bottom: 0;
@@ -946,9 +945,8 @@ i.infoAlertIcon {
 .yellowStatusBlob {
   background-color: $lighter_yellow;
   border-radius: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 4px;
+  padding: 5px 10px 0;
+  height: 22px;
   display:inline;
   p {
     margin: 0,0,0,0;
@@ -958,9 +956,8 @@ i.infoAlertIcon {
 .grayStatusBlob {
   background-color: $light_gray_100;
   border-radius: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 4px;
+  padding: 5px 10px 0;
+  height: 22px;
   display:inline;
   p {
     margin: 0,0,0,0;
