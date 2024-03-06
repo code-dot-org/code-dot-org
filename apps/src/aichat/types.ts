@@ -31,7 +31,8 @@ export interface AichatLevelProperties extends LevelProperties {
    * Initial AI customizations set by the level.
    * For each field, levelbuilders may define the initial default value,
    * and visibility (hidden, readonly, or editable).
-   * Visibility is not editable by the student; students can only change the value if it is set to editable.
+   * Visibility is not editable by the student; students can only change
+   * the value if it is set to editable.
    */
   initialAiCustomizations?: LevelAiCustomizations;
 }
@@ -67,11 +68,6 @@ export type LevelAiCustomizations = {
     visibility: Visibility;
   };
 } & {
-  /** The initial panel to show when displaying the level */
-  initialPanel?: 'edit' | 'presentation';
-  /**
-   * If the student can go back to the editing panel after starting on the presentation panel.
-   * Only applies if initialPanel is 'presentation'.
-   */
-  canGoBackToEditing?: boolean;
+  /** If the student can switch between the edit and presentation panels. */
+  canSwitchPanels?: boolean;
 };

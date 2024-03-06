@@ -12,3 +12,7 @@ const initialChatMessages: ChatCompletionMessage[] = [
 ];
 
 export {initialChatMessages};
+
+export const MIN_TEMPERATURE = 0;
+export const MAX_TEMPERATURE = 2;
+export const MAX_RETRIEVAL_CONTEXTS = 20;
