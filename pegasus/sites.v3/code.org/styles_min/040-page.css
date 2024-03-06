@@ -196,7 +196,7 @@ em {
 }
 
 /* Text link styles */
-a:is(:link, :visited) {
+a:any-link {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
@@ -404,6 +404,11 @@ td {
   border-color: rgb(141, 138, 138);
   border-style: solid;
   padding: 15px;
+}
+
+/*Centers a block-level element */
+.centered {
+  text-align: center !important;
 }
 
 /* Styles for the "OR" divider line between paragraphs

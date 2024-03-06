@@ -192,7 +192,7 @@ class LtiV1Controller < ApplicationController
   # It can respond to either HTML or JSON content requests.
   def sync_course
     return unauthorized_status unless current_user
-    unless current_user.teacher?
+    unless Policies::Lti.roster_sync_enabled?(current_user)
       return redirect_to home_path
     end
     params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
