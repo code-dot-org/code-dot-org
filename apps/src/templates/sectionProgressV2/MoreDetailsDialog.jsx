@@ -15,7 +15,7 @@ import styles from './progress-key-popup.module.scss';
 import iconStyles from './progress-table-legend.module.scss';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
-  const renderItem = (itemType, itemTitle, itemDetails, className) => (
+  const renderItem = (itemType, itemTitle, itemDetails, colorOverride) => (
     <div className={styles.item}>
       <ProgressIcon itemType={itemType} className={className} />
       <BodyThreeText>
