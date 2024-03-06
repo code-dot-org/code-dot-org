@@ -292,11 +292,9 @@ export default class MusicPlayer {
         return [];
       }
 
-      const url = library.generateSoundUrl(folder, soundData);
-
       return [
         {
-          sampleUrl: url,
+          sampleUrl: library.generateSoundUrl(folder, soundData),
           playbackPosition: event.when,
           triggered: soundEvent.triggered,
           effects: soundEvent.effects,
@@ -324,10 +322,8 @@ export default class MusicPlayer {
           return [];
         }
 
-        const url = library.generateSoundUrl(folder, soundData);
-
         const resultEvent = {
-          sampleUrl: url,
+          sampleUrl: library.generateSoundUrl(folder, soundData),
           playbackPosition: patternEvent.when + (event.tick - 1) / 16,
           triggered: patternEvent.triggered,
           effects: patternEvent.effects,

@@ -94,8 +94,7 @@ export default class MusicLibrary {
       : getBaseAssetUrl();
 
     const optionalSoundPath = soundData.path ? `${soundData.path}/` : '';
-    const url = `${baseUrl}${this.libraryJson.path}/${folder.path}/${optionalSoundPath}${soundData.src}.mp3`;
-    return url;
+    return `${baseUrl}${this.libraryJson.path}/${folder.path}/${optionalSoundPath}${soundData.src}.mp3`;
   }
 
   // A sound picker might want to show the subset of sounds permitted by the
