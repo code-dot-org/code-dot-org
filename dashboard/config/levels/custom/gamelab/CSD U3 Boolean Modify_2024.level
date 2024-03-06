@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:12:08.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Modify the code so that all of the console.log commands print true",
-    "start_blocks": "// Modify these sprite properties so that all of the\r\n// boolean commands print true on the screen\r\nvar sprite1 = createSprite(100, 200);\r\nsprite1.setAnimation(\"apple\");\r\nsprite1.rotation = 30;\r\nsprite1.scale = 1.5;\r\n\r\nvar sprite2 = createSprite(300, 200);\r\nsprite2.setAnimation(\"carrot\");\r\nsprite2.rotation = 60;\r\nsprite2.scale = 0.5;\r\n\r\n// Do NOT edit the following (I'm serious!!!)\r\ntextSize(20);\r\nfill(\"blue\");\r\ntext(\"Comparison 1: \" + (sprite2.x == sprite2.y), 0, 15);\r\ntext(\"Comparison 2: \" + (sprite2.rotation < 40), 0, 40);\r\ntext(\"Comparison 3: \" + (sprite1.scale == sprite2.scale), 0, 65);\r\ntext(\"Comparison 4: \" + (sprite1.x > 150), 0, 90);\r\ntext(\"Comparison 5: \" + (sprite2.y < 200), 0, 115);\r\n\r\ndrawSprites();\r\n",
+    "start_blocks": "// Modify these sprite properties so that all of the\r\n// boolean commands print true on the screen\r\nvar sprite1 = createSprite(100, 200);\r\nsprite1.setAnimation(\"apple\");\r\nsprite1.rotation = 30;\r\nsprite1.scale = 1.5;\r\n\r\nvar sprite2 = createSprite(300, 200);\r\nsprite2.setAnimation(\"carrot\");\r\nsprite2.rotation = 60;\r\nsprite2.scale = 0.5;\r\n\r\n// Do NOT edit the following (I'm serious!!!)\r\ndrawSprites();\r\ntextSize(20);\r\nfill(\"blue\");\r\ntext(\"Comparison 1: \" + (sprite2.x == sprite2.y), 0, 15);\r\ntext(\"Comparison 2: \" + (sprite2.rotation < 40), 0, 40);\r\ntext(\"Comparison 3: \" + (sprite1.scale == sprite2.scale), 0, 65);\r\ntext(\"Comparison 4: \" + (sprite1.x > 150), 0, 90);\r\ntext(\"Comparison 5: \" + (sprite2.y < 200), 0, 115);\r\n\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -116,9 +117,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:08.476+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Boolean Modify_2023\\\"\"],\"cloned_from\":\"CSD U3 Boolean Modify_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:08.476+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Boolean Modify_2023\\\"\"],\"cloned_from\":\"CSD U3 Boolean Modify_2023\"},{\"changed_at\":\"2024-03-05 16:23:15 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

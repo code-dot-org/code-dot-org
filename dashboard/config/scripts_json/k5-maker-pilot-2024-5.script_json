@@ -2,14 +2,16 @@
   "script": {
     "name": "k5-maker-pilot-2024-5",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSF",
-      "is_migrated": true
+      "curriculum_umbrella": "CSF Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 22:38:21 UTC",
+    "serialized_at": "2024-03-05 23:21:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -199,6 +201,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Course_F_CSFmaker_k5-maker-2024"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -221,6 +226,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Events_1_k5-maker-2024"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -243,6 +251,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_flappyIntro_2023MB_k5-maker-2024"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -265,6 +276,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events1_2023MB_k5-maker-2024"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -287,6 +301,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events2_2023MB_k5-maker-2024"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -309,6 +326,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events3_2023MB_k5-maker-2024"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -331,6 +351,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events4_2023MB_k5-maker-2024"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -353,6 +376,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events5_2023MB_k5-maker-2024"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -375,6 +401,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB_1_k5-maker-2024"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -397,6 +426,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1_k5-maker-2024"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -419,6 +451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "intro to variables_1_k5-maker-2024"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -441,6 +476,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Variable MB_k5-maker-2024"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -463,6 +501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_2023MB_k5-maker-2024"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -485,6 +526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_2023MB_k5-maker-2024"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -507,6 +551,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_2023MB_k5-maker-2024"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -529,6 +576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_2023MB_k5-maker-2024"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -551,6 +601,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_2023MB_k5-maker-2024"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -573,6 +626,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_2023MB_k5-maker-2024"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -595,6 +651,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_2023MB_k5-maker-2024"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -617,6 +676,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_2023MB_k5-maker-2024"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -639,6 +701,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1_k5-maker-2024"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -661,6 +726,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_F_k5-maker-2024"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,

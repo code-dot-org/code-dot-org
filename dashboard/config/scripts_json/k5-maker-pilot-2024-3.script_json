@@ -2,13 +2,16 @@
   "script": {
     "name": "k5-maker-pilot-2024-3",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "CSF Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 22:33:42 UTC",
+    "serialized_at": "2024-03-05 23:18:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -175,6 +178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Course_D_CSFmaker_k5-maker-2024"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -197,6 +203,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "intro to loops_1_k5-maker-2024"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -219,6 +228,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_artistLoops_2023MB_k5-maker-2024"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -241,6 +253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops2_2023MB_k5-maker-2024"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -263,6 +278,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops3_2023MB_k5-maker-2024"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -285,6 +303,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops5_2023MB_k5-maker-2024"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -307,6 +328,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops6_2023MB_k5-maker-2024"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -329,6 +353,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023MB_1_k5-maker-2024"
+        ],
         "progression": "Coding with Loops"
       },
       "bonus": false,
@@ -351,6 +378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Conditionals_1_k5-maker-2024"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -373,6 +403,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_2023MB_k5-maker-2024"
+        ],
         "progression": "Introduction to Conditionals"
       },
       "bonus": false,
@@ -395,6 +428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_makerMB_k5-maker-2024"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -417,6 +453,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2023MB_k5-maker-2024"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -439,6 +478,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_makerMB_k5-maker-2024"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -461,6 +503,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_makerMB_k5-maker-2024"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,
@@ -483,6 +528,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_D_k5-maker-2024"
+        ],
         "progression": "Conditionals with Bee"
       },
       "bonus": false,

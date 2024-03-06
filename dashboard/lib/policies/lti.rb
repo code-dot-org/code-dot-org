@@ -117,4 +117,17 @@ class Policies::Lti
   def self.roster_sync_enabled?(user)
     user.teacher? && user.lti_roster_sync_enabled
   end
+
+  def self.early_access?
+    DCDO.get('lti_early_access_limit', false).present?
+  end
+
+  def self.early_access_closed?
+    return unless early_access?
+
+    lti_early_access_limit = DCDO.get('lti_early_access_limit', false)
+    return false unless lti_early_access_limit.is_a?(Integer)
+
+    LtiIntegration.count >= lti_early_access_limit
+  end
 end

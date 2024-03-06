@@ -1466,6 +1466,7 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
+    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
     CDO.code_org_url "/congrats/#{name}"
   end
 
