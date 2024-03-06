@@ -84,11 +84,10 @@ export const commands = {
     }
   },
 
-  makeEnvironmentSprites(animation, layout, width, height) {
-    const bitmap = blockUtils.stringTo2DArray(layout.toString(), height, width);
-    const scale = APP_HEIGHT / height;
-    for (let i = 0; i < height; i++) {
-      for (let j = 0; j < width; j++) {
+  makeEnvironmentSprites(animation, bitmap) {
+    const scale = APP_HEIGHT / bitmap.length;
+    for (let i = 0; i < bitmap.length; i++) {
+      for (let j = 0; j < bitmap[0].length; j++) {
         const location = {
           x: scale / 2 + scale * i,
           y: scale / 2 + scale * j,

@@ -444,6 +444,8 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       const field = block.getField(arg.name);
+      // Convert 2d array into a string.
+      return JSON.stringify(block.getFieldValue(arg.name));
       return [
         `[${block.getFieldValue(arg.name)}]`,
         `${field.getImageWidth()}`,

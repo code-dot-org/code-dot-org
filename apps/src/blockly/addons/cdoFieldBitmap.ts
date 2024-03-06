@@ -21,9 +21,7 @@ export class CdoFieldBitmap extends FieldBitmap {
    * @returns {Element} The populated XML element.
    */
   toXml(fieldElement: Element): Element {
-    fieldElement.textContent = super.getValue();
-    fieldElement.setAttribute('height', super.getImageHeight());
-    fieldElement.setAttribute('width', super.getImageWidth());
+    fieldElement.textContent = JSON.stringify(this.getValue());
     return fieldElement;
   }
 
@@ -33,16 +31,7 @@ export class CdoFieldBitmap extends FieldBitmap {
    * @param {Element} fieldElement - The XML element containing field data.
    */
   fromXml(fieldElement: Element): void {
-    const fieldValue = fieldElement.textContent || '';
-    const height = parseInt(fieldElement.getAttribute('height') || '0');
-    const width = parseInt(fieldElement.getAttribute('width') || '0');
-    // TODO: define a type for blockUtils
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const bitmap = (blockUtils as any).stringTo2DArray(
-      fieldValue,
-      height,
-      width
-    );
-    super.setValue(bitmap);
+    const bitmap = JSON.parse(fieldElement.textContent || '[]');
+    this.setValue(bitmap);
   }
 }
