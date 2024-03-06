@@ -193,7 +193,7 @@ GEM
       activerecord (>= 4.2)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    aes_key_wrap (1.0.1)
+    aes_key_wrap (1.1.0)
     afm (0.2.2)
     annotate (3.1.1)
       activerecord (>= 3.2, < 7.0)
@@ -269,7 +269,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
       rouge (>= 1.0.0)
-    bindata (2.4.10)
+    bindata (2.5.0)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -293,7 +293,7 @@ GEM
     colorize (0.8.1)
     composite_primary_keys (13.0.4)
       activerecord (~> 6.1.0)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crack (0.4.5)
       rexml
@@ -490,7 +490,7 @@ GEM
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
-    i18n (1.12.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_optim_rails (0.4.3)
       image_optim (~> 0.24)
@@ -507,10 +507,11 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (2.6.2)
-    json-jwt (1.10.0)
+    json-jwt (1.15.3)
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
+      httpclient
     json-schema (2.8.1)
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
@@ -940,7 +941,7 @@ GEM
     xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
-    zeitwerk (2.6.7)
+    zeitwerk (2.6.13)
 
 PLATFORMS
   ruby
