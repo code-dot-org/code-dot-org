@@ -76,7 +76,7 @@ describe('SectionProgressSelector', () => {
 
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 
   it('shows v1', () => {
@@ -86,7 +86,7 @@ describe('SectionProgressSelector', () => {
     screen.getByTestId(V1_TEST_ID);
 
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 
   it('shows v2', () => {
@@ -97,7 +97,7 @@ describe('SectionProgressSelector', () => {
     screen.getByTestId(V2_TEST_ID);
 
     expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByText(V1_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V1_TEST_ID)).to.not.exist;
   });
 
   it('shows default v1 if no user preference', () => {
@@ -108,7 +108,7 @@ describe('SectionProgressSelector', () => {
     screen.getByTestId(V1_TEST_ID);
 
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 
   it('shows default v2 if no user preference', () => {
@@ -120,7 +120,7 @@ describe('SectionProgressSelector', () => {
     screen.getByTestId(V2_TEST_ID);
 
     expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByText(V1_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V1_TEST_ID)).to.not.exist;
   });
 
   it('sets user preference when link clicked', () => {
@@ -146,7 +146,7 @@ describe('SectionProgressSelector', () => {
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
 
     screen.getByTestId(V1_TEST_ID);
-    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 
   it('shows toggle if user is in closed beta', () => {
@@ -158,7 +158,7 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
 
     screen.getByTestId(V1_TEST_ID);
-    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 
   it('shows toggle if user not in closed beta, but v2 enabled', () => {
@@ -170,6 +170,6 @@ describe('SectionProgressSelector', () => {
     screen.getByTestId(V1_TEST_ID);
 
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByText(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 });

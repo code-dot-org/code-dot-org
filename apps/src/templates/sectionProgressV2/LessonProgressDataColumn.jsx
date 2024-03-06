@@ -55,6 +55,7 @@ function LessonProgressDataColumn({
               lessonProgressByStudent[student.id][lesson.id]
             }
             key={student.id + '.' + lesson.id}
+            studentId={student.id}
             addExpandedLesson={addExpandedLesson}
           />
         ))}

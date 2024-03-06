@@ -77,6 +77,14 @@ const optionsList = [
       {value: 'true', description: 'Enable keyboard shortcuts.'},
     ],
   },
+  {
+    name: 'player',
+    type: 'radio',
+    values: [
+      {value: 'sample', description: 'Use the sample player (default).'},
+      {value: 'tonejs', description: 'Use the ToneJS player.'},
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {

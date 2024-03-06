@@ -16,7 +16,7 @@ social:
 
 # Şiirle Kodlama
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "Mor bere şapka takmış, sahnede spot ışığı altında bir tabure ve mikrofonla şiir icra eden sevimli pembe bir ahtapot karakteri  ", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Şiir Sanatı", left_description: "Bu Kodlama Saati etkinliğinde klasik bir şiire resim ve animasyon ekleyin!",  left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Başlat", right_heading: "Şiirle Kodlama", right_description: "Bilgisayar bilimini ve  bu ders serisiyle sınıfınızda şiir.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Modülü görüntüle" }}
+{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg “, alt_text: “Mor bere şapkalı sevimli bir ahtapot karakteri, tabure ve mikrofonlu sahnede spot ışığı altında şiir yapan”, text_color: “white”, box_background_color: “rgb (0,0,0,0,0.4)”, left_heading: “Şiir Sanatı”, left_description: “Sanat ve animasyon ekle Bu Hour of Code etkinliğindeki klasik bir şiire!” , left_specs: “”, left_button_url: "https://studio.code.org/s/poem-art-2021/reset “, left_button_text: “Start”, right_heading: “Şiirle Kodlama”, right_description: “Sınıfınızdaki bilgisayar bilimi ve şiiri bu ders dizisiyle bağlayın. “, right_specs: “”, right_button_url: "https://studio.code.org/s/poetry?viewAs=Instructor “, right_button_text: “Modülü görüntüle”}}
 
 ## Şiirle Kodlama hakkında daha fazla bilgi alın
 

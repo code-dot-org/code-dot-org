@@ -18,10 +18,10 @@ class LtiAdvantageClient
         'Authorization' => "Bearer #{get_access_token(@client_id, @issuer)}",
       },
       query: {
-        rlid: resource_link_id,
         limit: page_limit,
       },
     }
+    options[:query][:rlid] = resource_link_id unless @issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
     res = make_request(url, options)
     next_page = next_page_url(res[:headers])
     parsed_res = res[:body]

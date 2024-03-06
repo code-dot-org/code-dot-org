@@ -17,6 +17,8 @@ import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
 import SamplePlayerWrapper from './SamplePlayerWrapper';
 import {DEFAULT_PATTERN_LENGTH, DEFAULT_CHORD_LENGTH} from '../constants';
+import appConfig from '../appConfig';
+import ToneJSPlayer from './ToneJSPlayer';
 
 const DEFAULT_BPM = 120;
 const DEFAULT_KEY = Key.C;
@@ -36,10 +38,17 @@ export default class MusicPlayer {
   constructor(
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
-    audioPlayer: AudioPlayer = new SamplePlayerWrapper(new SamplePlayer()),
+    audioPlayer?: AudioPlayer,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
-    this.audioPlayer = audioPlayer;
+    if (appConfig.getValue('player') === 'tonejs') {
+      console.log('[MusicPlayer] Using ToneJSPlayer');
+      this.audioPlayer = new ToneJSPlayer() || audioPlayer;
+    } else {
+      console.log('[MusicPlayer] Using SamplePlayer');
+      this.audioPlayer =
+        new SamplePlayerWrapper(new SamplePlayer()) || audioPlayer;
+    }
     this.metricsReporter = metricsReporter;
     this.updateConfiguration(bpm, key);
   }
@@ -491,6 +500,26 @@ export default class MusicPlayer {
 
   private calculatePitchShift(soundData: SoundData) {
     return soundData.type === 'beat' ? 0 : this.key - (soundData.key || Key.C);
+  }
+
+  // TODO: Temporary method to load all instruments at once.
+  // Instead we should load instruments as needed when they are first added to a project.
+  loadAllInstruments() {
+    if (!this.audioPlayer.supportsSamplers()) {
+      return;
+    }
+
+    const library = MusicLibrary.getInstance();
+    if (library === undefined) {
+      return;
+    }
+
+    for (const instrument of library.folders.filter(
+      folder => folder.type === 'instrument' || folder.type === 'kit'
+    )) {
+      console.log(`Creating sampler for ${instrument.path}`);
+      this.setupSampler(instrument.path);
+    }
   }
 
   async setupSampler(
