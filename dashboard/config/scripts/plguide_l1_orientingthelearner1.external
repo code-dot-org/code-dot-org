@@ -19,17 +19,18 @@ markdown <<MARKDOWN
 
 ___
 
+
+##### <span style="background-color: yellow">*Note for PL from Aryanna: This page would be at the beginning of **each** unit.</span>
+
 ## Exemplar
 
 # Receiving a Certificate for this Module
 
-##### <span style="background-color: yellow">*Notes for PL from Aryanna: </span>
-* ##### <span style="background-color: yellow">I would like to update this to an image with a placeholder name and a PL unit in the current "Hour of Code" field.</span>
-* ##### <span style="background-color: yellow"> This page would be at the beginning of **each** unit. </span>
-
-<img src="https://images.code.org/194fc1fc0e7b49d4d3337ea171b72232-image-1709335677735.19.45 PM.png" alt="A certificate of completion.">
+<img src="https://images.code.org/e62f36e2be7f118d2396c81c66c2a185-image-1709678127521.35.18 PM.png" alt="A certificate of completion.">
 
 #### Upon finishing this module, you will be eligible to receive a certificate of completion similar to the one above. You must complete **every level** in this module to access your certificate.
+
+#### We encourange you to share your certificates to social media to celebrate your success!
 
 ## FAQ
 
@@ -41,20 +42,31 @@ ___
 * #### For a coding activity level, you may be asked to complete a task. Some levels will require a correct answer. You will have an unlimited number of attempts.
 * #### For a checking for understanding level, such as vocabulary matching or multiple choice, you will need to answer correctly. You will have an unlimited number of attempts.
 * #### For an open reflection level, you will need to submit an answer to the question(s) provided.
+<br>
 
-### **How can I access my certificate?**
+### **When will I receive my certificate?**
+
+#### You'll be taken to a congratulations page once you've completed every level within a self-paced experience. If the self-paced experience has multiple units (see the image directly below), you will see the congratulations page once every level is complete in every unit. 
+
+<img src="https://images.code.org/d9524ff90cfb71186c7af20a4563e30d-image-1709678323493.38.38 PM.png" alt="A self-paced experience showing two units.">
+
+#### This self-paced experience has two units: Getting Started with Code.org and Preparing to Teach Problem Solving and Computing.
+<br>
+
+### **Where can I find the certificates I've earned?**
 
 #### You can find all your certificates at <a href="studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the module.
 
-#### You can also access your certificates by clicking "Print Certificate" on the module overview page.
+#### You can also access your certificates by clicking "Print Certificate" on each module overview page.
 
 <span style="background-color: yellow">Image of module overview page</span>
+<br>
 
 ### **Why can't I access my certificate?**
 
 #### Ensure that *every* level has been completed in the module. Your module overview page should look similar to this image:
 
-<img src="https://images.code.org/46f0a167af0e071bf3279327ca2e4d6f-image-1709348177958.56.12 PM.png" alt="A completed module on Code Studio shows every level completed.">
+<img src="https://images.code.org/ed7b8a175ed6b0978367e5fc53be6e42-image-1709678606207.43.20 PM.png" alt="A completed module on Code Studio shows every level completed.">
 
 #### You may need to return to individual levels to complete them. If every level is complete and you still can't access a certificate, <a href="https://support.code.org/hc/en-us/requests/new" target="blank" rel="noopener noreferrer">send us a message</a>.
 MARKDOWN

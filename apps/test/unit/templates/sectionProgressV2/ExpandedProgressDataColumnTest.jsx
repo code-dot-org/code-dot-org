@@ -8,6 +8,9 @@ import {Provider} from 'react-redux';
 import sectionProgress, {
   addDataByUnit,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import teacherSections, {
+  selectSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 
@@ -42,12 +45,13 @@ describe('ExpandedProgressDataColumn', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress, unitSelection});
+    registerReducers({sectionProgress, unitSelection, teacherSections});
     store = getStore();
     store.dispatch(setScriptId(1));
     store.dispatch(
       addDataByUnit({studentLevelProgressByUnit: {1: LEVEL_PROGRESS}})
     );
+    store.dispatch(selectSection(1));
   });
 
   afterEach(() => {

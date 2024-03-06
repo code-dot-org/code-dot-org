@@ -21,6 +21,11 @@
   width: 100%;
 }
 
+.certificateImageContainer {
+  display: flex;
+  width: 50%;
+}
+
 .heading {
   width: 100%;
 }
@@ -28,6 +33,7 @@
 .container {
   margin-bottom: 50px;
   float: left;
+  width: 100%;
 }
 
 .mobileHeading {
@@ -70,4 +76,22 @@
 
 .inputButtonContainer {
   display: flex;
+}
+
+.swiperContainer {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.swiperSlide {
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
