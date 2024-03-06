@@ -179,26 +179,20 @@ describe('testRecommender', () => {
 });
 
 describe('similarRecommender', () => {
-  it('similar curriculum recommender scores test curricula with relevant fields', () => {
+  it('similar curriculum recommender scores relevant test curricula', () => {
     const recommendedCurricula = getSimilarRecommendations(
       FULL_TEST_COURSES,
-      'month',
-      'markInit1',
-      'science',
-      `art_and_design,app_design,${IMPORTANT_TOPICS[0]}`
+      'fullTestCourse1'
     ).map(curr => curr.key);
 
+    // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
+    // and fullTestCourse5 should be filtered out because it does not support any of the same grade levels as fullTestCourse1.
     expect(recommendedCurricula).to.deep.equal([
-      'fullTestCourse2' /* 10 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(2) + hasAnySchoolSubject(1) +
-                          (2 overlapping topics * overlappingDesiredTopic(2)) + publishedWithinTwoYearsAgo(1) */,
-      'fullTestCourse1' /* 9 points = hasDesiredMarketingInitiative(2) + hasAnySchoolSubject(1) + (2 overlapping topics * overlappingDesiredTopic(2))
-                          + publishedWithinOneYearAgo(2) */,
-      'fullTestCourse5' /* 6 points = hasDesiredDuration(2) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
-                          (1 overlapping topic * overlappingDesiredTopic(2)) [sorted highest of 6-point courses because it is featured] */,
-      'fullTestCourse3' /* 6 points = hasDesiredDuration(2) + (1 overlapping topic * overlappingDesiredTopic(2)) + hasAnySchoolSubject(1) +
-                          publishedWithinTwoYearsAgo(1) [sorted next-highest of 6-point courses by recent published_date] */,
-      'fullTestCourse4' /* 6 points = hasDesiredDuration(2) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
-                          (1 overlapping topic * overlappingDesiredTopic(2)) */,
+      'fullTestCourse2' /* 7 points = hasDesiredMarketingInitiative(2) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
+                          (1 overlapping topic * overlappingDesiredTopic(2)) + publishedWithinTwoYearsAgo(1) */,
+      'fullTestCourse3' /* 5 points = (1 overlapping topic * overlappingDesiredTopic(2)) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
+                          publishedWithinTwoYearsAgo(1) */,
+      'fullTestCourse4' /* 1 point = hasAnySchoolSubject(2) */,
     ]);
   });
 });

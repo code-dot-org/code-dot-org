@@ -37,7 +37,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sections} from '../studioHomepages/fakeSectionUtils';
 import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
-import {FULL_TEST_COURSES} from '@cdo/apps/test/unit/util/curriculumRecommenderTestCurricula';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -666,23 +666,21 @@ describe('CurriculumCatalog', () => {
       });
 
       for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        const currCurriculum = FULL_TEST_COURSES[i];
+
         // Get the Similar Recommended Curriculum for the current test curriculum
-        const recommendableCurricula = [...FULL_TEST_COURSES];
-        const currCurriculum = recommendableCurricula.splice(i, 1)[0];
         const recommendedSimilarCurriculum = getSimilarRecommendations(
-          recommendableCurricula,
-          currCurriculum.duration,
-          currCurriculum.marketing_initiative,
-          currCurriculum.school_subject,
-          currCurriculum.cs_topic
+          FULL_TEST_COURSES,
+          currCurriculum.key
         )[0];
 
         // Open expanded card of the current test curriculum
         fireEvent.click(quickViewButtons[i]);
         screen.getByText(currCurriculum.description);
 
-        // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card
-        screen.getByAltText(recommendedSimilarCurriculum.display_name); //Image's alt text is the curriculum's display name
+        // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
+        //Image's alt text is the curriculum's display name.
+        screen.getByAltText(recommendedSimilarCurriculum.display_name);
         assert(
           document
             .querySelector('#similarCurriculumButton')

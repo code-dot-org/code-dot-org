@@ -75,35 +75,10 @@ const CurriculumCatalog = ({
   // Get the top recommended similar curriculum based on the curriculum with the given
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
-    let recommendableCurricula = [...curriculaData];
-
-    // Get current curricula the others are being compared against and filter it out of the
-    // recommendable curriculum
-    const currCurriculumIndex = recommendableCurricula.findIndex(
-      e => e.key === curriculumKey
-    );
-    const currCurriculum = recommendableCurricula.splice(
-      currCurriculumIndex,
-      1
-    )[0];
-
-    // Filter out curricula that don't support any of the same grade levels
-    const currCurriculumGrades = currCurriculum.grade_levels;
-    recommendableCurricula = recommendableCurricula.filter(curr =>
-      curr.grade_levels
-        ?.split(',')
-        ?.some(grade => currCurriculumGrades.includes(grade))
-    );
-
-    // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
-      recommendableCurricula,
-      currCurriculum.duration,
-      currCurriculum.marketing_initiative,
-      currCurriculum.school_subject,
-      currCurriculum.cs_topic
+      curriculaData,
+      curriculumKey
     );
-
     return recommendations[0];
   };
 
