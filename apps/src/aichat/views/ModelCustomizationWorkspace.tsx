@@ -1,13 +1,14 @@
 import React from 'react';
 
+import Tabs from './tabs/Tabs';
 import PromptCustomization from './modelCustomization/PromptCustomization';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
 import PublishNotes from './modelCustomization/PublishNotes';
-import Tabs from './tabs/Tabs';
+import styles from './model-customization-workspace.module.scss';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   return (
-    <div style={{width: 400, height: '100%'}}>
+    <div className={styles.modelCustomizationWorkspace}>
       <Tabs
         tabs={[
           {title: 'Prompt', content: <PromptCustomization />},

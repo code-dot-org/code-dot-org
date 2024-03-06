@@ -39,10 +39,7 @@ const PromptCustomization = () => {
           style={{width: '100%'}}
         />
         <label htmlFor="system-prompt">System prompt</label>
-        <textarea
-          id="system-prompt"
-          style={{width: 'calc(100% - 20px)', height: 100, resize: 'vertical'}}
-        />
+        <textarea id="system-prompt" />
       </div>
       <div
         id="bottom-container"
