@@ -279,8 +279,6 @@ export interface ExtendedVariables extends VariablesType {
 
 export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
-  // used for behavior blocks
-  behaviorId?: string;
   getTargetWorkspace_(): Workspace;
   hasReturn_: boolean;
   renameProcedure(
@@ -297,6 +295,8 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   createDef_: (name: string, params?: string[]) => IProcedureModel;
   findProcedureModel_: (name: string, params?: string[]) => IProcedureModel;
   initBlockWithProcedureModel_: () => void;
+  // used for behavior blocks
+  behaviorId?: string;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.

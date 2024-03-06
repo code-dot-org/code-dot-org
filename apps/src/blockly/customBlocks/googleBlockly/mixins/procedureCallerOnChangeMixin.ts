@@ -42,7 +42,7 @@ const procedureCallerOnChangeMixin = {
       name,
       this.workspace
     ) as ProcedureBlock;
-    if (def && !this.defMatches_(def)) def = null;
+    if (!this.defMatches_(def)) def = null;
     if (!def) {
       // We have no def nor procedure model.
       Blockly.Events.setGroup(event.group);
@@ -82,7 +82,7 @@ const procedureCallerOnChangeMixin = {
    * @param defBlock The definition block to check against.
    * @returns Whether the def block matches or not.
    */
-  defMatches_(this: ProcedureBlock, defBlock: ProcedureBlock) {
+  defMatches_(this: ProcedureBlock, defBlock: ProcedureBlock | null) {
     return (
       defBlock &&
       defBlock.type === this.defType_ &&
