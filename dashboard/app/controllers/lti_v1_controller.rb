@@ -221,9 +221,8 @@ class LtiV1Controller < ApplicationController
 
           // Append the new query parameter appropriately
           const auth_url = `${fullUrl}?${idTokenParam}&${stateParam}&${newTabParam}`
-          console.log(`Auth URL: ${auth_url}`)
           // Check if the current window is the top-level window
-          if (window !== window.top) {
+          if (window.location !== window.parent.location) {
             // Create a div to hold the message and button
             var messageDiv = document.createElement("div");
             messageDiv.style.position = "fixed";
