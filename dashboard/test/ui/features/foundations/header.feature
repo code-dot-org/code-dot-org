@@ -51,7 +51,7 @@ Scenario: Signed out user in Spanish should see 7 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
-  Given I am on "http://code.org/students"
+  Given I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
   And I see "#header-learn"
   And element "#header-learn" has "es" text from key "nav.header.learn"
@@ -70,8 +70,8 @@ Scenario: Signed out user in Spanish should see 7 header links
 
 Scenario: Student in Spanish should see 4 header links
   Given I create a student named "Eva Estudiante"
-  Given I am on "http://code.org/students"
-  Then check that I am on "http://code.org/students"
+  Given I am on "http://studio.code.org/home/lang/es"
+  Then check that I am on "http://studio.code.org/home?lang=es"
   And I wait to see ".headerlinks"
   And I see "#header-student-home"
   And element "#header-student-home" has "es" text from key "nav.header.my_dashboard"

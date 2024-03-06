@@ -66,7 +66,7 @@ Scenario: Join non-existent section from sign in page shows error
   Given I am on "http://studio.code.org/users/sign_in/"
   And I type "9999999999" into "#section_code"
   And I click ".section-sign-in button" to load a new page
-  Then I wait until I am on "http://code.org/students"
+  Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see ".alert-danger"
   And element ".alert-danger" contains text "Could not find a section with code"
 
