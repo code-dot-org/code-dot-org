@@ -89,7 +89,6 @@ describe('Design System - Icon Dropdown Component', () => {
     rerender(<DropdownToRender />);
 
     expect(spyOnChange).to.have.been.calledOnce;
-    // expect(option1.checked).to.be.true;
     expect(selectedValue.value).to.equal('option-1');
 
     await user.click(option2);

@@ -16,7 +16,6 @@ const SingleTemplate: Story<IconDropdownProps> = args => {
   const [selectedValue, setValue] = useState(
     args.selectedOption as IconDropdownOption
   );
-  console.log(args.selectedOption);
   const onChange = useCallback(
     (option: IconDropdownOption) => {
       setValue(option);

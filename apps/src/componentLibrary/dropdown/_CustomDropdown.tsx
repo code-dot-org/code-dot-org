@@ -20,15 +20,17 @@ import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/Dro
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 
 export interface CustomDropdownProps {
-  /** CheckboxDropdown name */
+  /** CustomDropdown name.
+   * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
-  /** CheckboxDropdown color */
+  /** CustomDropdown color */
   color?: DropdownColor;
-  /** CheckboxDropdown size */
+  /** CustomDropdown size */
   size: ComponentSizeXSToL;
-  /** CheckboxDropdown disabled state */
+  /** CustomDropdown disabled state */
   disabled?: boolean;
-  /** CheckboxDropdown label */
+  /** CustomDropdown label
+   * The user-facing label of the dropdown */
   labelText: string;
   /** Does custom dropdown hase a selected value (Renders a checkmark icon in the dropdown button if true) */
   isSomeValueSelected?: boolean;
@@ -54,9 +56,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   size = 'm',
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
-  const dropdownRef: React.MutableRefObject<HTMLDivElement | null> =
-    useRef(null);
-
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const handleClickOutside = useCallback(
     (event: Event) => {
       if (

@@ -27,7 +27,8 @@ export interface IconDropdownOption {
 }
 
 export interface IconDropdownProps {
-  /** IconDropdown name */
+  /** IconDropdown name.
+   * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
   /** IconDropdown color */
   color?: DropdownColor;
@@ -35,7 +36,8 @@ export interface IconDropdownProps {
   size: ComponentSizeXSToL;
   /** IconDropdown disabled state */
   disabled?: boolean;
-  /** IconDropdown label */
+  /** IconDropdown label
+   * The user-facing label of the dropdown */
   labelText: string;
   /** IconDropdown options */
   options: IconDropdownOption[];

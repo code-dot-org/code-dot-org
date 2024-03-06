@@ -19,7 +19,8 @@ import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 
 export interface CheckboxDropdownProps {
-  /** CheckboxDropdown name */
+  /** CheckboxDropdown name.
+   * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
   /** CheckboxDropdown color */
   color?: DropdownColor;
@@ -27,7 +28,8 @@ export interface CheckboxDropdownProps {
   size: ComponentSizeXSToL;
   /** CheckboxDropdown disabled state */
   disabled?: boolean;
-  /** CheckboxDropdown label */
+  /** CheckboxDropdown label
+   * The user-facing label of the dropdown */
   labelText: string;
   /** CheckboxDropdown options */
   allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
