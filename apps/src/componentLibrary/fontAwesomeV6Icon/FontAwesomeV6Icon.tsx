@@ -10,7 +10,7 @@ export interface FontAwesomeV6IconProps {
    *  * light - 300
    *  * thin - 100
    * */
-  iconStyle: 'solid' | 'regular' | 'light' | 'thin';
+  iconStyle?: 'solid' | 'regular' | 'light' | 'thin';
   /** Icon name */
   iconName: string;
   /**

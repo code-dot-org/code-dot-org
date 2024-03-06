@@ -9,7 +9,7 @@ const INPUTS = [
   {id: 'testing-and-evaluation', text: 'Testing and Evaluation'},
 ];
 
-const PublishNotes = () => {
+const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div>

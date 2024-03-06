@@ -4,17 +4,17 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/Font
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import styles from '../model-customization-workspace.module.scss';
 
-const RetrievalCustomization = () => {
-  const [messages, setMessages] = useState([]);
+const RetrievalCustomization: React.FunctionComponent = () => {
+  const [messages, setMessages] = useState<string[]>([]);
   const [newMessage, setNewMessage] = useState('');
 
   const onAdd = () => {
     setMessages([...messages, newMessage]);
     setNewMessage('');
-    document.getElementById('retrieval-input').focus();
+    document.getElementById('retrieval-input')?.focus();
   };
 
-  const onRemove = index => {
+  const onRemove = (index: number) => {
     const messagesCopy = [...messages];
     messagesCopy.splice(index, 1);
     setMessages(messagesCopy);

@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, ChangeEvent} from 'react';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import styles from '../model-customization-workspace.module.scss';
 
-const PromptCustomization = () => {
-  const [temperature, setTemperature] = useState(0.05);
+const PromptCustomization: React.FunctionComponent = () => {
+  const [temperature, setTemperature] = useState('0.05');
 
-  const handleTemperatureChange = event => {
+  const handleTemperatureChange = (event: ChangeEvent<HTMLInputElement>) => {
     setTemperature(event.target.value);
   };
 
