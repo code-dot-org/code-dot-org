@@ -8717,6 +8717,7 @@ __metadata:
     sortabular: ^1.6.0
     source-map-loader: ^4.0.1
     sprintf-js: ^1.0.3
+    statsig-js: ^4.50.0
     storybook-addon-rtl: ^0.5.0
     stream-browserify: ^3.0.0
     style-loader: ^3.2.1
@@ -18430,6 +18431,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"js-sha256@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "js-sha256@npm:0.11.0"
+  checksum: 742d34a0c6eb15247309f1c74889b5a51df01a96e4307375b420fbe973f2f25585012b4d3c8fa52a1b18546153d12587e6463bb725dc1bc58686da03e892c334
+  languageName: node
+  linkType: hard
+
 "js-string-escape@npm:^1.0.1":
   version: 1.0.1
   resolution: "js-string-escape@npm:1.0.1"
@@ -27235,6 +27243,16 @@ es6-shim@latest:
     define-property: ^0.2.5
     object-copy: ^0.1.0
   checksum: 8657485b831f79e388a437260baf22784540417a9b29e11572c87735df24c22b84eda42107403a64b30861b2faf13df9f7fc5525d51f9d1d2303aba5cbf4e12c
+  languageName: node
+  linkType: hard
+
+"statsig-js@npm:^4.50.0":
+  version: 4.50.0
+  resolution: "statsig-js@npm:4.50.0"
+  dependencies:
+    js-sha256: ^0.11.0
+    uuid: ^8.3.2
+  checksum: 9573f34d29fd105b713862711faa966b0988a6a1fa984dc61a593521b6a9424e534efea14dfe76fb4f9eafaeced7855ee2efaccb461ca9569f7ca5d5607d5a5b
   languageName: node
   linkType: hard
 
