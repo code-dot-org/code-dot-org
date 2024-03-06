@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import styles from '../model-customization-workspace.module.scss';
 
 const RetrievalCustomization = () => {
   const [messages, setMessages] = useState([]);
@@ -19,27 +21,36 @@ const RetrievalCustomization = () => {
   };
 
   return (
-    <>
-      <label htmlFor="system-prompt">Retrieval</label>
-      <textarea
-        id="retrieval-input"
-        onChange={event => setNewMessage(event.target.value)}
-        value={newMessage}
-      />
-      <button type="button" onClick={onAdd} disabled={!newMessage}>
-        Add
-      </button>
-      {messages.map((message, index) => {
-        return (
-          <div key={index}>
-            <button type="button" onClick={() => onRemove(index)}>
-              <FontAwesomeV6Icon iconName="x" />
-            </button>
-            {message}
-          </div>
-        );
-      })}
-    </>
+    <div className={styles.verticalFlexContainer}>
+      <div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="system-prompt">
+            <StrongText>Retrieval</StrongText>
+          </label>
+          <textarea
+            id="retrieval-input"
+            onChange={event => setNewMessage(event.target.value)}
+            value={newMessage}
+          />
+        </div>
+        <button type="button" onClick={onAdd} disabled={!newMessage}>
+          Add
+        </button>
+        {messages.map((message, index) => {
+          return (
+            <div key={index}>
+              <button type="button" onClick={() => onRemove(index)}>
+                <FontAwesomeV6Icon iconName="circle-xmark" />
+              </button>
+              <span style={{backgroundColor: 'gray'}}>{message}</span>
+            </div>
+          );
+        })}
+      </div>
+      <div className={styles.footerButtonContainer}>
+        <button type="button">Update</button>
+      </div>
+    </div>
   );
 };
 

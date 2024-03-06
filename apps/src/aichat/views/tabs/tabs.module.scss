@@ -7,6 +7,7 @@
   display: flex;
   padding-left: 5px;
   overflow-x: auto;
+  overflow-y: hidden;
 
   .active {
     background-color: $neutral_light;
@@ -26,6 +27,7 @@
   margin: 5px 8px 0 0;
   padding: 0 10px;
   border-radius: 4px 4px 0 0;
+  height: 30px;
 
   button {
     @include remove-button-styles;

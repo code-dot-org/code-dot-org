@@ -1,15 +1,33 @@
 import React from 'react';
 
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import styles from '../model-customization-workspace.module.scss';
+
+const INPUTS = [
+  {id: 'intended-uses', text: 'Intended Uses'},
+  {id: 'limitations-and-warnings', text: 'Limitations and Warnings'},
+  {id: 'testing-and-evaluation', text: 'Testing and Evaluation'},
+];
+
 const PublishNotes = () => {
   return (
-    <>
-      <label htmlFor="intended-uses">Intended Uses</label>
-      <textarea id="intended-uses" />
-      <label htmlFor="limitations-and-warnings">Limitations and Warnings</label>
-      <textarea id="limitations-and-warnings" />
-      <label htmlFor="testing-and-evaluation">Testing and Evaluation</label>
-      <textarea id="testing-and-evaluation" />
-    </>
+    <div className={styles.verticalFlexContainer}>
+      <div>
+        {INPUTS.map(input => {
+          return (
+            <div className={styles.inputContainer}>
+              <label htmlFor={input.id}>
+                <StrongText>{input.text}</StrongText>
+              </label>
+              <textarea id={input.id} />
+            </div>
+          );
+        })}
+      </div>
+      <div className={styles.footerButtonContainer}>
+        <button type="button">Publish</button>
+      </div>
+    </div>
   );
 };
 

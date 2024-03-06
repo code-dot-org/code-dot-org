@@ -57,10 +57,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                   aria-controls={getTabPanelId(index)}
                   id={getTabButtonId(index)}
                   onClick={() => handleTabClick(index)}
-                  className={classNames(
-                    styles.tabButton,
-                    index === activeIndex && styles.active
-                  )}
+                  className={classNames(index === activeIndex && styles.active)}
                 >
                   {tab.title}
                 </button>

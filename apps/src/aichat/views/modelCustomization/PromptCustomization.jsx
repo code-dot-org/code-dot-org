@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import styles from '../model-customization-workspace.module.scss';
+
 const PromptCustomization = () => {
   const [temperature, setTemperature] = useState(0.05);
 
@@ -8,48 +11,39 @@ const PromptCustomization = () => {
   };
 
   return (
-    <div
-      id="flex-container"
-      style={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-      }}
-    >
-      <div id="top-container" style={{height: 400}}>
-        <div style={{padding: '5px 0'}}>
-          <label htmlFor="chatbot-name">Chatbot name</label>
+    <div className={styles.verticalFlexContainer}>
+      <div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="chatbot-name">
+            <StrongText>Chatbot name</StrongText>
+          </label>
+          <input id="chatbot-name" />
+        </div>
+        <div className={styles.inputContainer}>
+          <div className={styles.horizontalFlexContainer}>
+            <label htmlFor="temperature">
+              <StrongText>Temperature</StrongText>
+            </label>
+            {temperature}
+          </div>
           <input
-            id="chatbot-name"
-            style={{width: '100%', boxSizing: 'border-box'}}
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={temperature}
+            onChange={handleTemperatureChange}
           />
         </div>
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
-          <label htmlFor="temperature">Temperature</label>
-          {temperature}
+        <div className={styles.inputContainer}>
+          <label htmlFor="system-prompt">
+            <StrongText>System prompt</StrongText>
+          </label>
+          <textarea id="system-prompt" />
         </div>
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value={temperature}
-          onChange={handleTemperatureChange}
-          style={{width: '100%'}}
-        />
-        <label htmlFor="system-prompt">System prompt</label>
-        <textarea id="system-prompt" />
       </div>
-      <div
-        id="bottom-container"
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <button>Update</button>
+      <div className={styles.footerButtonContainer}>
+        <button type="button">Update</button>
       </div>
     </div>
   );
