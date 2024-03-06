@@ -85,7 +85,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     end
 
     assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).first.status
-    verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
+    verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student, include_exact_confidence: false)
   end
 
   test "job fails on non-ai level" do
@@ -456,12 +456,21 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   # verify the job wrote the expected LearningGoalAiEvaluations to the database
+  #
+  # @param channel_id [String]
+  # @param rubric [Rubric]
+  # @param user [User]
+  # @param expected_understanding [Integer]
+  # @param version_id [String]
+  # @param include_exact_confidence [Boolean] whether to expect exact-match
+  #   confidence levels to be present in the database
   private def verify_stored_ai_evaluations(
     channel_id:,
     rubric:,
     user:,
     expected_understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.EXTENSIVE,
-    version_id: 'fake-version-id'
+    version_id: 'fake-version-id',
+    include_exact_confidence: true
   )
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
     rubric_ai_eval = RubricAiEvaluation.where(user_id: user.id).order(updated_at: :desc).first
@@ -471,6 +480,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       ai_eval = rubric_ai_eval.learning_goal_ai_evaluations.find_by(learning_goal_id: learning_goal.id)
       assert_equal expected_understanding, ai_eval.understanding
       assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
+      expected_confidence = include_exact_confidence ? LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:LOW] : nil
+      assert_equal expected_confidence, ai_eval.ai_confidence_exact_match
     end
   end
 end
