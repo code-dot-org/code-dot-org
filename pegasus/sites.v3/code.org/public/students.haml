@@ -1,11 +1,10 @@
 ---
 title: Learn Computer Science
 theme: responsive_full_width
-set_dir: true
 ---
 
 -# Determine if a user is signed in
-- cookie_key = environment_specific_cookie_name('_user_type')
+- cookie_key = environment_specific_cookie_name("_user_type")
 - user_type = request.cookies[cookie_key]
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
