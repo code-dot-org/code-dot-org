@@ -24,7 +24,6 @@ class PersonalProjectsNameCell extends Component {
   };
 
   showProjectInfo = () => {
-    console.log('showProjectInfo');
     this.props.showProjectInfoDialog();
   };
 
