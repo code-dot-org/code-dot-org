@@ -3,7 +3,11 @@ import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import MusicLibrary, {SoundData, SoundFolder} from '../player/MusicLibrary';
+import MusicLibrary, {
+  SoundData,
+  SoundFolder,
+  SoundType,
+} from '../player/MusicLibrary';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 const AppConfig = require('../appConfig').default;
@@ -12,6 +16,9 @@ const AppConfig = require('../appConfig').default;
  * Renders a UI for previewing and choosing samples. This is currently used within a
  * custom Blockly Field {@link FieldSounds}
  */
+
+type Mode = 'packs' | 'sounds';
+type Filter = 'all' | SoundType;
 
 const getLengthRepresentation = (length: number) => {
   const lengthToSymbol: {[length: number]: string} = {
@@ -200,21 +207,21 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
     library.getFolderForSoundId(currentValue) || folders[0]
   );
-  const [mode, setMode] = useState<string>('packs');
-  const [filter, setFilter] = useState<string>('all');
+  const [mode, setMode] = useState<Mode>('packs');
+  const [filter, setFilter] = useState<Filter>('all');
 
   const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
   const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
 
-  const onModeChange = (value: string) => {
+  const onModeChange = useCallback( (value: Mode) => {
     setMode(value);
-  };
+  }, []);
 
-  const onFilterChange = (value: string) => {
+  const onFilterChange = useCallback((value: Filter) => {
     setFilter(value);
-  };
+  }, []);
 
   useEffect(() => {
     // This timeout allows the scrolling to work when wrapping the content with FocusLock.
@@ -249,7 +256,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     rightColumnSounds = possibleSounds;
   } else {
     rightColumnSounds = possibleSounds.filter(
-      sound => filter === 'all' || sound.type === filter
+      sound => sound.type === filter
     );
   }
 
@@ -267,7 +274,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 {label: 'Packs', value: 'packs'},
                 {label: 'Sounds', value: 'sounds'},
               ]}
-              onChange={value => onModeChange(value)}
+              onChange={value => onModeChange(value as Mode)}
               className={styles.segmentedButtons}
             />
 
@@ -281,7 +288,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 {label: 'Effects', value: 'fx'},
                 {label: 'Vocals', value: 'vocal'},
               ]}
-              onChange={value => onFilterChange(value)}
+              onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}
             />
           </div>
