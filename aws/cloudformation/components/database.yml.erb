@@ -134,6 +134,8 @@
         # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
         slow_query_log: 1
         innodb_monitor_enable: all
+        # TODO: Is READ-COMMITTED not permitted o read replica database instance in Aurora Engine 3 / MySQL 8?
+        transaction_isolation: READ-COMMITTED
 
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
@@ -152,9 +154,6 @@
         #END: Static configuration settings.
 
         # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
-
-        # TODO: Is READ-COMMITTED not permitted o read replica database instance in Aurora Engine 3 / MySQL 8?
-        transaction_isolation: READ-COMMITTED
 
         # Prevent a slow query from degrading instance or cluster performance.
         # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
