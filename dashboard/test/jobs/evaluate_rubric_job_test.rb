@@ -66,6 +66,28 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
   end
 
+  test "job succeeds on ai-enabled level without confidence exact json" do
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data(response_type: 'json', include_exact: false)
+
+    stub_get_openai_evaluations(response_type: 'json')
+
+    # run the job
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
+    end
+
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).first.status
+    verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
+  end
+
   test "job fails on non-ai level" do
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns(nil)
 
@@ -309,7 +331,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   # stub out the s3 calls made from the job via read_file_from_s3 and read_examples.
-  private def stub_lesson_s3_data(response_type: 'tsv')
+  private def stub_lesson_s3_data(response_type: 'tsv', include_exact: true)
     raise "invalid response type #{response_type}" unless ['tsv', 'json'].include? response_type
     s3_client = Aws::S3::Client.new(stub_responses: true)
     fake_confidence_levels = {
@@ -342,19 +364,21 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => 'fake-standard-rubric',
       "#{path_prefix}fake-lesson-s3-name/params.json" => fake_params,
       "#{path_prefix}fake-lesson-s3-name/confidence.json" => fake_confidence_levels,
-      "#{path_prefix}fake-lesson-s3-name/confidence-exact.json" => fake_confidence_levels_exact,
       "#{path_prefix}fake-lesson-s3-name/examples/1.js" => 'fake-code-1',
       "#{path_prefix}fake-lesson-s3-name/examples/1.#{response_type}" => 'fake-response-1',
       "#{path_prefix}fake-lesson-s3-name/examples/2.js" => 'fake-code-2',
       "#{path_prefix}fake-lesson-s3-name/examples/2.#{response_type}" => 'fake-response-2',
     }
+    if include_exact
+      bucket["#{path_prefix}fake-lesson-s3-name/confidence-exact.json"] = fake_confidence_levels_exact
+    end
 
     s3_client.stub_responses(
       :get_object,
       ->(context) do
         key = context.params[:key]
         obj = bucket[key]
-        raise "NoSuchKey: #{key}" unless obj
+        raise EvaluateRubricJob::StubNoSuchKey.new(key) unless obj
         {body: StringIO.new(obj)}
       end
     )

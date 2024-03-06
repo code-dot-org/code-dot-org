@@ -54,6 +54,10 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  # For testing purposes, we can raise this error to simulate a missing key
+  class StubNoSuchKey < StandardError
+  end
+
   # The CloudWatch metric namespace
   AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
 
@@ -253,7 +257,8 @@ class EvaluateRubricJob < ApplicationJob
     validate_evaluations(ai_evaluations, rubric)
 
     ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
-    ai_confidence_levels_exact_match = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence-exact.json'))
+    confidence_exact_json = read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
+    ai_confidence_levels_exact_match = confidence_exact_json ? JSON.parse(confidence_exact_json) : nil
     merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
@@ -298,7 +303,7 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def read_file_from_s3(lesson_s3_name, key_suffix)
+  private def read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)
     key = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/#{key_suffix}"
     if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
       puts "Note: Reading AI prompt from local file: #{key}"
@@ -306,6 +311,9 @@ class EvaluateRubricJob < ApplicationJob
     else
       s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
     end
+  rescue Aws::S3::Errors::NoSuchKey, StubNoSuchKey => exception
+    raise exception unless allow_missing
+    nil
   end
 
   private def read_examples(lesson_s3_name, response_type)
@@ -394,16 +402,18 @@ class EvaluateRubricJob < ApplicationJob
   private def merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
     ai_evaluations.map do |evaluation|
       learning_goal = evaluation['Key Concept']
-      label = evaluation['Label']
       confidence_pass_fail = ai_confidence_levels_pass_fail[learning_goal]
-      confidence_exact_match = ai_confidence_levels_exact_match[learning_goal][label]
-      if ai_confidence_levels_exact_match && !confidence_exact_match
-        raise "No confidence_exact_match for learning goal: #{learning_goal}, label: #{label} evaluation: #{JSON.pretty_generate(evaluation)} ai_confidence_levels_exact_match: #{JSON.pretty_generate(ai_confidence_levels_exact_match)}"
+      evaluation['Confidence-Pass-Fail'] = confidence_s_to_i(confidence_pass_fail)
+
+      if ai_confidence_levels_exact_match
+        label = evaluation['Label']
+        confidence_exact_match = ai_confidence_levels_exact_match[learning_goal][label]
+        unless confidence_exact_match
+          raise "No confidence_exact_match for learning goal: #{learning_goal}, label: #{label} evaluation: #{JSON.pretty_generate(evaluation)} ai_confidence_levels_exact_match: #{JSON.pretty_generate(ai_confidence_levels_exact_match)}"
+        end
+        evaluation['Confidence-Exact-Match'] = confidence_s_to_i(confidence_exact_match)
       end
-      evaluation.merge(
-        'Confidence-Pass-Fail' => confidence_s_to_i(confidence_pass_fail),
-        'Confidence-Exact-Match' => confidence_s_to_i(confidence_exact_match)
-      )
+      evaluation
     end
   end
 
