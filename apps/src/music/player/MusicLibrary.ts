@@ -1,5 +1,7 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
+import {baseAssetUrlRestricted} from '../constants';
+import {getBaseAssetUrl} from '../appConfig';
 
 export default class MusicLibrary {
   private static instance: MusicLibrary;
@@ -68,21 +70,6 @@ export default class MusicLibrary {
     return null;
   }
 
-  // Given a sound path (e.g. "packs/pack1/sound1"), return the SoundData.
-  getSoundForPath(id: string): SoundData | null {
-    const lastSlashIndex = id.lastIndexOf('/');
-    const folderPath = id.substring(0, lastSlashIndex);
-    const src = id.substring(lastSlashIndex + 1);
-
-    const folder = this.getFolderForFolderPath(folderPath);
-
-    if (folder) {
-      return folder.sounds.find(sound => sound.src === src) || null;
-    }
-
-    return null;
-  }
-
   // Given a sound ID (e.g. "pack1/sound1"), return the SoundFolder.
   getFolderForSoundId(id: string): SoundFolder | null {
     const lastSlashIndex = id.lastIndexOf('/');
@@ -96,14 +83,19 @@ export default class MusicLibrary {
     return this.folders.find(folder => folder.id === folderId) || null;
   }
 
-  // Given a folder path (e.g. "packs/pack1") return a SoundFolder.
-  getFolderForFolderPath(folderPath: string): SoundFolder | null {
-    return this.folders.find(folder => folder.path === folderPath) || null;
-  }
-
   // A progression step might specify a smaller set of allowed sounds.
   setAllowedSounds(allowedSounds: Sounds): void {
     this.allowedSounds = allowedSounds;
+  }
+
+  generateSoundUrl(folder: SoundFolder, soundData: SoundData): string {
+    const baseUrl = soundData.restricted
+      ? baseAssetUrlRestricted
+      : getBaseAssetUrl();
+
+    const optionalSoundPath = soundData.path ? `${soundData.path}/` : '';
+    const url = `${baseUrl}${this.libraryJson.path}/${folder.path}/${optionalSoundPath}${soundData.src}.mp3`;
+    return url;
   }
 
   // A sound picker might want to show the subset of sounds permitted by the
@@ -179,6 +171,7 @@ export interface SampleSequence {
 
 export interface SoundData {
   name: string;
+  path?: string;
   src: string;
   length: number;
   type: SoundType;

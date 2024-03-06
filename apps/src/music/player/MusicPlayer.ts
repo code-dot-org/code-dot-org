@@ -16,9 +16,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
 import SamplePlayerWrapper from './SamplePlayerWrapper';
-
-// Using require() to import JS in TS files
-const constants = require('../constants');
+import {DEFAULT_PATTERN_LENGTH, DEFAULT_CHORD_LENGTH} from '../constants';
 
 const DEFAULT_BPM = 120;
 const DEFAULT_KEY = Key.C;
@@ -88,16 +86,16 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       events = events.filter(event => event.type === 'sound');
     }
-    const sampleIds = Array.from(
+    const sampleUrls = Array.from(
       new Set(
         events
           .map(event => this.convertEventToSamples(event))
           .flat()
-          .map(sampleEvent => sampleEvent.sampleId)
+          .map(sampleEvent => sampleEvent.sampleUrl)
       )
     );
 
-    return this.audioPlayer.loadSounds(sampleIds, {
+    return this.audioPlayer.loadSounds(sampleUrls, {
       onLoadFinished,
       updateLoadProgress: this.updateLoadProgress,
     });
@@ -133,7 +131,7 @@ export default class MusicPlayer {
       when: 1,
       value: chordValue,
       triggered: false,
-      length: constants.DEFAULT_CHORD_LENGTH,
+      length: DEFAULT_CHORD_LENGTH,
       id: 'preview',
       blockId: 'preview',
     };
@@ -167,7 +165,7 @@ export default class MusicPlayer {
       when: 1,
       value: patternValue,
       triggered: false,
-      length: constants.DEFAULT_PATTERN_LENGTH,
+      length: DEFAULT_PATTERN_LENGTH,
       id: 'preview',
       blockId: 'preview',
     };
@@ -285,9 +283,11 @@ export default class MusicPlayer {
         return [];
       }
 
+      const url = library.generateSoundUrl(folder, soundData);
+
       return [
         {
-          sampleId: `${folder.path}/${soundData.src}`,
+          sampleUrl: url,
           playbackPosition: event.when,
           triggered: soundEvent.triggered,
           effects: soundEvent.effects,
@@ -310,8 +310,15 @@ export default class MusicPlayer {
       }
 
       for (const event of patternEvent.value.events) {
+        const soundData = library.getSoundForId(`${folder.id}/${event.src}`);
+        if (soundData === null) {
+          return [];
+        }
+
+        const url = library.generateSoundUrl(folder, soundData);
+
         const resultEvent = {
-          sampleId: `${folder.path}/${event.src}`,
+          sampleUrl: url,
           playbackPosition: patternEvent.when + (event.tick - 1) / 16,
           triggered: patternEvent.triggered,
           effects: patternEvent.effects,
@@ -347,12 +354,12 @@ export default class MusicPlayer {
     );
 
     generatedNotes.forEach(note => {
-      const sampleId = this.getSampleForNote(note.note, instrument);
-      if (sampleId !== null) {
+      const sampleUrl = this.getSampleForNote(note.note, instrument);
+      if (sampleUrl !== null) {
         const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
         results.push({
-          sampleId,
+          sampleUrl,
           playbackPosition: noteWhen,
           originalBpm: this.bpm,
           pitchShift: 0,
@@ -377,16 +384,16 @@ export default class MusicPlayer {
       return null;
     }
 
-    const sound = folder.sounds.find(sound => sound.note === note) || null;
-    if (sound === null) {
+    const soundData = folder.sounds.find(sound => sound.note === note) || null;
+    if (soundData === null) {
       this.metricsReporter.logWarning(
         `No sound for note value ${note} on instrument ${instrument}`
       );
       return null;
     }
 
-    //   return `instruments/${instrument}/${sound.src}`;
-    return `${folder.path}/${sound.src}`;
+    const url = library.generateSoundUrl(folder, soundData);
+    return url;
   }
 
   private getSamplesForSequence(
@@ -400,11 +407,11 @@ export default class MusicPlayer {
 
     events.forEach(event => {
       const tranposedNote = getTranposedNote(this.key, event.noteOffset);
-      const sampleId = this.getSampleForNote(tranposedNote, instrument);
-      if (sampleId !== null) {
+      const sampleUrl = this.getSampleForNote(tranposedNote, instrument);
+      if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
-          sampleId,
+          sampleUrl,
           playbackPosition: eventWhen,
           length: event.length,
           triggered,
