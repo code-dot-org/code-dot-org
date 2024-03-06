@@ -38,7 +38,7 @@ function SectionProgressV2({
 
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
-      <Heading1>{i18n.progress() + ' (' + i18n.beta() + ')'}</Heading1>
+      <Heading1>{i18n.progressBeta()}</Heading1>
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
