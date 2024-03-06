@@ -174,6 +174,8 @@ export default function LearningGoals({
   );
   const [aiFeedback, setAiFeedback] = useState(-1);
   const [aiEvidence, setAiEvidence] = useState([]);
+  // The ref version of this state is used when updating the information based
+  // on saved info retrieved by network requests so as not to race them.
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
   const currentLearningGoalRef = useRef(0);
   const learningGoalEvalIds = useRef(Array(learningGoals.length).fill(null));
@@ -252,6 +254,7 @@ export default function LearningGoals({
     if (studentLevelInfo && learningGoals) {
       // Set our current idea of the feedback immediately
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
+      setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
       setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
 
       // Only load prior learning goal feedback once
@@ -282,16 +285,14 @@ export default function LearningGoals({
               if (json.understanding >= 0 && json.understanding !== null) {
                 understandingLevels.current[index] = json.understanding;
               }
+
+              // Uses the redundant ref here instead of state to defeat a race
+              // condition where the current learning goal changes before the
+              // fetch resolves.
               if (index === currentLearningGoalRef.current) {
-                setDisplayFeedback(
-                  teacherFeedbacks.current[currentLearningGoalRef.current]
-                );
-                setLoaded(
-                  teacherFeedbacksLoaded.current[currentLearningGoalRef.current]
-                );
-                setDisplayUnderstanding(
-                  understandingLevels.current[currentLearningGoalRef.current]
-                );
+                setDisplayFeedback(teacherFeedbacks.current[index]);
+                setLoaded(teacherFeedbacksLoaded.current[index]);
+                setDisplayUnderstanding(understandingLevels.current[index]);
               }
             })
             .catch(error => console.error(error));
