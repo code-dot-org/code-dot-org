@@ -1,5 +1,5 @@
 import React from 'react';
-import {ComponentStory} from '@storybook/react';
+import {StoryFn} from '@storybook/react';
 import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/lti/upgrade/LtiUpgradeAccountDialog';
 
 export default {
@@ -10,7 +10,7 @@ export default {
 // TEMPLATE
 //
 
-const Template: ComponentStory<typeof LtiUpgradeAccountDialog> = args => (
+const Template: StoryFn<typeof LtiUpgradeAccountDialog> = args => (
   <LtiUpgradeAccountDialog {...args} />
 );
 
