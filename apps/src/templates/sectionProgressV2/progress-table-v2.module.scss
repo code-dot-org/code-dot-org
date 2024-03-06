@@ -38,6 +38,21 @@ $level-cell-width: 52;
   }
 }
 
+.scrollingTable {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.topScrollBar {
+  height: 20px;
+  width: 100%;
+  overflow-x: scroll;
+
+  &Div {
+    width: 10000px;
+  }
+}
+
 .gridBox {
   border-top: 1px solid $light_gray_200;
   border-left: 1px solid $light_gray_200;

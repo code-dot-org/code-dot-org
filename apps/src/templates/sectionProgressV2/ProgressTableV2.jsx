@@ -89,10 +89,30 @@ function ProgressTableV2({
       // TODO: add no lesson state
       return null;
     }
-    const tableStyles = isSkeleton
-      ? classNames(styles.table, styles.tableLoading)
-      : styles.table;
-    return <div className={tableStyles}>{lessons.map(getRenderedColumn)}</div>;
+
+    const tableRef = React.useRef();
+
+    const table = (
+      <div
+        className={classNames(styles.table, isSkeleton && styles.tableLoading)}
+        ref={tableRef}
+      >
+        {lessons.map(getRenderedColumn)}
+      </div>
+    );
+
+    const scrollTable = scroll => {
+      tableRef.current.scrollLeft = scroll.target.scrollLeft;
+    };
+
+    return (
+      <div className={styles.scrollingTable}>
+        <div className={styles.topScrollBar} onScroll={scrollTable}>
+          <div className={styles.topScrollBarDiv} />
+        </div>
+        {table}
+      </div>
+    );
   }, [isSkeleton, getRenderedColumn, unitData]);
 
   return (
