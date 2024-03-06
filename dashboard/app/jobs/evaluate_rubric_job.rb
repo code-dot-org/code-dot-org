@@ -252,8 +252,8 @@ class EvaluateRubricJob < ApplicationJob
     ai_evaluations = response['data']
     validate_evaluations(ai_evaluations, rubric)
 
-    ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
-    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+    ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail)
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
   end
@@ -390,10 +390,10 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail)
     ai_evaluations.map do |evaluation|
       learning_goal = evaluation['Key Concept']
-      confidence_level = ai_confidence_levels[learning_goal]
+      confidence_level = ai_confidence_levels_pass_fail[learning_goal]
       evaluation.merge('Confidence' => confidence_s_to_i(confidence_level))
     end
   end
