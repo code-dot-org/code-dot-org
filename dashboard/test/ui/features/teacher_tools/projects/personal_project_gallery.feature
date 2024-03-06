@@ -32,7 +32,7 @@ Scenario: Can Rename a Project
   Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 0 of class ".pop-up-menu-item"
-  And I wait for 3 seconds
+  And I wait until element "#ui-project-rename-input" is visible
   And I clear the text from element "#ui-project-rename-input"
   And I press keys "New Name" for element "#ui-project-rename-input"
   Then I click selector ".ui-projects-rename-save"
