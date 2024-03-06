@@ -11,7 +11,11 @@ import {
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './edit-ai-customizations.module.scss';
-import {MAX_TEMPERATURE, MIN_TEMPERATURE} from '@cdo/apps/aichat/constants';
+import {
+  MAX_RETRIEVAL_CONTEXTS,
+  MAX_TEMPERATURE,
+  MIN_TEMPERATURE,
+} from '@cdo/apps/aichat/constants';
 import MultiItemInput from './MultiItemInput';
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
@@ -197,6 +201,7 @@ const EditAiCustomizations: React.FunctionComponent<{
                 setPropertyValue('retrievalContexts', updatedContexts);
               }}
               multiline={true}
+              max={MAX_RETRIEVAL_CONTEXTS}
             />
           }
         />

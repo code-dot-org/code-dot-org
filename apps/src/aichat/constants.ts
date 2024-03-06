@@ -16,3 +16,4 @@ export {initialChatMessages};
 export const MIN_TEMPERATURE = 0;
 export const MAX_TEMPERATURE = 2;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
+export const MAX_ASK_ABOUT_TOPICS = 10;

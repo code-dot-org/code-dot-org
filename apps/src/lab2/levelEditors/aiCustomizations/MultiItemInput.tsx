@@ -9,8 +9,10 @@ export const MultiItemInput: React.FunctionComponent<{
   onRemove: () => void;
   onChange: (index: number, value: string) => void;
   multiline?: boolean;
-}> = ({items, onAdd, onRemove, onChange, multiline = false}) => {
+  max?: number;
+}> = ({items, onAdd, onRemove, onChange, max, multiline = false}) => {
   const Tag = multiline ? 'textarea' : 'input';
+  const showPlus = max === undefined || items.length < max;
   return (
     <div className={moduleStyles.multiItemInput}>
       {items.map((item, index) => {
@@ -25,13 +27,15 @@ export const MultiItemInput: React.FunctionComponent<{
         );
       })}
       <div className={moduleStyles.buttonsRow}>
-        <button
-          type="button"
-          className={moduleStyles.plusMinusButton}
-          onClick={onAdd}
-        >
-          <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-        </button>
+        {showPlus && (
+          <button
+            type="button"
+            className={moduleStyles.plusMinusButton}
+            onClick={onAdd}
+          >
+            <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+          </button>
+        )}
         <button
           type="button"
           className={moduleStyles.plusMinusButton}
