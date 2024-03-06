@@ -5,16 +5,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import ProjectCardGrid from './ProjectCardGrid';
 import Button from '../Button';
-
-export const publishedProjectPropType = PropTypes.shape({
-  channel: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  studentName: PropTypes.string,
-  studentAgeRange: PropTypes.string,
-  thumbnailUrl: PropTypes.string,
-  type: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired,
-});
+import {publishedFeaturedProjectPropType} from './projectConstants';
 
 class PublicGallery extends Component {
   static propTypes = {
@@ -24,15 +15,15 @@ class PublicGallery extends Component {
 
     // Provided by Redux
     projectLists: PropTypes.shape({
-      special_topic: PropTypes.arrayOf(publishedProjectPropType),
-      applab: PropTypes.arrayOf(publishedProjectPropType),
-      spritelab: PropTypes.arrayOf(publishedProjectPropType),
-      gamelab: PropTypes.arrayOf(publishedProjectPropType),
-      playlab: PropTypes.arrayOf(publishedProjectPropType),
-      artist: PropTypes.arrayOf(publishedProjectPropType),
-      minecraft: PropTypes.arrayOf(publishedProjectPropType),
-      dance: PropTypes.arrayOf(publishedProjectPropType),
-      poetry: PropTypes.arrayOf(publishedProjectPropType),
+      special_topic: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      applab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      spritelab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      gamelab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      playlab: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      artist: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      minecraft: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      dance: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      poetry: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     }),
   };
 
