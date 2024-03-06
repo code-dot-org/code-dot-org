@@ -3,6 +3,7 @@ import React, {useContext} from 'react';
 import {UpdateContext} from './EditAiCustomizations';
 import MultiItemInput from './MultiItemInput';
 import moduleStyles from './edit-ai-customizations.module.scss';
+import {MAX_ASK_ABOUT_TOPICS} from '@cdo/apps/aichat/constants';
 
 const modelCardFieldsAndLabels: [keyof ModelCardInfo, string][] = [
   ['description', 'Description'],
@@ -52,6 +53,7 @@ const ModelCardFields: React.FunctionComponent = () => {
           updatedTopics[index] = value;
           setModelCardPropertyValue('askAboutTopics', updatedTopics);
         }}
+        max={MAX_ASK_ABOUT_TOPICS}
       />
     </div>
   );
