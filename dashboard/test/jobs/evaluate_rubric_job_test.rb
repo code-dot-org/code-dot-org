@@ -317,6 +317,17 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       'learning-goal-2': "MEDIUM",
       'learning-goal-3': "MEDIUM",
     }.to_json
+    exact_confidence_hash = {
+      'Extensive Evidence': 'LOW',
+      'Convincing Evidence': 'LOW',
+      'Limited Evidence': 'LOW',
+      'No Evidence': 'LOW',
+    }
+    fake_confidence_levels_exact = {
+      'learning-goal-1': exact_confidence_hash,
+      'learning-goal-2': exact_confidence_hash,
+      'learning-goal-3': exact_confidence_hash,
+    }.to_json
     fake_params = {
       'model' => 'gpt-4-0613',
       'remove-comments' => '1',
@@ -331,6 +342,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => 'fake-standard-rubric',
       "#{path_prefix}fake-lesson-s3-name/params.json" => fake_params,
       "#{path_prefix}fake-lesson-s3-name/confidence.json" => fake_confidence_levels,
+      "#{path_prefix}fake-lesson-s3-name/confidence-exact.json" => fake_confidence_levels_exact,
       "#{path_prefix}fake-lesson-s3-name/examples/1.js" => 'fake-code-1',
       "#{path_prefix}fake-lesson-s3-name/examples/1.#{response_type}" => 'fake-response-1',
       "#{path_prefix}fake-lesson-s3-name/examples/2.js" => 'fake-code-2',
@@ -379,11 +391,11 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     fake_ai_evaluations = [
       {
         'Key Concept' => 'learning-goal-1',
-        'Grade' => 'Extensive Evidence'
+        'Label' => 'Extensive Evidence'
       },
       {
         'Key Concept' => 'learning-goal-2',
-        'Grade' => 'Extensive Evidence'
+        'Label' => 'Extensive Evidence'
       },
       {
         'Key Concept' => 'learning-goal-3',

@@ -397,6 +397,9 @@ class EvaluateRubricJob < ApplicationJob
       label = evaluation['Label']
       confidence_pass_fail = ai_confidence_levels_pass_fail[learning_goal]
       confidence_exact_match = ai_confidence_levels_exact_match[learning_goal][label]
+      if ai_confidence_levels_exact_match && !confidence_exact_match
+        raise "No confidence_exact_match for learning goal: #{learning_goal}, label: #{label} evaluation: #{JSON.pretty_generate(evaluation)} ai_confidence_levels_exact_match: #{JSON.pretty_generate(ai_confidence_levels_exact_match)}"
+      end
       evaluation.merge(
         'Confidence-Pass-Fail' => confidence_s_to_i(confidence_pass_fail),
         'Confidence-Exact-Match' => confidence_s_to_i(confidence_exact_match)
