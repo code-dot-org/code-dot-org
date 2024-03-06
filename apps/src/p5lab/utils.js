@@ -20,12 +20,21 @@ export function arrayEquals(a, b) {
 
 // Creates and returns a helper object that represents the outer bounds of a sprite.
 // Used for comparing the positions of sprites. For example, checking whether
-// one sprite is "standing" on top of another.
+// one sprite is directly above ("standing on top of") another.
 export function createSpriteCollider(sprite) {
+  const {x, y, width, height, scale} = sprite;
+  /**
+   * Explanation of sprite properties:
+   * x: The x position of the center of the sprite.
+   * y: The y position of the center of the sprite.
+   * width: Height of the sprite's current image in pixels. Default is 100.
+   * heigh: Width of the sprite's current image in pixels. Default is 100.
+   * scale: The scaling factor applied to the sprite's image. Default is 1.0.
+   */
   return {
-    top: sprite.y - sprite.height * sprite.scale,
-    bottom: sprite.y + sprite.height * sprite.scale,
-    left: sprite.x - sprite.width * sprite.scale,
-    right: sprite.x + sprite.width * sprite.scale,
+    top: y - (height * scale) / 2,
+    bottom: y + (height * scale) / 2,
+    left: x - (width * scale) / 2,
+    right: x + (width * scale) / 2,
   };
 }

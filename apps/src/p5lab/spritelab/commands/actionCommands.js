@@ -101,6 +101,7 @@ export const commands = {
       targets.forEach(target => sprite[collisionType](target));
     });
   },
+
   edgesDisplace(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
@@ -109,6 +110,7 @@ export const commands = {
     sprites.forEach(sprite => this.p5.edges.displace(sprite));
   },
 
+  // Causes the sprite to stop moving when it hits an edge sprite.
   edgesCollide(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
@@ -196,6 +198,20 @@ export const commands = {
             spriteCollider.left <= targetCollider.right &&
             spriteCollider.right >= targetCollider.left
           ) {
+            sprite.debug = true;
+            target.debug = true;
+            console.log(
+              sprite,
+              {
+                x: sprite.x,
+                y: sprite.y,
+                width: sprite.width,
+                height: sprite.height,
+                scale: sprite.scale,
+              },
+              spriteCollider,
+              targetCollider
+            );
             touching = true;
             break;
           }
