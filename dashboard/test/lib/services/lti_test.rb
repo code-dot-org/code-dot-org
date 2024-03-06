@@ -236,7 +236,8 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'should parse the members response from NRPS and return a hash of sections' do
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_offers_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     assert_empty parsed_response.keys - @lms_section_ids.map(&:to_s)
     parsed_response.each do |_, v|
       assert_empty v.keys - [:name, :members]
@@ -246,7 +247,8 @@ class Services::LtiTest < ActiveSupport::TestCase
 
   test 'should append the course name to each section name when parsing NRPS response' do
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_offers_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     actual_section_names = parsed_response.values.map {|v| v[:name]}
     assert_empty expected_section_names - actual_section_names
   end
@@ -255,7 +257,8 @@ class Services::LtiTest < ActiveSupport::TestCase
     teacher = create :teacher
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_offers_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
 
     # initial names
@@ -269,7 +272,8 @@ class Services::LtiTest < ActiveSupport::TestCase
     new_response[:members].each do |member|
       member[:message][0][@custom_claims_key][:section_names] = new_names
     end
-    parsed_response = Services::Lti.parse_nrps_response(new_response)
+    Policies::Lti.stubs(:issuer_offers_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(new_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
     new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name}: #{name}"}
     actual_section_names = lti_course.reload.sections.map(&:name)
@@ -280,7 +284,8 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration
     lti_section = create :lti_section, lti_course: lti_course
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_offers_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     members = parsed_response[@lms_section_ids.first.to_s][:members]
 
     # Create and add brand new users
@@ -302,7 +307,8 @@ class Services::LtiTest < ActiveSupport::TestCase
     teacher = create :teacher
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_offers_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
 
     # Adding new sections

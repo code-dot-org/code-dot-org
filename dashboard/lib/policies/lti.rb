@@ -117,4 +117,9 @@ class Policies::Lti
   def self.roster_sync_enabled?(user)
     user.teacher? && user.lti_roster_sync_enabled
   end
+
+  # Retuns if the issuer offers a Resource Link level membership service.
+  def self.issuer_offers_resource_link?(issuer)
+    ['Canvas'].include?(issuer_name(issuer))
+  end
 end

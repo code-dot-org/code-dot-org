@@ -71,7 +71,7 @@ class Services::Lti
   end
 
   def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
-    nrps_member_message = nrps_member.key?(:message) ? nrps_member[:message].first : nrps_member
+    nrps_member_message = Policies::Lti.issuer_offers_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = User::TYPE_STUDENT
@@ -91,14 +91,14 @@ class Services::Lti
     user
   end
 
-  def self.parse_nrps_response(nrps_response)
+  def self.parse_nrps_response(nrps_response, issuer)
     sections = {}
     members = nrps_response[:members]
     context_title = nrps_response.dig(:context, :title)
     members.each do |member|
       next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
-      if member.key?(:message)
+      if Policies::Lti.issuer_offers_resource_link?(issuer)
         message = member[:message].first
 
         # Custom variables substitutions must be configured in the LMS.
