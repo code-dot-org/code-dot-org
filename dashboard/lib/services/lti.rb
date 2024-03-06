@@ -6,7 +6,7 @@ require 'sections/section'
 
 class Services::Lti
   def self.initialize_lti_user(id_token)
-    user_type = Policies::Lti.get_account_type(id_token[Policies::Lti::LTI_ROLES_KEY])
+    user_type = Policies::Lti.get_account_type(id_token)
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = user_type
@@ -71,7 +71,7 @@ class Services::Lti
   end
 
   def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
-    nrps_member_message = nrps_member[:message].first
+    nrps_member_message = nrps_member.key?(:message) ? nrps_member[:message].first : nrps_member
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = User::TYPE_STUDENT
@@ -91,17 +91,14 @@ class Services::Lti
     user
   end
 
-  def self.parse_nrps_response(nrps_response, issuer)
+  def self.parse_nrps_response(nrps_response)
     sections = {}
     members = nrps_response[:members]
     context_title = nrps_response.dig(:context, :title)
     members.each do |member|
       next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
-      if issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
-        member_section_ids = [nrps_response.dig(:context, :id)]
-        member_section_names = [context_title]
-      else
+      if member.key?(:message)
         message = member[:message].first
 
         # Custom variables substitutions must be configured in the LMS.
@@ -112,13 +109,16 @@ class Services::Lti
         # :section_names from Canvas is a stringified JSON array
         member_section_names = JSON.parse(custom_variables[:section_names])
 
+      else
+        member_section_ids = [nrps_response.dig(:context, :id)]
+        member_section_names = [nil]
       end
       member_section_ids.each_with_index do |section_id, index|
         if sections[section_id].present?
           sections[section_id][:members] << member
         else
           sections[section_id] = {
-            name: "#{context_title}: #{member_section_names[index]}",
+            name: member_section_names[index].nil? ? context_title.to_s : "#{context_title}: #{member_section_names[index]}",
             members: [member],
           }
         end
