@@ -104,7 +104,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           ITEM_TYPE.CHOICE_LEVEL,
           i18n.choiceLevel(),
           i18n.progressLegendDetailsChoiceLevels(),
-          iconStyles.fontAwesomeIconInLegend
+          color.neutral_dark
         )}
       </div>
     </AccessibleDialog>
