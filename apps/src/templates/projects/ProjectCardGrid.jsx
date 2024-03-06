@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
-import {projectPropType, Galleries} from './projectConstants';
+import {publishedFeaturedProjectPropType, Galleries} from './projectConstants';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import color from '../../util/color';
@@ -22,8 +22,8 @@ class ProjectCardGrid extends Component {
 
   static propTypes = {
     projectLists: PropTypes.shape({
-      featured: PropTypes.arrayOf(projectPropType),
-      special_topic: PropTypes.arrayOf(projectPropType),
+      featured: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      special_topic: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,

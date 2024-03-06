@@ -2,7 +2,10 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProjectCardRow from './ProjectCardRow';
-import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
+import {
+  MAX_PROJECTS_PER_CATEGORY,
+  publishedFeaturedProjectPropType,
+} from './projectConstants';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
@@ -19,7 +22,7 @@ class ProjectAppTypeArea extends React.Component {
     labName: PropTypes.string.isRequired,
     // Ability to hide link for Applab and Gamelab
     hideViewMoreLink: PropTypes.bool,
-    projectList: PropTypes.arrayOf(projectPropType),
+    projectList: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
     // Hide projects that don't have thumbnails
@@ -113,7 +116,14 @@ class ProjectAppTypeArea extends React.Component {
     const projectType =
       this.props.labKey === 'featured' ? 'all' : this.props.labKey;
     const {projectList} = this.props;
-    const oldestProject = projectList[projectList.length - 1];
+    const projectListToSort = [...projectList];
+    // Sort from least recent (oldest) to most recent featured_at date.
+    projectListToSort.sort((a, b) => {
+      const projectAFeaturedAt = a.projectData.featuredAt;
+      const projectBFeaturedAt = b.projectData.featuredAt;
+      return projectAFeaturedAt.localeCompare(projectBFeaturedAt);
+    });
+    const oldestProject = projectListToSort[0];
     const oldestFeaturedAt =
       oldestProject && oldestProject.projectData.featuredAt;
 
