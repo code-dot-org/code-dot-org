@@ -37,6 +37,10 @@ function ProgressTableV2({
       : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
 
+  const [tableWidth, setTableWidth] = React.useState(0);
+
+  const tableRef = React.useRef();
+
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
       if (isSkeleton) {
@@ -79,6 +83,12 @@ function ProgressTableV2({
     [isSkeleton, sortedStudents, expandedLessonIds, setExpandedLessons]
   );
 
+  React.useEffect(() => {
+    if (!!tableRef.current) {
+      setTableWidth(tableRef.current.scrollWidth);
+    }
+  });
+
   const table = React.useMemo(() => {
     const lessons =
       isSkeleton && unitData === undefined
@@ -90,17 +100,6 @@ function ProgressTableV2({
       return null;
     }
 
-    const tableRef = React.useRef();
-
-    const table = (
-      <div
-        className={classNames(styles.table, isSkeleton && styles.tableLoading)}
-        ref={tableRef}
-      >
-        {lessons.map(getRenderedColumn)}
-      </div>
-    );
-
     const scrollTable = scroll => {
       tableRef.current.scrollLeft = scroll.target.scrollLeft;
     };
@@ -108,12 +107,20 @@ function ProgressTableV2({
     return (
       <div className={styles.scrollingTable}>
         <div className={styles.topScrollBar} onScroll={scrollTable}>
-          <div className={styles.topScrollBarDiv} />
+          <div style={{width: tableWidth + 'px'}} />
         </div>
-        {table}
+        <div
+          className={classNames(
+            styles.table,
+            isSkeleton && styles.tableLoading
+          )}
+          ref={tableRef}
+        >
+          {lessons.map(getRenderedColumn)}
+        </div>
       </div>
     );
-  }, [isSkeleton, getRenderedColumn, unitData]);
+  }, [isSkeleton, getRenderedColumn, unitData, tableWidth, tableRef]);
 
   return (
     <div className={styles.progressTableV2}>

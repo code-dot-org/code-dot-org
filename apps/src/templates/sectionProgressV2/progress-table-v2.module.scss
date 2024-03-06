@@ -21,7 +21,7 @@ $level-cell-width: 52;
 
 .table {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   flex-direction: row;
@@ -46,14 +46,7 @@ $level-cell-width: 52;
 .topScrollBar {
   height: 20px;
   width: 100%;
-  overflow-x: scroll;
-  position: sticky;
-  bottom: 0;
-  margin-right: 64px;
-
-  &Div {
-    width: 3000px;
-  }
+  overflow-x: auto;
 }
 
 .gridBox {
