@@ -18,6 +18,16 @@ const DEFAULT_PROPS = {
 };
 
 describe('SignInOrAgeDialog', () => {
+  beforeEach(() => {
+    replaceOnWindow('dashboard', {
+      rack_env: 'unit_test',
+    });
+  });
+
+  afterEach(() => {
+    restoreOnWindow('dashboard');
+  });
+
   function renderDefault(propOverrides = {}) {
     render(<SignInOrAgeDialog {...DEFAULT_PROPS} {...propOverrides} />);
   }
@@ -47,8 +57,7 @@ describe('SignInOrAgeDialog', () => {
     fireEvent.change(screen.getByRole('combobox'), {target: {value: '12'}});
     const okay = screen.getByText('OK');
     fireEvent.click(okay);
-    expect(screen.queryByText('Tutorial unavailable for younger students')).to
-      .exist;
+    expect(screen.queryByText('Tutorial unavailable for younger students'));
     expect(screen.getByRole('link').getAttribute('href')).to.equal(
       '/hourofcode/overview'
     );
@@ -56,15 +65,11 @@ describe('SignInOrAgeDialog', () => {
 
   describe('redirect', () => {
     beforeEach(() => {
-      replaceOnWindow('dashboard', {
-        rack_env: 'unit_test',
-      });
       sinon.stub(utils, 'reload');
       sinon.stub(cookies, 'remove');
     });
 
     afterEach(() => {
-      restoreOnWindow('dashboard');
       utils.reload.restore();
       cookies.get.restore && cookies.get.restore();
       cookies.remove.restore();
