@@ -12,7 +12,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 import styles from './progress-key-popup.module.scss';
-import iconStyles from './progress-table-legend.module.scss';
+import color from '@cdo/apps/util/color';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
   const renderItem = (itemType, itemTitle, itemDetails, colorOverride) => (
@@ -42,20 +42,15 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.NO_ONLINE_WORK,
           i18n.noOnlineWork(),
-          i18n.progressLegendDetailsNoOnlineWork(),
-          iconStyles.fontAwesomeIconInLegend
+          i18n.progressLegendDetailsNoOnlineWork()
         )}
         {renderItem(
           ITEM_TYPE.IN_PROGRESS,
           i18n.inProgress(),
-          i18n.progressLegendDetailsInProgress(),
-          iconStyles.fontAwesomeIconInLegend
+          i18n.progressLegendDetailsInProgress()
         )}
         <div className={styles.item}>
-          <ProgressIcon
-            itemType={ITEM_TYPE.SUBMITTED}
-            className={iconStyles.fontAwesomeIconInLegend}
-          />
+          <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />
           <div>
             <BodyThreeText>
               <StrongText>{i18n.submitted() + ': '}</StrongText>
@@ -73,14 +68,12 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           renderItem(
             ITEM_TYPE.VALIDATED,
             i18n.validated(),
-            i18n.progressLegendDetailsValidated(),
-            iconStyles.fontAwesomeIconInLegend
+            i18n.progressLegendDetailsValidated()
           )}
         {renderItem(
           ITEM_TYPE.KEEP_WORKING,
           i18n.markedAsKeepWorking(),
-          i18n.progressLegendDetailsKeepGoing(),
-          iconStyles.fontAwesomeIconInLegend
+          i18n.progressLegendDetailsKeepGoing()
         )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
@@ -97,8 +90,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.ASSESSMENT_LEVEL,
           i18n.assessmentLevel(),
-          i18n.progressLegendDetailsAssessmentLevels(),
-          iconStyles.fontAwesomeIconInLegend
+          i18n.progressLegendDetailsAssessmentLevels()
         )}
         {renderItem(
           ITEM_TYPE.CHOICE_LEVEL,

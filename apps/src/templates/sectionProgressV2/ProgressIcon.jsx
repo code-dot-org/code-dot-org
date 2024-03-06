@@ -53,8 +53,7 @@ export default function ProgressIcon({itemType, colorOverride}) {
           id={'uitest-' + itemType[0]}
           icon={itemType[0]}
           style={{color: colorOverride ? colorOverride : itemType[1]}}
-          }
-          className={className ? className : styles.fontAwesomeIcon}
+          className={styles.fontAwesomeIcon}
           aria-label={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
       )}
