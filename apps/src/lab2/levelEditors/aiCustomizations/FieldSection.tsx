@@ -1,10 +1,10 @@
 import {AiCustomizations} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
-import {UpdateContext} from './EditAiCustomizations';
 import {BodyFourText, BodyOneText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import moduleStyles from './edit-ai-customizations.module.scss';
 import VisibilityDropdown from './VisibilityDropdown';
+import {UpdateContext} from './UpdateContext';
 
 interface FieldSectionProps {
   fieldName: keyof AiCustomizations;

@@ -4,7 +4,7 @@ import {
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
-import React, {createContext, useCallback, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {
   BodyFourText,
   BodyOneText,
@@ -21,6 +21,7 @@ import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import VisibilityDropdown from './VisibilityDropdown';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import {UpdateContext} from './UpdateContext';
 
 const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   description: '',
@@ -38,22 +39,6 @@ const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
   modelCardInfo: {value: EMPTY_MODEL_CARD_INFO, visibility: 'editable'},
   canSwitchPanels: true,
 };
-
-export const UpdateContext = createContext({
-  aiCustomizations: {} as LevelAiCustomizations,
-  setPropertyValue: (
-    property: keyof AiCustomizations,
-    value: string | number
-  ) => {},
-  setPropertyVisibility: (
-    property: keyof AiCustomizations,
-    visibility: Visibility
-  ) => {},
-  setModelCardPropertyValue: (
-    property: keyof ModelCardInfo,
-    value: string | string[]
-  ) => {},
-});
 
 // Make sure all fields have a visibility specified.
 function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
