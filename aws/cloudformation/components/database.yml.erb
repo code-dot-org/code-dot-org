@@ -229,6 +229,10 @@
     Type: AWS::RDS::DBCluster
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
+      # TODO: Test provisioning an Aurora 3 / MySQL 8 cluster by cloning an Aurora 2 / MySQL 5.7 cluster
+      SourceDBClusterIdentifier: staging-cluster
+      RestoreType: copy-on-write
+      UseLatestRestorableTime: true
       DBClusterParameterGroupName: !Ref AuroraClusterDBParameters # Resource name generated from db_parameters.yml.erb.
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
