@@ -54,7 +54,6 @@
     "@storybook/addon-essentials": "6.5.17-alpha.0",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/builder-webpack5": "6.5.17-alpha.0",
-    "@storybook/manager-webpack5": "6.5.17-alpha.0",
     "@storybook/react": "6.5.17-alpha.0",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.4.3",
