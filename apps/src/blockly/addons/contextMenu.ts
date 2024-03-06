@@ -381,7 +381,6 @@ function setNewCursor(type: string, scope: ContextMenuRegistry.Scope) {
   localStorage.setItem(BLOCKLY_CURSOR, type);
   Blockly.navigationController.cursorType = type;
   const markerManager = Blockly.getMainWorkspace().getMarkerManager();
-  const oldCurNode = markerManager.getCursor()?.getCurNode();
   Blockly.getMainWorkspace()
     .getMarkerManager()
     .setCursor(Blockly.getNewCursor(type));
@@ -389,9 +388,6 @@ function setNewCursor(type: string, scope: ContextMenuRegistry.Scope) {
     Blockly.getFunctionEditorWorkspace()
       ?.getMarkerManager()
       .setCursor(Blockly.getNewCursor(type));
-  }
-  if (oldCurNode) {
-    markerManager.getCursor()?.setCurNode(oldCurNode);
   }
   // Set the navigation state to the workspace and moves the cursor to the top block.
   Blockly.navigationController.navigation.focusWorkspace(scope.workspace);
