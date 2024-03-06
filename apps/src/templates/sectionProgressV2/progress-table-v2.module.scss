@@ -58,7 +58,7 @@ $level-cell-width: 52;
     min-width: 80px;
     max-width: 80px;  
     height: 47px;
-    line-height: 47px;
+    line-height: 47px !important;
   }
 
   &Skeleton {
@@ -223,6 +223,10 @@ $level-cell-width: 52;
       flex-direction: row;
       border-left: 1px solid $light_gray_200;
       border-top: 1px solid $light_gray_200;
+
+      & .assessmentLevelIcon {
+        color: $light_white;
+      }
 
       .expandedHeaderExpandedLevelCell:last-child {
         width: $level-cell-width + px;
