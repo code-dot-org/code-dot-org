@@ -7,11 +7,11 @@ import * as blockUtils from '../../block_utils';
 export class CdoFieldBitmap extends FieldBitmap {
   /**
    * Constructs a new instance of CdoFieldBitmap.
-   * @param {any} value - The initial value of the field.
-   * @param {Object} options - The options for the field.
-   * @param {Object} config - Additional configuration options.
+   * @param {number[][] | null} value - The initial value of the field, represented as a 2D array of any length, or null/undefined.
+   * @param {object | null} options - The options for the field, can be an object or null/undefined.
+   * @param {object | null} config - Additional configuration options, can be an object or null/undefined.
    */
-  constructor(value: any, options: any, config: any) {
+  constructor(value?: number[][], options?: object, config?: object) {
     super(value, options, config);
   }
 
@@ -36,6 +36,8 @@ export class CdoFieldBitmap extends FieldBitmap {
     const fieldValue = fieldElement.textContent || '';
     const height = parseInt(fieldElement.getAttribute('height') || '0');
     const width = parseInt(fieldElement.getAttribute('width') || '0');
+    // TODO: define a type for blockUtils
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const bitmap = (blockUtils as any).stringTo2DArray(
       fieldValue,
       height,
