@@ -26,6 +26,7 @@ import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
+import Loading from './Loading';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -129,7 +130,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
   const renderApp = (appProperties: AppProperties) => {
     return appProperties.lazyNode ? (
-      <Suspense fallback={<div />}>
+      <Suspense fallback={<Loading isLoading={true} />}>
         <appProperties.lazyNode />
       </Suspense>
     ) : (
