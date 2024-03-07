@@ -318,6 +318,16 @@ export const commands = {
     });
   },
 
+  setGroup(spriteArg, val) {
+    if (val === undefined) {
+      return;
+    }
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      sprite.group = val;
+    });
+  },
+
   spriteSay(spriteArg, text) {
     addSpriteSpeechBubble(this, spriteArg, text, 4 /* seconds */, 'say');
   },
