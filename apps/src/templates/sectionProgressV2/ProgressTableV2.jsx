@@ -40,7 +40,8 @@ function ProgressTableV2({
 
   const [onScroll, setOnScroll] = React.useState(() => {});
 
-  const tableRef = React.useRef();
+  const tableContentsRef = React.useRef();
+  const tableContainerRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -95,25 +96,33 @@ function ProgressTableV2({
       return null;
     }
 
-    return (
-      <FloatingScrollbar setOnScroll={setOnScroll} childRef={tableRef}>
-        <div
-          className={classNames(
-            styles.table,
-            isSkeleton && styles.tableLoading
-          )}
-          ref={tableRef}
-          onScroll={onScroll}
-        >
+    const tableDiv = (
+      <div
+        className={classNames(styles.table, isSkeleton && styles.tableLoading)}
+        onScroll={onScroll}
+        ref={tableContainerRef}
+      >
+        <div ref={tableContentsRef} className={styles.tableInterior}>
           {lessons.map(getRenderedColumn)}
         </div>
+      </div>
+    );
+
+    return (
+      <FloatingScrollbar
+        setOnScroll={setOnScroll}
+        childContainerRef={tableContainerRef}
+        childContentsRef={tableContentsRef}
+      >
+        {tableDiv}
       </FloatingScrollbar>
     );
   }, [
     isSkeleton,
     getRenderedColumn,
     unitData,
-    tableRef,
+    tableContentsRef,
+    tableContainerRef,
     setOnScroll,
     onScroll,
   ]);

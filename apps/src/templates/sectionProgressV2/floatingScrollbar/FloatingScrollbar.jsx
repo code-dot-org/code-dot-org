@@ -2,35 +2,86 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './floating-scrollbar.module.scss';
 
-export default function FloatingScrollbar({children, setOnScroll, childRef}) {
+export default function FloatingScrollbar({
+  children,
+  setOnScroll,
+  childContainerRef,
+  childContentsRef,
+}) {
   const scrollRef = React.useRef();
 
   const [childScrollWidth, setChildScrollWidth] = React.useState(0);
   const [childWidth, setChildWidth] = React.useState(0);
   const [scrollVisible, setScrollVisible] = React.useState(true);
 
-  if (!!childRef.current) {
-    if (childScrollWidth !== childRef.current.scrollWidth) {
-      setChildScrollWidth(childRef.current.scrollWidth);
+  const childContainerResizeObserver = React.useMemo(
+    () =>
+      new ResizeObserver(entries => {
+        for (let entry of entries) {
+          console.log('lfm', entry);
+          if (entry.borderBoxSize) {
+            console.log('entry.borderBoxSize', entry.borderBoxSize);
+            setChildWidth(entry.borderBoxSize[0].inlineSize);
+          }
+        }
+      }),
+    [setChildWidth]
+  );
+
+  const childContentsResizeObserver = React.useMemo(
+    () =>
+      new ResizeObserver(entries => {
+        for (let entry of entries) {
+          console.log('lfm1', entry);
+          if (entry.borderBoxSize) {
+            console.log('entry.contentBoxSize', entry.contentBoxSize);
+            setChildScrollWidth(entry.borderBoxSize[0].inlineSize);
+          }
+        }
+      }),
+    [setChildScrollWidth]
+  );
+
+  React.useEffect(() => {
+    if (childContainerResizeObserver) {
+      childContainerResizeObserver.observe(childContainerRef.current);
     }
-    if (childWidth !== childRef.current.offsetWidth) {
-      setChildWidth(childRef.current.offsetWidth);
+    if (childContentsResizeObserver) {
+      childContentsResizeObserver.observe(childContentsRef.current);
     }
-  }
+  }, [
+    childContainerResizeObserver,
+    childContentsResizeObserver,
+    childContainerRef,
+    childContentsRef,
+  ]);
+
+  // React.useEffect(() => {
+  //   console.log('childNode changed');
+  //   if (childScrollWidth !== childNode?.scrollWidth) {
+  //     console.log('childScrollWidth changed', childNode?.scrollWidth);
+  //     setChildScrollWidth(childNode?.scrollWidth);
+  //   }
+  //   if (childWidth !== childNode?.offsetWidth) {
+  //     console.log('childWidth changed', childNode?.offsetWidth);
+  //     setChildWidth(childNode?.offsetWidth);
+  //   }
+  // }, [childNode]);
 
   const handleScroll = React.useCallback(() => {
     const maxVisibleY =
       window.innerHeight || document.documentElement.clientHeight;
 
     const isNowVisible =
-      childRef.current?.getBoundingClientRect().bottom < maxVisibleY;
+      childContainerRef?.current.getBoundingClientRect().bottom < maxVisibleY;
 
     if (isNowVisible !== scrollVisible) {
       setScrollVisible(isNowVisible);
     }
-  }, [scrollVisible, setScrollVisible]);
+  }, [childContainerRef, scrollVisible, setScrollVisible]);
 
   React.useEffect(() => {
+    // TODO - switch this to an IntersectionObserver
     window.addEventListener('scroll', e => handleScroll(e));
 
     return () => {
@@ -39,9 +90,14 @@ export default function FloatingScrollbar({children, setOnScroll, childRef}) {
     };
   }, [handleScroll]);
 
-  const scrollChild = React.useCallback(scroll => {
-    childRef.current.scrollLeft = scroll.target.scrollLeft;
-  });
+  const scrollChild = React.useCallback(
+    scroll => {
+      if (childContainerRef?.current) {
+        childContainerRef.current.scrollLeft = scroll.target.scrollLeft;
+      }
+    },
+    [childContainerRef]
+  );
 
   React.useEffect(() => {
     setOnScroll(() => scroll => {

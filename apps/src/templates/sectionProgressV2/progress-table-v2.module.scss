@@ -23,8 +23,6 @@ $level-cell-width: 52;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  display: flex;
-  flex-direction: row;
 
   &Loading {
     overflow-x: hidden;
@@ -36,6 +34,12 @@ $level-cell-width: 52;
   .expandedColumn:last-child {
     margin-inline-end: 0;
   }
+}
+
+.tableInterior {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
 }
 
 .gridBox {
