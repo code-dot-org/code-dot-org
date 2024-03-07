@@ -87,6 +87,8 @@
         = render partial: 'layouts/logo'
       - if current_user && Policies::Lti.early_access_banner_available?(current_user)
         = render partial: 'lti/v1/early_access_banner'
+      - if current_user && Policies::Lti.feedback_available?(current_user)
+        = render partial: 'lti/v1/feedbacks/modal'
       - page = yield
 
       - if view_options[:full_width]

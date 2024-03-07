@@ -1,0 +1,78 @@
+@import 'buttons';
+@import 'color';
+@import 'font';
+
+#lti-feedback-modal {
+  &.modal {
+    @include main-font-regular;
+
+    $indent: 1rem;
+    $border-line: 1px solid $border_light_gray;
+
+    padding: 1.5rem;
+    font-size: 0.9rem;
+
+    & a.close {
+      font-size: 1.6rem;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    & form {
+      all: unset;
+    }
+
+    & .modal-header {
+      background-color: inherit;
+      border: none;
+      border-bottom: $border-line;
+      padding: 0;
+      padding-bottom: $indent;
+      margin-bottom: $indent;
+      height: initial;
+
+      & h4.heading-md {
+        margin: 0;
+      }
+    }
+
+    & .modal-body {
+      background-color: inherit;
+      padding: 0;
+
+      & legend, & p {
+        all: inherit;
+        margin-bottom: $indent;
+      }
+
+      & a {
+        color: $link_color;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & .modal-footer {
+      background-color: inherit;
+      border: none;
+      border-top: $border-line;
+      padding: 0;
+      padding-top: $indent;
+      margin-top: $indent;
+
+      & input[type="button"], input[type="submit"] {
+        @include button-with-color($brand_secondary_default);
+
+        border: none;
+        border-radius: 4px;
+
+        &:hover, &:disabled {
+          background-color: $brand_secondary_dark;
+        }
+      }
+    }
+  }
+}

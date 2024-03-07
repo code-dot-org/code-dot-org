@@ -199,4 +199,44 @@ class Policies::LtiTest < ActiveSupport::TestCase
       refute Policies::Lti.early_access_banner_available?(@user)
     end
   end
+
+  class FeedbackAvailabilityTest < ActiveSupport::TestCase
+    setup do
+      @show_in = 2.weeks
+
+      @user = create(:teacher)
+      @user.sign_ins.create(sign_in_count: 1, sign_in_at: @show_in.ago)
+
+      Policies::Lti.stubs(:lti?).with(@user).returns(true)
+      DCDO.stubs(:get).with('lti_feedback_show_in', false).returns(@show_in)
+    end
+
+    test 'returns true when user is LTI-integrated teacher and more time has passed then LTI Feedback show in since first sign-in' do
+      assert Policies::Lti.feedback_available?(@user)
+    end
+
+    test 'returns false when user in not teacher' do
+      @user.update!(user_type: User::TYPE_STUDENT)
+
+      refute Policies::Lti.feedback_available?(@user)
+    end
+
+    test 'returns false when teacher is not LTI-integrated' do
+      Policies::Lti.stubs(:lti?).with(@user).returns(false)
+
+      refute Policies::Lti.feedback_available?(@user)
+    end
+
+    test 'returns false when LTI Feedback show in is not set' do
+      DCDO.stubs(:get).with('lti_feedback_show_in', false).returns(false)
+
+      refute Policies::Lti.feedback_available?(@user)
+    end
+
+    test 'returns false when less time has passed then LTI Feedback show in since first sign-in' do
+      DCDO.stubs(:get).with('lti_feedback_show_in', false).returns(@show_in.next)
+
+      refute Policies::Lti.feedback_available?(@user)
+    end
+  end
 end

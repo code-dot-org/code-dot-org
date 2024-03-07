@@ -43,6 +43,10 @@ en:
           attributes:
             reset_password_token:
               invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
+        lti/feedback:
+          attributes:
+            user_id:
+              taken: "has already provided feedback"
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -82,6 +86,14 @@ en:
         user_type: 'Account Type'
         us_state: 'State'
         ai_rubrics_disabled: 'Disable AI Rubric Feature'
+      lti/feedback:
+        satisfaction_level: Satisfaction level
+        satisfaction_levels:
+          very_satisfied: Very satisfied
+          satisfied: Satisfied
+          neutral: Neither satisfied nor dissatisfied
+          dissatisfied: Dissatisfied
+          very_dissatisfied: Very dissatisfied
 
   beta: "beta"
   hello: "Hello world"
@@ -1421,6 +1433,16 @@ en:
       missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
       unsupported_lms_type: "Unsupported LMS platform type"
       wrong_resource_type: "Only LtiResourceLink is supported right now"
+
+    feedback:
+      modal:
+        title: Are you enjoying the Code.org LMS Integration?
+        satisfaction_level: How would you rate your experience with the Code.org LMS integration?
+        provided:
+          title: Thank you for your feedback! Can you tell us more?
+          additional_feedback: Your feedback is important to us. Are you open to telling us a little bit more?
+          additional_feedback_link: "[Click here to provide additional feedback](%{url})"
+
     iframe_button: "Open in New Tab"
     iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
     iframe_title: "Opening Code.org in New Tab"

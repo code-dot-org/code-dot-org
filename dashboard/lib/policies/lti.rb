@@ -152,4 +152,16 @@ class Policies::Lti
   def self.force_iframe_launch?(issuer)
     ['Schoology'].include?(issuer_name(issuer))
   end
+
+  def self.feedback_available?(user)
+    return false unless user.teacher?
+    return false unless lti?(user)
+
+    # The number of seconds after the first sign-in when the modal can be displayed.
+    show_in = DCDO.get('lti_feedback_show_in', false)
+    return false unless show_in
+
+    # Available following the specified amount of time after the first sign-in.
+    user.sign_ins.exists?(sign_in_count: 1, sign_in_at: ..show_in.seconds.ago)
+  end
 end

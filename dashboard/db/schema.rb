@@ -831,6 +831,16 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
+  create_table "lti_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "satisfaction_level", null: false
+    t.string "locale"
+    t.boolean "early_access"
+    t.datetime "created_at", null: false
+    t.index ["satisfaction_level"], name: "index_lti_feedbacks_on_satisfaction_level"
+    t.index ["user_id"], name: "index_lti_feedbacks_on_user_id", unique: true
+  end
+
   create_table "lti_integrations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "platform_id", limit: 36, null: false
