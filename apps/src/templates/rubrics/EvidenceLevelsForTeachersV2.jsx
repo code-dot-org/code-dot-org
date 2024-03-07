@@ -35,7 +35,7 @@ export default function EvidenceLevelsForTeachersV2({
       if (understanding !== INVALID_UNDERSTANDING || !isAiAssessed) {
         return [];
       }
-      if (aiEvalInfo.aiConfidenceExactMatch === 3) {
+      if (aiEvalInfo.showExactMatch) {
         return [aiEvalInfo.understanding];
       }
       if (aiEvalInfo.understanding > RubricUnderstandingLevels.LIMITED) {
