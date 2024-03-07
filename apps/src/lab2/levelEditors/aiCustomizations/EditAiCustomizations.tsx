@@ -9,7 +9,7 @@ import {
   BodyOneText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import moduleStyles from './edit-ai-customizations.module.scss';
 
 interface EditAiCustomizationsProps {
