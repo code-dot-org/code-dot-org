@@ -143,7 +143,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       ]
     }.deep_symbolize_keys
 
-    @nrps_response_no_message = {
+    @nrps_response_no_rlid_provided = {
       id: "https://lti-service.svc.schoology.com/lti-service/tool/115/services/names-roles/v2p0/membership/115",
       context: {
         id: "115",
@@ -159,6 +159,15 @@ class Services::LtiTest < ActiveSupport::TestCase
           email: "teacher@code.org",
           roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"],
           user_id: 'user-id-1'
+        },
+        {
+          status: "Active",
+          name: "Test Zero",
+          given_name: "Test",
+          family_name: "Zero",
+          email: "test0@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+          user_id: SecureRandom.uuid
         },
         {
           status: "Active",
@@ -283,6 +292,15 @@ class Services::LtiTest < ActiveSupport::TestCase
     end
   end
 
+  test 'should parse the members response from NRPS with no resource link provided and return a hash of sections' do
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_rlid_provided, @id_token[:iss])
+    assert_equal parsed_response.keys.length, 1
+    parsed_response.each do |_, v|
+      assert_empty v.keys - [:name, :members]
+      assert_equal v[:members].length, 3
+    end
+  end
+
   test 'should append the course name to each section name when parsing NRPS response' do
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
     Policies::Lti.stubs(:issuer_offers_resource_link?).returns(true)
@@ -293,7 +311,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
   test 'course name should match section name when parsing NRPS response with no resource link provided' do
     expected_section_name = [@course_name]
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_message, @id_token[:iss])
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_rlid_provided, @id_token[:iss])
     actual_section_name = parsed_response.values.map {|v| v[:name]}
     assert_empty expected_section_name - actual_section_name
   end
