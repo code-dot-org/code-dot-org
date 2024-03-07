@@ -213,6 +213,9 @@ export default function LearningGoals({
       const aiInfo = aiEvaluations.find(
         item => item.learning_goal_id === learningGoalId
       );
+      if (aiInfo) {
+        aiInfo.showExactMatch = aiInfo.aiConfidenceExactMatch === 3;
+      }
       return aiInfo;
     } else {
       return null;
@@ -223,8 +226,7 @@ export default function LearningGoals({
 
   let aiConfidence;
   if (aiEvalInfo) {
-    const showExactMatch = aiEvalInfo.aiConfidenceExactMatch === 3;
-    aiConfidence = showExactMatch
+    aiConfidence = aiEvalInfo.showExactMatch
       ? aiEvalInfo.aiConfidenceExactMatch
       : aiEvalInfo.aiConfidencePassFail;
   }

@@ -48,6 +48,7 @@ export const aiEvaluationShape = PropTypes.shape({
   understanding: PropTypes.number.isRequired,
   aiConfidencePassFail: PropTypes.number,
   aiConfidenceExactMatch: PropTypes.number,
+  showExactMatch: PropTypes.bool,
   observations: PropTypes.string,
 });
 
