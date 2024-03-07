@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-05T22:55:13.000Z",
   "level_num": "custom",
@@ -67,8 +66,9 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-05T22:55:13.884+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_touch_2023\\\"\"],\"cloned_from\":\"courseF_groups_touch_2023\"},{\"changed_at\":\"2024-03-05 23:00:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:02:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:04:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:04:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:08:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:08:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 00:18:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-05T22:55:13.884+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_touch_2023\\\"\"],\"cloned_from\":\"courseF_groups_touch_2023\"},{\"changed_at\":\"2024-03-05 23:00:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:02:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:04:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:04:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:08:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 23:08:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 00:18:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-03-06 17:03:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 20:42:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1234,6 +1234,12 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="gamelab_setAnimation" id="fC=BtH;jkSgAVvX{??_%" x="29" y="9">
+          <field name="ANIMATION">"face_birthdaycake_1"</field>
+          <value name="THIS">
+            <block type="gamelab_objectSpritePointer" id="JhaN2$98yK),QT)Z{XbP"/>
+          </value>
+        </block>
         <block type="gamelab_setBackgroundImageAs" id="b_N*m1`O+ygGKQ}xNO;N" x="16" y="92">
           <field name="IMG">"abstract_08_1"</field>
         </block>
@@ -1245,10 +1251,24 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setAnimation" id="fC=BtH;jkSgAVvX{??_%" x="17" y="314">
-          <field name="ANIMATION">"face_birthdaycake_1"</field>
+        <block type="gamelab_makeSpritesWithSize" id="7$B]lFq`bWS*Rb|%4Phq" x="13" y="300">
+          <field name="SIZE">100</field>
+          <field name="COSTUME">"face_pizza_1"</field>
+          <value name="NUM">
+            <block type="math_number" id="14yqsXBnpQ`V5x=Fo:G|">
+              <field name="NUM">0</field>
+            </block>
+          </value>
         </block>
-        <block type="gamelab_checkTouching" id="z.0eco|*9[;(M_yRo0P}" x="11" y="426">
+        <block type="gamelab_spriteSay" id="5ro/$YQj$*3J{,bn]4|f" x="18" y="411">
+          <field name="SPEECH"/>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="zD.1.YT$Sa.9Yq~Jr.~{">
+              <field name="ANIMATION">"face_pizza_1"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching" id="z.0eco|*9[;(M_yRo0P}" x="10" y="502">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
