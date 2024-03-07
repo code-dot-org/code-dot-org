@@ -13,6 +13,7 @@ import AiConfidenceBox from './AiConfidenceBox';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
 import AiAssessmentFeedback from './AiAssessmentFeedback';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function AiAssessmentBox({
   isAiAssessed,
@@ -33,6 +34,9 @@ export default function AiAssessmentBox({
   };
 
   const getStudentAssessmentString = () => {
+    if (aiEvalInfo.showExactMatch) {
+      return UNDERSTANDING_LEVEL_STRINGS[aiUnderstandingLevel];
+    }
     return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
       ? i18n.aiAssessmentDoesMeet()
       : i18n.aiAssessmentDoesNotMeet();
