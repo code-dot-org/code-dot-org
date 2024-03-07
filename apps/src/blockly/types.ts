@@ -26,6 +26,7 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {
   ObservableParameterModel,
@@ -85,6 +86,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldImageDropdown: typeof CdoFieldImageDropdown;
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
+  FieldBitmap: typeof CdoFieldBitmap;
   JavaScript: typeof javascriptGenerator;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
