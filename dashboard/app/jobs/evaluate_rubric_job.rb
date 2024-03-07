@@ -403,7 +403,7 @@ class EvaluateRubricJob < ApplicationJob
     ai_evaluations.map do |evaluation|
       learning_goal = evaluation['Key Concept']
       confidence_pass_fail = ai_confidence_levels_pass_fail[learning_goal]
-      evaluation['Confidence-Pass-Fail'] = confidence_s_to_i(confidence_pass_fail)
+      evaluation['Confidence Pass Fail'] = confidence_s_to_i(confidence_pass_fail)
 
       if ai_confidence_levels_exact_match
         label = evaluation['Label']
@@ -411,7 +411,7 @@ class EvaluateRubricJob < ApplicationJob
         unless confidence_exact_match
           raise "No confidence_exact_match for learning goal: #{learning_goal}, label: #{label} evaluation: #{JSON.pretty_generate(evaluation)} ai_confidence_levels_exact_match: #{JSON.pretty_generate(ai_confidence_levels_exact_match)}"
         end
-        evaluation['Confidence-Exact-Match'] = confidence_s_to_i(confidence_exact_match)
+        evaluation['Confidence Exact Match'] = confidence_s_to_i(confidence_exact_match)
       end
       evaluation
     end
@@ -441,8 +441,8 @@ class EvaluateRubricJob < ApplicationJob
           learning_goal_id: lg.id,
           rubric_ai_evaluation_id: rubric_ai_evaluation.id,
           understanding: understanding_s_to_i(label),
-          ai_confidence: ai_evaluation['Confidence-Pass-Fail'],
-          ai_confidence_exact_match: ai_evaluation['Confidence-Exact-Match'],
+          ai_confidence: ai_evaluation['Confidence Pass Fail'],
+          ai_confidence_exact_match: ai_evaluation['Confidence Exact Match'],
           observations: ai_evaluation['Observations'] || '',
         )
       end
