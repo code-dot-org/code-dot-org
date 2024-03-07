@@ -117,7 +117,7 @@ describe('RubricContainer', () => {
   const defaultStudentInfo = {user_id: 1, name: 'Jane Doe'};
 
   const mockAiEvaluations = [
-    {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+    {id: 2, learning_goal_id: 2, understanding: 2, aiConfidencePassFail: 2},
   ];
 
   it('renders a RubricContent component when the rubric tab is selected', () => {

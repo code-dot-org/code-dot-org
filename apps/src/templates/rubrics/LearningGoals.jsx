@@ -511,7 +511,7 @@ export default function LearningGoals({
                   <AiAssessment
                     isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                     studentName={studentLevelInfo.name}
-                    aiConfidence={aiEvalInfo.ai_confidence}
+                    aiConfidence={aiEvalInfo.aiConfidencePassFail}
                     aiUnderstandingLevel={aiEvalInfo.understanding}
                     aiEvalInfo={aiEvalInfo}
                     aiEvidence={aiEvidence}

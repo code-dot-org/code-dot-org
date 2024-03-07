@@ -49,7 +49,7 @@ describe('LearningGoals', () => {
       id: 2,
       learning_goal_id: 2,
       understanding: 2,
-      ai_confidence: 50,
+      aiConfidencePassFail: 50,
       observations:
         'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
     },

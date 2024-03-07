@@ -44,8 +44,8 @@ class LearningGoalAiEvaluation < ApplicationRecord
       understanding: understanding,
       learning_goal_id: learning_goal_id,
       observations: observations,
-      ai_confidence: ai_confidence,
-      ai_confidence_exact_match: ai_confidence_exact_match,
+      aiConfidencePassFail: ai_confidence,
+      aiConfidenceExactMatch: ai_confidence_exact_match,
     }
   end
 
