@@ -529,18 +529,6 @@ function recordShare(type, appType) {
   }
 }
 
-    // firehoseClient.putRecord({
-    //   study: FIREHOSE_STUDY,
-    //   study_group: dialog_type,
-    //   event: event,
-    //   data_json: JSON.stringify({
-    //     level_type: options.level ? options.level.skin : null,
-    //     level_id: options.response ? options.response.level_id : null,
-    //     level_path: options.response ? options.response.level_path : null,
-    //     isPerfectBlockCount: isPerfect,
-    //   }),
-    // });
-
 FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
   const store = getStore();
   store.dispatch(showPublishDialog());
