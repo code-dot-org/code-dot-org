@@ -1,0 +1,38 @@
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %title= t('lti.iframe_title')
+    :javascript
+      window.onload = function() {
+        const auth_url = `#{@auth_url}`;
+        const iframe_message = `#{t('lti.iframe_message')}`;
+        const iframe_button = `#{t('lti.iframe_button')}`;
+        if (window.location !== window.parent.location) {
+          var messageDiv = document.createElement("div");
+          messageDiv.style.position = "fixed";
+          messageDiv.style.left = "0";
+          messageDiv.style.top = "0";
+          messageDiv.style.width = "100%";
+          messageDiv.style.height = "100%";
+          messageDiv.style.backgroundColor = "white";
+          messageDiv.style.zIndex = "10000";
+          messageDiv.style.display = "flex";
+          messageDiv.style.justifyContent = "center";
+          messageDiv.style.alignItems = "center";
+          messageDiv.style.flexDirection = "column";
+          messageDiv.style.textAlign = "center";
+          messageDiv.innerHTML = `
+            <p>${iframe_message}</p>
+            <button onclick="openInNewTab()">${iframe_button}</button>
+          `;
+
+          window.openInNewTab = function() {
+            window.open(auth_url, '_blank');
+          };
+
+          document.body.appendChild(messageDiv);
+        } else {
+          window.location.replace(auth_url);
+        }
+      };
