@@ -16,6 +16,7 @@ import ManageStudentsTable, {
 } from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+import ManageStudentActionsHeaderCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
@@ -37,6 +38,7 @@ import manageStudents, {
 import teacherSections, {
   setSections,
   selectSection,
+  syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -116,6 +118,35 @@ describe('ManageStudentsTable', () => {
     });
   });
 
+  // describe('LTI section tests', () => {
+  //   const DEFAULT_PROPS = {
+  //     loginType: SectionLoginType.lti_v1,
+  //     studentData: [],
+  //     editingData: {},
+  //     addStatus: {},
+  //     transferStatus: {},
+  //   };
+
+  //   it('Should not render the action column for LTI sections with sync enabled', () => {
+  //     const wrapper = shallow(
+  //       <UnconnectedManageStudentsTable
+  //         {...{...DEFAULT_PROPS, ...{loginType: SectionLoginType.lti_v1, syncEnabled: true}}}
+  //       />
+  //     );
+  //     expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.false;
+  //   });
+
+  //   it('Should render the action column for LTI sections with sync disabled', () => {
+  //     const wrapper = shallow(
+  //       <UnconnectedManageStudentsTable
+  //         {...{...DEFAULT_PROPS, ...{loginType: SectionLoginType.email, syncEnabled: false}}}
+  //       />
+  //     );
+  //     console.log(wrapper.debug());
+  //     expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.true;
+  //   });
+  // });
+
   describe('full render tests', () => {
     const fakeStudent = {
       id: 1,
@@ -146,6 +177,7 @@ describe('ManageStudentsTable', () => {
       studentCount: 10,
       students: Object.values(fakeStudents),
       hidden: false,
+      syncEnabled: true,
     };
 
     beforeEach(() => {
@@ -186,6 +218,40 @@ describe('ManageStudentsTable', () => {
           }
         />
       );
+    });
+
+    describe('LTI section tests', () => {
+      it('does not render the Actions column if loginType is lti_v1', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.lti_v1));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable syncEnabled={true} />
+          </Provider>
+        );
+        const manageStudentsTable = wrapper.find('ManageStudentsTable');
+        
+        manageStudentsTable.setState('sections', {101: {syncEnabled: true}});
+        console.log(manageStudentsTable.state());
+        store.dispatch(syncEnabled(manageStudentsTable.state, 101));
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.false;
+      });
+
+      // const manageStudentsTable = wrapper.find('ManageStudentsTable');
+      // manageStudentsTable.setState({showPasswordLengthFailure: true});
+  
+      it('does render the Actions column if loginType is lti_v1 and syncEnabled is false', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.lti_v1));
+        // store.dispatch(syncEnabled(false));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable syncEnabled={false} />
+          </Provider>
+        );
+        // console.log(wrapper.find(ManageStudentActionsHeaderCell).debug())
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.true;
+      });
     });
 
     describe('Gender field feature flag', () => {
