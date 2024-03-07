@@ -96,25 +96,24 @@ function ProgressTableV2({
       return null;
     }
 
-    const tableDiv = (
-      <div
-        className={classNames(styles.table, isSkeleton && styles.tableLoading)}
-        onScroll={onScroll}
-        ref={tableContainerRef}
-      >
-        <div ref={tableContentsRef} className={styles.tableInterior}>
-          {lessons.map(getRenderedColumn)}
-        </div>
-      </div>
-    );
-
     return (
       <FloatingScrollbar
         setOnScroll={setOnScroll}
         childContainerRef={tableContainerRef}
         childContentsRef={tableContentsRef}
       >
-        {tableDiv}
+        <div
+          className={classNames(
+            styles.table,
+            isSkeleton && styles.tableLoading
+          )}
+          onScroll={onScroll}
+          ref={tableContainerRef}
+        >
+          <div ref={tableContentsRef} className={styles.tableInterior}>
+            {lessons.map(getRenderedColumn)}
+          </div>
+        </div>
       </FloatingScrollbar>
     );
   }, [
