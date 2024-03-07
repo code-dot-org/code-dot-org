@@ -177,7 +177,7 @@ describe('ManageStudentsTable', () => {
       studentCount: 10,
       students: Object.values(fakeStudents),
       hidden: false,
-      syncEnabled: true,
+      sync_enabled: false,
     };
 
     beforeEach(() => {
@@ -221,35 +221,29 @@ describe('ManageStudentsTable', () => {
     });
 
     describe('LTI section tests', () => {
-      it('does not render the Actions column if loginType is lti_v1', () => {
+      it('does not render the Actions column if loginType is lti_v1 and sync is enabled', () => {
         const store = getStore();
         store.dispatch(setLoginType(SectionLoginType.lti_v1));
+        store.dispatch(setSections([{...fakeSection, sync_enabled: true}]));
         const wrapper = mount(
           <Provider store={store}>
-            <ManageStudentsTable syncEnabled={true} />
+            <ManageStudentsTable />
           </Provider>
         );
-        const manageStudentsTable = wrapper.find('ManageStudentsTable');
-        
-        manageStudentsTable.setState('sections', {101: {syncEnabled: true}});
-        console.log(manageStudentsTable.state());
-        store.dispatch(syncEnabled(manageStudentsTable.state, 101));
+
         expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.false;
       });
-
-      // const manageStudentsTable = wrapper.find('ManageStudentsTable');
-      // manageStudentsTable.setState({showPasswordLengthFailure: true});
   
-      it('does render the Actions column if loginType is lti_v1 and syncEnabled is false', () => {
+      it('does render the Actions column if loginType is lti_v1 and sync is disabled', () => {
         const store = getStore();
         store.dispatch(setLoginType(SectionLoginType.lti_v1));
-        // store.dispatch(syncEnabled(false));
+        store.dispatch(setSections([{...fakeSection, sync_enabled: false}]));
         const wrapper = mount(
           <Provider store={store}>
-            <ManageStudentsTable syncEnabled={false} />
+            <ManageStudentsTable />
           </Provider>
         );
-        // console.log(wrapper.find(ManageStudentActionsHeaderCell).debug())
+
         expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.true;
       });
     });
