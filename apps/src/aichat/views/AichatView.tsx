@@ -9,6 +9,7 @@ const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
 import ChatWorkspace from './ChatWorkspace';
+import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
 
@@ -27,6 +28,14 @@ const AichatView: React.FunctionComponent = () => {
           headerText={commonI18n.instructions()}
         >
           <Instructions beforeNextLevel={beforeNextLevel} />
+        </PanelContainer>
+      </div>
+      <div>
+        <PanelContainer
+          id="aichat-model-customization-panel"
+          headerText="Model Customization"
+        >
+          <ModelCustomizationWorkspace />
         </PanelContainer>
       </div>
       <div className={moduleStyles.chatWorkspaceArea}>
