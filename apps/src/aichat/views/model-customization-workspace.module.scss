@@ -1,3 +1,6 @@
+@import 'color';
+@import '../../mixins.scss';
+
 %fullWidth {
   width: 100%;
   box-sizing: border-box;
@@ -41,6 +44,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid black;
+  border-top: 1px solid $light_gray_200;
   padding: 10px;
 }

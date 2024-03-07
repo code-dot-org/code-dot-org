@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import styles from '../model-customization-workspace.module.scss';
+import modelCustomizationStyles from '../model-customization-workspace.module.scss';
+import styles from './retrieval-customization.module.scss';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [messages, setMessages] = useState<string[]>([]);
@@ -21,9 +22,9 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   };
 
   return (
-    <div className={styles.verticalFlexContainer}>
+    <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div>
-        <div className={styles.inputContainer}>
+        <div className={modelCustomizationStyles.inputContainer}>
           <label htmlFor="system-prompt">
             <StrongText>Retrieval</StrongText>
           </label>
@@ -33,21 +34,30 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             value={newMessage}
           />
         </div>
-        <button type="button" onClick={onAdd} disabled={!newMessage}>
-          Add
-        </button>
+        <div className={styles.addItemContainer}>
+          <button type="button" onClick={onAdd} disabled={!newMessage}>
+            Add
+          </button>
+        </div>
         {messages.map((message, index) => {
           return (
-            <div key={index}>
-              <button type="button" onClick={() => onRemove(index)}>
-                <FontAwesomeV6Icon iconName="circle-xmark" />
+            <div key={index} className={styles.itemContainer}>
+              <button
+                type="button"
+                onClick={() => onRemove(index)}
+                className={styles.removeItemButton}
+              >
+                <FontAwesomeV6Icon
+                  iconName="circle-xmark"
+                  className={styles.removeItemIcon}
+                />
               </button>
-              <span style={{backgroundColor: 'gray'}}>{message}</span>
+              <span className={styles.itemText}>{message}</span>
             </div>
           );
         })}
       </div>
-      <div className={styles.footerButtonContainer}>
+      <div className={modelCustomizationStyles.footerButtonContainer}>
         <button type="button">Update</button>
       </div>
     </div>

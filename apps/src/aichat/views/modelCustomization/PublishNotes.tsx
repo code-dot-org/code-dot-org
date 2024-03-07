@@ -15,7 +15,7 @@ const PublishNotes: React.FunctionComponent = () => {
       <div>
         {INPUTS.map(input => {
           return (
-            <div className={styles.inputContainer}>
+            <div className={styles.inputContainer} key={input.id}>
               <label htmlFor={input.id}>
                 <StrongText>{input.text}</StrongText>
               </label>
