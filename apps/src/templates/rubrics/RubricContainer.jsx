@@ -14,7 +14,6 @@ import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
 import Draggable from 'react-draggable';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
