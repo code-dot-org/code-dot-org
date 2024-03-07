@@ -70,16 +70,6 @@ class LtiV1Controller < ApplicationController
   end
 
   def authenticate
-    # This checks to see if the param new_tab=true is present, which would
-    # indicate we have already mitigated an iframe launch, and are ready to
-    # proceed with the rest of the authentication flow.
-    unless params[:new_tab]
-      id_token = params[:id_token]
-      state = params[:state]
-      token_hash = {id_token: id_token, state: state}
-      redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
-      return
-    end
     id_token = params[:id_token]
     return log_unauthorized('Missing LTI ID token') unless id_token
     begin
@@ -120,6 +110,18 @@ class LtiV1Controller < ApplicationController
       decoded_jwt = get_decoded_jwt(integration, id_token)
     rescue => exception
       return log_unauthorized(exception)
+    end
+
+    # Schoology has multiple contexts that will launch LTI tools in an iframe.
+    # In this case, we will redirect to the iframe route, to prompt user to open
+    # in a new tab. This flow appends a 'new_tab=true' query param, so it will
+    # pass this block once the iframe "jail break" has happened.
+    if decoded_jwt[:iss] == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer] && !params[:new_tab]
+      id_token = params[:id_token]
+      state = params[:state]
+      token_hash = {id_token: id_token, state: state}
+      redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
+      return
     end
 
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
