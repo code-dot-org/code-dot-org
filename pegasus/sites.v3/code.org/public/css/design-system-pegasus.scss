@@ -361,10 +361,8 @@ ul {
     display: grid;
     grid-gap: 1.5rem;
 
-    &.three-col {
-      @media screen and (min-width: $width-lg) {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     li {
