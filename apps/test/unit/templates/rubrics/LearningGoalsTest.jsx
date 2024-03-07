@@ -12,21 +12,22 @@ import LearningGoals, {
   clearAnnotations,
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
+import {render, screen} from '@testing-library/react';
 
 const learningGoals = [
   {
     id: 2,
     key: 'abcd',
-    learningGoal: 'Testing 1',
+    learningGoal: 'Learning Goal 1',
     aiEnabled: true,
-    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
+    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'lg one'}],
     tips: 'Tips',
   },
   {
     key: 'efgh',
-    learningGoal: 'Testing 2',
+    learningGoal: 'Learning Goal 2',
     aiEnabled: false,
-    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
+    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'lg two'}],
     tips: 'Tips',
   },
 ];
@@ -58,7 +59,16 @@ const code = `// code
   `;
 
 describe('LearningGoals - React Testing Library', () => {
-  // test goes here
+  it('renders EvidenceLevels without canProvideFeedback', () => {
+    render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
+
+    // This text only shows up within EvidenceLevels when canProvideFeedback is false
+    expect(screen.getByText('Rubric Scores')).to.exist;
+
+    // First learning goal is visible
+    expect(screen.getByText('Learning Goal 1')).to.exist;
+    expect(screen.getByText(/lg one/)).to.exist;
+  });
 });
 
 describe('LearningGoals - Enzyme', () => {
@@ -158,17 +168,6 @@ describe('LearningGoals - Enzyme', () => {
       sinon.assert.called(clearAnnotationsStub);
       sinon.assert.called(clearHighlightedLinesStub);
     });
-  });
-
-  it('renders EvidenceLevels', () => {
-    const wrapper = shallow(
-      <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
-    );
-    expect(wrapper.find('EvidenceLevels')).to.have.lengthOf(1);
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).to.deep.equal(
-      [{id: 1, understanding: 1, teacherDescription: 'test'}]
-    );
-    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(1);
   });
 
   it('changes learning goal when left and right buttons are pressed', () => {
@@ -304,7 +303,7 @@ describe('LearningGoals - Enzyme', () => {
         unitName: 'test-2023',
         levelName: 'test-level',
         learningGoalKey: 'efgh',
-        learningGoal: 'Testing 2',
+        learningGoal: 'Learning Goal 2',
       }
     );
     wrapper.find('button').first().simulate('click');
@@ -314,7 +313,7 @@ describe('LearningGoals - Enzyme', () => {
         unitName: 'test-2023',
         levelName: 'test-level',
         learningGoalKey: 'abcd',
-        learningGoal: 'Testing 1',
+        learningGoal: 'Learning Goal 1',
       }
     );
     sendEventSpy.restore();
