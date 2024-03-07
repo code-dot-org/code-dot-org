@@ -11,6 +11,8 @@ const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
+const {publishSourcemap} = require('@newrelic/publish-sourcemap');
+
 // Review every couple of years to see if an increase improves test performance
 const MEM_PER_KARMA_PROCESS_MB = 4300;
 
@@ -637,12 +639,69 @@ module.exports = function (grunt) {
     'compile-firebase-rules',
   ]);
 
+  grunt.registerTask('upload-sourcemaps-to-newrelic', function () {
+    const done = this.async();
+
+    const {NEWRELIC_APP_ID, NEWRELIC_API_KEY} = process.env;
+
+    if (!NEWRELIC_APP_ID) {
+      grunt.log.warn(
+        'New Relic: skipping sourcemap upload, env var NEWRELIC_APP_ID not set'
+      );
+      return done();
+    } else if (!NEWRELIC_API_KEY) {
+      grunt.log.warn(
+        `New Relic: skipping sourcemap upload, env var NEWRELIC_API_KEY not set`
+      );
+      return done();
+    }
+
+    const sourceMaps = grunt.file.glob.sync('build/package/js/**/*.map');
+
+    const sourcemapUploads = sourceMaps.map(
+      sourceMapPath =>
+        new Promise((resolve, reject) =>
+          publishSourcemap(
+            {
+              sourceMapPath,
+              javascriptUrl: 'https://studio.code.org/assets/js/',
+              applicationId: process.env.NEWRELIC_APP_ID,
+              apiKey: process.env.NEWRELIC_API_KEY,
+            },
+            err => {
+              if (err) {
+                grunt.log.error(
+                  `New Relic: error uploading source map '${sourceMapPath}'`
+                );
+                reject(err);
+              } else {
+                grunt.log.ok(
+                  `New Relic: uploaded source map '${sourceMapPath}'`
+                );
+                resolve();
+              }
+            }
+          )
+        )
+    );
+
+    Promise.all(sourcemapUploads)
+      .then(() =>
+        grunt.log.ok('New Relic: All source maps uploaded successfully.')
+      )
+      .catch(error =>
+        grunt.log.warn('New Relic: Some source maps failed to upload.', error)
+      )
+      .finally(() => done());
+  });
+
   grunt.registerTask('build', [
     'prebuild',
     // For any minifiable libs, generate minified sources if they do not already
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
+    'upload-sourcemaps-to-newrelic',
     'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash',
