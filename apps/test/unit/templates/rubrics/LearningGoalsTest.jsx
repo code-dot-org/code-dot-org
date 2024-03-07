@@ -13,49 +13,41 @@ import LearningGoals, {
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
 
-describe('LearningGoals', () => {
-  let annotatorStub,
-    annotateLineStub,
-    highlightLineStub,
-    clearAnnotationsStub,
-    clearHighlightedLinesStub;
-  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+const learningGoals = [
+  {
+    id: 2,
+    key: 'abcd',
+    learningGoal: 'Testing 1',
+    aiEnabled: true,
+    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
+    tips: 'Tips',
+  },
+  {
+    key: 'efgh',
+    learningGoal: 'Testing 2',
+    aiEnabled: false,
+    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
+    tips: 'Tips',
+  },
+];
 
-  const learningGoals = [
-    {
-      id: 2,
-      key: 'abcd',
-      learningGoal: 'Testing 1',
-      aiEnabled: true,
-      evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
-      tips: 'Tips',
-    },
-    {
-      key: 'efgh',
-      learningGoal: 'Testing 2',
-      aiEnabled: false,
-      evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'test'}],
-      tips: 'Tips',
-    },
-  ];
+const submittedEvaluation = {
+  feedback: 'test feedback',
+  understanding: RubricUnderstandingLevels.LIMITED,
+};
 
-  const submittedEvaluation = {
-    feedback: 'test feedback',
-    understanding: RubricUnderstandingLevels.LIMITED,
-  };
+const aiEvaluations = [
+  {
+    id: 2,
+    learning_goal_id: 2,
+    understanding: 2,
+    aiConfidencePassFail: 50,
+    observations:
+      'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
+  },
+];
 
-  const aiEvaluations = [
-    {
-      id: 2,
-      learning_goal_id: 2,
-      understanding: 2,
-      aiConfidencePassFail: 50,
-      observations:
-        'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
-    },
-  ];
-
-  const code = `// code
+const code = `// code
     var x = 5;
     var y = 6;
     // add them together
@@ -64,6 +56,18 @@ describe('LearningGoals', () => {
     */
     draw();
   `;
+
+describe('LearningGoals - React Testing Library', () => {
+  // test goes here
+});
+
+describe('LearningGoals - Enzyme', () => {
+  let annotatorStub,
+    annotateLineStub,
+    highlightLineStub,
+    clearAnnotationsStub,
+    clearHighlightedLinesStub;
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
 
   // Stub out our references to the singleton and editor
   beforeEach(() => {
