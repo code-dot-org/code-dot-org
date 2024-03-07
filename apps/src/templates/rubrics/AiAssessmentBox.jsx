@@ -25,14 +25,17 @@ export default function AiAssessmentBox({
   const thumbsdownval = 0;
 
   const studentAchievement = () => {
-    const assessment =
-      aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
-        ? i18n.aiAssessmentDoesMeet()
-        : i18n.aiAssessmentDoesNotMeet();
+    const assessment = getStudentAssessmentString();
     return i18n.aiStudentAssessment({
       studentName: studentName,
       understandingLevel: assessment,
     });
+  };
+
+  const getStudentAssessmentString = () => {
+    return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
+      ? i18n.aiAssessmentDoesMeet()
+      : i18n.aiAssessmentDoesNotMeet();
   };
 
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
