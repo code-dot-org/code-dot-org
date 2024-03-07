@@ -224,6 +224,10 @@ $level-cell-width: 52;
       border-left: 1px solid $light_gray_200;
       border-top: 1px solid $light_gray_200;
 
+      & .assessmentLevelIcon {
+        color: $light_white;
+      }
+
       .expandedHeaderExpandedLevelCell:last-child {
         width: $level-cell-width + px;
         border-right: 0;

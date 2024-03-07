@@ -41,7 +41,7 @@ import {
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, DEFAULT_LIBRARY} from '../constants';
+import {BlockMode, LEGACY_DEFAULT_LIBRARY, DEFAULT_LIBRARY} from '../constants';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
@@ -249,6 +249,11 @@ class UnconnectedMusicView extends React.Component {
     let libraryName = levelData?.library;
     if (!libraryName && initialSources?.labConfig?.music) {
       libraryName = initialSources.labConfig.music.library;
+    }
+    // What was previously the default library (mapping to music-library.json)
+    // is now 'intro2024' (mapping to music-library-intro2024.json).
+    if (libraryName === LEGACY_DEFAULT_LIBRARY) {
+      libraryName = DEFAULT_LIBRARY;
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
