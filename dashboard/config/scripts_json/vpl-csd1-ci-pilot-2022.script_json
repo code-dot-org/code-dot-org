@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "has_verified_resources": true,
       "is_migrated": true,
       "pilot_experiment": "vpl-csd-summer-pilot-ci-2022",
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-31 22:54:33 UTC",
+    "serialized_at": "2024-03-06 20:07:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -927,6 +928,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
