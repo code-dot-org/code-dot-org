@@ -37,6 +37,7 @@ function ProgressTableV2({
       : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
 
+  const [tableScrollWidth, setTableScrollWidth] = React.useState(0);
   const [tableWidth, setTableWidth] = React.useState(0);
   const [scrollVisible, setScrollVisible] = React.useState(true);
 
@@ -87,24 +88,32 @@ function ProgressTableV2({
 
   React.useEffect(() => {
     if (!!tableRef.current) {
-      setTableWidth(tableRef.current.scrollWidth);
+      setTableScrollWidth(tableRef.current.scrollWidth);
+      setTableWidth(tableRef.current.offsetWidth);
+      console.log(tableRef.current.offsetWidth, tableRef.current.scrollWidth);
     }
   });
 
-  React.useEffect(() => {
+  const handleScroll = React.useCallback(() => {
     const maxVisibleY =
       window.innerHeight || document.documentElement.clientHeight;
-    console.log(
-      'lfm',
-      tableRef.current?.getBoundingClientRect(),
-      maxVisibleY,
-      tableRef.current?.getBoundingClientRect().bottom < maxVisibleY
-    );
 
-    setScrollVisible(
-      tableRef.current?.getBoundingClientRect().bottom < maxVisibleY
-    );
-  }, [tableRef.current]);
+    const isNowVisible =
+      tableRef.current?.getBoundingClientRect().bottom < maxVisibleY;
+
+    if (isNowVisible !== scrollVisible) {
+      setScrollVisible(isNowVisible);
+    }
+  }, [scrollVisible, setScrollVisible]);
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', e => handleScroll(e));
+
+    return () => {
+      // return a cleanup function to unregister our function since it will run multiple times
+      window.removeEventListener('scroll', e => handleScroll(e));
+    };
+  }, [handleScroll]);
 
   const table = React.useMemo(() => {
     const lessons =
@@ -144,8 +153,9 @@ function ProgressTableV2({
           )}
           onScroll={scrollTable}
           ref={scrollRef}
+          style={{width: tableWidth + 'px'}}
         >
-          <div style={{width: tableWidth + 'px'}} />
+          <div style={{width: tableScrollWidth + 'px'}} />
         </div>
       </div>
     );
@@ -154,6 +164,7 @@ function ProgressTableV2({
     getRenderedColumn,
     unitData,
     tableWidth,
+    tableScrollWidth,
     tableRef,
     scrollVisible,
   ]);
