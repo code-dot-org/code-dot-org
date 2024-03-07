@@ -201,13 +201,10 @@ class LtiV1Controller < ApplicationController
   # Detects if LMS is trying open Code.org in an iframe, prompt user to open in
   # new tab. The experience is unchanged to non-iframe users.
   def iframe
-    # Define your variables
     auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
     id_token_param = params[:id_token]
     state_param = params[:state]
     new_tab_param = 'new_tab=true'
-
-    # Construct the URL with interpolated query parameters
     @auth_url = "#{auth_url_base}?id_token=#{id_token_param}&state=#{state_param}&#{new_tab_param}"
     render 'lti/v1/iframe', layout: false
   end
