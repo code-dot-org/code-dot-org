@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './floating-scrollbar.module.scss';
 
@@ -125,3 +126,10 @@ export default function FloatingScrollbar({
     </div>
   );
 }
+
+FloatingScrollbar.propTypes = {
+  children: PropTypes.element.isRequired,
+  setOnScroll: PropTypes.func.isRequired,
+  childContainerRef: PropTypes.object.isRequired,
+  childContentsRef: PropTypes.object.isRequired,
+};
