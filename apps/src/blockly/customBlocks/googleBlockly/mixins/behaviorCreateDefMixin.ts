@@ -6,8 +6,9 @@
 // block but not its call blocks, which was possible with CDO Blockly.
 // References to behaviorId properties are customizations.
 import {getAlphanumericId} from '@cdo/apps/utils';
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
-export const behaviorCreateDefMixin = function () {
+export const behaviorCreateDefMixin = function (this: ProcedureBlock) {
   const mixin = {
     /**
      * Creates a procedure definition block with the given name and params,
@@ -18,7 +19,7 @@ export const behaviorCreateDefMixin = function () {
      * @returns The procedure model associated with the new
      *     procedure definition block.
      */
-    createDef_(name, params = []) {
+    createDef_(this: ProcedureBlock, name: string, params: string[] = []) {
       const xy = this.getRelativeToSurfaceXY();
       const newName = Blockly.Procedures.findLegalName(name, this);
       this.renameProcedure(name, newName);
@@ -38,7 +39,7 @@ export const behaviorCreateDefMixin = function () {
         blockDef,
         this.getTargetWorkspace_(),
         {recordUndo: true}
-      );
+      ) as ProcedureBlock;
       return block.getProcedureModel();
     },
   };
