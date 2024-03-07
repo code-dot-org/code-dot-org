@@ -10,34 +10,57 @@ const now = moment().utc();
 
 /*
  * Curriculum recommenders: Each recommender receives an array of all curricula to consider and any preferences it should prioritize. The given
- * recommender will score each curriculum based on the questions associated with that recommender. If a curriculum satisfies the conditions of a
- * question, it receives points based on that recommender's scoring framework found in 'curriculumRecommenderConstants.js'. Once all curricula
- * have been scored, the recommender returns an array of the passed-in curricula sorted in descending order by score (ties are broken by
- * prioritizing featured curricula and more recently published curricula).
+ * recommender will filter out non-applicable curricula (such as those that don't support the right grade levels). It will then score each
+ * curriculum based on the questions associated with that recommender. If a curriculum satisfies the conditions of a question, it receives
+ * points based on that recommender's scoring framework found in 'curriculumRecommenderConstants.js'. Once all curricula have been scored, the
+ * recommender returns an array of the passed-in curricula sorted in descending order by score (ties are broken by prioritizing featured
+ * curricula and more recently published curricula).
  */
-export const getSimilarRecommendations = (
-  curricula,
-  duration,
-  marketingInitiative,
-  schoolSubjects,
-  csTopics
-) => {
+
+// Similar Curriculum Recommender:
+//    1) Filters out the curriculum with the key, mainCurriculumKey, and any curricula that do not support any of mainCurriculum's grade levels
+//    2) Scores the remaining curricula to find which are most similar to mainCurriculum
+export const getSimilarRecommendations = (curriculaData, mainCurriculumKey) => {
+  // Create copy of array of curricula to not affect the curriculaData array passed in
+  let curricula = [...curriculaData];
+
+  // Filter out the curriculum with the key, mainCurriculumKey, from the curricula to consider
+  const mainCurriculumIndex = curricula.findIndex(
+    e => e.key === mainCurriculumKey
+  );
+  const mainCurriculum = curricula.splice(mainCurriculumIndex, 1)[0];
+
+  // Filter out curricula that don't support any of the same grade levels
+  const mainCurriculumGrades = mainCurriculum.grade_levels;
+  curricula = curricula.filter(curr =>
+    curr.grade_levels
+      ?.split(',')
+      ?.some(grade => mainCurriculumGrades.includes(grade))
+  );
+
+  // Score each remaining curricula
   const curriculaScores = [];
   curricula.forEach(curriculum => {
     let score = 0;
+
     // Add points if given curriculum has the desired duration.
-    score += hasDesiredDuration(curriculum, duration)
+    score += hasDesiredDuration(curriculum, mainCurriculum.duration)
       ? SIMILAR_RECOMMENDER_SCORING['hasDesiredDuration']
       : 0;
+
     // Add points if given curriculum has the desired marketing initiative.
-    score += hasDesiredMarketingInitiative(curriculum, marketingInitiative)
+    score += hasDesiredMarketingInitiative(
+      curriculum,
+      mainCurriculum.marketing_initiative
+    )
       ? SIMILAR_RECOMMENDER_SCORING['hasDesiredMarketingInitiative']
       : 0;
+
     // Add points for each overlapping desired school subject. If no overlapping school
     // subjects, then add points if the given curriculum has any school subjects.
     const numOverlappingSubjects = numOverlappingDesiredSchoolSubjects(
       curriculum,
-      schoolSubjects
+      mainCurriculum.school_subject
     );
     if (numOverlappingSubjects === 0) {
       score += hasAnySchoolSubject(curriculum)
@@ -48,15 +71,18 @@ export const getSimilarRecommendations = (
         SIMILAR_RECOMMENDER_SCORING['overlappingDesiredSchoolSubject'] *
         numOverlappingSubjects;
     }
+
     // Add points for each overlapping desired CS topic.
     score +=
-      numOverlappingDesiredTopics(curriculum, csTopics) *
+      numOverlappingDesiredTopics(curriculum, mainCurriculum.cs_topic) *
       SIMILAR_RECOMMENDER_SCORING['overlappingDesiredTopic'];
+
     // Add points if given curriculum has an important topic that isn't one of the
     // desired ones.
-    score += hasImportantButNotDesiredTopic(curriculum, csTopics)
+    score += hasImportantButNotDesiredTopic(curriculum, mainCurriculum.cs_topic)
       ? SIMILAR_RECOMMENDER_SCORING['hasImportantButNotDesiredTopic']
       : 0;
+
     // Add points if given curriculum was published within 2 years ago, and add more
     // points if it was published within 1 year ago.
     const publishedYearsAgo = publishedNumYearsAgo(curriculum);
@@ -81,14 +107,17 @@ export const getTestRecommendations = (
   const curriculaScores = [];
   curricula.forEach(curriculum => {
     let score = 0;
+
     // Add points if given curriculum has the desired duration.
     score += hasDesiredDuration(curriculum, duration)
       ? TEST_RECOMMENDER_SCORING['hasDesiredDuration']
       : 0;
+
     // Add points if given curriculum has the desired marketing initiative.
     score += hasDesiredMarketingInitiative(curriculum, marketingInitiative)
       ? TEST_RECOMMENDER_SCORING['hasDesiredMarketingInitiative']
       : 0;
+
     // Add points for each overlapping desired school subject. If no overlapping school
     // subjects, then add points if the given curriculum has any school subjects.
     const numOverlappingSubjects = numOverlappingDesiredSchoolSubjects(
@@ -104,15 +133,18 @@ export const getTestRecommendations = (
         TEST_RECOMMENDER_SCORING['overlappingDesiredSchoolSubject'] *
         numOverlappingSubjects;
     }
+
     // Add points for each overlapping desired CS topic.
     score +=
       numOverlappingDesiredTopics(curriculum, csTopics) *
       TEST_RECOMMENDER_SCORING['overlappingDesiredTopic'];
+
     // Add points if given curriculum has an important topic that isn't one of the
     // desired ones.
     score += hasImportantButNotDesiredTopic(curriculum, csTopics)
       ? TEST_RECOMMENDER_SCORING['hasImportantButNotDesiredTopic']
       : 0;
+
     // Add points if given curriculum was published within 2 years ago, and add more
     // points if it was published within 1 year ago.
     const publishedYearsAgo = publishedNumYearsAgo(curriculum);

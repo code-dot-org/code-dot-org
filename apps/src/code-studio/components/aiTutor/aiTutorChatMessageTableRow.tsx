@@ -29,6 +29,7 @@ const AITutorChatMessagesTableRow: React.FunctionComponent<
 
   return (
     <tr className={style.row}>
+      <td className={style.cell}>{chatMessage.id}</td>
       <td className={style.cell}>{chatMessage.studentName}</td>
       <td className={style.cell}>
         <div>{getTimestamp(chatMessage.createdAt)}</div>

@@ -21,7 +21,6 @@ export default function TeacherActionsBox({isViewingLevelProgress}) {
           />
         </div>
         <div className={styles.legendColumn}>
-          <LegendItem itemType={ITEM_TYPE.VIEWED} labelText={i18n.viewed()} />
           <LegendItem
             itemType={ITEM_TYPE.KEEP_WORKING}
             labelText={i18n.markedAsKeepWorking()}

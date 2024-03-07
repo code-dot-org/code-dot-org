@@ -3,9 +3,11 @@ import {
   BlockSvg,
   BlocklyOptions,
   CodeGenerator,
+  Cursor,
   Input,
   Procedures,
   Theme,
+  Variables,
   VariableMap,
   Workspace,
   WorkspaceSvg,
@@ -24,6 +26,7 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {
   ObservableParameterModel,
@@ -61,6 +64,8 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  getNewCursor: (type: string) => Cursor;
+  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -81,6 +86,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldImageDropdown: typeof CdoFieldImageDropdown;
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
+  FieldBitmap: typeof CdoFieldBitmap;
   JavaScript: typeof javascriptGenerator;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
@@ -103,6 +109,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   Procedures: ExtendedProcedures;
   BlockValueType: {[key: string]: string};
   SNAP_RADIUS: number;
+  Variables: ExtendedVariables;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -133,10 +140,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   getFunctionEditorWorkspace: () => ExtendedWorkspaceSvg | undefined;
   clearAllStudentWorkspaces: () => void;
   getPointerBlockImageUrl: (
-    block: Block,
-    pointerMetadataMap: {
-      [blockType: string]: {imageSourceType: string; imageIndex: number};
-    },
+    block: ExtendedBlockSvg,
+    pointerMetadataMap: PointerMetadataMap,
     imageSourceId: string
   ) => string;
 }
@@ -151,6 +156,11 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
+  imageSourceId?: string;
+  shortString?: string;
+  longString?: string;
+  thumbnailSize?: number;
   // used for function blocks
   functionalSvg_?: BlockSvgFrame;
 }
@@ -263,6 +273,15 @@ export interface ExtendedProcedures extends ProceduresType {
   DEFINITION_BLOCK_TYPES: string[];
 }
 
+type VariablesType = typeof Variables;
+export interface ExtendedVariables extends VariablesType {
+  DEFAULT_CATEGORY: string;
+  getters: {[key: string]: string};
+  registerGetter: (category: string, blockName: string) => void;
+  allVariablesFromBlock: (block: Block) => string[];
+  getVars: (opt_category?: string) => {[key: string]: string[]};
+}
+
 export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
 }
@@ -306,5 +325,12 @@ export interface ProcedureBlockConfiguration {
 export type ProcedureType =
   | BLOCK_TYPES.procedureDefinition
   | BLOCK_TYPES.behaviorDefinition;
+
+export type PointerMetadataMap = {
+  [blockType: string]: {
+    imageSourceType: string;
+    imageIndex: number;
+  };
+};
 
 export type BlockColor = [number, number, number];

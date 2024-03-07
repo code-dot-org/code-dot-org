@@ -1,0 +1,25 @@
+name 'k5_ai_plan_your_poster_pilot'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Plan Your AI Poster
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/dfa6afa75c3ed875d9f83a42e6452bbc-image-1709763830890.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>It's time to make your plan!</strong>
+</h4>
+
+>You should include:
+> - The person you chose
+> - The decision they have to make
+> - What data their AI tool should be trained on 
+> - One to two sentences on what this person should know about AI 
+
+**Here is a planning guide you can copy and fill out yourself:**  <a href="https://docs.google.com/document/d/1BJxKijkXrff8jm37xkPNYY7Lcx0QQjKGLJqoFPQggU8/template/preview" target="_blank"> Plan Your AI Poster Guide</a>.
+
+</div>
+MARKDOWN

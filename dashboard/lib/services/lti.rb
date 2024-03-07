@@ -6,13 +6,14 @@ require 'sections/section'
 
 class Services::Lti
   def self.initialize_lti_user(id_token)
-    user_type = Policies::Lti.get_account_type(id_token)
+    user_type = Policies::Lti.get_account_type(id_token[Policies::Lti::LTI_ROLES_KEY])
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = user_type
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
       user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
+      user.lti_roster_sync_enabled = true
     else
       user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
       user.family_name = get_claim(id_token, :family_name)

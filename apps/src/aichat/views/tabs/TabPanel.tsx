@@ -8,6 +8,7 @@ interface TabPanelProps {
   labelledBy: string;
 }
 
+// maybe need to move inline style
 const TabPanel: React.FunctionComponent<TabPanelProps> = ({
   content,
   isActive,

@@ -94,6 +94,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     }
     analyticsReporter.sendEvent(event, {
       levelId: level?.id,
+      levelType: level?.type,
     });
   }, [
     generalChat,
@@ -102,7 +103,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     isWaitingForChatResponse,
     compilation,
     validation,
-    level?.id,
+    level,
     tutorType,
     dispatch,
   ]);
