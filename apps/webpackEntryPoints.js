@@ -128,6 +128,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+  'levels/editors/fields/_ai_customizations': './src/sites/studio/pages/levels/editors/fields/_ai_customizations.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',
@@ -201,8 +202,6 @@ const PEGASUS_ENTRIES = {
 
 // prettier-ignore
 const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
-  'code.org/public/learn/local': './src/sites/code.org/pages/public/learn/local.js',
-
   'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
   'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
 

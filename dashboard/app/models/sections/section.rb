@@ -37,6 +37,7 @@
 require 'full-name-splitter'
 require 'cdo/code_generation'
 require 'cdo/safe_names'
+require 'policies/lti'
 
 class Section < ApplicationRecord
   include SerializedProperties
@@ -462,7 +463,8 @@ class Section < ApplicationRecord
         is_assigned_csa: assigned_csa?,
         # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
-        code_review_expires_at: code_review_expires_at
+        code_review_expires_at: code_review_expires_at,
+        sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
       }
     end
   end

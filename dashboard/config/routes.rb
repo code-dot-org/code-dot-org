@@ -594,6 +594,8 @@ Dashboard::Application.routes.draw do
     get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+    get '/admin/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
+    post '/admin/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
@@ -889,6 +891,7 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
