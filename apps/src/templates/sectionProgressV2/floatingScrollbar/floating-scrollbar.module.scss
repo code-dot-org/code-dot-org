@@ -13,3 +13,9 @@
   position: fixed;
   bottom: 0;
 }
+
+.emptyScrollContents {
+  // This is necessary for some browsers to show a horizontal scrollbar.
+  // Not entirely sure why, chrome works without, firefox doesn't.
+  height: 1px;
+}

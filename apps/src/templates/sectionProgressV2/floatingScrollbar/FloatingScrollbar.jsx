@@ -77,8 +77,10 @@ export default function FloatingScrollbar({
     const maxVisibleY =
       window.innerHeight || document.documentElement.clientHeight;
 
+    // 20 is the height of the scrollbar.
     const isNowVisible =
-      childContainerRef?.current.getBoundingClientRect().bottom < maxVisibleY;
+      childContainerRef?.current.getBoundingClientRect().bottom + 20 <
+      maxVisibleY;
 
     if (isNowVisible !== scrollVisible) {
       setScrollVisible(isNowVisible);
@@ -121,7 +123,10 @@ export default function FloatingScrollbar({
         ref={scrollRef}
         style={{width: childWidth + 'px'}}
       >
-        <div style={{width: childScrollWidth + 'px'}} />
+        <div
+          style={{width: childScrollWidth + 'px'}}
+          className={styles.emptyScrollContents}
+        />
       </div>
     </div>
   );
