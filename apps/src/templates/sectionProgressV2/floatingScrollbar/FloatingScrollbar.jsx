@@ -2,6 +2,22 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './floating-scrollbar.module.scss';
 
+/**
+ * A component that adds a horizontal scrollbar to the bottom of {children} element.
+ * Scrollbar will appear at the bottom of {child} if the bottom is visible.
+ * Scrollbar will at the bottom of the screen if the bottom of {child} is not visible.
+ *
+ * {children} must:
+ *    be a single element
+ *    be a container with overflow-x: hidden
+ *    have a single contents component that you would like to horizontally scroll
+ * setOnScroll - a function that will be called with an onScroll event.
+ *    This should be added to {child} element as the `onScroll` prop
+ * childContainerRef - a ref to {child} element.
+ *    Set by calling `ref={childContainerRef}` on the {child} element
+ * childContentsRef - a ref to the contents of {child} element.
+ *    Set by calling `ref={childContentsRef}` on the contents of {child} element
+ */
 export default function FloatingScrollbar({
   children,
   setOnScroll,
@@ -14,15 +30,15 @@ export default function FloatingScrollbar({
   const [childWidth, setChildWidth] = React.useState(0);
   const [scrollVisible, setScrollVisible] = React.useState(true);
 
+  if (children.length > 1) {
+    throw new Error('FloatingScrollbar only supports a single child');
+  }
+
   const childContainerResizeObserver = React.useMemo(
     () =>
-      new ResizeObserver(entries => {
-        for (let entry of entries) {
-          console.log('lfm', entry);
-          if (entry.borderBoxSize) {
-            console.log('entry.borderBoxSize', entry.borderBoxSize);
-            setChildWidth(entry.borderBoxSize[0].inlineSize);
-          }
+      new ResizeObserver(([entry]) => {
+        if (entry.borderBoxSize) {
+          setChildWidth(entry.borderBoxSize[0].inlineSize);
         }
       }),
     [setChildWidth]
@@ -30,13 +46,9 @@ export default function FloatingScrollbar({
 
   const childContentsResizeObserver = React.useMemo(
     () =>
-      new ResizeObserver(entries => {
-        for (let entry of entries) {
-          console.log('lfm1', entry);
-          if (entry.borderBoxSize) {
-            console.log('entry.contentBoxSize', entry.contentBoxSize);
-            setChildScrollWidth(entry.borderBoxSize[0].inlineSize);
-          }
+      new ResizeObserver(([entry]) => {
+        if (entry.borderBoxSize) {
+          setChildScrollWidth(entry.borderBoxSize[0].inlineSize + 1);
         }
       }),
     [setChildScrollWidth]
@@ -49,24 +61,16 @@ export default function FloatingScrollbar({
     if (childContentsResizeObserver) {
       childContentsResizeObserver.observe(childContentsRef.current);
     }
+    return () => {
+      childContainerResizeObserver.disconnect();
+      childContentsResizeObserver.disconnect();
+    };
   }, [
     childContainerResizeObserver,
     childContentsResizeObserver,
     childContainerRef,
     childContentsRef,
   ]);
-
-  // React.useEffect(() => {
-  //   console.log('childNode changed');
-  //   if (childScrollWidth !== childNode?.scrollWidth) {
-  //     console.log('childScrollWidth changed', childNode?.scrollWidth);
-  //     setChildScrollWidth(childNode?.scrollWidth);
-  //   }
-  //   if (childWidth !== childNode?.offsetWidth) {
-  //     console.log('childWidth changed', childNode?.offsetWidth);
-  //     setChildWidth(childNode?.offsetWidth);
-  //   }
-  // }, [childNode]);
 
   const handleScroll = React.useCallback(() => {
     const maxVisibleY =
@@ -81,7 +85,6 @@ export default function FloatingScrollbar({
   }, [childContainerRef, scrollVisible, setScrollVisible]);
 
   React.useEffect(() => {
-    // TODO - switch this to an IntersectionObserver
     window.addEventListener('scroll', e => handleScroll(e));
 
     return () => {
