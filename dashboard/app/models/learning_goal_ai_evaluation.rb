@@ -2,14 +2,15 @@
 #
 # Table name: learning_goal_ai_evaluations
 #
-#  id                      :bigint           not null, primary key
-#  rubric_ai_evaluation_id :bigint           not null
-#  learning_goal_id        :bigint           not null
-#  understanding           :integer
-#  ai_confidence           :integer
-#  created_at              :datetime         not null
-#  updated_at              :datetime         not null
-#  observations            :text(65535)
+#  id                        :bigint           not null, primary key
+#  rubric_ai_evaluation_id   :bigint           not null
+#  learning_goal_id          :bigint           not null
+#  understanding             :integer
+#  ai_confidence             :integer
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  observations              :text(65535)
+#  ai_confidence_exact_match :integer
 #
 # Indexes
 #

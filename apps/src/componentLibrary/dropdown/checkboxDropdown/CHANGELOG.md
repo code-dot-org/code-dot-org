@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/56683)
+* moved `CheckboxDropdown` to -> `dropdown/checkboxDropdown`
+* reworked `CheckboxDropdown` to use `_CustomDropdown` component
+
 ## [0.1.1](https://github.com/code-dot-org/code-dot-org/pull/56543)
 * update stories to display all the props in props control area
 * move dropdownColors to separate type & key-value object map

@@ -1,5 +1,6 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
 
 // Dropdown common styles
 .dropdownContainer {
@@ -33,6 +34,15 @@
       border-radius: 0.25rem;
       outline-offset: 2px;
     }
+
+    i {
+      display: inline-block;
+    }
+
+    span {
+      /* Manually center dropdown button label */
+      margin-top: 2px;
+    }
   }
 
   .dropdownMenuContainer {
@@ -54,6 +64,7 @@
 
     ul {
       margin: 0;
+      padding: 0;
 
       li {
         list-style-type: none;
@@ -61,7 +72,34 @@
         align-items: flex-end;
         align-self: stretch;
 
-        label {
+        .dropdownMenuItem {
+          /* Reset's every elements apperance */
+          background: none repeat scroll 0 0 transparent;
+          border: none !important;
+          border-radius: 0;
+          border-spacing: 0;
+          list-style: none outside none;
+          margin: 0;
+          padding: 0;
+          text-decoration: none;
+          text-indent: 0;
+          box-shadow: none;
+
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          &:focus-visible {
+            outline: 2px solid $light_primary_500;
+            outline-offset: -2px;
+          }
+
+          i {
+            display: inline-block;
+          }
+        }
+
+        label, .dropdownMenuItem {
           flex-grow: 1;
           margin-bottom: 0;
         }
@@ -70,7 +108,7 @@
           background-color: $light_gray_100;
         }
 
-        &:active, &:has(input[type="checkbox"]:checked) {
+        &:active, &:has(input[type="checkbox"]:checked), &:has(.selectedDropdownMenuItem) {
           background-color: $light_primary_500;
 
           i::before {
@@ -81,14 +119,35 @@
           span {
             color: $light_white;
           }
+
+          .dropdownMenuItem {
+            i::before {
+              background-color: $light_primary_500;
+              color: $light_white;
+            }
+
+            span {
+              color: $light_white;
+            }
+          }
         }
 
-        &:has(input[type="checkbox"]:disabled) {
-          cursor: not-allowed;
+        &:has(input[type="checkbox"]:disabled), &:has(.disabledDropdownMenuItem) {
           color: $light_gray_200;
           background-color: unset;
+          cursor: not-allowed;
 
-          span {
+
+          .dropdownMenuItem {
+            cursor: not-allowed;
+
+            i::before {
+              background-color: unset;
+              color: $light_gray_200;
+            }
+          }
+
+          span, .dropdownMenuItem span {
             color: $light_gray_200;
           }
         }
@@ -202,6 +261,12 @@
     height: 3rem;
     padding: 0.625rem 1rem;
     margin-bottom: 0;
+
+    i {
+      font-size: 1.1875rem;
+      line-height: 125%;
+      width: 1.5rem;
+    }
   }
 
   .dropdownMenuContainer {
@@ -209,9 +274,22 @@
 
     ul {
       li {
-        label {
+        label, .dropdownMenuItem {
           padding: 0.625rem 1rem 0.625rem .75rem;
           gap: 0.75rem;
+        }
+
+        .dropdownMenuItem {
+          i {
+            font-size: 1.375rem;
+            line-height: 125%;
+            width: 1.75rem;
+          }
+
+          span {
+            @include body-one;
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -238,6 +316,12 @@
     height: 2.5rem;
     padding: 0.5rem 1rem;
     margin-bottom: 0;
+
+    i {
+      font-size: 1rem;
+      line-height: 125%;
+      width: 1.25rem;
+    }
   }
 
   .dropdownMenuContainer {
@@ -245,9 +329,22 @@
 
     ul {
       li {
-        label {
+        label, .dropdownMenuItem {
           padding: 0.5rem 1rem 0.5rem .75rem;
           gap: 0.75rem;
+        }
+
+        .dropdownMenuItem {
+          i {
+            font-size: 1.1875rem;
+            line-height: 125%;
+            width: 1.5rem;
+          }
+
+          span {
+            @include body-two;
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -274,6 +371,12 @@
     height: 2rem;
     padding: 0.3125rem 1rem;
     margin-bottom: 0;
+
+    i {
+      font-size: 0.875rem;
+      line-height: 125%;
+      width: 1.125rem;
+    }
   }
 
   .dropdownMenuContainer {
@@ -281,9 +384,22 @@
 
     ul {
       li {
-        label {
+        label, .dropdownMenuItem {
           padding: 0.3125rem 0.875rem 0.3125rem 0.625rem;
           gap: 0.5rem;
+        }
+
+        .dropdownMenuItem {
+          i {
+            font-size: 1rem;
+            line-height: 125%;
+            width: 1.25rem;
+          }
+
+          span {
+            @include body-three;
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -310,6 +426,12 @@
     height: 1.5rem;
     padding: 0.125rem 0.5rem;
     margin-bottom: 0;
+
+    i {
+      font-size: 0.8125rem;
+      line-height: 125%;
+      width: 1rem;
+    }
   }
 
   .dropdownMenuContainer {
@@ -317,9 +439,22 @@
 
     ul {
       li {
-        label {
+        label, .dropdownMenuItem {
           padding: 0.125rem 0.625rem 0.125rem 0.5rem;
           gap: 0.25rem;
+        }
+
+        .dropdownMenuItem {
+          i {
+            font-size: 0.8125rem;
+            line-height: 125%;
+            width: 1rem;
+          }
+
+          span {
+            @include body-four;
+            margin-bottom: 0;
+          }
         }
       }
     }

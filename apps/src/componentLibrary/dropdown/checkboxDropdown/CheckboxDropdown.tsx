@@ -1,33 +1,26 @@
-import React, {
-  useCallback,
-  useMemo,
-  useRef,
-  useEffect,
-  KeyboardEvent,
-} from 'react';
-import classNames from 'classnames';
+import React from 'react';
 
 import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
-import moduleStyles from './checkboxDropdown.module.scss';
+import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 import Button from '@cdo/apps/templates/Button';
+
+import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {
-  DropdownProviderWrapper,
-  useDropdownContext,
-} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 
 export interface CheckboxDropdownProps {
-  /** CheckboxDropdown name */
+  /** CheckboxDropdown name.
+   * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
   /** CheckboxDropdown color */
   color?: DropdownColor;
@@ -35,7 +28,8 @@ export interface CheckboxDropdownProps {
   size: ComponentSizeXSToL;
   /** CheckboxDropdown disabled state */
   disabled?: boolean;
-  /** CheckboxDropdown label */
+  /** CheckboxDropdown label
+   * The user-facing label of the dropdown */
   labelText: string;
   /** CheckboxDropdown options */
   allOptions: {value: string; label: string; isOptionDisabled?: boolean}[];
@@ -74,85 +68,15 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   color = dropdownColors.black,
   size = 'm',
 }) => {
-  const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
-  const dropdownRef: React.MutableRefObject<HTMLDivElement | null> =
-    useRef(null);
-
-  const handleClickOutside = useCallback(
-    (event: Event) => {
-      if (
-        activeDropdownName &&
-        dropdownRef.current &&
-        event.target instanceof Node &&
-        !dropdownRef.current.contains(event.target)
-      ) {
-        setActiveDropdownName('');
-      }
-    },
-    [dropdownRef, setActiveDropdownName, activeDropdownName]
-  );
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('keydown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleClickOutside);
-    };
-  }, [handleClickOutside]);
-
-  const toggleDropdown = useCallback(() => {
-    if (activeDropdownName !== name) {
-      setActiveDropdownName(name);
-    } else {
-      setActiveDropdownName('');
-    }
-  }, [name, activeDropdownName, setActiveDropdownName]);
-
-  const isOpen = useMemo(
-    () => activeDropdownName === name,
-    [activeDropdownName, name]
-  );
-
-  // Collapse dropdown if 'Escape' is pressed
-  const onKeyDown: (e: KeyboardEvent) => void = e => {
-    if (e.key === 'Escape') {
-      e.currentTarget.classList.remove(moduleStyles.open);
-    }
-  };
-
   return (
-    <div
-      id={`${name}-dropdown`}
-      className={classNames(
-        {[moduleStyles.open]: isOpen},
-        moduleStyles.dropdownContainer,
-        moduleStyles[`dropdownContainer-${color}`],
-        moduleStyles[`dropdownContainer-${size}`]
-      )}
-      onKeyDown={onKeyDown}
-      ref={dropdownRef}
+    <CustomDropdown
+      name={name}
+      labelText={labelText}
+      color={color}
+      disabled={disabled}
+      size={size}
+      isSomeValueSelected={checkedOptions.length > 0}
     >
-      <button
-        id={`${name}-dropdown-button`}
-        type="button"
-        className={moduleStyles.dropdownButton}
-        data-toggle="dropdown"
-        aria-haspopup={true}
-        aria-label={`${name} filter dropdown`}
-        onClick={toggleDropdown}
-        disabled={disabled}
-      >
-        {checkedOptions.length > 0 && (
-          <FontAwesomeV6Icon
-            iconName="check-circle"
-            iconStyle="solid"
-            title={i18n.filterCheckIconTitle({filter_label: labelText})}
-          />
-        )}
-        <span className={moduleStyles.dropdownLabel}>{labelText}</span>
-        <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
-      </button>
       <form className={moduleStyles.dropdownMenuContainer}>
         <ul>
           {allOptions.map(({value, label, isOptionDisabled}) => (
@@ -186,7 +110,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
           />
         </div>
       </form>
-    </div>
+    </CustomDropdown>
   );
 };
 
@@ -195,7 +119,5 @@ const WrappedCheckboxDropdown = (props: CheckboxDropdownProps) => (
     <CheckboxDropdown {...props} />
   </DropdownProviderWrapper>
 );
-
-WrappedCheckboxDropdown.DropdownColors = dropdownColors;
 
 export default WrappedCheckboxDropdown;
