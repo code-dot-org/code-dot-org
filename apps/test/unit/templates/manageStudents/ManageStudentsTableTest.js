@@ -38,7 +38,6 @@ import manageStudents, {
 import teacherSections, {
   setSections,
   selectSection,
-  syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -201,9 +200,10 @@ describe('ManageStudentsTable', () => {
           </Provider>
         );
 
-        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.false;
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
+          .false;
       });
-  
+
       it('does render the Actions column if loginType is lti_v1 and sync is disabled', () => {
         const store = getStore();
         store.dispatch(setLoginType(SectionLoginType.lti_v1));
@@ -214,7 +214,8 @@ describe('ManageStudentsTable', () => {
           </Provider>
         );
 
-        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.true;
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
+          .true;
       });
     });
 
