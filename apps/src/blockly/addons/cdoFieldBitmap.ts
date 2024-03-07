@@ -15,7 +15,11 @@ export class CdoFieldBitmap extends FieldBitmap {
    * @param {object | null} options - The options for the field, can be an object or null/undefined.
    * @param {object | null} config - Additional configuration options, can be an object or null/undefined.
    */
-  constructor(value?: number[][], options?: object, config?: object) {
+  constructor(
+    value?: number[][] | null,
+    options?: object | null,
+    config?: object | null
+  ) {
     super(value, options, config);
   }
 
