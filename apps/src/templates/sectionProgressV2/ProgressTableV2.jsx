@@ -86,13 +86,14 @@ function ProgressTableV2({
     [isSkeleton, sortedStudents, expandedLessonIds, setExpandedLessons]
   );
 
-  React.useEffect(() => {
-    if (!!tableRef.current) {
+  if (!!tableRef.current) {
+    if (tableScrollWidth !== tableRef.current.scrollWidth) {
       setTableScrollWidth(tableRef.current.scrollWidth);
-      setTableWidth(tableRef.current.offsetWidth);
-      console.log(tableRef.current.offsetWidth, tableRef.current.scrollWidth);
     }
-  });
+    if (tableWidth !== tableRef.current.offsetWidth) {
+      setTableWidth(tableRef.current.offsetWidth);
+    }
+  }
 
   const handleScroll = React.useCallback(() => {
     const maxVisibleY =
@@ -104,7 +105,7 @@ function ProgressTableV2({
     if (isNowVisible !== scrollVisible) {
       setScrollVisible(isNowVisible);
     }
-  }, [scrollVisible, setScrollVisible]);
+  }, [scrollVisible, setScrollVisible, tableScrollWidth]);
 
   React.useEffect(() => {
     window.addEventListener('scroll', e => handleScroll(e));
