@@ -84,14 +84,21 @@ export const commands = {
   },
 
   makeEnvironmentSprites(animation, group, bitmap) {
+    // The scale is determined based on the app height (400) and the number of rows in the array.
+    // For example, with a 4x4 grid, the scale is 100 and the sprites are 100x100.
     const scale = APP_HEIGHT / bitmap.length;
     for (let i = 0; i < bitmap.length; i++) {
       for (let j = 0; j < bitmap[0].length; j++) {
-        const location = {
-          x: scale / 2 + scale * i,
-          y: scale / 2 + scale * j,
-        };
-        bitmap[j][i] && this.addSprite({animation, group, location, scale});
+        // Array values are either 0 or 1. Create a sprite for each 1.
+        if (bitmap[j][i]) {
+          // Sprite x/y coordinates represent the center of the sprite.
+          // To position the sprites, we offset x and y by half of the scale.
+          const location = {
+            x: scale / 2 + scale * i,
+            y: scale / 2 + scale * j,
+          };
+          this.addSprite({animation, group, location, scale});
+        }
       }
     }
   },
