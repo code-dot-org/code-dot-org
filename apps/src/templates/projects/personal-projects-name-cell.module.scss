@@ -19,6 +19,16 @@
   border: solid;
 }
 
+.infoIcon {
+  color: $neutral_dark60 !important;
+  font-size: 1rem;  
+}
+
+.infoIcon:hover {
+  color: $neutral_dark90 !important;
+  font-size: 1rem;  
+}
+
 .inputBox {
   width: 200px;
 }
