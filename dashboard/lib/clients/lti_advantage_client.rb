@@ -21,7 +21,7 @@ class LtiAdvantageClient
         limit: page_limit,
       },
     }
-    options[:query][:rlid] = resource_link_id unless @issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
+    options[:query][:rlid] = resource_link_id if Policies::Lti.issuer_offers_resource_link?(issuer)
     res = make_request(url, options)
     next_page = next_page_url(res[:headers])
     parsed_res = res[:body]

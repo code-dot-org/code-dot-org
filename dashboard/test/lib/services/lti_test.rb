@@ -142,6 +142,44 @@ class Services::LtiTest < ActiveSupport::TestCase
         }
       ]
     }.deep_symbolize_keys
+
+    @nrps_response_no_message = {
+      id: "https://lti-service.svc.schoology.com/lti-service/tool/115/services/names-roles/v2p0/membership/115",
+      context: {
+        id: "115",
+        title: @course_name,
+        label: nil
+      },
+      members: [
+        {
+          status: "Active",
+          name: "Test Teacher",
+          given_name: "Test",
+          family_name: "Teacher",
+          email: "teacher@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"],
+          user_id: 'user-id-1'
+        },
+        {
+          status: "Active",
+          name: "Test One",
+          given_name: "Test",
+          family_name: "One",
+          email: "test1@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+          user_id: SecureRandom.uuid
+        },
+        {
+          status: "Active",
+          name: "Test Two",
+          given_name: "Test",
+          family_name: "Two",
+          email: "test2@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+          user_id: SecureRandom.uuid
+        }
+      ]
+    }.deep_symbolize_keys
   end
 
   test 'initialize_lti_user should create User::TYPE_TEACHER when id_token contains teacher/admin roles' do
@@ -251,6 +289,13 @@ class Services::LtiTest < ActiveSupport::TestCase
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     actual_section_names = parsed_response.values.map {|v| v[:name]}
     assert_empty expected_section_names - actual_section_names
+  end
+
+  test 'course name should match section name when parsing NRPS response with no resource link provided' do
+    expected_section_name = [@course_name]
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_message, @id_token[:iss])
+    actual_section_name = parsed_response.values.map {|v| v[:name]}
+    assert_empty expected_section_name - actual_section_name
   end
 
   test 'should update a section name if it has changed' do
