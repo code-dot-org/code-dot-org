@@ -3,7 +3,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 
 // The parent class sets a static pixel size and calculate the field size dymanically.
 // We set a static height for the field and calculate the pixel size based on available space.
-const FIELD_HEIGHT = 50;
+const FIELD_HEIGHT = 42;
 
 /**
  * Custom FieldBitmap class with additional hooks for XML serialization.
