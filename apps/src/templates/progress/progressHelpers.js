@@ -164,6 +164,7 @@ export const studentNeedsFeedback = (progress, level) =>
   progress &&
   progress.status !== LevelStatus.not_tried &&
   level.kind === 'assessment' &&
+  level.canHaveFeedback &&
   !feedbackLeft(progress);
 
 /**
