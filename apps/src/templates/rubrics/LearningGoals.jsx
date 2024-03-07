@@ -221,6 +221,14 @@ export default function LearningGoals({
 
   const aiEvalInfo = getAiInfo(learningGoals[currentLearningGoal].id);
 
+  let aiConfidence;
+  if (aiEvalInfo) {
+    const showExactMatch = aiEvalInfo.aiConfidenceExactMatch === 3;
+    aiConfidence = showExactMatch
+      ? aiEvalInfo.aiConfidenceExactMatch
+      : aiEvalInfo.aiConfidencePassFail;
+  }
+
   const autosave = () => {
     setAutosaveStatus(STATUS.IN_PROGRESS);
     const bodyData = JSON.stringify({
@@ -511,7 +519,7 @@ export default function LearningGoals({
                   <AiAssessment
                     isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                     studentName={studentLevelInfo.name}
-                    aiConfidence={aiEvalInfo.aiConfidencePassFail}
+                    aiConfidence={aiConfidence}
                     aiUnderstandingLevel={aiEvalInfo.understanding}
                     aiEvalInfo={aiEvalInfo}
                     aiEvidence={aiEvidence}
