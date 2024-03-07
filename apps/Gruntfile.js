@@ -659,24 +659,24 @@ module.exports = function (grunt) {
     const sourceMaps = grunt.file.glob.sync('build/package/js/**/*.map');
 
     const sourcemapUploads = sourceMaps.map(
-      sourceMapPath =>
+      sourcemapPath =>
         new Promise((resolve, reject) =>
           publishSourcemap(
             {
-              sourceMapPath,
-              javascriptUrl: 'https://studio.code.org/assets/js/',
+              sourcemapPath,
+              javascriptUrl: `https://studio.code.org/assets/js/${sourcemapPath}`,
               applicationId: process.env.NEWRELIC_APP_ID,
               apiKey: process.env.NEWRELIC_API_KEY,
             },
             err => {
               if (err) {
                 grunt.log.error(
-                  `New Relic: error uploading source map '${sourceMapPath}'`
+                  `New Relic: error uploading source map '${sourcemapPath}':\n  ${err}`
                 );
                 reject(err);
               } else {
                 grunt.log.ok(
-                  `New Relic: uploaded source map '${sourceMapPath}'`
+                  `New Relic: uploaded source map '${sourcemapPath}'`
                 );
                 resolve();
               }
