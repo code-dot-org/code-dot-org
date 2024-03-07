@@ -321,6 +321,9 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_integration = create :lti_integration
     create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
     lti_course = create :lti_course, lti_integration: lti_integration
+    section = create :section, user: teacher
+
+    create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
@@ -372,11 +375,36 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal lti_section.followers.last, user_to_remove
   end
 
+  test 'should not sync if the current user is not the section owner' do
+    teacher = build :teacher
+    teacher.authentication_options << build(:lti_authentication_option, user: teacher)
+    teacher.save
+    different_teacher = create :teacher
+
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    create :lti_section, lti_course: lti_course
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+
+    # Sync once as the section owner
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 3
+
+    # Sync again as a different teacher with the section deleted (it should not delete)
+    parsed_response.delete(@lms_section_ids.first.to_s)
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: different_teacher)
+    assert lti_course.reload.sections.length, 3
+
+    # The same deletion as section owner should delete
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 2
+  end
+
   test 'should add or remove sections when syncing a course' do
     teacher = create :teacher
     lti_integration = create :lti_integration
     create :lti_user_identity, lti_integration: lti_integration, user: teacher
     lti_course = create :lti_course, lti_integration: lti_integration
+    create :lti_section, lti_course: lti_course
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
@@ -399,6 +427,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_integration = create :lti_integration
     create :lti_user_identity, lti_integration: lti_integration, user: teacher
     lti_course = create :lti_course, lti_integration: lti_integration
+    create :lti_section, lti_course: lti_course
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)

@@ -247,6 +247,7 @@ class LtiV1Controller < ApplicationController
       nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
 
       sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
+
       had_changes ||= sync_course_roster_results
 
       # Report which sections were updated

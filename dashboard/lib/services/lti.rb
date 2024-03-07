@@ -189,6 +189,9 @@ class Services::Lti
     had_changes = false
     lti_sections = LtiSection.where(lti_course_id: lti_course.id)
 
+    # Only sync the section if the section's owner is equal to the current user
+    return false unless lti_sections.first.section.user_id == current_user_id
+
     # Prune sections that have been deleted in the LMS
     lti_sections.each do |lti_section|
       unless nrps_sections.key?(lti_section.lms_section_id)
@@ -218,6 +221,7 @@ class Services::Lti
         lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
         had_changes = true
       end
+
       unless lti_section.section.name == section_name
         lti_section.section.update(name: section_name)
         had_changes = true
