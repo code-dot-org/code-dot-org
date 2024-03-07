@@ -63,48 +63,56 @@ describe('SignInOrAgeDialog', () => {
       '/hourofcode/overview'
     );
   });
+});
 
-  describe('redirect', () => {
-    beforeEach(() => {
-      sinon.stub(utils, 'reload');
-      sinon.stub(cookies, 'remove');
+describe('redirect', () => {
+  beforeEach(() => {
+    replaceOnWindow('dashboard', {
+      rack_env: 'unit_test',
     });
+    sinon.stub(utils, 'reload');
+    sinon.stub(cookies, 'remove');
+  });
 
-    afterEach(() => {
-      utils.reload.restore();
-      cookies.get.restore && cookies.get.restore();
-      cookies.remove.restore();
-    });
+  afterEach(() => {
+    restoreOnWindow('dashboard');
+    utils.reload.restore();
+    cookies.get.restore && cookies.get.restore();
+    cookies.remove.restore();
+  });
 
-    it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
-      const setItemSpy = sinon.spy(DEFAULT_PROPS.storage, 'setItem');
-      // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
-      // does not work in unit tests
-      sinon.stub(cookies, 'get').returns('something');
+  function renderDefault(propOverrides = {}) {
+    render(<SignInOrAgeDialog {...DEFAULT_PROPS} {...propOverrides} />);
+  }
 
-      renderDefault();
-      fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
-      const okay = screen.getByText('OK');
-      fireEvent.click(okay);
-      assert(setItemSpy.calledOnce);
-      assert(setItemSpy.calledWith('anon_over13', true));
-      assert(utils.reload.called);
-      assert(
-        cookies.remove.calledWith(environmentSpecificCookieName('storage_id'), {
-          path: '/',
-          domain: '.code.org',
-        })
-      );
-      setItemSpy.restore();
-    });
+  it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
+    const setItemSpy = sinon.spy(DEFAULT_PROPS.storage, 'setItem');
+    // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
+    // does not work in unit tests
+    sinon.stub(cookies, 'get').returns('something');
 
-    it('does not reload when providing an age >= 13 if you did not have a cookie', () => {
-      renderDefault();
-      fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
-      const okay = screen.getByText('OK');
-      fireEvent.click(okay);
-      assert.equal(utils.reload.called, false);
-      expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
-    });
+    renderDefault();
+    fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
+    const okay = screen.getByText('OK');
+    fireEvent.click(okay);
+    assert(setItemSpy.calledOnce);
+    assert(setItemSpy.calledWith('anon_over13', true));
+    assert(utils.reload.called);
+    assert(
+      cookies.remove.calledWith(environmentSpecificCookieName('storage_id'), {
+        path: '/',
+        domain: '.code.org',
+      })
+    );
+    setItemSpy.restore();
+  });
+
+  it('does not reload when providing an age >= 13 if you did not have a cookie', () => {
+    renderDefault();
+    fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
+    const okay = screen.getByText('OK');
+    fireEvent.click(okay);
+    assert.equal(utils.reload.called, false);
+    expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
   });
 });
