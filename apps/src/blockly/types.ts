@@ -3,6 +3,7 @@ import {
   BlockSvg,
   BlocklyOptions,
   CodeGenerator,
+  Cursor,
   Input,
   Procedures,
   Theme,
@@ -62,6 +63,8 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  getNewCursor: (type: string) => Cursor;
+  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;

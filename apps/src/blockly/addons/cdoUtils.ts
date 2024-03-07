@@ -28,6 +28,7 @@ import {
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {Block, BlockSvg, Field, WorkspaceSvg} from 'blockly';
 import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Loads blocks to a workspace.
@@ -302,6 +303,20 @@ export function getUserTheme(themeOption: string | undefined) {
     themeOption ||
     cdoTheme
   );
+}
+
+/**
+ * Returns a cursor type, based on the presence of an option in the browser's localStorage.
+ * @param {string} type
+ * @returns {string} one of 'default', 'basic', or 'line'
+ */
+export function getUserCursorType() {
+  const defaultCursorType = experiments.isEnabled(
+    experiments.KEYBOARD_NAVIGATION
+  )
+    ? 'line'
+    : 'default';
+  return localStorage.blocklyCursor || defaultCursorType;
 }
 
 /**
