@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './tab-panel.module.scss';
+
 interface TabPanelProps {
   content: React.ReactNode;
   isActive: boolean;
@@ -20,7 +22,7 @@ const TabPanel: React.FunctionComponent<TabPanelProps> = ({
     id={id}
     aria-labelledby={labelledBy}
     hidden={!isActive}
-    style={{height: '100%'}}
+    className={styles.panelContainer}
   >
     {content}
   </div>
