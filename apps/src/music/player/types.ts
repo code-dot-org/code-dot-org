@@ -16,7 +16,7 @@ export interface AudioPlayer {
 
   /** Load sounds into the cache */
   loadSounds(
-    sampleIds: string[],
+    sampleUrls: string[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
 
@@ -67,8 +67,8 @@ export interface AudioPlayer {
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
-  // ID of the sample
-  sampleId: string;
+  // URL of the sample
+  sampleUrl: string;
   // Whether the sound was triggered
   triggered: boolean;
   // Original BPM of the sample

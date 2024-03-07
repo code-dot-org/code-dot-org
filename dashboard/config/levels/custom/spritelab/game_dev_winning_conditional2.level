@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-03-05T00:01:30.000Z",
   "level_num": "custom",
@@ -24,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##How do you win?\r\n*Check if the player has a winning score.*\r\n\r\n- Connect the `if Score = 5` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` then click on the monsters. Can you win?",
+    "long_instructions": "(Note for Amy: Maybe this should be a predict level instead of adding to the conditional, students need to predict what will happen when the health = 0. Then make one more level with a choice level that has 'fix this game' levels similar to Lesson 1) \r\n\r\n**How do you loose the game?**\r\nCheck if the player has run out of Health.\r\n\r\n- Connect the `if Health = 0` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` to see how it works",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -36,7 +37,7 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
-    "start_animations": "{\"orderedKeys\":[\"fd3e93f5-33df-4091-b6c5-873e25349977\",\"0aed6f6c-efcc-440f-8b21-dcb5a7a5e871\",\"befad275-3e17-4ac3-bc77-277cc8cdc2de\",\"b8e334f0-89d2-40ba-8b6b-b28199b8d07c\",\"61ee313e-a518-4ae1-9f36-5bb9d7b2a45b\",\"bbbdc49a-3509-4a75-82bf-a8a359b76703\",\"04a3730b-4bfa-495b-8443-e5ce000a06c9\",\"d0b30707-fe56-464c-91b4-a5c18504ec9f\",\"fc81755c-e8cc-4d6d-9320-b882b8492952\",\"93ab6358-7d67-4b4d-a686-f3ff941bdbcc\",\"499a7b16-032c-46d7-82e8-0fcd915f63f9\",\"2f9f44a8-4f6d-417f-836d-81ec44e92591\",\"a47fadf0-64fa-4608-89e9-db8707f76ce4\",\"1b39f781-3e39-4b7c-abe3-a8d11b2d62bf\",\"8ba0e7f2-e87a-4cfb-9f90-8bc5cf310c50\",\"6a89546e-5d7f-4c7b-a237-e49432419159\"],\"propsByKey\":{\"fd3e93f5-33df-4091-b6c5-873e25349977\":{\"name\":\"gameplayfaces_04\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:56 UTC\",\"pngLastModified\":\"2021-01-19 23:55:49 UTC\",\"version\":\"nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb/category_faces/gameplayfaces_04.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"0aed6f6c-efcc-440f-8b21-dcb5a7a5e871\":{\"name\":\"gameplayfaces_02\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:53 UTC\",\"pngLastModified\":\"2021-01-19 23:56:13 UTC\",\"version\":\"zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ/category_faces/gameplayfaces_02.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"befad275-3e17-4ac3-bc77-277cc8cdc2de\":{\"name\":\"gameplayfaces_07\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:56:01 UTC\",\"pngLastModified\":\"2021-01-19 23:56:17 UTC\",\"version\":\"szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4/category_faces/gameplayfaces_07.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"b8e334f0-89d2-40ba-8b6b-b28199b8d07c\":{\"name\":\"gameplayfaces_08\",\"categories\":[\"faces\"],\"frameCount\":1,\"frameSize\":{\"x\":391,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:58 UTC\",\"pngLastModified\":\"2021-01-19 23:55:52 UTC\",\"version\":\"FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh/category_faces/gameplayfaces_08.png\",\"sourceSize\":{\"x\":391,\"y\":400}},\"61ee313e-a518-4ae1-9f36-5bb9d7b2a45b\":{\"name\":\"retrocreature_07\",\"categories\":[\"retro\"],\"frameCount\":1,\"frameSize\":{\"x\":332,\"y\":365},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:26:39 UTC\",\"pngLastModified\":\"2021-01-20 00:27:18 UTC\",\"version\":\"R7OTDFesYYpdf.ouJ3CupR437H09o89D\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/R7OTDFesYYpdf.ouJ3CupR437H09o89D/category_retro/retrocreature_07.png\",\"sourceSize\":{\"x\":332,\"y\":365}},\"bbbdc49a-3509-4a75-82bf-a8a359b76703\":{\"name\":\"retrocreature_09\",\"categories\":[\"retro\"],\"frameCount\":1,\"frameSize\":{\"x\":332,\"y\":365},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:27:12 UTC\",\"pngLastModified\":\"2021-01-20 00:26:55 UTC\",\"version\":\"TbnNrJLA0Qsqqh_oL2x8g5V1mwVhE4IM\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/TbnNrJLA0Qsqqh_oL2x8g5V1mwVhE4IM/category_retro/retrocreature_09.png\",\"sourceSize\":{\"x\":332,\"y\":365}},\"04a3730b-4bfa-495b-8443-e5ce000a06c9\":{\"name\":\"retrocreature_14\",\"categories\":[\"retro\"],\"frameCount\":1,\"frameSize\":{\"x\":365,\"y\":365},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:27:13 UTC\",\"pngLastModified\":\"2021-01-20 00:26:43 UTC\",\"version\":\"qmM52DzPSGLV7WgnVennekVNVk79FSxR\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/qmM52DzPSGLV7WgnVennekVNVk79FSxR/category_retro/retrocreature_14.png\",\"sourceSize\":{\"x\":365,\"y\":365}},\"d0b30707-fe56-464c-91b4-a5c18504ec9f\":{\"name\":\"retrocreature_16\",\"categories\":[\"retro\"],\"frameCount\":1,\"frameSize\":{\"x\":365,\"y\":365},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:26:44 UTC\",\"pngLastModified\":\"2021-01-20 00:26:59 UTC\",\"version\":\"lj4HRtQmkrRuALzyRiomuWL7GyRHlIQl\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/lj4HRtQmkrRuALzyRiomuWL7GyRHlIQl/category_retro/retrocreature_16.png\",\"sourceSize\":{\"x\":365,\"y\":365}},\"fc81755c-e8cc-4d6d-9320-b882b8492952\":{\"name\":\"cny_06\",\"categories\":[\"emoji\"],\"frameCount\":1,\"frameSize\":{\"x\":372,\"y\":296},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:56:35 UTC\",\"pngLastModified\":\"2021-01-19 23:57:33 UTC\",\"version\":\"y3j2o_ANyjUwdQKoah77PLKuBpspvNyR\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/y3j2o_ANyjUwdQKoah77PLKuBpspvNyR/category_emoji/cny_06.png\",\"sourceSize\":{\"x\":372,\"y\":296}},\"93ab6358-7d67-4b4d-a686-f3ff941bdbcc\":{\"name\":\"cny_08\",\"categories\":[\"emoji\"],\"frameCount\":1,\"frameSize\":{\"x\":396,\"y\":336},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:56:46 UTC\",\"pngLastModified\":\"2021-01-19 23:56:24 UTC\",\"version\":\"AXQVTLHf2XUJItZLTjr2r9HIniATmbpf\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/AXQVTLHf2XUJItZLTjr2r9HIniATmbpf/category_emoji/cny_08.png\",\"sourceSize\":{\"x\":396,\"y\":336}},\"499a7b16-032c-46d7-82e8-0fcd915f63f9\":{\"name\":\"emoji_11\",\"categories\":[\"emoji\"],\"frameCount\":1,\"frameSize\":{\"x\":300,\"y\":300},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:56:25 UTC\",\"pngLastModified\":\"2021-01-19 23:56:53 UTC\",\"version\":\"zTm226AsxpxmE9JW38wudcsQbYGMwkoY\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zTm226AsxpxmE9JW38wudcsQbYGMwkoY/category_emoji/emoji_11.png\",\"sourceSize\":{\"x\":300,\"y\":300}},\"2f9f44a8-4f6d-417f-836d-81ec44e92591\":{\"name\":\"emoji_09\",\"categories\":[\"emoji\"],\"frameCount\":1,\"frameSize\":{\"x\":300,\"y\":300},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:57:14 UTC\",\"pngLastModified\":\"2021-01-19 23:57:01 UTC\",\"version\":\"7MCmxi.hV60CdFhxZ388QvO.anutA7us\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/7MCmxi.hV60CdFhxZ388QvO.anutA7us/category_emoji/emoji_09.png\",\"sourceSize\":{\"x\":300,\"y\":300}},\"a47fadf0-64fa-4608-89e9-db8707f76ce4\":{\"name\":\"gradient_01\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A/category_backgrounds/gradient_01.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"1b39f781-3e39-4b7c-abe3-a8d11b2d62bf\":{\"name\":\"gradient_08\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"Gzf6AOFH7NK4woo365IgUcY_HE6VQ3nK\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Gzf6AOFH7NK4woo365IgUcY_HE6VQ3nK/category_backgrounds/gradient_08.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8ba0e7f2-e87a-4cfb-9f90-8bc5cf310c50\":{\"name\":\"gradient_09\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"38CQAxU4sQgbM7EB371iiphvhkxcR9J9\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/38CQAxU4sQgbM7EB371iiphvhkxcR9J9/category_backgrounds/gradient_09.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6a89546e-5d7f-4c7b-a237-e49432419159\":{\"name\":\"gradient_11\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:09 UTC\",\"pngLastModified\":\"2021-01-19 23:53:10 UTC\",\"version\":\"xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t/category_backgrounds/gradient_11.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
+    "start_animations": "{\"orderedKeys\":[\"55dc996c-34fd-4339-a064-41c54e6236ef\",\"b031c9dc-1155-402f-b364-be64fbd6572a\",\"2ece0900-97c3-4ac4-af96-dd85a143a417\",\"3c12fc06-6e88-4ad7-a5e8-7c3275f9add1\",\"23d38c30-7a6f-4549-a428-fae21bb3e78b\"],\"propsByKey\":{\"55dc996c-34fd-4339-a064-41c54e6236ef\":{\"name\":\"gameplayobject_item_03\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":360,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:46 UTC\",\"pngLastModified\":\"2021-03-29 19:25:47 UTC\",\"version\":\"FBDdYT8_fp3JPwa_lQbcuGlQQH7Iw9dU\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/FBDdYT8_fp3JPwa_lQbcuGlQQH7Iw9dU/category_video_games/gameplayobject_item_03.png\",\"sourceSize\":{\"x\":360,\"y\":400}},\"b031c9dc-1155-402f-b364-be64fbd6572a\":{\"name\":\"video_game_bg\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-07T22:22:15.000Z\",\"pngLastModified\":\"2023-03-07T22:22:14.000Z\",\"version\":\"jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/jFj9lXHa6ce7Vuc0EVosLcyBQS0HEpdU/video_game_bg.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2ece0900-97c3-4ac4-af96-dd85a143a417\":{\"name\":\"game_panda\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:16.000Z\",\"pngLastModified\":\"2024-03-06T16:38:16.000Z\",\"version\":\"c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn/game_panda.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"3c12fc06-6e88-4ad7-a5e8-7c3275f9add1\":{\"name\":\"gameplay_candy14\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":394,\"y\":376},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:17 UTC\",\"pngLastModified\":\"2021-03-29 19:26:17 UTC\",\"version\":\"sTe672PhsFjdUJRlCXojTWnwf6o7VmXl\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/sTe672PhsFjdUJRlCXojTWnwf6o7VmXl/category_video_games/gameplay_candy14.png\",\"sourceSize\":{\"x\":394,\"y\":376}},\"23d38c30-7a6f-4549-a428-fae21bb3e78b\":{\"name\":\"gradient_18\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:12 UTC\",\"pngLastModified\":\"2020-12-01 23:21:12 UTC\",\"version\":\"uBQg6gJaEi_A5QrZ.e5NLoG7nPUR1ihw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/uBQg6gJaEi_A5QrZ.e5NLoG7nPUR1ihw/category_backgrounds/gradient_18.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n\r\n\r\n\r\n",
     "mini_toolbox": "true",
     "hide_pause_button": "false",
     "soft_buttons": [
@@ -45,60 +46,90 @@
       "upButton",
       "downButton"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-05T00:01:30.869+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional_simple\\\"\"],\"cloned_from\":\"hello_games_winning_conditional_simple\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-05T00:01:30.869+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional_simple\\\"\"],\"cloned_from\":\"hello_games_winning_conditional_simple\"},{\"changed_at\":\"2024-03-06 17:30:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:45:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:48:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:49:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:51:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:56:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:57:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:00:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:01:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:01:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:02:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:03:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:04:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:04:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:05:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:06:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:08:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:11:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="brBn}v{CpUvR[.64ZYc{">Score</variable>
+          <variable id="brBn}v{CpUvR[.64ZYc{">Health</variable>
         </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="54" y="22">
           <next>
             <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"gradient_01"</field>
+              <field name="IMG">"video_game_bg"</field>
               <next>
                 <block type="gamelab_makeSpritesWithSize">
                   <field name="SIZE">50</field>
-                  <field name="COSTUME">"gameplayfaces_04"</field>
+                  <field name="COSTUME">"gameplayobject_item_03"</field>
                   <value name="NUM">
                     <block type="math_number">
-                      <field name="NUM">5</field>
+                      <field name="NUM">3</field>
                     </block>
                   </value>
                   <next>
-                    <block type="adaptations_toggleBehaviorSimple">
-                      <field name="TOGGLE">"begins"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"gameplayfaces_04"</field>
-                        </block>
-                      </value>
-                      <value name="BEHAVIOR">
-                        <block type="gamelab_behaviorPicker">
-                          <field name="BEHAVIOR">driving with arrow keys</field>
-                          <field name="EDIT">Edit</field>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <field name="ANIMATION_NAME">"game_panda"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <field name="LOCATION">{"x":197,"y":294}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_showVariable">
-                          <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":200,"y":100}</field>
+                        <block type="adaptations_toggleBehaviorSimple">
+                          <field name="TOGGLE">"begins"</field>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"gameplayobject_item_03"</field>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get">
+                              <mutation behaviorId="moving south and looping" name="moving south and looping"/>
+                              <field name="NAME">moving south and looping</field>
                             </block>
                           </value>
                           <next>
-                            <block type="variables_set">
-                              <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <field name="NUM">0</field>
+                            <block type="adaptations_toggleBehaviorSimple">
+                              <field name="TOGGLE">"begins"</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"game_panda"</field>
                                 </block>
                               </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <mutation behaviorId="patrolling" name="patrolling"/>
+                                  <field name="NAME">patrolling</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_showVariable">
+                                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_location_picker">
+                                      <field name="LOCATION">{"x":282,"y":119}</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set">
+                                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <field name="NUM">5</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -110,28 +141,41 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="52" y="356">
+        <block type="gamelab_checkTouching" x="63" y="451">
           <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_spriteClicked"/>
+          <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
+          <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
+              <field name="ANIMATION">"gameplayobject_item_03"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"game_panda"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_destroy">
-              <value name="THIS">
-                <block type="gamelab_clickedSpritePointer"/>
-              </value>
+            <block type="gamelab_playSoundOptions">
+              <field name="SOUND">'sound://category_projectile/retro_game_magic_spell_6.mp3'</field>
               <next>
                 <block type="math_change">
-                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Score</field>
+                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
                   <value name="DELTA">
                     <shadow type="math_number" id="[o[fCv%xLKlU/tXpTXSK">
-                      <field name="NUM">1</field>
+                      <field name="NUM">-1</field>
                     </shadow>
                   </value>
+                  <next>
+                    <block type="gamelab_ifVarEquals">
+                      <field name="NUM" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+                      <value name="VAL">
+                        <block type="math_number">
+                          <field name="NUM">0</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -1278,29 +1322,42 @@
     <toolbox_blocks>
       <xml>
         <variables>
-          <variable id="@-=S@3O,n:QRq]zW8kK+">Score</variable>
+          <variable id="@-=S@3O,n:QRq]zW8kK+">Health</variable>
         </variables>
         <block type="gamelab_ifVarEquals" id="`kUb%OM1icUG[7n:kdsV" x="368" y="48">
-          <field name="NUM" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+          <field name="NUM" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
           <value name="VAL">
-            <block type="gamelab_int10" id="2t8E!7{*h:db_buZJ|3I">
-              <field name="VALUE">5</field>
+            <block type="math_number" id="WQXEx@;jk?o@QgDN{0-h">
+              <field name="NUM">0</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="72" y="169">
-          <field name="IMG">"gradient_11"</field>
+        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="54" y="103">
+          <field name="IMG">"gradient_18"</field>
         </block>
-        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="26" y="248">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+        <block type="gamelab_removeAllBehaviors" id="gc@v|t=do+fuFb5k`t~W" x="309" y="163">
+          <value name="SPRITE">
+            <block type="gamelab_getAllSprites" id="Cj:-YEHARf@wIj,lfK%i"/>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay" id="~6fZC.syA5A5WxLlpVN2" x="183" y="214">
+          <field name="SPEECH">Game Over!</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="CsYs5^-T%nRqWs}T6g[3">
+              <field name="ANIMATION">"game_panda"</field>
+            </block>
+          </value>
+        </block>
+        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="20" y="285">
+          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
           <value name="DELTA">
             <shadow type="math_number" id="Dsygy)_vgya%_J|C?^+(">
-              <field name="NUM">1</field>
+              <field name="NUM">-1</field>
             </shadow>
           </value>
         </block>
         <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr" x="89" y="336">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="MTpyz3~[)2]e-cv8R$w!">
               <field name="LOCATION">{"x":200,"y":100}</field>
@@ -1308,15 +1365,15 @@
           </value>
         </block>
         <block type="variables_set" id=")R,JJO#7$==Alm:brx|2" x="67" y="395">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
+          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
           <value name="VALUE">
             <block type="math_number" id="O+Q2TbpteuZ$tH8?#oZT">
-              <field name="NUM">0</field>
+              <field name="NUM">5</field>
             </block>
           </value>
         </block>
         <block type="gamelab_makeNewSpriteAnon" id="JIw3/AZ92eD,iyz@QMI#" x="165" y="475">
-          <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+          <field name="ANIMATION_NAME">"game_panda"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="D=bbm,uR`M;-R6eXQ:/)">
               <field name="LOCATION">{"x":100,"y":300}</field>
@@ -1325,38 +1382,25 @@
         </block>
         <block type="gamelab_makeSpritesWithSize" id="lHTaF[tAmtGL7uK{uv}P" x="436" y="550">
           <field name="SIZE">50</field>
-          <field name="COSTUME">"gameplayfaces_04"</field>
+          <field name="COSTUME">"gameplayobject_item_03"</field>
           <value name="NUM">
             <block type="math_number" id="xV^Q?m?#|8HS3Vm$w6y?">
               <field name="NUM">3</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteClicked" id=":aBjWj/38+C7mrk=u~Mi" x="113" y="610">
+        <block type="gamelab_checkTouching" id="*5lvdq2[xK(p6{TZIF:H" x="130" y="628">
           <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_spriteClicked"/>
+          <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="9NoN6C[hdFFEG87A^JLm">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" id="5gtr,{jOPGiCM!H:L+IY">
+              <field name="ANIMATION">"gameplayobject_item_03"</field>
             </block>
           </value>
-        </block>
-        <block type="gamelab_destroy" id="xQ/wpru?0[0$?`L4o`jA" x="52" y="699">
-          <value name="THIS">
-            <block type="gamelab_clickedSpritePointer" id="GiqIOWlixMd.c]@;p2sp"/>
-          </value>
-        </block>
-        <block type="gamelab_setProp" id="#iahp7cR)oIpUh=+g!!%" x="223" y="782">
-          <field name="PROPERTY">"scale"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="PV@0|oZXe;OS)wi4TF%w">
-              <field name="ANIMATION">"gameplayfaces_04"</field>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number" id="6R9L-np_Td;Vz=D9TA`W">
-              <field name="NUM">50</field>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" id="ZKK)NbB=ufGp,X1j1W[b">
+              <field name="ANIMATION">"game_panda"</field>
             </block>
           </value>
         </block>

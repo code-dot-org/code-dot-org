@@ -67,6 +67,10 @@ export const commands = {
     return this.addSprite({animation, location});
   },
 
+  makeNewGroupSprite(animation, group, location) {
+    return this.addSprite({animation, group, location});
+  },
+
   makeNumSprites(numSprites, animation) {
     if (this.reachedSpriteMax()) {
       return;

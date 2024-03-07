@@ -1,0 +1,36 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "makeNewGroupSprite",
+    "docFunc": "gamelab_makeNewSpriteAnon",
+    "blockText": "make new {ANIMATION_NAME} {GROUP} sprite at {LOCATION}",
+    "style": "sprite_blocks",
+    "args": [
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "player",
+            "\"players\""
+          ],
+          [
+            "environment",
+            "\"walls\""
+          ],
+          [
+            "object",
+            "\"object\""
+          ]
+        ]
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

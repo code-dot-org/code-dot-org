@@ -354,6 +354,11 @@ export default class CoreLibrary {
         );
       }
     }
+    if (spriteArg.group) {
+      return Object.values(this.nativeSpriteMap).filter(
+        sprite => sprite.group === spriteArg.group
+      );
+    }
     return [];
   }
 
@@ -477,6 +482,9 @@ export default class CoreLibrary {
     let animation = opts.animation;
 
     const sprite = this.p5.createSprite(location.x, location.y);
+    if (opts.group) {
+      sprite.group = opts.group;
+    }
     this.nativeSpriteMap[this.spriteId] = sprite;
     sprite.id = this.spriteId;
     if (name) {
