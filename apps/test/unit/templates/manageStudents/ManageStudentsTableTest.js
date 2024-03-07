@@ -118,35 +118,6 @@ describe('ManageStudentsTable', () => {
     });
   });
 
-  // describe('LTI section tests', () => {
-  //   const DEFAULT_PROPS = {
-  //     loginType: SectionLoginType.lti_v1,
-  //     studentData: [],
-  //     editingData: {},
-  //     addStatus: {},
-  //     transferStatus: {},
-  //   };
-
-  //   it('Should not render the action column for LTI sections with sync enabled', () => {
-  //     const wrapper = shallow(
-  //       <UnconnectedManageStudentsTable
-  //         {...{...DEFAULT_PROPS, ...{loginType: SectionLoginType.lti_v1, syncEnabled: true}}}
-  //       />
-  //     );
-  //     expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.false;
-  //   });
-
-  //   it('Should render the action column for LTI sections with sync disabled', () => {
-  //     const wrapper = shallow(
-  //       <UnconnectedManageStudentsTable
-  //         {...{...DEFAULT_PROPS, ...{loginType: SectionLoginType.email, syncEnabled: false}}}
-  //       />
-  //     );
-  //     console.log(wrapper.debug());
-  //     expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be.true;
-  //   });
-  // });
-
   describe('full render tests', () => {
     const fakeStudent = {
       id: 1,
@@ -177,7 +148,6 @@ describe('ManageStudentsTable', () => {
       studentCount: 10,
       students: Object.values(fakeStudents),
       hidden: false,
-      sync_enabled: false,
     };
 
     beforeEach(() => {
