@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-02-12T18:15:52.000Z",
   "level_num": "custom",
@@ -19,7 +20,7 @@
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "standalone_app_name": "spritelab",
     "encrypted": "false",
     "soft_buttons": [
@@ -35,7 +36,7 @@
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "true",
+    "include_shared_functions": "false",
     "free_play": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -47,10 +48,13 @@
     "display_name": "Star Catcher ",
     "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Falling \r\n\r\n**How to win:** Use the arrows to catch 10 stars\r\n\r\n",
     "thumbnail_url": "https://images.code.org/05a8e10715bf857d91cd1dcde6794f31-warp_zone.jpg",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": " **Play the game!**\r\n \r\n Press `Run` and play the game. What do you notice?"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-14 18:18:40 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:22:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:24:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:28:43 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:29:54 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:06:14 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:09:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:10:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:12:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:13:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-14 18:18:40 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:22:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:24:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:28:43 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:29:54 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:06:14 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:09:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:10:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:12:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:13:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:13:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:14:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:17:09 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:20:57 +0000\",\"changed\":[\"start_blocks\",\"use_modal_function_editor\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:05:05 +0000\",\"changed\":[\"start_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -118,13 +122,23 @@
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="variables_set">
+                                    <block type="gamelab_showVariable">
                                       <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
-                                      <value name="VALUE">
-                                        <block type="math_number">
-                                          <field name="NUM">0</field>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_location_picker">
+                                          <field name="LOCATION">{"x":200,"y":58}</field>
                                         </block>
                                       </value>
+                                      <next>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <field name="NUM">0</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
                                     </block>
                                   </next>
                                 </block>
@@ -203,27 +217,13 @@
                     </block>
                   </value>
                   <next>
-                    <block type="adaptations_toggleBehaviorSimple">
-                      <field name="TOGGLE">"begins"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_objectSpritePointer"/>
+                    <block type="math_change">
+                      <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
+                      <value name="DELTA">
+                        <shadow type="math_number" id="p!Lh^aW^Q+Z7u6_-CQfm">
+                          <field name="NUM">1</field>
+                        </shadow>
                       </value>
-                      <value name="BEHAVIOR">
-                        <block type="gamelab_behavior_get">
-                          <mutation behaviorId="moving south and looping" name="moving south and looping"/>
-                          <field name="NAME">moving south and looping</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="math_change">
-                          <field name="VAR" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
-                          <value name="DELTA">
-                            <shadow type="math_number" id="p!Lh^aW^Q+Z7u6_-CQfm">
-                              <field name="NUM">1</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>

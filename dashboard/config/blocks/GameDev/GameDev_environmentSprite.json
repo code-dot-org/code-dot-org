@@ -1,0 +1,10 @@
+{
+  "category": "Sprites",
+  "config": {
+    "expression": "{group: \"walls\"}",
+    "name": "environmentSprite",
+    "blockText": "environment sprites",
+    "returnType": "Sprite",
+    "style": "sprite_blocks"
+  }
+}
