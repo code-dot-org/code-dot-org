@@ -38,6 +38,7 @@ function ProgressTableV2({
   }, [students, isSortedByFamilyName, isSkeleton]);
 
   const [tableWidth, setTableWidth] = React.useState(0);
+  const [scrollVisible, setScrollVisible] = React.useState(true);
 
   const tableRef = React.useRef();
   const scrollRef = React.useRef();
@@ -90,6 +91,21 @@ function ProgressTableV2({
     }
   });
 
+  React.useEffect(() => {
+    const maxVisibleY =
+      window.innerHeight || document.documentElement.clientHeight;
+    console.log(
+      'lfm',
+      tableRef.current?.getBoundingClientRect(),
+      maxVisibleY,
+      tableRef.current?.getBoundingClientRect().bottom < maxVisibleY
+    );
+
+    setScrollVisible(
+      tableRef.current?.getBoundingClientRect().bottom < maxVisibleY
+    );
+  }, [tableRef.current]);
+
   const table = React.useMemo(() => {
     const lessons =
       isSkeleton && unitData === undefined
@@ -112,13 +128,6 @@ function ProgressTableV2({
     return (
       <div className={styles.scrollingTable}>
         <div
-          className={styles.topScrollBar}
-          onScroll={scrollTable}
-          ref={scrollRef}
-        >
-          <div style={{width: tableWidth + 'px'}} />
-        </div>
-        <div
           className={classNames(
             styles.table,
             isSkeleton && styles.tableLoading
@@ -128,9 +137,26 @@ function ProgressTableV2({
         >
           {lessons.map(getRenderedColumn)}
         </div>
+        <div
+          className={classNames(
+            styles.scrollBar,
+            !scrollVisible && styles.bottomScrollBar
+          )}
+          onScroll={scrollTable}
+          ref={scrollRef}
+        >
+          <div style={{width: tableWidth + 'px'}} />
+        </div>
       </div>
     );
-  }, [isSkeleton, getRenderedColumn, unitData, tableWidth, tableRef]);
+  }, [
+    isSkeleton,
+    getRenderedColumn,
+    unitData,
+    tableWidth,
+    tableRef,
+    scrollVisible,
+  ]);
 
   return (
     <div className={styles.progressTableV2}>
