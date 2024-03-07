@@ -537,6 +537,7 @@ class ShareAllowedDialog extends React.Component {
                       onExpand={this.showAdvancedOptions}
                       channelId={channelId}
                       embedOptions={embedOptions}
+                      appType={this.props.appType}
                     />
                   )}
                 </div>

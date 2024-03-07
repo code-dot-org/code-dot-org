@@ -185,6 +185,9 @@ const EVENTS = {
     'User Clicks Send To Phone In Finish Congrats Dialog',
   FINISH_BUTTON_CERTIFICATE:
     'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
+
+  // Export app
+  EXPORT_APP: 'User Exports App From Share Advanced Options',
 };
 
 const EVENT_GROUP_NAMES = {
