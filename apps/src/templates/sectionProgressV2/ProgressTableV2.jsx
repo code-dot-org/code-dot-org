@@ -12,6 +12,7 @@ import LessonProgressDataColumn from './LessonProgressDataColumn';
 import classNames from 'classnames';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
 import {lessonHasLevels} from '../progress/progressHelpers';
+import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
@@ -37,12 +38,9 @@ function ProgressTableV2({
       : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
 
-  const [tableScrollWidth, setTableScrollWidth] = React.useState(0);
-  const [tableWidth, setTableWidth] = React.useState(0);
-  const [scrollVisible, setScrollVisible] = React.useState(true);
+  const [onScroll, setOnScroll] = React.useState(() => {});
 
   const tableRef = React.useRef();
-  const scrollRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -86,36 +84,6 @@ function ProgressTableV2({
     [isSkeleton, sortedStudents, expandedLessonIds, setExpandedLessons]
   );
 
-  if (!!tableRef.current) {
-    if (tableScrollWidth !== tableRef.current.scrollWidth) {
-      setTableScrollWidth(tableRef.current.scrollWidth);
-    }
-    if (tableWidth !== tableRef.current.offsetWidth) {
-      setTableWidth(tableRef.current.offsetWidth);
-    }
-  }
-
-  const handleScroll = React.useCallback(() => {
-    const maxVisibleY =
-      window.innerHeight || document.documentElement.clientHeight;
-
-    const isNowVisible =
-      tableRef.current?.getBoundingClientRect().bottom < maxVisibleY;
-
-    if (isNowVisible !== scrollVisible) {
-      setScrollVisible(isNowVisible);
-    }
-  }, [scrollVisible, setScrollVisible, tableScrollWidth]);
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', e => handleScroll(e));
-
-    return () => {
-      // return a cleanup function to unregister our function since it will run multiple times
-      window.removeEventListener('scroll', e => handleScroll(e));
-    };
-  }, [handleScroll]);
-
   const table = React.useMemo(() => {
     const lessons =
       isSkeleton && unitData === undefined
@@ -127,47 +95,27 @@ function ProgressTableV2({
       return null;
     }
 
-    const scrollTable = scroll => {
-      tableRef.current.scrollLeft = scroll.target.scrollLeft;
-    };
-
-    const scrollScrollBar = scroll => {
-      scrollRef.current.scrollLeft = scroll.target.scrollLeft;
-    };
-
     return (
-      <div className={styles.scrollingTable}>
+      <FloatingScrollbar setOnScroll={setOnScroll} childRef={tableRef}>
         <div
           className={classNames(
             styles.table,
             isSkeleton && styles.tableLoading
           )}
           ref={tableRef}
-          onScroll={scrollScrollBar}
+          onScroll={onScroll}
         >
           {lessons.map(getRenderedColumn)}
         </div>
-        <div
-          className={classNames(
-            styles.scrollBar,
-            !scrollVisible && styles.bottomScrollBar
-          )}
-          onScroll={scrollTable}
-          ref={scrollRef}
-          style={{width: tableWidth + 'px'}}
-        >
-          <div style={{width: tableScrollWidth + 'px'}} />
-        </div>
-      </div>
+      </FloatingScrollbar>
     );
   }, [
     isSkeleton,
     getRenderedColumn,
     unitData,
-    tableWidth,
-    tableScrollWidth,
     tableRef,
-    scrollVisible,
+    setOnScroll,
+    onScroll,
   ]);
 
   return (

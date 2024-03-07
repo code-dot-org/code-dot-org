@@ -38,22 +38,6 @@ $level-cell-width: 52;
   }
 }
 
-.scrollingTable {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.scrollBar {
-  height: 20px;
-  width: 100%;
-  overflow-x: auto;
-}
-
-.bottomScrollBar {
-  position: fixed;
-  bottom: 0;
-}
-
 .gridBox {
   border-top: 1px solid $light_gray_200;
   border-left: 1px solid $light_gray_200;

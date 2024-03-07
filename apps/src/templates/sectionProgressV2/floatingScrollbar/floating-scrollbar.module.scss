@@ -1,0 +1,16 @@
+
+.scrollingContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.scrollBar {
+  height: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.bottomScrollBar {
+  position: fixed;
+  bottom: 0;
+}
