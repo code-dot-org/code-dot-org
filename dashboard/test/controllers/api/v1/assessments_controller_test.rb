@@ -129,7 +129,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text, "question_index" => 3},
       {"level_id" => sub_level6.id.to_s, "type" => "Match", "name" => sub_level6.name, 'is_validated' => false, 'can_have_feedback' => false,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level6.get_question_text, "question" => sub_level6.question, "question_index" => 4},
-      {"level_id" => sub_level7.id.to_s, "type" => "Weblab", "name" => sub_level7.name, 'is_validated' => false, 'can_have_feedback' => false,
+      {"level_id" => sub_level7.id.to_s, "type" => "Match", "name" => sub_level7.name, 'is_validated' => false, 'can_have_feedback' => false,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level7.get_question_text, "question" => sub_level7.question, "question_index" => 5},
       {"level_id" => sub_level8.id.to_s, "type" => "Match", "name" => sub_level8.name, 'is_validated' => false, 'can_have_feedback' => false,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level8.get_question_text, "question" => sub_level8.question, "question_index" => 6},
