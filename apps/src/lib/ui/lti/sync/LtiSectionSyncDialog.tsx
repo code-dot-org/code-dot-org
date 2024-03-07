@@ -4,6 +4,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {LmsLinks} from '@cdo/apps/util/sharedConstants';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {
   LtiSectionSyncDialogProps,
@@ -89,12 +90,13 @@ export default function LtiSectionSyncDialog({
    * @param syncResult
    */
   const syncResultView = (syncResult: LtiSectionSyncResult) => {
-    const aboutSectionsUrl = '/sections';
-    const aboutSyncingUrl = '/syncing';
+    const aboutSectionsUrl =
+      'https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section';
+    const aboutSyncingUrl = LmsLinks.ROSTER_SYNC_INSTRUCTIONS_URL;
     const dialogTitle = i18n.ltiSectionSyncDialogTitle();
     const dialogDescription = i18n.ltiSectionSyncDialogDescription({
-      aboutSectionsUrl: aboutSectionsUrl,
-      aboutSyncingUrl: aboutSyncingUrl,
+      aboutSectionsUrl,
+      aboutSyncingUrl,
     });
     let sectionListItems;
     if (syncResult && syncResult.all) {
