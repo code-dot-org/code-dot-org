@@ -70,6 +70,9 @@ class LtiV1Controller < ApplicationController
   end
 
   def authenticate
+    # This checks to see if the param new_tab=true is present, which would
+    # indicate we have already mitigated an iframe launch, and are ready to
+    # proceed with the rest of the authentication flow.
     unless params[:new_tab]
       id_token = params[:id_token]
       state = params[:state]
@@ -198,8 +201,8 @@ class LtiV1Controller < ApplicationController
   end
 
   # GET /lti/v1/iframe
-  # Detects if LMS is trying open Code.org in an iframe, prompt user to open in
-  # new tab. The experience is unchanged to non-iframe users.
+  # Detects if an LMS is trying open Code.org in an iframe and prompts user to
+  # open in new tab. The experience is unchanged to non-iframe users.
   def iframe
     auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
     id_token_param = params[:id_token]

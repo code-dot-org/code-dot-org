@@ -9,6 +9,7 @@
         const auth_url = `#{@auth_url}`;
         const iframe_message = `#{t('lti.iframe_message')}`;
         const iframe_button = `#{t('lti.iframe_button')}`;
+        // Determine if we are running in an iframe
         if (window.location !== window.parent.location) {
           var messageDiv = document.createElement("div");
           messageDiv.style.position = "fixed";
