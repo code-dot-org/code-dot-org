@@ -61,7 +61,7 @@ class PersonalProjectsNameCell extends Component {
                   iconName="circle-exclamation"
                   iconStyle="solid"
                   title="project-info-icon"
-                  className={moduleStyles.infoIcon}
+                  className="infoIcon"
                 />
               </button>
             )}

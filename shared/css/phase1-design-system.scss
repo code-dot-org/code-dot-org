@@ -173,6 +173,16 @@ p {
       }
     }
   }
+
+  .infoIcon {
+    color: $neutral_dark60;
+    font-size: 1rem;  
+  }
+  
+  .infoIcon:hover {
+    color: $neutral_dark90;
+    font-size: 1rem;  
+  }
 }
 
 .courseexplorer {
