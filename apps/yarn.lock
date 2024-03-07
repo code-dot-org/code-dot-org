@@ -8590,7 +8590,6 @@ __metadata:
     firmata: ^2.2.0
     focus-trap-react: ^10.1.1
     fork-ts-checker-webpack-plugin: ^8.0.0
-    glob: 5.0.14
     grunt: ^1.4.1
     grunt-cli: 1.4.3
     grunt-concurrent: 1.0.1
@@ -15062,19 +15061,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"glob@npm:5.0.14":
-  version: 5.0.14
-  resolution: "glob@npm:5.0.14"
-  dependencies:
-    inflight: ^1.0.4
-    inherits: 2
-    minimatch: ^2.0.1
-    once: ^1.3.0
-    path-is-absolute: ^1.0.0
-  checksum: 77e2b6bdcb0e14fe1feab0ae249bcb18da737fee41ba1f5d629746b229f6168817178b5621e66c9b7e54182867da3587eb05aed6192f2fd7b81d064256bfa4f0
-  languageName: node
-  linkType: hard
-
 "glob@npm:7.1.2":
   version: 7.1.2
   resolution: "glob@npm:7.1.2"
@@ -20345,15 +20331,6 @@ es6-shim@latest:
   dependencies:
     brace-expansion: ^2.0.1
   checksum: 253487976bf485b612f16bf57463520a14f512662e592e95c571afdab1442a6a6864b6c88f248ce6fc4ff0b6de04ac7aa6c8bb51e868e99d1d65eb0658a708b5
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:^2.0.1":
-  version: 2.0.10
-  resolution: "minimatch@npm:2.0.10"
-  dependencies:
-    brace-expansion: ^1.0.0
-  checksum: 70c99221e7db80dde6027b1b7a545e6a8247a094456cf5f1d82dcf62fbc83b196c85825e807da0c818ab93fa9276085c63c35e4cae721c51f38d5b35d317a7e9
   languageName: node
   linkType: hard
 
