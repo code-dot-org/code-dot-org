@@ -8,6 +8,7 @@ import {
   ProjectInfoDialogState,
   hideProjectInfoDialog,
 } from './projectInfoDialogRedux';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
@@ -31,7 +32,9 @@ const ProjectInfoDialog: React.FunctionComponent = () => {
       useUpdatedStyles
       style={styles.dialog}
     >
-      <h3>Project Info</h3>
+      <Typography semanticTag="h2" visualAppearance="heading-lg">
+        {i18n.projectInfo()}
+      </Typography>
       <p>{i18n.congratsProjectSelected()}</p>
       <p>{i18n.projectFrozenNotice()}</p>
       <SafeMarkdown
