@@ -181,12 +181,11 @@ class AdminUsersController < ApplicationController
   end
 
   def delete_progress
-    params.require([:user_id, :script_id])
+    params.require([:user_id, :script_id, :reason])
 
     user_id = params[:user_id]
     script_id = params[:script_id]
     user_storage_id = storage_id_for_user_id(user_id)
-    reason = params.fetch(:reason, nil)
 
     FirehoseClient.instance.put_record(
       :analysis,
@@ -197,7 +196,7 @@ class AdminUsersController < ApplicationController
         script_id: script_id,
         data_json: {
           signed_in_user: current_user.username,
-          reason: reason
+          reason: params[:reason]
         }.to_json
       }
     )
