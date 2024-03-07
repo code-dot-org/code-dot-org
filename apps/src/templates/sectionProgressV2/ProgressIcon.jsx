@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
 import FontAwesome from '../FontAwesome';
@@ -66,4 +67,5 @@ export default function ProgressIcon({itemType, colorOverride}) {
 
 ProgressIcon.propTypes = {
   itemType: ITEM_TYPE_SHAPE,
+  colorOverride: PropTypes.string,
 };

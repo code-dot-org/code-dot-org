@@ -19,4 +19,5 @@ export default function LegendItem({itemType, labelText, colorOverride}) {
 LegendItem.propTypes = {
   labelText: PropTypes.string,
   itemType: ITEM_TYPE_SHAPE,
+  colorOverride: PropTypes.string,
 };
