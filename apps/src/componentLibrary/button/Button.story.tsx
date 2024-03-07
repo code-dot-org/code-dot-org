@@ -23,12 +23,19 @@ const SingleTemplate: Story<ButtonProps> = args => <Button {...args} />;
 const MultipleTemplate: Story<{
   components: ButtonProps[];
 }> = args => (
-  <>
+  <div
+    style={{
+      display: 'flex',
+      flexFlow: 'wrap',
+      alignItems: 'flex-start',
+      gap: '20px',
+    }}
+  >
     {args.components?.map(componentArg => (
       // TODO: fix key
       <Button key={componentArg.size} {...componentArg} />
     ))}
-  </>
+  </div>
 );
 
 export const DefaultButton = SingleTemplate.bind({});
@@ -43,6 +50,99 @@ DisabledButton.args = {
   text: 'Button',
   disabled: true,
   size: 'm',
+};
+
+export const GroupOfColorsOfButtons = MultipleTemplate.bind({});
+GroupOfColorsOfButtons.args = {
+  components: [
+    {
+      text: 'Button Primary Purple',
+      color: 'purple',
+      size: 'm',
+    },
+    {
+      text: 'Button Primary Black',
+      color: 'black',
+      size: 'm',
+    },
+    {
+      text: 'Button Primary White',
+      color: 'white',
+      size: 'm',
+    },
+    {
+      text: 'Button Secondary Purple',
+      color: 'purple',
+      type: 'secondary',
+      size: 'm',
+    },
+    {
+      text: 'Button Secondary Black',
+      color: 'black',
+      type: 'secondary',
+      size: 'm',
+    },
+    {
+      text: 'Button Secondary White',
+      color: 'white',
+      type: 'secondary',
+      size: 'm',
+    },
+    {
+      text: 'Button Tertiary Purple',
+      color: 'purple',
+      type: 'tertiary',
+      size: 'm',
+    },
+    {
+      text: 'Button Tertiary Black',
+      color: 'black',
+      type: 'tertiary',
+      size: 'm',
+    },
+    {
+      text: 'Button Tertiary White',
+      color: 'white',
+      type: 'tertiary',
+      size: 'm',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: 'purple',
+      type: 'iconBorder',
+      size: 'm',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: 'black',
+      type: 'iconBorder',
+      size: 'm',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: 'white',
+      type: 'iconBorder',
+      size: 'm',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: 'purple',
+      type: 'iconOnly',
+      size: 'm',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: 'black',
+      type: 'iconOnly',
+      size: 'm',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: 'white',
+      type: 'iconOnly',
+      size: 'm',
+    },
+  ],
 };
 
 export const GroupOfSizesOfButtons = MultipleTemplate.bind({});

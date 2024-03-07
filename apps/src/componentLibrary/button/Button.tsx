@@ -8,17 +8,25 @@ import FontAwesomeV6Icon, {
 
 import moduleStyles from './button.module.scss';
 
+type ButtonType =
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'iconBorder'
+  | 'iconOnly';
+type ButtonColor = 'purple' | 'black' | 'white';
+
 export interface ButtonProps {
   /** Button Component type */
-  type?: 'primary' | 'secondary' | 'tertiary' | 'iconBorder' | 'iconOnly';
+  type?: ButtonType;
   /** Custom class name */
   className?: string;
   /** Button id */
   id?: string;
   /** Button color */
-  color?: 'purple' | 'black' | 'white';
+  color?: ButtonColor;
   /** Button text */
-  text: string;
+  text?: string;
   /** Is button disabled */
   disabled?: boolean;
   //
@@ -26,6 +34,7 @@ export interface ButtonProps {
   // isPending?: boolean;
   // /** Button pending text */
   // pendingText?: string;
+
   // /** Is Button styled as text */
   // styleAsText?: boolean;
 
@@ -35,6 +44,8 @@ export interface ButtonProps {
   size?: ComponentSizeXSToL;
   /** Left Button icon */
   iconLeft?: FontAwesomeV6IconProps;
+  /** Button icon (When used in IconOnly mode)*/
+  icon?: FontAwesomeV6IconProps;
   /** Left Button icon */
   iconRight?: FontAwesomeV6IconProps;
   /** Whether we use \<a> (when set to true) or \<button> (when false) html tag for Button component.
@@ -82,6 +93,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   ariaLabel,
   iconLeft,
   iconRight,
+  icon,
   size = 'm',
   type = 'primary',
   color = 'purple',
@@ -97,15 +109,17 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   value,
   name,
 }) => {
-  const Tag = useAsLink ? 'a' : 'button';
+  const ButtonTag = useAsLink ? 'a' : 'button';
 
   const tagSpecificProps =
-    Tag === 'a'
+    ButtonTag === 'a'
       ? {href, target, download, title}
       : {type: buttonType, onClick, value, name};
-  console.log(Tag, tagSpecificProps);
+  console.log(ButtonTag, tagSpecificProps);
+
+  // TODO: Create error throwing function to check if correct props combination is passed
   return (
-    <Tag
+    <ButtonTag
       className={classNames(
         moduleStyles.button,
         moduleStyles[`button-${type}`],
@@ -119,9 +133,10 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       {...tagSpecificProps}
     >
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      <span>{text}</span>
+      {icon && <FontAwesomeV6Icon {...icon} />}
+      {text && <span>{text}</span>}
       {iconRight && <FontAwesomeV6Icon {...iconRight} />}
-    </Tag>
+    </ButtonTag>
   );
 };
 

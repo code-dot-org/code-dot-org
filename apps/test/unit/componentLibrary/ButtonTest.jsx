@@ -8,10 +8,10 @@ import {expect} from '../../util/reconfiguredChai';
 import Button from '@cdo/apps/componentLibrary/button';
 
 describe('Design System - Button', () => {
-  it('Button - renders with correct label', () => {
+  it('Button - renders with correct text', () => {
     render(<Button text="Button test" />);
 
-    const button = screen.getByText('test-checkbox');
+    const button = screen.getByText('Button test');
     expect(button).to.exist;
   });
 
