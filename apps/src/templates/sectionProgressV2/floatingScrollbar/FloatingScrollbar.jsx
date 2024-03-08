@@ -31,7 +31,7 @@ export default function FloatingScrollbar({
   const [childWidth, setChildWidth] = React.useState(0);
   const [scrollVisible, setScrollVisible] = React.useState(true);
 
-  if (children.length > 1) {
+  if (children.length !== 1) {
     throw new Error('FloatingScrollbar only supports a single child');
   }
 
