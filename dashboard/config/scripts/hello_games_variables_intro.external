@@ -7,12 +7,20 @@ markdown <<MARKDOWN
 <div style= "width:60%"> 
 <img src="https://images.code.org/78479850dd21f464e54c84295d4839be-image-1709338406148.png" style="width: 40%; margin-right: 20px; float: left;">
 
-###Variables are like labeled boxes that hold information (data). You can change what's inside them as the program runs. They help us keep track of the information as you play the game.
+####Variables are like boxes with labels that store information. 
+
+<br>
+<br>
+
+####You can change the information inside these boxes while the game is being played, helping you keep track of important details.
+
 </div>
 
 <br>
 <br>
 
+<br>
+<br>
 
 
 
