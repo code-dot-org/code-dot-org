@@ -40,9 +40,6 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 // by FeedbackUtils.blockShouldBeCounted_
 const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
 
-const FIREHOSE_STUDY = 'feedback_dialog';
-let dialog_type = 'default';
-
 /**
  * Bag of utility functions related to building and displaying feedback
  * to students.
@@ -259,15 +256,6 @@ FeedbackUtils.prototype.displayFeedback = function (
   const showPuzzleRatingButtons =
     options.response && options.response.puzzle_ratings_enabled;
 
-  if (showingSharing) {
-    dialog_type = 'share';
-    if (idealBlocks !== Infinity) {
-      dialog_type += '_validate';
-    }
-  } else if (idealBlocks !== Infinity) {
-    dialog_type = 'validate';
-  }
-
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
@@ -398,7 +386,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       feedback.appendChild(puzzleRatingUtils.buildPuzzleRatingButtons());
     }
 
-    dom.addClickTouchEvent(continueButton, function () { // TODOLOG
+    dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
       recordShare('FINISH_BUTTON_CERTIFICATE', project.getStandaloneApp());
 
@@ -439,7 +427,7 @@ FeedbackUtils.prototype.displayFeedback = function (
   const publishButtonSelector = '#publish-to-project-gallery-button';
   const publishButton = feedback.querySelector(publishButtonSelector);
   if (publishButton) {
-    dom.addClickTouchEvent(publishButton, () => { // TODOLOG
+    dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
       recordShare('FINISH_SHARING_PUBLISH', project.getStandaloneApp());
       feedbackDialog.hide();
@@ -524,7 +512,7 @@ FeedbackUtils.prototype.displayFeedback = function (
 function recordShare(type, appType) {
   if (Object.prototype.hasOwnProperty.call(EVENTS, type)) {
     analyticsReporter.sendEvent(type, {
-      lab_type: appType
+      lab_type: appType,
     });
   }
 }
@@ -960,7 +948,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
     '#sharing-dialog-copy-button'
   );
   if (sharingCopyButton) {
-    dom.addClickTouchEvent(sharingCopyButton, function () { // TODOLOG
+    dom.addClickTouchEvent(sharingCopyButton, function () {
       recordShare('FINISH_SHARING_LINK_COPY', project.getStandaloneApp());
       copyToClipboard(options.shareLink, () => {
         sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
@@ -971,7 +959,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   const twitterButtonSelector = '#twitter-button';
   const twitterButton = sharingDiv.querySelector(twitterButtonSelector);
   if (twitterButton) {
-    dom.addClickTouchEvent(twitterButton, () => { //TODOLOG
+    dom.addClickTouchEvent(twitterButton, () => {
       recordShare('FINISH_SHARING_TWITTER', project.getStandaloneApp());
     });
   }
@@ -979,7 +967,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   const facebookButtonSelector = '#facebook-button';
   const facebookButton = sharingDiv.querySelector(facebookButtonSelector);
   if (facebookButton) {
-    dom.addClickTouchEvent(facebookButton, () => { //TODOLOG
+    dom.addClickTouchEvent(facebookButton, () => {
       recordShare('FINISH_SHARING_FB', project.getStandaloneApp());
     });
   }
@@ -1002,8 +990,11 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
   //  QR Code & SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  dom.addClickTouchEvent(sharingPhone, function () { // 
-    recordShare('FINISH_SHARING_LINK_SEND_TO_PHONE', project.getStandaloneApp());
+  dom.addClickTouchEvent(sharingPhone, function () {
+    recordShare(
+      'FINISH_SHARING_LINK_SEND_TO_PHONE',
+      project.getStandaloneApp()
+    );
     var sendToPhone = sharingDiv.querySelector('#send-to-phone');
     if ($(sendToPhone).is(':hidden')) {
       $(sendToPhone).show();
