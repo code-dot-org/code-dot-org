@@ -21,9 +21,6 @@ export const styles = {
   xIcon: {
     paddingRight: 5,
   },
-  deleteOption: {
-    paddingBottom: 10,
-  },
 };
 
 export class PersonalProjectsTableActionsCell extends Component {
@@ -82,14 +79,12 @@ export class PersonalProjectsTableActionsCell extends Component {
             <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
+            {!this.props.isFrozen && <MenuBreak />}
             {!this.props.isFrozen && (
-              <div style={styles.deleteOption}>
-                <MenuBreak />
-                <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-                  <FontAwesome icon="times-circle" style={styles.xIcon} />
-                  {i18n.delete()}
-                </PopUpMenu.Item>
-              </div>
+              <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+                <FontAwesome icon="times-circle" style={styles.xIcon} />
+                {i18n.delete()}
+              </PopUpMenu.Item>
             )}
           </QuickActionsCell>
         )}
