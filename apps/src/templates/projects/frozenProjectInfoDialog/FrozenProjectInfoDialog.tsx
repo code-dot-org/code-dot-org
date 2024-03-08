@@ -5,23 +5,23 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import {
-  ProjectInfoDialogState,
-  hideProjectInfoDialog,
-} from './projectInfoDialogRedux';
+  FrozenProjectInfoDialogState,
+  hideFrozenProjectInfoDialog,
+} from './frozenProjectInfoDialogRedux';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const ProjectInfoDialog: React.FunctionComponent = () => {
+const FrozenProjectInfoDialog: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const isOpen = useSelector(
-    (state: {projectInfoDialog: ProjectInfoDialogState}) =>
-      state.projectInfoDialog.isOpen
+    (state: {frozenProjectInfoDialog: FrozenProjectInfoDialogState}) =>
+      state.frozenProjectInfoDialog.isOpen
   );
   const onClose = useCallback(
-    () => dispatch(hideProjectInfoDialog()),
+    () => dispatch(hideFrozenProjectInfoDialog()),
     [dispatch]
   );
 
@@ -54,7 +54,7 @@ const ProjectInfoDialog: React.FunctionComponent = () => {
   );
 };
 
-export default ProjectInfoDialog;
+export default FrozenProjectInfoDialog;
 
 const styles = {
   dialog: {

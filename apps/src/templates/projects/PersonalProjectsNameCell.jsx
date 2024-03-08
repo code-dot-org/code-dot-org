@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import {updateProjectName} from './projectsRedux';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {showProjectInfoDialog} from '@cdo/apps/templates/projects/projectInfoDialog/projectInfoDialogRedux';
+import {showFrozenProjectInfoDialog} from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import moduleStyles from './personal-projects-name-cell.module.scss';
 
 class PersonalProjectsNameCell extends Component {
@@ -16,15 +16,15 @@ class PersonalProjectsNameCell extends Component {
     updatedName: PropTypes.string,
     updateProjectName: PropTypes.func.isRequired,
     isFrozen: PropTypes.bool,
-    showProjectInfoDialog: PropTypes.func,
+    showFrozenProjectInfoDialog: PropTypes.func,
   };
 
   onChangeName = e => {
     this.props.updateProjectName(this.props.projectId, e.target.value);
   };
 
-  showProjectInfo = () => {
-    this.props.showProjectInfoDialog();
+  showFrozenProjectInfo = () => {
+    this.props.showFrozenProjectInfoDialog();
   };
 
   render() {
@@ -55,7 +55,7 @@ class PersonalProjectsNameCell extends Component {
               <button
                 type="button"
                 className={moduleStyles.infoButton}
-                onClick={this.showProjectInfo}
+                onClick={this.showFrozenProjectInfo}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-exclamation"
@@ -90,8 +90,8 @@ export default connect(
     updateProjectName(projectId, updatedName) {
       dispatch(updateProjectName(projectId, updatedName));
     },
-    showProjectInfoDialog() {
-      dispatch(showProjectInfoDialog());
+    showFrozenProjectInfoDialog() {
+      dispatch(showFrozenProjectInfoDialog());
     },
   })
 )(PersonalProjectsNameCell);

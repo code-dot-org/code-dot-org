@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/redux';
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
-import projectInfoDialog from '@cdo/apps/templates/projects/projectInfoDialog/projectInfoDialogRedux';
+import frozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
@@ -21,7 +21,7 @@ describe('PersonalProjectsTable', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({publishDialog, deleteDialog, projectInfoDialog});
+    registerReducers({publishDialog, deleteDialog, frozenProjectInfoDialog});
   });
 
   afterEach(() => {
