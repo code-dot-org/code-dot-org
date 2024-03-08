@@ -24,17 +24,20 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   const [messages, setMessages] = useState<string[]>(retrievalContexts.value);
   const [newMessage, setNewMessage] = useState('');
 
-  const onAdd = () => {
+  const onAdd = useCallback(() => {
     setMessages([...messages, newMessage]);
     setNewMessage('');
     document.getElementById('retrieval-input')?.focus();
-  };
+  }, [messages, setMessages, newMessage, setNewMessage]);
 
-  const onRemove = (index: number) => {
-    const messagesCopy = [...messages];
-    messagesCopy.splice(index, 1);
-    setMessages(messagesCopy);
-  };
+  const onRemove = useCallback(
+    (index: number) => {
+      const messagesCopy = [...messages];
+      messagesCopy.splice(index, 1);
+      setMessages(messagesCopy);
+    },
+    [messages, setMessages]
+  );
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>

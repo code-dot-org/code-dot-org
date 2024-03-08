@@ -1,3 +1,7 @@
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
+import {Abstract} from 'blockly/core/events/events_abstract';
+import {BlockCreate} from 'blockly/core/events/events_block_create';
+
 // This is copied and modified from
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
 // We need a bug fix not present in our current (v9) version of the mixin, and
@@ -10,7 +14,7 @@ const procedureCallerOnChangeMixin = {
    * @param event Change event.
    * @this {Blockly.Block}
    */
-  onchange: function (event) {
+  onchange: function (this: ProcedureBlock, event: Abstract) {
     // If the block is in an embedded workspace, we don't create a procedure definition.
     // An embedded workspace does not need any procedure definitions, and trying to add them
     // will cause confusing UI (for example, an empty procedure definition in a hint).
@@ -20,7 +24,7 @@ const procedureCallerOnChangeMixin = {
       Blockly.isEmbeddedWorkspace(this.workspace)
     )
       return;
-    if (event.type === Blockly.Events.BLOCK_MOVE) this.updateArgsMap_(true);
+    if (event.type === Blockly.Events.BLOCK_MOVE) this.updateArgsMap_();
     if (
       event.type !== Blockly.Events.FINISHED_LOADING &&
       !this.eventIsCreatingThisBlockDuringPaste_(event)
@@ -34,7 +38,10 @@ const procedureCallerOnChangeMixin = {
     // paste) and there is no matching definition.  In this case, create
     // an empty definition block with the correct signature.
     const name = this.getFieldValue('NAME');
-    let def = Blockly.Procedures.getDefinition(name, this.workspace);
+    let def: ProcedureBlock | null = Blockly.Procedures.getDefinition(
+      name,
+      this.workspace
+    ) as ProcedureBlock;
     if (!this.defMatches_(def)) def = null;
     if (!def) {
       // We have no def nor procedure model.
@@ -56,10 +63,14 @@ const procedureCallerOnChangeMixin = {
    * @param event The event to check.
    * @returns True if the given event is a paste event for this block.
    */
-  eventIsCreatingThisBlockDuringPaste_(event) {
+  eventIsCreatingThisBlockDuringPaste_(
+    this: ProcedureBlock,
+    event: Abstract
+  ): boolean {
     return (
       event.type === Blockly.Events.BLOCK_CREATE &&
-      (event.blockId === this.id || event.ids.indexOf(this.id) !== -1) &&
+      ((event as BlockCreate).blockId === this.id ||
+        (event as BlockCreate).ids?.indexOf(this.id) !== -1) &&
       // Record undo makes sure this is during paste.
       event.recordUndo
     );
@@ -71,7 +82,7 @@ const procedureCallerOnChangeMixin = {
    * @param defBlock The definition block to check against.
    * @returns Whether the def block matches or not.
    */
-  defMatches_(defBlock) {
+  defMatches_(this: ProcedureBlock, defBlock: ProcedureBlock | null) {
     return (
       defBlock &&
       defBlock.type === this.defType_ &&
@@ -88,7 +99,7 @@ const procedureCallerOnChangeMixin = {
    * @returns The procedure model associated with the new
    *     procedure definition block.
    */
-  createDef_(name, params = []) {
+  createDef_(this: ProcedureBlock, name: string, params: string[] = []) {
     const xy = this.getRelativeToSurfaceXY();
     const newName = Blockly.Procedures.findLegalName(name, this);
     this.renameProcedure(name, newName);
@@ -106,7 +117,7 @@ const procedureCallerOnChangeMixin = {
       blockDef,
       this.getTargetWorkspace_(),
       {recordUndo: true}
-    );
+    ) as ProcedureBlock;
     return block.getProcedureModel();
   },
 };

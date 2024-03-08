@@ -28,7 +28,7 @@ const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   intendedUse: '',
   limitationsAndWarnings: '',
   testingAndEvaluation: '',
-  askAboutTopics: [],
+  exampleTopics: [],
 };
 
 const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
@@ -40,13 +40,13 @@ const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
     value: EMPTY_MODEL_CARD_INFO,
     visibility: Visibility.EDITABLE,
   },
-  canSwitchPanels: true,
+  hidePresentationPanel: false,
 };
 
 // Make sure all fields have a visibility specified.
 function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
   for (const key of Object.keys(data)) {
-    if (key === 'canSwitchPanels') {
+    if (key === 'hidePresentationPanel') {
       continue;
     }
     const field = data[key as keyof AiCustomizations];
@@ -213,28 +213,27 @@ const EditAiCustomizations: React.FunctionComponent<{
           <BodyOneText>Additional Configuration</BodyOneText>
           <BodyFourText>
             <i>
-              If students can switch between the edit and presentation panels.
-              If unchecked, students will be locked to the edit panel only.
+              Students always have access to the Edit View, where they can
+              customize their chatbot. Published chatbots are able to be viewed
+              in a Presentation View which mimics a user-centered experience by
+              hiding instructions and displaying the model card. Use the setting
+              below to hide the option to enter presentation view in a level.
             </i>
           </BodyFourText>
           <div className={moduleStyles.fieldRow}>
             <label
-              htmlFor="canSwitchPanels"
+              htmlFor="hidePresentationPanel"
               className={moduleStyles.inlineLabel}
             >
-              Can Switch Panels?
+              Hide Presentation Panel
             </label>
             <Checkbox
-              name="canSwitchPanels"
-              checked={
-                aiCustomizations.canSwitchPanels === undefined
-                  ? true
-                  : aiCustomizations.canSwitchPanels
-              }
+              name="hidePresentationPanel"
+              checked={aiCustomizations.hidePresentationPanel || false}
               onChange={e => {
                 setAiCustomizations({
                   ...aiCustomizations,
-                  canSwitchPanels: e.target.checked,
+                  hidePresentationPanel: e.target.checked,
                 });
               }}
             />

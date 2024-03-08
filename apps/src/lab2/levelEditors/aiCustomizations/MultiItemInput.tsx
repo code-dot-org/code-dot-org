@@ -14,18 +14,27 @@ export const MultiItemInput: React.FunctionComponent<{
   const Tag = multiline ? 'textarea' : 'input';
   const showPlus = max === undefined || items.length < max;
   return (
-    <div className={moduleStyles.multiItemInput}>
-      {items.map((item, index) => {
-        return (
-          <Tag
-            key={index}
-            type="text"
-            value={item}
-            className={classNames(multiline && moduleStyles.textarea)}
-            onChange={e => onChange(index, e.target.value)}
-          />
-        );
-      })}
+    <div className={moduleStyles.multiItemContainer}>
+      <div
+        className={classNames(
+          moduleStyles.multiItemInput,
+          multiline && moduleStyles.multiItemInputMultiline
+        )}
+      >
+        {items.map((item, index) => {
+          return (
+            <Tag
+              key={index}
+              type="text"
+              value={item}
+              className={classNames(
+                multiline ? moduleStyles.textarea : moduleStyles.inlineLabel
+              )}
+              onChange={e => onChange(index, e.target.value)}
+            />
+          );
+        })}
+      </div>
       <div className={moduleStyles.buttonsRow}>
         {showPlus && (
           <button

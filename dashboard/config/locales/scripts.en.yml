@@ -10429,6 +10429,8 @@ en:
               name: Game Jam - Create
             lesson-10:
               name: Game Jam - Play
+            lesson-11:
+              name: Game Mechanics
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff

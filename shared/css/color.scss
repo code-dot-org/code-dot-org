@@ -2,7 +2,7 @@
 
 // Please keep this file simple; it should only contain color definitions
 //   and aliases.  Variables defined in this file are exported to
-//   apps/src/color.js during the apps build process.
+//   apps/src/util/color.js during the apps build process.
 
 $black: #000;
 $background_black: #121416;
@@ -203,6 +203,11 @@ $light_gray_800: #54595E;
 $light_gray_900: #3F444B;
 
 $light_affirmative_100: #E2F1E2;
+$light_affirmative_500: #3EA33E;
+
+$light_negative_500: #E5311A;
+
+$light_caution_500: #F9CB28;
 
 $light_info_100: #DCEFFB;
 $light_info_500: #1892E3;

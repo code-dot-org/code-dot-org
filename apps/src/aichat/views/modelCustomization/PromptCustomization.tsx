@@ -6,12 +6,7 @@ import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {AichatLevelProperties, Visibility} from '@cdo/apps/aichat/types';
 import styles from '../model-customization-workspace.module.scss';
 import {isHidden, isDisabled} from './utils';
-
-const DEFAULT_PROMPT_CUSTOMIZATIONS = {
-  botName: {value: '', visibility: Visibility.EDITABLE},
-  temperature: {value: 0.5, visibility: Visibility.EDITABLE},
-  systemPrompt: {value: '', visibility: Visibility.EDITABLE},
-};
+import {DEFAULT_PROMPT_CUSTOMIZATIONS} from './constants';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const {botName, temperature, systemPrompt} = useSelector(

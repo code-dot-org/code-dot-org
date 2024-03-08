@@ -52,7 +52,7 @@ export interface ModelCardInfo {
   intendedUse: string;
   limitationsAndWarnings: string;
   testingAndEvaluation: string;
-  askAboutTopics: string[];
+  exampleTopics: string[];
 }
 
 // Visibility for AI customization fields set by levelbuilders.
@@ -72,6 +72,6 @@ export type LevelAiCustomizations = {
     visibility: Visibility;
   };
 } & {
-  /** If the student can switch between the edit and presentation panels. */
-  canSwitchPanels?: boolean;
+  /** If the presentation panel is hidden from the student. */
+  hidePresentationPanel?: boolean;
 };
