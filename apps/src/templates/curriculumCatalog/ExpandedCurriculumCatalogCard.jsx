@@ -287,6 +287,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </Heading4>
                 <hr className={style.thickDivider} />
                 <img
+                  id="similarCurriculumImage"
                   src={recommendedSimilarCurriculum.image}
                   alt={recommendedSimilarCurriculum.display_name}
                   style={{height: '100%'}}
