@@ -1,0 +1,31 @@
+@import 'color';
+@import 'font';
+
+#lti-early-access-banner {
+  background-color: $light_secondary_100;
+  display: flex;
+  padding: 1rem;
+
+  & p {
+    font-size: initial;
+    line-height: normal;
+    margin: 0;
+  }
+
+  & a {
+    color: $brand_secondary_default;
+    text-decoration: underline;
+  }
+
+  & .close {
+    color: initial;
+    text-decoration: none;
+    margin-left: auto;
+    font-size: initial;
+    line-height: normal;
+
+    & i {
+      margin-left: 1rem;
+    }
+  }
+}

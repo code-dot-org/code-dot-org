@@ -92,6 +92,9 @@
         = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'help_button.haml')), type: :haml, locals: hamburger_options
         = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'hamburger.haml')), type: :haml, locals: hamburger_options
 
+- if current_user && Policies::Lti.show_early_access_banner?(current_user)
+  = render partial: 'lti/v1/early_access_banner'
+
 :ruby
   if should_show_progress
     view_as = @user || current_user

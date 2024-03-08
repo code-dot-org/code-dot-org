@@ -151,4 +151,35 @@ class Policies::LtiTest < ActiveSupport::TestCase
       assert_equal true, Policies::Lti.early_access_closed?
     end
   end
+
+  class ShowEarlyAccessBannerTest < ActiveSupport::TestCase
+    setup do
+      @user = build(:teacher)
+
+      Policies::Lti.stubs(:early_access?).returns(true)
+      Policies::Lti.stubs(:lti?).returns(true)
+    end
+
+    test 'returns true when early access and user is LTI teacher' do
+      assert Policies::Lti.show_early_access_banner?(@user)
+    end
+
+    test 'returns false when user is not a teacher' do
+      @user = build(:student)
+
+      refute Policies::Lti.show_early_access_banner?(@user)
+    end
+
+    test 'returns false when early access is not enabled' do
+      Policies::Lti.stubs(:early_access?).returns(false)
+
+      refute Policies::Lti.show_early_access_banner?(@user)
+    end
+
+    test 'returns false when user is not LTI' do
+      Policies::Lti.stubs(:lti?).returns(false)
+
+      refute Policies::Lti.show_early_access_banner?(@user)
+    end
+  end
 end

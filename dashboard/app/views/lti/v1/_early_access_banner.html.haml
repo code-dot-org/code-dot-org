@@ -1,0 +1,48 @@
+%div#lti-early-access-banner
+  != t('lti.integration.early_access.banner.text', bug_report_url: SharedConstants::LMS_LINKS.INTEGRATION_BUG_REPORT_URL, markdown: true)
+  %a.close{href: '#'}
+    %i.fa.fa-close
+
+  :javascript
+    var localStorageKey = 'lti-eab-#{Digest::MD5.hexdigest(current_user.id.to_s)}';
+    var ltiBanner = $('#lti-early-access-banner');
+
+    if (localStorage[localStorageKey] === 'closed') {
+      ltiBanner.hide();
+    } else {
+      ltiBanner.show();
+
+      $('#codeApp').ready(function() {
+        $('#codeApp').each(function() {
+          adjustCodeAppPosition();
+
+          // Adjusts #codeApp position relative to the banner when its class is dynamically changed.
+          // For example, the `.pin_bottom` class makes its position absolute, so it overlaps the banner.
+          var codeAppObserver = new MutationObserver(adjustCodeAppPosition);
+          codeAppObserver.observe(this, {attributes: true, attributeFilter: ['class']});
+        });
+      });
+    }
+
+    // Closes the banner and store the state in localStorage on the close button click.
+    ltiBanner.find('.close').click(function() {
+      ltiBanner.hide();
+      localStorage.setItem(localStorageKey, 'closed');
+      adjustCodeAppPosition();
+    });
+
+    // Adjusts the absolute top position of the #codeApp relative to the banner.
+    var adjustCodeAppPosition = function() {
+      var codeApp = $('#codeApp');
+      if (codeApp.css('position') !== 'absolute') return;
+
+      var codeAppStyle = codeApp[0].style;
+      codeAppStyle.setProperty('top', null);
+
+      var codeAppTop = parseInt(codeApp.css('top'));
+      if (isNaN(codeAppTop)) return;
+
+      var newCodeAppTop = ltiBanner.is(':visible') ? `${codeAppTop + ltiBanner.outerHeight(true)}px` : null;
+      codeAppStyle.setProperty('top', newCodeAppTop, 'important');
+      window.dispatchEvent(new Event('resize'));
+    };
