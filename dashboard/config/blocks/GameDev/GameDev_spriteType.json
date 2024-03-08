@@ -1,0 +1,33 @@
+{
+  "category": "Sprites",
+  "config": {
+    "expression": "{group: VALUE}",
+    "name": "spriteType",
+    "blockText": "{TYPE}",
+    "returnType": "Sprite",
+    "style": "sprite_blocks",
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "player sprites",
+            "\"players\""
+          ],
+          [
+            "environment sprites",
+            "\"walls\""
+          ],
+          [
+            "object sprites",
+            "\"objects\""
+          ],
+          [
+            "enemy sprites",
+            "\"enemies\""
+          ]
+        ]
+      }
+    ]
+  }
+}
