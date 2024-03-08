@@ -1,29 +1,17 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {AichatLevelProperties} from '../types';
 import Tabs, {Tab} from './tabs/Tabs';
 import PromptCustomization from './modelCustomization/PromptCustomization';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
 import PublishNotes from './modelCustomization/PublishNotes';
 import styles from './model-customization-workspace.module.scss';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-
-const DEFAULT_RETRIEVAL_CONTEXTS = {
-  value: ['retrieval 1', 'retrieval 2'],
-  visibility: 'editable',
-};
-
-const DEFAULT_MODEL_CARD_INFO = {
-  value: {
-    description: '',
-    intendedUse: '',
-    limitationsAndWarnings: '',
-    testingAndEvaluation: '',
-    askAboutTopics: '',
-  },
-  visibility: 'editable',
-};
+import {
+  DEFAULT_MODEL_CARD_INFO,
+  DEFAULT_RETRIEVAL_CONTEXTS,
+} from './modelCustomization/constants';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   const {retrievalContexts, modelCardInfo} = useSelector(

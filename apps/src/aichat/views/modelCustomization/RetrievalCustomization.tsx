@@ -1,17 +1,13 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {AichatLevelProperties} from '../../types';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-
-const DEFAULT_RETRIEVAL_CONTEXTS = {
-  value: ['retrieval 1', 'retrieval 2'],
-  visibility: 'editable',
-};
+import {DEFAULT_RETRIEVAL_CONTEXTS} from './constants';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const retrievalContexts = useSelector(

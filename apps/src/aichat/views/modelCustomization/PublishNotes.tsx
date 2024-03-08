@@ -5,6 +5,7 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import styles from '../model-customization-workspace.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {AichatLevelProperties, ModelCardInfo} from '@cdo/apps/aichat/types';
+import {DEFAULT_MODEL_CARD_INFO} from './constants';
 
 const INPUTS: {id: keyof ModelCardInfo; text: string}[] = [
   {id: 'description', text: 'Description'},
@@ -12,17 +13,6 @@ const INPUTS: {id: keyof ModelCardInfo; text: string}[] = [
   {id: 'limitationsAndWarnings', text: 'Limitations and Warnings'},
   {id: 'testingAndEvaluation', text: 'Testing and Evaluation'},
 ];
-
-const DEFAULT_MODEL_CARD_INFO = {
-  value: {
-    description: '',
-    intendedUse: '',
-    limitationsAndWarnings: '',
-    testingAndEvaluation: '',
-    askAboutTopics: '',
-  },
-  visibility: 'editable',
-};
 
 const PublishNotes: React.FunctionComponent = () => {
   const modelCardInfo = useSelector(
