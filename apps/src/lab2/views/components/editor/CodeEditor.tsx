@@ -24,6 +24,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   const [didInit, setDidInit] = useState(false);
+  const [editorView, setEditorView] = useState<EditorView | null>(null);
 
   useEffect(() => {
     if (editorRef.current === null || didInit) {
@@ -46,13 +47,15 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     if (darkMode) {
       editorExtensions.push(darkModeTheme);
     }
-    new EditorView({
-      state: EditorState.create({
-        doc: startCode,
-        extensions: editorExtensions,
-      }),
-      parent: editorRef.current,
-    });
+    setEditorView(
+      new EditorView({
+        state: EditorState.create({
+          doc: startCode,
+          extensions: editorExtensions,
+        }),
+        parent: editorRef.current,
+      })
+    );
     setDidInit(true);
   }, [
     dispatch,
@@ -63,6 +66,18 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     didInit,
     darkMode,
   ]);
+
+  useEffect(() => {
+    if (editorView) {
+      editorView.dispatch({
+        changes: {
+          from: 0,
+          to: editorView.state.doc.length,
+          insert: startCode,
+        },
+      });
+    }
+  }, [startCode, editorView]);
 
   return (
     <PanelContainer id="code-editor" headerText="Editor" hideHeaders={false}>
