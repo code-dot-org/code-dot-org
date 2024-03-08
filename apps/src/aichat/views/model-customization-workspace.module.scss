@@ -1,7 +1,7 @@
 @import 'color';
 @import '../../mixins.scss';
 
-%fullWidth {
+%full-width {
   width: 100%;
   box-sizing: border-box;
 }
@@ -12,14 +12,14 @@
   flex-direction: column;
 
   textarea {
-    @extend %fullWidth;
+    @extend %full-width;
     height: 100px;
     resize: none;
     margin: 0;
   }
 
   input {
-    @extend %fullWidth;
+    @extend %full-width;
   }
 
   .inputContainer {
