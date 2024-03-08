@@ -1,3 +1,5 @@
+import {EFFECTS_PALETTES} from './constants';
+
 // NOTE: min and max are inclusive
 export function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -37,4 +39,16 @@ export function createSpriteCollider(sprite) {
     left: x - (width * scale) / 2,
     right: x + (width * scale) / 2,
   };
+}
+
+export function randomColor(p5) {
+  return p5
+    .color('hsb(' + randomInt(0, 359) + ', 100%, 100%)')
+    .toString('#rrggbb');
+}
+
+export function randomColorFromPalette(palette) {
+  return EFFECTS_PALETTES[palette][
+    randomInt(0, EFFECTS_PALETTES[palette].length - 1)
+  ];
 }
