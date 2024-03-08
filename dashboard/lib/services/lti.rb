@@ -121,6 +121,7 @@ class Services::Lti
           sections[section_id][:members] << member
         else
           sections[section_id] = {
+            # Schoology provides Course and section name in context_title
             name: member_section_names[index].nil? ? context_title.to_s : "#{context_title}: #{member_section_names[index]}",
             members: [member],
           }
