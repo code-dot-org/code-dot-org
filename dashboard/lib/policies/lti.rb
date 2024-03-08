@@ -132,7 +132,7 @@ class Policies::Lti
   end
 
   # Returns if the issuer offers a Resource Link level membership service.
-  def self.issuer_offers_resource_link?(issuer)
+  def self.issuer_accepts_resource_link?(issuer)
     ['Canvas'].include?(issuer_name(issuer))
   end
 end
