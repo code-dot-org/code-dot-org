@@ -11,6 +11,7 @@
 #  updated_at                :datetime         not null
 #  observations              :text(65535)
 #  ai_confidence_exact_match :integer
+#  evidence                  :text(65535)
 #
 # Indexes
 #
