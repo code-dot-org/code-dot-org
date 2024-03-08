@@ -52,7 +52,8 @@ const aiEvaluations = [
     id: 2,
     learning_goal_id: 2,
     understanding: 2,
-    aiConfidencePassFail: 3,
+    aiConfidencePassFail: 2,
+    aiConfidenceExactMatch: 1,
     observations:
       'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
   },
@@ -92,13 +93,17 @@ describe('LearningGoals - React Testing Library', () => {
   });
 
   describe('when aiConfidenceExactMatch is high', () => {
-    aiEvaluations[0].aiConfidencePassFail = 2;
-    aiEvaluations[0].aiConfidenceExactMatch = 3;
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        aiConfidenceExactMatch: 3,
+      },
+    ];
     it('highlights one bubble', () => {
       render(
         <LearningGoals
           learningGoals={learningGoals}
-          aiEvaluations={aiEvaluations}
+          aiEvaluations={myAiEvaluations}
           studentLevelInfo={studentLevelInfo}
           teacherHasEnabledAi
           canProvideFeedback
@@ -110,7 +115,7 @@ describe('LearningGoals - React Testing Library', () => {
       render(
         <LearningGoals
           learningGoals={learningGoals}
-          aiEvaluations={aiEvaluations}
+          aiEvaluations={myAiEvaluations}
           studentLevelInfo={studentLevelInfo}
           teacherHasEnabledAi
           canProvideFeedback
@@ -124,13 +129,56 @@ describe('LearningGoals - React Testing Library', () => {
       render(
         <LearningGoals
           learningGoals={learningGoals}
-          aiEvaluations={aiEvaluations}
+          aiEvaluations={myAiEvaluations}
           studentLevelInfo={studentLevelInfo}
           teacherHasEnabledAi
           canProvideFeedback
         />
       );
       screen.getByText('AI Confidence: high');
+    });
+  });
+
+  describe('when aiConfidenceExactMatch is low', () => {
+    it('highlights two bubbles', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      expect(getSuggestedButtonNames().sort()).to.deep.equal(
+        ['Convincing', 'Extensive'].sort()
+      );
+    });
+    it('shows two evaluation levels in written summary', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText(
+        'Stella has achieved Extensive or Convincing Evidence for this learning goal.'
+      );
+    });
+    it('shows pass-fail confidence level', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText('AI Confidence: medium');
     });
   });
 });
@@ -273,7 +321,7 @@ describe('LearningGoals - Enzyme', () => {
     expect(wrapper.find('AiAssessment').props().studentName).to.equal(
       studentLevelInfo.name
     );
-    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(3);
+    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(2);
     expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
       2
     );
