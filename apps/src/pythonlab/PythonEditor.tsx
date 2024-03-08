@@ -3,25 +3,31 @@ import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';
 import moduleStyles from './python-editor.module.scss';
 import {useDispatch} from 'react-redux';
-import {appendOutput, resetOutput, setCode} from './pythonlabRedux';
+import {appendOutput, resetOutput, setSource} from './pythonlabRedux';
 import Button from '@cdo/apps/templates/Button';
 // import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 interface PermissionResponse {
   permissions: string[];
 }
 
 const PythonEditor: React.FunctionComponent = () => {
-  const code = useAppSelector(state => state.pythonlab.code); // eslint-disable-line @typescript-eslint/no-unused-vars
+  const source = useAppSelector(state => state.pythonlab.source);
   const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const dispatch = useDispatch();
-
-  const onCodeUpdate = (code: string) => dispatch(setCode(code));
   const editorExtensions = [python(), darkMode];
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+  let startCode = 'print("Hello world!")';
+
+  if (initialSources?.source) {
+    const parsedSource = JSON.parse(initialSources.source);
+    startCode = parsedSource['main.py'];
+  }
 
   const handleRun = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
@@ -30,9 +36,27 @@ const PythonEditor: React.FunctionComponent = () => {
       dispatch(appendOutput('Simulating running code.'));
       // TODO: re-enable once we fix iPad issues.
       // https://codedotorg.atlassian.net/browse/CT-299
-      // runPythonCode(code);
+      // if (source) {
+      //   // TODO: will need to handle a potentially nested main.py
+      //   const code = source['main.py'];
+      //   if (typeof code === 'string') {
+      //     runPythonCode(code);
+      //   }
+      // }
     } else {
       alert('You do not have permission to run python code.');
+    }
+  };
+
+  const onCodeUpdate = (updatedCode: string) => {
+    // TODO: handle multiple files. For now everything is "main.py".
+    const updatedSource = {'main.py': updatedCode};
+    dispatch(setSource(updatedSource));
+    if (Lab2Registry.getInstance().getProjectManager()) {
+      const projectSources = {
+        source: JSON.stringify(source),
+      };
+      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
     }
   };
 
@@ -44,7 +68,7 @@ const PythonEditor: React.FunctionComponent = () => {
     <div className={moduleStyles.editorContainer}>
       <CodeEditor
         onCodeChange={onCodeUpdate}
-        startCode={'print("Hello world!")'}
+        startCode={startCode}
         editorConfigExtensions={editorExtensions}
       />
       <div>
