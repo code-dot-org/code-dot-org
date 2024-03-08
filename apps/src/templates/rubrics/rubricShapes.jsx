@@ -49,3 +49,9 @@ export const aiEvaluationShape = PropTypes.shape({
   ai_confidence: PropTypes.number,
   observations: PropTypes.string,
 });
+
+export const aiEvidenceShape = PropTypes.shape({
+  firstLine: PropTypes.number,
+  lastLine: PropTypes.number,
+  message: PropTypes.string,
+});
