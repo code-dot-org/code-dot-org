@@ -16,7 +16,13 @@ export default function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   deeperLearningCourseData,
+  currentYearApplicationId,
+  workshopsAsParticipant,
+  plCoursesStarted,
 }) {
+  console.log(currentYearApplicationId);
+  console.log(workshopsAsParticipant);
+  console.log(plCoursesStarted);
   return (
     <>
       <HeaderBannerNoImage
@@ -24,7 +30,9 @@ export default function LandingPage({
         backgroundColor={color.light_gray_50}
       />
       <main className={style.wrapper}>
-        <GettingStartedBanner />
+        {currentYearApplicationId === undefined &&
+          workshopsAsParticipant.length === 0 &&
+          plCoursesStarted.length === 0 && <GettingStartedBanner />}
         {lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
             subHeading={i18n.plLandingSubheading()}
@@ -35,7 +43,7 @@ export default function LandingPage({
           />
         )}
         <EnrolledWorkshops />
-        {deeperLearningCourseData && (
+        {deeperLearningCourseData.length >= 1 && (
           <div>
             <h2>Online Professional Learning Courses</h2>
             <ProfessionalLearningCourseProgress
@@ -52,6 +60,9 @@ LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
   deeperLearningCourseData: PropTypes.array,
+  currentYearApplicationId: PropTypes.number,
+  workshopsAsParticipant: PropTypes.array,
+  plCoursesStarted: PropTypes.array,
 };
 
 export const LastWorkshopSurveyBanner = ({
