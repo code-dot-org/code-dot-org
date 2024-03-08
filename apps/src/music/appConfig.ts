@@ -1,17 +1,6 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {BlockMode, baseAssetUrl} from './constants';
 
-type ConfigValues = {[key: string]: string};
-
-// Static config values passed in via a call to setAppConfig.
-// If these are set, we ignore URL parameters.
-let configValues: ConfigValues | null = null;
-
-// Called to set config values.
-export function setAppConfig(values: ConfigValues) {
-  configValues = values;
-}
-
 // Helper function for specifically fetching the 'blocks' config value. Provides
 // a default if an invalid value or no value is found.
 export const getBlockMode = () => {
@@ -42,10 +31,6 @@ export const getBaseAssetUrl = (): string => {
 export default {
   // Returns a config value.
   getValue(name: string) {
-    if (configValues) {
-      return configValues[name];
-    } else {
-      return queryParams(name);
-    }
+    return queryParams(name);
   },
 };

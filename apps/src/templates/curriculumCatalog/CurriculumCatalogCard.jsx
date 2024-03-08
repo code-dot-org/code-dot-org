@@ -49,11 +49,13 @@ const CurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
+  setExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
   isSignedOut,
   isTeacher,
+  getRecommendedSimilarCurriculum,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -96,10 +98,12 @@ const CurriculumCatalogCard = ({
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
+    setExpandedCardKey={setExpandedCardKey}
     isInUS={isInUS}
     availableResources={availableResources}
     isSignedOut={isSignedOut}
     isTeacher={isTeacher}
+    getRecommendedSimilarCurriculum={getRecommendedSimilarCurriculum}
     {...props}
   />
 );
@@ -135,10 +139,12 @@ CurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
+  setExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
+  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
 };
 
@@ -171,9 +177,11 @@ const CustomizableCurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
+  setExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
+  getRecommendedSimilarCurriculum,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -323,6 +331,7 @@ const CustomizableCurriculumCatalogCard = ({
       </div>
       {isExpanded && (
         <ExpandedCurriculumCatalogCard
+          courseKey={courseKey}
           courseDisplayName={courseDisplayName}
           duration={duration}
           gradeRange={gradeRange}
@@ -337,12 +346,14 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
+          setExpandedCardKey={setExpandedCardKey}
           isInUS={isInUS}
           imageSrc={imageSrc}
           imageAltText={imageAltText}
           availableResources={availableResources}
           isSignedOut={isSignedOut}
           isTeacher={isTeacher}
+          getRecommendedSimilarCurriculum={getRecommendedSimilarCurriculum}
         />
       )}
     </div>
@@ -384,9 +395,11 @@ CustomizableCurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
+  setExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
+  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
 };
 
 export default connect(

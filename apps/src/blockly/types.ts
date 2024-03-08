@@ -26,6 +26,7 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {
   ObservableParameterModel,
@@ -34,7 +35,7 @@ import {
 import {Abstract} from 'blockly/core/events/events_abstract';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import {IProcedureBlock} from 'blockly/core/procedures';
+import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 
@@ -85,6 +86,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldImageDropdown: typeof CdoFieldImageDropdown;
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
+  FieldBitmap: typeof CdoFieldBitmap;
   JavaScript: typeof javascriptGenerator;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
@@ -282,6 +284,30 @@ export interface ExtendedVariables extends VariablesType {
 
 export interface ProcedureBlock extends Block, IProcedureBlock {
   userCreated: boolean;
+  getTargetWorkspace_(): Workspace;
+  hasReturn_: boolean;
+  renameProcedure(
+    oldName: string,
+    newName: string,
+    userCreated?: boolean
+  ): void;
+  defType_: string;
+  model_: IProcedureModel;
+  paramsFromSerializedState_: string[];
+  updateArgsMap_: () => void;
+  eventIsCreatingThisBlockDuringPaste_: (event: Abstract) => boolean;
+  defMatches_: (defBlock: ProcedureBlock) => boolean;
+  createDef_: (name: string, params?: string[]) => IProcedureModel;
+  findProcedureModel_: (name: string, params?: string[]) => IProcedureModel;
+  initBlockWithProcedureModel_: () => void;
+  noBlockHasClaimedModel_: (procedureId: string) => boolean;
+  setStatements_: (hasStatements: boolean) => void;
+  deserialize_: (name: string, params: string[]) => void;
+  createArgInputs_: (params: string[]) => void;
+  hasStatements_: boolean;
+  description?: string | null;
+  // used for behavior blocks
+  behaviorId?: string | null;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.

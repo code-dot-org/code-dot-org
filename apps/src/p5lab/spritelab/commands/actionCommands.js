@@ -198,20 +198,6 @@ export const commands = {
             spriteCollider.left <= targetCollider.right &&
             spriteCollider.right >= targetCollider.left
           ) {
-            sprite.debug = true;
-            target.debug = true;
-            console.log(
-              sprite,
-              {
-                x: sprite.x,
-                y: sprite.y,
-                width: sprite.width,
-                height: sprite.height,
-                scale: sprite.scale,
-              },
-              spriteCollider,
-              targetCollider
-            );
             touching = true;
             break;
           }

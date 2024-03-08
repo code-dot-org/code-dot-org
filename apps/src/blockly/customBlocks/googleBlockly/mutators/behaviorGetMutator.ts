@@ -1,3 +1,4 @@
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {commonFunctions} from './commonProcedureCallerMutator';
 import GoogleBlockly from 'blockly/core';
 
@@ -6,17 +7,19 @@ export const behaviorGetMutator = {
 
   paramsFromSerializedState_: [],
 
-  domToMutation: function (element) {
-    const name = element.nextElementSibling.textContent;
-    this.behaviorId = element.nextElementSibling.getAttribute('id');
+  domToMutation: function (this: ProcedureBlock, element: Element) {
+    const name = element.nextElementSibling?.textContent || '';
+    this.behaviorId = element.nextElementSibling?.getAttribute('id');
     this.deserialize_(name, []);
   },
 
   // We shouldn't ever need to save behaviors as XML because Sprite Lab also saves to JSON.
   // However, this function would create the appropriate mutation if did.
-  mutationToDom: function () {
+  mutationToDom: function (this: ProcedureBlock) {
     const container = GoogleBlockly.utils.xml.createElement('mutation');
-    container.setAttribute('behaviorId', this.behaviorId);
+    if (this.behaviorId !== undefined && this.behaviorId !== null) {
+      container.setAttribute('behaviorId', this.behaviorId);
+    }
     container.setAttribute('name', this.getFieldValue('NAME'));
     return container;
   },
