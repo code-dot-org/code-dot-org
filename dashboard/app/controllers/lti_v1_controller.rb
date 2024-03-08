@@ -120,10 +120,9 @@ class LtiV1Controller < ApplicationController
 
       user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
-
       launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]
-      nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM][:context_memberships_url]
-      resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
+      nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM] ? decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM][:context_memberships_url] : nil
+      resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM] ? decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id] : nil
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
@@ -134,12 +133,12 @@ class LtiV1Controller < ApplicationController
       redirect_params = {
         lti_integration_id: integration.id,
         deployment_id: deployment.id,
-        context_id: launch_context[:id],
+        context_id: launch_context ? launch_context[:id] : nil,
         rlid: resource_link_id,
         nrps_url: nrps_url,
       }
 
-      destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      destination_url = redirect_params.values.all?(&:present?) ? "#{target_link_uri}?#{redirect_params.to_query}" : target_link_uri
 
       if user
         sign_in user
@@ -158,7 +157,7 @@ class LtiV1Controller < ApplicationController
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = "#{target_link_uri}?#{redirect_params.to_query}"
+        session[:user_return_to] = destination_url
         redirect_to new_user_registration_url
       end
     else
@@ -198,7 +197,14 @@ class LtiV1Controller < ApplicationController
     unless Policies::Lti.roster_sync_enabled?(current_user)
       return redirect_to home_path
     end
-    params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
+
+    if params[:section_code].blank?
+      begin
+        params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url])
+      rescue ActionController::ParameterMissing => _exception
+        return render_sync_course_error('Looks like you’re attempting to sync a course or section from the wrong place. Please launch from inside the course or section you’d like to sync.', :bad_request)
+      end
+    end
 
     lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
     if params[:section_code].present?
