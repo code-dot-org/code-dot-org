@@ -32,7 +32,7 @@ function recordShare(type, appType) {
     return;
   }
   if (Object.prototype.hasOwnProperty.call(EVENTS, type)) {
-    analyticsReporter.sendEvent(type, {
+    analyticsReporter.sendEvent(EVENTS.type, {
       lab_type: appType,
       channel_id: dashboard.project && dashboard.project.getCurrentId(),
     });
@@ -394,7 +394,7 @@ class ShareAllowedDialog extends React.Component {
                       }}
                       onClick={wrapShareClick(
                         this.copy,
-                        'SHARING_LINK_COPY',
+                        EVENTS.SHARING_LINK_COPY,
                         this.props.appType
                       )}
                       text={i18n.copyLinkToProject()}
@@ -413,7 +413,7 @@ class ShareAllowedDialog extends React.Component {
                     href=""
                     onClick={wrapShareClick(
                       this.showSendToPhone,
-                      'SHARING_LINK_SEND_TO_PHONE',
+                      EVENTS.SHARING_LINK_SEND_TO_PHONE,
                       this.props.appType
                     )}
                     style={styles.sendToPhoneButton}
@@ -437,7 +437,7 @@ class ShareAllowedDialog extends React.Component {
                         }
                         onClick={wrapShareClick(
                           this.publish,
-                          'SHARING_PUBLISH',
+                          EVENTS.SHARING_PUBLISH,
                           this.props.appType
                         )}
                         disabled={disablePublishButton}
@@ -474,7 +474,7 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'SHARING_FB',
+                            EVENTS.SHARING_FB,
                             this.props.appType
                           )}
                           style={styles.socialLink}
@@ -489,7 +489,7 @@ class ShareAllowedDialog extends React.Component {
                           rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             onClickPopup.bind(this),
-                            'SHARING_TWITTER',
+                            EVENTS.SHARING_TWITTER,
                             this.props.appType
                           )}
                           style={styles.socialLink}
