@@ -30,7 +30,7 @@ export default function LandingPage({
         backgroundColor={color.light_gray_50}
       />
       <main className={style.wrapper}>
-        {currentYearApplicationId === undefined &&
+        {!currentYearApplicationId &&
           workshopsAsParticipant.length === 0 &&
           plCoursesStarted.length === 0 && <GettingStartedBanner />}
         {lastWorkshopSurveyUrl && (
