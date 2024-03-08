@@ -195,7 +195,7 @@ const hasImportantButNotDesiredTopic = (curriculum, csTopics) => {
   const curriculumTopics = curriculum.cs_topic?.split(',');
   const desiredTopics = csTopics?.split(',');
 
-  if (curriculumTopics) {
+  if (curriculumTopics && desiredTopics) {
     for (const topic of curriculumTopics) {
       if (IMPORTANT_TOPICS.includes(topic) && !desiredTopics.includes(topic)) {
         return true;
