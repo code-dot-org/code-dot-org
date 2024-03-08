@@ -19,7 +19,7 @@ describe('AiAssessment', () => {
     aiEvalInfo: mockAiInfo,
   };
 
-  it('renders AiAssessmentBox if it is assessessed by AI', () => {
+  it('renders AiAssessmentBox and passes down properties', () => {
     const wrapper = shallow(<AiAssessment {...props} />);
     expect(wrapper.find('AiAssessmentBox')).to.have.lengthOf(1);
     expect(wrapper.find('AiAssessmentBox').props().isAiAssessed).to.equal(
@@ -33,14 +33,6 @@ describe('AiAssessment', () => {
     ).to.equal(props.aiUnderstandingLevel);
     expect(wrapper.find('AiAssessmentBox').props().aiConfidence).to.equal(
       props.aiConfidence
-    );
-  });
-
-  it('render AIAssessmentFeedback element', () => {
-    const wrapper = shallow(<AiAssessment {...props} />);
-    expect(wrapper.find('AiAssessmentFeedback')).to.have.lengthOf(1);
-    expect(wrapper.find('AiAssessmentFeedback').props().aiEvalInfo).to.equal(
-      props.aiEvalInfo
     );
   });
 });

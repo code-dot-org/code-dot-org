@@ -65,21 +65,22 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"mini-toolbox-blue-button\",\r\n  \"callout_text\": \"Click the blue button to open or close.\",\r\n  \"element_id\": \"#whenclicked\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 12,\r\n     \"y\": 24\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function() {\r\n    return spritesDefaultSize();\r\n  }, 'spritesNotDefaultSize');\r\n  addCriteria(function(){\r\n    return anySpriteClicked();\r\n  }, 'spritelabFeedbackClickSprites');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'eventNotDetected');\r\n  addCriteria(function(){\r\n    return onlyClickedPropChanged('scale')&&clickEventFound();\r\n  }, 'changeOrSetSize');\r\n}\r\n\r\ncheck();",
     "encrypted_examples": "f3WJ3Ls8kx7g0iVPhYANqu/aEWrLQTLozldF7vh3mN6a1xUGXjB8fH2QuHYk\n8el1vAhsNhnVvss6KjJ+GDYlcA==\n",
-    "preload_asset_list": null,
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-05T22:32:32.236+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_size_2023\\\"\"],\"cloned_from\":\"courseF_groups_size_2023\"},{\"changed_at\":\"2024-03-05 22:35:17 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 22:37:47 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 22:48:46 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-05T22:32:32.236+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_size_2023\\\"\"],\"cloned_from\":\"courseF_groups_size_2023\"},{\"changed_at\":\"2024-03-05 22:35:17 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 22:37:47 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-05 22:48:46 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 16:58:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 19:44:28 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" x="16" y="16">
           <next>
-            <block type="gamelab_makeNumSprites">
-              <field name="ANIMATION_NAME">"face_strawberry_1"</field>
+            <block type="gamelab_makeSpritesWithSize">
+              <field name="SIZE">100</field>
+              <field name="COSTUME">"face_strawberry_1"</field>
               <value name="NUM">
                 <block type="math_number">
                   <field name="NUM">3</field>
@@ -88,7 +89,9 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" miniflyout="open" id="whenclicked">
+        <block type="gamelab_spriteClicked" id="whenclicked" x="16" y="107">
+          <mutation useDefaultIcon="false"/>
+          <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">

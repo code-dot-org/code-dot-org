@@ -21,10 +21,8 @@ $level-cell-width: 52;
 
 .table {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
-  display: flex;
-  flex-direction: row;
 
   &Loading {
     overflow-x: hidden;
@@ -36,6 +34,12 @@ $level-cell-width: 52;
   .expandedColumn:last-child {
     margin-inline-end: 0;
   }
+}
+
+.tableInterior {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
 }
 
 .gridBox {
@@ -270,7 +274,7 @@ $level-cell-width: 52;
 .studentColumn {
   width: 195px;
   min-width: 195px;
-  margin-right: 12px;
+  margin-inline-end: 12px;
   display: flex;
   flex-direction: column;
 }
