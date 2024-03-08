@@ -13,9 +13,7 @@ const DEFAULT_RETRIEVAL_CONTEXTS = {
   visibility: 'editable',
 };
 
-// what does it mean for retrieval to be hidden? hide whole tab?
 const RetrievalCustomization: React.FunctionComponent = () => {
-  // deal with AiCustomizations vs LevelAiCustomizations distinction in requiring model
   const retrievalContexts = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
@@ -55,7 +53,13 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           />
         </div>
         <div className={styles.addItemContainer}>
-          <button type="button" onClick={onAdd} disabled={!newMessage}>
+          <button
+            type="button"
+            onClick={onAdd}
+            disabled={
+              !newMessage || retrievalContexts.visibility === 'readonly'
+            }
+          >
             Add
           </button>
         </div>
@@ -66,6 +70,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
                 type="button"
                 onClick={() => onRemove(index)}
                 className={styles.removeItemButton}
+                disabled={retrievalContexts.visibility === 'readonly'}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
@@ -78,7 +83,12 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button type="button">Update</button>
+        <button
+          type="button"
+          disabled={retrievalContexts.visibility === 'readonly'}
+        >
+          Update
+        </button>
       </div>
     </div>
   );

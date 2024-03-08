@@ -7,10 +7,7 @@ import RetrievalCustomization from './modelCustomization/RetrievalCustomization'
 import PublishNotes from './modelCustomization/PublishNotes';
 import styles from './model-customization-workspace.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {
-  AichatLevelProperties,
-  LevelAiCustomizations,
-} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const DEFAULT_RETRIEVAL_CONTEXTS = {
   value: ['retrieval 1', 'retrieval 2'],

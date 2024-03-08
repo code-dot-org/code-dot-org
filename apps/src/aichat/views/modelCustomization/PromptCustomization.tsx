@@ -13,12 +13,16 @@ const DEFAULT_INITIAL_AI_CUSTOMIZATIONS = {
 };
 
 const PromptCustomization: React.FunctionComponent = () => {
-  // deal with AiCustomizations vs LevelAiCustomizations distinction in requiring model
   const {botName, temperature, systemPrompt} = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.initialAiCustomizations || DEFAULT_INITIAL_AI_CUSTOMIZATIONS
   );
+
+  const allFieldsDisabled =
+    botName.visibility === 'readonly' &&
+    temperature.visibility === 'readonly' &&
+    systemPrompt.visibility === 'readonly';
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -32,7 +36,7 @@ const PromptCustomization: React.FunctionComponent = () => {
               id="chatbot-name"
               value={botName.value}
               disabled={botName.visibility === 'readonly'}
-              // readOnly might be preferred?
+              // readOnly might be preferred property for disabling inputs?
             />
           </div>
         )}
@@ -68,7 +72,9 @@ const PromptCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button">Update</button>
+        <button type="button" disabled={allFieldsDisabled}>
+          Update
+        </button>
       </div>
     </div>
   );

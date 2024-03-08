@@ -24,9 +24,7 @@ const DEFAULT_MODEL_CARD_INFO = {
   visibility: 'editable',
 };
 
-// what does it mean for this to be hidden? hide whole tab?
 const PublishNotes: React.FunctionComponent = () => {
-  // deal with AiCustomizations vs LevelAiCustomizations distinction in requiring model
   const modelCardInfo = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
@@ -54,7 +52,12 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button">Publish</button>
+        <button
+          type="button"
+          disabled={modelCardInfo.visibility === 'readonly'}
+        >
+          Publish
+        </button>
       </div>
     </div>
   );
