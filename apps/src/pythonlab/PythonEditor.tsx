@@ -16,6 +16,7 @@ interface PermissionResponse {
 }
 
 const PythonEditor: React.FunctionComponent = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const source = useAppSelector(state => state.pythonlab.source);
   const codeOutput = useAppSelector(state => state.pythonlab.output);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
@@ -54,7 +55,7 @@ const PythonEditor: React.FunctionComponent = () => {
     dispatch(setSource(updatedSource));
     if (Lab2Registry.getInstance().getProjectManager()) {
       const projectSources = {
-        source: JSON.stringify(source),
+        source: JSON.stringify(updatedSource),
       };
       Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
     }
