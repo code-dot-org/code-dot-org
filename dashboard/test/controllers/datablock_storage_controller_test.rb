@@ -673,9 +673,9 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "export csv" do
     CSV_DATA = <<~CSV
       id,name,age,male
-      4,alice,7,false
-      5,bob,8,true
-      6,charlie,9,true
+      1,alice,7,false
+      2,bob,8,true
+      3,charlie,9,true
     CSV
 
     post _url(:import_csv), params: {
@@ -684,11 +684,11 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    post _url(:export_csv), params: {
+    get _url(:export_csv), params: {
       table_name: 'mytable',
     }
     assert_response :success
 
-    assert_equal @response.body, CSV_DATA
+    assert_equal CSV_DATA, @response.body
   end
 end
