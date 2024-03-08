@@ -501,6 +501,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
     assert_response :redirect
+    assert_redirected_to '/users/sign_up'
   end
 
   test 'sync - should redirect students to homepage without syncing' do
