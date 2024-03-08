@@ -82,7 +82,31 @@ describe('LearningGoals - React Testing Library', () => {
     expect(screen.getByText(/lg one convincing/)).to.exist;
     expect(screen.getByText(/lg one extensive/)).to.exist;
   });
+
+  describe('when aiConfidenceExactMatch is high', () => {
+    aiEvaluations[0].aiConfidencePassFail = 2;
+    aiEvaluations[0].aiConfidenceExactMatch = 3;
+    it('highlights one bubble', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      expect(getSuggestedButtonNames()).to.deep.equal(['Convincing']);
+    });
+  });
 });
+
+function getSuggestedButtonNames() {
+  const allButtons = screen.getAllByRole('button');
+  const suggestedButtons = allButtons.filter(button =>
+    button.classList.contains('unittest-evidence-level-suggested')
+  );
+  return suggestedButtons.map(button => button.textContent);
+}
 
 describe('LearningGoals - Enzyme', () => {
   let annotatorStub,

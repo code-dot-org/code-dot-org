@@ -84,6 +84,7 @@ export default function EvidenceLevelsForTeachersV2({
                     ? style.evidenceLevelSelected
                     : aiEvidenceLevels.includes(evidenceLevel.understanding)
                     ? classnames(
+                        'unittest-evidence-level-suggested',
                         style.evidenceLevelSuggested,
                         style.evidenceLevelUnselected
                       )
