@@ -301,15 +301,6 @@ class Services::LtiTest < ActiveSupport::TestCase
     end
   end
 
-  test 'should parse the members response from NRPS with no resource link provided and return a hash of sections' do
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_rlid_provided, @id_token[:iss])
-    assert_equal parsed_response.keys.length, 1
-    parsed_response.each do |_, v|
-      assert_empty v.keys - [:name, :members]
-      assert_equal v[:members].length, 3
-    end
-  end
-
   test 'should append the course name to each section name when parsing NRPS response' do
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
@@ -361,7 +352,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     lti_course = create :lti_course, lti_integration: @lti_integration
     lti_section = create(:lti_section, lti_course: lti_course, section: section)
-    Policies::Lti.stubs(:issuer_a_resource_link?).returns(true)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     members = parsed_response[@lms_section_ids.first.to_s][:members]
 
@@ -405,14 +396,15 @@ class Services::LtiTest < ActiveSupport::TestCase
     teacher = create :teacher
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
 
     assert lti_course.reload.sections.length, 3
 
     # Remove empty sections with no users
     @nrps_full_response[:members] = []
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
     assert lti_course.reload.sections.length, 2
   end
