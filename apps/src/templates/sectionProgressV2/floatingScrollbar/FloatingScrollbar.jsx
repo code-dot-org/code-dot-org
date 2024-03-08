@@ -73,7 +73,7 @@ export default function FloatingScrollbar({
     childContentsRef,
   ]);
 
-  const handleScroll = React.useCallback(() => {
+  const handleScrollAndResize = React.useCallback(() => {
     const maxVisibleY =
       window.innerHeight || document.documentElement.clientHeight;
 
@@ -88,13 +88,15 @@ export default function FloatingScrollbar({
   }, [childContainerRef, scrollVisible, setScrollVisible]);
 
   React.useEffect(() => {
-    window.addEventListener('scroll', e => handleScroll(e));
+    window.addEventListener('scroll', e => handleScrollAndResize(e));
+    window.addEventListener('resize', e => handleScrollAndResize(e));
 
     return () => {
       // return a cleanup function to unregister our function since it will run multiple times
-      window.removeEventListener('scroll', e => handleScroll(e));
+      window.removeEventListener('scroll', e => handleScrollAndResize(e));
+      window.removeEventListener('resize', e => handleScrollAndResize(e));
     };
-  }, [handleScroll]);
+  }, [handleScrollAndResize]);
 
   const scrollChild = React.useCallback(
     scroll => {
