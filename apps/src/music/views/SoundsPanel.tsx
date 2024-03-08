@@ -254,26 +254,26 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     currentSoundRef.current = ref;
   };
 
-  let possibleSounds: SoundEntry[] = [];
-  let rightColumnSounds: SoundEntry[] = [];
+  let possibleSoundEntries: SoundEntry[] = [];
+  let rightColumnSoundEntries: SoundEntry[] = [];
 
   if (mode === 'packs') {
-    possibleSounds = selectedFolder.sounds.map(sound => ({
+    possibleSoundEntries = selectedFolder.sounds.map(sound => ({
       folder: selectedFolder,
       sound,
     }));
   } else {
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
-        possibleSounds.push({folder, sound});
+        possibleSoundEntries.push({folder, sound});
       });
     });
   }
 
   if (filter === 'all') {
-    rightColumnSounds = possibleSounds;
+    rightColumnSoundEntries = possibleSoundEntries;
   } else {
-    rightColumnSounds = possibleSounds.filter(
+    rightColumnSoundEntries = possibleSoundEntries.filter(
       soundEntry => soundEntry.sound.type === filter
     );
   }
@@ -331,7 +331,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             </div>
           )}
           <div id="sounds-panel-right" className={styles.rightColumn}>
-            {rightColumnSounds.map((soundEntry, soundIndex) => {
+            {rightColumnSoundEntries.map((soundEntry, soundIndex) => {
               return (
                 <SoundsPanelRow
                   key={soundIndex}
