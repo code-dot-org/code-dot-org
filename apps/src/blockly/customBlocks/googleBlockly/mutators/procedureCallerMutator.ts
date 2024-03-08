@@ -5,6 +5,7 @@
 
 // Blockly is fixing this issue, so we should be able to remove this file
 // once we upgrade to Blockly v10.
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {commonFunctions} from './commonProcedureCallerMutator';
 
 const procedureCallerMutator = {
@@ -18,7 +19,7 @@ const procedureCallerMutator = {
    * @returns XML storage element.
    * @this {Blockly.Block}
    */
-  mutationToDom: function () {
+  mutationToDom: function (this: ProcedureBlock) {
     const container = Blockly.utils.xml.createElement('mutation');
     const model = this.getProcedureModel();
     if (!model) return container;
@@ -38,12 +39,14 @@ const procedureCallerMutator = {
    * @param xmlElement XML storage element.
    * @this {Blockly.Block}
    */
-  domToMutation: function (xmlElement) {
-    const name = xmlElement.getAttribute('name');
-    const params = [];
-    for (const n of xmlElement.childNodes) {
-      if (n.nodeName.toLowerCase() === 'arg') {
-        params.push(n.getAttribute('name'));
+  domToMutation: function (this: ProcedureBlock, xmlElement: Element) {
+    const name = xmlElement.getAttribute('name') || '';
+    const params: string[] = [];
+    const childNodes = Array.from(xmlElement.childNodes) as Element[];
+    for (const n of childNodes) {
+      const nameAttribute = n.getAttribute('name');
+      if (n.nodeName.toLowerCase() === 'arg' && nameAttribute) {
+        params.push(nameAttribute);
       }
     }
     this.deserialize_(name, params);

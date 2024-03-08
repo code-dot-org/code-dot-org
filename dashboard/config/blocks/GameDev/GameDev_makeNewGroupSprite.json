@@ -23,7 +23,11 @@
           ],
           [
             "object",
-            "\"object\""
+            "\"objects\""
+          ],
+          [
+            "enemy",
+            "\"enemies\""
           ]
         ]
       },

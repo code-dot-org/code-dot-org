@@ -4,6 +4,7 @@ import React from 'react';
 import {studentLessonProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
+import legendStyles from './progress-table-legend.module.scss';
 import {lessonHasLevels} from '../progress/progressHelpers';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
@@ -14,6 +15,7 @@ function LessonDataCell({
   lesson,
   sectionId,
   locked,
+  needsFeedback,
   studentLessonProgress,
   addExpandedLesson,
   studentId,
@@ -49,7 +51,8 @@ function LessonDataCell({
           styles.gridBox,
           styles.gridBoxLesson,
           locked && styles.littleLock,
-          interactive && styles.lessonInteractive
+          interactive && styles.lessonInteractive,
+          !locked && needsFeedback && legendStyles.needsFeedback
         )}
         onClick={expandLesson}
         data-testid={'lesson-data-cell-' + lesson.id + '-' + studentId}
@@ -83,4 +86,5 @@ LessonDataCell.propTypes = {
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   studentId: PropTypes.number.isRequired,
+  needsFeedback: PropTypes.bool,
 };
