@@ -48,6 +48,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                   styles.tab,
                   index === activeIndex && styles.active
                 )}
+                key={index}
               >
                 <button
                   type="button"
@@ -56,10 +57,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
                   aria-controls={getTabPanelId(index)}
                   id={getTabButtonId(index)}
                   onClick={() => handleTabClick(index)}
-                  className={classNames(
-                    styles.tabButton,
-                    index === activeIndex && styles.active
-                  )}
+                  className={classNames(index === activeIndex && styles.active)}
                 >
                   {tab.title}
                 </button>
@@ -68,16 +66,19 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
           })}
         </ul>
       </div>
-      {tabs.map((tab, index) => {
-        return (
-          <TabPanel
-            content={tab.content}
-            isActive={index === activeIndex}
-            id={getTabPanelId(index)}
-            labelledBy={getTabButtonId(index)}
-          />
-        );
-      })}
+      <div className={styles.tabPanelsContainer}>
+        {tabs.map((tab, index) => {
+          return (
+            <TabPanel
+              key={index}
+              content={tab.content}
+              isActive={index === activeIndex}
+              id={getTabPanelId(index)}
+              labelledBy={getTabButtonId(index)}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
