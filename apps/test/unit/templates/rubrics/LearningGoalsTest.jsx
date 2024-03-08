@@ -68,6 +68,14 @@ const code = `// code
     draw();
   `;
 
+const studentLevelInfo = {
+  user_id: 1,
+  name: 'Stella',
+  attempts: 3,
+  timeSpent: 100,
+  lastAttempt: '2024-03-02',
+};
+
 describe('LearningGoals - React Testing Library', () => {
   it('renders EvidenceLevels without canProvideFeedback', () => {
     render(<LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />);
@@ -91,11 +99,38 @@ describe('LearningGoals - React Testing Library', () => {
         <LearningGoals
           learningGoals={learningGoals}
           aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
           teacherHasEnabledAi
           canProvideFeedback
         />
       );
       expect(getSuggestedButtonNames()).to.deep.equal(['Convincing']);
+    });
+    it('shows only one evaluation level in written summary', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText(
+        'Stella has achieved Convincing Evidence for this learning goal.'
+      );
+    });
+    it('shows exact-match confidence level', () => {
+      render(
+        <LearningGoals
+          learningGoals={learningGoals}
+          aiEvaluations={aiEvaluations}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi
+          canProvideFeedback
+        />
+      );
+      screen.getByText('AI Confidence: high');
     });
   });
 });
