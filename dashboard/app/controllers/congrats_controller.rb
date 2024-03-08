@@ -47,7 +47,7 @@ class CongratsController < ApplicationController
       # The order of this conditional is important. During HoC, we generally want to avoid
       # hitting the database, so we check if the unit is an HoC unit first.
       @certificate_data =
-        if curriculum&.hoc? || UserScript.where(user: current_user, script: curriculum).where.not(completed_at: nil).exists?
+        if curriculum&.hoc? || curriculum&.csf? || UserScript.where(user: current_user, script: curriculum).where.not(completed_at: nil).exists?
           [{
             courseName: @course_name,
             coursePath: @curriculum_url,

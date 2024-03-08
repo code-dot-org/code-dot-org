@@ -8,6 +8,7 @@ export enum BlocklyVersion {
 
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
+export const BLOCKLY_CURSOR = 'blocklyCursor';
 export const MenuOptionStates = {
   ENABLED: 'enabled',
   DISABLED: 'disabled',
@@ -65,6 +66,7 @@ export const Renderers = {
   DEFAULT: 'cdo_renderer_thrasos',
 };
 
+export const NAVIGATION_CURSOR_TYPES = ['default', 'basic', 'line'];
 // Used for custom field type ClampedNumber(,)
 // Captures two optional arguments from the type string
 // Allows:

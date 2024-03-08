@@ -1,10 +1,12 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import LearningGoals, {
   clearAnnotations,
@@ -169,15 +171,15 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
   });
@@ -239,7 +241,7 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
@@ -250,7 +252,7 @@ describe('LearningGoals', () => {
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -263,7 +265,7 @@ describe('LearningGoals', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -328,15 +330,32 @@ describe('LearningGoals', () => {
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
   });
 
-  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
-    const wrapper = shallow(
+  it('shows editable textbox for feedback when the teacher can provide feedback', async () => {
+    const postStub = sinon.stub(HttpClient, 'post').returns(
+      Promise.resolve({
+        json: () => {
+          return {
+            id: 0,
+          };
+        },
+      })
+    );
+
+    const wrapper = mount(
       <LearningGoals
         canProvideFeedback={true}
         studentLevelInfo={studentLevelInfo}
         learningGoals={learningGoals}
       />
     );
-    expect(wrapper.find('textarea').props().disabled).to.equal(false);
+
+    // Need to have it 'load' all the prior evaluations
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(wrapper.find('textarea').getDOMNode().disabled).to.equal(false);
+    postStub.restore();
   });
 
   it('passes isStudent down to EvidenceLevels', () => {

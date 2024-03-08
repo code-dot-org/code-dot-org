@@ -6,7 +6,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {NavigationController} from '@blockly/keyboard-navigation';
+import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -18,6 +18,7 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldVariable from './addons/cdoFieldVariable';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
@@ -208,6 +209,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
+  blocklyWrapper.wrapReadOnlyProperty('BasicCursor');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
@@ -226,6 +228,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('createBlockDefinitionsFromJsonArray');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
+  blocklyWrapper.wrapReadOnlyProperty('Cursor');
   blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
@@ -297,6 +300,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    // CdoFieldBitmap extends from a JavaScript class without typing.
+    // We know it's a field, so it's safe to cast as unknown.
+    ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -423,9 +429,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
 
   blocklyWrapper.JavaScript = javascriptGenerator;
+  blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
   blocklyWrapper.navigationController.init();
+  blocklyWrapper.navigationController.cursorType = cdoUtils.getUserCursorType();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -705,6 +713,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
+
+    blocklyWrapper.getNewCursor = function (type) {
+      switch (type) {
+        case 'basic':
+          return new blocklyWrapper.BasicCursor();
+        case 'line':
+          return new blocklyWrapper.LineCursor();
+        case 'default':
+        default:
+          return new blocklyWrapper.Cursor();
+      }
+    };
 
     if (!blocklyWrapper.isStartMode && !optOptionsExtended.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);

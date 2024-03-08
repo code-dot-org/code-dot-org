@@ -5,11 +5,11 @@ import {studentLevelProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
 import legendStyles from './progress-table-legend.module.scss';
-import queryString from 'query-string';
 import {Link} from '@dsco_/link';
 import ProgressIcon from './ProgressIcon';
 import {ITEM_TYPE} from './ItemType';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import queryString from 'query-string';
 
 export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {

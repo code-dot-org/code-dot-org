@@ -1,0 +1,2425 @@
+{
+  "script": {
+    "name": "pilot-k5-ai",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "pilot-k5-ai",
+    "serialized_at": "2024-03-07 18:03:24 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "pilot-k5-ai"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Sorting Data",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Training AI",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "How AI Makes Decisions",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Create an AI Poster",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "Dance Party: AI Edition",
+      "name": "Dance Party: AI Edition",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "In this activity, learners of all ages get an introductory experience with coding and artificial intelligence in a safe and creative environment. This lesson has been designed for learners of all ages but does require reading. This activity requires students to play sound, as the tutorial was built to respond to music.\n",
+        "preparation": "###How to Plan Your Hour of Code\n\nFind the resources you need to plan, implement, and celebrate the Hour of Code at your school [here](https://hourofcode.com/us/how-to)!",
+        "purpose": "Making coding an exciting and enjoyable experience is essential in cultivating interest in computer science. This lesson is filled with moments of joy, where students use code to choreograph a dance spectacle of color and movement using simple drag-and-drop coding blocks. Students will be introduced to an A.I. Bot that they will direct to help find the perfect effects to match the mood of their dance.  "
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "AI for Oceans",
+      "name": "AI for Oceans",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. First, students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com).\n- Review and complete the online tutorial yourself.\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Each student who completes the activity should receive a certificate. Print one [certificate](https://studio.code.org/certificates/batch?course=b2NlYW5z) for each student in advance to make this easier at the end of your Hour of Code.\n",
+        "purpose": "This tutorial is designed to quickly introduce students to **machine learning**, a type of **artificial intelligence**. Students will explore how **training data** is used to enable a machine learning model to classify new data. Students should have a positive experience during the tutorial and more importantly should be motivated to keep learning computer science. ",
+        "student_overview": "First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
+      },
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "08460319-0405-45a2-b8b4-444379ba805a",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08460319-0405-45a2-b8b4-444379ba805a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "67966cef-e610-4a6c-9b80-a5f01715f81c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "67966cef-e610-4a6c-9b80-a5f01715f81c",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "4350736b-84ad-4049-9949-32ca83394698",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "7baafb96-218c-4665-b1ef-b339f830cf0d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7baafb96-218c-4665-b1ef-b339f830cf0d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "d175feb1-c74f-4096-a7a5-de4b48e7af12",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "f83c5a5a-95dd-41e0-b888-e47f120210f6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f83c5a5a-95dd-41e0-b888-e47f120210f6",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "e568bbbf-7a5b-489e-ad34-0dfd50493568",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e568bbbf-7a5b-489e-ad34-0dfd50493568",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "9bf1aff3-bf49-48cf-a537-a49cfd014444",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bf1aff3-bf49-48cf-a537-a49cfd014444",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "0fc03c6e-efc8-4f90-8081-65604cca60f0",
+      "position": 1,
+      "properties": {
+        "name": "Getting Started"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fc03c6e-efc8-4f90-8081-65604cca60f0",
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "8c40c213-9d73-4c73-a6df-721f3b67fc9c",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c40c213-9d73-4c73-a6df-721f3b67fc9c",
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "107aca78-7bf3-4357-85ac-ff3842c10aad",
+      "position": 3,
+      "properties": {
+        "duration": 50,
+        "name": "Activity "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "107aca78-7bf3-4357-85ac-ff3842c10aad",
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "742d1970-5531-488e-b0a9-e922cb9f85d9",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "742d1970-5531-488e-b0a9-e922cb9f85d9",
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "b02d6abe-b8bd-47dc-a98a-c35a189ed6e8",
+      "position": 5,
+      "properties": {
+        "name": "After the Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b02d6abe-b8bd-47dc-a98a-c35a189ed6e8",
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "a8ac24d9-a040-4759-b170-3db55ada8001",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8ac24d9-a040-4759-b170-3db55ada8001",
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524",
+      "position": 2,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524",
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "3fcbff8a-1aba-4295-9cd1-809b53df4601",
+      "position": 3,
+      "properties": {
+        "name": "Celebrate and Keep Going!"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fcbff8a-1aba-4295-9cd1-809b53df4601",
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "f623bade-875f-4938-852b-a11bef27f661",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f623bade-875f-4938-852b-a11bef27f661",
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "3d1d04f0-e562-4482-ae80-b329d9a1572a",
+      "position": 5,
+      "properties": {
+        "name": "Digging into the Information View"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d1d04f0-e562-4482-ae80-b329d9a1572a",
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "c1960ca2-a0b2-4cf0-a065-7aa5fafd5805",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1960ca2-a0b2-4cf0-a065-7aa5fafd5805",
+        "lesson_activity.key": "08460319-0405-45a2-b8b4-444379ba805a"
+      }
+    },
+    {
+      "key": "7904af47-66ef-4f1d-98c5-c43ac42c7676",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7904af47-66ef-4f1d-98c5-c43ac42c7676",
+        "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e"
+      }
+    },
+    {
+      "key": "1b979832-b6ad-4bae-b833-9dc42bb8e950",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sorting Items"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b979832-b6ad-4bae-b833-9dc42bb8e950",
+        "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e"
+      }
+    },
+    {
+      "key": "8f9ce652-dd04-4743-90c1-dcf9af89806f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8f9ce652-dd04-4743-90c1-dcf9af89806f",
+        "lesson_activity.key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b"
+      }
+    },
+    {
+      "key": "eaf85520-8039-41f6-b7ab-08166a0d28a6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eaf85520-8039-41f6-b7ab-08166a0d28a6",
+        "lesson_activity.key": "67966cef-e610-4a6c-9b80-a5f01715f81c"
+      }
+    },
+    {
+      "key": "1e36d836-7304-4f17-9418-676b8d32b76d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e36d836-7304-4f17-9418-676b8d32b76d",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "21f56bab-977d-4631-a8bf-8384e284a640",
+      "position": 2,
+      "properties": {
+        "progression_name": "Train AI on Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "21f56bab-977d-4631-a8bf-8384e284a640",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "43b3c232-f77c-41a5-af1d-f76f422fc3de",
+      "position": 3,
+      "properties": {
+        "progression_name": "Train AI on Sea Creatures"
+      },
+      "seeding_key": {
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "07d57fd1-faea-4249-8b30-ed36439b2500",
+      "position": 4,
+      "properties": {
+        "progression_name": "Teach AI a New Word"
+      },
+      "seeding_key": {
+        "activity_section.key": "07d57fd1-faea-4249-8b30-ed36439b2500",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "37e3aef9-20d6-4681-ba67-c9b05ef8fc54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37e3aef9-20d6-4681-ba67-c9b05ef8fc54",
+        "lesson_activity.key": "7baafb96-218c-4665-b1ef-b339f830cf0d"
+      }
+    },
+    {
+      "key": "e2c05441-bbba-471a-9895-fe181c896f02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c05441-bbba-471a-9895-fe181c896f02",
+        "lesson_activity.key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288"
+      }
+    },
+    {
+      "key": "1e965f53-b758-4eaf-afcb-251dbe095bcb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e965f53-b758-4eaf-afcb-251dbe095bcb",
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12"
+      }
+    },
+    {
+      "key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sorting Fruit and Vegetables"
+      },
+      "seeding_key": {
+        "activity_section.key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71",
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12"
+      }
+    },
+    {
+      "key": "bf325b06-a967-439c-9011-6f78adf50ec7",
+      "position": 3,
+      "properties": {
+        "progression_name": "AI Bot Effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf325b06-a967-439c-9011-6f78adf50ec7",
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12"
+      }
+    },
+    {
+      "key": "71a99e48-3147-474f-8ee1-3444144d6516",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "71a99e48-3147-474f-8ee1-3444144d6516",
+        "lesson_activity.key": "f83c5a5a-95dd-41e0-b888-e47f120210f6"
+      }
+    },
+    {
+      "key": "d0f57173-475f-42ec-bdec-1e926611baea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d0f57173-475f-42ec-bdec-1e926611baea",
+        "lesson_activity.key": "e568bbbf-7a5b-489e-ad34-0dfd50493568"
+      }
+    },
+    {
+      "key": "bdefd8af-23c6-409a-86c3-f6d35f5197f9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bdefd8af-23c6-409a-86c3-f6d35f5197f9",
+        "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c"
+      }
+    },
+    {
+      "key": "0f6296dd-e703-401c-bad0-116ecbd0acf0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Plan Your AI Poster"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f6296dd-e703-401c-bad0-116ecbd0acf0",
+        "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c"
+      }
+    },
+    {
+      "key": "bc18f51c-e617-4fac-bacc-b11c63857a39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bc18f51c-e617-4fac-bacc-b11c63857a39",
+        "lesson_activity.key": "9bf1aff3-bf49-48cf-a537-a49cfd014444"
+      }
+    },
+    {
+      "key": "9573c382-b358-4a9c-949c-e7b2f505a06b",
+      "position": 1,
+      "properties": {
+        "description": "This tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this Spotify Playlist (all ages) . We are using radio-safe versions of all songs and for students under 13.",
+        "name": "Music Filtering"
+      },
+      "seeding_key": {
+        "activity_section.key": "9573c382-b358-4a9c-949c-e7b2f505a06b",
+        "lesson_activity.key": "0fc03c6e-efc8-4f90-8081-65604cca60f0"
+      }
+    },
+    {
+      "key": "16304428-a28c-43e3-b1a6-e85ea63b576a",
+      "position": 2,
+      "properties": {
+        "description": "As a teacher, your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can easily become isolating.  Help break those barriers by actively pairing students if they seem like they need help. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions:** The instructions provide steps to complete the level. .\n- **Stuck? Look for hints:** Each level includes a hint with further details about how to pass the level. If students are trying to pass levels as quickly as possible, they might find they just need to wait a certain amount of time for all of the code to play out before moving on. \n- **Move On and Come Back: **Sometimes students will benefit more from coming back to a tricky level. All levels are independent of one another, though they sometimes rely on previously introduced concepts.\n- **Take your time and experiment.** There are explicit instructions and hints to help students pass each level. In addition to passing, students should also feel free to try out their own ideas by experimenting with different dancers, dance moves, effects, and songs. \n",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "16304428-a28c-43e3-b1a6-e85ea63b576a",
+        "lesson_activity.key": "0fc03c6e-efc8-4f90-8081-65604cca60f0"
+      }
+    },
+    {
+      "key": "eb9807fc-429e-43fc-ba26-83f28a79e3de",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To build background knowledge about Artificial Intelligence and/or to extend learning, check out the videos, lessons, and professional learning opportunities on our [Creativity with AI page](https://hourofcode.com/ca).\n\nIf you have time and would like to prepare your students with an unplugged activity, consider delivering [Dance Party: Unplugged](https://studio.code.org/s/dance-unplugged/lessons/1) before your Hour of Code event. This brief lesson introduces students to the idea of events triggering different dance moves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eb9807fc-429e-43fc-ba26-83f28a79e3de",
+        "lesson_activity.key": "0fc03c6e-efc8-4f90-8081-65604cca60f0"
+      }
+    },
+    {
+      "key": "33d0aa62-9309-4bba-91fc-f00cf8ce9ece",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to do something really creative with code! “Code” is a set of directions that a computer can understand. Before we get started, what are some ways that you like to be creative or express yourself?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "33d0aa62-9309-4bba-91fc-f00cf8ce9ece",
+        "lesson_activity.key": "8c40c213-9d73-4c73-a6df-721f3b67fc9c"
+      }
+    },
+    {
+      "key": "53636a3e-86f0-4886-9fa7-19627fa525d6",
+      "position": 2,
+      "properties": {
+        "description": "*Encourage students to share the ways they express creativity, such as with art, dance, music, and writing.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "53636a3e-86f0-4886-9fa7-19627fa525d6",
+        "lesson_activity.key": "8c40c213-9d73-4c73-a6df-721f3b67fc9c"
+      }
+    },
+    {
+      "key": "93a98236-bf06-4d92-9e8d-4393ba69bd06",
+      "position": 3,
+      "properties": {
+        "description": "Just like choosing which paint colors to use or words you write with are ways of expressing creativity. Choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\nIn this creative coding activity, you will be introduced to a new, helpful tool: Artificial Intelligence, also known as AI! AI is a computer program that works like a human's brain. The A.I. Bot in this activity can help you by making choices for the special effects very quickly. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "93a98236-bf06-4d92-9e8d-4393ba69bd06",
+        "lesson_activity.key": "8c40c213-9d73-4c73-a6df-721f3b67fc9c"
+      }
+    },
+    {
+      "key": "5bc447ff-9866-4322-b905-527cad77d6ee",
+      "position": 4,
+      "properties": {
+        "description": "**Discuss:** How do you think computers and robots can help us be more creative?\n\n**Discussion Goal:** Students should start to think about ways that AI could be helpful in the creative process. Some ideas might include: \n- **Idea generation:** AI can help come up with new and exciting ideas for stories, drawings, and other creative projects when you're feeling stuck. \n- **Artistic Inspiration:** AI can suggest colors, styles, and themes for your artwork, giving you inspiration for your next masterpiece.\n- **Collaboration:** AI can be a creative partner, helping you brainstorm and collaborate with others on projects.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5bc447ff-9866-4322-b905-527cad77d6ee",
+        "lesson_activity.key": "8c40c213-9d73-4c73-a6df-721f3b67fc9c"
+      }
+    },
+    {
+      "key": "974515c2-993b-4133-8742-87207b07a2e7",
+      "position": 1,
+      "properties": {
+        "description": "In this video, students will see an example of creative coding in the real world to help inspire them to code their own interactive dance party. This video also explains the different elements of their coding platform like the Instruction Panel, the Workspace, the Toolbox, and the Playspace. ",
+        "name": "Intro to Dance Party",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "974515c2-993b-4133-8742-87207b07a2e7",
+        "lesson_activity.key": "107aca78-7bf3-4357-85ac-ff3842c10aad"
+      }
+    },
+    {
+      "key": "e5584470-09a3-4e13-84dd-af0edd5a9a73",
+      "position": 2,
+      "properties": {
+        "description": "This level requires students to make a new dancer with one block of code and make that dancer do a dance move with a second block of code. Encourage students to use the dropdown menus to explore different dancers, dance moves, and songs.  ",
+        "name": "Let's dance",
+        "progression_name": "Make Dancer & Dance Move"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5584470-09a3-4e13-84dd-af0edd5a9a73",
+        "lesson_activity.key": "107aca78-7bf3-4357-85ac-ff3842c10aad"
+      }
+    },
+    {
+      "key": "519ba07e-65e0-41c6-9c27-99d3ba9f0091",
+      "position": 3,
+      "properties": {
+        "description": "In these three levels, students are introduced to the new A.I. block. There are two videos that accompany these levels. Encourage students to re-watch these videos if they are feeling stuck. To pass these levels, students prompt AI to generate code for colorful effects to go with their dance party. Encourage students to choose three emojis that describe the mood they want to convey for their dance party.\n",
+        "name": "Use AI to generate special effects",
+        "progression_name": "Use AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "519ba07e-65e0-41c6-9c27-99d3ba9f0091",
+        "lesson_activity.key": "107aca78-7bf3-4357-85ac-ff3842c10aad"
+      }
+    },
+    {
+      "key": "7c23d145-7b3d-4646-867b-9bb7a4b0a13e",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Embedded videos will overlay on the level the first time a user opens the level. Students can close out of it once they're done watching. If they would like to watch the video again, it will be available under the \"run\" button."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7c23d145-7b3d-4646-867b-9bb7a4b0a13e",
+        "lesson_activity.key": "107aca78-7bf3-4357-85ac-ff3842c10aad"
+      }
+    },
+    {
+      "key": "7be72b2f-869b-43f1-8414-8922cc6523ea",
+      "position": 5,
+      "properties": {
+        "description": "Now, students are introduced to events. This is the trickiest coding concept in this tutorial. Events are special. They don’t connect to the setup block, but instead are mini programs on their own. Think of an event as a listening ear that will execute whatever code is under it when it is triggered. The first events students use are `when arrow pressed` events that will allow students to trigger new chunks of code by pressing a key on their keyboard. The second event is the `at measure` event that works more like a timer on a clock. When the song has run for a specified amount of measures, the new code will be triggered. \n\nEncourage students to rewatch the videos on events that accompany two of these levels. ",
+        "name": "Code events to add interaction",
+        "progression_name": "Key Press & At Measure Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea",
+        "lesson_activity.key": "107aca78-7bf3-4357-85ac-ff3842c10aad"
+      }
+    },
+    {
+      "key": "0c12e9fb-09f7-4e1f-a310-2992e4c4656b",
+      "position": 6,
+      "properties": {
+        "description": "This last level is meant to be a space for free play and exploration. Encourage students to get creative and to practice their new coding skills to make a dance party of their own!  ",
+        "name": "Get creative! ",
+        "progression_name": "Final Dance Party Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c12e9fb-09f7-4e1f-a310-2992e4c4656b",
+        "lesson_activity.key": "107aca78-7bf3-4357-85ac-ff3842c10aad"
+      }
+    },
+    {
+      "key": "7561e653-6f61-4be4-80d2-3d51084e9f61",
+      "position": 1,
+      "properties": {
+        "description": "Build on their positive experience with coding. \n\n**Discuss:** \n\n*If this is their first time coding, ask:*\n-  What is something you enjoyed about today's activity? \nor \n- “How did you usecreativity and computer science today?\n\n*If your students have coded before, ask:*\n- What is one new thing you coded today that you hadn’t done before?\n\nThen, **reflect on the process of using  A.I.** to assist them in their coding:\n- Do you think it's better to create things all by yourself, or is it more fun to work together with a computer or robot? Why?\n- What are some cool ways A.I. could be used in schools to help students be more creative?\n- Can you think of a fun story or drawing that you'd like a computer to help you create? How could it assist you?\n",
+        "name": "Debrief"
+      },
+      "seeding_key": {
+        "activity_section.key": "7561e653-6f61-4be4-80d2-3d51084e9f61",
+        "lesson_activity.key": "742d1970-5531-488e-b0a9-e922cb9f85d9"
+      }
+    },
+    {
+      "key": "599092f2-f626-4edf-8a9d-636ed3ac5f4a",
+      "position": 1,
+      "properties": {
+        "description": "Explain that you are spending one hour coding today because this week is CS Education Week, and millions of other students across the globe have also been learning one Hour of Code this week. Congratulate students on being part of this worldwide movement.\n\nGive each student a [certificate](http://code.org/certificates) with his or her name on it.",
+        "name": "Celebrate"
+      },
+      "seeding_key": {
+        "activity_section.key": "599092f2-f626-4edf-8a9d-636ed3ac5f4a",
+        "lesson_activity.key": "b02d6abe-b8bd-47dc-a98a-c35a189ed6e8"
+      }
+    },
+    {
+      "key": "c0b64f87-89b2-4aa2-81c2-30edb6c3ebb4",
+      "position": 2,
+      "properties": {
+        "description": "Let students know that if they enjoyed today’s activity, they have many options for continuing to code. Encourage students to visit code.org/learn for a list of options, or, if you’re planning any of the extension activities that follow, tell students what’s coming next in your classroom.",
+        "name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0b64f87-89b2-4aa2-81c2-30edb6c3ebb4",
+        "lesson_activity.key": "b02d6abe-b8bd-47dc-a98a-c35a189ed6e8"
+      }
+    },
+    {
+      "key": "7f495a9c-89a7-4d48-913e-c571d27e7a83",
+      "position": 3,
+      "properties": {
+        "description": "The Hour of Code is about creativity, and we can’t wait to see what you create! Please share student creations, photos, and videos on social media! Teachers, record your classroom coding a dance, or dancing the dance.\n\nBe sure to include #HourOfCode and tag us on Facebook, Twitter and Instagram. Bonus points for tagging the artist whose music your students used. Code.org will re-share our favorite posts to our millions of followers.\n\n*Of course, make sure to respect your school's social media policy.*\n",
+        "name": "Go Viral"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f495a9c-89a7-4d48-913e-c571d27e7a83",
+        "lesson_activity.key": "b02d6abe-b8bd-47dc-a98a-c35a189ed6e8"
+      }
+    },
+    {
+      "key": "0233caa9-5404-4a64-bd43-1c122a085898",
+      "position": 1,
+      "properties": {
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n**Video:** [AI: Machine Learning](https://www.youtube.com/watch?v=OeU5m6vRyCk) The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch it as a class and debrief afterwards to help students build connections to the content.",
+        "name": "Build Excitement!\r",
+        "progression_name": "AI Machine Learning - Video",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can share these stories with your class to help them see how AI will impact the future.\n\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0233caa9-5404-4a64-bd43-1c122a085898",
+        "lesson_activity.key": "a8ac24d9-a040-4759-b170-3db55ada8001"
+      }
+    },
+    {
+      "key": "4322a6e4-84a7-48b7-9cac-2dfe17c6f927",
+      "position": 2,
+      "properties": {
+        "description": "**Quick Share-out:** Where have you seen or experienced artificial intelligence in your lives?\nExamples from the video include: \n\n* email filters\n* auto-complete text\n* video recommendation systems\n* voice recognition\n* translation apps\n* digital assistants\n* image recognition\n\n**Prompt:** Based on what you saw in the video, what is machine learning?\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses. The goal here is to get students acquainted with the world of artificial intelligence, reflect on the prevalence of artificial intelligence in our lives and think broadly about potential future innovations.\n\n**Say:** *Machine learning refers to a computer that can recognize patterns and make decisions without being explicitly programmed. In this activity you’re going to supply the data to train your own machine learning model. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "4322a6e4-84a7-48b7-9cac-2dfe17c6f927",
+        "lesson_activity.key": "a8ac24d9-a040-4759-b170-3db55ada8001"
+      }
+    },
+    {
+      "key": "6b1b3f7e-8cf8-4a5b-b08a-1750545137fd",
+      "position": 1,
+      "properties": {
+        "name": "AI For Oceans",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Every image in this part of the tutorial is fed into a neural network that has been pre-trained on a huge set of data called [ImageNet](http://www.image-net.org/). The database contains over 14 million hand-annotated images. ImageNet contains more than 20,000 categories with a typical category, such as \"balloon\" or \"strawberry\", consisting of several hundred images. When A.I. is scanning new images and making its own predictions in the tutorial, it is actually comparing the possible categories for the new image with the patterns it found in the training dataset. \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b1b3f7e-8cf8-4a5b-b08a-1750545137fd",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "fb1df0aa-b399-4bbe-9045-948ef06fb3c2",
+      "position": 2,
+      "properties": {
+        "description": "####Levels 2-4 - Train AI to Clean the Ocean\n\nStudents can work through levels 2-4 on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "progression_name": "Train an AI to Clean the Ocean"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb1df0aa-b399-4bbe-9045-948ef06fb3c2",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "228fcf29-a289-49fb-b3d0-79c03cfb159d",
+      "position": 3,
+      "properties": {
+        "description": "####Level 5 - Training Data & Bias\n\n**Quick Share-out:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n",
+        "progression_name": "AI: Training Data & Bias - Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "228fcf29-a289-49fb-b3d0-79c03cfb159d",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "6ffd1b0f-5e5a-490f-b9b4-4764f1eba0b6",
+      "position": 4,
+      "properties": {
+        "description": "**Prompt:** How do you think your training data influenced the results that A.I. produced?"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ffd1b0f-5e5a-490f-b9b4-4764f1eba0b6",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "d0222c9b-8489-4ad4-9e53-5f3a356b840d",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** In small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial. The goal is to get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\"."
+      },
+      "seeding_key": {
+        "activity_section.key": "d0222c9b-8489-4ad4-9e53-5f3a356b840d",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "1231ae31-324d-45f5-ab1b-fdc87aed1759",
+      "position": 6,
+      "properties": {
+        "description": "####Levels 6 - Using Training Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "1231ae31-324d-45f5-ab1b-fdc87aed1759",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "b56c3d0c-599c-4f0f-8b42-bb10bb888f88",
+      "position": 7,
+      "properties": {
+        "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how machine learning works, it should be encouraged!",
+        "progression_name": "Using Training Data",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "The fish in this tutorial are randomly generated based on some pre-defined components, including mouths, tails, eyes, scales, and fins, with a randomly chosen body color, shape, and size. Rather than looking at the actual image data, A.I. is now looking for patterns in these components based on how the student classifies each fish. It will be more likely to label a fish the same way the student would have if it has matching traits."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b56c3d0c-599c-4f0f-8b42-bb10bb888f88",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "014b2b48-d4c4-45ac-95d7-5920cf0a5990",
+      "position": 8,
+      "properties": {
+        "description": "####Level 7 - Impacts on Society\n\n\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but that data could be opinion-based or biased.*",
+        "progression_name": "AI: Impact on Society - Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "014b2b48-d4c4-45ac-95d7-5920cf0a5990",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "ef3f24aa-e043-4582-83a1-755bc68fa599",
+      "position": 9,
+      "properties": {
+        "description": "**Say:** *Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have gotten something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n**Prompt:** How could biased data result in problems for artificial intelligence? What are ways to address this?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef3f24aa-e043-4582-83a1-755bc68fa599",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "3306878c-2e5b-41c8-b7c3-bd76b1fcdc7a",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:** Beginning in small groups then moving to whole class, students share their responses.  The goal of this discussion is to bring students back to the context of artificial intelligence in the real world.\n\n**Say:** *Some ways to address bias are to use a larger or more inclusive set of training data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "3306878c-2e5b-41c8-b7c3-bd76b1fcdc7a",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "9056aeef-3649-4cd2-af0e-bb44a11028e7",
+      "position": 11,
+      "properties": {
+        "description": "####Level 8 - Teach A.I. a New Word\n\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.\n\n**Open question:** *What is a problem you care about that artificial intelligence could help to solve?*",
+        "progression_name": "Teach AI a New Word"
+      },
+      "seeding_key": {
+        "activity_section.key": "9056aeef-3649-4cd2-af0e-bb44a11028e7",
+        "lesson_activity.key": "d59f3289-8ff4-4c69-bb7f-ee3ff7c1e524"
+      }
+    },
+    {
+      "key": "96ec7336-6ae8-4436-b8a6-6597835466f1",
+      "position": 1,
+      "properties": {
+        "description": "[Print certificates](https://studio.code.org/certificates/batch?course=b2NlYW5z) for students to celebrate their achievement.\n\nAt the end of the lesson encourage students to head to [Code.org/learn](http://Code.org/learn) where they can get ideas for more ways to keep their adventure with computer science going."
+      },
+      "seeding_key": {
+        "activity_section.key": "96ec7336-6ae8-4436-b8a6-6597835466f1",
+        "lesson_activity.key": "3fcbff8a-1aba-4295-9cd1-809b53df4601"
+      }
+    },
+    {
+      "key": "6d472705-ea7f-44b7-a266-7a1c264f0e10",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Professional Learning Opportunity**\n\nAre you interested in teaching your students more about AI? Consider engaging in our self-paced professional learning module, [Preparing to Teach AI and Machine Learning](https://studio.code.org/courses/self-paced-pl-aiml-2023)! This module will give you all the tools, skills, and knowledge you need to teach your students our AI and Machine Learning unit.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6d472705-ea7f-44b7-a266-7a1c264f0e10",
+        "lesson_activity.key": "3fcbff8a-1aba-4295-9cd1-809b53df4601"
+      }
+    },
+    {
+      "key": "3a3d1c01-317c-452b-bb30-74632f96228a",
+      "position": 1,
+      "properties": {
+        "description": "####Help Classify Animals at Mountain Zebra National Park\n\nSnapshot Safari has placed hundreds of hidden cameras across southern Africa, capturing millions of images of beautiful and rare animals. Students can help protect the endangered Cape Mountain Zebra by classifying the different animals in these images.  You can read about the project [here](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) or click below to give it a try!\n\n[Snapshot Mountain Zebra - Zooniverse](\nhttps://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a3d1c01-317c-452b-bb30-74632f96228a",
+        "lesson_activity.key": "f623bade-875f-4938-852b-a11bef27f661"
+      }
+    },
+    {
+      "key": "92178e85-e2d0-42da-aead-bf678c2f15c5",
+      "position": 1,
+      "properties": {
+        "description": "On the final results screen, a visualization of A.I.'s machine learning model can be viewed by clicking ![](https://curriculum.code.org/media/uploads/info.png)."
+      },
+      "seeding_key": {
+        "activity_section.key": "92178e85-e2d0-42da-aead-bf678c2f15c5",
+        "lesson_activity.key": "3d1d04f0-e562-4482-ae80-b329d9a1572a"
+      }
+    },
+    {
+      "key": "bfc9ed48-36a7-4417-b382-bbed54fc1ed7",
+      "position": 2,
+      "properties": {
+        "description": "As an example, let's look at a student who is training A.I. to recognize **\"circular\"** fish by only selecting fish with by looking at a single trait:\r\n\r\n|\"Circular\" body shapes: ![](https://curriculum.code.org/media/uploads/circle_1.png) ![](https://curriculum.code.org/media/uploads/circle_2.png)|\r\n|-|\r\n\r\nAfter about 30 sets of training data, we can see that A.I. is able to classify the fish perfectly. It has successfully recognized a pattern: All of the fish the student selected had one of the same two body shapes. \r\n\r\n|\"Circular\" fish - training: 30| |\r\n|-|-|\r\n|<img src=\"https://curriculum.code.org/media/uploads/circularSum.png\" width=\"5000\">|<img src=\"https://curriculum.code.org/media/uploads/circular.png\" width=\"5000\">|\r\n| *By clicking on the information button, we can see that A.I. is very confident that \"body\" is the most important component overall in the fish it has determined are \"circular\".*|*An individual fish can be inspected by clicking it. The information here shows that for this fish, A.I. determined that its body shape was a positive indicator that this was a \"circular\" fish.*|\r\n\r\n|\"Not circular\" fish - training: 30| |\r\n|-|-|\r\n|<img src=\"https://curriculum.code.org/media/uploads/Screen-Shot-2019-12-05-at-4.53.07-PM.png\" width=\"2500\">|*By toggling the view, we can also analyze the fist A.I. determined are \"not circular\". Green bars pointing to the right represent a signal that the trait is \"circular\". Red bars pointing left signal that it's \"not circular\". A.I. decides how to classify each fish by weighing *all* of the components, even those that aren't shown in the list.*|\r\n\r\n##### What about the other traits?\r\n\r\nYou may have noticed that the other traits such as color seem to matter to A.I. even though the student was just focusing on body shape. Besides the obvious fact that A.I. can't literally read our minds, there is another reason A.I. might draw some of the wrong conclusions. \r\n\r\nThe fish in this tutorial are generated randomly. The fish the student labeled as \"circular\" happened to randomly have some of the same colors. If the set of training data didn't include fish that are green with round bodies, A.I. will be less confident about classifying one as \"circular\" even if that's what the student intended.",
+        "name": "Example 1: Training based on one trait (body shape)"
+      },
+      "seeding_key": {
+        "activity_section.key": "bfc9ed48-36a7-4417-b382-bbed54fc1ed7",
+        "lesson_activity.key": "3d1d04f0-e562-4482-ae80-b329d9a1572a"
+      }
+    },
+    {
+      "key": "5b56b13b-c598-424b-96d2-eb6c6754ed26",
+      "position": 3,
+      "properties": {
+        "description": "Adding more training data not only changes the results, but the data shown in the Info view. Sometimes the results graph shown can make it clearer why the results don't match expectations.\r\n\r\nLet's consider a student who wants to train A.I. to recognize **\"angry\"** fish.\r\nThey want to accomplish this by selecting any fish with eyebrows that point inwards and frowning mouths. They will label a fish as \"angry\" if it has a combination of these traits:\r\n\r\n|\"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\r\n|-|\r\n\r\nCan A.I. figure out what the student is doing without being explicitly programmed? It depends on how much training data the student provides and the quality of data in the set. \r\n\r\n| \"Angry\" fish - training: 30 | \"Angry\" fish - training: 200 |\r\n|-----------------------------|------------------------------|\r\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> |<img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\r\n|*Here we can see that A.I. picked up right away on the \"eyes\" being the most important trait, but closely followed by \"color\", not \"mouth\". There are a few purple fish in the left image that have mouths that are different from what the student was targeting. Perhaps many of the \"angry\" fish the student initially selected were purple? One way to improve the model would be to continue training, making sure to keep going until several purple \"not angry\" fish have been correctly labeled.* |*Improved results after additional training.* |",
+        "name": "Example 2: Using the Information view to improve the model\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b56b13b-c598-424b-96d2-eb6c6754ed26",
+        "lesson_activity.key": "3d1d04f0-e562-4482-ae80-b329d9a1572a"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_items"
+        ],
+        "progression": "Sorting Items"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "1b979832-b6ad-4bae-b833-9dc42bb8e950"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_items"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_k5pilot"
+        ],
+        "progression": "Train AI on Fish"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "21f56bab-977d-4631-a8bf-8384e284a640"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash_k5pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilot"
+        ],
+        "progression": "Train AI on Sea Creatures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrashDemo_k5pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_k5pilot"
+        ],
+        "progression": "Train AI on Sea Creatures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrash_k5pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Long_k5pilot"
+        ],
+        "progression": "Teach AI a New Word"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "07d57fd1-faea-4249-8b30-ed36439b2500"
+      },
+      "level_keys": [
+        "Oceans_Long_k5pilot"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables"
+        ],
+        "progression": "Sorting Fruit and Vegetables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_fruit_vegetables"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_customize_effect_-k5pilot"
+        ],
+        "progression": "AI Bot Effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_customize_effect_-k5pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "bf325b06-a967-439c-9011-6f78adf50ec7"
+      },
+      "level_keys": [
+        "dance_ai_customize_effect_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_plan_your_poster_pilot"
+        ],
+        "progression": "Plan Your AI Poster"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_plan_your_poster_pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0f6296dd-e703-401c-bad0-116ecbd0acf0"
+      },
+      "level_keys": [
+        "k5_ai_plan_your_poster_pilot"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_intro_video_-k5pilot"
+        ],
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_intro_video_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "974515c2-993b-4133-8742-87207b07a2e7"
+      },
+      "level_keys": [
+        "dance_ai_intro_video_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_dancer_and_dance_move_-k5pilot"
+        ],
+        "progression": "Make Dancer & Dance Move"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_dancer_and_dance_move_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "e5584470-09a3-4e13-84dd-af0edd5a9a73"
+      },
+      "level_keys": [
+        "dance_ai_dancer_and_dance_move_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_generate_effect_-k5pilot"
+        ],
+        "progression": "Use AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_generate_effect_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "519ba07e-65e0-41c6-9c27-99d3ba9f0091"
+      },
+      "level_keys": [
+        "dance_ai_generate_effect_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_generate_effect_again_-k5pilot"
+        ],
+        "progression": "Use AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_generate_effect_again_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "519ba07e-65e0-41c6-9c27-99d3ba9f0091"
+      },
+      "level_keys": [
+        "dance_ai_generate_effect_again_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_try_key_press_-k5pilot"
+        ],
+        "progression": "Key Press & At Measure Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_try_key_press_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      },
+      "level_keys": [
+        "dance_ai_try_key_press_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_code_key_press_-k5pilot"
+        ],
+        "progression": "Key Press & At Measure Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_code_key_press_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      },
+      "level_keys": [
+        "dance_ai_code_key_press_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_try_at_measure_-k5pilot"
+        ],
+        "progression": "Key Press & At Measure Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_try_at_measure_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      },
+      "level_keys": [
+        "dance_ai_try_at_measure_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_code_at_measure_-k5pilot"
+        ],
+        "progression": "Key Press & At Measure Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_code_at_measure_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      },
+      "level_keys": [
+        "dance_ai_code_at_measure_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_freeplay_-k5pilot"
+        ],
+        "progression": "Final Dance Party Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_freeplay_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0c12e9fb-09f7-4e1f-a310-2992e4c4656b"
+      },
+      "level_keys": [
+        "dance_ai_freeplay_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_k5pilot"
+        ],
+        "progression": "AI Machine Learning - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0233caa9-5404-4a64-bd43-1c122a085898"
+      },
+      "level_keys": [
+        "Oceans_Video_Machine_Learning_k5pilot"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data_k5pilot"
+        ],
+        "progression": "AI: Training Data & Bias - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "228fcf29-a289-49fb-b3d0-79c03cfb159d"
+      },
+      "level_keys": [
+        "Oceans_Video_Training_Data_k5pilot"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Short_k5pilot"
+        ],
+        "progression": "Using Training Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Short_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "b56c3d0c-599c-4f0f-8b42-bb10bb888f88"
+      },
+      "level_keys": [
+        "Oceans_Short_k5pilot"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications_k5pilot"
+        ],
+        "progression": "AI: Impact on Society - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Societal_Implications_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "014b2b48-d4c4-45ac-95d7-5920cf0a5990"
+      },
+      "level_keys": [
+        "Oceans_Video_Societal_Implications_k5pilot"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_items",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "1b979832-b6ad-4bae-b833-9dc42bb8e950"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "21f56bab-977d-4631-a8bf-8384e284a640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrashDemo_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrash_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_Long_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "07d57fd1-faea-4249-8b30-ed36439b2500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_fruit_vegetables",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_customize_effect_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_customize_effect_-k5pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "bf325b06-a967-439c-9011-6f78adf50ec7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_plan_your_poster_pilot",
+        "script_level.level_keys": [
+          "k5_ai_plan_your_poster_pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0f6296dd-e703-401c-bad0-116ecbd0acf0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_intro_video_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_intro_video_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "974515c2-993b-4133-8742-87207b07a2e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_dancer_and_dance_move_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_dancer_and_dance_move_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "e5584470-09a3-4e13-84dd-af0edd5a9a73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_generate_effect_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_generate_effect_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "519ba07e-65e0-41c6-9c27-99d3ba9f0091"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_generate_effect_again_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_generate_effect_again_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "519ba07e-65e0-41c6-9c27-99d3ba9f0091"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_try_key_press_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_try_key_press_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_code_key_press_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_code_key_press_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_try_at_measure_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_try_at_measure_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_code_at_measure_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_code_at_measure_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "7be72b2f-869b-43f1-8414-8922cc6523ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_freeplay_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_freeplay_-k5pilot"
+        ],
+        "lesson.key": "Dance Party: AI Edition",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0c12e9fb-09f7-4e1f-a310-2992e4c4656b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Machine_Learning_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0233caa9-5404-4a64-bd43-1c122a085898"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Training_Data_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "228fcf29-a289-49fb-b3d0-79c03cfb159d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Short_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_Short_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "b56c3d0c-599c-4f0f-8b42-bb10bb888f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Societal_Implications_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_Video_Societal_Implications_k5pilot"
+        ],
+        "lesson.key": "AI for Oceans",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "014b2b48-d4c4-45ac-95d7-5920cf0a5990"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "AI: Impact on Society",
+      "url": "https://youtu.be/ng4c1g3COfs",
+      "key": "ai_impact_on_society",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_impact_on_society"
+      }
+    },
+    {
+      "name": "AI: Machine Learning",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_machine_learning",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_machine_learning"
+      }
+    },
+    {
+      "name": "AI: Training Data & Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "ai_training_data_bias",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_training_data_bias"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai_impact_on_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai_training_data_bias"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "artificial_intelligence_a_i_",
+      "word": "Artificial Intelligence (A.I.) ",
+      "definition": "The ability of machines to learn and problem-solve.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "key": "bias",
+      "word": "Bias",
+      "definition": "When a decision favors some things and not others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "Classification ",
+      "definition": "Sorting items into categories based on their features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "data",
+      "word": "Data",
+      "definition": "Information that we collect about the world",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "delete",
+      "word": "Delete",
+      "definition": "To remove or take something away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "delete"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "feature_vector",
+      "word": "Feature Vector",
+      "definition": "A numerical representation of a set of features of an object or event",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature_vector"
+      }
+    },
+    {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "key": "modify",
+      "word": "Modify",
+      "definition": "To change or make something different",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": " An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "retrieve",
+      "word": "Retrieve",
+      "definition": "To get back something you stored or put away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "key": "sort",
+      "word": "Sort",
+      "definition": "To put things in groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "key": "store",
+      "word": "Store",
+      "definition": "To keep something in a computer’s memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "store"
+      }
+    },
+    {
+      "key": "training",
+      "word": "Training",
+      "definition": "Teaching a computer to do tasks by showing it many examples",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "delete"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "store"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "feature_vector"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "training"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "01c7a841-345e-4b6f-84d4-b7be2921304b",
+      "properties": {
+        "description": "Train and test a machine learning model."
+      },
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "objective.key": "01c7a841-345e-4b6f-84d4-b7be2921304b"
+      }
+    },
+    {
+      "key": "09369bb2-08f3-4ae3-9a55-b69295ac2aa9",
+      "properties": {
+        "description": "Utilize A.I. to select and generate appropriate special effects based on chosen emojis to enhance the visual experience of their dance party."
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "objective.key": "09369bb2-08f3-4ae3-9a55-b69295ac2aa9"
+      }
+    },
+    {
+      "key": "2ca085a6-567d-4df2-8d1c-30bb80d0d7b9",
+      "properties": {
+        "description": "Use core coding concepts to program interactive elements that respond to user input, such as keystrokes and timed events."
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "objective.key": "2ca085a6-567d-4df2-8d1c-30bb80d0d7b9"
+      }
+    },
+    {
+      "key": "72d0242f-c5ba-4567-a2f6-6a886fb157dd",
+      "properties": {
+        "description": "Discuss the role artificial intelligence plays in their lives."
+      },
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "objective.key": "72d0242f-c5ba-4567-a2f6-6a886fb157dd"
+      }
+    },
+    {
+      "key": "b803fdbe-6694-472c-8b0e-4247f8287613",
+      "properties": {
+        "description": "Reason about how human bias plays a role in machine learning."
+      },
+      "seeding_key": {
+        "lesson.key": "AI for Oceans",
+        "objective.key": "b803fdbe-6694-472c-8b0e-4247f8287613"
+      }
+    },
+    {
+      "key": "e9f08cf3-c73b-40ea-b4a0-b0e52a289b2d",
+      "properties": {
+        "description": "Reflect on how computers can contribute to creative processes."
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party: AI Edition",
+        "objective.key": "e9f08cf3-c73b-40ea-b4a0-b0e52a289b2d"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

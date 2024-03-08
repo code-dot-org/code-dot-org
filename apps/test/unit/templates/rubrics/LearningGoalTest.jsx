@@ -101,6 +101,7 @@ describe('LearningGoal', () => {
           evidenceLevels: [],
           tips: 'Tips',
         }}
+        teacherHasEnabledAi={false}
         isStudent={true}
       />
     );
@@ -164,12 +165,14 @@ describe('LearningGoal', () => {
       <LearningGoal
         learningGoal={{
           learningGoal: 'Testing',
+          aiEnabled: true,
           evidenceLevels: [],
         }}
         submittedEvaluation={{
           feedback: 'test feedback',
           understanding: RubricUnderstandingLevels.LIMITED,
         }}
+        teacherHasEnabledAi={false}
       />
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -180,7 +183,11 @@ describe('LearningGoal', () => {
 
     const wrapper = shallow(
       <LearningGoal
-        learningGoal={{key: 'key', learningGoal: 'Testing', evidenceLevels: []}}
+        learningGoal={{
+          key: 'key',
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
       />
     );
@@ -220,7 +227,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Evaluate');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Evaluate');
     wrapper.unmount();
   });
 
@@ -237,7 +244,7 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
+    expect(wrapper.find('BodyThreeText').first().text()).to.include('Approve');
     wrapper.unmount();
   });
 

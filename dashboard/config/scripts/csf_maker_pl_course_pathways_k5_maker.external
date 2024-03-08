@@ -8,6 +8,8 @@ markdown <<MARKDOWN
 
 #### Take a look at this chart to get an overview of the skills and projects covered in each course to help you decide which course bets fits your needs.
 
+#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the units below. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
+
 <br>
 
 <table width="850px">
@@ -17,11 +19,11 @@ markdown <<MARKDOWN
     </tr>
     <tr>
     	<td>
-         <a href="https://levelbuilder-studio.code.org/s/coursec-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course C: Maker with micro:bit page</a> 
+         <a href="https://studio.code.org/s/pilot-coursec-maker-2024/" target="blank" rel="noopener noreferrer">Course C: Maker with micro:bit page</a> 
         	
         </td>
     	<td>
-         <a href="https://levelbuilder-studio.code.org/s/coursed-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course D: Maker with micro:bit page</a> 
+         <a href="https://studio.code.org/s/pilot-coursed-maker-2024" target="blank" rel="noopener noreferrer">Course D: Maker with micro:bit page</a> 
         	
         </td>
       </tr>
@@ -67,10 +69,10 @@ markdown <<MARKDOWN
     </tr>
     <tr>
          <td>
-          <a href="https://levelbuilder-studio.code.org/s/coursee-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course E: Maker with micro:bit page</a> 
+          <a href="https://studio.code.org/s/pilot-coursee-maker-2024" target="blank" rel="noopener noreferrer">Course E: Maker with micro:bit page</a> 
    	      </td>
     	<td>
-        <a href="https://levelbuilder-studio.code.org/s/coursef-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course F: Maker with micro:bit page</a> 
+        <a href="https://studio.code.org/s/pilot-coursef-maker-2024" target="blank" rel="noopener noreferrer">Course F: Maker with micro:bit page</a> 
         </td>
     </tr>
      <tr>
