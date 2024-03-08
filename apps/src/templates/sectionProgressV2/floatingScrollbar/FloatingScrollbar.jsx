@@ -31,12 +31,6 @@ export default function FloatingScrollbar({
   const [childWidth, setChildWidth] = React.useState(0);
   const [scrollVisible, setScrollVisible] = React.useState(true);
 
-  if (children.length > 1) {
-    throw new Error('FloatingScrollbar only supports a single child');
-  } else if (children.length === 0) {
-    return null;
-  }
-
   const childContainerResizeObserver = React.useMemo(
     () =>
       new ResizeObserver(([entry]) => {
@@ -114,6 +108,12 @@ export default function FloatingScrollbar({
       scrollRef.current.scrollLeft = scroll.target.scrollLeft;
     });
   }, [setOnScroll, scrollRef]);
+
+  if (children.length > 1) {
+    throw new Error('FloatingScrollbar only supports a single child');
+  } else if (children.length === 0) {
+    return null;
+  }
 
   return (
     <div className={styles.scrollingContainer}>
