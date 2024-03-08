@@ -355,6 +355,8 @@
   "censusRequiredSelect": "Required. Please select an option.",
   "censusTextBased": "Text-based programming in a language such as Java, JavaScript, Python, C++, etc. (Excluding HTML or CSS)",
   "censusWebDesign": "Web design using HTML or CSS",
+  "certificateAltTextNoName": "Certificate for completion of {courseTitle}",
+  "certificateAltTextWithName": "Certificate for {studentName} for completion of {courseTitle}",
   "certificateForCompletion": "Certificate for Completion of One Hour of Code",
   "challengeLevelIntro": "Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!",
   "challengeLevelPassTitle": "You did it!",
