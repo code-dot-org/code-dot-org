@@ -29,7 +29,7 @@ export default function EvidenceLevelsForTeachersV2({
   // Generates a list based on whether the AI understanding level falls in the pass
   // (Extensive / Convincing) or fail (Limited / None) range. Used to display AI bubble
   // around evidence level.
-  const aiEvidenceLevels = useMemo(() => {
+  const suggestedEvidenceLevels = useMemo(() => {
     if (!!aiEvalInfo) {
       // If a teacher set an understanding, or no AI assessment, then bail
       if (understanding !== INVALID_UNDERSTANDING || !isAiAssessed) {
@@ -82,7 +82,9 @@ export default function EvidenceLevelsForTeachersV2({
                 [
                   understanding === evidenceLevel.understanding
                     ? style.evidenceLevelSelected
-                    : aiEvidenceLevels.includes(evidenceLevel.understanding)
+                    : suggestedEvidenceLevels.includes(
+                        evidenceLevel.understanding
+                      )
                     ? classnames(
                         'unittest-evidence-level-suggested',
                         style.evidenceLevelSuggested,
