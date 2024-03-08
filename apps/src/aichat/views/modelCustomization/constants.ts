@@ -11,7 +11,7 @@ export const DEFAULT_MODEL_CARD_INFO = {
     intendedUse: '',
     limitationsAndWarnings: '',
     testingAndEvaluation: '',
-    askAboutTopics: '',
+    exampleTopics: [],
   },
   visibility: Visibility.EDITABLE,
 };

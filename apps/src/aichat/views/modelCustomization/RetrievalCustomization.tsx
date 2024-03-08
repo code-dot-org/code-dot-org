@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
 import {LabState} from '@cdo/apps/lab2/lab2Redux';

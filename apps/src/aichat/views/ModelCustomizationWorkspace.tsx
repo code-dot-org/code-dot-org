@@ -37,7 +37,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       <Tabs
         tabs={
           [
-            hidePromptCustomization && {
+            !hidePromptCustomization && {
               title: 'Prompt',
               content: <PromptCustomization />,
             },
