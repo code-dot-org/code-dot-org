@@ -1,4 +1,4 @@
-# TODO: unfirebase, when we move this to the datablock_storage_controler should we delete this whole file? see: #56996
+# TODO: post-firebase-cleanup, consider removing this file, see https://github.com/code-dot-org/code-dot-org/issues/56996#issuecomment-1977935612, post-firebase-cleanup issue is: #56994
 
 require 'sinatra/base'
 require 'cdo/sinatra'
@@ -24,14 +24,12 @@ class TablesApi < Sinatra::Base
   # Exports a csv file from a table where the first row is the column names
   # and additional rows are the column values.
   #
-  # TODO: unfirebase, this should moved to datablock_storage_controler, see: #56996
-  #
-  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name| # TODO: unfirebase
+  # TODO: post-firebase-cleanup, remove this method at the least, probably remove whole file: #56994
+  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name|
     dont_cache
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
-    # TODO: post-firebase-cleanup, remove the firebase version: #56994
     return FirebaseHelper.new(channel_id).table_as_csv(table_name)
   end
 end

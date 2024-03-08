@@ -67,7 +67,7 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
-    // TODO: post-firebase-cleanup, remove this conditional, leave only else clause #56994
+    // TODO: post-firebase-cleanup, remove this conditional, leave only logic from the else clause #56994
     if (isFirebaseStorage()) {
       const isSharedTable =
         this.props.tableListMap[this.props.tableName] === tableType.SHARED;
