@@ -388,7 +388,10 @@ FeedbackUtils.prototype.displayFeedback = function (
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
-      recordShare(EVENTS.FINISH_BUTTON_CERTIFICATE, project.getStandaloneApp());
+      recordFinishShare(
+        EVENTS.FINISH_BUTTON_CERTIFICATE,
+        project.getStandaloneApp()
+      );
 
       if (options.response && options.response.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
@@ -429,7 +432,10 @@ FeedbackUtils.prototype.displayFeedback = function (
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
-      recordShare(EVENTS.FINISH_SHARING_PUBLISH, project.getStandaloneApp());
+      recordFinishShare(
+        EVENTS.FINISH_SHARING_PUBLISH,
+        project.getStandaloneApp()
+      );
       feedbackDialog.hide();
 
       const store = getStore();
@@ -509,7 +515,7 @@ FeedbackUtils.prototype.displayFeedback = function (
   }
 };
 
-function recordShare(type, appType) {
+function recordFinishShare(type, appType) {
   analyticsReporter.sendEvent(EVENTS.type, {
     lab_type: appType,
   });
@@ -947,7 +953,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   );
   if (sharingCopyButton) {
     dom.addClickTouchEvent(sharingCopyButton, function () {
-      recordShare(EVENTS.FINISH_SHARING_LINK_COPY, project.getStandaloneApp());
+      recordFinishShare(
+        EVENTS.FINISH_SHARING_LINK_COPY,
+        project.getStandaloneApp()
+      );
       copyToClipboard(options.shareLink, () => {
         sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
       });
@@ -958,7 +967,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   const twitterButton = sharingDiv.querySelector(twitterButtonSelector);
   if (twitterButton) {
     dom.addClickTouchEvent(twitterButton, () => {
-      recordShare(EVENTS.FINISH_SHARING_TWITTER, project.getStandaloneApp());
+      recordFinishShare(
+        EVENTS.FINISH_SHARING_TWITTER,
+        project.getStandaloneApp()
+      );
     });
   }
 
@@ -966,7 +978,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   const facebookButton = sharingDiv.querySelector(facebookButtonSelector);
   if (facebookButton) {
     dom.addClickTouchEvent(facebookButton, () => {
-      recordShare(EVENTS.FINISH_SHARING_FB, project.getStandaloneApp());
+      recordFinishShare(EVENTS.FINISH_SHARING_FB, project.getStandaloneApp());
     });
   }
 
@@ -989,7 +1001,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   //  QR Code & SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   dom.addClickTouchEvent(sharingPhone, function () {
-    recordShare(
+    recordFinishShare(
       EVENTS.FINISH_SHARING_LINK_SEND_TO_PHONE,
       project.getStandaloneApp()
     );
