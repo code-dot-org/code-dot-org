@@ -16,12 +16,7 @@ import {
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
-
-export const styles = {
-  xIcon: {
-    paddingRight: 5,
-  },
-};
+import moduleStyles from './personal-projects-table-actions-cell.module.scss';
 
 export class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
@@ -82,7 +77,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             {!this.props.isFrozen && <MenuBreak />}
             {!this.props.isFrozen && (
               <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-                <FontAwesome icon="times-circle" style={styles.xIcon} />
+                <FontAwesome icon="times-circle" style={moduleStyles.xIcon} />
                 {i18n.delete()}
               </PopUpMenu.Item>
             )}
