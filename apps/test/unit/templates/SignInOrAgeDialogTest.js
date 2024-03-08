@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import React from 'react';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
-import {render, screen, fireEvent, cleanup} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import i18n from '@cdo/locale';
@@ -26,7 +26,6 @@ describe('SignInOrAgeDialog', () => {
 
   afterEach(() => {
     restoreOnWindow('dashboard');
-    cleanup();
   });
 
   function renderDefault(propOverrides = {}) {
