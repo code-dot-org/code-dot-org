@@ -111,7 +111,7 @@ namespace :build do
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
         ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-        
+
         # TODO: Remove this after we have migrated all workers to ECS
         if rack_env?(:production)
           # WARNING: the number of workers in production is safe to increase,
