@@ -11,9 +11,9 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | 
 
 bundle install --verbose
 
-ls ~/.aws
-cat ~/.aws/credentials
+echo "AWS_PROFILE is $AWS_PROFILE"
+# aws sts get-caller-identity
 
-bundle exec rake install --trace
+bundle exec rake install:locals_yml --trace
 
 bundle exec rake build --trace
