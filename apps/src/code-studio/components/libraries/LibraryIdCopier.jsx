@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './library.module.scss';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
@@ -10,7 +11,8 @@ export default class LibraryIdCopier extends React.Component {
 
   copyChannelId = () => {
     this.channelId.select();
-    document.execCommand('copy');
+    navigator.clipboard.writeText(this.channelId);
+    // document.execCommand('copy');
   };
 
   render() {
@@ -23,26 +25,14 @@ export default class LibraryIdCopier extends React.Component {
           onClick={event => event.target.select()}
           readOnly
           value={channelId}
-          style={styles.copy}
+          className={style.idTextbox}
         />
         <Button
           onClick={this.copyChannelId}
           text={i18n.copyId()}
-          style={styles.button}
+          className={style.copyButton}
         />
       </div>
     );
   }
 }
-
-const styles = {
-  copy: {
-    cursor: 'copy',
-    width: 250,
-    height: 25,
-    marginBottom: 0,
-  },
-  button: {
-    marginLeft: 10,
-  },
-};
