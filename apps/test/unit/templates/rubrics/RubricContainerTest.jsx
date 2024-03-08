@@ -605,7 +605,6 @@ describe('RubricContainer', () => {
     });
 
     const element = getByTestId('draggable-test-id');
-    console.log(element);
 
     const initialPosition = element.style.transform;
 
