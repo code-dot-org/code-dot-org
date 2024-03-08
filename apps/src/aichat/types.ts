@@ -43,7 +43,7 @@ export interface AiCustomizations {
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
-  modelCardInfo?: ModelCardInfo;
+  modelCardInfo: ModelCardInfo;
 }
 
 /** Chat bot Model Card information */
