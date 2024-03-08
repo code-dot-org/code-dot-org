@@ -40,6 +40,19 @@ if (testType('unit')) {
     // throwOnConsoleWarningsEverywhere();
 
     clearTimeoutsBetweenTests();
+
+    beforeEach(() => {
+      // Some tests anchor to the body tag and is not reset per test execution, leading to a case where the DOM
+      // is full of elements from prior test runs. This leads to scenarios where a test runs if executed alone but
+      // fails if run as part of the whole test suite.
+      // Ensure that the <body> tag is empty before each test execution.
+      const bodyTags = Array.from(document.getElementsByTagName('body'));
+
+      bodyTags.forEach(bodyTag => {
+        bodyTag.innerHTML = '';
+      });
+    });
+
     tests.forEach(testsContext);
   });
 }
