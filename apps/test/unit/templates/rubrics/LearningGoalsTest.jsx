@@ -42,7 +42,7 @@ const aiEvaluations = [
     id: 2,
     learning_goal_id: 2,
     understanding: 2,
-    aiConfidencePassFail: 50,
+    aiConfidencePassFail: 3,
     observations:
       'Line 3-5: The sprite is defined here. `var sprite = createSprite(100, 120)`',
   },
@@ -192,7 +192,6 @@ describe('LearningGoals - Enzyme', () => {
       <LearningGoals
         learningGoals={learningGoals}
         teacherHasEnabledAi={true}
-        aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
         aiEvaluations={aiEvaluations}
@@ -202,7 +201,7 @@ describe('LearningGoals - Enzyme', () => {
     expect(wrapper.find('AiAssessment').props().studentName).to.equal(
       studentLevelInfo.name
     );
-    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(50);
+    expect(wrapper.find('AiAssessment').props().aiConfidence).to.equal(3);
     expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).to.equal(
       2
     );
