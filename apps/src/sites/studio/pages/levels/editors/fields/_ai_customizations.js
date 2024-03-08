@@ -6,17 +6,9 @@ import EditAiCustomizations from '@cdo/apps/lab2/levelEditors/aiCustomizations/E
 
 $(document).ready(function () {
   const initialCustomizations = getScriptData('aicustomizations');
-  const levelName = document.querySelector('script[data-levelname]').dataset
-    .levelname;
-  const appName = document.querySelector('script[data-appname]').dataset
-    .appname;
 
   ReactDOM.render(
-    <EditAiCustomizations
-      initialCustomizations={initialCustomizations}
-      levelName={levelName}
-      appName={appName}
-    />,
+    <EditAiCustomizations initialCustomizations={initialCustomizations} />,
     document.getElementById('ai-customizations-container')
   );
 });
