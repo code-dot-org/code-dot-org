@@ -47,7 +47,6 @@ export default function RubricContainer({
   );
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
-  // TODO move to separate footer component
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
@@ -55,7 +54,7 @@ export default function RubricContainer({
   const [keepWorking, setKeepWorking] = useState(false);
 
   useEffect(() => {
-    if (open) {
+    if (open && studentLevelInfo) {
       // Get the teacher feedback
       const studentId = studentLevelInfo.user_id;
       const endPoint = `/rubrics/${rubric.id}/get_teacher_feedback?student=${studentId}`;
@@ -67,7 +66,7 @@ export default function RubricContainer({
           setLastSubmittedTimestamp(lastSubmittedDateObj.toLocaleString());
         });
     }
-  }, [open, rubric.id, studentLevelInfo.user_id]);
+  }, [open, rubric.id, studentLevelInfo]);
 
   const submitFeedbackToStudent = () => {
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {

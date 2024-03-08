@@ -95,6 +95,7 @@ const defaultStudentLevelInfo = {
   attempts: 2,
   timeSpent: 404,
   lastAttempt: '5/26/23',
+  user_id: 107,
 };
 
 const Template = args => (
