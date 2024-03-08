@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
-import popUpStyles from './progress-key-popup.module.scss';
 import FontAwesome from '../FontAwesome';
 import ProgressBox from '../sectionProgress/ProgressBox';
 import classNames from 'classnames';
@@ -55,10 +54,7 @@ export default function ProgressIcon({itemType, colorOverride}) {
           id={'uitest-' + itemType[0]}
           icon={itemType[0]}
           style={{color: colorOverride ? colorOverride : itemType[1]}}
-          className={classNames(
-            styles.fontAwesomeIcon,
-            popUpStyles.fontAwesomeIcon
-          )}
+          className={styles.fontAwesomeIcon}
           aria-label={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
       )}
