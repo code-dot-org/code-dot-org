@@ -2,55 +2,57 @@
 // studio.code.org/my-professional-learning
 
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
-import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
+import {EnrolledWorkshops} from './EnrolledWorkshops';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import style from './landingPage.module.scss';
 
-export default class LandingPage extends Component {
-  static propTypes = {
-    lastWorkshopSurveyUrl: PropTypes.string,
-    lastWorkshopSurveyCourse: PropTypes.string,
-    deeperLearningCourseData: PropTypes.array,
-  };
-
-  render() {
-    return (
-      <div>
-        <HeaderBannerNoImage
-          headingText={i18n.professionalLearning()}
-          backgroundColor={color.light_gray_50}
-        />
-        <main className={style.wrapper}>
-          <GettingStartedBanner />
-          {this.props.lastWorkshopSurveyUrl && (
-            <LastWorkshopSurveyBanner
-              subHeading={i18n.plLandingSubheading()}
-              description={i18n.plLandingDescription({
-                course: this.props.lastWorkshopSurveyCourse,
-              })}
-              surveyUrl={this.props.lastWorkshopSurveyUrl}
+export default function LandingPage({
+  lastWorkshopSurveyUrl,
+  lastWorkshopSurveyCourse,
+  deeperLearningCourseData,
+}) {
+  return (
+    <>
+      <HeaderBannerNoImage
+        headingText={i18n.professionalLearning()}
+        backgroundColor={color.light_gray_50}
+      />
+      <main className={style.wrapper}>
+        <GettingStartedBanner />
+        {lastWorkshopSurveyUrl && (
+          <LastWorkshopSurveyBanner
+            subHeading={i18n.plLandingSubheading()}
+            description={i18n.plLandingDescription({
+              course: lastWorkshopSurveyCourse,
+            })}
+            surveyUrl={lastWorkshopSurveyUrl}
+          />
+        )}
+        <EnrolledWorkshops />
+        {deeperLearningCourseData && (
+          <div>
+            <h2>Online Professional Learning Courses</h2>
+            <ProfessionalLearningCourseProgress
+              deeperLearningCourseData={deeperLearningCourseData}
             />
-          )}
-          <EnrolledWorkshops />
-          {this.props.deeperLearningCourseData && (
-            <div>
-              <h2>Online Professional Learning Courses</h2>
-              <ProfessionalLearningCourseProgress
-                deeperLearningCourseData={this.props.deeperLearningCourseData}
-              />
-            </div>
-          )}
-        </main>
-      </div>
-    );
-  }
+          </div>
+        )}
+      </main>
+    </>
+  );
 }
+
+LandingPage.propTypes = {
+  lastWorkshopSurveyUrl: PropTypes.string,
+  lastWorkshopSurveyCourse: PropTypes.string,
+  deeperLearningCourseData: PropTypes.array,
+};
 
 export const LastWorkshopSurveyBanner = ({
   subHeading,
