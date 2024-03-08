@@ -86,6 +86,8 @@ export default function RubricContainer({
   return (
     <Draggable>
       <div
+        data-testid="draggable-test-id"
+        id="draggable-id"
         className={classnames(style.rubricContainer, {
           [style.hiddenRubricContainer]: !open,
         })}
