@@ -12,6 +12,7 @@ import LessonProgressDataColumn from './LessonProgressDataColumn';
 import classNames from 'classnames';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
 import {lessonHasLevels} from '../progress/progressHelpers';
+import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
@@ -36,6 +37,11 @@ function ProgressTableV2({
       ? [...students].sort(stringKeyComparator(['familyName', 'name']))
       : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
+
+  const [onScroll, setOnScroll] = React.useState(() => {});
+
+  const tableContentsRef = React.useRef();
+  const tableContainerRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -89,11 +95,36 @@ function ProgressTableV2({
       // TODO: add no lesson state
       return null;
     }
-    const tableStyles = isSkeleton
-      ? classNames(styles.table, styles.tableLoading)
-      : styles.table;
-    return <div className={tableStyles}>{lessons.map(getRenderedColumn)}</div>;
-  }, [isSkeleton, getRenderedColumn, unitData]);
+
+    return (
+      <FloatingScrollbar
+        setOnScroll={setOnScroll}
+        childContainerRef={tableContainerRef}
+        childContentsRef={tableContentsRef}
+      >
+        <div
+          className={classNames(
+            styles.table,
+            isSkeleton && styles.tableLoading
+          )}
+          onScroll={onScroll}
+          ref={tableContainerRef}
+        >
+          <div ref={tableContentsRef} className={styles.tableInterior}>
+            {lessons.map(getRenderedColumn)}
+          </div>
+        </div>
+      </FloatingScrollbar>
+    );
+  }, [
+    isSkeleton,
+    getRenderedColumn,
+    unitData,
+    tableContentsRef,
+    tableContainerRef,
+    setOnScroll,
+    onScroll,
+  ]);
 
   return (
     <div className={styles.progressTableV2}>

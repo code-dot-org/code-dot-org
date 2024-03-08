@@ -35,6 +35,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
   }.freeze
 
   validates :ai_confidence, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
+  validates :ai_confidence_exact_match, inclusion: {in: AI_CONFIDENCE_LEVELS.values}, allow_nil: true
   validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
 
   def summarize_for_instructor
@@ -44,6 +45,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
       learning_goal_id: learning_goal_id,
       observations: observations,
       ai_confidence: ai_confidence,
+      ai_confidence_exact_match: ai_confidence_exact_match,
     }
   end
 
@@ -62,6 +64,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.invert[understanding].to_s,
       observations: observations,
       ai_confidence: AI_CONFIDENCE_LEVELS.invert[ai_confidence].to_s,
+      ai_confidence_exact_match: AI_CONFIDENCE_LEVELS.invert[ai_confidence_exact_match].to_s,
     }
   end
 end
