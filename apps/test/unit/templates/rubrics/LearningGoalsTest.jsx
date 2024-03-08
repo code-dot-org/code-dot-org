@@ -20,14 +20,24 @@ const learningGoals = [
     key: 'abcd',
     learningGoal: 'Learning Goal 1',
     aiEnabled: true,
-    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'lg one'}],
+    evidenceLevels: [
+      {id: 10, understanding: 0, teacherDescription: 'lg one none'},
+      {id: 11, understanding: 1, teacherDescription: 'lg one limited'},
+      {id: 12, understanding: 2, teacherDescription: 'lg one convincing'},
+      {id: 13, understanding: 3, teacherDescription: 'lg one extensive'},
+    ],
     tips: 'Tips',
   },
   {
     key: 'efgh',
     learningGoal: 'Learning Goal 2',
     aiEnabled: false,
-    evidenceLevels: [{id: 1, understanding: 1, teacherDescription: 'lg two'}],
+    evidenceLevels: [
+      {id: 10, understanding: 0, teacherDescription: 'lg two none'},
+      {id: 11, understanding: 1, teacherDescription: 'lg two limited'},
+      {id: 12, understanding: 2, teacherDescription: 'lg two convincing'},
+      {id: 13, understanding: 3, teacherDescription: 'lg two extensive'},
+    ],
     tips: 'Tips',
   },
 ];
@@ -67,7 +77,10 @@ describe('LearningGoals - React Testing Library', () => {
 
     // First learning goal is visible
     expect(screen.getByText('Learning Goal 1')).to.exist;
-    expect(screen.getByText(/lg one/)).to.exist;
+    expect(screen.getByText(/lg one none/)).to.exist;
+    expect(screen.getByText(/lg one limited/)).to.exist;
+    expect(screen.getByText(/lg one convincing/)).to.exist;
+    expect(screen.getByText(/lg one extensive/)).to.exist;
   });
 });
 
