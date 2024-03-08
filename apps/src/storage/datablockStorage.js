@@ -234,7 +234,7 @@ DatablockStorage.importCsv = function (
   }).then(onSuccess, onError);
 };
 
-DatablockStorage.exportCsvURL = function (tableName) {
+DatablockStorage.exportCsvUrl = function (tableName) {
   return (
     urlFor('export_csv') + '?' + new URLSearchParams({table_name: tableName})
   );
