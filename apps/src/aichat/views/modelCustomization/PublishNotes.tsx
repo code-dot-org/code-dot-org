@@ -13,13 +13,13 @@ const PublishNotes: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {INPUTS.map(input => {
+        {INPUTS.map(({id, text}) => {
           return (
-            <div className={styles.inputContainer} key={input.id}>
-              <label htmlFor={input.id}>
-                <StrongText>{input.text}</StrongText>
+            <div className={styles.inputContainer} key={id}>
+              <label htmlFor={id}>
+                <StrongText>{text}</StrongText>
               </label>
-              <textarea id={input.id} />
+              <textarea id={id} />
             </div>
           );
         })}

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -9,17 +9,20 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   const [messages, setMessages] = useState<string[]>([]);
   const [newMessage, setNewMessage] = useState('');
 
-  const onAdd = () => {
+  const onAdd = useCallback(() => {
     setMessages([...messages, newMessage]);
     setNewMessage('');
     document.getElementById('retrieval-input')?.focus();
-  };
+  }, [messages, setMessages, newMessage, setNewMessage]);
 
-  const onRemove = (index: number) => {
-    const messagesCopy = [...messages];
-    messagesCopy.splice(index, 1);
-    setMessages(messagesCopy);
-  };
+  const onRemove = useCallback(
+    (index: number) => {
+      const messagesCopy = [...messages];
+      messagesCopy.splice(index, 1);
+      setMessages(messagesCopy);
+    },
+    [messages, setMessages]
+  );
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
