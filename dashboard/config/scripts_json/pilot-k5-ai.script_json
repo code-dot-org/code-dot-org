@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pilot-k5-ai",
-    "serialized_at": "2024-03-06 22:20:21 UTC",
+    "serialized_at": "2024-03-07 18:03:24 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -134,9 +134,25 @@
   ],
   "lesson_activities": [
     {
-      "key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e",
+      "key": "08460319-0405-45a2-b8b4-444379ba805a",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08460319-0405-45a2-b8b4-444379ba805a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e",
@@ -146,9 +162,39 @@
       }
     },
     {
-      "key": "4350736b-84ad-4049-9949-32ca83394698",
+      "key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "67966cef-e610-4a6c-9b80-a5f01715f81c",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "67966cef-e610-4a6c-9b80-a5f01715f81c",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "4350736b-84ad-4049-9949-32ca83394698",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698",
@@ -158,9 +204,39 @@
       }
     },
     {
-      "key": "d175feb1-c74f-4096-a7a5-de4b48e7af12",
+      "key": "7baafb96-218c-4665-b1ef-b339f830cf0d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7baafb96-218c-4665-b1ef-b339f830cf0d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "d175feb1-c74f-4096-a7a5-de4b48e7af12",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12",
@@ -170,12 +246,56 @@
       }
     },
     {
-      "key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c",
+      "key": "f83c5a5a-95dd-41e0-b888-e47f120210f6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f83c5a5a-95dd-41e0-b888-e47f120210f6",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "e568bbbf-7a5b-489e-ad34-0dfd50493568",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e568bbbf-7a5b-489e-ad34-0dfd50493568",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "9bf1aff3-bf49-48cf-a537-a49cfd014444",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bf1aff3-bf49-48cf-a537-a49cfd014444",
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "pilot-k5-ai"
@@ -319,6 +439,16 @@
   ],
   "activity_sections": [
     {
+      "key": "c1960ca2-a0b2-4cf0-a065-7aa5fafd5805",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1960ca2-a0b2-4cf0-a065-7aa5fafd5805",
+        "lesson_activity.key": "08460319-0405-45a2-b8b4-444379ba805a"
+      }
+    },
+    {
       "key": "7904af47-66ef-4f1d-98c5-c43ac42c7676",
       "position": 1,
       "properties": {
@@ -337,6 +467,26 @@
       "seeding_key": {
         "activity_section.key": "1b979832-b6ad-4bae-b833-9dc42bb8e950",
         "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e"
+      }
+    },
+    {
+      "key": "8f9ce652-dd04-4743-90c1-dcf9af89806f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8f9ce652-dd04-4743-90c1-dcf9af89806f",
+        "lesson_activity.key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b"
+      }
+    },
+    {
+      "key": "eaf85520-8039-41f6-b7ab-08166a0d28a6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eaf85520-8039-41f6-b7ab-08166a0d28a6",
+        "lesson_activity.key": "67966cef-e610-4a6c-9b80-a5f01715f81c"
       }
     },
     {
@@ -383,6 +533,26 @@
       }
     },
     {
+      "key": "37e3aef9-20d6-4681-ba67-c9b05ef8fc54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37e3aef9-20d6-4681-ba67-c9b05ef8fc54",
+        "lesson_activity.key": "7baafb96-218c-4665-b1ef-b339f830cf0d"
+      }
+    },
+    {
+      "key": "e2c05441-bbba-471a-9895-fe181c896f02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c05441-bbba-471a-9895-fe181c896f02",
+        "lesson_activity.key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288"
+      }
+    },
+    {
       "key": "1e965f53-b758-4eaf-afcb-251dbe095bcb",
       "position": 1,
       "properties": {
@@ -415,6 +585,26 @@
       }
     },
     {
+      "key": "71a99e48-3147-474f-8ee1-3444144d6516",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "71a99e48-3147-474f-8ee1-3444144d6516",
+        "lesson_activity.key": "f83c5a5a-95dd-41e0-b888-e47f120210f6"
+      }
+    },
+    {
+      "key": "d0f57173-475f-42ec-bdec-1e926611baea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d0f57173-475f-42ec-bdec-1e926611baea",
+        "lesson_activity.key": "e568bbbf-7a5b-489e-ad34-0dfd50493568"
+      }
+    },
+    {
       "key": "bdefd8af-23c6-409a-86c3-f6d35f5197f9",
       "position": 1,
       "properties": {
@@ -433,6 +623,16 @@
       "seeding_key": {
         "activity_section.key": "0f6296dd-e703-401c-bad0-116ecbd0acf0",
         "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c"
+      }
+    },
+    {
+      "key": "bc18f51c-e617-4fac-bacc-b11c63857a39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bc18f51c-e617-4fac-bacc-b11c63857a39",
+        "lesson_activity.key": "9bf1aff3-bf49-48cf-a537-a49cfd014444"
       }
     },
     {
@@ -899,6 +1099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_items"
+        ],
         "progression": "Sorting Items"
       },
       "bonus": false,
@@ -921,6 +1124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_k5pilot"
+        ],
         "progression": "Train AI on Fish"
       },
       "bonus": false,
@@ -943,6 +1149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilot"
+        ],
         "progression": "Train AI on Sea Creatures"
       },
       "bonus": false,
@@ -965,6 +1174,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_k5pilot"
+        ],
         "progression": "Train AI on Sea Creatures"
       },
       "bonus": false,
@@ -987,6 +1199,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_k5pilot"
+        ],
         "progression": "Teach AI a New Word"
       },
       "bonus": false,
@@ -1009,6 +1224,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables"
+        ],
         "progression": "Sorting Fruit and Vegetables"
       },
       "bonus": false,
@@ -1031,6 +1249,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_customize_effect_-k5pilot"
+        ],
         "progression": "AI Bot Effects"
       },
       "bonus": false,
@@ -1053,6 +1274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_plan_your_poster_pilot"
+        ],
         "progression": "Plan Your AI Poster"
       },
       "bonus": false,
@@ -1075,6 +1299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_intro_video_-k5pilot"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -1097,6 +1324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_dancer_and_dance_move_-k5pilot"
+        ],
         "progression": "Make Dancer & Dance Move"
       },
       "bonus": false,
@@ -1119,6 +1349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_generate_effect_-k5pilot"
+        ],
         "progression": "Use AI"
       },
       "bonus": false,
@@ -1141,6 +1374,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_generate_effect_again_-k5pilot"
+        ],
         "progression": "Use AI"
       },
       "bonus": false,
@@ -1163,6 +1399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_try_key_press_-k5pilot"
+        ],
         "progression": "Key Press & At Measure Events"
       },
       "bonus": false,
@@ -1185,6 +1424,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_code_key_press_-k5pilot"
+        ],
         "progression": "Key Press & At Measure Events"
       },
       "bonus": false,
@@ -1207,6 +1449,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_try_at_measure_-k5pilot"
+        ],
         "progression": "Key Press & At Measure Events"
       },
       "bonus": false,
@@ -1229,6 +1474,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_code_at_measure_-k5pilot"
+        ],
         "progression": "Key Press & At Measure Events"
       },
       "bonus": false,
@@ -1251,6 +1499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_freeplay_-k5pilot"
+        ],
         "progression": "Final Dance Party Project"
       },
       "bonus": false,
@@ -1273,6 +1524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_k5pilot"
+        ],
         "progression": "AI Machine Learning - Video"
       },
       "bonus": false,
@@ -1295,6 +1549,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data_k5pilot"
+        ],
         "progression": "AI: Training Data & Bias - Video"
       },
       "bonus": false,
@@ -1317,6 +1574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_k5pilot"
+        ],
         "progression": "Using Training Data"
       },
       "bonus": false,
@@ -1339,6 +1599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications_k5pilot"
+        ],
         "progression": "AI: Impact on Society - Video"
       },
       "bonus": false,
@@ -1681,11 +1944,31 @@
     {
       "key": "artificial_intelligence_a_i_",
       "word": "Artificial Intelligence (A.I.) ",
-      "definition": " A computer program that takes in data, learns patterns from that data, and then makes decisions based on what it has learned.",
+      "definition": "The ability of machines to learn and problem-solve.",
       "properties": {
       },
       "seeding_key": {
         "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "key": "bias",
+      "word": "Bias",
+      "definition": "When a decision favors some things and not others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "Classification ",
+      "definition": "Sorting items into categories based on their features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
       }
     },
     {
@@ -1699,6 +1982,26 @@
       }
     },
     {
+      "key": "data",
+      "word": "Data",
+      "definition": "Information that we collect about the world",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "delete",
+      "word": "Delete",
+      "definition": "To remove or take something away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "delete"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -1706,6 +2009,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "feature_vector",
+      "word": "Feature Vector",
+      "definition": "A numerical representation of a set of features of an object or event",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature_vector"
       }
     },
     {
@@ -1719,6 +2032,16 @@
       }
     },
     {
+      "key": "modify",
+      "word": "Modify",
+      "definition": "To change or make something different",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modify"
+      }
+    },
+    {
       "key": "program",
       "word": "Program",
       "definition": " An algorithm that has been coded into something that can be run by a machine.",
@@ -1726,6 +2049,46 @@
       },
       "seeding_key": {
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "retrieve",
+      "word": "Retrieve",
+      "definition": "To get back something you stored or put away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "key": "sort",
+      "word": "Sort",
+      "definition": "To put things in groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "key": "store",
+      "word": "Store",
+      "definition": "To keep something in a computer’s memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "store"
+      }
+    },
+    {
+      "key": "training",
+      "word": "Training",
+      "definition": "Teaching a computer to do tasks by showing it many examples",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training"
       }
     }
   ],
@@ -1758,6 +2121,120 @@
       "seeding_key": {
         "lesson.key": "Dance Party: AI Edition",
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "delete"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "store"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "feature_vector"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "training"
       }
     }
   ],
@@ -1827,7 +2304,111 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

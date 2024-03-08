@@ -1,14 +1,12 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "makeNewGroupSprite",
-    "docFunc": "gamelab_makeNewSpriteAnon",
-    "blockText": "make new {ANIMATION_NAME} {GROUP} sprite at {LOCATION}",
-    "style": "sprite_blocks",
+    "func": "setGroup",
+    "blockText": "set {SPRITE} type to {GROUP}",
     "args": [
       {
-        "name": "ANIMATION_NAME",
-        "customInput": "costumePicker"
+        "name": "SPRITE",
+        "type": "Sprite"
       },
       {
         "name": "GROUP",
@@ -30,11 +28,8 @@
             "\"enemies\""
           ]
         ]
-      },
-      {
-        "name": "LOCATION",
-        "type": "Location"
       }
-    ]
+    ],
+    "style": "default"
   }
 }
