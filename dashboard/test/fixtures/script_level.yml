@@ -39653,37 +39653,6 @@ script_level_68_11305:
   seed_key: 
   activity_section_position: 12
   levels: level_11305
-# Need help here: 
-# http://localhost-studio.code.org:3000/levels/525
-# This seems like a test level that is just here to test the OnRecordEvent functionality?
-# What happens if I just remove this section of the yml? Is there some other artifact
-# I would have to clean up? Does this have to change from levelbuilder or something? 
-# I see this in the debug helper grey box in local : This level is in 1 scripts:
-# allthethings (Lesson ID: 554) as /s/allthethings/lessons/18/levels/13
-# which scares me because does that mean this is part of a lesson or something? 
-# or no?
-script_level_68_557:
-  id: 60454
-  script_id: 68
-  chapter: 77
-  created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3606 2021-11-27 22:37:52.000000000 Z
-    zone: *2
-    time: *3606
-  updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3607 2022-04-22 05:13:43.000000000 Z
-    zone: *2
-    time: *3607
-  stage_id: 429
-  position: 13
-  assessment: false
-  properties: '{"level_keys":["Applab allthethings onRecordEvent"]}'
-  named_level: 
-  bonus: false
-  activity_section_id: 522059
-  seed_key: 
-  activity_section_position: 13
-  levels: level_557
 script_level_68_17421:
   id: 60455
   script_id: 68
