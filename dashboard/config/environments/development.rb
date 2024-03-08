@@ -82,5 +82,6 @@ Dashboard::Application.configure do
   # the developer is not running a delayed_job worker. To use the delayed_job
   # queue adapter in development, comment out this line and make sure you have
   # run `bin/delayed_job start` or rake build.
-  config.active_job.queue_adapter = :async
+  # TODO: revert this before merge
+  # config.active_job.queue_adapter = :async
 end
