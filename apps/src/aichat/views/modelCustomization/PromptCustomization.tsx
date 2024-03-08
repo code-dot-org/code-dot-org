@@ -1,98 +1,68 @@
-import React, {useState, ChangeEvent} from 'react';
+import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import styles from '../model-customization-workspace.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties, AiCustomizations} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
-interface PromptCustomizationProps {
-  botName: string;
-}
+const DEFAULT_INITIAL_AI_CUSTOMIZATIONS = {
+  botName: {value: '', visibility: 'editable'},
+  temperature: {value: 0.5, visibility: 'editable'},
+  systemPrompt: {value: '', visibility: 'editable'},
+};
 
-const PromptCustomization: React.FunctionComponent<
-  PromptCustomizationProps
-> = ({botName}) => {
-  const [temperature, setTemperature] = useState('0.05');
-
+const PromptCustomization: React.FunctionComponent = () => {
   // deal with AiCustomizations vs LevelAiCustomizations distinction in requiring model
-  const initialAiCustomizations = useSelector(
+  const {botName, temperature, systemPrompt} = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || {
-        botName: {value: 'bot name', visibility: 'editable'},
-        temperature: {value: 0.5, visibility: 'editable'},
-        systemPrompt: {value: 'a system prompt', visibility: 'editable'},
-        retrievalContexts: {
-          value: ['retrieval 1', 'retrieval 2'],
-          visibility: 'editable',
-        },
-        modelCardInfo: {
-          description: 'a description',
-          intendedUse: 'intended use',
-          limitationsAndWarnings: 'limitations and warnings',
-          testingAndEvaluation: 'testing and evaluation',
-          askAboutTopics: 'ask about topics',
-          visibility: 'editable',
-        },
-      }
+        ?.initialAiCustomizations || DEFAULT_INITIAL_AI_CUSTOMIZATIONS
   );
-
-  const getVisibility = (property: keyof AiCustomizations) =>
-    initialAiCustomizations[property]?.visibility;
-  const isDisabled = (property: keyof AiCustomizations) =>
-    getVisibility(property) === 'readonly';
-  const isVisible = (property: keyof AiCustomizations) =>
-    getVisibility(property) && getVisibility(property) !== 'hidden';
-
-  console.log(isDisabled('temperature'));
-  const handleTemperatureChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setTemperature(event.target.value);
-  };
 
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {isVisible('botName') && (
+        {botName.visibility !== 'hidden' && (
           <div className={styles.inputContainer}>
             <label htmlFor="chatbot-name">
               <StrongText>Chatbot name</StrongText>
             </label>
             <input
               id="chatbot-name"
-              value={botName}
-              disabled={isDisabled('botName')}
+              value={botName.value}
+              disabled={botName.visibility === 'readonly'}
               // readOnly might be preferred?
             />
           </div>
         )}
-        {isVisible('temperature') && (
+        {temperature.visibility !== 'hidden' && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
               <label htmlFor="temperature">
                 <StrongText>Temperature</StrongText>
               </label>
-              {temperature}
+              {temperature.value}
             </div>
             <input
               type="range"
               min="0"
               max="1"
               step="0.01"
-              value={temperature}
-              onChange={handleTemperatureChange}
-              disabled={isDisabled('temperature')}
+              value={temperature.value}
+              disabled={temperature.visibility === 'readonly'}
             />
           </div>
         )}
-        {isVisible('systemPrompt') && (
+        {systemPrompt.visibility !== 'hidden' && (
           <div className={styles.inputContainer}>
             <label htmlFor="system-prompt">
               <StrongText>System prompt</StrongText>
             </label>
             <textarea
               id="system-prompt"
-              disabled={isDisabled('systemPrompt')}
+              value={systemPrompt.value}
+              disabled={systemPrompt.visibility === 'readonly'}
             />
           </div>
         )}

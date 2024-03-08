@@ -8,34 +8,25 @@ import styles from './retrieval-customization.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
+const DEFAULT_RETRIEVAL_CONTEXTS = {
+  value: ['retrieval 1', 'retrieval 2'],
+  visibility: 'editable',
+};
+
 // what does it mean for retrieval to be hidden? hide whole tab?
 const RetrievalCustomization: React.FunctionComponent = () => {
   // deal with AiCustomizations vs LevelAiCustomizations distinction in requiring model
-  const initialAiCustomizations = useSelector(
+  const retrievalContexts = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || {
-        botName: {value: 'bot name', visibility: 'editable'},
-        temperature: {value: 0.5, visibility: 'editable'},
-        systemPrompt: {value: 'a system prompt', visibility: 'editable'},
-        retrievalContexts: {
-          value: ['retrieval 1', 'retrieval 2'],
-          visibility: 'editable',
-        },
-        modelCardInfo: {
-          description: 'a description',
-          intendedUse: 'intended use',
-          limitationsAndWarnings: 'limitations and warnings',
-          testingAndEvaluation: 'testing and evaluation',
-          askAboutTopics: 'ask about topics',
-          visibility: 'editable',
-        },
-      }
+        ?.initialAiCustomizations?.retrievalContexts ||
+      DEFAULT_RETRIEVAL_CONTEXTS
   );
 
-  const [messages, setMessages] = useState<string[]>(
-    initialAiCustomizations.retrievalContexts.value
-  );
+  // We shouldn't actually do this once (ie, initialize state from redux) once students can update these,
+  // but leaving as-is temporarily until we are set up to allow a user to update these initial values
+  // and store them in redux.
+  const [messages, setMessages] = useState<string[]>(retrievalContexts.value);
   const [newMessage, setNewMessage] = useState('');
 
   const onAdd = () => {

@@ -4,43 +4,34 @@ import {useSelector} from 'react-redux';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import styles from '../model-customization-workspace.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties, ModelCardInfo} from '@cdo/apps/aichat/types';
 
-const INPUTS = [
+const INPUTS: {id: keyof ModelCardInfo; text: string}[] = [
   {id: 'description', text: 'Description'},
   {id: 'intendedUse', text: 'Intended Use'},
   {id: 'limitationsAndWarnings', text: 'Limitations and Warnings'},
   {id: 'testingAndEvaluation', text: 'Testing and Evaluation'},
 ];
 
+const DEFAULT_MODEL_CARD_INFO = {
+  value: {
+    description: '',
+    intendedUse: '',
+    limitationsAndWarnings: '',
+    testingAndEvaluation: '',
+    askAboutTopics: '',
+  },
+  visibility: 'editable',
+};
+
 // what does it mean for this to be hidden? hide whole tab?
 const PublishNotes: React.FunctionComponent = () => {
   // deal with AiCustomizations vs LevelAiCustomizations distinction in requiring model
-  const {modelCardInfo} = useSelector(
+  const modelCardInfo = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || {
-        botName: {value: 'bot name', visibility: 'editable'},
-        temperature: {value: 0.5, visibility: 'editable'},
-        systemPrompt: {value: 'a system prompt', visibility: 'editable'},
-        retrievalContexts: {
-          value: ['retrieval 1', 'retrieval 2'],
-          visibility: 'editable',
-        },
-        modelCardInfo: {
-          value: {
-            description: 'a description',
-            intendedUse: 'intended use',
-            limitationsAndWarnings: 'limitations and warnings',
-            testingAndEvaluation: 'testing and evaluation',
-            askAboutTopics: 'ask about topics',
-          },
-          visibility: 'editable',
-        },
-      }
+        ?.initialAiCustomizations?.modelCardInfo || DEFAULT_MODEL_CARD_INFO
   );
-
-  console.log(modelCardInfo);
 
   return (
     <div className={styles.verticalFlexContainer}>
