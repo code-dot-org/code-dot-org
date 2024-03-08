@@ -388,7 +388,7 @@ FeedbackUtils.prototype.displayFeedback = function (
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
-      recordShare('FINISH_BUTTON_CERTIFICATE', project.getStandaloneApp());
+      recordShare(EVENTS.FINISH_BUTTON_CERTIFICATE, project.getStandaloneApp());
 
       if (options.response && options.response.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
@@ -429,7 +429,7 @@ FeedbackUtils.prototype.displayFeedback = function (
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
-      recordShare('FINISH_SHARING_PUBLISH', project.getStandaloneApp());
+      recordShare(EVENTS.FINISH_SHARING_PUBLISH, project.getStandaloneApp());
       feedbackDialog.hide();
 
       const store = getStore();
@@ -510,11 +510,9 @@ FeedbackUtils.prototype.displayFeedback = function (
 };
 
 function recordShare(type, appType) {
-  if (Object.prototype.hasOwnProperty.call(EVENTS, type)) {
-    analyticsReporter.sendEvent(type, {
-      lab_type: appType,
-    });
-  }
+  analyticsReporter.sendEvent(EVENTS.type, {
+    lab_type: appType,
+  });
 }
 
 FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
@@ -949,7 +947,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   );
   if (sharingCopyButton) {
     dom.addClickTouchEvent(sharingCopyButton, function () {
-      recordShare('FINISH_SHARING_LINK_COPY', project.getStandaloneApp());
+      recordShare(EVENTS.FINISH_SHARING_LINK_COPY, project.getStandaloneApp());
       copyToClipboard(options.shareLink, () => {
         sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
       });
@@ -960,7 +958,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   const twitterButton = sharingDiv.querySelector(twitterButtonSelector);
   if (twitterButton) {
     dom.addClickTouchEvent(twitterButton, () => {
-      recordShare('FINISH_SHARING_TWITTER', project.getStandaloneApp());
+      recordShare(EVENTS.FINISH_SHARING_TWITTER, project.getStandaloneApp());
     });
   }
 
@@ -968,7 +966,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   const facebookButton = sharingDiv.querySelector(facebookButtonSelector);
   if (facebookButton) {
     dom.addClickTouchEvent(facebookButton, () => {
-      recordShare('FINISH_SHARING_FB', project.getStandaloneApp());
+      recordShare(EVENTS.FINISH_SHARING_FB, project.getStandaloneApp());
     });
   }
 
@@ -992,7 +990,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   dom.addClickTouchEvent(sharingPhone, function () {
     recordShare(
-      'FINISH_SHARING_LINK_SEND_TO_PHONE',
+      EVENTS.FINISH_SHARING_LINK_SEND_TO_PHONE,
       project.getStandaloneApp()
     );
     var sendToPhone = sharingDiv.querySelector('#send-to-phone');
