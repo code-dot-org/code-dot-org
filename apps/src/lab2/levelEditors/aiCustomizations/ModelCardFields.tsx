@@ -15,7 +15,7 @@ const modelCardFieldsAndLabels: [keyof ModelCardInfo, string][] = [
 const ModelCardFields: React.FunctionComponent = () => {
   const {setModelCardPropertyValue, aiCustomizations} =
     useContext(UpdateContext);
-  const askAboutTopics = aiCustomizations.modelCardInfo?.value?.askAboutTopics;
+  const exampleTopics = aiCustomizations.modelCardInfo?.value?.exampleTopics;
   return (
     <div className={moduleStyles['model-card-fields']}>
       {modelCardFieldsAndLabels.map(([property, label]) => {
@@ -33,25 +33,25 @@ const ModelCardFields: React.FunctionComponent = () => {
           </div>
         );
       })}
-      <label>Ask About Topics</label>
+      <label>Example Prompts and Topics</label>
       <MultiItemInput
-        items={askAboutTopics || []}
+        items={exampleTopics || []}
         onAdd={() => {
           setModelCardPropertyValue(
-            'askAboutTopics',
-            askAboutTopics?.concat('') || ['']
+            'exampleTopics',
+            exampleTopics?.concat('') || ['']
           );
         }}
         onRemove={() => {
           setModelCardPropertyValue(
-            'askAboutTopics',
-            askAboutTopics?.slice(0, -1) || []
+            'exampleTopics',
+            exampleTopics?.slice(0, -1) || []
           );
         }}
         onChange={(index, value) => {
-          const updatedTopics = askAboutTopics?.slice() || [];
+          const updatedTopics = exampleTopics?.slice() || [];
           updatedTopics[index] = value;
-          setModelCardPropertyValue('askAboutTopics', updatedTopics);
+          setModelCardPropertyValue('exampleTopics', updatedTopics);
         }}
         max={MAX_ASK_ABOUT_TOPICS}
       />

@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 20px;
+  flex: 1;
 }
 
 .model-card-fields {
@@ -31,15 +32,23 @@
 }
 
 .textarea {
-  width: 460px;
-  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.multiItemContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .multiItemInput {
   display: flex;
   flex-wrap: wrap;
-  max-width: 500px;
-  justify-content: space-between;
+
+  &Multiline {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 .buttonsRow {
