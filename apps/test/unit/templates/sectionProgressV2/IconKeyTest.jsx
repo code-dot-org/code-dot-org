@@ -7,6 +7,7 @@ describe('IconKey Component', () => {
   it('renders the collapsed state initially', () => {
     render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
     expect(screen.getByLabelText('Icon key')).be.visible;
+    expect(screen.queryByText('More Details')).be.visible;
     expect(screen.queryByText('Assignment Completion States')).to.be.null;
     expect(screen.queryByText('Teacher Actions')).to.be.null;
     expect(screen.queryByText('Level Types')).to.be.null;
@@ -39,5 +40,14 @@ describe('IconKey Component', () => {
     const containerDiv = screen.getByTestId('expandable-container');
     fireEvent.click(containerDiv);
     expect(screen.getByText('Validated')).to.exist;
+  });
+
+  it('shows pop-up when more details are clicked', () => {
+    render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
+    const moreDetailsLink = screen.queryByText('More Details');
+    expect(moreDetailsLink).be.visible;
+    expect(screen.queryByText('Progress Tracking Icon Key')).to.be.null;
+    fireEvent.click(moreDetailsLink);
+    expect(screen.getByText('Progress Tracking Icon Key')).to.exist;
   });
 });

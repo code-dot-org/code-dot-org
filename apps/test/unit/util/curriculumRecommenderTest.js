@@ -1,4 +1,7 @@
-import {getTestRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {
+  getTestRecommendations,
+  getSimilarRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {
   IS_FEATURED_TEST_COURSES,
   DURATION_TEST_COURSES,
@@ -6,12 +9,13 @@ import {
   SCHOOL_SUBJECT_TEST_COURSES,
   TOPICS_TEST_COURSES,
   PUBLISHED_DATE_TEST_COURSES,
+  FULL_TEST_COURSES,
 } from './curriculumRecommenderTestCurricula';
 import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('testRecommender', () => {
-  it('curricula marked as is_featured sorted before other curricula with same score ', () => {
+  it('curricula marked as is_featured sorted before other curricula with same score', () => {
     const recommendedCurricula = getTestRecommendations(
       IS_FEATURED_TEST_COURSES,
       '',
@@ -170,6 +174,25 @@ describe('testRecommender', () => {
       // Sort remaining 0-score curricula by published_date
       'emptyCourse',
       'nullCourse',
+    ]);
+  });
+});
+
+describe('similarRecommender', () => {
+  it('similar curriculum recommender scores relevant test curricula', () => {
+    const recommendedCurricula = getSimilarRecommendations(
+      FULL_TEST_COURSES,
+      'fullTestCourse1'
+    ).map(curr => curr.key);
+
+    // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
+    // and fullTestCourse5 should be filtered out because it does not support any of the same grade levels as fullTestCourse1.
+    expect(recommendedCurricula).to.deep.equal([
+      'fullTestCourse2' /* 7 points = hasDesiredMarketingInitiative(2) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
+                          (1 overlapping topic * overlappingDesiredTopic(2)) + publishedWithinTwoYearsAgo(1) */,
+      'fullTestCourse3' /* 5 points = (1 overlapping topic * overlappingDesiredTopic(2)) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
+                          publishedWithinTwoYearsAgo(1) */,
+      'fullTestCourse4' /* 1 point = hasAnySchoolSubject(2) */,
     ]);
   });
 });

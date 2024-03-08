@@ -6,12 +6,12 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "coursec-maker-pilot",
+      "pilot_experiment": "csf-maker-pilot",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "pilot-coursec-maker-2024",
-    "serialized_at": "2024-02-27 23:49:18 UTC",
+    "serialized_at": "2024-02-28 18:36:00 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

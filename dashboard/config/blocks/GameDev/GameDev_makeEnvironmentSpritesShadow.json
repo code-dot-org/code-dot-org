@@ -1,0 +1,28 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "makeEnvironmentSpritesShadow",
+    "inline": false,
+    "blockText": "make {ANIMATION_NAME}  {GROUP} sprites with layout {GRID}",
+    "style": "sprite_blocks",
+    "args": [
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "environment",
+            "\"walls\""
+          ]
+        ]
+      },
+      {
+        "name": "GRID",
+        "type": "Array"
+      }
+    ]
+  }
+}

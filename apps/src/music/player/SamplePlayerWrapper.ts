@@ -32,21 +32,25 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   async loadSounds(
-    sampleIds: string[],
+    sampleUrls: string[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void> {
-    return this.samplePlayer.loadSounds(sampleIds, callbacks);
+    return this.samplePlayer.loadSounds(sampleUrls, callbacks);
   }
 
   async loadInstrument(): Promise<void> {
     console.log('Not supported');
   }
 
+  isInstrumentLoaded(): boolean {
+    return false;
+  }
+
   async playSampleImmediately(
     sample: SampleEvent,
     onStop?: () => void
   ): Promise<void> {
-    return this.samplePlayer.previewSample(sample.sampleId, onStop);
+    return this.samplePlayer.previewSample(sample.sampleUrl, onStop);
   }
 
   async playSamplesImmediately(

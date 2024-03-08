@@ -12,6 +12,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {Provider} from 'react-redux';
 import {act} from 'react-dom/test-utils';
 
@@ -19,7 +20,7 @@ describe('RubricContent', () => {
   let store;
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections});
+    registerReducers({teacherSections, teacherPanel});
     store = getStore();
   });
 
@@ -140,7 +141,7 @@ describe('RubricContent', () => {
 
   it('shows level title when teacher is viewing student work', () => {
     const wrapper = shallow(<RubricContent {...defaultProps} />);
-    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+    expect(wrapper.find('Heading3').at(0).props().children).to.equal(
       'Lesson 3: Data Structures'
     );
   });
@@ -149,7 +150,7 @@ describe('RubricContent', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
-    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+    expect(wrapper.find('Heading3').at(0).props().children).to.equal(
       'Lesson 3: Data Structures'
     );
   });

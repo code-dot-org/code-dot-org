@@ -11,6 +11,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {Provider} from 'react-redux';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
@@ -23,7 +24,7 @@ describe('RubricContainer', () => {
     fetchStub = sinon.stub(window, 'fetch');
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
-    registerReducers({teacherSections});
+    registerReducers({teacherSections, teacherPanel});
     store = getStore();
   });
 
@@ -157,9 +158,19 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
+    // Push the `fetch` through
     await act(async () => {
       await Promise.resolve();
     });
+    // Perform the json() call from the fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    // Perform the data call from the fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    // Let the component re-render with the set state
     wrapper.update();
     expect(fetchStub).to.have.been.calledThrice;
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
@@ -247,7 +258,7 @@ describe('RubricContainer', () => {
     wrapper.update();
     expect(wrapper.find('Button')).to.have.lengthOf(3);
     expect(wrapper.find('Button').first().props().text).to.equal(
-      i18n.runAiAssessment({studentName: defaultStudentInfo.name})
+      i18n.runAiAssessment()
     );
   });
 

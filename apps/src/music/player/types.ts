@@ -1,10 +1,10 @@
 import {SoundLoadCallbacks} from '../types';
 import {Effects} from './interfaces/Effects';
 
-/** Common interface for the internal audio player */
+/**
+ * Common interface for the internal audio player
+ */
 export interface AudioPlayer {
-  // TODO: Fill in as we align ToneJSPlayer and SamplePlayer
-
   /** If this player supports samplers */
   supportsSamplers(): boolean;
 
@@ -16,7 +16,7 @@ export interface AudioPlayer {
 
   /** Load sounds into the cache */
   loadSounds(
-    sampleIds: string[],
+    sampleUrls: string[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
 
@@ -26,6 +26,9 @@ export interface AudioPlayer {
     sampleMap: {[note: number]: string},
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
+
+  /** If the given instrument has been loaded */
+  isInstrumentLoaded(instrumentName: string): boolean;
 
   /** Play a sample immediately (used for previews) */
   playSampleImmediately(
@@ -64,8 +67,8 @@ export interface AudioPlayer {
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
-  // ID of the sample
-  sampleId: string;
+  // URL of the sample
+  sampleUrl: string;
   // Whether the sound was triggered
   triggered: boolean;
   // Original BPM of the sample

@@ -53,9 +53,7 @@ export default function RunAIAssessmentButton({
   );
 
   const studentButtonText = () => {
-    return i18n.runAiAssessment({
-      studentName: studentName,
-    });
+    return i18n.runAiAssessment();
   };
 
   useEffect(() => {
@@ -155,7 +153,7 @@ export default function RunAIAssessmentButton({
           <Button
             className="uitest-run-ai-assessment"
             text={studentButtonText()}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            color={Button.ButtonColor.neutralDark}
             onClick={handleRunAiAssessment}
             style={{margin: 0}}
             disabled={status !== STATUS.READY}
