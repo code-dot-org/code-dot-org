@@ -8,6 +8,7 @@ import {AichatLevelProperties} from '../../types';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {DEFAULT_RETRIEVAL_CONTEXTS} from './constants';
+import {isDisabled} from './utils';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const retrievalContexts = useSelector(
@@ -52,9 +53,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           <button
             type="button"
             onClick={onAdd}
-            disabled={
-              !newMessage || retrievalContexts.visibility === 'readonly'
-            }
+            disabled={!newMessage || isDisabled(retrievalContexts.visibility)}
           >
             Add
           </button>
@@ -66,7 +65,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
                 type="button"
                 onClick={() => onRemove(index)}
                 className={styles.removeItemButton}
-                disabled={retrievalContexts.visibility === 'readonly'}
+                disabled={isDisabled(retrievalContexts.visibility)}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
@@ -81,7 +80,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <button
           type="button"
-          disabled={retrievalContexts.visibility === 'readonly'}
+          disabled={isDisabled(retrievalContexts.visibility)}
         >
           Update
         </button>

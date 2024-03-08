@@ -3,13 +3,14 @@ import {useSelector} from 'react-redux';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties, Visibility} from '@cdo/apps/aichat/types';
 import styles from '../model-customization-workspace.module.scss';
+import {isHidden, isDisabled} from './utils';
 
 const DEFAULT_PROMPT_CUSTOMIZATIONS = {
-  botName: {value: '', visibility: 'editable'},
-  temperature: {value: 0.5, visibility: 'editable'},
-  systemPrompt: {value: '', visibility: 'editable'},
+  botName: {value: '', visibility: Visibility.EDITABLE},
+  temperature: {value: 0.5, visibility: Visibility.EDITABLE},
+  systemPrompt: {value: '', visibility: Visibility.EDITABLE},
 };
 
 const PromptCustomization: React.FunctionComponent = () => {
@@ -20,14 +21,14 @@ const PromptCustomization: React.FunctionComponent = () => {
   );
 
   const allFieldsDisabled =
-    botName.visibility === 'readonly' &&
-    temperature.visibility === 'readonly' &&
-    systemPrompt.visibility === 'readonly';
+    isDisabled(botName.visibility) &&
+    isDisabled(temperature.visibility) &&
+    isDisabled(systemPrompt.visibility);
 
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {botName.visibility !== 'hidden' && (
+        {!isHidden(botName.visibility) && (
           <div className={styles.inputContainer}>
             <label htmlFor="chatbot-name">
               <StrongText>Chatbot name</StrongText>
@@ -35,12 +36,12 @@ const PromptCustomization: React.FunctionComponent = () => {
             <input
               id="chatbot-name"
               value={botName.value}
-              disabled={botName.visibility === 'readonly'}
+              disabled={isDisabled(botName.visibility)}
               // readOnly might be preferred property for disabling inputs?
             />
           </div>
         )}
-        {temperature.visibility !== 'hidden' && (
+        {!isHidden(temperature.visibility) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
               <label htmlFor="temperature">
@@ -54,11 +55,11 @@ const PromptCustomization: React.FunctionComponent = () => {
               max="1"
               step="0.01"
               value={temperature.value}
-              disabled={temperature.visibility === 'readonly'}
+              disabled={isDisabled(temperature.visibility)}
             />
           </div>
         )}
-        {systemPrompt.visibility !== 'hidden' && (
+        {!isHidden(systemPrompt.visibility) && (
           <div className={styles.inputContainer}>
             <label htmlFor="system-prompt">
               <StrongText>System prompt</StrongText>
@@ -66,7 +67,7 @@ const PromptCustomization: React.FunctionComponent = () => {
             <textarea
               id="system-prompt"
               value={systemPrompt.value}
-              disabled={systemPrompt.visibility === 'readonly'}
+              disabled={isDisabled(systemPrompt.visibility)}
             />
           </div>
         )}

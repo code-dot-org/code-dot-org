@@ -32,11 +32,14 @@ const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
 };
 
 const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
-  botName: {value: '', visibility: 'editable'},
-  temperature: {value: 0, visibility: 'editable'},
-  systemPrompt: {value: '', visibility: 'editable'},
-  retrievalContexts: {value: [], visibility: 'editable'},
-  modelCardInfo: {value: EMPTY_MODEL_CARD_INFO, visibility: 'editable'},
+  botName: {value: '', visibility: Visibility.EDITABLE},
+  temperature: {value: 0, visibility: Visibility.EDITABLE},
+  systemPrompt: {value: '', visibility: Visibility.EDITABLE},
+  retrievalContexts: {value: [], visibility: Visibility.EDITABLE},
+  modelCardInfo: {
+    value: EMPTY_MODEL_CARD_INFO,
+    visibility: Visibility.EDITABLE,
+  },
   canSwitchPanels: true,
 };
 
@@ -51,7 +54,7 @@ function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
       continue;
     }
     if (field.visibility === undefined) {
-      field.visibility = 'editable';
+      field.visibility = Visibility.EDITABLE;
     }
   }
   return data;
@@ -105,7 +108,8 @@ const EditAiCustomizations: React.FunctionComponent<{
         ...aiCustomizations,
         modelCardInfo: {
           value: updatedModelCardInfo,
-          visibility: aiCustomizations.modelCardInfo?.visibility || 'editable',
+          visibility:
+            aiCustomizations.modelCardInfo?.visibility || Visibility.EDITABLE,
         },
       });
     },
@@ -196,7 +200,10 @@ const EditAiCustomizations: React.FunctionComponent<{
           <div className={moduleStyles.fieldRow}>
             <ModelCardFields />
             <VisibilityDropdown
-              value={aiCustomizations.modelCardInfo?.visibility || 'editable'}
+              value={
+                aiCustomizations.modelCardInfo?.visibility ||
+                Visibility.EDITABLE
+              }
               property="modelCardInfo"
             />
           </div>

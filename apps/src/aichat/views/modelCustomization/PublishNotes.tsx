@@ -6,6 +6,7 @@ import styles from '../model-customization-workspace.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {AichatLevelProperties, ModelCardInfo} from '@cdo/apps/aichat/types';
 import {DEFAULT_MODEL_CARD_INFO} from './constants';
+import {isHidden, isDisabled} from './utils';
 
 const INPUTS: {id: keyof ModelCardInfo; text: string}[] = [
   {id: 'description', text: 'Description'},
@@ -26,14 +27,14 @@ const PublishNotes: React.FunctionComponent = () => {
       <div>
         {INPUTS.map(input => {
           return (
-            modelCardInfo.visibility !== 'hidden' && (
+            !isHidden(modelCardInfo.visibility) && (
               <div className={styles.inputContainer} key={input.id}>
                 <label htmlFor={input.id}>
                   <StrongText>{input.text}</StrongText>
                 </label>
                 <textarea
                   id={input.id}
-                  disabled={modelCardInfo.visibility === 'readonly'}
+                  disabled={isDisabled(modelCardInfo.visibility)}
                   value={modelCardInfo.value[input.id]}
                 />
               </div>
@@ -42,10 +43,7 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button
-          type="button"
-          disabled={modelCardInfo.visibility === 'readonly'}
-        >
+        <button type="button" disabled={isDisabled(modelCardInfo.visibility)}>
           Publish
         </button>
       </div>
