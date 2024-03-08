@@ -1,5 +1,3 @@
-import {EFFECTS_PALETTES} from './constants';
-
 // NOTE: min and max are inclusive
 export function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -48,7 +46,5 @@ export function randomColor(p5) {
 }
 
 export function randomColorFromPalette(palette) {
-  return EFFECTS_PALETTES[palette][
-    randomInt(0, EFFECTS_PALETTES[palette].length - 1)
-  ];
+  return palette[randomInt(0, palette.length - 1)];
 }

@@ -7,6 +7,7 @@ import drawTickled from '@code-dot-org/dance-party/src/shapes/tickled';
 import drawWink from '@code-dot-org/dance-party/src/shapes/wink';
 import {createUuid} from '@cdo/apps/utils';
 import * as utils from '../../utils';
+import {EFFECTS_PALETTES} from '../../constants';
 
 export const commands = {
   setForegroundEffect(effectName) {
@@ -306,7 +307,7 @@ export const commands = {
           }
           glassShards.push({
             points: points,
-            color: utils.randomColorFromPalette('ocean'),
+            color: utils.randomColorFromPalette(EFFECTS_PALETTES['ocean']),
           });
         }
         this.foregroundEffects.push({
@@ -341,7 +342,7 @@ export const commands = {
         let stars = [];
         for (let i = 0; i < numStars; i++) {
           stars.push({
-            color: utils.randomColorFromPalette('twinkling'),
+            color: utils.randomColorFromPalette(EFFECTS_PALETTES['twinkling']),
             x: utils.randomInt(0, 400),
             y: utils.randomInt(0, 400),
             alpha: utils.randomInt(1, 100),
