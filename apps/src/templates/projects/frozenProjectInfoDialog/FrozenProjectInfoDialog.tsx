@@ -39,7 +39,7 @@ const FrozenProjectInfoDialog: React.FunctionComponent = () => {
       <p>{i18n.projectFrozenNotice()}</p>
       <SafeMarkdown
         markdown={i18n.requestProjectUnfeatured({
-          url: 'https://studio.code.org/projects/public',
+          url: '/projects/public',
         })}
       />
       <DialogFooter>
