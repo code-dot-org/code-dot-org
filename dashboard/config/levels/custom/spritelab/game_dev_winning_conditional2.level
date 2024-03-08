@@ -25,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "(Note for Amy: Maybe this should be a predict level instead of adding to the conditional, students need to predict what will happen when the health = 0. Then make one more level with a choice level that has 'fix this game' levels similar to Lesson 1) \r\n\r\n**How do you loose the game?**\r\nCheck if the player has run out of Health.\r\n\r\n- Connect the `if Health = 0` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` to see how it works",
+    "long_instructions": "**How do you loose the game?**\r\nCheck if the player has run out of Health.\r\n\r\n- Connect the `if Health = 0` block at the end of the `when sprite clicked` program\r\n\r\n- Add a `chage background block` *inside* the new block\r\n- Press `Run` to see how it works",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -47,11 +47,14 @@
       "downButton"
     ],
     "preload_asset_list": null,
+    "contained_level_names": [
+      "game_dev_predict_question"
+    ],
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-05T00:01:30.869+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional_simple\\\"\"],\"cloned_from\":\"hello_games_winning_conditional_simple\"},{\"changed_at\":\"2024-03-06 17:30:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:45:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:48:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:49:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:51:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:56:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:57:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:00:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:01:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:01:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:02:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:03:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:04:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:04:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:05:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:06:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:08:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:11:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-05T00:01:30.869+00:00\",\"changed\":[\"cloned from \\\"hello_games_winning_conditional_simple\\\"\"],\"cloned_from\":\"hello_games_winning_conditional_simple\"},{\"changed_at\":\"2024-03-06 17:30:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:45:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:48:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:49:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:51:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:56:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:57:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:00:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:01:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:01:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:02:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:03:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:04:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:04:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:05:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:06:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:08:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 00:11:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 16:52:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 17:15:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:19:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:27:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:29:09 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:29:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:29:35 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:31:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:31:49 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:50:49 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,77 +66,25 @@
         </variables>
         <block type="when_run" id="0WpyRqIux2B^Wms=lcLv" deletable="false" movable="false" editable="false" x="54" y="22">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"video_game_bg"</field>
+            <block type="procedures_callnoreturn">
+              <mutation name="GameSetup"/>
+              <field name="NAME">GameSetup</field>
               <next>
-                <block type="gamelab_makeSpritesWithSize">
-                  <field name="SIZE">50</field>
-                  <field name="COSTUME">"gameplayobject_item_03"</field>
-                  <value name="NUM">
-                    <block type="math_number">
-                      <field name="NUM">3</field>
+                <block type="gamelab_showVariable">
+                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <field name="LOCATION">{"x":200,"y":100}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"game_panda"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":197,"y":294}</field>
+                    <block type="variables_set">
+                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <field name="NUM">5</field>
                         </block>
                       </value>
-                      <next>
-                        <block type="adaptations_toggleBehaviorSimple">
-                          <field name="TOGGLE">"begins"</field>
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"gameplayobject_item_03"</field>
-                            </block>
-                          </value>
-                          <value name="BEHAVIOR">
-                            <block type="gamelab_behavior_get">
-                              <mutation behaviorId="moving south and looping" name="moving south and looping"/>
-                              <field name="NAME">moving south and looping</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="adaptations_toggleBehaviorSimple">
-                              <field name="TOGGLE">"begins"</field>
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"game_panda"</field>
-                                </block>
-                              </value>
-                              <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get">
-                                  <mutation behaviorId="patrolling" name="patrolling"/>
-                                  <field name="NAME">patrolling</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_showVariable">
-                                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":282,"y":119}</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="variables_set">
-                                      <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
-                                      <value name="VALUE">
-                                        <block type="math_number">
-                                          <field name="NUM">5</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
                     </block>
                   </next>
                 </block>
@@ -141,7 +92,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="63" y="451">
+        <block type="gamelab_checkTouching" x="52" y="179">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -156,16 +107,19 @@
             </block>
           </value>
           <next>
-            <block type="gamelab_playSoundOptions">
-              <field name="SOUND">'sound://category_projectile/retro_game_magic_spell_6.mp3'</field>
+            <block type="math_change">
+              <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
+              <value name="DELTA">
+                <shadow type="math_number" id="[o[fCv%xLKlU/tXpTXSK">
+                  <field name="NUM">-1</field>
+                </shadow>
+                <block type="math_number">
+                  <field name="NUM">-1</field>
+                </block>
+              </value>
               <next>
-                <block type="math_change">
-                  <field name="VAR" id="brBn}v{CpUvR[.64ZYc{">Health</field>
-                  <value name="DELTA">
-                    <shadow type="math_number" id="[o[fCv%xLKlU/tXpTXSK">
-                      <field name="NUM">-1</field>
-                    </shadow>
-                  </value>
+                <block type="gamelab_playSoundOptions">
+                  <field name="SOUND">'sound://category_projectile/retro_game_magic_spell_6.mp3'</field>
                   <next>
                     <block type="gamelab_ifVarEquals">
                       <field name="NUM" id="brBn}v{CpUvR[.64ZYc{">Health</field>
@@ -174,6 +128,28 @@
                           <field name="NUM">0</field>
                         </block>
                       </value>
+                      <statement name="STATEMENT">
+                        <block type="gamelab_setBackgroundImageAs">
+                          <field name="IMG">"gradient_18"</field>
+                          <next>
+                            <block type="gamelab_removeAllBehaviors">
+                              <value name="SPRITE">
+                                <block type="gamelab_getAllSprites"/>
+                              </value>
+                              <next>
+                                <block type="gamelab_spriteSay">
+                                  <field name="SPEECH">Game Over!</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"game_panda"</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
                     </block>
                   </next>
                 </block>
@@ -1317,94 +1293,72 @@
             </block>
           </statement>
         </block>
+        <block type="procedures_defnoreturn" x="20" y="75">
+          <field name="NAME">GameSetup</field>
+          <field name="DESCRIPTION"/>
+          <statement name="STACK">
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"video_game_bg"</field>
+              <next>
+                <block type="gamelab_makeSpritesWithSize">
+                  <field name="SIZE">50</field>
+                  <field name="COSTUME">"gameplayobject_item_03"</field>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">3</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <field name="ANIMATION_NAME">"game_panda"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <field name="LOCATION">{"x":197,"y":294}</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="adaptations_toggleBehaviorSimple">
+                          <field name="TOGGLE">"begins"</field>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"gameplayobject_item_03"</field>
+                            </block>
+                          </value>
+                          <value name="BEHAVIOR">
+                            <block type="gamelab_behavior_get">
+                              <mutation behaviorId="moving south and looping" name="moving south and looping"/>
+                              <field name="NAME">moving south and looping</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="adaptations_toggleBehaviorSimple">
+                              <field name="TOGGLE">"begins"</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"game_panda"</field>
+                                </block>
+                              </value>
+                              <value name="BEHAVIOR">
+                                <block type="gamelab_behavior_get">
+                                  <mutation behaviorId="patrolling" name="patrolling"/>
+                                  <field name="NAME">patrolling</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <variables>
-          <variable id="@-=S@3O,n:QRq]zW8kK+">Health</variable>
-        </variables>
-        <block type="gamelab_ifVarEquals" id="`kUb%OM1icUG[7n:kdsV" x="368" y="48">
-          <field name="NUM" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
-          <value name="VAL">
-            <block type="math_number" id="WQXEx@;jk?o@QgDN{0-h">
-              <field name="NUM">0</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="54" y="103">
-          <field name="IMG">"gradient_18"</field>
-        </block>
-        <block type="gamelab_removeAllBehaviors" id="gc@v|t=do+fuFb5k`t~W" x="309" y="163">
-          <value name="SPRITE">
-            <block type="gamelab_getAllSprites" id="Cj:-YEHARf@wIj,lfK%i"/>
-          </value>
-        </block>
-        <block type="gamelab_spriteSay" id="~6fZC.syA5A5WxLlpVN2" x="183" y="214">
-          <field name="SPEECH">Game Over!</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="CsYs5^-T%nRqWs}T6g[3">
-              <field name="ANIMATION">"game_panda"</field>
-            </block>
-          </value>
-        </block>
-        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="20" y="285">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
-          <value name="DELTA">
-            <shadow type="math_number" id="Dsygy)_vgya%_J|C?^+(">
-              <field name="NUM">-1</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="gamelab_showVariable" id="3.cNzacS^N.O/t!LPkxr" x="89" y="336">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="MTpyz3~[)2]e-cv8R$w!">
-              <field name="LOCATION">{"x":200,"y":100}</field>
-            </block>
-          </value>
-        </block>
-        <block type="variables_set" id=")R,JJO#7$==Alm:brx|2" x="67" y="395">
-          <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Health</field>
-          <value name="VALUE">
-            <block type="math_number" id="O+Q2TbpteuZ$tH8?#oZT">
-              <field name="NUM">5</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="JIw3/AZ92eD,iyz@QMI#" x="165" y="475">
-          <field name="ANIMATION_NAME">"game_panda"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="D=bbm,uR`M;-R6eXQ:/)">
-              <field name="LOCATION">{"x":100,"y":300}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeSpritesWithSize" id="lHTaF[tAmtGL7uK{uv}P" x="436" y="550">
-          <field name="SIZE">50</field>
-          <field name="COSTUME">"gameplayobject_item_03"</field>
-          <value name="NUM">
-            <block type="math_number" id="xV^Q?m?#|8HS3Vm$w6y?">
-              <field name="NUM">3</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_checkTouching" id="*5lvdq2[xK(p6{TZIF:H" x="130" y="628">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_checkTouching"/>
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation" id="5gtr,{jOPGiCM!H:L+IY">
-              <field name="ANIMATION">"gameplayobject_item_03"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation" id="ZKK)NbB=ufGp,X1j1W[b">
-              <field name="ANIMATION">"game_panda"</field>
-            </block>
-          </value>
-        </block>
-      </xml>
+      <xml xmlns="https://developers.google.com/blockly/xml"/>
     </toolbox_blocks>
   </blocks>
 </GamelabJr>
