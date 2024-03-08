@@ -1,7 +1,8 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
-  "created_at": "2024-03-05T21:39:27.000Z",
+  "created_at": "2024-03-04T19:53:29.000Z",
   "level_num": "custom",
   "user_id": 63,
   "properties": {
@@ -70,11 +71,13 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-04T19:53:29.062+00:00\",\"changed\":[\"cloned from \\\"CourseF_Project_SpriteLab_2023\\\"\"],\"cloned_from\":\"CourseF_Project_SpriteLab_2023\"},{\"changed_at\":\"2024-03-04 19:54:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-04 19:56:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-04 19:57:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-05 11:45:06 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 11:55:16 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 12:01:04 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 12:14:00 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:04:40 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:14:51 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:15:08 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:54:27 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 15:07:33 -0500\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-04T19:53:29.062+00:00\",\"changed\":[\"cloned from \\\"CourseF_Project_SpriteLab_2023\\\"\"],\"cloned_from\":\"CourseF_Project_SpriteLab_2023\"},{\"changed_at\":\"2024-03-04 19:54:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-04 19:56:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-04 19:57:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-05 11:45:06 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 11:55:16 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 12:01:04 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 12:14:00 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:04:40 -0500\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:14:51 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:15:08 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 14:54:27 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-05 15:07:33 -0500\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-03-07 17:50:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 18:18:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 18:18:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 19:05:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-03-07 21:12:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -95,12 +98,28 @@
                 <block type="procedures_callnoreturn">
                   <mutation name="setup environment sprites"/>
                   <field name="NAME">setup environment sprites</field>
+                  <next>
+                    <block type="gamelab_toggleBehaviorSimple">
+                      <field name="TOGGLE">"begins"</field>
+                      <value name="SPRITE">
+                        <block type="GameDev_spriteType">
+                          <field name="GROUP">"players"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_behavior_get">
+                          <mutation behaviorId="moving right and left with arrows" name="moving right and left with arrows"/>
+                          <field name="NAME">moving right and left with arrows</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_keyPressed" id="U](1taXCi`ib2}XSgLYx" x="517" y="19">
+        <block type="gamelab_keyPressed" id="U](1taXCi`ib2}XSgLYx" x="27" y="250">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"space"</field>
           <next>
@@ -372,6 +391,62 @@
                       </next>
                     </block>
                   </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" movable="false" x="20" y="75">
+          <mutation behaviorId="moving right and left with arrows"/>
+          <field name="button_behavior_definition"/>
+          <field name="NAME">moving right and left with arrows</field>
+          <field name="DESCRIPTION"/>
+          <statement name="STACK">
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed">
+                  <field name="KEY">"left"</field>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveInDirection">
+                  <field name="DIRECTION">"West"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed">
+                      <field name="KEY">"right"</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveInDirection">
+                      <field name="DIRECTION">"East"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp">
+                          <field name="PROPERTY">"speed"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
                 </block>
               </next>
             </block>
@@ -918,18 +993,15 @@
           <block type="GameDev_getVelocity" id="eEU15n[^PT/Kvv-?^8/]">
             <field name="PROPERTY">"velocityX"</field>
           </block>
-          <block type="GameDev_makeNewGroupSprite" id="4lT?/o$Zd(c=!G2;!BUQ">
-            <field name="ANIMATION_NAME">"dirt_grass"</field>
+          <block type="GameDev_spriteType" id="YM9mj5k;MBOaS`Z7fpw]">
             <field name="GROUP">"players"</field>
-            <value name="LOCATION">
-              <block type="gamelab_location_picker" id="bpFX!EE4~K_.r!PhI5jW">
-                <field name="LOCATION">{"x":200,"y":200}</field>
-              </block>
-            </value>
           </block>
-          <block type="GameDev_playerSprite" id=":l{$,q{F!)VcjX*/VC+B"/>
-          <block type="GameDev_environmentSprite" id="aSpcdPl}*61N@y7Xmo#_"/>
-          <block type="GameDev_playerJump" id="4R$z%}7D0p$[t6+Ts%Xq"/>
+          <block type="GameDev_playerJump" id="4R$z%}7D0p$[t6+Ts%Xq">
+            <field name="STRENGTH">5</field>
+          </block>
+          <block type="GameDev_setGroup" id="{E@?UD6fF?p7yQ?o1y,B">
+            <field name="GROUP">"players"</field>
+          </block>
         </category>
       </xml>
     </toolbox_blocks>
