@@ -181,6 +181,17 @@ class DatablockStorageTable < ApplicationRecord
     create_records(records)
   end
 
+  def export_csv
+    column_names = get_columns
+
+    CSV.generate do |csv|
+      csv << column_names
+      read_records.map(&:record_json).each do |record_json|
+        csv << column_names.map {|x| record_json[x]}
+      end
+    end
+  end
+
   def get_columns
     is_shared_table ? shared_table.columns : columns
   end

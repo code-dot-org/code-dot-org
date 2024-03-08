@@ -92,6 +92,15 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  def export_csv
+    table_name = params[:table_name]
+    response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
+    response.headers['Content-Type'] = 'text/csv'
+
+    table = find_table
+    render plain: table.export_csv
+  end
+
   def clear_table
     table = find_table
     table.records.delete_all

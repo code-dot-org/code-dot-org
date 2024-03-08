@@ -4,7 +4,7 @@
 import TableControls from './TableControls';
 import {DataView, WarningType} from '../constants';
 import DataTable from './DataTable';
-import {storageBackend} from '../storage';
+import {storageBackend, isFirebaseStorage} from '../storage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -67,12 +67,16 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
-    const isSharedTable =
-      this.props.tableListMap[this.props.tableName] === tableType.SHARED;
-    const tableName = encodeURIComponent(this.props.tableName);
-    const channelId = isSharedTable ? 'shared' : Applab.channelId;
-    // TODO: unfirebase, this should be a call to datablock_storage_controller, see: #56996
-    location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
+    // TODO: post-firebase-cleanup, remove this conditional, leave only logic from the else clause #56994
+    if (isFirebaseStorage()) {
+      const isSharedTable =
+        this.props.tableListMap[this.props.tableName] === tableType.SHARED;
+      const tableName = encodeURIComponent(this.props.tableName);
+      const channelId = isSharedTable ? 'shared' : Applab.channelId;
+      location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
+    } else {
+      location.href = storageBackend().exportCsvUrl(this.props.tableName);
+    }
   };
 
   /** Delete all rows, but preserve the columns. */

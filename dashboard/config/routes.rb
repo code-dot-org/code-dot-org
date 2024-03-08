@@ -1128,6 +1128,7 @@ Dashboard::Application.routes.draw do
         post :create_table
         post :add_shared_table
         post :import_csv
+        get :export_csv
         delete :clear_table
         delete :delete_table
         get :get_table_names

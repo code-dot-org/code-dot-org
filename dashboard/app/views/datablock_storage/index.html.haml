@@ -122,6 +122,11 @@
   = text_area_tag "table_data_csv", "", placeholder: "table_data_csv"
   = submit_tag "import_csv"
 
+%h3 export_csv
+= form_tag "export_csv", :method => :get, :remote => false do
+  = text_field_tag "table_name", "", placeholder: "table_name"
+  = submit_tag "export_csv"
+
 %h3 get_column
 = form_tag "get_column", :method => :get, :remote => false do
   = text_field_tag "table_name", "", placeholder: "table_name"

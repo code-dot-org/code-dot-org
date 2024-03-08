@@ -669,4 +669,26 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     # Tim, age 2 record should be gone:
     assert_equal EXPECTED_RECORDS, read_records
   end
+
+  test "export csv" do
+    CSV_DATA = <<~CSV
+      id,name,age,male
+      1,alice,7,false
+      2,bob,8,true
+      3,charlie,9,true
+    CSV
+
+    post _url(:import_csv), params: {
+      table_name: 'mytable',
+      table_data_csv: CSV_DATA,
+    }
+    assert_response :success
+
+    get _url(:export_csv), params: {
+      table_name: 'mytable',
+    }
+    assert_response :success
+
+    assert_equal CSV_DATA, @response.body
+  end
 end
