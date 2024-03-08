@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {curriculumDataShape} from './curriculumCatalogShapes';
+import {curriculumDataShape} from './curriculumCatalogConstants';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import HeaderBanner from '../HeaderBanner';
