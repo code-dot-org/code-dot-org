@@ -99,6 +99,8 @@ class Services::Lti
     members.each do |member|
       next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
+
+      # If the LMS hasn't implemented the resource link level membership service, we don't get the message property in the member object
       if Policies::Lti.issuer_accepts_resource_link?(issuer)
         message = member[:message].first
 
