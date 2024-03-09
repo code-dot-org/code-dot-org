@@ -1,11 +1,5 @@
 @single_session
 Feature: OneTrust integration
-
-  # hourofcode.com
-  # code.org
-  # studio.code.org
-
-  # prod vs test vs off
   Scenario: The pages load the prod OneTrust libraries.
     Given I am on "http://studio.code.org/courses"
     Then element "script[src$='otSDKStub.js']" does exist
