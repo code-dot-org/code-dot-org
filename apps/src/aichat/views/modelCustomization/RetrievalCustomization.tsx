@@ -50,6 +50,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             id="retrieval-input"
             onChange={event => setNewMessage(event.target.value)}
             value={newMessage}
+            disabled={isDisabled(retrievalContexts.visibility)}
           />
         </div>
         <div className={styles.addItemContainer}>
