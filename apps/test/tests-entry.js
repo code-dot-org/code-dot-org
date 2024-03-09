@@ -49,7 +49,13 @@ if (testType('unit')) {
       const bodyTags = Array.from(document.getElementsByTagName('body'));
 
       bodyTags.forEach(bodyTag => {
-        bodyTag.innerHTML = '';
+        // Add a <script> tag to avoid recaptcha error
+        // The <script> portion can be removed if the RecaptchaDialog test is updated to remove the downloading of
+        // the recaptcha.js file in Karma. The recaptcha script looks for the <script> tag which is inserted in the
+        // RecaptchaDialog file. That test finishes early but the recaptcha javascript never finished loading.
+        // This causes an error to surface in later tests and cause those to fail. Instead, adding a stub <script>
+        // allows subsequent tests to pass.
+        bodyTag.innerHTML = '<script></script>';
       });
     });
 
