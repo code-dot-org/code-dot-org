@@ -2,7 +2,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import style from './rubrics.module.scss';
-import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
 import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
