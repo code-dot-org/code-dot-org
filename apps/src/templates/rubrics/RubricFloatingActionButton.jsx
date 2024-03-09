@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import style from './rubrics.module.scss';
 import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
 import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
+import taIcon from '@cdo/static/ai-bot-tag-TA.png';
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -68,7 +69,7 @@ function RubricFloatingActionButton({
     trySetSessionStorage(sessionStorageKey, isOpen);
   }, [isOpen]);
 
-  const icon = aiEnabled ? aiFabIcon : rubricFabIcon;
+  const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
   return (
     <div id="fab-contained">
@@ -76,9 +77,14 @@ function RubricFloatingActionButton({
         id="ui-floatingActionButton"
         className={style.floatingActionButton}
         // I couldn't get an image url to work in the SCSS module, so using an inline style for now
-        style={{backgroundImage: `url(${icon})`}}
+        style={{backgroundImage: `url(${fabIcon})`}}
         onClick={handleClick}
         type="button"
+      />
+      <div
+        id="ui-floatingActionButton-overlay"
+        className={style.taOverlay}
+        style={{backgroundImage: `url(${taIcon})`}}
       />
       {/* TODO: do not hardcode in AI setting */}
       <RubricContainer

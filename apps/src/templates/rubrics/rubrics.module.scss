@@ -15,6 +15,22 @@
   border-radius: 30px;
 }
 
+.taOverlay {
+  position: fixed;
+  left: 56px;
+  bottom: 99px;
+
+  height: 20px;
+  width: 30px;
+  background-size: 32px;
+  padding: 0;
+
+  border-width: 3px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
+}
+
 .rubricContainer {
   position: fixed;
   left: 10px;
