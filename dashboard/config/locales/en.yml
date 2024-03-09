@@ -96,6 +96,7 @@ en:
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
+  to_close: Close
   okay: "Okay"
   type_here: "Type here"
   or: "or"
@@ -1442,6 +1443,7 @@ en:
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"
       early_access:
+        title: LMS Early Access
         closed: Sorry, all Early Access slots for Code.org Learning Management System Integrations have been claimed.
         waitlist: Please [sign-up here](%{sign_up_link}) to join the Early Access waitlist and get updates about LMS Integration releases.
         form_header: Register your LMS for Integration Early Access
