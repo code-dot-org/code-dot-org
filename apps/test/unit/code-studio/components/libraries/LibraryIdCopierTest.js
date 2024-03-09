@@ -1,5 +1,4 @@
 import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import LibraryIdCopier from '@cdo/apps/code-studio/components/libraries/LibraryIdCopier.jsx';
@@ -10,6 +9,7 @@ describe('LibraryIdCopier', () => {
     render(<LibraryIdCopier channelId={channelId} />);
     const user = userEvent.setup();
     await user.click(screen.getByRole('button'));
-    navigator.clipboard.readText().then(clipText => expect(clipText).to.equal(channelId));
+    const clipText = await navigator.clipboard.readText();
+    expect(clipText).to.equal(channelId);
   });
 });

@@ -11,8 +11,7 @@ export default class LibraryIdCopier extends React.Component {
 
   copyChannelId = () => {
     this.channelId.select();
-    navigator.clipboard.writeText(this.channelId);
-    // document.execCommand('copy');
+    navigator.clipboard.writeText(this.props.channelId);
   };
 
   render() {
