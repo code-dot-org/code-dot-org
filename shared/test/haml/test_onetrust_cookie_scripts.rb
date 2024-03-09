@@ -20,21 +20,40 @@ class OnetrustCookieScriptsTest < ActionView::TestCase
     DCDO.unstub(:get)
   end
 
-  test 'test_does_not_render_onetrust_scripts' do
+  test 'code.org does not render OneTrust scripts' do
     html = render_onetrust_cookie_scripts(CODE_DOMAIN, 'off')
     assert_equal "", html
   end
 
-  test 'test_renders_onetrust_test_scripts' do
+  test 'code.org renders OneTrust test scripts' do
     html = render_onetrust_cookie_scripts(CODE_DOMAIN, 'test')
     assert_match /977d-test\/OtAutoBlock\.js/, html
     assert_match /otSDKStub\.js/, html
     assert_match "function OptanonWrapper() { }", html
   end
 
-  test 'test_renders_onetrust_prod_scripts' do
+  test 'code.org renders OneTrust prod scripts' do
     html = render_onetrust_cookie_scripts(CODE_DOMAIN)
     assert_match /977d\/OtAutoBlock\.js/, html
+    assert_match /otSDKStub\.js/, html
+    assert_match "function OptanonWrapper() { }", html
+  end
+
+  test 'hourofcode.com does not render OneTrust scripts' do
+    html = render_onetrust_cookie_scripts(HOC_DOMAIN, 'off')
+    assert_equal "", html
+  end
+
+  test 'hourofcode.com renders OneTrust test scripts' do
+    html = render_onetrust_cookie_scripts(HOC_DOMAIN, 'test')
+    assert_match /e345-test\/OtAutoBlock\.js/, html
+    assert_match /otSDKStub\.js/, html
+    assert_match "function OptanonWrapper() { }", html
+  end
+
+  test 'hourofcode.com renders OneTrust prod scripts' do
+    html = render_onetrust_cookie_scripts(HOC_DOMAIN)
+    assert_match /e345\/OtAutoBlock\.js/, html
     assert_match /otSDKStub\.js/, html
     assert_match "function OptanonWrapper() { }", html
   end
