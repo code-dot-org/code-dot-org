@@ -15,10 +15,10 @@
       'prod' => 'https://cdn.cookielaw.org/consent/7c79c547-a2fc-4998-9b21-0c7a5e67e345/OtAutoBlock.js',
     }
   }
-- return '' if cookie_script_env == 'off'
--# If an invalid domain is given don't render anything.
-- return '' unless auto_block_src[domain]
-%script{src: auto_block_src[domain][cookie_script_env], type: 'text/javascript'}
-%script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d'}
-:javascript
-  function OptanonWrapper() { }
+-# Don't add the libraries if the feature is 'off' or an unknown
+-# domain was given.
+- if cookie_script_env != 'off' &&  auto_block_src[domain].present?
+  %script{src: auto_block_src[domain][cookie_script_env], type: 'text/javascript'}
+  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d'}
+  :javascript
+    function OptanonWrapper() { }
