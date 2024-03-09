@@ -77,7 +77,10 @@ export class PersonalProjectsTableActionsCell extends Component {
             {!this.props.isFrozen && <MenuBreak />}
             {!this.props.isFrozen && (
               <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-                <FontAwesome icon="times-circle" style={moduleStyles.xIcon} />
+                <FontAwesome
+                  icon="times-circle"
+                  className={moduleStyles.xIcon}
+                />
                 {i18n.delete()}
               </PopUpMenu.Item>
             )}
@@ -90,7 +93,6 @@ export class PersonalProjectsTableActionsCell extends Component {
               onClick={this.onSave}
               color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
-              style={styles.saveButton}
               disabled={isSaving}
               className="ui-projects-rename-save"
             />
