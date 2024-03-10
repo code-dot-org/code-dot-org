@@ -494,7 +494,7 @@ Resources:
       SecurityGroupIngress:
         -
           Description: Enable Autoscaler to issue Docker API calls to Runner EC2 Instances.
-          SourceSecurityGroupId: !Ref DroneAutoscalerEcsSecurityGroup
+          SourceSecurityGroupId: !GetAtt DroneAutoscalerEcsSecurityGroup.GroupId
           IpProtocol: tcp
           FromPort: 2376
           ToPort: 2376
