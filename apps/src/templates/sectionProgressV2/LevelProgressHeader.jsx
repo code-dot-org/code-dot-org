@@ -66,7 +66,9 @@ export default function ExpandedProgressColumnHeader({
         onClick={() => toggleExpandedChoiceLevel(level)}
       >
         {level.sublevels?.length > 0 && <FontAwesome icon="caret-right" />}
-        <div>{lesson.relative_position + '.' + level.bubbleText}</div>
+        <div>{`${lesson.relative_position}.${
+          level.isUnplugged ? 0 : level.bubbleText
+        }`}</div>
         {level.kind === 'assessment' && (
           <FontAwesome
             icon="star"
