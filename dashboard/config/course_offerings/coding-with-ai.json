@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
   "header": null,
-  "image": null,
+  "image": "https://images.code.org/6a7c4b4237d1d31afdb1b1a2cf5796c4-CWAI_Cover_Catalog.png",
   "cs_topic": "artificial_intelligence,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",

@@ -1,6 +1,7 @@
 import {commands as actionCommands} from './actionCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import {commands as criterionCommands} from './criterionCommands';
+import {commands as effectCommands} from './effectCommands';
 import {commands as eventCommands} from './eventCommands';
 import {commands as locationCommands} from './locationCommands';
 import {commands as spriteCommands} from './spriteCommands';
@@ -13,6 +14,7 @@ export default {
   ...actionCommands,
   ...behaviorCommands,
   ...criterionCommands,
+  ...effectCommands,
   ...eventCommands,
   ...locationCommands,
   ...spriteCommands,
