@@ -1,6 +1,5 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
-import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
 import Sequencer from './Sequencer';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
