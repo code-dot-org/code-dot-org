@@ -163,6 +163,7 @@ export interface ExtendedBlockSvg extends BlockSvg {
   thumbnailSize?: number;
   // used for function blocks
   functionalSvg_?: BlockSvgFrame;
+  workspace: ExtendedWorkspaceSvg;
 }
 
 export interface ExtendedInput extends Input {
