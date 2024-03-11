@@ -82,7 +82,7 @@ export function annotateLines(evidence) {
   // those out, we do not trust them and instead find the code it
   // references to highlight it.
   for (const match of evidence.matchAll(
-    'Line (\\d+)(?:\\s*-\\s*(\\d+))?:(.+?)\\s*(?=Line|$)'
+    'Lines? (\\d+)(?:\\s*-\\s*(\\d+))?:(.+?)\\s*(?=Line|$)'
   )) {
     let lineNumber = parseInt(match[1]);
     let lastLineNumber = parseInt(match[2] || lineNumber);
