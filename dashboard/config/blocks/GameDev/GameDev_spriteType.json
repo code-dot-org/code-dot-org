@@ -11,19 +11,19 @@
         "name": "GROUP",
         "options": [
           [
-            "player sprites",
+            "player",
             "\"players\""
           ],
           [
-            "environment sprites",
+            "environment",
             "\"walls\""
           ],
           [
-            "object sprites",
+            "objects",
             "\"objects\""
           ],
           [
-            "enemy sprites",
+            "enemies",
             "\"enemies\""
           ]
         ]

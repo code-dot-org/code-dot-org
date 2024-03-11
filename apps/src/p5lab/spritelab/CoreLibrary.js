@@ -44,6 +44,7 @@ export default class CoreLibrary {
       pass: 90,
       successFrame: 0,
     };
+    this.foregroundEffects = [];
     this.variableBubbles = [];
     this.jsInterpreter = jsInterpreter;
 
@@ -55,6 +56,10 @@ export default class CoreLibrary {
         this.p5.drawSprites();
         this.drawVariableBubbles();
         this.drawSpeechBubbles();
+        // Don't show foreground effect in preview
+        if (!this.isPreviewFrame()) {
+          this.foregroundEffects.forEach(effect => effect.func());
+        }
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
         }
@@ -938,5 +943,20 @@ export default class CoreLibrary {
 
   runBehaviors() {
     this.behaviors.forEach(behavior => behavior.func({id: behavior.sprite.id}));
+  }
+
+  // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355
+  getP5Color(hex, alpha) {
+    let color = this.p5.color(hex);
+    if (alpha !== undefined) {
+      color._array[3] = alpha / color.maxes[color.mode][3];
+    }
+    const array = color._array;
+    // (loop backwards for performance)
+    const levels = (color.levels = new Array(array.length));
+    for (let i = array.length - 1; i >= 0; --i) {
+      levels[i] = Math.round(array[i] * 255);
+    }
+    return color;
   }
 }
