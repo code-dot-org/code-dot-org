@@ -29,6 +29,11 @@ function RubricFloatingActionButton({
   const [isOpen, setIsOpen] = useState(
     JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
   );
+  // Show the pulse if this is the first time the user has seen the FAB in this
+  // session. Depends on other logic which sets the open state in session storage.
+  const [showPulse] = useState(
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
+  );
 
   const eventData = useMemo(() => {
     return {
@@ -72,11 +77,15 @@ function RubricFloatingActionButton({
 
   const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
+  const classes = showPulse
+    ? classNames(style.floatingActionButton, style.pulse)
+    : style.floatingActionButton;
+
   return (
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
-        className={classNames(style.floatingActionButton, style.pulse)}
+        className={classes}
         // I couldn't get an image url to work in the SCSS module, so using an inline style for now
         style={{backgroundImage: `url(${fabIcon})`}}
         onClick={handleClick}
