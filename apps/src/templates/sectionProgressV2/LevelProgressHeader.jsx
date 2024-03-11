@@ -81,8 +81,6 @@ export default function ExpandedProgressColumnHeader({
     [lesson, level, toggleExpandedChoiceLevel, isExpandable]
   );
 
-  console.log(level);
-
   return level.sublevels?.length > 0 && isLevelExpanded
     ? expandedChoiceLevel()
     : unexpandedLevel();
