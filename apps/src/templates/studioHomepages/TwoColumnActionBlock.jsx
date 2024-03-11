@@ -18,13 +18,22 @@ export default function TwoColumnActionBlock({
   marginBottom = '64px',
 }) {
   return (
-    <div id={id} className={styles.container}>
+    <div
+      id={id}
+      className={styles.container}
+      data-testid="two-column-action-block"
+    >
       {heading && <Heading2>{heading}</Heading2>}
       <div
         className={styles.actionBlockWrapper}
         style={{marginBottom: marginBottom}}
       >
-        <img src={imageUrl} alt="" className={styles.image} />
+        <img
+          src={imageUrl}
+          alt=""
+          className={styles.image}
+          data-testid="two-column-action-block-img"
+        />
         <div className={styles.contentWrapper}>
           {subHeading && (
             <BodyOneText
