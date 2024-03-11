@@ -1,6 +1,20 @@
 @import 'color.scss';
 @import 'font.scss';
 
+@keyframes pulse {
+  0% {
+    transform: scale(.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
+
 .floatingActionButton {
   position: fixed;
   left: 10px;
@@ -13,6 +27,8 @@
 
   border-width: 0;
   border-radius: 30px;
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
 }
 
 .taOverlay {
