@@ -100,6 +100,22 @@ class SamplePlayerWrapper implements AudioPlayer {
     this.samplePlayer.stopAllSamplesStillToPlay();
   }
 
+  setLoopEnabled(): void {
+    console.log('Not supported');
+  }
+
+  setLoopStart() {
+    console.log('Not supported');
+  }
+
+  setLoopEnd() {
+    console.log('Not supported');
+  }
+
+  jumpToPosition() {
+    console.log('Not supported');
+  }
+
   // Converts actual seconds used by the audio system into a playhead
   // position, which is 1-based and scaled to measures.
   private convertSecondsToPlayheadPosition(seconds: number): number {

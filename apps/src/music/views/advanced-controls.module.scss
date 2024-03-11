@@ -1,0 +1,40 @@
+@import 'color.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: $neutral_light;
+  padding: 10px;
+  background: $neutral_dark70;
+  border: 2px solid $neutral_light;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.title {
+  color: $neutral_light;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+
+  .rowLabel {
+    margin-right: 10px;
+  }
+}
+
+.section {
+  margin: 15px 0px;
+}
+
+.input {
+  width: auto;
+}
+
+.measureInput {
+  width: 30px;
+  margin-right: 10px;
+}
