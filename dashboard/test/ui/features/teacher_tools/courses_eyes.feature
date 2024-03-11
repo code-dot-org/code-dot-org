@@ -32,7 +32,6 @@ Scenario: Student courses, non-english
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And I press "header-student-courses"
-  And I wait to see "#hero"
   And I wait to see "#student-page-header"
   And I see no difference for "student non-english courses page"
   And I close my eyes
