@@ -64,11 +64,9 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
           <RubricFloatingActionButton {...defaultProps} />
         </Provider>
       );
-      const images = screen.getAllByRole('img');
-      const image = images.find(i => i.id === 'unittest-fab-image');
+      const image = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(image);
-      const buttons = screen.getAllByRole('button');
-      const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
+      const fab = screen.getByRole('button', {name: 'AI bot'});
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.true;
     });
 
@@ -79,11 +77,9 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
           <RubricFloatingActionButton {...defaultProps} />
         </Provider>
       );
-      const images = screen.getAllByRole('img');
-      const image = images.find(i => i.id === 'unittest-fab-image');
+      const image = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(image);
-      const buttons = screen.getAllByRole('button');
-      const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
+      const fab = screen.getByRole('button', {name: 'AI bot'});
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;
     });
   });

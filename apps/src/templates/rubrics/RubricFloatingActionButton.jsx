@@ -93,14 +93,12 @@ function RubricFloatingActionButton({
       >
         <img
           alt="AI bot"
-          id="unittest-fab-image"
           src={fabIcon}
           onLoad={() => setIsFabImageLoaded(true)}
           style={{opacity: 1.0}}
         />
       </button>
       <div
-        id="ui-floatingActionButton-overlay"
         className={style.taOverlay}
         style={{backgroundImage: `url(${taIcon})`}}
       />
