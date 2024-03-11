@@ -20,9 +20,6 @@ export default function LandingPage({
   workshopsAsParticipant,
   plCoursesStarted,
 }) {
-  console.log(currentYearApplicationId);
-  console.log(workshopsAsParticipant);
-  console.log(plCoursesStarted);
   return (
     <>
       <HeaderBannerNoImage
@@ -31,8 +28,8 @@ export default function LandingPage({
       />
       <main className={style.wrapper}>
         {!currentYearApplicationId &&
-          workshopsAsParticipant.length === 0 &&
-          plCoursesStarted.length === 0 && <GettingStartedBanner />}
+          workshopsAsParticipant?.length === 0 &&
+          plCoursesStarted?.length === 0 && <GettingStartedBanner />}
         {lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
             subHeading={i18n.plLandingSubheading()}
@@ -43,7 +40,7 @@ export default function LandingPage({
           />
         )}
         <EnrolledWorkshops />
-        {deeperLearningCourseData.length >= 1 && (
+        {deeperLearningCourseData?.length >= 1 && (
           <div>
             <h2>Online Professional Learning Courses</h2>
             <ProfessionalLearningCourseProgress
