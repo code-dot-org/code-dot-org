@@ -17,7 +17,6 @@ describe('AgeDialog', () => {
   it('renders null if user is signed in', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} signedIn={true} />);
     assert.equal(wrapper.children().length, 0);
-    wrapper.detach();
   });
 
   it('renders null if dialog was seen before', () => {
@@ -26,12 +25,10 @@ describe('AgeDialog', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
     getItem.restore();
-    wrapper.detach();
   });
 
   it('renders a dialog if neither signed in nor seen before', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.name(), 'BaseDialog');
-    wrapper.detach();
   });
 });
