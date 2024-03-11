@@ -81,10 +81,14 @@ class LtiV1Controller < ApplicationController
     extracted_client_id = decoded_jwt_no_auth[:aud]
     extracted_issuer_id = decoded_jwt_no_auth[:iss]
 
-    integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
-    if integration.nil?
-      return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id})
-    end
+    # set cache key
+    integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
+
+    integration = read_cache(integration_cache_key) || LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
+    return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
+    # Cache integration for fast retrieval on subsequent LTI launches. Set
+    # expires_in to 1 week
+    write_cache(integration_cache_key, integration, 1.week)
 
     # check state and nonce in response and id_token against cached values
     begin
@@ -116,7 +120,7 @@ class LtiV1Controller < ApplicationController
     # In this case, we will redirect to the iframe route, to prompt user to open
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
-    if decoded_jwt[:iss] == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer] && !params[:new_tab]
+    if force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
       id_token = params[:id_token]
       state = params[:state]
       token_hash = {id_token: id_token, state: state}
@@ -387,9 +391,9 @@ class LtiV1Controller < ApplicationController
     {state: state, nonce: nonce}
   end
 
-  def write_cache(key, value)
+  def write_cache(key, value, expires_in = 1.minute)
     # TODO: Add error handling
-    CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: 1.minute)
+    CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: expires_in)
   end
 
   def read_cache(key)
