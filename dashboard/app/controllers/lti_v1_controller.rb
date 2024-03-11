@@ -138,7 +138,7 @@ class LtiV1Controller < ApplicationController
         nrps_url: nrps_url,
       }
 
-      destination_url = redirect_params.values.all?(&:present?) ? "#{target_link_uri}?#{redirect_params.to_query}" : target_link_uri
+      destination_url = redirect_params.values.all?(&:present?) ? "#{target_link_uri}?#{redirect_params.to_query}" : "#{target_link_uri}?issuer=#{Policies::Lti.issuer_name(extracted_issuer_id)}"
 
       if user
         sign_in user
@@ -202,7 +202,11 @@ class LtiV1Controller < ApplicationController
       begin
         params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url])
       rescue ActionController::ParameterMissing => _exception
-        return render_sync_course_error(I18n.t('lti.error.wrong_context'), :bad_request)
+        error_message = I18n.t('lti.error.wrong_context')
+        if params[:issuer]
+          error_message += " #{I18n.t('lti.error.wrong_context_schoology', url: 'example.com')}"
+        end
+        return render_sync_course_error(error_message, :bad_request)
       end
     end
 
