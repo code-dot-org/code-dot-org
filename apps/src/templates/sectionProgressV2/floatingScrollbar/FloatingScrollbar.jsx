@@ -73,8 +73,9 @@ export default function FloatingScrollbar({children, childRef}) {
   }, [childContainerRef, scrollVisible, setScrollVisible]);
 
   React.useEffect(() => {
-    window.addEventListener('scroll', e => handleScrollAndResize(e));
-    window.addEventListener('resize', e => handleScrollAndResize(e));
+    window.addEventListener('scroll', () => handleScrollAndResize());
+    window.addEventListener('resize', () => handleScrollAndResize());
+    handleScrollAndResize();
 
     return () => {
       // return a cleanup function to unregister our function since it will run multiple times

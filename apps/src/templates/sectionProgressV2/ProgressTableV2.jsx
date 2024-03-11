@@ -83,12 +83,16 @@ function ProgressTableV2({
   );
 
   const table = React.useMemo(() => {
-    const lessons =
-      isSkeleton && unitData === undefined
-        ? LESSON_SKELETON_DATA.map(id => ({id, isFake: true}))
-        : unitData?.lessons;
+    if (isSkeleton && unitData === undefined) {
+      const lessons = LESSON_SKELETON_DATA.map(id => ({id, isFake: true}));
+      return (
+        <div className={styles.tableLoading}>
+          {lessons.map(getRenderedColumn)}
+        </div>
+      );
+    }
 
-    if (lessons === undefined) {
+    if (unitData?.lessons === undefined) {
       // TODO: add no lesson state
       return null;
     }
@@ -103,7 +107,7 @@ function ProgressTableV2({
           ref={tableRef}
         >
           <div className={styles.tableInterior}>
-            {lessons.map(getRenderedColumn)}
+            {unitData.lessons.map(getRenderedColumn)}
           </div>
         </div>
       </FloatingScrollbar>
