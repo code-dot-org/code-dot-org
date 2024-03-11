@@ -64,9 +64,10 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
           <RubricFloatingActionButton {...defaultProps} />
         </Provider>
       );
+      const fab = screen.getByRole('button', {name: 'AI bot'});
+      expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;
       const image = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(image);
-      const fab = screen.getByRole('button', {name: 'AI bot'});
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.true;
     });
 
