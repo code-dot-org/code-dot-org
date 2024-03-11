@@ -357,7 +357,6 @@
   "censusWebDesign": "Web design using HTML or CSS",
   "certificateAltTextNoName": "Certificate for completion of {courseTitle}",
   "certificateAltTextWithName": "Certificate for {studentName} for completion of {courseTitle}",
-  "certificateForCompletion": "Certificate for Completion of One Hour of Code",
   "challengeLevelIntro": "Challenge Puzzles are lessons designed to stretch your brain! Just do the best that you can!",
   "challengeLevelPassTitle": "You did it!",
   "challengeLevelPassText": "However, you could've done it with only {idealBlocks, plural, one {1 block} other {# blocks}}. Can you make your program even better?",
