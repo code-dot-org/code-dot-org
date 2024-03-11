@@ -80,6 +80,11 @@ class Policies::LtiTest < ActiveSupport::TestCase
     end
   end
 
+  test `force_iframe_launch? should return true for Schoology and false for other LMS platforms` do
+    assert Policies::Lti.force_iframe_launch?('https://schoology.schoology.com')
+    refute Policies::Lti.force_iframe_launch?('https://canvas.instructure.com')
+  end
+
   class EarlyAccessTest < ActiveSupport::TestCase
     setup do
       @lti_early_access_limit = DCDO.stubs(:get).with('lti_early_access_limit', false)
