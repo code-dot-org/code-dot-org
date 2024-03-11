@@ -2,8 +2,9 @@ import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import style from './rubrics.module.scss';
-import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
 import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
+import taIcon from '@cdo/static/ai-bot-tag-TA.png';
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -13,6 +14,7 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 function RubricFloatingActionButton({
   rubric,
@@ -22,7 +24,10 @@ function RubricFloatingActionButton({
   aiEnabled,
   sectionId,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const sessionStorageKey = 'RubricFabOpenStateKey';
+  const [isOpen, setIsOpen] = useState(
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
+  );
 
   const eventData = useMemo(() => {
     return {
@@ -60,7 +65,11 @@ function RubricFloatingActionButton({
     }
   }, [eventData, studentLevelInfo]); // Neither of these should change, so this should run once
 
-  const icon = aiEnabled ? aiFabIcon : rubricFabIcon;
+  useEffect(() => {
+    trySetSessionStorage(sessionStorageKey, isOpen);
+  }, [isOpen]);
+
+  const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
   return (
     <div id="fab-contained">
@@ -68,9 +77,14 @@ function RubricFloatingActionButton({
         id="ui-floatingActionButton"
         className={style.floatingActionButton}
         // I couldn't get an image url to work in the SCSS module, so using an inline style for now
-        style={{backgroundImage: `url(${icon})`}}
+        style={{backgroundImage: `url(${fabIcon})`}}
         onClick={handleClick}
         type="button"
+      />
+      <div
+        id="ui-floatingActionButton-overlay"
+        className={style.taOverlay}
+        style={{backgroundImage: `url(${taIcon})`}}
       />
       {/* TODO: do not hardcode in AI setting */}
       <RubricContainer

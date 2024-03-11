@@ -29,6 +29,7 @@ import {
   sectionName,
   selectedSection,
   sectionUnitName,
+  syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   convertStudentDataToArray,
@@ -126,6 +127,7 @@ class ManageStudentsTable extends Component {
     transferData: PropTypes.object,
     transferStatus: PropTypes.object,
     setSortByFamilyName: PropTypes.func,
+    syncEnabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -204,6 +206,14 @@ class ManageStudentsTable extends Component {
   // Helper function to determine if user is a teacher
   isTeacher(userType) {
     return userType === 'teacher';
+  }
+
+  shouldShowActionColumn() {
+    const {loginType} = this.props;
+    return (
+      LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType) ||
+      (loginType === SectionLoginType.lti_v1 && !this.props.syncEnabled)
+    );
   }
 
   // Cell formatters.
@@ -509,7 +519,7 @@ class ManageStudentsTable extends Component {
       columns.push(this.projectSharingColumn());
     }
 
-    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
+    if (this.shouldShowActionColumn()) {
       columns.push(this.controlsColumn());
     }
 
@@ -1098,6 +1108,7 @@ export default connect(
     addStatus: state.manageStudents.addStatus,
     transferData: state.manageStudents.transferData,
     transferStatus: state.manageStudents.transferStatus,
+    syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
   }),
   dispatch => ({
     saveAllStudents() {

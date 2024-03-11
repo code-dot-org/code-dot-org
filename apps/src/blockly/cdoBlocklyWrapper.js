@@ -301,6 +301,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     isWorkspaceReadOnly: function (workspace) {
       return workspace.isReadOnly();
     },
+    handleColorAndStyle(block, color, style, returnType) {
+      // CDO Blockly does not support block styles.
+      if (color) {
+        this.setHSV(block, ...color);
+      } else if (!returnType) {
+        // CDO Blockly assigns colors to blocks with an output connection based on return type.
+        // See Blockly.Connection.prototype.colorForType
+        const DEFAULT_COLOR = [184, 1.0, 0.74];
+        this.setHSV(block, ...DEFAULT_COLOR);
+      }
+    },
     setHSV: function (block, h, s, v) {
       block.setHSV(h, s, v);
     },

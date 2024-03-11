@@ -1,0 +1,22 @@
+.app-wrapper-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: #fee;
+  width: 100%;
+}
+
+.app-wrapper-nav button {
+  background-color: #faa;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-rows: 40px auto;
+  width: 100vw;
+}
+
+.app-ide {
+  height: calc(100vh - 40px);
+  width: 100%;
+}

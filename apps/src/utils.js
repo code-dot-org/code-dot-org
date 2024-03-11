@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
-import MD5 from 'crypto-js/md5';
 import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
+import md5 from 'md5';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -812,9 +812,9 @@ export function resetAniGif(element) {
 export function interpolateColors(from, to, value) {
   const fromRGB = new RGBColor(from);
   const toRGB = new RGBColor(to);
-  const r = fromRGB.r * (1 - value) + toRGB.r * value;
-  const g = fromRGB.g * (1 - value) + toRGB.g * value;
-  const b = fromRGB.b * (1 - value) + toRGB.b * value;
+  const r = Math.round(fromRGB.r * (1 - value) + toRGB.r * value);
+  const g = Math.round(fromRGB.g * (1 - value) + toRGB.g * value);
+  const b = Math.round(fromRGB.b * (1 - value) + toRGB.b * value);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
@@ -883,7 +883,7 @@ export const findProfanity = (text, locale, authenticityToken = null) => {
  * @returns {string} A string representing an MD5 hash.
  */
 export function hashString(str) {
-  return MD5(str).toString();
+  return md5(str);
 }
 
 /*

@@ -1,0 +1,11 @@
+.flex-container.justify-space-between.align-items-center.gap-2{class: wrap_reverse ? 'wrap-reverse' : 'wrap'}
+  - if wrap_reverse
+    .text-wrapper.col-47
+      %h2= heading
+      %p= desc
+  %figure.col-47
+    %img.rounded-corners{src: image_url, alt: "", style: "width: 100%;"}
+  - unless wrap_reverse
+    .text-wrapper.col-47
+      %h2= heading
+      %p= desc

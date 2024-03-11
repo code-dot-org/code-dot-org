@@ -98,16 +98,25 @@ figure.curriculum-pathway {
       place-content: center;
       gap: 4px;
 
+      &:after {
+        color: var(--neutral_dark20);
+        font: var(--fa-font-solid);
+        content: "\f054";
+        margin-top: 4px;
+        transition: color 0.2s ease-in-out;
+
+        @media screen and (max-width: 700px) {
+          display: none;
+        }
+
+        html[dir="rtl"] & { content: "\f053"; }
+      }
+
       &:is(:hover, :focus) {
         box-shadow: 0 1px 6px var(--neutral_dark20);
 
         &:after {
           color: var(--neutral_dark40);
-          font: var(--fa-font-solid);
-          content: "\f054";
-          margin-top: 4px;
-
-          html[dir="rtl"] & { content: "\f053"; }
         }
       }
 

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:24:59.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Investigate and Modify\r\n\r\nThis program contains a `double`(#e7e8ea) array that stores the Netflix subscription fees for the Standard plan. The fees in the array are for the following countries (in order):\r\n\r\n1. Brazil\r\n\r\n2. Canada\r\n\r\n3. France\r\n\r\n4. India\r\n\r\n5. Japan\r\n\r\n6. Mexico\r\n\r\n7. South Africa\r\n\r\n8. Spain\r\n\r\n9. United States\r\n\r\n10. Venezuela\r\n\r\nExplore this program using the guiding questions on the [**Exploring 1D Arrays**](https://docs.google.com/document/d/1pBmknAxqIIgeUwAKnrA0hd_hSAmLtNpok0tw4haJr64/edit?usp=sharing) activity guide.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.comparitech.com/blog/vpn-privacy/countries-netflix-cost/)!*",
@@ -18,12 +22,9 @@
         "text": "/*\n * Manages Netflix data\n */\npublic class Netflix {\n\n  private double[] data;\n\n  /*\n   * Constructor to create a Netflix object\n   * with a specified array of double values\n   */\n  public Netflix(double[] data) {\n    this.data = data;\n  }\n\n  /*\n   * Returns the data array\n   */\n  public double[] getData() {\n    return data;\n  }\n\n  /*\n   * Returns the number of values in the data array\n   */\n  public int getDataLength() {\n    return data.length;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:24:59.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:24:59.903+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L1_2022\\\"\"],\"cloned_from\":\"CSA U3L1-L1_2022\"},{\"changed_at\":\"2022-08-30 13:04:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:04:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:04:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:09:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:09:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:10:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:10:27 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:11:45 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:11:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 13:12:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 14:59:41 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 16:51:31 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 16:58:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 16:59:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 17:39:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 17:39:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 17:39:46 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

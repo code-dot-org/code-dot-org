@@ -8,7 +8,7 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {AnalyticsContext} from '../context';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
+import AppConfig, {getBlockMode} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
@@ -41,7 +41,7 @@ import {
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode, DEFAULT_LIBRARY, Triggers} from '../constants';
+import {BlockMode, LEGACY_DEFAULT_LIBRARY, DEFAULT_LIBRARY} from '../constants';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
@@ -61,8 +61,6 @@ const BLOCKLY_DIV_ID = 'blockly-div';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    appConfig: PropTypes.object,
-
     /**
      * True if Music Lab is being presented from the /projectbeats page,
      * false/undefined if as part of a script or single level.
@@ -106,10 +104,6 @@ class UnconnectedMusicView extends React.Component {
 
   constructor(props) {
     super(props);
-
-    if (this.props.appConfig) {
-      setAppConfig(this.props.appConfig);
-    }
 
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
@@ -250,6 +244,11 @@ class UnconnectedMusicView extends React.Component {
     if (!libraryName && initialSources?.labConfig?.music) {
       libraryName = initialSources.labConfig.music.library;
     }
+    // What was previously the default library (mapping to music-library.json)
+    // is now 'intro2024' (mapping to music-library-intro2024.json).
+    if (libraryName === LEGACY_DEFAULT_LIBRARY) {
+      libraryName = DEFAULT_LIBRARY;
+    }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
     this.musicBlocklyWorkspace.init(
@@ -295,7 +294,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     if (getBlockMode() === BlockMode.SIMPLE2) {
-      this.sequencer = new Simple2Sequencer(this.library);
+      this.sequencer = new Simple2Sequencer();
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
     }
@@ -304,6 +303,9 @@ class UnconnectedMusicView extends React.Component {
       this.library.getBPM(),
       this.library.getKey()
     );
+
+    // Temporarily loading all instruments for ToneJS player.
+    this.player.loadAllInstruments();
 
     this.setState({
       currentLibraryName: libraryName,
@@ -381,8 +383,7 @@ class UnconnectedMusicView extends React.Component {
       this.executeCompiledSong().then(() => {
         // If code has changed mid-playback, clear and re-queue all events in the player
         if (this.props.isPlaying) {
-          this.player.stopAllSoundsStillToPlay();
-          this.player.playEvents(this.sequencer.getPlaybackEvents());
+          this.player.playEvents(this.sequencer.getPlaybackEvents(), true);
         }
       });
 
@@ -468,12 +469,9 @@ class UnconnectedMusicView extends React.Component {
     this.props.clearOrderedFunctions();
 
     // Sequence out all possible trigger events to preload sounds if necessary.
-    const allTriggerEvents = [];
-    Triggers.forEach(trigger => {
-      this.sequencer.clear();
-      this.musicBlocklyWorkspace.executeTrigger(trigger.id, 0);
-      allTriggerEvents.push(...this.sequencer.getPlaybackEvents());
-    });
+    this.sequencer.clear();
+    this.musicBlocklyWorkspace.executeAllTriggers();
+    const allTriggerEvents = this.sequencer.getPlaybackEvents();
 
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);

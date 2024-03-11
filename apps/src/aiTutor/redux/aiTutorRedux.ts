@@ -1,20 +1,27 @@
-import {
-  getChatCompletionMessage,
-  postOpenaiChatCompletion,
-} from '@cdo/apps/aichat/chatApi';
-import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aichat/types';
+import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
-import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
-import {Level} from '../types';
+import {
+  compilationSystemPrompt,
+  generalChatSystemPrompt,
+  validationSystemPrompt,
+} from '@cdo/apps/aiTutor/constants';
+import {savePromptAndResponse} from '../interactionsApi';
+import {
+  TutorType,
+  Role,
+  Status,
+  ChatCompletionMessage,
+  Level,
+  ChatContext,
+} from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface AITutorState {
+  selectedTutorType: TutorType | undefined;
   level: Level | undefined;
-  // State for compilation and validation.
+  scriptId: number | undefined;
   aiResponse: string | undefined;
-  isWaitingForAIResponse: boolean;
-  // State for general chat.
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   chatMessageError: boolean;
@@ -24,81 +31,69 @@ const initialChatMessages: ChatCompletionMessage[] = [
   {
     id: 0,
     role: Role.ASSISTANT,
-    chatMessageText: "Hi! I'm your AI Tutor. Type your question below.",
+    chatMessageText: "Hi! I'm your AI Tutor.",
     status: Status.OK,
   },
 ];
 
 const initialState: AITutorState = {
+  selectedTutorType: undefined,
   level: undefined,
+  scriptId: undefined,
   aiResponse: '',
-  isWaitingForAIResponse: false,
   chatMessages: initialChatMessages,
   isWaitingForChatResponse: false,
   chatMessageError: false,
 };
 
-export interface ChatContext {
-  levelId?: number;
-  systemPrompt: string;
-  studentCode: string;
-}
-
 // THUNKS
-
-// Compilation & Validation
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
-  async (ChatContext: ChatContext, thunkAPI) => {
-    if (ChatContext.systemPrompt === undefined) {
-      throw new Error('systemPrompt is undefined');
-    }
-
-    if (ChatContext.studentCode === undefined) {
-      throw new Error('studentCode is undefined');
-    }
-
-    const chatApiResponse = await postOpenaiChatCompletion(
-      [
-        {role: Role.SYSTEM, content: ChatContext.systemPrompt},
-        {role: Role.USER, content: ChatContext.studentCode},
-      ],
-      ChatContext.levelId
-    );
-
-    thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
-  }
-);
-
-// General Chat
-// This thunk's callback function submits a user chat message to the chat completion endpoint,
-// waits for a chat completion response, and updates the user message state.
-export const submitChatMessage = createAsyncThunk(
-  'aitutor/submitChatMessage',
-  async (message: string, thunkAPI) => {
+  async (chatContext: ChatContext, thunkAPI) => {
     const state = thunkAPI.getState() as {aiTutor: AITutorState};
-    const systemPrompt = generalChatSystemPrompt;
+    const levelContext = {
+      levelId: state.aiTutor.level?.id,
+      isProjectBacked: state.aiTutor.level?.isProjectBacked,
+      scriptId: state.aiTutor.scriptId,
+    };
+
+    const tutorType = chatContext.tutorType;
+    const generalChat = tutorType === TutorType.GENERAL_CHAT;
+    const compilation = tutorType === TutorType.COMPILATION;
+    const validation = tutorType === TutorType.VALIDATION;
+
+    let systemPrompt;
+    if (validation) {
+      systemPrompt = validationSystemPrompt;
+    } else if (compilation) {
+      systemPrompt = compilationSystemPrompt;
+    } else {
+      systemPrompt = generalChatSystemPrompt;
+    }
+
     const storedMessages = state.aiTutor.chatMessages;
+
     const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
 
-    // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessage: ChatCompletionMessage = {
-      id: newMessageId,
-      role: Role.USER,
-      status: Status.UNKNOWN,
-      chatMessageText: message,
-    };
-    thunkAPI.dispatch(addChatMessage(newMessage));
+    if (generalChat) {
+      const newMessage: ChatCompletionMessage = {
+        id: newMessageId,
+        role: Role.USER,
+        status: Status.UNKNOWN,
+        chatMessageText: chatContext.studentInput,
+      };
+      thunkAPI.dispatch(addChatMessage(newMessage));
+    }
 
-    // Send user message to backend and retrieve assistant response.
     const chatApiResponse = await getChatCompletionMessage(
       systemPrompt,
       newMessageId,
-      message,
-      storedMessages
+      chatContext.studentInput,
+      storedMessages,
+      levelContext.levelId,
+      chatContext.tutorType
     );
 
-    // Find message in chatMessages and update status.
     thunkAPI.dispatch(
       updateChatMessageStatus({
         id: chatApiResponse.id,
@@ -106,16 +101,25 @@ export const submitChatMessage = createAsyncThunk(
       })
     );
 
-    // Add assistant chat messages to chatMessages.
     if (chatApiResponse.assistantResponse) {
       const assistantChatMessage: ChatCompletionMessage = {
-        id: chatApiResponse.id + 1,
+        id: newMessageId,
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.assistantResponse,
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
+
+    const interactionData = {
+      ...levelContext,
+      type: chatContext.tutorType,
+      prompt: JSON.stringify(chatContext.studentInput),
+      status: chatApiResponse?.status,
+      aiResponse: chatApiResponse?.assistantResponse,
+    };
+
+    await savePromptAndResponse(interactionData);
   }
 );
 
@@ -123,17 +127,29 @@ const aiTutorSlice = createSlice({
   name: 'aiTutor',
   initialState,
   reducers: {
+    setSelectedTutorType: (
+      state,
+      action: PayloadAction<TutorType | undefined>
+    ) => {
+      state.selectedTutorType = action.payload;
+    },
     addAIResponse: (state, action: PayloadAction<string | undefined>) => {
       state.aiResponse = action.payload;
     },
     setLevel: (state, action: PayloadAction<Level | undefined>) => {
       state.level = action.payload;
     },
-    setIsWaitingForAIResponse: (state, action: PayloadAction<boolean>) => {
-      state.isWaitingForAIResponse = action.payload;
+    setScriptId: (state, action: PayloadAction<number | undefined>) => {
+      state.scriptId = action.payload;
     },
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+      const newMessageId =
+        state.chatMessages[state.chatMessages.length - 1].id + 1;
+      const newMessage = {
+        ...action.payload,
+        id: newMessageId,
+      };
+      state.chatMessages.push(newMessage);
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
@@ -154,24 +170,13 @@ const aiTutorSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(askAITutor.fulfilled, state => {
-      state.isWaitingForAIResponse = false;
+      state.isWaitingForChatResponse = false;
     });
     builder.addCase(askAITutor.rejected, (state, action) => {
-      state.isWaitingForAIResponse = false;
+      state.isWaitingForChatResponse = false;
       console.error(action.error);
     });
     builder.addCase(askAITutor.pending, state => {
-      state.isWaitingForAIResponse = true;
-    });
-    builder.addCase(submitChatMessage.fulfilled, state => {
-      state.isWaitingForChatResponse = false;
-    });
-    builder.addCase(submitChatMessage.rejected, (state, action) => {
-      state.isWaitingForChatResponse = false;
-      state.chatMessageError = true;
-      console.error(action.error);
-    });
-    builder.addCase(submitChatMessage.pending, state => {
       state.isWaitingForChatResponse = true;
     });
   },
@@ -179,7 +184,9 @@ const aiTutorSlice = createSlice({
 
 registerReducers({aiTutor: aiTutorSlice.reducer});
 export const {
+  setSelectedTutorType,
   setLevel,
+  setScriptId,
   addAIResponse,
   addChatMessage,
   clearChatMessages,

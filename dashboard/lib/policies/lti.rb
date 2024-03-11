@@ -44,6 +44,20 @@ class Policies::Lti
       jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
     },
+    canvas_beta_cloud: {
+      name: 'Canvas - Beta'.freeze,
+      issuer: 'https://canvas.beta.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token'.freeze,
+    },
+    canvas_test_cloud: {
+      name: 'Canvas - Test'.freeze,
+      issuer: 'https://canvas.test.instructure.com'.freeze,
+      auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect'.freeze,
+      jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks'.freeze,
+      access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token'.freeze,
+    },
     schoology: {
       name: 'Schoology'.freeze,
       issuer: 'https://schoology.schoology.com'.freeze,
@@ -55,8 +69,8 @@ class Policies::Lti
 
   MAX_COURSE_MEMBERSHIP = 650
 
-  def self.get_account_type(id_token)
-    id_token[LTI_ROLES_KEY].each do |role|
+  def self.get_account_type(roles)
+    roles.each do |role|
       return User::TYPE_TEACHER if TEACHER_ROLES.include? role
     end
     return User::TYPE_STUDENT
@@ -102,5 +116,23 @@ class Policies::Lti
   # Whether or not a roster sync can be performed for a user.
   def self.roster_sync_enabled?(user)
     user.teacher? && user.lti_roster_sync_enabled
+  end
+
+  def self.early_access?
+    DCDO.get('lti_early_access_limit', false).present?
+  end
+
+  def self.early_access_closed?
+    return unless early_access?
+
+    lti_early_access_limit = DCDO.get('lti_early_access_limit', false)
+    return false unless lti_early_access_limit.is_a?(Integer)
+
+    LtiIntegration.count >= lti_early_access_limit
+  end
+
+  # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
+  def self.issuer_accepts_resource_link?(issuer)
+    ['Canvas'].include?(issuer_name(issuer))
   end
 end

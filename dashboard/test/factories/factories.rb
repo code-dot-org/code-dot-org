@@ -449,6 +449,7 @@ FactoryBot.define do
         user.authentication_options.destroy_all
         lti_auth = create(:lti_authentication_option, user: user)
         user.authentication_options << lti_auth
+        user.lti_roster_sync_enabled = true
         user.save!
       end
     end
@@ -985,9 +986,14 @@ FactoryBot.define do
     end
 
     factory :hoc_script do
+      is_course {true}
+      sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
+      sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
       after(:create) do |hoc_script|
         hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
+        course_offering = CourseOffering.add_course_offering(hoc_script)
+        course_offering.update!(category: 'hoc')
       end
     end
 
@@ -1916,5 +1922,11 @@ FactoryBot.define do
     name {"foosbars"}
     email {"foobar@example.com"}
     receives_marketing {true}
+  end
+
+  factory :ai_tutor_interaction do
+    association :user
+    type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
+    status {SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS[:OK]}
   end
 end

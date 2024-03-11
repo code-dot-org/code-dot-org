@@ -6,13 +6,14 @@ require 'sections/section'
 
 class Services::Lti
   def self.initialize_lti_user(id_token)
-    user_type = Policies::Lti.get_account_type(id_token)
+    user_type = Policies::Lti.get_account_type(id_token[Policies::Lti::LTI_ROLES_KEY])
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = user_type
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
       user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
+      user.lti_roster_sync_enabled = true
     else
       user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
       user.family_name = get_claim(id_token, :family_name)
@@ -71,7 +72,7 @@ class Services::Lti
   end
 
   def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
-    nrps_member_message = nrps_member[:message].first
+    nrps_member_message = Policies::Lti.issuer_accepts_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = User::TYPE_STUDENT
@@ -91,28 +92,37 @@ class Services::Lti
     user
   end
 
-  def self.parse_nrps_response(nrps_response)
+  def self.parse_nrps_response(nrps_response, issuer)
     sections = {}
     members = nrps_response[:members]
     context_title = nrps_response.dig(:context, :title)
     members.each do |member|
-      next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
+      next if member[:status] == 'Inactive'
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
-      message = member[:message].first
 
-      # Custom variables substitutions must be configured in the LMS.
-      custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
+      # If the LMS hasn't implemented the resource link level membership service, we don't get the message property in the member object
+      if Policies::Lti.issuer_accepts_resource_link?(issuer)
+        message = member[:message].first
 
-      # Handles the possibility of the LMS not having sectionId variable substitution configured.
-      member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
-      # :section_names from Canvas is a stringified JSON array
-      member_section_names = JSON.parse(custom_variables[:section_names])
+        # Custom variables substitutions must be configured in the LMS.
+        custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
+
+        # Handles the possibility of the LMS not having sectionId variable substitution configured.
+        member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
+        # :section_names from Canvas is a stringified JSON array
+        member_section_names = JSON.parse(custom_variables[:section_names])
+
+      else
+        member_section_ids = [nrps_response.dig(:context, :id)]
+        member_section_names = [nil]
+      end
       member_section_ids.each_with_index do |section_id, index|
         if sections[section_id].present?
           sections[section_id][:members] << member
         else
           sections[section_id] = {
-            name: "#{context_title}: #{member_section_names[index]}",
+            # Schoology provides Course and section name in context_title
+            name: member_section_names[index].nil? ? context_title.to_s : "#{context_title}: #{member_section_names[index]}",
             members: [member],
           }
         end

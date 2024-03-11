@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-02-10 02:24:53 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-03-08 22:53:26 UTC",
+    "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -888,7 +888,7 @@
       "key": "77755000-ce58-44a0-93ab-8a17aaba4453",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Display**: Show the video *What is pseudocode?*\n\n**Do This**: Have students translate the pseudocode into a programming language.\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #1\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #2",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Display**: Show the video *What is pseudocode?* *[coming soon]*\n\n**Do This**: Have students translate the pseudocode into a programming language.\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #1\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #2",
         "tips": [
           {
             "type": "teachingTip",
@@ -949,6 +949,17 @@
       },
       "seeding_key": {
         "activity_section.key": "8be047e9-d1c3-4184-a63a-a30a887763d2",
+        "lesson_activity.key": "f7c54d56-bace-48d2-85f8-dd5674b3ca58"
+      }
+    },
+    {
+      "key": "f4d46bf2-f6cd-4d5d-ad87-f05fc24076e2",
+      "position": 4,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4d46bf2-f6cd-4d5d-ad87-f05fc24076e2",
         "lesson_activity.key": "f7c54d56-bace-48d2-85f8-dd5674b3ca58"
       }
     },
@@ -1328,6 +1339,30 @@
       }
     },
     {
+      "key": "e5060d62-22d3-402b-b37d-f7e0c7ea3640",
+      "position": 7,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5060d62-22d3-402b-b37d-f7e0c7ea3640",
+        "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726"
+      }
+    },
+    {
+      "key": "b13e9138-df8a-402c-bad0-5a6476f945aa",
+      "position": 8,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b13e9138-df8a-402c-bad0-5a6476f945aa",
+        "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726"
+      }
+    },
+    {
       "key": "b9d76033-9cd9-4d74-9a6f-0823503208ab",
       "position": 1,
       "properties": {
@@ -1393,7 +1428,7 @@
       "key": "27812833-1c7d-4c5d-a1f7-ce2e6326901a",
       "position": 1,
       "properties": {
-        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the Navigating Algorithms with AI Strategies activity guide.\n",
+        "description": "**Group**: Put students to work in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute**: Give each pair a copy of the [r navigating_algorithms_with_ai_strategies/coding-with-ai/unversioned] activity guide.\n\n",
         "duration": "20",
         "name": "Algorithms & AI Strategies",
         "tips": [
@@ -1659,6 +1694,17 @@
       },
       "seeding_key": {
         "activity_section.key": "d0fecfb0-bc9c-4f73-94e6-9bee2e7798d2",
+        "lesson_activity.key": "dc033ef4-fce2-41db-abb2-38a7de8168dd"
+      }
+    },
+    {
+      "key": "1d290c5b-5c31-46a3-98c5-11874035d227",
+      "position": 4,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d290c5b-5c31-46a3-98c5-11874035d227",
         "lesson_activity.key": "dc033ef4-fce2-41db-abb2-38a7de8168dd"
       }
     },
@@ -1987,6 +2033,17 @@
       },
       "seeding_key": {
         "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0",
+        "lesson_activity.key": "9bf840f4-a866-4387-a81c-bf4a4234eb5b"
+      }
+    },
+    {
+      "key": "459c566b-8503-4b40-916c-6dbe41df8825",
+      "position": 4,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "459c566b-8503-4b40-916c-6dbe41df8825",
         "lesson_activity.key": "9bf840f4-a866-4387-a81c-bf4a4234eb5b"
       }
     },
@@ -2398,6 +2455,17 @@
         "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8",
         "lesson_activity.key": "4043d02b-0211-4cfa-82a1-f6b54560cec8"
       }
+    },
+    {
+      "key": "429af6f5-e222-4cc1-9af9-d2b965a12236",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "429af6f5-e222-4cc1-9af9-d2b965a12236",
+        "lesson_activity.key": "4043d02b-0211-4cfa-82a1-f6b54560cec8"
+      }
     }
   ],
   "script_levels": [
@@ -2528,6 +2596,56 @@
     },
     {
       "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson1-survey-2024"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coding-with-ai-lesson1-survey-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "f4d46bf2-f6cd-4d5d-ad87-f05fc24076e2"
+      },
+      "level_keys": [
+        "coding-with-ai-lesson1-survey-2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson2-survey-2024"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coding-with-ai-lesson2-survey-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "b13e9138-df8a-402c-bad0-5a6476f945aa"
+      },
+      "level_keys": [
+        "coding-with-ai-lesson2-survey-2024"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2552,7 +2670,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -2577,7 +2695,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -2602,7 +2720,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
@@ -2627,7 +2745,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -2652,7 +2770,32 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson3-survey-2024"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coding-with-ai-lesson3-survey-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "1d290c5b-5c31-46a3-98c5-11874035d227"
+      },
+      "level_keys": [
+        "coding-with-ai-lesson3-survey-2024"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2677,7 +2820,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -2702,7 +2845,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -2727,7 +2870,32 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson4-survey-2024"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coding-with-ai-lesson4-survey-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "459c566b-8503-4b40-916c-6dbe41df8825"
+      },
+      "level_keys": [
+        "coding-with-ai-lesson4-survey-2024"
+      ]
+    },
+    {
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2752,7 +2920,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2777,7 +2945,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2802,7 +2970,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -2827,7 +2995,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 22,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -2852,7 +3020,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 23,
       "position": 6,
       "activity_section_position": 4,
       "assessment": true,
@@ -2877,7 +3045,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 24,
       "position": 7,
       "activity_section_position": 5,
       "assessment": true,
@@ -2899,6 +3067,31 @@
       },
       "level_keys": [
         "Code wAI_CFU_L5_7"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "coding-with-ai-lesson5-survey-2024"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coding-with-ai-lesson5-survey-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "429af6f5-e222-4cc1-9af9-d2b965a12236"
+      },
+      "level_keys": [
+        "coding-with-ai-lesson5-survey-2024"
       ]
     }
   ],
@@ -2965,6 +3158,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "coding-with-ai-lesson1-survey-2024",
+        "script_level.level_keys": [
+          "coding-with-ai-lesson1-survey-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "f4d46bf2-f6cd-4d5d-ad87-f05fc24076e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coding-with-ai-lesson2-survey-2024",
+        "script_level.level_keys": [
+          "coding-with-ai-lesson2-survey-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "b13e9138-df8a-402c-bad0-5a6476f945aa"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Code wAI_CFU_L3_1",
         "script_level.level_keys": [
           "Code wAI_CFU_L3_1"
@@ -3025,6 +3242,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "coding-with-ai-lesson3-survey-2024",
+        "script_level.level_keys": [
+          "coding-with-ai-lesson3-survey-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "1d290c5b-5c31-46a3-98c5-11874035d227"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Code wAI_temp_check_L4_1",
         "script_level.level_keys": [
           "Code wAI_temp_check_L4_1"
@@ -3057,6 +3286,18 @@
         "lesson_group.key": "",
         "script.name": "coding-with-ai",
         "activity_section.key": "4a85ac76-647f-45f4-bc73-cc8b523109c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coding-with-ai-lesson4-survey-2024",
+        "script_level.level_keys": [
+          "coding-with-ai-lesson4-survey-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "459c566b-8503-4b40-916c-6dbe41df8825"
       }
     },
     {
@@ -3141,6 +3382,18 @@
         "lesson_group.key": "",
         "script.name": "coding-with-ai",
         "activity_section.key": "8e7a4760-0cda-48b5-9fa1-9f1dea022fa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coding-with-ai-lesson5-survey-2024",
+        "script_level.level_keys": [
+          "coding-with-ai-lesson5-survey-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai",
+        "activity_section.key": "429af6f5-e222-4cc1-9af9-d2b965a12236"
       }
     }
   ],
@@ -3428,12 +3681,12 @@
     },
     {
       "name": "Navigating Algorithms with AI Strategies",
-      "url": "https://docs.google.com/presentation/d/1gVlgf6VC7f8rMHI2RqSsBa3zCrjHogMkIq23ybd0MYw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1oOM9A2jcEFHt7VMLqIznE3KVCkPZFDee8pI9LxryFbk/edit?usp=sharing",
       "key": "navigating_algorithms_with_ai_strategies",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Handout"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "navigating_algorithms_with_ai_strategies"
@@ -3712,7 +3965,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chatbot_prompting_guide",
+        "script.name": "coding-with-ai"
+      }
+    }
   ],
   "scripts_student_resources": [
 

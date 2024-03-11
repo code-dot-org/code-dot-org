@@ -1,13 +1,15 @@
 import React from 'react';
 import i18n from '@cdo/locale';
+import classNames from 'classnames';
 import LegendItem from './LegendItem';
 import {ITEM_TYPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import color from '@cdo/apps/util/color';
 
 export default function LevelTypesBox() {
   return (
-    <div className={styles.legend}>
+    <div className={classNames(styles.legend, styles.levelTypes)}>
       <StrongText className={styles.headerContainer}>
         {i18n.levelTypes()}
       </StrongText>
@@ -20,6 +22,7 @@ export default function LevelTypesBox() {
           <LegendItem
             itemType={ITEM_TYPE.CHOICE_LEVEL}
             labelText={i18n.choiceLevel()}
+            colorOverride={color.neutral_dark}
           />
         </div>
       </div>

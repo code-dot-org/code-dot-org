@@ -48,13 +48,6 @@ function handleScreenSize(carouselId, cardsList) {
   if (windowWidth < 639) {
     reorganizeAndWrapSlides(carouselId, 1);
     console.log("< 639");
-  } else if (
-    windowWidth > 639 &&
-    windowWidth < 959 &&
-    carouselId === "minecraft_cdo_activities"
-  ) {
-    reorganizeAndWrapSlides(carouselId, 2);
-    console.log("639 - 959");
   } else if (windowWidth > 959) {
     reorganizeAndWrapSlides(carouselId, cardsList);
     console.log("> 959");
@@ -62,20 +55,6 @@ function handleScreenSize(carouselId, cardsList) {
 }
 
 $(document).ready(function () {
-  let idMinecraftActivities = "#minecraft_cdo_activities";
-  handleScreenSize("minecraft_cdo_activities", 3);
-  $(idMinecraftActivities + " .slides").carouFredSel({
-    auto: false,
-    pagination: "#minecraft_cdo_activities-pagination",
-    prev: "#prev_1",
-    next: "#next_1",
-    responsive: true,
-    scroll: 1,
-    swipe: {
-      onTouch: true,
-      onMouse: true,
-    },
-  });
   let idInspirationalVideo = "#inspirational_works_collection";
   handleScreenSize("inspirational_works_collection", 2);
   $(idInspirationalVideo + " .slides").carouFredSel({

@@ -5,7 +5,7 @@ import moduleStyles from './python-editor.module.scss';
 import {useDispatch} from 'react-redux';
 import {appendOutput, resetOutput, setCode} from './pythonlabRedux';
 import Button from '@cdo/apps/templates/Button';
-// import {runPythonCode} from './pyodideRunner';
+import {runPythonCode} from './pyodideRunner';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -27,10 +27,8 @@ const PythonEditor: React.FunctionComponent = () => {
     const parsedData = data ? (data as PermissionResponse) : {permissions: []};
     // For now, restrict running python code to levelbuilders.
     if (parsedData.permissions.includes('levelbuilder')) {
-      dispatch(appendOutput('Simulating running code.'));
-      // TODO: re-enable once we fix iPad issues.
-      // https://codedotorg.atlassian.net/browse/CT-299
-      // runPythonCode(code);
+      dispatch(appendOutput('Running code...'));
+      runPythonCode(code);
     } else {
       alert('You do not have permission to run python code.');
     }

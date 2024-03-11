@@ -5,11 +5,6 @@
     "docFunc": "gamelab_createNewSprite",
     "inline": false,
     "blockText": "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
     "style": "sprite_blocks",
     "args": [
       {
