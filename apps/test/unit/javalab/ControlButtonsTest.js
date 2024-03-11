@@ -39,50 +39,38 @@ describe('Java Lab Control Buttons Test', () => {
     restoreRedux();
   });
 
-  it('submit button for unsubmitted submittable level', () => {
-    render(
+  function renderDefault(props) {
+    return render(
       <Provider store={store}>
-        <ControlButtons {...defaultProps} isSubmittable isSubmitted={false} />
+        <ControlButtons {...defaultProps} {...props} />
       </Provider>
     );
+  }
+
+  it('submit button for unsubmitted submittable level', () => {
+    renderDefault({isSubmittable: true, isSubmitted: false});
     expect(screen.getByRole('button', {name: 'Submit'})).to.exist;
   });
 
   it('finish button says finish for non-submittable level', () => {
-    render(
-      <Provider store={store}>
-        <ControlButtons {...defaultProps} isSubmittable={false} />
-      </Provider>
-    );
+    renderDefault({isSubmittable: false});
     expect(screen.getByRole('button', {name: 'Finish'})).to.exist;
   });
 
   it('disables run button if disableRunButton is true', () => {
-    render(
-      <Provider store={store}>
-        <ControlButtons {...defaultProps} disableRunButton />
-      </Provider>
-    );
+    renderDefault({disableRunButton: true});
     expect(screen.getByRole('button', {name: 'Run'}).getAttribute('disabled'))
       .to.exist;
   });
 
   it('disables test button if disableTestButton is true', () => {
-    render(
-      <Provider store={store}>
-        <ControlButtons {...defaultProps} disableTestButton />
-      </Provider>
-    );
+    renderDefault({disableTestButton: true});
     expect(screen.getByRole('button', {name: 'Test'}).getAttribute('disabled'))
       .to.exist;
   });
 
   it('hides test button if showTestButton is false', () => {
-    render(
-      <Provider store={store}>
-        <ControlButtons {...defaultProps} showTestButton={false} />
-      </Provider>
-    );
+    renderDefault({showTestButton: false});
     expect(screen.queryByRole('button', {name: 'Test'})).to.be.null;
   });
 });
