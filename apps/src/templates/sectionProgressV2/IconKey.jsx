@@ -9,10 +9,13 @@ import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
 import Link from '@cdo/apps/componentLibrary/link';
 import MoreDetailsDialog from './MoreDetailsDialog.jsx';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+  const [isIconDetailsOpen, setIconDetailsOpen] = useState(
+    tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
+  );
 
   const toggleIsViewingDetails = event => {
     event.preventDefault();
@@ -33,7 +36,10 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
     </>
   );
 
-  const clickListener = () => setIsOpen(!isOpen);
+  const clickListener = () => {
+    trySetLocalStorage('iconKeyIsOpen', !isOpen);
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div
