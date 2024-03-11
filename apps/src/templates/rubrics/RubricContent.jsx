@@ -112,8 +112,8 @@ export default function RubricContent({
       <div className={style.studentInfoGroup}>
         <Heading3>
           {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.name,
+            lessonNumber: lesson?.position,
+            lessonName: lesson?.name,
           })}
         </Heading3>
 

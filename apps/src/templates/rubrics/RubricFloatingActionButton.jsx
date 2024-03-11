@@ -78,7 +78,7 @@ function RubricFloatingActionButton({
   const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
   const classes = showPulse
-    ? classNames(style.floatingActionButton, style.pulse)
+    ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
 
   return (

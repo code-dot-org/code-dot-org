@@ -5,18 +5,60 @@ import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import {render, screen} from '@testing-library/react';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import {Provider} from 'react-redux';
 
-describe('RubricFloatingActionButton', () => {
-  const defaultProps = {
-    rubric: {
-      level: {
-        name: 'test-level',
-      },
+const defaultProps = {
+  rubric: {
+    level: {
+      name: 'test-level',
     },
-    currentLevelName: 'test-level',
-    studentLevelInfo: null,
-  };
+    learningGoals: [
+      {
+        id: 1,
+        key: 'abc',
+        learningGoal: 'Learning Goal 1',
+        aiEnabled: true,
+        evidenceLevels: [
+          {id: 1, understanding: 1, teacherDescription: 'lg level 1'},
+        ],
+        tips: 'Tips',
+      },
+    ],
+  },
+  currentLevelName: 'test-level',
+  studentLevelInfo: null,
+};
 
+describe('RubricFloatingActionButton - React Testing Library', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({teacherSections, teacherPanel});
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  it('renders default props', () => {
+    render(
+      <Provider store={getStore()}>
+        <RubricFloatingActionButton {...defaultProps} />
+      </Provider>
+    );
+    screen.debug();
+  });
+});
+
+describe('RubricFloatingActionButton - Enzyme', () => {
   it('begins closed when student level info is null', () => {
     const wrapper = shallow(<RubricFloatingActionButton {...defaultProps} />);
     expect(wrapper.find('RubricContainer').length).to.equal(1);
