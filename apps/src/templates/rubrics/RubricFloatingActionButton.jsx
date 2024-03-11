@@ -15,6 +15,7 @@ import {
 } from './rubricShapes';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import classNames from 'classnames';
 
 function RubricFloatingActionButton({
   rubric,
@@ -75,7 +76,7 @@ function RubricFloatingActionButton({
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
-        className={style.floatingActionButton}
+        className={classNames(style.floatingActionButton, style.pulse)}
         // I couldn't get an image url to work in the SCSS module, so using an inline style for now
         style={{backgroundImage: `url(${fabIcon})`}}
         onClick={handleClick}
