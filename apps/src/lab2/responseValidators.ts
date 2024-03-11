@@ -7,9 +7,7 @@ import {BLOCKLY_LABS} from './constants';
 export const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  if (!response.source) {
-    throw new ValidationError('Missing required field: source');
-  }
+  validateSourceField(response);
 
   let blocklySource;
   try {
@@ -28,9 +26,7 @@ export const BlocklySourceResponseValidator: ResponseValidator<
 export const PythonSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  if (!response.source) {
-    throw new ValidationError('Missing required field: source');
-  }
+  validateSourceField(response);
 
   let pythonSource;
   try {
@@ -50,9 +46,7 @@ export const PythonSourceResponseValidator: ResponseValidator<
 export const DefaultSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  if (!response.source) {
-    throw new ValidationError('Missing required field: source');
-  }
+  validateSourceField(response);
 
   return response as unknown as ProjectSources;
 };
@@ -103,5 +97,11 @@ export function setValidatorForAppType(appName: AppName) {
     Lab2Registry.getInstance().setSourceResponseValidator(
       DefaultSourceResponseValidator
     );
+  }
+}
+
+function validateSourceField(response: Record<string, unknown>) {
+  if (!response.source) {
+    throw new ValidationError('Missing required field: source');
   }
 }
