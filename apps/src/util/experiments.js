@@ -14,6 +14,8 @@ import DCDO from '@cdo/apps/dcdo';
 const queryString = require('query-string');
 
 const experiments = module.exports;
+// Needed to support TypeScript usage.
+export default experiments;
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
@@ -54,6 +56,8 @@ experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 experiments.GOOGLE_BLOCKLY = 'google_blockly';
 // Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
 experiments.SPRITE_LAB_DOCS = 'sl_docs';
+// Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
+experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

@@ -1,0 +1,242 @@
+{
+  "ar-SA": {
+    "/dashboard/marketing_announcements.json": "debd6f01e5210e87cbe7e9d65d57a077"
+  },
+  "az-AZ": {
+    "/dashboard/marketing_announcements.json": "24fc04d16e3b8c3088e7ec2bb0fedd15"
+  },
+  "bg-BG": {
+    "/dashboard/marketing_announcements.json": "92e2167cd5309798a1536ee637f11620"
+  },
+  "bn-BD": {
+    "/dashboard/marketing_announcements.json": "cfa6c4efef597045dedcc28e15799b96"
+  },
+  "bs-BA": {
+    "/dashboard/marketing_announcements.json": "212264451ad548d5d2ad9771a39d6358"
+  },
+  "ca-ES": {
+    "/dashboard/marketing_announcements.json": "604fb347c1e94f0f6edcf7f588b588d6"
+  },
+  "co-CO": {
+    "/dashboard/marketing_announcements.json": "25146c9fde8426dd2eca994895dea091"
+  },
+  "cs-CZ": {
+    "/dashboard/marketing_announcements.json": "92d79c0ee73dad46ee86ab364a505064"
+  },
+  "da-DK": {
+    "/dashboard/marketing_announcements.json": "79f360affe8060b24404182b49e5034d"
+  },
+  "de-DE": {
+    "/dashboard/marketing_announcements.json": "c78df23587770877cb30b8f7906cb429"
+  },
+  "dv-MV": {
+    "/dashboard/marketing_announcements.json": "c099497ed4f2c013cc1e93a30278c585"
+  },
+  "el-GR": {
+    "/dashboard/marketing_announcements.json": "df8dbe992b03b87e0d7fde92085693a3"
+  },
+  "en-GB": {
+    "/dashboard/marketing_announcements.json": "4a9c374c8559b04f20ccdb819d1b89e0"
+  },
+  "es-ES": {
+    "/dashboard/marketing_announcements.json": "15a2980ab3839c563bf583971eec7284"
+  },
+  "es-MX": {
+    "/dashboard/marketing_announcements.json": "27b8c02acb8d00c029c183c817736c11"
+  },
+  "et-EE": {
+    "/dashboard/marketing_announcements.json": "c3a62c2978a21a649d2a89eb4385dfb2"
+  },
+  "eu-ES": {
+    "/dashboard/marketing_announcements.json": "69952f663da78f30aa4981de2202376c"
+  },
+  "fa-AF": {
+    "/dashboard/marketing_announcements.json": "1236492f0862cd212a944ccc5513ff41"
+  },
+  "fa-IR": {
+    "/dashboard/marketing_announcements.json": "10ad474ac6b30d36e49c924e46168875"
+  },
+  "fi-FI": {
+    "/dashboard/marketing_announcements.json": "c4a1d84a8a62a0b6a531042c00204795"
+  },
+  "fil-PH": {
+    "/dashboard/marketing_announcements.json": "6573675f4221b8b0383cd919883e91d6"
+  },
+  "fr-FR": {
+    "/dashboard/marketing_announcements.json": "e0f14ba2b8f12da91c79f4bd16ad6cdc"
+  },
+  "ga-IE": {
+    "/dashboard/marketing_announcements.json": "03ebbdc1690b93115c9099a6a0696f3a"
+  },
+  "gl-ES": {
+    "/dashboard/marketing_announcements.json": "64d4c4a3112ee2ab48b3a0b75b426a81"
+  },
+  "haw-HI": {
+    "/dashboard/marketing_announcements.json": "57b07956a3de4954e2e2fd351c055db3"
+  },
+  "he-IL": {
+    "/dashboard/marketing_announcements.json": "e76700dc300adc408c3f1c4980dccdb6"
+  },
+  "hi-IN": {
+    "/dashboard/marketing_announcements.json": "e754033770b2305d36f989724c88787e"
+  },
+  "hr-HR": {
+    "/dashboard/marketing_announcements.json": "61844e932ce4858b97863745c511837c"
+  },
+  "hu-HU": {
+    "/dashboard/marketing_announcements.json": "43b08cacd39af6ad0486acd27152d730"
+  },
+  "hy-AM": {
+    "/dashboard/marketing_announcements.json": "84ac8fdaef1cc196aeded82241b2728d"
+  },
+  "id-ID": {
+    "/dashboard/marketing_announcements.json": "82079f75dec1f72c7e1e36d1012a7c08"
+  },
+  "is-IS": {
+    "/dashboard/marketing_announcements.json": "f8b7391e031fd72b735c4a66a05f0d13"
+  },
+  "it-IT": {
+    "/dashboard/marketing_announcements.json": "cddfde55ce38c2c63407d1d3650044c0"
+  },
+  "ja-JP": {
+    "/dashboard/marketing_announcements.json": "7573de0090bb55c650cb2b6719313731"
+  },
+  "ka-GE": {
+    "/dashboard/marketing_announcements.json": "6b314baa08481dab763ad7074c3d85ab"
+  },
+  "kk-KZ": {
+    "/dashboard/marketing_announcements.json": "0f542a3b28a934632a8325749102a51d"
+  },
+  "kn-IN": {
+    "/dashboard/marketing_announcements.json": "02d1adff87e8ab3992fe7b72ff3f33ae"
+  },
+  "km-KH": {
+    "/dashboard/marketing_announcements.json": "4c10b858cf37f6baf95caa4756422ee5"
+  },
+  "ko-KR": {
+    "/dashboard/marketing_announcements.json": "a10dcd323d53da9123a208ee97dc33f8"
+  },
+  "ku-IQ": {
+    "/dashboard/marketing_announcements.json": "1b86b3f96b60e9cff7408bf7dea9b55f"
+  },
+  "ky-KG": {
+    "/dashboard/marketing_announcements.json": "6db2522021dde2db8352e4de66593bd6"
+  },
+  "lt-LT": {
+    "/dashboard/marketing_announcements.json": "d9d286749636f0155ec09b33c4e3bbbf"
+  },
+  "lv-LV": {
+    "/dashboard/marketing_announcements.json": "14960da2eb88739d44b654645816e840"
+  },
+  "mi-NZ": {
+    "/dashboard/marketing_announcements.json": "712c0ea56eb29e8982337ffbab13ab6c"
+  },
+  "mk-MK": {
+    "/dashboard/marketing_announcements.json": "aad5bbc2f70dc3c94f555bd58fc31d15"
+  },
+  "mn-MN": {
+    "/dashboard/marketing_announcements.json": "83ae4741f7da7427a8f9c6aeebce98be"
+  },
+  "mr-IN": {
+    "/dashboard/marketing_announcements.json": "87881e3d91c03579fb7ed57512bf13b6"
+  },
+  "ms-MY": {
+    "/dashboard/marketing_announcements.json": "eb6ca7f2837fe0809b4f300fb28ead43"
+  },
+  "mt-MT": {
+    "/dashboard/marketing_announcements.json": "61c8bc4d1869902acb6e430a3479c6e8"
+  },
+  "my-MM": {
+    "/dashboard/marketing_announcements.json": "037306e8b80fcaf7cf34467e0eceff57"
+  },
+  "ne-NP": {
+    "/dashboard/marketing_announcements.json": "89ebbb7fd6b9af9a77e97b8e1973c508"
+  },
+  "nl-NL": {
+    "/dashboard/marketing_announcements.json": "4c97e556412b04b8a45b7b89c3c400fd"
+  },
+  "nn-NO": {
+    "/dashboard/marketing_announcements.json": "a2d540a594211ae99d623174b9e5bd78"
+  },
+  "no-NO": {
+    "/dashboard/marketing_announcements.json": "2a329bbd82f46c726a9c54f229aa7d46"
+  },
+  "pl-PL": {
+    "/dashboard/marketing_announcements.json": "ec2d6a1d91e1bd39b100d1787ef45952"
+  },
+  "ps-AF": {
+    "/dashboard/marketing_announcements.json": "93dd141b9b5cad570e1a5ac42eec967e"
+  },
+  "pt-BR": {
+    "/dashboard/marketing_announcements.json": "e6a288b4d63c16b9f2b15f28c1aadf8a"
+  },
+  "pt-PT": {
+    "/dashboard/marketing_announcements.json": "3fe5e8872791ddd360f6643e67801061"
+  },
+  "ro-RO": {
+    "/dashboard/marketing_announcements.json": "4df608938a589416bfd446bbdecdb4f4"
+  },
+  "ru-RU": {
+    "/dashboard/marketing_announcements.json": "e8067ab6552bf8cb235856d13fb05ed2"
+  },
+  "se-FI": {
+    "/dashboard/marketing_announcements.json": "e5d469aae769e47b069c0e4ff8ad9155"
+  },
+  "sm-WS": {
+    "/dashboard/marketing_announcements.json": "76537ddea50d64c4bba8bc7cafc2f9cf"
+  },
+  "si-LK": {
+    "/dashboard/marketing_announcements.json": "4c5a7ae611b5a0b5cca4352ff810d5cc"
+  },
+  "sk-SK": {
+    "/dashboard/marketing_announcements.json": "aaaa3de09910047e86967c245f0f51f0"
+  },
+  "sl-SI": {
+    "/dashboard/marketing_announcements.json": "84d2070a47dd9793164811af5e8834fa"
+  },
+  "sq-AL": {
+    "/dashboard/marketing_announcements.json": "be729085da16d8ba3651b90b9265f526"
+  },
+  "sr-SP": {
+    "/dashboard/marketing_announcements.json": "49331b2d416e493798402162911f7a2a"
+  },
+  "sv-SE": {
+    "/dashboard/marketing_announcements.json": "9da150b697f4ac674e4b07e91dff0d1e"
+  },
+  "ta-IN": {
+    "/dashboard/marketing_announcements.json": "a18e01ae440080d469c8e47e4ad13384"
+  },
+  "te-IN": {
+    "/dashboard/marketing_announcements.json": "063ee787993793060f621ecf0137c70f"
+  },
+  "tg-TJ": {
+    "/dashboard/marketing_announcements.json": "7ed6b09e87dd1a32317a669fdbec2555"
+  },
+  "th-TH": {
+    "/dashboard/marketing_announcements.json": "5fe967c11cbaf148e2b68e48805fe827"
+  },
+  "tr-TR": {
+    "/dashboard/marketing_announcements.json": "36cf533b58328d33451866ff0a5d7731"
+  },
+  "uk-UA": {
+    "/dashboard/marketing_announcements.json": "e906166fab947abda3f5659989fe48b2"
+  },
+  "ur-PK": {
+    "/dashboard/marketing_announcements.json": "a115400ec40deddb0a90ebebeeec13c2"
+  },
+  "uz-UZ": {
+    "/dashboard/marketing_announcements.json": "653869bf070e19ecbbaab745216af5da"
+  },
+  "vi-VN": {
+    "/dashboard/marketing_announcements.json": "97d6d69d94d0b7b021a12fc8c4258dec"
+  },
+  "zh-CN": {
+    "/dashboard/marketing_announcements.json": "ac3335b3eef3f1e7e03e1c23b738e464"
+  },
+  "zh-TW": {
+    "/dashboard/marketing_announcements.json": "32fa65961884857b98bf4538130af07c"
+  },
+  "zu-ZA": {
+    "/dashboard/marketing_announcements.json": "3c7bc608f8e8132c30164803d246e29b"
+  }
+}

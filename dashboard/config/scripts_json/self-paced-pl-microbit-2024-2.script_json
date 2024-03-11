@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-21 18:36:51 UTC",
+    "serialized_at": "2024-03-01 22:41:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,6 +73,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes\n",
+        "student_overview": "#### This lesson will help you get started teaching with micro:bits\n\n#### **You will:**\n- ####  Learn more about the assessment feature, JuiceMind\n\n- #### Plan the best course pathway for your class\n\n- #### Explore best practices for teaching with physical computing devices \n\n#### **Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -463,6 +465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_juiceMInd_intro"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,

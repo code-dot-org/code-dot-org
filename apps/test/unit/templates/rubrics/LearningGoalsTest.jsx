@@ -1,10 +1,12 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import LearningGoals, {
   clearAnnotations,
@@ -169,15 +171,15 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
   });
@@ -239,7 +241,7 @@ describe('LearningGoals', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
@@ -250,7 +252,7 @@ describe('LearningGoals', () => {
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
     wrapper.find('button').first().simulate('click');
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[1].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -263,7 +265,7 @@ describe('LearningGoals', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find('Heading5 span').first().text()).to.equal(
       learningGoals[0].learningGoal
     );
     expect(wrapper.find('AiToken')).to.have.lengthOf(0);
@@ -314,33 +316,6 @@ describe('LearningGoals', () => {
     sendEventSpy.restore();
   });
 
-  it('displays Evaluate when AI is disabled and no understanding has been selected', () => {
-    const wrapper = mount(
-      <LearningGoals
-        learningGoals={learningGoals}
-        teacherHasEnabledAi
-        canProvideFeedback
-      />
-    );
-    wrapper.update();
-    wrapper.find('button').at(1).simulate('click');
-    expect(wrapper.find('BodyThreeText').at(1).text()).to.include('Evaluate');
-    wrapper.unmount();
-  });
-
-  it('displays Approve when AI is enabled and no understanding has been selected', () => {
-    const wrapper = mount(
-      <LearningGoals
-        learningGoals={learningGoals}
-        teacherHasEnabledAi
-        canProvideFeedback
-      />
-    );
-    wrapper.update();
-    expect(wrapper.find('BodyThreeText').at(1).text()).to.include('Approve');
-    wrapper.unmount();
-  });
-
   it('shows feedback in disabled textbox when available', () => {
     const wrapper = shallow(
       <LearningGoals
@@ -353,48 +328,34 @@ describe('LearningGoals', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('message');
   });
 
-  it('shows editable textbox for feedback when the teacher can provide feedback', () => {
-    const wrapper = shallow(
+  it('shows editable textbox for feedback when the teacher can provide feedback', async () => {
+    const postStub = sinon.stub(HttpClient, 'post').returns(
+      Promise.resolve({
+        json: () => {
+          return {
+            id: 0,
+          };
+        },
+      })
+    );
+
+    const wrapper = mount(
       <LearningGoals
         canProvideFeedback={true}
         studentLevelInfo={studentLevelInfo}
         learningGoals={learningGoals}
       />
     );
-    expect(wrapper.find('textarea').props().disabled).to.equal(false);
-  });
 
-  it('shows understanding in header if submittedEvaluation contains understand', () => {
-    const wrapper = shallow(
-      <LearningGoals
-        learningGoals={learningGoals}
-        submittedEvaluation={{
-          feedback: 'test feedback',
-          understanding: RubricUnderstandingLevels.LIMITED,
-        }}
-      />
-    );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
-      'Limited Evidence'
-    );
-  });
+    // Need to have it 'load' all the prior evaluations
+    await act(async () => {
+      await Promise.resolve();
+    });
 
-  it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
-    const wrapper = shallow(
-      <LearningGoals
-        learningGoals={learningGoals}
-        submittedEvaluation={{
-          feedback: 'test feedback',
-          understanding: RubricUnderstandingLevels.NONE,
-        }}
-      />
-    );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
-      'No Evidence'
-    );
+    expect(wrapper.find('textarea').getDOMNode().disabled).to.equal(false);
+    postStub.restore();
   });
 
   it('passes isStudent down to EvidenceLevels', () => {

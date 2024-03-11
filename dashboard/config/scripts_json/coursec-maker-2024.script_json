@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2024-02-16 23:16:36 UTC",
+    "serialized_at": "2024-03-06 19:25:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2540,6 +2540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_juicemind_bridging_activity_intermediate"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -2587,6 +2590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_juicemind_content_assessment_intermediate"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,
@@ -2934,6 +2940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_juicemind_bridging_activity_stretch"
+        ],
         "progression": "Matching Game (Optional)"
       },
       "bonus": false,
@@ -2981,6 +2990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_juicemind_content_assessment_stretch"
+        ],
         "progression": "JuiceMind Quiz"
       },
       "bonus": false,

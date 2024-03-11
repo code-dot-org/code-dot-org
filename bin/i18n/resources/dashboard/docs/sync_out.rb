@@ -26,7 +26,7 @@ module I18n
           private
 
           def crowdin_locale_dir_of(language)
-            I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
+            I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
           end
 
           def new_programming_envs_i18n_data(crowdin_file_path)

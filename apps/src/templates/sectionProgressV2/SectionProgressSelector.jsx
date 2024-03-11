@@ -13,6 +13,7 @@ import Link from '@cdo/apps/componentLibrary/link';
 function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
+  progressTableV2ClosedBeta,
 }) {
   const onShowProgressTableV2Change = useCallback(
     e => {
@@ -25,19 +26,15 @@ function SectionProgressSelector({
   );
 
   // If progress table is disabled, only show the v1 table.
-  if (!DCDO.get('progress-table-v2-enabled', false)) {
+  // If closed beta is disabled or the user is not in the closed beta, only show the v1 table.
+  const isInClosedBeta =
+    DCDO.get('progress-table-v2-closed-beta-enabled', false) &&
+    progressTableV2ClosedBeta;
+  const allowSelection =
+    DCDO.get('progress-table-v2-enabled', false) || isInClosedBeta;
+  if (!allowSelection) {
     return <SectionProgress />;
   }
-
-  const toggleV1OrV2Link = () => (
-    <div className={styles.toggleViews}>
-      <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
-        {showProgressTableV2
-          ? i18n.switchToOldProgressView()
-          : i18n.switchToNewProgressView()}
-      </Link>
-    </div>
-  );
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
   // If a user has selected manually, show that version.
@@ -45,6 +42,16 @@ function SectionProgressSelector({
   const displayV2 = isPreferenceSet
     ? showProgressTableV2
     : DCDO.get('progress-table-v2-default-v2', false);
+
+  const toggleV1OrV2Link = () => (
+    <div className={styles.toggleViews}>
+      <Link type="primary" size="s" onClick={onShowProgressTableV2Change}>
+        {displayV2
+          ? i18n.switchToOldProgressView()
+          : i18n.switchToNewProgressView()}
+      </Link>
+    </div>
+  );
   return (
     <div>
       {toggleV1OrV2Link()}
@@ -55,13 +62,17 @@ function SectionProgressSelector({
 
 SectionProgressSelector.propTypes = {
   showProgressTableV2: PropTypes.bool,
+  progressTableV2ClosedBeta: PropTypes.bool,
   setShowProgressTableV2: PropTypes.func.isRequired,
 };
 
 export const UnconnectedSectionProgressSelector = SectionProgressSelector;
 
 export default connect(
-  state => ({showProgressTableV2: state.currentUser.showProgressTableV2}),
+  state => ({
+    showProgressTableV2: state.currentUser.showProgressTableV2,
+    progressTableV2ClosedBeta: state.currentUser.progressTableV2ClosedBeta,
+  }),
   dispatch => ({
     setShowProgressTableV2: showProgressTableV2 =>
       dispatch(setShowProgressTableV2(showProgressTableV2)),

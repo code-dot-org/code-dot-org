@@ -161,7 +161,7 @@ $container-width: 960px;
   }
 }
 
-.professionalLearningContainer {
+.professionalLearningContainer, .relatedContainer {
   a {
     color: $brand_secondary_default !important;
     text-decoration: underline !important;
@@ -175,6 +175,17 @@ $container-width: 960px;
 
 .relatedContainer {
   margin-top: 32px;
+
+  .relatedCurriculaLink {
+    width: 100%;
+    text-wrap: wrap;
+    margin-top: 8px;
+    color: $brand_secondary_default
+  }
+
+  .relatedCurriculaLink:hover {
+    color: $brand_secondary_dark
+  }
 
   h4 {
     margin-bottom: 0;

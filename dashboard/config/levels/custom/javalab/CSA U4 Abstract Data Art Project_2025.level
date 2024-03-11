@@ -48,7 +48,8 @@
       "xbox.png": "31ecb48c-a6a0-4bb5-9d3f-289f2859eff2.png",
       "playstation.png": "6180e9bd-972b-4849-92a5-3b59e0a533f0.png"
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:55:30.915+00:00\",\"changed\":[\"cloned from \\\"CSA U4 Abstract Data Art Project_2023\\\"\"],\"cloned_from\":\"CSA U4 Abstract Data Art Project_2023\"}]"

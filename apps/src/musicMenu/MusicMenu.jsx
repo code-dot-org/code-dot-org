@@ -1,7 +1,5 @@
 import React from 'react';
-import {LOCAL_STORAGE, REMOTE_STORAGE} from '../music/constants';
-
-const baseUrl = window.location.origin + '/musiclab';
+const baseUrl = window.location.origin + '/projectbeats';
 
 const optionsList = [
   {
@@ -36,40 +34,21 @@ const optionsList = [
     ],
   },
   {
+    name: 'base-asset-url',
+    type: 'string',
+    description: 'Use a specific base asset URL.',
+  },
+  {
     name: 'library',
     type: 'string',
     description: 'Use a specific music library file.',
   },
   {
-    name: 'show-upload',
+    name: 'show-sound-filters',
     type: 'radio',
     values: [
-      {value: 'false', description: "Don't show upload option."},
-      {value: 'true', description: 'Show upload option.'},
-    ],
-  },
-  {
-    name: 'show-instructions',
-    type: 'radio',
-    values: [
-      {value: 'false', description: "Don't show instructions."},
-      {value: 'true', description: 'Show instructions.'},
-    ],
-  },
-  {
-    name: 'show-video',
-    type: 'radio',
-    values: [
-      {value: 'false', description: "Don't show video."},
-      {value: 'true', description: 'Show video.'},
-    ],
-  },
-  {
-    name: 'storage-type',
-    type: 'radio',
-    values: [
-      {value: LOCAL_STORAGE, description: 'Save to local storage.'},
-      {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
+      {value: 'false', description: 'Hide sound filters.'},
+      {value: 'true', description: 'Show sound filters.'},
     ],
   },
   {
@@ -96,6 +75,14 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Disable keyboard shortcuts.'},
       {value: 'true', description: 'Enable keyboard shortcuts.'},
+    ],
+  },
+  {
+    name: 'player',
+    type: 'radio',
+    values: [
+      {value: 'sample', description: 'Use the sample player (default).'},
+      {value: 'tonejs', description: 'Use the ToneJS player.'},
     ],
   },
 ];
