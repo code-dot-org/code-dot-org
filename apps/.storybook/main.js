@@ -65,4 +65,7 @@ export default {
   docs: {
     autodocs: true,
   },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
 };
