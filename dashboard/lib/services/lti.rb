@@ -97,7 +97,7 @@ class Services::Lti
     members = nrps_response[:members]
     context_title = nrps_response.dig(:context, :title)
     members.each do |member|
-      next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
+      next if member[:status] == 'Inactive'
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
       message = member[:message].first
 
