@@ -2439,6 +2439,14 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_confidence_exact_match
+    sql_type_metadata: *2
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
   learning_goal_evidence_levels:
   - *18
   - &54 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -13039,7 +13047,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240228195613
+version: 20240306184654
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

@@ -10429,6 +10429,8 @@ en:
               name: Game Jam - Create
             lesson-10:
               name: Game Jam - Play
+            lesson-11:
+              name: Game Mechanics
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -14892,7 +14894,7 @@ en:
               name: Implementing with Code.org
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-1
-          title: Intro to Code.org
+          title: Introduction to Maker K-5 Units
           description_audience: ''
           description_short: ''
           description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
@@ -15150,7 +15152,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: k5-maker-pilot-2024-1
-          title: Intro to Code.org
+          title: Intro to Maker K-5 Units
           description_audience: ''
           description_short: ''
           description: "#### This unit is a short overview for navigating this professional learning course with an optional additional lesson to get you started implementing Code.org in your class. \n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
@@ -15241,4 +15243,39 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
+        lesson-plan-feedback-v1:
+          lessons:
+            lesson-1:
+              name: Option A
+            lesson-2:
+              name: Option B
+            lesson-3:
+              name: Option C
+            lesson-4:
+              name: Option D
+            lesson-5:
+              name: Option E
+            lesson-6:
+              name: Option F
+          lesson_groups: {}
+          name: lesson-plan-feedback-v1
+          title: Lesson Plan Feedback (V1)
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## How to navigate these lessons
+
+            1) Start with Lesson A. This is the world we're in now.
+            2) **Go to Lesson F - the last lesson in the progression!** This represents a world where lessons are entirely connected to slides at every step of the way with everything in the table itself.
+            3) All the lessons in between are a "progression" from one world to the next, gradually introducing ways tables and slides could appear in lessons.
+
+            **Ignore weird image sizing in tables**. This is a markdown thing and, if we go more in a slide-image direction, we can find a way to figure out image sizes so they'll all be the same even in separate tables.
+
+            If you can't ignore the weird sizing, open up the developer console in a lesson and paste this into the javascript console:
+            ```
+            document.querySelectorAll('tr').forEach(row => { const cells = row.querySelectorAll('td, th'); if (cells.length > 0) cells[0].style.width = '25%'; if (cells.length > 1) cells[1].style.width = '75%'; });
+            ```
+
+            This will resize all of the tables to be the same size
           student_description: ''
