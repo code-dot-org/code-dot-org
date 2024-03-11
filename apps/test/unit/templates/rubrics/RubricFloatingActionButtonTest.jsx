@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import {
   getStore,
   registerReducers,
@@ -65,10 +65,8 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
         </Provider>
       );
       const images = screen.getAllByRole('img');
-      const preloader = images.find(
-        i => i.id === 'unittest-fab-image-preloader'
-      );
-      preloader.onload();
+      const image = images.find(i => i.id === 'unittest-fab-image');
+      fireEvent.load(image);
       const buttons = screen.getAllByRole('button');
       const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.true;
@@ -82,10 +80,8 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
         </Provider>
       );
       const images = screen.getAllByRole('img');
-      const preloader = images.find(
-        i => i.id === 'unittest-fab-image-preloader'
-      );
-      preloader.onload();
+      const image = images.find(i => i.id === 'unittest-fab-image');
+      fireEvent.load(image);
       const buttons = screen.getAllByRole('button');
       const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;

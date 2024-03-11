@@ -85,20 +85,20 @@ function RubricFloatingActionButton({
 
   return (
     <div id="fab-contained">
-      <img
-        id="unittest-fab-image-preloader"
-        src={fabIcon}
-        onLoad={() => setIsFabImageLoaded(true)}
-        style={{display: 'none'}}
-      />
       <button
         id="ui-floatingActionButton"
         className={classes}
-        // I couldn't get an image url to work in the SCSS module, so using an inline style for now
-        style={{backgroundImage: `url(${fabIcon})`}}
         onClick={handleClick}
         type="button"
-      />
+      >
+        <img
+          alt="AI bot"
+          id="unittest-fab-image"
+          src={fabIcon}
+          onLoad={() => setIsFabImageLoaded(true)}
+          style={{opacity: 1.0}}
+        />
+      </button>
       <div
         id="ui-floatingActionButton-overlay"
         className={style.taOverlay}
