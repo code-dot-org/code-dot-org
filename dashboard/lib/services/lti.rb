@@ -13,6 +13,7 @@ class Services::Lti
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
       user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
+      user.lti_roster_sync_enabled = true
     else
       user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
       user.family_name = get_claim(id_token, :family_name)
@@ -96,7 +97,7 @@ class Services::Lti
     members = nrps_response[:members]
     context_title = nrps_response.dig(:context, :title)
     members.each do |member|
-      next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
+      next if member[:status] == 'Inactive'
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
       message = member[:message].first
 

@@ -12,6 +12,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {Provider} from 'react-redux';
 import {act} from 'react-dom/test-utils';
 
@@ -19,7 +20,7 @@ describe('RubricContent', () => {
   let store;
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections});
+    registerReducers({teacherSections, teacherPanel});
     store = getStore();
   });
 

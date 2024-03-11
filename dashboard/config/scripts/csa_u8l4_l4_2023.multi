@@ -23,7 +23,7 @@ public static void selectSort(int[] data) {
       }
       int temp = data[current];      // Assign to temp
       data[current] = data[index];
-      data[next] = temp;
+      data[index] = temp;
    }  // End of outer loop
 }
 ```

@@ -10429,6 +10429,8 @@ en:
               name: Game Jam - Create
             lesson-10:
               name: Game Jam - Play
+            lesson-11:
+              name: Game Mechanics
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -14122,7 +14124,7 @@ en:
           title: Course C - Maker with micro:bit
           description_audience: ''
           description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         coursef-maker-2024:
           lessons:
@@ -14153,7 +14155,7 @@ en:
           title: Course F - Maker with micro:bit
           description_audience: ''
           description_short: ''
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         coursee-maker-2024:
           lessons:
@@ -14182,7 +14184,7 @@ en:
           title: Course E - Maker with micro:bit
           description_audience: ''
           description_short: ''
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         coursed-maker-2024:
           lessons:
@@ -14209,7 +14211,7 @@ en:
           title: Course D - Maker with micro:bit
           description_audience: ''
           description_short: ''
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         self-paced-pl-k5-2024:
           lessons:
@@ -14892,7 +14894,7 @@ en:
               name: Implementing with Code.org
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-1
-          title: Intro to Code.org
+          title: Introduction to Maker K-5 Units
           description_audience: ''
           description_short: ''
           description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
@@ -15099,7 +15101,7 @@ en:
           title: 'Physical Computing with micro:bit '
           description_audience: ''
           description_short: ''
-          description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes"
+          description: "#### This unit will introduce you to the basics of physical computing  so you are ready to begin teaching with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes"
           student_description: "#### This module will introduce you to the basics of physical computing with micro:bit. \n\n#### **You will:**\n- ####  Get acquainted with the micro:bit\n\n- #### Navigate the classroom feature in Microsoft MakeCode\n\n- #### Practice using the micro:bit\n\n- #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes"
         pilot-coursee-maker-2024:
           lesson_groups:
@@ -15150,11 +15152,11 @@ en:
           lessons: {}
           lesson_groups: {}
           name: k5-maker-pilot-2024-1
-          title: Intro to Code.org
+          title: Intro to Maker K-5 Units
           description_audience: ''
           description_short: ''
-          description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
-          student_description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
+          description: "#### This unit is a short overview for navigating this professional learning course with an optional additional lesson to get you started implementing Code.org in your class. \n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short overview for navigating this professional learning course with an optional additional lesson to get you started implementing Code.org in your class. \n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
         k5-maker-pilot-2024-2:
           lessons: {}
           lesson_groups: {}
@@ -15162,8 +15164,8 @@ en:
           title: Course C (2nd-3rd Grade)
           description_audience: ''
           description_short: ''
-          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n"
-          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n"
+          description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course C.**\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>\n"
+          student_description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course C.**\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>\n\n"
         k5-maker-pilot-2024-3:
           lessons: {}
           lesson_groups: {}
@@ -15171,22 +15173,28 @@ en:
           title: Course D (3rd-4th Grade)
           description_audience: ''
           description_short: ''
-          description: |-
-            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+          description: |
+            #### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course D.**
+            #### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.
 
             #### **You will:**
             * #### Code using loops and conditionals with Code.org.
 
 
             #### **Suggested Time:** 40 minutes
-          student_description: |-
-            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+
+            #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
+          student_description: |
+            #### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course D.**
+            #### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.
 
             #### **You will:**
             * #### Code using loops and conditionals with Code.org.
 
 
             #### **Suggested Time:** 40 minutes
+
+            #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
         k5-maker-pilot-2024-4:
           lessons: {}
           lesson_groups: {}
@@ -15194,8 +15202,8 @@ en:
           title: Course E (4th-5th) Grade
           description_audience: ''
           description_short: ''
-          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes"
-          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes"
+          description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course E.**\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>\n"
+          student_description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course E.**\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>\n"
         k5-maker-pilot-2024-5:
           lessons: {}
           lesson_groups: {}
@@ -15203,8 +15211,8 @@ en:
           title: Course F (5th-6th Grade)
           description_audience: ''
           description_short: ''
-          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes"
-          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes"
+          description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course F.**\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>\n"
+          student_description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course F.**\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>\n"
         k5-maker-pilot-2024-6:
           lessons: {}
           lesson_groups: {}
@@ -15218,4 +15226,56 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
+        pilot-k5-ai:
+          lessons:
+            lesson-1:
+              name: Sorting Data
+            lesson-2:
+              name: Training AI
+            lesson-3:
+              name: How AI Makes Decisions
+            lesson-4:
+              name: Create an AI Poster
+          lesson_groups: {}
+          name: pilot-k5-ai
+          title: Elementary AI Module [Pilot]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        lesson-plan-feedback-v1:
+          lessons:
+            lesson-1:
+              name: Option A
+            lesson-2:
+              name: Option B
+            lesson-3:
+              name: Option C
+            lesson-4:
+              name: Option D
+            lesson-5:
+              name: Option E
+            lesson-6:
+              name: Option F
+          lesson_groups: {}
+          name: lesson-plan-feedback-v1
+          title: Lesson Plan Feedback (V1)
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## How to navigate these lessons
+
+            1) Start with Lesson A. This is the world we're in now.
+            2) **Go to Lesson F - the last lesson in the progression!** This represents a world where lessons are entirely connected to slides at every step of the way with everything in the table itself.
+            3) All the lessons in between are a "progression" from one world to the next, gradually introducing ways tables and slides could appear in lessons.
+
+            **Ignore weird image sizing in tables**. This is a markdown thing and, if we go more in a slide-image direction, we can find a way to figure out image sizes so they'll all be the same even in separate tables.
+
+            If you can't ignore the weird sizing, open up the developer console in a lesson and paste this into the javascript console:
+            ```
+            document.querySelectorAll('tr').forEach(row => { const cells = row.querySelectorAll('td, th'); if (cells.length > 0) cells[0].style.width = '25%'; if (cells.length > 1) cells[1].style.width = '75%'; });
+            ```
+
+            This will resize all of the tables to be the same size
           student_description: ''

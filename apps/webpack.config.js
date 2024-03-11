@@ -44,6 +44,7 @@ const nodeModulesToTranspile = [
   '@blockly/field-grid-dropdown',
   '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
+  '@blockly/field-bitmap',
   'blockly',
   '@code-dot-org/dance-party',
   '@code-dot-org/johnny-five',
