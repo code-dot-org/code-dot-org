@@ -131,7 +131,7 @@ class Policies::Lti
     LtiIntegration.count >= lti_early_access_limit
   end
 
-  def self.show_early_access_banner?(user)
+  def self.early_access_banner_available?(user)
     early_access? && lti?(user)
   end
 

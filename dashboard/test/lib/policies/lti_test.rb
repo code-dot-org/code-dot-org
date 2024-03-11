@@ -152,7 +152,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
     end
   end
 
-  class ShowEarlyAccessBannerTest < ActiveSupport::TestCase
+  class EarlyAccessBannerAvailabilityTest < ActiveSupport::TestCase
     setup do
       @user = build(:teacher)
 
@@ -161,19 +161,19 @@ class Policies::LtiTest < ActiveSupport::TestCase
     end
 
     test 'returns true when early access and user is LTI' do
-      assert Policies::Lti.show_early_access_banner?(@user)
+      assert Policies::Lti.early_access_banner_available?(@user)
     end
 
     test 'returns false when early access is not enabled' do
       Policies::Lti.stubs(:early_access?).returns(false)
 
-      refute Policies::Lti.show_early_access_banner?(@user)
+      refute Policies::Lti.early_access_banner_available?(@user)
     end
 
     test 'returns false when user is not LTI' do
       Policies::Lti.stubs(:lti?).with(@user).returns(false)
 
-      refute Policies::Lti.show_early_access_banner?(@user)
+      refute Policies::Lti.early_access_banner_available?(@user)
     end
   end
 end
