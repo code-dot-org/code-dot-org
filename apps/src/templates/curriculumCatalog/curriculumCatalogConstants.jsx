@@ -12,3 +12,6 @@ export const curriculumDataShape = PropTypes.shape({
   course_version_path: PropTypes.string,
   marketing_initiative: PropTypes.string,
 });
+
+export const defaultImageSrc =
+  'https://images.code.org/0a24eb3b51bd86e054362f0760c6e64e-image-1681413990565.png';

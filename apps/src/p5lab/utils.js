@@ -38,3 +38,13 @@ export function createSpriteCollider(sprite) {
     right: x + (width * scale) / 2,
   };
 }
+
+export function randomColor(p5) {
+  return p5
+    .color('hsb(' + randomInt(0, 359) + ', 100%, 100%)')
+    .toString('#rrggbb');
+}
+
+export function randomColorFromPalette(palette) {
+  return palette[randomInt(0, palette.length - 1)];
+}
