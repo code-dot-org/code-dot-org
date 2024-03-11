@@ -80,6 +80,7 @@
 
       &SubTitle {
         font-size: 11px;
+        line-height: 2em;
       }
     }
 
@@ -95,6 +96,9 @@
     padding: 4px 0;
     font-size: 14px;
     margin: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &:hover {
       background-color: $neutral_dark90;
@@ -109,25 +113,33 @@
     }
 
     &Left {
-      width: 15px;
-      margin: 0 6px 0 4px;
-      float: left;
+      display: flex;
+      align-items: center;
+      width: 200px;
 
       .typeIcon {
         width: 13px;
+        height: 13px;
+        margin-right: 6px;
+        margin-left: 4px;
+      }
+
+      .name {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
+
     &Middle {
-      width: calc(100% - 25px - 58px);
-      float: left;
+      font-size: 11px;
     }
 
     &Right {
-      float: right;
-      width: 43px;
+      display: flex;
       margin-right: 15px;
-
     }
   }
 
