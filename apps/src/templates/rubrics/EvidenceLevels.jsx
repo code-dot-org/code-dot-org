@@ -17,6 +17,7 @@ export default function EvidenceLevels({
   submittedEvaluation,
   isStudent,
   isAutosaving,
+  isAiAssessed,
   aiEvalInfo,
 }) {
   const sortedEvidenceLevels = () => {
@@ -34,6 +35,7 @@ export default function EvidenceLevels({
     return (
       <EvidenceLevelsForTeachersV2
         aiEvalInfo={aiEvalInfo}
+        isAiAssessed={isAiAssessed}
         learningGoalKey={learningGoalKey}
         evidenceLevels={sortedEvidenceLevels().reverse()}
         understanding={understanding}
@@ -54,5 +56,6 @@ EvidenceLevels.propTypes = {
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   isAutosaving: PropTypes.bool,
+  isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
 };

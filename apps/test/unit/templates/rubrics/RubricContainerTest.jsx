@@ -2,7 +2,6 @@ import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
-import {act} from 'react-dom/test-utils';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import {
   getStore,
@@ -16,6 +15,9 @@ import {Provider} from 'react-redux';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+
+// react testing library import
+import {render, fireEvent, act} from '@testing-library/react';
 
 describe('RubricContainer', () => {
   let store;
@@ -158,9 +160,19 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
+    // Push the `fetch` through
     await act(async () => {
       await Promise.resolve();
     });
+    // Perform the json() call from the fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    // Perform the data call from the fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    // Let the component re-render with the set state
     wrapper.update();
     expect(fetchStub).to.have.been.calledThrice;
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
@@ -578,5 +590,42 @@ describe('RubricContainer', () => {
       i18n.aiEvaluationStatus_profanity_error()
     );
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+  });
+
+  // react testing library
+  it('moves rubric container when user clicks and drags component', async () => {
+    fetchStub.onCall(0).returns(Promise.resolve(new Response('')));
+    fetchStub.onCall(1).returns(Promise.resolve(new Response('')));
+    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
+    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
+
+    const {getByTestId} = render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    const element = getByTestId('draggable-test-id');
+
+    const initialPosition = element.style.transform;
+
+    // simulate dragging
+    fireEvent.mouseDown(element, {clientX: 0, clientY: 0});
+    fireEvent.mouseMove(element, {clientX: 100, clientY: 100});
+    fireEvent.mouseUp(element);
+
+    const newPosition = element.style.transform;
+
+    expect(newPosition).to.not.equal(initialPosition);
   });
 });
