@@ -202,7 +202,7 @@ class LtiV1Controller < ApplicationController
       begin
         params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url])
       rescue ActionController::ParameterMissing => _exception
-        return render_sync_course_error('Looks like you’re attempting to sync a course or section from the wrong place. Please launch from inside the course or section you’d like to sync.', :bad_request)
+        return render_sync_course_error(I18n.t('lti.error.wrong_context'), :bad_request)
       end
     end
 

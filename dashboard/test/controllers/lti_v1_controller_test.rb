@@ -492,6 +492,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal home_path, '/' + @response.redirect_url.split('/').last
   end
 
+  test 'sync - should display error message when required param missing' do
+    user = create :teacher, :with_lti_auth
+    sign_in user
+    get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: nil, nrps_url: nil}
+    assert_response :bad_request
+    assert_includes(response.body, I18n.t('lti.error.wrong_context'))
+  end
+
   test 'sync - should sync and show the confirmation page' do
     had_changes = true
     user = create :teacher, :with_lti_auth
