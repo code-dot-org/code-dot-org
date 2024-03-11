@@ -7,48 +7,47 @@ import {BLOCKLY_LABS} from './constants';
 export const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  validateSourceField(response);
+  const blocklyValidator = (sourceToValidate: Record<string, unknown>) => {
+    let blocklySource;
+    try {
+      blocklySource = JSON.parse(
+        sourceToValidate.source as string
+      ) as BlocklySource;
+    } catch (e) {
+      throw new ValidationError('Error parsing JSON: ' + e);
+    }
+    if (blocklySource.blocks === undefined) {
+      throw new ValidationError('Missing required field: blocks');
+    }
+  };
 
-  let blocklySource;
-  try {
-    blocklySource = JSON.parse(response.source as string) as BlocklySource;
-  } catch (e) {
-    throw new ValidationError('Error parsing JSON: ' + e);
-  }
-  if (blocklySource.blocks === undefined) {
-    throw new ValidationError('Missing required field: blocks');
-  }
-
-  return response as unknown as ProjectSources;
+  return sourceValidatorHelper(response, blocklyValidator);
 };
 
 // Validator for Python sources.
 export const PythonSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  validateSourceField(response);
-
-  let pythonSource;
-  try {
-    pythonSource = JSON.parse(response.source as string);
-  } catch (e) {
-    throw new ValidationError('Error parsing JSON: ' + e);
-  }
-  // TODO: support a nested main.py
-  if (!pythonSource['main.py']) {
-    throw new ValidationError('Missing required field: main.py');
-  }
-
-  return response as unknown as ProjectSources;
+  const pythonValidator = (sourceToValidate: Record<string, unknown>) => {
+    let pythonSource;
+    try {
+      pythonSource = JSON.parse(sourceToValidate.source as string);
+    } catch (e) {
+      throw new ValidationError('Error parsing JSON: ' + e);
+    }
+    // TODO: support a nested main.py
+    if (!pythonSource['main.py']) {
+      throw new ValidationError('Missing required field: main.py');
+    }
+  };
+  return sourceValidatorHelper(response, pythonValidator);
 };
 
 // Default source validator. This just checks if there is a source field.
 export const DefaultSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  validateSourceField(response);
-
-  return response as unknown as ProjectSources;
+  return sourceValidatorHelper(response, () => {});
 };
 
 export const LevelPropertiesValidator: ResponseValidator<
@@ -100,8 +99,13 @@ export function setValidatorForAppType(appName: AppName) {
   }
 }
 
-function validateSourceField(response: Record<string, unknown>) {
+function sourceValidatorHelper(
+  response: Record<string, unknown>,
+  appSpecificValidator: (response: Record<string, unknown>) => void
+): ProjectSources {
   if (!response.source) {
     throw new ValidationError('Missing required field: source');
   }
+  appSpecificValidator(response);
+  return response as unknown as ProjectSources;
 }
