@@ -48,13 +48,38 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
     restoreRedux();
   });
 
-  it('renders default props', () => {
-    render(
-      <Provider store={getStore()}>
-        <RubricFloatingActionButton {...defaultProps} />
-      </Provider>
-    );
-    screen.debug();
+  describe('pulse animation', () => {
+    beforeEach(() => {
+      sinon.stub(sessionStorage, 'getItem');
+    });
+
+    afterEach(() => {
+      sessionStorage.getItem.restore();
+    });
+
+    it('renders pulse animation when session storage is empty', () => {
+      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
+      render(
+        <Provider store={getStore()}>
+          <RubricFloatingActionButton {...defaultProps} />
+        </Provider>
+      );
+      const buttons = screen.getAllByRole('button');
+      const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
+      expect(fab.classList.contains('unittest-fab-pulse')).to.be.true;
+    });
+
+    it('does not render pulse animation when open state is present in session storage', () => {
+      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(false);
+      render(
+        <Provider store={getStore()}>
+          <RubricFloatingActionButton {...defaultProps} />
+        </Provider>
+      );
+      const buttons = screen.getAllByRole('button');
+      const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
+      expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;
+    });
   });
 });
 
