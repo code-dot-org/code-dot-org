@@ -30,7 +30,7 @@ export default class AdvancedSequencer extends Sequencer {
       return;
     }
 
-    this.addNewEvent<SoundEvent>({
+    this.playbackEvents.push({
       id,
       type: 'sound',
       length: soundData.length,
@@ -38,7 +38,7 @@ export default class AdvancedSequencer extends Sequencer {
       blockId,
       triggered: false,
       when: measure,
-    });
+    } as PlaybackEvent);
   }
 
   createTrack() {
@@ -63,9 +63,5 @@ export default class AdvancedSequencer extends Sequencer {
 
   getLastMeasure(): number {
     return 0;
-  }
-
-  private addNewEvent<T extends PlaybackEvent>(event: T) {
-    this.playbackEvents.push(event);
   }
 }

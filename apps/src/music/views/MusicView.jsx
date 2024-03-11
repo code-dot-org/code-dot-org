@@ -450,9 +450,7 @@ class UnconnectedMusicView extends React.Component {
       lastMeasure: this.sequencer.getLastMeasure(),
     });
     this.props.addOrderedFunctions({
-      orderedFunctions:
-        this.sequencer.getOrderedFunctions &&
-        this.sequencer.getOrderedFunctions(),
+      orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
     this.player.playEvents(playbackEvents);
 
@@ -486,9 +484,7 @@ class UnconnectedMusicView extends React.Component {
       lastMeasure: this.sequencer.getLastMeasure(),
     });
     this.props.addOrderedFunctions({
-      orderedFunctions:
-        this.sequencer.getOrderedFunctions &&
-        this.sequencer.getOrderedFunctions(),
+      orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
 
     return this.player.preloadSounds(
