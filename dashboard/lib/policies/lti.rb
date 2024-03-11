@@ -139,9 +139,9 @@ class Policies::Lti
   def self.issuer_accepts_resource_link?(issuer)
     ['Canvas'].include?(issuer_name(issuer))
   end
-end
 
-# Force Schoology through iframe mitigation flow
-def self.force_iframe_launch?(issuer)
-  ['Schoology'].include?(issuer_name(issuer))
+  # Force Schoology through iframe mitigation flow
+  def self.force_iframe_launch?(issuer)
+    ['Schoology'].include?(issuer_name(issuer))
+  end
 end

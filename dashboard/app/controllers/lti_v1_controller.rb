@@ -120,7 +120,7 @@ class LtiV1Controller < ApplicationController
     # In this case, we will redirect to the iframe route, to prompt user to open
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
-    if force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
+    if Policies::Lti.force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
       id_token = params[:id_token]
       state = params[:state]
       token_hash = {id_token: id_token, state: state}
@@ -141,14 +141,14 @@ class LtiV1Controller < ApplicationController
       nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM][:context_memberships_url]
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
-      deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
+      deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
 
       if deployment.nil?
-        deployment = Services::Lti.create_lti_deployment(integration.id, deployment_id)
+        deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id)
       end
       redirect_params = {
-        lti_integration_id: integration.id,
+        lti_integration_id: integration[:id],
         deployment_id: deployment.id,
         context_id: launch_context[:id],
         rlid: resource_link_id,
@@ -184,7 +184,7 @@ class LtiV1Controller < ApplicationController
   end
 
   def get_decoded_jwt(integration, id_token)
-    public_jwk_url = integration.jwks_url
+    public_jwk_url = integration[:jwks_url]
     response = JSON.parse(HTTParty.get(public_jwk_url).body)
     jwk_set = JSON::JWK::Set.new response
     JSON::JWT.decode(id_token, jwk_set)
@@ -399,6 +399,7 @@ class LtiV1Controller < ApplicationController
   def read_cache(key)
     # TODO: Add error handling
     json_value = CDO.shared_cache.read("#{NAMESPACE}/#{key}")
+    return nil unless json_value
     JSON.parse(json_value).symbolize_keys
   end
 
