@@ -132,7 +132,7 @@ class Policies::Lti
   end
 
   def self.early_access_banner_available?(user)
-    early_access? && lti?(user)
+    user.teacher? && early_access? && lti?(user)
   end
 
   # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
