@@ -31,9 +31,10 @@ function RubricFloatingActionButton({
   );
   // Show the pulse if this is the first time the user has seen the FAB in this
   // session. Depends on other logic which sets the open state in session storage.
-  const [showPulse] = useState(
+  const [isFirstSession] = useState(
     JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
   );
+  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
   const eventData = useMemo(() => {
     return {
@@ -77,12 +78,19 @@ function RubricFloatingActionButton({
 
   const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
+  const showPulse = isFirstSession && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
 
   return (
     <div id="fab-contained">
+      <img
+        id="unittest-fab-image-preloader"
+        src={fabIcon}
+        onLoad={() => setIsFabImageLoaded(true)}
+        style={{display: 'none'}}
+      />
       <button
         id="ui-floatingActionButton"
         className={classes}

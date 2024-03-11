@@ -64,6 +64,11 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
           <RubricFloatingActionButton {...defaultProps} />
         </Provider>
       );
+      const images = screen.getAllByRole('img');
+      const preloader = images.find(
+        i => i.id === 'unittest-fab-image-preloader'
+      );
+      preloader.onload();
       const buttons = screen.getAllByRole('button');
       const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.true;
@@ -76,6 +81,11 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
           <RubricFloatingActionButton {...defaultProps} />
         </Provider>
       );
+      const images = screen.getAllByRole('img');
+      const preloader = images.find(
+        i => i.id === 'unittest-fab-image-preloader'
+      );
+      preloader.onload();
       const buttons = screen.getAllByRole('button');
       const fab = buttons.find(b => b.id === 'ui-floatingActionButton');
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;
