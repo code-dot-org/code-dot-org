@@ -67,7 +67,7 @@ export default function ExpandedProgressColumnHeader({
       >
         {level.sublevels?.length > 0 && <FontAwesome icon="caret-right" />}
         <div>{`${lesson.relative_position}.${
-          level.kind === 'unplugged' ? 0 : level.bubbleText
+          level.isUnplugged ? 0 : level.bubbleText
         }`}</div>
         {level.kind === 'assessment' && (
           <FontAwesome
