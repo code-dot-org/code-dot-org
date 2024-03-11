@@ -52,7 +52,8 @@ class AdminSearchController < ApplicationController
   end
 
   def find_student
-    @user = User.with_deleted.where(user_type: 'student').find(params[:user_id])
+    @user = User.with_deleted.find(params[:user_id])
+    #@user = User.with_deleted.where(user_type: 'student').find(params[:user_id])
   rescue ActiveRecord::RecordNotFound
     render :not_found
   end
