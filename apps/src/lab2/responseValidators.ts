@@ -1,7 +1,9 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {AppName, BlocklySource, LevelProperties, ProjectSources} from './types';
 import Lab2Registry from './Lab2Registry';
+import {BLOCKLY_LABS} from './constants';
 
+// Validator for Blockly sources.
 export const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
@@ -9,7 +11,6 @@ export const BlocklySourceResponseValidator: ResponseValidator<
     throw new ValidationError('Missing required field: source');
   }
 
-  // Currently Blockly JSON sources and python sources with a "main.py" are supported.
   let blocklySource;
   try {
     blocklySource = JSON.parse(response.source as string) as BlocklySource;
@@ -23,6 +24,7 @@ export const BlocklySourceResponseValidator: ResponseValidator<
   return response as unknown as ProjectSources;
 };
 
+// Validator for Python sources.
 export const PythonSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
@@ -36,6 +38,7 @@ export const PythonSourceResponseValidator: ResponseValidator<
   } catch (e) {
     throw new ValidationError('Error parsing JSON: ' + e);
   }
+  // TODO: support a nested main.py
   if (!pythonSource['main.py']) {
     throw new ValidationError('Missing required field: main.py');
   }
@@ -43,6 +46,7 @@ export const PythonSourceResponseValidator: ResponseValidator<
   return response as unknown as ProjectSources;
 };
 
+// Default source validator. This just checks if there is a source field.
 export const DefaultSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
@@ -89,10 +93,15 @@ export function setValidatorForAppType(appName: AppName) {
     Lab2Registry.getInstance().setSourceResponseValidator(
       PythonSourceResponseValidator
     );
-  } else {
-    // otherwise assume blockly
+  } else if (BLOCKLY_LABS.includes(appName)) {
+    // Blockly labs
     Lab2Registry.getInstance().setSourceResponseValidator(
       BlocklySourceResponseValidator
+    );
+  } else {
+    // Everything else uses the default validator
+    Lab2Registry.getInstance().setSourceResponseValidator(
+      DefaultSourceResponseValidator
     );
   }
 }
