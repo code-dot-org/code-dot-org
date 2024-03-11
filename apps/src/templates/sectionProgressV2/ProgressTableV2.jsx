@@ -38,7 +38,7 @@ function ProgressTableV2({
       : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
 
-  const tableContentsRef = React.useRef();
+  const tableRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -94,13 +94,13 @@ function ProgressTableV2({
     }
 
     return (
-      <FloatingScrollbar childRef={tableContentsRef}>
+      <FloatingScrollbar childRef={tableRef}>
         <div
           className={classNames(
             styles.table,
             isSkeleton && styles.tableLoading
           )}
-          ref={tableContentsRef}
+          ref={tableRef}
         >
           <div className={styles.tableInterior}>
             {lessons.map(getRenderedColumn)}
@@ -108,7 +108,7 @@ function ProgressTableV2({
         </div>
       </FloatingScrollbar>
     );
-  }, [isSkeleton, getRenderedColumn, unitData, tableContentsRef]);
+  }, [isSkeleton, getRenderedColumn, unitData, tableRef]);
 
   return (
     <div className={styles.progressTableV2}>

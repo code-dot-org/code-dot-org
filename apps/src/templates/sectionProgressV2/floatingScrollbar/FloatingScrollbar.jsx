@@ -8,19 +8,9 @@ import {scrollbarWidth} from './scrollbarUtils';
  * Scrollbar will appear at the bottom of {child} if the bottom is visible.
  * Scrollbar will at the bottom of the screen if the bottom of {child} is not visible.
  *
- * {children} must:
- *    be a single element
- *    be a container with:
- *      overflow-x: scroll
- *      overflow-y: hidden
- *      height = {expectedHeight} + scrollbarWidth
- *    have a single contents component that you would like to horizontally scroll
- * setOnScroll - a function that will be called with an onScroll event.
- *    This should be added to {child} element as the `onScroll` prop
- * childContainerRef - a ref to {child} element.
- *    Set by calling `ref={childContainerRef}` on the {child} element
- * childContentsRef - a ref to the contents of {child} element.
- *    Set by calling `ref={childContentsRef}` on the contents of {child} element
+ * {children} must be a single element and not a list of elements.
+ * childRef - a ref to {child} element.
+ *    Set by calling `ref={childRef}` on the {child} element
  */
 export default function FloatingScrollbar({children, childRef}) {
   const scrollRef = React.useRef();
