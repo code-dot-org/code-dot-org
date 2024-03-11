@@ -392,7 +392,15 @@ Resources:
               Name: DRONE_AGENT_CONCURRENCY
               Value: 1
             # END: Settings for the Drone Runner.
-
+  AutoscalerEcsServiceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Placeholder SecurityGroup for Drone Autoscaler Service
+      VpcId: !Ref VpcId
+      # No Ingress rules specified - doesn't open new inbound traffic paths
+      SecurityGroupEgress:
+        - IpProtocol: -1 # Allows all protocols
+          CidrIp: 0.0.0.0/0 # Allows all destinations
   DroneAutoscalerEcsService:
     Type: AWS::ECS::Service
     DependsOn: LoadBalancerListener
@@ -404,6 +412,11 @@ Resources:
         - ContainerName: drone-autoscaler
           ContainerPort: 8080
           TargetGroupArn: !Ref DroneAutoscalerTargetGroup
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: DISABLED
+          SecurityGroups:
+            - !Ref AutoscalerEcsServiceSecurityGroup
       TaskDefinition: !Ref DroneAutoscalerTaskDefinition
 
   DroneAutoscalerECSCluster:
@@ -494,7 +507,7 @@ Resources:
       SecurityGroupIngress:
         -
           Description: Enable Autoscaler to issue Docker API calls to Runner EC2 Instances.
-          SourceSecurityGroupId: !GetAtt DroneAutoscalerEcsSecurityGroup.GroupId
+          SourceSecurityGroupId: !GetAtt AutoscalerEcsServiceSecurityGroup.GroupId
           IpProtocol: tcp
           FromPort: 2376
           ToPort: 2376
