@@ -77,10 +77,11 @@ class LtiV1Controller < ApplicationController
     rescue => exception
       return log_unauthorized(exception)
     end
-    # client_id is the aud[ience] in the JWT
-    extracted_client_id = decoded_jwt_no_auth[:aud]
+    # client_id is the aud[ience] in the JWT, it can be a string or an array
+    extracted_client_id = decoded_jwt_no_auth[:aud].is_a?(Array) ? decoded_jwt_no_auth[:aud].first : decoded_jwt_no_auth[:aud]
     extracted_issuer_id = decoded_jwt_no_auth[:iss]
 
+    return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
 

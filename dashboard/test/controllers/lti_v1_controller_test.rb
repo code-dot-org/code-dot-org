@@ -227,7 +227,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     # stub cache reads for each test
-    LtiV1Controller.any_instance.stubs(:read_cache).returns({state: @state, nonce: @nonce})
+    LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
   end
 
@@ -487,6 +488,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should redirect to iframe route if LMS caller is Schoology AND new_tab=true param is missing' do
     issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
     integration = create :lti_integration, issuer: issuer
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
@@ -497,6 +499,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
     issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
     integration = create :lti_integration, issuer: issuer
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id, azp: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
