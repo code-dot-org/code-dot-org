@@ -11,6 +11,7 @@
 #  updated_at                :datetime         not null
 #  observations              :text(65535)
 #  ai_confidence_exact_match :integer
+#  evidence                  :text(65535)
 #
 # Indexes
 #
@@ -44,6 +45,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
       understanding: understanding,
       learning_goal_id: learning_goal_id,
       observations: observations,
+      evidence: evidence,
       # temporarily include this until client code is updated to use aiConfidencePassFail
       ai_confidence: ai_confidence,
       aiConfidencePassFail: ai_confidence,
@@ -65,6 +67,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
       learning_goal: learning_goal.learning_goal,
       understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.invert[understanding].to_s,
       observations: observations,
+      evidence: evidence,
       ai_confidence: AI_CONFIDENCE_LEVELS.invert[ai_confidence].to_s,
       ai_confidence_exact_match: AI_CONFIDENCE_LEVELS.invert[ai_confidence_exact_match].to_s,
     }

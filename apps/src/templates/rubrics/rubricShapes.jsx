@@ -50,6 +50,7 @@ export const aiEvaluationShape = PropTypes.shape({
   aiConfidenceExactMatch: PropTypes.number,
   showExactMatch: PropTypes.bool,
   observations: PropTypes.string,
+  evidence: PropTypes.string,
 });
 
 export const aiEvidenceShape = PropTypes.shape({
