@@ -6,6 +6,10 @@ import {procedureDefMutator} from './mutators/procedureDefMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin';
 import procedureCallerMutator from './mutators/procedureCallerMutator';
+import {ExtendedWorkspaceSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
+import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
+import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -94,142 +98,163 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 ]);
 
 // Respond to the click of a call block's edit button
-export const editButtonHandler = function () {
-  const procedure = this.getSourceBlock().getProcedureModel();
+export const editButtonHandler = function (this: CdoFieldButton) {
+  const procedure = (
+    this.getSourceBlock() as ProcedureBlock
+  )?.getProcedureModel();
   if (procedure) {
-    Blockly.functionEditor.showForFunction(procedure);
+    Blockly.functionEditor.showForFunction(
+      procedure as ObservableProcedureModel
+    );
   }
 };
 
 // This extension adds an edit button to the end of a procedure call block.
-GoogleBlockly.Extensions.register('procedures_edit_button', function () {
-  // Edit buttons are used to open the modal editor. The button is appended to the last input.
-  // If we are in the modal function editor, don't add the button, due to an issue with Blockly
-  // not being able to handle us clearing the block right after it has been clicked.
-  if (
-    Blockly.useModalFunctionEditor &&
-    this.inputList.length &&
-    !this.workspace.isFlyout &&
-    toolboxConfigurationSupportsEditButton(this) &&
-    !Blockly.isEmbeddedWorkspace(this.workspace)
-  ) {
-    const button = new Blockly.FieldButton({
-      value: msg.edit(),
-      onClick: editButtonHandler,
-      colorOverrides: {button: 'blue', text: 'white'},
-      allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
-    });
-    button.EDITABLE = false;
-    button.SERIALIZABLE = false;
-    this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
+GoogleBlockly.Extensions.register(
+  'procedures_edit_button',
+  function (this: ProcedureBlock) {
+    // Edit buttons are used to open the modal editor. The button is appended to the last input.
+    // If we are in the modal function editor, don't add the button, due to an issue with Blockly
+    // not being able to handle us clearing the block right after it has been clicked.
+    if (
+      Blockly.useModalFunctionEditor &&
+      this.inputList.length &&
+      !this.workspace.isFlyout &&
+      toolboxConfigurationSupportsEditButton(this) &&
+      !Blockly.isEmbeddedWorkspace(this.workspace)
+    ) {
+      const button = new Blockly.FieldButton({
+        value: msg.edit(),
+        onClick: editButtonHandler,
+        colorOverrides: {button: 'blue', text: 'white'},
+        allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
+      });
+      button.EDITABLE = false;
+      button.SERIALIZABLE = false;
+      this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
+    }
   }
-});
+);
 
 // This extension make the NAME fields of caller/getter blocks serializable.
 GoogleBlockly.Extensions.register(
   'procedure_caller_serialize_name',
-  function () {
+  function (this: ProcedureBlock) {
     const labelField = this.getField('NAME');
-    labelField.SERIALIZABLE = true;
+    if (labelField) {
+      labelField.SERIALIZABLE = true;
+    }
   }
 );
 
 // This extension renders function and behavior definitions as mini toolboxes
 // The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
-GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
-  // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
-  let miniToolboxBlocks = [];
-  if (this.type === BLOCK_TYPES.behaviorDefinition) {
-    miniToolboxBlocks.push('sprite_parameter_get');
-  }
+GoogleBlockly.Extensions.register(
+  'procedure_def_mini_toolbox',
+  function (this: ProcedureBlock) {
+    // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
+    const miniToolboxBlocks = [];
+    if (this.type === BLOCK_TYPES.behaviorDefinition) {
+      miniToolboxBlocks.push('sprite_parameter_get');
+    }
 
-  // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
-  if (!miniToolboxBlocks.length) {
-    return;
-  }
+    // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
+    if (!miniToolboxBlocks.length) {
+      return;
+    }
 
-  const renderToolboxBeforeStack = true;
-  const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
-    this
-  )(undefined, renderToolboxBeforeStack);
-  const renderingInFunctionEditor = true;
-  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
-    miniToolboxBlocks,
-    flyoutToggleButton,
-    renderingInFunctionEditor
-  );
-  // Open mini-toolbox by default
-  flyoutToggleButton.setIcon(false);
-});
+    const renderToolboxBeforeStack = true;
+    const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
+      this
+    )(undefined, renderToolboxBeforeStack);
+    const renderingInFunctionEditor = true;
+    Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+      miniToolboxBlocks,
+      flyoutToggleButton,
+      renderingInFunctionEditor
+    );
+    // Open mini-toolbox by default
+    flyoutToggleButton.setIcon(false);
+  }
+);
 
 // Adds an SVG frame to procedure definition blocks when they're on the main workspace.
 // Not used in Music Lab, the editor workspace, or embedded workspaces.
 // Note: The workspace frame used in the modal function editor is added there.
-GoogleBlockly.Extensions.register('procedures_block_frame', function () {
-  if (
-    this.workspace === Blockly.getMainWorkspace() &&
-    !this.workspace.noFunctionBlockFrame
-  ) {
-    const getColor = () => {
-      return Blockly.cdoUtils.getBlockColor(this);
-    };
-    this.functionalSvg_ = new BlockSvgFrame(
-      this,
-      msg.function(),
-      'blocklyFunctionalFrame',
-      getColor
-    );
+GoogleBlockly.Extensions.register(
+  'procedures_block_frame',
+  function (this: ProcedureBlock) {
+    if (
+      this.workspace === Blockly.getMainWorkspace() &&
+      !(this.workspace as ExtendedWorkspaceSvg).noFunctionBlockFrame
+    ) {
+      const getColor = () => {
+        return Blockly.cdoUtils.getBlockColor(this);
+      };
+      this.functionalSvg_ = new BlockSvgFrame(
+        this,
+        msg.function(),
+        'blocklyFunctionalFrame',
+        getColor
+      );
 
-    this.setOnChange(function () {
-      if (!this.isInFlyout) {
-        this.functionalSvg_.render();
-      }
-    });
+      this.setOnChange(function (this: ProcedureBlock) {
+        if (!this.isInFlyout) {
+          this.functionalSvg_?.render();
+        }
+      });
+    }
   }
-});
+);
 
 // Override the destroy function to not destroy the procedure if we're using the
 // modal function editor. We need to do this so that when we clear its workspace
 // we don't remove the procedure from the procedure map. Insertion markers also
 // get this destroy function and they should not cause us to delete a procedure
 // either.
-GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
-  const originalDestroy = this.destroy.bind(this);
-  const mixin = {
-    destroy: function () {
-      if (!Blockly.useModalFunctionEditor && !this.isInsertionMarker()) {
-        originalDestroy();
-      }
-    },
-  };
-  // We can't register this as a mixin since we're overwriting existing methods
-  Object.assign(this, mixin);
-});
+GoogleBlockly.Extensions.register(
+  'modal_procedures_no_destroy',
+  function (this: ProcedureBlock) {
+    const originalDestroy = this.destroy?.bind(this);
+    const mixin = {
+      destroy: function (this: ProcedureBlock) {
+        if (!Blockly.useModalFunctionEditor && !this.isInsertionMarker()) {
+          originalDestroy?.();
+        }
+      },
+    };
+    // We can't register this as a mixin since we're overwriting existing methods
+    Object.assign(this, mixin);
+  }
+);
 
 // Override the doProcedureUpdate function to heal the stack. Without this,
 // any child blocks connected to a call block would also get deleted.
 // Copied directly from
 // https://github.com/BeksOmega/blockly-samples/blob/7954a8fff50e41fa7c0f891e957bf9ed616361d6/plugins/block-shareable-procedures/src/blocks.ts#L1068
-GoogleBlockly.Extensions.register('procedure_call_do_update', function () {
-  const mixin = {
-    /**
-     * Updates the shape of this block to reflect the state of the data model.
-     */
-    doProcedureUpdate: function () {
-      if (!this.getProcedureModel()) return;
-      const id = this.getProcedureModel().getId();
-      if (!this.getTargetWorkspace_().getProcedureMap().has(id)) {
-        this.dispose(/* Begin Customization*/ true /* End Customization*/);
-        return;
-      }
-      this.updateName_();
-      this.updateEnabled_();
-      this.updateParameters_();
-    },
-  };
-  // We can't register this as a mixin since we're overwriting existing methods
-  Object.assign(this, mixin);
-});
+GoogleBlockly.Extensions.register(
+  'procedure_call_do_update',
+  function (this: ProcedureBlock) {
+    const mixin = {
+      /**
+       * Updates the shape of this block to reflect the state of the data model.
+       */
+      doProcedureUpdate: function (this: ProcedureBlock) {
+        if (!this.getProcedureModel()) return;
+        const id = this.getProcedureModel().getId();
+        if (!this.getTargetWorkspace_().getProcedureMap().has(id)) {
+          this.dispose(/* Begin Customization*/ true /* End Customization*/);
+          return;
+        }
+        this.updateName_();
+        this.updateEnabled_();
+        this.updateParameters_();
+      },
+    };
+    // We can't register this as a mixin since we're overwriting existing methods
+    Object.assign(this, mixin);
+  }
+);
 
 // TODO: After updating to Blockly v10, remove this local copy of
 // procedureDefMutator and instead modify the imported mutator directly.
@@ -263,8 +288,11 @@ GoogleBlockly.Extensions.registerMixin(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of block objects representing the flyout blocks
  */
-export function flyoutCategory(workspace, functionEditorOpen = false) {
-  const blockList = [];
+export function flyoutCategory(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  functionEditorOpen = false
+) {
+  const blockList: FlyoutItemInfoArray = [];
 
   // Note: Blockly.Msg was undefined when this code was extracted into global scope
   const functionDefinitionBlock = {
@@ -293,7 +321,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     Blockly.getHiddenDefinitionWorkspace(),
   ];
 
-  const allFunctions = [];
+  const allFunctions: {name: string; id: string}[] = [];
   workspaces.forEach(workspace => {
     const procedureBlocks = workspace
       .getTopBlocks()
@@ -323,11 +351,11 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewFunctionButtonWithCallback = workspace => {
-  let callbackKey, callback;
-
-  callbackKey = 'newProcedureCallback';
-  callback = () => {
+const getNewFunctionButtonWithCallback = (
+  workspace: GoogleBlockly.WorkspaceSvg
+) => {
+  const callbackKey = 'newProcedureCallback';
+  const callback = () => {
     workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(
       BLOCK_TYPES.procedureDefinition
@@ -354,13 +382,19 @@ const getNewFunctionButtonWithCallback = workspace => {
  * @param {Block} block Block to check
  * @returns boolean
  */
-export const toolboxConfigurationSupportsEditButton = block => {
+export const toolboxConfigurationSupportsEditButton = (
+  block: GoogleBlockly.Block
+) => {
   if (block.type === BLOCK_TYPES.procedureCall) {
     return true;
   } else {
     // block is a behavior caller or picker.
-    const hasCategorizedToolbox = !!block.workspace.toolbox_;
-    const hasUncategorizedToolbox = !!block.workspace.flyout;
+    const hasCategorizedToolbox = !!(
+      block.workspace as ExtendedWorkspaceSvg
+    ).getToolbox();
+    const hasUncategorizedToolbox = !!(
+      block.workspace as ExtendedWorkspaceSvg
+    ).getFlyout(/*opt_own*/ true);
     // We show the edit button for levels with a categorized toolbox or no toolbox.
     // We do not show it for uncategorized toolboxes because renaming behaviors
     // without the behavior category causes confusing behavior.

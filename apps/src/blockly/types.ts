@@ -87,7 +87,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
-  JavaScript: typeof javascriptGenerator;
+  JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
   levelBlockIds: string[];
@@ -123,7 +123,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     blockspace: Workspace,
     handler: (e: Abstract) => void
   ) => void;
-  getGenerator: () => typeof javascriptGenerator;
+  getGenerator: () => JavascriptGeneratorType;
   addEmbeddedWorkspace: (workspace: Workspace) => void;
   isEmbeddedWorkspace: (workspace: Workspace) => boolean;
   findEmptyContainerBlock: () => void;
@@ -283,7 +283,7 @@ export interface ExtendedVariables extends VariablesType {
   getVars: (opt_category?: string) => {[key: string]: string[]};
 }
 
-export interface ProcedureBlock extends Block, IProcedureBlock {
+export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
   userCreated: boolean;
   getTargetWorkspace_(): Workspace;
   hasReturn_: boolean;
@@ -305,6 +305,9 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   setStatements_: (hasStatements: boolean) => void;
   deserialize_: (name: string, params: string[]) => void;
   createArgInputs_: (params: string[]) => void;
+  updateName_: () => void;
+  updateEnabled_: () => void;
+  updateParameters_: () => void;
   hasStatements_: boolean;
   description?: string | null;
   // used for behavior blocks
