@@ -586,16 +586,4 @@ export const commands = {
     const result = this.studentVars.length >= 1;
     return result;
   },
-
-  // variableBubblesCreated(count = 1) {
-  //   return this.getVariableBubbles().length >= count;
-  // },
-
-  // foregroundEffectsCreated(count = 1) {
-  //   return this.getForegroundEffects().length >= count;
-  // },
-
-  // getPrevious() {
-  //   return true;
-  // },
 };
