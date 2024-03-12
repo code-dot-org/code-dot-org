@@ -77,7 +77,14 @@ class Policies::Lti
   end
 
   def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
+    case id_token[:aud]
+    when String
+      "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
+    when Array
+      "#{id_token[:iss]}|#{id_token[:aud].first}|#{id_token[:sub]}"
+    else
+      raise "Invalid audience type: #{id_token[:aud].class}"
+    end
   end
 
   def self.lti?(user)
