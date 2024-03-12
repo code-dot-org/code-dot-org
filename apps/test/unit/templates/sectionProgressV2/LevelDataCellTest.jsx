@@ -10,6 +10,8 @@ const PROGRESS = {
   result: 0,
   locked: false,
   paired: false,
+  teacherFeedbackReviewState: 'completed',
+  teacherFeedbackNew: false,
 };
 const DEFAULT_PROPS = {
   level: {isValidated: false, id: 1, url: TEST_URL},
@@ -27,18 +29,20 @@ describe('ProgressTableV2', () => {
   it('Redirects with sectionId and studentId when specified', () => {
     renderDefault();
 
-    screen.getByRole('link', {href: TEST_URL + '?section_id=1&user_id=1'});
+    expect(screen.getByRole('link').getAttribute('href')).to.equal(
+      TEST_URL + '?section_id=1&user_id=1'
+    );
   });
   it('Redirects without sectionId and studentId', () => {
     renderDefault({sectionId: null, studentId: null});
 
-    screen.getByRole('link', {href: TEST_URL});
+    expect(screen.getByRole('link').getAttribute('href')).to.equal(TEST_URL);
   });
 
   it('Expanded choice level', () => {
     renderDefault({expandedChoiceLevel: true});
 
-    screen.getByLabelText('progressicon-split');
+    screen.getByRole('link', {name: 'progressicon-split'});
   });
 
   it('Keep working level', () => {
@@ -49,13 +53,14 @@ describe('ProgressTableV2', () => {
       },
     });
 
-    screen.getByLabelText('progressicon-rotate-left');
+    screen.getByRole('link', {name: 'progressicon-rotate-left'});
   });
 
   it('Not tried level', () => {
     renderDefault();
 
-    expect(screen.queryByLabelText('progressicon-', {exact: false})).to.be.null;
+    expect(screen.queryByRole('link', {name: /progressicon-^[a-z]*$/})).to.be
+      .null;
   });
 
   it('Validated level', () => {
@@ -67,7 +72,7 @@ describe('ProgressTableV2', () => {
       level: {isValidated: true, id: 1, url: TEST_URL},
     });
 
-    screen.getByLabelText('progressicon-circle-check');
+    screen.getByRole('link', {name: 'progressicon-circle-check'});
   });
 
   it('Submitted level', () => {
@@ -78,7 +83,7 @@ describe('ProgressTableV2', () => {
       },
     });
 
-    screen.getByLabelText('progressicon-circle');
+    screen.getByRole('link', {name: 'progressicon-circle'});
   });
 
   it('In progress level', () => {
@@ -89,6 +94,6 @@ describe('ProgressTableV2', () => {
       },
     });
 
-    screen.getByLabelText('progressicon-circle-o');
+    screen.getByRole('link', {name: 'progressicon-circle-o'});
   });
 });

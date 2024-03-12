@@ -19,7 +19,7 @@ class ToneJSPlayer implements AudioPlayer {
   private samplers: {[instrument: string]: Sampler};
   private activePlayers: Source<SourceOptions>[];
   private currentPreview: {
-    id: string;
+    url: string;
     player: Source<SourceOptions>;
   } | null;
 
@@ -60,8 +60,8 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.loopEnd = this.playbackTimeToTransportTime(endPosition);
   }
 
-  async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
-    return this.soundCache.loadSounds(sampleIds, callbacks);
+  async loadSounds(sampleUrls: string[], callbacks?: SoundLoadCallbacks) {
+    return this.soundCache.loadSounds(sampleUrls, callbacks);
   }
 
   async loadInstrument(
@@ -95,11 +95,11 @@ class ToneJSPlayer implements AudioPlayer {
       this.currentPreview.player.stop();
     }
 
-    const buffer = await this.soundCache.loadSound(sample.sampleId);
+    const buffer = await this.soundCache.loadSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
-          sample.sampleId
+          sample.sampleUrl
       );
       return;
     }
@@ -114,7 +114,7 @@ class ToneJSPlayer implements AudioPlayer {
     player.onstop = () => {
       player.dispose();
 
-      if (this.currentPreview?.id === sample.sampleId) {
+      if (this.currentPreview?.url === sample.sampleUrl) {
         this.currentPreview = null;
       }
 
@@ -122,7 +122,7 @@ class ToneJSPlayer implements AudioPlayer {
     };
 
     player.start();
-    this.currentPreview = {id: sample.sampleId, player};
+    this.currentPreview = {url: sample.sampleUrl, player};
   }
 
   async playSamplesImmediately() {
@@ -161,11 +161,11 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   scheduleSample(sample: SampleEvent) {
-    const buffer = this.soundCache.getSound(sample.sampleId);
+    const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
-          sample.sampleId
+          sample.sampleUrl
       );
       return;
     }

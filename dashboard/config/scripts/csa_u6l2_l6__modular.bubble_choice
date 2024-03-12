@@ -1,6 +1,6 @@
 name 'CSA U6L2-L6_-modular'
-display_name 'Practice: The substring() Method'
-description 'Practice using the `substring()` method to retrieve characters from a starting index to the end of a `String`.'
+display_name 'Practice: Checking String objects for certain criteria'
+description 'Practice using the `substring()` method to check if `String` objects meet a criteria.'
 
 sublevels
 level 'CSA U6L2-L6a_-modular'

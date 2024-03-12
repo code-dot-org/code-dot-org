@@ -5,11 +5,12 @@ import {studentLevelProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
 import legendStyles from './progress-table-legend.module.scss';
-import queryString from 'query-string';
 import {Link} from '@dsco_/link';
 import ProgressIcon from './ProgressIcon';
 import {ITEM_TYPE} from './ItemType';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import queryString from 'query-string';
+import {feedbackLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 
 export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
@@ -69,18 +70,21 @@ function LevelDataCell({
     }
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
+  const feedbackStyle = React.useMemo(() => {
+    if (feedbackLeft(studentLevelProgress)) {
+      return legendStyles.feedbackGiven;
+    }
+    if (studentNeedsFeedback(studentLevelProgress, level)) {
+      return legendStyles.needsFeedback;
+    }
+  }, [studentLevelProgress, level]);
+
   return (
     <Link
       href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
       openInNewTab
       external
-      className={classNames(
-        styles.gridBox,
-        styles.gridBoxLevel,
-        studentLevelProgress?.teacherFeedbackReviewState !== 'keepWorking' &&
-          studentLevelProgress?.teacherFeedbackNew &&
-          legendStyles.feedbackGiven
-      )}
+      className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
     >
       {itemType && <ProgressIcon itemType={itemType} />}
     </Link>

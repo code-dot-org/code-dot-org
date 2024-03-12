@@ -10,6 +10,7 @@
     "background": "music-black",
     "long_instructions": "####Play a Sound\r\n\r\nLet's play a new sound!\r\n\r\nPlace the [play](#clickable=play-sound-block) block and attach it to [when run](#clickable=when-run-block). Click the name of the sound if you want to select a new sound.\r\n\r\nThen press [Run](#clickable=run-button).",
     "level_data": {
+      "library": "intro2024",
       "startSources": {
         "blocks": {
           "languageVersion": 0,

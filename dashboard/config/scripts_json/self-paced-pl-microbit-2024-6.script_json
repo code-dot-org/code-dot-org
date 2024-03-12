@@ -2,14 +2,16 @@
   "script": {
     "name": "self-paced-pl-microbit-2024-6",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSF",
-      "is_migrated": true
+      "curriculum_umbrella": "CSF Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 22:41:13 UTC",
+    "serialized_at": "2024-03-06 18:29:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -191,6 +193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Opening_microbit1_k5-maker-2024"
+        ],
         "progression": "Introduction to Physical Computing"
       },
       "bonus": false,
@@ -213,6 +218,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_physical_computing_k5-maker-2024"
+        ],
         "progression": "Introduction to Physical Computing"
       },
       "bonus": false,
@@ -235,6 +243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_define_microbit_k5-maker-2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -257,6 +268,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_pdf_lessons_k5-maker-2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -279,6 +293,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_meet_lesson_overview_k5-maker-2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -301,6 +318,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_meet_lesson_plan_overview_k5-maker-2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -323,6 +343,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_pl_maker_meet_your_microbit_k5-maker-2024"
+        ],
         "progression": "Meet your micro:bit"
       },
       "bonus": false,
@@ -345,6 +368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_create_classroom_MakeCode_k5-maker-2024"
+        ],
         "progression": "Emotion Badge "
       },
       "bonus": false,
@@ -367,6 +393,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_emoition_lesson_plan_overview_k5-maker-2024"
+        ],
         "progression": "Emotion Badge "
       },
       "bonus": false,
@@ -389,6 +418,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_PL_maker_emotion_badge_k5-maker-2024"
+        ],
         "progression": "Emotion Badge "
       },
       "bonus": false,
@@ -411,6 +443,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_PL-microbit_checkUnderstanding_k5-maker-2024"
+        ],
         "progression": "Emotion Badge "
       },
       "bonus": false,
@@ -433,6 +468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_juiceMInd_intro_k5-maker-2024"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -455,6 +493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_deciding_your_path_k5-maker-2024"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -477,6 +518,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_courses-C-F_k5-maker-2024"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -499,6 +543,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_reflecting_k5-maker-2024"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -521,6 +568,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_Best_Practices_k5-maker-2024"
+        ],
         "progression": "Deciding your path"
       },
       "bonus": false,
@@ -543,6 +593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced_PL_microbit_Closing2_k5-maker-2024"
+        ],
         "progression": "Continue learning"
       },
       "bonus": false,
