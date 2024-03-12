@@ -35,6 +35,7 @@ function RubricFloatingActionButton({
     JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
   );
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
+  const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
   const eventData = useMemo(() => {
     return {
@@ -78,7 +79,7 @@ function RubricFloatingActionButton({
 
   const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
-  const showPulse = isFirstSession && isFabImageLoaded;
+  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -94,14 +95,20 @@ function RubricFloatingActionButton({
         <img
           alt="AI bot"
           src={fabIcon}
-          onLoad={() => setIsFabImageLoaded(true)}
+          onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
           style={{opacity: 1.0}}
         />
       </button>
       <div
         className={style.taOverlay}
         style={{backgroundImage: `url(${taIcon})`}}
-      />
+      >
+        <img
+          src={taIcon}
+          alt="TA overlay"
+          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
+        />
+      </div>
       {/* TODO: do not hardcode in AI setting */}
       <RubricContainer
         rubric={rubric}
