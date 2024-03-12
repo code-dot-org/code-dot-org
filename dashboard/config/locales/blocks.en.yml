@@ -1224,6 +1224,71 @@ en:
         text: "[testing] represent {NUM} new {ANIMATION_NAME} sprites"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}say{TEXT1}"
+      GameDev_collide:
+        text: colliding {SPRITE} {INTERACTION} {TARGET}
+        options:
+          INTERACTION:
+            '"bounceOff"': bounces off
+            '"bounce"': bumps
+            '"collide"': is blocked by
+            '"displace"': pushes
+      GameDev_getVelocity:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"velocityX"': horizontal velocity
+            '"velocityY"': vertical velocity
+      GameDev_gravity:
+        text: "{SPRITE} falls with {VELOCITY} gravity"
+        options:
+          SIZE:
+            "-0.25": low
+            "-0.5": medium
+            "-1": high
+      GameDev_playSoundOptions:
+        text: play sound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubble
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harp
+            "'sound://category_digital/jump_7.mp3'": jump
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_transition/star_dust_particle_10.mp3'": star dust
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonal hit
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+      GameDev_playerJump:
+        text: make player do {STRENGTH} jump
+        options:
+          STRENGTH:
+            '5': small
+            '7.5': medium
+            '10': big
+      GameDev_setGroup:
+        text: set {SPRITE} type to {GROUP}
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
+            '"objects"': object
+            '"enemies"': enemy
+      GameDev_setVelocity:
+        text: set {SPRITE} {PROPERTY} to {VALUE}
+        options:
+          PROPERTY:
+            '"velocityX"': horizontal velocity
+            '"velocityY"': vertical velocity
+      GameDev_spriteType:
+        text: "{TYPE}"
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
+            '"objects"': objects
+            '"enemies"': enemies
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
       gamelab_addTarget:
@@ -1246,6 +1311,8 @@ en:
         text: begin collecting data {BREAK} value {VALUE} with label {LABEL}
       gamelab_behaviorPicker:
         text: "{BEHAVIOR}"
+      gamelab_bitmap:
+        text: "{GRID}"
       gamelab_bounceOff:
         text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
@@ -1507,6 +1574,10 @@ en:
             '90': down
             '180': left
             '0': right
+      gamelab_makeSpritesGrid:
+        text: 'make {ANIMATION_NAME} sprites using grid: {GRID}'
+      gamelab_makeSpritesGridInput:
+        text: make {ANIMATION_NAME} sprites using grid {GRID}
       gamelab_makeSpritesWithSize:
         text: make {NUM} new {SIZE} {COSTUME} sprites
         options:
@@ -1695,6 +1766,18 @@ en:
             '75': medium
             '50': small
             '25': extra small
+      gamelab_setForegroundEffect:
+        text: do {EFFECT} effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"emojis"': happy emojis
+            '"rain"': rain
+            '"starburst"': starburst
+            '"glass"': shattering glass
+            '"twinkling"': twinkling
       gamelab_setPrompt:
         text: prompt user {QUESTION} for variable {VAR}
       gamelab_setPromptWith2Choices:
@@ -1813,6 +1896,12 @@ en:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
+      gamelab_toggleBehaviorSimple:
+        text: sprite {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:
@@ -1895,12 +1984,13 @@ en:
       gamelab_yLocationOf:
         text: y coordinate of {SPRITE}
       KatiesBlocks_changeVelocity:
-        text: change {SPRITE} {PROPERTY} by {VAL}
+        text: "{SPRITE} jump {PROPERTY} and {PROPERTY}"
         options:
           PROPERTY:
-            '"velocityX"': velocityX
-            '"velocityY"': velocityY
-            '"rotationSpeed"': rotationSpeed
+            '"velocityX"': short
+            '"velocityY"': long
+      KatiesBlocks_collide:
+        text: "{SPRITE} blocks {TARGET}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} glide to {LOCATION}"
       KatiesBlocks_goldilocks:
@@ -1914,6 +2004,8 @@ en:
             '"gas"': gas
       KatiesBlocks_katieCollide:
         text: "{SPRITE} collides {TARGET}"
+      KatiesBlocks_katiePushes:
+        text: "{SPRITE} bumps {TARGET}"
       KatiesBlocks_makeNumSpritesNear:
         text: make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}
       KatiesBlocks_setVelocity:

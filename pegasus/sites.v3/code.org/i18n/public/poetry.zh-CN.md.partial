@@ -16,7 +16,7 @@ social:
 
 # 诗歌编程
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
+{{tutorial_promo2，background_image：” /images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg”，alt_text：“一个戴着紫色无檐便帽的可爱粉色章鱼角色在舞台上用凳子和麦克风在聚光灯下表演诗歌”，text_color：“白色”，box_background_color：“rgb (0,0,0,0.4)”，左边标题：“诗歌艺术”，左边的描述：“添加艺术和动画转到本次 “编程一小时” 活动中的一首经典诗歌！”，left_specs：“”，left_button_url：“https://studio.code.org/s/poem-art-2021/reset”，left_button_text：“开始”，right_heading：“用诗歌编程”，right_description：“用本系列课程将课堂上的计算机科学与诗歌联系起来。“，right_specs：“”，right_button_url：“https://studio.code.org/s/poetry?viewAs=Instructor”，right_button_text：“查看模块”}}
 
 ## 进一步了解诗歌编程
 

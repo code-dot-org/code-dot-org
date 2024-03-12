@@ -48,4 +48,11 @@ export const aiEvaluationShape = PropTypes.shape({
   understanding: PropTypes.number.isRequired,
   ai_confidence: PropTypes.number,
   observations: PropTypes.string,
+  evidence: PropTypes.string,
+});
+
+export const aiEvidenceShape = PropTypes.shape({
+  firstLine: PropTypes.number,
+  lastLine: PropTypes.number,
+  message: PropTypes.string,
 });

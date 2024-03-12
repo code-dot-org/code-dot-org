@@ -1,7 +1,7 @@
 @import "color.scss";
 
 .progressV2Page {
-  padding: 10px 64px 64px 64px;
+  padding: 24px 64px 64px 64px;
   background-color: $light_gray_50;
 }
 
@@ -20,14 +20,13 @@ $level-cell-width: 52;
 }
 
 .table {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: flex;
-  flex-direction: row;
+  width: fit-content;
 
   &Loading {
     overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
 
   .expandedColumn:first-child {
@@ -36,6 +35,12 @@ $level-cell-width: 52;
   .expandedColumn:last-child {
     margin-inline-end: 0;
   }
+}
+
+.tableInterior {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
 }
 
 .gridBox {
@@ -58,7 +63,7 @@ $level-cell-width: 52;
     min-width: 80px;
     max-width: 80px;  
     height: 47px;
-    line-height: 47px;
+    line-height: 47px !important;
   }
 
   &Skeleton {
@@ -111,6 +116,8 @@ $level-cell-width: 52;
     display: flex;
     flex-direction: row;
     line-height: 32px;
+    min-width: fit-content;
+    max-height: 32px;
 
     &Dropdown {
       margin-inline-start: 8px;
@@ -222,6 +229,10 @@ $level-cell-width: 52;
       border-left: 1px solid $light_gray_200;
       border-top: 1px solid $light_gray_200;
 
+      & .assessmentLevelIcon {
+        color: $light_white;
+      }
+
       .expandedHeaderExpandedLevelCell:last-child {
         width: $level-cell-width + px;
         border-right: 0;
@@ -264,7 +275,7 @@ $level-cell-width: 52;
 .studentColumn {
   width: 195px;
   min-width: 195px;
-  margin-right: 12px;
+  margin-inline-end: 12px;
   display: flex;
   flex-direction: column;
 }

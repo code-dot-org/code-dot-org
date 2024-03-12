@@ -11,12 +11,13 @@ import {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
-import styles from './progress-key-popup.module.scss';
+import styles from './progress-table-legend.module.scss';
+import color from '@cdo/apps/util/color';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
-  const renderItem = (itemType, itemTitle, itemDetails) => (
+  const renderItem = (itemType, itemTitle, itemDetails, colorOverride) => (
     <div className={styles.item}>
-      <ProgressIcon itemType={itemType} />
+      <ProgressIcon itemType={itemType} colorOverride={colorOverride} />
       <BodyThreeText>
         <StrongText>{itemTitle + ': '}</StrongText>
         {itemDetails}
@@ -81,11 +82,6 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           i18n.progressLegendDetailsNeedsFeedback()
         )}
         {renderItem(
-          ITEM_TYPE.VIEWED,
-          i18n.viewed(),
-          i18n.progressLegendDetailsViewed()
-        )}
-        {renderItem(
           ITEM_TYPE.FEEDBACK_GIVEN,
           i18n.feedbackGiven(),
           i18n.progressLegendDetailsFeedbackGiven()
@@ -99,7 +95,8 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.CHOICE_LEVEL,
           i18n.choiceLevel(),
-          i18n.progressLegendDetailsChoiceLevels()
+          i18n.progressLegendDetailsChoiceLevels(),
+          color.neutral_dark
         )}
       </div>
     </AccessibleDialog>
