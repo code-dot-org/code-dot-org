@@ -83,7 +83,7 @@ class Policies::Lti
     when Array
       "#{id_token[:iss]}|#{id_token[:aud].first}|#{id_token[:sub]}"
     else
-      raise "Invalid audience type: #{id_token[:aud].class}"
+      raise "Invalid Audience Claim: #{id_token[:aud]}, with class: #{id_token[:aud].class}"
     end
   end
 
