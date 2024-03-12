@@ -156,16 +156,16 @@ export function lessonHasLevels(lesson) {
   return !!lesson.levels?.length;
 }
 
-export const feedbackLeft = progress =>
-  progress?.teacherFeedbackReviewState !== 'keepWorking' &&
-  progress?.teacherFeedbackNew;
+export const commentLeft = progress =>
+  progress?.teacherFeedbackCommented && progress?.teacherFeedbackNew;
 
 export const studentNeedsFeedback = (progress, level) =>
   progress &&
   progress.status !== LevelStatus.not_tried &&
+  progress.teacherFeedbackReviewState !== 'keepWorking' &&
   level.kind === 'assessment' &&
   level.canHaveFeedback &&
-  !feedbackLeft(progress);
+  !commentLeft(progress);
 
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
@@ -339,6 +339,8 @@ export const levelProgressFromServer = serverProgress => {
     timeSpent: serverProgress.time_spent,
     teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
     teacherFeedbackNew: serverProgress.teacher_feedback_new || false,
+    teacherFeedbackCommented:
+      serverProgress.teacher_feedback_commented || false,
     lastTimestamp: serverProgress.last_progress_at,
     pages: getPagesProgress(serverProgress),
   };
