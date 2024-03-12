@@ -63,9 +63,9 @@ export default function FloatingScrollbar({children, childRef}) {
     const maxVisibleY =
       window.innerHeight || document.documentElement.clientHeight;
 
-    // 20 is the height of the scrollbar.
     const isNowVisible =
-      childContainerRef?.current.getBoundingClientRect().bottom + 20 <
+      childContainerRef?.current.getBoundingClientRect().bottom +
+        scrollbarWidth <
       maxVisibleY;
 
     if (isNowVisible !== scrollVisible) {
@@ -74,15 +74,15 @@ export default function FloatingScrollbar({children, childRef}) {
   }, [childContainerRef, scrollVisible, setScrollVisible]);
 
   React.useEffect(() => {
-    window.addEventListener('scroll', () => handleScrollAndResize());
-    window.addEventListener('resize', () => handleScrollAndResize());
+    window.addEventListener('scroll', handleScrollAndResize);
+    window.addEventListener('resize', handleScrollAndResize);
     // Call it on initial render to set the initial state
     handleScrollAndResize();
 
     return () => {
       // return a cleanup function to unregister our function since it will run multiple times
-      window.removeEventListener('scroll', e => handleScrollAndResize(e));
-      window.removeEventListener('resize', e => handleScrollAndResize(e));
+      window.removeEventListener('scroll', handleScrollAndResize);
+      window.removeEventListener('resize', handleScrollAndResize);
     };
   }, [handleScrollAndResize]);
 
