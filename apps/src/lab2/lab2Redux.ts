@@ -31,10 +31,7 @@ import {
   getInitialValidationState,
   ValidationState,
 } from './progress/ProgressManager';
-import {
-  LevelPropertiesValidator,
-  setValidatorForAppType,
-} from './responseValidators';
+import {LevelPropertiesValidator} from './responseValidators';
 
 interface PageError {
   errorMessage: string;
@@ -111,7 +108,7 @@ export const setUpWithLevel = createAsyncThunk(
 
       const {isProjectLevel, usesProjects} = levelProperties;
 
-      setValidatorForAppType(levelProperties.appName);
+      Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
       if (!usesProjects) {
         // If projects are disabled on this level, we can skip loading projects data.
@@ -183,7 +180,7 @@ export const setUpWithoutLevel = createAsyncThunk(
 
       await cleanUpProjectManager();
 
-      setValidatorForAppType(payload.appName);
+      Lab2Registry.getInstance().setAppName(payload.appName);
 
       // Create the new project manager.
       const projectManager = ProjectManagerFactory.getProjectManager(

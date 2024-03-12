@@ -3,7 +3,7 @@
 import {ResponseValidator} from '../util/HttpClient';
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
-import {ProjectSources} from './types';
+import {AppName, ProjectSources} from './types';
 
 export default class Lab2Registry {
   private projectManager: ProjectManager | null;
@@ -11,12 +11,14 @@ export default class Lab2Registry {
     | ResponseValidator<ProjectSources>
     | undefined;
   private metricsReporter: LabMetricsReporter;
+  private appName: AppName | null;
 
   private static _instance: Lab2Registry;
 
   constructor() {
     this.projectManager = null;
     this.metricsReporter = new LabMetricsReporter();
+    this.appName = null;
   }
 
   public static getInstance(): Lab2Registry {
@@ -53,13 +55,11 @@ export default class Lab2Registry {
     return this.metricsReporter;
   }
 
-  public setSourceResponseValidator(
-    responseValidator: ResponseValidator<ProjectSources>
-  ) {
-    this.sourceResponseValidator = responseValidator;
+  public setAppName(appName: AppName) {
+    this.appName = appName;
   }
 
-  public getSourceResponseValidator() {
-    return this.sourceResponseValidator;
+  public getAppName() {
+    return this.appName;
   }
 }

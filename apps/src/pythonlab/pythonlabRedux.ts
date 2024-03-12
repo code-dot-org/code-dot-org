@@ -1,14 +1,11 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {NestedSourceCode} from '@cdo/apps/lab2/types';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface PythonlabState {
   source: NestedSourceCode | undefined;
   output: string[];
 }
-
-// A potentially deeply nested object of source code, where keys are file or folder names
-// and values are folders or individual file contents.
-export type NestedSourceCode = {[key: string]: string | NestedSourceCode};
 
 export const initialState: PythonlabState = {
   source: undefined,

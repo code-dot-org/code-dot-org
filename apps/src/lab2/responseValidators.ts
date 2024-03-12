@@ -1,15 +1,27 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
-import {AppName, BlocklySource, LevelProperties, ProjectSources} from './types';
+import {
+  BlocklySource,
+  LevelProperties,
+  NestedSourceCode,
+  ProjectSources,
+} from './types';
 import Lab2Registry from './Lab2Registry';
 import {BLOCKLY_LABS} from './constants';
-import {NestedSourceCode} from '@cdo/apps/pythonlab/pythonlabRedux';
 
 // Validator for Blockly sources.
 export const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  const blocklyValidator = (source: string) => {
-    const blocklySource = parseJSON<BlocklySource>(source);
+  const blocklyValidator = (responseToValidate: Record<string, unknown>) => {
+    // Blockly sources are always stringified JSON.
+    let blocklySource;
+    try {
+      blocklySource = JSON.parse(
+        responseToValidate.source as string
+      ) as BlocklySource;
+    } catch (e) {
+      throw new ValidationError('Error parsing JSON: ' + e);
+    }
     if (blocklySource.blocks === undefined) {
       throwMissingFieldError('blocks');
     }
@@ -22,10 +34,13 @@ export const BlocklySourceResponseValidator: ResponseValidator<
 export const PythonSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  const pythonValidator = (source: string) => {
-    const pythonSource = parseJSON<NestedSourceCode>(source);
+  const pythonValidator = (responseToValidate: Record<string, unknown>) => {
+    if (typeof responseToValidate.source === 'string') {
+      throw new ValidationError('Python sources must be a JSON object');
+    }
+    const source = responseToValidate.source as NestedSourceCode;
     // TODO: support a nested main.py
-    if (!pythonSource['main.py']) {
+    if (!source['main.py']) {
       throwMissingFieldError('main.py');
     }
   };
@@ -37,6 +52,21 @@ export const DefaultSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   return sourceValidatorHelper(response, () => {});
+};
+
+export const SourceResponseValidator: ResponseValidator<
+  ProjectSources
+> = response => {
+  const appName = Lab2Registry.getInstance().getAppName();
+  if (appName === 'pythonlab') {
+    return PythonSourceResponseValidator(response);
+  } else if (appName !== null && BLOCKLY_LABS.includes(appName)) {
+    // Blockly labs
+    return BlocklySourceResponseValidator(response);
+  } else {
+    // Everything else uses the default validator
+    return DefaultSourceResponseValidator(response);
+  }
 };
 
 export const LevelPropertiesValidator: ResponseValidator<
@@ -70,36 +100,15 @@ export class ValidationError extends Error {
   }
 }
 
-export function setValidatorForAppType(appName: AppName) {
-  const registry = Lab2Registry.getInstance();
-  if (appName === 'pythonlab') {
-    registry.setSourceResponseValidator(PythonSourceResponseValidator);
-  } else if (BLOCKLY_LABS.includes(appName)) {
-    // Blockly labs
-    registry.setSourceResponseValidator(BlocklySourceResponseValidator);
-  } else {
-    // Everything else uses the default validator
-    registry.setSourceResponseValidator(DefaultSourceResponseValidator);
-  }
-}
-
 function sourceValidatorHelper(
   response: Record<string, unknown>,
-  appSpecificValidator: (source: string) => void
+  appSpecificValidator: (response: Record<string, unknown>) => void
 ): ProjectSources {
   if (!response.source) {
     throwMissingFieldError('source');
   }
-  appSpecificValidator(response.source as string);
+  appSpecificValidator(response);
   return response as unknown as ProjectSources;
-}
-
-function parseJSON<T>(source: string) {
-  try {
-    return JSON.parse(source) as T;
-  } catch (e) {
-    throw new ValidationError('Error parsing JSON: ' + e);
-  }
 }
 
 function throwMissingFieldError(fieldName: string) {

@@ -6,8 +6,7 @@
 import {ProjectSources, SourceUpdateOptions} from '../types';
 import {SOURCE_FILE} from '../constants';
 import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
-import Lab2Registry from '../Lab2Registry';
-import {DefaultSourceResponseValidator} from '../responseValidators';
+import {SourceResponseValidator} from '../responseValidators';
 const {stringifyQueryParams} = require('@cdo/apps/utils');
 
 const rootUrl = (channelId: string) =>
@@ -16,13 +15,10 @@ const rootUrl = (channelId: string) =>
 export async function get(
   channelId: string
 ): Promise<GetResponse<ProjectSources>> {
-  const sourceValidator =
-    Lab2Registry.getInstance().getSourceResponseValidator() ||
-    DefaultSourceResponseValidator;
   return HttpClient.fetchJson<ProjectSources>(
     rootUrl(channelId),
     {},
-    sourceValidator
+    SourceResponseValidator
   );
 }
 
