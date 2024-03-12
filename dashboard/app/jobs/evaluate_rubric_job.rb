@@ -444,6 +444,7 @@ class EvaluateRubricJob < ApplicationJob
           ai_confidence: ai_evaluation['Confidence Pass Fail'],
           ai_confidence_exact_match: ai_evaluation['Confidence Exact Match'],
           observations: ai_evaluation['Observations'] || '',
+          evidence: ai_evaluation['Evidence'] || '',
         )
       end
 
