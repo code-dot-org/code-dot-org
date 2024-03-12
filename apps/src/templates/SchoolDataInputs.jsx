@@ -19,6 +19,7 @@ export default function SchoolDataInputs(
   const [isOutsideUS, setIsOutsideUS] = useState(false);
   const [zip, setZip] = useState('');
   const [country, setCountry] = useState('');
+  const [schoolName, setSchoolName] = useState('');
   const [zipSearchReady, setZipSearchReady] = useState(false);
 
   let COUNTRY_ITEMS = [{value: 'selectCountry', text: i18n.selectCountry()}];
@@ -31,11 +32,6 @@ export default function SchoolDataInputs(
       setZipSearchReady(true);
     }
   }, [zip.length]);
-
-  const onZipChange = e => {
-    const newZip = e.target.value;
-    setZip(newZip);
-  };
 
   const onCountryChange = e => {
     const country = e.target.value;
@@ -85,7 +81,9 @@ export default function SchoolDataInputs(
               type="text"
               name={fieldNames.schoolZip}
               placeholder={'i.e. 98104'}
-              onChange={onZipChange}
+              onChange={e => {
+                setZip(e.target.value);
+              }}
               value={zip}
             />
             {zip && !zipSearchReady && 'Please enter a 5 digit zip code'}
@@ -99,7 +97,14 @@ export default function SchoolDataInputs(
             >
               {i18n.schoolOrganizationQuestion()}
             </BodyTwoText>
-            {/*<EnterSchoolNameManually fieldName={fieldNames.schoolName} /> Write new component to gather school name*/}
+            <input
+              type="text"
+              name={fieldNames.schoolName}
+              onChange={e => {
+                setSchoolName(e.target.value);
+              }}
+              value={schoolName}
+            />
           </div>
         )}
         {askForZip && zipSearchReady && (
