@@ -199,12 +199,12 @@ $level-cell-width: 52;
       flex-direction: row;
       width: fit-content;
 
-      .expandedHeaderLevelCell:last-child {
+      & .expandedHeaderLevelCellUnexpanded:last-child {
         border-right: 1px solid $light_gray_200;
       }
     }
 
-    &LevelCell {
+    .expandedHeaderLevelCell {
       width: $level-cell-width + px;
       text-align: center;
       height: 32px;
@@ -217,8 +217,8 @@ $level-cell-width: 52;
       flex-wrap: nowrap;
     }
 
-    &ExpandedLevel:last-child {
-      border-right: 1px solid $light_gray_200;
+    .expandedHeaderLevelCellUnexpanded {
+      background-color: white;
     }
 
     &ExpandedLevel {
@@ -233,14 +233,14 @@ $level-cell-width: 52;
         color: $light_white;
       }
 
-      .expandedHeaderExpandedLevelCell:last-child {
-        width: $level-cell-width + px;
-        border-right: 0;
+      .expandedHeaderExpandedLevelCell:first-child {
+        border-left: 0;
       }
     }
 
     &ExpandedLevelCell {
-      width: $level-cell-width + 1 + px;
+      // Invisible border to match sizing of table
+      border-left: 1px solid $light_primary_500;
     }
   }
   &Column {

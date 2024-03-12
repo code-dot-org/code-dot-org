@@ -60,6 +60,7 @@ export default function ExpandedProgressColumnHeader({
         className={classNames(
           styles.gridBox,
           styles.expandedHeaderLevelCell,
+          styles.expandedHeaderLevelCellUnexpanded,
           isExpandable && styles.pointerMouse
         )}
         key={lesson.id + '.' + level.id + '-h'}

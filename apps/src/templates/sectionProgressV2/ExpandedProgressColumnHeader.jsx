@@ -20,13 +20,9 @@ export default function ExpandedProgressColumnHeader({
   React.useEffect(() => {
     const resizeObserver = new ResizeObserver(([entry]) => {
       if (entry.borderBoxSize) {
+        // toFixed(1) is necessary because most browsers round to one decimal point,
+        // But with zoom, borderBoxSize can be a float with many decimal points.
         const newWidth = entry.borderBoxSize[0].inlineSize.toFixed(1);
-        console.log(
-          'lfm',
-          entry.borderBoxSize[0],
-          entry.contentBoxSize[0],
-          newWidth
-        );
         setHeaderWidth(newWidth);
       }
     });
