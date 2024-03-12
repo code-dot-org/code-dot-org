@@ -24,6 +24,9 @@ class Services::Lti
       email: get_claim(id_token, :email),
     )
     user.authentication_options = [ao]
+
+    # As final step of the LTI user creation, a LtiUserIdentity is created for the user.
+    create_lti_user_identity(user)
     user
   end
 
