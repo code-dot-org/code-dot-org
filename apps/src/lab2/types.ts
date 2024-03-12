@@ -131,7 +131,6 @@ export interface Condition {
 
 export interface ConditionType {
   name: string;
-  hasValue: boolean;
   valueType?: 'string' | 'number';
 }
 
