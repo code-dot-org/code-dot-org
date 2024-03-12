@@ -20,6 +20,11 @@ export default function LandingPage({
   workshopsAsParticipant,
   plCoursesStarted,
 }) {
+  const showGettingStartedBanner =
+    !currentYearApplicationId &&
+    workshopsAsParticipant?.length === 0 &&
+    plCoursesStarted?.length === 0;
+
   return (
     <>
       <HeaderBannerNoImage
@@ -27,9 +32,7 @@ export default function LandingPage({
         backgroundColor={color.light_gray_50}
       />
       <main className={style.wrapper}>
-        {!currentYearApplicationId &&
-          workshopsAsParticipant?.length === 0 &&
-          plCoursesStarted?.length === 0 && <GettingStartedBanner />}
+        {showGettingStartedBanner && <GettingStartedBanner />}
         {lastWorkshopSurveyUrl && (
           <LastWorkshopSurveyBanner
             subHeading={i18n.plLandingSubheading()}
@@ -80,6 +83,7 @@ export const LastWorkshopSurveyBanner = ({
     ]}
   />
 );
+
 LastWorkshopSurveyBanner.propTypes = {
   subHeading: PropTypes.string,
   description: PropTypes.string,
