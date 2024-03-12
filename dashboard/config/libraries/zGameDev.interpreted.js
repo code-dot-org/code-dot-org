@@ -1,6 +1,6 @@
 var GRID_SIZE = 8;
 var CELL_SIZE = 400 / GRID_SIZE;
-var GRAVITY = -0.25;
+var GRAVITY = -0.5;
 
 setDefaultSpriteSize(CELL_SIZE);
 
@@ -9,6 +9,8 @@ function gameDevLoop() {
   collide('collide', {group: 'players'}, {group: 'walls'});
   collide('collide', {group: 'objects'}, {group: 'walls'});
   collide('collide', {group: 'enemies'}, {group: 'walls'});
+  collide("collide", ({costume: "all"}), ({group: "walls"}));
+ 
   edgesCollide({group: 'players'});
   edgesCollide({group: 'enemies'});
   edgesCollide({group: 'objects'});

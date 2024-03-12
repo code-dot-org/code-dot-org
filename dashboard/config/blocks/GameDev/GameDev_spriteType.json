@@ -3,7 +3,7 @@
   "config": {
     "expression": "{group: VALUE}",
     "name": "spriteType",
-    "blockText": "{TYPE}",
+    "blockText": "{GROUP}",
     "returnType": "Sprite",
     "style": "sprite_blocks",
     "args": [

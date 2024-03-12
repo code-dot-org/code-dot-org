@@ -3,18 +3,21 @@ title: Learn Computer Science
 theme: responsive_full_width
 ---
 
+-# Determine if a user is signed in
+- cookie_key = environment_specific_cookie_name("_user_type")
+- user_type = request.cookies[cookie_key]
+
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
 %section
   .wrapper
-    %h1=hoc_s(:heading_anyone_can_learn)
+    %h1#student-page-header
+      =hoc_s(:heading_anyone_can_learn)
     %p.body-one.no-margin-bottom
       =hoc_s(:student_courses_top_desc)
-    -# rubocop:disable CustomCops/DashboardDbUsage
-    - if !current_user
-      %a.link-button{href: CDO.studio_url("/users/sign_up"), style: "margin-top: 2rem"}
+    - if !user_type
+      %a#sign-in-button.link-button{href: CDO.studio_url("/users/sign_up"), style: "margin-top: 2rem"}
         =hoc_s(:call_to_action_sign_up_free)
-    -# rubocop:enable CustomCops/DashboardDbUsage
 
 = view :section_divider_line
 
