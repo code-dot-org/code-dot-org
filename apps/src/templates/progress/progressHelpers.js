@@ -162,10 +162,9 @@ export const commentLeft = progress =>
 export const studentNeedsFeedback = (progress, level) =>
   progress &&
   progress.status !== LevelStatus.not_tried &&
-  progress.teacherFeedbackReviewState !== 'keepWorking' &&
+  !progress.teacherFeedbackNew &&
   level.kind === 'assessment' &&
-  level.canHaveFeedback &&
-  !commentLeft(progress);
+  level.canHaveFeedback;
 
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
