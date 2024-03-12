@@ -96,7 +96,6 @@ function RubricFloatingActionButton({
           alt="AI bot"
           src={fabIcon}
           onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-          style={{opacity: 1.0}}
         />
       </button>
       <div
