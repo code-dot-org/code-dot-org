@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -7,8 +8,9 @@ import {
   JavascriptGeneratorType,
 } from '@cdo/apps/blockly/types';
 import {readBooleanAttribute} from '../../utils';
+import {Block, CodeGenerator} from 'blockly';
 
-const mutatorProperties = [];
+const mutatorProperties: string[] = [];
 
 export const blocks = {
   installJoinBlock(blockly: BlocklyWrapperType) {
@@ -28,11 +30,15 @@ export const blocks = {
   defineNewBlockGenerator(
     generator: JavascriptGeneratorType,
     type: string,
-    generatorFunction
+    generatorFunction: (
+      block: Block,
+      generator: CodeGenerator
+    ) => [string, number] | string | null
   ) {
     generator.forBlock[type] = generatorFunction;
   },
-  mutationToDom() {
+  // TODO: is this used??
+  mutationToDom(this: Record<string, any>) {
     const container = Blockly.utils.xml.createElement('mutation');
     mutatorProperties.forEach(prop => {
       if (this[prop]) {
@@ -41,7 +47,8 @@ export const blocks = {
     });
     return container;
   },
-  domToMutation(mutationElement) {
+  // TODO: is this used??
+  domToMutation(this: Record<string, any>, mutationElement: Element) {
     Array.from(mutationElement.attributes).forEach(attr => {
       const attrName = attr.name;
       const attrValue = attr.value;
@@ -61,8 +68,8 @@ export const blocks = {
         mutatorProperties.push(attrName);
     });
   },
-  saveExtraState() {
-    let state = {};
+  saveExtraState(this: Record<string, any>) {
+    const state: Record<string, any> = {};
     mutatorProperties.forEach(prop => {
       if (this[prop]) {
         state[prop] = this[prop];
@@ -70,14 +77,14 @@ export const blocks = {
     });
     return state;
   },
-  loadExtraState(state) {
-    for (var prop in state) {
+  loadExtraState(this: Record<string, any>, state: Record<string, any>) {
+    for (const prop in state) {
       this[prop] = state[prop];
       mutatorProperties.indexOf(prop) === -1 && mutatorProperties.push(prop);
     }
   },
   // Global function to handle serialization hooks
-  addSerializationHooksToBlock(block) {
+  addSerializationHooksToBlock(block: Block) {
     if (!block.mutationToDom) {
       block.mutationToDom = this.mutationToDom;
     }
@@ -96,7 +103,7 @@ export const blocks = {
   // We need to override this generator in order to continue using the
   // legacy function name from CDO Blockly. Other custom blocks in pools
   // depend on the original name..
-  mathRandomIntGenerator(block, generator) {
+  mathRandomIntGenerator(block: Block, generator: JavascriptGeneratorType) {
     // Random integer between [X] and [Y].
     const argument0 =
       generator.valueToCode(block, 'FROM', generator.ORDER_NONE) || '0';
