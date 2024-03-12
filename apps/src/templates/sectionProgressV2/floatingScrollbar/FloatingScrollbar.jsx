@@ -18,6 +18,7 @@ export default function FloatingScrollbar({children, childRef}) {
 
   const [childScrollWidth, setChildScrollWidth] = React.useState(0);
   const [childWidth, setChildWidth] = React.useState(0);
+  const [childHeight, setChildHeight] = React.useState(0);
   const [scrollVisible, setScrollVisible] = React.useState(true);
 
   const childContainerResizeObserver = React.useMemo(
@@ -35,6 +36,7 @@ export default function FloatingScrollbar({children, childRef}) {
       new ResizeObserver(([entry]) => {
         if (entry.borderBoxSize) {
           setChildScrollWidth(entry.borderBoxSize[0].inlineSize + 1);
+          setChildHeight(entry.borderBoxSize[0].blockSize);
         }
       }),
     [setChildScrollWidth]
@@ -75,6 +77,7 @@ export default function FloatingScrollbar({children, childRef}) {
   React.useEffect(() => {
     window.addEventListener('scroll', () => handleScrollAndResize());
     window.addEventListener('resize', () => handleScrollAndResize());
+    // Call it on initial render to set the initial state
     handleScrollAndResize();
 
     return () => {

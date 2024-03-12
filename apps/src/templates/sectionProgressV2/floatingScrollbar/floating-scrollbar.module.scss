@@ -23,5 +23,11 @@
 .scrollingContent {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.scrollingContent::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
