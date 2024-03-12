@@ -16,11 +16,13 @@ const rootUrl = (channelId: string) =>
 export async function get(
   channelId: string
 ): Promise<GetResponse<ProjectSources>> {
+  const sourceValidator =
+    Lab2Registry.getInstance().getSourceResponseValidator() ||
+    DefaultSourceResponseValidator;
   return HttpClient.fetchJson<ProjectSources>(
     rootUrl(channelId),
     {},
-    Lab2Registry.getInstance().getSourceResponseValidator() ||
-      DefaultSourceResponseValidator
+    sourceValidator
   );
 }
 

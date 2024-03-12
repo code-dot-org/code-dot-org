@@ -2,22 +2,16 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {AppName, BlocklySource, LevelProperties, ProjectSources} from './types';
 import Lab2Registry from './Lab2Registry';
 import {BLOCKLY_LABS} from './constants';
+import {NestedSourceCode} from '@cdo/apps/pythonlab/pythonlabRedux';
 
 // Validator for Blockly sources.
 export const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  const blocklyValidator = (sourceToValidate: Record<string, unknown>) => {
-    let blocklySource;
-    try {
-      blocklySource = JSON.parse(
-        sourceToValidate.source as string
-      ) as BlocklySource;
-    } catch (e) {
-      throw new ValidationError('Error parsing JSON: ' + e);
-    }
+  const blocklyValidator = (source: string) => {
+    const blocklySource = parseJSON<BlocklySource>(source);
     if (blocklySource.blocks === undefined) {
-      throw new ValidationError('Missing required field: blocks');
+      throwMissingFieldError('blocks');
     }
   };
 
@@ -28,16 +22,11 @@ export const BlocklySourceResponseValidator: ResponseValidator<
 export const PythonSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  const pythonValidator = (sourceToValidate: Record<string, unknown>) => {
-    let pythonSource;
-    try {
-      pythonSource = JSON.parse(sourceToValidate.source as string);
-    } catch (e) {
-      throw new ValidationError('Error parsing JSON: ' + e);
-    }
+  const pythonValidator = (source: string) => {
+    const pythonSource = parseJSON<NestedSourceCode>(source);
     // TODO: support a nested main.py
     if (!pythonSource['main.py']) {
-      throw new ValidationError('Missing required field: main.py');
+      throwMissingFieldError('main.py');
     }
   };
   return sourceValidatorHelper(response, pythonValidator);
@@ -54,7 +43,7 @@ export const LevelPropertiesValidator: ResponseValidator<
   LevelProperties
 > = response => {
   if (!response.appName) {
-    throw new ValidationError('Missing required field: appName');
+    throwMissingFieldError('appName');
   }
 
   // Convert stringified booleans to actual booleans.
@@ -82,30 +71,37 @@ export class ValidationError extends Error {
 }
 
 export function setValidatorForAppType(appName: AppName) {
+  const registry = Lab2Registry.getInstance();
   if (appName === 'pythonlab') {
-    Lab2Registry.getInstance().setSourceResponseValidator(
-      PythonSourceResponseValidator
-    );
+    registry.setSourceResponseValidator(PythonSourceResponseValidator);
   } else if (BLOCKLY_LABS.includes(appName)) {
     // Blockly labs
-    Lab2Registry.getInstance().setSourceResponseValidator(
-      BlocklySourceResponseValidator
-    );
+    registry.setSourceResponseValidator(BlocklySourceResponseValidator);
   } else {
     // Everything else uses the default validator
-    Lab2Registry.getInstance().setSourceResponseValidator(
-      DefaultSourceResponseValidator
-    );
+    registry.setSourceResponseValidator(DefaultSourceResponseValidator);
   }
 }
 
 function sourceValidatorHelper(
   response: Record<string, unknown>,
-  appSpecificValidator: (response: Record<string, unknown>) => void
+  appSpecificValidator: (source: string) => void
 ): ProjectSources {
   if (!response.source) {
-    throw new ValidationError('Missing required field: source');
+    throwMissingFieldError('source');
   }
-  appSpecificValidator(response);
+  appSpecificValidator(response.source as string);
   return response as unknown as ProjectSources;
+}
+
+function parseJSON<T>(source: string) {
+  try {
+    return JSON.parse(source) as T;
+  } catch (e) {
+    throw new ValidationError('Error parsing JSON: ' + e);
+  }
+}
+
+function throwMissingFieldError(fieldName: string) {
+  throw new ValidationError('Missing required field: ' + fieldName);
 }
