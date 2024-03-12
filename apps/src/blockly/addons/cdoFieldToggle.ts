@@ -16,7 +16,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
   private onClick: () => void;
   private defaultIcon: SVGElement;
   private alternateIcon: SVGElement;
-  private useDefaultIcon: boolean;
+  public useDefaultIcon: boolean;
   private callback?: (block: Block) => void;
   private colorOverrides?: {
     icon?: string;
