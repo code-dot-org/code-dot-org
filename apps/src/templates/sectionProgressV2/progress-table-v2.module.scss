@@ -197,7 +197,7 @@ $level-cell-width: 52;
       flex-direction: row;
       width: fit-content;
 
-      & .expandedHeaderLevelCellUnexpanded:last-child {
+      & .expandedHeaderChild:last-child {
         border-right: 1px solid $light_gray_200;
       }
     }
