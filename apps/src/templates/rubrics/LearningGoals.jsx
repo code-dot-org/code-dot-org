@@ -224,6 +224,16 @@ export default function LearningGoals({
 
   const aiEvalInfo = getAiInfo(learningGoals[currentLearningGoal].id);
 
+  // The backend provides two ai confidence levels. aiConfidenceExactMatch is
+  // our confidence that the ai score is exactly correct, and and
+  // aiConfidencePassFail indicates our confidence in its accuracy on a
+  // pass/fail basis where Extended/Convincing are passing and Limited/No are
+  // failing.
+  //
+  // Use the precomputed showExactMatch value to decide which of these two
+  // confidence levels we will show in the UI. Throughout client code,
+  // aiConfidence should represent this computed value, and the more specific
+  // variable names should be used for exact-match or pass/fail confidence.
   let aiConfidence;
   if (aiEvalInfo) {
     aiConfidence = aiEvalInfo.showExactMatch

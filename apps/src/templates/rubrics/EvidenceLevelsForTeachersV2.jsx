@@ -26,9 +26,10 @@ export default function EvidenceLevelsForTeachersV2({
   isAiAssessed,
   aiEvalInfo,
 }) {
-  // Generates a list based on whether the AI understanding level falls in the pass
-  // (Extensive / Convincing) or fail (Limited / None) range. Used to display AI bubble
-  // around evidence level.
+  // Generates a list of evidence levels to highlight, indicating the AI
+  // recommendation. Using the precomputed value showExactMatch, decides whether
+  // to highlight a single evidence level (exact match) or a range of two
+  // evidence levels (pass / fail).
   const suggestedEvidenceLevels = useMemo(() => {
     if (!!aiEvalInfo) {
       // If a teacher set an understanding, or no AI assessment, then bail

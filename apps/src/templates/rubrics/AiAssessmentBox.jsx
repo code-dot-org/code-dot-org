@@ -33,6 +33,9 @@ export default function AiAssessmentBox({
     });
   };
 
+  // use the computed value showExactMatch to decide whether to return text
+  // containing a single evidence level (exact match) or a range of two
+  // evidence levels (pass fail).
   const getStudentAssessmentString = () => {
     if (aiEvalInfo.showExactMatch) {
       return UNDERSTANDING_LEVEL_STRINGS[aiUnderstandingLevel];
