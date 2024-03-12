@@ -22,7 +22,10 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
-import {storageBackend} from '@cdo/apps/storage/storage';
+import {
+  isInitialized as isStorageInitialized,
+  storageBackend,
+} from '@cdo/apps/storage/storage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import loadSource from './util/loadSource';
 import projectRedux from '@cdo/apps/code-studio/projectRedux';
@@ -216,8 +219,9 @@ describe('Level tests', function () {
     // always defined because loadApplab is always required (the same is true
     // for other app types). Therefore, rely on storageBackend() to defensively
     // reset itself.
-
-    storageBackend().resetForTesting();
+    if (isStorageInitialized) {
+      storageBackend().resetForTesting();
+    }
 
     LegacyDialog.prototype.hide.restore();
     LegacyDialog.prototype.show.restore();

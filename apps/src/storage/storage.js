@@ -5,6 +5,7 @@ export const DATABLOCK_STORAGE = 'DatablockStorage';
 export const FIREBASE_STORAGE = 'FirebaseStorage';
 
 export let type;
+export let isInitialized = false;
 
 export function isDatablockStorage() {
   return getStorageType() === DATABLOCK_STORAGE;
@@ -34,8 +35,10 @@ export function initStorage(storageType, config) {
   type = storageType;
   // TODO: post-firebase-cleanup, remove this conditional: #56994
   if (storageType === DATABLOCK_STORAGE) {
+    isInitialized = true;
     return initDatablockStorage(config);
   } else if (storageType === FIREBASE_STORAGE) {
+    isInitialized = true;
     return initFirebaseStorage(config);
   } else {
     throw new Error(`Unknown storage type: ${storageType}`);
