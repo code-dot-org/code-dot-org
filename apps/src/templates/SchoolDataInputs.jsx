@@ -77,7 +77,7 @@ export default function SchoolDataInputs(
           size="m"
         />
         {askForZip && (
-          <div>
+          <label>
             <BodyTwoText
               className={style.padding}
               visualAppearance={'heading-xs'}
@@ -96,10 +96,10 @@ export default function SchoolDataInputs(
             {zip && !zipSearchReady && (
               <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
             )}
-          </div>
+          </label>
         )}
         {isOutsideUS && (
-          <div>
+          <label>
             <BodyTwoText
               className={style.padding}
               visualAppearance={'heading-xs'}
@@ -114,7 +114,7 @@ export default function SchoolDataInputs(
               }}
               value={schoolName}
             />
-          </div>
+          </label>
         )}
         {askForZip && zipSearchReady && (
           <div>
