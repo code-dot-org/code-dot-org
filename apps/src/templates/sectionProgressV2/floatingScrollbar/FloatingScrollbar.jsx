@@ -119,7 +119,7 @@ export default function FloatingScrollbar({children, childRef}) {
         )}
         onScroll={scrollChild}
         ref={scrollRef}
-        style={{width: childWidth + 'px', height: scrollbarWidth + 'px'}}
+        style={{width: childWidth + 'px', height: 1 + scrollbarWidth + 'px'}}
       >
         <div
           style={{width: childScrollWidth + 'px'}}
