@@ -1,6 +1,7 @@
 import {WorkspaceSvg} from 'blockly';
 import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import msg from '@cdo/locale';
+import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 /**
  * Constructs the blocks required by the flyout for the variables category.
@@ -8,7 +9,7 @@ import msg from '@cdo/locale';
  * @returns {FlyoutDefinition} An array of JSON block elements.
  */
 export function flyoutCategory(workspace: WorkspaceSvg) {
-  const blockList = [];
+  const blockList: FlyoutItemInfoArray = [];
   const newVariableButton = getNewVariableButtonWithCallback(workspace);
   blockList.push(newVariableButton);
 
@@ -16,7 +17,7 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
   blockList.push(...categoryBlocks);
   const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('VARIABLE');
   if (!levelToolboxBlocks) {
-    return;
+    return [];
   }
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
@@ -30,12 +31,12 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
   // If any of these blocks are found, we can remove the auto-generated block.
   // Count the 'math_change' blocks in blockList.
   const mathChangeBlocksCount = blockList.filter(
-    block => block.type === 'math_change'
+    block => (block as BlockInfo).type === 'math_change'
   ).length;
   // If there is more than one, remove the first occurrence which was auto-generated.
   if (mathChangeBlocksCount > 1) {
     const firstMathChangeIndex = blockList.findIndex(
-      block => block.type === 'math_change'
+      block => (block as BlockInfo).type === 'math_change'
     );
     if (firstMathChangeIndex !== -1) {
       blockList.splice(firstMathChangeIndex, 1);
