@@ -9,6 +9,7 @@ import {scrollbarWidth} from './scrollbarUtils';
  * Scrollbar will at the bottom of the screen if the bottom of {child} is not visible.
  *
  * {children} must be a single element and not a list of elements.
+ *   {child} should have all content visible and not itself scrollable.
  * childRef - a ref to {child} element.
  *    Set by calling `ref={childRef}` on the {child} element
  */
@@ -18,7 +19,6 @@ export default function FloatingScrollbar({children, childRef}) {
 
   const [childScrollWidth, setChildScrollWidth] = React.useState(0);
   const [childWidth, setChildWidth] = React.useState(0);
-  const [childHeight, setChildHeight] = React.useState(0);
   const [scrollVisible, setScrollVisible] = React.useState(true);
 
   const childContainerResizeObserver = React.useMemo(
@@ -36,7 +36,6 @@ export default function FloatingScrollbar({children, childRef}) {
       new ResizeObserver(([entry]) => {
         if (entry.borderBoxSize) {
           setChildScrollWidth(entry.borderBoxSize[0].inlineSize + 1);
-          setChildHeight(entry.borderBoxSize[0].blockSize);
         }
       }),
     [setChildScrollWidth]
