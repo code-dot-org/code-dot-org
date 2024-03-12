@@ -176,7 +176,7 @@ class HomeControllerTest < ActionController::TestCase
       get :index
     end
 
-    assert_redirected_to '/courses'
+    assert_redirected_to '/users/sign_in'
   end
 
   test "language is determined from cdo.locale" do

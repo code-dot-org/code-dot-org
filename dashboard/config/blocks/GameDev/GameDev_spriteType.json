@@ -3,7 +3,7 @@
   "config": {
     "expression": "{group: VALUE}",
     "name": "spriteType",
-    "blockText": "{TYPE}",
+    "blockText": "{GROUP}",
     "returnType": "Sprite",
     "style": "sprite_blocks",
     "args": [
@@ -11,19 +11,19 @@
         "name": "GROUP",
         "options": [
           [
-            "player sprites",
+            "player",
             "\"players\""
           ],
           [
-            "environment sprites",
+            "environment",
             "\"walls\""
           ],
           [
-            "object sprites",
+            "objects",
             "\"objects\""
           ],
           [
-            "enemy sprites",
+            "enemies",
             "\"enemies\""
           ]
         ]

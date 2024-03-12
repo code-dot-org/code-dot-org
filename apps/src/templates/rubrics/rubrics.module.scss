@@ -6,20 +6,36 @@
   left: 10px;
   bottom: 48px;
 
-  height: 60px;
-  width: 60px;
-  background-size: 60px;
+  height: 55px;
+  width: 55px;
+  background-size: 55px;
   padding: 0;
 
   border-width: 0;
   border-radius: 30px;
 }
 
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 18px;
+  width: 28px;
+  background-size: 28px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
+}
+
 .rubricContainer {
   position: fixed;
   left: 10px;
-  bottom: 116px;
-  z-index: 400;
+  bottom: 120px;
+  z-index: 2000;
   width: 760px;
 }
 

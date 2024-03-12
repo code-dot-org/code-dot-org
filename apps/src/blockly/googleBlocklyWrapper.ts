@@ -755,16 +755,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     blocklyWrapper.setMainWorkspace(workspace);
 
-    // Same flyout callbacks are used for both main workspace categories
-    // and categories when modal function editor is enabled.
-    workspace.registerToolboxCategoryCallback(
-      'PROCEDURE',
-      functionsFlyoutCategory
-    );
-    workspace.registerToolboxCategoryCallback(
-      'VARIABLE',
-      variablesFlyoutCategory
-    );
+    if (!optOptionsExtended.useBlocklyDynamicCategories) {
+      // Same flyout callbacks are used for both main workspace categories
+      // and categories when modal function editor is enabled.
+      workspace.registerToolboxCategoryCallback(
+        'PROCEDURE',
+        functionsFlyoutCategory
+      );
+      workspace.registerToolboxCategoryCallback(
+        'VARIABLE',
+        variablesFlyoutCategory
+      );
+    }
 
     workspace.registerToolboxCategoryCallback(
       'Behavior',
