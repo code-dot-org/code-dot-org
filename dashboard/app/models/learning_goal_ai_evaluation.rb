@@ -46,8 +46,10 @@ class LearningGoalAiEvaluation < ApplicationRecord
       learning_goal_id: learning_goal_id,
       observations: observations,
       evidence: evidence,
+      # temporarily include this until client code is updated to use aiConfidencePassFail
       ai_confidence: ai_confidence,
-      ai_confidence_exact_match: ai_confidence_exact_match,
+      aiConfidencePassFail: ai_confidence,
+      aiConfidenceExactMatch: ai_confidence_exact_match,
     }
   end
 
