@@ -10,7 +10,6 @@ import MusicLibrary, {
 } from '../player/MusicLibrary';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-const AppConfig = require('../appConfig').default;
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
