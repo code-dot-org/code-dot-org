@@ -14,7 +14,14 @@ type ButtonType =
   | 'tertiary'
   | 'iconBorder'
   | 'iconOnly';
+
 type ButtonColor = 'purple' | 'black' | 'white';
+
+export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
+  purple: 'purple',
+  black: 'black',
+  white: 'white',
+};
 
 export interface ButtonProps {
   /** Button Component type */
@@ -83,6 +90,8 @@ export interface ButtonProps {
 }
 
 const checkButtonPropsForErrors = ({
+  type,
+  icon,
   useAsLink,
   onClick,
   href,
@@ -109,6 +118,12 @@ const checkButtonPropsForErrors = ({
   if (!useAsLink && download) {
     throw new Error(
       'Expect download prop to be undefined when useAsLink is false'
+    );
+  }
+
+  if (type !== 'iconOnly' && type !== 'iconBorder' && icon) {
+    throw new Error(
+      'Expect icon prop to be undefined when type is not iconOnly or iconBorder'
     );
   }
 };
@@ -161,13 +176,15 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   useMemo(
     () =>
       checkButtonPropsForErrors({
+        type,
+        icon,
         useAsLink,
         buttonType,
         onClick,
         href,
         download,
       }),
-    [useAsLink, buttonType, onClick, href, download]
+    [type, icon, useAsLink, buttonType, onClick, href, download]
   );
 
   return (
@@ -206,79 +223,3 @@ const Button: React.FunctionComponent<ButtonProps> = ({
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
 export default memo(Button);
-
-// TODO: Add colors export const
-
-//
-// // Note: Keep these constants in sync with button.module.scss.
-// const Phase1ButtonColor = {
-//   brandSecondaryDefault: 'brandSecondaryDefault',
-//   neutralDark: 'neutralDark',
-// };
-//
-// const ButtonColor = {
-//   ...Phase1ButtonColor,
-//   orange: 'orange',
-//   gray: 'gray',
-//   blue: 'blue',
-//   teal: 'teal',
-//   white: 'white',
-//   red: 'red',
-//   green: 'green',
-//   purple: 'purple',
-// };
-//
-// class Button extends React.Component {
-//
-//
-//   render() {
-//     const {
-//       type,
-//       color = ButtonColor.orange,
-//       size = ButtonSize.default,
-//       href,
-//       text,
-//       styleAsText,
-//       icon,
-//       iconClassName,
-//       iconStyle,
-//       target,
-//       style,
-//       onClick,
-//       disabled,
-//       download,
-//       id,
-//       tabIndex,
-//       isPending,
-//       pendingText,
-//       value,
-//       useDefaultLineHeight,
-//       __useDeprecatedTag,
-//       'aria-label': ariaLabel,
-//       title,
-//     } = this.props;
-//
-//     return (
-//         <Tag
-//         >
-//           <div style={_.pick(style, ['textAlign'])}>
-//             {icon && (
-//                 <FontAwesome
-//                     icon={icon}
-//                     className={classNames(iconClassName, moduleStyles.icon)}
-//                     style={{...iconStyle}}
-//                 />
-//             )}
-//             {this.props.children && this.props.children}
-//             {isPending && pendingText && (
-//                 <span>
-//               {pendingText}&nbsp;
-//                   <FontAwesome icon="spinner" className="fa-spin" />
-//             </span>
-//             )}
-//             <span className={moduleStyles.textSpan}>{!isPending && text}</span>
-//           </div>
-//         </Tag>
-//     );
-//   }
-// }
