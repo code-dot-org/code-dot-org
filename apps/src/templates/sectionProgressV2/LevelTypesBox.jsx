@@ -22,7 +22,6 @@ export default function LevelTypesBox() {
           <LegendItem
             itemType={ITEM_TYPE.CHOICE_LEVEL}
             labelText={i18n.choiceLevel()}
-            colorOverride={color.neutral_dark}
           />
         </div>
       </div>
