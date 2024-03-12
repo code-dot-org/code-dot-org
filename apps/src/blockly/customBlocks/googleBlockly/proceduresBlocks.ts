@@ -1,5 +1,5 @@
 import * as GoogleBlockly from 'blockly/core';
-import msg from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
@@ -124,7 +124,7 @@ GoogleBlockly.Extensions.register(
       !Blockly.isEmbeddedWorkspace(this.workspace)
     ) {
       const button = new Blockly.FieldButton({
-        value: msg.edit(),
+        value: commonI18n.edit(),
         onClick: editButtonHandler,
         colorOverrides: {button: 'blue', text: 'white'},
         allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
@@ -193,7 +193,7 @@ GoogleBlockly.Extensions.register(
       };
       this.functionalSvg_ = new BlockSvgFrame(
         this,
-        msg.function(),
+        commonI18n.function(),
         'blocklyFunctionalFrame',
         getColor
       );
@@ -366,7 +366,7 @@ const getNewFunctionButtonWithCallback = (
 
   return {
     kind: 'button',
-    text: msg.createBlocklyFunction(),
+    text: commonI18n.createBlocklyFunction(),
     callbackKey,
   };
 };
