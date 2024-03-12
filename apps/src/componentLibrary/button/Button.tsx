@@ -36,12 +36,12 @@ export interface ButtonProps {
   text?: string;
   /** Is button disabled */
   disabled?: boolean;
-
+  // TODO: We'll need this two props functionality in the future, now designs for it is in progress.
+  //  Once designs are ready, we can implement it.
   // /** Is button pending */
   // isPending?: boolean;
   // /** Button pending text */
   // pendingText?: string;
-
   /** Button aria-label */
   ariaLabel?: string;
   /** Size of button */
