@@ -1954,7 +1954,7 @@
   "progressLegendDetailsValidated": "The student has passed all validation tests on this level.",
   "progressLegendDetailsViewed": "You have viewed the student's work on this level.",
   "progressLegendDetailsFeedbackGiven": "You have left feedback for the student on this level.",
-  "progressLegendDetailsAssessmentLevels": "These are levels that Code.org recommends for teacher review. Assessment levels are marked with a purple circle behind the level number.",
+  "progressLegendDetailsAssessmentLevels": "These are levels that Code.org recommends for teacher review. Assessment levels are marked with a star next to the level number in the column header.",
   "progressLegendDetailsChoiceLevels": "These are levels with multiple options. Students can choose which option to complete.",
   "progressBubbleDescription": "Level {levelID}",
   "progressBubbleDescriptionWithLesson": "Level {levelID} Lesson {lessonName}",
