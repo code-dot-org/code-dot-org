@@ -1,0 +1,43 @@
+name 'game_dev_world5_sprite_types'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##How to set sprite types
+
+
+<img src="https://images.code.org/ba616f37b7a1db48a4407b6f88e1a48e-image-1709924855176.jpg" style="float: left;  clear: both; width: 15%; margin: 0 20px 10px 0;">
+
+<br>
+
+####Type: **Player** sprites are affected by the game world's gravity
+:::details [Expand for examples]
+	- This gif
+    - That pic
+:::
+
+<br>
+<br>
+<br>
+<br>
+
+***
+<img src="https://images.code.org/44add82d324b56ff103088f5cf7ac197-image-1709926170803.jpg" style="float: left;  clear: both; width: 15%; margin: 0 20px 10px 0;">
+
+<br>
+
+
+####Type: **Environment** sprites block all sprites from moving past
+:::details [Expand for examples]
+	- This gif
+    - That pic
+:::
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+MARKDOWN
