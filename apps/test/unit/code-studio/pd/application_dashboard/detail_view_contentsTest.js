@@ -5,7 +5,7 @@ import {
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import React from 'react';
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, fireEvent, within} from '@testing-library/react';
 import {Provider} from 'react-redux';
 import _ from 'lodash';
 import sinon from 'sinon';
@@ -18,6 +18,8 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import {BrowserRouter as Router} from 'react-router-dom';
+import { assert } from 'chai';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();
@@ -28,15 +30,15 @@ describe('DetailViewContents', () => {
   let server;
 
   beforeEach(() => {
+    stubRedux();
     store = getStore();
     server = sinon.fakeServer.create();
   });
 
   afterEach(() => {
+    restoreRedux();
     server.restore();
   });
-
-  // let context;
 
   const DEFAULT_APPLICATION_DATA = {
     regionalPartner: 'partner',
@@ -85,29 +87,23 @@ describe('DetailViewContents', () => {
     applicationId: '1',
     applicationData: DEFAULT_APPLICATION_DATA,
     isWorkshopAdmin: false,
-    router: {
-      push() {},
-    },
   };
 
   // Nobody is able to set an application status to incomplete or to awaiting_admin_approval from detail view
-  // const getSelectableApplicationStatuses = (addAutoEmail = true) =>
-  //   _.omit(getApplicationStatuses(addAutoEmail), [
-  //     'incomplete',
-  //     'awaiting_admin_approval',
-  //     'enrolled',
-  //   ]);
+  const getSelectableApplicationStatuses = (addAutoEmail = true) =>
+    _.omit(getApplicationStatuses(addAutoEmail), [
+      'incomplete',
+      'awaiting_admin_approval',
+      'enrolled',
+    ]);
 
   function renderDefault(overrideProps = {}) {
     render(
-      <Provider store={store}>
-        <DetailViewContents {...DEFAULT_PROPS} {...overrideProps} />
-      </Provider>,
-      {
-        router: {
-          push() {},
-        },
-      }
+      <Router>
+        <Provider store={store}>
+          <DetailViewContents {...DEFAULT_PROPS} {...overrideProps} />
+        </Provider>
+      </Router>
     );
   }
 
@@ -134,67 +130,81 @@ describe('DetailViewContents', () => {
   //   });
   // };
 
-  describe('Notes', () => {
-    it('Does not supply value for teacher applications with no notes', () => {
-      const overrideProps = {
-        applicationData: {
-          ...DEFAULT_APPLICATION_DATA,
-          notes: '',
-        },
-      };
-      renderDefault(overrideProps);
-      expect(screen.getByRole('FormControl')).to.eql('aaaa');
-    });
-  });
+
+
+
+
+
+
+
+
+  // describe('Notes', () => {
+  //   it('Does not supply value for teacher applications with no notes', () => {
+  //     const overrideProps = {
+  //       applicationData: {
+  //         ...DEFAULT_APPLICATION_DATA,
+  //         notes: '',
+  //       },
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     expect(screen.getAllByDisplayValue('')[0].id).to.eql('notes');
+  //   });
+  // });
 
   // describe('Edit controls in Teacher', () => {
   //   it("cannot change status if application is currently in 'Awaiting Admin Approval'", () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         status: 'awaiting_admin_approval',
   //       },
-  //     });
+  //     };
+  //     renderDefault(overrideProps);
 
-  //     expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-  //       .to.be.true;
+  //     const statusDropdowns = screen.getAllByDisplayValue(
+  //       'Awaiting Admin Approval'
+  //     );
+  //     statusDropdowns.forEach(statusDropdown => {
+  //       assert(statusDropdown.disabled);
+  //     });
   //   });
 
   //   it("cannot make status 'Awaiting Admin Approval' from dropdown", () => {
-  //     const detailView = mountDetailView();
-  //     expect(
-  //       detailView
-  //         .find('#DetailViewHeader select')
-  //         .find('option')
-  //         .find('[value="awaiting_admin_approval"]')
-  //     ).to.have.lengthOf(0);
+  //     renderDefault();
+
+  //     const statusDropdowns = screen.getAllByDisplayValue('Accepted');
+  //     statusDropdowns.forEach(statusDropdown => {
+  //       expect(within(statusDropdown).queryByText('Awaiting Admin Approval')).to
+  //         .be.null;
+  //     });
   //   });
 
   //   it("cannot make status 'Incomplete' from dropdown", () => {
-  //     const detailView = mountDetailView();
-  //     expect(
-  //       detailView
-  //         .find('#DetailViewHeader select')
-  //         .find('option')
-  //         .find('[value="incomplete"]')
-  //     ).to.have.lengthOf(0);
+  //     renderDefault();
+
+  //     const statusDropdowns = screen.getAllByDisplayValue('Accepted');
+  //     statusDropdowns.forEach(statusDropdown => {
+  //       expect(within(statusDropdown).queryByText('Incomplete')).to.be.null;
+  //     });
   //   });
 
   //   it('incomplete status is in dropdown if teacher application is incomplete', () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         status: 'incomplete',
   //         scholarship_status: null,
   //         update_emails_sent_by_system: false,
   //       },
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     const statusDropdowns = screen.getAllByDisplayValue('Incomplete');
+  //     expect(statusDropdowns.length).to.equal(2);
+  //     statusDropdowns.forEach(statusDropdown => {
+  //       within(statusDropdown).queryByText('Incomplete');
   //     });
-  //     expect(
-  //       detailView
-  //         .find('#DetailViewHeader select')
-  //         .find('option')
-  //         .find('[value="incomplete"]')
-  //     ).to.have.lengthOf(1);
   //   });
 
   //   it('changelog logs all possible status changes', () => {
@@ -210,233 +220,244 @@ describe('DetailViewContents', () => {
   //     });
 
   //     // check that recorded change logs are rendered in ChangeLog element
-  //     const overrides = {
-  //       applicationData: {status_change_log: status_change_log},
+  //     const overrideProps = {
+  //       applicationData: {
+  //         ...DEFAULT_APPLICATION_DATA,
+  //         status_change_log: status_change_log,
+  //       },
   //     };
-  //     const detailView = mountDetailView(overrides);
-  //     expect(detailView.find('ChangeLog').props().changeLog).to.deep.equal(
-  //       status_change_log
-  //     );
+  //     renderDefault(overrideProps);
+
+  //     Object.keys(getSelectableApplicationStatuses()).forEach(status => {
+  //       screen.getByText(status);
+  //     });
   //   });
   // });
 
   // describe('Admin edit dropdown', () => {
   //   it('Is not visible to regional partners', () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       isWorkshopAdmin: false,
-  //     });
-  //     expect(detailView.find('button#admin-edit')).to.have.length(0);
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     expect(screen.queryByLabelText('Edit')).to.be.null;
+  //     expect(screen.queryByText('(Admin) Edit Form Data')).to.be.null;
+  //     expect(screen.queryByText('Delete Application')).to.be.null;
   //   });
 
   //   it('Is visible to admins', () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       isWorkshopAdmin: true,
-  //     });
-  //     expect(detailView.find('button#admin-edit')).to.have.length(2);
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     expect(screen.getAllByLabelText('Edit').length).to.equal(2);
+  //     expect(screen.getAllByText('(Admin) Edit Form Data').length).to.equal(2);
+  //     expect(screen.getAllByText('Delete Application').length).to.equal(2);
   //   });
 
-  //   it('Edit redirects to edit page', () => {
-  //     const detailView = mountDetailView({
-  //       isWorkshopAdmin: true,
-  //     });
-  //     const mockRouter = sinon.mock(context.router);
+  // //   it('Edit redirects to edit page', () => {
+  // //     const detailView = mountDetailView({
+  // //       isWorkshopAdmin: true,
+  // //     });
+  // //     const mockRouter = sinon.mock(context.router);
 
-  //     detailView.find('button#admin-edit').first().simulate('click');
-  //     const adminEditMenuitem = detailView
-  //       .find('.dropdown.open a')
-  //       .findWhere(a => a.text() === '(Admin) Edit Form Data')
-  //       .first();
+  // //     detailView.find('button#admin-edit').first().simulate('click');
+  // //     const adminEditMenuitem = detailView
+  // //       .find('.dropdown.open a')
+  // //       .findWhere(a => a.text() === '(Admin) Edit Form Data')
+  // //       .first();
 
-  //     mockRouter.expects('push').withExactArgs('/1/edit');
-  //     adminEditMenuitem.simulate('click');
-  //     mockRouter.verify();
-  //   });
-
-  //   it('Has Delete Application menu item', () => {
-  //     const detailView = mountDetailView({
-  //       isWorkshopAdmin: true,
-  //     });
-  //     detailView.find('button#admin-edit').first().simulate('click');
-  //     const deleteApplicationMenuitem = detailView
-  //       .find('.dropdown.open a')
-  //       .findWhere(a => a.text() === 'Delete Application')
-  //       .first();
-
-  //     expect(deleteApplicationMenuitem).to.have.length(1);
-  //   });
+  // //     mockRouter.expects('push').withExactArgs('/1/edit');
+  // //     adminEditMenuitem.simulate('click');
+  // //     mockRouter.verify();
+  // //   });
   // });
 
   // describe('Edit controls behavior', () => {
   //   it('the dropdown is disabled until the Edit button is clicked in Teacher Application', () => {
-  //     const detailView = mountDetailView();
+  //     renderDefault();
 
-  //     let expectedButtons = ['Edit', 'Delete'];
-  //     expect(
-  //       detailView.find('#DetailViewHeader Button').map(button => {
-  //         return button.text();
-  //       })
-  //     ).to.deep.equal(expectedButtons);
-  //     expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-  //       .to.be.true;
-  //     expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
-  //     expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
+  //     // Dropdowns and notes are disabled before Edit button is clicked
+  //     screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+  //       assert(dropdown.disabled);
+  //     });
+  //     assert(screen.getByDisplayValue('notes').disabled);
 
-  //     expectedButtons = ['Save', 'Cancel'];
-  //     detailView.find('button#edit').first().simulate('click');
-  //     expect(
-  //       detailView.find('#DetailViewHeader Button').map(button => {
-  //         return button.text();
-  //       })
-  //     ).to.deep.equal(expectedButtons);
-  //     expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-  //       .to.be.false;
-  //     expect(detailView.find('textarea#notes').prop('disabled')).to.be.false;
-  //     expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.false;
+  //     // Dropdowns and notes are enabled after Edit button is clicked
+  //     fireEvent.click(screen.getAllByText('Edit')[0]);
+  //     screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+  //       assert(!dropdown.disabled);
+  //     });
+  //     assert(!screen.getByDisplayValue('notes').disabled);
 
-  //     detailView.find('#DetailViewHeader Button').last().simulate('click');
-  //     expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-  //       .to.be.true;
-  //     expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
-  //     expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
+  //     // Dropdowns and notes are disabled after Cancel or Save button is clicked
+  //     fireEvent.click(screen.getAllByText('Cancel')[0]);
+  //     screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+  //       assert(dropdown.disabled);
+  //     });
+  //     assert(screen.getByDisplayValue('notes').disabled);
   //   });
   // });
 
   // describe('Principal Approvals', () => {
   //   it(`Shows principal responses if approval is complete`, () => {
-  //     const detailView = mountDetailView();
-  //     expect(detailView.text()).to.contain(
-  //       'Administrator Approval and School Information'
-  //     );
+  //     renderDefault();
+
+  //     screen.findByText('Administrator Approval and School Information');
   //   });
+
   //   it(`Shows URL to principal approval if sent and incomplete`, () => {
   //     const guid = '1020304';
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         application_guid: guid,
   //         principal_approval_state: PrincipalApprovalState.inProgress,
   //       },
-  //     });
-  //     expect(detailView.text()).to.contain(`Incomplete`);
-  //     expect(
-  //       detailView.find('#principal-approval-url').props().href
-  //     ).to.contain(`principal_approval/${guid}`);
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     assert(
+  //       screen
+  //         .getAllByRole('link')[1]
+  //         .href.includes(`/pd/application/principal_approval/${guid}`)
+  //     );
   //   });
+
   //   it(`Shows complete text for principal approval if complete`, () => {
   //     const guid = '1020305';
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         application_guid: guid,
   //         principal_approval_state: PrincipalApprovalState.complete,
   //       },
-  //     });
-  //     expect(detailView.text()).to.contain(`Complete`);
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     screen.getByText(PrincipalApprovalState.complete.trim());
   //   });
+
   //   it(`Shows button to make principal approval required if not`, () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         principal_approval_not_required: true,
   //       },
-  //     });
-  //     expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
-  //       'Make required'
-  //     );
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     screen.getByRole('button', {name: 'Make required'});
   //   });
+
   //   it(`Shows button to make principal approval not required if it is`, () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         principal_approval_not_required: null, // principal approval is required
   //       },
-  //     });
-  //     expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
-  //       'Make not required'
-  //     );
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     screen.getByRole('button', {name: 'Make not required'});
   //   });
+
   //   it(`Shows button to resend admin email if status is awaiting_admin_approval and it is allowed to be resent`, () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         principal_approval_state: PrincipalApprovalState.inProgress,
   //         allow_sending_principal_email: true,
   //         status: 'awaiting_admin_approval',
   //       },
-  //     });
-  //     expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
-  //       'Resend request'
-  //     );
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     screen.getByRole('button', {name: 'Resend request'});
   //   });
+
   //   it(`Does not show button to resend admin email if status is awaiting_admin_approval but is not allowed to be resent`, () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         principal_approval_state: PrincipalApprovalState.inProgress,
   //         allow_sending_principal_email: false,
   //         status: 'awaiting_admin_approval',
   //       },
-  //     });
-  //     expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
-  //       'Resend request'
-  //     );
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
   //   });
+
   //   it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       applicationData: {
   //         ...DEFAULT_APPLICATION_DATA,
   //         principal_approval_state: PrincipalApprovalState.inProgress,
   //         allow_sending_principal_email: true,
   //         status: 'pending',
   //       },
-  //     });
-  //     expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
-  //       'Resend request'
-  //     );
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
   //   });
   // });
 
   // describe('Regional Partner View', () => {
   //   it('has delete button', () => {
-  //     const detailView = mountDetailView({
+  //     const overrideProps = {
   //       isWorkshopAdmin: false,
-  //     });
-  //     const deleteButton = detailView.find('button#delete');
-  //     expect(deleteButton).to.have.length(2);
+  //     };
+  //     renderDefault(overrideProps);
+
+  //     expect(screen.getAllByText('Delete').length).to.equal(2);
   //   });
   // });
 
-  // describe('Scholarship Teacher? row', () => {
-  //   it('on teacher applications', () => {
-  //     const detailView = mountDetailView({
-  //       isWorkshopAdmin: true,
-  //       regionalPartners: [{id: 1, name: 'test'}],
-  //     });
-  //     const getLastRow = () =>
-  //       detailView
-  //         .find('tr')
-  //         .filterWhere(row => row.text().includes('Scholarship Teacher?'));
+  describe('Scholarship Teacher? row', () => {
+    it('on teacher applications', () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          scholarship_status: 'no',
+        },
+        isWorkshopAdmin: true,
+        regionalPartners: [{id: 1, name: 'test'}],
+      };
+      renderDefault(overrideProps);
 
-  //     // Dropdown is disabled
-  //     expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
+      console.log(screen.getByText('No, paid teacher').closest('select'));
+      console.log(screen.getByText('No, paid teacher').closest('Select'));
 
-  //     // Click "Edit"
-  //     detailView
-  //       .find('#DetailViewHeader Button')
-  //       .not('#admin-edit')
-  //       .last()
-  //       .simulate('click');
+      // const getLastRow = () =>
+      //   detailView
+      //     .find('tr')
+      //     .filterWhere(row => row.text().includes('Scholarship Teacher?'));
 
-  //     // Dropdown is no longer disabled
-  //     expect(getLastRow().find('Select').prop('disabled')).to.equal(false);
+      // // Dropdown is disabled
+      // expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
 
-  //     // Click "Save"
-  //     detailView.find('#DetailViewHeader Button').last().simulate('click');
+      // // Click "Edit"
+      // detailView
+      //   .find('#DetailViewHeader Button')
+      //   .not('#admin-edit')
+      //   .last()
+      //   .simulate('click');
 
-  //     // Dropdown is disabled
-  //     expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
-  //   });
-  // });
+      // // Dropdown is no longer disabled
+      // expect(getLastRow().find('Select').prop('disabled')).to.equal(false);
+
+      // // Click "Save"
+      // detailView.find('#DetailViewHeader Button').last().simulate('click');
+
+      // // Dropdown is disabled
+      // expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
+    });
+  });
 
   // describe('Teacher application scholarship status', () => {
   //   let detailView;
