@@ -37,7 +37,8 @@ export const blocks = {
   ) {
     generator.forBlock[type] = generatorFunction;
   },
-  // TODO: is this used??
+  // For the next 4 functions, this is actually a Block.
+  // However we are accessing its properties generically so we type it as a Record.
   mutationToDom(this: Record<string, any>) {
     const container = Blockly.utils.xml.createElement('mutation');
     mutatorProperties.forEach(prop => {
@@ -47,7 +48,6 @@ export const blocks = {
     });
     return container;
   },
-  // TODO: is this used??
   domToMutation(this: Record<string, any>, mutationElement: Element) {
     Array.from(mutationElement.attributes).forEach(attr => {
       const attrName = attr.name;
