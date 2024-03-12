@@ -220,6 +220,10 @@ $level-cell-width: 52;
       flex-wrap: nowrap;
     }
 
+    &ExpandedLevel:last-child {
+      border-right: 1px solid $light_gray_200;
+    }
+
     &ExpandedLevel {
       background-color: $light_primary_500;
       color: $light_white;
