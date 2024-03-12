@@ -2192,6 +2192,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/field-bitmap@npm:^4.0.13":
+  version: 4.0.13
+  resolution: "@blockly/field-bitmap@npm:4.0.13"
+  peerDependencies:
+    blockly: ^10.0.0
+  checksum: e66329f66b4f53024143b1570c788bab8e8d50360aa23e8e67f2132134fc36afaf70d4a1169dfb2bcd693b3be144f3361164b42a345ac1d4a26f1e845dac2466
+  languageName: node
+  linkType: hard
+
 "@blockly/field-grid-dropdown@npm:~4.0.9":
   version: 4.0.10
   resolution: "@blockly/field-grid-dropdown@npm:4.0.10"
@@ -8485,6 +8494,7 @@ __metadata:
     "@babel/preset-env": ^7.18.10
     "@babel/preset-react": ^7.18.6
     "@blockly/block-shareable-procedures": ~4.0.5
+    "@blockly/field-bitmap": ^4.0.13
     "@blockly/field-grid-dropdown": ~4.0.9
     "@blockly/keyboard-navigation": ~0.5.6
     "@blockly/plugin-cross-tab-copy-paste": ~5.0.4
@@ -8590,7 +8600,6 @@ __metadata:
     firmata: ^2.2.0
     focus-trap-react: ^10.1.1
     fork-ts-checker-webpack-plugin: ^8.0.0
-    glob: 5.0.14
     grunt: ^1.4.1
     grunt-cli: 1.4.3
     grunt-concurrent: 1.0.1
@@ -8644,7 +8653,6 @@ __metadata:
     pepjs: ^0.4.3
     pixelmatch: ^5.2.0
     playground-io: "code-dot-org/playground-io#v0.6.0-cdo.2"
-    postcss: 8
     prettier: 2.8.7
     process: ^0.11.10
     progress-bar-webpack-plugin: ^2.1.0
@@ -8667,6 +8675,7 @@ __metadata:
     react-debounce-input: ^3.2.2
     react-dom: ~16.14.0
     react-dom-confetti: ^0.2.0
+    react-draggable: ^4.4.6
     react-focus-lock: ^2.11.2
     react-google-charts: 2
     react-hot-loader: ^1.3.1
@@ -10102,6 +10111,13 @@ canvg@gabelerner/canvg:
     kind-of: ^6.0.2
     shallow-clone: ^3.0.0
   checksum: 770f912fe4e6f21873c8e8fbb1e99134db3b93da32df271d00589ea4a29dbe83a9808a322c93f3bcaf8584b8b4fa6fc269fc8032efbaa6728e0c9886c74467d2
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^1.1.1":
+  version: 1.2.1
+  resolution: "clsx@npm:1.2.1"
+  checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
   languageName: node
   linkType: hard
 
@@ -15059,19 +15075,6 @@ es6-shim@latest:
   version: 0.4.1
   resolution: "glob-to-regexp@npm:0.4.1"
   checksum: e795f4e8f06d2a15e86f76e4d92751cf8bbfcf0157cea5c2f0f35678a8195a750b34096b1256e436f0cebc1883b5ff0888c47348443e69546a5a87f9e1eb1167
-  languageName: node
-  linkType: hard
-
-"glob@npm:5.0.14":
-  version: 5.0.14
-  resolution: "glob@npm:5.0.14"
-  dependencies:
-    inflight: ^1.0.4
-    inherits: 2
-    minimatch: ^2.0.1
-    once: ^1.3.0
-    path-is-absolute: ^1.0.0
-  checksum: 77e2b6bdcb0e14fe1feab0ae249bcb18da737fee41ba1f5d629746b229f6168817178b5621e66c9b7e54182867da3587eb05aed6192f2fd7b81d064256bfa4f0
   languageName: node
   linkType: hard
 
@@ -20348,15 +20351,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^2.0.1":
-  version: 2.0.10
-  resolution: "minimatch@npm:2.0.10"
-  dependencies:
-    brace-expansion: ^1.0.0
-  checksum: 70c99221e7db80dde6027b1b7a545e6a8247a094456cf5f1d82dcf62fbc83b196c85825e807da0c818ab93fa9276085c63c35e4cae721c51f38d5b35d317a7e9
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:^3.0.0, minimatch@npm:^3.0.2":
   version: 3.0.3
   resolution: "minimatch@npm:3.0.3"
@@ -22993,17 +22987,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"postcss@npm:8, postcss@npm:^8.2.15, postcss@npm:^8.4.7":
-  version: 8.4.16
-  resolution: "postcss@npm:8.4.16"
-  dependencies:
-    nanoid: ^3.3.4
-    picocolors: ^1.0.0
-    source-map-js: ^1.0.2
-  checksum: 10eee25efd77868036403858577da0cefaf2e0905feeaba5770d5438ccdddba3d01cba8063e96b8aac4c6daa0ed413dd5ae0554a433a3c4db38df1d134cffc1f
-  languageName: node
-  linkType: hard
-
 "postcss@npm:^7.0.14":
   version: 7.0.14
   resolution: "postcss@npm:7.0.14"
@@ -23022,6 +23005,17 @@ es6-shim@latest:
     picocolors: ^0.2.1
     source-map: ^0.6.1
   checksum: 4ac793f506c23259189064bdc921260d869a115a82b5e713973c5af8e94fbb5721a5cc3e1e26840500d7e1f1fa42a209747c5b1a151918a9bc11f0d7ed9048e3
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.2.15, postcss@npm:^8.4.7":
+  version: 8.4.16
+  resolution: "postcss@npm:8.4.16"
+  dependencies:
+    nanoid: ^3.3.4
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 10eee25efd77868036403858577da0cefaf2e0905feeaba5770d5438ccdddba3d01cba8063e96b8aac4c6daa0ed413dd5ae0554a433a3c4db38df1d134cffc1f
   languageName: node
   linkType: hard
 
@@ -24057,6 +24051,19 @@ es6-shim@latest:
   peerDependencies:
     react: ^16.14.0
   checksum: 5a5c49da0f106b2655a69f96c622c347febcd10532db391c262b26aec225b235357d9da1834103457683482ab1b229af7a50f6927a6b70e53150275e31785544
+  languageName: node
+  linkType: hard
+
+"react-draggable@npm:^4.4.6":
+  version: 4.4.6
+  resolution: "react-draggable@npm:4.4.6"
+  dependencies:
+    clsx: ^1.1.1
+    prop-types: ^15.8.1
+  peerDependencies:
+    react: ">= 16.3.0"
+    react-dom: ">= 16.3.0"
+  checksum: 9b15aac59244873ac4561c5a2bead43a56e18d406e0a5f242bd4f9d151c074530c02b99387983104bf43417292f9cf8d063e554ed08d88792235e3fbc965f1b8
   languageName: node
   linkType: hard
 
