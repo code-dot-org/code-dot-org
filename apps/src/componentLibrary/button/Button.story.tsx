@@ -32,8 +32,10 @@ const MultipleTemplate: Story<{
     }}
   >
     {args.components?.map(componentArg => (
-      // TODO: fix key
-      <Button key={componentArg.size} {...componentArg} />
+      <Button
+        key={`${componentArg.size}-${componentArg.text}`}
+        {...componentArg}
+      />
     ))}
   </div>
 );
@@ -48,8 +50,44 @@ DefaultButton.args = {
 export const DisabledButton = SingleTemplate.bind({});
 DisabledButton.args = {
   text: 'Button',
+  onClick: () => console.log('Button clicked'),
   disabled: true,
   size: 'm',
+};
+
+export const IconButton = SingleTemplate.bind({});
+IconButton.args = {
+  // text: 'Button',
+  icon: {iconName: 'smile', iconStyle: 'solid'},
+  type: 'iconBorder',
+  onClick: () => console.log('Button clicked'),
+  size: 'm',
+};
+
+export const LinkButton = SingleTemplate.bind({});
+LinkButton.args = {
+  text: 'Link',
+  useAsLink: true,
+  href: 'https://www.google.com',
+  size: 'm',
+};
+
+export const ButtonButtonVsLinkButton = MultipleTemplate.bind({});
+ButtonButtonVsLinkButton.args = {
+  components: [
+    {
+      text: 'Button',
+      onClick: () => console.log('Button clicked'),
+      size: 'm',
+    },
+    {
+      text: 'Link',
+      useAsLink: true,
+      href: 'https://www.google.com',
+      size: 'm',
+      target: '_blank',
+    },
+  ],
 };
 
 export const GroupOfColorsOfButtons = MultipleTemplate.bind({});
@@ -59,88 +97,103 @@ GroupOfColorsOfButtons.args = {
       text: 'Button Primary Purple',
       color: 'purple',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Primary Black',
       color: 'black',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Primary White',
       color: 'white',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Secondary Purple',
       color: 'purple',
       type: 'secondary',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Secondary Black',
       color: 'black',
       type: 'secondary',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Secondary White',
       color: 'white',
       type: 'secondary',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Tertiary Purple',
       color: 'purple',
       type: 'tertiary',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Tertiary Black',
       color: 'black',
       type: 'tertiary',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button Tertiary White',
       color: 'white',
       type: 'tertiary',
       size: 'm',
+      onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: 'purple',
       type: 'iconBorder',
       size: 'm',
+      onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: 'black',
       type: 'iconBorder',
       size: 'm',
+      onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: 'white',
       type: 'iconBorder',
       size: 'm',
+      onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: 'purple',
       type: 'iconOnly',
       size: 'm',
+      onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: 'black',
       type: 'iconOnly',
       size: 'm',
+      onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: 'white',
       type: 'iconOnly',
       size: 'm',
+      onClick: () => null,
     },
   ],
 };
@@ -151,18 +204,22 @@ GroupOfSizesOfButtons.args = {
     {
       text: 'Button xs',
       size: 'xs',
+      onClick: () => null,
     },
     {
       text: 'Button s',
       size: 's',
+      onClick: () => null,
     },
     {
       text: 'Button m',
       size: 'm',
+      onClick: () => null,
     },
     {
       text: 'Button l',
       size: 'l',
+      onClick: () => null,
     },
   ],
 };
