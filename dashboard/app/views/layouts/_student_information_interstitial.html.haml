@@ -6,7 +6,7 @@
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}
         = t('parent_mailer.parent_email_added_subject')
         = t('activerecord.attributes.user.finish_sign_up_header_account_information')
-        = t('age_interstitial.disclaimer')
+        = t('age_interstitial.disclaimer', url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
       = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
         .form-group
           %div{style: 'display: flex;'}
