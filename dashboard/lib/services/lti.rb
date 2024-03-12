@@ -25,8 +25,7 @@ class Services::Lti
     )
     user.authentication_options = [ao]
 
-    # As final step of the LTI user creation, a LtiUserIdentity is created for the user.
-    create_lti_user_identity(user)
+    # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user.
     user
   end
 
@@ -92,6 +91,7 @@ class Services::Lti
       email: get_claim(nrps_member_message, :email),
       )
     user.authentication_options = [ao]
+    # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user.
     user
   end
 
