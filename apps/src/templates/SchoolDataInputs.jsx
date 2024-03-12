@@ -5,27 +5,19 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 
 export default function SchoolDataInputs(
-  onCountryChange,
-  onSchoolChange,
-  onSchoolNotFoundChange,
-  country,
-  ncesSchoolId,
-  schoolName,
-  schoolState,
-  schoolZip,
-  schoolLocation,
-  useLocationSearch,
-  fieldNames,
-  showErrors,
-  showRequiredIndicator
+  fieldNames = {
+    country: 'user[school_info_attributes][country]',
+    ncesSchoolId: 'user[school_info_attributes][school_id]',
+    schoolName: 'user[school_info_attributes][school_name]',
+    schoolZip: 'user[school_info_attributes][school_zip]',
+  }
 ) {
   const [askForZip, setAskForZip] = useState(false);
   const [isOutsideUS, setIsOutsideUS] = useState(false);
-  const [zip, setZip] = useState(schoolZip || '');
+  const [zip, setZip] = useState('');
+  const [country, setCountry] = useState('');
   const [zipSearchReady, setZipSearchReady] = useState(false);
 
   let COUNTRY_ITEMS = [{value: 'selectCountry', text: i18n.selectCountry()}];
@@ -45,6 +37,7 @@ export default function SchoolDataInputs(
   };
 
   const updateCountry = country => {
+    setCountry(country);
     if (country === 'US') {
       setAskForZip(true);
       setIsOutsideUS(false);
@@ -64,11 +57,10 @@ export default function SchoolDataInputs(
         </BodyTwoText>
         <SimpleDropdown
           className={style.dropdown}
+          name={fieldNames.country}
           items={COUNTRY_ITEMS}
-          name="countryDropdown"
           selectedValue={country}
           onChange={e => {
-            onCountryChange;
             updateCountry(e.target.value);
           }}
           size="m"
@@ -83,6 +75,7 @@ export default function SchoolDataInputs(
             </BodyTwoText>
             <input
               type="text"
+              name={fieldNames.schoolZip}
               placeholder={'i.e. 98104'}
               onChange={onZipChange}
               value={zip}
@@ -98,24 +91,7 @@ export default function SchoolDataInputs(
             >
               {i18n.schoolOrganizationQuestion()}
             </BodyTwoText>
-            <SchoolNotFound
-              onChange={onSchoolNotFoundChange}
-              isNcesSchool={false}
-              schoolName={schoolName}
-              schoolType={SchoolNotFound.OMIT_FIELD}
-              schoolCity={SchoolNotFound.OMIT_FIELD}
-              schoolState={SchoolNotFound.OMIT_FIELD}
-              schoolZip={SchoolNotFound.OMIT_FIELD}
-              schoolLocation={schoolLocation}
-              country={country}
-              controlSchoolLocation={true}
-              fieldNames={fieldNames}
-              showErrorMsg={showErrors}
-              singleLineLayout
-              showRequiredIndicators={showRequiredIndicator}
-              schoolNameLabel={schoolName}
-              useLocationSearch={useLocationSearch}
-            />
+            {/*<EnterSchoolNameManually fieldName={fieldNames.schoolName} /> Write new component to gather school name*/}
           </div>
         )}
         {zipSearchReady && (
@@ -126,11 +102,7 @@ export default function SchoolDataInputs(
             >
               {i18n.selectYourSchool()}
             </BodyTwoText>
-            <SchoolAutocompleteDropdown
-              value={ncesSchoolId}
-              disabled={!zipSearchReady}
-              onChange={onSchoolChange}
-            />
+            {/*<SchoolZipSearch fieldName={fieldNames.ncesSchoolId} /> Write new component to search with zip*/}
           </div>
         )}
       </div>
@@ -139,18 +111,5 @@ export default function SchoolDataInputs(
 }
 
 SchoolDataInputs.propTypes = {
-  onCountryChange: PropTypes.func.isRequired,
-  onSchoolChange: PropTypes.func.isRequired,
-  onSchoolNotFoundChange: PropTypes.func.isRequired,
-  country: PropTypes.string,
-  ncesSchoolId: PropTypes.string,
-  schoolName: PropTypes.string,
-  schoolCity: PropTypes.string,
-  schoolState: PropTypes.string,
-  schoolZip: PropTypes.string,
-  schoolLocation: PropTypes.string,
-  useLocationSearch: PropTypes.bool,
   fieldNames: PropTypes.object,
-  showErrors: PropTypes.bool,
-  showRequiredIndicator: PropTypes.bool,
 };
