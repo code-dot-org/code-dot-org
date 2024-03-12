@@ -1,0 +1,1253 @@
+{
+  "script": {
+    "name": "pilot-k5-ai",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "pilot-k5-ai",
+    "serialized_at": "2024-03-08 22:22:56 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "pilot-k5-ai"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Sorting Data",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "This lesson will introduce students to the fundamentals of Artificial Intelligence (AI) and machine learning by focusing on predictive data models. Starting with a teacher-led demonstration (“we do”) on sorting items by their features using a widget, students will then partner up (“you do”) to apply these concepts by training a model on data they have categorized, in order to understand how AI makes predictions. This hands-on experience will be complemented by discussions on the significance of data categorization and the challenges posed by limited datasets. Students will explore a real-world example where AI predictions have been used to help humans. The lesson aims to demystify AI technology, emphasizing its pattern-based logic rather than perceiving it as magical or random."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Training AI",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "In this lesson, students will learn about how the inputs they give a machine learning model directly impact the predictions that the model makes. First, they will learn about the difference between random predictions and AI predictions, before training their own AI model to make predictions on whether an item is a fish or trash in the ocean. Finally, students will discuss the implications of biased training data by discussing hypothetical scenarios."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "How AI Makes Decisions",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "In this lesson, students will begin thinking about how to classify real world objects by their features. They will build out a feature vector of fruits and vegetables in order to learn how AI makes decisions based on the probability of an outcome. Students will use “Dance Party: AI Edition” to see first-hand how AI can make tasks more efficient, but that it might come at the cost of customization. Students will consider what it means to collaborate and co-create with AI.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Create an AI Poster",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "In this lesson, students will consider several hypothetical AI tools that could be used in a school setting. Then, they will choose a person who works at or is a student at an elementary school and consider how this person could use AI to make a decision. Students will create a poster for this person to explain what training data and information the AI tool will need to successfully make a decision.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "08460319-0405-45a2-b8b4-444379ba805a",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08460319-0405-45a2-b8b4-444379ba805a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "67966cef-e610-4a6c-9b80-a5f01715f81c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "67966cef-e610-4a6c-9b80-a5f01715f81c",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "4350736b-84ad-4049-9949-32ca83394698",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "7baafb96-218c-4665-b1ef-b339f830cf0d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7baafb96-218c-4665-b1ef-b339f830cf0d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "d175feb1-c74f-4096-a7a5-de4b48e7af12",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "f83c5a5a-95dd-41e0-b888-e47f120210f6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f83c5a5a-95dd-41e0-b888-e47f120210f6",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "e568bbbf-7a5b-489e-ad34-0dfd50493568",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e568bbbf-7a5b-489e-ad34-0dfd50493568",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    },
+    {
+      "key": "9bf1aff3-bf49-48cf-a537-a49cfd014444",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bf1aff3-bf49-48cf-a537-a49cfd014444",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "c1960ca2-a0b2-4cf0-a065-7aa5fafd5805",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1960ca2-a0b2-4cf0-a065-7aa5fafd5805",
+        "lesson_activity.key": "08460319-0405-45a2-b8b4-444379ba805a"
+      }
+    },
+    {
+      "key": "7904af47-66ef-4f1d-98c5-c43ac42c7676",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7904af47-66ef-4f1d-98c5-c43ac42c7676",
+        "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e"
+      }
+    },
+    {
+      "key": "1b979832-b6ad-4bae-b833-9dc42bb8e950",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sorting Items"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b979832-b6ad-4bae-b833-9dc42bb8e950",
+        "lesson_activity.key": "7a4bf836-a214-40fb-9c3d-7f5972a99d9e"
+      }
+    },
+    {
+      "key": "8f9ce652-dd04-4743-90c1-dcf9af89806f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8f9ce652-dd04-4743-90c1-dcf9af89806f",
+        "lesson_activity.key": "4e2fc931-d9f4-49dc-b283-656ed2e39c9b"
+      }
+    },
+    {
+      "key": "eaf85520-8039-41f6-b7ab-08166a0d28a6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eaf85520-8039-41f6-b7ab-08166a0d28a6",
+        "lesson_activity.key": "67966cef-e610-4a6c-9b80-a5f01715f81c"
+      }
+    },
+    {
+      "key": "1e36d836-7304-4f17-9418-676b8d32b76d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Machine Learning Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e36d836-7304-4f17-9418-676b8d32b76d",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "21f56bab-977d-4631-a8bf-8384e284a640",
+      "position": 2,
+      "properties": {
+        "progression_name": "Train AI on Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "21f56bab-977d-4631-a8bf-8384e284a640",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "43b3c232-f77c-41a5-af1d-f76f422fc3de",
+      "position": 3,
+      "properties": {
+        "progression_name": "Train AI on Sea Creatures"
+      },
+      "seeding_key": {
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "07d57fd1-faea-4249-8b30-ed36439b2500",
+      "position": 4,
+      "properties": {
+        "progression_name": "Teach AI a New Word"
+      },
+      "seeding_key": {
+        "activity_section.key": "07d57fd1-faea-4249-8b30-ed36439b2500",
+        "lesson_activity.key": "4350736b-84ad-4049-9949-32ca83394698"
+      }
+    },
+    {
+      "key": "37e3aef9-20d6-4681-ba67-c9b05ef8fc54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37e3aef9-20d6-4681-ba67-c9b05ef8fc54",
+        "lesson_activity.key": "7baafb96-218c-4665-b1ef-b339f830cf0d"
+      }
+    },
+    {
+      "key": "e2c05441-bbba-471a-9895-fe181c896f02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c05441-bbba-471a-9895-fe181c896f02",
+        "lesson_activity.key": "9a88af7d-f9ce-40ae-8a52-bc12a19c0288"
+      }
+    },
+    {
+      "key": "1e965f53-b758-4eaf-afcb-251dbe095bcb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e965f53-b758-4eaf-afcb-251dbe095bcb",
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12"
+      }
+    },
+    {
+      "key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sorting Fruit and Vegetables"
+      },
+      "seeding_key": {
+        "activity_section.key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71",
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12"
+      }
+    },
+    {
+      "key": "bf325b06-a967-439c-9011-6f78adf50ec7",
+      "position": 3,
+      "properties": {
+        "progression_name": "AI Bot Effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf325b06-a967-439c-9011-6f78adf50ec7",
+        "lesson_activity.key": "d175feb1-c74f-4096-a7a5-de4b48e7af12"
+      }
+    },
+    {
+      "key": "71a99e48-3147-474f-8ee1-3444144d6516",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "71a99e48-3147-474f-8ee1-3444144d6516",
+        "lesson_activity.key": "f83c5a5a-95dd-41e0-b888-e47f120210f6"
+      }
+    },
+    {
+      "key": "d0f57173-475f-42ec-bdec-1e926611baea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d0f57173-475f-42ec-bdec-1e926611baea",
+        "lesson_activity.key": "e568bbbf-7a5b-489e-ad34-0dfd50493568"
+      }
+    },
+    {
+      "key": "bdefd8af-23c6-409a-86c3-f6d35f5197f9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bdefd8af-23c6-409a-86c3-f6d35f5197f9",
+        "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c"
+      }
+    },
+    {
+      "key": "0f6296dd-e703-401c-bad0-116ecbd0acf0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Planning Your AI Poster"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f6296dd-e703-401c-bad0-116ecbd0acf0",
+        "lesson_activity.key": "a5f3b3d5-7751-46b3-aff3-162bd4080b4c"
+      }
+    },
+    {
+      "key": "bc18f51c-e617-4fac-bacc-b11c63857a39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bc18f51c-e617-4fac-bacc-b11c63857a39",
+        "lesson_activity.key": "9bf1aff3-bf49-48cf-a537-a49cfd014444"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_items"
+        ],
+        "progression": "Sorting Items"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "1b979832-b6ad-4bae-b833-9dc42bb8e950"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_items"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Machine Learning Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "1e36d836-7304-4f17-9418-676b8d32b76d"
+      },
+      "level_keys": [
+        "Oceans_Video_Machine_Learning_k5pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_k5pilot"
+        ],
+        "progression": "Train AI on Fish"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "21f56bab-977d-4631-a8bf-8384e284a640"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash_k5pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilot"
+        ],
+        "progression": "Train AI on Sea Creatures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrashDemo_k5pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_k5pilot"
+        ],
+        "progression": "Train AI on Sea Creatures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrash_k5pilot"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Long_k5pilot"
+        ],
+        "progression": "Teach AI a New Word"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "07d57fd1-faea-4249-8b30-ed36439b2500"
+      },
+      "level_keys": [
+        "Oceans_Long_k5pilot"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables"
+        ],
+        "progression": "Sorting Fruit and Vegetables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_fruit_vegetables"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dance_ai_customize_effect_-k5pilot"
+        ],
+        "progression": "AI Bot Effects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dance_ai_customize_effect_-k5pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "bf325b06-a967-439c-9011-6f78adf50ec7"
+      },
+      "level_keys": [
+        "dance_ai_customize_effect_-k5pilot"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_plan_your_poster_pilot"
+        ],
+        "progression": "Planning Your AI Poster"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_plan_your_poster_pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0f6296dd-e703-401c-bad0-116ecbd0acf0"
+      },
+      "level_keys": [
+        "k5_ai_plan_your_poster_pilot"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_items",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "1b979832-b6ad-4bae-b833-9dc42bb8e950"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Machine_Learning_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "1e36d836-7304-4f17-9418-676b8d32b76d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "21f56bab-977d-4631-a8bf-8384e284a640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrashDemo_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrash_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "43b3c232-f77c-41a5-af1d-f76f422fc3de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long_k5pilot",
+        "script_level.level_keys": [
+          "Oceans_Long_k5pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "07d57fd1-faea-4249-8b30-ed36439b2500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_fruit_vegetables",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "607bc84e-cb3c-4f3d-b4cf-0e3255afaa71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dance_ai_customize_effect_-k5pilot",
+        "script_level.level_keys": [
+          "dance_ai_customize_effect_-k5pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "bf325b06-a967-439c-9011-6f78adf50ec7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_plan_your_poster_pilot",
+        "script_level.level_keys": [
+          "k5_ai_plan_your_poster_pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-ai",
+        "activity_section.key": "0f6296dd-e703-401c-bad0-116ecbd0acf0"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Planning Your AI Poster",
+      "url": "https://docs.google.com/document/d/1DfM45p1yWGGVmwnDli3kVAmcA3KTvnon2GovtX_GtY8/template/preview",
+      "key": "_key_planning_your_ai_poster",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1DfM45p1yWGGVmwnDli3kVAmcA3KTvnon2GovtX_GtY8/export/pdf",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "_key_planning_your_ai_poster"
+      }
+    },
+    {
+      "name": "Elementary AI Module Slides",
+      "url": "https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/template/preview",
+      "key": "elementary_ai_module_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "elementary_ai_module_slides"
+      }
+    },
+    {
+      "name": "Planning Your AI Poster",
+      "url": "https://docs.google.com/document/d/1BJxKijkXrff8jm37xkPNYY7Lcx0QQjKGLJqoFPQggU8/template/preview",
+      "key": "planning_your_ai_poster",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1BJxKijkXrff8jm37xkPNYY7Lcx0QQjKGLJqoFPQggU8/export/pdf",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "planning_your_ai_poster"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "elementary_ai_module_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "elementary_ai_module_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "elementary_ai_module_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_planning_your_ai_poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "elementary_ai_module_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "planning_your_ai_poster"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "artificial_intelligence_a_i_",
+      "word": "Artificial Intelligence (A.I.) ",
+      "definition": "A way to make computers and machines learn and make decisions by themselves",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "key": "bias",
+      "word": "Bias",
+      "definition": "When a decision favors some things and not others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "Classification ",
+      "definition": "Sorting items into categories based on their features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "data",
+      "word": "Data",
+      "definition": "Information that we collect about the world",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "delete",
+      "word": "Delete",
+      "definition": "To remove or take something away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "delete"
+      }
+    },
+    {
+      "key": "feature_vector",
+      "word": "Feature Vector",
+      "definition": "A numerical representation of certain features of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature_vector"
+      }
+    },
+    {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "key": "modify",
+      "word": "Modify",
+      "definition": "To change or make something different",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "key": "retrieve",
+      "word": "Retrieve",
+      "definition": "To get back something you stored or put away",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "key": "sort",
+      "word": "Sort",
+      "definition": "To put things in groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "key": "store",
+      "word": "Store",
+      "definition": "To keep something in a computer’s memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "store"
+      }
+    },
+    {
+      "key": "training",
+      "word": "Training",
+      "definition": "Teaching a computer to do tasks by showing it many examples",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "modify"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "sort"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "delete"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "retrieve"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "store"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "feature_vector"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "artificial_intelligence_a_i_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "training"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "5-B-i.3-5"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

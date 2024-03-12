@@ -22,7 +22,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     CDO.stubs(:openai_evaluate_rubric_api_key).returns('fake-api-key')
   end
 
-  test "job succeeds on ai-enabled level" do
+  test "job succeeds on ai-enabled level with tsv response type" do
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
     # create a project
@@ -42,6 +42,50 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).first.status
     verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
+  end
+
+  test "job succeeds on ai-enabled level with json response type" do
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data(response_type: 'json')
+
+    stub_get_openai_evaluations(response_type: 'json')
+
+    # run the job
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
+    end
+
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).first.status
+    verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
+  end
+
+  test "job succeeds on ai-enabled level without confidence exact json" do
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data(response_type: 'json', include_exact: false)
+
+    stub_get_openai_evaluations(response_type: 'json')
+
+    # run the job
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
+    end
+
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).first.status
+    verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student, include_exact_confidence: false)
   end
 
   test "job fails on non-ai level" do
@@ -287,19 +331,32 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   # stub out the s3 calls made from the job via read_file_from_s3 and read_examples.
-  private def stub_lesson_s3_data
+  private def stub_lesson_s3_data(response_type: 'tsv', include_exact: true)
+    raise "invalid response type #{response_type}" unless ['tsv', 'json'].include? response_type
     s3_client = Aws::S3::Client.new(stub_responses: true)
     fake_confidence_levels = {
       'learning-goal-1': "MEDIUM",
       'learning-goal-2': "MEDIUM",
       'learning-goal-3': "MEDIUM",
     }.to_json
+    exact_confidence_hash = {
+      'Extensive Evidence': 'LOW',
+      'Convincing Evidence': 'LOW',
+      'Limited Evidence': 'LOW',
+      'No Evidence': 'LOW',
+    }
+    fake_confidence_levels_exact = {
+      'learning-goal-1': exact_confidence_hash,
+      'learning-goal-2': exact_confidence_hash,
+      'learning-goal-3': exact_confidence_hash,
+    }.to_json
     fake_params = {
       'model' => 'gpt-4-0613',
       'remove-comments' => '1',
       'num-responses' => '3',
       'num-passing-labels' => '2',
-      'temperature' => '0.2'
+      'temperature' => '0.2',
+      'response-type' => response_type,
     }.to_json
     path_prefix = EvaluateRubricJob::S3_AI_RELEASE_PATH
     bucket = {
@@ -308,17 +365,20 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "#{path_prefix}fake-lesson-s3-name/params.json" => fake_params,
       "#{path_prefix}fake-lesson-s3-name/confidence.json" => fake_confidence_levels,
       "#{path_prefix}fake-lesson-s3-name/examples/1.js" => 'fake-code-1',
-      "#{path_prefix}fake-lesson-s3-name/examples/1.tsv" => 'fake-response-1',
+      "#{path_prefix}fake-lesson-s3-name/examples/1.#{response_type}" => 'fake-response-1',
       "#{path_prefix}fake-lesson-s3-name/examples/2.js" => 'fake-code-2',
-      "#{path_prefix}fake-lesson-s3-name/examples/2.tsv" => 'fake-response-2',
+      "#{path_prefix}fake-lesson-s3-name/examples/2.#{response_type}" => 'fake-response-2',
     }
+    if include_exact
+      bucket["#{path_prefix}fake-lesson-s3-name/confidence-exact.json"] = fake_confidence_levels_exact
+    end
 
     s3_client.stub_responses(
       :get_object,
       ->(context) do
         key = context.params[:key]
         obj = bucket[key]
-        raise "NoSuchKey: #{key}" unless obj
+        raise EvaluateRubricJob::StubNoSuchKey.new(key) unless obj
         {body: StringIO.new(obj)}
       end
     )
@@ -333,7 +393,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
   end
 
-  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {})
+  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {}, response_type: 'tsv')
+    raise "invalid response type #{response_type}" unless ['tsv', 'json'].include? response_type
     expected_examples = [
       ['fake-code-1', 'fake-response-1'],
       ['fake-code-2', 'fake-response-2']
@@ -344,6 +405,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       "num-responses" => "3",
       "num-passing-labels" => "2",
       "temperature" => "0.2",
+      'response-type' => response_type,
       "code" => code,
       "prompt" => 'fake-system-prompt',
       "rubric" => 'fake-standard-rubric',
@@ -353,11 +415,11 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     fake_ai_evaluations = [
       {
         'Key Concept' => 'learning-goal-1',
-        'Grade' => 'Extensive Evidence'
+        'Label' => 'Extensive Evidence'
       },
       {
         'Key Concept' => 'learning-goal-2',
-        'Grade' => 'Extensive Evidence'
+        'Label' => 'Extensive Evidence'
       },
       {
         'Key Concept' => 'learning-goal-3',
@@ -394,12 +456,21 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   # verify the job wrote the expected LearningGoalAiEvaluations to the database
+  #
+  # @param channel_id [String]
+  # @param rubric [Rubric]
+  # @param user [User]
+  # @param expected_understanding [Integer]
+  # @param version_id [String]
+  # @param include_exact_confidence [Boolean] whether to expect exact-match
+  #   confidence levels to be present in the database
   private def verify_stored_ai_evaluations(
     channel_id:,
     rubric:,
     user:,
     expected_understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.EXTENSIVE,
-    version_id: 'fake-version-id'
+    version_id: 'fake-version-id',
+    include_exact_confidence: true
   )
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
     rubric_ai_eval = RubricAiEvaluation.where(user_id: user.id).order(updated_at: :desc).first
@@ -409,6 +480,8 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       ai_eval = rubric_ai_eval.learning_goal_ai_evaluations.find_by(learning_goal_id: learning_goal.id)
       assert_equal expected_understanding, ai_eval.understanding
       assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
+      expected_confidence = include_exact_confidence ? LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:LOW] : nil
+      assert_equal expected_confidence, ai_eval.ai_confidence_exact_match
     end
   end
 end

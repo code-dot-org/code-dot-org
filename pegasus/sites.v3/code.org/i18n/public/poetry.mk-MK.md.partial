@@ -16,7 +16,7 @@ social:
 
 # Coding with Poetry
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
+{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg “, alt_text: “Симпатичен лик од розов октопод кој носи виолетова шапка со beanie изведување песна под рефлектор на сцена со столица и микрофон”, text_color: “бела”, box_background_color: “rgb (0,0,0,0.4)”, left_header: “Песна уметност”, left_description: “Додај уметност и анимација на класична песна во оваа активност Часот на кодот!” , left_spec: "”, left_button_url: "https://studio.code.org/s/poem-art-2021/reset “, left_button_text: “Почеток”, right_header: “Кодирање со поезија”, right_description: “Поврзете ги компјутерските науки и поезијата во вашата училница со оваа серија лекции. “, right_specs:"”, right_button_url: "https://studio.code.org/s/poetry?viewAs=Instructor “, right_button_text: “Прикажи го модулот”}}
 
 ## Learn more about Coding with Poetry
 

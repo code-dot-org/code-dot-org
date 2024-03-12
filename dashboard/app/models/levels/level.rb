@@ -521,7 +521,8 @@ class Level < ApplicationRecord
       type: self.class.to_s,
       name: name,
       display_name: display_name,
-      is_validated: validated?
+      is_validated: validated?,
+      can_have_feedback: can_have_feedback?
     }
   end
 

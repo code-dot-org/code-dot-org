@@ -449,6 +449,7 @@ FactoryBot.define do
         user.authentication_options.destroy_all
         lti_auth = create(:lti_authentication_option, user: user)
         user.authentication_options << lti_auth
+        user.lti_roster_sync_enabled = true
         user.save!
       end
     end

@@ -2,13 +2,16 @@
   "script": {
     "name": "k5-maker-pilot-2024-1",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "CSF Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 21:38:22 UTC",
+    "serialized_at": "2024-03-08 23:22:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -147,6 +150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Opening1MB_k5-maker"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -169,6 +175,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_202_k5-maker"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -191,6 +200,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2022MB_k5-maker"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -213,6 +225,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_maker_microbit_pl_introVideo_k5-maker"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -235,6 +250,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-lessonactivities_2023MB_k5-maker"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -257,6 +275,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_maker_PL_course pathways_k5-maker"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -279,6 +300,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How this curriculum works_k5-maker"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -301,6 +325,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-features_2023MB_k5-maker"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -323,6 +350,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-classsection_2023MB_k5-maker"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -345,6 +375,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-STexperience_2023MB_k5-maker"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -367,6 +400,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K5-onlinePD-assessment_2023mb_k5-maker"
+        ],
         "progression": "Navigating the Code.org learning Platform"
       },
       "bonus": false,
@@ -389,6 +425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TeachersInClassrooms_k5-maker"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -411,6 +450,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingLessonPlans_k5-maker"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -433,6 +475,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ExploreLessonPlan_k5-maker"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -455,6 +500,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL_21-mod2-MakeAPlan-LessonPlanning_k5-maker"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -477,6 +525,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-NavigatingTeacherResources_k5-maker"
+        ],
         "progression": "Navigating lesson plans and resources"
       },
       "bonus": false,
@@ -499,6 +550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-TaskResources_k5-maker"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -521,6 +575,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-navigating support_k5-maker"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -543,6 +600,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReadSupportArticles_k5-maker"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -565,6 +625,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-ReportAProblem_k5-maker"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -587,6 +650,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MBSP-VPL-21-mod2-JoinTheTeacherCommunity_k5-maker"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
@@ -609,6 +675,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_certificate_k5-maker"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,
