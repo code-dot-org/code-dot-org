@@ -10,15 +10,15 @@ import style from './school-association.module.scss';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 
-export default function SchoolDataInputs(
+export default function SchoolDataInputs({
   includeHeaders = true,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
     ncesSchoolId: 'user[school_info_attributes][school_id]',
     schoolName: 'user[school_info_attributes][school_name]',
     schoolZip: 'user[school_info_attributes][school_zip]',
-  }
-) {
+  },
+}) {
   const [askForZip, setAskForZip] = useState(false);
   const [isOutsideUS, setIsOutsideUS] = useState(false);
   const [zip, setZip] = useState('');
