@@ -1,3 +1,4 @@
+// We need to use any in this class to generically reference the block type.
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Defines blocks useful in multiple blockly apps

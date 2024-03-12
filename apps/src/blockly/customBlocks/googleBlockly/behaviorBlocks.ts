@@ -1,14 +1,14 @@
 import * as GoogleBlockly from 'blockly/core';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
-import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
+import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {behaviorCallerGetDefMixin} from './mixins/behaviorCallerGetDefMixin';
 import {behaviorCreateDefMixin} from './mixins/behaviorCreateDefMixin';
-import {ExtendedBlockSvg, ProcedureBlock} from '../../types';
+import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockChange} from 'blockly/core/events/events_block_change';
 import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';

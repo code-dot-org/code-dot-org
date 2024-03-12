@@ -13,10 +13,11 @@ interface CdoFieldButtonToggleOptions {
 }
 
 export default class CdoFieldToggle extends GoogleBlockly.Field {
+  public useDefaultIcon: boolean;
+
   private onClick: () => void;
   private defaultIcon: SVGElement;
   private alternateIcon: SVGElement;
-  public useDefaultIcon: boolean;
   private callback?: (block: Block) => void;
   private colorOverrides?: {
     icon?: string;

@@ -1,6 +1,6 @@
 import {WorkspaceSvg} from 'blockly';
 import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
-import msg from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 /**
@@ -50,8 +50,8 @@ const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
   const callbackKey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackKey, () => {
     Blockly.FieldVariable.modalPromptName(
-      msg.renameThisPromptTitle(),
-      msg.create(),
+      commonI18n.renameThisPromptTitle(),
+      commonI18n.create(),
       '',
       newName => {
         workspace.createVariable(newName);
@@ -61,7 +61,7 @@ const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
 
   return {
     kind: 'button',
-    text: msg.createBlocklyVariable(),
+    text: commonI18n.createBlocklyVariable(),
     callbackKey,
   };
 };

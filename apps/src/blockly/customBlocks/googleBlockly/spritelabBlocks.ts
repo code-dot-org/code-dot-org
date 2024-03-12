@@ -1,4 +1,4 @@
-import msg from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
 import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
@@ -22,6 +22,7 @@ import {BlockChange} from 'blockly/core/events/events_block_change';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import CdoFieldToggle from '@cdo/apps/blockly/addons/cdoFieldToggle';
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+
 const INPUTS = {
   FLYOUT: 'flyout_input',
   STACK: 'STACK',
@@ -285,7 +286,7 @@ export const blocks = {
       const args = [];
       args.push(
         generator.nameDB_.getName(
-          msg.thisSprite(),
+          commonI18n.thisSprite(),
           Blockly.Names.NameType.VARIABLE
         )
       );
@@ -359,7 +360,7 @@ export const blocks = {
       toolboxConfigurationSupportsEditButton(block)
     ) {
       const editButton = new Blockly.FieldButton({
-        value: msg.edit(),
+        value: commonI18n.edit(),
         onClick: editButtonHandler,
         colorOverrides: {button: 'blue', text: 'white'},
         allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
@@ -382,7 +383,7 @@ export const blocks = {
             break;
           }
         }
-        // Can this ever be undefined?
+        // We should always find the procedure in the map.
         return procedure!;
       };
     }
@@ -390,7 +391,7 @@ export const blocks = {
   // Get a list of behavior options for a dropdown field, based on
   // blocks found on the main workspace.
   getAllBehaviorOptions() {
-    const noBehaviorLabel = msg.behaviorsNotFound();
+    const noBehaviorLabel = commonI18n.behaviorsNotFound();
     const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
     // Behavior definition blocks are always moved to the hidden workspace.
     const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
