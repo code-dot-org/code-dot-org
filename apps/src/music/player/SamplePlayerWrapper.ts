@@ -39,7 +39,7 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   async loadInstrument(): Promise<void> {
-    console.log('Not supported');
+    console.warn('loadInstrument not supported');
   }
 
   isInstrumentLoaded(): boolean {
@@ -64,7 +64,7 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   async playSequenceImmediately(): Promise<void> {
-    console.log('Not supported');
+    console.warn('playSequenceImmediately not supported');
   }
 
   cancelPreviews(): void {
@@ -80,7 +80,7 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   scheduleSamplerSequence(): void {
-    console.log('Not supported');
+    console.warn('scheduleSamplerSequence not supported');
   }
 
   async start(startPosition = 1) {
@@ -101,19 +101,19 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   setLoopEnabled(): void {
-    console.log('Not supported');
+    console.warn('setLoopEnabled not supported');
   }
 
   setLoopStart() {
-    console.log('Not supported');
+    console.warn('setLoopStart not supported');
   }
 
   setLoopEnd() {
-    console.log('Not supported');
+    console.warn('setLoopEnd not supported');
   }
 
   jumpToPosition() {
-    console.log('Not supported');
+    console.warn('jumpToPosition not supported');
   }
 
   // Converts actual seconds used by the audio system into a playhead
