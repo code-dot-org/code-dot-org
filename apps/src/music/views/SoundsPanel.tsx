@@ -205,6 +205,7 @@ interface SoundsPanelProps {
   library: MusicLibrary;
   currentValue: string;
   playingPreview: string;
+  showSoundFilters: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -213,6 +214,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   library,
   currentValue,
   playingPreview,
+  showSoundFilters,
   onSelect,
   onPreview,
 }) => {
@@ -277,8 +279,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       soundEntry => soundEntry.sound.type === filter
     );
   }
-
-  const showSoundFilters = AppConfig.getValue('show-sound-filters') === 'true';
 
   return (
     <FocusLock>

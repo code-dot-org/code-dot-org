@@ -109,6 +109,7 @@ class FieldSounds extends GoogleBlockly.Field {
         library={this.options.getLibrary()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
+        showSoundFilters={this.options.getShowSoundFilters()}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();
