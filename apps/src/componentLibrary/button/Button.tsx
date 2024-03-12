@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useMemo} from 'react';
 import classNames from 'classnames';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -29,14 +29,11 @@ export interface ButtonProps {
   text?: string;
   /** Is button disabled */
   disabled?: boolean;
-  //
+
   // /** Is button pending */
   // isPending?: boolean;
   // /** Button pending text */
   // pendingText?: string;
-
-  // /** Is Button styled as text */
-  // styleAsText?: boolean;
 
   /** Button aria-label */
   ariaLabel?: string;
@@ -85,6 +82,37 @@ export interface ButtonProps {
   title?: string;
 }
 
+const checkButtonPropsForErrors = ({
+  useAsLink,
+  onClick,
+  href,
+  download,
+}: ButtonProps) => {
+  if (useAsLink && !href) {
+    throw new Error('Expect href prop when useAsLink is true');
+  }
+
+  if (useAsLink && onClick) {
+    throw new Error(
+      'Expect onClick prop to be undefined when useAsLink is true'
+    );
+  }
+
+  if (!useAsLink && !onClick) {
+    throw new Error('Expect onClick prop when useAsLink is false');
+  }
+
+  if (!useAsLink && href) {
+    throw new Error('Expect href prop to be undefined when useAsLink is false');
+  }
+
+  if (!useAsLink && download) {
+    throw new Error(
+      'Expect download prop to be undefined when useAsLink is false'
+    );
+  }
+};
+
 const Button: React.FunctionComponent<ButtonProps> = ({
   className,
   id,
@@ -113,11 +141,35 @@ const Button: React.FunctionComponent<ButtonProps> = ({
 
   const tagSpecificProps =
     ButtonTag === 'a'
-      ? {href, target, download, title}
+      ? {
+          href: disabled ? '#' : href,
+          target,
+          /** Copied from old button component. Only need it for the older browsers,
+           *  since modern browsers (~2020+ release year secures this vulnerabilities by default) */
+          // Opening links in new tabs with 'target=_blank' is inherently insecure. Unfortunately, we depend
+          // on this functionality in a couple of place. Fortunately, it is possible to partially mitigate some of
+          // the insecurity of this functionality by using the `rel` tag to block some of the potential exploits.
+          // Therefore, we do so here.
+          rel: target === '_blank' ? 'noopener noreferrer' : undefined,
+          download,
+          title,
+        }
       : {type: buttonType, onClick, value, name};
   console.log(ButtonTag, tagSpecificProps);
 
-  // TODO: Create error throwing function to check if correct props combination is passed
+  // Check if correct props combination is passed
+  useMemo(
+    () =>
+      checkButtonPropsForErrors({
+        useAsLink,
+        buttonType,
+        onClick,
+        href,
+        download,
+      }),
+    [useAsLink, buttonType, onClick, href, download]
+  );
+
   return (
     <ButtonTag
       className={classNames(
@@ -155,18 +207,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({
  */
 export default memo(Button);
 
-//
-// /**
-//  * New style button.
-//  * This particular button is designed to operate in contexts where we have a solid
-//  * background. When we're a button on top of an image, we may want something different.
-//  */
-// import _ from 'lodash';
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import FontAwesome from '@cdo/apps/templates/FontAwesome';
-// import classNames from 'classnames';
-// import moduleStyles from './button.module.scss';
+// TODO: Add colors export const
+
 //
 // // Note: Keep these constants in sync with button.module.scss.
 // const Phase1ButtonColor = {
@@ -186,61 +228,8 @@ export default memo(Button);
 //   purple: 'purple',
 // };
 //
-// const ButtonSize = {
-//   default: 'default',
-//   large: 'large',
-//   narrow: 'narrow',
-//   small: 'small',
-// };
-//
-// const ButtonHeight = {
-//   default: 34,
-//   large: 40,
-//   narrow: 40,
-//   small: 20,
-// };
-//
 // class Button extends React.Component {
-//   static propTypes = {
-//     type: PropTypes.oneOf(['button', 'submit', 'reset']),
-//     className: PropTypes.string,
-//     href: PropTypes.string,
-//     text: PropTypes.string,
-//     value: PropTypes.oneOfType([
-//       PropTypes.string,
-//       PropTypes.number,
-//       PropTypes.bool,
-//     ]),
-//     children: PropTypes.node,
-//     size: PropTypes.oneOf(Object.keys(ButtonSize)),
-//     color: PropTypes.oneOf(Object.values(ButtonColor)),
-//     styleAsText: PropTypes.bool,
-//     icon: PropTypes.string,
-//     iconClassName: PropTypes.string,
-//     iconStyle: PropTypes.object,
-//     target: PropTypes.string,
-//     style: PropTypes.object,
-//     disabled: PropTypes.bool,
-//     download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-//     onClick: PropTypes.func,
-//     id: PropTypes.string,
-//     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-//     isPending: PropTypes.bool,
-//     pendingText: PropTypes.string,
-//     useDefaultLineHeight: PropTypes.bool,
-//     __useDeprecatedTag: PropTypes.bool,
-//     'aria-label': PropTypes.string,
-//     title: PropTypes.string,
-//   };
 //
-//   onKeyDown = event => {
-//     const {href, disabled, onClick} = this.props;
-//     if (event.key === 'Enter' && !disabled && !href) {
-//       event.preventDefault();
-//       event.stopPropagation();
-//       onClick();
-//     }
-//   };
 //
 //   render() {
 //     const {
@@ -269,85 +258,8 @@ export default memo(Button);
 //       title,
 //     } = this.props;
 //
-//     if (!href && !onClick) {
-//       throw new Error('Expect at least one of href/onClick');
-//     }
-//
-//     let buttonStyle = style;
-//     let Tag = 'button';
-//     /*
-//     TODO: Rework __useDeprecatedTag logic once the remaining instances are only
-//     links. The tag is safe to remove from current <Button> implementations if
-//     the button has an onClick() and no href. Such removal may require style
-//     updates for margin and boxShadow to match page styling.
-//     */
-//     if (__useDeprecatedTag) {
-//       Tag = href ? 'a' : 'div';
-//     } else {
-//       // boxShadow should default to none, unless otherwise overridden
-//       buttonStyle = {boxShadow: 'none', ...style};
-//     }
-//
-//     if (download && Tag !== 'a') {
-//       // <button> and <div> elements do not support the download attribute, so
-//       // don't let this component attempt to do that.
-//       throw new Error(
-//           'Attempted to use the download attribute with a non-anchor tag'
-//       );
-//     }
-//
-//     const sizeClassNames = __useDeprecatedTag
-//         ? [
-//           moduleStyles[size],
-//           Phase1ButtonColor[color] ? moduleStyles.phase1Updated : '',
-//         ]
-//         : [moduleStyles[size], !useDefaultLineHeight && moduleStyles.updated];
-//
-//     // Opening links in new tabs with 'target=_blank' is inherently insecure.
-//     // Unfortunately, we depend on this functionality in a couple of place.
-//     // Fortunately, it is possible to partially mitigate some of the insecurity
-//     // of this functionality by using the `rel` tag to block some of the
-//     // potential exploits. Therefore, we do so here.
-//     const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
-//
-//     let className;
-//     if (styleAsText) {
-//       className = classNames(
-//           this.props.className,
-//           moduleStyles.main,
-//           moduleStyles.textButton,
-//           'button-active-no-border',
-//           color === ButtonColor.brandSecondaryDefault &&
-//           moduleStyles.rebrandedTextButton
-//       );
-//     } else {
-//       className = classNames(
-//           this.props.className,
-//           moduleStyles.main,
-//           moduleStyles[color],
-//           sizeClassNames
-//       );
-//     }
-//
-//     const buttonProps = Tag === 'button' ? {type} : {};
-//
 //     return (
 //         <Tag
-//             {...buttonProps}
-//             className={className}
-//             style={{...buttonStyle}}
-//             href={disabled ? '#' : href}
-//             target={target}
-//             value={value}
-//             rel={rel}
-//             disabled={disabled}
-//             download={download}
-//             onClick={disabled ? null : onClick}
-//             onKeyDown={this.onKeyDown}
-//             tabIndex={tabIndex}
-//             id={id}
-//             aria-label={ariaLabel}
-//             title={title}
 //         >
 //           <div style={_.pick(style, ['textAlign'])}>
 //             {icon && (
@@ -370,9 +282,3 @@ export default memo(Button);
 //     );
 //   }
 // }
-//
-// Button.ButtonColor = ButtonColor;
-// Button.ButtonSize = ButtonSize;
-// Button.ButtonHeight = ButtonHeight;
-//
-// export default Button;
