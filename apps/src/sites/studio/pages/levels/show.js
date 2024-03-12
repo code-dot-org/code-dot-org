@@ -71,11 +71,11 @@ function initPage() {
     } = aiTutorData;
     const level = {
       id: levelId,
-      type: type,
-      hasValidation: hasValidation,
-      isProjectBacked: isProjectBacked,
+      type,
+      hasValidation,
+      isProjectBacked,
       aiTutorAvailable,
-      isAssessment: isAssessment,
+      isAssessment,
     };
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));
