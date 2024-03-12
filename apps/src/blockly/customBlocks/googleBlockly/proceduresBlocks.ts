@@ -389,12 +389,12 @@ export const toolboxConfigurationSupportsEditButton = (
     return true;
   } else {
     // block is a behavior caller or picker.
-    const hasCategorizedToolbox = !!(
-      block.workspace as ExtendedWorkspaceSvg
-    ).getToolbox();
-    const hasUncategorizedToolbox = !!(
-      block.workspace as ExtendedWorkspaceSvg
-    ).getFlyout(/*opt_own*/ true);
+    const workspace = block.workspace as ExtendedWorkspaceSvg;
+    // A non-svg workspace does not have getToolbox() and getFlyout() methods.
+    const hasCategorizedToolbox =
+      workspace.getToolbox !== undefined && !!workspace.getToolbox();
+    const hasUncategorizedToolbox =
+      workspace.getFlyout !== undefined && !!workspace.getFlyout();
     // We show the edit button for levels with a categorized toolbox or no toolbox.
     // We do not show it for uncategorized toolboxes because renaming behaviors
     // without the behavior category causes confusing behavior.
