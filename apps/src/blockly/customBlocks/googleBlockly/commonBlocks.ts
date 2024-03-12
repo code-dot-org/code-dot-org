@@ -2,26 +2,38 @@
  * Defines blocks useful in multiple blockly apps
  */
 
+import {
+  BlocklyWrapperType,
+  JavascriptGeneratorType,
+} from '@cdo/apps/blockly/types';
 import {readBooleanAttribute} from '../../utils';
 
 const mutatorProperties = [];
 
 export const blocks = {
-  installJoinBlock(blockly) {
+  installJoinBlock(blockly: BlocklyWrapperType) {
     // text_join is included with core Blockly. We register a custom text_join_mutator
     // which adds the plus/minus block UI.
     blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
     blockly.JavaScript.forBlock.text_join_simple =
       blockly.JavaScript.forBlock.text_join;
   },
-  copyBlockGenerator(generator, type1, type2) {
+  copyBlockGenerator(
+    generator: JavascriptGeneratorType,
+    type1: string,
+    type2: string
+  ) {
     generator.forBlock[type1] = generator.forBlock[type2];
   },
-  defineNewBlockGenerator(generator, type, generatorFunction) {
+  defineNewBlockGenerator(
+    generator: JavascriptGeneratorType,
+    type: string,
+    generatorFunction
+  ) {
     generator.forBlock[type] = generatorFunction;
   },
   mutationToDom() {
-    var container = Blockly.utils.xml.createElement('mutation');
+    const container = Blockly.utils.xml.createElement('mutation');
     mutatorProperties.forEach(prop => {
       if (this[prop]) {
         container.setAttribute(prop, this[prop]);

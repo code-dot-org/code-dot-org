@@ -359,3 +359,6 @@ export type PointerMetadataMap = {
 };
 
 export type BlockColor = [number, number, number];
+
+// Blockly defines this as any.
+export type JavascriptGeneratorType = typeof javascriptGenerator;
