@@ -20,7 +20,7 @@ class CongratsController < ApplicationController
     if curriculum.is_a?(UnitGroup)
       @curriculum_url = course_path(curriculum)
       units = curriculum.units_for_user(current_user)
-      completed_units = UserScript.where(user: current_user, script: units).where.not(completed_at: nil).map(&:script)
+      completed_units = units.filter {|unit| Policies::ScriptActivity.completed?(current_user, unit)}
       @certificate_data =
         if completed_units.length == units.length
           [{
@@ -47,7 +47,7 @@ class CongratsController < ApplicationController
       # The order of this conditional is important. During HoC, we generally want to avoid
       # hitting the database, so we check if the unit is an HoC unit first.
       @certificate_data =
-        if curriculum&.hoc? || curriculum&.csf? || UserScript.where(user: current_user, script: curriculum).where.not(completed_at: nil).exists?
+        if curriculum&.hoc? || curriculum&.csf? || Policies::ScriptActivity.completed?(current_user, curriculum)
           [{
             courseName: @course_name,
             coursePath: @curriculum_url,

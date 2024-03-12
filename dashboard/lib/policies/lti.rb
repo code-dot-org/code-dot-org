@@ -130,4 +130,9 @@ class Policies::Lti
 
     LtiIntegration.count >= lti_early_access_limit
   end
+
+  # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
+  def self.issuer_accepts_resource_link?(issuer)
+    ['Canvas'].include?(issuer_name(issuer))
+  end
 end
