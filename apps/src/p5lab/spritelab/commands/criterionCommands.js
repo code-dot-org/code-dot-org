@@ -24,13 +24,13 @@ export const commands = {
     );
   },
 
-  // Return true if any sprite began speaking.
-  anySpriteSpeaks() {
+  // Return true if the minimum number of sprites began speaking.
+  anySpriteSpeaks(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id =>
         commands.spriteSpeechRenderedThisFrame.call(this, id)
-      ).length > 0
+      ).length >= min
     );
   },
 
@@ -46,30 +46,31 @@ export const commands = {
 
   // Return true if any sprite began speaking
   // and the text is not an empty string.
-  strictAnySpriteSpeaks() {
+  strictAnySpriteSpeaks(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id =>
         commands.strictSpriteSpeechRenderedThisFrame.call(this, id)
-      ).length > 0
+      ).length >= min
     );
   },
 
   // Return true if any sprite was speaking.
-  anySpriteSpeaking() {
+  anySpriteSpeaking(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
-      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length > 0
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length >=
+      1
     );
   },
 
   // Return true if any sprite was speaking
   // and the text is not an empty string.
-  strictAnySpriteSpeaking() {
+  strictAnySpriteSpeaking(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)?.text)
-        .length > 0
+        .length >= min
     );
   },
 
@@ -125,8 +126,24 @@ export const commands = {
   },
 
   // Returns true if some minimum number of sprites are in use.
-  minimumSprites(min) {
+  minimumSprites(min = 1) {
     return this.getSpriteIdsInUse().length >= min;
+  },
+
+  // Returns true if some minimum number of sprites are in use.
+  minimumSpritesNonDefaultLocation(min = 1) {
+    const defaultLocation = {x: 200, y: 200};
+    const spriteIds = this.getSpriteIdsInUse();
+    let spritesNonDefaultLocation = 0;
+    spriteIds.forEach(spriteId => {
+      if (
+        this.nativeSpriteMap[spriteId].x !== defaultLocation.x ||
+        this.nativeSpriteMap[spriteId].y !== defaultLocation.y
+      ) {
+        spritesNonDefaultLocation++;
+      }
+    });
+    return spritesNonDefaultLocation >= min;
   },
 
   // Returns true if any sprite(s) was removed this frame.
@@ -183,7 +200,7 @@ export const commands = {
   },
 
   // Returns true if there is at least some number of costumes in use.
-  minimumCostumeCount(count) {
+  minimumCostumeCount(count = 1) {
     return this.getAnimationsInUse().length >= count;
   },
 
@@ -349,6 +366,51 @@ export const commands = {
       }
     }
     return result;
+  },
+
+  // Returns true if sprites collectively have the minimum number of behaviors this frame.
+  minimumBehaviors(min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let totalBehaviors = 0;
+    for (let i = 0; i < spriteIds.length; i++) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(i);
+      totalBehaviors += currentBehaviors.length;
+    }
+    return totalBehaviors >= min;
+  },
+
+  // Returns true if any sprite has the specified behavior.
+  minimumMatchingBehaviors(matchingBehavior, min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let matchingBehaviors = 0;
+    for (let i = 0; i < spriteIds.length; i++) {
+      const hasBehavior =
+        this.getBehaviorsForSpriteId(i).includes(matchingBehavior);
+      if (hasBehavior) {
+        matchingBehaviors++;
+        if (matchingBehaviors >= min) {
+          return true;
+        }
+      }
+    }
+    return false;
+  },
+
+  // Returns true if sprites collectively have the minimum number of behaviors this frame,
+  // excluding a specified default behavior.
+  minimumNonMatchingBehaviors(excludedBehavior, min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let totalBehaviors = 0;
+    for (let i = 0; i < spriteIds.length; i++) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(i).filter(
+        behavior => behavior !== excludedBehavior
+      );
+      totalBehaviors += currentBehaviors.length;
+      if (totalBehaviors >= min) {
+        return true;
+      }
+    }
+    return false;
   },
 
   // Special function for lesson: Mini-Project: Collector Game
@@ -524,4 +586,16 @@ export const commands = {
     const result = this.studentVars.length >= 1;
     return result;
   },
+
+  // variableBubblesCreated(count = 1) {
+  //   return this.getVariableBubbles().length >= count;
+  // },
+
+  // foregroundEffectsCreated(count = 1) {
+  //   return this.getForegroundEffects().length >= count;
+  // },
+
+  // getPrevious() {
+  //   return true;
+  // },
 };
