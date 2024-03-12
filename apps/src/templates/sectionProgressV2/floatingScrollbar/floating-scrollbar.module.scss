@@ -1,0 +1,21 @@
+
+.scrollingContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.scrollBar {
+  height: 20px;
+  overflow-x: auto;
+}
+
+.bottomScrollBar {
+  position: fixed;
+  bottom: 0;
+}
+
+.emptyScrollContents {
+  // This is necessary for some browsers to show a horizontal scrollbar.
+  // Not entirely sure why, chrome works without, firefox doesn't.
+  height: 1px;
+}

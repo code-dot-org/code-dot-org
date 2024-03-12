@@ -1,16 +1,18 @@
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import classNames from 'classnames';
 import styles from './progress-table-v2.module.scss';
 import legendStyles from './progress-table-legend.module.scss';
-import queryString from 'query-string';
 import {Link} from '@dsco_/link';
 import ProgressIcon from './ProgressIcon';
 import {ITEM_TYPE} from './ItemType';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import queryString from 'query-string';
+import {feedbackLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 
-const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
+export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   if (!levelUrl) {
     return null;
   }
@@ -28,7 +30,7 @@ const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   return levelUrl;
 };
 
-export default function LevelDataCell({
+function LevelDataCell({
   level,
   studentId,
   sectionId,
@@ -68,23 +70,32 @@ export default function LevelDataCell({
     }
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
+  const feedbackStyle = React.useMemo(() => {
+    if (feedbackLeft(studentLevelProgress)) {
+      return legendStyles.feedbackGiven;
+    }
+    if (studentNeedsFeedback(studentLevelProgress, level)) {
+      return legendStyles.needsFeedback;
+    }
+  }, [studentLevelProgress, level]);
+
   return (
     <Link
       href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
       openInNewTab
       external
-      className={classNames(
-        styles.gridBox,
-        styles.gridBoxLevel,
-        studentLevelProgress?.teacherFeedbackReviewState !== 'keepWorking' &&
-          studentLevelProgress?.teacherFeedbackNew &&
-          legendStyles.feedbackGiven
-      )}
+      className={classNames(styles.gridBox, styles.gridBoxLevel, feedbackStyle)}
     >
       {itemType && <ProgressIcon itemType={itemType} />}
     </Link>
   );
 }
+
+export const UnconnectedLevelDataCell = LevelDataCell;
+
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+}))(LevelDataCell);
 
 LevelDataCell.propTypes = {
   studentId: PropTypes.number,

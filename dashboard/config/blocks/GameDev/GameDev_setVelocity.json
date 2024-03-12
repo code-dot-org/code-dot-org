@@ -17,13 +17,13 @@
             "\"velocityX\""
           ],
           [
-            "vertical speed",
+            "vertical velocity",
             "\"velocityY\""
           ]
         ]
       },
       {
-        "name": "SIZE",
+        "name": "VALUE",
         "type": "Number"
       }
     ],

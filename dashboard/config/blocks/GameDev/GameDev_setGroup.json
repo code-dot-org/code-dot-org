@@ -1,0 +1,35 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "setGroup",
+    "blockText": "set {SPRITE} type to {GROUP}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "player",
+            "\"players\""
+          ],
+          [
+            "environment",
+            "\"walls\""
+          ],
+          [
+            "object",
+            "\"objects\""
+          ],
+          [
+            "enemy",
+            "\"enemies\""
+          ]
+        ]
+      }
+    ],
+    "style": "default"
+  }
+}

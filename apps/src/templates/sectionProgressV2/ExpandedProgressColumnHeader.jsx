@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import FontAwesome from '../FontAwesome';
 import LevelProgressHeader from './LevelProgressHeader';
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import i18n from '@cdo/locale';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -50,7 +51,11 @@ export default function ExpandedProgressColumnHeader({
         data-for={getTooltipId(lesson)}
       >
         <LessonTitleTooltip lesson={lesson} />
-        <FontAwesome icon="caret-down" className={styles.expandedHeaderCaret} />
+        <FontAwesome
+          icon="caret-down"
+          className={styles.expandedHeaderCaret}
+          title={i18n.unexpand()}
+        />
         <div className={styles.expandedHeaderLessonText}>{headerText}</div>
       </div>
       <div className={styles.expandedHeaderSecondRow}>
