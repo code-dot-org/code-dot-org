@@ -23,7 +23,7 @@
         ]
       },
       {
-        "name": "SIZE",
+        "name": "VALUE",
         "type": "Number"
       }
     ],
