@@ -14,13 +14,16 @@ class Policies::Lti
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
+
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
+  TEACHER_ONLY_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
+                                'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
+).freeze
   TEACHER_ROLES = Set.new(
     [
+      *TEACHER_ONLY_ROLES,
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/membership#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/system/person#Administrator',
     ]
 ).freeze
@@ -76,6 +79,14 @@ class Policies::Lti
     return User::TYPE_STUDENT
   end
 
+  # Returns true if any of the user's roles is the LTI instructor role
+  def self.lti_teacher?(roles)
+    Array(roles).each do |role|
+      return true if TEACHER_ONLY_ROLES.include? role
+    end
+    return false
+  end
+
   def self.generate_auth_id(id_token)
     "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
   end
@@ -99,6 +110,13 @@ class Policies::Lti
     return 'Canvas' if /canvas/.match?(issuer)
     return 'Schoology' if /schoology/.match?(issuer)
     I18n.t(:lti_v1, scope: [:section, :type])
+  end
+
+  # Returns the LTI user id for a particular code.org user and LTI integration
+  def self.lti_user_id(user, lti_integration)
+    lti_user_identities = user.lti_user_identities
+
+    lti_user_identities.find {|identity|  identity.lti_integration_id == lti_integration.id}.try(:subject)
   end
 
   # Returns the email provided by the LMS when creating the User through LTI
