@@ -51,22 +51,6 @@ function handleScreenSize(carouselId) {
 }
 
 $(document).ready(function () {
-  let idCollections = "#collections_carousel";
-  handleScreenSize("collections_carousel");
-  $(idCollections + " .slides").carouFredSel({
-    auto: false,
-    pagination: "#collections_carousel-pagination",
-    prev: "#prev_2",
-    next: "#next_2",
-    responsive: true,
-    height: "490",
-    scroll: 1,
-    swipe: {
-      onTouch: true,
-      onMouse: true,
-    },
-  });
-
   let idHowAiWorks = "#how-ai-works-videos";
   handleScreenSize("how-ai-works-videos");
   $(idHowAiWorks + " .slides").carouFredSel({
