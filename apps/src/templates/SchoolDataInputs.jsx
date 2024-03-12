@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {
+  Heading2,
+  BodyTwoText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
@@ -30,6 +34,9 @@ export default function SchoolDataInputs(
   useEffect(() => {
     if (zip.length === 5) {
       setZipSearchReady(true);
+    } else {
+      // Removes the school dropdown if you delete part of the zip
+      setZipSearchReady(false);
     }
   }, [zip.length]);
 
@@ -86,7 +93,9 @@ export default function SchoolDataInputs(
               }}
               value={zip}
             />
-            {zip && !zipSearchReady && 'Please enter a 5 digit zip code'}
+            {zip && !zipSearchReady && (
+              <BodyThreeText>{i18n.zipInvalidMessage()}</BodyThreeText>
+            )}
           </div>
         )}
         {isOutsideUS && (
