@@ -13,15 +13,15 @@ import {
 } from './proceduresBlocks';
 import {getAlphanumericId} from '@cdo/apps/utils';
 import {Block, Field, WorkspaceSvg} from 'blockly';
-import CdoFieldToggle from '../../addons/cdoFieldToggle';
 import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
-import CdoFieldDropdown from '../../addons/cdoFieldDropdown';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockDrag} from 'blockly/core/events/events_block_drag';
-import CdoFieldImage from '../../addons/cdoFieldImage';
 import {BlockCreate} from 'blockly/core/events/events_block_create';
 import {BlockChange} from 'blockly/core/events/events_block_change';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import CdoFieldToggle from '@cdo/apps/blockly/addons/cdoFieldToggle';
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 const INPUTS = {
   FLYOUT: 'flyout_input',
   STACK: 'STACK',

@@ -1,12 +1,13 @@
-import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
+import {WorkspaceSvg} from 'blockly';
+import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import msg from '@cdo/locale';
 
 /**
  * Constructs the blocks required by the flyout for the variables category.
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
- * @returns {import('blockly/core/utils/toolbox').FlyoutDefinition} An array of JSON block elements.
+ * @returns {FlyoutDefinition} An array of JSON block elements.
  */
-export function flyoutCategory(workspace) {
+export function flyoutCategory(workspace: WorkspaceSvg) {
   const blockList = [];
   const newVariableButton = getNewVariableButtonWithCallback(workspace);
   blockList.push(newVariableButton);
@@ -44,7 +45,7 @@ export function flyoutCategory(workspace) {
   return blockList;
 }
 
-const getNewVariableButtonWithCallback = workspace => {
+const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
   const callbackKey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackKey, () => {
     Blockly.FieldVariable.modalPromptName(
@@ -70,7 +71,7 @@ const getNewVariableButtonWithCallback = workspace => {
  * @param workspace The workspace containing variables.
  * @returns {Array<Object>} An array of JSON block objects for a flyout.
  */
-export function flyoutCategoryBlocks(workspace) {
+export function flyoutCategoryBlocks(workspace: WorkspaceSvg) {
   const variableModelList = workspace.getVariablesOfType('');
 
   const blockList = [];
