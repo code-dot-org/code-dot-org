@@ -9,7 +9,7 @@ import Lab2Registry from './Lab2Registry';
 import {BLOCKLY_LABS} from './constants';
 
 // Validator for Blockly sources.
-export const BlocklySourceResponseValidator: ResponseValidator<
+const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   const blocklyValidator = (responseToValidate: Record<string, unknown>) => {
@@ -31,7 +31,7 @@ export const BlocklySourceResponseValidator: ResponseValidator<
 };
 
 // Validator for Python sources.
-export const PythonSourceResponseValidator: ResponseValidator<
+const PythonSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   const pythonValidator = (responseToValidate: Record<string, unknown>) => {
@@ -48,7 +48,7 @@ export const PythonSourceResponseValidator: ResponseValidator<
 };
 
 // Default source validator. This just checks if there is a source field.
-export const DefaultSourceResponseValidator: ResponseValidator<
+const DefaultSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   return sourceValidatorHelper(response, () => {});

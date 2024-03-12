@@ -1,15 +1,11 @@
 // Registry for Lab singletons
 
-import {ResponseValidator} from '../util/HttpClient';
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
-import {AppName, ProjectSources} from './types';
+import {AppName} from './types';
 
 export default class Lab2Registry {
   private projectManager: ProjectManager | null;
-  private sourceResponseValidator:
-    | ResponseValidator<ProjectSources>
-    | undefined;
   private metricsReporter: LabMetricsReporter;
   private appName: AppName | null;
 
