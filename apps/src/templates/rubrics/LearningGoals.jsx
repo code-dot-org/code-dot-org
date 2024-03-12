@@ -213,6 +213,9 @@ export default function LearningGoals({
       const aiInfo = aiEvaluations.find(
         item => item.learning_goal_id === learningGoalId
       );
+      if (aiInfo) {
+        aiInfo.showExactMatch = aiInfo.aiConfidenceExactMatch === 3;
+      }
       return aiInfo;
     } else {
       return null;
@@ -220,6 +223,23 @@ export default function LearningGoals({
   };
 
   const aiEvalInfo = getAiInfo(learningGoals[currentLearningGoal].id);
+
+  // The backend provides two ai confidence levels. aiConfidenceExactMatch is
+  // our confidence that the ai score is exactly correct, and and
+  // aiConfidencePassFail indicates our confidence in its accuracy on a
+  // pass/fail basis where Extended/Convincing are passing and Limited/No are
+  // failing.
+  //
+  // Use the precomputed showExactMatch value to decide which of these two
+  // confidence levels we will show in the UI. Throughout client code,
+  // aiConfidence should represent this computed value, and the more specific
+  // variable names should be used for exact-match or pass/fail confidence.
+  let aiConfidence;
+  if (aiEvalInfo) {
+    aiConfidence = aiEvalInfo.showExactMatch
+      ? aiEvalInfo.aiConfidenceExactMatch
+      : aiEvalInfo.aiConfidencePassFail;
+  }
 
   const autosave = () => {
     setAutosaveStatus(STATUS.IN_PROGRESS);
@@ -511,7 +531,7 @@ export default function LearningGoals({
                   <AiAssessment
                     isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                     studentName={studentLevelInfo.name}
-                    aiConfidence={aiEvalInfo.ai_confidence}
+                    aiConfidence={aiConfidence}
                     aiUnderstandingLevel={aiEvalInfo.understanding}
                     aiEvalInfo={aiEvalInfo}
                     aiEvidence={aiEvidence}

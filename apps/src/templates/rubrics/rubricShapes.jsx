@@ -46,7 +46,9 @@ export const aiEvaluationShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   learning_goal_id: PropTypes.number.isRequired,
   understanding: PropTypes.number.isRequired,
-  ai_confidence: PropTypes.number,
+  aiConfidencePassFail: PropTypes.number,
+  aiConfidenceExactMatch: PropTypes.number,
+  showExactMatch: PropTypes.bool,
   observations: PropTypes.string,
   evidence: PropTypes.string,
 });

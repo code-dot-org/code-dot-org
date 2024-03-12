@@ -13,6 +13,7 @@ import AiConfidenceBox from './AiConfidenceBox';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
 import AiAssessmentFeedback from './AiAssessmentFeedback';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function AiAssessmentBox({
   isAiAssessed,
@@ -25,14 +26,23 @@ export default function AiAssessmentBox({
   const thumbsdownval = 0;
 
   const studentAchievement = () => {
-    const assessment =
-      aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
-        ? i18n.aiAssessmentDoesMeet()
-        : i18n.aiAssessmentDoesNotMeet();
+    const assessment = getStudentAssessmentString();
     return i18n.aiStudentAssessment({
       studentName: studentName,
       understandingLevel: assessment,
     });
+  };
+
+  // use the computed value showExactMatch to decide whether to return text
+  // containing a single evidence level (exact match) or a range of two
+  // evidence levels (pass fail).
+  const getStudentAssessmentString = () => {
+    if (aiEvalInfo.showExactMatch) {
+      return UNDERSTANDING_LEVEL_STRINGS[aiUnderstandingLevel];
+    }
+    return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
+      ? i18n.aiAssessmentDoesMeet()
+      : i18n.aiAssessmentDoesNotMeet();
   };
 
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
