@@ -11,7 +11,7 @@ const CollapsibleSection: React.FunctionComponent<{
   const [collapsed, setCollapsed] = useState(initiallyCollapsed);
 
   return (
-    <div>
+    <>
       <div className={moduleStyles.titleRow}>
         <button
           type="button"
@@ -26,7 +26,7 @@ const CollapsibleSection: React.FunctionComponent<{
         <BodyOneText className={moduleStyles.fieldTitle}>{title}</BodyOneText>
       </div>
       {!collapsed && children}
-    </div>
+    </>
   );
 };
 
