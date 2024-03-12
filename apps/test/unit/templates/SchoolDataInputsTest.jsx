@@ -1,11 +1,15 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {render, screen} from '@testing-library/react';
 import {expect} from '../../util/deprecatedChai';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import i18n from '@cdo/locale';
 
 describe('SchoolDataInputs', () => {
+  function renderDefault() {
+    render(<SchoolDataInputs />);
+  }
   it('shallow-renders', () => {
-    const wrapper = shallow(<SchoolDataInputs />);
-    expect(wrapper).not.to.be.null;
+    renderDefault({signedIn: true});
+    expect(screen.queryByText(i18n.censusHeading()));
   });
 });

@@ -36,8 +36,11 @@ export default function SchoolDataInputs(
     setZip(newZip);
   };
 
-  const updateCountry = country => {
+  const onCountryChange = e => {
+    const country = e.target.value;
     setCountry(country);
+    // We don't want to display any fields to start that won't eventually be
+    // necessary, so updating both of these any time country changes
     if (country === 'US') {
       setAskForZip(true);
       setIsOutsideUS(false);
@@ -60,9 +63,7 @@ export default function SchoolDataInputs(
           name={fieldNames.country}
           items={COUNTRY_ITEMS}
           selectedValue={country}
-          onChange={e => {
-            updateCountry(e.target.value);
-          }}
+          onChange={onCountryChange}
           size="m"
         />
         {askForZip && (
@@ -94,7 +95,7 @@ export default function SchoolDataInputs(
             {/*<EnterSchoolNameManually fieldName={fieldNames.schoolName} /> Write new component to gather school name*/}
           </div>
         )}
-        {zipSearchReady && (
+        {askForZip && zipSearchReady && (
           <div>
             <BodyTwoText
               className={style.padding}
