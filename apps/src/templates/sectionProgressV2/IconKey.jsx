@@ -8,8 +8,8 @@ import styles from './progress-table-legend.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
 import Link from '@cdo/apps/componentLibrary/link';
-import MoreDetailsDialog from './MoreDetailsDialog.jsx';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import MoreDetailsDialog from './MoreDetailsDialog.jsx';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const [isOpen, setIsOpen] = useState(true);
