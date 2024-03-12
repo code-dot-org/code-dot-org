@@ -7,6 +7,7 @@ import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 
 export default function SchoolDataInputs(
+  includeHeaders = true,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
     ncesSchoolId: 'user[school_info_attributes][school_id]',
@@ -52,8 +53,14 @@ export default function SchoolDataInputs(
 
   return (
     <div className={style.outerContainer}>
-      <Heading2 className={style.topPadding}>{i18n.censusHeading()}</Heading2>
-      <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
+      {includeHeaders && (
+        <div>
+          <Heading2 className={style.topPadding}>
+            {i18n.censusHeading()}
+          </Heading2>
+          <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
+        </div>
+      )}
       <div className={style.inputContainer}>
         <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
           {i18n.whatCountry()}
@@ -112,5 +119,6 @@ export default function SchoolDataInputs(
 }
 
 SchoolDataInputs.propTypes = {
+  includeHeaders: PropTypes.bool,
   fieldNames: PropTypes.object,
 };
