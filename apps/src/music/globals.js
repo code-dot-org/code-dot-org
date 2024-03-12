@@ -23,7 +23,7 @@ export default {
     showSoundFilters = show;
   },
 
-  getShowSoundFilters(get) {
+  getShowSoundFilters() {
     return showSoundFilters;
   },
 };
