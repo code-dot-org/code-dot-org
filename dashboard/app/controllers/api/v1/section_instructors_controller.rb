@@ -63,6 +63,10 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     @section_instructor.status = new_status
     @section_instructor.save!
 
+    if @section_instructor.invited_by&.verified_teacher? && new_status == :active
+      @section_instructor.instructor.permission = UserPermission::AUTHORIZED_TEACHER
+    end
+
     render json: @section_instructor, serializer: Api::V1::SectionInstructorSerializer
   end
 
