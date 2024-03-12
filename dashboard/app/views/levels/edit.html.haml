@@ -1,7 +1,6 @@
 %div{style: "display: flex;"}
   %div{style: "display: flex; width: 10%; padding: 20px;", id: "table-of-contents-mount-point"}
     %h1="hello world"
-    = render partial: 'levels/editors/_navigation_bar'
   %div{style: "flex: 1;"}
     %h1= @page_title = @level.new_record? ? "New #{@level.class.to_s} level" : "Editing #{@level.name}"
 
