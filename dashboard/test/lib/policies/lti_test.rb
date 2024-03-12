@@ -85,7 +85,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
   end
 
   test 'lti_teacher returns false if learner' do
-    assert_equal false, Policies::Lti.lti_teacher?([Policies::Lti.CONTEXT_LEARNER_ROLE])
+    assert_equal false, Policies::Lti.lti_teacher?([Policies::Lti::CONTEXT_LEARNER_ROLE])
   end
 
   test 'lti_teacher returns true if instructor' do
