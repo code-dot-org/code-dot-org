@@ -5,7 +5,6 @@ import LegendItem from './LegendItem';
 import {ITEM_TYPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import color from '@cdo/apps/util/color';
 
 export default function LevelTypesBox() {
   return (
