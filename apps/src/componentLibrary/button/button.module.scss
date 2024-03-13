@@ -203,11 +203,11 @@
   }
 
   &.button-white {
-    color: $light_gray_200;
+    color: $light_white;
 
     &:hover {
       background-color: $light_gray_800;
-      color: $light_gray_200;
+      color: $light_white;
     }
 
     &:active {
