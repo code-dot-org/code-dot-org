@@ -1010,11 +1010,15 @@ FactoryBot.define do
     end
   end
 
-  # WARNING: Using this factory in new tests may cause other tests, including
-  # ProjectsController tests, to fail.
+  # WARNING: using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail, see: https://codedotorg.atlassian.net/browse/TEACH-230
+  # Errors seen were: `Mysql2::Error::TimeoutError`
   factory :project_storage do
   end
 
+  # WARNING: due to using project_storage, using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail, see: https://codedotorg.atlassian.net/browse/TEACH-230
+  # Errors seen were: `Mysql2::Error::TimeoutError`
   factory :project do
     transient do
       owner {create :user}
@@ -1025,6 +1029,18 @@ FactoryBot.define do
     after(:build) do |project, evaluator|
       project_storage = create :project_storage, user_id: evaluator.owner.id
       project.storage_id = project_storage.id
+    end
+  end
+
+  factory :project_with_fake_storage, class: 'Project' do
+    transient do
+      owner {create :user}
+    end
+
+    updated_ip {'127.0.0.1'}
+
+    after(:build) do |project, evaluator|
+      project.storage_id = fake_storage_id_for_user_id(evaluator.owner.id)
     end
   end
 

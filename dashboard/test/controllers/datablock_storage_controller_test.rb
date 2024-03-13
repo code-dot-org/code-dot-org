@@ -5,7 +5,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     @student = create :student
     sign_in @student
 
-    project = create :project, owner: @student
+    project = create :project_with_fake_storage, owner: @student
     project.project_type = 'applab'
     project.save!
     @channel_id = project.channel_id
