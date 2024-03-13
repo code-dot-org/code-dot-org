@@ -254,6 +254,15 @@ ul {
     }
   }
 
+  // Show list items in two columns
+  &.two-col {
+    @media screen and (min-width: $width-md) { column-count: 2; }
+
+    li:first-child {
+      margin-top: 0;
+    }
+  }
+
   // Show list items in three columns
   &.three-col {
     @media screen and (min-width: $width-sm) { column-count: 2; }
@@ -1280,15 +1289,6 @@ section.quote {
   padding: 1.5rem;
   display: grid;
 
-  // Used with two ul elements
-  &.two-col {
-    @media (min-width: $width-md) {
-      ul {
-        column-count: 2;
-      }
-    }
-  }
-
   ul {
     margin: 0;
     gap: 1.25rem;
@@ -1296,13 +1296,17 @@ section.quote {
     li {
       all: unset;
       font-size: 1rem;
-      margin: 0;
+      margin: 0 0 1.25rem;
       display: flex;
       align-items: baseline;
       gap: 0.75rem;
 
       &:before {
         display: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
 
       p {

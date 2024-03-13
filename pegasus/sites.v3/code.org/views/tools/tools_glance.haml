@@ -12,8 +12,8 @@
 - titles = [hoc_s("app_lab_page.glance.titles.ages"), hoc_s("app_lab_page.glance.titles.level"), hoc_s("app_lab_page.glance.titles.make"), hoc_s("app_lab_page.glance.titles.devices"), hoc_s("app_lab_page.glance.titles.browsers"), hoc_s("app_lab_page.glance.titles.languages"), hoc_s("app_lab_page.glance.titles.accessiblity")]
 - descriptions = [ages, level, make, devices, browsers, languages, accessiblity]
 
-.at-a-glance.two-col
-  %ul
+.at-a-glance
+  %ul.two-col
     - items_index.times do |index|
       %li
         %i{class: "#{icons[index]}"}
