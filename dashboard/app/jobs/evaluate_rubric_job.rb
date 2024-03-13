@@ -277,7 +277,7 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   # The client for s3 access made directly by this job, not via SourceBucket.
-  private def s3_client
+  def s3_client
     @s3_client ||= AWS::S3.create_client
   end
 
