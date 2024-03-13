@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/55797)
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/57228)
 * added font awesome icon animation support for `FontAwesomeV6Icon` component
 
 ## [0.1.1](https://github.com/code-dot-org/code-dot-org/pull/55797)
