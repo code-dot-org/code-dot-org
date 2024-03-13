@@ -1771,6 +1771,34 @@
         accessiblity: "Accessibility"
       documentation: "Extensive documentation detailing specific functionality and use is available for App Lab."
       button: "View documentation"
+    make:
+      heading: "See what you can make in App Lab!"
+      desc: "Explore some project guides for App Lab to get started with building apps using Javascript!"
+      button: "Try it out"
+      slider_sketch:
+        title: "Slider Sketch"
+        desc: "Use the sliders to draw cool patterns and designs. Challenge: Add another slider to change the thickness of the line."
+        aria_label: "Try the Slider Sketch project"
+      landmark_flashcards:
+        title: "Landmark Flashcards"
+        desc: "Use this app to create flashcards to learn a new subject or practice for a test. Challenge: add more cards to the deck or create a whole new deck."
+        aria_label: "Try the Landmark Flashcards project"
+      choose_adventure:
+        title: "Choose Your Own Adventure"
+        desc: "Choose carefully as you go through this short adventure. Challenge: continue the story by adding in more choices. Or create a different story!"
+        aria_label: "Try the Choose Your Own Adventure project"
+      poke_pig:
+        title: "Poke the Pig"
+        desc: "How many times you can poke the pig before time runs out? Add a button and event to be able to play again and again, so you can improve your score."
+        aria_label: "Try the Poke the Pig project"
+      pet_poll:
+        title: "Pet Poll"
+        desc: "Vote for your favorite pet in this fun app. Challenge: Add more animals so you can vote for more favorites."
+        aria_label: "Try the Pet Poll project"
+      pet_poll:
+        title: "Pensive Painter"
+        desc: "Take a deep breath, relax, and paint whatever you desire. Challenge: Add a click event to clear the screen so you can start painting a new masterpiece."
+        aria_label: "Try the Pensive Painter project"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
