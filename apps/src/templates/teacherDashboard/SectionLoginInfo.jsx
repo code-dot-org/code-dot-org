@@ -92,6 +92,8 @@ class LtiLogins extends React.Component {
       <div>
         <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
         <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody()} />
+        <h2 style={styles.heading}>{i18n.loginInfoLtiUpdateHeader()}</h2>
+        <SafeMarkdown markdown={i18n.loginInfoLtiUpdateBody()} />
         <SignInInstructions loginType={SectionLoginType.lti_v1} />
       </div>
     );

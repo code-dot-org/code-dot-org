@@ -1557,6 +1557,8 @@
   "loginInfo_signinStep5": "Click the \"Sign in\" button.",
   "loginInfoLtiSetupHeader": "Set up your class",
   "loginInfoLtiSetupBody": "To get a class set up with your LMS, please do the following:\n1. Ensure your class is set up the way you want it to be in your LMS (e.g. the students are rostered in the sections you desire).\n1. Click the \"Sync students & sections\" button above to copy your LMS students & LMS sections into Code.org.\n\nYou're finished! If you ever need to add or remove sections & students later, do that in your LMS first, then re-sync your classroom again with the \"Sync students & sections\" button above.",
+  "loginInfoLtiUpdateHeader": "Update your class",
+  "loginInfoLtiUpdateBody": "In order to update your sections, please do the following:\n1. Ensure your class is setup the way you want it to be in your LMS\n1. Click \"Launch Code.org\" or\nClick \"Sync sections & students\" from the Manage Students tab",
   "loginType": "Login Type",
   "loginTypeClever": "Clever",
   "loginTypeCleverButton": "Use Clever",
