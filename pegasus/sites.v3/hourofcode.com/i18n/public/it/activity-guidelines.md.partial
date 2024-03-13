@@ -182,7 +182,7 @@ Se il comitato di revisione valuta l'attività a zero in termini di qualità del
 
 Inoltre, per essere elencate, tutte le attività devono:
 
-In addition, in order to be listed, all activities must:
+Per quanto riguarda le attività autonome destinate a nuovi insegnanti e studenti, il comitato di revisione verificherà se:
 
 - Essere appropriato per un'aula di una scuola pubblica (niente armi, nessun contenuto esplicito/maturo, nessun contenuto religioso, ecc.)
 - Non richiedono l'iscrizione
@@ -198,9 +198,9 @@ Teachers and students will be able to search through and filter our list of acti
 
 - Feedback positivo: Cosa funziona bene?
 - Feedback critico: Cosa si potrebbe migliorare?
-- Appeal to a wide range of users (across platforms, languages, and ages)
+- Attraggono una vasta gamma di utenti (attraverso piattaforme, lingue ed età)
 - Questa attività incoraggia gli studenti a creare qualcosa di unico?
-- Are new this year
+- Sono nuove quest'anno
 
 [**Torna all'inizio**](#top)
 
@@ -210,7 +210,7 @@ Teachers and students will be able to search through and filter our list of acti
 
 Activities do not have to include AI, though we are looking to offer more AI related activities.
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+**Includi le note per l'insegnante.** La maggior parte delle attività dovrebbe essere autogestita dagli studenti, ma se un'attività deve essere guidata o gestita da un insegnante ti preghiamo di includere delle indicazioni chiare e semplici per l'insegnante, in forma di note disponibili ad un URL separato da inviare unitamente alla tua attività. Non sono solo gli studenti ad essere principianti, lo sono anche alcuni degli insegnanti. Includi le informazioni utili come:
 
 Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
 
@@ -239,13 +239,13 @@ Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, i
 
 Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Usa «Hour of Code» solo in relazione alle attività non commerciali di CS Education nel contesto della campagna Hour of Code e per nessun altro scopo.
+2. Qualsiasi riferimento a "Hour of Code" ("Ora del codice") deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Buon esempio: «Partecipa all'Ora del Codice® su AcmeCorp.com». Un esempio di uso sbagliato: "Prova l'Ora del Codice di ACME Corp".
+3. Usa un apice «®» nei punti più importanti in cui menzioni «L'ora del codice», sia sul tuo sito web che nelle descrizioni delle app.
+4. Includi un linguaggio nella pagina (o nel piè di pagina), compresi i link ai siti web di Hour of Code, CSedWeek e Code.org, che indichi entrambi i seguenti elementi: a. Hour of Code® e Hora del Código® sono marchi registrati di Code.org; e b. «L'Ora[del Codice](http://hourofcode.com/) ® è un'iniziativa nazionale di [Code.org](http://code.org/) per avvicinare milioni di studenti a un'ora di informatica e programmazione informatica».
+5. Non utilizzare «Hour of Code» nei nomi delle app.
+6. Non utilizzare «L'Ora del Codice» in relazione a qualsiasi uso o scopo commerciale (ad esempio, inserire la tua attività sull'Ora del Codice dietro un paywall; promuovere un altro servizio a pagamento come parte della tua attività L'Ora del Codice; vendere prodotti dell'Ora del Codice).
+7. Non utilizzare «Hour of Code» in relazione ad attività che richiedono un accesso o la creazione di un account.
 
 [**Torna all'inizio**](#top)
 
@@ -253,13 +253,13 @@ Hour of Code® and Hora del Código® are registered trademarks of Code.org. Man
 
 ## Linee guida sui Marchi Registrati
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Se il tuo corso viene approvato e incluso nell'elenco finale dei corsi, Code.org ti fornirà uno specifico pixel di tracciamento che potrai integrare nel tuo corso. Vedi l'esempio in basso. Do not include on any interim pages of your tutorial.
 
 This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
 If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 Example tracking pixels for Dance Party:
 

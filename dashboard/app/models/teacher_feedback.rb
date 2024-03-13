@@ -66,12 +66,11 @@ class TeacherFeedback < ApplicationRecord
   end
 
   # returns the latest feedback from each teacher for the student on the level
-  def self.get_latest_feedbacks_received(student_id, level_id, script_id, teacher_id = nil)
+  def self.get_latest_feedbacks_received(student_id, level_id, script_id)
     query = {
       student_id: student_id,
       level_id: level_id,
-      script_id: script_id,
-      teacher_id: teacher_id,
+      script_id: script_id
     }.compact
 
     where(query).

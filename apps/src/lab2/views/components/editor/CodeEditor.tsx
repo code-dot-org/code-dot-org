@@ -7,7 +7,6 @@ import {useDispatch} from 'react-redux';
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
 import {autocompletion} from '@codemirror/autocomplete';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
@@ -25,8 +24,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   const [didInit, setDidInit] = useState(false);
-  const [editorView, setEditorView] = useState<EditorView | null>(null);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   useEffect(() => {
     if (editorRef.current === null || didInit) {
@@ -49,15 +46,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     if (darkMode) {
       editorExtensions.push(darkModeTheme);
     }
-    setEditorView(
-      new EditorView({
-        state: EditorState.create({
-          doc: startCode,
-          extensions: editorExtensions,
-        }),
-        parent: editorRef.current,
-      })
-    );
+    new EditorView({
+      state: EditorState.create({
+        doc: startCode,
+        extensions: editorExtensions,
+      }),
+      parent: editorRef.current,
+    });
     setDidInit(true);
   }, [
     dispatch,
@@ -68,20 +63,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     didInit,
     darkMode,
   ]);
-
-  // When we have a new channelId and/or start code, reset the editor with the start code.
-  // A new channelId means we are loading a new project, and we need to reset the editor.
-  useEffect(() => {
-    if (editorView) {
-      editorView.dispatch({
-        changes: {
-          from: 0,
-          to: editorView.state.doc.length,
-          insert: startCode,
-        },
-      });
-    }
-  }, [startCode, editorView, channelId]);
 
   return (
     <PanelContainer id="code-editor" headerText="Editor" hideHeaders={false}>

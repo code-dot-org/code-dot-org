@@ -8,9 +8,6 @@ import {Provider} from 'react-redux';
 import sectionProgress, {
   addDataByUnit,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import teacherSections, {
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 
@@ -45,13 +42,12 @@ describe('ExpandedProgressDataColumn', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress, unitSelection, teacherSections});
+    registerReducers({sectionProgress, unitSelection});
     store = getStore();
     store.dispatch(setScriptId(1));
     store.dispatch(
       addDataByUnit({studentLevelProgressByUnit: {1: LEVEL_PROGRESS}})
     );
-    store.dispatch(selectSection(1));
   });
 
   afterEach(() => {
@@ -87,10 +83,10 @@ describe('ExpandedProgressDataColumn', () => {
     renderDefault();
 
     expect(
-      screen.getAllByText(
+      screen.getByText(
         'Lesson ' + LESSON.relative_position + ': ' + LESSON.name
       )
-    ).to.have.length(2);
+    ).to.exist;
 
     LESSON.levels.forEach(level => {
       expect(
@@ -135,7 +131,7 @@ describe('ExpandedProgressDataColumn', () => {
     );
 
     expect(
-      screen.queryAllByLabelText(PROGRESS_ICON_TITLE_PREFIX + 'split')
+      screen.queryAllByTitle(PROGRESS_ICON_TITLE_PREFIX + 'split')
     ).to.have.length(STUDENTS.length);
   });
 

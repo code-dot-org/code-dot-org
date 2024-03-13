@@ -116,7 +116,7 @@ module I18n
           # over parsing unchanged strings, and if we skipped strings without doing a
           # merge we'd end up deleting any unchanged strings.
           def distribute_level_content(language)
-            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
+            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
             return unless File.directory?(crowdin_locale_dir)
 
             i18n_data = i18n_data_of(language, crowdin_locale_dir) || {}
@@ -142,12 +142,10 @@ module I18n
               dashboard_i18n_data = I18nScriptUtils.to_dashboard_i18n_data(language[:locale_s], type, type_i18n_data)
               I18nScriptUtils.sanitize_data_and_write(dashboard_i18n_data, target_i18n_file_path)
             end
-
-            I18nScriptUtils.remove_empty_dir(crowdin_locale_dir)
           end
 
           def distribute_localization_of(type, language)
-            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
+            crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             return unless File.exist?(crowdin_file_path)
 
             target_i18n_file_path = dashboard_i18n_file_path(type, language[:locale_s], 'yml')
@@ -155,7 +153,6 @@ module I18n
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], I18n::Resources::Dashboard::DIR_NAME, "#{type}.yml")
             I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
-            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
         end
       end

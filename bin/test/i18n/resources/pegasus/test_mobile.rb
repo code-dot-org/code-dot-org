@@ -18,13 +18,6 @@ describe I18n::Resources::Pegasus::Mobile do
     end
   end
 
-  describe '.sync_down' do
-    it 'sync-down Mobile resource' do
-      described_class::SyncDown.expects(:perform).once
-      described_class.sync_down
-    end
-  end
-
   describe '.sync_out' do
     it 'sync-out Mobile resource' do
       described_class::SyncOut.expects(:perform).once

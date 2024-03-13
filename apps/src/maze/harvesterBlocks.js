@@ -4,8 +4,6 @@
 
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
-var BlockStyles = require('../blockly/constants').BlockStyles;
-var BlockColors = require('../blockly/constants').BlockColors;
 
 const CROPS = ['corn', 'pumpkin', 'lettuce'];
 
@@ -17,11 +15,7 @@ function addIfAtSpecificCropBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifAt${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg[crop]()].join(' ')
       );
@@ -46,11 +40,7 @@ function addIfAtSpecificCropElseBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifAt${capitalizeFirstLetter(crop)}Else`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg[crop]()].join(' ')
       );
@@ -77,11 +67,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg.at(), msg[crop]()].join(' ')
       );
@@ -105,11 +91,7 @@ function addIfSpecificCropHasBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifHas${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg[`has${crop}`]()].join(' ')
       );
@@ -134,11 +116,7 @@ function addIfSpecificCropHasElseBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifHas${capitalizeFirstLetter(crop)}Else`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(
         [msg.ifCode(), msg[`has${crop}`]()].join(' ')
       );
@@ -165,11 +143,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_whileHas${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(
         [msg.whileMsg(), msg[`has${crop}`]()].join(' ')
       );
@@ -195,11 +169,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_untilHas${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg[`has${crop}`]()].join(' ')
       );
@@ -261,11 +231,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifAtCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(AT_OPTIONS),
@@ -288,11 +254,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifAtCropElse = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(AT_OPTIONS),
@@ -317,11 +279,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_untilAtCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg.at()].join(' ')
       );
@@ -347,11 +305,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifHasCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),
@@ -376,11 +330,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_ifHasCropElse = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),
@@ -407,11 +357,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_whileHasCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(msg.whileMsg());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),
@@ -437,11 +383,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_untilHasCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput().appendField(msg.repeatUntil());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),

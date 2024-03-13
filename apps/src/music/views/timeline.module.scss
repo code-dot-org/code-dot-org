@@ -12,10 +12,6 @@
   height: 100%;
   position: relative;
 
-  &Playing {
-    overflow-x: hidden;
-  }
-
   .fullWidthOverlay {
     height: 100%;
     position: absolute;
@@ -88,11 +84,6 @@
       &Yellow {
         background-color: yellow;
         border-color: brown;
-      }
-
-      &Orange {
-        background-color: darkorange;
-        border-color: #60d5cd;
       }
 
       &Pattern {

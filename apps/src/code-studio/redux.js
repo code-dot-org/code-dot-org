@@ -20,7 +20,6 @@ import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import microBit from '../lib/kits/maker/microBitRedux';
 import lab from '../lab2/lab2Redux';
 import javalabEditor from '@cdo/apps/javalab/redux/editorRedux';
-import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 
 registerReducers({
   header,
@@ -43,7 +42,6 @@ registerReducers({
   microBit,
   lab,
   javalabEditor,
-  javalab,
 });
 
 export {getStore};

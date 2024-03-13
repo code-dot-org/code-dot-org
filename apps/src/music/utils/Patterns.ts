@@ -40,7 +40,7 @@ export function generateGraphDataFromPattern({
   const useWidth = width - 2 * padding - noteWidth;
   const useHeight = height - 2 * padding - noteHeight;
 
-  const currentFolder = library.getFolderForFolderId(patternEventValue.kit);
+  const currentFolder = library.getFolderForPath(patternEventValue.kit);
   if (!currentFolder) {
     return [];
   }

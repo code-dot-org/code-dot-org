@@ -2,11 +2,9 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   load_and_authorize_resource except: :create
   authorize_resource only: :create
 
-  PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
   def index
-    @summarized_course_enrollments = @user_course_enrollments.map(&:summarize).sort_by do |enrollment|
-      PLC_COURSE_ORDERING.index(enrollment[:courseName]) || PLC_COURSE_ORDERING.size
-    end
+    @user_course_enrollments = @user_course_enrollments.where(user: current_user) if @user_course_enrollments
+    render 'index', locals: {user_course_enrollments: @user_course_enrollments}
   end
 
   def group_view

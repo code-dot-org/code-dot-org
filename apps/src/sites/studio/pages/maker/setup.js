@@ -11,4 +11,5 @@ $(function () {
     </Provider>,
     document.getElementById('maker-setup')
   );
+  $('#maker-setup a').attr('target', '_blank');
 });

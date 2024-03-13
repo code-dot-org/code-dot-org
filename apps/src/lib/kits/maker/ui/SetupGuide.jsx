@@ -11,11 +11,19 @@ import {
   MIN_CHROME_VERSION,
 } from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
+const style = {
+  descriptionFlexCard: {
+    width: '45%',
+  },
+};
+
 export default class SetupGuide extends React.Component {
-  setupGuideContent = {
-    id: 'general-description',
-    title: applabI18n.makerSetupGeneralTitle(),
-    description: applabI18n.makerSetupGeneralDescription(),
+  setupGuideContent = content => {
+    return {
+      id: 'general-description',
+      title: applabI18n.makerSetupGeneralTitle(),
+      description: applabI18n.makerSetupGeneralDescription(),
+    };
   };
 
   render() {
@@ -49,7 +57,11 @@ export default class SetupGuide extends React.Component {
           )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
 
-        <HeaderCard {...this.setupGuideContent} />
+        <div>
+          <div style={style.oneColumn}>
+            <HeaderCard {...this.setupGuideContent('general')} />
+          </div>
+        </div>
 
         <div id="setup-status-mount">
           <SetupInstructions />
@@ -59,12 +71,43 @@ export default class SetupGuide extends React.Component {
   }
 }
 
-function HeaderCard({id, title, description, divStyle}) {
+function DescriptionCard(props) {
   return (
-    <div id={id} style={divStyle}>
-      <h2>{title}</h2>
+    <div id={props.id} style={props.divStyle}>
+      <h2>{props.title}</h2>
+      <center>
+        <a href={props.href}>
+          <img
+            src={props.imgSrc}
+            width={200}
+            style={props.imgStyle}
+            alt={props.alt}
+          />
+        </a>
+      </center>
       <div className="description-content">
-        <SafeMarkdown markdown={description} openExternalLinksInNewTab={true} />
+        <SafeMarkdown markdown={props.description} />
+      </div>
+    </div>
+  );
+}
+DescriptionCard.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  imgStyle: PropTypes.object,
+  description: PropTypes.string.isRequired,
+  divStyle: PropTypes.object,
+  alt: PropTypes.string.isRequired,
+};
+
+function HeaderCard(props) {
+  return (
+    <div id={props.id} style={props.divStyle}>
+      <h2>{props.title}</h2>
+      <div className="description-content">
+        <SafeMarkdown markdown={props.description} />
       </div>
     </div>
   );

@@ -4,17 +4,15 @@ import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {learningGoalShape} from './rubricShapes';
 import color from '@cdo/apps/util/color';
-import classnames from 'classnames';
 
 export default function ProgressRing({
-  className,
   learningGoals,
   currentLearningGoal,
   understandingLevels,
   radius,
   stroke,
 }) {
-  const normalizedRadius = radius - stroke;
+  const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;
   const assessedLearningGoals = understandingLevels.filter(u => u >= 0).length;
   const currentLearningGoalOffset =
@@ -25,11 +23,7 @@ export default function ProgressRing({
     (assessedLearningGoals / learningGoals.length) * circumference;
 
   return (
-    <svg
-      className={classnames(className)}
-      height={radius * 2}
-      width={radius * 2}
-    >
+    <svg height={radius * 2} width={radius * 2}>
       <circle
         className={style.progressRing}
         stroke={color.light_gray_200}
@@ -69,7 +63,6 @@ export default function ProgressRing({
 }
 
 ProgressRing.propTypes = {
-  className: PropTypes.string,
   learningGoals: PropTypes.arrayOf(learningGoalShape),
   currentLearningGoal: PropTypes.number,
   understandingLevels: PropTypes.arrayOf(PropTypes.number),

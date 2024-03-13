@@ -43,7 +43,7 @@ module Cdo
 
     def render(*sources)
       super.tap do |configs|
-        configs.each {|config| process_secrets!(config)}
+        configs.each(&method(:process_secrets!))
       end
     end
 

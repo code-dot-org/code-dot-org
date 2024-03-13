@@ -1,0 +1,336 @@
+@import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+// Dropdown common styles
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+
+  .dropdownLabel {
+    display: block;
+  }
+
+  .dropdownButton {
+    display: inline-flex;
+    align-items: center;
+    align-self: stretch;
+    width: auto;
+    background-color: unset;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    color: $light_black;
+    box-shadow: none;
+    gap: 0.5rem;
+    margin: 0;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:focus-visible {
+      outline: 2px solid $light_primary_500;
+      border-radius: 0.25rem;
+      outline-offset: 2px;
+    }
+  }
+
+  .dropdownMenuContainer {
+    position: absolute;
+    bottom: auto;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    margin: 2px 0 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid rgba(0 0 0 / .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+    box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+    background-clip: padding-box;
+    padding: .25rem 0 0;
+
+    ul {
+      margin: 0;
+
+      li {
+        list-style-type: none;
+        display: flex;
+        align-items: flex-end;
+        align-self: stretch;
+
+        label {
+          flex-grow: 1;
+        }
+
+        &:hover {
+          background-color: $light_gray_100;
+        }
+
+        &:active, &:has(input[type="checkbox"]:checked) {
+          background-color: $light_primary_500;
+
+          i::before {
+            background-color: $light_white;
+            color: $light_primary_500;
+          }
+
+          span {
+            color: $light_white;
+          }
+        }
+
+        &:has(input[type="checkbox"]:disabled) {
+          cursor: not-allowed;
+          color: $light_gray_200;
+          background-color: unset;
+
+          span {
+            color: $light_gray_200;
+          }
+        }
+      }
+    }
+  }
+
+  .bottomButtonsContainer {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.25rem;
+    gap: 0.25rem;
+
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-top: 1px solid $light_gray_300;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+.dropdownContainer.open {
+  .dropdownMenuContainer {
+    display: block;
+  }
+}
+
+// Dropdown colors
+.dropdownContainer-black {
+  .dropdownLabel {
+    color: $light_black;
+  }
+
+  .dropdownButton {
+    color: $light_black;
+    border-color: $light_black;
+  }
+
+  &:has(.dropdownButton:hover) {
+    .dropdownButton:not(:disabled) {
+      color: $light_black;
+      background-color: $light_gray_100;
+    }
+  }
+
+  &:has(.dropdownButton:active) {
+    .dropdownButton:not(:disabled) {
+      color: $light_black;
+      background-color: unset;
+    }
+  }
+
+  &:has(.dropdownButton:disabled) {
+    .dropdownButton {
+      color: $light_gray_200;
+      border-color: $light_gray_200 !important;
+      cursor: not-allowed;
+    }
+
+    .dropdownLabel {
+      color: $light_gray_200;
+    }
+  }
+}
+
+.dropdownContainer-white {
+  .dropdownLabel {
+    color: $light_white;
+  }
+
+  .dropdownButton {
+    color: $light_white;
+    border-color: $light_white;
+  }
+
+  &:has(.dropdownButton:hover) {
+    .dropdownButton:not(:disabled) {
+      color: $light_white;
+      background-color: $light_gray_900;
+    }
+  }
+
+  &:has(.dropdownButton:active) {
+    .dropdownButton:not(:disabled) {
+      color: $light_white;
+      background-color: unset;
+    }
+  }
+
+  &:has(.dropdownButton:disabled) {
+    .dropdownButton {
+      color: $light_gray_900;
+      border-color: $light_gray_900;
+    }
+  }
+}
+
+// Sizes
+.dropdownContainer-l {
+  .dropdownLabel {
+    @include label-one;
+    margin-bottom: 0;
+  }
+
+  .dropdownButton {
+    @include button-one-text;
+    height: 3rem;
+    padding: 0.625rem 1rem;
+    margin-bottom: 0;
+  }
+
+  .dropdownMenuContainer {
+    min-width: 15.1rem;
+
+    ul {
+      li {
+        label {
+          padding: 0.625rem 1rem 0.625rem .75rem;
+          gap: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .bottomButtonsContainer {
+    button {
+      padding: 0.625rem 1rem;
+
+      @include button-one-text;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dropdownContainer-m {
+  .dropdownLabel {
+    @include label-two;
+    margin-bottom: 0;
+  }
+
+  .dropdownButton {
+    @include button-two-text;
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+  }
+
+  .dropdownMenuContainer {
+    min-width: 13.1rem;
+
+    ul {
+      li {
+        label {
+          padding: 0.5rem 1rem 0.5rem .75rem;
+          gap: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .bottomButtonsContainer {
+    button {
+      padding: 0.5rem 1rem;
+
+      @include button-two-text;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dropdownContainer-s {
+  .dropdownLabel {
+    @include label-three;
+    margin-bottom: 0;
+  }
+
+  .dropdownButton {
+    @include button-three-text;
+    height: 2rem;
+    padding: 0.3125rem 1rem;
+    margin-bottom: 0;
+  }
+
+  .dropdownMenuContainer {
+    min-width: 12.1rem;
+
+    ul {
+      li {
+        label {
+          padding: 0.3125rem 0.875rem 0.3125rem 0.625rem;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .bottomButtonsContainer {
+    button {
+      padding: 0.3125rem 1rem;
+
+      @include button-three-text;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dropdownContainer-xs {
+  .dropdownLabel {
+    @include label-four;
+    margin-bottom: 0;
+  }
+
+  .dropdownButton {
+    @include button-four-text;
+    height: 1.5rem;
+    padding: 0.125rem 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .dropdownMenuContainer {
+    min-width: 9rem;
+
+    ul {
+      li {
+        label {
+          padding: 0.125rem 0.625rem 0.125rem 0.5rem;
+          gap: 0.25rem;
+        }
+      }
+    }
+  }
+
+  .bottomButtonsContainer {
+    button {
+      padding: 0.125rem 0.5rem;
+
+      @include button-four-text;
+      margin-bottom: 0;
+    }
+  }
+}
+

@@ -34,8 +34,7 @@
       "student_detail_progress_view": true,
       "supported_locales": [
         "es-MX",
-        "it-IT",
-        "sk-SK"
+        "it-IT"
       ],
       "tts": true,
       "version_year": "2021",
@@ -43,7 +42,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2024-03-05 20:19:01 UTC",
+    "serialized_at": "2024-02-06 20:28:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

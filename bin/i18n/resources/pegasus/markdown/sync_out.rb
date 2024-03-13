@@ -12,13 +12,15 @@ module I18n
     module Pegasus
       module Markdown
         class SyncOut < I18n::Utils::SyncOutBase
+          DIR_NAME = 'codeorg-markdown'.freeze
+
           def process(language)
-            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
+            crowdin_locale_dir = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
             return unless File.directory?(crowdin_locale_dir)
 
             distribute(language[:locale_s], crowdin_locale_dir)
 
-            I18nScriptUtils.remove_empty_dir crowdin_locale_dir
+            FileUtils.rm_r(crowdin_locale_dir)
           end
 
           private

@@ -31,6 +31,5 @@
     },
     "resolveJsonModule": true,
     "incremental": true,
-    "sourceMap": true,
   }
 }

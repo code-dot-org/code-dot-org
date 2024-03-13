@@ -8,6 +8,7 @@ import {
 } from './CensusForm';
 import YourSchoolResources from './YourSchoolResources';
 import Notification, {NotificationType} from '../Notification';
+import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
@@ -64,8 +65,12 @@ class YourSchool extends Component {
       schoolForMap = schoolDropdownOption.school;
     }
 
+    // Hide the special announcement.
+    const showSpecialAnnouncement = false;
+
     return (
       <div>
+        {showSpecialAnnouncement && <SpecialAnnouncementActionBlock />}
         {this.props.alertHeading &&
           this.props.alertText &&
           this.props.alertUrl && (

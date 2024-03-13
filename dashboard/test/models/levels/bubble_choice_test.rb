@@ -191,8 +191,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         letter: 'a',
         icon: nil,
         status: 'not_tried',
-        is_validated: false,
-        can_have_feedback: false
+        is_validated: false
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -208,8 +207,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         icon: nil,
         status: 'not_tried',
         short_instructions: @sublevel2.short_instructions,
-        is_validated: false,
-        can_have_feedback: false
+        is_validated: false
       }
     ]
 
@@ -239,8 +237,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
           type: "FreeResponse",
           name: "Sublevel contained level",
           display_name: nil,
-          is_validated: false,
-          can_have_feedback: false
+          is_validated: false
         }],
         id: @sublevel_with_contained.id.to_s,
         description: @sublevel_with_contained.bubble_choice_description,
@@ -253,8 +250,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         status: 'perfect',
         teacher_feedback_review_state: nil,
         exampleSolutions: [],
-        is_validated: false,
-        can_have_feedback: false
+        is_validated: false
       },
       {
         level_id: @sublevel2.id.to_s,
@@ -273,8 +269,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
         status: 'passed',
         teacher_feedback_review_state: nil,
         exampleSolutions: [],
-        is_validated: false,
-        can_have_feedback: false
+        is_validated: false
       }
     ]
 

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -16,8 +16,6 @@ import {
   Heading2,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
-import {register} from 'swiper/element/bundle';
-register();
 
 /**
  * Without this, we get an error on the server "invalid byte sequence in UTF-8".
@@ -67,11 +65,11 @@ function Certificate(props) {
     });
   };
 
-  const getEncodedParams = courseName => {
+  const getEncodedParams = () => {
     const donor = studentName ? props.randomDonorName : null;
     const data = {
       name: studentName,
-      course: courseName,
+      course: props.tutorial,
       donor,
     };
     const asciiData = btoa(reEncodeNonLatin1(JSON.stringify(data)));
@@ -88,80 +86,42 @@ function Certificate(props) {
     return urlSafeData;
   };
 
-  const getCertificateImagePath = courseName => {
-    const filename = getEncodedParams(courseName);
+  const getCertificateImagePath = () => {
+    const filename = getEncodedParams();
     return `/certificate_images/${filename}.jpg`;
   };
 
-  const getPrintPath = courseName => {
-    const encoded = getEncodedParams(courseName);
+  const getPrintPath = () => {
+    const encoded = getEncodedParams();
     return `/print_certificates/${encoded}`;
   };
 
-  const getCertificateSharePath = courseName => {
-    const encoded = getEncodedParams(courseName);
+  const getCertificateSharePath = () => {
+    const encoded = getEncodedParams();
     return `/certificates/${encoded}`;
   };
 
-  const getExternalCertificateSharePath = courseName => {
-    return `${window.location.origin}${getCertificateSharePath(courseName)}`;
+  const getExternalCertificateSharePath = () => {
+    return `${window.location.origin}${getCertificateSharePath()}`;
   };
 
   const {
     responsiveSize,
+    tutorial,
     certificateId,
     randomDonorTwitter,
     under13,
     children,
-    certificateData,
+    initialCertificateImageUrl,
     isHocTutorial,
-    isPlCourse,
-    userType,
   } = props;
 
-  const swiperRef = useRef(null);
-
-  const [currentCertificateIndex, setCurrentImageIndex] = useState(0);
-  useEffect(() => {
-    if (swiperRef.current) {
-      const swiperParams = {
-        autoHeight: true,
-        pagination: {
-          clickable: true,
-        },
-        spaceBetween: 24,
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        breakpoints: {
-          640: {
-            autoHeight: false,
-          },
-        },
-        injectStyles: [
-          `
-            :host .swiper-pagination {
-              position: relative;
-              margin-top: 2rem;
-            }
-            `,
-        ],
-      };
-      Object.assign(swiperRef.current, swiperParams);
-      swiperRef.current.initialize();
-
-      swiperRef.current.addEventListener('swiperslidechange', e => {
-        const [swiper] = e.detail;
-        setCurrentImageIndex(swiper.activeIndex);
-      });
-    }
-  }, []);
-
-  const courseName = certificateData[currentCertificateIndex]?.courseName;
-  const coursePath =
-    certificateData[currentCertificateIndex]?.coursePath || `s/${courseName}`;
-
-  const externalCertificateShareLink =
-    getExternalCertificateSharePath(courseName);
+  const personalizedCertificate = getCertificateImagePath();
+  const imgSrc = personalized
+    ? personalizedCertificate
+    : initialCertificateImageUrl;
+  const certificateShareLink = getCertificateSharePath();
+  const externalCertificateShareLink = getExternalCertificateSharePath();
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
@@ -184,7 +144,7 @@ function Certificate(props) {
     url: externalCertificateShareLink,
   });
 
-  const print = getPrintPath(courseName);
+  const print = getPrintPath();
 
   return (
     <div className={style.container}>
@@ -193,40 +153,28 @@ function Certificate(props) {
           {i18n.congratsCertificateHeading()}
         </Heading1>
       </div>
-      {courseName && (
-        <LargeChevronLink link={coursePath} linkText={i18n.backToActivity()} />
+      {tutorial && (
+        <LargeChevronLink
+          link={`/s/${tutorial}`}
+          linkText={i18n.backToActivity()}
+        />
       )}
       <div className={style.certificateContainer}>
-        <div
-          id="uitest-certificate"
-          className={style.certificateImageContainer}
-        >
-          {
-            <BackToFrontConfetti
-              active={personalized}
-              className={style.confetti}
-            />
-          }
-          <swiper-container ref={swiperRef} class={style.swiperContainer}>
-            {certificateData.map(image => (
-              <swiper-slide key={image.courseName} class={style.swiperSlide}>
-                <a href={getCertificateSharePath(image.courseName)}>
-                  {
-                    // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                    // Verify or update this alt-text as necessary
-                  }
-                  <img
-                    src={getCertificateImagePath(image.courseName)}
-                    alt=""
-                    style={{width: 470}}
-                  />
-                </a>
-              </swiper-slide>
-            ))}
-          </swiper-container>
+        <div id="uitest-certificate" className={certificateStyle}>
+          <BackToFrontConfetti
+            active={personalized}
+            className={style.confetti}
+          />
+          <a href={certificateShareLink}>
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
+            <img src={imgSrc} alt="" />
+          </a>
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
-          {courseName && !personalized && (
+          {tutorial && !personalized && (
             <div>
               <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
               <BodyThreeText className={style.enterName}>
@@ -250,7 +198,7 @@ function Certificate(props) {
               </div>
             </div>
           )}
-          {courseName && personalized && (
+          {tutorial && personalized && (
             <div>
               <Heading2>
                 <div id="uitest-thanks">{i18n.congratsCertificateThanks()}</div>
@@ -263,14 +211,14 @@ function Certificate(props) {
           <BodyThreeText>
             {i18n.congratsCertificateShareMessage()}
           </BodyThreeText>
+          {/* TODO(ACQ-1342): determine whether certificate is for pl course  */}
           <SocialShare
             facebook={facebook}
             twitter={twitter}
             linkedin={linkedin}
             print={print}
             under13={under13}
-            isPlCourse={isPlCourse}
-            userType={userType}
+            isPlCourse={false}
           />
         </div>
       </div>
@@ -280,16 +228,15 @@ function Certificate(props) {
 }
 
 Certificate.propTypes = {
+  tutorial: PropTypes.string,
   certificateId: PropTypes.string,
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   under13: PropTypes.bool,
   children: PropTypes.node,
-  certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
-  isPlCourse: PropTypes.bool,
-  userType: PropTypes.string,
 };
 
 export default connect(state => ({

@@ -39,20 +39,36 @@ export default project => {
     $('#unpublished_warning').show();
   }
 
-  if ($('#bookmark_project').length && project.isProjectLevel()) {
-    $('#bookmark_project').click(function () {
-      var url = `/featured_projects/${project.getCurrentId()}/bookmark`;
+  if ($('#feature_project').length && project.isProjectLevel()) {
+    $('#feature_project').click(function () {
+      var url = `/featured_projects/${project.getCurrentId()}/feature`;
       $.ajax({
         url: url,
         type: 'PUT',
         dataType: 'json',
         success: function (data) {
-          $('#is_bookmarked_featured_project').show();
-          $('#bookmark_project').hide();
+          $('#unfeature_project').show();
+          $('#feature_project').hide();
+        },
+        error: function (data) {
+          alert("Shucks. Something went wrong - this project wasn't featured.");
+        },
+      });
+    });
+
+    $('#unfeature_project').click(function () {
+      var url = `/featured_projects/${project.getCurrentId()}/unfeature`;
+      $.ajax({
+        url: url,
+        type: 'PUT',
+        dataType: 'json',
+        success: function (data) {
+          $('#unfeature_project').hide();
+          $('#feature_project').show();
         },
         error: function (data) {
           alert(
-            "Shucks. Something went wrong - this project wasn't bookmarked."
+            'Shucks. Something went wrong - this project is still featured.'
           );
         },
       });

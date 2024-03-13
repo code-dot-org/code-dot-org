@@ -4,7 +4,6 @@ import {stub} from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import * as utils from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {
@@ -13,7 +12,6 @@ import {
   READY,
   IN_PROGRESS,
   SUCCESS,
-  DISABLED,
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 
 describe('SyncOmniAuthSectionControl', () => {
@@ -211,17 +209,5 @@ describe('SyncOmniAuthSectionControl', () => {
         wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')
       ).to.equal(READY);
     });
-  });
-
-  it('Disables the button when the section is of type LTI and syncEnabled is false', () => {
-    const wrapper = shallow(
-      <SyncOmniAuthSectionControl
-        {...defaultProps}
-        sectionProvider={SectionLoginType.lti_v1}
-        syncEnabled={false}
-      />
-    );
-    const button = wrapper.find(SyncOmniAuthSectionButton);
-    expect(button.prop('buttonState')).to.equal(DISABLED);
   });
 });

@@ -41,8 +41,7 @@
       "CSA U8L7-L1 Contained_2025"
     ],
     "project_template_level_name": "CSA U8L7-Multiple Lists PBT_2025",
-    "name_suffix": "_2025",
-    "ai_tutor_available": true
+    "name_suffix": "_2025"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:40:59.601+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L1_2023\\\"\"],\"cloned_from\":\"CSA U8L7-L1_2023\"}]"

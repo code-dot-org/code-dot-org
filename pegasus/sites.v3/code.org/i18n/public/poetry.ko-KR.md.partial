@@ -16,7 +16,7 @@ social:
 
 # 시를 사용한 코딩
 
-{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg “, alt_text: “보라색 비니 모자를 쓰고 스툴과 마이크가 있는 무대 위 스포트라이트 아래에서 시를 연주하는 귀여운 분홍색 문어 캐릭터”, 텍스트_색상: “흰색”, box_background_color: “rgb (0,0,0,0.4)”, 왼쪽_제목: “포엠 아트”, left_description: “이 아워오브코드 활동에서 고전 시에 아트와 애니메이션을 추가해 보세요!”, left_specs: “”, left_button_url: "https://studio.code.org/s/poem-art-2021/reset “, 왼쪽_button_text: “시작”, 오른쪽 제목: “시로 코딩하기”, right_description: “이 일련의 수업을 통해 교실에서 컴퓨터 과학과 시를 연결하세요.“, 오른쪽_사양: “”, 오른쪽_버튼_url: "https://studio.code.org/s/poetry?viewAs=Instructor “, 오른쪽_버튼_텍스트: “모듈 보기”}}
+{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
 
 ## 시를 사용한 코딩에 대해 더 자세히 알아보기
 

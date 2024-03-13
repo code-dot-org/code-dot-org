@@ -43,7 +43,6 @@ const LEVEL_PROGRESS = {
       status: 'perfect',
       result: 100,
       paired: true,
-      teacherFeedbackNew: false,
     },
   },
   [STUDENT_2.id]: {
@@ -52,7 +51,6 @@ const LEVEL_PROGRESS = {
       status: 'not_tried',
       result: 1,
       paired: false,
-      teacherFeedbackNew: true,
     },
   },
 };

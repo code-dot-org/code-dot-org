@@ -1,10 +1,5 @@
 @import "color.scss";
 
-.progressV2Page {
-  padding: 24px 64px 64px 64px;
-  background-color: $light_gray_50;
-}
-
 .progressTableV2 {
   width: 100%;
   font-size: 16px;
@@ -20,13 +15,14 @@ $level-cell-width: 52;
 }
 
 .table {
-  width: fit-content;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
 
   &Loading {
     overflow-x: hidden;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
   }
 
   .expandedColumn:first-child {
@@ -37,25 +33,14 @@ $level-cell-width: 52;
   }
 }
 
-.tableInterior {
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-}
-
 .gridBox {
   border-top: 1px solid $light_gray_200;
   border-left: 1px solid $light_gray_200;
-  background-color: white;
 
   &Student {
     height: 47px;
     line-height: 47px;
-    padding-inline-start: 12px;
-    padding-inline-end: .5em;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    padding-left: 12px;
   }
 
   &Lesson {
@@ -63,7 +48,7 @@ $level-cell-width: 52;
     min-width: 80px;
     max-width: 80px;  
     height: 47px;
-    line-height: 47px !important;
+    line-height: 47px;
   }
 
   &Skeleton {
@@ -88,10 +73,6 @@ $level-cell-width: 52;
   background-position: top 3px right 4px;
 }
 
-.lessonInteractive {
-  cursor: pointer;
-}
-
 .grid {
   border-bottom: 1px solid $light_gray_200;
   border-right: 1px solid $light_gray_200;
@@ -113,15 +94,10 @@ $level-cell-width: 52;
   }
   
   &UnitSelector {
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    line-height: 32px;
-    min-width: fit-content;
-    max-height: 32px;
-
-    &Dropdown {
-      margin-inline-start: 8px;
-    }
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 
@@ -142,11 +118,6 @@ $level-cell-width: 52;
     text-align: center;
   }
   
-  &HeaderTooltip {
-    height: 18px;
-    line-height: 18px;
-  }
-
   &HeaderCaret {
     margin-inline-end: 12px;
   }
@@ -209,16 +180,11 @@ $level-cell-width: 52;
     }
 
     &LevelCell {
-      width: $level-cell-width + px;
+      // If width is updated, must also update `LEVEL_HEADER_WIDTH` in ExpandedProgressDataColumn.jsx
+      width: 52px;
       text-align: center;
       height: 32px;
       line-height: 32px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      overflow-x: hidden;
-      flex-wrap: nowrap;
     }
 
     &ExpandedLevel {
@@ -229,18 +195,17 @@ $level-cell-width: 52;
       border-left: 1px solid $light_gray_200;
       border-top: 1px solid $light_gray_200;
 
-      & .assessmentLevelIcon {
-        color: $light_white;
-      }
-
       .expandedHeaderExpandedLevelCell:last-child {
-        width: $level-cell-width + px;
-        border-right: 0;
+        width: 52px;
       }
     }
 
     &ExpandedLevelCell {
-      width: $level-cell-width + 1 + px;
+      width: 53px;
+    }
+
+    &LevelCaret {
+      margin-inline-end: 4px;
     }
   }
   &Column {
@@ -275,16 +240,11 @@ $level-cell-width: 52;
 .studentColumn {
   width: 195px;
   min-width: 195px;
-  margin-inline-end: 12px;
+  margin-right: 12px;
   display: flex;
   flex-direction: column;
 }
 
 .pointerMouse {
   cursor: pointer;
-}
-
-.assessmentLevelIcon {
-  font-size: 12px;
-  color: $neutral_dark60;
 }

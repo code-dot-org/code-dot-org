@@ -16,7 +16,7 @@ social:
 
 # Coding with Poetry
 
-{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg “, alt_text: “Tabure va mikrofon bilan sahnada diqqat markazida she'rni ijro etuvchi binafsha beanie shlyapa kiygan yoqimli pushti ahtapot belgi”, text_color: “oq”, box_background_color: “rgb (0,0,0,0.4)”, left_header: “She'r san'ati”, left_description: “san'atni qo'shing va ushbu Kod soati faoliyatidagi klassik she'rga animatsiya!” , left_spec: “”, left_button_url: "https://studio.code.org/s/poem-art-2021/reset “, left_button_text: “Boshlash”, right_header: “She'riyat bilan kodlash”, right_description: “Sizning sinfingizdagi informatika va she'riyatni ushbu qator darslar bilan bog'lang. “, right_specs: “”, right_button_url: "https://studio.code.org/s/poetry?viewAs=Instructor “, right_button_text: “Modulni ko'rish”}}
+{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
 
 ## Learn more about Coding with Poetry
 

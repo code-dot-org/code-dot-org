@@ -32,6 +32,12 @@ describe('Certificate', () => {
     window.dashboard = storedWindowDashboard;
   });
 
+  it('renders image with initialCertificateImageUrl', () => {
+    const imageUrl = 'https://code.org/images/placeholder-hoc-image.jpg';
+    const wrapper = wrapperWithParams({initialCertificateImageUrl: imageUrl});
+    expect(wrapper.find('img').html()).to.include(imageUrl);
+  });
+
   describe('personalized certificate', () => {
     let server;
 
@@ -54,17 +60,16 @@ describe('Certificate', () => {
         JSON.stringify(data),
       ]);
 
+      const initialCertificateImageUrl =
+        'https://code.org/images/placeholder-hoc-image.jpg';
       const wrapper = wrapperWithParams({
-        certificateData: [
-          {
-            courseName: 'dance',
-          },
-        ],
+        tutorial: 'dance',
         certificateId: 'sessionId',
+        initialCertificateImageUrl,
         isHocTutorial: true,
       });
       let image = wrapper.find('#uitest-certificate img');
-      expect(image.prop('src')).to.include('/certificate_images/');
+      expect(image.prop('src')).to.equal(initialCertificateImageUrl);
 
       const printLink = wrapper.find('.social-print-link');
       expect(printLink.prop('href')).to.match(/^\/print_certificates/);
@@ -96,41 +101,17 @@ describe('Certificate', () => {
     });
 
     it('passes down full urls to SocialShare', () => {
+      const initialCertificateImageUrl =
+        'https://code.org/images/placeholder-hoc-image.jpg';
       const wrapper = wrapperWithParams({
-        certificateData: [
-          {
-            courseName: 'dance',
-          },
-        ],
+        tutorial: 'dance',
         certificateId: 'sessionId',
+        initialCertificateImageUrl,
         isHocTutorial: true,
       });
       const socialShare = wrapper.find('SocialShare');
       expect(socialShare.props().facebook).to.include('studio.code.org');
       expect(socialShare.props().twitter).to.include('studio.code.org');
     });
-  });
-
-  it('renders swiper for multiple certificates', () => {
-    const wrapper = wrapperWithParams({
-      certificateData: [
-        {
-          courseName: 'csd1-2023',
-          coursePath: '/s/csd1-2023',
-        },
-        {
-          courseName: 'csd2-2023',
-          coursePath: '/s/csd2-2023',
-        },
-      ],
-      certificateId: 'sessionId',
-      isHocTutorial: false,
-    });
-    expect(wrapper.find('swiper-container').exists()).to.be.true;
-    expect(wrapper.find('swiper-slide').length).to.equal(2);
-
-    expect(wrapper.find('LargeChevronLink').props().link).to.equal(
-      '/s/csd1-2023'
-    );
   });
 });

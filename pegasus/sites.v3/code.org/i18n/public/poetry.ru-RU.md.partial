@@ -16,7 +16,7 @@ social:
 
 # Программирование и поэзия
 
-{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg «, alt_text: «Симпатичный розовый осьминог в фиолетовой шапочке-бини исполняет стихотворение под прожектором на сцене с табуретом и микрофоном», text_color: «белый», box_background_color: «rgb (0,0,0,0,4)», left_heading: «Стихотворение», left_description: «Добавить и анимация к классическому стихотворению в рамках акции «Час кода»!» , left_specs: «», left_button_url: "https://studio.code.org/s/poem-art-2021/reset «, left_button_text: «Начать», right_heading: «Программирование с помощью поэзии», right_description: «Объедините информатику и поэзию в своем классе с помощью этой серии уроков. «, right_specs: «», URL-адрес правой кнопки: "https://studio.code.org/s/poetry?viewAs=Instructor «, текст правой кнопки: «Просмотр модуля»}}
+{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
 
 ## Подробнее о серии уроков "Программирование и поэзия"
 

@@ -1,64 +1,77 @@
 import {assert} from 'chai';
 import React from 'react';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
-import {render, screen, fireEvent} from '@testing-library/react';
-import {expect} from '../../util/reconfiguredChai';
+import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import i18n from '@cdo/locale';
 import * as utils from '@cdo/apps/utils';
 import cookies from 'js-cookie';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import FakeStorage from '../../util/FakeStorage';
 
-const DEFAULT_PROPS = {
-  age13Required: true,
-  signedIn: false,
-  storage: new FakeStorage(),
-};
-
 describe('SignInOrAgeDialog', () => {
-  beforeEach(() => {
+  const defaultProps = {
+    age13Required: true,
+    signedIn: false,
+    storage: new FakeStorage(),
+  };
+
+  before(() => {
     replaceOnWindow('dashboard', {
       rack_env: 'unit_test',
     });
   });
 
-  afterEach(() => {
+  after(() => {
     restoreOnWindow('dashboard');
   });
 
-  function renderDefault(propOverrides = {}) {
-    render(<SignInOrAgeDialog {...DEFAULT_PROPS} {...propOverrides} />);
-  }
-
   it('renders null if signed in', () => {
-    renderDefault({signedIn: true});
-    expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
-    expect(screen.queryByText(i18n.provideAge())).to.not.exist;
+    const wrapper = shallow(
+      <SignInOrAgeDialog {...defaultProps} signedIn={true} />
+    );
+    assert.equal(wrapper.children().length, 0);
   });
 
   it('renders null if script does not require 13+', () => {
-    renderDefault({age13Required: false});
-    expect(screen.queryByText(i18n.provideAge())).to.not.exist;
+    const wrapper = shallow(
+      <SignInOrAgeDialog {...defaultProps} age13Required={false} />
+    );
+    assert.equal(wrapper.children().length, 0);
   });
 
   it('renders null if seen before', () => {
-    let getItem = sinon.stub(DEFAULT_PROPS.storage, 'getItem');
+    let getItem = sinon.stub(defaultProps.storage, 'getItem');
     getItem.withArgs('anon_over13').returns('true');
-    renderDefault({signedIn: true});
-    expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
-    expect(screen.queryByText(i18n.provideAge())).to.not.exist;
+    const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
+    assert.equal(wrapper.children().length, 0);
     getItem.restore();
   });
 
+  it('renders a dialog otherwise', () => {
+    const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
+    assert.equal(wrapper.name(), 'BaseDialog');
+  });
+
   it('renders an explanation and button if under 13', () => {
-    renderDefault();
-    fireEvent.change(screen.getByRole('combobox'), {target: {value: '12'}});
-    const okay = screen.getByText('OK');
-    fireEvent.click(okay);
-    expect(screen.queryByText('Tutorial unavailable for younger students'));
-    expect(screen.getByRole('link').getAttribute('href')).to.equal(
+    const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
+    const instance = wrapper.instance();
+    instance.ageDropdown = {
+      getValue: () => '12',
+    };
+    assert.equal(wrapper.state().tooYoung, false);
+    instance.onClickAgeOk();
+    assert.equal(wrapper.state().tooYoung, true);
+    assert.equal(
+      wrapper.find('BaseDialog div > div').first().text(),
+      'Tutorial unavailable for younger students'
+    );
+    assert.equal(
+      wrapper.find('BaseDialog Button').props().text,
+      'See all tutorials'
+    );
+    assert.equal(
+      wrapper.find('BaseDialog Button').props().href,
       '/hourofcode/overview'
     );
   });
@@ -68,7 +81,6 @@ describe('SignInOrAgeDialog', () => {
       sinon.stub(utils, 'reload');
       sinon.stub(cookies, 'remove');
     });
-
     afterEach(() => {
       utils.reload.restore();
       cookies.get.restore && cookies.get.restore();
@@ -76,15 +88,17 @@ describe('SignInOrAgeDialog', () => {
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
-      const setItemSpy = sinon.spy(DEFAULT_PROPS.storage, 'setItem');
+      const setItemSpy = sinon.spy(defaultProps.storage, 'setItem');
       // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
       // does not work in unit tests
       sinon.stub(cookies, 'get').returns('something');
 
-      renderDefault();
-      fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
-      const okay = screen.getByText('OK');
-      fireEvent.click(okay);
+      const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
+      const instance = wrapper.instance();
+      instance.ageDropdown = {
+        getValue: () => '13',
+      };
+      wrapper.find('Button').at(1).simulate('click');
       assert(setItemSpy.calledOnce);
       assert(setItemSpy.calledWith('anon_over13', true));
       assert(utils.reload.called);
@@ -98,12 +112,14 @@ describe('SignInOrAgeDialog', () => {
     });
 
     it('does not reload when providing an age >= 13 if you did not have a cookie', () => {
-      renderDefault();
-      fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
-      const okay = screen.getByText('OK');
-      fireEvent.click(okay);
+      const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
+      const instance = wrapper.instance();
+      instance.ageDropdown = {
+        getValue: () => '13',
+      };
+      instance.onClickAgeOk();
       assert.equal(utils.reload.called, false);
-      expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
+      assert.equal(wrapper.state().open, false);
     });
   });
 });

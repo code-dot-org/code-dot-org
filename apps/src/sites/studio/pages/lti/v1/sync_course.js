@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
+import LtiSectionSyncDialog from '@cdo/apps/lib/ui/LtiSectionSyncDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,12 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = scriptData['lti_section_sync_result'];
 
   ReactDOM.render(
-    <LtiSectionSyncDialog
-      isOpen
-      syncResult={result}
-      onClose={onClose}
-      disableRosterSyncButtonEnabled
-    />,
+    <LtiSectionSyncDialog isOpen syncResult={result} onClose={onClose} />,
     mountPoint
   );
 });

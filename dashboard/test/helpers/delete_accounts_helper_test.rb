@@ -1585,20 +1585,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.ai_tutor_interactions
-  #
-
-  test "deletes all of a purged user's ai tutor interactions (chat messages)" do
-    student = create :student_with_ai_tutor_access
-    num_ai_tutor_interactions = 3
-    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
-
-    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
-      purge_user student
-    end
-  end
-
-  #
   # Table: dashboard.projects
   #
 
@@ -1813,12 +1799,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.active?
+      assert featured_project.featured?
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.active?
+      refute featured_project.featured?
     end
   end
 
@@ -1829,12 +1815,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.active?
+      assert featured_project.featured?
 
       purge_user student
 
       featured_project.reload
-      refute featured_project.active?
+      refute featured_project.featured?
     end
   end
 
@@ -1848,14 +1834,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
-      refute featured_project.active?
+      refute featured_project.featured?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.active?
+      refute featured_project.featured?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
     end

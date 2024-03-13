@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pl-team-design-guide",
-    "serialized_at": "2024-03-01 23:03:44 UTC",
+    "serialized_at": "2024-02-15 19:26:37 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -160,7 +160,7 @@
       "key": "699805c7-e94d-4dd3-8864-08d61f5661c0",
       "position": 2,
       "properties": {
-        "progression_name": "Overview Pages"
+        "progression_name": "Overview Page"
       },
       "seeding_key": {
         "activity_section.key": "699805c7-e94d-4dd3-8864-08d61f5661c0",
@@ -171,7 +171,7 @@
       "key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16",
       "position": 3,
       "properties": {
-        "progression_name": "Orienting the Learner"
+        "progression_name": "Module 1: Welcome "
       },
       "seeding_key": {
         "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16",
@@ -230,6 +230,17 @@
       },
       "seeding_key": {
         "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011",
+        "lesson_activity.key": "a648a8a0-56de-49a5-8bb1-5387670d42f2"
+      }
+    },
+    {
+      "key": "0e4ca782-0b2d-490d-b178-1c6dea07a515",
+      "position": 2,
+      "properties": {
+        "progression_name": "Color"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e4ca782-0b2d-490d-b178-1c6dea07a515",
         "lesson_activity.key": "a648a8a0-56de-49a5-8bb1-5387670d42f2"
       }
     },
@@ -315,7 +326,7 @@
         "level_keys": [
           "PLGuide_L1_OverviewPage1"
         ],
-        "progression": "Overview Pages"
+        "progression": "Overview Page"
       },
       "bonus": false,
       "seeding_key": {
@@ -340,7 +351,7 @@
         "level_keys": [
           "PLGuide_L1_OverviewPage2"
         ],
-        "progression": "Overview Pages"
+        "progression": "Overview Page"
       },
       "bonus": false,
       "seeding_key": {
@@ -362,12 +373,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Orienting the Learner"
+        "level_keys": [
+          "Module 1 Placeholder"
+        ],
+        "progression": "Module 1: Welcome "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner1"
+          "Module 1 Placeholder"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -375,7 +389,7 @@
         "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16"
       },
       "level_keys": [
-        "PLGuide_L1_OrientingTheLearner1"
+        "Module 1 Placeholder"
       ]
     },
     {
@@ -384,12 +398,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Orienting the Learner"
+        "progression": "Module 1: Welcome "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner2"
+          "OPD-K5 Why teach CS_copy_2023_MelissaSandbox_Designguide"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -397,34 +411,12 @@
         "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16"
       },
       "level_keys": [
-        "PLGuide_L1_OrientingTheLearner2"
+        "OPD-K5 Why teach CS_copy_2023_MelissaSandbox_Designguide"
       ]
     },
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Orienting the Learner"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-team-design-guide",
-        "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16"
-      },
-      "level_keys": [
-        "PLGuide_L1_OrientingTheLearner3"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -448,8 +440,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -473,8 +465,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -498,8 +490,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -523,8 +515,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -548,8 +540,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -570,6 +562,31 @@
       },
       "level_keys": [
         "PLGuide_L1_ToneVoice2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLGuide_L1_ToneVoice3"
+        ],
+        "progression": "Tone and Voice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_ToneVoice3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "8419351b-174a-4403-840f-ac7ae559e864"
+      },
+      "level_keys": [
+        "PLGuide_L1_ToneVoice3"
       ]
     },
     {
@@ -774,6 +791,31 @@
     },
     {
       "chapter": 22,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Designing Visuals: Color"
+        ],
+        "progression": "Color"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Designing Visuals: Color"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "0e4ca782-0b2d-490d-b178-1c6dea07a515"
+      },
+      "level_keys": [
+        "Designing Visuals: Color"
+      ]
+    },
+    {
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -798,7 +840,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -823,7 +865,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -848,7 +890,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -872,7 +914,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -947,9 +989,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "PLGuide_L1_OrientingTheLearner1",
+        "level.key": "Module 1 Placeholder",
         "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner1"
+          "Module 1 Placeholder"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -959,21 +1001,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "PLGuide_L1_OrientingTheLearner2",
+        "level.key": "OPD-K5 Why teach CS_copy_2023_MelissaSandbox_Designguide",
         "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-team-design-guide",
-        "activity_section.key": "c63bcdb2-faa5-4c48-a76d-ccc19e13aa16"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PLGuide_L1_OrientingTheLearner3",
-        "script_level.level_keys": [
-          "PLGuide_L1_OrientingTheLearner3"
+          "OPD-K5 Why teach CS_copy_2023_MelissaSandbox_Designguide"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1046,6 +1076,18 @@
         "level.key": "PLGuide_L1_ToneVoice2",
         "script_level.level_keys": [
           "PLGuide_L1_ToneVoice2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "8419351b-174a-4403-840f-ac7ae559e864"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_ToneVoice3",
+        "script_level.level_keys": [
+          "PLGuide_L1_ToneVoice3"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1147,6 +1189,18 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
         "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Designing Visuals: Color",
+        "script_level.level_keys": [
+          "Designing Visuals: Color"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "0e4ca782-0b2d-490d-b178-1c6dea07a515"
       }
     },
     {

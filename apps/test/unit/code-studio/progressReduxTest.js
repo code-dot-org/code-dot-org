@@ -610,7 +610,6 @@ describe('progressReduxTest', () => {
             app: 'maze',
             usesLab2: false,
             isValidated: true,
-            canHaveFeedback: undefined,
           },
           {
             id: '323',
@@ -635,7 +634,6 @@ describe('progressReduxTest', () => {
             app: 'maze',
             usesLab2: false,
             isValidated: true,
-            canHaveFeedback: undefined,
           },
           {
             id: '322',
@@ -660,7 +658,6 @@ describe('progressReduxTest', () => {
             app: 'maze',
             usesLab2: false,
             isValidated: false,
-            canHaveFeedback: undefined,
           },
         ],
         [
@@ -687,7 +684,6 @@ describe('progressReduxTest', () => {
             app: 'maze',
             usesLab2: false,
             isValidated: true,
-            canHaveFeedback: undefined,
           },
           {
             id: '339',
@@ -712,7 +708,6 @@ describe('progressReduxTest', () => {
             app: 'maze',
             usesLab2: false,
             isValidated: false,
-            canHaveFeedback: undefined,
           },
           {
             id: '341',
@@ -737,7 +732,6 @@ describe('progressReduxTest', () => {
             app: 'maze',
             usesLab2: false,
             isValidated: false,
-            canHaveFeedback: undefined,
           },
         ],
       ];

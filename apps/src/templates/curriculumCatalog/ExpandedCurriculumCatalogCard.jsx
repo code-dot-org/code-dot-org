@@ -15,10 +15,8 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
-import {defaultImageSrc} from './curriculumCatalogConstants';
 
 const ExpandedCurriculumCatalogCard = ({
-  courseKey,
   courseDisplayName,
   duration,
   gradeRange,
@@ -33,14 +31,12 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
-  setExpandedCardKey,
   isInUS,
   imageSrc,
   imageAltText,
   availableResources,
   isSignedOut,
   isTeacher,
-  getRecommendedSimilarCurriculum,
 }) => {
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
@@ -78,9 +74,6 @@ const ExpandedCurriculumCatalogCard = ({
   const displayDivider = () => {
     return ++availableResourceCounter < availableResourcesCount;
   };
-
-  const recommendedSimilarCurriculum =
-    getRecommendedSimilarCurriculum(courseKey);
 
   useEffect(() => {
     const yOffset =
@@ -282,27 +275,11 @@ const ExpandedCurriculumCatalogCard = ({
                   aria-label="Close Button"
                 />
               </div>
-              <div className={style.relatedContainer}>
+              <div className={style.relatedContainer} style={{display: 'none'}}>
                 <Heading4 visualAppearance="heading-xs">
                   {i18n.relatedCurricula()}
                 </Heading4>
                 <hr className={style.thickDivider} />
-                <img
-                  src={recommendedSimilarCurriculum.image || defaultImageSrc}
-                  alt={recommendedSimilarCurriculum.display_name}
-                  style={{height: '100%'}}
-                />
-                <Button
-                  id="similarCurriculumButton"
-                  name={recommendedSimilarCurriculum.display_name}
-                  type="button"
-                  styleAsText
-                  className={style.relatedCurriculaLink}
-                  text={recommendedSimilarCurriculum.display_name}
-                  onClick={() =>
-                    setExpandedCardKey(recommendedSimilarCurriculum.key)
-                  }
-                />
               </div>
             </div>
           </div>
@@ -312,7 +289,6 @@ const ExpandedCurriculumCatalogCard = ({
   );
 };
 ExpandedCurriculumCatalogCard.propTypes = {
-  courseKey: PropTypes.string.isRequired,
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
@@ -327,13 +303,11 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
-  setExpandedCardKey: PropTypes.func.isRequired,
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
-  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
 };
 export default ExpandedCurriculumCatalogCard;

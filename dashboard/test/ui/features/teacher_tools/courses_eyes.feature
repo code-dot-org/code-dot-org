@@ -9,7 +9,7 @@ Scenario: Student courses
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And I press "header-student-courses"
-  And I wait to see "#student-page-header"
+  And I wait to see "#hero"
   And I see no difference for "student courses page"
   And I close my eyes
 
@@ -32,7 +32,8 @@ Scenario: Student courses, non-english
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And I press "header-student-courses"
-  And I wait to see "#student-page-header"
+  And I wait to see "#hero"
+  And I wait to see "#uitest-course-blocks-tools"
   And I see no difference for "student non-english courses page"
   And I close my eyes
 
@@ -43,7 +44,7 @@ Scenario: Signed out courses, learn
   And I wait to see "#headerlinks"
   And I see "#header-learn"
   And I press "header-learn"
-  Then I am on "http://code.org/students"
+  Then I am on "http://studio.code.org/courses"
   And I see no difference for "signed-out courses page, learn"
   And I close my eyes
 
@@ -65,7 +66,7 @@ Scenario: Signed out courses, non-english
   And I wait to see ".headerlinks"
   And I see "#header-learn"
   And I press "header-learn"
-  Then I am on "http://code.org/students"
-  And I wait to see "#sign-in-button"
+  Then I am on "http://studio.code.org/courses"
+  And I wait to see "#uitest-course-blocks-tools"
   And I see no difference for "signed-out courses page, non-english"
   And I close my eyes

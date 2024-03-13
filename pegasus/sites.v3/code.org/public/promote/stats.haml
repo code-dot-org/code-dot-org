@@ -1,0 +1,12 @@
+---
+title: Computer Science Education Stats
+theme: responsive
+---
+%h1 Computer Science Education Stats
+-statistics = DB[:cdo_cs_statistics].all.to_a
+
+-statistics.each do |statistic|
+  %img{:src=>"/images/cs-stats/#{statistic[:code_s]}.png", :style=> "padding-bottom: 20px; width: 100%;"}
+
+
+%a{:href=>'https://docs.google.com/document/u/1/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub'} Source Data

@@ -12,8 +12,6 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sinon from 'sinon';
-import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
-
 describe('CurriculumCatalogExpandedCard', () => {
   let defaultProps;
   let store;
@@ -30,7 +28,6 @@ describe('CurriculumCatalogExpandedCard', () => {
     registerReducers({teacherSections});
     store = getStore();
     defaultProps = {
-      courseKey: 'oceans',
       courseDisplayName: 'AI for Oceans',
       duration: 'quarter',
       gradeRange: 'Grades: 3-12',
@@ -51,10 +48,6 @@ describe('CurriculumCatalogExpandedCard', () => {
         'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
       isSignedOut: false,
       isTeacher: true,
-      setExpandedCardKey: () => {},
-      getRecommendedSimilarCurriculum: () => {
-        return FULL_TEST_COURSES[0];
-      },
     };
   });
 
@@ -121,8 +114,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       video: null,
     });
 
-    // Expect to find 2 images: one as the video replacement and one from the Similar Curriculum recommendation
-    expect(screen.getAllByRole('img', {hidden: true}).length).to.equal(2);
+    screen.getByRole('img', {hidden: true});
   });
 
   it('renders image with alt text if passed and no video', () => {

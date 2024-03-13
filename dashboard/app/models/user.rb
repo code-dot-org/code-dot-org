@@ -107,7 +107,6 @@ class User < ApplicationRecord
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
-  #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -147,7 +146,6 @@ class User < ApplicationRecord
     ai_rubrics_disabled
     sort_by_family_name
     show_progress_table_v2
-    progress_table_v2_closed_beta
     lti_roster_sync_enabled
   )
 
@@ -287,7 +285,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  validate :validate_us_state, if: -> {us_state.present?}
+  validate :validate_us_state, on: :create
 
   before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
     Services::ChildAccount.lock_out(self)
@@ -304,10 +302,6 @@ class User < ApplicationRecord
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
-
-  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
-    self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
-  end
 
   def save_email_preference
     if teacher?
@@ -1365,19 +1359,7 @@ class User < ApplicationRecord
     user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.none? do |script_level|
-      user_levels = []
-      script_level.levels.each do |level|
-        curr_user_level = user_levels_by_level[level.id]
-
-        # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
-        if !curr_user_level && !level.contained_levels.empty?
-          level.contained_levels.each do |contained_level|
-            user_levels.push(user_levels_by_level[contained_level.id])
-          end
-        else
-          user_levels.push(curr_user_level)
-        end
-      end
+      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
   end
@@ -1514,11 +1496,6 @@ class User < ApplicationRecord
     !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
-  end
-
-  def can_view_student_ai_chat_messages?
-    sections.any?(&:assigned_csa?) &&
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
   # Students

@@ -854,16 +854,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student_1).can? :view_as_user_for_code_review, @login_required_script_level, student_2
   end
 
-  test 'levelbuilders cannot view as peer on non-Javalab levels' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    levelbuilder = create :levelbuilder
-    student = create :student
-
-    assert Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
-    refute Ability.new(levelbuilder).can? :view_as_user_for_code_review, @login_required_script_level, student
-  end
-
   test 'only the project owner can create a code review on that project' do
     skip 'tests that create a project'
     project_owner = create :student

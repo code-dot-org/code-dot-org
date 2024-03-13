@@ -28,15 +28,13 @@ export default function ExpandedProgressColumnHeader({
             styles.expandedHeaderExpandedLevelCell
           )}
         >
-          {level.sublevels?.length > 0 && <FontAwesome icon="caret-down" />}
-          {lesson.relative_position + '.' + level.bubbleText}
-          {level.kind === 'assessment' && (
+          {level.sublevels?.length > 0 && (
             <FontAwesome
-              icon="star"
-              aria-label="assessment"
-              className={styles.assessmentLevelIcon}
+              icon="caret-down"
+              className={styles.expandedHeaderLevelCaret}
             />
           )}
+          {lesson.relative_position + '.' + level.bubbleText}
         </div>
         {level.sublevels?.map(sublevel => (
           <div
@@ -65,17 +63,13 @@ export default function ExpandedProgressColumnHeader({
         key={lesson.id + '.' + level.id + '-h'}
         onClick={() => toggleExpandedChoiceLevel(level)}
       >
-        {level.sublevels?.length > 0 && <FontAwesome icon="caret-right" />}
-        <div>{`${lesson.relative_position}.${
-          level.isUnplugged ? 0 : level.bubbleText
-        }`}</div>
-        {level.kind === 'assessment' && (
+        {level.sublevels?.length > 0 && (
           <FontAwesome
-            icon="star"
-            aria-label="assessment"
-            className={styles.assessmentLevelIcon}
+            icon="caret-right"
+            className={styles.expandedHeaderLevelCaret}
           />
         )}
+        {lesson.relative_position + '.' + level.bubbleText}
       </div>
     ),
     [lesson, level, toggleExpandedChoiceLevel, isExpandable]

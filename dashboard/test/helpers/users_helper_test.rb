@@ -291,13 +291,11 @@ class UsersHelperTest < ActionView::TestCase
   def test_script_progress_for_users
     user_1 = create :user
     user_2 = create :user
-    user_3 = create :user
 
     teacher = create :teacher
     section = create :section, teacher: teacher
     section.students << user_1 # we query for feedback where student is currently in section
     section.students << user_2
-    section.students << user_3
 
     # set up progress
     script = create :script
@@ -326,8 +324,6 @@ class UsersHelperTest < ActionView::TestCase
     sublevel1_user_level_2 = create :user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
     sublevel2_user_level_2 = create :user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300
     create :teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
-    create :teacher_feedback, student: user_3, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
-    create :teacher_feedback, student: user_3, teacher: teacher, level: sublevel2, script: script, comment: 'Better get working on this one!'
 
     sublevel1_last_progress_2 = UserLevel.find(sublevel1_user_level_2.id).updated_at.to_i
     sublevel2_last_progress_2 = UserLevel.find(sublevel2_user_level_2.id).updated_at.to_i
@@ -375,33 +371,16 @@ class UsersHelperTest < ActionView::TestCase
             time_spent: 480, # sum of time spent on sublevels
             teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
           }
-        },
-        user_3.id => {
-          sublevel1.id => {
-            status: LEVEL_STATUS.not_tried,
-            teacher_feedback_new: true,
-            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
-          },
-          sublevel2.id => {
-            status: LEVEL_STATUS.not_tried,
-            teacher_feedback_new: true
-          },
-          level.id => {
-            status: LEVEL_STATUS.not_tried,
-            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking,
-            teacher_feedback_new: true
-          }
         }
       },
       {
         user_1.id => sublevel1_last_progress,
-        user_2.id => sublevel2_last_progress_2,
-        user_3.id => nil
+        user_2.id => sublevel2_last_progress_2
       }
     ]
 
     assert_equal expected_progress, script_progress_for_users(
-      [user_1, user_2, user_3], script
+      [user_1, user_2], script
     )
   end
 

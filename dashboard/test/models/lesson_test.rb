@@ -105,8 +105,7 @@ class LessonTest < ActiveSupport::TestCase
         type: level.class.to_s,
         name: level.name,
         display_name: level.display_name,
-        is_validated: false,
-        can_have_feedback: level.can_have_feedback?
+        is_validated: false
       }
     ]
 

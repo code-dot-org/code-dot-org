@@ -176,7 +176,7 @@ class HomeControllerTest < ActionController::TestCase
       get :index
     end
 
-    assert_redirected_to '/users/sign_in'
+    assert_redirected_to '/courses'
   end
 
   test "language is determined from cdo.locale" do
@@ -278,65 +278,35 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'a[href="/levels/new"]'
   end
 
-  test 'student without age gets student information prompt with age select' do
-    student = create(:student)
-    student.update_attribute(:birthday, nil) # bypasses validations
-    student = student.reload
-    refute student.age, "user should not have age, but value was #{student.age}"
+  test 'user without age gets age prompt' do
+    skip 'TODO: get :home'
 
-    sign_in student
-    get :home
+    user = create(:user)
+    user.update_attribute(:birthday, nil) # bypasses validations
+    user = user.reload
+    refute user.age, "user should not have age, but value was #{user.age}"
 
-    assert_select '#student-information-modal'
-    assert_select '#user_age'
-    assert_select '#user_us_state', false
-    assert_select '#user_gender_student_input', false
-  end
-
-  test 'LTI student without us_state gets student information prompt' do
-    student = create :student, :with_lti_auth
-
-    student.update_attribute(:us_state, nil) # bypasses validations
-    refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
-
-    sign_in student
-    get :home
-
-    assert_select '#student-information-modal'
-    assert_select '#user_age'
-    assert_select '#user_us_state'
-    assert_select '#user_gender_student_input'
-  end
-
-  test 'student with age does not get student information prompt' do
-    student = create(:student)
-    assert student.age
-
-    sign_in student
-
-    get :home
-
-    assert_select '#student-information-modal', false
-  end
-
-  test 'LTI student with age and us_state does not get student information prompt' do
-    student = create :student, :with_lti_auth
-    assert student.age
-    student.update_attribute(:us_state, 'AL')
-    student = student.reload
-    assert student.us_state
-
-    sign_in student
-
-    get :home
-
-    assert_select '#student-information-modal', false
-  end
-
-  test 'anonymous does not get student information prompt' do
+    sign_in user
     get :index
 
-    assert_select '#student-information-modal', false
+    assert_select '#age-modal'
+  end
+
+  test 'user with age does not get age prompt' do
+    user = create(:user)
+    assert user.age
+
+    sign_in user
+
+    get :index
+
+    assert_select '#age-modal', false
+  end
+
+  test 'anonymous does not get age prompt' do
+    get :index
+
+    assert_select '#age-modal', false
   end
 
   test "teacher visiting homepage gets expected cookies set" do

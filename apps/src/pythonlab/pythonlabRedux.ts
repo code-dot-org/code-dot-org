@@ -1,14 +1,13 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {NestedSourceCode} from '@cdo/apps/lab2/types';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface PythonlabState {
-  source: NestedSourceCode | undefined;
+  code: string;
   output: string[];
 }
 
 export const initialState: PythonlabState = {
-  source: undefined,
+  code: '',
   output: [],
 };
 
@@ -16,8 +15,8 @@ const pythonlabSlice = createSlice({
   name: 'pythonlab',
   initialState,
   reducers: {
-    setSource(state, action: PayloadAction<NestedSourceCode>) {
-      state.source = action.payload;
+    setCode(state, action: PayloadAction<string>) {
+      state.code = action.payload;
     },
     appendOutput(state, action: PayloadAction<string>) {
       state.output.push(action.payload);
@@ -30,4 +29,4 @@ const pythonlabSlice = createSlice({
 
 registerReducers({pythonlab: pythonlabSlice.reducer});
 
-export const {setSource, appendOutput, resetOutput} = pythonlabSlice.actions;
+export const {setCode, appendOutput, resetOutput} = pythonlabSlice.actions;

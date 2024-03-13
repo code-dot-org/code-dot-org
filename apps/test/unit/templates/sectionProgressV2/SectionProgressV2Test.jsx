@@ -1,75 +1,52 @@
 import React from 'react';
+import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import SectionProgressV2 from '@cdo/apps/templates/sectionProgressV2/SectionProgressV2.jsx';
-import {render, screen} from '@testing-library/react';
-
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import sectionProgress, {
-  startLoadingProgress,
-  finishLoadingProgress,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import teacherSections, {
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Provider} from 'react-redux';
-import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
-import {createStore} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
-
-const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
-const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
-const STUDENTS = [STUDENT_1, STUDENT_2];
-const DEFAULT_PROPS = {};
+import sinon from 'sinon';
+import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import {UnconnectedSectionProgressV2} from '@cdo/apps/templates/sectionProgressV2/SectionProgressV2.jsx';
+import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
 
 describe('SectionProgressV2', () => {
-  let store;
-
+  const DEFAULT_PROPS = {
+    scriptId: 1,
+    sectionId: 1,
+    unitData: {
+      id: 123,
+      path: '/scripts/myunit',
+      lessons: [
+        {
+          id: 456,
+          levels: [{id: '789'}],
+        },
+      ],
+      csf: true,
+      hasStandards: true,
+    },
+    isLoadingProgress: false,
+    isRefreshingProgress: false,
+  };
   beforeEach(() => {
-    stubRedux();
-    registerReducers({
-      currentUser,
-      sectionProgress,
-      unitSelection,
-      teacherSections,
-    });
-
-    store = createStore(5, 5);
-    store.dispatch(setScriptId(1));
-    store.dispatch(finishLoadingProgress());
+    sinon.stub(progressLoader, 'loadUnitProgress');
   });
 
   afterEach(() => {
-    restoreRedux();
+    progressLoader.loadUnitProgress.restore();
   });
 
-  function renderDefault(propOverrides = {}) {
-    render(
-      <Provider store={store}>
-        <SectionProgressV2 {...DEFAULT_PROPS} {...propOverrides} />
-      </Provider>
+  const setUp = (overrideProps = {}) => {
+    return shallow(
+      <UnconnectedSectionProgressV2 {...DEFAULT_PROPS} {...overrideProps} />
     );
-  }
+  };
 
   it('shows skeleton if loading', () => {
-    renderDefault();
-    store.dispatch(startLoadingProgress());
-
-    screen.getByText('Progress (beta)');
-    screen.getByText('Students');
-    screen.getAllByTestId('skeleton-cell');
-    expect(screen.queryAllByText(/Student [1-9]/)).to.be.empty;
+    const wrapper = setUp({isLoadingProgress: true});
+    expect(wrapper.find(ProgressTableV2).props().isSkeleton).to.be.true;
   });
 
   it('shows students and unit selector', () => {
-    renderDefault();
-
-    store.dispatch(setStudentsForCurrentSection(1, STUDENTS));
-
-    screen.getByText('Progress (beta)');
-    screen.getByText('Students');
-
-    expect(screen.getAllByText(/Student [1-9]/).length).to.equal(
-      STUDENTS.length
-    );
+    const wrapper = setUp();
+    expect(wrapper.find(Heading6)).to.have.length(2);
   });
 });

@@ -4,7 +4,7 @@ module HashUtils
   def self.file_contents_hash(file_globs)
     # Resolve all file patterns to individual file names
     file_names = Dir[*file_globs].
-      select {|file_name| File.file?(file_name)}.
+      select(&File.method(:file?)).
       sort
 
     # For each file, concat its name with a hash of its contents.

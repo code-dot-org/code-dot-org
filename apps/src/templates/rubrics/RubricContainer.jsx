@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import classnames from 'classnames';
+import i18n from '@cdo/locale';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -12,9 +13,7 @@ import {
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
-import Draggable from 'react-draggable';
+import experiments from '@cdo/apps/util/experiments';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -33,12 +32,8 @@ export default function RubricContainer({
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
-  const rubricTabSessionKey = 'rubricFABTabSessionKey';
 
-  const [selectedTab, setSelectedTab] = useState(
-    tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
-      TAB_NAMES.RUBRIC
-  );
+  const [selectedTab, setSelectedTab] = useState(TAB_NAMES.RUBRIC);
   const [aiEvaluations, setAiEvaluations] = useState(null);
 
   const tabSelectCallback = tabSelection => {
@@ -74,41 +69,57 @@ export default function RubricContainer({
     fetchAiEvaluations();
   }, [fetchAiEvaluations]);
 
-  useEffect(() => {
-    trySetSessionStorage(rubricTabSessionKey, selectedTab);
-  }, [selectedTab]);
-
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
-  const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
+  const showSettings = canProvideFeedback && teacherHasEnabledAi;
 
   return (
-    <Draggable>
+    <div
+      className={classnames(style.rubricContainer, {
+        [style.hiddenRubricContainer]: !open,
+      })}
+    >
       <div
-        data-testid="draggable-test-id"
-        id="draggable-id"
-        className={classnames(style.rubricContainer, {
-          [style.hiddenRubricContainer]: !open,
+        className={
+          experiments.isEnabled('ai-rubrics-redesign')
+            ? style.rubricHeaderRedesign
+            : style.rubricHeader
+        }
+      >
+        {!experiments.isEnabled('ai-rubrics-redesign') && (
+          <div className={style.rubricHeaderLeftSide}>
+            <HeaderTab
+              text={i18n.rubric()}
+              isSelected={selectedTab === TAB_NAMES.RUBRIC}
+              onClick={() => setSelectedTab(TAB_NAMES.RUBRIC)}
+            />
+            {showSettings && (
+              <HeaderTab
+                text={i18n.settings()}
+                isSelected={selectedTab === TAB_NAMES.SETTINGS}
+                onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
+              />
+            )}
+          </div>
+        )}
+        <div className={style.rubricHeaderRightSide}>
+          <button
+            type="button"
+            onClick={closeRubric}
+            className={classnames(style.buttonStyle, style.closeButton)}
+          >
+            <FontAwesome icon="xmark" />
+          </button>
+        </div>
+      </div>
+
+      <div
+        className={classnames({
+          [style.fabBackground]: experiments.isEnabled('ai-rubrics-redesign'),
         })}
       >
-        <div className={style.rubricHeaderRedesign}>
-          <div className={style.rubricHeaderLeftSide}>
-            <FontAwesome icon="house" />
-            {i18n.rubricAiHeaderText()}
-          </div>
-          <div className={style.rubricHeaderRightSide}>
-            <button
-              type="button"
-              onClick={closeRubric}
-              className={classnames(style.buttonStyle, style.closeButton)}
-            >
-              <FontAwesome icon="xmark" />
-            </button>
-          </div>
-        </div>
-
-        <div className={style.fabBackground}>
+        {experiments.isEnabled('ai-rubrics-redesign') && (
           <RubricTabButtons
             tabSelectCallback={tabSelectCallback}
             selectedTab={selectedTab}
@@ -120,28 +131,33 @@ export default function RubricContainer({
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
           />
+        )}
 
-          <RubricContent
-            rubric={rubric}
-            open={open}
-            studentLevelInfo={studentLevelInfo}
-            teacherHasEnabledAi={teacherHasEnabledAi}
+        <RubricContent
+          rubric={rubric}
+          open={open}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          onLevelForEvaluation={onLevelForEvaluation}
+          reportingData={reportingData}
+          visible={selectedTab === TAB_NAMES.RUBRIC}
+          aiEvaluations={aiEvaluations}
+        />
+        {showSettings && (
+          <RubricSettings
             canProvideFeedback={canProvideFeedback}
-            onLevelForEvaluation={onLevelForEvaluation}
-            reportingData={reportingData}
-            visible={selectedTab === TAB_NAMES.RUBRIC}
-            aiEvaluations={aiEvaluations}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            visible={selectedTab === TAB_NAMES.SETTINGS}
+            refreshAiEvaluations={fetchAiEvaluations}
+            rubric={rubric}
+            studentName={studentLevelInfo && studentLevelInfo.name}
+            sectionId={sectionId}
           />
-          {showSettings && (
-            <RubricSettings
-              visible={selectedTab === TAB_NAMES.SETTINGS}
-              rubric={rubric}
-              sectionId={sectionId}
-            />
-          )}
-        </div>
+        )}
       </div>
-    </Draggable>
+    </div>
   );
 }
 

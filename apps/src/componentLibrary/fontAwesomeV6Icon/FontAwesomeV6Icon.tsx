@@ -10,7 +10,7 @@ export interface FontAwesomeV6IconProps {
    *  * light - 300
    *  * thin - 100
    * */
-  iconStyle?: 'solid' | 'regular' | 'light' | 'thin';
+  iconStyle: 'solid' | 'regular' | 'light' | 'thin';
   /** Icon name */
   iconName: string;
   /**
@@ -38,7 +38,7 @@ export interface FontAwesomeV6IconProps {
  * Can can be used in any component in/out of the scope of Design System.
  */
 const FontAwesomeV6Icon: React.FunctionComponent<FontAwesomeV6IconProps> = ({
-  iconStyle = 'solid',
+  iconStyle,
   iconName,
   className,
   title,

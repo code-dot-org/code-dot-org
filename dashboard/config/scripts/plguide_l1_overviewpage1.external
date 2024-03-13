@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Course Overview Page
+# Welcome Page
 
-#### The course overview page is the first thing the user sees when they select the course. This is the chance to briefly tell the user how the course works and the purpose of the course. This page uses H5 for text instead of H4 that is found in the levels to stay consistent with curriculum overview pages.
+#### The welcome page is the first thing the user sees when they select the course.This is the chance to briefly tell the user how the course works and the purpose of the course. This page uses H5 for text instead of H4 that is found in the levels. 
 
 ![](https://images.code.org/d36a259426fd4df88be409deef7db6cd-image-1706725812749.29.44 AM.png)
 

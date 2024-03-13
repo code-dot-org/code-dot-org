@@ -55,7 +55,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     playerRef.current.stopSong();
     // Load code
     const projectSources = await sourcesStoreRef.current.load(project.id);
-    workspaceRef.current.loadCode(JSON.parse(projectSources.source as string));
+    workspaceRef.current.loadCode(JSON.parse(projectSources.source));
 
     // Compile song
     workspaceRef.current.compileSong({Sequencer: sequencerRef.current});

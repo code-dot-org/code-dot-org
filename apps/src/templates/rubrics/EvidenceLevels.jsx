@@ -6,7 +6,9 @@ import {
   submittedEvaluationShape,
 } from './rubricShapes';
 import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
+import EvidenceLevelsForTeachers from './EvidenceLevelsForTeachers';
 import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
+import experiments from '@cdo/apps/util/experiments';
 
 export default function EvidenceLevels({
   evidenceLevels,
@@ -17,7 +19,6 @@ export default function EvidenceLevels({
   submittedEvaluation,
   isStudent,
   isAutosaving,
-  isAiAssessed,
   aiEvalInfo,
 }) {
   const sortedEvidenceLevels = () => {
@@ -31,13 +32,23 @@ export default function EvidenceLevels({
         submittedEvaluation={submittedEvaluation}
       />
     );
-  } else {
+  } else if (experiments.isEnabled('ai-rubrics-redesign')) {
     return (
       <EvidenceLevelsForTeachersV2
         aiEvalInfo={aiEvalInfo}
-        isAiAssessed={isAiAssessed}
         learningGoalKey={learningGoalKey}
         evidenceLevels={sortedEvidenceLevels().reverse()}
+        understanding={understanding}
+        radioButtonCallback={radioButtonCallback}
+        canProvideFeedback={canProvideFeedback}
+        isAutosaving={isAutosaving}
+      />
+    );
+  } else {
+    return (
+      <EvidenceLevelsForTeachers
+        learningGoalKey={learningGoalKey}
+        evidenceLevels={sortedEvidenceLevels()}
         understanding={understanding}
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}
@@ -56,6 +67,5 @@ EvidenceLevels.propTypes = {
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   isAutosaving: PropTypes.bool,
-  isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
 };

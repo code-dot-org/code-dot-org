@@ -27,7 +27,7 @@ import locales from '@cdo/apps/redux/localesRedux';
 import {
   fakeLessonWithLevels,
   fakeStudents,
-  fakeUnitData,
+  fakeScriptData,
   fakeProgressTableReduxInitialState,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
@@ -36,7 +36,7 @@ const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
 const STUDENTS = fakeStudents(2);
 const LESSONS = [LESSON_1, LESSON_2];
-const SCRIPT_DATA = fakeUnitData({lessons: LESSONS});
+const SCRIPT_DATA = fakeScriptData({lessons: LESSONS});
 
 const initialState = fakeProgressTableReduxInitialState(
   LESSONS,

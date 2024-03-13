@@ -1,79 +1,32 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
-import {
-  BlocklySource,
-  LevelProperties,
-  NestedSourceCode,
-  ProjectSources,
-} from './types';
-import Lab2Registry from './Lab2Registry';
-import {BLOCKLY_LABS} from './constants';
-
-// Validator for Blockly sources.
-const BlocklySourceResponseValidator: ResponseValidator<
-  ProjectSources
-> = response => {
-  const blocklyValidator = (responseToValidate: Record<string, unknown>) => {
-    // Blockly sources are always stringified JSON.
-    let blocklySource;
-    try {
-      blocklySource = JSON.parse(
-        responseToValidate.source as string
-      ) as BlocklySource;
-    } catch (e) {
-      throw new ValidationError('Error parsing JSON: ' + e);
-    }
-    if (blocklySource.blocks === undefined) {
-      throwMissingFieldError('blocks');
-    }
-  };
-
-  return sourceValidatorHelper(response, blocklyValidator);
-};
-
-// Validator for Python sources.
-const PythonSourceResponseValidator: ResponseValidator<
-  ProjectSources
-> = response => {
-  const pythonValidator = (responseToValidate: Record<string, unknown>) => {
-    if (typeof responseToValidate.source === 'string') {
-      throw new ValidationError('Python sources must be a JSON object');
-    }
-    const source = responseToValidate.source as NestedSourceCode;
-    // TODO: support a nested main.py
-    if (!source['main.py']) {
-      throwMissingFieldError('main.py');
-    }
-  };
-  return sourceValidatorHelper(response, pythonValidator);
-};
-
-// Default source validator. This just checks if there is a source field.
-const DefaultSourceResponseValidator: ResponseValidator<
-  ProjectSources
-> = response => {
-  return sourceValidatorHelper(response, () => {});
-};
+import {BlocklySource, LevelProperties, ProjectSources} from './types';
 
 export const SourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  const appName = Lab2Registry.getInstance().getAppName();
-  if (appName === 'pythonlab') {
-    return PythonSourceResponseValidator(response);
-  } else if (appName !== null && BLOCKLY_LABS.includes(appName)) {
-    // Blockly labs
-    return BlocklySourceResponseValidator(response);
-  } else {
-    // Everything else uses the default validator
-    return DefaultSourceResponseValidator(response);
+  if (!response.source) {
+    throw new ValidationError('Missing required field: source');
   }
+
+  // Currently only Blockly JSON sources are supported.
+  let blocklySource;
+  try {
+    blocklySource = JSON.parse(response.source as string) as BlocklySource;
+  } catch (e) {
+    throw new ValidationError('Error parsing JSON: ' + e);
+  }
+  if (blocklySource.blocks === undefined) {
+    throw new ValidationError('Missing required field: blocks');
+  }
+
+  return response as unknown as ProjectSources;
 };
 
 export const LevelPropertiesValidator: ResponseValidator<
   LevelProperties
 > = response => {
   if (!response.appName) {
-    throwMissingFieldError('appName');
+    throw new ValidationError('Missing required field: appName');
   }
 
   // Convert stringified booleans to actual booleans.
@@ -98,19 +51,4 @@ export class ValidationError extends Error {
     // https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes#extending-built-ins-like-error-array-and-map-may-no-longer-work
     Object.setPrototypeOf(this, ValidationError.prototype);
   }
-}
-
-function sourceValidatorHelper(
-  response: Record<string, unknown>,
-  appSpecificValidator: (response: Record<string, unknown>) => void
-): ProjectSources {
-  if (!response.source) {
-    throwMissingFieldError('source');
-  }
-  appSpecificValidator(response);
-  return response as unknown as ProjectSources;
-}
-
-function throwMissingFieldError(fieldName: string) {
-  throw new ValidationError('Missing required field: ' + fieldName);
 }

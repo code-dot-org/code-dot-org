@@ -42,7 +42,6 @@ export function variableBubble(p5, x, y, text) {
   const textWidthValue = textWidth + 2 * padding;
   const textHeightValue = textSizeValue + 2 * padding;
 
-  p5.push();
   p5.fill(colors.darkest_gray);
   p5.stroke('white');
   p5.strokeWeight(3);
@@ -54,7 +53,6 @@ export function variableBubble(p5, x, y, text) {
   p5.textSize(textSizeValue);
   p5.textAlign(p5.CENTER, p5.CENTER);
   p5.text(text, x, y);
-  p5.pop();
 }
 
 /**

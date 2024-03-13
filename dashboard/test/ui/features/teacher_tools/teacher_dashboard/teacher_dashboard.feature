@@ -224,7 +224,7 @@ Feature: Using the teacher dashboard
     Given I am a teacher
     And I create a new student section and go home
     And I attempt to join the section
-    Then I wait until element "div.alert" is visible
+    Then I wait until element "#flashes" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
   Scenario: Attempt to join an invalid section through the homepage

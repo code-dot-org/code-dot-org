@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 18:47:40 UTC",
+    "serialized_at": "2024-01-12 21:52:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1174,9 +1174,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-pt-tech-setup-and-tools2022_2024"
-        ],
         "progression": "Tech Setup and Tools for Create PT"
       },
       "bonus": false,
@@ -1199,9 +1196,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Create PT Workspace 2020_2024"
-        ],
         "progression": "Create PT Coding Workspace"
       },
       "bonus": false,
@@ -1224,9 +1218,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp8_2024"
-        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -1249,9 +1240,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp9_2024"
-        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -1551,18 +1539,6 @@
       }
     },
     {
-      "name": "Help Students Sign Up For The AP Exam",
-      "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
-      "key": "help_students_sign_up_for_the_ap_exam",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "help_students_sign_up_for_the_ap_exam"
-      }
-    },
-    {
       "name": "Syllabus",
       "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
       "key": "syllabus",
@@ -1596,18 +1572,6 @@
       },
       "seeding_key": {
         "resource.key": "unit_9_lesson_4_-_create_pt_mock_exam_-_slides"
-      }
-    },
-    {
-      "name": "Why Should You Take The AP CSP Exam?",
-      "url": "https://drive.google.com/file/d/1g5t9kBhrNgXcM2US67CJy17f4JEfTevW/view?usp=drive_link",
-      "key": "why_should_you_take_the_ap_csp_exam_",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "why_should_you_take_the_ap_csp_exam_"
       }
     }
   ],
@@ -1748,12 +1712,6 @@
     },
     {
       "seeding_key": {
-        "resource.key": "help_students_sign_up_for_the_ap_exam",
-        "script.name": "csp9-2024"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "syllabus",
         "script.name": "csp9-2024"
       }
@@ -1766,12 +1724,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "why_should_you_take_the_ap_csp_exam_",
-        "script.name": "csp9-2024"
-      }
-    }
+
   ],
   "vocabularies": [
 

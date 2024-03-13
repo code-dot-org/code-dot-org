@@ -8,9 +8,7 @@ import ProgressIcon from './ProgressIcon';
 export default function LegendItem({itemType, labelText}) {
   return (
     <div className={styles.legendItem}>
-      <div className={styles.legendIcon}>
-        <ProgressIcon itemType={itemType} />
-      </div>
+      <ProgressIcon itemType={itemType} />
       <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
     </div>
   );

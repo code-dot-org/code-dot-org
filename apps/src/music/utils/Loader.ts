@@ -5,8 +5,8 @@ import MusicLibrary, {
   LibraryJson,
   LibraryValidator,
 } from '../player/MusicLibrary';
+import {baseAssetUrl, DEFAULT_LIBRARY} from '../constants';
 const AppConfig = require('../appConfig').default;
-import {getBaseAssetUrl} from '../appConfig';
 
 /**
  * Loads a sound library JSON file.
@@ -18,18 +18,23 @@ import {getBaseAssetUrl} from '../appConfig';
 export const loadLibrary = async (
   libraryName: string
 ): Promise<MusicLibrary> => {
-  const libraryParameter = AppConfig.getValue('library') || libraryName;
-  const libraryFilename = `music-library-${libraryParameter}`;
-
   if (AppConfig.getValue('local-library') === 'true') {
-    const localLibrary = require(`@cdo/static/music/${libraryFilename}.json`);
+    const localLibraryFilename = 'music-library';
+    const localLibrary = require(`@cdo/static/music/${localLibraryFilename}.json`);
     return new MusicLibrary(
-      'local-' + libraryFilename,
+      'local-' + localLibraryFilename,
       localLibrary as LibraryJson
     );
   } else {
+    // URL param takes precendence over provided library name.
+    const libraryParameter = AppConfig.getValue('library') || libraryName;
+    const libraryFilename =
+      libraryParameter !== DEFAULT_LIBRARY
+        ? `music-library-${libraryParameter}`
+        : 'music-library';
+
     const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
-      getBaseAssetUrl() + libraryFilename + '.json',
+      baseAssetUrl + libraryFilename + '.json',
       {},
       LibraryValidator
     );

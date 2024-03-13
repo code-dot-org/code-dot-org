@@ -1,26 +1,31 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
-import {featuredProjectDataPropType} from './projectConstants';
+import {
+  featuredProjectDataPropType,
+  featuredProjectTableTypes,
+} from './projectConstants';
 
 export default class FeaturedProjects extends React.Component {
   static propTypes = {
-    activeFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+    currentFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
-    archivedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
-      .isRequired,
-    bookmarkedFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
+    archivedUnfeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
   };
 
   render() {
     return (
       <div>
-        <h3>Featured Projects</h3>
+        <h3>Currently Featured Projects</h3>
         <FeaturedProjectsTable
-          activeList={this.props.activeFeaturedProjects}
-          bookmarkedList={this.props.bookmarkedFeaturedProjects}
-          archivedList={this.props.archivedFeaturedProjects}
+          projectList={this.props.currentFeaturedProjects}
+          tableVersion={featuredProjectTableTypes.current}
+        />
+        <h3>Archive of Previously Featured Projects</h3>
+        <FeaturedProjectsTable
+          projectList={this.props.archivedUnfeaturedProjects}
+          tableVersion={featuredProjectTableTypes.archived}
         />
       </div>
     );

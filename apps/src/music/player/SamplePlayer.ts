@@ -3,7 +3,7 @@ import {Effects} from './interfaces/Effects';
 import SoundCache from './SoundCache';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import SoundPlayer from './SoundPlayer';
-import {SoundLoadCallbacks} from '../types';
+import {LoadFinishedCallback} from '../types';
 
 // Multiplied by the duration of a single beat to determine the length of
 // time to fade out a sound, if trimming to a specific duration. This results
@@ -14,7 +14,7 @@ const RELEASE_DURATION_FACTOR = 0.2;
 
 export interface SampleEvent {
   offsetSeconds: number;
-  sampleUrl: string;
+  sampleId: string;
   triggered: boolean;
   effects?: Effects;
   lengthSeconds?: number;
@@ -38,6 +38,7 @@ export default class SamplePlayer {
   private playingSamples: PlayingSample[];
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
+  private updateLoadProgress: ((value: number) => void) | undefined;
 
   constructor(
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
@@ -50,6 +51,10 @@ export default class SamplePlayer {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
+  }
+
+  setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
+    this.updateLoadProgress = updateLoadProgress;
   }
 
   setBpm(bpm: number) {
@@ -71,25 +76,25 @@ export default class SamplePlayer {
     sampleEventList: SampleEvent[],
     playTimeOffsetSeconds?: number
   ) {
-    await this.loadSounds(sampleEventList.map(event => event.sampleUrl));
+    await this.loadSounds(sampleEventList.map(event => event.sampleId));
     this.startInternal(sampleEventList, playTimeOffsetSeconds);
   }
 
-  async previewSample(sampleUrl: string, onStop?: () => void) {
+  async previewSample(sampleId: string, onStop?: () => void) {
     this.cancelPreviews();
 
     try {
-      const audioBuffer = await this.soundCache.loadSound(sampleUrl);
+      const audioBuffer = await this.soundCache.loadSound(sampleId);
       if (audioBuffer) {
         this.soundPlayer.playSound(audioBuffer, PREVIEW_GROUP, 0, onStop);
       } else {
         this.metricsReporter.logError('Error loading sound', undefined, {
-          sound: sampleUrl,
+          sound: sampleId,
         });
       }
     } catch (error) {
       this.metricsReporter.logError('Error loading sound', error as Error, {
-        sound: sampleUrl,
+        sound: sampleId,
       });
     }
   }
@@ -107,14 +112,14 @@ export default class SamplePlayer {
         }
       : undefined;
 
-    await this.loadSounds(events.map(event => event.sampleUrl));
+    await this.loadSounds(events.map(event => event.sampleId));
 
     events.forEach(event => {
-      const audioBuffer = this.soundCache.getSound(event.sampleUrl);
+      const audioBuffer = this.soundCache.getSound(event.sampleId);
       if (!audioBuffer) {
         this.metricsReporter.logWarning(
           'Could not load sound which should have been in cache: ' +
-            event.sampleUrl
+            event.sampleId
         );
       } else {
         this.soundPlayer.playSound(
@@ -163,11 +168,11 @@ export default class SamplePlayer {
       const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
-        const buffer = this.soundCache.getSound(sampleEvent.sampleUrl);
+        const buffer = this.soundCache.getSound(sampleEvent.sampleId);
         if (!buffer) {
           this.metricsReporter.logWarning(
             'Could not load sound which should have been in cache: ' +
-              sampleEvent.sampleUrl
+              sampleEvent.sampleId
           );
           continue;
         }
@@ -218,8 +223,11 @@ export default class SamplePlayer {
     }
   }
 
-  async loadSounds(sampleUrls: string[], callbacks?: SoundLoadCallbacks) {
-    return this.soundCache.loadSounds(sampleUrls, callbacks);
+  async loadSounds(sampleIds: string[], onLoadFinished?: LoadFinishedCallback) {
+    return this.soundCache.loadSounds(sampleIds, {
+      updateLoadProgress: this.updateLoadProgress,
+      onLoadFinished,
+    });
   }
 
   private startInternal(

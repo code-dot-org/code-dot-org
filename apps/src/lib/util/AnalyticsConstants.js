@@ -64,7 +64,6 @@ const EVENTS = {
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
-  PROGRESS_V2_CHANGE_UNIT: 'Section Progress V2 Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
@@ -116,7 +115,6 @@ const EVENTS = {
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
   AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
   AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
-  AI_TUTOR_ASK_GENERAL_CHAT: 'AI Tutor was asked a question in general chat',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
@@ -144,11 +142,9 @@ const EVENTS = {
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',
 
-  // congrats and certificates
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
-  TEACHER_VISITED_CONGRATS_PAGE: 'Teacher Visited Congrats Page',
-  CERTIFICATE_SHARED: 'Certificate Shared',
-  CERTIFICATE_PRINT_PAGE_VISITED: 'Certificate Print Page Visited',
+  TEACHER_HOC_CONGRATS_PAGE_VISITED:
+    'Teacher Hour of Code Congrats Page Visited ',
 
   // Coteacher
   COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',
@@ -166,7 +162,7 @@ const EVENTS = {
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
 
-  // Project sharing via 'Share' button
+  // Project sharing
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
   SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
   SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
@@ -175,26 +171,12 @@ const EVENTS = {
   SHARING_LINK_SEND_TO_PHONE:
     'User Clicks Send To Phone In Project Share Dialog',
   SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
-
-  // Project sharing via 'Finish' button
-  FINISH_SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
-  FINISH_SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
-  FINISH_SHARING_FB: 'User Clicks Facebook Icon In Project Share Dialog',
-  FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Project Share Dialog',
-  FINISH_SHARING_LINK_SEND_TO_PHONE:
-    'User Clicks Send To Phone In Finish Congrats Dialog',
-  FINISH_BUTTON_CERTIFICATE:
-    'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
-
-  // Export app
-  EXPORT_APP: 'User Exports App From Share Advanced Options',
 };
 
 const EVENT_GROUP_NAMES = {
   VIDEO_EVENTS: 'video-events',
   DANCE_PARTY: 'dance-party-events',
   PROJECT_SHARING: 'project-sharing-events',
-  FINISH_PROJECT_SHARING: 'finish-project-sharing-events',
 };
 
 const EVENT_GROUPS = {
@@ -217,22 +199,13 @@ const EVENT_GROUPS = {
   [EVENTS.VIDEO_PAUSED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
   [EVENTS.VIDEO_ENDED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
 
-  // Project sharing via 'Share' button
-  [EVENTS.SHARING_LINK_COPY]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  // Project sharing
+  [EVENTS.SHARING_LINK_COPIED]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_PUBLISH]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_FB]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_TWITTER]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_LINK_SEND_TO_PHONE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_CLOSE_ESCAPE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
-
-  // Project sharing via 'Finish' button
-  [EVENTS.FINISH_SHARING_LINK_COPY]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_PUBLISH]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_FB]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_TWITTER]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_SHARING_LINK_SEND_TO_PHONE]:
-    EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
-  [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
 export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};

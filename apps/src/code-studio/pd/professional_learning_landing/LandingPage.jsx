@@ -6,7 +6,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
-import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
@@ -38,12 +38,9 @@ export default class LandingPage extends Component {
           )}
           <EnrolledWorkshops />
           {this.props.deeperLearningCourseData && (
-            <div>
-              <h2>Online Professional Learning Courses</h2>
-              <ProfessionalLearningCourseProgress
-                deeperLearningCourseData={this.props.deeperLearningCourseData}
-              />
-            </div>
+            <ProfessionalLearningCourseProgress
+              deeperLearningCourseData={this.props.deeperLearningCourseData}
+            />
           )}
         </main>
       </div>
@@ -57,6 +54,8 @@ export const LastWorkshopSurveyBanner = ({
   surveyUrl,
 }) => (
   <TwoColumnActionBlock
+    isRtl={false}
+    responsiveSize="lg"
     imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
     subHeading={subHeading}
     description={description}

@@ -39,7 +39,7 @@ module I18n
           private
 
           def crowdin_locale_dir_of(language)
-            I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
+            I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME)
           end
 
           # We use URLs as keys for lessons in Crowdin, to make things easier for translators.

@@ -77,7 +77,6 @@ export interface UnitProgress {
   result: number;
   status: string;
   teacherFeedbackReviewState: keyof typeof ReviewStates | undefined;
-  teacherFeedbackNew: boolean;
   timeSpent: number | undefined;
 }
 

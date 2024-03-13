@@ -13,7 +13,6 @@ import {
   sectionProviderName,
   sectionName,
   ltiSyncResult,
-  syncEnabled,
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../../templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -21,7 +20,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
-} from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
+} from '@cdo/apps/lib/ui/LtiSectionSyncDialog';
 
 const SUPPORTED_PROVIDERS = [
   OAuthSectionTypes.clever,
@@ -37,7 +36,6 @@ const SYNC_PROVIDERS = [
 export const READY = 'ready';
 export const IN_PROGRESS = 'in-progress';
 export const SUCCESS = 'success';
-export const DISABLED = 'disabled';
 
 /**
  * Button that will re-sync an omniauth section's roster with the third-paty
@@ -55,7 +53,6 @@ class SyncOmniAuthSectionControl extends React.Component {
     sectionProviderName: PropTypes.string.isRequired,
     updateRoster: PropTypes.func.isRequired,
     ltiSyncResult: LtiSectionSyncResultShape,
-    syncEnabled: PropTypes.bool,
   };
 
   state = {
@@ -83,7 +80,7 @@ class SyncOmniAuthSectionControl extends React.Component {
       {includeUserId: true}
     );
 
-    if ([IN_PROGRESS, SUCCESS, DISABLED].includes(buttonState)) {
+    if ([IN_PROGRESS, SUCCESS].includes(buttonState)) {
       // Don't acknowledge click events while request is in progress.
       // For now, ignore them on success too - the page reload will take care of it.
       return;
@@ -139,19 +136,10 @@ class SyncOmniAuthSectionControl extends React.Component {
     utils.reload();
   };
 
-  getButtonState = () => {
-    const {syncEnabled, sectionProvider} = this.props;
-    if (sectionProvider === SectionLoginType.lti_v1 && !syncEnabled) {
-      return DISABLED;
-    }
-    return this.state.buttonState;
-  };
-
   render() {
     const {sectionProvider, sectionProviderName, sectionCode, ltiSyncResult} =
       this.props;
-    const buttonState = this.getButtonState();
-    const isLtiDialogOpen = this.state;
+    const {buttonState, isLtiDialogOpen} = this.state;
     const supportedType = SUPPORTED_PROVIDERS.includes(sectionProvider);
     if (!supportedType || !sectionCode) {
       // Possibly not loaded yet.
@@ -215,7 +203,6 @@ export default connect(
     sectionProvider: sectionProvider(state, props.sectionId),
     sectionProviderName: sectionProviderName(state, props.sectionId),
     ltiSyncResult: ltiSyncResult(state),
-    syncEnabled: syncEnabled(state, props.sectionId),
   }),
   {
     updateRoster: importOrUpdateRoster,
@@ -237,28 +224,17 @@ export function SyncOmniAuthSectionButton({
       text={buttonText(buttonState, provider, providerName)}
       color={Button.ButtonColor.gray}
       size={Button.ButtonSize.default}
-      disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
+      disabled={buttonState === IN_PROGRESS}
       onClick={onClick}
       {...iconProps(buttonState)}
       style={{float: 'left'}}
-      title={
-        buttonState === DISABLED
-          ? i18n.ltiSectionSyncButtonDisabledAltText()
-          : undefined
-      }
-      aria-label={
-        buttonState === DISABLED
-          ? i18n.ltiSectionSyncButtonDisabledAltText()
-          : undefined
-      }
     />
   );
 }
 SyncOmniAuthSectionButton.propTypes = {
   provider: PropTypes.oneOf(SYNC_PROVIDERS).isRequired,
   providerName: PropTypes.string.isRequired,
-  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, DISABLED])
-    .isRequired,
+  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS]).isRequired,
   onClick: PropTypes.func,
 };
 

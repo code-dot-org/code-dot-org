@@ -20,7 +20,10 @@ Scenario: Student sign in from code.org
 Scenario: Student sign in from studio.code.org
   Given I create a student named "Alice"
   And I sign out
-  Given I am on "http://studio.code.org/users/sign_in"
+  Given I am on "http://studio.code.org/"
+  And I reload the page
+  Then I wait to see "#header_user_signin"
+  Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Alice"
   And I click "#signin-button" to load a new page
@@ -32,7 +35,10 @@ Scenario: Student sign in from studio.code.org
 Scenario: Student sign in from studio.code.org in the eu
   Given I create a student in the eu named "Alice"
   And I sign out
-  Given I am on "http://studio.code.org/users/sign_in"
+  Given I am on "http://studio.code.org/"
+  And I reload the page
+  Then I wait to see "#header_user_signin"
+  Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Alice"
   And I click "#signin-button" to load a new page
@@ -44,7 +50,10 @@ Scenario: Student sign in from studio.code.org in the eu
 Scenario: Teacher sign in from studio.code.org
   Given I create a teacher named "Casey"
   And I sign out
-  Given I am on "http://studio.code.org/users/sign_in"
+  Given I am on "http://studio.code.org/"
+  And I reload the page
+  Then I wait to see "#header_user_signin"
+  Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Casey"
   And I click "#signin-button" to load a new page
@@ -57,7 +66,7 @@ Scenario: Join non-existent section from sign in page shows error
   Given I am on "http://studio.code.org/users/sign_in/"
   And I type "9999999999" into "#section_code"
   And I click ".section-sign-in button" to load a new page
-  Then I wait until I am on "http://studio.code.org/join"
+  Then I wait until I am on "http://studio.code.org/courses"
   Then I wait to see ".alert-danger"
   And element ".alert-danger" contains text "Could not find a section with code"
 

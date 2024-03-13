@@ -16,7 +16,7 @@ social:
 
 # البرمجة باستخدام الشِعر
 
-{{tutorial_promo2، background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg"، alt_text: «شخصية أخطبوط وردية لطيفة ترتدي قبعة صغيرة أرجوانية تؤدي قصيدة تحت الأضواء على خشبة المسرح باستخدام كرسي وميكروفون»، لون النص: «أبيض»، box_background_color: «rgb (0،0،0،0.4)»، العنوان الأيسر: «فن القصيدة»، الوصف الأيسر: «إضافة فن ورسوم متحركة إلى قصيدة كلاسيكية في نشاط «ساعة البرمجة» هذا!» , left_specs: «», left_button_url: "https://studio.code.org/s/poem-art-2021/reset «, left_button_text: «ابدأ», العنوان الأيمن: «الترميز باستخدام الشعر», right_description: «اربط علوم الكمبيوتر والشعر في فصلك الدراسي بهذه السلسلة من الدروس. «، المواصفات الصحيحة: «»، رابط الزر الأيمن: "https://studio.code.org/s/poetry?viewAs=Instructor «، نص_الزر الأيمن: «عرض الوحدة»}}
+{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
 
 ## تعرف على المزيد حول البرمجة باستخدام الشِعر
 

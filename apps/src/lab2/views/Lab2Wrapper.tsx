@@ -12,10 +12,11 @@ import classNames from 'classnames';
 import moduleStyles from './Lab2Wrapper.module.scss';
 import ErrorBoundary from '../ErrorBoundary';
 import {LabState, isLabLoading, hasPageError} from '../lab2Redux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+const i18n = require('@cdo/locale');
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
 import Lab2Registry from '../Lab2Registry';
-import Loading from './Loading';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
@@ -28,6 +29,9 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
+  const overlayStyle: string = isLoading
+    ? moduleStyles.showingBlock
+    : moduleStyles.fadeInBlock;
 
   return (
     <ErrorBoundary
@@ -48,7 +52,25 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
         )}
       >
         {children}
-        <Loading isLoading={isLoading} />
+        <div
+          id="fade-overlay"
+          className={classNames(moduleStyles.solidBlock, overlayStyle)}
+        >
+          {isLoading && (
+            <div className={moduleStyles.slowLoadContainer}>
+              <div className={moduleStyles.spinnerContainer}>
+                <FontAwesome
+                  title={undefined}
+                  icon="spinner"
+                  className={classNames('fa-pulse', 'fa-3x')}
+                />
+              </div>
+              <div className={moduleStyles.spinnerText}>
+                {i18n.slowLoading()}
+              </div>
+            </div>
+          )}
+        </div>
 
         {isPageError && <ErrorUI message={errorMessage} />}
       </div>

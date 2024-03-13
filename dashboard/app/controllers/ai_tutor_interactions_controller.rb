@@ -27,7 +27,7 @@ class AiTutorInteractionsController < ApplicationController
     ai_tutor_interaction_params[:user_id] = current_user.id
     ai_tutor_interaction_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
     if params[:isProjectBacked]
-      project_data = find_project_and_version_id(ai_tutor_interaction_params[:level_id], ai_tutor_interaction_params[:script_id])
+      project_data = find_project_and_version_id(params[:level_id], params[:script_id])
       ai_tutor_interaction_params[:project_id] = project_data[:project_id]
       ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]
     end
@@ -61,24 +61,5 @@ class AiTutorInteractionsController < ApplicationController
       project_id: project_id,
       version_id: version_id,
     }
-  end
-
-  # GET /ai_tutor_interactions
-  def index
-    return render(status: :forbidden, json: {error: 'This user does not have access to AI Tutor chat messages'}) unless current_user.can_view_student_ai_chat_messages?
-    params.require([:sectionId])
-    section = Section.find(params[:sectionId])
-    students = section.students
-    return render(status: :not_found, json: {error: 'Section not found'}) unless section
-    return render(status: :forbidden, json: {error: 'This user does not own this section'}) unless current_user.sections.include?(section)
-    ai_tutor_interactions = AiTutorInteraction.where(user_id: students.pluck(:id)).map(&:attributes)
-    student_chats = []
-    ai_tutor_interactions.each do |interaction|
-      student_name = students.find(interaction["user_id"]).name
-      interaction["student_name"] = student_name
-      student_chat = interaction.transform_keys {|key| key.camelize(:lower)}
-      student_chats << student_chat
-    end
-    render json: student_chats
   end
 end

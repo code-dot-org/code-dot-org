@@ -44,7 +44,6 @@ const nodeModulesToTranspile = [
   '@blockly/field-grid-dropdown',
   '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
-  '@blockly/field-bitmap',
   'blockly',
   '@code-dot-org/dance-party',
   '@code-dot-org/johnny-five',
@@ -136,8 +135,7 @@ const nodePolyfillConfig = {
       'process/browser': require.resolve('process/browser'),
       stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
-      crypto: false,
-      vm: require.resolve('vm-browserify'),
+      crypto: require.resolve('crypto-browserify'),
     },
   },
 };

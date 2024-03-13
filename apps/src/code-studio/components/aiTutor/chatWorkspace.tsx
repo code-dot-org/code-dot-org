@@ -1,21 +1,21 @@
 import React from 'react';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useSelector} from 'react-redux';
+import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import ChatMessage from './chatMessage';
 import UserChatMessageEditor from './userChatMessageEditor';
-import style from './chat-workspace.module.scss';
+import style from './ai-tutor.module.scss';
 import WarningModal from './warningModal';
-import {TutorType} from '@cdo/apps/aiTutor/types';
 
 /**
  * Renders the AI Tutor main chat workspace component.
  */
-
 const ChatWorkspace: React.FunctionComponent = () => {
-  const storedMessages = useAppSelector(state => state.aiTutor.chatMessages);
-  const isWaitingForChatResponse = useAppSelector(
-    state => state.aiTutor.isWaitingForChatResponse
+  const storedMessages = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.chatMessages
   );
-  const tutorType = useAppSelector(state => state.aiTutor.selectedTutorType);
+  const isWaitingForChatResponse = useSelector(
+    (state: {aiTutor: AITutorState}) => state.aiTutor.isWaitingForChatResponse
+  );
 
   const showWaitingAnimation = () => {
     if (isWaitingForChatResponse) {
@@ -29,11 +29,9 @@ const ChatWorkspace: React.FunctionComponent = () => {
     }
   };
 
-  const generalChat = tutorType === TutorType.GENERAL_CHAT;
-
   return (
     <div id="chat-workspace-area" className={style.chatWorkspace}>
-      {generalChat && <WarningModal />}
+      <WarningModal />
       <div id="chat-workspace-conversation" className={style.conversationArea}>
         {storedMessages.map(message => (
           <ChatMessage message={message} key={message.id} />

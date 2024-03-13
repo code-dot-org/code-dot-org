@@ -145,11 +145,13 @@ const styles = {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
       borderRadius: 5,
+      color: color.darker_gray,
       margin: 3,
     },
     [QuickActionsCellType.header]: {
       fontSize: 20,
       lineHeight: '15px',
+      color: color.charcoal,
     },
   },
   hoverFocus: {
@@ -157,6 +159,7 @@ const styles = {
       backgroundColor: color.lighter_gray,
       border: '1px solid ' + color.light_gray,
       borderRadius: 5,
+      color: color.white,
     },
   },
 };

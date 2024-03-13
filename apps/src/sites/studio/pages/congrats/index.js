@@ -26,34 +26,30 @@ $(document).ready(function () {
   // Allows us to conditionally hide the promotional card for the Dance Party
   // Extras tutorial if we have problems during Hour of Code.
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
-  const certificateData = congratsData.certificate_data;
-  const curriculumUrl = congratsData.curriculum_url;
+  const certificateImageUrl = congratsData.certificate_image_url;
   const isHocTutorial = congratsData.is_hoc_tutorial;
   const isPlCourse = congratsData.is_pl_course;
   const isK5PlCourse = congratsData.is_k5_pl_course;
-  const courseName = congratsData.course_name || 'hourofcode';
 
   let certificateId = '';
+  let tutorial = '';
   try {
     const params = queryString.parse(window.location.search);
     certificateId = params['i'] && params['i'].replace(/[^a-z0-9_]/g, '');
+    const s = params['s'];
+    tutorial = s ? atob(s).replace(/[^A-Za-z0-9_\- ]/g, '') : 'hourofcode';
   } catch (e) {}
 
   const mcShareLink = tryGetLocalStorage('craftHeroShareLink', '');
 
   userType === 'teacher' &&
-    analyticsReporter.sendEvent(EVENTS.TEACHER_VISITED_CONGRATS_PAGE, {
-      isHocTutorial,
-      isPlCourse,
-      isK5PlCourse,
-      courseNames: certificateData.map(data => data.courseName),
-    });
+    analyticsReporter.sendEvent(EVENTS.TEACHER_HOC_CONGRATS_PAGE_VISITED);
 
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
         certificateId={certificateId}
-        tutorial={courseName}
+        tutorial={tutorial}
         userType={userType}
         under13={under13}
         language={language}
@@ -61,14 +57,13 @@ $(document).ready(function () {
         randomDonorTwitter={randomDonorTwitter}
         randomDonorName={randomDonorName}
         hideDancePartyFollowUp={hideDancePartyFollowUp}
-        certificateData={certificateData}
+        initialCertificateImageUrl={certificateImageUrl}
         isHocTutorial={isHocTutorial}
         isPlCourse={isPlCourse}
         isK5PlCourse={isK5PlCourse}
         nextCourseScriptName={nextCourseScriptName}
         nextCourseTitle={nextCourseTitle}
         nextCourseDesc={nextCourseDesc}
-        curriculumUrl={curriculumUrl}
       />
     </Provider>,
     document.getElementById('congrats-container')

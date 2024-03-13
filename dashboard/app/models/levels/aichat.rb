@@ -29,7 +29,7 @@ class Aichat < Level
     system_prompt
     bot_title
     bot_description
-    initial_ai_customizations
+    disable_projects
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -38,7 +38,9 @@ class Aichat < Level
         user: params[:user],
         game: Game.aichat,
         level_num: 'custom',
-        properties: {}
+        properties: {
+          disable_projects: true
+        }
       )
     )
   end

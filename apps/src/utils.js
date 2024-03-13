@@ -4,8 +4,7 @@ import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
-import md5 from 'md5';
-
+import {md5} from './util/crypto';
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
  * and whether the elements appear in the same order as the sequence.
@@ -812,9 +811,9 @@ export function resetAniGif(element) {
 export function interpolateColors(from, to, value) {
   const fromRGB = new RGBColor(from);
   const toRGB = new RGBColor(to);
-  const r = Math.round(fromRGB.r * (1 - value) + toRGB.r * value);
-  const g = Math.round(fromRGB.g * (1 - value) + toRGB.g * value);
-  const b = Math.round(fromRGB.b * (1 - value) + toRGB.b * value);
+  const r = fromRGB.r * (1 - value) + toRGB.r * value;
+  const g = fromRGB.g * (1 - value) + toRGB.g * value;
+  const b = fromRGB.b * (1 - value) + toRGB.b * value;
   return `rgb(${r}, ${g}, ${b})`;
 }
 

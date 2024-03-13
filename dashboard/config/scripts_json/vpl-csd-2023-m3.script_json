@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "PD Workshop Activity CSD",
+      "curriculum_umbrella": "CSD Virtual PL",
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-06 20:07:31 UTC",
+    "serialized_at": "2023-09-15 23:14:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -624,9 +624,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD M3 Theme Introduction_2023"
-        ],
         "progression": "Module 3 Overview & Check In (~10 mins)"
       },
       "bonus": false,
@@ -649,9 +646,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD M3 Check-in_2023"
-        ],
         "progression": "Module 3 Overview & Check In (~10 mins)"
       },
       "bonus": false,
@@ -749,9 +743,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD - M3 - U4L1 Investigation_2022"
-        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -799,9 +790,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD - Module 3 - U4L3 and 4 Investigation_2022"
-        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -849,9 +837,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD - Module 3 - Conclusions and Connections_2023"
-        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -874,9 +859,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - M3_CSD U4 Chapter 1 Project_2023"
-        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -899,9 +881,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD - Module 3 - L13 LInkingScreens_2023"
-        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -924,9 +903,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - M3_CSD U4 Chapter 2 Project_2023"
-        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -974,9 +950,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL - CSD - M3 Wrap Up_2023"
-        ],
         "progression": "Module 3 Asynchronous Wrap Up (~5 mins)"
       },
       "bonus": false,

@@ -37,7 +37,7 @@ export function fakeDetailRowsForStudent(student) {
   ];
 }
 
-export function createStore(numStudents, numLessons, studentList = null) {
+export function createStore(numStudents, numLessons) {
   const scriptData = getScriptData(numLessons);
   const section = {
     id: 11,
@@ -45,12 +45,8 @@ export function createStore(numStudents, numLessons, studentList = null) {
     students: [],
     lessonExtras: false,
   };
-  if (studentList === null) {
-    for (let i = 0; i < numStudents; i++) {
-      section.students.push({id: i, name: 'Student' + i + ' Long Lastname'});
-    }
-  } else {
-    section.students = [...studentList];
+  for (let i = 0; i < numStudents; i++) {
+    section.students.push({id: i, name: 'Student' + i + ' Long Lastname'});
   }
   try {
     registerReducers({
@@ -114,8 +110,7 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        teacherFeedbackReviewState: randomReviewState(),
-        teacherFeedbackNew: false,
+        reviewState: randomReviewState(),
       };
     case 1:
       return {
@@ -125,8 +120,7 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        teacherFeedbackReviewState: randomReviewState(),
-        teacherFeedbackNew: true,
+        reviewState: randomReviewState(),
       };
     case 2:
       return {
@@ -136,8 +130,7 @@ function randomProgress(level) {
         paired: paired,
         timeSpent: timeSpent,
         lastTimestamp: timestamp,
-        teacherFeedbackReviewState: randomReviewState(),
-        teacherFeedbackNew: false,
+        reviewState: randomReviewState(),
       };
     default:
       return null;

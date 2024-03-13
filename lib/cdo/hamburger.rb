@@ -100,7 +100,7 @@ class Hamburger
 
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
-      {title: "course_catalog", url: CDO.code_org_url("/students")},
+      {title: "course_catalog", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"},
       {title: "incubator", url: CDO.studio_url("/incubator")}
     ].each do |entry|
@@ -184,7 +184,7 @@ class Hamburger
 
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
-      url: CDO.code_org_url("/students"),
+      url: CDO.studio_url("/courses"),
       class: visibility[:show_pegasus_options],
       id: "learn"
     }
@@ -243,13 +243,14 @@ class Hamburger
 
     any_student_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.code_org_url("/students"), id: "header-student-courses"},
+      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"},
       {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
     ]
 
     signed_out_links = [
-      {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/students"), id: "header-learn"},
+      # When signed out, "Learn" will take all users to the student view of /courses.
+      {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-learn"},
       {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-teach"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-projects"},
       {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats"},

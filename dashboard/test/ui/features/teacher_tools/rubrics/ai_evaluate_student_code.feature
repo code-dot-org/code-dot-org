@@ -39,18 +39,22 @@ Feature: Evaluate student code against rubrics using AI
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
-    # Teacher views AI evaluation status in rubric header
+    # Teacher views AI evaluation status in settings tab
     When I click selector "#ui-floatingActionButton"
-    And I wait until element "#uitest-rubric-content" is visible
+    And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
+    And I click selector ".uitest-rubric-header-tab:contains('Settings')"
+    And I wait until element ".uitest-rubric-settings" is visible
     And element ".uitest-run-ai-assessment" is disabled
-    And element ".uitest-info-alert" is visible
-    Then I wait until element ".uitest-info-alert" contains text "AI analysis already completed for this project."
+    And element ".uitest-eval-status-text" is visible
+    Then I wait until element ".uitest-eval-status-text" contains text "AI analysis already completed for this project."
+    # Make settings tab visible to the human eye
+    And I wait for 1 second
 
-    # Teacher views AI evaluation results in rubric
-    And I wait until element "#uitest-next-goal" is visible
-    And I click selector "#uitest-next-goal"
-    And I wait until element ".uitest-learning-goal-title" is visible
-    Then element ".uitest-learning-goal-title" contains text "Sprites"
+    # Teacher views AI evaluation results in rubric tab
+    When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
+    And I wait until element ".uitest-learning-goal-row" is visible
+    And element ".uitest-uses-ai" is visible
+    And I click selector ".uitest-uses-ai:eq(0)"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
@@ -85,18 +89,22 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views AI evaluation status in settings tab
     When I click selector "#ui-floatingActionButton"
-    And I wait until element "#uitest-rubric-content" is visible
-    And element ".uitest-run-ai-assessment" is enabled
+    And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
+    And I click selector ".uitest-rubric-header-tab:contains('Settings')"
+    And I wait until element ".uitest-rubric-settings" is visible
+    Then element ".uitest-run-ai-assessment" is enabled
+    And element ".uitest-eval-status-text" is visible
+    And element ".uitest-eval-status-text" contains text ""
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
-    Then I wait until element ".uitest-info-alert" is visible
-    And element ".uitest-info-alert" contains text "AI analysis complete."
+    And I wait until element ".uitest-eval-status-text" is visible
+    Then I wait until element ".uitest-eval-status-text" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in rubric tab
-    And I wait until element "#uitest-next-goal" is visible
-    And I click selector "#uitest-next-goal"
-    And I wait until element ".uitest-learning-goal-title" is visible
-    Then element ".uitest-learning-goal-title" contains text "Sprites"
+    When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
+    And I wait until element ".uitest-learning-goal-row" is visible
+    And element ".uitest-uses-ai" is visible
+    And I click selector ".uitest-uses-ai:eq(0)"
     And I wait until element ".uitest-ai-assessment" is visible
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"

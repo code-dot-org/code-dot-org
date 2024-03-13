@@ -22,8 +22,7 @@
         "isVisible": false,
         "tabOrder": 1
       }
-    },
-    "ai_tutor_available": true
+    }
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-03-31T21:39:35.897+00:00\",\"changed\":[\"cloned from \\\"CSA U5 Personal Narrative Project 1-Day_2023\\\"\"],\"cloned_from\":\"CSA U5 Personal Narrative Project 1-Day_2023\"},{\"changed_at\":\"2023-03-31 21:39:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-06 16:46:45 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-06 16:47:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-06 16:47:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-06 16:47:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-02-15 18:09:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

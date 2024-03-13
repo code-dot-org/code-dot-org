@@ -263,6 +263,3 @@ LegacyDialog.prototype.processHideOptions = function (options) {
       $(this).modal('hide');
     });
 };
-
-// Needed to support TypeScript usage.
-export default LegacyDialog;

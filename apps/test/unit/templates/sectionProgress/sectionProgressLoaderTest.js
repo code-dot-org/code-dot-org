@@ -151,7 +151,6 @@ const fullExpectedResult = {
           paired: false,
           timeSpent: undefined,
           teacherFeedbackReviewState: undefined,
-          teacherFeedbackNew: false,
           lastTimestamp: 12345,
         },
         2001: {
@@ -162,7 +161,6 @@ const fullExpectedResult = {
           paired: true,
           timeSpent: 12345,
           teacherFeedbackReviewState: undefined,
-          teacherFeedbackNew: false,
           lastTimestamp: 12345,
         },
       },
@@ -175,7 +173,6 @@ const fullExpectedResult = {
           paired: false,
           timeSpent: 6789,
           teacherFeedbackReviewState: undefined,
-          teacherFeedbackNew: false,
           lastTimestamp: 6789,
         },
       },

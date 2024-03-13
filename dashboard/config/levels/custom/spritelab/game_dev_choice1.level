@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-02-12T18:15:35.000Z",
   "level_num": "custom",
@@ -20,7 +21,7 @@
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
-    "use_modal_function_editor": "false",
+    "use_modal_function_editor": "true",
     "standalone_app_name": "spritelab",
     "encrypted": "false",
     "embed": "false",
@@ -30,7 +31,7 @@
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "false",
+    "include_shared_functions": "true",
     "free_play": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -47,12 +48,13 @@
     "start_animations": "{\"orderedKeys\":[\"a6624596-b827-460b-a518-dc8e59c9c924\",\"2357f724-cb66-479b-a5f1-7eed540be275\",\"df8e0804-6fe2-40e5-9f6c-1a63dd55b25f\",\"e0bdd31e-73c2-415b-aa82-a603f82393ac\",\"28479432-2282-4186-8908-a43e280328a9\",\"fe35c6bb-67f3-40c6-b9c5-f125f2ac589d\",\"54d97e6a-144c-4a29-a204-a0553027ec6b\",\"734a225e-b1c3-482d-ba4a-1939307a8646\",\"388e7214-32aa-417f-8903-002d2252a55c\",\"71db4324-ec89-4f0d-936c-e002b90a2396\",\"53fd04e2-db86-4505-9cd9-5ac56e3e7554\",\"cc45dae0-5e30-4ce8-b345-46e317591a68\"],\"propsByKey\":{\"a6624596-b827-460b-a518-dc8e59c9c924\":{\"name\":\"fox\",\"frameCount\":1,\"frameSize\":{\"x\":367,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:02:14.000Z\",\"pngLastModified\":\"2022-04-11T21:46:21.000Z\",\"version\":\"Jy0XxgCWCEyHnkwxysW5sJO8Sa7UySBy\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Jy0XxgCWCEyHnkwxysW5sJO8Sa7UySBy/fox.png\",\"sourceSize\":{\"x\":367,\"y\":400}},\"2357f724-cb66-479b-a5f1-7eed540be275\":{\"name\":\"blue_watercolor\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:33:45 UTC\",\"pngLastModified\":\"2021-11-10 23:36:23 UTC\",\"version\":\"7TXSbgENOzcEcABEwbM7lMNH2cHWiwu9\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/7TXSbgENOzcEcABEwbM7lMNH2cHWiwu9/category_backgrounds/blue_watercolor.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"df8e0804-6fe2-40e5-9f6c-1a63dd55b25f\":{\"name\":\"gradient_01\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A/category_backgrounds/gradient_01.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e0bdd31e-73c2-415b-aa82-a603f82393ac\":{\"name\":\"gradient_02\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_/category_backgrounds/gradient_02.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"28479432-2282-4186-8908-a43e280328a9\":{\"name\":\"ink_mountain\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-11-10 23:23:45 UTC\",\"pngLastModified\":\"2021-11-10 23:23:45 UTC\",\"version\":\"8Daf3mypu5JKWmyfPga8tpQomLjtRcM7\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/8Daf3mypu5JKWmyfPga8tpQomLjtRcM7/category_backgrounds/ink_mountain.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"fe35c6bb-67f3-40c6-b9c5-f125f2ac589d\":{\"name\":\"cuteanimals_penguin_hello\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:32 UTC\",\"pngLastModified\":\"2021-09-02 21:58:23 UTC\",\"version\":\"0fZhrXVKxYuN3aYSFvf4wrrpGCsRaezO\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0fZhrXVKxYuN3aYSFvf4wrrpGCsRaezO/category_animals/cuteanimals_penguin_hello.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"54d97e6a-144c-4a29-a204-a0553027ec6b\":{\"name\":\"wolf\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":266},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:44:20 UTC\",\"pngLastModified\":\"2021-01-19 23:44:21 UTC\",\"version\":\"mS4Qj56vJVrD0HLkJFpdUQGKy0ZDL.Jx\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/mS4Qj56vJVrD0HLkJFpdUQGKy0ZDL.Jx/category_animals/wolf.png\",\"sourceSize\":{\"x\":398,\"y\":266}},\"734a225e-b1c3-482d-ba4a-1939307a8646\":{\"name\":\"deer\",\"frameCount\":1,\"frameSize\":{\"x\":275,\"y\":399},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-04-11T21:00:43.000Z\",\"pngLastModified\":\"2022-04-11T21:00:42.000Z\",\"version\":\"uaWzC7hg7t.05OYceaBaLseRWrvW0Kkv\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/uaWzC7hg7t.05OYceaBaLseRWrvW0Kkv/deer.png\",\"sourceSize\":{\"x\":275,\"y\":399}},\"388e7214-32aa-417f-8903-002d2252a55c\":{\"name\":\"gameplay_greendiamond2\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":281,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:20 UTC\",\"pngLastModified\":\"2021-03-29 19:25:55 UTC\",\"version\":\"tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx/category_video_games/gameplay_greendiamond2.png\",\"sourceSize\":{\"x\":281,\"y\":400}},\"71db4324-ec89-4f0d-936c-e002b90a2396\":{\"name\":\"gameplay_bluestar\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":349},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:11 UTC\",\"pngLastModified\":\"2021-03-29 19:26:11 UTC\",\"version\":\"cHLxyFtxN360bKiFE3JTx8wlVix.48O6\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/cHLxyFtxN360bKiFE3JTx8wlVix.48O6/category_video_games/gameplay_bluestar.png\",\"sourceSize\":{\"x\":398,\"y\":349}},\"53fd04e2-db86-4505-9cd9-5ac56e3e7554\":{\"name\":\"gameplayobject_heart_02\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":396,\"y\":376},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:42 UTC\",\"pngLastModified\":\"2021-03-29 19:25:43 UTC\",\"version\":\"T9cVKefx7rb7tG8zAzKj1TwS6U2SruY3\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T9cVKefx7rb7tG8zAzKj1TwS6U2SruY3/category_video_games/gameplayobject_heart_02.png\",\"sourceSize\":{\"x\":396,\"y\":376}},\"cc45dae0-5e30-4ce8-b345-46e317591a68\":{\"name\":\"gameplay_purplestar\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:57 UTC\",\"pngLastModified\":\"2021-03-29 19:25:57 UTC\",\"version\":\"5YBvXNYGIKZmdtXOEOBEPjeD7Lc5Y95b\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/5YBvXNYGIKZmdtXOEOBEPjeD7Lc5Y95b/category_video_games/gameplay_purplestar.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
     "display_name": "Jewels of the Arctic ",
     "thumbnail_url": "https://images.code.org/38e869d2474704f9d71e4caadb375e48-fox_jewel.jpg",
-    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Collect  \r\n\r\n**How to win:** Use the arrows to get 6 arctic jewels. ",
-    "long_instructions": " **Play the game!**\r\n \r\n Press `Run` and play the game. What do you notice?",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**How to play:** Use the arrows to move. \r\n\r\n**How to win:** Collect 6 arctic jewels. "
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-12 22:52:52 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 22:59:28 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:00:43 +0000\",\"changed\":[\"include_shared_functions\",\"mini_toolbox\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:22:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:23:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:26:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:30:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:35:36 +0000\",\"changed\":[\"start_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:36:33 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:37:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:46:57 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:00:09 +0000\",\"changed\":[\"use_default_sprites\",\"hide_animation_mode\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:00:53 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:12:13 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:13:13 +0000\",\"changed\":[\"block_pools\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:14:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:23:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:30:42 +0000\",\"changed\":[\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:40:58 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 16:52:32 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:34:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:36:21 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:04:58 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:10:43 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:12:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:20:33 +0000\",\"changed\":[\"start_blocks\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:55:18 +0000\",\"changed\":[\"start_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-03-06 23:55:52 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-03-07 00:01:00 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-03-07 00:12:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-03-07 00:14:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-03-07 16:56:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 22:32:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-12 22:52:52 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 22:59:28 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:00:43 +0000\",\"changed\":[\"include_shared_functions\",\"mini_toolbox\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:22:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:23:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:26:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-12 23:30:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:35:36 +0000\",\"changed\":[\"start_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:36:33 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:37:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 20:46:57 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:00:09 +0000\",\"changed\":[\"use_default_sprites\",\"hide_animation_mode\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:00:53 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:12:13 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:13:13 +0000\",\"changed\":[\"block_pools\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:14:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:23:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:30:42 +0000\",\"changed\":[\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-13 21:40:58 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 16:52:32 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:34:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:36:21 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,7 +64,7 @@
         <variables>
           <variable id="NxB^1]lLc8);a:8IK3(6">Gems</variable>
         </variables>
-        <block type="when_run" id="Awi8kv?p8Jt?*~A7y8iO" deletable="false" movable="false" x="24" y="20">
+        <block type="when_run" id="Awi8kv?p8Jt?*~A7y8iO" deletable="false" x="79" y="42">
           <next>
             <block type="gamelab_setBackgroundImageAs" id="OsK~.#aT~[$e#Zf[Mz;a">
               <field name="IMG">"blue_watercolor"</field>
@@ -83,9 +85,9 @@
                         </block>
                       </value>
                       <value name="BEHAVIOR">
-                        <block type="gamelab_behavior_get">
-                          <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-                          <field name="NAME">moving with arrow keys</field>
+                        <block type="gamelab_behaviorPicker" id="0y9aQecq@m.L%Q$=L/K^">
+                          <field name="BEHAVIOR">driving with arrow keys</field>
+                          <field name="EDIT">Edit</field>
                         </block>
                       </value>
                       <next>
@@ -97,22 +99,36 @@
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_makeSpritesWithSize">
-                              <field name="SIZE">50</field>
-                              <field name="COSTUME">"gameplayobject_heart_02"</field>
+                            <block type="gamelab_makeNumSprites" id="LX,n=-~0Vo]3n/,bqF]f">
+                              <field name="ANIMATION_NAME">"gameplayobject_heart_02"</field>
                               <value name="NUM">
                                 <block type="gamelab_int10" id="|[sjkOo*Gwy8ob~$4_+b">
                                   <field name="VALUE">6</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="variables_set" id="u{6bnpOz^un34,fF=PO^">
-                                  <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">Gems</field>
-                                  <value name="VALUE">
-                                    <block type="ecosystems_int10" id="?Xj~(E/n2F5??AE3GT!S">
-                                      <field name="VALUE">0</field>
+                                <block type="gamelab_setProp">
+                                  <field name="PROPERTY">"scale"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"gameplayobject_heart_02"</field>
                                     </block>
                                   </value>
+                                  <value name="VAL">
+                                    <block type="math_number">
+                                      <field name="NUM">50</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="u{6bnpOz^un34,fF=PO^">
+                                      <field name="VAR" id="NxB^1]lLc8);a:8IK3(6">Gems</field>
+                                      <value name="VALUE">
+                                        <block type="ecosystems_int10" id="?Xj~(E/n2F5??AE3GT!S">
+                                          <field name="VALUE">0</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -126,7 +142,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" id="B,_W%aBFH=#{w]Y^3+j." x="29" y="399">
+        <block type="gamelab_checkTouching" id="B,_W%aBFH=#{w]Y^3+j." x="78" y="484">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -147,9 +163,6 @@
                 <shadow type="math_number" id=".@*R02e1quT?GmCy|VAq">
                   <field name="NUM">1</field>
                 </shadow>
-                <block type="math_number">
-                  <field name="NUM">1</field>
-                </block>
               </value>
               <next>
                 <block type="gamelab_destroy" id="4MzI/}r^~_f`gKh#C^r.">
@@ -195,10 +208,11 @@
             </block>
           </next>
         </block>
-        <block type="behavior_definition" id="P9ffm1pqK*70pVztWs.$" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="P9ffm1pqK*70pVztWs.$" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="wandering"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">wandering</field>
+          <field name="DESCRIPTION">move a sprite, changing its direction randomly</field>
           <statement name="STACK">
             <block type="gamelab_withPercentChance" id="V7rJ_!n*uDWc^+u%[W;a">
               <value name="NUM">
@@ -348,10 +362,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="/T%icxo,IFW-Qt@Ky3$u" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="/T%icxo,IFW-Qt@Ky3$u" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving east"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving east</field>
+          <field name="DESCRIPTION">move a sprite to the right across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" id="3c,8(@1Pb0h}]JnSX!?E">
               <field name="DIRECTION">"East"</field>
@@ -369,10 +384,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="4R50!aasF9!uGu{|]2uO" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="4R50!aasF9!uGu{|]2uO" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="spinning left"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">spinning left</field>
+          <field name="DESCRIPTION">rotate a sprite to its left</field>
           <statement name="STACK">
             <block type="gamelab_turn" id="nqoBf?R_u:CJfLIE59SD">
               <field name="DIRECTION">"left"</field>
@@ -387,10 +403,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="{~aYOiQQ(,J^,3j%ySLr" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="{~aYOiQQ(,J^,3j%ySLr" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="spinning right"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">spinning right</field>
+          <field name="DESCRIPTION">rotate a sprite to its right</field>
           <statement name="STACK">
             <block type="gamelab_turn" id="UoB:iDa48#yo03d_Hx]1">
               <field name="DIRECTION">"right"</field>
@@ -405,10 +422,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="Xl+7vJpwB~#lKcwdGn3R" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="Xl+7vJpwB~#lKcwdGn3R" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="shrinking"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">shrinking</field>
+          <field name="DESCRIPTION">change the size of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy" id="HbyRD|+=vK6.TZxl%1Ln">
               <field name="PROPERTY">"scale"</field>
@@ -423,10 +441,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="u1HQL*bUU9su0NIxk5j$" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="u1HQL*bUU9su0NIxk5j$" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="growing"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">growing</field>
+          <field name="DESCRIPTION">change the size of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy" id="XJp*|e/qpQ$Jz1CF1MfF">
               <field name="PROPERTY">"scale"</field>
@@ -441,10 +460,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="[k_ZCL-e2Wa.`e,~bo_O" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="[k_ZCL-e2Wa.`e,~bo_O" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving south"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving south</field>
+          <field name="DESCRIPTION">move a sprite downwards across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" id="~F0SiLpbtp!V4i8z+1tu">
               <field name="DIRECTION">"South"</field>
@@ -462,10 +482,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="!9Cnv,u_[tsVQE=~,q]G" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="!9Cnv,u_[tsVQE=~,q]G" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="swimming left and right"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">swimming left and right</field>
+          <field name="DESCRIPTION">move a sprite horizontally, reversing direction if it touches the edges of the screen</field>
           <statement name="STACK">
             <block type="controls_if" id="cr5@6FTro4O#A:D)/R3h">
               <mutation elseif="1"/>
@@ -570,10 +591,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="d`3R7iW=Ijp77W]|%Qwa" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="d`3R7iW=Ijp77W]|%Qwa" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving north"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving north</field>
+          <field name="DESCRIPTION">move a sprite upwards across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" id="F;*e^2R`;#EsKRY0*v_+">
               <field name="DIRECTION">"North"</field>
@@ -591,10 +613,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="XuqHkKf9rfiBApv6U8C#" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="XuqHkKf9rfiBApv6U8C#" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="jittering"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">jittering</field>
+          <field name="DESCRIPTION">randomly change the size of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy" id="w@j`kedsf1-w%CqxYL}}">
               <field name="PROPERTY">"scale"</field>
@@ -618,10 +641,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="R!%zSgMJwlJoq3En]YkX" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="R!%zSgMJwlJoq3En]YkX" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving west"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving west</field>
+          <field name="DESCRIPTION">move a sprite to the left across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" id="nF!ne8Kf|8t%UTcLZ3H#">
               <field name="DIRECTION">"West"</field>
@@ -639,10 +663,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="9WDJ@reMu,y2JG0:2A6]" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="9WDJ@reMu,y2JG0:2A6]" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="patrolling"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">patrolling</field>
+          <field name="DESCRIPTION">move a sprite across the screen, reversing direction if it touches the edges</field>
           <statement name="STACK">
             <block type="gamelab_moveForward" id="]g[a+]ArpuH1|65Mk=wG">
               <value name="SPRITE">
@@ -752,10 +777,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="f:PmBy]+Mn/C27;x6q++" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="f:PmBy]+Mn/C27;x6q++" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving with arrow keys"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving with arrow keys</field>
+          <field name="DESCRIPTION">move a sprite if the user is pressing the arrow keys</field>
           <statement name="STACK">
             <block type="controls_if" id=")p}Ua?iE*$|x9^l:1sD.">
               <value name="IF0">
@@ -857,10 +883,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="9p@{fj1%]A`3;Cq8T-QY" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="9p@{fj1%]A`3;Cq8T-QY" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="driving with arrow keys"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">driving with arrow keys</field>
+          <field name="DESCRIPTION">move a sprite if the user is pressing the arrow keys</field>
           <statement name="STACK">
             <block type="controls_if" id="sCqwVS,Eon5V!DmTSXGz">
               <value name="IF0">
@@ -1008,10 +1035,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="xiAhF0Xz#5^gnWIMh]VU" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="xiAhF0Xz#5^gnWIMh]VU" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="fluttering"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">fluttering</field>
+          <field name="DESCRIPTION">randomly change the vertical position of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy" id=".!u;d7?jM24d}pR_pO|/">
               <field name="PROPERTY">"y"</field>
@@ -1035,10 +1063,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="[L9w4d1WTO[j`66pHCDE" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="[L9w4d1WTO[j`66pHCDE" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="wobbling"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">wobbling</field>
+          <field name="DESCRIPTION">randomly set the rotation of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_withPercentChance" id="oJ]-vx^HygNDuVI-`wq:">
               <value name="NUM">
@@ -1071,10 +1100,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="#c:LO78o~^O,dO3nRW{J" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="#c:LO78o~^O,dO3nRW{J" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving west and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving west and looping</field>
+          <field name="DESCRIPTION">Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_mirrorSprite" id="$EbD(remRAMv3HMS!?kB">
               <field name="DIRECTION">"left"</field>
@@ -1135,10 +1165,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="WRjw#JkJ!a(V_.-l1)D@" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="WRjw#JkJ!a(V_.-l1)D@" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving east and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving east and looping</field>
+          <field name="DESCRIPTION">Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_mirrorSprite" id="}#Sq3:[VVpMPNz5p!CB|">
               <field name="DIRECTION">"right"</field>
@@ -1199,10 +1230,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="E870!l~LI|;o,7~x3KuF" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="E870!l~LI|;o,7~x3KuF" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving north and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving north and looping</field>
+          <field name="DESCRIPTION">Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" id="5-C|LclEX(+;@i_m+SEb">
               <field name="DIRECTION">"North"</field>
@@ -1255,10 +1287,11 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" id="o|H)`I;YxZmfV!o94v+@" deletable="false" x="0" y="0">
+        <block type="behavior_definition" id="o|H)`I;YxZmfV!o94v+@" deletable="false" movable="false" x="0" y="0">
           <mutation behaviorId="moving south and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving south and looping</field>
+          <field name="DESCRIPTION">Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" id="/9q106Gq{=Gc3E#PkO{n">
               <field name="DIRECTION">"South"</field>
@@ -1313,8 +1346,5 @@
         </block>
       </xml>
     </start_blocks>
-    <toolbox_blocks>
-      <xml/>
-    </toolbox_blocks>
   </blocks>
 </GamelabJr>

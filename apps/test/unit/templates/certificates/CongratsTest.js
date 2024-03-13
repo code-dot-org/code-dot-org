@@ -7,27 +7,22 @@ import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNext
 
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];
-  const certificateData = [
-    {
-      courseName: 'dance',
-    },
-  ];
-
+  const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
   const defaultProps = {
     language: 'en',
-    certificateData,
+    initialCertificateImageUrl,
     isHocTutorial: false,
   };
 
   const hocProps = {
     language: 'en',
-    certificateData,
+    initialCertificateImageUrl,
     isHocTutorial: true,
   };
 
   const plProps = {
     language: 'en',
-    certificateData,
+    initialCertificateImageUrl,
     isHocTutorial: false,
     isPlCourse: true,
     userType: 'teacher',
@@ -133,21 +128,5 @@ describe('Congrats', () => {
     ).to.be.false;
     expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
       .true;
-  });
-
-  it('renders a message when there is no certificateData', () => {
-    const wrapper = shallow(
-      <Congrats
-        {...plProps}
-        certificateData={[]}
-        curriculumUrl="/s/self-paced-pl3-2023"
-      />
-    );
-    expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
-      'You must complete the course to earn a certificate.'
-    );
-    expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
-      '/s/self-paced-pl3-2023'
-    );
   });
 });

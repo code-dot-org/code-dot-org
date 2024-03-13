@@ -87,34 +87,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     refute @user.show_progress_table_v2
   end
 
-  test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
-    teacher = create :teacher, lti_roster_sync_enabled: true
-    sign_in(teacher)
-
-    assert teacher.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
-    assert_response :success
-    teacher.reload
-    assert_nil teacher.lti_roster_sync_enabled
-  end
-
-  test 'a post request to disable_lti_roster_sync as student is forbidden' do
-    sign_in(@user)
-
-    assert_nil @user.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
-    assert_response :unauthorized
-    @user.reload
-    assert_nil @user.lti_roster_sync_enabled
-  end
-
-  test_user_gets_response_for(
-    :post_disable_lti_roster_sync,
-    user: nil,
-    params: {user_id: 'me'},
-    response: :unauthorized
-  )
-
   test 'a get request to display_theme returns display_theme attribute of user object' do
     sign_in(@user)
     get :get_display_theme, params: {user_id: 'me'}

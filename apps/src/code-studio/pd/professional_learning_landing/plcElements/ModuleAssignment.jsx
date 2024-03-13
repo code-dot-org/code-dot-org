@@ -22,7 +22,6 @@ export default class ModuleAssignment extends React.Component {
                   `${this.props.moduleAssignmentData.status}`
                 ]
               )}
-              className="ribbon"
             />
           </div>
         </div>

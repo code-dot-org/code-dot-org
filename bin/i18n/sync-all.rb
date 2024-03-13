@@ -40,17 +40,17 @@ class I18nSync
 
   def run
     if @options[:interactive]
-      # Run `sync-in` first to generate `original` files for the restoration of redacted files during `sync-out`
+      # download and distribute translations from the previous sync
       return_to_staging_branch
-      sync_in if should_i "sync in"
-      sync_up if should_i "sync up"
-      CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
-
-      # Force switch to the `staging` branch to avoid potential merge conflicts with the `sync-in-up` PR
-      return_to_staging_branch(force: true)
       sync_down if should_i "sync down"
       sync_out if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
+
+      # force switch to the staging branch to collect and upload the most relevant English content
+      return_to_staging_branch(force: true)
+      sync_in if should_i "sync in"
+      sync_up if should_i "sync up"
+      CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
     elsif @options[:command]
       case @options[:command]
       when 'in'
@@ -86,24 +86,23 @@ class I18nSync
   end
 
   def sync_up
-    I18n::SyncUp.perform(options)
+    I18n::SyncUp.perform(options.slice(:testing))
   end
 
   def sync_down
-    I18n::SyncDown.perform(options)
+    I18n::SyncDown.perform(options.slice(:testing))
   end
 
   def sync_out
-    I18n::SyncOut.perform(options)
+    I18n::SyncOut.perform
   end
 
   def parse_options(args)
-    options = {}
-    opt_parser = nil
+    options = {
+      testing: I18nScriptUtils::TESTING_BY_DEFAULT,
+    }
 
-    I18nScriptUtils.parse_options(args, options: options) do |opts|
-      opt_parser = opts
-
+    opt_parser = OptionParser.new do |opts|
       opts.banner = <<-USAGE
   Usage: sync-all [options]
 
@@ -131,7 +130,12 @@ class I18nSync
       opts.on("-y", "--yes", "Run without confirmation") do
         options[:yes] = true
       end
+
+      opts.on('-t', '--testing', 'Run in testing mode') do
+        options[:testing] = true
+      end
     end
+    opt_parser.parse!(args)
 
     unless options[:interactive] || options[:command]
       puts "  ERROR: Must specify either interactive or command mode\n\n"

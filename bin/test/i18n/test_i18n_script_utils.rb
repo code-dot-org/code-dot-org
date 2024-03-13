@@ -52,38 +52,6 @@ describe I18nScriptUtils do
     end
   end
 
-  describe '.parse_options' do
-    let(:parse_options) {described_class.parse_options}
-
-    describe ':testing' do
-      let(:option_testing) {parse_options[:testing]}
-
-      it 'returns false by default' do
-        _(option_testing).must_equal false
-      end
-
-      context 'when "-t" command line option is set' do
-        before do
-          ARGV << '-t'
-        end
-
-        it 'returns true' do
-          _(option_testing).must_equal true
-        end
-      end
-
-      context 'when "--testing" command line option is set' do
-        before do
-          ARGV << '--testing'
-        end
-
-        it 'returns true' do
-          _(option_testing).must_equal true
-        end
-      end
-    end
-  end
-
   describe '.unit_directory_change?' do
     let(:unit_directory_change?) {I18nScriptUtils.unit_directory_change?(content_dir, unit_i18n_filepath)}
 
@@ -498,18 +466,6 @@ describe I18nScriptUtils do
 
         assert File.directory?(dir)
       end
-    end
-  end
-
-  describe '.crowdin_locale_dir' do
-    let(:crowdin_locale_dir) {I18nScriptUtils.crowdin_locale_dir(locale, subdir, file_path)}
-
-    let(:locale) {'uk-UA'}
-    let(:subdir) {nil}
-    let(:file_path) {'expected_file.json'}
-
-    it 'returns the correct Crowdin translation file path' do
-      _(crowdin_locale_dir).must_equal CDO.dir('i18n/crowdin', locale, file_path)
     end
   end
 end

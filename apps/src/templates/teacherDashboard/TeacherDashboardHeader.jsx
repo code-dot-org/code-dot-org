@@ -92,12 +92,11 @@ class TeacherDashboardHeader extends React.Component {
 
   render() {
     return (
-      <div style={styles.headerContainer}>
+      <div>
         <SmallChevronLink
           href="/home#classroom-sections"
           text={i18n.viewAllSections()}
           iconBefore
-          style={styles.linkPadding}
         />
         <this.lockedSectionNotification
           restrictSection={this.props.selectedSection.restrictSection}
@@ -165,12 +164,6 @@ const styles = {
   buttonWithMargin: {
     margin: 0,
     marginRight: 5,
-  },
-  linkPadding: {
-    padding: '10px 0',
-  },
-  headerContainer: {
-    padding: '0 64px',
   },
 };
 

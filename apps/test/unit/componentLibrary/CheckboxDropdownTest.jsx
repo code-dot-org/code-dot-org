@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {expect} from '../../util/reconfiguredChai';
 
-import {CheckboxDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import CheckboxDropdown from '@cdo/apps/componentLibrary/checkboxDropdown';
 
 const allOptions = [
   {value: 'option-1', label: 'option1'},

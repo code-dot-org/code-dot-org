@@ -96,12 +96,32 @@ describe I18n::Utils::SyncUpBase do
   describe '.parse_options' do
     let(:parse_options) {described_class.parse_options}
 
-    it 'returns parsed options' do
-      parsed_options = {parsed: 'options'}
+    it 'returns default options' do
+      _(parse_options).must_equal({testing: false})
+    end
 
-      I18nScriptUtils.expects(:parse_options).returns(parsed_options)
+    describe ':testing' do
+      let(:option_testing) {parse_options[:testing]}
 
-      _(parse_options).must_equal parsed_options
+      context 'when "-t" command line option is set' do
+        before do
+          ARGV << '-t'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
+        end
+      end
+
+      context 'when "--testing" command line option is set' do
+        before do
+          ARGV << '--testing'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
+        end
+      end
     end
   end
 
@@ -172,6 +192,36 @@ describe I18n::Utils::SyncUpBase do
     end
   end
 
+  describe '#options' do
+    let(:options) {described_instance.send(:options)}
+
+    it 'returns instance of Options struct' do
+      _(options).must_be_instance_of described_class::Options
+    end
+
+    it 'is frozen' do
+      _(options).must_be :frozen?
+    end
+
+    describe ':testing' do
+      let(:option_testing) {options.testing}
+
+      it 'returns false by default' do
+        _(option_testing).must_equal false
+      end
+
+      context 'when value is provided' do
+        let(:described_instance) {described_class.new(testing: expected_option_testing)}
+
+        let(:expected_option_testing) {'expected_option_testing'}
+
+        it 'returns provided value' do
+          _(option_testing).must_equal expected_option_testing
+        end
+      end
+    end
+  end
+
   describe '#crowdin_project' do
     let(:crowdin_project) {described_instance.send(:crowdin_project)}
 
@@ -179,7 +229,7 @@ describe I18n::Utils::SyncUpBase do
     let(:crowdin_test_project) {'expected_crowdin_test_project'}
 
     let(:config) {stub(crowdin_project: crowdin_prod_project)}
-    let(:options) {{testing: is_testing}}
+    let(:options) {stub(testing: is_testing)}
 
     let(:is_testing) {false}
 

@@ -1,195 +1,124 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
+import {UnconnectedProgressTableV2} from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
 
-import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import teacherSections, {
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser, {
-  setSortByFamilyName,
-} from '@cdo/apps/templates/currentUserRedux';
-import {Provider} from 'react-redux';
+import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
+import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
 
 import {
   fakeLessonWithLevels,
-  fakeUnitData,
+  fakeScriptData,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import {createStore} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
-const SERVER_STUDENT_1 = {...STUDENT_1, family_name: STUDENT_1.familyName};
-const SERVER_STUDENT_2 = {...STUDENT_2, family_name: STUDENT_2.familyName};
+const STUDENTS = [STUDENT_1, STUDENT_2];
 const LESSONS = [1, 2, 3, 4, 5].map(index =>
   fakeLessonWithLevels({position: index}, index)
 );
-const SECTION_ID = 1;
-const UNIT_DATA = fakeUnitData({lessons: LESSONS});
 const DEFAULT_PROPS = {
+  students: STUDENTS,
+  sectionId: 1,
+  unitData: fakeScriptData({lessons: LESSONS}),
+  isSortedByFamilyName: false,
   expandedLessonIds: [],
   setExpandedLessons: () => {},
-  isSkeleton: false,
 };
 
-// ID 722 set by createStore
-const LESSON_ID_1 = 722;
+const setUp = overrideProps => {
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return shallow(<UnconnectedProgressTableV2 {...props} />);
+};
 
 describe('ProgressTableV2', () => {
-  let store;
-
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({
-      currentUser,
-      sectionProgress,
-      unitSelection,
-      teacherSections,
-    });
-  });
-
-  afterEach(() => {
-    restoreRedux();
-  });
-
-  function renderDefault(
-    sortByFamilyName = false,
-    students = [SERVER_STUDENT_1, SERVER_STUDENT_2],
-    propOverrides = {}
-  ) {
-    store = createStore(null, 5, students);
-    store.dispatch(
-      setSortByFamilyName(sortByFamilyName, SECTION_ID, UNIT_DATA.name, 'test')
-    );
-    store.dispatch(setStudentsForCurrentSection(SECTION_ID, students));
-
-    render(
-      <Provider store={store}>
-        <ProgressTableV2 {...DEFAULT_PROPS} {...propOverrides} />
-      </Provider>
-    );
-  }
-
   it('sorts by display name by default', () => {
-    renderDefault();
+    const wrapper = setUp();
 
-    const s1 = screen.getByText(STUDENT_1.name + ' ' + STUDENT_1.familyName);
-    const s2 = screen.getByText(STUDENT_2.name + ' ' + STUDENT_2.familyName);
-    expect(s1.compareDocumentPosition(s2)).to.equal(
-      Node.DOCUMENT_POSITION_FOLLOWING
-    );
-
-    const cell1 = screen.getByTestId(
-      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id
-    );
-    const cell2 = screen.getByTestId(
-      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id
-    );
-    expect(cell1.compareDocumentPosition(cell2)).to.equal(
-      Node.DOCUMENT_POSITION_FOLLOWING
+    expect(wrapper.find(StudentColumn).props().sortedStudents[0]).to.equal(
+      STUDENT_1
     );
   });
 
   it('sorts by family name if toggled', () => {
-    renderDefault(true);
+    const wrapper = setUp({isSortedByFamilyName: true});
 
-    const s1 = screen.getByText(STUDENT_1.name + ' ' + STUDENT_1.familyName);
-    const s2 = screen.getByText(STUDENT_2.name + ' ' + STUDENT_2.familyName);
-    expect(s1.compareDocumentPosition(s2)).to.equal(
-      Node.DOCUMENT_POSITION_PRECEDING
-    );
-
-    const cell1 = screen.getByTestId(
-      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id,
-      {
-        exact: false,
-      }
-    );
-    const cell2 = screen.getByTestId(
-      'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id,
-      {
-        exact: false,
-      }
-    );
-    expect(cell1.compareDocumentPosition(cell2)).to.equal(
-      Node.DOCUMENT_POSITION_PRECEDING
+    expect(wrapper.find(StudentColumn).props().sortedStudents[0]).to.equal(
+      STUDENT_2
     );
   });
 
   it('sorts null family names last', () => {
-    renderDefault(true, [
-      SERVER_STUDENT_1,
-      {id: 3, name: 'Student 3'},
-      SERVER_STUDENT_2,
-    ]);
+    const wrapper = setUp({
+      students: [
+        {id: 1, name: 'Student 1', familyName: 'FamNameB'},
+        {id: 2, name: 'Student 2'},
+        {id: 3, name: 'Student 3', familyName: 'ZFamNameA'},
+      ],
+      isSortedByFamilyName: true,
+    });
 
-    const s1 = screen.getByText(STUDENT_1.name + ' ' + STUDENT_1.familyName);
-    const s2 = screen.getByText(STUDENT_2.name + ' ' + STUDENT_2.familyName);
-    const nullNameStudent = screen.getByText('Student 3');
-    expect(nullNameStudent.compareDocumentPosition(s2)).to.equal(
-      Node.DOCUMENT_POSITION_PRECEDING
-    );
-    expect(nullNameStudent.compareDocumentPosition(s1)).to.equal(
-      Node.DOCUMENT_POSITION_PRECEDING
-    );
+    const sortedStudentIds = wrapper
+      .find(StudentColumn)
+      .props()
+      .sortedStudents.map(student => student.id);
+    expect(sortedStudentIds).to.eql([1, 3, 2]);
   });
 
   it('includes non-alphabetic characters in sorting', () => {
-    renderDefault(true, [
-      {id: 1, name: 'Student 1', family_name: '2Brown'},
-      {id: 2, name: 'Student 2', family_name: 'Delta'},
-      {id: 3, name: 'Student 3', family_name: '1Adams'},
-      {id: 4, name: 'Student 4', family_name: '!Charles'},
-    ]);
-    const sortedStudents = screen.getAllByText(/Student [1-4]/);
-
-    const expectedOrder = [4, 3, 1, 2];
-    expectedOrder.forEach((id, index) => {
-      expect(sortedStudents[index].textContent).to.contain(`Student ${id}`);
+    const wrapper = setUp({
+      students: [
+        {id: 1, name: 'Student 1', familyName: '2Brown'},
+        {id: 2, name: 'Student 2', familyName: 'Delta'},
+        {id: 3, name: 'Student 3', familyName: '1Adams'},
+        {id: 4, name: 'Student 4', familyName: '!Charles'},
+      ],
+      isSortedByFamilyName: true,
     });
+
+    const sortedStudentIds = wrapper
+      .find(StudentColumn)
+      .props()
+      .sortedStudents.map(student => student.id);
+    expect(sortedStudentIds).to.eql([4, 3, 1, 2]);
   });
 
   it('sorts by name when family names are equivalent', () => {
-    renderDefault(true, [
-      {id: 1, name: 'C Student 1', familyName: 'Carlson'},
-      {id: 2, name: 'A Student 2', familyName: 'Carlson'},
-      {id: 3, name: 'B Student 3', familyName: 'Carlson'},
-    ]);
-
-    const sortedStudents = screen.getAllByText(/Student [1-3]/);
-    const expectedOrder = [2, 3, 1];
-    expectedOrder.forEach((id, index) => {
-      expect(sortedStudents[index].textContent).to.contain(`Student ${id}`);
+    const wrapper = setUp({
+      students: [
+        {id: 1, name: 'Eve', familyName: 'Carlson'},
+        {id: 2, name: 'Alice', familyName: 'Carlson'},
+        {id: 3, name: 'Bob', familyName: 'Carlson'},
+      ],
+      isSortedByFamilyName: true,
     });
+
+    const sortedStudentIds = wrapper
+      .find(StudentColumn)
+      .props()
+      .sortedStudents.map(student => student.id);
+    expect(sortedStudentIds).to.eql([2, 3, 1]);
   });
 
   it('nothing expanded', () => {
-    renderDefault();
+    const wrapper = setUp();
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(4);
-    expect(screen.queryAllByTitle('Unexpand')).to.have.lengthOf(0);
+    expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(5);
+    expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(0);
   });
 
   it('one lesson expanded', () => {
-    renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
-      expandedLessonIds: [LESSON_ID_1],
-    });
+    const wrapper = setUp({expandedLessonIds: [LESSONS[2].id]});
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(3);
-    screen.getByTitle('Unexpand');
+    expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(4);
+    expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(1);
   });
 
   it('multiple lessons expanded', () => {
-    store = createStore(2, 5);
-    // ID 1558 set by createStore
-    renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
-      expandedLessonIds: [LESSON_ID_1, 1558],
-    });
+    const wrapper = setUp({expandedLessonIds: [LESSONS[2].id, LESSONS[4].id]});
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(2);
-    expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(2);
+    expect(wrapper.find(LessonProgressDataColumn)).to.have.lengthOf(3);
+    expect(wrapper.find(ExpandedProgressDataColumn)).to.have.lengthOf(2);
   });
 });

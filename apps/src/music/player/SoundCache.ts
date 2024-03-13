@@ -1,8 +1,11 @@
 import {fetchSignedCookies} from '@cdo/apps/utils';
+import {baseAssetUrl} from '../constants';
+import MusicLibrary from './MusicLibrary';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LoadFinishedCallback} from '../types';
-import {baseAssetUrlRestricted} from '../constants';
+
+const restrictedSoundUrlPath = '/restricted/musiclab/';
 
 class SoundCache {
   private readonly audioContext: AudioContext;
@@ -84,14 +87,14 @@ class SoundCache {
    * Load a single sound into the cache if not already loaded. Returns the loaded buffer.
    * Throws if there is an error loading a sound.
    */
-  async loadSound(url: string): Promise<AudioBuffer | undefined> {
-    if (this.audioBuffers[url]) {
-      return this.audioBuffers[url];
+  async loadSound(path: string): Promise<AudioBuffer | undefined> {
+    if (this.audioBuffers[path]) {
+      return this.audioBuffers[path];
     }
     const startTime = Date.now();
 
-    const verified = await this.verifyUrl(url);
-    if (!verified) {
+    const url = await this.getUrl(path);
+    if (!url) {
       // Error is logged below
       return;
     }
@@ -99,7 +102,7 @@ class SoundCache {
     const response = await fetch(url);
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
-    this.audioBuffers[url] = audioBuffer;
+    this.audioBuffers[path] = audioBuffer;
     // Report load time for a single sound
     this.metricsReporter.reportLoadTime(
       'SoundCache.SingleSoundLoadTime',
@@ -112,11 +115,20 @@ class SoundCache {
     this.audioBuffers = {};
   }
 
-  private async verifyUrl(path: string): Promise<boolean | null> {
-    const restricted = path.startsWith(baseAssetUrlRestricted);
+  private async getUrl(path: string): Promise<string | null> {
+    const library = MusicLibrary.getInstance();
+    if (!library) {
+      this.metricsReporter.logWarning('Library not loaded. Cannot get URL.');
+      return null;
+    }
+
+    const soundData = library.getSoundForId(path);
+    if (!soundData) {
+      return null;
+    }
 
     let canLoadRestrictedContent = this.hasLoadedSignedCookies;
-    if (restricted && !this.hasLoadedSignedCookies) {
+    if (soundData.restricted && !this.hasLoadedSignedCookies) {
       try {
         const response = await fetchSignedCookies();
         if (response.ok) {
@@ -131,11 +143,15 @@ class SoundCache {
       }
     }
 
-    if (restricted && !canLoadRestrictedContent) {
-      return false;
+    if (soundData.restricted && !canLoadRestrictedContent) {
+      return null;
     }
 
-    return true;
+    const baseUrl = soundData.restricted
+      ? restrictedSoundUrlPath
+      : baseAssetUrl;
+
+    return baseUrl + library.groups[0].path + '/' + path + '.mp3';
   }
 }
 

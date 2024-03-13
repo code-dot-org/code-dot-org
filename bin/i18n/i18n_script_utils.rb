@@ -8,9 +8,7 @@ require 'psych'
 require 'ruby-progressbar'
 require 'parallel'
 
-I18N_DIR = 'i18n'.freeze
-I18N_CROWDIN_DIR = File.join(I18N_DIR, 'crowdin').freeze
-I18N_LOCALES_DIR = File.join(I18N_DIR, 'locales').freeze
+I18N_LOCALES_DIR = 'i18n/locales'.freeze
 I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
 I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
@@ -26,24 +24,6 @@ class I18nScriptUtils
   #   @option crowdin_creds [String] 'api_token' the Crowdin API token.
   def self.crowdin_creds
     @crowdin_creds ||= YAML.load_file(CROWDIN_CREDS_PATH).freeze
-  end
-
-  # Parses sync options from the command line
-  #
-  # @param options [Hash] the default options to populate
-  # @return [Hash] the parsed options
-  def self.parse_options(argv = ARGV, options: {})
-    options[:testing] = TESTING_BY_DEFAULT if options[:testing].nil?
-
-    OptionParser.new do |parser|
-      parser.on('-t', '--testing', 'Run in testing mode') do
-        options[:testing] = true
-      end
-
-      yield(parser, options) if block_given?
-    end.parse!(argv)
-
-    options
   end
 
   # List of supported CDO Languages
@@ -394,10 +374,6 @@ class I18nScriptUtils
     FileUtils.mkdir_p(to_dir)
     FileUtils.cp_r File.join(from_dir, '.'), to_dir
     FileUtils.rm_r(from_dir)
-  end
-
-  def self.crowdin_locale_dir(locale, *paths)
-    CDO.dir(I18N_CROWDIN_DIR, locale, *paths.compact)
   end
 
   def self.locale_dir(locale, *paths)

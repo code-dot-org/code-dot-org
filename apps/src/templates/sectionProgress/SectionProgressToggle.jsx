@@ -54,7 +54,6 @@ class SectionProgressToggle extends React.Component {
         selected={currentView}
         activeColor={color.teal}
         onChange={this.onChange}
-        style={styles.toggleGroup}
       >
         <button
           type="button"
@@ -91,9 +90,6 @@ const styles = {
     padding: '3px 20px',
     height: 34,
     margin: 'auto auto 10px auto',
-  },
-  toggleGroup: {
-    minWidth: 'fit-content',
   },
 };
 

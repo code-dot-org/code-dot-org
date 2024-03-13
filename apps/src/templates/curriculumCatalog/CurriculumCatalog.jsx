@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {curriculumDataShape} from './curriculumCatalogConstants';
+import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import HeaderBanner from '../HeaderBanner';
@@ -12,7 +12,6 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -70,16 +69,6 @@ const CurriculumCatalog = ({
       );
     }
     setExpandedCardKey(expandedCardKey === key ? null : key);
-  };
-
-  // Get the top recommended similar curriculum based on the curriculum with the given
-  // curriculumKey
-  const getRecommendedSimilarCurriculum = curriculumKey => {
-    const recommendations = getSimilarRecommendations(
-      curriculaData,
-      curriculumKey
-    );
-    return recommendations[0];
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -149,15 +138,11 @@ const CurriculumCatalog = ({
                     self_paced_pl_course_offering_path
                   }
                   isExpanded={expandedCardKey === key}
-                  setExpandedCardKey={setExpandedCardKey}
                   onQuickViewClick={() => handleExpandedCardChange(key)}
                   isInUS={isInUS}
                   availableResources={available_resources}
                   isSignedOut={isSignedOut}
                   isTeacher={isTeacher}
-                  getRecommendedSimilarCurriculum={
-                    getRecommendedSimilarCurriculum
-                  }
                   {...props}
                 />
               )

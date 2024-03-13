@@ -2,8 +2,6 @@
  * Defines blocks useful in multiple blockly apps
  */
 var commonMsg = require('@cdo/locale');
-var BlockStyles = require('./blockly/constants').BlockStyles;
-var BlockColors = require('./blockly/constants').BlockColors;
 
 /**
  * Install extensions to Blockly's language and JavaScript generator
@@ -40,11 +38,8 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      this.setStyle('loop_blocks');
       this.appendDummyInput()
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
@@ -69,11 +64,8 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      this.setStyle('loop_blocks');
       this.appendDummyInput()
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
@@ -100,11 +92,8 @@ function installControlsRepeatDropdown(blockly) {
     // Repeat n times (internal number) with a customizable dropdown of # choices.
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      this.setStyle('loop_blocks');
       this.appendDummyInput()
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
@@ -134,11 +123,8 @@ function installNumberDropdown(blockly) {
     // Numeric value with a customizable dropdown.
     init: function () {
       this.setHelpUrl(blockly.Msg.MATH_NUMBER_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.MATH,
-        BlockStyles.MATH
-      );
+      Blockly.cdoUtils.setHSV(this, 258, 0.35, 0.62);
+      this.setStyle('math_blocks');
       this.appendDummyInput().appendField(new blockly.FieldDropdown(), 'NUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
@@ -152,11 +138,7 @@ function installPickOne(blockly) {
   blockly.Blocks.pick_one = {
     // Repeat n times (internal number).
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
 
       // Not localized as this is only used by level builders
       this.appendDummyInput().appendField(
@@ -179,11 +161,7 @@ function installCategory(blockly) {
   blockly.Blocks.category = {
     // Repeat n times (internal number).
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.setInputsInline(true);
 
       // Not localized as this is only used by level builders
@@ -205,11 +183,7 @@ function installCategory(blockly) {
   blockly.Blocks.custom_category = {
     // Repeat n times (internal number).
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.setInputsInline(true);
 
       var customDropdown = new blockly.FieldDropdown([
@@ -241,11 +215,8 @@ function installWhenRun(blockly, skin, isK1) {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.SETUP,
-        BlockStyles.SETUP
-      );
+      Blockly.cdoUtils.setHSV(this, 39, 1.0, 0.99);
+      this.setStyle('setup_blocks');
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.whenRun())
@@ -279,8 +250,7 @@ function installJoinBlock(blockly) {
 function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
     init: function () {
-      // Comment blocks use a hard-coded HSV color and are not compatible with themes.
-      Blockly.cdoUtils.handleColorAndStyle(this, BlockColors.COMMENT);
+      Blockly.cdoUtils.setHSV(this, 0, 0, 0.6);
       this.appendDummyInput()
         .appendField(commonMsg.commentPrefix())
         .appendField(new Blockly.FieldTextInput(''), 'TEXT');
