@@ -20,12 +20,13 @@ $level-cell-width: 52;
 }
 
 .table {
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  width: fit-content;
 
   &Loading {
     overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
 
   .expandedColumn:first-child {
