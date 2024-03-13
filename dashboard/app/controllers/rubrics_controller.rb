@@ -25,7 +25,7 @@ class RubricsController < ApplicationController
       @rubric.lesson.script.write_script_json
       render json: {redirectUrl: edit_rubric_path(@rubric.id), rubricId: @rubric.id}
     else
-      render :new
+      render json: @rubric.errors, status: :bad_request
     end
   end
 

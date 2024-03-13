@@ -74,6 +74,30 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 2, learning_goals.length
   end
 
+  test "cannot create ai-enabled learning goal without ai config" do
+    sign_in @levelbuilder
+    @rubric.destroy
+
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    refute_creates(Rubric) do
+      post :create, params: {
+        level_id: @level.id,
+        lesson_id: @lesson.id,
+        learning_goals_attributes: [
+          {learning_goal: 'non-ai learning goal', ai_enabled: true, position: 1},
+        ]
+      }
+    end
+    assert_response :bad_request
+    errors = JSON.parse(response.body)
+    assert_equal "no valid AI config in S3 for ai-enabled learning goal 'non-ai learning goal'", errors['learning_goals.learning_goal'].first
+  end
+
   test 'updates rubric and learning goals with valid params' do
     sign_in @levelbuilder
 
@@ -99,6 +123,56 @@ class RubricsControllerTest < ActionController::TestCase
     }
     learning_goal.reload
     assert_equal 'updated learning goal', learning_goal.learning_goal
+  end
+
+  test 'cannot update ai_enabled learning goal to non-ai-configured name' do
+    sign_in @levelbuilder
+
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    lesson = create :lesson, :with_lesson_group
+    level = create :level
+    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
+    rubric = create :rubric, lesson: lesson, level: level
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 0
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'non-ai learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    assert_response :bad_request
+    learning_goal.reload
+    assert_equal 'ai-configured learning goal 1', learning_goal.learning_goal
+  end
+
+  test 'cannot set ai_enabled field for non-ai-configured learning goal' do
+    sign_in @levelbuilder
+
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    lesson = create :lesson, :with_lesson_group
+    level = create :level
+    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
+    rubric = create :rubric, lesson: lesson, level: level
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'non-ai learning goal', ai_enabled: false, position: 0
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'non-ai learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    assert_response :bad_request
+    learning_goal.reload
+    refute learning_goal.ai_enabled
   end
 
   test 'submits rubric evaluations of a student' do
