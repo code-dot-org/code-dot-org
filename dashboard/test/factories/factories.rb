@@ -1014,14 +1014,14 @@ FactoryBot.define do
   # ProjectsController tests, to fail, see: https://codedotorg.atlassian.net/browse/TEACH-230
   # Errors seen were: `Mysql2::Error::TimeoutError`
   factory :project_storage do
-    sequence(:id) {|n| 100000 + n}
+    sequence(:id) {|n| 1_000_000 + n}
   end
 
   # WARNING: due to using project_storage, using this factory in new tests may cause other tests, including
   # ProjectsController tests, to fail, see: https://codedotorg.atlassian.net/browse/TEACH-230
   # Errors seen were: `Mysql2::Error::TimeoutError`
   factory :project do
-    sequence(:id) {|n| 100000 + n}
+    sequence(:id) {|n| 1_000_000 + n}
 
     transient do
       owner {create :user}
