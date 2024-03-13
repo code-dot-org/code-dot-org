@@ -79,7 +79,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     lti_integration = create :lti_integration
     lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
 
-    assert_equal "subject", Policies::Lti.lti_user_id(lti_user_identity.user, lti_integration)
+    assert_equal "subject", Queries::Lti.lti_user_id(lti_user_identity.user, lti_integration)
   end
 
   test 'lti_user_id should return nil if there are no matching identities' do
@@ -87,6 +87,6 @@ class Services::LtiTest < ActiveSupport::TestCase
     other_lti_integration = create :lti_integration
     lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
 
-    assert_nil Policies::Lti.lti_user_id(lti_user_identity.user, other_lti_integration)
+    assert_nil Queries::Lti.lti_user_id(lti_user_identity.user, other_lti_integration)
   end
 end

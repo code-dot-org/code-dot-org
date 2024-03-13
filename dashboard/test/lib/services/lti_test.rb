@@ -412,7 +412,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert lti_course.reload.sections.length, 2
   end
 
-  test 'should NOT sync if the user is not a teacher on LTI' do
+  test 'should NOT sync if the user is not a teacher on the LMS' do
     teacher = create :teacher
     lti_integration = create :lti_integration
     create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-2'
