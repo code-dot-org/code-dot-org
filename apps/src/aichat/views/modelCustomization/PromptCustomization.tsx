@@ -3,16 +3,16 @@ import {useSelector} from 'react-redux';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties, Visibility} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import styles from '../model-customization-workspace.module.scss';
 import {isHidden, isDisabled} from './utils';
-import {DEFAULT_PROMPT_CUSTOMIZATIONS} from './constants';
+import {EMPTY_AI_CUSTOMIZATIONS} from './constants';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const {botName, temperature, systemPrompt} = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || DEFAULT_PROMPT_CUSTOMIZATIONS
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
 
   const allFieldsDisabled =

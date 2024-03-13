@@ -15,33 +15,15 @@ import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
-} from '@cdo/apps/aichat/constants';
+  EMPTY_MODEL_CARD_INFO,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import MultiItemInput from './MultiItemInput';
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import VisibilityDropdown from './VisibilityDropdown';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
-
-const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
-  description: '',
-  intendedUse: '',
-  limitationsAndWarnings: '',
-  testingAndEvaluation: '',
-  exampleTopics: [],
-};
-
-const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
-  botName: {value: '', visibility: Visibility.EDITABLE},
-  temperature: {value: 0, visibility: Visibility.EDITABLE},
-  systemPrompt: {value: '', visibility: Visibility.EDITABLE},
-  retrievalContexts: {value: [], visibility: Visibility.EDITABLE},
-  modelCardInfo: {
-    value: EMPTY_MODEL_CARD_INFO,
-    visibility: Visibility.EDITABLE,
-  },
-  hidePresentationPanel: false,
-};
 
 // Make sure all fields have a visibility specified.
 function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {

@@ -1,23 +1,33 @@
-import {Visibility} from '../../types';
+import {LevelAiCustomizations, ModelCardInfo, Visibility} from '../../types';
 
-export const DEFAULT_RETRIEVAL_CONTEXTS = {
-  value: [],
-  visibility: Visibility.EDITABLE,
+export const MIN_TEMPERATURE = 0;
+export const MAX_TEMPERATURE = 2;
+export const MAX_RETRIEVAL_CONTEXTS = 20;
+export const MAX_ASK_ABOUT_TOPICS = 10;
+
+export const MODEL_CARD_FIELDS_AND_LABELS: [keyof ModelCardInfo, string][] = [
+  ['description', 'Description'],
+  ['intendedUse', 'Intended Use'],
+  ['limitationsAndWarnings', 'Limitations and Warnings'],
+  ['testingAndEvaluation', 'Testing and Evaluation'],
+];
+
+export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
+  description: '',
+  intendedUse: '',
+  limitationsAndWarnings: '',
+  testingAndEvaluation: '',
+  exampleTopics: [],
 };
 
-export const DEFAULT_MODEL_CARD_INFO = {
-  value: {
-    description: '',
-    intendedUse: '',
-    limitationsAndWarnings: '',
-    testingAndEvaluation: '',
-    exampleTopics: [],
-  },
-  visibility: Visibility.EDITABLE,
-};
-
-export const DEFAULT_PROMPT_CUSTOMIZATIONS = {
+export const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
   botName: {value: '', visibility: Visibility.EDITABLE},
   temperature: {value: 0.5, visibility: Visibility.EDITABLE},
   systemPrompt: {value: '', visibility: Visibility.EDITABLE},
+  retrievalContexts: {value: [], visibility: Visibility.EDITABLE},
+  modelCardInfo: {
+    value: EMPTY_MODEL_CARD_INFO,
+    visibility: Visibility.EDITABLE,
+  },
+  hidePresentationPanel: false,
 };

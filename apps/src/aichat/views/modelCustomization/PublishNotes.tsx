@@ -4,28 +4,24 @@ import {useSelector} from 'react-redux';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import styles from '../model-customization-workspace.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties, ModelCardInfo} from '@cdo/apps/aichat/types';
-import {DEFAULT_MODEL_CARD_INFO} from './constants';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {
+  EMPTY_AI_CUSTOMIZATIONS,
+  MODEL_CARD_FIELDS_AND_LABELS,
+} from './constants';
 import {isHidden, isDisabled} from './utils';
 
-const INPUTS: {id: keyof ModelCardInfo; text: string}[] = [
-  {id: 'description', text: 'Description'},
-  {id: 'intendedUse', text: 'Intended Use'},
-  {id: 'limitationsAndWarnings', text: 'Limitations and Warnings'},
-  {id: 'testingAndEvaluation', text: 'Testing and Evaluation'},
-];
-
 const PublishNotes: React.FunctionComponent = () => {
-  const modelCardInfo = useSelector(
+  const {modelCardInfo} = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations?.modelCardInfo || DEFAULT_MODEL_CARD_INFO
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
 
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {INPUTS.map(({id, text}) => {
+        {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
           return (
             !isHidden(modelCardInfo.visibility) && (
               <div className={styles.inputContainer} key={id}>
