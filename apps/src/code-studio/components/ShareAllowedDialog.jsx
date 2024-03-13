@@ -563,23 +563,7 @@ class ShareAllowedDialog extends React.Component {
           {isAbusive && renderAbuseError()}
 
           <div style={styles.newLayoutContainer}>
-            <div
-              id="share-thumbnail-image-container"
-              style={{
-                ...styles.thumbnail,
-                ...styles.thumbnailBigger,
-              }}
-            >
-              <img
-                id="share-thumbnail-image"
-                style={styles.thumbnailImg}
-                src={thumbnailUrl}
-                alt={i18n.projectThumbnail()}
-              />
-            </div>
-
             {renderCopyButton()}
-
             <div id="share-qrcode-container">
               <QRCode value={shareUrl + '?qr=true'} size={180} />
             </div>
@@ -681,10 +665,6 @@ const styles = {
     backgroundColor: color.white,
     position: 'relative',
   },
-  thumbnailBigger: {
-    width: 180,
-    height: 180,
-  },
   thumbnailImg: {
     position: 'absolute',
     left: '50%',
@@ -738,6 +718,7 @@ const styles = {
   },
   newLayoutContainer: {
     display: 'flex',
+    justifyContent: 'space-around',
     alignItems: 'center',
     gap: 12,
   },
