@@ -1420,7 +1420,6 @@ en:
       missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
       unsupported_lms_type: "Unsupported LMS platform type"
       wrong_context: "Sorry, looks like you are attempting to sync a course or section from the wrong place. Please launch the Code.org Integration from inside the course or section you would like to sync."
-      wrong_context_schoology: "Read more about supported Schoology placements [here](%{url})"
       wrong_resource_type: "Only LtiResourceLink is supported right now"
     integration:
       client_id: "LMS Client ID"

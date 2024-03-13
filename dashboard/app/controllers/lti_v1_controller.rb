@@ -173,8 +173,8 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
-  def render_sync_course_error(message, status)
-    @lti_section_sync_result = {error: message}
+  def render_sync_course_error(message, status, issuer)
+    @lti_section_sync_result = {error: message, issuer: issuer}
     Honeybadger.notify(
       'LTI roster sync error',
       context: {
@@ -203,10 +203,7 @@ class LtiV1Controller < ApplicationController
         params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url])
       rescue ActionController::ParameterMissing => _exception
         error_message = I18n.t('lti.error.wrong_context')
-        if params[:issuer]
-          error_message += " #{I18n.t('lti.error.wrong_context_schoology', url: 'example.com')}"
-        end
-        return render_sync_course_error(error_message, :bad_request)
+        return render_sync_course_error(error_message, :bad_request, params[:issuer])
       end
     end
 

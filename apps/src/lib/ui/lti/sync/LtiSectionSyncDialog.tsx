@@ -45,14 +45,26 @@ export default function LtiSectionSyncDialog({
     );
   };
 
-  const errorView = (error: string | undefined) => {
+  const errorView = (error: string | undefined, issuer: string | undefined) => {
     return (
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
         <p>{i18n.ltiSectionSyncDialogError()}</p>
         <p>{error}</p>
+        {issuer && (
+          <SafeMarkdown markdown={getRosterSyncIssuerErrorDetails(issuer)} />
+        )}
       </div>
     );
+  };
+
+  const getRosterSyncIssuerErrorDetails = (issuer: string) => {
+    switch (issuer) {
+      case 'Schoology':
+        return i18n.ltiSectionSyncDialogErrorSchoologyDetails({
+          url: 'example.com',
+        });
+    }
   };
 
   const disableRosterSyncView = () => {
@@ -143,7 +155,7 @@ export default function LtiSectionSyncDialog({
       case SubView.SPINNER:
         return spinnerView();
       case SubView.ERROR:
-        return errorView(syncResult.error);
+        return errorView(syncResult.error, syncResult.issuer);
       case SubView.DISABLE_ROSTER_SYNC:
         return disableRosterSyncView();
       default:
@@ -189,6 +201,7 @@ export const LtiSectionSyncResultShape = PropTypes.shape({
   all: PropTypes.objectOf(LtiSectionShape),
   updated: PropTypes.objectOf(LtiSectionShape),
   error: PropTypes.string,
+  issuer: PropTypes.string,
 });
 
 LtiSectionSyncDialog.propTypes = {
