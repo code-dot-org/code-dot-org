@@ -43,24 +43,40 @@ const MultipleTemplate: Story<{
 export const DefaultButton = SingleTemplate.bind({});
 DefaultButton.args = {
   text: 'Button',
-  onClick: () => console.log('Button clicked'),
+  onClick: () => null,
   size: 'm',
 };
 
 export const DisabledButton = SingleTemplate.bind({});
 DisabledButton.args = {
   text: 'Button',
-  onClick: () => console.log('Button clicked'),
+  onClick: () => null,
   disabled: true,
+  size: 'm',
+};
+
+export const PendingButton = SingleTemplate.bind({});
+PendingButton.args = {
+  text: 'Button',
+  onClick: () => null,
+  isPending: true,
+  size: 'm',
+};
+
+export const ButtonWithIcons = SingleTemplate.bind({});
+ButtonWithIcons.args = {
+  text: 'Button',
+  onClick: () => null,
+  iconLeft: {iconName: 'house', iconStyle: 'solid'},
+  iconRight: {iconName: 'smile', iconStyle: 'solid'},
   size: 'm',
 };
 
 export const IconButton = SingleTemplate.bind({});
 IconButton.args = {
-  // text: 'Button',
   icon: {iconName: 'smile', iconStyle: 'solid'},
   type: 'iconBorder',
-  onClick: () => console.log('Button clicked'),
+  onClick: () => null,
   size: 'm',
 };
 
@@ -77,7 +93,7 @@ ButtonButtonVsLinkButton.args = {
   components: [
     {
       text: 'Button',
-      onClick: () => console.log('Button clicked'),
+      onClick: () => null,
       size: 'm',
     },
     {
