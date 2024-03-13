@@ -356,3 +356,5 @@ gem "delayed_job_active_record", "~> 4.1"
 gem 'rack-cors', '~> 2.0.1'
 
 gem 'statsig', '~> 1.33'
+
+gem 'mailjet', '~> 1.7.3'
