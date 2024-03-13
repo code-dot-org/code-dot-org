@@ -1,0 +1,43 @@
+name 'game_dev_world5_sprite_types'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Setting sprite types
+
+
+<img src="https://images.code.org/4fb1e86f8fe374b5762dc785b3e95358-image-1710260150883.jpg" style="float: left;  clear: both; width: 25%; margin: 0 20px 60px 0;">
+
+
+####**When a sprite's type is set to player:**
+####- It is affected by the game world's gravity
+####- It can jump
+####- It is blocked by all environment type sprites
+
+:::details [Examples]
+<img src="https://images.code.org/1b434bbd7c009a9845256ab443792903-image-1710260386930.jpg">
+    
+    - Fix this pic
+:::
+
+<br>
+
+***
+
+
+<img src="https://images.code.org/fe823718eac0662bd3d9f348583ae6ac-image-1710261058995.jpg" style="float: left;  clear: both; width: 25%; margin: 0 20px 60px 0;">
+
+
+####**When a sprite's type is set to environment:**
+####- It blocks all other sprites
+####- Player type sprites will always stand on on
+
+:::details [Examples]
+
+<img src="https://images.code.org/f4fc6fe52c6e07f8cde61a1f46530c20-image-1710261677568.gif">
+:::
+
+<br>
+
+
+MARKDOWN

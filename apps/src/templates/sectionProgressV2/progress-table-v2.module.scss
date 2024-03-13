@@ -15,19 +15,14 @@
 
 $level-cell-width: 52;
 
-:export {
-   levelCellWidth: $level-cell-width;
-}
-
 .table {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: flex;
-  flex-direction: row;
+  width: fit-content;
 
   &Loading {
     overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
 
   .expandedColumn:first-child {
@@ -36,6 +31,12 @@ $level-cell-width: 52;
   .expandedColumn:last-child {
     margin-inline-end: 0;
   }
+}
+
+.tableInterior {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
 }
 
 .gridBox {
@@ -71,8 +72,6 @@ $level-cell-width: 52;
     height: 47px;
     line-height: 47px !important;
     color: inherit !important;
-    // remove overflow after data icons are added
-    overflow-x: hidden;
   }
 }
 
@@ -198,12 +197,12 @@ $level-cell-width: 52;
       flex-direction: row;
       width: fit-content;
 
-      .expandedHeaderLevelCell:last-child {
+      & .expandedHeaderChild:last-child {
         border-right: 1px solid $light_gray_200;
       }
     }
 
-    &LevelCell {
+    .expandedHeaderLevelCell {
       width: $level-cell-width + px;
       text-align: center;
       height: 32px;
@@ -214,6 +213,10 @@ $level-cell-width: 52;
       justify-content: space-evenly;
       overflow-x: hidden;
       flex-wrap: nowrap;
+    }
+
+    .expandedHeaderLevelCellUnexpanded {
+      background-color: white;
     }
 
     &ExpandedLevel {
@@ -228,14 +231,14 @@ $level-cell-width: 52;
         color: $light_white;
       }
 
-      .expandedHeaderExpandedLevelCell:last-child {
-        width: $level-cell-width + px;
-        border-right: 0;
+      .expandedHeaderExpandedLevelCell:first-child {
+        border-left: 0;
       }
     }
 
     &ExpandedLevelCell {
-      width: $level-cell-width + 1 + px;
+      // Invisible border to match sizing of table
+      border-left: 1px solid $light_primary_500;
     }
   }
   &Column {
@@ -270,7 +273,7 @@ $level-cell-width: 52;
 .studentColumn {
   width: 195px;
   min-width: 195px;
-  margin-right: 12px;
+  margin-inline-end: 12px;
   display: flex;
   flex-direction: column;
 }

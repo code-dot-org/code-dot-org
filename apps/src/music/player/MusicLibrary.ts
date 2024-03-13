@@ -1,5 +1,7 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
+import {baseAssetUrlRestricted} from '../constants';
+import {getBaseAssetUrl} from '../appConfig';
 
 export default class MusicLibrary {
   private static instance: MusicLibrary;
@@ -13,7 +15,8 @@ export default class MusicLibrary {
   }
 
   name: string;
-  groups: FolderGroup[];
+  libraryJson: LibraryJson;
+  folders: SoundFolder[];
   private allowedSounds: Sounds | null;
 
   // BPM & Key associated with this library, or undefined if not present.
@@ -22,38 +25,43 @@ export default class MusicLibrary {
 
   constructor(name: string, libraryJson: LibraryJson) {
     this.name = name;
-    this.groups = libraryJson.groups;
+    this.libraryJson = libraryJson;
     this.allowedSounds = null;
 
-    const firstGroup: FolderGroup = this.groups[0];
-    if (firstGroup.bpm) {
-      this.bpm = firstGroup.bpm;
+    // Combine the JSON-specified folders into one flat list of folders.
+    this.folders = [
+      ...libraryJson.packs,
+      ...libraryJson.instruments,
+      ...libraryJson.kits,
+    ];
+
+    if (libraryJson.bpm) {
+      this.bpm = libraryJson.bpm;
     }
 
-    if (firstGroup.key) {
-      this.key = Key[firstGroup.key.toUpperCase() as keyof typeof Key];
+    if (libraryJson.key) {
+      this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
     }
   }
 
   getDefaultSound(): string | undefined {
-    const firstGroup: FolderGroup = this.groups[0];
-
     // Return the specified default sound if there is one.
-    if (firstGroup?.defaultSound) {
-      return firstGroup?.defaultSound;
+    if (this.libraryJson?.defaultSound) {
+      return this.libraryJson?.defaultSound;
     }
 
     // The fallback is the first non-instrument/kit folder's first sound.
-    const firstFolder = firstGroup?.folders.find(group => !group.type);
-    return `${firstFolder?.path}/${firstFolder?.sounds[0].src}`;
+    const firstFolder = this.folders.find(group => !group.type);
+    return `${firstFolder?.id}/${firstFolder?.sounds[0].src}`;
   }
 
+  // Given a sound ID (e.g. "pack1/sound1"), return the SoundData.
   getSoundForId(id: string): SoundData | null {
-    const splitId = id.split('/');
-    const path = splitId[0];
-    const src = splitId[1];
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+    const src = id.substring(lastSlashIndex + 1);
 
-    const folder = this.getFolderForPath(path);
+    const folder = this.getFolderForFolderId(folderId);
 
     if (folder) {
       return folder.sounds.find(sound => sound.src === src) || null;
@@ -62,8 +70,17 @@ export default class MusicLibrary {
     return null;
   }
 
-  getFolderForPath(path: string): SoundFolder | null {
-    return this.groups[0].folders.find(folder => folder.path === path) || null;
+  // Given a sound ID (e.g. "pack1/sound1"), return the SoundFolder.
+  getFolderForSoundId(id: string): SoundFolder | null {
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+
+    return this.getFolderForFolderId(folderId);
+  }
+
+  // Given a folder ID (e.g. "pack1") return the SoundFolder.
+  getFolderForFolderId(folderId: string): SoundFolder | null {
+    return this.folders.find(folder => folder.id === folderId) || null;
   }
 
   // A progression step might specify a smaller set of allowed sounds.
@@ -71,14 +88,21 @@ export default class MusicLibrary {
     this.allowedSounds = allowedSounds;
   }
 
+  generateSoundUrl(folder: SoundFolder, soundData: SoundData): string {
+    const baseUrl = soundData.restricted
+      ? baseAssetUrlRestricted
+      : getBaseAssetUrl();
+
+    const optionalSoundPath = soundData.path ? `${soundData.path}/` : '';
+    return `${baseUrl}${this.libraryJson.path}/${folder.path}/${optionalSoundPath}${soundData.src}.mp3`;
+  }
+
   // A sound picker might want to show the subset of sounds permitted by the
   // progression's currently allowed sounds.
   getAllowedSounds(folderType: string | undefined): SoundFolder[] {
-    const folders = this.groups[0].folders;
-
     // Let's just do a deep copy and then do filtering in-place.
     let foldersCopy: SoundFolder[] = JSON.parse(
-      JSON.stringify(folders)
+      JSON.stringify(this.folders)
     ) as SoundFolder[];
 
     // Whether or not we have allowedSounds, we need to filter by type.
@@ -88,12 +112,12 @@ export default class MusicLibrary {
 
     if (this.allowedSounds) {
       foldersCopy = foldersCopy.filter(
-        (folder: SoundFolder) => this.allowedSounds?.[folder.path]
+        (folder: SoundFolder) => this.allowedSounds?.[folder.id]
       );
 
       foldersCopy.forEach((folder: SoundFolder) => {
         folder.sounds = folder.sounds.filter((sound: SoundData) =>
-          this.allowedSounds?.[folder.path]?.includes(sound.src)
+          this.allowedSounds?.[folder.id]?.includes(sound.src)
         );
       });
     }
@@ -110,19 +134,15 @@ export default class MusicLibrary {
   }
 }
 
-export type LibraryJson = {
-  groups: FolderGroup[];
-};
-
 export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
   const libraryJson = response as LibraryJson;
-  if (!libraryJson.groups || libraryJson.groups.length === 0) {
+  if (!libraryJson) {
     throw new Error(`Invalid library JSON: ${response}`);
   }
   return libraryJson;
 };
 
-export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
+export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal';
 
 /**
  * A single event in a {@link SampleSequence}
@@ -150,6 +170,7 @@ export interface SampleSequence {
 
 export interface SoundData {
   name: string;
+  path?: string;
   src: string;
   length: number;
   type: SoundType;
@@ -161,15 +182,19 @@ export interface SoundData {
   key?: Key;
 }
 
+export type SoundFolderType = 'sound' | 'kit' | 'instrument';
+
 export interface SoundFolder {
   name: string;
-  type?: 'kit' | 'instrument';
+  artist?: string;
+  id: string;
+  type?: SoundFolderType;
   path: string;
   imageSrc: string;
   sounds: SoundData[];
 }
 
-interface FolderGroup {
+export type LibraryJson = {
   id: string;
   name: string;
   imageSrc: string;
@@ -178,7 +203,10 @@ interface FolderGroup {
   key?: string;
   defaultSound?: string;
   folders: SoundFolder[];
-}
+  instruments: SoundFolder[];
+  kits: SoundFolder[];
+  packs: SoundFolder[];
+};
 
 interface Sounds {
   [index: string]: [string];
