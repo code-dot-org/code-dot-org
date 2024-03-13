@@ -3,9 +3,10 @@ import {render, screen, within} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
 
+const defaultImageAlt = 'certificate alt text';
 const defaultProps = {
   imageUrl: '/certificate-image',
-  imageAlt: 'certificate alt text',
+  imageAlt: defaultImageAlt,
   printUrl: '/certificate-print',
   announcement: {
     image: '/announcement-image',
@@ -34,13 +35,12 @@ describe('CertificateShare', () => {
   it('renders announcement image url relative to pegasus', () => {
     render(<CertificateShare {...defaultProps} />);
 
-    const printLink = screen.getByRole('link', {name: 'certificate alt text'});
+    const printLink = screen.getByRole('link', {name: defaultImageAlt});
     expect(printLink.href).to.include('/certificate-print');
-    const image = screen.getByRole('img', {name: 'certificate alt text'});
+    const image = screen.getByRole('img', {name: defaultImageAlt});
     expect(image.src).to.include('/certificate-image');
 
     const twoColumnActionBlock = screen.getByTestId('two-column-action-block');
-    expect(twoColumnActionBlock).to.exist;
     const announcementImg = within(twoColumnActionBlock).getByTestId(
       'two-column-action-block-img'
     );
@@ -54,7 +54,7 @@ describe('CertificateShare', () => {
     };
     render(<CertificateShare {...props} />);
 
-    screen.findByRole('link', {name: 'certificate alt text'});
+    screen.findByRole('link', {name: defaultImageAlt});
 
     expect(screen.queryByTestId('two-column-action-block')).to.not.exist;
   });
