@@ -1753,6 +1753,25 @@
       heading: "Don't see your country?"
       desc: "While we currently do not actively recruit new partners into our professional learning program, we encourage organizations worldwide to join us in organizing the annual Hour of Code campaign as the first step to introducing computer science in your country. [Learn more about a partnership opportunity and apply here!](%{apply_url})"
 
+  app_lab_page:
+    heading: "App Lab"
+    subheading: "Create an app with Javascript"
+    top:
+      desc: "App Lab is a programming environment where you can make simple apps right in the browser. Design an app, code in JavaScript with either blocks or text, then share your app in seconds."
+      button: "Try App Lab"
+    glance:
+      heading: "App Lab at-a-glance"
+      titles:
+        ages: "Ages"
+        level: "Level"
+        make: "What you can make"
+        devices: "Devices"
+        browsers: "Browsers"
+        languages: "Languages supported"
+        accessiblity: "Accessibility"
+      documentation: "Extensive documentation detailing specific functionality and use is available for App Lab."
+      button: "View documentation"
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
