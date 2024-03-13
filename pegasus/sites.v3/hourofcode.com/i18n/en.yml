@@ -1794,7 +1794,6 @@
       button: "Try App Lab"
     glance:
       heading: "App Lab at a glance"
-      documentation_desc: "Extensive documentation detailing specific functionality and use is available for App Lab."
       ages: "13+"
       level: "Beginner"
       make: "Simple Javascript apps"
@@ -1802,6 +1801,7 @@
       browsers: "All modern browsers"
       languages: "English"
       accessiblity: "Text-to-speech, Closed captioning, Immersive reader"
+      documentation_desc: "Extensive documentation detailing specific functionality and use is available for App Lab."
     projects:
       heading: "See what you can make in App Lab!"
       desc: "Explore some project guides for App Lab to get started with building apps using Javascript!"
