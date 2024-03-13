@@ -323,6 +323,271 @@ class ShareAllowedDialog extends React.Component {
 
     const warningText = this.getWarningText(showPublishInfo);
 
+    const interfaceVersion = appType === 'music' ? 2 : 1;
+
+    const renderAbuseError = () => {
+      return (
+        <AbuseError
+          i18n={{
+            tos: i18n.tosLong({url: 'http://code.org/tos'}),
+            contact_us: i18n.contactUs({
+              url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+                `Abuse error for project at url: ${shareUrl}`
+              )}`,
+            }),
+          }}
+          className="alert-error"
+          style={styles.abuseStyle}
+          textStyle={styles.abuseTextStyle}
+        />
+      );
+    };
+
+    const renderSharingDisabled = () => {
+      return (
+        <div style={{position: 'relative'}}>
+          <div style={{paddingRight: 10}}>
+            <p>{i18n.sharingBlockedByTeacher()}</p>
+          </div>
+          <div style={{clear: 'both', height: 40}}>
+            <button
+              type="button"
+              id="continue-button"
+              style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
+              onClick={this.close}
+            >
+              {i18n.dialogOK()}
+            </button>
+          </div>
+        </div>
+      );
+    };
+
+    const renderCopyButton = () => {
+      return (
+        <Button
+          color={Button.ButtonColor.brandSecondaryDefault}
+          id="sharing-dialog-copy-button"
+          icon="clipboard"
+          style={{
+            ...styles.button,
+            ...styles.copyButton,
+            ...(this.state.hasBeenCopied && styles.copyButtonLight),
+          }}
+          onClick={wrapShareClick(
+            this.copy,
+            'SHARING_LINK_COPY',
+            this.props.appType
+          )}
+          text={i18n.copyLinkToProject()}
+          value={shareUrl}
+        />
+      );
+    };
+
+    const renderInterfaceV1 = () => {
+      return (
+        <div
+          id="project-share"
+          className={modalClass}
+          style={{position: 'relative'}}
+        >
+          <h5 className="dialog-title">{i18n.shareTitle()}</h5>
+          {isAbusive && renderAbuseError()}
+          {showShareWarning && (
+            <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
+          )}
+          <div style={{clear: 'both'}}>
+            <div style={styles.thumbnail}>
+              <img
+                style={styles.thumbnailImg}
+                src={thumbnailUrl}
+                alt={i18n.projectThumbnail()}
+              />
+            </div>
+
+            <div>
+              {renderCopyButton()}
+
+              <DownloadReplayVideoButton
+                style={{...styles.button, marginBottom: 8}}
+                onError={this.replayVideoNotFound}
+              />
+            </div>
+          </div>
+
+          <div className="social-buttons" style={{marginTop: 12}}>
+            <Button
+              color={Button.ButtonColor.neutralDark}
+              id="sharing-phone"
+              href=""
+              onClick={wrapShareClick(
+                this.showSendToPhone,
+                'SHARING_LINK_SEND_TO_PHONE',
+                this.props.appType
+              )}
+              style={styles.sendToPhoneButton}
+            >
+              <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
+              <span style={styles.sendToPhoneSpan}>{i18n.sendToPhone()}</span>
+            </Button>
+
+            {showPublishInfo &&
+              (isLoadingAccountAndProjectAge ? (
+                <Spinner size="medium" style={styles.loadingSpinner} />
+              ) : (
+                <Button
+                  type="button"
+                  color={Button.ButtonColor.neutralDark}
+                  id="share-dialog-publish-button"
+                  style={hasThumbnail ? styles.button : styles.buttonDisabled}
+                  onClick={wrapShareClick(
+                    this.publish,
+                    'SHARING_PUBLISH',
+                    this.props.appType
+                  )}
+                  disabled={disablePublishButton}
+                  className="no-mc"
+                >
+                  <span>{i18n.publish()}</span>
+                </Button>
+              ))}
+            {this.isPublishAllowed() && isPublished && (
+              <PendingButton
+                id="share-dialog-unpublish-button"
+                isPending={isUnpublishPending}
+                onClick={this.unpublish}
+                pendingText={i18n.unpublishPending()}
+                style={styles.button}
+                text={i18n.unpublish()}
+                className="no-mc"
+              />
+            )}
+
+            {canPrint && hasThumbnail && (
+              <a href="#" onClick={wrapShareClick(this.print, 'print')}>
+                <FontAwesome icon="print" style={{fontSize: 26}} />
+                <span>{i18n.print()}</span>
+              </a>
+            )}
+            {/* prevent buttons from overlapping when unpublish is pending */}
+            {this.isSocialShareAllowed() && !isUnpublishPending && (
+              <span>
+                {this.state.isFacebookAvailable && (
+                  <a
+                    href={facebookShareUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={wrapShareClick(
+                      onClickPopup.bind(this),
+                      'SHARING_FB',
+                      this.props.appType
+                    )}
+                    style={styles.socialLink}
+                  >
+                    <FontAwesome icon="facebook" />
+                  </a>
+                )}
+                {this.state.isTwitterAvailable && (
+                  <a
+                    href={twitterShareUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={wrapShareClick(
+                      onClickPopup.bind(this),
+                      'SHARING_TWITTER',
+                      this.props.appType
+                    )}
+                    style={styles.socialLink}
+                  >
+                    <FontAwesome icon="twitter" />
+                  </a>
+                )}
+              </span>
+            )}
+          </div>
+
+          {this.state.showSendToPhone && (
+            <div>
+              <div style={styles.sendToPhoneContainer}>
+                <div style={styles.sendToPhoneLeft}>
+                  <SendToPhone
+                    channelId={channelId}
+                    appType={appType}
+                    isLegacyShare={false}
+                  />
+                </div>
+                <div style={styles.sendToPhoneRight}>
+                  <label>{i18n.scanQRCode()}</label>
+                  <QRCode value={shareUrl + '?qr=true'} size={90} />
+                </div>
+              </div>
+              <div style={{clear: 'both'}} />
+            </div>
+          )}
+          {warningText && (
+            <div style={styles.warningMessageContainer}>
+              <span
+                style={styles.thumbnailWarning}
+                className="thumbnail-warning"
+              >
+                {warningText}
+              </span>
+            </div>
+          )}
+          <div style={{clear: 'both', marginTop: 40}}>
+            {isDroplet && (
+              <AdvancedShareOptions
+                shareUrl={shareUrl}
+                exportApp={exportApp}
+                expanded={this.state.showAdvancedOptions}
+                onExpand={this.showAdvancedOptions}
+                channelId={channelId}
+                embedOptions={embedOptions}
+                appType={this.props.appType}
+              />
+            )}
+          </div>
+        </div>
+      );
+    };
+
+    const renderInterfaceV2 = () => {
+      return (
+        <div
+          id="project-share"
+          className={modalClass}
+          style={{position: 'relative'}}
+        >
+          <h5 className="dialog-title">{i18n.shareTitle()}</h5>
+          {isAbusive && renderAbuseError()}
+
+          <div style={styles.newLayoutContainer}>
+            <div
+              id="share-thumbnail-image-container"
+              style={{
+                ...styles.thumbnail,
+                ...styles.thumbnailBigger,
+              }}
+            >
+              <img
+                id="share-thumbnail-image"
+                style={styles.thumbnailImg}
+                src={thumbnailUrl}
+                alt={i18n.projectThumbnail()}
+              />
+            </div>
+
+            {renderCopyButton()}
+
+            <div id="share-qrcode-container">
+              <QRCode value={shareUrl + '?qr=true'} size={180} />
+            </div>
+          </div>
+        </div>
+      );
+    };
+
     return (
       <div>
         <BaseDialog
@@ -331,219 +596,13 @@ class ShareAllowedDialog extends React.Component {
           handleClose={this.close}
           hideBackdrop={hideBackdrop}
         >
-          {this.sharingDisabled() && (
-            <div style={{position: 'relative'}}>
-              <div style={{paddingRight: 10}}>
-                <p>{i18n.sharingBlockedByTeacher()}</p>
-              </div>
-              <div style={{clear: 'both', height: 40}}>
-                <button
-                  type="button"
-                  id="continue-button"
-                  style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-                  onClick={this.close}
-                >
-                  {i18n.dialogOK()}
-                </button>
-              </div>
-            </div>
-          )}
-          {!this.sharingDisabled() && (
-            <div>
-              <div
-                id="project-share"
-                className={modalClass}
-                style={{position: 'relative'}}
-              >
-                <h5 className="dialog-title">{i18n.shareTitle()}</h5>
-                {isAbusive && (
-                  <AbuseError
-                    i18n={{
-                      tos: i18n.tosLong({url: 'http://code.org/tos'}),
-                      contact_us: i18n.contactUs({
-                        url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
-                          `Abuse error for project at url: ${shareUrl}`
-                        )}`,
-                      }),
-                    }}
-                    className="alert-error"
-                    style={styles.abuseStyle}
-                    textStyle={styles.abuseTextStyle}
-                  />
-                )}
-                {showShareWarning && (
-                  <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
-                )}
-                <div style={{clear: 'both'}}>
-                  <div style={styles.thumbnail}>
-                    <img
-                      style={styles.thumbnailImg}
-                      src={thumbnailUrl}
-                      alt={i18n.projectThumbnail()}
-                    />
-                  </div>
-                  <div>
-                    <Button
-                      color={Button.ButtonColor.brandSecondaryDefault}
-                      id="sharing-dialog-copy-button"
-                      icon="clipboard"
-                      style={{
-                        ...styles.button,
-                        ...styles.copyButton,
-                        ...(this.state.hasBeenCopied && styles.copyButtonLight),
-                      }}
-                      onClick={wrapShareClick(
-                        this.copy,
-                        'SHARING_LINK_COPY',
-                        this.props.appType
-                      )}
-                      text={i18n.copyLinkToProject()}
-                      value={shareUrl}
-                    />
-                    <DownloadReplayVideoButton
-                      style={{...styles.button, marginBottom: 8}}
-                      onError={this.replayVideoNotFound}
-                    />
-                  </div>
-                </div>
-                <div className="social-buttons" style={{marginTop: 12}}>
-                  <Button
-                    color={Button.ButtonColor.neutralDark}
-                    id="sharing-phone"
-                    href=""
-                    onClick={wrapShareClick(
-                      this.showSendToPhone,
-                      'SHARING_LINK_SEND_TO_PHONE',
-                      this.props.appType
-                    )}
-                    style={styles.sendToPhoneButton}
-                  >
-                    <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
-                    <span style={styles.sendToPhoneSpan}>
-                      {i18n.sendToPhone()}
-                    </span>
-                  </Button>
-
-                  {showPublishInfo &&
-                    (isLoadingAccountAndProjectAge ? (
-                      <Spinner size="medium" style={styles.loadingSpinner} />
-                    ) : (
-                      <Button
-                        type="button"
-                        color={Button.ButtonColor.neutralDark}
-                        id="share-dialog-publish-button"
-                        style={
-                          hasThumbnail ? styles.button : styles.buttonDisabled
-                        }
-                        onClick={wrapShareClick(
-                          this.publish,
-                          'SHARING_PUBLISH',
-                          this.props.appType
-                        )}
-                        disabled={disablePublishButton}
-                        className="no-mc"
-                      >
-                        <span>{i18n.publish()}</span>
-                      </Button>
-                    ))}
-                  {this.isPublishAllowed() && isPublished && (
-                    <PendingButton
-                      id="share-dialog-unpublish-button"
-                      isPending={isUnpublishPending}
-                      onClick={this.unpublish}
-                      pendingText={i18n.unpublishPending()}
-                      style={styles.button}
-                      text={i18n.unpublish()}
-                      className="no-mc"
-                    />
-                  )}
-
-                  {canPrint && hasThumbnail && (
-                    <a href="#" onClick={wrapShareClick(this.print, 'print')}>
-                      <FontAwesome icon="print" style={{fontSize: 26}} />
-                      <span>{i18n.print()}</span>
-                    </a>
-                  )}
-                  {/* prevent buttons from overlapping when unpublish is pending */}
-                  {this.isSocialShareAllowed() && !isUnpublishPending && (
-                    <span>
-                      {this.state.isFacebookAvailable && (
-                        <a
-                          href={facebookShareUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={wrapShareClick(
-                            onClickPopup.bind(this),
-                            'SHARING_FB',
-                            this.props.appType
-                          )}
-                          style={styles.socialLink}
-                        >
-                          <FontAwesome icon="facebook" />
-                        </a>
-                      )}
-                      {this.state.isTwitterAvailable && (
-                        <a
-                          href={twitterShareUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={wrapShareClick(
-                            onClickPopup.bind(this),
-                            'SHARING_TWITTER',
-                            this.props.appType
-                          )}
-                          style={styles.socialLink}
-                        >
-                          <FontAwesome icon="twitter" />
-                        </a>
-                      )}
-                    </span>
-                  )}
-                </div>
-                {this.state.showSendToPhone && (
-                  <div>
-                    <div style={styles.sendToPhoneContainer}>
-                      <div style={styles.sendToPhoneLeft}>
-                        <SendToPhone
-                          channelId={channelId}
-                          appType={appType}
-                          isLegacyShare={false}
-                        />
-                      </div>
-                      <div style={styles.sendToPhoneRight}>
-                        <label>{i18n.scanQRCode()}</label>
-                        <QRCode value={shareUrl + '?qr=true'} size={90} />
-                      </div>
-                    </div>
-                    <div style={{clear: 'both'}} />
-                  </div>
-                )}
-                {warningText && (
-                  <div style={styles.warningMessageContainer}>
-                    <span
-                      style={styles.thumbnailWarning}
-                      className="thumbnail-warning"
-                    >
-                      {warningText}
-                    </span>
-                  </div>
-                )}
-                <div style={{clear: 'both', marginTop: 40}}>
-                  {isDroplet && (
-                    <AdvancedShareOptions
-                      shareUrl={shareUrl}
-                      exportApp={exportApp}
-                      expanded={this.state.showAdvancedOptions}
-                      onExpand={this.showAdvancedOptions}
-                      channelId={channelId}
-                      embedOptions={embedOptions}
-                      appType={this.props.appType}
-                    />
-                  )}
-                </div>
-              </div>
-            </div>
-          )}
+          {this.sharingDisabled() && renderSharingDisabled()}
+          {!this.sharingDisabled() &&
+            interfaceVersion === 1 &&
+            renderInterfaceV1()}
+          {!this.sharingDisabled() &&
+            interfaceVersion === 2 &&
+            renderInterfaceV2()}
         </BaseDialog>
         <PublishDialog />
         <LibraryCreationDialog channelId={channelId} />
@@ -622,6 +681,10 @@ const styles = {
     backgroundColor: color.white,
     position: 'relative',
   },
+  thumbnailBigger: {
+    width: 180,
+    height: 180,
+  },
   thumbnailImg: {
     position: 'absolute',
     left: '50%',
@@ -672,6 +735,11 @@ const styles = {
   warningMessageContainer: {
     clear: 'both',
     marginTop: 10,
+  },
+  newLayoutContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 12,
   },
 };
 

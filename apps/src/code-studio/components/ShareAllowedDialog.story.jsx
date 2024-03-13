@@ -48,6 +48,12 @@ SpriteLab.args = {
   appType: 'spritelab',
 };
 
+export const MusicLab = Template.bind({});
+MusicLab.args = {
+  ...defaultArgs,
+  appType: 'music',
+};
+
 export const WithThumbnail = Template.bind({});
 WithThumbnail.args = {
   ...defaultArgs,
@@ -127,3 +133,41 @@ InRestrictedShareMode.args = {
   inRestrictedShareMode: true,
   appType: 'spritelab',
 };
+
+/*
+export const MusicLabWithUnder13Warning = Template.bind({});
+MusicLabWithUnder13Warning.args = {
+  ...defaultArgs,
+  appType: 'music',
+  canShareSocial: false,
+};
+*/
+
+export const MusicLabAbusive = Template.bind({});
+MusicLabAbusive.args = {
+  ...defaultArgs,
+  appType: 'music',
+  isAbusive: true,
+};
+
+/*
+export const MusicLabWithSharingForUserDisabled = Template.bind({});
+MusicLabWithSharingForUserDisabled.args = {
+  ...defaultArgs,
+  appType: 'music',
+  canPublish: true,
+  isPublished: true,
+  isUnpublishPending: true,
+  userSharingDisabled: true,
+};
+*/
+
+/*
+export const MusicLabInRestrictedShareMode = Template.bind({});
+MusicLabInRestrictedShareMode.args = {
+  ...defaultArgs,
+  appType: 'music',
+  canPublish: true,
+  inRestrictedShareMode: true,
+};
+*/
