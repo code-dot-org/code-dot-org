@@ -319,10 +319,11 @@ class Services::LtiTest < ActiveSupport::TestCase
   test 'should update a section name if it has changed' do
     teacher = create :teacher
     lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
     lti_course = create :lti_course, lti_integration: lti_integration
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
     # initial names
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
@@ -337,7 +338,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     end
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(new_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name}: #{name}"}
     actual_section_names = lti_course.reload.sections.map(&:name)
     assert_empty new_expected_names - actual_section_names
@@ -374,38 +375,82 @@ class Services::LtiTest < ActiveSupport::TestCase
   test 'should add or remove sections when syncing a course' do
     teacher = create :teacher
     lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher
     lti_course = create :lti_course, lti_integration: lti_integration
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
     # Adding new sections
     assert lti_course.reload.sections.length, 3
 
     # Removing old sections
     parsed_response.delete(@lms_section_ids.first.to_s)
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     assert lti_course.reload.sections.length, 2
 
     # Remove empty sections with no users
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     assert lti_course.reload.sections.length, 1
   end
 
   test 'should remove empty sections when syncing a course' do
     teacher = create :teacher
     lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher
     lti_course = create :lti_course, lti_integration: lti_integration
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
     assert lti_course.reload.sections.length, 3
 
     # Remove empty sections with no users
     @nrps_full_response[:members] = []
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     assert lti_course.reload.sections.length, 2
+  end
+
+  test 'should NOT sync if the user is not a teacher on the LMS' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-2'
+    lti_course = create :lti_course, lti_integration: lti_integration
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    had_changes = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+
+    assert_equal false, had_changes
+  end
+
+  test 'lti_user_roles should return the LTI roles for a given user' do
+    roles = Services::Lti.lti_user_roles(@nrps_full_response, "user-id-1")
+
+    assert_equal ["http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"], roles
+  end
+
+  test 'lti_user_roles should return nil if the user cannot be found' do
+    roles = Services::Lti.lti_user_roles(@nrps_full_response, "unknown")
+
+    assert_nil roles
+  end
+
+  test 'lti_user_type should return teacher if LTI user role is instructor' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
+    user_type = Services::Lti.lti_user_type(teacher, lti_integration, @nrps_full_response)
+
+    assert_equal User::TYPE_TEACHER, user_type
+  end
+
+  test 'lti_user_type should return student if LTI user role is not instructor' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-2'
+    user_type = Services::Lti.lti_user_type(teacher, lti_integration, @nrps_full_response)
+
+    assert_equal User::TYPE_STUDENT, user_type
   end
 end
