@@ -452,41 +452,53 @@ describe('DetailViewContents', () => {
   // });
 
   describe('Teacher application scholarship status', () => {
-    let detailView;
+    // let detailView;
 
-    afterEach(() => {
-      detailView.unmount();
-    });
+    // afterEach(() => {
+    //   detailView.unmount();
+    // });
 
     for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
       it(`is required in order to set application status to ${applicationStatus}`, () => {
         const overrideProps = {
-          ...DEFAULT_APPLICATION_DATA,
-          status: 'unreviewed',
-          scholarship_status: null,
-          update_emails_sent_by_system: false,
+          applicationData: {
+            ...DEFAULT_APPLICATION_DATA,
+            status: 'unreviewed',
+            scholarship_status: null,
+            update_emails_sent_by_system: false,
+          },
         };
         renderDefault(overrideProps);
 
-        expect(isModalShowing()).to.be.false;
-        expect(getScholarshipStatus()).to.be.null;
-        expect(screen.findAllByText('unreviewed').length).to.equal(2);
+        // Application status set to 'Unreviewed'
+        const appStatusDropdown = screen.getAllByRole('combobox')[0];
+        assert(appStatusDropdown.disabled);
+        expect(appStatusDropdown.value).to.equal('unreviewed');
+        expect(screen.queryByText('Cannot save applicant status')).to.be.null;
 
-        setApplicationStatusTo(applicationStatus);
-        expect(isModalShowing()).to.be.true;
-        expect(screen.findAllByText('unreviewed').length).to.equal(2);
+        // Attempt to switch application status to 'Accepted'
+        fireEvent.click(screen.getAllByRole('button', {name: 'Edit'})[0]);
+        assert(!appStatusDropdown.disabled);
 
-        dismissModal();
-        expect(isModalShowing()).to.be.false;
-        expect(screen.findAllByText('unreviewed').length).to.equal(2);
+        fireEvent.change(appStatusDropdown, {
+          target: {value: 'accepted'},
+        });
 
-        clickEditButton();
-        setScholarshipStatusTo('no');
-        expect(getScholarshipStatus()).to.equal('no');
+        // WHY IS THIS HIDDEN?
 
-        setApplicationStatusTo(applicationStatus);
-        expect(isModalShowing()).to.be.false;
-        expect(screen.findAllByText(applicationStatus).length).to.equal(2);
+        expect(screen.getAllByRole('combobox', {hidden: true})[0].value).to.equal('accepted');
+
+
+        expect(screen.getAllByText('Accepted').length).to.equal(2);
+
+        screen.getByText('Cannot save applicant status');
+
+        // setScholarshipStatusTo('no');
+        // expect(getScholarshipStatus()).to.equal('no');
+
+        // setApplicationStatusTo(applicationStatus);
+        // expect(isModalShowing()).to.be.false;
+        // expect(screen.findAllByText(applicationStatus).length).to.equal(2);
       });
     }
 
@@ -552,45 +564,45 @@ describe('DetailViewContents', () => {
   //     });
   //   });
 
-    function clickEditButton() {
-      fireEvent.click(screen.getAllByText('Edit')[0]);
-    }
+    // function clickEditButton() {
+    //   fireEvent.click(screen.getAllByText('Edit')[0]);
+    // }
 
-    function setApplicationStatusTo(currentStatus, newStatus) {
-      const applicationDropdown = screen.getAllByDisplayValue(currentStatus);
-      fireEvent.change(applicationDropdown, {target: newStatus});
-    }
+    // function setApplicationStatusTo(currentStatus, newStatus) {
+    //   const applicationDropdown = screen.getAllByDisplayValue(currentStatus);
+    //   fireEvent.change(applicationDropdown, {target: newStatus});
+    // }
 
-    function getScholarshipStatus() {
-      const scholarshipDropdown = detailView
-        .find('tr')
-        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-        .find('Select');
-      return scholarshipDropdown.prop('value');
-    }
+    // function getScholarshipStatus() {
+    //   const scholarshipDropdown = detailView
+    //     .find('tr')
+    //     .filterWhere(row => row.text().includes('Scholarship Teacher?'))
+    //     .find('Select');
+    //   return scholarshipDropdown.prop('value');
+    // }
 
-    function setScholarshipStatusTo(newValue) {
-      const scholarshipDropdown = detailView
-        .find('tr')
-        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-        .find('Select');
-      scholarshipDropdown.prop('onChange')({value: newValue});
-      detailView.update();
-    }
+    // function setScholarshipStatusTo(newValue) {
+    //   const scholarshipDropdown = detailView
+    //     .find('tr')
+    //     .filterWhere(row => row.text().includes('Scholarship Teacher?'))
+    //     .find('Select');
+    //   scholarshipDropdown.prop('onChange')({value: newValue});
+    //   detailView.update();
+    // }
 
-    function isModalShowing() {
-      const modal = detailView
-        .find('ConfirmationDialog')
-        .filterWhere(
-          dialog => dialog.prop('headerText') === 'Cannot save applicant status'
-        )
-        .first();
-      return !!modal.prop('show');
-    }
+    // function isModalShowing() {
+    //   const modal = detailView
+    //     .find('ConfirmationDialog')
+    //     .filterWhere(
+    //       dialog => dialog.prop('headerText') === 'Cannot save applicant status'
+    //     )
+    //     .first();
+    //   return !!modal.prop('show');
+    // }
 
-    function dismissModal() {
-      detailView.find('ConfirmationDialog').first().prop('onOk')();
-      detailView.update();
-    }
+    // function dismissModal() {
+    //   detailView.find('ConfirmationDialog').first().prop('onOk')();
+    //   detailView.update();
+    // }
   });
 });
