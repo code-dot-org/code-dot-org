@@ -205,6 +205,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
       if (retryCount < MAX_GET_CODE_RETRIES) {
+        // Sometimes we need to wait for Google Blockly change handlers to complete
+        // before the code will generate correctly. Retry after a short delay.
         setTimeout(() => {
           return getWorkspaceCodeHelper(retryCount + 1, hiddenWorkspace);
         }, RETRY_GET_CODE_INTERVAL_MS);
