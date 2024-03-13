@@ -311,27 +311,6 @@ const customInputTypes = {
           ],
         };
       };
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue, block);
-        }
-        block.superSetTitleValue(newValue, name);
-      };
 
       currentInputRow
         .appendField(inputConfig.label)
@@ -449,6 +428,25 @@ const customInputTypes = {
       return [`"${label}"`, `"${name}"`];
     },
   },
+
+  bitmap: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const config = {
+        height: 8,
+        width: 8,
+      };
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldBitmap(null, null, config),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      // Convert 2d array into a string.
+      return JSON.stringify(block.getFieldValue(arg.name));
+    },
+  },
 };
 
 export default {
@@ -547,6 +545,8 @@ export default {
       !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
+      // This is only used by CDO Blockly. When we are ready to remove support
+      // for CDO Blockly we can remove this call.
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {

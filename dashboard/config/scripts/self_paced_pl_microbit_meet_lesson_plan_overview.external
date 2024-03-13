@@ -5,8 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Meet your micro:bit - Lesson Overview
 
-<p style="font-size: 14pt; font-weight: bold;"> Carefully read over the entire <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf" target="_blank" style="color: #8C52BA;">lesson plan</a> before you begin teaching.</p>
+<p style="font-size: 14pt; font-weight: bold;"> Carefully read over the entire <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7" target="_blank" style="color: #8C52BA;">lesson plan on pages 7-17</a> before you begin teaching.</p>
 
+#### *Remember, lesson plans for the CSF maker courses are located in the downloadable micro:bit booklet. 
 
 ## What your students will learn
 
@@ -61,7 +62,7 @@ markdown <<MARKDOWN
 
 ## Equipment list
 #### **You will need:**
-- #### Access to the MakeCode online editor on the teacher’s computer.
+- #### Access to the micro:bit classroom online editor on the teacher’s computer.
 - #### Several micro:bits with micro USB cords. One micro:bit for every two to three students is ideal. 
 - #### A power source for the micro:bits. Battery packs are best, but you can also power them from computer USB ports.
 

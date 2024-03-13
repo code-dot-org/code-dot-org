@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-02-12T18:15:46.000Z",
   "level_num": "custom",
@@ -20,7 +19,7 @@
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "standalone_app_name": "spritelab",
     "encrypted": "false",
     "embed": "false",
@@ -41,13 +40,12 @@
     "mini_toolbox": "true",
     "hide_pause_button": "false",
     "thumbnail_url": "https://images.code.org/cc9a499d75d54111c80fe27989a0c1d5-sports_ball.jpg",
-    "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**How to play:** The balls bounce around while you try to click on them!\r\n\r\n**How to win:** Get 12 balls!",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Game Mechanics:** Click & Collect \r\n\r\n**How to win:** Click on 12 of the bouncing balls!",
+    "long_instructions": " **Play the game!**\r\n \r\n Press `Run` and play the game. What do you notice?",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-02-14 17:59:56 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:03:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:04:00 +0000\",\"changed\":[\"mini_toolbox\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:05:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:07:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:09:52 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:39:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:55:35 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-02-14 17:59:56 +0000\",\"changed\":[\"show_debug_watch\",\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:03:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:04:00 +0000\",\"changed\":[\"mini_toolbox\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:05:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:07:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:09:52 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 18:39:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:55:35 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:15:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:16:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:18:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-21 23:20:01 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 21:23:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 21:24:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 21:25:05 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 21:26:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:16:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-06 23:21:23 +0000\",\"changed\":[\"start_blocks\",\"use_modal_function_editor\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 16:54:34 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 16:55:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 17:07:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,7 +55,7 @@
         <variables>
           <variable id="TPks;#qQ]AsS/}K=XrX$">ballCount</variable>
         </variables>
-        <block type="when_run" deletable="false" movable="false" x="118" y="46">
+        <block type="when_run" deletable="false" x="32" y="26">
           <next>
             <block type="gamelab_showTitleScreen">
               <value name="TITLE">
@@ -107,9 +105,9 @@
                                     </block>
                                   </value>
                                   <value name="BEHAVIOR">
-                                    <block type="gamelab_behaviorPicker">
-                                      <field name="BEHAVIOR">wandering</field>
-                                      <field name="EDIT">Edit</field>
+                                    <block type="gamelab_behavior_get">
+                                      <mutation behaviorId="wandering" name="wandering"/>
+                                      <field name="NAME">wandering</field>
                                     </block>
                                   </value>
                                 </block>
@@ -125,7 +123,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="154" y="571">
+        <block type="gamelab_spriteClicked" x="30" y="467">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
@@ -135,28 +133,68 @@
             </block>
           </value>
           <next>
-            <block type="gamelab_destroy">
-              <value name="THIS">
-                <block type="gamelab_clickedSpritePointer"/>
+            <block type="gamelab_showVariable">
+              <field name="VAR" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <field name="LOCATION">{"x":200,"y":300}</field>
+                </block>
               </value>
               <next>
-                <block type="math_change">
-                  <field name="VAR" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
-                  <value name="DELTA">
-                    <shadow type="math_number" id="@u5:ckTU^62I@)bjo9hQ">
-                      <field name="NUM">1</field>
-                    </shadow>
+                <block type="gamelab_destroy">
+                  <value name="THIS">
+                    <block type="gamelab_clickedSpritePointer"/>
                   </value>
+                  <next>
+                    <block type="math_change">
+                      <field name="VAR" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
+                      <value name="DELTA">
+                        <shadow type="math_number" id="@u5:ckTU^62I@)bjo9hQ">
+                          <field name="NUM">1</field>
+                        </shadow>
+                        <block type="math_number">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_playSoundOptions">
+                          <field name="SOUND">'sound://category_digital/boing_2.mp3'</field>
+                          <next>
+                            <block type="gamelab_hideTitleScreen">
+                              <next>
+                                <block type="gamelab_ifVarEquals">
+                                  <field name="NUM" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
+                                  <value name="VAL">
+                                    <block type="math_number">
+                                      <field name="NUM">12</field>
+                                    </block>
+                                  </value>
+                                  <statement name="STATEMENT">
+                                    <block type="gamelab_showTitleScreen">
+                                      <value name="TITLE">
+                                        <block type="text">
+                                          <field name="TEXT">You Win!</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
           </next>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="wandering"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">wandering</field>
-          <field name="DESCRIPTION">move a sprite, changing its direction randomly</field>
           <statement name="STACK">
             <block type="gamelab_withPercentChance">
               <value name="NUM">
@@ -306,11 +344,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving east"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving east</field>
-          <field name="DESCRIPTION">move a sprite to the right across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <field name="DIRECTION">"East"</field>
@@ -328,11 +365,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="spinning left"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">spinning left</field>
-          <field name="DESCRIPTION">rotate a sprite to its left</field>
           <statement name="STACK">
             <block type="gamelab_turn">
               <field name="DIRECTION">"left"</field>
@@ -347,11 +383,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="spinning right"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">spinning right</field>
-          <field name="DESCRIPTION">rotate a sprite to its right</field>
           <statement name="STACK">
             <block type="gamelab_turn">
               <field name="DIRECTION">"right"</field>
@@ -366,11 +401,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="shrinking"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">shrinking</field>
-          <field name="DESCRIPTION">change the size of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <field name="PROPERTY">"scale"</field>
@@ -385,11 +419,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="growing"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">growing</field>
-          <field name="DESCRIPTION">change the size of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <field name="PROPERTY">"scale"</field>
@@ -404,11 +437,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving south"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving south</field>
-          <field name="DESCRIPTION">move a sprite downwards across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <field name="DIRECTION">"South"</field>
@@ -426,11 +458,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="swimming left and right"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">swimming left and right</field>
-          <field name="DESCRIPTION">move a sprite horizontally, reversing direction if it touches the edges of the screen</field>
           <statement name="STACK">
             <block type="controls_if">
               <mutation elseif="1"/>
@@ -535,11 +566,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving north"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving north</field>
-          <field name="DESCRIPTION">move a sprite upwards across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <field name="DIRECTION">"North"</field>
@@ -557,11 +587,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="jittering"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">jittering</field>
-          <field name="DESCRIPTION">randomly change the size of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <field name="PROPERTY">"scale"</field>
@@ -585,11 +614,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving west"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving west</field>
-          <field name="DESCRIPTION">move a sprite to the left across the screen</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <field name="DIRECTION">"West"</field>
@@ -607,11 +635,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="patrolling"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">patrolling</field>
-          <field name="DESCRIPTION">move a sprite across the screen, reversing direction if it touches the edges</field>
           <statement name="STACK">
             <block type="gamelab_moveForward">
               <value name="SPRITE">
@@ -721,11 +748,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving with arrow keys"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving with arrow keys</field>
-          <field name="DESCRIPTION">move a sprite if the user is pressing the arrow keys</field>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">
@@ -827,11 +853,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="driving with arrow keys"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">driving with arrow keys</field>
-          <field name="DESCRIPTION">move a sprite if the user is pressing the arrow keys</field>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">
@@ -979,11 +1004,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="fluttering"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">fluttering</field>
-          <field name="DESCRIPTION">randomly change the vertical position of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <field name="PROPERTY">"y"</field>
@@ -1007,11 +1031,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="wobbling"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">wobbling</field>
-          <field name="DESCRIPTION">randomly set the rotation of a sprite</field>
           <statement name="STACK">
             <block type="gamelab_withPercentChance">
               <value name="NUM">
@@ -1044,11 +1067,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving west and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving west and looping</field>
-          <field name="DESCRIPTION">Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_mirrorSprite">
               <field name="DIRECTION">"left"</field>
@@ -1109,11 +1131,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving east and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving east and looping</field>
-          <field name="DESCRIPTION">Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_mirrorSprite">
               <field name="DIRECTION">"right"</field>
@@ -1174,11 +1195,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving north and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving north and looping</field>
-          <field name="DESCRIPTION">Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <field name="DIRECTION">"North"</field>
@@ -1231,11 +1251,10 @@
             </block>
           </statement>
         </block>
-        <block type="behavior_definition" deletable="false" movable="false" x="0" y="0">
+        <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="moving south and looping"/>
           <field name="button_behavior_definition"/>
           <field name="NAME">moving south and looping</field>
-          <field name="DESCRIPTION">Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <field name="DIRECTION">"South"</field>
@@ -1290,5 +1309,8 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
   </blocks>
 </GamelabJr>

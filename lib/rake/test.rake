@@ -123,9 +123,9 @@ namespace :test do
             push(dashboard_dir('db/schema.rb')).
             push(dashboard_dir('config/videos.csv')).
             push(dashboard_dir('lib/tasks/seed.rake')).
-            select(&File.method(:file?)).
+            select {|filename| File.file?(filename)}.
             sort.
-            map(&Digest::MD5.method(:file)).
+            map {|filename| Digest::MD5.file(filename)}.
             join
         )
         CDO.log.info "Fixture hash: #{fixture_hash}"

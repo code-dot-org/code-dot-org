@@ -4,6 +4,9 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
+  # Redirect studio.code.org/courses to code.org/students
+  get "/courses", to: redirect(CDO.code_org_url("/students"))
+
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -179,7 +182,7 @@ Dashboard::Application.routes.draw do
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
-      patch '/users/set_age', to: 'registrations#set_age'
+      patch '/users/set_student_information', to: 'registrations#set_student_information'
       patch '/users/email', to: 'registrations#set_email'
       patch '/users/parent_email', to: 'registrations#set_parent_email'
       patch '/users/user_type', to: 'registrations#set_user_type'
@@ -226,6 +229,7 @@ Dashboard::Application.routes.draw do
     delete '/featured_projects/:project_id', to: 'featured_projects#destroy'
     put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
+    put '/featured_projects/:project_id/bookmark', to: 'featured_projects#bookmark'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -574,6 +578,7 @@ Dashboard::Application.routes.draw do
     get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
     post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
     get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
+    get '/admin/permissions/csv', to: 'admin_users#permissions_csv', as: 'permissions_csv'
     post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
     get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
     post '/admin/bulk_grant_permission', to: 'admin_users#bulk_grant_permission', as: 'bulk_grant_permission'
@@ -592,6 +597,8 @@ Dashboard::Application.routes.draw do
     get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+    get '/admin/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
+    post '/admin/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
@@ -599,6 +606,7 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
+    post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -625,6 +633,8 @@ Dashboard::Application.routes.draw do
 
     get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
     get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+
+    get '/deeper-learning', to: 'plc/user_course_enrollments#index'
 
     namespace :plc do
       root to: 'plc#index'
@@ -884,6 +894,7 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
@@ -1100,7 +1111,7 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
-    resources :ai_tutor_interactions, only: [:create]
+    resources :ai_tutor_interactions, only: [:create, :index]
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

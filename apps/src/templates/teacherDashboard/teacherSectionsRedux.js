@@ -214,7 +214,7 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * Removes null values from stringified object before sending firehose record
  */
 function removeNullValues(key, val) {
-  if (val === null || typeof val === undefined) {
+  if (val === null || typeof val === 'undefined') {
     return undefined;
   }
   return val;
@@ -1232,6 +1232,10 @@ export function ltiSyncResult(state) {
   return getRoot(state).ltiSyncResult;
 }
 
+export function syncEnabled(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).syncEnabled;
+}
+
 export function sectionUnitName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).courseVersionName;
 }
@@ -1340,6 +1344,7 @@ export const sectionFromServerSection = serverSection => ({
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.section_instructors,
+  syncEnabled: serverSection.sync_enabled,
 });
 
 /**

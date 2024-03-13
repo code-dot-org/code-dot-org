@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-17 22:36:11 UTC",
+    "serialized_at": "2024-03-11 22:09:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -457,7 +457,7 @@
       "key": "ac184b1b-7fc9-48f5-a37b-4b0fcc91028c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
         "duration": "15",
         "name": "Function Requirement Activity 1: Does It Count?"
       },
@@ -539,7 +539,7 @@
       "key": "22edf043-450b-4963-bdcf-39873b774d5f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a class read the \"Narrow It Down\" section (page 6) of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a class read the \"Narrow It Down\" section (page 4) of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n",
         "duration": "5",
         "name": "Narrow It Down"
       },
@@ -565,7 +565,7 @@
       "key": "3aa05580-5a78-435d-9dc6-70c679248b3e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Quickly read this section (page 8) with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Quickly read this section (page 6) with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can.",
         "duration": "5",
         "name": "Choosing a Project Idea "
       },
@@ -578,7 +578,7 @@
       "key": "41237178-12eb-4a90-86d9-7b9f24aa1775",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students use page 8 to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students use page 6 to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects.",
         "duration": "10",
         "name": "Brainstorm Ideas"
       },
@@ -602,7 +602,7 @@
       "key": "eeadc5fb-2afc-4c4d-89f9-ec7c61fe32f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 12 class hours to track their progress and make sure they have every component needed to answer the questions.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 7):**",
         "name": "Make a Plan\r"
       },
       "seeding_key": {
@@ -667,7 +667,7 @@
       "key": "d1625d9e-29c4-452d-a4e4-c5e8f60c3ee4",
       "position": 2,
       "properties": {
-        "description": "Before we start let's review the AP CSP Create Task Instructions.\n\n---\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Read page 12-13: Preparing for the Performance Task. This is a general checklist of things you should do to prepare for the AP Performance Task.  Let's see how we did. With a partner - one person reading from the top down, the other reading from bottom up - check off things we've done to prepare so far.  Identify anything we haven't done. Discuss together before discussing as a class. Also, Read Page 11: AP Computer Science Principles Policy on Plagiarism. With a partner carefully read this section. Discuss together before discussing as a class.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Make sure everyone understands expectations.\n\n* For example: if you use a library that someone else created, you need to include a comment citing this source as code you yourself did not write\n* If using images, media or other copyrighted material found on the web, you should cite those sources in comments in your program code - usually at the top.  Something like:\n\n```\n// The images used in this app came from:\n// [1] bird image - http://name-of-site.com/path/to/image.jpg\n// [2] flower image - http://site.com/path/to/flower.jpg\n```",
+        "description": "Before we start let's review the AP CSP Create Task Instructions.\n\n---\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Read page 8-9: Preparing for the Performance Task. This is a general checklist of things you should do to prepare for the AP Performance Task.  Let's see how we did. With a partner - one person reading from the top down, the other reading from bottom up - check off things we've done to prepare so far.  Identify anything we haven't done. Discuss together before discussing as a class. Also, Read Page 6: AP Computer Science Principles Policy on Plagiarism. With a partner carefully read this section. Discuss together before discussing as a class.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Make sure everyone understands expectations.\n\n* For example: if you use a library that someone else created, you need to include a comment citing this source as code you yourself did not write\n* If using images, media or other copyrighted material found on the web, you should cite those sources in comments in your program code - usually at the top.  Something like:\n\n```\n// The images used in this app came from:\n// [1] bird image - http://name-of-site.com/path/to/image.jpg\n// [2] flower image - http://site.com/path/to/flower.jpg\n```",
         "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
@@ -679,7 +679,7 @@
       "key": "bbed3899-fdd1-4378-a73b-7add733e4ecd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read Pages 14-15: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the* **You must**, **You may not**, *and* **You may** *sections of this page. Then with you partner summarize: what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read Pages 10-11: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the* **You must**, **You may not**, *and* **You may** *sections of this page. Then with you partner summarize: what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
         "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
@@ -1488,6 +1488,18 @@
       }
     },
     {
+      "name": "Create PT Unit Slides",
+      "url": "https://docs.google.com/presentation/d/1PuVYRZOfWyXzdFDK6Uan8WJnfo02Qz6oUACG4WNUekg/template/preview",
+      "key": "create_pt_unit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_unit_slides"
+      }
+    },
+    {
       "name": "CSP Unit 9 - Lesson 1 - Deep Dive",
       "url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/copy",
       "key": "csp_unit_9_-_lesson_2_-_deep_dive",
@@ -1524,6 +1536,52 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_9_-_lesson_4_-_complete_the_task_1"
+      }
+    },
+    {
+      "name": "Digital Portfolio Guide (Students)",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-digital-portfolio-student-user-guide.pdf",
+      "key": "digital_portfolio_guide_students_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "digital_portfolio_guide_students_"
+      }
+    },
+    {
+      "name": "Digital Portfolio Guide (Teachers)",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-digital-portfolio-teacher-user-guide.pdf",
+      "key": "digital_portfolio_guide_teachers_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "digital_portfolio_guide_teachers_"
+      }
+    },
+    {
+      "name": "Help Students Sign Up For The AP Exam",
+      "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
+      "key": "help_students_sign_up_the_ap_exam",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_the_ap_exam"
+      }
+    },
+    {
+      "name": " Personalized Project Reference Tip Sheet",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-csp-personalized-project-reference-tip-sheet.pdf",
+      "key": "personalized_project_reference_tip_sheet",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "personalized_project_reference_tip_sheet"
       }
     },
     {
@@ -1614,6 +1672,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "resource.key": "digital_portfolio_guide_students_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "resource.key": "digital_portfolio_guide_teachers_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "resource.key": "personalized_project_reference_tip_sheet"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
         "resource.key": "_key_create_pt_survival_guide_23-24"
       }
@@ -1628,6 +1704,12 @@
       "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
         "resource.key": "create_pt_survival_guide_23-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "create_pt_unit_slides"
       }
     },
     {
@@ -1695,6 +1777,18 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp9-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "create_pt_unit_slides",
+        "script.name": "csp9-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "help_students_sign_up_the_ap_exam",
         "script.name": "csp9-2023"
       }
     },

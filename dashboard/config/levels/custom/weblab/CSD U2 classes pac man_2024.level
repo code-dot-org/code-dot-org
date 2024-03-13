@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "long_instructions": "# The Four Ghosts\r\n\r\nThis page describes the four ghosts from Pac Man and Mrs. Pac man, but only one of them is styled with a special class.\r\n\r\n# Do This\r\n\r\n1) Look through the code to see how the \"blinky\" class works.\r\n2) Add a new class attribute in the `index.html` file for each of the other three ghosts.\r\n3) Add a class rule-set in the `style.css` file for each of the three ghosts.\r\n4) Add properties to each rule set to style the ghost's image and paragraph differently.\r\n  \r\n::: details [**Show Me How**]\r\n\r\n<img src=\"https://images.code.org/c7087e291c5d954a2f958be5f449db01-image-1677109951954.gif\" style=\"width:500px\">\r\n\r\n<br>\r\n\r\n**More resources in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
+    "long_instructions": "# The Four Ghosts\r\n\r\nThis page describes the four ghosts from Pac Man and Mrs. Pac man, but only one of them is styled with a special class.\r\n\r\n# Do This\r\n\r\n1) Look through the code to see how the \"blinky\" class works.\r\n2) Add a new class attribute in the `index.html` file for each of the other three ghosts.\r\n3) Add a class rule-set in the `style.css` file for each of the three ghosts.\r\n4) Add properties to each rule set to style the ghost's image and paragraph differently.\r\n  \r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n<img src=\"https://images.code.org/c7087e291c5d954a2f958be5f449db01-image-1677109951954.gif\" style=\"width:500px\">\r\n\r\n<br>\r\n\r\n**More resources in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "parent_level_id": 23254,
@@ -34,6 +34,6 @@
     "encrypted_examples": "JhWAm2Bfm2S/qH6Cwm/VSN68gUr1B2XhCU4YszFHa7N12q57wnmNtrVP/KcP\nC8AXxbz9OSPIesyDP7SYsKxVNA==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:11.898+00:00\",\"changed\":[\"cloned from \\\"CSD U2 classes pac man_2023\\\"\"],\"cloned_from\":\"CSD U2 classes pac man_2023\"},{\"changed_at\":\"2024-02-15 19:46:23 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:47:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:59:11.898+00:00\",\"changed\":[\"cloned from \\\"CSD U2 classes pac man_2023\\\"\"],\"cloned_from\":\"CSD U2 classes pac man_2023\"},{\"changed_at\":\"2024-02-15 19:46:23 +0000\",\"changed\":[\"long_instructions\",\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 19:47:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-16 21:24:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

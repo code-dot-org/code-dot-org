@@ -17,7 +17,8 @@
       }
     },
     "name_suffix": "_pilot-2022",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What does the `remove()`(#e7e8ea) method remove? Try changing the `2`(#e7e8ea) to a different value, like `1`(#e7e8ea) or `12`(#e7e8ea). Run the program to observe the results after each change.\r\n\r\n2. What happens if you change the argument for the `remove`(#e7e8ea) method to the loop control variable? Try changing the argument to `index`(#e7e8ea) and run the program to observe the results."
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What does the `remove()`(#e7e8ea) method remove? Try changing the `2`(#e7e8ea) to a different value, like `1`(#e7e8ea) or `12`(#e7e8ea). Run the program to observe the results after each change.\r\n\r\n2. What happens if you change the argument for the `remove`(#e7e8ea) method to the loop control variable? Try changing the argument to `index`(#e7e8ea) and run the program to observe the results.",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:07.014+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L1_2022\\\"\"],\"cloned_from\":\"CSA U6L6-L1_2022\"}]"
