@@ -681,8 +681,9 @@ describe('CurriculumCatalog', () => {
         screen.getByText(currCurriculum.description);
 
         // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
-        // Image's alt text is the curriculum's display name.
-        screen.getByAltText(recommendedSimilarCurriculum.display_name);
+        screen.getByRole('img', {
+          name: recommendedSimilarCurriculum.display_name,
+        });
         assert(
           document
             .querySelector('#similarCurriculumButton')
@@ -727,8 +728,9 @@ describe('CurriculumCatalog', () => {
           curriculaTaughtBefore[0].key !== recommendedSimilarCurriculum.key
         );
 
-        // Image's alt text is the curriculum's display name
-        screen.getByAltText(recommendedSimilarCurriculum.display_name);
+        screen.getByRole('img', {
+          name: recommendedSimilarCurriculum.display_name,
+        });
         assert(
           document
             .querySelector('#similarCurriculumButton')
