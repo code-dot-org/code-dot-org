@@ -1793,7 +1793,7 @@
       desc: "App Lab is a programming environment where you can make simple apps right in the browser. Design an app, code in JavaScript with either blocks or text, then share your app in seconds."
       button: "Try App Lab"
     glance:
-      heading: "App Lab at-a-glance"
+      heading: "App Lab at a glance"
       documentation_desc: "Extensive documentation detailing specific functionality and use is available for App Lab."
     projects:
       heading: "See what you can make in App Lab!"
