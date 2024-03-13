@@ -288,10 +288,9 @@ const ExpandedCurriculumCatalogCard = ({
                 </Heading4>
                 <hr className={style.thickDivider} />
                 <img
-                  name={recommendedSimilarCurriculum.display_name}
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
-                  alt=""
                   style={{height: '100%'}}
+                  alt={recommendedSimilarCurriculum.display_name}
                 />
                 <Button
                   id="similarCurriculumButton"
