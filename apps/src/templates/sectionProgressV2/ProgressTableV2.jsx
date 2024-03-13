@@ -38,10 +38,7 @@ function ProgressTableV2({
       : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
 
-  const [onScroll, setOnScroll] = React.useState(() => {});
-
-  const tableContentsRef = React.useRef();
-  const tableContainerRef = React.useRef();
+  const tableRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -86,45 +83,36 @@ function ProgressTableV2({
   );
 
   const table = React.useMemo(() => {
-    const lessons =
-      isSkeleton && unitData === undefined
-        ? LESSON_SKELETON_DATA.map(id => ({id, isFake: true}))
-        : unitData?.lessons;
+    if (isSkeleton && unitData === undefined) {
+      const lessons = LESSON_SKELETON_DATA.map(id => ({id, isFake: true}));
+      return (
+        <div className={styles.tableLoading}>
+          {lessons.map(getRenderedColumn)}
+        </div>
+      );
+    }
 
-    if (lessons === undefined) {
+    if (unitData?.lessons === undefined) {
       // TODO: add no lesson state
       return null;
     }
 
     return (
-      <FloatingScrollbar
-        setOnScroll={setOnScroll}
-        childContainerRef={tableContainerRef}
-        childContentsRef={tableContentsRef}
-      >
+      <FloatingScrollbar childRef={tableRef}>
         <div
           className={classNames(
             styles.table,
             isSkeleton && styles.tableLoading
           )}
-          onScroll={onScroll}
-          ref={tableContainerRef}
+          ref={tableRef}
         >
-          <div ref={tableContentsRef} className={styles.tableInterior}>
-            {lessons.map(getRenderedColumn)}
+          <div className={styles.tableInterior}>
+            {unitData.lessons.map(getRenderedColumn)}
           </div>
         </div>
       </FloatingScrollbar>
     );
-  }, [
-    isSkeleton,
-    getRenderedColumn,
-    unitData,
-    tableContentsRef,
-    tableContainerRef,
-    setOnScroll,
-    onScroll,
-  ]);
+  }, [isSkeleton, getRenderedColumn, unitData, tableRef]);
 
   return (
     <div className={styles.progressTableV2}>

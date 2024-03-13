@@ -11,7 +11,7 @@ describe('AiAssessmentBox', () => {
     id: 2,
     learning_goal_id: 2,
     understanding: 2,
-    ai_confidence: 2,
+    aiConfidencePassFail: 2,
   };
   const mockEvidence = [
     {
