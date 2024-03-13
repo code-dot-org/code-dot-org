@@ -149,6 +149,13 @@ frontend_device_name ||= '/dev/sda1'
       IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroups: [!ImportValue VPC-FrontendSecurityGroup]
       KeyName: <%=ssh_key_name%>
+      Tags:
+        - Key: "Name"
+          Value: !Sub "Frontend-${AWS::StackName}"
+          PropagateAtLaunch: true
+        - Key: "environment"
+          Value: <%=environment%>
+          PropagateAtLaunch: true
       BlockDeviceMappings:
         - DeviceName: <%=frontend_device_name%>
           Ebs:

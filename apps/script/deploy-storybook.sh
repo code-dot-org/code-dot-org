@@ -29,7 +29,7 @@ popd
 
 # build the static storybook site
 echo "Building the static storybook site"
-NODE_OPTIONS="--max-old-space-size=4096" npx build-storybook -o $DIR_TO_DEPLOY
+NODE_OPTIONS="--max-old-space-size=4096" npx storybook build -o $DIR_TO_DEPLOY
 
 # manually copy over static files
 echo "Copying static files"
