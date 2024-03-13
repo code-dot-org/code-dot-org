@@ -11,10 +11,12 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {Provider} from 'react-redux';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import $ from 'jquery';
 
 // react testing library import
 import {render, fireEvent, act} from '@testing-library/react';
@@ -22,18 +24,56 @@ import {render, fireEvent, act} from '@testing-library/react';
 describe('RubricContainer', () => {
   let store;
   let fetchStub;
+  let ajaxStub;
+
+  async function wait() {
+    for (let _ = 0; _ < 10; _++) {
+      await act(async () => {
+        await Promise.resolve();
+      });
+    }
+  }
+
+  function stubFetchEvalStatusForUser(data) {
+    fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
+  function stubFetchEvalStatusForAll(data) {
+    fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
+  function stubFetchAiEvaluations(data) {
+    fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_ai_evaluations.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
+    ajaxStub = sinon.stub($, 'ajax');
+    const request = sinon.stub();
+    request.getResponseHeader = sinon.stub().returns('some-crsf-token');
+    ajaxStub.returns({
+      done: cb => {
+        cb([], null, request);
+      },
+    });
     fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.returns(Promise.resolve(new Response('')));
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
-    registerReducers({teacherSections, teacherPanel});
+    registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
   });
 
   afterEach(() => {
-    fetchStub.restore();
-    utils.queryParams.restore();
     restoreRedux();
+    utils.queryParams.restore();
+    fetchStub.restore();
+    ajaxStub.restore();
   });
 
   const notAttemptedJson = {
@@ -106,11 +146,15 @@ describe('RubricContainer', () => {
         evidenceLevels: [],
       },
     ],
+    script: {
+      id: 42,
+    },
     lesson: {
       position: 3,
       name: 'Data Structures',
     },
     level: {
+      id: 107,
       name: 'test_level',
       position: 7,
     },
@@ -137,17 +181,10 @@ describe('RubricContainer', () => {
   });
 
   it('fetches AI evaluations and passes them to children', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(successJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(successJsonAll))));
-    fetchStub
-      .onCall(2)
-      .returns(
-        Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
-      );
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -160,18 +197,9 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    // Push the `fetch` through
-    await act(async () => {
-      await Promise.resolve();
-    });
-    // Perform the json() call from the fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
-    // Perform the data call from the fetch
-    await act(async () => {
-      await Promise.resolve();
-    });
+    // Push the `fetch`s through
+    await wait();
+
     // Let the component re-render with the set state
     wrapper.update();
     expect(fetchStub).to.have.been.calledThrice;
@@ -195,17 +223,10 @@ describe('RubricContainer', () => {
   });
 
   it('switches components when tabs are clicked', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(successJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(successJsonAll))));
-    fetchStub
-      .onCall(2)
-      .returns(
-        Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
-      );
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -218,9 +239,7 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.find('RubricContent').props().visible).to.be.true;
     expect(wrapper.find('RubricSettings').props().visible).to.be.false;
@@ -233,15 +252,9 @@ describe('RubricContainer', () => {
   });
 
   it('shows a a button for running analysis if canProvideFeedback is true', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(readyJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(readyJsonAll))));
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
 
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -254,9 +267,7 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(wrapper.find('Button')).to.have.lengthOf(3);
     expect(wrapper.find('Button').first().props().text).to.equal(
@@ -265,16 +276,10 @@ describe('RubricContainer', () => {
   });
 
   it('shows status text when student has not attempted level', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(notAttemptedJson))));
-    fetchStub
-      .onCall(1)
-      .returns(
-        Promise.resolve(new Response(JSON.stringify(notAttemptedJsonAll)))
-      );
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
+    stubFetchEvalStatusForUser(notAttemptedJson);
+    stubFetchEvalStatusForAll(notAttemptedJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -287,9 +292,7 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
     expect(fetchStub).to.have.callCount(4);
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_not_attempted());
@@ -297,22 +300,10 @@ describe('RubricContainer', () => {
   });
 
   it('shows status text when level has already been evaluated', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(successJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(successJsonAll))));
-    fetchStub
-      .onCall(2)
-      .returns(
-        Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
-      );
-    fetchStub
-      .onCall(3)
-      .returns(
-        Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
-      );
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -325,9 +316,10 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches
+    await wait();
+
     wrapper.update();
     expect(fetchStub).to.have.callCount(4);
     expect(wrapper.text()).to.include(
@@ -337,14 +329,8 @@ describe('RubricContainer', () => {
   });
 
   it('allows teacher to run analysis when level has not been evaluated', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(readyJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(readyJsonAll))));
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -358,9 +344,9 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches
+    await wait();
 
     wrapper.update();
     expect(fetchStub).to.have.callCount(4);
@@ -380,22 +366,11 @@ describe('RubricContainer', () => {
     */
     const clock = sinon.useFakeTimers();
 
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(readyJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(readyJsonAll))));
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
+    stubFetchEvalStatusForUser(readyJson);
+    stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
 
-    //for run ai fetch on click
-    fetchStub.onCall(4).returns(Promise.resolve({ok: true}));
-
-    fetchStub
-      .onCall(5)
-      .returns(Promise.resolve(new Response(JSON.stringify(pendingJson))));
-
+    /*
     fetchStub
       .onCall(6)
       .returns(Promise.resolve(new Response(JSON.stringify(runningJson))));
@@ -413,7 +388,7 @@ describe('RubricContainer', () => {
       .onCall(16)
       .returns(
         Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
-      );
+      );*/
 
     const wrapper = mount(
       <Provider store={store}>
@@ -428,40 +403,45 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    await act(async () => {
-      await Promise.resolve();
-    });
+    // Wait for fetches
+    await wait();
+
     // 1. Initial fetch returns a json object that puts AI Status into READY state
     wrapper.update();
     expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+
     // 2. User clicks button to run analysis
+    stubFetchEvalStatusForUser(pendingJson);
+
     wrapper.find('Button').at(0).simulate('click');
 
+    // Wait for fetches and re-render
     clock.tick(5000);
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
+
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
     expect(wrapper.text()).include(i18n.aiEvaluationStatus_pending());
 
-    // 4. Move clock forward 5 seconds
+    stubFetchEvalStatusForUser(runningJson);
+
+    // 4. Move clock forward 5 seconds and re-render
     clock.tick(5000);
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
+
     // 5. Fetch returns a json object with puts AI Status into EVALUATION_RUNNING state
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
     expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
 
-    // 6. Move clock forward 5 seconds
+    stubFetchEvalStatusForUser(successJson);
+
+    // 6. Move clock forward 5 seconds and re-render
     clock.tick(5000);
-    await act(async () => {
-      await Promise.resolve();
-    });
+    await wait();
     wrapper.update();
+
     // 7. Fetch returns a json object with puts AI Status into SUCCESS state
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
     expect(wrapper.text()).include(i18n.aiEvaluationStatus_success());
@@ -481,14 +461,10 @@ describe('RubricContainer', () => {
       attemptedUnevaluatedCount: 0,
       csrfToken: 'abcdef',
     };
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(returnedJsonAll))));
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
+
+    stubFetchEvalStatusForUser(returnedJson);
+    stubFetchEvalStatusForAll(returnedJsonAll);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -501,9 +477,10 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches
+    await wait();
+
     wrapper.update();
     expect(fetchStub).to.have.callCount(4);
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
@@ -521,14 +498,10 @@ describe('RubricContainer', () => {
       attemptedUnevaluatedCount: 0,
       csrfToken: 'abcdef',
     };
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(returnedJsonAll))));
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
+
+    stubFetchEvalStatusForUser(returnedJson);
+    stubFetchEvalStatusForAll(returnedJsonAll);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -541,9 +514,10 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches
+    await wait();
+
     wrapper.update();
     expect(fetchStub).to.have.callCount(4);
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pii_error());
@@ -561,14 +535,10 @@ describe('RubricContainer', () => {
       attemptedUnevaluatedCount: 0,
       csrfToken: 'abcdef',
     };
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(returnedJson))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(returnedJsonAll))));
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
+
+    stubFetchEvalStatusForUser(returnedJson);
+    stubFetchEvalStatusForAll(returnedJsonAll);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricContainer
@@ -581,9 +551,10 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches
+    await wait();
+
     wrapper.update();
     expect(fetchStub).to.have.callCount(4);
     expect(wrapper.text()).to.include(
@@ -594,11 +565,6 @@ describe('RubricContainer', () => {
 
   // react testing library
   it('moves rubric container when user clicks and drags component', async () => {
-    fetchStub.onCall(0).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(1).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(2).returns(Promise.resolve(new Response('')));
-    fetchStub.onCall(3).returns(Promise.resolve(new Response('')));
-
     const {getByTestId} = render(
       <Provider store={store}>
         <RubricContainer
@@ -611,6 +577,7 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
+
     await act(async () => {
       await Promise.resolve();
     });

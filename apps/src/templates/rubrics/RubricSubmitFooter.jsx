@@ -105,7 +105,6 @@ function RubricSubmitFooter({
   // The second stage of submission is the feedback submission
   // via the rubrics API
   const submitFeedbackToEndpoint = () => {
-    console.log('feedback');
     const body = JSON.stringify({
       student_id: studentLevelInfo.user_id,
     });
