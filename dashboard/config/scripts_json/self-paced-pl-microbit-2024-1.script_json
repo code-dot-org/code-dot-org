@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 21:33:11 UTC",
+    "serialized_at": "2024-03-08 23:23:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -222,6 +222,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_maker_microbit_pl_introVideo"
+        ],
         "progression": "Getting Started "
       },
       "bonus": false,
@@ -669,6 +672,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_certificate"
+        ],
         "progression": "Navigating Support"
       },
       "bonus": false,

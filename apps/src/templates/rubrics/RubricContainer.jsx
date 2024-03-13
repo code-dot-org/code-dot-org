@@ -14,6 +14,7 @@ import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+import Draggable from 'react-draggable';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -83,60 +84,64 @@ export default function RubricContainer({
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
   return (
-    <div
-      className={classnames(style.rubricContainer, {
-        [style.hiddenRubricContainer]: !open,
-      })}
-    >
-      <div className={style.rubricHeaderRedesign}>
-        <div className={style.rubricHeaderLeftSide}>
-          <FontAwesome icon="house" />
-          {i18n.rubricAiHeaderText()}
+    <Draggable>
+      <div
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={classnames(style.rubricContainer, {
+          [style.hiddenRubricContainer]: !open,
+        })}
+      >
+        <div className={style.rubricHeaderRedesign}>
+          <div className={style.rubricHeaderLeftSide}>
+            <FontAwesome icon="house" />
+            {i18n.rubricAiHeaderText()}
+          </div>
+          <div className={style.rubricHeaderRightSide}>
+            <button
+              type="button"
+              onClick={closeRubric}
+              className={classnames(style.buttonStyle, style.closeButton)}
+            >
+              <FontAwesome icon="xmark" />
+            </button>
+          </div>
         </div>
-        <div className={style.rubricHeaderRightSide}>
-          <button
-            type="button"
-            onClick={closeRubric}
-            className={classnames(style.buttonStyle, style.closeButton)}
-          >
-            <FontAwesome icon="xmark" />
-          </button>
-        </div>
-      </div>
 
-      <div className={style.fabBackground}>
-        <RubricTabButtons
-          tabSelectCallback={tabSelectCallback}
-          selectedTab={selectedTab}
-          showSettings={showSettings}
-          canProvideFeedback={canProvideFeedback}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
-          refreshAiEvaluations={fetchAiEvaluations}
-          rubric={rubric}
-          studentName={studentLevelInfo && studentLevelInfo.name}
-        />
-
-        <RubricContent
-          rubric={rubric}
-          open={open}
-          studentLevelInfo={studentLevelInfo}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          canProvideFeedback={canProvideFeedback}
-          onLevelForEvaluation={onLevelForEvaluation}
-          reportingData={reportingData}
-          visible={selectedTab === TAB_NAMES.RUBRIC}
-          aiEvaluations={aiEvaluations}
-        />
-        {showSettings && (
-          <RubricSettings
-            visible={selectedTab === TAB_NAMES.SETTINGS}
+        <div className={style.fabBackground}>
+          <RubricTabButtons
+            tabSelectCallback={tabSelectCallback}
+            selectedTab={selectedTab}
+            showSettings={showSettings}
+            canProvideFeedback={canProvideFeedback}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
+            refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
-            sectionId={sectionId}
+            studentName={studentLevelInfo && studentLevelInfo.name}
           />
-        )}
+
+          <RubricContent
+            rubric={rubric}
+            open={open}
+            studentLevelInfo={studentLevelInfo}
+            teacherHasEnabledAi={teacherHasEnabledAi}
+            canProvideFeedback={canProvideFeedback}
+            onLevelForEvaluation={onLevelForEvaluation}
+            reportingData={reportingData}
+            visible={selectedTab === TAB_NAMES.RUBRIC}
+            aiEvaluations={aiEvaluations}
+          />
+          {showSettings && (
+            <RubricSettings
+              visible={selectedTab === TAB_NAMES.SETTINGS}
+              rubric={rubric}
+              sectionId={sectionId}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </Draggable>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from 'react';
 import CheckboxDropdown, {CheckboxDropdownProps} from './index';
-import {Meta, Story} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
 
@@ -12,7 +12,7 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<CheckboxDropdownProps> = args => {
+const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
   const [selectedValues, setValues] = useState(
     (args.checkedOptions = [] as string[])
   );
@@ -53,7 +53,7 @@ const SingleTemplate: Story<CheckboxDropdownProps> = args => {
   );
 };
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: CheckboxDropdownProps[];
 }> = args => {
   const [values, setValues] = useState({} as Record<string, string[]>);

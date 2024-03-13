@@ -1241,16 +1241,54 @@ en:
       GameDev_gravity:
         text: "[SPRITE][0] falls with [VELOCITY][1] gravity"
         options:
-          SIZE:
+          VELOCITY:
             "-0.25": low
             "-0.5": medium
             "-1": high
+      GameDev_playSoundOptions:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubble
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harp
+            "'sound://category_digital/jump_7.mp3'": jump
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_transition/star_dust_particle_10.mp3'": star dust
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonal hit
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": twinkle
+      GameDev_playerJump:
+        text: make player do [STRENGTH][0] jump
+        options:
+          STRENGTH:
+            '7': small
+            '11': big
+            '8.5': medium
+      GameDev_setGroup:
+        text: set [SPRITE][0] type to [GROUP][1]
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
+            '"objects"': object
+            '"enemies"': enemy
       GameDev_setVelocity:
         text: set [SPRITE][0] [PROPERTY][1] to [VALUE][2]
         options:
           PROPERTY:
             '"velocityX"': horizontal velocity
-            '"velocityY"': vertical speed
+            '"velocityY"': vertical velocity
+      GameDev_spriteType:
+        text: "[GROUP][0]"
+        options:
+          GROUP:
+            '"players"': player
+            '"walls"': environment
+            '"objects"': objects
+            '"enemies"': enemies
       gamelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       gamelab_addTarget:
@@ -1273,6 +1311,8 @@ en:
         text: begin collecting data [BREAK][0] value [VALUE][1] with label [LABEL][2]
       gamelab_behaviorPicker:
         text: "[BEHAVIOR][0]"
+      gamelab_bitmap:
+        text: "[GRID][0]"
       gamelab_bounceOff:
         text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
@@ -1534,6 +1574,10 @@ en:
             '90': down
             '180': left
             '270': up
+      gamelab_makeSpritesGrid:
+        text: 'make [ANIMATION_NAME][0] sprites using grid: [GRID][1]'
+      gamelab_makeSpritesGridInput:
+        text: make [ANIMATION_NAME][0] sprites using grid [GRID][1]
       gamelab_makeSpritesWithSize:
         text: make [NUM][0] new [SIZE][1] [COSTUME][2] sprites
         options:
@@ -1722,6 +1766,18 @@ en:
             '50': small
             '75': medium
             '100': large
+      gamelab_setForegroundEffect:
+        text: do [EFFECT][0] effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"emojis"': happy emojis
+            '"rain"': rain
+            '"starburst"': starburst
+            '"glass"': shattering glass
+            '"twinkling"': twinkling
       gamelab_setPrompt:
         text: prompt user [QUESTION][0] for variable [VAR][1]
       gamelab_setPromptWith2Choices:
@@ -1840,6 +1896,12 @@ en:
         text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
       gamelab_textVariableJoin:
         text: "[VAR][0][TEXT2][1]"
+      gamelab_toggleBehaviorSimple:
+        text: sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:

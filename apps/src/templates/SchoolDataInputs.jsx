@@ -3,7 +3,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
-import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 
 const TEST_SCHOOL_DATA = [{value: 'test', text: 'VeryLongNameTestSchool'}];

@@ -18,6 +18,7 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldVariable from './addons/cdoFieldVariable';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
@@ -299,6 +300,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    // CdoFieldBitmap extends from a JavaScript class without typing.
+    // We know it's a field, so it's safe to cast as unknown.
+    ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -751,16 +755,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     blocklyWrapper.setMainWorkspace(workspace);
 
-    // Same flyout callbacks are used for both main workspace categories
-    // and categories when modal function editor is enabled.
-    workspace.registerToolboxCategoryCallback(
-      'PROCEDURE',
-      functionsFlyoutCategory
-    );
-    workspace.registerToolboxCategoryCallback(
-      'VARIABLE',
-      variablesFlyoutCategory
-    );
+    if (!optOptionsExtended.useBlocklyDynamicCategories) {
+      // Same flyout callbacks are used for both main workspace categories
+      // and categories when modal function editor is enabled.
+      workspace.registerToolboxCategoryCallback(
+        'PROCEDURE',
+        functionsFlyoutCategory
+      );
+      workspace.registerToolboxCategoryCallback(
+        'VARIABLE',
+        variablesFlyoutCategory
+      );
+    }
 
     workspace.registerToolboxCategoryCallback(
       'Behavior',

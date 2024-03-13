@@ -12,6 +12,7 @@ import LessonProgressDataColumn from './LessonProgressDataColumn';
 import classNames from 'classnames';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
 import {lessonHasLevels} from '../progress/progressHelpers';
+import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
@@ -36,6 +37,8 @@ function ProgressTableV2({
       ? [...students].sort(stringKeyComparator(['familyName', 'name']))
       : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }, [students, isSortedByFamilyName, isSkeleton]);
+
+  const tableRef = React.useRef();
 
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
@@ -80,20 +83,36 @@ function ProgressTableV2({
   );
 
   const table = React.useMemo(() => {
-    const lessons =
-      isSkeleton && unitData === undefined
-        ? LESSON_SKELETON_DATA.map(id => ({id, isFake: true}))
-        : unitData?.lessons;
+    if (isSkeleton && unitData === undefined) {
+      const lessons = LESSON_SKELETON_DATA.map(id => ({id, isFake: true}));
+      return (
+        <div className={styles.tableLoading}>
+          {lessons.map(getRenderedColumn)}
+        </div>
+      );
+    }
 
-    if (lessons === undefined) {
+    if (unitData?.lessons === undefined) {
       // TODO: add no lesson state
       return null;
     }
-    const tableStyles = isSkeleton
-      ? classNames(styles.table, styles.tableLoading)
-      : styles.table;
-    return <div className={tableStyles}>{lessons.map(getRenderedColumn)}</div>;
-  }, [isSkeleton, getRenderedColumn, unitData]);
+
+    return (
+      <FloatingScrollbar childRef={tableRef}>
+        <div
+          className={classNames(
+            styles.table,
+            isSkeleton && styles.tableLoading
+          )}
+          ref={tableRef}
+        >
+          <div className={styles.tableInterior}>
+            {unitData.lessons.map(getRenderedColumn)}
+          </div>
+        </div>
+      </FloatingScrollbar>
+    );
+  }, [isSkeleton, getRenderedColumn, unitData, tableRef]);
 
   return (
     <div className={styles.progressTableV2}>
