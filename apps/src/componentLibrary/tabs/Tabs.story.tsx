@@ -377,5 +377,6 @@ const SupernovaSizesMultipleTemplate: Story<{
   </>
 );
 
-export const SupernovaGroupOfTabsSizes =
-  SupernovaSizesMultipleTemplate.bind({});
+// export const SupernovaGroupOfTabsSizes = SupernovaSizesMultipleTemplate.bind(
+//   {}
+// );
