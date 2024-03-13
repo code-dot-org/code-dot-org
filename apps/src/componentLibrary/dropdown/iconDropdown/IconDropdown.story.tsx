@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from 'react';
 import IconDropdown, {IconDropdownProps, IconDropdownOption} from './index';
-import {Meta, Story} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
 
@@ -12,7 +12,7 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<IconDropdownProps> = args => {
+const SingleTemplate: StoryFn<IconDropdownProps> = args => {
   const [selectedValue, setValue] = useState(
     args.selectedOption as IconDropdownOption
   );
@@ -33,7 +33,7 @@ const SingleTemplate: Story<IconDropdownProps> = args => {
   );
 };
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: IconDropdownProps[];
 }> = args => {
   const [values, setValues] = useState(

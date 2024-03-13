@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
 import styles from './progress-table-legend.module.scss';
 import FontAwesome from '../FontAwesome';
@@ -8,7 +7,7 @@ import classNames from 'classnames';
 
 export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
-export default function ProgressIcon({itemType, colorOverride}) {
+export default function ProgressIcon({itemType}) {
   const needsFeedbackTriangle = () => (
     <div
       className={classNames(styles.needsFeedback, styles.cornerBox)}
@@ -53,7 +52,7 @@ export default function ProgressIcon({itemType, colorOverride}) {
         <FontAwesome
           id={'uitest-' + itemType[0]}
           icon={itemType[0]}
-          style={{color: colorOverride ? colorOverride : itemType[1]}}
+          style={{color: itemType[1]}}
           className={styles.fontAwesomeIcon}
           aria-label={PROGRESS_ICON_TITLE_PREFIX + itemType[0]}
         />
@@ -67,5 +66,4 @@ export default function ProgressIcon({itemType, colorOverride}) {
 
 ProgressIcon.propTypes = {
   itemType: ITEM_TYPE_SHAPE,
-  colorOverride: PropTypes.string,
 };
