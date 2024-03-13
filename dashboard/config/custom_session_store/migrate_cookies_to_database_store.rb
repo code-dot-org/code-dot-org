@@ -47,20 +47,15 @@ module ActionDispatch
 
         stale_session_check! do
           session_data = unpacked_cookie_data(req)
-          puts "unpacked session data from cookie: #{session_data.inspect}"
           unless session_data.empty?
             session_id = Rack::Session::SessionId.new(session_data["session_id"])
-            puts "with session id #{session_id.inspect}"
             delete_session(req, session_id, req.session_options)
             # TODO: check for existing session data? Confirm same value for warden.user.user.key?
             write_session(req, session_id, session_data.except("session_id"), req.session_options)
-            puts "deleted from cookie, added to database"
           end
         end
 
-        puts "current session id from request: #{session_id.inspect}"
         session_id, session = find_session(req, session_id)
-        puts "found session data: #{session.inspect}"
         [session_id, session || {}]
       end
 
