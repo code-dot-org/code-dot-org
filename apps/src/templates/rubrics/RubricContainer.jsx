@@ -135,6 +135,7 @@ export default function RubricContainer({
           {showSettings && (
             <RubricSettings
               visible={selectedTab === TAB_NAMES.SETTINGS}
+              refreshAiEvaluations={fetchAiEvaluations}
               rubric={rubric}
               sectionId={sectionId}
             />
