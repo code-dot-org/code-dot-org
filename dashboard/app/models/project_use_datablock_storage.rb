@@ -11,6 +11,7 @@
 #  index_project_use_datablock_storages_on_project_id  (project_id)
 #
 class ProjectUseDatablockStorage < ApplicationRecord
+  DEFAULT_USE_DATABLOCK_STORAGE = false
   # Should a given Project use datablock storage?
   # This allows us to progressively migrate between Firebase
   # and Datablock storage.
@@ -19,7 +20,9 @@ class ProjectUseDatablockStorage < ApplicationRecord
 
   def self.use_data_block_storage_for?(channel_id)
     project = Project.find_by_channel_id(channel_id)
-    find_by(project_id: project.id)&.use_datablock_storage || false
+    find_by(project_id: project.id)&.use_datablock_storage || DEFAULT_USE_DATABLOCK_STORAGE
+  rescue ActiveRecord::RecordNotFound
+    DEFAULT_USE_DATABLOCK_STORAGE
   end
 
   def self.set_data_block_storage_for!(channel_id, use_datablock_storage)
