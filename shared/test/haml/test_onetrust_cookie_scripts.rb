@@ -64,9 +64,6 @@ class OnetrustCookieScriptsTest < ActionView::TestCase
       request: mock_request({'onetrust_cookie_scripts' => flag}),
       domain: domain
     }
-    # path = File.join(__dir__, '../../haml/onetrust_cookie_scripts.html.haml')
-    # haml = File.read(path)
-    # Haml::Engine.new(haml).render(Object.new, **locals)
     render template: 'onetrust_cookie_scripts', locals: locals
   end
 
