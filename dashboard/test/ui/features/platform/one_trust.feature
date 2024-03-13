@@ -1,7 +1,7 @@
 @single_session
 Feature: OneTrust integration
   Scenario: The pages load the prod OneTrust libraries.
-    Given I am on "http://studio.code.org/courses"
+    Given I am on "http://studio.code.org/users/sign_in"
     Then element "script[src$='otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
@@ -17,7 +17,7 @@ Feature: OneTrust integration
     Then element "script[src$='e345-test/OtAutoBlock.js']" does not exist
 
   Scenario: The pages load the test OneTrust libraries.
-    Given I am on "http://studio.code.org/courses?onetrust_cookie_scripts=test"
+    Given I am on "http://studio.code.org/users/sign_in?onetrust_cookie_scripts=test"
     Then element "script[src$='otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does not exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does exist
@@ -33,7 +33,7 @@ Feature: OneTrust integration
     Then element "script[src$='e345-test/OtAutoBlock.js']" does exist
 
   Scenario: The pages do not load the OneTrust libraries.
-    Given I am on "http://studio.code.org/courses?onetrust_cookie_scripts=off"
+    Given I am on "http://studio.code.org/users/sign_in?onetrust_cookie_scripts=off"
     Then element "script[src$='otSDKStub.js']" does not exist
     Then element "script[src$='977d/OtAutoBlock.js']" does not exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
