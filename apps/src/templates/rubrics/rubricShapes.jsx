@@ -19,6 +19,12 @@ export const rubricShape = PropTypes.shape({
     position: PropTypes.number,
     name: PropTypes.string,
   }),
+  script: PropTypes.shape({
+    id: PropTypes.number,
+  }),
+  level: PropTypes.shape({
+    id: PropTypes.number,
+  }),
 });
 
 // Used for any data that is only for reporting purposes. Other data may be used for event reporting

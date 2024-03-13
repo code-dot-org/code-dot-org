@@ -44,11 +44,11 @@ export default function RubricContent({
   reportingData,
   visible,
   aiEvaluations,
+  feedbackAdded,
+  setFeedbackAdded,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
-
-  const [feedbackAdded, setFeedbackAdded] = useState(false);
 
   let infoText = null;
   if (!onLevelForEvaluation) {
@@ -150,6 +150,8 @@ RubricContent.propTypes = {
   teacherHasEnabledAi: PropTypes.bool,
   visible: PropTypes.bool,
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
 };
 
 export const InfoAlert = ({text, dismissable}) => {
