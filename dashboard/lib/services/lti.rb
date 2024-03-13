@@ -3,7 +3,6 @@ require 'queries/lti'
 require 'user'
 require 'authentication_option'
 require 'sections/section'
-require 'metrics/events'
 
 class Services::Lti
   def self.initialize_lti_user(id_token)
