@@ -1,6 +1,10 @@
 #!/bin/bash
 
+set -e
+
 echo "Starting entrypoint.sh..."
+
+eval "$(~/.rbenv/bin/rbenv init -)"
 
 # Verify correct ruby version
 current_ruby_version=$(ruby -v | awk '{print $2}' | sed 's/p[0-9]*//') # Remove any 'pXXX' suffix
