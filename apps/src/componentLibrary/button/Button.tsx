@@ -124,7 +124,7 @@ const checkButtonPropsForErrors = ({
   }
 };
 
-const spinnerIcon = {
+const spinnerIcon: FontAwesomeV6IconProps = {
   iconName: 'spinner',
   iconStyle: 'solid',
   className: 'fa-spin',
@@ -211,6 +211,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
         moduleStyles[`button-${type}`],
         moduleStyles[`button-${color}`],
         moduleStyles[`button-${size}`],
+        !showText && isPending && moduleStyles.buttonPendingWithHiddenText,
         className
       )}
       id={id}
@@ -223,7 +224,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       )}
       {showIconLeft && <FontAwesomeV6Icon {...iconLeft} />}
       {showIcon && <FontAwesomeV6Icon {...icon} />}
-      {text && showText && <span>{text}</span>}
+      {text && <span>{text}</span>}
       {showIconRight && <FontAwesomeV6Icon {...iconRight} />}
       {isPending && spinnerPosition === 'right' && (
         <FontAwesomeV6Icon {...spinnerIcon} />
