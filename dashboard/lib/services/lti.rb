@@ -80,7 +80,7 @@ class Services::Lti
   end
 
   def self.lti_user_type(current_user, lti_integration, nrps_section)
-    lti_user_id = Policies::Lti.lti_user_id(current_user, lti_integration)
+    lti_user_id = Queries::Lti.lti_user_id(current_user, lti_integration)
     member_roles = lti_user_roles(nrps_section, lti_user_id)
 
     if Policies::Lti.lti_teacher?(member_roles)
@@ -197,8 +197,7 @@ class Services::Lti
       end
     end
 
-    nrps_sections.keys.each do |lms_section_id|
-      nrps_section = nrps_sections[lms_section_id]
+    nrps_sections.each do |lms_section_id, nrps_section|
       section_name = nrps_section[:name]
       # Check if lti_sections already contains a section with this lms_section_id
       lti_section = lti_sections.find_by(lms_section_id: lms_section_id)

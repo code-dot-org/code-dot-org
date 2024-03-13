@@ -65,21 +65,6 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_equal nil, Policies::Lti.lti_provided_email(user)
   end
 
-  test 'lti_user_id should return the subject (user id) for a given user' do
-    lti_integration = create :lti_integration
-    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
-
-    assert_equal "subject", Policies::Lti.lti_user_id(lti_user_identity.user, lti_integration)
-  end
-
-  test 'lti_user_id should return nil if there are no matching identities' do
-    lti_integration = create :lti_integration
-    other_lti_integration = create :lti_integration
-    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
-
-    assert_nil Policies::Lti.lti_user_id(lti_user_identity.user, other_lti_integration)
-  end
-
   test 'lti_teacher returns false if administrator' do
     assert_equal false, Policies::Lti.lti_teacher?(["http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator"])
   end
