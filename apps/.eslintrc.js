@@ -28,6 +28,7 @@ module.exports = {
     'babel',
     'jsx-a11y',
     'storybook',
+    'import',
   ],
   parserOptions: {
     babelOptions: {
@@ -113,11 +114,28 @@ module.exports = {
     'react/no-danger': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
+    'import/no-duplicates': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          ['builtin', 'external'],
+          'internal',
+          ['parent', 'sibling'],
+          'index',
+        ],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
   },
   settings: {
     react: {
       version: 'detect',
     },
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
   overrides: [
     {
@@ -140,6 +158,12 @@ module.exports = {
       files: ['*.story.@(ts|tsx|js|jsx)'],
       rules: {
         'storybook/no-title-property-in-meta': 'error',
+      },
+    },
+    {
+      files: ['src/*'],
+      rules: {
+        'import/order': 'off',
       },
     },
   ],
