@@ -1,0 +1,153 @@
+#########################################################
+# multi-stage build for parallel compiling ruby:
+# see: https://docs.docker.com/build/building/multi-stage/
+#
+# For adding regular deps, skip to `primary-layer` below
+#########################################################
+FROM ubuntu:20.04 as base
+
+ENV \
+    LANG=C.UTF-8 \
+    TZ=Etc/UTC \
+    DEBIAN_FRONTEND=noninteractive \
+    USER=appuser \
+    GROUP=appuser
+
+# just enough to compile ruby: other deps => primary-layer below
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        autoconf \
+        bison \
+        build-essential \
+        ca-certificates \
+        curl \
+        git \
+        libaio-dev \
+        libaio1 \
+        libffi-dev \
+        libgdbm-dev \
+        libncurses5-dev \
+        libreadline-dev \
+        libssl-dev \
+        libyaml-dev \
+        sudo \
+        zlib1g-dev \
+        && rm -rf /var/lib/apt/lists/*
+
+# add user
+RUN groupadd --gid 3434 ${USER} && \
+    useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
+    printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
+
+
+#########################################################
+FROM base as rbenv
+#########################################################
+# install rbenv and ruby, this runs in parallel to the
+# next layer, which installs the rest of the dependencies
+#########################################################
+
+USER ${USER}
+
+# clone rbenv
+RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
+# clone ruby-build
+RUN git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# install ruby & bundler
+RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
+    rbenv install 3.0.5 && \
+    rbenv global 3.0.5 && \
+    gem install bundler
+
+#########################################################
+FROM base as primary-layer
+#########################################################
+# Main layer of this Dockerfile: add packages etc below
+#########################################################
+
+# MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    apt-transport-https \
+    ca-certificates \
+    enscript \
+    ghostscript \
+    gnupg \
+    gzip \
+    imagemagick \
+    jq \
+    libicu-dev \
+    libmagickwand-dev \
+    locales \
+    moreutils \
+    openssh-client \
+    parallel \
+    python \
+    python-dev \
+    software-properties-common \
+    sudo \
+    tar \
+    tzdata \
+    unzip \
+    vim \
+    wget \
+    xvfb \
+    xz-utils \
+    zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /tmp
+
+# Install MySQL.
+#
+# We explicitly target MySQL 5.7, and because of that we also explicitly target
+# Ubuntu Bionic (18.x).
+#
+# We also explicitly install both mysql-client and mysql-server, so that we can
+# also explicitly define the versions of both; normally only the latter is
+# required since it depends on the former.
+#
+# Once we update to MySQL 8+, this can be simplified.
+# TODO: I removed mysql-server from the install, is any of the setup here no longer necessary?
+RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
+    echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections && \
+    echo "mysql-apt-config mysql-apt-config/repo-codename select bionic" | /usr/bin/debconf-set-selections && \
+    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get --fix-broken --yes install && \
+    rm -rf mysql-apt-config_0.8.22-1_all.deb && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C && \
+    apt-get update && \
+    apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04
+
+# en_US.UTF-8 locale not available by default
+RUN locale-gen en_US.UTF-8
+
+# install pdftk & tidy
+RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
+    curl -sSLOJ https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb && \
+    dpkg -i pdftk-java_3.0.9-1_all.deb || apt-get -fy install && \
+    rm pdftk-java_3.0.9-1_all.deb && \
+    curl -sSLOJ https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb && \
+    dpkg -i tidy-5.4.0-64bit.deb && \
+    rm tidy-5.4.0-64bit.deb && \
+    mv /usr/bin/gnu_parallel /usr/bin/parallel
+
+USER ${USER}
+WORKDIR /home/${USER}/code-dot-org
+
+# Merge in the ruby layer
+COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
+
+# Setup Ruby environment when using bash
+RUN echo 'eval "$(~/.rbenv/bin/rbenv init -)"' >> ~/.bashrc
+
+# install gems - rbenv must be initialized within the same RUN command
+# as each RUN command runs in a new shell
+COPY --chown=${USER}:${GROUP}  ../../Gemfile ../../Gemfile.lock ./
+RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
+    rbenv global 3.0.5 && \
+    bundle install
+
+# copy the rest of the app
+# COPY --chown=${USER}:${GROUP} ../.. .

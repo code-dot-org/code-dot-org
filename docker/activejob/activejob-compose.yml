@@ -19,21 +19,24 @@
 version: "3"
 services:
   console:
-    image: codedotorg/code-dot-org:1.9.3
-    command: sleep infinity
+    image: activejob:latest
+    entrypoint: ["docker/activejob/entrypoint.sh"]
+    command: ["console"]
     volumes:
-      - ../:/home/circleci/code-dot-org:delegated
+      - ./entrypoint.sh:/home/appuser/code-dot-org/docker/activejob/entrypoint.sh
+      - ../../:/home/appuser/code-dot-org:delegated
     depends_on:
       - db
   
   activejob:
-    image: codedotorg/code-dot-org:1.9.3
-    user: ${FIXUID:-1000}:${FIXGID:-1000}
+    image: activejob:latest
+    # user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
-      - ../:/home/circleci/code-dot-org:delegated
+      - ../:/home/appuser/code-dot-org:delegated
     stdin_open: true
     tty: true
-    entrypoint: bash code-dot-org/docker/activejob/entrypoint.sh
+    entrypoint: ["docker/activejob/entrypoint.sh"]
+    command: ["delayed_job"]
 
   db:
     container_name: db

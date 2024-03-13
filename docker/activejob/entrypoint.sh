@@ -1,43 +1,23 @@
-#!/bin/sh
+#!/bin/bash
 
-# Run https://github.com/boxboat/fixuid allow writes to bind-mounted code-dot-org directory
-eval $( fixuid )
+echo "Starting entrypoint.sh..."
 
-cd $HOME/code-dot-org
-
-# Need to change ownership of volume mounts which are not bind-mounted to the uid/gid after fixuid is applied
-sudo chown -R $USER:$GROUP \
-        $HOME/.rbenv \
-        $HOME/.config \
-        $HOME/.cache
-
-eval "$(rbenv init -)"
-
-# execute original command
-exec "$@"
-
-# Custom initialization logic can go here
-# For example, check for the presence of mounted volumes:
-if [ ! -d "/home/circleci/code-dot-org" ]; then
-  echo "The code-dot-org directory is not mounted. Exiting..."
-  exit 1
+# Verify correct ruby version
+current_ruby_version=$(ruby -v | awk '{print $2}' | sed 's/p[0-9]*//') # Remove any 'pXXX' suffix
+echo "Ruby Version: ${current_ruby_version}"
+required_ruby_version=$(cat .ruby-version)
+if [ "${current_ruby_version}" != "${required_ruby_version}" ]; then
+    echo "Error: Ruby version mismatch. Expected: ${required_ruby_version}, but was: ${current_ruby_version}."
+    exit 1
 fi
 
-# Wait for the database to be ready
-# This is useful if your service depends on the database to be fully operational before starting
-# echo "Waiting for database to be ready..."
-# while ! nc -z db 3306; do   
-#   sleep 1 # wait for 1 second before check again
-# done
-# echo "Database is ready!"
-
-# Installing dependencies
-echo "Installing dependencies..."
-bundle install
-
-# Execute the main process
-# Assuming the main process is a Ruby on Rails job worker
-# Customize this command based on your specific needs
-echo "Starting ActiveJob workers..."
-cd dashboard
-exec bin/delayed_job run
+if [ "$1" = "delayed_job" ]; then
+    echo "Starting ActiveJob delayed_job workers..."
+    cd dashboard
+    exec bin/delayed_job run
+elif [ "$1" = "console" ]; then
+    echo "Sleeping and waiting for you to exec into the container..."
+    sleep infinity
+else
+    echo "You said $1, but I only know how to run 'delayed_job' or 'console'!"
+fi
