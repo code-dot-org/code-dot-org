@@ -479,9 +479,18 @@ class FilesApi < Sinatra::Base
     if source.is_a?(Hash)
       # Iterate over each file
       source.each_key do |key|
-        # Multi-file source structure:
-        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
-        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        # Nested file source structure for lab2 labs such as Python Lab and Web Lab 2 is
+        # {files: {filename: {contents: "...<code here>...",...}}, folders: {id: {id: <id>, name: <folder_name>,...}}}
+        if key == "files"
+          source[key].each_key do |file|
+            return false unless source[key][file]["contents"]&.force_encoding("UTF-8")&.valid_encoding?
+          end
+        elsif key != "folders"
+          # Multi-file source structure, used in Java Lab
+          # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+          return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        end
+        # TODO: validate folders?
       end
       return true
     end

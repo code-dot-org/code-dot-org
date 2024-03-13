@@ -2,7 +2,7 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {
   BlocklySource,
   LevelProperties,
-  NestedSourceCode,
+  MultiFileSource,
   ProjectSources,
 } from './types';
 import Lab2Registry from './Lab2Registry';
@@ -38,9 +38,9 @@ const PythonSourceResponseValidator: ResponseValidator<
     if (typeof responseToValidate.source === 'string') {
       throw new ValidationError('Python sources must be a JSON object');
     }
-    const source = responseToValidate.source as NestedSourceCode;
+    const source = responseToValidate.source as MultiFileSource;
     // TODO: support a nested main.py
-    if (!source['main.py']) {
+    if (!source?.files?.['main.py']) {
       throwMissingFieldError('main.py');
     }
   };
