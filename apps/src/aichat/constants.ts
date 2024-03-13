@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const CHAT_COMPLETION_URL = '/openai/chat_completion';
 import {ChatCompletionMessage, Role, Status} from './types';
 

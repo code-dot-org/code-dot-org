@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Wrapper around Johnny-Five Button component */
 import five from '@code-dot-org/johnny-five';
 import '../../../../../utils'; // For Function.prototype.inherits

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const SpriteSpeed = {
   VERY_SLOW: 2,
   SLOW: 3,

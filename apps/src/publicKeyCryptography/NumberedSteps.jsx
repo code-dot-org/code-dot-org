@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** Auto-numbered table of arbitrary components, used for character steps */
 import PropTypes from 'prop-types';
 import React from 'react';

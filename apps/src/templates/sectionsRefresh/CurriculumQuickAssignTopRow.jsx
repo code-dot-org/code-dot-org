@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {memo, useCallback} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';

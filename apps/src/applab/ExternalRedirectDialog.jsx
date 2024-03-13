@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';

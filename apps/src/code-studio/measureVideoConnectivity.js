@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import testImageAccess from '../code-studio/url_test';
 import trackEvent from '../util/trackEvent';
 

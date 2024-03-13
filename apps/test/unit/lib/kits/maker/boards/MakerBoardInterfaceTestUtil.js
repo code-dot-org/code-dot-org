@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Exports a set of tests that verify the MakerBoard interface */
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser

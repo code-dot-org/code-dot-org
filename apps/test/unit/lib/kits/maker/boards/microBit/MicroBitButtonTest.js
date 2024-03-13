@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import {EventEmitter} from 'events';

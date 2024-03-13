@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Game Lab pure-functional utility methods that answer questions by
  * looking at the state from the redux store. */
 

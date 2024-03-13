@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {MockFirebase} from 'firebase-mock';
 
 // Previously, this file contained patches for firebase-mock 1.0.5 which are no longer needed in version 1.0.8.

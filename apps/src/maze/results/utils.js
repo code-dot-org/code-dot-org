@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const subtypes = require('@code-dot-org/maze').subtypes;
 
 const FarmerHandler = require('./farmer');

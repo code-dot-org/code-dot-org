@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Component containing a link to edit key/value pairs, a list of
  * existing data tables with controls to edit/delete, and a control to add

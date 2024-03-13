@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';

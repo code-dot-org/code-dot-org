@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useRef, memo} from 'react';
 
 const commonI18n = require('@cdo/locale');

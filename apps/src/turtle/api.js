@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var _ = require('lodash');
 import {randomValue} from '../utils';
 

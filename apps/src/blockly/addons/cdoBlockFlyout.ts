@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly, {IDraggable, Options} from 'blockly/core';
 import {FlyoutItem} from 'blockly/core/flyout_base';
 import {Svg} from 'blockly/core/utils';

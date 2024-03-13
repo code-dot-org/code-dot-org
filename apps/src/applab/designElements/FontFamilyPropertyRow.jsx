@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import applabMsg from '@cdo/applab/locale';
 import EnumPropertyRow from './EnumPropertyRow';
 import {fontFamilyOptions} from '../constants';

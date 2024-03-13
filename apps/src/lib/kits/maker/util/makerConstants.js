@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const MAKER_DEPRECATION_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/11304760762125';
 

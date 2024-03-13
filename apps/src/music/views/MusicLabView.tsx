@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useContext, useEffect} from 'react';
 import MusicValidator from '../progress/MusicValidator';
 import moduleStyles from './music-view.module.scss';

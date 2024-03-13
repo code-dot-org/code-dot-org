@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // some arbitrary data in a form we expect to receive from the server
 // We get this from our call to /api/lock_status
 const section1Id = 42;

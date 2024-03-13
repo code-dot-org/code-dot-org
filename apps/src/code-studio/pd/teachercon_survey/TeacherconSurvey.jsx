@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import FormController from '../form_components/FormController';
 

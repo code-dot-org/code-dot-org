@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {fixMenuGenerator} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import {expect} from '../../../util/reconfiguredChai';
 

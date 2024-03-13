@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const trackedProps = ['x', 'y', 'tint'];
 const log = [];
 let original;

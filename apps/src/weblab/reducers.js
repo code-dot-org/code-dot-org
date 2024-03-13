@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux reducer functions for WebLab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
 import {ActionType} from './actions';

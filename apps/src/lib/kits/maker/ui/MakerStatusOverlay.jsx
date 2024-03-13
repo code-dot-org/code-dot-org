@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Maker connection status visualization overlay */
 import PropTypes from 'prop-types';
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var tiles = require('./tiles');
 var studioApp = require('../StudioApp').singleton;
 

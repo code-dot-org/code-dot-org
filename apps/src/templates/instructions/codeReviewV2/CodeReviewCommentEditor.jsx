@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import {Editable, withReact, Slate} from 'slate-react';

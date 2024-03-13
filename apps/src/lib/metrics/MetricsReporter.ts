@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import DashboardMetricsApi from './DashboardMetricsApi';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var _ = require('lodash');
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');

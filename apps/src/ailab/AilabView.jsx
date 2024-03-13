@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Top-level view for Ailab */
 import PropTypes from 'prop-types';
 import React from 'react';

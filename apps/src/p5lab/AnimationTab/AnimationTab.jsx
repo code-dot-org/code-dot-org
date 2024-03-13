@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Root of the animation editor interface mode for GameLab */
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file A three-part loopable audio effect (start-loop-end). */
 
 var utils = require('../utils');

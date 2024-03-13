@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 import i18n from '@cdo/locale';

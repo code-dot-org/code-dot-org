@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useLayoutEffect, useState} from 'react';
 import standaloneVideoLocale from './locale';
 import styles from './video.module.scss';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export default class Walls {
   constructor(level, skin, drawDebugRect) {
     this.gridAlignedMovement = skin.gridAlignedMovement;

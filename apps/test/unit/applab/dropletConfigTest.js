@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test applab droplet config behavior */
 import {expect} from '../../util/reconfiguredChai';
 import {blocks} from '@cdo/apps/applab/dropletConfig';

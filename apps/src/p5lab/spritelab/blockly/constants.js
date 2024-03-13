@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This object maps the pointer block types that shadow images to the image source
 // block type they can shadow.
 // It also includes the index of the image to shadow in the image source's inputList.

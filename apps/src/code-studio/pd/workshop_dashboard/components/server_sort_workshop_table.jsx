@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Table that gets workshop data from a supplied url,
  * displays the results, possibly limited, and allows sorting.

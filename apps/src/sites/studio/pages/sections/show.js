@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import clientState from '@cdo/apps/code-studio/clientState.js';
 
 const script = document.querySelector('script[data-section]');

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const Interpreter = require('@code-dot-org/js-interpreter');
 const CustomMarshaler = require('./CustomMarshaler');
 

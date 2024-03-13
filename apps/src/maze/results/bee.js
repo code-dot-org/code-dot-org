@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GathererHandler from './gatherer';
 import mazeMsg from '../locale';
 import {

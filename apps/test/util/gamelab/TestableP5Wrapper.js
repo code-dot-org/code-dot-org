@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Helper to load a configured P5Wrapper object for tests */
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';

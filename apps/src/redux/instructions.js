@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A duck module for instructions, particularly instructions that we show in
  * the top pane above the code workspace. This module contains both the actions

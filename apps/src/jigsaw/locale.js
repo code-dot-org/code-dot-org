@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for jigsaw
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {memo} from 'react';
 
 import {

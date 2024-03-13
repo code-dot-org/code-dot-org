@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useMemo} from 'react';
 import classNames from 'classnames';
 

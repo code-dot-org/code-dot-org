@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Permission from './permission';
 
 const SET_PERMISSION = 'pd/workshop_dashboard/SET_PERMISSION';

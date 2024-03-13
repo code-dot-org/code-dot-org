@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @overview Component for editing a key/value pair row. */
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';

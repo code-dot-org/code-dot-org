@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var jsnums = require('@code-dot-org/js-numbers');
 
 // Unicode character for non-breaking space

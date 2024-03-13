@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getStore} from '@cdo/apps/redux';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {

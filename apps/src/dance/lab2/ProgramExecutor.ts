@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {SongMetadata} from '../types';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';

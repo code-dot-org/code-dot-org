@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import {reduxStore} from '@cdo/storybook/decorators';

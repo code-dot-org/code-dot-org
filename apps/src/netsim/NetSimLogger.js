@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Utility class wrapping more granular log behavior that isn't
  * available in all browsers.  Also makes it easy to turn logging on and off

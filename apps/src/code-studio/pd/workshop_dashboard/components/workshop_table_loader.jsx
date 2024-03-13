@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Loader for table displaying workshop summaries based on a supplied query.
  * It requires exactly one child component that expects workshops in its props.

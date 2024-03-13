@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Decorator and delegator for error, warning and info events in toolkits
  * that use droplet and allow students to write and execute JavaScript. */
 import annotationList from './acemode/annotationList';

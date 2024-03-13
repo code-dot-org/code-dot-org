@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import RGBColor from 'rgbcolor';
 import {expect} from '../../../util/reconfiguredChai';
 

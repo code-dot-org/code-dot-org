@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Application Dashboard quick view.
  * Route: /csd_teachers

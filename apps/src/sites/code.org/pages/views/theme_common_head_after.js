@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import 'details-element-polyfill';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';

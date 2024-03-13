@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for our johnny-five Button wrapper */
 import _ from 'lodash';
 import {expect} from '../../../../../../util/reconfiguredChai';

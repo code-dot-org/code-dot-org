@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for Poetry
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

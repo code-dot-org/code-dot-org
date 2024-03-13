@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Pythonlab view
 import React from 'react';
 import PythonEditor from './PythonEditor';

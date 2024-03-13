@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');

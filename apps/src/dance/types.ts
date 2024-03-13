@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {LevelProperties, ProjectSources} from '../lab2/types';
 
 export type SongData = {

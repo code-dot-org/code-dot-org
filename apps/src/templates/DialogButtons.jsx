@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import LegacyButton from './LegacyButton';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';

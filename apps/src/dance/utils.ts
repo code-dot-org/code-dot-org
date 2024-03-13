@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {SongMetadata} from './types';
 import previewMetadata from '@cdo/static/dance/preview-metadata.json';
 

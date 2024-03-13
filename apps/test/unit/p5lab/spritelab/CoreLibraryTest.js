@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';

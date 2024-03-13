@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Render a gallery image/spritesheet as an animated preview */
 import PropTypes from 'prop-types';
 import React from 'react';

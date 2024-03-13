@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ProjectType} from '../types';
 import * as utils from '@cdo/apps/utils';
 

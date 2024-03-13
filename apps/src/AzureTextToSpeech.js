@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import {hashString, findProfanity} from '@cdo/apps/utils';

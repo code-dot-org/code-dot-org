@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import IconLibrary from './IconLibrary';
 import {action} from '@storybook/addon-actions';

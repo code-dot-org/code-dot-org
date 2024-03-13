@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useMemo} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import aiBotMini from '@cdo/static/dance/ai/bot/ai-bot-mini.svg';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export default class LedScreen {
   constructor(board) {
     this.board = board;

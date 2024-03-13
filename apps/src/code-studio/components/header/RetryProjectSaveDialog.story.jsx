@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from './RetryProjectSaveDialog';
 import React from 'react';
 import {projectUpdatedStatuses as statuses} from '../../projectRedux';

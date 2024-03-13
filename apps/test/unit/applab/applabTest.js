@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import sinon from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';

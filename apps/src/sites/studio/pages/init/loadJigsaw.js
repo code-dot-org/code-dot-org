@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 import Jigsaw from '@cdo/apps/jigsaw/jigsaw';
 window.Jigsaw = Jigsaw;

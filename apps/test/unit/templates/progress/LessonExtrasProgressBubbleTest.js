@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import React from 'react';

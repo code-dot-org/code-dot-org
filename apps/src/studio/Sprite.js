@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as constants from './constants';
 import Item from './Item';
 import StudioAnimation from './StudioAnimation';

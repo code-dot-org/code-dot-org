@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Workspace} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';

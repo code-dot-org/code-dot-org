@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var script = document.querySelector('script[data-teacherdashboard]');
 var scriptData = JSON.parse(script.dataset.teacherdashboard);
 var studioUrlPrefix = scriptData.studio_url;

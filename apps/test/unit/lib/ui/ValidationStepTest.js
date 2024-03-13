@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test SetupStep component */
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';

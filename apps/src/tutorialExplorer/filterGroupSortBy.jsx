@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* SortBy: The sort order of tutorials.
  */
 

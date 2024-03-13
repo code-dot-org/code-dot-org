@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux reducer and actions for the Animation Picker */
 import _ from 'lodash';
 import {

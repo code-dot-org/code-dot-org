@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI table of local subnet, displaying hostname => address map.
  */

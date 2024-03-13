@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedSummaryProgressTable as SummaryProgressTable} from './SummaryProgressTable';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';

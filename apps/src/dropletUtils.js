@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import color from './util/color';
 import {singleton as studioApp} from './StudioApp';

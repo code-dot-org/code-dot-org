@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** Animation or Frame thumbnail */
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {AiTutorInteractionSaveStatus} from '@cdo/apps/util/sharedConstants';
 

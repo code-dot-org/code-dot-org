@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ResourceLink from './ResourceLink';
 import React from 'react';
 

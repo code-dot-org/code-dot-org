@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {progressUrl, manageStudentsUrl} from './fakeSectionUtils';
 
 export const announcement = {

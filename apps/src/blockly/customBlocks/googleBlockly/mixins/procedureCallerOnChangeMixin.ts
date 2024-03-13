@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockCreate} from 'blockly/core/events/events_block_create';

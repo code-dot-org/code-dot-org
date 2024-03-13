@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview A base class for all simulation node entities.
  */

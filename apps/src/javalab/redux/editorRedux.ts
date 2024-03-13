@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Redux store for editor-specific Java Lab state.
  */

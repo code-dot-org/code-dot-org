@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* A single tutorial shown in TutorialExplorer.  Displays a thumbnail image, name, and some extra information.
  */
 

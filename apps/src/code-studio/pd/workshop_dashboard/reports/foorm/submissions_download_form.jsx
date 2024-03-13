@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Pop-up modal for downloading all Foorm submissions for a single form as a csv.
 import React from 'react';
 import PropTypes from 'prop-types';

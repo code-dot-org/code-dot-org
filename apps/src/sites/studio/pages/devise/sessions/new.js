@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';

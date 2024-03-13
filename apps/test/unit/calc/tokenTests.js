@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../util/reconfiguredChai';
 
 var Token = require('@cdo/apps/calc/token');

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Droplet-friendly command definitions for timeout and
  * interval commands (shared between App Lab and Game Lab).

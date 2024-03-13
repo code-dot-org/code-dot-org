@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {fetchSignedCookies} from '@cdo/apps/utils';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';

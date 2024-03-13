@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import {TestResults} from './constants';
 import * as callouts from '@cdo/apps/code-studio/callouts';

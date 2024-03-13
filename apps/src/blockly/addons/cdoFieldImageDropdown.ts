@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
 import color from '@cdo/apps/util/color';
 import {BlockSvg, MenuItem, MenuOption} from 'blockly';

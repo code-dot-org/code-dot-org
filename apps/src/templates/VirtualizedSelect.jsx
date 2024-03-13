@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @fileoverview This component is designed to be lazy-loaded loaded, so that
  * all js and css related to it are kept out of the initial download.

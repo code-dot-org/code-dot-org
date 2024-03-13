@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import {ViewType} from './sectionProgressConstants';

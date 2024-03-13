@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Playground Component setup tests */
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';

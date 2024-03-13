@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A react component for rendering a set of buttons that control what the
  * interpreter/debugger are doing. i.e. step in/out/over code and pause/continue

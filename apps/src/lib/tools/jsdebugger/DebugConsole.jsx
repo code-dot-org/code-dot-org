@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A react component that renders a little debugging console that interacts
  * with the javascript interpreter. You can type expressions into an input area

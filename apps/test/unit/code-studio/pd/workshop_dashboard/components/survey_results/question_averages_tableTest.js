@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import QuestionAveragesTable from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/question_averages_table';
 import React from 'react';
 import {expect} from 'chai';

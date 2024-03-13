@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 

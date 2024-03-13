@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Import chai and configure it for our own test style. */
 import chai from 'chai';
 import chaiSubset from 'chai-subset';

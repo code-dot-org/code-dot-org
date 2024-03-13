@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {useRef} from 'react';
 import UniqueSounds from '../utils/UniqueSounds';

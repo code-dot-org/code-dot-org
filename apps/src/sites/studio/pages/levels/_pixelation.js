@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Pixelation widget for visualizing image encoding.
  *

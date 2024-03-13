@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This component renders a survey answer that consists of one question
 // Ex. checkbox or radio button question
 

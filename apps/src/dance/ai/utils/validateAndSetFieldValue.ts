@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {FieldDropdown} from 'blockly';
 
 export type ValidateAndSetFieldValueLogger = (o: {

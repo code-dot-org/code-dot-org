@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A set of tests for blocks in the UI controls section of the toolbox
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assertVisible, assertHidden} from '../util/assertions';
 import SchoolInfoManager from '@cdo/apps/schoolInfoManager';
 import {enforceDocumentBodyCleanup} from '../util/testUtils';

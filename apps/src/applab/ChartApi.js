@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Core implementation of Applab commands related to the Chart design element.
  *

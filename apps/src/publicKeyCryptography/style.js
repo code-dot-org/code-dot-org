@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Style properties shared among cryptopgraphy widget components */
 import color from '../util/color';
 

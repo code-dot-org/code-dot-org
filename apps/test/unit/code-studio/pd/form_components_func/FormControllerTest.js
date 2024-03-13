@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';

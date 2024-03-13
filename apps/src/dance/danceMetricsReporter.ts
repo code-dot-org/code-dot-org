@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import LabMetricsReporter from '../lab2/Lab2MetricsReporter';
 
 const danceMetricsReporter = new LabMetricsReporter({

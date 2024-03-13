@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import CourseCard from './CourseCard';
 import {Provider} from 'react-redux';

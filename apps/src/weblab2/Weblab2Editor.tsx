@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';

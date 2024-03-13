@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Warning dialog that you cannot upload until you un-publish your project.
 import React from 'react';
 import PropTypes from 'prop-types';

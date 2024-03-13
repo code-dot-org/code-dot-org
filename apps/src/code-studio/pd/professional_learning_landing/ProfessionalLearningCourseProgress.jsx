@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  *  Progress for professional learning courses as rendered on the landing page
  */

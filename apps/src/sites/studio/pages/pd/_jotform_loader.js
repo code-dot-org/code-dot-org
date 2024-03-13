@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Entry point for a bundle to embed on pages where we are also letting JotForm embed
  * an inline form using an iframe.  This bundle monitors the JotForm script and attempts

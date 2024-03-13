@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';

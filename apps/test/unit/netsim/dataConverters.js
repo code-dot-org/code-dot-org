@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../util/reconfiguredChai';
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 

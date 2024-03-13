@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isLessonHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';

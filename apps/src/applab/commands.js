@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';

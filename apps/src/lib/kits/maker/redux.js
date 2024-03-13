@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux reducers/actions/selectors for Maker Toolkit */
 import * as Immutable from 'immutable';
 

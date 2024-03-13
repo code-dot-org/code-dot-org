@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Given a point (in the same coordinate space as container), returns
  * whether or not the point is within the bounds of container

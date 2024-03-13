@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {APP_WIDTH} from './constants';
 
 const OUTER_MARGIN = 50;

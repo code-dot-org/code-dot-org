@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /*
 We have to disable the jsx-no-target-blank here because we rely on the
 referrer to determine the abuse url:

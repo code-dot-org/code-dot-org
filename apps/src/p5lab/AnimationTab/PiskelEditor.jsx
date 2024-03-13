@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Component wrapping embedded Piskel editor */
 import PropTypes from 'prop-types';
 import React from 'react';

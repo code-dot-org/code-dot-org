@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import unwrappedHtml2Canvas from 'html2canvas';
 
 // Add an extra wrapper around html2canvas so that it can be stubbed by tests.

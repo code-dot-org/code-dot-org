@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** Body of the animation picker dialog */
 import PropTypes from 'prop-types';
 import React from 'react';

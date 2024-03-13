@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Loads an application from the API by a supplied applicationId
  * Upon load it will call the supplied onApplicationLoaded callback if present, (e.g. for redirects), then

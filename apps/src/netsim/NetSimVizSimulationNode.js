@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Nodes in the visualization that map to simulation entities.
  */

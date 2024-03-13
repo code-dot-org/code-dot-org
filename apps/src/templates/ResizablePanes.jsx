@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Divide a region into a set of panels and allow resizing them.
  *
  *  Similar to react-split-pane (MIT license) but supports more than two panes

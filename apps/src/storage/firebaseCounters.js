@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Firebase from 'firebase';
 import {
   loadConfig,

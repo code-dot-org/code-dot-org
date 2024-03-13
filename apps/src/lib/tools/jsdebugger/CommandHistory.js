@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Provide browsable command history to a textbox with limited depth. */
 
 var CommandHistory = (module.exports = function () {

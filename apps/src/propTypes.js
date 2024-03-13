@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Code.org custom react proptypes.
  */

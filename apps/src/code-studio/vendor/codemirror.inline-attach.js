@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /*! inline-attach - v1.3.2 - 2015-01-03 */
 /*jslint newcap: true */
 /*global XMLHttpRequest: false, inlineAttach: false, FormData: false */

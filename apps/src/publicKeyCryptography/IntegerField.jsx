@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Non-editable positive integer field in the cryptography widget */
 import PropTypes from 'prop-types';
 import React from 'react';

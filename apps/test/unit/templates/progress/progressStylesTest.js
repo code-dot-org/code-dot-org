@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../util/reconfiguredChai';
 import {levelProgressStyle} from '@cdo/apps/templates/progress/progressStyles';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';

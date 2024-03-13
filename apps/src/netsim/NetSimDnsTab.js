@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI controller for the DNS tab in the left column.
  */

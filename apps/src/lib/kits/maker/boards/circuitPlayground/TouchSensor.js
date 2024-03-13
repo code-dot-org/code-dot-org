@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Wrapper for playground-io Touchpad to expose individual pads */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 

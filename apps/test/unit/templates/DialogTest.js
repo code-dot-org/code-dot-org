@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for Dialog component */
 import React from 'react';
 import {mount} from 'enzyme';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A component that adds a ribbon to the side of your row to indicate that it is
  * a focus area. Note: This is English only.

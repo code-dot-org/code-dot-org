@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* FilterGroup: A group of filter choices, for the search area in TutorialExplorer.
  * Contains a heading and a collection of filter choices.
  */

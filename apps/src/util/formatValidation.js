@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // RFC 5322 Official Standard email regex
 // Source: http://emailregex.com/
 

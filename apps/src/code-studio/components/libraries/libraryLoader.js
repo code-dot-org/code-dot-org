@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import libraryParser from './libraryParser';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import i18n from '@cdo/locale';

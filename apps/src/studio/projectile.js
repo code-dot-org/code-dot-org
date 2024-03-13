@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Collidable from './collidable';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';

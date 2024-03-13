@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import {interpolateColors} from '@cdo/apps/utils';

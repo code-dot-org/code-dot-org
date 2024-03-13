@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {CSSProperties, useState} from 'react';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';

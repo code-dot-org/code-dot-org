@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Lobby UI component used for name entry and selecting a shard/class
  *           section.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   BlocklyVersion,
   CLAMPED_NUMBER_REGEX,

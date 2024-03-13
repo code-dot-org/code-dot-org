@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {createRef, useEffect} from 'react';
 import {parseElement} from '@cdo/apps/xml';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Creates a new workshop.
  * Route: /workshops/new

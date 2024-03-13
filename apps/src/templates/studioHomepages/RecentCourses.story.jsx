@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import RecentCourses from './RecentCourses';
 import {Provider} from 'react-redux';

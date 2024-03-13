@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Form for creating / editing workshop details.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file The Alice character panel from the crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export interface TrackMetadata {
   /** Display name of the track */
   name: string;

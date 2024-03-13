@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* JSDoc annotations for appOptions and related object types. */
 
 /**

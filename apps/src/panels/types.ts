@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // The level data for a panels level that doesn't require
 // reloads between levels.
 export interface PanelsLevelData {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {
   getApplicationStatuses,

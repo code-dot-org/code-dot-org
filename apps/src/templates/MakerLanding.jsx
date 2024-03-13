@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import TopCourse from './studioHomepages/TopCourse';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';

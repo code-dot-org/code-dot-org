@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export enum BlockTypes {
   WHEN_RUN = 'when_run',
   WHEN_RUN_SIMPLE2 = 'when_run_simple2',

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 function isNativeCode(func) {
   return func && func.toString().indexOf('[native code]') > -1;
 }

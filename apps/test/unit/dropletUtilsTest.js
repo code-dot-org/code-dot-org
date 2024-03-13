@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import {assert, expect} from '../util/reconfiguredChai';
 import sinon from 'sinon';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

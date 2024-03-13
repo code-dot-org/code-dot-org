@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {makeEnum} from './utils';
 import experiments from './util/experiments';
 

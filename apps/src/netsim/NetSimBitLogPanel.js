@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI component, a log panel (used as "Sent Bits" and "Received Bits")
  *           that is used in the single-bit-sending configurations of the simulator.

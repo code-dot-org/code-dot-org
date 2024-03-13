@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';

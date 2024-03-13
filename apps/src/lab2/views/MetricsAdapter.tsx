@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';

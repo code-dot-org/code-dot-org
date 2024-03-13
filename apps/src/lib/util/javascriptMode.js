@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Utility methods common to toolkits that use the Droplet editor to let
  * students write and execute JavaScript. */
 import RGBColor from './rgbcolor.js';

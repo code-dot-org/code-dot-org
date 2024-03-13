@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Workshop Index. Displays workshop summaries and controls for CRUD actions.
  * Route: /workshops

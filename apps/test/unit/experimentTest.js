@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../util/reconfiguredChai';
 import {setExternalGlobals} from '../util/testUtils';
 import experiments from '@cdo/apps/util/experiments';

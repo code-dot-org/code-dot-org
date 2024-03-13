@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Modal confirmation (OK/Cancel) dialog with custom text and events.
  */

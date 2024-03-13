@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /*

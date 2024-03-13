@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import msg from '@cdo/poetry/locale';
 import {POEMS, PoetryStandaloneApp, TIME_CAPSULE_POEMS} from './constants';
 

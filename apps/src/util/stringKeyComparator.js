@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const collator = new Intl.Collator();
 
 /** Returns a comparator function that sorts objects a and b by the given

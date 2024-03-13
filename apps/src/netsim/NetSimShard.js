@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.

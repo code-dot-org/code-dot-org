@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import EditableTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';

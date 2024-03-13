@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {SoundLoadCallbacks} from '../types';
 import SoundCache from './SoundCache';
 import {GrainPlayer, Player, Sampler, Transport, getContext, start} from 'tone';

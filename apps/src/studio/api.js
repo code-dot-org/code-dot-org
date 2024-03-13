@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {SpriteSize, SpriteSpeed} from './constants';
 import {randomValue} from '../utils';
 

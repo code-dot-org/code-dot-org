@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Table displaying workshop summaries based on a supplied workshop query result.
  */

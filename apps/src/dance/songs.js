@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
 import {DanceSongManifestFilename} from '../util/sharedConstants';

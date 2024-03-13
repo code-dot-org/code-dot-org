@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/javalab/locale';

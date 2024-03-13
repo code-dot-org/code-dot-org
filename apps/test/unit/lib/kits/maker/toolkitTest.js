@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for toolkit.js - Maker's main export */
 import {expect} from '../../../../util/reconfiguredChai';
 import {

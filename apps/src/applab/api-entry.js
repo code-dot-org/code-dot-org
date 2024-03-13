@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // entry point for api that gets exposed.
 
 window.$ = require('jquery');

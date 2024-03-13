@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint no-unused-vars: "error" */
 import React from 'react';
 import sinon from 'sinon';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
 import React from 'react';

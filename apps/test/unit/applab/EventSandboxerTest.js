@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests of App Lab event sanitization. */
 import {assert} from '../../util/reconfiguredChai';
 var EventSandboxer = require('@cdo/apps/applab/EventSandboxer');

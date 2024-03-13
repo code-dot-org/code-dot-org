@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Header banner and start new project buttons for the project gallery */
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Load Skin for Bounce.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI slider used to change the local device's chunk size, which
  *           is used when interpreting binary to other formats.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Application Dashboard admin edit view
  * Route: /:applicationId/edit

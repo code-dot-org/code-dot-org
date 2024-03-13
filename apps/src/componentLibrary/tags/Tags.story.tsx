@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import Tags, {TagsProps} from './index';
 import {Meta, Story} from '@storybook/react';

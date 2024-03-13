@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 function update(blockSpace, container, editor) {
   try {
     // Populate with new xml; because we do this every time the editor

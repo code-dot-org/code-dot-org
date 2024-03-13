@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Provides the basic frame for running Blockly.  In particular, this will
  * create a basic dom, load blockly.js  and put the contents into the global

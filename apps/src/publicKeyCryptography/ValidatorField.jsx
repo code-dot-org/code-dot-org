@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Non-editable integer field that checks its value against an expected
  *        value and communicates a correct match or a failure. */
 import PropTypes from 'prop-types';

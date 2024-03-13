@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {makeEnum} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 

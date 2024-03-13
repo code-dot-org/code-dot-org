@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Workspace, WorkspaceSvg} from 'blockly';
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';

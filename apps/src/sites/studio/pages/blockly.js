@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * "Pointer Events Polyfill" to support pointer events on Safari.
  * This polyfill is used only for the Location Picker in Sprite Lab.

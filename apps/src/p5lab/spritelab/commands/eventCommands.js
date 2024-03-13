@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const commands = {
   atTime(n, unit, callback) {
     this.addEvent('atTime', {n, unit}, callback);

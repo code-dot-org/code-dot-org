@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export default class ExternalLed {
   constructor(opts) {
     this.board = opts.board;

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';

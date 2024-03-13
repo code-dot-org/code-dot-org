@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @typedef {Object} parameterSlotInfo
  * @property {string} funcName

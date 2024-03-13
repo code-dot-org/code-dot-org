@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {SoundLoadCallbacks} from '../types';
 import {Effects} from './interfaces/Effects';
 

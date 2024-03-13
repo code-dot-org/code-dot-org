@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>

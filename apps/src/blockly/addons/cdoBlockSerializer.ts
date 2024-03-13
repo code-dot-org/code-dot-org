@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly, {Workspace} from 'blockly/core';
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {State} from 'blockly/core/serialization/blocks';

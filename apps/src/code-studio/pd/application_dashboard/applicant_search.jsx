@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import color from '@cdo/apps/util/color';
 /* eslint-disable no-restricted-imports */

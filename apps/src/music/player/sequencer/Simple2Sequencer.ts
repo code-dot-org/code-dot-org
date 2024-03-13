@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';

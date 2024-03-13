@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A collection of components for displaying the purple header used in a few
  * places in our apps. The parent component is a PaneHeader that can be toggled

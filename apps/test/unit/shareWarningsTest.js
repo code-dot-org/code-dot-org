@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var testUtils = require('../util/testUtils');
 import {assert, expect} from '../util/reconfiguredChai';
 var ReactDOM = require('react-dom');

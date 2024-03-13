@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Firebase from 'firebase';
 const SHARED_ENV = 'cdo-v3-shared';
 let config;

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var utils = require('@cdo/apps/utils');
 var blockUtils = require('@cdo/apps/block_utils');
 var tb = blockUtils.createToolbox;

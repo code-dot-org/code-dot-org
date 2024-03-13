@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Factory} from 'rosie';
 
 export const serializedWorkshopFactory = Factory.define('serializedWorkshop')

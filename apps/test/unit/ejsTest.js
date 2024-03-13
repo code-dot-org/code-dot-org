@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../util/reconfiguredChai';
 // nonstandard EJS behavior we rely upon in our templates
 describe('ejs test', function () {

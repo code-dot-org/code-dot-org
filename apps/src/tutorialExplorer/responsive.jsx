@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* A very simple responsive layout system.
  */
 import $ from 'jquery';

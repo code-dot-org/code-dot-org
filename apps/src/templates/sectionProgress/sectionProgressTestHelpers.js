@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
 import sectionProgress, {
   addDataByUnit,

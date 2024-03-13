@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux actions and reducer for the Error Dialog Stack component */
 var REPORT_ERROR = 'ErrorDialogStack/REPORT_ERROR';
 var DISMISS_ERROR = 'ErrorDialogStack/DISMISS_ERROR';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {EventEmitter} from 'events';
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 

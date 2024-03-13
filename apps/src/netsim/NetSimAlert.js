@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Controller for creating growl-style Bootstrap alerts
  */

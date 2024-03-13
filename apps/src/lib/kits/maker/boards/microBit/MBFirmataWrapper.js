@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 import {SAMPLE_INTERVAL} from './MicroBitConstants';
 import {isWebSerialPort} from '../../util/boardUtils';

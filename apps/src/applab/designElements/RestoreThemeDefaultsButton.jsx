@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import commonStyles from '../../commonStyles';

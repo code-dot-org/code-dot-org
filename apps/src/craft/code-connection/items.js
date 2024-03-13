@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const MEDIA_URL = '/blockly/media/craft/Icons/';
 
 export default Object.freeze({

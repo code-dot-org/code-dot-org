@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Adds carousel functionality to code.org/csd
 
 // This installs the Swiper library WebComponent.

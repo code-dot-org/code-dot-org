@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Music Lab specific validations.
 
 import MusicPlayer from '../player/MusicPlayer';

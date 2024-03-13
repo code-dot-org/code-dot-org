@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {OverlayTrigger, Tooltip} from 'react-bootstrap-2';
 import React from 'react';
 import style from '@cdo/apps/templates/curriculumCatalog/curriculum_catalog_card.module.scss';

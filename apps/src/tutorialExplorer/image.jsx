@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Simple img replacement that fades in upon load.
  * Based on http://buildwithreact.com/article/fade-in-image-recipe

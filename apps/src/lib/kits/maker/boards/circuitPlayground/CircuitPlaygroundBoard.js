@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Board controller for Adafruit Circuit Playground */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser

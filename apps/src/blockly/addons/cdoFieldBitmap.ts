@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {FieldBitmap} from '@blockly/field-bitmap';
 import {commonI18n} from '@cdo/apps/types/locale';
 

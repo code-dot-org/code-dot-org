@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @overview a button which shows a spinner while an operation is pending */
 import FontAwesome from './FontAwesome';
 import PropTypes from 'prop-types';

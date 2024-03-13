@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {testApplabConsoleOutput} from '../../util/levelTestHelpers';
 import {TestResults} from '@cdo/apps/constants';
 

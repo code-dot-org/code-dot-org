@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This duck module tracks whether the current app's run state.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Possible sizes for most(!) of Design System components
  */

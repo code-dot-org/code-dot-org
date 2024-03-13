@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A simple wrapper for the react-dom-confetti Confetti component, which
  * simulates the confetti being tossed up from behind the containing element,

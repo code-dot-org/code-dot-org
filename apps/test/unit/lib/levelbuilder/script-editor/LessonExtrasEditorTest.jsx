@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from 'chai';
 import React from 'react';
 import {mount} from 'enzyme';

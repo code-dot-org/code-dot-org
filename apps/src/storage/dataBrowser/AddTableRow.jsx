@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';

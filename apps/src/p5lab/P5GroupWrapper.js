@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var jsInterpreter;
 
 module.exports.injectJSInterpreter = function (jsi) {

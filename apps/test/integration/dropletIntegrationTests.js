@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert, expect} from '../util/reconfiguredChai';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {

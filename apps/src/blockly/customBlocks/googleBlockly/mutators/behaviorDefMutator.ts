@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Most of this logic is copied from `procedureDefMutator` from @blockly/block-shareable-procedures.
  * As in our local copy of `procedureDefMutator`, the compose() and decompose() methods

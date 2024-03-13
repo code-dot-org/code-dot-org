@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 //When a user right-clicks (or long presses) on a block or workspace, a context menu
 // with additional actions is shown. We configure this context menu to show
 // additional options or to remove some default options.

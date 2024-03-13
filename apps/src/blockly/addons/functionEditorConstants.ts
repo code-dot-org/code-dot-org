@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const MODAL_EDITOR_CONTAINER_ID = 'modalFunctionEditorContainer';
 export const MODAL_EDITOR_ID = 'modalFunctionEditor';
 export const MODAL_EDITOR_CLOSE_ID = 'closeModalFunctionEditor';

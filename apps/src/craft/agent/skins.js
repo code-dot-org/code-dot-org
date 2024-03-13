@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import skinsBase from '../../skins';
 import Craft from './craft.js';
 

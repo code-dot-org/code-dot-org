@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Main entry file for the publicKeyCryptography bundle, used by the
  *        Public Key Cryptography widget levels. */
 import React from 'react';

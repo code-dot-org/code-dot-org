@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import {navigateToHref} from '@cdo/apps/utils';
 import {TeacherDashboardPath} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {useRef, useEffect} from 'react';
 
 // This function is taken from the react docs as a way to mimic common componentDidMount logic

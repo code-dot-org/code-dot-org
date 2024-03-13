@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import queryString from 'query-string';
 
 // Provide methods that allow tests to mock window.location

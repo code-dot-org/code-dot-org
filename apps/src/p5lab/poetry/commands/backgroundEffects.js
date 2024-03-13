@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as utils from './utils';
 import {PALETTES} from '../constants';
 import {APP_WIDTH, APP_HEIGHT} from '../../constants';

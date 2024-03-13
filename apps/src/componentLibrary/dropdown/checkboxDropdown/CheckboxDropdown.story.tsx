@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, useCallback} from 'react';
 import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 import {Meta, Story} from '@storybook/react';

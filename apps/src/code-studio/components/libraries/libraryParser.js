@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getFunctionsAndMetadata} from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 /**

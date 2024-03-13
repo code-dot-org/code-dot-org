@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // we use module.exports instead of export default to make this compatible with
 // node.js
 module.exports = class CustomMarshaler {

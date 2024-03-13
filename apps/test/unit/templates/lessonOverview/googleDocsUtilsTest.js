@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../../util/reconfiguredChai';
 import * as utils from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
 const {isGDocsUrl, gDocsBaseUrl, gDocsPdfUrl, gDocsMsOfficeUrl, gDocsCopyUrl} =

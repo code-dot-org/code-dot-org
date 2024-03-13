@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import loadGamelab from '@cdo/apps/sites/studio/pages/init/loadGamelab';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   HIDDEN_VALUE,
   RANDOM_VALUE,

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import loadNetSim from './init/loadNetSim';
 import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
 

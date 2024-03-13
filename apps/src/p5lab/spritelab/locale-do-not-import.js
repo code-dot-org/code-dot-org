@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for Spritelab
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

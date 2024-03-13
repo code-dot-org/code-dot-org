@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';

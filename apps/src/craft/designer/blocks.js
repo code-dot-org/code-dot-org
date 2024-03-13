@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const i18n = require('../locale');
 import {singleton as studioApp} from '../../StudioApp';
 import {stripQuotes} from '../../utils';

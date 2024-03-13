@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * ProjectManager manages loading and saving projects that have a source
  * and channel component, and are indexed on a channel id (or other unique identifier).

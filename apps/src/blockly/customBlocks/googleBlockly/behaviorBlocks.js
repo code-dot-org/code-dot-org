@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 import {nameComparator} from '@cdo/apps/util/sort';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This is a _very_ thin convenience wrapper around react-loading-skeleton
 // to workaround an import issue and to also import the required css file.
 

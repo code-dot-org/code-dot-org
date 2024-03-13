@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file P5 Lab constants */
 var utils = require('@cdo/apps/utils');
 

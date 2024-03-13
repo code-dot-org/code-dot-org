@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Common helper functions for procedure and behavior mutators.
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import msg from '@cdo/locale';

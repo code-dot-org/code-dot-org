@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var utils = require('../utils');
 var _ = require('lodash');
 var Token = require('./token');

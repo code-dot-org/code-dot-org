@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Input fields specific to the cryptography widget */
 import _ from 'lodash';
 import PropTypes from 'prop-types';

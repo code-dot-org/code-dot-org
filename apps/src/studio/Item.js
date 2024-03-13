@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Collidable from './collidable';
 import * as constants from './constants';
 import _ from 'lodash';

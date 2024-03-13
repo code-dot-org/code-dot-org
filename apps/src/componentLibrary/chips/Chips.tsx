@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import uniq from 'lodash/uniq';
 import classNames from 'classnames';

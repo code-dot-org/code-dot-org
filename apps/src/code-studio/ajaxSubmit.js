@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 
 module.exports = function ajaxSubmit(form_selector) {

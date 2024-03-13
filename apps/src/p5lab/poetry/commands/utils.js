@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {PALETTES} from '../constants';
 import {randomInt, randomColor, randomColorFromPalette} from '../../utils';
 

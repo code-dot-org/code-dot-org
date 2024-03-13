@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const testLessons = [
   {
     id: 1,

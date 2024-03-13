@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Maker Board setup checker */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';

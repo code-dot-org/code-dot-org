@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly, {Connection} from 'blockly/core';
 import {customConnectionBlockTypes} from './cdoConstants';
 

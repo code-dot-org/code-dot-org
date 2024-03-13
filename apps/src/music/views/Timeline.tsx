@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {MouseEvent, useCallback, useRef} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';

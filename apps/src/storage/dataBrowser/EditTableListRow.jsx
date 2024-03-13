@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import {DataView} from '../constants';
 import EditLink from './EditLink';

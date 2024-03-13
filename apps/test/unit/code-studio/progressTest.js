@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test of progress.js. */
 
 import assert from 'assert';

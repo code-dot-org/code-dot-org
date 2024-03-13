@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState} from 'react';
 import $ from 'jquery';
 import PropTypes from 'prop-types';

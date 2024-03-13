@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Router node simulation entity.  Also contains logic for the
  *           auto-DNS system.

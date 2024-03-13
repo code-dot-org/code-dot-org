@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import fontConstants from '@cdo/apps/fontConstants';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';

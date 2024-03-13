@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Redux reducer for data mode in App Lab.
  * @see http://redux.js.org/docs/basics/Reducers.html

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {parseElement, serialize} from '../../xml';
 
 export function convertBlocksXml(xmlString) {

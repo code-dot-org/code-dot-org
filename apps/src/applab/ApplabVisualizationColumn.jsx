@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import * as color from '../util/color';

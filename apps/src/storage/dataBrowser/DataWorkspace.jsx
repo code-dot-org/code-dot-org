@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ApplabInterfaceMode} from '../../applab/constants';
 import {DataView} from '../constants';
 import DataOverview from './DataOverview';

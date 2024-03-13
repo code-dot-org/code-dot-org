@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for studio
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

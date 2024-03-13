@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A TypeScript wrapper for the AichatLocale object which casts
  * it to the {@link Locale} type.

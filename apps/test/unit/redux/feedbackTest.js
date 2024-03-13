@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import reducer, * as feedback from '@cdo/apps/redux/feedback';
 import {expect} from '../../util/reconfiguredChai';
 

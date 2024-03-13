@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getChatCompletionMessage} from '@cdo/apps/aichat/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {

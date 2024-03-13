@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Blocks specific to Planter
  */

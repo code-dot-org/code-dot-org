@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {CsaViewMode} from './constants';
 
 // Get the default file contents for a given filename and viewMode.

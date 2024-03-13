@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import * as redux from '@cdo/apps/redux';
 import {init, fixPath} from '@cdo/apps/assetManagement/assetPrefix';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Dropdown for theme selection that shows sample icons of what
 // each theme will look like
 import PropTypes from 'prop-types';

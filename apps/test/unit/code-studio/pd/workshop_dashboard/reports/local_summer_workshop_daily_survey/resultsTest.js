@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from 'chai';
 import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/local_summer_workshop_daily_survey/results';
 import {mount} from 'enzyme';

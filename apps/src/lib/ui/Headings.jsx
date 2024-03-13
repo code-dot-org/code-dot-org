@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Reusable heading components for the 2017 dashboard redesign */
 import PropTypes from 'prop-types';
 

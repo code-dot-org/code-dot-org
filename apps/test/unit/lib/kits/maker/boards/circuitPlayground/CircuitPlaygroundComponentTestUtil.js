@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Exports a set of tests that verify  that the Circuit Playground board
  * components and component constructors are available from the interpreter

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {Button, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';

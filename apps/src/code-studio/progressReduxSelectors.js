@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Selectors and related helpers for progressRedux. These are in their own file
 // because they are quite complex and progressRedux.js is already quite large.
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Block} from 'blockly';
 import {BlocklyWrapperType} from '../types';
 import {VARIABLE_BLOCK_TYPES} from '../constants';

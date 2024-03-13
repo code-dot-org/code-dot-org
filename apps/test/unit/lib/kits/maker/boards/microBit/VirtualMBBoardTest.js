@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 import VirtualMBBoard from '@cdo/apps/lib/kits/maker/boards/VirtualMBBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';

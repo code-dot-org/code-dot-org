@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly from 'blockly/core';
 import DarkTheme from '@blockly/theme-dark';
 import fontConstants from '@cdo/apps/fontConstants';

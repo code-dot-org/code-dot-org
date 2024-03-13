@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly from 'blockly/core';
 
 export default class CdoFieldImage extends GoogleBlockly.FieldImage {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {assert} from '../../../../util/reconfiguredChai';
 import {UnconnectedMiniView as MiniView} from '@cdo/apps/code-studio/components/progress/MiniView';

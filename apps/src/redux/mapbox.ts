@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 export interface MapboxState {

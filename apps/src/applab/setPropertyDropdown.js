@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This file manages logic for the dropdown used in our setProperty block
  */

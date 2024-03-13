@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const cspStandards = [
   {
     frameworkName: 'CSP Conceptual Framework',

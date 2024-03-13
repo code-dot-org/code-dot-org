@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 import classNames from 'classnames';
 import styles from './patternPanel.module.scss';

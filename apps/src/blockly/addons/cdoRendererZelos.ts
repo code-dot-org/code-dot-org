@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly from 'blockly/core';
 import CdoPathObject from './cdoPathObjectZelos';
 import {BlockStyle} from 'blockly/core/theme';

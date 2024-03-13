@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedProgressBubbleSet as ProgressBubbleSet} from './ProgressBubbleSet';
 import {fakeLevels, fakeLevel} from './progressTestHelpers';

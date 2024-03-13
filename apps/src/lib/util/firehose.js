@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
 import {

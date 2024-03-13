@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';

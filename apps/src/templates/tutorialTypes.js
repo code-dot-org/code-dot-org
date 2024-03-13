@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const tutorialTypes = [
   'applab',
   'dance',

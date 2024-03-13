@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {SinonStub} from 'sinon';
 
 /** Utility type for a stubbed sinon function */

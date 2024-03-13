@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file controls below an animation thumbnail */
 import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports

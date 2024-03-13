@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {shallow} from 'enzyme';
 import AllCodeDocs from '@cdo/apps/lib/levelbuilder/code-docs-editor/AllCodeDocs';

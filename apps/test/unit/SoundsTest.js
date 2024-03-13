@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../util/reconfiguredChai';
 import Sounds from '@cdo/apps/Sounds';
 import sinon from 'sinon';

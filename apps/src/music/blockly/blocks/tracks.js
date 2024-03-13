@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlockTypes} from '../blockTypes';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,

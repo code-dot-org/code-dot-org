@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Block} from 'blockly';
 import {BlockColors} from '../constants';
 

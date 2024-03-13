@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const globalFunctions = {
   randomNumber(min, max) {
     if (typeof max === 'undefined') {

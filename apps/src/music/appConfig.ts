@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {BlockMode, baseAssetUrl} from './constants';
 

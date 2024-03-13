@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Wrapper around Google Charts API chart-drawing features
  *

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';

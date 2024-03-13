@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly, {Block, FieldConfig, WorkspaceSvg} from 'blockly/core';
 import CdoBlockFlyout from './cdoBlockFlyout';
 

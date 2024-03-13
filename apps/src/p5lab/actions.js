@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlockTypes} from '../blockTypes';
 import musicI18n from '../../locale';
 import {fieldTriggerDefinition} from '../fields';

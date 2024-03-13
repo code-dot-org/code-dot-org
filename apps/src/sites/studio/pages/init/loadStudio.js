@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 import Studio from '@cdo/apps/studio/studio';
 window.Studio = Studio;

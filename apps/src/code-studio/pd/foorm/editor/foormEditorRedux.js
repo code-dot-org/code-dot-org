@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_HAS_LINT_ERROR = 'foormEditor/SET_HAS_LINT_ERROR';

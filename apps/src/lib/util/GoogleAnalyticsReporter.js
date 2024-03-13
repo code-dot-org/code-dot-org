@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 window.dataLayer = window.dataLayer || [];
 
 /**

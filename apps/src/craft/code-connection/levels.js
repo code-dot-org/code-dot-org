@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createToolbox} from '../../block_utils';
 
 function craftBlock(type, children = '') {

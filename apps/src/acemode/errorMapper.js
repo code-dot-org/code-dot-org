@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var errorMap = [
   {
     original: /Assignment in conditional expression/,

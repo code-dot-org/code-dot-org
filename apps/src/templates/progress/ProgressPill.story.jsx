@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedProgressPill as ProgressPill} from './ProgressPill';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';

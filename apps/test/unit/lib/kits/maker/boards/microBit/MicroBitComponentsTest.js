@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file MicroBit Component setup tests */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for clientState.js */
 
 var assert = require('assert');

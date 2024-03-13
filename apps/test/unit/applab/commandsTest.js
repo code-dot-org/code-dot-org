@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';

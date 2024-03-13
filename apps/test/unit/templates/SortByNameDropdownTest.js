@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import React from 'react';
 import {mount} from 'enzyme';

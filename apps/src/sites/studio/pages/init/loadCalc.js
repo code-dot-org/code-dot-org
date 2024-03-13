@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 import Calc from '@cdo/apps/calc/calc';
 window.Calc = Calc;

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Dance Party song titles mapped to the artist's Twitter handle to use in the
  * <ShareDialog/> share links. Not all songs are available in all environments.

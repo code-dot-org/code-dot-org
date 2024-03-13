@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import $ from 'jquery';

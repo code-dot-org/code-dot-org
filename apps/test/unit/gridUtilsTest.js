@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../util/reconfiguredChai';
 
 var gridUtils = require('@cdo/apps/applab/gridUtils');

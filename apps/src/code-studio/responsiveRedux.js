@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {makeEnum} from '@cdo/apps/utils';
 
 const SET_RESPONSIVE_SIZE = 'responsive/SET_RESPONSIVE_SIZE';

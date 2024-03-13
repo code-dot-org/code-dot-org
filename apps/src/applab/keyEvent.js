@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Table provided by https://www.jabcreations.com/blog/polyfill-for-event.key
 
 export default {

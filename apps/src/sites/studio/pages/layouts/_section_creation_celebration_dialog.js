@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionCreationCelebrationDialog from '@cdo/apps/templates/sectionsRefresh/SectionCreationCelebrationDialog';

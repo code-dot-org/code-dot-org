@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const commands = {
   locationAt(x, y) {
     return {x: x, y: 400 - y};

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {tiles, MazeController} from '@code-dot-org/maze';
 const Slider = require('@cdo/apps/slider');
 const Direction = tiles.Direction;

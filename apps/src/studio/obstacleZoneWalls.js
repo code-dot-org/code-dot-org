@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Walls from './walls';
 
 export default class ObstacleZoneWalls extends Walls {

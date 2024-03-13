@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Renders error dialogs in sequence, given a stack of errors */
 import PropTypes from 'prop-types';
 import React from 'react';

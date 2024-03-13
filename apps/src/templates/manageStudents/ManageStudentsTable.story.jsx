@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';

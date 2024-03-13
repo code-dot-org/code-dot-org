@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {ComponentStory} from '@storybook/react';
 import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/lti/upgrade/LtiUpgradeAccountDialog';

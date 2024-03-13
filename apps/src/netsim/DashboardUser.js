@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Interface to dashboard user data API.
  */

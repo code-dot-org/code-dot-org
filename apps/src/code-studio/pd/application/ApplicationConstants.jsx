@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const YES = 'Yes';
 const NO = 'No';
 const NONE = 'None';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @overview Component for adding a key/value pair row. */
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';

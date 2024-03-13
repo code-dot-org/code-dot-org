@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import React from 'react';

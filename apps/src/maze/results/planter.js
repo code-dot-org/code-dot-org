@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ResultsHandler from './resultsHandler';
 import mazeMsg from '../locale';
 import {TestResults} from '../../constants.js';

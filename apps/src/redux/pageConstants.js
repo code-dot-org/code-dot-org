@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var _ = require('lodash');
 
 var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';

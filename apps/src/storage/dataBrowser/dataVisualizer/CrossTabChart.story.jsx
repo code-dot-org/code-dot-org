@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import CrossTabChart from './CrossTabChart';
 import _ from 'lodash';

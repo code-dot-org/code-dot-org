@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const GDOCS_HOST = 'docs.google.com';
 const GDOCS_URL_REGEX =
   /^https?:\/\/docs\.google\.com\/(document|presentation)\/d\/([\w-]+)/;

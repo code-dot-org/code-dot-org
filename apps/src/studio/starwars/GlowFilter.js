@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Filter that adds a white glowing outline to an image. */
 
 import '@cdo/apps/utils'; // Provides Function.prototype.inherits

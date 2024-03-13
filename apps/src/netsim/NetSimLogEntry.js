@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Simulation entity for router log entries.
  */

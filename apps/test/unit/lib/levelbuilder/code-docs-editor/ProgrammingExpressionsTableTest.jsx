@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';

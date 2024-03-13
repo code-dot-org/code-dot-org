@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
 import {BaseDialogProps} from './DialogManager';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /*
  * Contains firehose tracking for buttons on the student privacy page.
  */

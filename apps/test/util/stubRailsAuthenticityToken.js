@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 

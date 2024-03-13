@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var evalUtils = require('./evalUtils');
 
 var EvalImage = function (style, color) {

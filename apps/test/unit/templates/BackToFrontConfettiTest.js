@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 import React from 'react';

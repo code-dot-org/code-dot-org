@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Helper function to pull json data off of script tags.
  *

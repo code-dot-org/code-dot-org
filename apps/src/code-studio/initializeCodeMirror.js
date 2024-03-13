@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Function that initializes a CodeMirror editor in place of a textarea.
  */

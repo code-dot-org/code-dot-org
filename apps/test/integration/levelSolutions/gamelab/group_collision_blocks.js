@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 

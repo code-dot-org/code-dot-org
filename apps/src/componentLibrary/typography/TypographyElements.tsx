@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import Typography from './Typography';
 import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React from 'react';
 import PopUpMenu from '../../lib/ui/PopUpMenu';

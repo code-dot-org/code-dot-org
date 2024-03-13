@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
 export const SENSOR_CHANNELS = {

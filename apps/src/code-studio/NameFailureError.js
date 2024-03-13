@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @param {string} nameFailure
  * @constructor

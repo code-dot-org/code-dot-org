@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Facilitator bio as used on the workshop enrollment form
  */

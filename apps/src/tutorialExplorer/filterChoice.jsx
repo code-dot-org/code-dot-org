@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* FilterChoice: An individual filter choice inside a filter group, for the search area in TutorialExplorer.
  * Contains a checkbox and text describing that choice.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert, expect} from 'chai';
 import Multi from '@cdo/apps/code-studio/levels/multi';
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';

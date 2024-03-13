@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 module.exports = {
   WORKSPACE_BUFFER: 20,
   WORKSPACE_COL_WIDTH: 210,

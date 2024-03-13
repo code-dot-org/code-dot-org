@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 function isMobile() {
   return 'ontouchstart' in document.documentElement;
 }

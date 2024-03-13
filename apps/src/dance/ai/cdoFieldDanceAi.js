@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';

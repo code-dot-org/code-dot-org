@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Global singleton used to simplify certain cross-cutting concerns,
  *           including:

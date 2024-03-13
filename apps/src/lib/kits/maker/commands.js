@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Maker commands (invoked by Applab/Gamelab.executeCmd) */
 import {
   apiValidateType,

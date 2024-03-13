@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {commonI18n} from '@cdo/apps/types/locale';
 import {frameSizes} from './cdoConstants';
 import SvgFrame from './svgFrame';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {FieldDropdown} from 'blockly';
 
 // The keys are English-only (eg, "blooming_petals"),

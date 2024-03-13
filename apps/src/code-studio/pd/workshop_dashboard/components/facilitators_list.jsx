@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * List of facilitators for display in the workshop summary.
  */

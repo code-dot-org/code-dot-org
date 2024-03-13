@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for weblab
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

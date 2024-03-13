@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {Provider} from 'react-redux';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';

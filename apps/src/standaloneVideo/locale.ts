@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A TypeScript wrapper for the StandaloneVideolocale object which casts
  * it to the {@link StandaloneVideoLocale} type.

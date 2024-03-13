@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from 'chai';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import React from 'react';
 import {shallow, mount} from 'enzyme';

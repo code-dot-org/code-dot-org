@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const OPEN_DIALOG = 'instructionsDialog/OPEN_DIALOG';
 const CLOSE_DIALOG = 'instructionsDialog/CLOSE_DIALOG';
 

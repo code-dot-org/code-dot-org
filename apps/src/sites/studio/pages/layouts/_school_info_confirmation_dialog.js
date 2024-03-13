@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Renders the SchoolInfoConfirmationDialog component on page load.
  * This file is responsibile for mounting and unmounting the React component,

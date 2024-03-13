@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {asyncRun} from './pyodideWorkerManager';
 
 export async function runPythonCode(code: string) {

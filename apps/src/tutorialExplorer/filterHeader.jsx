@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* FilterHeader: A header that can contain a back button, a "Filter by", a
  * count of tutorials, and maybe show/hide buttons.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for App Lab redux module */
 import {expect, assert} from '../../../util/reconfiguredChai';
 import {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import i18n from '@cdo/locale';
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
 import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';

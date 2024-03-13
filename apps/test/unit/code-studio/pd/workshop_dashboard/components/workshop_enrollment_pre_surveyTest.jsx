@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import WorkshopEnrollmentPreSurvey from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_pre_survey';
 import React from 'react';
 import {shallow} from 'enzyme';

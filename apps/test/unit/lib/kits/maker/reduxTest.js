@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for Maker Toolkit redux module */
 import {expect} from '../../../../util/reconfiguredChai';
 import {createStore, combineReducers} from 'redux';

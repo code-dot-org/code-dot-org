@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Sound from './Sound';
 import _ from 'lodash';
 

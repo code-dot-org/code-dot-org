@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import loadFlappy from './init/loadFlappy';
 import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
 

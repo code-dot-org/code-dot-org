@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useContext} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './panelContainer.module.scss';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ResourceCard from './ResourceCard';
 import {Provider} from 'react-redux';

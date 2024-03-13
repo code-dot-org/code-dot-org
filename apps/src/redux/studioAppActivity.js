@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_START_IDLE = 'studioAppActivity/SET_START_IDLE';
 const SET_END_IDLE = 'studioAppActivity/SET_END_IDLE';
 const RESET_IDLE_TIME = 'studioAppActivity/RESET_IDLE_TIME';

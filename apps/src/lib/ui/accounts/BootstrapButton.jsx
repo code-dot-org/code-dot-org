@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This component is a simple wrapper for buttons that need to be styled to match
  * old Bootstrap-style buttons. At the time of writing, this should only be used

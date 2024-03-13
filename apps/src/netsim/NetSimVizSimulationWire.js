@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Wires in the visualization that map to simulation entities.
  */

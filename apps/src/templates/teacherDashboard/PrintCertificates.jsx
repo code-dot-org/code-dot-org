@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';

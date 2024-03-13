@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 

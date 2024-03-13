@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as Survey from 'survey-react';
 import PropTypes from 'prop-types';
 import React from 'react';

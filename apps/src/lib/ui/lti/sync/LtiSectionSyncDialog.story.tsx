@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 import {ComponentStory} from '@storybook/react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TestResults} from '@cdo/apps/constants';
 var Calc = require('@cdo/apps/calc/calc.js');
 var EquationSet = require('@cdo/apps/calc/equationSet.js');

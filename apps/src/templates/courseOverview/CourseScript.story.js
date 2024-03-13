@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import Immutable from 'immutable';
 import {UnconnectedCourseScript as CourseScript} from './CourseScript';

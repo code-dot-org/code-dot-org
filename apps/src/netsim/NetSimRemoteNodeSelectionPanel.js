@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Lobby table UI component.
  * @see NetSimLobby for usage.

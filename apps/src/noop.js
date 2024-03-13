@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * There are some cases (i.e. playground-io's repl), where third party modules
  * include a bunch of modules that we don't want to end up in our webpack bundle

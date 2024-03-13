@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for NetSimRouterLogModal */
 import $ from 'jquery';
 import {assert, expect} from '../../util/reconfiguredChai';

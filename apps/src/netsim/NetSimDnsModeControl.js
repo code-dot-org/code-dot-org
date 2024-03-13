@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI component used to select a DNS mode at runtime.
  */

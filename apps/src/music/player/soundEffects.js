@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This class generates various sound effects, and can insert them into
 // an existing Web Audio graph.  It pre-generates busses for all
 // possible combinations of more expensive sound effects, so that any

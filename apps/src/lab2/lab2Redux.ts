@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This is not yet a complete store for lab-related state, but it can
 // be used to hold lab-specific information that is not available in any
 // other existing redux store.  It also holds useful state for newer labs

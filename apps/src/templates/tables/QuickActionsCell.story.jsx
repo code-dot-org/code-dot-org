@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import QuickActionsCell from './QuickActionsCell';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 exports.addReadyListener = function (callback) {
   if (document.readyState === 'complete') {
     setTimeout(callback, 1);

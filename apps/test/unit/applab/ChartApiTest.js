@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../util/reconfiguredChai';
 var ChartApi = require('@cdo/apps/applab/ChartApi');
 var GoogleChart = require('@cdo/apps/applab/GoogleChart');

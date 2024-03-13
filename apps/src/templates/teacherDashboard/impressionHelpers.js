@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import firehoseClient from '../../lib/util/firehose';
 
 export function recordImpression(study_group) {

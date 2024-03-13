@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const DisplayTheme = {
   LIGHT: 'light',
   DARK: 'dark',

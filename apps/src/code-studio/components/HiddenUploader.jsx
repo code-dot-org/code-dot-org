@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Hidden file input with interface for handling uploads. */
 import $ from 'jquery';
 import PropTypes from 'prop-types';

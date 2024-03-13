@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // TODO: Ideally this type would only contain keys present in
 // translated string JSON files (ex. apps/i18n/standaloneVideo/en_us.json).
 // However, this requires depending on files outside of apps/src,

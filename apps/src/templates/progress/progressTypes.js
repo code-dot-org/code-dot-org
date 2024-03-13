@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 

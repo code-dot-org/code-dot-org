@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A React component for our JavaScript debugger UI. Returns a connected component
  * so this can only be used in cases where we have a redux store.

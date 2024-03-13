@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';

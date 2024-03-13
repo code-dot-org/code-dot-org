@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';

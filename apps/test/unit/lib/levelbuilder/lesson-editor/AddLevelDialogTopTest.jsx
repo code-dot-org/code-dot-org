@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';

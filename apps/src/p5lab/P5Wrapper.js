@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './redux/animationList';
 import p5 from '@code-dot-org/p5';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import {themeOptions, DEFAULT_THEME_INDEX} from '@cdo/apps/applab/constants';

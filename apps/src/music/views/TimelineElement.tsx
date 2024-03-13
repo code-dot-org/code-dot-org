@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './timeline.module.scss';

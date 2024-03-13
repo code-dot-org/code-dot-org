@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test of Log Browser Filters component. */
 import _ from 'lodash';
 import React from 'react';

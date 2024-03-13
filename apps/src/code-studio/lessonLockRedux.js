@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Reducer and actions for lesson lock info. This includes the teacher panel on
  * the course overview page, and the lesson locking dialog.

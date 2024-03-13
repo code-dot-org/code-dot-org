@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Configuration and management for rendering Lab views in Lab2, based on the
  * currently active Lab (determined by the current app name). This

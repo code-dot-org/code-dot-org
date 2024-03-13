@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {linter, Diagnostic} from '@codemirror/lint';
 import {HTMLHint} from 'htmlhint';
 import {Ruleset} from 'htmlhint/types';

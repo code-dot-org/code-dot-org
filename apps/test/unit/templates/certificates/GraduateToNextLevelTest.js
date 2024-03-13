@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import React from 'react';
 import {isolateComponent} from 'isolate-react';

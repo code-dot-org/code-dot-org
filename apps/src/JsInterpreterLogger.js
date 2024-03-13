@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Observes a JSInterpreter and logs to the designated browser console. */
 var Observer = require('./Observer');
 

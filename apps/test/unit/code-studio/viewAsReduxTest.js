@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from 'chai';
 import sinon, {stub} from 'sinon';
 import reducer, {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Arranges child components as columns of equal width, filling available space */
 import PropTypes from 'prop-types';
 import React from 'react';

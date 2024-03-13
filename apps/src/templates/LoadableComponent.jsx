@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';

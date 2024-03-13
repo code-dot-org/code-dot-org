@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {AiEmojiItem} from '../types';
 
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';

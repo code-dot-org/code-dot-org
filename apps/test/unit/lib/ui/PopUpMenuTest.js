@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test PopUpMenu component */
 import React from 'react';
 import sinon from 'sinon';

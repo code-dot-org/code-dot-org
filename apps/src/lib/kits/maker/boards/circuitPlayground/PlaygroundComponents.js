@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Utilities for initializing Circuit Playground board components with APIs
  * conforming to Maker API droplet blocks.

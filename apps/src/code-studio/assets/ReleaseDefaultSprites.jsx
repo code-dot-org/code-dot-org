@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';

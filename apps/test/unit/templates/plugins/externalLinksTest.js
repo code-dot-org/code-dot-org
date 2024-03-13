@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../../util/reconfiguredChai';
 import {isExternalLink} from '@cdo/apps/templates/plugins/externalLinks';
 

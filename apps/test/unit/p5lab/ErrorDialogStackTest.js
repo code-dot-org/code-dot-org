@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
 import {expect} from '../../util/reconfiguredChai';
 import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';

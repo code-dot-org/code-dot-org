@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // A small helper class that accumulates satisfied conditions, and then evaluates
 // whether a set of conditions have all been satisfied.  Unknown conditions are
 // skipped.  The accumulated satisfied conditions can be cleared at any time.

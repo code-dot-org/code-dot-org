@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This installs the Swiper library WebComponent for use across code.org.
 // See docs here: https://swiperjs.com/swiper-api#web-component.
 // Use this implementation when there is one carousel on the page —

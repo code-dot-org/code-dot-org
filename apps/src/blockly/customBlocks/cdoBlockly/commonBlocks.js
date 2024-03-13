@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Defines blocks useful in multiple blockly apps
  */

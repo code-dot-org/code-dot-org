@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview helper class to manage the state of the Authored Hint UI.
  * Used exclusively by StudioApp.

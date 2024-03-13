@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const studioApp = require('../../StudioApp').singleton;
 
 import ResultsHandler from './resultsHandler';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* ToggleAllTutorialsButton: A button shown for non-en users which allows them
  * to show/hide the set of all tutorials and filters for all languages.
  */

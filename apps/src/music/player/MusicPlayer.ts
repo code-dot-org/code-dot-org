@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';

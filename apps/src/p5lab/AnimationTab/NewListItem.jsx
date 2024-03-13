@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** List item placeholder for adding a new item */
 import React from 'react';
 import PropTypes from 'prop-types';

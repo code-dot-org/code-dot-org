@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This file contains constants that are used across the component library
  */

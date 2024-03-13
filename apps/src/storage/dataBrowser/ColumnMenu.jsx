@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Component for the dropdown menu and icon in the column header.
  */

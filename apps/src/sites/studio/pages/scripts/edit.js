@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file JavaScript run only on the /s/:script_name/edit page. */
 
 import React from 'react';

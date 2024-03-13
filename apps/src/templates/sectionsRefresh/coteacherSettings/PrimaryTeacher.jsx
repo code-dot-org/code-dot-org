@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import styles from './coteacher-settings.module.scss';

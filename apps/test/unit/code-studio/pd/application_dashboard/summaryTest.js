@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {shallow} from 'enzyme';
 import {Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {darkMode} from '@cdo/apps/lab2/views/components/editor/editorThemes';
 import {python} from '@codemirror/lang-python';

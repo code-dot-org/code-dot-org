@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* filterGroupHeaderSelection: A horizontal selection of filters for a given
  * filter group, shown in the header on desktop widths.
  */

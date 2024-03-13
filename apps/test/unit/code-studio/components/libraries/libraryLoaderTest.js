@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../../util/reconfiguredChai';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import sinon from 'sinon';

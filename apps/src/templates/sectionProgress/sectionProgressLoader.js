@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ViewType} from './sectionProgressConstants';
 import {
   startLoadingProgress,

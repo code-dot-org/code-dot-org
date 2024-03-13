@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A utility for retrieving the Rails authenticity token, needed for certain
  * requests made to dashboard. On some pages, this is passed down as part of the

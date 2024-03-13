@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Helper for converting a string boolean ('true' or 'false') to a boolean.
 // However, if an actual boolean is passed in, it's returned directly.
 // If undefined is passed in, then the provided defaultValue is returned.

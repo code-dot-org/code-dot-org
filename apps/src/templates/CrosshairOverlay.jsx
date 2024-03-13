@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Crosshair and guides over visualization */
 import PropTypes from 'prop-types';
 import React from 'react';

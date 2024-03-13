@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as api from '@cdo/apps/applab/api';
 
 export let aiConfig = {

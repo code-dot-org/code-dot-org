@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /*
  * Removes the parent email from the student's account.
  */

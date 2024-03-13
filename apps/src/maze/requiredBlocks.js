@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var requiredBlockUtils = require('../required_block_utils');
 
 var MOVE_FORWARD = {test: 'moveForward', type: 'maze_moveForward'};

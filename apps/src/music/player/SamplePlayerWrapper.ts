@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {DEFAULT_BEATS_PER_MEASURE, DEFAULT_BPM} from '../constants';
 import {SoundLoadCallbacks} from '../types';
 import SamplePlayer from './SamplePlayer';

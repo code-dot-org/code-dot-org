@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.

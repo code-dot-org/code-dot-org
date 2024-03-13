@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import dom from '@cdo/apps/dom';
 import gameLabDPadHtmlEjs from '@cdo/apps/templates/gameLabDPad.html.ejs';
 import {GAMELAB_DPAD_CONTAINER_ID} from './constants';

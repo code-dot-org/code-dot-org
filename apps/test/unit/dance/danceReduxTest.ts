@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createStore} from '../../util/redux';
 import {expect} from '../../util/reconfiguredChai';
 import {

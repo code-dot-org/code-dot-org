@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Vertical scrolling list */
 import React from 'react';
 import PropTypes from 'prop-types';

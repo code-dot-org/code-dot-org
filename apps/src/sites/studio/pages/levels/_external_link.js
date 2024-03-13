@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {processResults} from '@cdo/apps/code-studio/levels/dialogHelper';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';

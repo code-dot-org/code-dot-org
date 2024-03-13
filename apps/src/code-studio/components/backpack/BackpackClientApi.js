@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
 
 const REQUEST_RETRY_COUNT = 1;

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Global TypeScript definitions
 // These are types that do not rely on any external imports. If you
 // need to import to declare a type, add to GlobalsModule.d.ts instead.

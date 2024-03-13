@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.  Includes the TutorialExplorer React class.

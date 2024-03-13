@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Extended error type returned for failed interactions with NetSim
  * server API (net_sim_api.rb) that extracts and exposes additional error info.

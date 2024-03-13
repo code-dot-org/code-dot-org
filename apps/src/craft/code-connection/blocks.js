@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var i18n = require('../locale');
 import items from './items';
 

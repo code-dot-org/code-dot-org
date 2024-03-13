@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * DatePicker control.
  * It's basically a wrapper around react-datepicker (with limited props) that displays

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useMemo} from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

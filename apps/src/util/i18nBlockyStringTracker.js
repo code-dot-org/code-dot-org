@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import experiments from '@cdo/apps/util/experiments';
 import {getI18nStringTrackerWorker} from '@cdo/apps/util/i18nStringTrackerWorker';
 

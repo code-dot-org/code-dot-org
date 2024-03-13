@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // We have to include the locale files below as translations must be loaded in the global
 // scope for HeadlessChrome to run properly.
 import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars

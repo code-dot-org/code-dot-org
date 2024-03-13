@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Emotions} from './constants';
 import msg from './locale';
 import {extend} from '../utils';

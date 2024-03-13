@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import zip from 'lodash/zip';
 import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, useEffect, forwardRef} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';

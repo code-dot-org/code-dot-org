@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import ResourceCard from '../studioHomepages/ResourceCard';
 import i18n from '@cdo/locale';

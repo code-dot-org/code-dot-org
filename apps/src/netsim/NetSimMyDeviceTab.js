@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI controller for the "My Device" tab in the left column.
  */

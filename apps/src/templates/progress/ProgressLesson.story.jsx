@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';

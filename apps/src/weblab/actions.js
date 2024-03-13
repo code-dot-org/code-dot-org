@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux action-creators for WebLab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import {getStore} from '@cdo/apps/redux';

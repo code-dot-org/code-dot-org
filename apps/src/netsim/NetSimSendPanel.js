@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI controller for the send panel (the bottom panel on the right)
  *           which is used to transmit packets.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Panels
 //
 // This is a React client for a panels level.  Note that this is

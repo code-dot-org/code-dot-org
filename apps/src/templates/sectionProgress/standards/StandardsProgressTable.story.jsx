@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedStandardsProgressTable as StandardsProgressTable} from './StandardsProgressTable';
 import {standardsData, lessonCompletedByStandard} from './standardsTestHelpers';

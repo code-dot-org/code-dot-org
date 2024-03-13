@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   REQUEST_LOCATION,
   CANCEL_LOCATION_SELECTION,

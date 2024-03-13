@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Dropdown for admins to select which
  * RegionalPartner's applications to view

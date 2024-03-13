@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {commands as actionCommands} from './actionCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import {commands as criterionCommands} from './criterionCommands';

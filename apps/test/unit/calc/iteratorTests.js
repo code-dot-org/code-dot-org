@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../util/reconfiguredChai';
 
 var InputIterator = require('@cdo/apps/calc/inputIterator');

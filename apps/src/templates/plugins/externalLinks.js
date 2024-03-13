@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Open external links in a new tab.
  */

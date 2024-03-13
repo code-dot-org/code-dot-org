@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Component for editing the name of a project.
  */

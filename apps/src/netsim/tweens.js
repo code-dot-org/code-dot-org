@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Tween functions used to animate visualization elements.
  */

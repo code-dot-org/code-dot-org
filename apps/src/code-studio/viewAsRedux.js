@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Reducer for tracking whether we're currently viewing the page as a participant
  * or as a instructor

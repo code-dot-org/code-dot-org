@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';

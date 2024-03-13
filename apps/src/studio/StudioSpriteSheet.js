@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file A utility that can help find particular frames within a spritesheet,
  * given certain metadata about that spritesheet */
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {makeEnum} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TestResults} from '@cdo/apps/constants';
 import blockUtils from '@cdo/apps/block_utils';
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 import Eval from '@cdo/apps/eval/eval';
 window.Eval = Eval;

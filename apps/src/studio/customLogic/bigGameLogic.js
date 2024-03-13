@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import CustomGameLogic from './customGameLogic';
 import {valueOr} from '@cdo/apps/utils';
 import {Direction, Position} from '../constants';

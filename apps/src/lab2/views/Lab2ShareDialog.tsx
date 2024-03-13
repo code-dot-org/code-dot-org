@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ShareDialog from '@cdo/apps/code-studio/components/ShareDialog';
 import React from 'react';
 import {useSelector} from 'react-redux';

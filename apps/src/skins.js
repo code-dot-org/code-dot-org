@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function (assetUrl, id) {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import testImageAccess from '../code-studio/url_test';
 
 // forcePlayer can be "youtube", "fallback", or false if we just want to

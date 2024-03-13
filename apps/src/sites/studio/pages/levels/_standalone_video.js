@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';

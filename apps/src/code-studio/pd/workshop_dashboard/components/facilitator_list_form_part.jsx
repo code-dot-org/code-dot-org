@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Dynamic list of facilitator select controls for creating & editing workshops.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const JavalabEditorDialog = {
   RENAME_FILE: 'RENAME_FILE',
   DELETE_FILE: 'DELETE_FILE',

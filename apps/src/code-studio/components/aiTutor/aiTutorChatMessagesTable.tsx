@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useState} from 'react';
 import {fetchStudentChatMessages} from '@cdo/apps/aiTutor/interactionsApi';
 import AITutorChatMessagesTableRow from './aiTutorChatMessageTableRow';

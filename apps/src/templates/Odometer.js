@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Motion, spring} from 'react-motion';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';

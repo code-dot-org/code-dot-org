@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import trackEvent from '../util/trackEvent';
 import {
   getChannelIdFromUrl,

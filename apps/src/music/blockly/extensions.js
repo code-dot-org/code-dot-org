@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlockTypes} from './blockTypes';
 import {
   EXTRA_SOUND_INPUT_PREFIX,

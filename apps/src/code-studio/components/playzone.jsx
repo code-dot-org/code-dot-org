@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview React for the End-of-Lesson Experience
  */

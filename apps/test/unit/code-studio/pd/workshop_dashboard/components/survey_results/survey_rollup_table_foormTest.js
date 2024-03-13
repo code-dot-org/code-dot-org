@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {expect} from 'chai';
 import SurveyRollupTableFoorm from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foorm';

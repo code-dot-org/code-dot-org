@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';

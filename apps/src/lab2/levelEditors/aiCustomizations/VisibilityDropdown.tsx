@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {AiCustomizations, Visibility} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
 import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';

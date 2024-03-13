@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {useState, useEffect} from 'react';
 
 const baseFetchState = {

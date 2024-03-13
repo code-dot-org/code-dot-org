@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // TODO: other channel properties mentioned in project.js:
 // level, frozen, hidden, thumbnailUrl, migratedToS3, sharedWith, libraryName, libraryDescription,
 // latestLibraryVersion, publishLibrary, libraryPublishedAt

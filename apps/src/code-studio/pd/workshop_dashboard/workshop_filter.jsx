@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Workshop Filter.
  * Route: /workshops/filter

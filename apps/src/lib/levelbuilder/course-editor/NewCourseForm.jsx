@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState} from 'react';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import PropTypes from 'prop-types';

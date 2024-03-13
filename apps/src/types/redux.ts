@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {JavalabConsoleState} from '@cdo/apps/javalab/redux/consoleRedux';
 import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
 import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_VERIFIED = 'verifiedInstructor/SET_VERIFIED';
 const SET_VERIFIED_RESOURCES = 'verifiedInstructor/SET_VERIFIED_RESOURCES';
 

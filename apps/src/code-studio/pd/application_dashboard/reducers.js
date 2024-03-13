@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_WORKSHOP_ADMIN_PERMISSION =
   'application_dashboard/SET_WORKSHOP_ADMIN_PERMISSION';
 const SET_LOCK_APPLICATION_PERMISSION =

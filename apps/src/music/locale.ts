@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A TypeScript wrapper for the Music Lab locale object which casts
  * it to the {@link Locale} type.

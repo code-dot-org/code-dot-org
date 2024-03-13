@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Workshop management buttons (view, edit, delete).
  */

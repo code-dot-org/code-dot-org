@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '@cdo/apps/code-studio/pd/components/confirmation_dialog';

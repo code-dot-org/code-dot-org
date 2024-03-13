@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Describes effects that can be applied to playback events.
  */

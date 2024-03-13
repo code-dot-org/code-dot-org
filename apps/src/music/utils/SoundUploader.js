@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export default class UniqueSounds {
   constructor(player) {
     this.player = player;

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const ENQUEUE_HINTS = 'authoredHints/ENQUEUE_HINTS';
 const SHOW_NEXT_HINT = 'authoredHints/SHOW_NEXT_HINT';
 const DISPLAY_MISSING_BLOCK_HINTS = 'authoredHints/DISPLAY_MISSING_BLOCK_HINTS';

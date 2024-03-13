@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Wrapper for an SVG filter definition with animation capabilities */
 
 import * as utils from '@cdo/apps/utils';

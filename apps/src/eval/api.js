@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var color = require('../util/color');
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Installs some default block stubs for use in tests
  * @param blockly

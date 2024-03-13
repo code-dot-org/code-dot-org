@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @fileoverview Utility functions related to processing thumbnail images
  * of code studio apps.

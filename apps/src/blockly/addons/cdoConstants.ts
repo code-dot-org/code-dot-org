@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlocklyWrapperType} from '@cdo/apps/blockly/types';
 
 export default function initializeCdoConstants(

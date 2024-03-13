@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Display and edit attendance for a workshop.
  * It has a tab for each session which lists all enrolled teachers and their status.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Load all .story.jsx files and render them with enzyme, checking for
 // render errors and other problems.
 import {

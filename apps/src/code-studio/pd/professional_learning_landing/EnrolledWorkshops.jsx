@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';

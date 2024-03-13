@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlockSvg, Workspace} from 'blockly';
 import {GeneratedEffect} from '../types';
 

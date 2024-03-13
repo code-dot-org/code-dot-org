@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const fakeTeacherSectionsForDropdown = [
   {
     name: 'Initally Selected Section',

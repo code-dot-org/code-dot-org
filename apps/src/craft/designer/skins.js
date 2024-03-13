@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var skinsBase = require('../../skins');
 
 exports.load = function (assetUrl, id) {

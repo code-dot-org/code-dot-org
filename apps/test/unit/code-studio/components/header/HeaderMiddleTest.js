@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var assert = require('assert');
 
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';

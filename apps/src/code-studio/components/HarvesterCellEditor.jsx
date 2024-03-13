@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview React component to allow for easy editing and creation of HarvesterCells
  * @see @code-dot-org/maze/src/harvesterCell

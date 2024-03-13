@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';

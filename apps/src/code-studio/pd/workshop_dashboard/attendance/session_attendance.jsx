@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../util/reconfiguredChai';
 
 // we have to include the base locale file so the craft-specific one will work,

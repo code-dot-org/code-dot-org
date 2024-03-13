@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A set of reducers that are used across all of our apps
  */

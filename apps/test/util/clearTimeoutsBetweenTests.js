@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file
  * We use this helper at the top-level of our test suite, in the entry points. For that reason

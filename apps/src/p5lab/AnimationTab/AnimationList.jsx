@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Vertical scrolling list of animation sequences */
 import PropTypes from 'prop-types';
 import React from 'react';

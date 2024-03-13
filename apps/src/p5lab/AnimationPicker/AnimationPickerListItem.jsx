@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file A clickable item in the scroll area of the animation picker */
 import PropTypes from 'prop-types';
 import React from 'react';

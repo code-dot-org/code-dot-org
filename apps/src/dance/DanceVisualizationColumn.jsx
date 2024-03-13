@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';

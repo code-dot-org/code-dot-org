@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import moduleStyles from '../views/toolbox.module.scss';
 import {BlockTypes} from './blockTypes';
 import {getBlockMode} from '../appConfig';

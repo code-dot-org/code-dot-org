@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const skinBase = require('../skins');
 const linePatterns = require('./linePatterns');
 

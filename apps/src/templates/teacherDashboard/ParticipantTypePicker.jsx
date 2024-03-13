@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * View shown to an instructor if they can create sections with different participant types
  * (students, teachers, facilitators). Allows user to pick participant type for this section

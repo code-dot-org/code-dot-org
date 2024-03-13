@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file
  * Wrapper for johnny-five Switch that changes which events it surfaces
  * to the rest of the system and how often they are fired.

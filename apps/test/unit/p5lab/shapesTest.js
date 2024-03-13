@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 import {expect} from '../../util/reconfiguredChai';
 

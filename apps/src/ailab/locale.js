@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for ailab
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

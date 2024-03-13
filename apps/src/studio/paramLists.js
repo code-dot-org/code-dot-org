@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var studioApp = require('../StudioApp').singleton;
 var utils = require('../utils');
 var _ = require('lodash');

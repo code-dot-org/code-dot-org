@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const DROPPABLE_ID_PREFIX = 'groupId';
 export const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 

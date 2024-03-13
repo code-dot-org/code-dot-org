@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const courseData = {
   title: 'My Course',
   link: '/courses/my-course',

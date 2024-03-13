@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Store feedback about the student's solution */
 
 const SHOW_FEEDBACK = 'feedback/show_feedback';

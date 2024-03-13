@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TypedUseSelectorHook, useSelector} from 'react-redux';
 import {MusicState} from '../redux/musicRedux';
 

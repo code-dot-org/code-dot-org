@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Topics we care about promoting more than others
 export const IMPORTANT_TOPICS = [
   'artificial_intelligence',

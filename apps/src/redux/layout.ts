@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Track the app's layout */
 import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
 

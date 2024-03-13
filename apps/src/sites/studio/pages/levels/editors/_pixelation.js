@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Javascript for the pixelation widget levelbuilder edit page */
 import $ from 'jquery';
 import 'jquery-ui/ui/effect'; // Add easing functions

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Serializes an XML DOM node to a string.
 exports.serialize = function (node) {
   var serializer = new XMLSerializer();

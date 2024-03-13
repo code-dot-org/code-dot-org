@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Describes whether a sound is inside a random block, and is currently being skipped.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_MICROBIT_FIRMATA_UPDATE_PERCENT =
   'microBit/SET_MICROBIT_FIRMATA_UPDATE_PERCENT';
 

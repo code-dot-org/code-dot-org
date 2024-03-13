@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 import msg from '@cdo/locale';
 

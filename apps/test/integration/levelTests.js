@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * The level test driver.
  * Tests collections are specified in .js files in the solutions directory.

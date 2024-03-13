@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as color from '../util/color';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';

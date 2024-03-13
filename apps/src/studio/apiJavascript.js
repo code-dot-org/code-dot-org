@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
 exports.endGame = function (value) {

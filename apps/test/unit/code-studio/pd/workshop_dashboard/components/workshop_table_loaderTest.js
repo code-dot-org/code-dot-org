@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
 import React from 'react';
 import _ from 'lodash';

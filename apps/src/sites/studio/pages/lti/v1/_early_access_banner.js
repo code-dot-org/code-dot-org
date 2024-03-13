@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Inits the LtiEarlyAccessBannerHandler on the LTI Early Access banner load.
  * @see dashboard/app/views/lti/v1/_early_access_banner.html.haml

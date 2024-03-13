@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import CheckboxDropdown from './checkboxDropdown';
 import IconDropdown from './iconDropdown';
 

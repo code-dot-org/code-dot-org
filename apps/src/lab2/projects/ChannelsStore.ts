@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This file contains the ChannelsStore interface and the local (saved to browser local storage)
  * and remote (saved to the server) implementations of the ChannelStore.

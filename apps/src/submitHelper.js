@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This helper can be used by an app (e.g. GameLab) to handle the pressing of
  * submit/unsubmit buttons if the level is submittable.

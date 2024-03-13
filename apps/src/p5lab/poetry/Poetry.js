@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import msg from '@cdo/poetry/locale';
 import {getStore} from '@cdo/apps/redux';
 import trackEvent from '@cdo/apps/util/trackEvent';

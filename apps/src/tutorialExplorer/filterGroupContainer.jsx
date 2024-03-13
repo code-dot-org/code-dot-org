@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* FilterGroupContainer: The container UI for a group of filter choices.
  * The choices themselves should be passed in as children.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview base class for all simulation entities.
  */

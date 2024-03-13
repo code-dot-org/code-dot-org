@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import PropTypes from 'prop-types';

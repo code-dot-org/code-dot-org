@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Applab theme values.
 
 const CLASSIC_LABEL_PADDING = '2px';

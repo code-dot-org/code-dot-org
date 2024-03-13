@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview React component to allow for easy editing of Karel Grids.
  * Used in LevelBuilder, and relies on some apps code for validation.

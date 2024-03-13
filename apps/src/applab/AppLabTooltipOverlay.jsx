@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file App Lab-specific Tooltip Overlay */
 import $ from 'jquery';
 import PropTypes from 'prop-types';

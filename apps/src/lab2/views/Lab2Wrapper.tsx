@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Lab2Wrapper
 //
 // Lab2 uses this component to wrap the apps that it switches between.  This

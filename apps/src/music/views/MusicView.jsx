@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Top-level view for Music */
 import React from 'react';
 import PropTypes from 'prop-types';

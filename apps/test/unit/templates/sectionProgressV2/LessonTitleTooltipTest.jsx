@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {render, screen} from '@testing-library/react';
 import {expect} from 'chai';
 import React from 'react';

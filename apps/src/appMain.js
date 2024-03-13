@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getStore, registerReducers} from './redux';
 import {wrapNumberValidatorsForLevelBuilder, valueOr} from './utils';
 import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';

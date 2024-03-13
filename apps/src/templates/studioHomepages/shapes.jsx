@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* Common shapes used for React prop validation.
  */
 

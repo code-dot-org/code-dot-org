@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {unicode} from '@cdo/apps/code-studio/components/icons';
 import {getStore} from '@cdo/apps/redux';
 

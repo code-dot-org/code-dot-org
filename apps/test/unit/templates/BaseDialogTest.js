@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for BaseDialog component */
 import React from 'react';
 import {mount} from 'enzyme';

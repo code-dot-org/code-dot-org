@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback} from 'react';
 import classnames from 'classnames';
 import moduleStyles from '@cdo/apps/componentLibrary/segmentedButtons/segmentedButtons.module.scss';

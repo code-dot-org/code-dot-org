@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Top-level view for WebLab */
 import PropTypes from 'prop-types';
 import React from 'react';

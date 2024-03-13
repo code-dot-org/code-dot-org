@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import msg from '@cdo/applab/locale';
 import * as utils from '../utils';
 import blockUtils from '../block_utils';

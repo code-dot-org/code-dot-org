@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Using MIDI note values for notes.
 // Note values range [0-127], starting at C-1 (octave -1).
 

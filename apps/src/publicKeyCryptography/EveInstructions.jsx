@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Static instructions for the Eve character in the crypto widget */
 import React from 'react';
 import CharacterPanel from './CharacterPanel';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';

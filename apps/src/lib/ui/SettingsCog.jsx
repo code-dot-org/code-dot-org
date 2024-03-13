@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Settings menu cog icon */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {AppName} from './types';
 
 export const SOURCE_FILE = 'main.json';

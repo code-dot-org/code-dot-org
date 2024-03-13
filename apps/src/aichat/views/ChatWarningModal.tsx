@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 
 import aichatI18n from '@cdo/apps/aichat/locale';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Serialport scanning logic for Maker Toolkit */
 
 /**

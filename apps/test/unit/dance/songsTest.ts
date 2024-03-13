@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../util/reconfiguredChai';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import sinon from 'sinon';

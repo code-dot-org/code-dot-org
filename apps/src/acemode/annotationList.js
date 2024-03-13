@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var errorMapper = require('./errorMapper');
 
 var lintAnnotations = [];

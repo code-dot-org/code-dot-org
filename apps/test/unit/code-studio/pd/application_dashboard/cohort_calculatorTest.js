@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {shallow} from 'enzyme';
 import CohortCalculator from '@cdo/apps/code-studio/pd/application_dashboard/cohort_calculator';

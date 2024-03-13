@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 
 import DropletTooltipManager from '@cdo/apps/blockTooltips/DropletTooltipManager.js';

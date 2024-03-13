@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * DO NOT IMPORT THIS DIRECTLY. Instead do:
  *   ```

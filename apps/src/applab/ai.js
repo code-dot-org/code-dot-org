@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import designMode from './designMode';
 import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';

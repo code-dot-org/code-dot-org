@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import PendingButton from './PendingButton';
 import dataStyles from '../storage/dataBrowser/data-styles.module.scss';

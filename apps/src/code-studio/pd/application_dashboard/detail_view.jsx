@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Application Dashboard detail view
  * Route: /csd_facilitators/(:applicationId)

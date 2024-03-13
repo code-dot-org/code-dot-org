@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 

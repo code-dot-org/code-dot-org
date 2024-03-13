@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const dashboardPrefix = '/teacher_dashboard/sections/';
 
 /**

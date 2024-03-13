@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ApplabInterfaceMode} from './constants';
 import PropTypes from 'prop-types';
 import React from 'react';

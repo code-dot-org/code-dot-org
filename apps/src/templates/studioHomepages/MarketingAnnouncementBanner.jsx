@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import TwoColumnActionBlock from './TwoColumnActionBlock';

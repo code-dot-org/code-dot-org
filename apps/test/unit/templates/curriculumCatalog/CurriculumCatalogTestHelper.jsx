@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Individual curricula definitions
 const makerCurriculum = {
   key: 'devices',

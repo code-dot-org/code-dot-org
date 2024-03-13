@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {EventEmitter} from 'events';
 import {roundToHundredth, SENSOR_CHANNELS} from './MicroBitConstants';
 

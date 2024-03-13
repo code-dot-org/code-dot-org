@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 import {DanceState} from '../danceRedux';

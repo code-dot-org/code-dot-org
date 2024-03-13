@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint-disable react/no-is-mounted */
 
 import PropTypes from 'prop-types';

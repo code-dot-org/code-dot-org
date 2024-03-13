@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import drawHeart from '@code-dot-org/dance-party/src/shapes/heart';
 import drawLovestruck from '@code-dot-org/dance-party/src/shapes/lovestruck';
 import drawSmiley from '@code-dot-org/dance-party/src/shapes/smiley';

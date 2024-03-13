@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Loads an application from the API by a supplied applicationId and passes it to
  * the applicationData prop of the child component.

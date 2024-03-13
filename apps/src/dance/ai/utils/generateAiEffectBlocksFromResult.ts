@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
 import {FieldKey, GeneratedEffect} from '../types';
 import danceMetricsReporter from '../../danceMetricsReporter';

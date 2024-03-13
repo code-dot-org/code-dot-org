@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var createToolbox = require('../block_utils').createToolbox;
 
 var jigsawBlock = function (type, x, y, child, childType) {

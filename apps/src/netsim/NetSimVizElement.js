@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Base type for visible elements in the visualization.
  */

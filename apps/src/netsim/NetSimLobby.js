@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI controller for lobby - handles flow for name entry, section
  *           selection, and remote node selection.

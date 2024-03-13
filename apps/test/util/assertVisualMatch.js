@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from 'chai';
 import pixelmatch from 'pixelmatch';
 import {toImageData} from '@cdo/apps/imageUtils';

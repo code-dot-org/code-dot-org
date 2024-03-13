@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getProjectDatabase, getPathRef} from './firebaseUtils';
 import _ from 'lodash';
 

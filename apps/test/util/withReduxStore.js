@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';

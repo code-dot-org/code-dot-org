@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A set of functional blocks
  */

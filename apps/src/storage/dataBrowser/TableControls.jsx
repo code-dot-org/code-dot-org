@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Component containing UI controls for modifying the table, including
  * import, export, adding a new column, and deleting the entire table.

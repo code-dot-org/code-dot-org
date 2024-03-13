@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import FormController from '@cdo/apps/code-studio/pd/form_components/FormController';
 import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
 import React from 'react';

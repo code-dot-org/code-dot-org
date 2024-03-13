@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** TODO: Merge these with currentUserRedux when it has been updated to TypeScript/redux-toolkit **/
 
 enum CourseRole {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Global Type Definitions that rely on imports.
 // If you use an import, the type definition file becomes a module file
 // and the syntax for declaring types changes. Therefore all types that require

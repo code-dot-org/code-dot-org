@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var api = require('./apiJavascript.js');
 
 module.exports.blocks = [

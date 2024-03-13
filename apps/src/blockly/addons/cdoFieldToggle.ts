@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly, {Block, BlockSvg, Field} from 'blockly/core';
 
 interface CdoFieldButtonToggleOptions {

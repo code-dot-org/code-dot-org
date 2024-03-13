@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This is an auto-generated file. Do not edit. Run `./icons_metadata_generator.rb` to regenerate.
  *

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';

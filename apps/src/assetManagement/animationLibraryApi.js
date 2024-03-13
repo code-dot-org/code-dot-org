@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createUuid} from '@cdo/apps/utils';
 
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale

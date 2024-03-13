@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var i18n = require('../locale');
 import {blockTypesToDropdownOptions} from '../utils';
 import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';

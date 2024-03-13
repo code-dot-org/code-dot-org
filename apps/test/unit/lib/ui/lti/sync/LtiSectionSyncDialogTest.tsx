@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import {

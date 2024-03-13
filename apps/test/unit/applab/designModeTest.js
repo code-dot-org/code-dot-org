@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../util/reconfiguredChai';
 import designMode from '@cdo/apps/applab/designMode';
 import elementLibrary from '@cdo/apps/applab/designElements/library';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {useEffect, useRef} from 'react';
 
 // Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/

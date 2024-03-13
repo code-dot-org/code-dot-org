@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {findProfanity} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 

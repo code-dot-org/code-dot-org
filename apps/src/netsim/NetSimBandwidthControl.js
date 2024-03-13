@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI Slider control used for changing simulated router bandwidth.
  */

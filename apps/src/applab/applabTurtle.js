@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import applabCommands from './commands';
 import turtleImageSrc from '!!url-loader!../../static/applab/723-location-arrow-toolbar-48px-centered.png';
 

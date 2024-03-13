@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import loadBounce from './init/loadBounce';
 import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
 

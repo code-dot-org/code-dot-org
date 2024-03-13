@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly, {IDraggable, WorkspaceSvg} from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockDrag} from 'blockly/core/events/events_block_drag';

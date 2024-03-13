@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Modal dialog for browsing any logs in the simulation. */
 import PropTypes from 'prop-types';
 import React from 'react';

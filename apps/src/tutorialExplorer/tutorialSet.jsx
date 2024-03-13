@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* TutorialSet: The overall tutorial area in TutorialExplorer.  Contains a set of tutorials.
  */
 

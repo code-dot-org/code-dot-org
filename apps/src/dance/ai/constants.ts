@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import UntypedCachedBackgroundEffects from '@cdo/static/dance/ai/model/cached_background_effects_map.json';
 import UntypedCachedForegroundEffects from '@cdo/static/dance/ai/model/cached_foreground_effects_map.json';
 import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached_palettes_map.json';

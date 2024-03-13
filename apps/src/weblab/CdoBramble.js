@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
 import {makeEnum} from '../utils';

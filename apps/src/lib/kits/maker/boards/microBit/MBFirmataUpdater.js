@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   MICROBIT_VENDOR_ID,
   MICROBIT_PRODUCT_ID,

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1

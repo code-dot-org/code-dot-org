@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {EFFECTS_PALETTES} from '../constants';
 
 export const PoetryStandaloneApp = {

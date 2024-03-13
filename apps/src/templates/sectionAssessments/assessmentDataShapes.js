@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 /**
  * If custom PropType shapes are required in more than one file,

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux actions and reducer for the AnimationTab */
 
 import {P5LabInterfaceMode} from '../constants';

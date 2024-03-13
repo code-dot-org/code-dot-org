@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import FontAwesome from './../FontAwesome';
 import React from 'react';
 import {connect} from 'react-redux';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
 export const commonFunctions = {

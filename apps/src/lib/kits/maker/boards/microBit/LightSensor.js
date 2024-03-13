@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {EventEmitter} from 'events';
 import {
   SENSOR_CHANNELS,

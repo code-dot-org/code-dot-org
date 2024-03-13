@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This factory creates a project manager for the given storage type.
  * The factory handles setup of the sources and channels stores

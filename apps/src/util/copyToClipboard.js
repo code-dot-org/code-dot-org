@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Copies a string to the clipboard. Includes a fallback for legacy browsers.
  * @param {string} str - Text to copy to the clipboard.

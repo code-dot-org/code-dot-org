@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // A session variable storing a comma-delimited list of course/script names for which:
 // ...the user has already dismissed the version redirect warning.
 const DISMISSED_REDIRECT_WARNINGS_SESSION_KEY = 'dismissedRedirectWarnings';

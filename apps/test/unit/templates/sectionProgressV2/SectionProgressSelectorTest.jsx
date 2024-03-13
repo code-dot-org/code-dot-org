@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {render, screen, fireEvent} from '@testing-library/react';
 import $ from 'jquery';
 import React from 'react';

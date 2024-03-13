@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import WorkshopFilter from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_filter';
 import {expect} from '../../../../util/reconfiguredChai';
 

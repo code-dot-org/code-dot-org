@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {shallow} from 'enzyme';
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';

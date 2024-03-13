@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Shared styles for the animation picker dialog. */
 var color = require('@cdo/apps/util/color');
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import i18n from '@cdo/tutorialExplorer/locale';
 import * as utils from '../utils';
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 import $ from 'jquery';

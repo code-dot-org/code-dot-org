@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import {expect} from '../../../util/reconfiguredChai';
 import library from '@cdo/apps/applab/designElements/library';

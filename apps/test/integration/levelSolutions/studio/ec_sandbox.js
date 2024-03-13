@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';
 var Direction = require('@cdo/apps/studio/constants.js').Direction;

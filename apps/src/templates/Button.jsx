@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * New style button.
  * This particular button is designed to operate in contexts where we have a solid

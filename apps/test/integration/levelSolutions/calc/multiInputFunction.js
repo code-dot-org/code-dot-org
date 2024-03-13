@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TestResults} from '@cdo/apps/constants';
 var calcMsg = require('@cdo/apps/calc/locale');
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {AiCustomizations} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';

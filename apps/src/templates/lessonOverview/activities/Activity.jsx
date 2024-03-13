@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
 import color from '@cdo/apps/util/color';

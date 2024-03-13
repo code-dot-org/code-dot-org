@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Fires an event when page visibility changes.
  * Wrap a component in this to listen for page visibility.

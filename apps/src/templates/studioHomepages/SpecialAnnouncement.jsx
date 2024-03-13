@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import TwoColumnActionBlock from './TwoColumnActionBlock';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';

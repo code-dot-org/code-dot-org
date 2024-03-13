@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A bunch of teacher info that shows up in a blue box to the right of the detail
  * view for a given lesson.

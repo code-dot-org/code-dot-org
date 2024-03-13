@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedShareAllowedDialog as ShareAllowedDialog} from './ShareAllowedDialog';
 import {Provider} from 'react-redux';

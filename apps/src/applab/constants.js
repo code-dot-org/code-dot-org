@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as utils from '../utils';
 import {
   ICON_PREFIX,

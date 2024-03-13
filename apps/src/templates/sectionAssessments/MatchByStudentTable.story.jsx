@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import MatchByStudentTable from './MatchByStudentTable';
 import {matchDataForSingleStudent} from './assessmentsTestHelpers';

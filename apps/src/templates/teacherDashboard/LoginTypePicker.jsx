@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * View shown to a teacher when beginning to add students to an empty section.
  * Lets the teacher decide whether to use word/picture logins, have students

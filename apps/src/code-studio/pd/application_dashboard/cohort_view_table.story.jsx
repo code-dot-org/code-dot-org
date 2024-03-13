@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {CohortViewTable} from './cohort_view_table';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';

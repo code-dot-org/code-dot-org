@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import color from '@cdo/apps/util/color';
 import fontConstants from '@cdo/apps/fontConstants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';

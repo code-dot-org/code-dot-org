@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* @file Test of our p5.play Sprite wrapper object */
 
 import {expect} from '../../util/reconfiguredChai';

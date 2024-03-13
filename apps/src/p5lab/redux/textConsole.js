@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {CLEAR_CONSOLE, ADD_MESSAGE} from '../actions';
 import {MAX_NUM_TEXTS} from '../spritelab/constants';
 

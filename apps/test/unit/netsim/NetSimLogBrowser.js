@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file NetSimLogBrowser tests */
 import React from 'react';
 import {shallow} from 'enzyme';

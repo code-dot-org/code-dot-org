@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ModelCardInfo} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
 import MultiItemInput from './MultiItemInput';

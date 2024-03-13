@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import Immutable from 'immutable';
 import RGBColor from 'rgbcolor';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect, assert} from '../../util/reconfiguredChai';
 import {combineReducers} from 'redux';
 import reducers, {

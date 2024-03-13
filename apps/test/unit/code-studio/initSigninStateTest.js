@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from 'chai';
 import cookies from 'js-cookie';
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';

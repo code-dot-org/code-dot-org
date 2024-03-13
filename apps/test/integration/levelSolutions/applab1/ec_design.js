@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';

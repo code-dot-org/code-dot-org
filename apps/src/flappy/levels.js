@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // todo - i think our prepoluated code counts as LOCs
 
 var constants = require('./constants');

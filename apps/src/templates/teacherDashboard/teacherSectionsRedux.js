@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import $ from 'jquery';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';

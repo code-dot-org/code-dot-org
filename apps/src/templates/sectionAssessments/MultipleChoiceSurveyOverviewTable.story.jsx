@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 import i18n from '@cdo/locale';

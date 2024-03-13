@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ExtendedWorkspaceSvg} from '@cdo/apps/blockly/types';
 
 /**

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *

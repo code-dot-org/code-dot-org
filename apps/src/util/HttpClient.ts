@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   AUTHENTICITY_TOKEN_HEADER,
   getAuthenticityToken,

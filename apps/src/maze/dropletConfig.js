@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 module.exports.blocks = [
   {func: 'moveForward', category: 'Movement'},
   {func: 'turnLeft', category: 'Movement'},

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Displays the current project name and a button to begin editing it.
  * This should only be shown when the project name is not being edited.

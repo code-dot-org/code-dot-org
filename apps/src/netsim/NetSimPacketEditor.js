@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI controller for the packet editor which allows editing multiple
  *           encodings at once and lives inside the send panel.

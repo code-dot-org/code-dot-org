@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 export function attachAssertToInterpreter(interpreter, scope, assertion) {

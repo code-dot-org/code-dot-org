@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import RubricContainer from './RubricContainer';

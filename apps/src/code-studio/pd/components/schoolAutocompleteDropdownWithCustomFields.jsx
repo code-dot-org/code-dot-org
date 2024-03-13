@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /*
  * Autocomplete school dropdown with
  * custom fields if school not found

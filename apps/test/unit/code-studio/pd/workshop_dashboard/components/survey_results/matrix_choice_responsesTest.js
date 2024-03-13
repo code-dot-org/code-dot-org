@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {expect} from 'chai';
 import MatrixChoiceResponses from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/matrix_choice_responses';

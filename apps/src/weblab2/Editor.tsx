@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useState} from 'react';
 
 import {useCDOIDEContext, editableFileType, prettify} from 'cdo-ide-poc';

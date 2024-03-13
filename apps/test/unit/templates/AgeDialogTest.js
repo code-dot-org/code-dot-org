@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from 'chai';
 import React from 'react';
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';

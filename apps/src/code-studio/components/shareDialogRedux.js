@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {channels as channelsApi} from '../../clientApi';
 
 // Action types

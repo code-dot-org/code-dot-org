@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This module contains logic for tracking various experiments. Experiments
  * can be enabled/disabled using query parameters:

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Custom error types for Maker Toolkit */
 import ExtendableError from '../../util/ExtendableError';
 

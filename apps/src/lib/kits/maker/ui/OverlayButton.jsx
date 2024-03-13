@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** Button for use in Maker connection status overlays */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';

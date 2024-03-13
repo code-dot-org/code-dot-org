@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';

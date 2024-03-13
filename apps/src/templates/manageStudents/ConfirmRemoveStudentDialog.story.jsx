@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,

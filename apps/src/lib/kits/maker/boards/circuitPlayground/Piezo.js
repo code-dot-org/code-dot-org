@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Wrapper around Johnny-Five Piezo component to modify play() */
 import five from '@code-dot-org/johnny-five';
 import '../../../../../utils'; // For Function.prototype.inherits

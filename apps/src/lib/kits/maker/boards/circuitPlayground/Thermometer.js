@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file wrap Playground.Thermometer to expose raw value */
 import Playground from 'playground-io';
 

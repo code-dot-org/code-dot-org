@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, useEffect, useRef, useCallback, useMemo} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';

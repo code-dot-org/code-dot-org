@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */

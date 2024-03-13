@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Wrapper for window.performance that no-ops for unavailable methods
  */

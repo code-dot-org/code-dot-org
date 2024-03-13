@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const progressUrl =

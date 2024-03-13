@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useContext} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 

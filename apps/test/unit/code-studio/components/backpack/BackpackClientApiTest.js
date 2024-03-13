@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';

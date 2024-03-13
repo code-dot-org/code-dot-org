@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import * as sort from 'sortabular';
 import FontAwesome from '../FontAwesome';

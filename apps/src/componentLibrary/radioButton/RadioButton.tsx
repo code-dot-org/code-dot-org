@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {memo, ChangeEvent} from 'react';
 import classnames from 'classnames';
 

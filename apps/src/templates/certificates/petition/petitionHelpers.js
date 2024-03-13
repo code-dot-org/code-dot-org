@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
 import {forEach, has, merge} from 'lodash';
 import i18n from '@cdo/locale';

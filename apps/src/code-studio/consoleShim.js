@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Provide no-op fills for missing window.console methods.  Doesn't add
  *       any special functionality, just makes the console safe to use on our

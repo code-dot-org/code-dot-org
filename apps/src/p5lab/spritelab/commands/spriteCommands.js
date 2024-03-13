@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import {layoutSpriteGroup} from '../../layoutUtils';

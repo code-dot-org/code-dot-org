@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file App Lab-specific Crosshair Overlay */
 
 import PropTypes from 'prop-types';

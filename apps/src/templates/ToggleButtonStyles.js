@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Reusable styles for interface mode toggle buttons. */
 
 var color = require('../util/color');

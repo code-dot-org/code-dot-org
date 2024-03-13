@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import Javalab from '@cdo/apps/javalab/Javalab';

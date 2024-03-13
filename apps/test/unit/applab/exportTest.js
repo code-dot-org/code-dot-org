@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../util/reconfiguredChai';
 import {blocks as applabBlocks} from '@cdo/apps/applab/dropletConfig';
 import {getExportedGlobals} from '@cdo/apps/applab/export';

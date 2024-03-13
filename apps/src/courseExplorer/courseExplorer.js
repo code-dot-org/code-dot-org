@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Code for the Course/Tools Explorer.  Include it once on the page and it will
 // handle both CourseExplorer and ToolsExplorer on the same page.
 import color from '../util/color';

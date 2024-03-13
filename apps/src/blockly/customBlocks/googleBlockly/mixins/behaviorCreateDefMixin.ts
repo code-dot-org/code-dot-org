@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This mixin's function is copied and modified from
 // https://github.com/google/blockly-samples/blob/7954a8fff50e41fa7c0f891e957bf9ed616361d6/plugins/block-shareable-procedures/src/blocks.ts#L1312
 // We need to override createDef_ so that it correctly assigns a behavior id matching

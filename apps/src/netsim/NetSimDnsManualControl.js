@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI button used become the current DNS node in manual DNS mode.
  */

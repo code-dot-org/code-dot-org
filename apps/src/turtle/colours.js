@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in

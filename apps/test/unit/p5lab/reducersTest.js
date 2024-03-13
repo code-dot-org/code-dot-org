@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var actions = require('@cdo/apps/p5lab/actions');
 var {
   clearConsole,

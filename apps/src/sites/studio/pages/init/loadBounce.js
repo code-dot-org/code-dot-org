@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 import Bounce from '@cdo/apps/bounce/bounce';
 window.Bounce = Bounce;

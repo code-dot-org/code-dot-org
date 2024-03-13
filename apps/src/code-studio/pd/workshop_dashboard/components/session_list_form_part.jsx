@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Dynamic list of session inputs for creating and editing workshops.
  */

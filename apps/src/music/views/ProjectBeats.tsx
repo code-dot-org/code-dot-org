@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import ProjectContainer from '@cdo/apps/lab2/projects/ProjectContainer';
 import DialogManager from '@cdo/apps/lab2/views/dialogs/DialogManager';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   TheaterSignalType,
   STATUS_MESSAGE_PREFIX,

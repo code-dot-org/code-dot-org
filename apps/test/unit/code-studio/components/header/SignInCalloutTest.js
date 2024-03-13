@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
 import {shallow, mount} from 'enzyme';

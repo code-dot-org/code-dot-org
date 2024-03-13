@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Defines a function for initializing an embedded markdown editor using
  *       CodeMirror

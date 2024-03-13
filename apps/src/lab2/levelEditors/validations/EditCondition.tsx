@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import React from 'react';
 import {Condition, ConditionType} from '../../types';

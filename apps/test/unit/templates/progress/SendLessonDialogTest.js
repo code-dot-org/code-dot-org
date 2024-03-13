@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {assert} from '../../../util/reconfiguredChai';
 import {UnconnectedSendLessonDialog as SendLessonDialog} from '@cdo/apps/templates/progress/SendLessonDialog';

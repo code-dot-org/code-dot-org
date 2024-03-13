@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_PROMPT = 'spritelabInput/SET_PROMPT';
 const POP_PROMPT = 'spritelabInput/POP_PROMPT';
 const CLEAR_PROMPTS = 'spritelabInput/CLEAR_PROMPTS';

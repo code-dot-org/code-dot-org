@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {useMemo} from 'react';
 import _ from 'lodash';
 import {makeEnum} from '@cdo/apps/utils';

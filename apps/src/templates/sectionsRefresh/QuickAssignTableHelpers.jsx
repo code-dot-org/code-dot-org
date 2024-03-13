@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import classnames from 'classnames';
 import moduleStyles from './sections-refresh.module.scss';

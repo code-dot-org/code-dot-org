@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_ARROW_BUTTONS_VISIBLE = 'arrowDisplay/SET_ARROW_BUTTONS_VISIBLE';
 const SET_ARROW_BUTTONS_HIDDEN = 'arrowDisplay/SET_ARROW_BUTTONS_HIDDEN';
 const SET_ARROW_BUTTONS_DISABLED = 'arrowDisplay/SET_ARROW_BUTTONS_DISABLED';

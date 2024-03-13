@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Utilities for doing cryptography widget calculations */
 import memoize from 'fast-memoize';
 

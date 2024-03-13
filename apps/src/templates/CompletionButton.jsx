@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import msg from '@cdo/locale';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';

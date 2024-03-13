@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Utility functions for the data browser. */
 
 /**

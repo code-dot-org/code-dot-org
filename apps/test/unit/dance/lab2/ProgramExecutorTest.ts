@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ProgramExecutor from '@cdo/apps/dance/lab2/ProgramExecutor';
 import {SongMetadata} from '@cdo/apps/dance/types';
 import utils from '@cdo/apps/dance/utils';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * NOTE: Constants in this file are generally shared by Javabuilder.
  * Check their use in the Javabuilder repo before editing.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Some misc. browser check methods for maker */
 
 export function isChrome() {

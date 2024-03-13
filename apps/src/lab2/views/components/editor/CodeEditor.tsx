@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
 import {EditorState, Extension} from '@codemirror/state';

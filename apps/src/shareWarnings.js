@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var React = require('react');
 var ReactDOM = require('react-dom');
 var utils = require('./utils');

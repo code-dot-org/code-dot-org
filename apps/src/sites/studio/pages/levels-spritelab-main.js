@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
 import loadSpritelab from './init/loadSpritelab';
 

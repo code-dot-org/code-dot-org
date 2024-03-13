@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {WorkshopEnrollmentSchoolInfo} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_school_info';
 import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import React from 'react';

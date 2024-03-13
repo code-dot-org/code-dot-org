@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState} from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';

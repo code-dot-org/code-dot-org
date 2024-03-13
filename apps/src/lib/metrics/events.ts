@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Metric event names
 export enum MetricEvent {
   AI_TUTOR_CHAT_SAVE_FAIL = 'AI_TUTOR_CHAT_SAVE_FAIL',

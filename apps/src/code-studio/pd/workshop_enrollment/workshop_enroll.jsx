@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * New workshop enrollment page
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export default {
   left: {
     position: 'absolute',

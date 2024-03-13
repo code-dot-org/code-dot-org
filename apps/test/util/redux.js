@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
 

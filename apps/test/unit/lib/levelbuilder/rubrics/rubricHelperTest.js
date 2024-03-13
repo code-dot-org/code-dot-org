@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   saveRubricToTable,
   SAVING_TEXT,

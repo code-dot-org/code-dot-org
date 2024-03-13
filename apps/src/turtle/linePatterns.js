@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 exports.load = function (assetUrl) {
   return {
     patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'), // default first, then alphabetical

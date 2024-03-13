@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import AudioSystem from './soundSub';
 import {Effects} from './interfaces/Effects';
 

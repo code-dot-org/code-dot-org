@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Entry point for JotForm embedded iframe.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 

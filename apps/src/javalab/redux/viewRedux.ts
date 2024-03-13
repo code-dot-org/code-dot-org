@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Redux store for state specific to the visuals of Java Lab
  * (widths/heights/font sizes/etc.)

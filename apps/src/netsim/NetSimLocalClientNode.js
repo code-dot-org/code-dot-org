@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Simulation entity controller reserved for the local client's
  *           simulation node.

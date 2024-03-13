@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const minX = 20;
 const maxX = 400 - minX;
 const minY = 35;

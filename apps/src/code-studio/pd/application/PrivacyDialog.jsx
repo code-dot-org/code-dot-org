@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Modal containing privacy text for the 19-20 teacher application and
  *       principal approval.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   SET_SCRIPT,
   getSelectedScriptName,

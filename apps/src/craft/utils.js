@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import i18n from './locale';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import * as craftRedux from '@cdo/apps/craft/redux';

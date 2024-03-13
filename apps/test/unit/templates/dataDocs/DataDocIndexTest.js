@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {isolateComponentTree} from 'isolate-react';
 import DataDocIndex from '@cdo/apps/templates/dataDocs/DataDocIndex';

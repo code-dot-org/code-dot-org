@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var userTimings = {};
 
 module.exports = {

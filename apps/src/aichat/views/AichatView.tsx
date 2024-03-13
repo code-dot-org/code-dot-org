@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Top-level view for AI Chat Lab */
 
 import React, {useCallback} from 'react';

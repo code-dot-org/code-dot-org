@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, ChangeEvent} from 'react';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';

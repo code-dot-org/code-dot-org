@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {stub} from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {validateFirehoseDataSize} from '@cdo/apps/lib/util/firehose';

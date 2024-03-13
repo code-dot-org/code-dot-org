@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import danceBlocks from '@cdo/apps/dance/blockly/blocks';
 import * as commonBlocks from '@cdo/apps/blocksCommon';
 import {BlockDefinition} from '@cdo/apps/blockly/types';

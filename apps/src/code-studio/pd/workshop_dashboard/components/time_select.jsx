@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * TimeSelect control.
  * Displays a text box with a clock icon. When clicked, it displays a popup

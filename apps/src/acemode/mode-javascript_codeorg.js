@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
 	The missing SVG.toDataURL library for your SVG elements.
 

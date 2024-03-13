@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Role, Status} from '@cdo/apps/aiTutor/types';
 
 export const compilationSystemPrompt =

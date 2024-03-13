@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const commands = {
   // Since hiding the variable doesn't require the JSInterpreter, we can ignore
   // the name argument returned by the variableFieldNamePicker

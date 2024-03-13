@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export interface LtiUpgradeAccountForm {
   destination_url: string;
   email?: string;

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for our johnny-five Piezo wrapper */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';

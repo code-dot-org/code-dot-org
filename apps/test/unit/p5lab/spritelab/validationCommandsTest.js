@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../util/reconfiguredChai';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';

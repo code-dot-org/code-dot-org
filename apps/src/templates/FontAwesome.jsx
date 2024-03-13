@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file font-awesome helper component. */
 
 import PropTypes from 'prop-types';

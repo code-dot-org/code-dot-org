@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var ArtistApi;
 
 exports.injectArtistAPI = function (artistApi) {

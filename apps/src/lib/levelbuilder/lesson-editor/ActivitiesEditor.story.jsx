@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';

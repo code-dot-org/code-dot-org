@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import {

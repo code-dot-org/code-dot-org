@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_RTL = 'isRtl/SET_RTL';
 export const setRtl = isRtl => ({type: SET_RTL, isRtl});
 export const setRtlFromDOM = () => setRtl(isRtlFromDOM());

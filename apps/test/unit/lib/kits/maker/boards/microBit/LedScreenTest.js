@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';

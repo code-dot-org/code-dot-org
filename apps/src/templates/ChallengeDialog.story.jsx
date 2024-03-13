@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ChallengeDialog from './ChallengeDialog';
 import CodeWritten from './feedback/CodeWritten';
 import GeneratedCode from './feedback/GeneratedCode';

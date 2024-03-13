@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useState} from 'react';
 import moduleStyles from './dialog-manager.module.scss';
 import StartOverDialog from './StartOverDialog';

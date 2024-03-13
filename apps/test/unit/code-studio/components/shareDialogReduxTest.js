@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for share dialog redux module */
 import {expect} from '../../../util/reconfiguredChai';
 import reducer, * as shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';

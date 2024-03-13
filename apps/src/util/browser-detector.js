@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // We support IE 11+
 function isIE() {
   return navigator.userAgent.indexOf('MSIE') !== -1 || isIE11();

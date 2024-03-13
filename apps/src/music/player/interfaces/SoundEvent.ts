@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {SoundType} from '../MusicLibrary';
 import {PlaybackEvent} from './PlaybackEvent';
 

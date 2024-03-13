@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TeacherScores} from '@cdo/apps/templates/sectionProgress/standards/standardsConstants';
 import {levelProgressFromResult} from '@cdo/apps/templates/progress/progressHelpers';
 

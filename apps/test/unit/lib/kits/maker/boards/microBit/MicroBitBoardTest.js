@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * API for getting and updating channels via the code.org dashboard. A channel contains
  * metadata about a project.

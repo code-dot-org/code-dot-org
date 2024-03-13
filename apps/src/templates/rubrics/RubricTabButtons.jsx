@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {combineReducers} from 'redux';
 import sinon from 'sinon';
 import reducer, {

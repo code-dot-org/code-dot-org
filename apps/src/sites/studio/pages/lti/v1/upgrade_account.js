@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Renders the LtiUpgradeAccountDialog component on page load.
  * This file is responsible for mounting and unmounting the React component,

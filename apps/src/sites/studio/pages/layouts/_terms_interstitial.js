@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 
 $(document).ready(function () {

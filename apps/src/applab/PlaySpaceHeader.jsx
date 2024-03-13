@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Row of controls above the visualization. */
 
 import PropTypes from 'prop-types';

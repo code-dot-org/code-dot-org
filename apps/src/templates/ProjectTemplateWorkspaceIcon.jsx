@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';

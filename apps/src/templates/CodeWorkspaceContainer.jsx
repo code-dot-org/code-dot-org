@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A non-protected div that wraps our ProtectedStatefulDiv codeWorkspace, allowing
  * us to position it vertically. Causes resize events to fire when receiving new props

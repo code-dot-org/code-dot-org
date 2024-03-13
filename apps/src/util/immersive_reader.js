@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {launchAsync} from '@microsoft/immersive-reader-sdk';
 
 /**

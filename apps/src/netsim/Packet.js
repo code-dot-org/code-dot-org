@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Utility class for encoding and decoding simulated packets.
  */

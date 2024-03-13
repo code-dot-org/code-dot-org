@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for NetSimPacketEditor */
 import {assert} from '../../util/reconfiguredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');

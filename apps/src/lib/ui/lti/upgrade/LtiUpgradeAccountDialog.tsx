@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {LtiUpgradeAccountDialogProps} from '@cdo/apps/lib/ui/lti/upgrade/types';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import React, {CSSProperties, useState} from 'react';

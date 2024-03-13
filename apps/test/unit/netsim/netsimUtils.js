@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert, expect} from '../../util/reconfiguredChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');

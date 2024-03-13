@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Workspace} from 'blockly/core';
 
 import {GeneratedEffect} from '../types';

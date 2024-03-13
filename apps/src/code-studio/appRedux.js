@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_APP_LOAD_STARTED = 'app/SET_APP_LOAD_STARTED';
 const SET_APP_LOADED = 'app/SET_APP_LOADED';
 

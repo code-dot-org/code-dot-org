@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {mount} from 'enzyme';
 import ApplicationDashboard from '@cdo/apps/code-studio/pd/application_dashboard/application_dashboard';

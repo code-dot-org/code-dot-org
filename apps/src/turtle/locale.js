@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for turtle
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

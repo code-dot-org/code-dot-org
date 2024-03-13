@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';

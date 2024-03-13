@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TestResults} from '@cdo/apps/constants.js';
 
 // Inspired by https://studio.code.org/s/course4/lessons/16/levels/4

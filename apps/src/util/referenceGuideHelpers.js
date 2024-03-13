@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {flatten} from 'lodash';
 
 export const getGuideChildren = (key, guides) =>

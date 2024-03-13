@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @fileoverview Utility functions shared by applab and gamelab exporters.
  */

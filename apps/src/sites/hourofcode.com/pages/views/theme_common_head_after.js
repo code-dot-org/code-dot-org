@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
 
 // Prevent filtered errors from being passed to New Relic.

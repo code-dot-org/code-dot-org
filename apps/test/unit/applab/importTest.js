@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint no-unused-vars: "error" */
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';

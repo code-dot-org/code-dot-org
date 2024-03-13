@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Fake implementation of the storage interface, usable in place
  * of window.localStorage or window.sessionStorage during tests.

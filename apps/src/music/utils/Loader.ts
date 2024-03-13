@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Utilities for retrieving various types of data for Music Lab.
 
 import HttpClient from '@cdo/apps/util/HttpClient';

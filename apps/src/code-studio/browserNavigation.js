@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // browserNavigation
 //
 // This file contains some functionality related to navigating through

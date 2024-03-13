@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Event Handlers for Google Blockly.
 
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';

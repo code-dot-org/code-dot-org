@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Redux store for state that relates to the Java Lab console.
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 

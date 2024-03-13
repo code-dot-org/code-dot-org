@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 export interface MazeState {

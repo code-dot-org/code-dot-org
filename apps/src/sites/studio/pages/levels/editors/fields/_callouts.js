@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* global levelbuilder */
 import $ from 'jquery';
 

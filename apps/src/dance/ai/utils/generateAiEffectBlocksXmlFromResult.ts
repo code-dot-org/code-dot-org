@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {GeneratedEffect} from '../types';
 
 // Returns XML for a generated effect's blocks.

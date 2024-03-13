@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {Validation, ConditionType, AppName} from '../../types';
 import {MusicConditions} from '@cdo/apps/music/progress/MusicValidator';

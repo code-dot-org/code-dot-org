@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 import React from 'react';
 import {isolateComponent} from 'isolate-react';

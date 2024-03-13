@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../util/reconfiguredChai';
 import * as achievements from '@cdo/apps/achievements';
 import sinon from 'sinon';

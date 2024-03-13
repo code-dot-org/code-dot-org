@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Text display over sprite lab visualization column */
 import PropTypes from 'prop-types';
 import React from 'react';

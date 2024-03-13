@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A button that opens our LessonLockDialog component, using our redesigned button.
  */

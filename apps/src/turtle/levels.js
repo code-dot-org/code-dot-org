@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var levelBase = require('../level_base');
 var answer = require('./answers').answer;
 var msg = require('./locale');

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** Initial state for manageLinkedAccounts redux store.
  * authenticationOptions - object of authentication options for current user with id key and authentication option value
  * userHasPassword - whether or not the user has a code.org password

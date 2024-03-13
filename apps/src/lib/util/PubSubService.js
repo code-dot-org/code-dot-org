@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */

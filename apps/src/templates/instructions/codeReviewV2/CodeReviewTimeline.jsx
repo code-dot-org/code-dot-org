@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import CodeReviewTimelineElement, {

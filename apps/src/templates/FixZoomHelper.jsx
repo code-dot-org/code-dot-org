@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import i18n from '@cdo/locale';
 import color from '../util/color';

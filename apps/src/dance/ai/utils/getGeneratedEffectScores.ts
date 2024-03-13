@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {FieldKey, GeneratedEffect} from '../types';
 import {cachedWeightsMappings} from '../constants';
 

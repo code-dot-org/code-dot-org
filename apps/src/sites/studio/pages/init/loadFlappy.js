@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 import Flappy from '@cdo/apps/flappy/flappy';
 window.Flappy = Flappy;

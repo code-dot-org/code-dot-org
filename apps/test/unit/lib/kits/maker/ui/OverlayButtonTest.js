@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test maker overlay button */
 import React from 'react';
 import {expect} from '../../../../../util/deprecatedChai';

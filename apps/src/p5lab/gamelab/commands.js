@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Non-p5 GameLab commands */
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';

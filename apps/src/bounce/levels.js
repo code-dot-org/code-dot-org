@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createToolbox as tb} from '../block_utils';
 import {extend} from '../utils';
 

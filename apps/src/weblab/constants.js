@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {makeEnum} from '../utils';
 
 export const SUPPORT_ARTICLE_URL =

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as constants from '@cdo/apps/constants';
 const {TestResults} = constants;
 

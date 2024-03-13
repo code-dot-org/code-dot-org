@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI component, a log panel (used as "Sent Packets" and
  *           "Received Packets") that is used in the packet-sending

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import React from 'react';

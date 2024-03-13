@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* FilterSet: The overall search area in TutorialExplorer.  Contains a set of filter groups.
  */
 

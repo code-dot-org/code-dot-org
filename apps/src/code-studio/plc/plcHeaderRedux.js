@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const SET_PLC_HEADER = 'plcHeader/SET_PLC_HEADER';
 export const setPlcHeader = (unitName, courseViewPath) => ({
   type: SET_PLC_HEADER,

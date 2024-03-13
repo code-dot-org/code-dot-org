@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {ProjectType} from '../types';
 

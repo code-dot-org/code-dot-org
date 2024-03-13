@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {WorkshopIndex} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_index';
 import React from 'react';
 import {expect} from 'chai';

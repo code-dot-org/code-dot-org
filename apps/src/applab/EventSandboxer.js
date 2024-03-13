@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Helper that generates sanitized, standardized event objects. */
 import keyEvent from './keyEvent';
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import {expect} from '../../../util/reconfiguredChai';

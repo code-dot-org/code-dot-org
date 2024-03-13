@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Header component to show the project name and allow editing.
  * Supports projects in either lab2 or legacy lab mode.

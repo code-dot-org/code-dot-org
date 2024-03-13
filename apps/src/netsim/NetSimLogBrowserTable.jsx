@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Table of log rows displayed in the log browser */
 import PropTypes from 'prop-types';
 import React from 'react';

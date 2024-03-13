@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This file contains the SourcesStore interface and the local (saved to broswer local storage)
  * and remote (saved to the server) implementations of the SourcesStore.

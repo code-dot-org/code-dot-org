@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useContext, useState} from 'react';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';

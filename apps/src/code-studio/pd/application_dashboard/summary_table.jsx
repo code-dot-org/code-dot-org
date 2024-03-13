@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Table displaying a summary of application statuses
  */

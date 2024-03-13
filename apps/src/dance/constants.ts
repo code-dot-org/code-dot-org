@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   MAX_VISUALIZATION_WIDTH,
   MIN_VISUALIZATION_WIDTH,

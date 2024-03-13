@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Helper for consuming ObservableEventDEPRECATEDs. */
 
 /**

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {connect} from 'react-redux';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import PropTypes from 'prop-types';

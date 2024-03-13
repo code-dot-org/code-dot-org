@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const convertAddCoteacherResponse = response => {
   return {
     id: response.id,

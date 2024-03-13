@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // JavalabPanels.  This React class manages and renders the four panels of a typical
 // Javalab level.  It is used by JavalabView.
 // Long term, it would be great if this could be generalized to work for many labs.

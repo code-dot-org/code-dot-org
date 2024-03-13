@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** Generic search bar */
 import PropTypes from 'prop-types';
 import React from 'react';

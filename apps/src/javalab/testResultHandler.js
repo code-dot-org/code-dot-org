@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {UserTestResultSignalType, TestStatus} from './constants';
 import msg from '@cdo/javalab/locale';
 import {getExceptionMessage} from './javabuilderExceptionHandler';

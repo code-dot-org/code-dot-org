@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A set of utility functions made for dealing with activities easier.
  */

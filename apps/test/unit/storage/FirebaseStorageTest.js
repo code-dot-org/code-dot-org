@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../util/reconfiguredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {WarningType} from '@cdo/apps/storage/constants';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly from 'blockly/core';
 import 'blockly/blocks';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';

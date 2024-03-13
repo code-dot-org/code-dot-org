@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file SVG Visualization Overlay */
 
 import PropTypes from 'prop-types';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import artistShareFrame from '../static/turtle/blank_sharing_drawing.png';
 
 export function fetchURLAsBlob(url, onComplete) {

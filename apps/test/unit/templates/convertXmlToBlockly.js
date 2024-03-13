@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for convertXmlToBlockly utility */
 import {expect} from '../../util/reconfiguredChai';
 import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';

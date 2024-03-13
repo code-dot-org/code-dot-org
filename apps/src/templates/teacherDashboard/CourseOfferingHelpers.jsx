@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import i18n from '@cdo/locale';
 
 // Same list as CourseOfferingCsTopics in sharedCourseConstants but with translated strings

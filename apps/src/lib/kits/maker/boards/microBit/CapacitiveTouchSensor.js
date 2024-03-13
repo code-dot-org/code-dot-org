@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {EventEmitter} from 'events';
 
 export default class CapacitiveTouchSensor extends EventEmitter {

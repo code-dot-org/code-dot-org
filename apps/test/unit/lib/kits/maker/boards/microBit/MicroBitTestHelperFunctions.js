@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import {MICROBIT_FIRMWARE_VERSION} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 

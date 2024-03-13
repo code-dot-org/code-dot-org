@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file JavaScript loaded in all Widget-type levels.
  */

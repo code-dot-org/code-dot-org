@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Redux module for new format for tracking project animations.
  */

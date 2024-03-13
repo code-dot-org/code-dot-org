@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   ADAFRUIT_VID,
   CIRCUIT_PLAYGROUND_EXPRESS_PID,

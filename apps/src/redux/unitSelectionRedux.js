@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Reducer for script selection in teacher dashboard.
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.

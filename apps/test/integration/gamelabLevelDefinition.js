@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const gamelabLevelDefinition = {
   skin: 'gamelab',
   code_functions: {

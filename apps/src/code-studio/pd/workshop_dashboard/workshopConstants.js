@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const TIME_FORMAT = 'h:mma';
 const DATE_FORMAT = 'YYYY-MM-DD';
 const DATETIME_FORMAT = `${DATE_FORMAT} ${TIME_FORMAT}`;

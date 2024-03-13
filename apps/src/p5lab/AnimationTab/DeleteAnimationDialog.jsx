@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file controls below a dialog to delete animations */
 import PropTypes from 'prop-types';
 import React from 'react';

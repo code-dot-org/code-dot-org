@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {combineReducers} from 'redux';
 import reducers, {
   addActivity,

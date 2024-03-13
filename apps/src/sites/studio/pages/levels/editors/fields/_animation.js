@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';

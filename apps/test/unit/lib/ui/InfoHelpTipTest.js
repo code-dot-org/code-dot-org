@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test InfoHelpTip component */
 import React from 'react';
 import {shallow} from 'enzyme';

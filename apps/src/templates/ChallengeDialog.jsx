@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import BackToFrontConfetti from './BackToFrontConfetti';
 import BaseDialog from './BaseDialog';
 import LegacyButton from './LegacyButton';

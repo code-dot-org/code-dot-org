@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const getPathToApplication = (course, applicationType, applicationId) =>
   course
     ? `/${course}_${applicationType.toLowerCase()}s/${applicationId}`

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Static helper methods for NetSim.
  */

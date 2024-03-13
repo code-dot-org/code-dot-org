@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import {expect, assert} from '../util/reconfiguredChai';
 const project = require('@cdo/apps/code-studio/initApp/project');

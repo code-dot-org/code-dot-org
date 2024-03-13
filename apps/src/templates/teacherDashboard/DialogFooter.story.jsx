@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import DialogFooter from './DialogFooter';
 import Button from '../Button';

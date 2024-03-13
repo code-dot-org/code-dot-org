@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Utilities for initializing MicroBit board components
  */

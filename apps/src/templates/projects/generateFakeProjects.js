@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import {FeaturedProjectStatus} from '@cdo/apps/util/sharedConstants';
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Reducer and actions used to track what sections/scripts are are hidden on a
  * per section basis.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Centered animated Modulo Clock component for the Crypto widget levels */
 import _ from 'lodash';
 import PropTypes from 'prop-types';

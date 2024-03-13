@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React from 'react';
 import {BASE_DIALOG_WIDTH} from '../constants';

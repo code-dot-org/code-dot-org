@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 const baseUrl = window.location.origin + '/projectbeats';
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 

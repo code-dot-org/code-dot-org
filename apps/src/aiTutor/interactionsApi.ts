@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {AITutorInteraction} from './types';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';

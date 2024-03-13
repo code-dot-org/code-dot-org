@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Note: Putting ES6 in this test file breaks the test build, for reasons we
 // haven't figured out yet.  It's got something to do with require-globify.
 var assert = require('../../util/reconfiguredChai').assert;

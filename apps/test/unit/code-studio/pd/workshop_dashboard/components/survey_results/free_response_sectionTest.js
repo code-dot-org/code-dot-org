@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import FreeResponseSection from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/free_response_section';
 import React from 'react';
 import {expect} from 'chai';

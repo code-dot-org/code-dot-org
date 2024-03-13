@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import loadEval from './init/loadEval';
 import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
 

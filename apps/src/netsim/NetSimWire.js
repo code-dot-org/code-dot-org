@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Simulation Entity: A connection between two nodes and related
  *           metadata.

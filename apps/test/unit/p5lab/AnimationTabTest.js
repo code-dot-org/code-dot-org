@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var animationTab = require('@cdo/apps/p5lab/redux/animationTab');
 import {expect} from '../../util/reconfiguredChai';
 

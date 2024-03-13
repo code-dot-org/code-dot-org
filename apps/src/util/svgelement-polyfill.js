@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
   // Loading these modules extends SVGElement and puts canvg in the global

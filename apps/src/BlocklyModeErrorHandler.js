@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import JavaScriptModeErrorHandler from './JavaScriptModeErrorHandler';
 
 // Number of surrounding context lines to show (before and after). A value of 0

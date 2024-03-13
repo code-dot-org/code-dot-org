@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var requiredBlockUtils = require('@cdo/apps//required_block_utils');
 import {TestResults} from '@cdo/apps/constants';
 

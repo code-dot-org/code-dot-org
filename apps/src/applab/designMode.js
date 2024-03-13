@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';

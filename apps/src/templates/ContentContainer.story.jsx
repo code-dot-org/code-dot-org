@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ContentContainer from './ContentContainer';
 import CourseCard from './studioHomepages/CourseCard';

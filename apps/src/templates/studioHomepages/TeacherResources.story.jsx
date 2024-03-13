@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import TeacherResources from './TeacherResources';
 import {Provider} from 'react-redux';

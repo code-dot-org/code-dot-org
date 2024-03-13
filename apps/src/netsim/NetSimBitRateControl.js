@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI slider used to change the local device's bitrate.
  *           Differs from the pulse rate slider in scale and units.

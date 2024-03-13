@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Component for displaying a data table.
  */

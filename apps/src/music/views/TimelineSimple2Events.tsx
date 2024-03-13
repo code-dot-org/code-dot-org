@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useMemo} from 'react';
 import TimelineElement from './TimelineElement';
 import {useMusicSelector} from './types';

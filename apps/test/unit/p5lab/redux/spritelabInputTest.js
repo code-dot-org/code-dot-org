@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import spritelabInputList, * as spritelabInput from '@cdo/apps/p5lab/redux/spritelabInput';
 import {expect} from '../../../util/reconfiguredChai';
 

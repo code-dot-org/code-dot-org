@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file For running Maker apps without an attached Circuit Playground board. */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser

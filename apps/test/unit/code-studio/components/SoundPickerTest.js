@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {mount} from 'enzyme';

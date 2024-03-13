@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Filtering controls for Log Browser modal */
 import PropTypes from 'prop-types';
 import React from 'react';

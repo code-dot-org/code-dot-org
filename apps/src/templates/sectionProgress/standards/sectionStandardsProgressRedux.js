@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
 import {TeacherScores} from './standardsConstants';

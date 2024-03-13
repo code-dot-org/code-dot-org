@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ProjectLevelData} from '../lab2/types';
 
 // TODO: Use this interface when converting MusicView to TypeScript

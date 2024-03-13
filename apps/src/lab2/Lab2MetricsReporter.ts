@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricDimension} from '@cdo/apps/lib/metrics/types';
 

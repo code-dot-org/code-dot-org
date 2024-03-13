@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import {reduxStore} from '@cdo/storybook/decorators';

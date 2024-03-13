@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useEffect} from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';

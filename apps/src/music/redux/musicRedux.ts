@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Registry for Lab singletons
 
 import LabMetricsReporter from './Lab2MetricsReporter';

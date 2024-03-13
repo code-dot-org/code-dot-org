@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {APP_WIDTH, APP_HEIGHT} from '../../../../applab/constants';
 import {UnconnectedMakerStatusOverlay} from './MakerStatusOverlay';

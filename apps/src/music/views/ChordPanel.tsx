@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, useEffect, useCallback} from 'react';
 import classNames from 'classnames';
 import {getNoteName, isBlackKey} from '../utils/Notes';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import color from '../../util/color';
 
 export var input = {

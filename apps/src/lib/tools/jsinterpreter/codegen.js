@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {dropletGlobalConfigBlocks} from '../../../dropletUtils';
 import * as utils from '../../../utils';
 

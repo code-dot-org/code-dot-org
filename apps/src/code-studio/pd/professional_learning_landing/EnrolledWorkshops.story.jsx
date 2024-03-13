@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 import {EnrolledWorkshopsTable} from './EnrolledWorkshops';

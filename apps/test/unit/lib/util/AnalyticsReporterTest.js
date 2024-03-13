@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../util/reconfiguredChai';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as utils from '@cdo/apps/utils';

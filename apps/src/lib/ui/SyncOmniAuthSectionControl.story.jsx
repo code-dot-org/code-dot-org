@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {

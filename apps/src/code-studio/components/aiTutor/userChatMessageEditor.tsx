@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';

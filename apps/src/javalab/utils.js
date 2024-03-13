@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import msg from '@cdo/javalab/locale';
 
 // Common utilities for Java Lab

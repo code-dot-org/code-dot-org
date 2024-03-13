@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import cookies from 'js-cookie';
 
 const MUTE_MUSIC = 'mute_music';

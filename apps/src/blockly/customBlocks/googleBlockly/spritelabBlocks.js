@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import {SVG_NS} from '@cdo/apps/constants';

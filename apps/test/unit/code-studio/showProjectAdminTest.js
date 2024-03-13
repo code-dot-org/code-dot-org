@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import {assertVisible, assertHidden} from '../../util/assertions';
 import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';

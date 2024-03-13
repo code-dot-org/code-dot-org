@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Displays a list of nicely-formatted session times for a workshop.
  */

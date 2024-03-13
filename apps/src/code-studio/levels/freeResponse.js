@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import {TestResults} from '../../constants';
 import {onAnswerChanged, resetContainedLevel} from './codeStudioLevels';

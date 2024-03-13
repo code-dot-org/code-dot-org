@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useRef, useState} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';

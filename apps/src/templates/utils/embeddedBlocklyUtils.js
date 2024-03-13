@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';

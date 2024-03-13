@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import React from 'react';
 import i18n from '@cdo/locale';

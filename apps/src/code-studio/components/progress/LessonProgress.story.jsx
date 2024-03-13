@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';

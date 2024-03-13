@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const LessonIcons = {
   PLUGGED: 'desktop',
   UNPLUGGED: 'scissors',

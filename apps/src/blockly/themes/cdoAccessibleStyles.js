@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // IMPORTANT! Whenever updating ./cdoBlockStyles.mjs, be sure to also update
 // the styles here as well. The accessible styles can be generated using
 // accessibleStylesGenerator.mjs.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';

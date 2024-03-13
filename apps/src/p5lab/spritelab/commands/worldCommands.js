@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../../redux/textConsole';
 import {

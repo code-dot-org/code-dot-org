@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import GoogleBlockly, {BlockSvg, FieldValidator} from 'blockly/core';
 
 interface ColorOverrides {

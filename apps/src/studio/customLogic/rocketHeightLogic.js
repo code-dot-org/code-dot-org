@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {Direction} from '../constants';
 import CustomGameLogic from './customGameLogic';
 import '@cdo/apps/utils'; // Provides Function.prototype.inherits

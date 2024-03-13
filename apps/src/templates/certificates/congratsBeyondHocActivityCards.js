@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 

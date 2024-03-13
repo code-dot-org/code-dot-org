@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Functions for checking required blocks.
 
 /**

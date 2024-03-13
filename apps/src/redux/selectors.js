@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Some common selectors for redux state questions */
 
 /**

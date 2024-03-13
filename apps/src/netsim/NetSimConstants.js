@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Constants and enums used across Internet Simulator.
  */

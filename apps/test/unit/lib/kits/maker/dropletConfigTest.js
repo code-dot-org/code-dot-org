@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test maker droplet config behavior */
 import {expect} from '../../../../util/reconfiguredChai';
 import dropletConfig, {

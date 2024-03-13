@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {commands as actionCommands} from './actionCommands';
 import {commands as spriteCommands} from './spriteCommands';
 import * as utils from '@cdo/apps/p5lab/utils';

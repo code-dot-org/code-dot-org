@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI slider used to control router memory size.
  */

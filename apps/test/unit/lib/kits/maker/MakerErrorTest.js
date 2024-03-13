@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for our MakerError classes */
 import {expect} from '../../../../util/reconfiguredChai';
 import MakerError, {

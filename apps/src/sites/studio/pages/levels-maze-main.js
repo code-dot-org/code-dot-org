@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import loadMaze from './init/loadMaze';
 import loadAppOptions from '@cdo/apps/code-studio/initApp/loadApp';
 

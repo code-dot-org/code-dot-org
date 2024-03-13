@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Extendable error type */
 
 /**

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Allows objects to be sorted in ascending alphabetical order based on their `name` properties
 // Note: Sorting is case-insensitive
 export const nameComparator = (a, b) => {

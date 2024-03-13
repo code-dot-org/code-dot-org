@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import UsPhoneNumberInput from '@cdo/apps/code-studio/pd/form_components/UsPhoneNumberInput';
 import React from 'react';
 import {expect} from 'chai';

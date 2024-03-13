@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Radio, ControlLabel, FormGroup, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports

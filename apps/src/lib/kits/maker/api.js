@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Inject an executeCmd method so this mini-library can be used in both
  * App Lab and Game Lab

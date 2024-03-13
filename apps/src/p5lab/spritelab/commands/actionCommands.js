@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {commands as behaviorCommands} from './behaviorCommands';
 import {layoutSpriteGroup} from '../../layoutUtils';
 import {APP_HEIGHT} from '../../constants';

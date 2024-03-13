@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 
 // This file contains helper functions for chords, and is used by the

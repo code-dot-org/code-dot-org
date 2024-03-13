@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import EnrollmentCancelButton from '@cdo/apps/code-studio/pd/workshop_enrollment/enrollmentCancelButton';

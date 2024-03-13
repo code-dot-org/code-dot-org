@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlockSvg, Workspace} from 'blockly';
 
 // returns an array with the foreground/background effect blocks

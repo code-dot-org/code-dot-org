@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var Cell = function (tileType, speed, size, direction, emotion, sprite) {
   /**
    * @type {Number}

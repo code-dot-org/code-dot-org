@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import ResultsHandler from './resultsHandler';
 
 export default class FarmerHandler extends ResultsHandler {

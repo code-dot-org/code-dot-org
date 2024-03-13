@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {NestedSourceCode} from '@cdo/apps/lab2/types';
 const registerReducers = require('@cdo/apps/redux').registerReducers;

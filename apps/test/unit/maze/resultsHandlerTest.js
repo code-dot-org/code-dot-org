@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../util/reconfiguredChai';
 
 const FarmerHandler = require('@cdo/apps/maze/results/farmer');

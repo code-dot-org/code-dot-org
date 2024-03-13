@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ParticipantSections from './ParticipantSections';
 import {action} from '@storybook/addon-actions';

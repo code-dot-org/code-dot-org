@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This file exports customized blocks for Google Blockly labs.
 
 import {blocks as commonBlocks} from './commonBlocks';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useEffect} from 'react';
 import style from './ai-tutor.module.scss';
 import ChatWorkspace from './chatWorkspace';

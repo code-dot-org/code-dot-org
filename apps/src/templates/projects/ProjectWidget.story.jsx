@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ProjectWidget from './ProjectWidget';
 import {generateFakePersonalProjects} from './generateFakeProjects';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TestResults} from '@cdo/apps/constants';
 
 // Bee level which requires initialization blocks to work

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export default class ResultsHandler {
   constructor(maze, config) {
     this.maze_ = maze;

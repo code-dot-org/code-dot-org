@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Helper method for loading the locale from the global scope, which will detect if
  * translations are not present in the environment and fall back to an empty locale

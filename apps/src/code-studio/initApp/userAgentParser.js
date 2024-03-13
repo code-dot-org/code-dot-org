@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Long term we'd like to share this with app/src/dom.js
 
 module.exports.isMobile = function () {

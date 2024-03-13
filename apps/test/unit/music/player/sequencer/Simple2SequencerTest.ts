@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect, assert} from 'chai';
 import Simple2Sequencer from '@cdo/apps/music/player/sequencer/Simple2Sequencer';
 import MusicLibrary, {SoundData} from '@cdo/apps/music/player/MusicLibrary';

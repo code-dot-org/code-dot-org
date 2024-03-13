@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';

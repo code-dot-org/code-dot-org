@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';

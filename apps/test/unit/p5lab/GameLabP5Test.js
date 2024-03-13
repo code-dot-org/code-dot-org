@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test of our p5.play wrapper object */
 import {spy} from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';

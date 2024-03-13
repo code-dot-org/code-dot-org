@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export type LogLevel = 'INFO' | 'WARNING' | 'SEVERE';
 
 export interface MetricDatum {

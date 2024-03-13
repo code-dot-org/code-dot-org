@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)

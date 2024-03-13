@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';

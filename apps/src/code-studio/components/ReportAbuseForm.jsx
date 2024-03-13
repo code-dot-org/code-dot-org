@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import cookies from 'js-cookie';
 import _ from 'lodash';
 import PropTypes from 'prop-types';

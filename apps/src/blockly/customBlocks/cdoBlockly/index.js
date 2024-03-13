@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This file exports customized blocks for CDO Blockly labs.
 
 import {blocks as commonBlocks} from './commonBlocks';

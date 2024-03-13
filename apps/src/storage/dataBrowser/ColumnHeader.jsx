@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Component for adding a new column to the specified table.
  */

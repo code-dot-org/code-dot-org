@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {commonI18n} from '@cdo/apps/types/locale';
 import color from '@cdo/apps/util/color';
 import {frameSizes} from './cdoConstants';

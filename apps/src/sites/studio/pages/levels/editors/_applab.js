@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file JavaScript run only on the applab level edit page. */
 import $ from 'jquery';
 import React from 'react';

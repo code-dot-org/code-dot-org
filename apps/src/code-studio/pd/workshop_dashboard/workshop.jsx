@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Workshop view / edit. Displays and optionally edits details for a workshop.
  * Routes:

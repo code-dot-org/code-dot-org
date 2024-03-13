@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';
 import CdoBramble from '@cdo/apps/weblab/CdoBramble';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Globals used in this file:
 //   Blockly
 

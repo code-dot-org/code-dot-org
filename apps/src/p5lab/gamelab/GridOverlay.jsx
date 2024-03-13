@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Grid over visualization */
 import PropTypes from 'prop-types';
 import React from 'react';

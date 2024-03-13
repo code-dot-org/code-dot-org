@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test of consoleShim.js which makes console functions safer to use
  *  on older browsers by filling in no-op functions. */
 

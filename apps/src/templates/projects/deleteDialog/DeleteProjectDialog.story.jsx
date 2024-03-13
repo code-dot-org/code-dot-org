@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedDeleteProjectDialog as DeleteProjectDialog} from './DeleteProjectDialog';
 import {action} from '@storybook/addon-actions';

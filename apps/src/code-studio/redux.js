@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint no-unused-vars: "error" */
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import header from './headerRedux';

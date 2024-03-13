@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI controller for tabs area in left column
  *           Directly controls the instructions tab, others are delegated.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';

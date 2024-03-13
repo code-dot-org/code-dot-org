@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for tutorialExplorer.js */
 
 var assert = require('assert');

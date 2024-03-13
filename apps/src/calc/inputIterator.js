@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.

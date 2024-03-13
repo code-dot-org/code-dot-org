@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Main landing page and router for the application dashboard.
  */

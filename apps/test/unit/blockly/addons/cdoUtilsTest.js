@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializationHelpers';

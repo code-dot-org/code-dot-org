@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * An ordered set of progress bubbles.
  */

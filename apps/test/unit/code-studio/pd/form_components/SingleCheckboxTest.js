@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
 import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Resolves the location value from the provided input.
  * The input can be either a location object directly, or a function that returns a location object.

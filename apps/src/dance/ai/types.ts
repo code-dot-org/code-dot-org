@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {DANCE_AI_SOUNDS} from '@cdo/apps/dance/ai/constants';
 
 export enum DanceAiModalOutputType {

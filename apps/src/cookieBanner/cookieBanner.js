@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import cookies from 'js-cookie';
 import {getRootDomainFromHostname} from '@cdo/apps/code-studio/utils';
 

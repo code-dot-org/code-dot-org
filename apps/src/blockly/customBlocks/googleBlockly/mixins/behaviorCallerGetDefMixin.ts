@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This mixin's function is copied and modified from
 // https://github.com/google/blockly-samples/blob/9a83a2c78a3e2a993942e96c4933dcbb3b2c79d7/plugins/block-shareable-procedures/src/blocks.ts#L832-L858
 // We need to override findProcedureModel_ so that it can find a match based

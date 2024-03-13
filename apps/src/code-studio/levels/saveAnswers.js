@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {getResult} from './codeStudioLevels';
 
 // The external web page might tell us to save our progress and then navigate

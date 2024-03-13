@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as Immutable from 'immutable';
 import Observer from '../../../Observer';
 import {update as updateWatchExpressions} from '../../../redux/watchedExpressions';

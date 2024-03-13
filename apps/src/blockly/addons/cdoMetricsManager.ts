@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ScrollMetricsManager} from '@blockly/plugin-scroll-options';
 import {ContainerRegion} from 'blockly/core/metrics_manager';
 

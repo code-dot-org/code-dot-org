@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {EditorView} from '@codemirror/view';
 import color from '@cdo/apps/util/color';
 import {

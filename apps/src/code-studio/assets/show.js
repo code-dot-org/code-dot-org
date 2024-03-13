@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Sounds from '../../Sounds';
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* If a dashboard page knows that it's going to have a banner image as part of
  * the page header, then it should include this component at its top so that it
  * can put a text header and subheader over that banner image.

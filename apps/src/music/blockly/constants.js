@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Extensions & Mutator Names
 
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';

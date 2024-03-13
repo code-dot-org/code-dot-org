@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var React = require('react');
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');

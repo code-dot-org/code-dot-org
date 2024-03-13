@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';

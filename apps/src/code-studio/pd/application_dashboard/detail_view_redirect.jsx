@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Generic detail view url, loads and then redirects to the appropriate course_type url
  * Route: /:applicationId

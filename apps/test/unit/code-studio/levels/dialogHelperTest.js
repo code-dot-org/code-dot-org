@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {assert} from 'chai';
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';

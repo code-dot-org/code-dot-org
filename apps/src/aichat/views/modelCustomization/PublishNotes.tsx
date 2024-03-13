@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';

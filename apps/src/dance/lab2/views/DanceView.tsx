@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useEffect, useState} from 'react';
 import {TypedUseSelectorHook, useSelector} from 'react-redux';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';

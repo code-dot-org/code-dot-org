@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;

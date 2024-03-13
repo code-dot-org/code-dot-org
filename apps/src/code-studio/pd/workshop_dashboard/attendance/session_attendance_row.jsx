@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Display and edit attendance for a single teacher in a session,
  * for use in SessionAttendance.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Test SetupChecklist component */
 import React from 'react';
 import sinon from 'sinon';

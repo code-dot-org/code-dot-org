@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import * as locationUtils from '@cdo/apps/p5lab/locationUtils';

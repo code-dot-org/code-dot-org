@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 let registeredGetResult = null;
 let answerChangedFn = null;
 let authenticityToken = null;

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import SoundEffects from './soundEffects';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';

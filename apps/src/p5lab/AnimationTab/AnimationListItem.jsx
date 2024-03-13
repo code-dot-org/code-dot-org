@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** A single list item representing an animation. */
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import style from './chat-messages-table.module.scss';
 import {StudentChatRow, TutorType} from '@cdo/apps/aiTutor/types';

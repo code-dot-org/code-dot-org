@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview React component to allow for easy editing and creation of Cells.
  * can be extended to allow for editing of various specialized kinds of cells.

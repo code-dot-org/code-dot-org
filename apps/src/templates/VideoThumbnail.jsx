@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';

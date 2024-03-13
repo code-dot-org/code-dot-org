@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as utils from '@cdo/apps/p5lab/utils';
 import {commands as validationCommands} from './validationCommands';
 

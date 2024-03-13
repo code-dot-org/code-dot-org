@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Helper functions for accessing client state. This state is stored in a
  *       combination of cookies and HTML5 web storage.

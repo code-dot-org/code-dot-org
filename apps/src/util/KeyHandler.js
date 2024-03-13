@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * A KeyHandler class that can listen for events with multiple keys pressed.
  */

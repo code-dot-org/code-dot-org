@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for StudioApp.requiredBlocks_.

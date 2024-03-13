@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ProjectShare from './ProjectShare';
 import ProjectRemix from './ProjectRemix';

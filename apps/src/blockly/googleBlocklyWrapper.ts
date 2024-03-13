@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import './addons/plusMinusBlocks/if';
 import './addons/plusMinusBlocks/text_join';

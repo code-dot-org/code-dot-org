@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Immutable from 'immutable';
 import $ from 'jquery';
 import {

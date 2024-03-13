@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import KNN from 'ml-knn';
 import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 

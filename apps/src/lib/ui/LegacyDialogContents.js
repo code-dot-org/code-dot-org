@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * This file contains a set of dialogs used to create LegacyDialogs.
  * LegacyDialog expects a semi-specific format.

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Wraps remote storage interface and polling behavior.
  */

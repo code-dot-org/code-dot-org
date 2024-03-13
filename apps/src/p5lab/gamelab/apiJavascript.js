@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 let GameLab;
 
 // API definitions for functions exposed for JavaScript (droplet/ace) levels.

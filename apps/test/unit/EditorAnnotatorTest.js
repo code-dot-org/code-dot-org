@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import EditorAnnotator, {DropletAnnotator} from '@cdo/apps/EditorAnnotator';
 import {expect} from '../util/reconfiguredChai';

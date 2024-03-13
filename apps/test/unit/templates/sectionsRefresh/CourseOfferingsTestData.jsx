@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Use this for simple, singular course testing
 export const elementarySchoolCourseOffering = {
   elementary: {

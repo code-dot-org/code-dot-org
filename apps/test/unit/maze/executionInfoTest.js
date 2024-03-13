@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {expect} from '../../util/reconfiguredChai';
 import ExecutionInfo from '@cdo/apps/maze/executionInfo';
 

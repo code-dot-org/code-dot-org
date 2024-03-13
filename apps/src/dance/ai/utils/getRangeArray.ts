@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Returns an array containing [min, min+1, min+2, ..., max]
 export const getRangeArray = (min: number, max: number) => {
   const len = max - min + 1;

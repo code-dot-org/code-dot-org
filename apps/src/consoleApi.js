@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var vsprintf = require('sprintf-js').vsprintf;
 
 var consoleApi = module.exports;

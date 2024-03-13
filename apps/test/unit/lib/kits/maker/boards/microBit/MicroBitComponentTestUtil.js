@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Exports a set of tests that verify  that the micro:bit board
  * components and component constructors are available from the interpreter

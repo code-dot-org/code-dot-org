@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Wraps NetSim REST APIs for operations of "tables" and "shards."
  * @see net_sim_api.rb

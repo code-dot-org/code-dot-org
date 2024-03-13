@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview base class for all "panels" (visual boxes) in the NetSim
  *           interface, provides some common expand/collapse functionality.

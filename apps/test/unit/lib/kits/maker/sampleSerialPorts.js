@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Sample serial port objects for testing maker device detection.
  * See sample Adafruit board configurations at https://github.com/adafruit/Adafruit_Arduino_Boards/blob/master/boards.txt

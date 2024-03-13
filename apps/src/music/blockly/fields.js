@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Common field definitions used across multiple music blocks
 
 import {DEFAULT_PATTERN, DEFAULT_CHORD, Triggers} from '../constants';

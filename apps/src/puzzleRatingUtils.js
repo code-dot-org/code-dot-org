@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview A helper class for all actions associated with Puzzle
  * Ratings, aka the Fun-O-Meter.

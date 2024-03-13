@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createThumbnail} from '@cdo/apps/util/thumbnail';
 import {toCanvas} from '@cdo/apps/imageUtils';
 import assertVisualMatch from '../../util/assertVisualMatch';

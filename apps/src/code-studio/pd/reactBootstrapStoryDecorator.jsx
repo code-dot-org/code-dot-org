@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Currently the Bootstrap 3 styles required by React-Bootstrap are only
  * applied inside div#application-container. This is to prevent conflicts with

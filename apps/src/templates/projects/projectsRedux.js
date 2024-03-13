@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Redux actions and reducer for the Projects Gallery */
 import {combineReducers} from 'redux';
 import $ from 'jquery';

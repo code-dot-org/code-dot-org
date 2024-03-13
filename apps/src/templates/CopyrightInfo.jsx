@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';

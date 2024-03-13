@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {BlockTypes} from '../blockTypes';
 import {FIELD_SOUNDS_NAME, SOUND_VALUE_TYPE} from '../constants';
 import {fieldSoundsDefinition} from '../fields';

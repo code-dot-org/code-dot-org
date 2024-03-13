@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import weblabI18n from '@cdo/weblab/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {assert} from 'chai';
 import {UnconnectedLessonProgress as LessonProgress} from '@cdo/apps/code-studio/components/progress/LessonProgress';

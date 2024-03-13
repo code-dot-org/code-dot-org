@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {AnyAction, Dispatch, ThunkDispatch} from '@reduxjs/toolkit';
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
 import {RootState} from '@cdo/apps/types/redux';

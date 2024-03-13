@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Wrapper component for labs that use the project system.
  * This component will create a project manager for the current level and script

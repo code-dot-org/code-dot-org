@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {
   ALL_PARTNERS_OPTION,
   UNMATCHED_PARTNER_OPTION,

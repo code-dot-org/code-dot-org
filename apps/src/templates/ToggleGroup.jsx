@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Row of buttons for switching editor modes. */
 import PropTypes from 'prop-types';
 

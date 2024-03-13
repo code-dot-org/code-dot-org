@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import MusicLibrary from '../MusicLibrary';

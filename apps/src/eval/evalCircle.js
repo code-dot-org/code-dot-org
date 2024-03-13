@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits

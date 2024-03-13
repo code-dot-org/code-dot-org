@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 export const testSection = {
   id: 11,
   courseId: 29,

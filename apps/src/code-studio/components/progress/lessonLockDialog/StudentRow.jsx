@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';

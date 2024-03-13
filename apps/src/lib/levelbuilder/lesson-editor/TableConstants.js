@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import color from '@cdo/apps/util/color';
 
 export const lessonEditorTableStyles = {

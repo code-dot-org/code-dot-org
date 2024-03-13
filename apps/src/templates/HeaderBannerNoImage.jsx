@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Use this component if a dashboard page has a header banner with no image.
 // Adapted from the HeaderBanner component.
 

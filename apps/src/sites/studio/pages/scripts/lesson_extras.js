@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';

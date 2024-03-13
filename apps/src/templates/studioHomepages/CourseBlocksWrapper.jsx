@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
 import PropTypes from 'prop-types';

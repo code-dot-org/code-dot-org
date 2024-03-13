@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview UI component: An animated SVG metronome.
  */

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {range, mapValues, without, find} from 'lodash';

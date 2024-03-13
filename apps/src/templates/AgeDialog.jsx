@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';

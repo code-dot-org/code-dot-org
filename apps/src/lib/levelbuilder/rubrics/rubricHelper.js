@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {navigateToHref} from '@cdo/apps/utils';
 import {snakeCase, isNumber} from 'lodash';
 

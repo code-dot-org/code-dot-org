@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Provides utility methods for converting user data between
  *           different encodings, and formatting those encodings: binary,

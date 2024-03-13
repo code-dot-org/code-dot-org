@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {loadPyodide} from 'pyodide';
 
 async function loadPyodideAndPackages() {

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Shows rollup data from Foorm surveys. Shows average data for this workshop
  * and across all workshops for this course

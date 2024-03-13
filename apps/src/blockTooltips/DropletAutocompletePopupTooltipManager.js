@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');

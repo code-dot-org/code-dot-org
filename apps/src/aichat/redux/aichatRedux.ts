@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';

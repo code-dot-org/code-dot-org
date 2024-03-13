@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
 import {expect} from '../../../../util/reconfiguredChai';

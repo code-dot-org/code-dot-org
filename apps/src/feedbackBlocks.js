@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {TestResults} from './constants';
 var parseXmlElement = require('./xml').parseElement;
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* Tests for music/utils/UniqueSounds.js */
 
 var assert = require('assert');

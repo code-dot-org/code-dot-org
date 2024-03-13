@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import {

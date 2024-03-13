@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedMultipleChoiceAssessmentsOverviewTable as MultipleChoiceAssessmentsOverviewTable} from './MultipleChoiceAssessmentsOverviewTable';
 import i18n from '@cdo/locale';

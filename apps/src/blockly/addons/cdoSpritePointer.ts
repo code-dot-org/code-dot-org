@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // Helper functions for pointer block logic. In our pointer blocks (a.k.a.)
 // mini toolbox blocks) we "shadow" the image on the block from a source block.
 // This file contains functions to get and set the image on the pointer block.

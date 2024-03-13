@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import SetupChecklist from './SetupChecklist';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';

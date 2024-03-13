@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import $ from 'jquery';
 import clientState from '@cdo/apps/code-studio/clientState';
 import sinon from 'sinon';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 const QUERY_BY_OPTIONS = [
   {option: 'Scheduled Start Date', value: 'schedule'},
   {option: 'Date The Workshop Ended', value: 'end'},

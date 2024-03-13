@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // As we move from inline css to css modules we are temporarily duplicating this
 // into the css module common-styles.module.scss.
 // Any changes in one should be made in the other to apply to all components.

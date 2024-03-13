@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // StandaloneVideo
 //
 // This is a React client for a standalone_video level.  Note that this is

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {createToolbox} from '../../block_utils';
 
 const moveForwardBlock = '<block type="craft_moveForward"></block>';

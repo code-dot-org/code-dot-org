@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import {UnconnectedLessonStatusList as LessonStatusList} from './LessonStatusList';
 import {unpluggedLessonList} from './standardsTestHelpers';

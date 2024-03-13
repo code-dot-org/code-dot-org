@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * HeightResizer
  * A draggable, horizontal toolbar. As it is dragged, it calls back to onResize

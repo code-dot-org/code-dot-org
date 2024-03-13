@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // APIs needed for droplet (keep in sync with apiBlockly.js):
 
 export function container(elementId, html) {

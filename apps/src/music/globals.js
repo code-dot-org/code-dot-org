@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This module will hold some references to values that are currently
 // stored in React state (in MusicView), so that non-React code related
 // to Blockly blocks can access them.

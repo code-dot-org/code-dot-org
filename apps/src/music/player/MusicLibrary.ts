@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
 import {baseAssetUrlRestricted} from '../constants';

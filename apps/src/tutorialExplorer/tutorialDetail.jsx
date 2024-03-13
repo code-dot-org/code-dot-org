@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* A pop-up modal displaying information about a single tutorial in TutorialExplorer.
  */
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @overview Wrapped pub/sub service channel APIs (like Pusher's Channel)
  */

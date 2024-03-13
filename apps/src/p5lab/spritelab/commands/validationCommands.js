@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import {APP_WIDTH} from '../../constants';
 

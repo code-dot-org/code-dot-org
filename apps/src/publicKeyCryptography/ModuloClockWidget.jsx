@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Root component for Modulo Clock widget */
 import _ from 'lodash';
 import PropTypes from 'prop-types';

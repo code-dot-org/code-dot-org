@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Header present throughout the workshop dashboard UI.
  * Displays navigation breadcrumbs.

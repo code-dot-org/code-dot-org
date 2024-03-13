@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Dropdown with positive integer options, used in crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';

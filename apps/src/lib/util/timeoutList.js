@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Wrap timer functions for easy cleanup of all timers. */
 const timeoutList = [];
 

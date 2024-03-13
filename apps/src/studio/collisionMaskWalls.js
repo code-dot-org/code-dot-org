@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Walls from './walls';
 import {toImageData, URIFromImageData} from '../imageUtils';
 

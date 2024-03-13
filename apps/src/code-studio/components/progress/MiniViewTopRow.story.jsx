@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React from 'react';
 import MiniViewTopRow from './MiniViewTopRow';
 import progress from '@cdo/apps/code-studio/progressRedux';

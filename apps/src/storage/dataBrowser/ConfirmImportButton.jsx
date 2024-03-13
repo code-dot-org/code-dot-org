@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import Dialog from '../../templates/Dialog';
 import PendingButton from '../../templates/PendingButton';
 import React from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import {cachedWeightsMappings} from '../constants';
 import {FieldKey, GeneratedEffect, EffectsQuality} from '../types';
 import {calculateOutputSummedWeights} from './calculateOutputSummedWeights';

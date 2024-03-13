@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';

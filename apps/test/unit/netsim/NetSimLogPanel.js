@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Tests for NetSimLogPanel */
 import $ from 'jquery';
 import {assert} from '../../util/reconfiguredChai';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Button that continues to the next puzzle when clicked */
 import React from 'react';
 import i18n from '@cdo/locale';

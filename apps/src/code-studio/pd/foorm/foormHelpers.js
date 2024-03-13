@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * Creates a map of entity name to entity version where the version is the highest for that name
  * @param {Array<{metadata: {name: string, version: number}}>} foormEntities foorm entities (forms or libraries)

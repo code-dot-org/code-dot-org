@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useEffect, useRef} from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import centererStyle from './curriculum_catalog_card.module.scss';

@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file App Lab redux module */
 import {ApplabInterfaceMode} from '../constants';
 import data from '../../storage/redux/data';

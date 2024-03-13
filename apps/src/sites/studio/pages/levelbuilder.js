@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /**
  * @file Main entry point for scripts used on all level editing pages.
  */

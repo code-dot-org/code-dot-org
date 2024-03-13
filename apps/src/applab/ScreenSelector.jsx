@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /** @file Dropdown for selecting design mode screens */
 import PropTypes from 'prop-types';
 import React from 'react';

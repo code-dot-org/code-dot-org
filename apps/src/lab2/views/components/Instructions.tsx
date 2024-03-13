@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import React, {useCallback, useContext, useState} from 'react';
 import classNames from 'classnames';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';

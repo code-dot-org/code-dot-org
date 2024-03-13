@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // locale for bounce
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';

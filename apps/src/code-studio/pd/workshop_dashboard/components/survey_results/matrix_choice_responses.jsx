@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 // This component renders a survey answer for a matrix question
 // It will split the matrix into individual questions and display them with
 // the title "matrix title -> question title"
