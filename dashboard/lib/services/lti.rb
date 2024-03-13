@@ -220,17 +220,6 @@ class Services::Lti
           }
         )
         lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
-        # log_event LTI_Section_Created
-        metadata = {
-          'LMS_Type' => lti_integration.platform_name,
-          'Number_Of_Students' => '', #TODO: We don't know number of students yet, that happens when this gets called again on recursive redirect to sync course endpoint
-        }
-        Metrics::Events.log_event(
-          user: user, # TODO: We don't have access to user here, should we make it a param for this function?
-          event_type: 'LTI_EVENT',
-          event_name: 'LTI_Section_Created',
-          metadata: metadata,
-        )
         had_changes = true
       end
 

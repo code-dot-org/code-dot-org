@@ -9,7 +9,10 @@ module Metrics
           log_event_with_statsig(user: user, event_type: event_type, event_name: event_name, metadata: metadata)
         end
       rescue => exception
-        Honeybadger.notify(exception)
+        Honeybadger.notify(
+          exception,
+          error_message: 'Error logging event to Statsig',
+      )
       end
 
       private
