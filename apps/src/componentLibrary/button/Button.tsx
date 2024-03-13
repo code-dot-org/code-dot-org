@@ -160,7 +160,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   const tagSpecificProps =
     ButtonTag === 'a'
       ? {
-          href: disabled ? '#' : href,
+          href: disabled ? undefined : href,
           target,
           /** Copied from old button component. Only need it for the older browsers,
            *  since modern browsers (~2020+ release year secures these vulnerabilities by default) */
@@ -173,7 +173,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
           title,
         }
       : {type: buttonType, onClick, value, name};
-  console.log(ButtonTag, tagSpecificProps);
 
   // Check if correct props combination is passed
   useMemo(
@@ -200,8 +199,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   const showIconLeft = iconLeft && !isPending;
   const showIconRight =
     (iconRight && !isPending) || (isPending && iconRight && iconLeft);
-  const showText =
-    !isPending || (isPending && iconRight) || (isPending && iconLeft);
+  const addPendingButtonWithHiddenTextClass =
+    isPending && !icon && !iconLeft && !iconRight;
   const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
 
   return (
@@ -211,11 +210,13 @@ const Button: React.FunctionComponent<ButtonProps> = ({
         moduleStyles[`button-${type}`],
         moduleStyles[`button-${color}`],
         moduleStyles[`button-${size}`],
-        !showText && isPending && moduleStyles.buttonPendingWithHiddenText,
+        addPendingButtonWithHiddenTextClass &&
+          moduleStyles.buttonPendingWithHiddenText,
         className
       )}
       id={id}
       disabled={disabled}
+      aria-disabled={disabled}
       aria-label={ariaLabel}
       {...tagSpecificProps}
     >

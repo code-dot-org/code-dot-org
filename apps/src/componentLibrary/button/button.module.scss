@@ -44,7 +44,7 @@
     border: none !important;
   }
 
-  &:disabled {
+  &:disabled, &[aria-disabled="true"] {
     cursor: not-allowed;
     border: none;
   }
@@ -60,7 +60,7 @@
       background-color: $light_secondary_700;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       background-color: $light_gray_200;
       color: $light_white;
     }
@@ -74,7 +74,7 @@
       background-color: $light_gray_800;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       background-color: $light_gray_200;
       color: $light_white;
     }
@@ -88,7 +88,7 @@
       background-color: $light_gray_200;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       background-color: $light_gray_800;
       color: $light_gray_900;
     }
@@ -111,7 +111,7 @@
       border: 1px solid $light_secondary_500 !important;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       border-color: $light_gray_200 !important;
       color: $light_gray_200;
       background-color: unset;
@@ -133,7 +133,7 @@
       border: 1px solid $light_black !important;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       border-color: $light_gray_200 !important;
       color: $light_gray_200;
       background-color: unset;
@@ -155,7 +155,7 @@
       border: 1px solid $light_white !important;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       border-color: $light_gray_800 !important;
       color: $light_gray_800;
       background-color: unset;
@@ -177,7 +177,7 @@
       color: $light_secondary_700;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       color: $light_gray_200;
       background-color: unset;
     }
@@ -196,7 +196,7 @@
       color: $light_gray_800;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       color: $light_gray_200;
       background-color: unset;
     }
@@ -215,7 +215,7 @@
       color: $light_gray_200;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       color: $light_gray_800;
       background-color: unset;
     }
@@ -230,7 +230,7 @@
       background-color: $light_secondary_100;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       border-color: $light_gray_200;
       color: $light_gray_200;
       background-color: unset;
@@ -246,7 +246,7 @@
     }
 
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       border-color: $light_gray_200;
       color: $light_gray_200;
       background-color: unset;
@@ -260,7 +260,7 @@
       background-color: $light_gray_800;
     }
 
-    &:disabled {
+    &:disabled, &[aria-disabled="true"] {
       border-color: $light_gray_800;
       color: $light_gray_800;
       background-color: unset;
