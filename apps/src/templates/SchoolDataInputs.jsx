@@ -7,7 +7,7 @@ import {
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
-import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 
 export default function SchoolDataInputs({

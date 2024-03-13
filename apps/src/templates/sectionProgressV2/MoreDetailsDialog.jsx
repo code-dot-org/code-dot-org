@@ -12,12 +12,11 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 import styles from './progress-table-legend.module.scss';
-import color from '@cdo/apps/util/color';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
-  const renderItem = (itemType, itemTitle, itemDetails, colorOverride) => (
+  const renderItem = (itemType, itemTitle, itemDetails) => (
     <div className={styles.item}>
-      <ProgressIcon itemType={itemType} colorOverride={colorOverride} />
+      <ProgressIcon itemType={itemType} />
       <BodyThreeText>
         <StrongText>{itemTitle + ': '}</StrongText>
         {itemDetails}
@@ -95,8 +94,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.CHOICE_LEVEL,
           i18n.choiceLevel(),
-          i18n.progressLegendDetailsChoiceLevels(),
-          color.neutral_dark
+          i18n.progressLegendDetailsChoiceLevels()
         )}
       </div>
     </AccessibleDialog>

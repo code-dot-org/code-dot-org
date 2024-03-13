@@ -73,7 +73,7 @@ describe('RubricContent', () => {
   };
 
   const aiEvaluations = [
-    {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+    {id: 2, learning_goal_id: 2, understanding: 2, aiConfidencePassFail: 2},
   ];
 
   it('displays LearningGoals component with correct props when viewing student work on assessment level', async () => {

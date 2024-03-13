@@ -15,6 +15,7 @@ import {
 } from './rubricShapes';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import classNames from 'classnames';
 
 function RubricFloatingActionButton({
   rubric,
@@ -28,6 +29,13 @@ function RubricFloatingActionButton({
   const [isOpen, setIsOpen] = useState(
     JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
   );
+  // Show the pulse if this is the first time the user has seen the FAB in this
+  // session. Depends on other logic which sets the open state in session storage.
+  const [isFirstSession] = useState(
+    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
+  );
+  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
+  const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
   const eventData = useMemo(() => {
     return {
@@ -71,21 +79,35 @@ function RubricFloatingActionButton({
 
   const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
 
+  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
+  const classes = showPulse
+    ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
+    : style.floatingActionButton;
+
   return (
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
-        className={style.floatingActionButton}
-        // I couldn't get an image url to work in the SCSS module, so using an inline style for now
-        style={{backgroundImage: `url(${fabIcon})`}}
+        className={classes}
         onClick={handleClick}
         type="button"
-      />
+      >
+        <img
+          alt="AI bot"
+          src={fabIcon}
+          onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+        />
+      </button>
       <div
-        id="ui-floatingActionButton-overlay"
         className={style.taOverlay}
         style={{backgroundImage: `url(${taIcon})`}}
-      />
+      >
+        <img
+          src={taIcon}
+          alt="TA overlay"
+          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
+        />
+      </div>
       {/* TODO: do not hardcode in AI setting */}
       <RubricContainer
         rubric={rubric}
