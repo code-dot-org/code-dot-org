@@ -8,7 +8,7 @@ import RetrievalCustomization from './modelCustomization/RetrievalCustomization'
 import PublishNotes from './modelCustomization/PublishNotes';
 import styles from './model-customization-workspace.module.scss';
 import {EMPTY_AI_CUSTOMIZATIONS} from './modelCustomization/constants';
-import {isHidden} from './modelCustomization/utils';
+import {isVisible} from './modelCustomization/utils';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
   const {retrievalContexts, modelCardInfo, botName, temperature, systemPrompt} =
@@ -18,26 +18,26 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
           ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
     );
 
-  const hidePromptCustomization =
-    isHidden(botName.visibility) &&
-    isHidden(temperature.visibility) &&
-    isHidden(systemPrompt.visibility);
+  const showPromptCustomization =
+    isVisible(botName.visibility) ||
+    isVisible(temperature.visibility) ||
+    isVisible(systemPrompt.visibility);
 
   return (
     <div className={styles.modelCustomizationWorkspace}>
       <Tabs
         tabs={
           [
-            !hidePromptCustomization && {
+            showPromptCustomization && {
               title: 'Prompt',
               content: <PromptCustomization />,
             },
-            !isHidden(retrievalContexts.visibility) && {
+            isVisible(retrievalContexts.visibility) && {
               title: 'Retrieval',
               content: <RetrievalCustomization />,
             },
             {title: 'Fine Tuning', content: 'fine tuning content TBD'},
-            !isHidden(modelCardInfo.visibility) && {
+            isVisible(modelCardInfo.visibility) && {
               title: 'Publish',
               content: <PublishNotes />,
             },

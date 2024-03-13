@@ -9,7 +9,7 @@ import {
   EMPTY_AI_CUSTOMIZATIONS,
   MODEL_CARD_FIELDS_AND_LABELS,
 } from './constants';
-import {isHidden, isDisabled} from './utils';
+import {isVisible, isDisabled} from './utils';
 
 const PublishNotes: React.FunctionComponent = () => {
   const {modelCardInfo} = useSelector(
@@ -23,7 +23,7 @@ const PublishNotes: React.FunctionComponent = () => {
       <div>
         {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
           return (
-            !isHidden(modelCardInfo.visibility) && (
+            isVisible(modelCardInfo.visibility) && (
               <div className={styles.inputContainer} key={id}>
                 <label htmlFor={id}>
                   <StrongText>{text}</StrongText>

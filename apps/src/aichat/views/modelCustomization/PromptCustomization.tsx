@@ -5,7 +5,7 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import styles from '../model-customization-workspace.module.scss';
-import {isHidden, isDisabled} from './utils';
+import {isVisible, isDisabled} from './utils';
 import {EMPTY_AI_CUSTOMIZATIONS} from './constants';
 
 const PromptCustomization: React.FunctionComponent = () => {
@@ -23,7 +23,7 @@ const PromptCustomization: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div>
-        {!isHidden(botName.visibility) && (
+        {isVisible(botName.visibility) && (
           <div className={styles.inputContainer}>
             <label htmlFor="chatbot-name">
               <StrongText>Chatbot name</StrongText>
@@ -36,7 +36,7 @@ const PromptCustomization: React.FunctionComponent = () => {
             />
           </div>
         )}
-        {!isHidden(temperature.visibility) && (
+        {isVisible(temperature.visibility) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
               <label htmlFor="temperature">
@@ -54,7 +54,7 @@ const PromptCustomization: React.FunctionComponent = () => {
             />
           </div>
         )}
-        {!isHidden(systemPrompt.visibility) && (
+        {isVisible(systemPrompt.visibility) && (
           <div className={styles.inputContainer}>
             <label htmlFor="system-prompt">
               <StrongText>System prompt</StrongText>
