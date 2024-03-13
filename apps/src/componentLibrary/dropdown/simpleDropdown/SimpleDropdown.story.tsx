@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Meta, Story} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react';
 
 import {
   SimpleDropdown,
@@ -16,7 +16,7 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: Story<SimpleDropdownProps> = args => {
+const SingleTemplate: StoryFn<SimpleDropdownProps> = args => {
   const [value, setValues] = useState('');
   return (
     <SimpleDropdown
@@ -30,7 +30,7 @@ const SingleTemplate: Story<SimpleDropdownProps> = args => {
   );
 };
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: SimpleDropdownProps[];
 }> = args => {
   const [values, setValues] = useState({} as Record<string, string>);
