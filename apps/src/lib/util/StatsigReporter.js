@@ -12,11 +12,10 @@ const Statsig = require('statsig-js');
 
 class StatsigReporter {
   constructor() {
-    const local_mode = isProductionEnvironment ? false : true;
     const options = {
       environment: {tier: getEnvironment()},
       network_timeout: 5,
-      local_mode: local_mode,
+      local_mode: !isProductionEnvironment(),
     };
     const api_key = document.querySelector('script[statsig_api_client_key]');
     Statsig.initialize(api_key, options);
