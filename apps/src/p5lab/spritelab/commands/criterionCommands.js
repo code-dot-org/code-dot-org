@@ -89,9 +89,9 @@ export const commands = {
       const speechText = this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
       if (speechText) {
         for (const value of values) {
-          if (typeof value === 'string' && speechText.includes(value)) {
+          if (typeof speechText === 'string' && speechText.includes(value)) {
             return true;
-          } else if (typeof value === 'number' && speechText === value) {
+          } else if (typeof speechText === 'number' && speechText === value) {
             return true;
           }
         }
@@ -363,18 +363,10 @@ export const commands = {
   // Returns true if a minimum number of sprites has the specified behavior.
   minimumMatchingBehaviors(matchingBehavior, min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
-    let matchingBehaviors = 0;
-    for (const spriteId of spriteIds) {
-      const hasBehavior =
-        this.getBehaviorsForSpriteId(spriteId).includes(matchingBehavior);
-      if (hasBehavior) {
-        matchingBehaviors++;
-        if (matchingBehaviors >= min) {
-          return true;
-        }
-      }
-    }
-    return false;
+    const matchingSprites = spriteIds.filter(spriteId =>
+      this.getBehaviorsForSpriteId(spriteId).includes(matchingBehavior)
+    );
+    return matchingSprites.length >= min;
   },
 
   // Returns true if sprites collectively have the minimum number of behaviors this frame,
