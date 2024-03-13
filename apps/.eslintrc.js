@@ -118,16 +118,32 @@ module.exports = {
     'import/order': [
       'error',
       {
+        'newlines-between': 'always',
         groups: [
           ['builtin', 'external'],
           'internal',
-          ['parent', 'sibling'],
+          'parent',
+          'sibling',
           'index',
+        ],
+        pathGroups: [
+          {
+            pattern: '@cdo/**',
+            group: 'internal',
+            position: 'before',
+          },
+          {
+            pattern: '*.scss',
+            group: 'index',
+            position: 'after',
+            patternOptions: {matchBase: true},
+          },
         ],
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
         },
+        pathGroupsExcludedImportTypes: ['builtin', 'object'],
       },
     ],
   },
@@ -241,7 +257,6 @@ module.exports = {
         'src/templates/rubrics/**',
         'src/templates/sectionAssessments/**',
         'src/templates/sectionProgress/**',
-        'src/templates/sectionProgressV2/**',
         'src/templates/sectionSetup/**',
         'src/templates/sectionsRefresh/**',
         'src/templates/sessions/**',
@@ -314,7 +329,6 @@ module.exports = {
         'test/unit/templates/rubrics/**',
         'test/unit/templates/sectionAssessments/**',
         'test/unit/templates/sectionProgress/**',
-        'test/unit/templates/sectionProgressV2/**',
         'test/unit/templates/sectionSetup/**',
         'test/unit/templates/sectionsRefresh/**',
         'test/unit/templates/studioHomepages/**',

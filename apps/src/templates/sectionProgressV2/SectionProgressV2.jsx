@@ -1,15 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
-import ProgressTableV2 from './ProgressTableV2';
-import IconKey from './IconKey';
+import i18n from '@cdo/locale';
+
+import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-import {connect} from 'react-redux';
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
-import styles from './progress-table-v2.module.scss';
 import UnitSelectorV2 from '../UnitSelectorV2';
-import i18n from '@cdo/locale';
+
+import IconKey from './IconKey';
+import ProgressTableV2 from './ProgressTableV2';
+
+import styles from './progress-table-v2.module.scss';
 
 function SectionProgressV2({
   scriptId,

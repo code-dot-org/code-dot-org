@@ -1,7 +1,9 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import IconKey from '@cdo/apps/templates/sectionProgressV2/IconKey';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('IconKey Component', () => {
   it('renders the open state initially', () => {
