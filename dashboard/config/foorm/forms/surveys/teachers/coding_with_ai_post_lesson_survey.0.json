@@ -4,7 +4,7 @@
     {
       "type": "panel",
       "name": "testing_panel",
-      "visible": true,
+      "visible": false,
       "title": " ",
       "elements": [
         {
@@ -13,14 +13,32 @@
           "html": "<h2 style='background-color: yellow'>Panel for variable testing (hide before shipping)</h2>"
         },
         {
-          "type": "text",
+          "type": "radiogroup",
           "name": "lesson_number",
-          "inputType": "number",
-          "min": 0,
-          "max": 9,
-          "step": 1,
           "defaultValueExpression": "{1}",
-          "visible": true
+          "visible": true,
+          "choices": [
+            {
+              "value": 1,
+              "text": "Lesson 1: Introduction to AI in Programming"
+            },
+            {
+              "value": 2,
+              "text": "Lesson 2: AI-Assisted Initial Programming Stages"
+            },
+            {
+              "value": 3,
+              "text": "Lesson 3: AI in Algorithm Planning"
+            },
+            {
+              "value": 4,
+              "text": "Lesson 4: AI in Debugging and Code Improvement"
+            },
+            {
+              "value": 5,
+              "text": "Lesson 5: Enhancing Finished Programs with AI"
+            }
+          ]
         },
         {
           "type": "html",
@@ -38,14 +56,19 @@
     {
       "type": "html",
       "name": "intro_coding_with_ai_post_lesson_survey",
-      "html": "<h1>Code.org Coding with AI</h1><p><h2>Post-Lesson Survey</h2></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Lesson {lesson_number}</h2>"
+      "html": "<h1>Code.org Coding with AI</h1><p><h2>Post-Lesson Survey</h2></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>{lesson_number}</h2>"
     },
     {
       "type": "panel",
       "name": "questions",
       "visible": true,
-      "title": "Coding with AI - Post-Lesson {lesson_number} Survey",
+      "title": "Coding with AI - Post-Lesson Survey",
       "elements": [
+        {
+          "type": "html",
+          "name": "instructions",
+          "html": " <p style='font-size: larger'>Please answer this questions to share your overall thoughts about teaching this lesson.</p>"
+        },
         {
           "type": "rating",
           "name": "student_engagement",
