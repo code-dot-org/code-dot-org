@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {render, screen} from '@testing-library/react';
-import userEvent from '@testing-library/user-event'
+import userEvent from '@testing-library/user-event';
 import LibraryIdCopier from '@cdo/apps/code-studio/components/libraries/LibraryIdCopier.jsx';
 
 describe('LibraryIdCopier', () => {
