@@ -63,7 +63,8 @@ steps:
       filename: unit-tests-cache-ubuntu-20.tar
 
   - name: unit-tests
-    # see: docker/dockerfiles/Dockerfile
+    # see: docker/drone/Dockerfile
+    # TODO: switch to codedotorg/cdo-drone
     image: codedotorg/code-dot-org:1.9.3
     pull: always
     volumes:
@@ -180,7 +181,8 @@ steps:
       filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
-    # see: docker/dockerfiles/Dockerfile
+    # see: docker/drone/Dockerfile
+    # TODO: switch to codedotorg/cdo-drone
     image: codedotorg/code-dot-org:1.9.3
     pull: always
     volumes:
