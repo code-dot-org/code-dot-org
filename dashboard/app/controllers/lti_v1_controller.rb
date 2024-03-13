@@ -173,7 +173,7 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
-  def render_sync_course_error(message, status, issuer)
+  def render_sync_course_error(message, status, issuer = nil)
     @lti_section_sync_result = {error: message, issuer: issuer}
     Honeybadger.notify(
       'LTI roster sync error',
