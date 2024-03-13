@@ -32,7 +32,7 @@ services:
     image: activejob:latest
     # user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
-      - ../:/home/appuser/code-dot-org:delegated
+      - ../../:/home/appuser/code-dot-org:delegated
     stdin_open: true
     tty: true
     entrypoint: ["docker/activejob/entrypoint.sh"]
@@ -52,6 +52,7 @@ services:
     - "3306:3306"
     volumes:
       - ./data:/var/lib/mysql
+      - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro
 
 
 # Okay, you got your local environment working. Now you need to create a job and confirm it runs. Maybe pull up a mysql client to watch the table?
