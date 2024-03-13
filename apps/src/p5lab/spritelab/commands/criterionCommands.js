@@ -618,6 +618,10 @@ export const commands = {
   // Optionally checks if the variable values have increased or decreased.
   // Since this command requires a variable bubble, it should be used in conjunction
   // with variableBubblesCreated.
+  // Example usage:
+  //   variableValueChanged(); // Checks if any watched variable changed.
+  //   variableValueChanged('increase'); // Checks if any watched variable increased.
+  //   variableValueChanged('decrease'); // Checks if any watched variable decreased.
   variableValueChanged(changeType = '') {
     const previousStudentVars = this.previous.variableBubbles;
     if (previousStudentVars) {
@@ -668,7 +672,7 @@ export const commands = {
         }
       }
     }
-    // If we reach this point, none of the watched variables changed
+    // If we reach this point, none of the watched variables changed in the specified way.
     return false;
   },
 };
