@@ -127,7 +127,7 @@ const checkButtonPropsForErrors = ({
 const spinnerIcon: FontAwesomeV6IconProps = {
   iconName: 'spinner',
   iconStyle: 'solid',
-  className: 'fa-spin',
+  animationType: 'spin',
 };
 
 const Button: React.FunctionComponent<ButtonProps> = ({
