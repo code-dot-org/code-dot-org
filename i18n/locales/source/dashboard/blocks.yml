@@ -1241,7 +1241,7 @@ en:
       GameDev_gravity:
         text: "[SPRITE][0] falls with [VELOCITY][1] gravity"
         options:
-          SIZE:
+          VELOCITY:
             "-0.25": low
             "-0.5": medium
             "-1": high
@@ -1264,9 +1264,9 @@ en:
         text: make player do [STRENGTH][0] jump
         options:
           STRENGTH:
-            '5': small
-            '10': big
-            '7.5': medium
+            '7': small
+            '11': big
+            '8.5': medium
       GameDev_setGroup:
         text: set [SPRITE][0] type to [GROUP][1]
         options:
@@ -1282,7 +1282,7 @@ en:
             '"velocityX"': horizontal velocity
             '"velocityY"': vertical velocity
       GameDev_spriteType:
-        text: "[TYPE][0]"
+        text: "[GROUP][0]"
         options:
           GROUP:
             '"players"': player
