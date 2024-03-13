@@ -25,12 +25,14 @@ class CongratsController < ApplicationController
         if completed_units.length == units.length
           [{
             courseName: @course_name,
+            courseTitle: curriculum.localized_title,
             coursePath: course_path(curriculum),
           }]
         else
           completed_units.map do |unit|
             {
               courseName: unit.name,
+              courseTitle: unit.localized_title,
               coursePath: script_path(unit),
             }
           end
@@ -40,6 +42,7 @@ class CongratsController < ApplicationController
       @curriculum_url = script_path('hourofcode')
       @certificate_data = [{
         courseName: @course_name,
+        courseTitle: I18n.t('certificates.one_hour_of_code'),
         coursePath: @curriculum_url,
       }]
     else
@@ -50,6 +53,7 @@ class CongratsController < ApplicationController
         if curriculum&.hoc? || curriculum&.csf? || Policies::ScriptActivity.completed?(current_user, curriculum)
           [{
             courseName: @course_name,
+            courseTitle: curriculum.localized_title,
             coursePath: @curriculum_url,
           }]
         else
