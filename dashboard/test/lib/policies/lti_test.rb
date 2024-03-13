@@ -65,6 +65,18 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_equal nil, Policies::Lti.lti_provided_email(user)
   end
 
+  test 'lti_teacher returns false if administrator' do
+    assert_equal false, Policies::Lti.lti_teacher?(["http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator"])
+  end
+
+  test 'lti_teacher returns false if learner' do
+    assert_equal false, Policies::Lti.lti_teacher?([Policies::Lti::CONTEXT_LEARNER_ROLE])
+  end
+
+  test 'lti_teacher returns true if instructor' do
+    assert_equal true, Policies::Lti.lti_teacher?(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor'])
+  end
+
   test 'show_email_input?' do
     test_matrix = [
       [true, [:teacher, :with_lti_auth]],
