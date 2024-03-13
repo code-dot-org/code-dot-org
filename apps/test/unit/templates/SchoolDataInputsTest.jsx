@@ -8,6 +8,7 @@ describe('SchoolDataInputs', () => {
   function renderDefault(propOverrides = {}) {
     render(<SchoolDataInputs {...propOverrides} />);
   }
+
   it('displays headers in basic component render', () => {
     renderDefault();
     expect(screen.queryByText(i18n.censusHeading()));

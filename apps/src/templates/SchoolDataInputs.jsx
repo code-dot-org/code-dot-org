@@ -87,7 +87,6 @@ export default function SchoolDataInputs({
             <input
               type="text"
               name={fieldNames.schoolZip}
-              placeholder={'i.e. 98104'}
               onChange={e => {
                 setZip(e.target.value);
               }}
