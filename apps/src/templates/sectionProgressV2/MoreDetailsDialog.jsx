@@ -11,7 +11,7 @@ import {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
-import styles from './progress-key-popup.module.scss';
+import styles from './progress-table-legend.module.scss';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
   const renderItem = (itemType, itemTitle, itemDetails) => (

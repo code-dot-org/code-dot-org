@@ -11,18 +11,10 @@ export interface ConditionNames {
 }
 
 export const MusicConditions: ConditionNames = {
-  PLAYED_SOUNDS_TOGETHER: {
-    name: 'played_sounds_together',
-    hasValue: true,
-    valueType: 'number',
-  },
-  PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered', hasValue: false},
-  PLAYED_SOUNDS: {name: 'played_sounds', hasValue: true, valueType: 'number'},
-  PLAYED_SOUND_ID: {
-    name: 'played_sound_id',
-    hasValue: false,
-    valueType: 'string',
-  },
+  PLAYED_SOUNDS_TOGETHER: {name: 'played_sounds_together', valueType: 'number'},
+  PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
+  PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
+  PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
 };
 
 export default class MusicValidator extends Validator {

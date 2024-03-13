@@ -22,7 +22,7 @@ import classnames from 'classnames';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StudentSelector from './StudentSelector';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import SectionSelector from './SectionSelector';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -112,13 +112,13 @@ export default function RubricContent({
       <div className={style.studentInfoGroup}>
         <Heading3>
           {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.name,
+            lessonNumber: lesson?.position,
+            lessonName: lesson?.name,
           })}
         </Heading3>
 
         <div className={style.selectors}>
-          <SectionSelector reloadOnChange={true} requireSelection={false} />
+          <SectionSelector reloadOnChange={true} />
           <StudentSelector
             styleName={style.studentSelector}
             selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
