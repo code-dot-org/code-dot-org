@@ -12,10 +12,10 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import MoreDetailsDialog from './MoreDetailsDialog.jsx';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
-  const [isOpen, setIsOpen] = useState(true);
-  const [isIconDetailsOpen, setIconDetailsOpen] = useState(
+  const [isOpen, setIsOpen] = useState(
     tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
   );
+  const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
 
   const toggleIsViewingDetails = event => {
     event.preventDefault();
