@@ -19,8 +19,24 @@ describe('RubricSettings', () => {
   let fetchStub;
   let store;
   let refreshAiEvaluationsSpy;
+
+  async function wait() {
+    for (let _ = 0; _ < 10; _++) {
+      await act(async () => {
+        await Promise.resolve();
+      });
+    }
+  }
+
+  function stubFetchEvalStatusForAll(data) {
+    fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.returns(Promise.resolve(new Response('')));
     refreshAiEvaluationsSpy = sinon.spy();
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
@@ -29,10 +45,11 @@ describe('RubricSettings', () => {
   });
 
   afterEach(() => {
-    fetchStub.restore();
     utils.queryParams.restore();
     restoreRedux();
+    fetchStub.restore();
   });
+
   const defaultRubric = {
     id: 1,
     learningGoals: [],
@@ -65,7 +82,8 @@ describe('RubricSettings', () => {
   };
 
   it('displays Section selector', () => {
-    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(ready))));
+    stubFetchEvalStatusForAll(ready);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -80,7 +98,8 @@ describe('RubricSettings', () => {
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
-    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(ready))));
+    stubFetchEvalStatusForAll(ready);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -91,17 +110,17 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches
+    await wait();
+
     wrapper.update();
     expect(wrapper.find('Button').first().props().disabled).to.be.false;
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
-    fetchStub.returns(
-      Promise.resolve(new Response(JSON.stringify(noAttempts)))
-    );
+    stubFetchEvalStatusForAll(noAttempts);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -112,17 +131,17 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches and re-render
+    await wait();
     wrapper.update();
+
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
-    fetchStub.returns(
-      Promise.resolve(new Response(JSON.stringify(noUnevaluated)))
-    );
+    stubFetchEvalStatusForAll(noUnevaluated);
+
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -133,21 +152,16 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches and re-render
+    await wait();
     wrapper.update();
+
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(ready))));
-    fetchStub.onCall(1).returns(Promise.resolve({ok: true}));
-    fetchStub
-      .onCall(2)
-      .returns(Promise.resolve(new Response(JSON.stringify(noUnevaluated))));
+    stubFetchEvalStatusForAll(ready);
 
     const clock = sinon.useFakeTimers();
 
@@ -161,22 +175,30 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches and re-renders
+    await wait();
     wrapper.update();
+
+    // Next time it asks, we have no unevaluated as a status
+    stubFetchEvalStatusForAll(noUnevaluated);
+
     wrapper.find('Button').first().simulate('click');
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches and re-renders
+    await wait();
     wrapper.update();
+
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pending());
+
+    // Advance clock 5 seconds
     clock.tick(5000);
-    await act(async () => {
-      await Promise.resolve();
-    });
+
+    // Perform fetches and re-renders
+    await wait();
     wrapper.update();
+
     expect(fetchStub).to.have.callCount(3);
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
