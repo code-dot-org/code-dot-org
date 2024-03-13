@@ -1282,12 +1282,10 @@ section.quote {
 
   // Used with two ul elements
   &.two-col {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-
-    @media screen and (max-width: $width-md) {
-      grid-template-columns: unset;
-      gap: 1rem;
+    @media (min-width: $width-md) {
+      ul {
+        column-count: 2;
+      }
     }
   }
 
