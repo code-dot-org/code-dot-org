@@ -42,8 +42,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const currentFolder = useMemo(() => {
     // Default to the first available kit if the current kit is not found in this library.
     return (
-      availableKits.find(kit => kit.path === currentValue.kit) ||
-      availableKits[0]
+      availableKits.find(kit => kit.id === currentValue.kit) || availableKits[0]
     );
   }, [availableKits, currentValue.kit]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);

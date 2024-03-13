@@ -7,6 +7,11 @@ class Queries::Lti
     User.find_by_credential(type: AuthenticationOption::LTI_V1, id: auth_id)
   end
 
+  # Returns the LTI user id for a particular code.org user and LTI integration
+  def self.lti_user_id(user, lti_integration)
+    user.lti_user_identities.find_by(lti_integration_id: lti_integration.id)&.subject
+  end
+
   def self.get_lti_integration(issuer, client_id)
     LtiIntegration.find_by(issuer: issuer, client_id: client_id)
   end

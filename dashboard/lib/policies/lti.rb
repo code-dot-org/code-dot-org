@@ -14,13 +14,16 @@ class Policies::Lti
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
+
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
-  TEACHER_ROLES = Set.new(
+  TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
+).freeze
+  STAFF_ROLES = Set.new(
     [
+      *TEACHER_ROLES,
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/membership#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/system/person#Administrator',
     ]
 ).freeze
@@ -71,9 +74,14 @@ class Policies::Lti
 
   def self.get_account_type(roles)
     roles.each do |role|
-      return User::TYPE_TEACHER if TEACHER_ROLES.include? role
+      return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end
     return User::TYPE_STUDENT
+  end
+
+  # Returns true if any of the user's roles is the LTI instructor role
+  def self.lti_teacher?(roles)
+    (Set.new(roles) & TEACHER_ROLES).any?
   end
 
   def self.generate_auth_id(id_token)

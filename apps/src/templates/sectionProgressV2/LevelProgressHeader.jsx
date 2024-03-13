@@ -19,6 +19,7 @@ export default function ExpandedProgressColumnHeader({
       <div
         key={lesson.id + '.' + level.id + '-h'}
         className={classNames(
+          styles.expandedHeaderChild,
           styles.expandedHeaderExpandedLevel,
           isExpandable && styles.pointerMouse
         )}
@@ -61,7 +62,9 @@ export default function ExpandedProgressColumnHeader({
       <div
         className={classNames(
           styles.gridBox,
+          styles.expandedHeaderChild,
           styles.expandedHeaderLevelCell,
+          styles.expandedHeaderLevelCellUnexpanded,
           isExpandable && styles.pointerMouse
         )}
         key={lesson.id + '.' + level.id + '-h'}
