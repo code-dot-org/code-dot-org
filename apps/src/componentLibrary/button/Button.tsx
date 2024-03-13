@@ -36,12 +36,8 @@ export interface ButtonProps {
   text?: string;
   /** Is button disabled */
   disabled?: boolean;
-  // TODO: We'll need this two props functionality in the future, now designs for it is in progress.
-  //  Once designs are ready, we can implement it.
-  // /** Is button pending */
-  // isPending?: boolean;
-  // /** Button pending text */
-  // pendingText?: string;
+  /** Is button pending */
+  isPending?: boolean;
   /** Button aria-label */
   ariaLabel?: string;
   /** Size of button */
@@ -128,11 +124,18 @@ const checkButtonPropsForErrors = ({
   }
 };
 
+const spinnerIcon = {
+  iconName: 'spinner',
+  iconStyle: 'solid',
+  className: 'fa-spin',
+};
+
 const Button: React.FunctionComponent<ButtonProps> = ({
   className,
   id,
   text,
   disabled = false,
+  isPending = false,
   ariaLabel,
   iconLeft,
   iconRight,
@@ -160,7 +163,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
           href: disabled ? '#' : href,
           target,
           /** Copied from old button component. Only need it for the older browsers,
-           *  since modern browsers (~2020+ release year secures this vulnerabilities by default) */
+           *  since modern browsers (~2020+ release year secures these vulnerabilities by default) */
           // Opening links in new tabs with 'target=_blank' is inherently insecure. Unfortunately, we depend
           // on this functionality in a couple of place. Fortunately, it is possible to partially mitigate some of
           // the insecurity of this functionality by using the `rel` tag to block some of the potential exploits.
@@ -187,6 +190,20 @@ const Button: React.FunctionComponent<ButtonProps> = ({
     [type, icon, useAsLink, buttonType, onClick, href, download]
   );
 
+  /** Handling isPending state content & spinner show logic here.
+     - If there's only text - we show only spinner.
+     - If there's only icon - we show only spinner.
+     - If there's text and iconLeft or both iconLeft and iconRight -> we show spinner on the left + text + iconRight (if it's present).
+     - If there's text and iconRight - we show text + spinner on the right.
+     */
+  const showIcon = icon && !isPending;
+  const showIconLeft = iconLeft && !isPending;
+  const showIconRight =
+    (iconRight && !isPending) || (isPending && iconRight && iconLeft);
+  const showText =
+    !isPending || (isPending && iconRight) || (isPending && iconLeft);
+  const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
+
   return (
     <ButtonTag
       className={classNames(
@@ -201,23 +218,29 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       aria-label={ariaLabel}
       {...tagSpecificProps}
     >
-      {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      {icon && <FontAwesomeV6Icon {...icon} />}
-      {text && <span>{text}</span>}
-      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+      {isPending && spinnerPosition === 'left' && (
+        <FontAwesomeV6Icon {...spinnerIcon} />
+      )}
+      {showIconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+      {showIcon && <FontAwesomeV6Icon {...icon} />}
+      {text && showText && <span>{text}</span>}
+      {showIconRight && <FontAwesomeV6Icon {...iconRight} />}
+      {isPending && spinnerPosition === 'right' && (
+        <FontAwesomeV6Icon {...spinnerIcon} />
+      )}
     </ButtonTag>
   );
 };
 
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
+ * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/ButtonTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Button Component.
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
