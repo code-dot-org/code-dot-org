@@ -1021,6 +1021,8 @@ FactoryBot.define do
   # ProjectsController tests, to fail, see: https://codedotorg.atlassian.net/browse/TEACH-230
   # Errors seen were: `Mysql2::Error::TimeoutError`
   factory :project do
+    sequence(:id) {|n| 100000 + n}
+
     transient do
       owner {create :user}
     end
