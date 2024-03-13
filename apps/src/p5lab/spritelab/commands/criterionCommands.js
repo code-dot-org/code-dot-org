@@ -44,7 +44,7 @@ export const commands = {
     );
   },
 
-  // Return true if any sprite began speaking
+  // Return true if a minimum number of sprites began speaking
   // and the text is not an empty string.
   strictAnySpriteSpeaks(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
@@ -55,7 +55,7 @@ export const commands = {
     );
   },
 
-  // Return true if any sprite was speaking.
+  // Return true if a minimum number of sprites was speaking.
   anySpriteSpeaking(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
@@ -64,7 +64,7 @@ export const commands = {
     );
   },
 
-  // Return true if any sprite was speaking
+  // Return true if a minimum number of sprites was speaking
   // and the text is not an empty string.
   strictAnySpriteSpeaking(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
@@ -130,7 +130,8 @@ export const commands = {
     return this.getSpriteIdsInUse().length >= min;
   },
 
-  // Returns true if some minimum number of sprites are in use.
+  // Returns true if some minimum number of sprites have been been moved.
+  // Tests whether the location picker has been used when making sprites.
   minimumSpritesNonDefaultLocation(min = 1) {
     const defaultLocation = {x: 200, y: 200};
     const spriteIds = this.getSpriteIdsInUse();
@@ -372,20 +373,20 @@ export const commands = {
   minimumBehaviors(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     let totalBehaviors = 0;
-    for (let i = 0; i < spriteIds.length; i++) {
-      const currentBehaviors = this.getBehaviorsForSpriteId(i);
+    for (const spriteId of spriteIds) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(spriteId);
       totalBehaviors += currentBehaviors.length;
     }
     return totalBehaviors >= min;
   },
 
-  // Returns true if any sprite has the specified behavior.
+  // Returns true if a minimum number of sprites has the specified behavior.
   minimumMatchingBehaviors(matchingBehavior, min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     let matchingBehaviors = 0;
-    for (let i = 0; i < spriteIds.length; i++) {
+    for (const spriteId of spriteIds) {
       const hasBehavior =
-        this.getBehaviorsForSpriteId(i).includes(matchingBehavior);
+        this.getBehaviorsForSpriteId(spriteId).includes(matchingBehavior);
       if (hasBehavior) {
         matchingBehaviors++;
         if (matchingBehaviors >= min) {
@@ -400,13 +401,14 @@ export const commands = {
   // excluding a specified default behavior.
   minimumNonMatchingBehaviors(excludedBehavior, min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
-    let totalBehaviors = 0;
-    for (let i = 0; i < spriteIds.length; i++) {
-      const currentBehaviors = this.getBehaviorsForSpriteId(i).filter(
+    let totalNonMatchingBehaviors = 0;
+    for (const spriteId of spriteIds) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(spriteId);
+      const nonMatchingBehaviors = currentBehaviors.filter(
         behavior => behavior !== excludedBehavior
       );
-      totalBehaviors += currentBehaviors.length;
-      if (totalBehaviors >= min) {
+      totalNonMatchingBehaviors += nonMatchingBehaviors.length;
+      if (totalNonMatchingBehaviors >= min) {
         return true;
       }
     }
