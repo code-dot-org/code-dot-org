@@ -6,7 +6,8 @@ require_relative '../../deployment'
 # This module serves as a thin wrapper around Octokit, itself a wrapper around
 # the GitHub API.
 module GitHub
-  REPO = "code-dot-org/code-dot-org".freeze
+  ORGANIZATION = 'code-dot-org'.freeze
+  REPO = "#{ORGANIZATION}/code-dot-org".freeze
   DASHBOARD_DB_DIR = 'dashboard/db/'.freeze
   PEGASUS_DB_DIR = 'pegasus/migrations/'.freeze
   STAGING_BRANCH = 'staging'.freeze
@@ -135,7 +136,10 @@ module GitHub
   #         and head, or a new PR if one didn't already exist.
   def self.find_or_create_pull_request(base:, head:, title:, body: nil)
     configure_octokit
-    existing_pull_requests = Octokit.pull_requests(REPO, {base: base, head: head})
+    # The "List pull requests" endpoint has special requirements for the `head` property.
+    # See https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests--parameters
+    formatted_head = "#{ORGANIZATION}:#{head}"
+    existing_pull_requests = Octokit.pull_requests(REPO, {base: base, head: formatted_head})
     return existing_pull_requests.first['number'] unless existing_pull_requests.empty?
 
     return create_pull_request(base: base, head: head, title: title, body: body)

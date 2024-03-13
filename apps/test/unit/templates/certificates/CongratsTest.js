@@ -7,17 +7,30 @@ import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNext
 
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];
-  const initialCertificateImageUrl = '/images/placeholder-hoc-image.jpg';
+  const certificateData = [
+    {
+      courseName: 'dance',
+    },
+  ];
+
   const defaultProps = {
     language: 'en',
-    initialCertificateImageUrl,
+    certificateData,
     isHocTutorial: false,
   };
 
   const hocProps = {
     language: 'en',
-    initialCertificateImageUrl,
+    certificateData,
     isHocTutorial: true,
+  };
+
+  const plProps = {
+    language: 'en',
+    certificateData,
+    isHocTutorial: false,
+    isPlCourse: true,
+    userType: 'teacher',
   };
 
   //Non HOC course Tests
@@ -84,5 +97,57 @@ describe('Congrats', () => {
     const congratsPageText = wrapper.text();
 
     expect(congratsPageText).to.not.include('Teach with Code.org');
+  });
+
+  it('renders self paced next options for self-paced k5 course', () => {
+    const wrapper = shallow(<Congrats {...plProps} isK5PlCourse />);
+    expect(
+      wrapper
+        .find(
+          'a[href="https://code.org/educate/professional-development-online"]'
+        )
+        .exists()
+    ).to.be.true;
+    expect(
+      wrapper
+        .find('a[href="https://code.org/professional-development-workshops"]')
+        .exists()
+    ).to.be.true;
+    expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
+      .false;
+  });
+
+  it('renders self paced next options for self-paced 6-12 course', () => {
+    const wrapper = shallow(<Congrats {...plProps} isK5PlCourse={false} />);
+    expect(
+      wrapper
+        .find(
+          'a[href="https://code.org/educate/professional-development-online"]'
+        )
+        .exists()
+    ).to.be.true;
+    expect(
+      wrapper
+        .find('a[href="https://code.org/professional-development-workshops"]')
+        .exists()
+    ).to.be.false;
+    expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
+      .true;
+  });
+
+  it('renders a message when there is no certificateData', () => {
+    const wrapper = shallow(
+      <Congrats
+        {...plProps}
+        certificateData={[]}
+        curriculumUrl="/s/self-paced-pl3-2023"
+      />
+    );
+    expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
+      'You must complete the course to earn a certificate.'
+    );
+    expect(wrapper.find('InlineMarkdown').props().markdown).to.include(
+      '/s/self-paced-pl3-2023'
+    );
   });
 });

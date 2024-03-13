@@ -16,6 +16,7 @@ const skeletonCell = key => (
         styles.gridBoxSkeleton
       )}
       style={{width: _.random(30, 90) + '%'}}
+      data-testid="skeleton-cell"
     />
   </div>
 );
@@ -46,13 +47,12 @@ export default function StudentColumn({
 
   return (
     <div className={styles.studentColumn}>
-      <div className={styles.sortDropdown}>
-        <SortByNameDropdown
-          sectionId={sectionId}
-          unitName={unitName}
-          source={SECTION_PROGRESS_V2}
-        />
-      </div>
+      <SortByNameDropdown
+        sectionId={sectionId}
+        unitName={unitName}
+        source={SECTION_PROGRESS_V2}
+        className={styles.sortDropdown}
+      />
       <div className={styles.grid}>
         {sortedStudents.map((student, ind) => studentColumnBox(student, ind))}
       </div>

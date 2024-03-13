@@ -18,6 +18,7 @@
  * Application assets
  *= require_self
  *= require_directory .
+ *= require_directory ./lti
  *
  * Shared
  *= require barlow-semi-condensed-font
@@ -851,6 +852,10 @@ $small-footer-standard-width: 400px;
 
     .small-footer-base {
       margin-left: 10px;
+
+      .version-caption {
+        display: none;
+      }
     }
 
     .i18n-dropdown-container, .copyright-link {
@@ -3944,7 +3949,7 @@ html[dir=rtl] {
     float: left;
   }
 
-  &:hover {
+  &:hover, &:focus {
     background-color: $brand_primary_default !important;
     border-color: $brand_primary_default;
 

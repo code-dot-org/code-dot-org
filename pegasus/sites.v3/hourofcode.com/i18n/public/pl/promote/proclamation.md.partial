@@ -23,38 +23,38 @@ Mając na względzie fakt, że technologia informatyczna stanowi integralną cz�
 
 Mając na względzie fakt, że informatyka przekształca przemysł, tworzy nowe pola w gospodarce, napędza innowacje we wszystkich dziedzinach wiedzy i wzmacnia produktywność w ugruntowanych sektorach gospodarczych;
 
-dziedzina informatyki jest podstawowym tematem leżącym u podstaw sektora technologii informatycznych naszej gospodarki, który w znaczący sposób przyczynia się do produkcji gospodarczej Stanów Zjednoczonych;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-umiejętność korzystania ze sztucznej inteligencji odnosi się do wiedzy, umiejętności i postaw związanych ze sposobem działania sztucznej inteligencji, w tym podstawowych pojęć w informatyce oraz sposobów bezpiecznego, odpowiedzialnego i etycznego korzystania ze sztucznej inteligencji;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-dziedzina informatyki, w tym sztuczna inteligencja, to technologie zdolne do fundamentalnej transformacji prawie wszystkich sektorów gospodarki Stanów Zjednoczonych;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-przywództwo technologiczne we wszystkich dziedzinach informatyki, w tym sztucznej inteligencji, jest imperatywem ekonomicznym i bezpieczeństwa narodowego;
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Mając na względzie fakt, że perspektywy zatrudnienia w branży informatycznej są optymistyczne z uwagi na ponad 500 000 miejsc pracy do obsadzenia na stanowiskach związanych z komputeryzacją w całym kraju;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Mając na względzie fakt zapewnienia uczniom możliwości udziału w zajęciach informatycznych wysokiej jakości, które otwierają przed nimi bogate możliwości, jakie oferuje branża oraz buduje w nich umiejętność krytycznego myślenia, które posłuży im przez całe życie;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Mając na względnie fakt, że uczniowie zasługują na rzetelne przygotowanie w ramach edukacji informatycznej, w tym na dostęp do wykwalifikowanych nauczycieli, technologię i dostosowany do wieku program potrzebny do nauki informatyki na poziomie nauki w szkole podstawowej i średniej;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-edukacja informatyki wiąże się z wyzwaniami, w tym poprawą dostępu do kursów informatyki dla wszystkich studentów oraz zapewnieniem rozwoju zawodowego nauczycielom informatyki;
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-Mając na względzie, że udział w "Godzinie kodowania" w trakcie "Tygodnia Edukacji Informatycznej" może służyć odsłanianiu tajników informatyki i zachęcaniu większej liczby uczniów do podejmowania dalszych studiów informatycznych;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-dziedzina informatyki ma istotne bariery w zakresie równości, w tym przyciąganie i utrzymywanie dziedziny kandydatów zróżnicowanych pod względem rasy, pochodzenia etnicznego i płci na wszystkich poziomach i gałęziach;
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Mając na względnie fakt, że Grace Murray Hopper, jedna z pierwszych kobiet w dziedzinie informatyki opracowała nowe języki programowania i stała się pionierem tworzenia norm dla systemów komputerowych, które dały podwaliny dla nowych osiągnięć w dziedzinie informatyki; oraz
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Mając na względzie, że tydzień {{ campaign_date/start_long }}, na cześć urodzin Grace Hopper ustanowiono "Tygodniem Edukacji Informatycznej", niniejszym <br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-postanowiono, że (IZBA LUB SENAT, STAN, HRABSTWO, MIASTO LUB RADA SZKOŁY) --
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) popiera wyznaczenie "Tygodnia Edukacji Informatycznej" ({{ campaign_date/full }});
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) zachęca szkoły, edukatorów, rodziców i ustawodawców do udziału w "Tygodniu Edukacji Informatycznej" poprzez umożliwienie uczniom uczestnictwo w "Godzinie kodowania";
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) zachęca szkoły, nauczycieli, badaczy, uczelnie, liderów gospodarczych oraz ustawodawców do określania mechanizmów umożliwiających nauczycielom osiąganie rozwoju osobistego w zakresie nowoczesnych technologii, aby zapewnić sobie zrównoważoną naukę w dziedzinie informatyki na wszystkich poziomach edukacji i zachęca uczniów do konfrontacji z koncepcjami informatycznymi;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) zachęca do możliwości, w tym poprzez istniejące programy, dla studentek i studentek z grup rasowych i etnicznych niedostatecznie reprezentowanych w informatyce.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

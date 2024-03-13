@@ -3,6 +3,10 @@ import React from 'react';
 import MultiCheckboxSelector from './MultiCheckboxSelector';
 import {action} from '@storybook/addon-actions';
 
+export default {
+  component: MultiCheckboxSelector,
+};
+
 const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };
@@ -24,12 +28,6 @@ ComplexItemComponent.propTypes = {
   }),
 };
 
-const defaultExport = {
-  component: MultiCheckboxSelector,
-};
-
-const stories = {};
-
 const ItemComponentTemplate = args => (
   <MultiCheckboxSelector {...args}>
     <ItemComponent />
@@ -42,7 +40,7 @@ const ComplexComponentTemplate = args => (
   </MultiCheckboxSelector>
 );
 
-const WithSomeSelected = ItemComponentTemplate.bind({});
+export const WithSomeSelected = ItemComponentTemplate.bind({});
 WithSomeSelected.args = {
   header: 'Some Items',
   items: ['one', 'two', 'three'],
@@ -50,9 +48,7 @@ WithSomeSelected.args = {
   onChange: action('onChange'),
 };
 
-stories['WithSomeSelected'] = WithSomeSelected;
-
-const WithAllSelected = ItemComponentTemplate.bind({});
+export const WithAllSelected = ItemComponentTemplate.bind({});
 WithAllSelected.args = {
   header: 'Some Items',
   items: ['one', 'two', 'three'],
@@ -60,10 +56,8 @@ WithAllSelected.args = {
   onChange: action('onChange'),
 };
 
-stories['WithAllSelected'] = WithAllSelected;
-
-const WithComplextItemComponent = ComplexComponentTemplate.bind({});
-WithComplextItemComponent.args = {
+export const WithComplexItemComponent = ComplexComponentTemplate.bind({});
+WithComplexItemComponent.args = {
   header: 'Some Items',
   itemPropName: 'screen',
   items: [
@@ -74,9 +68,7 @@ WithComplextItemComponent.args = {
   onChange: action('onChange'),
 };
 
-stories['WithComplexItemComponent'] = WithComplextItemComponent;
-
-const DisabledMultiCheckboxSelector = ItemComponentTemplate.bind({});
+export const DisabledMultiCheckboxSelector = ItemComponentTemplate.bind({});
 DisabledMultiCheckboxSelector.args = {
   header: 'Some Items',
   items: ['one', 'two', 'three'],
@@ -85,19 +77,10 @@ DisabledMultiCheckboxSelector.args = {
   disabled: true,
 };
 
-stories['DisabledMultiCheckboxSelector'] = DisabledMultiCheckboxSelector;
-
-const NoHeaderMultiCheckboxSelector = ItemComponentTemplate.bind({});
+export const NoHeaderMultiCheckboxSelector = ItemComponentTemplate.bind({});
 NoHeaderMultiCheckboxSelector.args = {
   noHeader: true,
   items: ['one', 'two', 'three'],
   selected: ['two'],
   onChange: action('onChange'),
-};
-
-stories['NoHeaderMultiCheckboxSelector'] = NoHeaderMultiCheckboxSelector;
-
-module.exports = {
-  ...stories,
-  default: defaultExport,
 };

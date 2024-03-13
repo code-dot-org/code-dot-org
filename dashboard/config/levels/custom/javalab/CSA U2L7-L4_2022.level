@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-03-06T18:19:47.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U2L7 PBT_2022",
@@ -15,12 +19,9 @@
         "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // Level 3\n    // TO DO #1: Instantiate a Dessert object called myDessert.\n\n\n    // Level 3\n    // TO DO #2, #3: Use the accessor methods for myDessert to print\n    // the flavor and price of the dessert.\n\n\n    // Level 5\n    // TO DO #1: Instantiate an object of your Dessert subclass.\n\n\n    // Level 5\n    // TO DO #2: Call the accessor methods for your object to get\n    // and print the values stored in its instance variables.\n    \n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-03-06T18:19:47.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-03-06T18:19:47.726+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L3_2022\\\"\"],\"cloned_from\":\"CSA U2L7-L3_2022\"},{\"changed_at\":\"2022-03-06 18:21:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 19:51:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:32:46 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 18:48:12 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 13:00:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 13:00:23 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 21:22:53 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-06-24 15:02:06 +0000\",\"changed\":[\"encrypted_examples\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-27 13:12:29 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-07-12 20:47:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-10 21:12:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

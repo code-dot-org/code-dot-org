@@ -4,11 +4,6 @@
     "func": "gravity_test",
     "blockText": "{BEHAVIOR}",
     "returnType": "Behavior",
-    "color": [
-      136,
-      ".84",
-      ".80"
-    ],
     "args": [
       {
         "name": "BEHAVIOR",

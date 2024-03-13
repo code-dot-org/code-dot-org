@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
 <h1>Udělejte si Code Break</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Týdenní aktivity a minulé epizody</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Týdenní aktivity a minulé epizody</h1></div>
 <h2>Epizoda 1 - Algoritmy; Hill Harper</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 3/25</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 3/25</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>Zobrazit na Youtube</a></i> I <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">Zobrazit na Facebooku</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Algoritmy</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Algoritmy</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 2 - Prototypy; Mark Cuban a Lyndsey Scott</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 4/1</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 4/1</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>Zobrazit na Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>Zobrazit na Facebooku</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Prototypy</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Prototypy</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 3 - Šifrování; Ashton Kutcher a Mia Gil Epner</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 4/8</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 4/8</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>Zobrazit na Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i>Zobrazit na Facebooku</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Šifrování</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Šifrování</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -116,12 +116,12 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 4 - Digitální informace; Mike Krieger a Alice Keeler</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 4/15</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 4/15</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
 ">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Digitální informace</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Digitální informace</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -140,11 +140,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 5 - Simulace a data; Bill Gates</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 4/22</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 4/22</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Simulace data</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Simulace data</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -163,11 +163,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 6 - Internet; Keegan-Michael Key a Vint Cerf</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 4/29</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 4/29</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - internet</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - internet</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -186,11 +186,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 7 - Podmínky; Sal Khan a Flo Vaughn</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 5/6</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 5/6</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Podmínky</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Podmínky</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -207,11 +207,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 8 - proměnné; Yara Shahidi a Fuzzy Khosrowshahi</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 5/13</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 5/13</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - proměnné</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - proměnné</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -228,11 +228,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 9 - Události; Macklemore a Scott Forstall</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 5/20</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 5/20</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - události</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - události</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -249,11 +249,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 10 - Umělá inteligence s Kat Graham a Kate Park</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 5/27</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 5/27</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Umělá inteligence (AI)</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Umělá inteligence (AI)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -270,11 +270,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 11 - Abstrakce se Susan Wojcicki a China Anne McClain</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 6/3</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 6/3</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Abstrakce</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Abstrakce</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -291,11 +291,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Epizoda 12 - Hardware s Aloe Blaccem, Bretem Taylorem a Paolou Mejiou Minayou</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Sledujte epizodu 6/10</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Sledujte epizodu 6/10</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>Zobrazit na Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">Zobrazit na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Týdenní aktivita - Hardware</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Týdenní aktivita - Hardware</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší studenti:</span> Přihlášení není třeba</p>
@@ -315,3 +315,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

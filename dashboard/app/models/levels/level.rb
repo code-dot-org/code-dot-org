@@ -93,6 +93,7 @@ class Level < ApplicationRecord
     bubble_choice_description
     thumbnail_url
     start_libraries
+    ai_tutor_available
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -518,7 +519,9 @@ class Level < ApplicationRecord
       level_id: id.to_s,
       type: self.class.to_s,
       name: name,
-      display_name: display_name
+      display_name: display_name,
+      is_validated: validated?,
+      can_have_feedback: can_have_feedback?
     }
   end
 
@@ -788,11 +791,20 @@ class Level < ApplicationRecord
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
+    properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
     properties_camelized
   end
 
   def project_type
     return game&.app
+  end
+
+  # Whether this level has validation for the completion of student work.
+  def validated?
+    if uses_lab2?
+      return properties.dig('level_data', 'validations').present?
+    end
+    properties['validation_code'].present? || properties['success_condition'].present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

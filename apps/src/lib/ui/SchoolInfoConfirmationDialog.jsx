@@ -7,6 +7,8 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {getStore} from '../../redux';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const styles = {
   button: {
@@ -18,9 +20,11 @@ export const styles = {
     marginRight: '50%',
   },
   updateButton: {
+    marginTop: 20,
     marginLeft: 5,
   },
   updateButtonRTL: {
+    marginTop: 20,
     marginRight: 5,
   },
   intro: {
@@ -69,11 +73,13 @@ class SchoolInfoConfirmationDialog extends Component {
   }
 
   closeModal = () => {
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED);
     this.setState({isOpen: false});
     this.props.onClose();
   };
 
   handleClickYes = () => {
+    analyticsReporter.sendEvent(EVENTS.CONFIRM_SCHOOL_CLICKED);
     const {authTokenName, authTokenValue} = this.props.scriptData;
     const formData = new FormData();
     formData.append(authTokenName, authTokenValue);
@@ -91,10 +97,12 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickUpdate = () => {
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_CLICKED);
     this.setState({showSchoolInterstitial: true});
   };
 
   renderInitialContent = () => {
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN);
     const {schoolName} = this.state;
     const isRTL = getStore().getState()?.isRtl;
     return (
@@ -108,7 +116,6 @@ class SchoolInfoConfirmationDialog extends Component {
           </p>
         </div>
         <Button
-          __useDeprecatedTag
           style={isRTL ? styles.updateButtonRTL : styles.updateButton}
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
@@ -116,7 +123,6 @@ class SchoolInfoConfirmationDialog extends Component {
           id="update-button"
         />
         <Button
-          __useDeprecatedTag
           style={isRTL ? styles.buttonRTL : styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.brandSecondaryDefault}

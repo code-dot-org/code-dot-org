@@ -3,7 +3,7 @@ import SegmentedButtons, {SegmentedButtonsProps} from './index';
 import {Meta, Story} from '@storybook/react';
 
 export default {
-  title: 'DesignSystem/Segmented Buttons',
+  title: 'DesignSystem/Segmented Buttons', // eslint-disable-line storybook/no-title-property-in-meta
   component: SegmentedButtons,
 } as Meta;
 

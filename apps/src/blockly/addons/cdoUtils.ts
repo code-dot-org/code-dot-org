@@ -1,0 +1,570 @@
+import _ from 'lodash';
+import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import cdoTheme from '../themes/cdoTheme';
+import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import {
+  BLOCK_TYPES,
+  CLAMPED_NUMBER_REGEX,
+  DEFAULT_SOUND,
+  stringIsXml,
+  Themes,
+  ToolboxType,
+} from '../constants';
+import {
+  appendProceduresToState,
+  convertFunctionsXmlToJson,
+  convertXmlToJson,
+  getProjectSerialization,
+  hasBlocks,
+  positionBlocksOnWorkspace,
+} from './cdoSerializationHelpers';
+import {parseElement as parseXmlElement} from '../../xml';
+import * as blockUtils from '../../block_utils';
+import {
+  getProjectXml,
+  processIndividualBlock,
+} from '@cdo/apps/blockly/addons/cdoXml';
+import {Block, BlockSvg, Field, WorkspaceSvg} from 'blockly';
+import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
+import experiments from '@cdo/apps/util/experiments';
+
+/**
+ * Loads blocks to a workspace.
+ * To maintain backwards compatibility we must be able to use the XML source if no JSON state is provided.
+ * @param {Blockly.Workspace} workspace - the current Blockly workspace
+ * @param {string} source - workspace serialization, either XML or JSON
+ */
+export function loadBlocksToWorkspace(
+  workspace: WorkspaceSvg,
+  source: string,
+  includeHiddenDefinitions = true
+) {
+  const embedded = Blockly.isEmbeddedWorkspace(workspace);
+  const {mainSource, hiddenDefinitionSource} = prepareSourcesForWorkspaces(
+    source,
+    embedded
+  );
+  // We intentionally load hidden definitions before other blocks on the main workspace.
+  if (includeHiddenDefinitions) {
+    loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
+  }
+  Blockly.serialization.workspaces.load(mainSource, workspace);
+  positionBlocksOnWorkspace(workspace);
+}
+
+/**
+ * Load hidden definition blocks to the hidden definition workspace, if it exists.
+ * @param {Object} hiddenDefinitionSource Blockly serialization of hidden definition blocks.
+ */
+function loadHiddenDefinitionBlocksToWorkspace(
+  hiddenDefinitionSource: WorkspaceSerialization
+) {
+  if (!Blockly.getHiddenDefinitionWorkspace() || !hiddenDefinitionSource) {
+    return;
+  }
+
+  Blockly.serialization.workspaces.load(
+    hiddenDefinitionSource,
+    Blockly.getHiddenDefinitionWorkspace()
+  );
+  if (Blockly.functionEditor) {
+    Blockly.functionEditor.setUpEditorWorkspaceProcedures();
+  }
+}
+
+/**
+ * Split source into appropriate serialization objects for the main and the hidden workspaces for loading.
+ * Which blocks are moved depends on whether the modal function editor is enabled.
+ * @param {string} source - workspace serialization, either XML or JSON
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
+ * @returns {mainSource: Object, hiddenDefinitionSource: Object}
+ *  mainSource and hiddenDefinitionSource are Blockly serialization objects.
+ */
+function prepareSourcesForWorkspaces(source: string, embedded: boolean) {
+  const parsedSource = parseSource(source, embedded);
+  const procedureTypesToHide = [BLOCK_TYPES.behaviorDefinition];
+  if (Blockly.useModalFunctionEditor) {
+    procedureTypesToHide.push(BLOCK_TYPES.procedureDefinition);
+  }
+  const {mainSource, hiddenDefinitionSource} = moveHiddenBlocks(
+    parsedSource,
+    procedureTypesToHide
+  );
+  return {mainSource, hiddenDefinitionSource};
+}
+
+/**
+ * Convert source to parsed json objects. If source was xml, convert to json before parsing.
+ * @param {string} source - workspace serialization, either XML or JSON
+ * @param {boolean} [embedded] - indicates whether the source will be parsed
+ * for an embedded workspace for not.
+ * @returns Object: source as json
+ */
+function parseSource(source: string, embedded: boolean) {
+  const isXml = stringIsXml(source);
+  let parsedSource;
+
+  if (isXml) {
+    const xml = parseXmlElement(source);
+    parsedSource = convertXmlToJson(xml, embedded);
+  } else {
+    parsedSource = JSON.parse(source);
+  }
+  return parsedSource;
+}
+
+/**
+ * Move hidden blocks (e.g. procedures) from the source to a hidden definition object.
+ * These will be used to initialize the main and hidden definitions workspaces, respectively.
+ * Blocks are hidden if they have a type in the procedureTypesToHide array, or if they
+ * are explicitly marked as invisible in the project source.
+ * In addition, copy the procedure model from the source
+ * object to the hidden definition object when moving a procedure block.
+ * @param {Object} source Project source object, parsed from JSON.
+ * @param {Array<string>} procedureTypesToHide procedure types to move to procedures object.
+ * @returns void
+ * exported for unit testing
+ */
+export function moveHiddenBlocks(
+  source: WorkspaceSerialization = {},
+  procedureTypesToHide: string[] = []
+) {
+  if (procedureTypesToHide.length === 0 || !hasBlocks(source)) {
+    return {mainSource: {}, hiddenDefinitionSource: {}};
+  }
+
+  const mainSource = _.cloneDeep(source);
+  const hiddenDefinitionSource = _.cloneDeep(source);
+
+  // Reset the values on the copies so they can be populated from scratch
+  // All of the original source procedures can be retained on the main workspace
+  mainSource.blocks.blocks = [];
+  hiddenDefinitionSource.blocks.blocks = [];
+  hiddenDefinitionSource.procedures = [];
+
+  source.blocks.blocks.forEach(block => {
+    const {invisible, procedureId} = block.extraState || {};
+    const hideBlock = procedureTypesToHide.includes(block.type) || invisible;
+    const destination = hideBlock ? hiddenDefinitionSource : mainSource;
+    destination.blocks.blocks.push(block);
+
+    // Also copy the procedure model for blocks to that need to be hidden
+    // Equality check works because hiddenDefinitionSource and mainSource are different object references
+    if (destination === hiddenDefinitionSource && procedureId) {
+      const procedureModel = source.procedures?.find(
+        procedure => procedure.id === procedureId
+      );
+      if (procedureModel) {
+        if (!hiddenDefinitionSource.procedures) {
+          hiddenDefinitionSource.procedures = [];
+        }
+        hiddenDefinitionSource.procedures.push(procedureModel);
+      }
+    }
+  });
+
+  return {
+    mainSource,
+    hiddenDefinitionSource,
+  };
+}
+
+export function handleColorAndStyle(
+  block: Block,
+  color: BlockColor,
+  style: string
+) {
+  if (style) {
+    // Styles are preferred because they are compatible with accessible themes.
+    block.setStyle(style);
+  } else if (color) {
+    // Colors are fixed and do not change with themes.
+    setHSV(block, ...color);
+  } else {
+    // The default block style is teal for our default theme.
+    block.setStyle('default');
+  }
+}
+
+export function setHSV(block: Block, h: number, s: number, v: number) {
+  block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
+}
+
+export function injectCss() {
+  return Blockly.Css.inject(true, 'media');
+}
+
+export function resizeSvg(blockSpace: WorkspaceSvg) {
+  return Blockly.svgResize(blockSpace);
+}
+
+export function getBlockFields(block: Block) {
+  const fields: Field[] = [];
+  block.inputList.forEach(input => {
+    input.fieldRow.forEach(field => {
+      fields.push(field);
+    });
+  });
+  return fields;
+}
+
+export function getToolboxType(workspaceOverride?: WorkspaceSvg) {
+  const workspace = workspaceOverride || Blockly.getMainWorkspace();
+  if (!workspace) {
+    return;
+  }
+  // True is passed so we only get the flyout directly owned by the workspace.
+  // Otherwise getFlyout will return the flyout for the toolbox if it has categories.
+  if (workspace.getFlyout(true)) {
+    return ToolboxType.UNCATEGORIZED;
+  } else if (workspace.getToolbox()) {
+    return ToolboxType.CATEGORIZED;
+  } else {
+    return ToolboxType.NONE;
+  }
+}
+
+export function getToolboxWidth(workspaceOverride?: WorkspaceSvg) {
+  const workspace = workspaceOverride || Blockly.getMainWorkspace();
+  const metrics = workspace.getMetrics();
+  switch (getToolboxType(workspace)) {
+    case ToolboxType.CATEGORIZED:
+      return metrics.toolboxWidth;
+    case ToolboxType.UNCATEGORIZED:
+      return metrics.flyoutWidth;
+    case ToolboxType.NONE:
+      return 0;
+  }
+}
+
+export function workspaceSvgResize(workspace: WorkspaceSvg) {
+  return Blockly.svgResize(workspace);
+}
+
+export function bindBrowserEvent(
+  element: EventTarget,
+  name: string,
+  // We use Object and Function here because those are what Blockly uses.
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  thisObject: Object | null,
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  func: Function
+) {
+  return Blockly.browserEvents.bind(element, name, thisObject, func);
+}
+
+export function isWorkspaceReadOnly() {
+  return false; // TODO - used for feedback
+}
+
+export function blockLimitExceeded() {
+  return false;
+}
+
+export function getBlockLimit() {
+  return 0;
+}
+
+/**
+ * Returns a new Field object,
+ * conditional on the type of block we're trying to create.
+ * @param {string} type
+ * @returns {?Blockly.Field}
+ */
+export function getField(type: string) {
+  let field;
+  if (type === Blockly.BlockValueType.NUMBER) {
+    field = new Blockly.FieldNumber();
+  } else if (type.includes('ClampedNumber')) {
+    const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+    if (clampedNumberMatch) {
+      const min = parseFloat(clampedNumberMatch[1]);
+      const max = parseFloat(clampedNumberMatch[2]);
+      field = new Blockly.FieldNumber(0, min, max);
+    }
+  } else {
+    field = new Blockly.FieldTextInput();
+  }
+  return field;
+}
+
+/**
+ * Returns a theme object, based on the presence of an option in the browser's localStorage.
+ * @param {string} type
+ * @returns {?Blockly.Field}
+ */
+// Users can change their active theme using the context menu. Use this setting, if present.
+export function getUserTheme(themeOption: string | undefined) {
+  return (
+    Blockly.themes[localStorage.blocklyTheme as Themes] ||
+    themeOption ||
+    cdoTheme
+  );
+}
+
+/**
+ * Returns a cursor type, based on the presence of an option in the browser's localStorage.
+ * @param {string} type
+ * @returns {string} one of 'default', 'basic', or 'line'
+ */
+export function getUserCursorType() {
+  const defaultCursorType = experiments.isEnabled(
+    experiments.KEYBOARD_NAVIGATION
+  )
+    ? 'line'
+    : 'default';
+  return localStorage.blocklyCursor || defaultCursorType;
+}
+
+/**
+ * Retrieves the serialization of the workspace (student code).
+ *
+ * @param {Blockly.WorkspaceSvg} workspace - The workspace to serialize.
+ * @param {boolean} [getSourceAsJson] - Flag indicating whether to retrieve the code as JSON or XML.
+ *                                      If truthy, the code will be returned as a JSON string.
+ *                                      If falsy, the code will be returned as an XML string.
+ * @returns {string} The serialization of the workspace.
+ */
+export function getCode(workspace: WorkspaceSvg, getSourceAsJson: boolean) {
+  if (!getSourceAsJson) {
+    return Blockly.Xml.domToText(getProjectXml(workspace));
+  } else {
+    return JSON.stringify(getProjectSerialization(workspace));
+  }
+}
+
+export function soundField(
+  onClick: () => void,
+  transformText?: (text: string) => string,
+  icon?: SVGElement
+) {
+  // Handle 'play sound' block with default param from CDO blockly.
+  // TODO: Remove when sprite lab is migrated to Google blockly.
+  const validator = (newValue: string) => {
+    if (typeof newValue !== 'string') {
+      return null;
+    }
+    if (!newValue.startsWith(SOUND_PREFIX) || !newValue.endsWith('.mp3')) {
+      console.error(
+        'An invalid sound value was selected. Therefore, the default sound value will be used.'
+      );
+      return DEFAULT_SOUND;
+    }
+    return newValue;
+  };
+  return new Blockly.FieldButton({
+    value: DEFAULT_SOUND,
+    validator,
+    onClick,
+    transformText,
+    icon,
+  });
+}
+
+export function locationField(icon: SVGElement, onClick: () => void) {
+  const transformTextSetField = (value: string) => {
+    if (value) {
+      try {
+        const loc = JSON.parse(value);
+        return `(${loc.x}, ${APP_HEIGHT - loc.y})`;
+      } catch (e) {
+        // Just ignore bad values
+      }
+    }
+    return '';
+  };
+  return new Blockly.FieldButton({
+    onClick,
+    transformText: transformTextSetField,
+    icon,
+  });
+}
+
+export function registerCustomProcedureBlocks() {
+  unregisterProcedureBlocks();
+  Blockly.common.defineBlocks(procedureBlocks);
+}
+
+/**
+ * Retrieves the toolbox blocks for a custom category from the level config.
+ * @param {string} customCategory The name of the custom category to retrieve blocks from. (Ex. 'VARIABLE', 'Behavior')
+ * @returns {Document} A new XML document containing the filtered blocks.
+ */
+export function getLevelToolboxBlocks(customCategory: string) {
+  const parser = new DOMParser();
+  // This method only works for string toolboxes.
+  if (!Blockly.toolboxBlocks || typeof Blockly.toolboxBlocks !== 'string') {
+    return;
+  }
+  // TODO: Update this to support JSON once https://codedotorg.atlassian.net/browse/CT-8 is merged
+  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+
+  // Find the category based on the custom attribute
+  const categories = Array.from(xmlDoc.getElementsByTagName('category'));
+  let foundCategory = null;
+
+  for (const category of categories) {
+    if (category.getAttribute('custom') === customCategory) {
+      foundCategory = category;
+      break;
+    }
+  }
+
+  if (foundCategory) {
+    // Create a new XML document and append the child nodes of the category to it
+    const newXmlDocument = parser.parseFromString(
+      '<xml></xml>',
+      'application/xml'
+    );
+    const childNodes = Array.from(foundCategory.childNodes);
+    for (const childNode of childNodes) {
+      // Clone the child node and append it to the new XML document
+      newXmlDocument.documentElement.appendChild(childNode.cloneNode(true));
+    }
+
+    return newXmlDocument;
+  } else {
+    return undefined;
+  }
+}
+
+/**
+ * Simplifies the state of blocks for a flyout by removing properties like x/y and id.
+ * Also replaces variable IDs with variable names derived from the serialied variable map.
+ * @param {object} serialization The serialized block state.
+ * @returns {Array<object>} An array of simplified block objects.
+ */
+export function getSimplifiedStateForFlyout(
+  serialization: WorkspaceSerialization
+) {
+  const variableMap: {[key: string]: string} = {};
+  const variables = serialization.variables;
+  variables?.forEach(variable => {
+    variableMap[variable.id] = variable.name;
+  });
+
+  const blocksList = hasBlocks(serialization)
+    ? serialization.blocks.blocks.map(block =>
+        simplifyBlockState(block, variableMap)
+      )
+    : [];
+
+  return blocksList;
+}
+
+/**
+ * Simplifies the state of a block by removing properties like x/y and id.
+ * Also replaces variable IDs with variable names derived from the specified variable map.
+ * @param {object} block The block to process.
+ * @param {object} variableMap A map of variable IDs to variable names.
+ * @returns {object} The processed block with variable names.
+ */
+function simplifyBlockState(
+  block: JsonBlockConfig,
+  variableMap: {[key: string]: string}
+) {
+  // Create a copy of the block so we can modify certain fields.
+  const result = {...block};
+
+  // For variable fields, look up the name of the variable to use instead of the id.
+  const variableFields = [
+    'VAR' /* most common */,
+    'VARIABLE' /* used in gamelab_changeVarBy */,
+  ];
+
+  variableFields.forEach(field => {
+    const fieldValue = block.fields?.[field];
+    if (fieldValue) {
+      result.fields[field] = {
+        name: fieldValue.id ? variableMap[fieldValue.id] || '' : '',
+        type: '',
+      };
+    }
+  });
+
+  // Recursively check nested blocks.
+  if (block.inputs?.block) {
+    for (const inputKey in block.inputs) {
+      result.inputs[inputKey].block = simplifyBlockState(
+        block.inputs[inputKey].block,
+        variableMap
+      );
+    }
+  }
+  // Recursively check next block, if present.
+  if (block.next?.block) {
+    result.next.block = simplifyBlockState(block.next.block, variableMap);
+  }
+  // Remove unnecessary properties
+  delete result.id;
+  delete result.x;
+  delete result.y;
+
+  // Add 'kind' property
+  result.kind = 'block';
+
+  return result;
+}
+
+export function getBlockColor(block: BlockSvg) {
+  return block?.style?.colourPrimary;
+}
+
+/**
+ * Combines shared functions (XML) with a starting block source (XML or JSON).
+ * Used in levels where shared functions and behaviors are enabled.
+ *
+ * @param {string} startBlocksSource - The source of starting blocks (XML or JSON).
+ * @param {string} functionsXml - The XML representation of functions to append.
+ * @returns {string} - Updated starting blocks in JSON format.
+ */
+export function appendSharedFunctions(
+  startBlocksSource: string,
+  functionsXml: string
+) {
+  let startBlocks;
+  if (stringIsXml(startBlocksSource)) {
+    // TODO: define a type for blockUtils
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    startBlocks = (blockUtils as any).appendNewFunctions(
+      startBlocksSource,
+      functionsXml
+    );
+  } else {
+    const proceduresState = convertFunctionsXmlToJson(functionsXml);
+    const stateToLoad = appendProceduresToState(
+      JSON.parse(startBlocksSource),
+      proceduresState
+    );
+    startBlocks = JSON.stringify(stateToLoad);
+  }
+  return startBlocks;
+}
+/**
+ * Update the XML string representing toolbox data for compatibility with
+ * Google Blockly.
+ * This function potentially modifies each <block> element in the XML
+ * if there are unsupported attributes, missing mutators, etc.
+ * We also process block xml during domToBlockSpace, which is called to
+ * convert sources from XML to JSON.
+ *
+ * @param {string} toolboxString - The XML string representing toolbox data.
+ * @returns {string} The modified XML string after processing.
+ */
+export function processToolboxXml(toolboxString: string) {
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(toolboxString, 'text/xml');
+  if (xmlDoc.querySelector('parsererror')) {
+    throw new Error('Error parsing XML');
+  }
+
+  const blocks = xmlDoc.querySelectorAll('block');
+  blocks.forEach(processIndividualBlock);
+
+  // Convert the modified XML document back to a string
+  const modifiedXmlString = new XMLSerializer().serializeToString(xmlDoc);
+  return modifiedXmlString;
+}

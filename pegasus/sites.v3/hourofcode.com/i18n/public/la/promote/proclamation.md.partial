@@ -23,38 +23,38 @@ Considerando que la tecnología informática es una parte integral de la cultura
 
 Considerando que las ciencias de la computación transforman la industria, crean nuevos campos de comercio, impulsan la innovación en todos los campos de la ciencia y fortalecen la productividad en los sectores económicos establecidos;
 
-Considerando que el campo de la informática es un tema fundacional que sustenta el sector de las tecnologías de la información de nuestra economía, que contribuye significativamente a la producción económica de los Estados Unidos;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Considerando que la alfabetización en inteligencia artificial se refiere a los conocimientos, habilidades y actitudes asociados con la forma en que funciona la inteligencia artificial, incluidos los conceptos fundamentales en la informática, y cómo usar la inteligencia artificial de manera segura, responsable y ética;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-Considerando que el campo de la informática, incluida la inteligencia artificial, son tecnologías con el poder de transformar fundamentalmente casi todos los sectores de la economía de los Estados Unidos;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-Considerando que el liderazgo tecnológico en todas las áreas de la informática, incluida la inteligencia artificial, es un imperativo económico y de seguridad nacional;
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Considerando que las perspectivas para los empleos en ciencias de la computación son prometedoras, con más de 500,000 puestos vacantes en todo el país;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Considerando que proporcionar a los estudiantes la oportunidad de participar en actividades de ciencias de la computación de alta calidad, los expone a las generosas oportunidades que ofrece el campo y les proporciona la habilidad de pensamiento crítico que le servirá a lo largo de sus vidas;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Considerando que todos los estudiantes merecen una enseñanza profunda en ciencias de la computación, que incluya el acceso a docentes calificados, tecnología y un plan de estudios adecuado para que puedan aprender ciencias de la computación en los niveles de educación primaria y secundaria;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Considerando que la educación en ciencias de la computación tiene desafíos que abordar, incluida la mejora del acceso a los cursos de informática para todos los estudiantes y la provisión de desarrollo profesional para los profesores de informática;
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-Considerando que la participación en la Hora del Código durante la Semana por la Educación en Ciencias de la Computación puede servir para romper las barreras en el campo de las ciencias de la computación y alentar a más estudiantes a que sigan aprendiendo;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Considerando que el campo de la informática tiene importantes barreras de equidad que abordar, incluida la atracción y retención de un campo de candidatos diverso en raza, etnia y género en todos los niveles y ramas;
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Considerando que Grace Murray Hopper, una de las primeras mujeres en el campo de las ciencias de la computación, diseñó nuevos lenguajes de programación y fue pionera en las normas para los sistemas informáticos que sentaron las bases de muchos adelantos en ciencias de la computación; y
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Considerando que la semana de {{ campaign_date/start_long }}, en honor al cumpleaños de Grace Hopper, es conocida como la 'Semana por la Educación en Ciencias de la Computación': por lo tanto, se <br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-Resuelve que (CÁMARA o SENADO, ESTADO, CONDADO, CIUDAD o JUNTA ESCOLAR):
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) apoya la designación de la Semana por la Educación en Ciencias de la Computación ({{ campaign_date/full }});
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) motiva a escuelas, educadores, padres y legisladores a participar en la Semana por la Educación en Ciencias de la Computación al animar a sus estudiantes a que participen en la Hora del Código;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) motiva a escuelas, docentes, investigadores, universidades, empresarios y legisladores a identificar mecanismos para que los docentes reciban desarrollo profesional de primer nivel para proporcionar experiencias de aprendizaje sostenibles en ciencias de la computación en todos los niveles educativos y animen a los estudiantes a incorporar los conceptos de las ciencias de la computación;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) fomenta oportunidades, incluso a través de programas existentes, para estudiantes de sexo femenino y estudiantes de grupos raciales y étnicos subrepresentados en la informática.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

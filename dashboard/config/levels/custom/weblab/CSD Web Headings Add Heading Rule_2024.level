@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:39.000Z",
   "level_num": "custom",
@@ -11,7 +12,7 @@
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"body {\\r\\n  background: white;\\r\\n}\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>Elephants<\\/h1>\\r\\n    <h3>Fun facts about elephants:<\\/h3>\\r\\n    <p>- Elephants are the largest land animals on Earth!<\\/p>\\r\\n    <p>- There are 3 different species of elephants: African Savannah elephant, African Forest elephant, and Asian elephant<\\/p>\\r\\n    <p>- Want to tell the types of elephants apart? African elephants' ears are the shape of Africa, and Asian elephants' ears are the shape of India.<\\/p>\\r\\n    <p>- Elephant tusks never stop growing!<\\/p>\\r\\n    <p>- Elephants cover themselves in mud to protect themselves from the sun.<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    <!-- content about elephants -->\\n    <h1>Elephants</h1>\\n    \\n    <h3>Fun facts about elephants:</h3>\\n    \\n    <p>- Elephants are the largest land animals on Earth!</p>\\n    \\n    <p>- There are 3 different species of elephants: African Savannah elephant, African Forest elephant, and Asian elephant</p>\\n    \\n    <p>- Want to tell the types of elephants apart? African elephants' ears are the shape of Africa, and Asian elephants' ears are the shape of India.</p>\\n    \\n    <p>- Elephant tusks never stop growing!</p>\\n    \\n    <p>- Elephants cover themselves in mud to protect themselves from the sun.</p>\\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"body {\\n  background: white;\\n}\\n\\n/* 1) Add a rule-set for the heading */\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "display_name": "Add a heading rule-set",
     "bubble_choice_description": "Add a rule-set for the heading of this article.",
     "encrypted_examples": "Lr7+jYdYNMz8QqN1N1YwEaGNYZCraj5G31EAIedGM9IA9RxAC1nwdm9pYnzA\nwz7tEIEVnSH74FScSEvZXS6nUg==\n",
@@ -30,8 +31,7 @@
     "name_suffix": "_2024",
     "validation_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:39.286+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Add Heading Rule_2023\\\"\"],\"cloned_from\":\"CSD Web Headings Add Heading Rule_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:39.286+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Add Heading Rule_2023\\\"\"],\"cloned_from\":\"CSD Web Headings Add Heading Rule_2023\"},{\"changed_at\":\"2024-02-15 17:35:11 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>
