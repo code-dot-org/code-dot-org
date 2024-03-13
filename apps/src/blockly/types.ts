@@ -211,6 +211,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   editBlocks: string | undefined;
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
+  useBlocklyDynamicCategories: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {

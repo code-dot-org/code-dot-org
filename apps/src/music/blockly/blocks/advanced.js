@@ -36,5 +36,7 @@ export const playSound = {
     ) +
     ', ' +
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
-    ');\n',
+    ', "' +
+    ctx.id +
+    '");\n',
 };
