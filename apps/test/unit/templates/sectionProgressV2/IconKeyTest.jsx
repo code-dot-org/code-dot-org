@@ -13,15 +13,6 @@ describe('IconKey Component', () => {
     expect(screen.queryByText('Level Types')).to.be.null;
   });
 
-  it('expands collapses on click', () => {
-    render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
-    const containerDiv = screen.getByTestId('expandable-container');
-    fireEvent.click(containerDiv);
-    expect(screen.queryByText('Assignment Completion States')).to.be.null;
-    expect(screen.queryByText('Teacher Actions')).to.be.null;
-    expect(screen.queryByText('Level Types')).to.be.null;
-  });
-
   it('displays LevelTypesBox when viewing level progress', () => {
     render(
       <IconKey isViewingValidatedLevel={false} expandedLessonIds={[123]} />
@@ -36,6 +27,15 @@ describe('IconKey Component', () => {
       <IconKey isViewingValidatedLevel={true} expandedLessonIds={[123]} />
     );
     expect(screen.getByText('Validated')).to.exist;
+  });
+
+  it('expands collapses on click', () => {
+    render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
+    const containerDiv = screen.getByTestId('expandable-container');
+    fireEvent.click(containerDiv);
+    expect(screen.queryByText('Assignment Completion States')).to.be.null;
+    expect(screen.queryByText('Teacher Actions')).to.be.null;
+    expect(screen.queryByText('Level Types')).to.be.null;
   });
 
   it('shows pop-up when more details are clicked', () => {
