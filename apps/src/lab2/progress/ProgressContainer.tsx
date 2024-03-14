@@ -4,10 +4,10 @@ import {
   ProgressLevelType,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import React, {useCallback, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
-import {LabState, setValidationState} from '../lab2Redux';
+import {setValidationState} from '../lab2Redux';
 import {ProjectLevelData} from '../types';
 
 interface ProgressContainerProps {
@@ -43,15 +43,21 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
     new ProgressManager(onProgressChange)
   );
 
-  const levelData = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.levelData
+  const levelDataValidations = useAppSelector(
+    state =>
+      (state.lab.levelProperties?.levelData as ProjectLevelData | undefined)
+        ?.validations
+  );
+  const levelValidations = useAppSelector(
+    state => state.lab.levelProperties?.validations
   );
 
   useEffect(() => {
+    // Use validations on level properties if present, otherwise fallback to validations in level data.
     progressManager.current.onLevelChange(
-      levelData as ProjectLevelData | undefined
+      levelValidations || levelDataValidations
     );
-  }, [levelData]);
+  }, [levelValidations, levelDataValidations]);
 
   return (
     <ProgressManagerContext.Provider value={progressManager.current}>

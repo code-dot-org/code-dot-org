@@ -1,7 +1,4 @@
 import $ from 'jquery';
-import {initializeRTL} from 'storybook-addon-rtl';
-
-initializeRTL();
 
 //Stub jquery fileupload library function
 $.fn.fileupload = () => {};
@@ -9,11 +6,8 @@ $.fn.fileupload = () => {};
 export const parameters = {
   options: {
     storySort: {
-      order: [
-        'DesignSystem',
-        'templates',
-        'code-studio',
-      ],
-    }
-  }
+      method: 'alphabetical',
+      order: ['DesignSystem', 'templates', 'code-studio'],
+    },
+  },
 };

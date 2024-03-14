@@ -26,6 +26,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             this.p5.push();
             this.p5.stroke(
@@ -67,6 +68,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -107,6 +109,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             hearts.forEach(heart => {
               this.p5.push();
@@ -164,6 +167,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             emojis.forEach(emoji => {
               emoji.y += this.p5.pow(emoji.size, 0.25);
@@ -205,6 +209,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -250,6 +255,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -313,6 +319,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -357,6 +364,7 @@ export const commands = {
         this.foregroundEffects.push({
           id,
           name: effectName,
+          renderFrame: this.currentFrame(),
           func: () => {
             this.p5.push();
             this.p5.noStroke();

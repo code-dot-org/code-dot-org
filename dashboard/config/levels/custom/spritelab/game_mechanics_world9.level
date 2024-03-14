@@ -55,7 +55,7 @@
       "GamelabJr",
       "GameDev"
     ],
-    "start_animations": "{\"orderedKeys\":[\"97bc73cd-6af8-40fb-b9e9-787e0345fa90\",\"bc082321-d56d-4609-bd8e-ef4d98d56f66\",\"89ae0802-f307-432f-a8aa-d5200a364723\",\"0d040925-d55c-4894-bf94-0f9cd684e9f0\",\"5d36e2e6-f6d5-4945-b13f-7bf999ccc3d7\",\"78af6206-cf60-4356-8a5e-11d360adc2d6\",\"8006aab4-e496-4a6e-959c-5b1b444c561a\",\"16b1315d-dddc-4672-bdf9-ba9b999e8812\",\"4e768c65-e0ef-43bf-893d-1abdb4323137\",\"bfbdd71b-fa00-4aa5-9357-c7e7ccc94056\",\"27574a47-af2d-4848-bb9d-431b16f251fe\",\"85beb90e-7334-4cfc-8110-26639a6dea1d\",\"d072e42b-550e-40a3-b2ed-1eb1f48b12e0\",\"38507092-595f-428e-8234-f412dc5baf7b\",\"c81f9925-81f4-461b-be21-4557c0ab419d\",\"0c7455f6-755f-4744-abc8-a9c069ba276d\",\"ffb3ad5d-bdcd-41a4-80e4-0e4a21c8ef8e\",\"9eea28e6-b606-4885-a913-d903847c0195\",\"2b986bd6-76bd-480d-bc4f-cac2e44c1409\",\"1ae65c8d-3de2-4b04-97b7-5c6a4a2211fc\"],\"propsByKey\":{\"97bc73cd-6af8-40fb-b9e9-787e0345fa90\":{\"name\":\"gradient_02\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_/category_backgrounds/gradient_02.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"bc082321-d56d-4609-bd8e-ef4d98d56f66\":{\"name\":\"gradient_11\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:09 UTC\",\"pngLastModified\":\"2021-01-19 23:53:10 UTC\",\"version\":\"xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t/category_backgrounds/gradient_11.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"89ae0802-f307-432f-a8aa-d5200a364723\":{\"name\":\"gradient_09\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"38CQAxU4sQgbM7EB371iiphvhkxcR9J9\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/38CQAxU4sQgbM7EB371iiphvhkxcR9J9/category_backgrounds/gradient_09.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"0d040925-d55c-4894-bf94-0f9cd684e9f0\":{\"name\":\"gradient_01\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A/category_backgrounds/gradient_01.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5d36e2e6-f6d5-4945-b13f-7bf999ccc3d7\":{\"name\":\"dirt_snow\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:25 UTC\",\"pngLastModified\":\"2021-03-29 19:26:25 UTC\",\"version\":\"86X04PpTaYEBrK6F27TJFedeXj2HFC3r\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/86X04PpTaYEBrK6F27TJFedeXj2HFC3r/category_video_games/dirt_snow.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"78af6206-cf60-4356-8a5e-11d360adc2d6\":{\"name\":\"dirt_sand\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:24 UTC\",\"pngLastModified\":\"2021-03-29 19:26:24 UTC\",\"version\":\"zbnv56JHKJ20hX14ucL7U1WPMQ11Y4xw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zbnv56JHKJ20hX14ucL7U1WPMQ11Y4xw/category_video_games/dirt_sand.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"8006aab4-e496-4a6e-959c-5b1b444c561a\":{\"name\":\"dirt_grass\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:23 UTC\",\"pngLastModified\":\"2021-03-29 19:26:23 UTC\",\"version\":\"j3S822QaqfQAoPByTgoUiwI7qVYpzFsm\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/j3S822QaqfQAoPByTgoUiwI7qVYpzFsm/category_video_games/dirt_grass.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"16b1315d-dddc-4672-bdf9-ba9b999e8812\":{\"name\":\"stone_snow\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:22:41 UTC\",\"pngLastModified\":\"2021-03-29 19:22:41 UTC\",\"version\":\"rJnChIBKqoAnCJRBBhwZa9O2sVgTpGps\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/rJnChIBKqoAnCJRBBhwZa9O2sVgTpGps/category_video_games/stone_snow.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"4e768c65-e0ef-43bf-893d-1abdb4323137\":{\"name\":\"brick_red\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:36 UTC\",\"pngLastModified\":\"2021-03-29 19:26:36 UTC\",\"version\":\"6tYB7QenwLPTeQ5W_5jN47JpXYja_29O\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/6tYB7QenwLPTeQ5W_5jN47JpXYja_29O/category_video_games/brick_red.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"bfbdd71b-fa00-4aa5-9357-c7e7ccc94056\":{\"name\":\"brick_grey\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:35 UTC\",\"pngLastModified\":\"2021-03-29 19:26:35 UTC\",\"version\":\"QpSCT9s1exNaSMynJVDXC6iuA._kdf90\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/QpSCT9s1exNaSMynJVDXC6iuA._kdf90/category_video_games/brick_grey.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"27574a47-af2d-4848-bb9d-431b16f251fe\":{\"name\":\"lava\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:24:45 UTC\",\"pngLastModified\":\"2021-03-29 19:24:45 UTC\",\"version\":\"PIQTZt3VxS7qlKqPSMAIXTNeQeo8c26n\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/PIQTZt3VxS7qlKqPSMAIXTNeQeo8c26n/category_video_games/lava.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"85beb90e-7334-4cfc-8110-26639a6dea1d\":{\"name\":\"water\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:22:36 UTC\",\"pngLastModified\":\"2021-03-29 19:22:36 UTC\",\"version\":\"pxLqSuTyopmZXOng3Gy25yDkp24E_80A\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/pxLqSuTyopmZXOng3Gy25yDkp24E_80A/category_video_games/water.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"d072e42b-550e-40a3-b2ed-1eb1f48b12e0\":{\"name\":\"dirt\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:26 UTC\",\"pngLastModified\":\"2021-03-29 19:26:26 UTC\",\"version\":\"ee5.RSzJiu2jP5Fcf_RuMpUEShrlRDdW\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/ee5.RSzJiu2jP5Fcf_RuMpUEShrlRDdW/category_video_games/dirt.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"38507092-595f-428e-8234-f412dc5baf7b\":{\"name\":\"gravel_dirt\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:37 UTC\",\"pngLastModified\":\"2021-03-29 19:25:37 UTC\",\"version\":\".pRAHyeM4749tpXecK4Mli82dZ7UYv5_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/.pRAHyeM4749tpXecK4Mli82dZ7UYv5_/category_video_games/gravel_dirt.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"c81f9925-81f4-461b-be21-4557c0ab419d\":{\"name\":\"gravel_stone\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:38 UTC\",\"pngLastModified\":\"2021-03-29 19:25:38 UTC\",\"version\":\"0KjCdX6FYBb4Hv6Zyc0DBJShfJpUyfoZ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0KjCdX6FYBb4Hv6Zyc0DBJShfJpUyfoZ/category_video_games/gravel_stone.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"0c7455f6-755f-4744-abc8-a9c069ba276d\":{\"name\":\"greystone\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:24 UTC\",\"pngLastModified\":\"2021-03-29 19:25:24 UTC\",\"version\":\"q9KsPLuzDS6ShfQllWdPLk3HCaP8DrBY\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/q9KsPLuzDS6ShfQllWdPLk3HCaP8DrBY/category_video_games/greystone.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"ffb3ad5d-bdcd-41a4-80e4-0e4a21c8ef8e\":{\"name\":\"game_penguin\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:39.000Z\",\"pngLastModified\":\"2024-03-06T16:38:39.000Z\",\"version\":\"v640q5YligHnBsi6aCt6KK5k1aVZpkmC\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/v640q5YligHnBsi6aCt6KK5k1aVZpkmC/game_penguin.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9eea28e6-b606-4885-a913-d903847c0195\":{\"name\":\"game_panda\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:16.000Z\",\"pngLastModified\":\"2024-03-06T16:38:16.000Z\",\"version\":\"c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn/game_panda.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2b986bd6-76bd-480d-bc4f-cac2e44c1409\":{\"name\":\"gameplayadventure_08\",\"categories\":[\"fantasy\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:02 UTC\",\"pngLastModified\":\"2021-01-19 23:55:20 UTC\",\"version\":\"E6bn4w_OC.g1L035R23yOuRfcdl6PZ3q\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/E6bn4w_OC.g1L035R23yOuRfcdl6PZ3q/category_fantasy/gameplayadventure_08.png\",\"sourceSize\":{\"x\":398,\"y\":400}},\"1ae65c8d-3de2-4b04-97b7-5c6a4a2211fc\":{\"name\":\"gameplayadventure_17\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":399,\"y\":339},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:30 UTC\",\"pngLastModified\":\"2021-01-19 23:46:31 UTC\",\"version\":\"7pOsNki16GS6FaGH7LS4kKRUvTQD2GLV\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/7pOsNki16GS6FaGH7LS4kKRUvTQD2GLV/category_animals/gameplayadventure_17.png\",\"sourceSize\":{\"x\":399,\"y\":339}}}}\r\n\r\n",
+    "start_animations": "{\"orderedKeys\":[\"7ee89958-7bd2-4df5-9fc2-f3e938e1daf6\",\"f516fde7-b214-448f-9a7b-a1f7d5f83f23\",\"5f04326f-8437-40cd-961e-4b9a865e54f1\",\"ae3eb482-8919-4bc3-a285-ab55ea72fd3b\",\"ecc6c32f-c137-4d7e-97bc-9fb04b130d43\",\"c2317aaa-39df-4615-ae5b-014bf9900af6\",\"918c0775-eb77-4e40-a3a8-765cbdd1fa31\",\"a789ab64-454d-47b8-ad29-302fb80da2cc\",\"1b79b410-04ff-42c4-ace4-781b35c63b3c\",\"de40aae6-81fa-4d77-b0f9-3dac91df331d\",\"daf6a8bf-ace3-474c-a121-6959d857f75f\",\"6691f410-7f66-460d-8bd2-cd1fecaac094\",\"08c25dcb-175f-4c70-8fea-0113af43370c\",\"d548076d-ceb7-43fd-8bfa-887e8126b221\",\"051a5f3d-6096-444e-ba6a-0efa64183540\",\"1a2e4d9b-2972-48db-be39-99ed82be8c18\",\"9521951b-6100-4575-8848-77f104f514a4\",\"2a4d38e3-3e58-4380-8915-47064564818f\",\"6741bd55-dc1d-409d-9bb8-68cdb77d5669\",\"2bd246a0-53a0-4e4a-8dc8-6638c5046708\",\"267e708d-95e2-4fa6-b4fe-b4a3a0b7cfbc\",\"dbd625c7-18ed-4de4-87d6-94f4ba0013b2\",\"a3b2744d-1f43-4f89-8001-566391099fb9\",\"5ed44882-66df-4b9f-b395-2145add6f9ae\"],\"propsByKey\":{\"7ee89958-7bd2-4df5-9fc2-f3e938e1daf6\":{\"name\":\"gradient_02\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/hvTfMCUzuXgHHwSW8z.ODsyzrh1HtFi_/category_backgrounds/gradient_02.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f516fde7-b214-448f-9a7b-a1f7d5f83f23\":{\"name\":\"gradient_11\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:09 UTC\",\"pngLastModified\":\"2021-01-19 23:53:10 UTC\",\"version\":\"xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t/category_backgrounds/gradient_11.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5f04326f-8437-40cd-961e-4b9a865e54f1\":{\"name\":\"gradient_09\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:14 UTC\",\"version\":\"38CQAxU4sQgbM7EB371iiphvhkxcR9J9\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/38CQAxU4sQgbM7EB371iiphvhkxcR9J9/category_backgrounds/gradient_09.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ae3eb482-8919-4bc3-a285-ab55ea72fd3b\":{\"name\":\"gradient_01\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:13 UTC\",\"pngLastModified\":\"2020-12-01 23:21:13 UTC\",\"version\":\"Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Lmv3XeqJRaGXvedSQkGc7OIGEZ.qfU3A/category_backgrounds/gradient_01.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ecc6c32f-c137-4d7e-97bc-9fb04b130d43\":{\"name\":\"dirt_snow\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:25 UTC\",\"pngLastModified\":\"2021-03-29 19:26:25 UTC\",\"version\":\"86X04PpTaYEBrK6F27TJFedeXj2HFC3r\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/86X04PpTaYEBrK6F27TJFedeXj2HFC3r/category_video_games/dirt_snow.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"c2317aaa-39df-4615-ae5b-014bf9900af6\":{\"name\":\"dirt_sand\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:24 UTC\",\"pngLastModified\":\"2021-03-29 19:26:24 UTC\",\"version\":\"zbnv56JHKJ20hX14ucL7U1WPMQ11Y4xw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zbnv56JHKJ20hX14ucL7U1WPMQ11Y4xw/category_video_games/dirt_sand.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"918c0775-eb77-4e40-a3a8-765cbdd1fa31\":{\"name\":\"dirt_grass\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:23 UTC\",\"pngLastModified\":\"2021-03-29 19:26:23 UTC\",\"version\":\"j3S822QaqfQAoPByTgoUiwI7qVYpzFsm\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/j3S822QaqfQAoPByTgoUiwI7qVYpzFsm/category_video_games/dirt_grass.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"a789ab64-454d-47b8-ad29-302fb80da2cc\":{\"name\":\"stone_snow\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:22:41 UTC\",\"pngLastModified\":\"2021-03-29 19:22:41 UTC\",\"version\":\"rJnChIBKqoAnCJRBBhwZa9O2sVgTpGps\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/rJnChIBKqoAnCJRBBhwZa9O2sVgTpGps/category_video_games/stone_snow.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"1b79b410-04ff-42c4-ace4-781b35c63b3c\":{\"name\":\"brick_red\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:36 UTC\",\"pngLastModified\":\"2021-03-29 19:26:36 UTC\",\"version\":\"6tYB7QenwLPTeQ5W_5jN47JpXYja_29O\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/6tYB7QenwLPTeQ5W_5jN47JpXYja_29O/category_video_games/brick_red.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"de40aae6-81fa-4d77-b0f9-3dac91df331d\":{\"name\":\"brick_grey\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:35 UTC\",\"pngLastModified\":\"2021-03-29 19:26:35 UTC\",\"version\":\"QpSCT9s1exNaSMynJVDXC6iuA._kdf90\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/QpSCT9s1exNaSMynJVDXC6iuA._kdf90/category_video_games/brick_grey.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"daf6a8bf-ace3-474c-a121-6959d857f75f\":{\"name\":\"lava\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:24:45 UTC\",\"pngLastModified\":\"2021-03-29 19:24:45 UTC\",\"version\":\"PIQTZt3VxS7qlKqPSMAIXTNeQeo8c26n\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/PIQTZt3VxS7qlKqPSMAIXTNeQeo8c26n/category_video_games/lava.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"6691f410-7f66-460d-8bd2-cd1fecaac094\":{\"name\":\"water\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:22:36 UTC\",\"pngLastModified\":\"2021-03-29 19:22:36 UTC\",\"version\":\"pxLqSuTyopmZXOng3Gy25yDkp24E_80A\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/pxLqSuTyopmZXOng3Gy25yDkp24E_80A/category_video_games/water.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"08c25dcb-175f-4c70-8fea-0113af43370c\":{\"name\":\"dirt\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:26 UTC\",\"pngLastModified\":\"2021-03-29 19:26:26 UTC\",\"version\":\"ee5.RSzJiu2jP5Fcf_RuMpUEShrlRDdW\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/ee5.RSzJiu2jP5Fcf_RuMpUEShrlRDdW/category_video_games/dirt.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"d548076d-ceb7-43fd-8bfa-887e8126b221\":{\"name\":\"gravel_dirt\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:37 UTC\",\"pngLastModified\":\"2021-03-29 19:25:37 UTC\",\"version\":\".pRAHyeM4749tpXecK4Mli82dZ7UYv5_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/.pRAHyeM4749tpXecK4Mli82dZ7UYv5_/category_video_games/gravel_dirt.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"051a5f3d-6096-444e-ba6a-0efa64183540\":{\"name\":\"gravel_stone\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:38 UTC\",\"pngLastModified\":\"2021-03-29 19:25:38 UTC\",\"version\":\"0KjCdX6FYBb4Hv6Zyc0DBJShfJpUyfoZ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0KjCdX6FYBb4Hv6Zyc0DBJShfJpUyfoZ/category_video_games/gravel_stone.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"1a2e4d9b-2972-48db-be39-99ed82be8c18\":{\"name\":\"greystone\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":128,\"y\":128},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:24 UTC\",\"pngLastModified\":\"2021-03-29 19:25:24 UTC\",\"version\":\"q9KsPLuzDS6ShfQllWdPLk3HCaP8DrBY\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/q9KsPLuzDS6ShfQllWdPLk3HCaP8DrBY/category_video_games/greystone.png\",\"sourceSize\":{\"x\":128,\"y\":128}},\"9521951b-6100-4575-8848-77f104f514a4\":{\"name\":\"game_penguin\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:39.000Z\",\"pngLastModified\":\"2024-03-06T16:38:39.000Z\",\"version\":\"v640q5YligHnBsi6aCt6KK5k1aVZpkmC\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/v640q5YligHnBsi6aCt6KK5k1aVZpkmC/game_penguin.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2a4d38e3-3e58-4380-8915-47064564818f\":{\"name\":\"game_panda\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:38:16.000Z\",\"pngLastModified\":\"2024-03-06T16:38:16.000Z\",\"version\":\"c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/c_dzHSjoQrgyD1aoIITjZCZf4wFgv_yn/game_panda.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6741bd55-dc1d-409d-9bb8-68cdb77d5669\":{\"name\":\"gameplayadventure_08\",\"categories\":[\"fantasy\"],\"frameCount\":1,\"frameSize\":{\"x\":398,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:55:02 UTC\",\"pngLastModified\":\"2021-01-19 23:55:20 UTC\",\"version\":\"E6bn4w_OC.g1L035R23yOuRfcdl6PZ3q\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/E6bn4w_OC.g1L035R23yOuRfcdl6PZ3q/category_fantasy/gameplayadventure_08.png\",\"sourceSize\":{\"x\":398,\"y\":400}},\"2bd246a0-53a0-4e4a-8dc8-6638c5046708\":{\"name\":\"gameplayadventure_17\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":399,\"y\":339},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:30 UTC\",\"pngLastModified\":\"2021-01-19 23:46:31 UTC\",\"version\":\"7pOsNki16GS6FaGH7LS4kKRUvTQD2GLV\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/7pOsNki16GS6FaGH7LS4kKRUvTQD2GLV/category_animals/gameplayadventure_17.png\",\"sourceSize\":{\"x\":399,\"y\":339}},\"267e708d-95e2-4fa6-b4fe-b4a3a0b7cfbc\":{\"name\":\"gameplay_greendiamond2\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":281,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:26:20 UTC\",\"pngLastModified\":\"2021-03-29 19:25:55 UTC\",\"version\":\"tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/tJWdCCnsDAEcSzdDcvIizS0sSgjpbRkx/category_video_games/gameplay_greendiamond2.png\",\"sourceSize\":{\"x\":281,\"y\":400}},\"dbd625c7-18ed-4de4-87d6-94f4ba0013b2\":{\"name\":\"gameplay_purplediamond\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":383},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:56 UTC\",\"pngLastModified\":\"2021-03-29 19:25:57 UTC\",\"version\":\"qdHTNhAxESpD.fpx1BHCqMBDLb_IyXtC\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/qdHTNhAxESpD.fpx1BHCqMBDLb_IyXtC/category_video_games/gameplay_purplediamond.png\",\"sourceSize\":{\"x\":400,\"y\":383}},\"a3b2744d-1f43-4f89-8001-566391099fb9\":{\"name\":\"gameplay_redcrystal\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:58 UTC\",\"pngLastModified\":\"2021-03-29 19:25:58 UTC\",\"version\":\"pE40x3Aso.TEfutWKCYlSkRh.uCZ8GGD\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/pE40x3Aso.TEfutWKCYlSkRh.uCZ8GGD/category_video_games/gameplay_redcrystal.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5ed44882-66df-4b9f-b395-2145add6f9ae\":{\"name\":\"gameplayobject_heart_02\",\"categories\":[\"video_games\"],\"frameCount\":1,\"frameSize\":{\"x\":396,\"y\":376},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-03-29 19:25:42 UTC\",\"pngLastModified\":\"2021-03-29 19:25:43 UTC\",\"version\":\"T9cVKefx7rb7tG8zAzKj1TwS6U2SruY3\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/T9cVKefx7rb7tG8zAzKj1TwS6U2SruY3/category_video_games/gameplayobject_heart_02.png\",\"sourceSize\":{\"x\":396,\"y\":376}}}}\r\n\r\n\r\n",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -70,25 +70,25 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Add a scoreboard! (placeholder)**\r\n1. Add the show variable\r\n\r\n- Set the variable to 0\r\n- Make the score increase by 1 when the player sprite touches the collectible sprite\r\n",
+    "long_instructions": "**Add a working scoreboard!**\r\n1. Add the scoreboard using the `show variable` block\r\n\r\n- Include `set variable to 0` to rest the score at the beginning of the game\r\n- Make the score `change by 1` when the `player sprite touches the collectible sprite`\r\n- Press `Run` and try out the game!\r\n",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-08T22:20:57.834+00:00\",\"changed\":[\"cloned from \\\"game_mechancis_world8\\\"\"],\"cloned_from\":\"game_mechancis_world8\"},{\"changed_at\":\"2024-03-08 22:22:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:23:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:25:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:26:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-08T22:20:57.834+00:00\",\"changed\":[\"cloned from \\\"game_mechancis_world8\\\"\"],\"cloned_from\":\"game_mechancis_world8\"},{\"changed_at\":\"2024-03-08 22:22:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:23:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:25:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:26:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 16:45:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:29:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:33:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:36:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:38:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:39:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:44:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:45:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:45:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:59:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:59:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 04:34:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 04:35:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 04:36:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 04:36:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 04:36:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 04:48:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-13 17:59:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-13 18:00:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="16" y="16">
+        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="32" y="1">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"gradient_02"</field>
               <next>
                 <block type="gamelab_makeSpritesGridInput">
-                  <field name="ANIMATION_NAME">"dirt_grass"</field>
+                  <field name="ANIMATION_NAME">"stone_snow"</field>
                   <value name="GRID">
                     <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
                       <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
@@ -102,25 +102,68 @@
                       <field name="ANIMATION_NAME">"game_penguin"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":81,"y":34}</field>
+                          <field name="LOCATION">{"x":60,"y":274}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="GameDev_setGroup">
-                          <field name="GROUP">"walls"</field>
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"dirt_grass"</field>
+                        <block type="gamelab_makeSpritesWithSize">
+                          <field name="SIZE">30</field>
+                          <field name="COSTUME">"gameplay_greendiamond2"</field>
+                          <value name="NUM">
+                            <block type="math_number">
+                              <field name="NUM">5</field>
                             </block>
                           </value>
                           <next>
                             <block type="GameDev_setGroup">
-                              <field name="GROUP">"players"</field>
+                              <field name="GROUP">"walls"</field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"game_penguin"</field>
+                                  <field name="ANIMATION">"stone_snow"</field>
                                 </block>
                               </value>
+                              <next>
+                                <block type="GameDev_setGroup">
+                                  <field name="GROUP">"players"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"game_penguin"</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_toggleBehaviorSimple">
+                                      <field name="TOGGLE">"begins"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"game_penguin"</field>
+                                        </block>
+                                      </value>
+                                      <value name="BEHAVIOR">
+                                        <block type="gamelab_behavior_get">
+                                          <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+                                          <field name="NAME">moving with arrow keys</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_toggleBehaviorSimple">
+                                          <field name="TOGGLE">"begins"</field>
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"gameplay_greendiamond2"</field>
+                                            </block>
+                                          </value>
+                                          <value name="BEHAVIOR">
+                                            <block type="gamelab_behavior_get">
+                                              <mutation behaviorId="wandering" name="wandering"/>
+                                              <field name="NAME">wandering</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -132,12 +175,34 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_keyPressed" x="15" y="462">
+        <block type="gamelab_keyPressed" x="43" y="561">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
           <next>
             <block type="GameDev_playerJump">
-              <field name="STRENGTH">5</field>
+              <field name="STRENGTH">6.5</field>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="41" y="652">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_checkTouching"/>
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"game_penguin"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"gameplay_greendiamond2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_objectSpritePointer"/>
+              </value>
             </block>
           </next>
         </block>
@@ -1227,6 +1292,10 @@
             </block>
           </statement>
         </block>
+        <block type="procedures_defnoreturn" x="20" y="75">
+          <field name="NAME">worldSetup</field>
+          <field name="DESCRIPTION"/>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -1238,7 +1307,7 @@
           <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="1nF~2/0Fw#i:(?/KkQ97">
-              <field name="LOCATION">{"x":100,"y":100}</field>
+              <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>
@@ -1261,19 +1330,45 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_makeSpritesWithSize" id="(R#6?L^QtfcDos:sq{EF" x="24" y="187">
-          <field name="SIZE">100</field>
-          <field name="COSTUME">"gameplayadventure_17"</field>
+        <block type="gamelab_checkTouching" id="J^t^CpbV:Odc,_!7SNB(" x="213" y="169">
+          <mutation useDefaultIcon="true"/>
+          <field name="button_gamelab_checkTouching"/>
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation" id="Q,sPTN!;x)#*Y1,k|c33">
+              <field name="ANIMATION">"game_penguin"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation" id="f{saY_r+2i):^I[{Md=-">
+              <field name="ANIMATION">"gameplay_greendiamond2"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeSpritesWithSize" id="(R#6?L^QtfcDos:sq{EF" x="54" y="231">
+          <field name="SIZE">30</field>
+          <field name="COSTUME">"gameplay_greendiamond2"</field>
           <value name="NUM">
             <block type="math_number" id="Ulk_(R{2^Cfob}HrYV,%">
               <field name="NUM">3</field>
             </block>
           </value>
         </block>
-        <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k" x="25" y="282">
+        <block type="gamelab_makeSpritesGridInput" id="7aKJ1+YZxOSu|Klw^89H" x="15" y="319">
+          <field name="ANIMATION_NAME">"dirt_grass"</field>
+          <value name="GRID">
+            <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
+              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
+            </shadow>
+            <block type="gamelab_bitmap" id="GMVHM0N@K8ICoP8;2I,+">
+              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
+            </block>
+          </value>
+        </block>
+        <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k" x="30" y="407">
           <field name="STRENGTH">5</field>
         </block>
-        <block type="gamelab_toggleBehaviorSimple" id="r48p2H6jy.%#JgLn#i$z" x="19" y="410">
+        <block type="gamelab_toggleBehaviorSimple" id="r48p2H6jy.%#JgLn#i$z" x="19" y="470">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id=",,*n@[ER6IrAd74k%jSr">
@@ -1286,11 +1381,6 @@
               <field name="NAME">moving with arrow keys</field>
             </block>
           </value>
-        </block>
-        <block type="gamelab_checkTouching" id="J^t^CpbV:Odc,_!7SNB(" x="32" y="525">
-          <mutation useDefaultIcon="true"/>
-          <field name="button_gamelab_checkTouching"/>
-          <field name="CONDITION">"when"</field>
         </block>
       </xml>
     </toolbox_blocks>
