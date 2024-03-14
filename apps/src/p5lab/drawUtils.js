@@ -24,11 +24,11 @@ export function getTextWidth(p5, text, size) {
 
 /**
  * Draws a bubble on the canvas that displays a piece of text, representing a variable name and value.
- * The bubble has a black background with a white border and white text.
- * The bubble is drawn with rounded corners. The text is horizontally and vertically centered within the bubble.
+ * The bubble is dynamically sized and has a black background with a white border/text and rounded corners.
+ * The x and y parameters determine the bubble's center, except the location will be adjusted if the bubble
+ * would overflow the canvas.
  *
- * The bubble's position is based on the x and y parameters which represent the center of the bubble.
- * The size of the bubble is dynamically calculated based on the width of the text and padding.
+ * Note: This function assumes the text provided fits within the playspace width (APP_WIDTH).
  *
  * @param {p5} p5 - The p5 instance used to draw the bubble.
  * @param {number} x - The x-coordinate of the center of the bubble.
