@@ -1,3 +1,5 @@
+import {getTextWidth} from './drawUtils';
+
 // NOTE: min and max are inclusive
 export function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -47,4 +49,21 @@ export function randomColor(p5) {
 
 export function randomColorFromPalette(palette) {
   return palette[randomInt(0, palette.length - 1)];
+}
+
+export function truncateText(p5, text, maxWidth, textSize) {
+  let truncatedText = text;
+  let textWidth = getTextWidth(p5, truncatedText, textSize);
+
+  if (textWidth <= maxWidth) return truncatedText; // No truncation needed
+
+  const ellipsisWidth = getTextWidth(p5, '...', textSize);
+  maxWidth -= ellipsisWidth; // Reserve space for ellipsis
+
+  while (textWidth > maxWidth && truncatedText.length > 1) {
+    truncatedText = truncatedText.slice(0, -1);
+    textWidth = getTextWidth(p5, truncatedText, textSize);
+  }
+
+  return truncatedText + '...';
 }

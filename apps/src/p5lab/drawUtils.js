@@ -1,3 +1,4 @@
+import {constant} from 'lodash';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import * as colors from '@cdo/apps/util/color';
 
@@ -259,4 +260,35 @@ export function validationBar(
   p5.strokeWeight(1);
   p5.rect(x, y, width, barHeight);
   p5.pop();
+}
+
+/**
+ * Truncates the given text to fit within a specified width, adding an ellipsis if truncation occurs.
+ * This function ensures the text (such as variable labels or values) does not exceed the available space
+ * in a given context (e.g., within the variable bubble).
+ *
+ * @param {p5} p5 - The p5 instance.
+ * @param {string} text - The text to be potentially truncated.
+ * @param {number} maxWidth - The maximum width (in pixels) the text is allowed to occupy. This value should account for any desired padding or margins.
+ * @param {number} textSize - The font size (in pixels) to be used when measuring and displaying the text.
+ * @returns {string} The original text or a truncated version with an ellipsis appended if the text exceeded maxWidth.
+ */
+export function truncateText(p5, text, maxWidth, textSize) {
+  let ellipsis = '...';
+  let textWidth = getTextWidth(p5, text, textSize);
+
+  if (textWidth <= maxWidth) {
+    return text;
+  }
+
+  const ellipsisWidth = getTextWidth(p5, ellipsis, textSize);
+  maxWidth -= ellipsisWidth;
+
+  let truncatedText = text;
+  while (textWidth > maxWidth && truncatedText.length > 1) {
+    truncatedText = truncatedText.slice(0, -1);
+    textWidth = getTextWidth(p5, truncatedText, textSize);
+  }
+
+  return truncatedText + ellipsis;
 }
