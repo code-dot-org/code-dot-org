@@ -27,6 +27,7 @@ const getManageStudentsUrl = sectionId => {
 class SectionLoginInfo extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
+    sectionProviderName: PropTypes.string,
 
     // Provided by redux.
     section: PropTypes.shape({
@@ -72,7 +73,7 @@ class SectionLoginInfo extends React.Component {
         ) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
-        {section.loginType === SectionLoginType.lti_v1 && <LtiLogins />}
+        {section.loginType === SectionLoginType.lti_v1 && <LtiLogins sectionProviderName={this.props.sectionProviderName} />}
       </div>
     );
   }
@@ -87,14 +88,17 @@ export default connect(state => ({
 }))(SectionLoginInfo);
 
 class LtiLogins extends React.Component {
+  static propTypes = {
+    sectionProviderName: PropTypes.string,
+  }
   render() {
     return (
       <div>
         <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
-        <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody()} />
+        <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody({providerName: this.props.sectionProviderName})} />
         <h2 style={styles.heading}>{i18n.loginInfoLtiUpdateHeader()}</h2>
-        <SafeMarkdown markdown={i18n.loginInfoLtiUpdateBody()} />
-        <SignInInstructions loginType={SectionLoginType.lti_v1} />
+        <SafeMarkdown markdown={i18n.loginInfoLtiUpdateBody({providerName: this.props.sectionProviderName})} />
+        <SignInInstructions loginType={SectionLoginType.lti_v1} sectionProviderName={this.props.sectionProviderName} />
       </div>
     );
   }
