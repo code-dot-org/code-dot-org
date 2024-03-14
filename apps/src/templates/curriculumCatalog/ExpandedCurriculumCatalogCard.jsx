@@ -290,8 +290,8 @@ const ExpandedCurriculumCatalogCard = ({
                 <img
                   id="similarCurriculumImage"
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
-                  alt={recommendedSimilarCurriculum.display_name}
                   style={{height: '100%'}}
+                  alt={recommendedSimilarCurriculum.display_name}
                 />
                 <Button
                   id="similarCurriculumButton"

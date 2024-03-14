@@ -1,4 +1,3 @@
-@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 Feature: Evaluate student code against rubrics using AI
   # Make sure AI config files in S3 are parseable. Do this in a UI test because
@@ -9,6 +8,7 @@ Feature: Evaluate student code against rubrics using AI
 
   Scenario: Student code is evaluated by AI when student submits project
     Given I create a teacher-associated student named "Aiden"
+    And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And I add the current user to the "ai-rubrics" single user experiment
@@ -91,7 +91,7 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
     Then I wait until element ".uitest-info-alert" is visible
-    And element ".uitest-info-alert" contains text "AI analysis complete."
+    And I wait until element ".uitest-info-alert" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in rubric tab
     And I wait until element "#uitest-next-goal" is visible

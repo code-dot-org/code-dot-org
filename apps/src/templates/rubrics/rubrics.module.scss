@@ -1,25 +1,64 @@
 @import 'color.scss';
 @import 'font.scss';
 
+@keyframes pulse {
+  0% {
+    transform: scale(.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
+
 .floatingActionButton {
   position: fixed;
   left: 10px;
   bottom: 48px;
 
-  height: 60px;
-  width: 60px;
-  background-size: 60px;
+  height: 55px;
+  width: 55px;
+  background-size: 55px;
   padding: 0;
 
   border-width: 0;
   border-radius: 30px;
+
+  img {
+    opacity: 1.0;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
+}
+
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 18px;
+  width: 28px;
+  background-size: 28px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
 }
 
 .rubricContainer {
   position: fixed;
   left: 10px;
-  bottom: 116px;
-  z-index: 400;
+  bottom: 120px;
+  z-index: 2000;
   width: 760px;
 }
 

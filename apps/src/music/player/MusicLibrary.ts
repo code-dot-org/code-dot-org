@@ -186,6 +186,7 @@ export type SoundFolderType = 'sound' | 'kit' | 'instrument';
 
 export interface SoundFolder {
   name: string;
+  artist?: string;
   id: string;
   type?: SoundFolderType;
   path: string;
