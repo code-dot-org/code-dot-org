@@ -91,7 +91,7 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
     Then I wait until element ".uitest-info-alert" is visible
-    And element ".uitest-info-alert" contains text "AI analysis complete."
+    And I wait until element ".uitest-info-alert" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in rubric tab
     And I wait until element "#uitest-next-goal" is visible
