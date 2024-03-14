@@ -225,7 +225,7 @@ class LtiV1Controller < ApplicationController
       begin
         lti_integration = LtiIntegration.find(params[:lti_integration_id])
       rescue
-        return render_sync_course_error('LTI Integration not found', :bad_request, error_code: 404)
+        return render_sync_course_error('LTI Integration not found', :bad_request, error_code: 401)
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]
