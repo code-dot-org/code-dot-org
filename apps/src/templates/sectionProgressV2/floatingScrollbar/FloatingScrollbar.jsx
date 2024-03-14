@@ -17,8 +17,8 @@ export default function FloatingScrollbar({children, childRef}) {
   const scrollRef = React.useRef();
   const childContainerRef = React.useRef();
 
-  const [childScrollWidth, setChildScrollWidth] = React.useState(0);
-  const [childWidth, setChildWidth] = React.useState(0);
+  const [childScrollWidth, setChildScrollWidth] = React.useState(1);
+  const [childWidth, setChildWidth] = React.useState(1);
   const [floatScrollbar, setFloatScrollbar] = React.useState(true);
 
   const canFloat = React.useMemo(() => {
