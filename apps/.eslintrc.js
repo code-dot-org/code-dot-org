@@ -177,6 +177,9 @@ module.exports = {
       },
     },
     {
+      // We are actively working to decrease the number of folders in this list.
+      // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
+      // Commit any changes made.
       files: [
         'src/*',
         'src/acemode/*',
