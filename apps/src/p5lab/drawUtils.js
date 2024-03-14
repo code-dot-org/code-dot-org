@@ -35,12 +35,30 @@ export function getTextWidth(p5, text, size) {
  * @param {number} y - The y-coordinate of the center of the bubble.
  * @param {string} text - The text to display inside the bubble. This should represent the variable's name and value.
  */
-export function variableBubble(p5, x, y, text) {
-  const padding = 10;
-  const textSizeValue = 20;
-  const textWidth = getTextWidth(p5, text, textSizeValue);
-  const textWidthValue = textWidth + 2 * padding;
-  const textHeightValue = textSizeValue + 2 * padding;
+export function variableBubble(p5, x, y, text, config) {
+  const textWidth = getTextWidth(p5, text, config.textSize);
+  const textWidthValue = textWidth + 2 * config.padding;
+  const textHeightValue = config.textSize + 2 * config.padding;
+
+  const halfWidth = textWidthValue / 2;
+  const halfHeight = textHeightValue / 2;
+  const leftBound = x - halfWidth;
+  const rightBound = x + halfWidth;
+  const topBound = y - halfHeight;
+  const bottomBound = y + halfHeight;
+
+  // If the bubble is too close to the edge of the canvas, adjust the position so it fits.
+  if (leftBound < 0) {
+    x = halfWidth;
+  } else if (rightBound > APP_WIDTH) {
+    x = APP_WIDTH - halfWidth;
+  }
+
+  if (topBound < 0) {
+    y = halfHeight;
+  } else if (bottomBound > APP_HEIGHT) {
+    y = APP_HEIGHT - halfHeight;
+  }
 
   const halfWidth = textWidthValue / 2;
   const halfHeight = textHeightValue / 2;
@@ -65,13 +83,13 @@ export function variableBubble(p5, x, y, text) {
   p5.push();
   p5.fill(colors.darkest_gray);
   p5.stroke('white');
-  p5.strokeWeight(3);
+  p5.strokeWeight(config.strokeWeight);
   p5.rectMode(p5.CENTER);
-  p5.rect(x, y, textWidthValue, textHeightValue, 24);
+  p5.rect(x, y, textWidthValue, textHeightValue, config.strokeRadius);
 
   p5.fill('white');
   p5.noStroke();
-  p5.textSize(textSizeValue);
+  p5.textSize(config.textSize);
   p5.textAlign(p5.CENTER, p5.CENTER);
   p5.text(text, x, y);
   p5.pop();
