@@ -1,4 +1,3 @@
-import {constant} from 'lodash';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import * as colors from '@cdo/apps/util/color';
 
