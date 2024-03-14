@@ -11,8 +11,8 @@ describe('IconKey Component', () => {
     render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
     expect(screen.getByLabelText('Icon key')).be.visible;
     expect(screen.queryByText('More Details')).be.visible;
-    expect(screen.getByText('Assignment Completion States')).to.exist;
-    expect(screen.getByText('Teacher Actions')).to.exist;
+    screen.getByText('Assignment Completion States');
+    screen.getByText('Teacher Actions');
     expect(screen.queryByText('Level Types')).to.be.null;
     utils.tryGetLocalStorage.restore();
   });
@@ -42,9 +42,9 @@ describe('IconKey Component', () => {
     render(
       <IconKey isViewingValidatedLevel={false} expandedLessonIds={[123]} />
     );
-    expect(screen.getByText('Assignment Completion States')).to.exist;
-    expect(screen.getByText('Teacher Actions')).to.exist;
-    expect(screen.getByText('Level Types')).to.exist;
+    screen.getByText('Assignment Completion States');
+    screen.getByText('Teacher Actions');
+    screen.getByText('Level Types');
     utils.tryGetLocalStorage.restore();
   });
 
@@ -53,7 +53,7 @@ describe('IconKey Component', () => {
     render(
       <IconKey isViewingValidatedLevel={true} expandedLessonIds={[123]} />
     );
-    expect(screen.getByText('Validated')).to.exist;
+    screen.getByText('Validated');
     utils.tryGetLocalStorage.restore();
   });
 
@@ -63,6 +63,6 @@ describe('IconKey Component', () => {
     expect(moreDetailsLink).be.visible;
     expect(screen.queryByText('Progress Tracking Icon Key')).to.be.null;
     fireEvent.click(moreDetailsLink);
-    expect(screen.getByText('Progress Tracking Icon Key')).to.exist;
+    screen.getByText('Progress Tracking Icon Key');
   });
 });
