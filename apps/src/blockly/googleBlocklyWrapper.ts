@@ -82,7 +82,7 @@ import {
   GoogleBlocklyInstance,
 } from './types';
 import {FieldProto} from 'blockly/core/field';
-import {Options, Theme} from 'blockly';
+import {Options, Theme, Workspace} from 'blockly';
 
 const options = {
   contextMenu: true,
@@ -94,6 +94,8 @@ plugin.init(options);
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+const MAX_GET_CODE_RETRIES = 2;
+const RETRY_GET_CODE_INTERVAL_MS = 500;
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -185,22 +187,35 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
+    return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
+  };
+
+  const getWorkspaceCodeHelper = (
+    retryCount: number,
+    hiddenWorkspace: Workspace | undefined
+  ): string => {
     let workspaceCode = '';
     try {
       workspaceCode = Blockly.JavaScript.workspaceToCode(
         Blockly.mainBlockSpace
       );
-      if (this.getHiddenDefinitionWorkspace()) {
-        workspaceCode += Blockly.JavaScript.workspaceToCode(
-          this.getHiddenDefinitionWorkspace()
-        );
+      if (hiddenWorkspace) {
+        workspaceCode += Blockly.JavaScript.workspaceToCode(hiddenWorkspace);
       }
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
-      handleCodeGenerationFailure(
-        MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
-        e as Error
-      );
+      if (retryCount < MAX_GET_CODE_RETRIES) {
+        // Sometimes we need to wait for Google Blockly change handlers to complete
+        // before the code will generate correctly. Retry after a short delay.
+        setTimeout(() => {
+          return getWorkspaceCodeHelper(retryCount + 1, hiddenWorkspace);
+        }, RETRY_GET_CODE_INTERVAL_MS);
+      } else {
+        handleCodeGenerationFailure(
+          MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
+          e as Error
+        );
+      }
     }
     return workspaceCode;
   };

@@ -1763,6 +1763,7 @@
   "noMenuItemsAvailable": "No menu items available.",
   "nominateATeacher": "Nominate a Teacher",
   "noOnlineWork": "No online work",
+  "noSchoolSetting": "I don't teach in a school setting",
   "noStudentsInSection": "There are no other students in this section.",
   "exceededPairProgrammingMax": "You cannot pair with more than 4 people.",
   "noPersonalProjects": "You currently have no projects. Click on one of the buttons above to start a project.",
@@ -1955,8 +1956,8 @@
   "progressLegendDetailsValidated": "The student has passed all validation tests on this level.",
   "progressLegendDetailsViewed": "You have viewed the student's work on this level.",
   "progressLegendDetailsFeedbackGiven": "You have left feedback for the student on this level.",
-  "progressLegendDetailsAssessmentLevels": "These are levels that Code.org recommends for teacher review. Assessment levels are marked with a star next to the level number in the column header.",
-  "progressLegendDetailsChoiceLevels": "These are levels with multiple options. Students can choose which option to complete.",
+  "progressLegendDetailsAssessmentLevels": "Code.org recommends that you review student work on these levels. Assessment levels are marked with a star next to the level number in the column header.",
+  "progressLegendDetailsChoiceLevels": "To submit work on these levels, students choose to complete at least one task from multiple options.",
   "progressBubbleDescription": "Level {levelID}",
   "progressBubbleDescriptionWithLesson": "Level {levelID} Lesson {lessonName}",
   "progressLegendAssessment": "Assessment",
@@ -2267,6 +2268,8 @@
   "schoolNotFound": "Other school not listed below (click here to provide details)",
   "schoolNotFoundCheckboxLabel": "I cannot find my school above",
   "schoolNotFoundDescription": "Sorry, we couldn't find your school. Please enter information below.",
+  "schoolNotListed": "I don't see my school",
+  "schoolOrganizationQuestion": "What is the school/organization name?",
   "score": "score",
   "secretWords": "Secret words",
   "section": "Section",
@@ -2309,6 +2312,7 @@
   "selectCleverSection": "Select a Clever section",
   "selectCommuneFirst": "Please select a commune first.",
   "selectCountryFirst": "Please select a country first.",
+  "selectCountry": "Select a country",
   "selectDepartmentFirst": "Please select a department/region first.",
   "selectDistrictFirst": "Please select a city/district first.",
   "selectGoogleClassroom": "Select a Google Classroom",
@@ -2835,5 +2839,6 @@
   "yourSchoolTeacherDesc": "Start teaching today, no computer science experience necessary",
   "yourSchoolTellUs": "Tell us about your school",
   "yourSectionsList": "Your Sections",
-  "zipOrCountry": "ZIP code or country"
+  "zipOrCountry": "ZIP code or country",
+  "zipInvalidMessage": "Please enter a 5 digit zip code"
 }
