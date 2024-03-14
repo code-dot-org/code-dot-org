@@ -335,12 +335,12 @@
       RestoreType: copy-on-write
       UseLatestRestorableTime: true
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: !Ref Aurora3ClusterDBParameters
+      DBClusterParameterGroupName: !Ref Aurora2ClusterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
-      EngineVersion: 8.0.mysql_aurora.3.05.2
+      EngineVersion: 5.7.mysql_aurora.2.11.1
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
@@ -359,7 +359,7 @@
     Properties:
       DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
       # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
-      DBParameterGroupName: !Ref Aurora3WriterDBParameters
+      DBParameterGroupName: !Ref Aurora2WriterDBParameters
       DBClusterIdentifier: !Ref AuroraCluster
       DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
