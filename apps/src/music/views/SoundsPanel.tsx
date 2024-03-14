@@ -304,7 +304,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 {label: 'Bass', value: 'bass'},
                 {label: 'Leads', value: 'lead'},
                 {label: 'Effects', value: 'fx'},
-                {label: 'Vocals', value: 'vocal'},
               ]}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}
