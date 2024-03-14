@@ -1,6 +1,6 @@
 import React from 'react';
 import Button, {ButtonProps, buttonColors} from './index';
-import {Meta, Story} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react';
 
 export default {
   title: 'DesignSystem/Button', // eslint-disable-line storybook/no-title-property-in-meta
@@ -18,9 +18,9 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<ButtonProps> = args => <Button {...args} />;
+const SingleTemplate: StoryFn<ButtonProps> = args => <Button {...args} />;
 
-const MultipleTemplate: Story<{
+const MultipleTemplate: StoryFn<{
   components: ButtonProps[];
 }> = args => (
   <div
