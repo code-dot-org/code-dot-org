@@ -15,7 +15,8 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../../deployment'
 require 'ostruct'
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper' # TODO: unfirebase, remaining firebase reference
+# TODO: post-firebase-cleanup, remove the firebase reference: #56994
+require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 require 'cdo/profanity_filter'
 require 'rest-client'
 
@@ -134,7 +135,8 @@ end
 
 def main
   get_token
-  fb = FirebaseHelper.new('shared') # TODO: unfirebase
+  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
+  fb = FirebaseHelper.new('shared')
 
   if $token.nil? || $token.empty?
     Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")

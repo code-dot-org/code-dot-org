@@ -1,12 +1,20 @@
 import _ from 'lodash';
 
+// DatablockStorage powers the "Data" tab in App Lab and Game Lab, including the
+// datasets library, and the data blocks such as `readRecords` and `getKeyValue`.
+//
+// DatablockStorage.* methods are thin wrappers over the corresponding methods
+// found in apps/controllers/datablock_storage_controller.rb
+
 const DatablockStorage = {};
 let channelId = undefined;
 
+export function initDatablockStorage({channelId: _channelId}) {
+  channelId = _channelId;
+  return DatablockStorage;
+}
+
 function urlFor(func_name) {
-  // FIXME: this doesn't work for all URLs where this can be loaded from
-  // e.g. http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g/edit/
-  // vs http://localhost-studio.code.org:3000/projects/applab/Yp05MnSdVubn04tBoEZn_g
   return `/datablock_storage/${channelId}/` + func_name;
 }
 
@@ -391,10 +399,5 @@ DatablockStorage.resetForTesting = function () {
 };
 
 DatablockStorage.resetRecordListener = function () {};
-
-export function initDatablockStorage({channelId: _channelId}) {
-  channelId = _channelId;
-  return DatablockStorage;
-}
 
 export default DatablockStorage;
