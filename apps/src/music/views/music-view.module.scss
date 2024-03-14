@@ -80,3 +80,9 @@ $default-spacing: 2px;
   flex: 1;
   position: relative;
 }
+
+.advancedControlsContainer {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
