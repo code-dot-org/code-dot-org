@@ -1759,14 +1759,14 @@
   tools_pages_shared:
     glance:
       titles:
-        ages: "Ages"
-        level: "Level"
-        make: "What you can make"
-        devices: "Devices"
-        browsers: "Browsers"
-        languages: "Languages supported"
-        accessiblity: "Accessibility"
-      button: "View documentation"
+        ages: "Ages:"
+        level: "Level:"
+        make: "What you can make:"
+        devices: "Devices:"
+        browsers: "Browsers:"
+        languages: "Languages supported:"
+        accessibility: "Accessibility:"
+      button: "View documentation:"
     featured_projects:
       heading: "Featured student projects"
       desc: "Explore more featured projects built by students like you in our featured project gallery."
@@ -1800,7 +1800,7 @@
       devices: "Laptop, Chromebook, Tablet"
       browsers: "All modern browsers"
       languages: "English"
-      accessiblity: "Text-to-speech, Closed captioning, Immersive reader"
+      accessibility: "Text-to-speech, Closed captioning, Immersive reader"
       documentation_desc: "Extensive documentation detailing specific functionality and use is available for App Lab."
     projects:
       heading: "See what you can make in App Lab!"
