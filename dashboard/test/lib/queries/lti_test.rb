@@ -12,7 +12,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       iss: 'http://some-iss.com',
     }
     user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: Services::Lti.generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
     )
     create :lti_user_identity, user: user, subject: id_token[:sub]
@@ -31,7 +31,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       iss: lms_issuer,
     }
     user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: Services::Lti.generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
     )
     create :lti_user_identity, user: user, subject: lms_user_id

@@ -457,7 +457,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     user = create :student
 
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Services::Lti.generate_auth_id(payload))
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
@@ -474,7 +474,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     user = create :student
 
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Services::Lti.generate_auth_id(payload))
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)

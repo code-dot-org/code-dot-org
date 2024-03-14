@@ -3,6 +3,7 @@ require 'queries/lti'
 require 'user'
 require 'authentication_option'
 require 'sections/section'
+require 'cdo/honeybadger'
 
 class Services::Lti
   def self.initialize_lti_user(id_token)
@@ -19,12 +20,11 @@ class Services::Lti
       user.family_name = get_claim(id_token, :family_name)
     end
     ao = AuthenticationOption.new(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
       email: get_claim(id_token, :email),
     )
     user.authentication_options = [ao]
-
     # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user.
     user
   end
@@ -65,6 +65,31 @@ class Services::Lti
     )
   end
 
+  def self.generate_auth_id(id_token)
+    case id_token[:aud]
+    when String
+      "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
+    when Array
+      # Per LTI spec, the client ID is used to identify an LTI 1.3 app to the LMS.
+      # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
+      # TODO: Remove the error logging after the Pilot if the error is not seen.
+      if id_token[:aud].length > 1
+        Honeybadger.notify(
+          'Generate Authentication ID error',
+          context: {
+            message: 'Too many client_ids in the audience claim',
+            audience: id_token[:aud],
+          }
+        )
+        raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
+      else
+        "#{id_token[:iss]}|#{id_token[:aud].first}|#{id_token[:sub]}"
+      end
+    else
+      raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with class: #{id_token[:aud].class}"
+    end
+  end
+
   def self.get_claim_from_list(id_token, keys_array)
     keys_array.filter_map {|key| get_claim(id_token, key)}.first
   end
@@ -86,7 +111,7 @@ class Services::Lti
       iss: issuer,
     }
     ao = AuthenticationOption.new(
-      authentication_id: Policies::Lti.generate_auth_id(id_token),
+      authentication_id: generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
       email: get_claim(nrps_member_message, :email),
       )

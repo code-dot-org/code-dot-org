@@ -1,6 +1,5 @@
 require 'user'
 require 'authentication_option'
-require 'cdo/honeybadger'
 
 class Policies::Lti
   module AccessTokenScopes
@@ -75,31 +74,6 @@ class Policies::Lti
       return User::TYPE_TEACHER if TEACHER_ROLES.include? role
     end
     return User::TYPE_STUDENT
-  end
-
-  def self.generate_auth_id(id_token)
-    case id_token[:aud]
-    when String
-      "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
-    when Array
-      # Per LTI spec, the client ID is used to identify an LTI 1.3 app to the LMS.
-      # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
-      # TODO: Remove the error logging after the Pilot if the error is not seen.
-      if id_token[:aud].length > 1
-        Honeybadger.notify(
-          'Generate Authentication ID error',
-          context: {
-            message: 'Too many client_ids in the audience claim',
-            audience: id_token[:aud],
-          }
-        )
-        raise "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
-      else
-        "#{id_token[:iss]}|#{id_token[:aud].first}|#{id_token[:sub]}"
-      end
-    else
-      raise "Invalid Audience Claim: #{id_token[:aud]}, with class: #{id_token[:aud].class}"
-    end
   end
 
   def self.lti?(user)

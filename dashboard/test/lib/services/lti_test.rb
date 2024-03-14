@@ -212,7 +212,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     refute user.authentication_options.empty?
     assert_equal user.authentication_options[0].credential_type, AuthenticationOption::LTI_V1
-    assert_equal user.authentication_options[0].authentication_id, Policies::Lti.generate_auth_id(@id_token)
+    assert_equal user.authentication_options[0].authentication_id, Services::Lti.generate_auth_id(@id_token)
   end
 
   test 'initialize_lti_user should create User::TYPE_STUDENT when id_token contains student roles' do

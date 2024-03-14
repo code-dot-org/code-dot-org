@@ -25,7 +25,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
     @user = create :user
     @user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(@id_token),
+      authentication_id: Services::Lti.generate_auth_id(@id_token),
       credential_type: AuthenticationOption::LTI_V1,
     )
   end
@@ -41,7 +41,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
   end
 
   test 'generate_auth_id should create authentication_id string' do
-    assert_equal Policies::Lti.generate_auth_id(@id_token), @ids.join('|')
+    assert_equal Services::Lti.generate_auth_id(@id_token), @ids.join('|')
   end
 
   test 'issuer should return the issuer of the LTI Platform from a users LTI authentication_options' do
