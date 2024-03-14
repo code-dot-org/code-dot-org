@@ -80,6 +80,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
       onClick={() => onSelect(folder)}
       onKeyDown={event => {
         if (event.key === 'Enter') {
+          event.nativeEvent.stopImmediatePropagation();
           onSelect(folder);
         }
       }}
@@ -164,6 +165,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
       onClick={() => onSelect(folder.id + '/' + sound.src)}
       onKeyDown={event => {
         if (event.key === 'Enter') {
+          event.nativeEvent.stopImmediatePropagation();
           onSelect(folder.id + '/' + sound.src);
         }
       }}
