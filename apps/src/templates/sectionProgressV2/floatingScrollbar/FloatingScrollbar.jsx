@@ -21,10 +21,18 @@ export default function FloatingScrollbar({children, childRef}) {
   const [childWidth, setChildWidth] = React.useState(0);
   const [floatScrollbar, setFloatScrollbar] = React.useState(true);
 
-  const canFloat = React.useMemo(
-    () => childScrollWidth > 0 && childWidth > 0 && scrollbarWidth > 0,
-    [childScrollWidth, childWidth]
-  );
+  const canFloat = React.useMemo(() => {
+    const newCanFloat =
+      childScrollWidth > 0 && childWidth > 0 && scrollbarWidth > 0;
+    if (!newCanFloat) {
+      console.warn('FloatingScrollbar: Unable to calculate widths', {
+        childScrollWidth,
+        childWidth,
+        scrollbarWidth,
+      });
+    }
+    return newCanFloat;
+  }, [childScrollWidth, childWidth]);
 
   const childContainerResizeObserver = React.useMemo(
     () =>
