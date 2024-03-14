@@ -520,7 +520,8 @@ class Level < ApplicationRecord
       type: self.class.to_s,
       name: name,
       display_name: display_name,
-      is_validated: validated?
+      is_validated: validated?,
+      can_have_feedback: can_have_feedback?
     }
   end
 
@@ -790,6 +791,7 @@ class Level < ApplicationRecord
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
+    properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
     properties_camelized
   end
 

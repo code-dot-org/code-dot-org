@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {curriculumDataShape} from './curriculumCatalogShapes';
+import {curriculumDataShape} from './curriculumCatalogConstants';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import HeaderBanner from '../HeaderBanner';
@@ -12,7 +12,7 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '../../util/curriculumRecommender/curriculumRecommender';
+import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
@@ -86,41 +86,11 @@ const CurriculumCatalog = ({
       return similarRecommenderCurrKeyResult;
     }
 
-    // If result is not already in localStorage, then get recommendation and save to localStorage
-    let recommendableCurricula = [...curriculaData];
-
-    // Get current curricula the others are being compared against and filter it out of the
-    // recommendable curriculum
-    const currCurriculumIndex = recommendableCurricula.findIndex(
-      e => e.key === curriculumKey
-    );
-    const currCurriculum = recommendableCurricula.splice(
-      currCurriculumIndex,
-      1
-    )[0];
-
-    // Filter out curricula that don't support any of the same grade levels
-    const currCurriculumGrades = currCurriculum.grade_levels;
-    recommendableCurricula = recommendableCurricula.filter(curr =>
-      curr.grade_levels
-        ?.split(',')
-        ?.some(grade => currCurriculumGrades.includes(grade))
-    );
-
-    // (if signed-in teacher) Filter out curricula the user has taught before
-    if (curriculaTaught) {
-      recommendableCurricula = recommendableCurricula.filter(
-        curr => !curriculaTaught.includes(curr.course_offering_id)
-      );
-    }
-
     // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
-      recommendableCurricula,
-      currCurriculum.duration,
-      currCurriculum.marketing_initiative,
-      currCurriculum.school_subject,
-      currCurriculum.cs_topic
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
     );
 
     // Update localStorage with new recommendation result

@@ -2936,6 +2936,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: dance-draft
         cspplayground:
           title: CSP Playground
           description_audience: ''
@@ -7778,6 +7780,8 @@ en:
               name: Test micro:bit lesson
             lesson-15:
               name: Testing Slides Lesson Plan
+            lesson-17:
+              name: Showin Emma How Cool I Am
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
@@ -9405,6 +9409,8 @@ en:
               name: Ecosystems Test
             lesson-7:
               name: Matching Levels
+            lesson-9:
+              name: AI Draft Levels
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -9953,6 +9959,8 @@ en:
               name: Game Jam - Create
             lesson-10:
               name: Game Jam - Play
+            lesson-11:
+              name: Game Mechanics
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -13206,7 +13214,7 @@ en:
               display_name: 'Chapter 1: Creating Webpages'
             lessonGroup-3:
               display_name: 'Chapter 2: Multi-page Websites'
-          title: Unit 2 - Web Development ('23-'24)
+          title: Web Development ('23-'24)
           description: "In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students use computing as a form of self expression as they design and develop basic web pages.   Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a website as a form of personal expression.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n\n-   Why do people create websites?\n-   How can text communicate content, structure, and style on a web page?\n-   How do I safely and appropriately make use of the content published on the Internet?\n-   What strategies can I use when coding to find and fix issues?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a website that solves a problem.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n\n-   How can websites be used to address problems in the world?\n-   What strategies can teams use to work better together?\n-   How do I know what information can be trusted online?\n    :::\n\n::: details [**Implementation Guidance for Web Development**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Implementation Guide][2] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][3] to let the Code.org curriculum team know how the unit went."
           student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: " Learn to build your own web site in Web Lab."
@@ -13731,11 +13739,15 @@ en:
               display_name: Functions
             csp_project:
               display_name: Project
-          title: Variables, Conditionals, and Functions ('23-'24)
+            lessonGroup-5:
+              display_name: Alternate Lessons
+          title: Variables, Conditionals, and Functions ('24-'25)
           description: "This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.\n\n::: details [**\U0001F9D0 Unit Philosophy and Pedagogy**]\n\n#### Intro to EIPM\n\nThis unit is students' first experience with the Explore, Investigate, Practice, Make lesson sequence, or EIPM. This structured approach to teaching programming is covered in detail in the curriculum guide. We highly recommend watching the [accompanying video series][0] to better understand what EIPM should look like in the classroom. When used effectively, it supports deep learning of content and helps maintain a collaborative classroom culture, even as you move into more complex programming concepts.\n\n#### Scaffolding Towards Independent Projects\n\nA major goal of this course is to empower students to design and build projects independently. The Create PT in Unit 8 offers students enormous freedom to scope and build projects, and even this unit begins scaffolding towards that goal. Individual EIPM sequences of lessons gradually prepare students for scoped, independent Make projects. The unit project has a few requirements, but students are largely free to choose the design, topic, and implementation of their ideas. As you teach the unit, look for the opportunities to scaffold the skills and knowledge students will need to creatively and independently tackle the unit project.\n\n:::\n\n::: details [**⭐️ Major Assessment and Projects**]\n\n \n\nThe unit project asks students to design an app that makes a recommendation based on information from user input. Students are given a great deal of freedom to choose their topic, design their user interface, and decide how to actually program their app's behavior. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n:::\n\n::: details [**✅ AP Connections**]\n\n \n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n-   CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n-   AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n-   AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n-   AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage][1].\n\n-   1.4 Identifying and Correcting Errors\n-   3.1 Variables and Assignment\n-   3.3 Mathematical Expressions\n-   3.5 Boolean Expressions\n-   3.6 Conditionals\n-   3.7 Nested Conditionals\n-   3.15 Random Values\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n-   3.a.i.\n-   3.a.ii.\n-   3.a.iii\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
+          lessons: {}
+          name: csp4-2024
         csp5-2024:
           lesson_groups:
             csp_lists:
@@ -13747,6 +13759,8 @@ en:
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
           description_audience: ''
+          lessons: {}
+          name: csp5-2024
         csp6-2024:
           lesson_groups:
             csp_unit6_2020:
@@ -13801,6 +13815,8 @@ en:
           student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
+          lessons: {}
+          name: csp9-2024
         csp10-2024:
           lesson_groups:
             csp_unit10_2020:
@@ -14075,11 +14091,11 @@ en:
               name: Implementing with Code.org
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-1
-          title: Intro to Code.org
+          title: Introduction to Maker K-5 Units
           description_audience: ''
           description_short: ''
-          description: "#### This module is a short introduction to both Code.org and this professional learning course.\n\n#### **You will:**\n\n-   #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n-   #### add objective\n-   #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** ?? minutes"
-          student_description: "#### This module is a short introduction to both Code.org and this professional learning course.\n\n#### **You will:**\n\n-   #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n-   #### add objective\n-   #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 10 minutes"
+          description: "#### This module is a short introduction to both Code.org and this professional learning course.\n\n#### **You will:**\n\n-   #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n-   #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short introduction to both Code.org and this professional learning course.\n\n#### **You will:**\n\n-   #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n-   #### add objective\n-   #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
         self-paced-pl-microbit-2024-2:
           lessons:
             lesson-1:
@@ -14168,8 +14184,8 @@ en:
           title: Course C (2nd-3rd Grade)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes"
         melissambcd:
           lessons: {}
           lesson_groups: {}
@@ -14177,8 +14193,8 @@ en:
           title: Course D (3rd-4th Grade)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using loops and conditionals with Code.org.\n\n#### **Suggested Time:** 40 minutes"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using loops and conditionals with Code.org.\n\n#### **Suggested Time:** 40 minutes"
         melissambcoursed:
           lessons: {}
           lesson_groups: {}
@@ -14189,8 +14205,8 @@ en:
           title: Course E (4th-5th) Grade
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes"
         melissambcf:
           lessons: {}
           lesson_groups: {}
@@ -14198,8 +14214,8 @@ en:
           title: Course F (5th-6th Grade)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n-   #### Create and code with variables.\n\n#### **Suggested Time:** 40 minutes"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n-   #### Create and code with variables.\n\n#### **Suggested Time:** 40 minutes"
         coursed-maker-2024-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -14217,6 +14233,8 @@ en:
           student_description: ''
           description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
           description_audience: ''
+          lessons: {}
+          name: pilot-coursec-maker-2024
         yaddayadda:
           lesson_groups:
             lessonGroup-2:
@@ -14245,6 +14263,12 @@ en:
         self-paced-pl-microbit-2024-6:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-microbit-2024-6
+          title: 'Physical Computing with micro:bit '
+          description_audience: ''
+          description_short: ''
+          description: "#### This unit will introduce you to the basics of physical computing  so you are ready to begin teaching with micro:bit.\n\n#### **You will:**\n\n-   #### Get acquainted with the micro:bit\n\n-   #### Navigate the classroom feature in Microsoft MakeCode\n\n-   #### Practice using the micro:bit\n\n-   #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes"
+          student_description: "#### This module will introduce you to the basics of physical computing with micro:bit.\n\n#### **You will:**\n\n-   #### Get acquainted with the micro:bit\n\n-   #### Navigate the classroom feature in Microsoft MakeCode\n\n-   #### Practice using the micro:bit\n\n-   #### Learn best practices for teaching with micro:bit\n\n#### **Suggested time:** 90 minutes"
         pilot-coursee-maker-2024:
           lesson_groups:
             lessonGroup-2:
@@ -14258,6 +14282,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pilot-coursee-maker-2024
         pilot-coursed-maker-2024:
           lesson_groups:
             lessonGroup-2:
@@ -14271,6 +14297,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pilot-coursed-maker-2024
         pilot-coursef-maker-2024:
           lesson_groups:
             lessonGroup-2:
@@ -14284,21 +14312,115 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: pilot-coursef-maker-2024
         k5-maker-pilot-2024-1:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-1
+          title: Intro to Maker K-5 Units
+          description_audience: ''
+          description_short: ''
+          description: "#### This unit is a short overview for navigating this professional learning course with an optional additional lesson to get you started implementing Code.org in your class.\n\n#### **You will:**\n\n-   #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n-   #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short overview for navigating this professional learning course with an optional additional lesson to get you started implementing Code.org in your class.\n\n#### **You will:**\n\n-   #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n-   #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
         k5-maker-pilot-2024-2:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-2
+          title: Course C (2nd-3rd Grade)
+          description_audience: ''
+          description_short: ''
+          description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course C.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
+          student_description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course C.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
         k5-maker-pilot-2024-3:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-3
+          title: Course D (3rd-4th Grade)
+          description_audience: ''
+          description_short: ''
+          description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course D.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using loops and conditionals with Code.org.\n\n#### **Suggested Time:** 40 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
+          student_description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course D.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using loops and conditionals with Code.org.\n\n#### **Suggested Time:** 40 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
         k5-maker-pilot-2024-4:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-4
+          title: Course E (4th-5th) Grade
+          description_audience: ''
+          description_short: ''
+          description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course E.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
+          student_description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course E.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n\n#### **Suggested Time:** 30 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
         k5-maker-pilot-2024-5:
           lessons: {}
           lesson_groups: {}
+          name: k5-maker-pilot-2024-5
+          title: Course F (5th-6th Grade)
+          description_audience: ''
+          description_short: ''
+          description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course F.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n-   #### Create and code with variables.\n\n#### **Suggested Time:** 40 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
+          student_description: "#### This unit covers the concepts and skills from the beginner pathway of **CS Fundamentals Course F.**\n\n#### Choose at least one course unit (C-F) to complete before proceeding to the Physical Computing with micro:bit unit.\n\n#### **You will:**\n\n-   #### Code using events with Code.org.\n-   #### Explore an unplugged coding lesson.\n-   #### Create and code with variables.\n\n#### **Suggested Time:** 40 minutes\n\n#### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href=\"http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot\" target=\"blank\" rel=\"noopener noreferrer\">Click here to enroll in the pilot</a> </strong>"
         k5-maker-pilot-2024-6:
           lessons: {}
           lesson_groups: {}
+        music-accessibility:
+          lessons:
+            lesson-1:
+              name: Keyboard Navigation Testing
+          lesson_groups: {}
+          name: music-accessibility
+          title: Music-accessibility
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pilot-k5-ai:
+          lessons:
+            lesson-1:
+              name: Sorting Data
+            lesson-2:
+              name: Training AI
+            lesson-3:
+              name: How AI Makes Decisions
+            lesson-4:
+              name: Create an AI Poster
+          lesson_groups: {}
+          name: pilot-k5-ai
+          title: Elementary AI Module [Pilot]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        lesson-plan-feedback-v1:
+          lessons:
+            lesson-1:
+              name: Option A
+            lesson-2:
+              name: Option B
+            lesson-3:
+              name: Option C
+            lesson-4:
+              name: Option D
+            lesson-5:
+              name: Option E
+            lesson-6:
+              name: Option F
+          lesson_groups: {}
+          name: lesson-plan-feedback-v1
+          title: Lesson Plan Feedback (V1)
+          description_audience: ''
+          description_short: ''
+          description: "## How to navigate these lessons\n\n1.  Start with Lesson A. This is the world we're in now.\n2.  **Go to Lesson F - the last lesson in the progression!** This represents a world where lessons are entirely connected to slides at every step of the way with everything in the table itself.\n3.  All the lessons in between are a \"progression\" from one world to the next, gradually introducing ways tables and slides could appear in lessons.\n\n**Ignore weird image sizing in tables**. This is a markdown thing and, if we go more in a slide-image direction, we can find a way to figure out image sizes so they'll all be the same even in separate tables.\n\nIf you can't ignore the weird sizing, open up the developer console in a lesson and paste this into the javascript console:\n\n    document.querySelectorAll('tr').forEach(row => { const cells = row.querySelectorAll('td, th'); if (cells.length > 0) cells[0].style.width = '25%'; if (cells.length > 1) cells[1].style.width = '75%'; });\n\nThis will resize all of the tables to be the same size"
+          student_description: ''
+        csd-web-dev-beta-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-page Websites'
+          title: Web Development ('23-'24)
+          description: "In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students use computing as a form of self expression as they design and develop basic web pages.   Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a website as a form of personal expression.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n\n-   Why do people create websites?\n-   How can text communicate content, structure, and style on a web page?\n-   How do I safely and appropriately make use of the content published on the Internet?\n-   What strategies can I use when coding to find and fix issues?\n    :::\n\n::: details [**Chapter 2 Overview**]\n**Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.\n\n**Goals:**\n\n-   Create digital artifacts that use multiple computer languages to control the structure and style of their content.\n-   Create a website that solves a problem.\n-   Use different programming languages to solve different problems.\n-   Examine their role and responsibilities as both creators and consumers of digital media.\n\n**Big Questions:**\n\n-   How can websites be used to address problems in the world?\n-   What strategies can teams use to work better together?\n-   How do I know what information can be trusted online?\n    :::\n\n::: details [**Implementation Guidance for Web Development**]\n\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Implementation Guide][2] for more information about this unit\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][3] to let the Code.org curriculum team know how the unit went."
+          student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description_short: " Learn to build your own website in Web Lab."
+          description_audience: ''
+          lessons: {}
+          name: csd-web-dev-beta-2024

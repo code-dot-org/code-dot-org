@@ -11,7 +11,12 @@ export default {
 const Template = args => (
   <Provider store={reduxStore()}>
     <Congrats
-      initialCertificateImageUrl={'/images/placeholder-hoc-image.jpg'}
+      certificateData={[
+        {
+          courseName: 'dance',
+          coursePath: '/s/dance',
+        },
+      ]}
       language="en"
       tutorial="other"
       isHocTutorial={true}

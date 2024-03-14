@@ -222,9 +222,11 @@ export const commands = {
     this.previous.eventLogLength = this.eventLog.length;
     this.previous.printLogLength = this.printLog.length || 0;
     this.previous.soundLogLength = this.soundLog.length || 0;
+    this.previous.foregroundEffectsLength = this.foregroundEffects.length || 0;
+
+    // Store basic information about sprites.
     this.previous.sprites = [];
-    for (let i = 0; i < spriteIds.length; i++) {
-      let spriteId = spriteIds[i];
+    spriteIds.forEach(spriteId => {
       this.previous.sprites.push({
         id: spriteId,
         costume: this.nativeSpriteMap[spriteId].getAnimationLabel(),
@@ -236,7 +238,19 @@ export const commands = {
         speed: this.nativeSpriteMap[spriteId].speed,
         rotation: this.nativeSpriteMap[spriteId].rotation,
       });
-    }
+    });
+
+    // Store basic information about watched variables.
+    this.previous.variableBubbles = [];
+    const variableBubbles = this.getVariableBubbles();
+    variableBubbles.forEach(variableBubble => {
+      this.previous.variableBubbles.push({
+        ...variableBubble,
+        // Run the variable name through the JS interpreter to get its value.
+        // We need to store the previous value to validate changes between frames.
+        value: this.getVariableValue(variableBubble.name),
+      });
+    });
   },
 
   // If the student has not completed any criteria, they are "failing".

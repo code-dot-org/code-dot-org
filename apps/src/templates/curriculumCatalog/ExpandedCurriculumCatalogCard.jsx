@@ -15,6 +15,7 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
+import {defaultImageSrc} from './curriculumCatalogConstants';
 
 const ExpandedCurriculumCatalogCard = ({
   courseKey,
@@ -287,9 +288,9 @@ const ExpandedCurriculumCatalogCard = ({
                 </Heading4>
                 <hr className={style.thickDivider} />
                 <img
-                  src={recommendedSimilarCurriculum.image}
-                  alt={recommendedSimilarCurriculum.display_name}
+                  src={recommendedSimilarCurriculum.image || defaultImageSrc}
                   style={{height: '100%'}}
+                  alt={recommendedSimilarCurriculum.display_name}
                 />
                 <Button
                   id="similarCurriculumButton"

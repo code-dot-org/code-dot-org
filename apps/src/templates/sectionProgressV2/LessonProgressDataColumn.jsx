@@ -8,6 +8,7 @@ import {
 } from '../progress/progressTypes';
 import {connect} from 'react-redux';
 import LessonDataCell from './LessonDataCell';
+import {studentNeedsFeedback} from '../progress/progressHelpers';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 function LessonProgressDataColumn({
@@ -29,6 +30,22 @@ function LessonProgressDataColumn({
         ])
       ),
     [levelProgressByStudent, sortedStudents, lesson]
+  );
+
+  const needsFeedbackByStudent = React.useMemo(
+    () =>
+      Object.fromEntries(
+        sortedStudents.map(student => [
+          student.id,
+          lesson.levels.some(level =>
+            studentNeedsFeedback(
+              levelProgressByStudent[student.id][level.id],
+              level
+            )
+          ),
+        ])
+      ),
+    [levelProgressByStudent, sortedStudents, lesson.levels]
   );
 
   // For lockable lessons, check whether each level is locked for each student.
@@ -54,7 +71,9 @@ function LessonProgressDataColumn({
             studentLessonProgress={
               lessonProgressByStudent[student.id][lesson.id]
             }
+            needsFeedback={needsFeedbackByStudent[student.id]}
             key={student.id + '.' + lesson.id}
+            studentId={student.id}
             addExpandedLesson={addExpandedLesson}
           />
         ))}

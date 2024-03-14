@@ -72,7 +72,12 @@ module I18n
 
               locale_etags[source_file['path']] = translation_etag
             ensure
-              mutex.synchronize {progress_bar.increment}
+              mutex.synchronize do
+                progress_bar.increment
+
+                # Limits the number of requests to 20 per second to avoid hitting Crowdin's rate limit
+                sleep(1) if progress_bar.progress % I18n::Utils::CrowdinClient::MAX_CONCURRENT_REQUESTS == 0
+              end
             end
           end
         end

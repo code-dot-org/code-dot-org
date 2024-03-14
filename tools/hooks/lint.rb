@@ -14,8 +14,10 @@ def filter_eslint_apps(modified_files)
         f.match(/public\/.+package\//) ||
         f.include?('apps/lib/') ||
         f.include?('shared/') ||
-        f.include?('dashboard/config/')
-       )
+        f.include?('dashboard/config/') ||
+        f.include?('pegasus/sites/virtual') ||
+        f.include?('dashboard/public')
+      )
   end
 end
 

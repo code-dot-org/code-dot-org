@@ -30,6 +30,7 @@ import {
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
+import {defaultImageSrc} from './curriculumCatalogConstants';
 
 const CurriculumCatalogCard = ({
   courseKey,
@@ -37,7 +38,7 @@ const CurriculumCatalogCard = ({
   duration,
   gradesArray,
   imageAltText = '', // for decorative images
-  imageSrc = 'https://images.code.org/0a24eb3b51bd86e054362f0760c6e64e-image-1681413990565.png',
+  imageSrc = defaultImageSrc,
   subjects = [],
   topics = [],
   pathToCourse,

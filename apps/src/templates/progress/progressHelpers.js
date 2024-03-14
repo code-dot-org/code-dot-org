@@ -156,6 +156,17 @@ export function lessonHasLevels(lesson) {
   return !!lesson.levels?.length;
 }
 
+export const feedbackLeft = progress =>
+  progress?.teacherFeedbackReviewState !== 'keepWorking' &&
+  progress?.teacherFeedbackNew;
+
+export const studentNeedsFeedback = (progress, level) =>
+  progress &&
+  progress.status !== LevelStatus.not_tried &&
+  level.kind === 'assessment' &&
+  level.canHaveFeedback &&
+  !feedbackLeft(progress);
+
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
  * progress in a unit. Unit must be either CSD or CSP.
@@ -276,6 +287,7 @@ export const processedLevel = level => {
         : level.letter || level.title.toString(),
     isConceptLevel: level.is_concept_level,
     isValidated: level.is_validated,
+    canHaveFeedback: level.can_have_feedback,
     bonus: level.bonus,
     pageNumber:
       typeof level.page_number !== 'undefined'
@@ -326,6 +338,7 @@ export const levelProgressFromServer = serverProgress => {
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
     teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
+    teacherFeedbackNew: serverProgress.teacher_feedback_new || false,
     lastTimestamp: serverProgress.last_progress_at,
     pages: getPagesProgress(serverProgress),
   };

@@ -24,7 +24,7 @@ class CurriculumCatalogController < ApplicationController
       isTeacher: @is_teacher,
       sections: @sections_for_teacher,
       isInUS: request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us'),
-      curriculaTaught: current_user&.sections&.map {|s| s.summarize_without_students[:course_offering_id]}
+      curriculaTaught: current_user&.sections&.map(&:course_offering_id)
     }
   end
 end

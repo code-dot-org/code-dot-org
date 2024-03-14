@@ -464,6 +464,7 @@ describe('teacherSectionsRedux', () => {
             instructor_email: 'coteacher@code.org',
           },
         ],
+        syncEnabled: undefined,
       });
     });
   });
@@ -782,6 +783,7 @@ describe('teacherSectionsRedux', () => {
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
           sectionInstructors: [],
+          syncEnabled: undefined,
         },
       });
     });
