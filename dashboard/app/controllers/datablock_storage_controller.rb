@@ -1,3 +1,17 @@
+# DatablockStorage is the backend for the 'Data' tab of Applab, the 'Data' blocks
+# and the dataset browser. DatablockStorage stores student-controlled data generated
+# by and with the data blocks like `createRecord`, `updateRecord`, `setKeyValue`, etc.
+#
+# These backend methods are accessed by a thin wrapper on the JS side: datablockStorage.js
+#
+# Student data is stored in corresponding ActiveRecord models:
+# - DatablockStorageTable: stores a list of tables and their columns
+# - DatablockStorageRecord: stores the records in each table
+# - DatablockStorageKvp: stores key-value pairs
+#
+# Metadata for the code.org defined datasets are stored in:
+# - DatablockStorageLibraryManifest
+
 class DatablockStorageController < ApplicationController
   before_action :validate_channel_id
   before_action :authenticate_user!
