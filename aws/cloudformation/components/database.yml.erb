@@ -136,7 +136,7 @@
         # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
         slow_query_log: 1
         innodb_monitor_enable: all
-        transaction_isolation: READ-COMMITTED
+        tx_isolation: READ-COMMITTED
 
         # Favor write performance over durability. In the event of a database server crash
         # we could lose roughly 1 second of transactions.
