@@ -28,7 +28,7 @@ export function getTextWidth(p5, text, size) {
  * The x and y parameters determine the bubble's center, except the location will be adjusted if the bubble
  * would overflow the canvas.
  *
- * Note: This function assumes the text provided fits within the playspace width (APP_WIDTH).
+ * Note: Truncating the text so it fits within the playspace width (APP_WIDTH) should be handled before this function.
  *
  * @param {p5} p5 - The p5 instance used to draw the bubble.
  * @param {number} x - The x-coordinate of the center of the bubble.
