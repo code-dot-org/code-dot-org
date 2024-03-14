@@ -10,5 +10,7 @@ class CreateDatablockStorageTables < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+
+    add_index :datablock_storage_tables, :project_id
   end
 end

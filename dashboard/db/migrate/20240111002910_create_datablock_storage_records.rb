@@ -9,6 +9,8 @@ class CreateDatablockStorageRecords < ActiveRecord::Migration[6.1]
       t.integer :record_id
       t.json :record_json
     end
+
+    add_index :datablock_storage_records, :project_id
     add_index :datablock_storage_records, [:project_id, :table_name]
   end
 end
