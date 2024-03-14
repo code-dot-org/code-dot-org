@@ -13,6 +13,8 @@
 #  index_datablock_storage_records_on_project_id_and_table_name  (project_id,table_name)
 #
 class DatablockStorageRecord < ApplicationRecord
+  # Stores student-owned records for App Lab's data features, see datablock_storage_controller.rb
+
   self.primary_keys = :project_id, :table_name, :record_id
 
   # TODO: #57001, implement enforcement of MAX_RECORD_LENGTH, we already have

@@ -11,6 +11,8 @@
 #  index_datablock_storage_kvps_on_project_id  (project_id)
 #
 class DatablockStorageKvp < ApplicationRecord
+  # Stores student-owned KVP data for App Lab's data features, see datablock_storage_controller.rb
+
   self.primary_keys = :project_id, :key
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
