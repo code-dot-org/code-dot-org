@@ -9,6 +9,10 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
+# Indexes
+#
+#  index_datablock_storage_tables_on_project_id  (project_id)
+#
 class DatablockStorageTable < ApplicationRecord
   self.primary_keys = :project_id, :table_name
   has_many :records,

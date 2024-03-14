@@ -6,6 +6,10 @@
 #  key        :string(700)      not null, primary key
 #  value      :json
 #
+# Indexes
+#
+#  index_datablock_storage_kvps_on_project_id  (project_id)
+#
 class DatablockStorageKvp < ApplicationRecord
   self.primary_keys = :project_id, :key
 

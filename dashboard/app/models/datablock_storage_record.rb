@@ -9,6 +9,7 @@
 #
 # Indexes
 #
+#  index_datablock_storage_records_on_project_id                 (project_id)
 #  index_datablock_storage_records_on_project_id_and_table_name  (project_id,table_name)
 #
 class DatablockStorageRecord < ApplicationRecord
