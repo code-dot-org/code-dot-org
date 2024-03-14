@@ -112,6 +112,9 @@ export interface LevelProperties {
   skin?: string;
   toolboxBlocks?: string;
   sharedBlocks?: BlockDefinition[];
+  // We are moving level validations out of level data and into level properties.
+  // Temporarily keeping them in both places to avoid breaking existing code.
+  validations?: Validation[];
 }
 
 // Level configuration data used by project-backed labs that don't require

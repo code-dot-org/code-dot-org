@@ -238,3 +238,7 @@ end
 And(/^I get plc reviewer access$/) do
   browser_request(url: '/api/test/plc_reviewer_access', method: 'POST')
 end
+
+And(/^I get debug info for the current user$/) do
+  puts browser_request(url: '/api/v1/users/current', method: 'GET')
+end

@@ -4,7 +4,7 @@ import React, {useCallback} from 'react';
 import i18n from '@cdo/locale';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import SimpleDropdown from '../componentLibrary/simpleDropdown/SimpleDropdown';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 const FAMILY_NAME = 'familyName';
 const DISPLAY_NAME = 'displayName';
