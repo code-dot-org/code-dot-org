@@ -4,6 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 
 import HeaderBanner from '../HeaderBanner';
+import i18n from '@cdo/locale';
 
 class Incubator extends Component {
   render() {
@@ -35,6 +36,25 @@ class Incubator extends Component {
               computer science education. We would love to hear what you think.
             </p>
           </div>
+
+          <TwoColumnActionBlock
+            imageUrl="/shared/images/teacher-announcement/incubator-canvas-integration.png"
+            subHeading={i18n.incubator_canvasIntegration_earlyAccess_title()}
+            description={i18n.incubator_canvasIntegration_earlyAccess_desc()}
+            marginBottom="20px"
+            buttons={[
+              {
+                url: 'https://forms.gle/x7EBBiC18yJysb5D7',
+                text: i18n.incubator_canvasIntegration_earlyAccess_signIn_button(),
+                target: '_blank',
+              },
+              {
+                url: '#',
+                text: i18n.incubator_canvasIntegration_earlyAccess_viewDemo_button(),
+                color: Button.ButtonColor.neutralDark,
+              },
+            ]}
+          />
 
           <TwoColumnActionBlock
             imageUrl={
