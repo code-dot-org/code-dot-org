@@ -13,6 +13,10 @@ import {
 } from './types';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
+import {
+  getRosterSyncErrorMessage,
+  getRosterSyncIssuerErrorDetails,
+} from './LtiSectionSyncDialogHelpers';
 
 // This dialog is shown to the teacher whenever they have requested Code.org to
 // import/sync the teacher's sections and students managed by their LMS.
@@ -21,7 +25,9 @@ export default function LtiSectionSyncDialog({
   onClose,
   disableRosterSyncButtonEnabled,
 }: LtiSectionSyncDialogProps) {
-  const initialView = syncResult.error ? SubView.ERROR : SubView.SYNC_RESULT;
+  const initialView = syncResult.error_code
+    ? SubView.ERROR
+    : SubView.SYNC_RESULT;
   const [currentView, setCurrentView] = useState<SubView>(initialView);
 
   const handleClose = () => {
@@ -45,26 +51,20 @@ export default function LtiSectionSyncDialog({
     );
   };
 
-  const errorView = (error: string | undefined, issuer: string | undefined) => {
+  const errorView = (
+    errorCode: number | undefined,
+    issuer: string | undefined
+  ) => {
     return (
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
         <p>{i18n.ltiSectionSyncDialogError()}</p>
-        <p>{error}</p>
+        {errorCode && <p>{getRosterSyncErrorMessage(errorCode)}</p>}
         {issuer && (
           <SafeMarkdown markdown={getRosterSyncIssuerErrorDetails(issuer)} />
         )}
       </div>
     );
-  };
-
-  const getRosterSyncIssuerErrorDetails = (issuer: string) => {
-    switch (issuer) {
-      case 'Schoology':
-        return i18n.ltiSectionSyncDialogErrorSchoologyDetails({
-          url: 'example.com',
-        });
-    }
   };
 
   const disableRosterSyncView = () => {
@@ -155,7 +155,7 @@ export default function LtiSectionSyncDialog({
       case SubView.SPINNER:
         return spinnerView();
       case SubView.ERROR:
-        return errorView(syncResult.error, syncResult.issuer);
+        return errorView(syncResult.error_code, syncResult.issuer);
       case SubView.DISABLE_ROSTER_SYNC:
         return disableRosterSyncView();
       default:
@@ -200,7 +200,7 @@ const LtiSectionShape = PropTypes.shape({
 export const LtiSectionSyncResultShape = PropTypes.shape({
   all: PropTypes.objectOf(LtiSectionShape),
   updated: PropTypes.objectOf(LtiSectionShape),
-  error: PropTypes.string,
+  error_code: PropTypes.number,
   issuer: PropTypes.string,
 });
 

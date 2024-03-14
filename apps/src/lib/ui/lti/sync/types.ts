@@ -8,7 +8,7 @@ export type LtiSectionMap = {[sectionId: string]: LtiSection};
 export interface LtiSectionSyncResult {
   all?: LtiSectionMap;
   updated?: LtiSectionMap;
-  error?: string;
+  error_code?: string;
   issuer?: string;
 }
 
