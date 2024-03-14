@@ -583,9 +583,96 @@ export const commands = {
     return result;
   },
 
-  // Returns true if the student set a variable to any number, string, or boolean.
-  variableCreated() {
-    const result = this.studentVars.length >= 1;
-    return result;
+  // Returns true if a minimum number of foreground effects are currently active.
+  // Disregards their initial render frame.
+  foregroundEffectsActive(min = 1) {
+    return this.getForegroundEffects().length >= min;
+  },
+
+  // Returns true if a minimum number of foreground effects were first rendered
+  // this frame (e.g. using an event block)
+  foregroundEffectRenderedThisFrame(min = 1) {
+    const effects = this.getForegroundEffects();
+    const newEffects = effects.filter(
+      effect => effect.renderFrame === this.currentFrame()
+    );
+    return newEffects.length >= min;
+  },
+
+  // Returns true if a minimum number of variable bubbles are currently being drawn.
+  variableBubblesCreated(min = 1) {
+    return this.getVariableBubbles().length >= min;
+  },
+
+  // Returns true if a minimum number of watched variables have a valid value.
+  // If unset, a variable's value is an empty string.
+  variableValueSet(min = 1) {
+    const studentVars = this.getVariableBubbles();
+    const filteredVars = studentVars.filter(
+      studentVar => this.getVariableValue(studentVar.name) !== ''
+    );
+    return filteredVars.length >= min;
+  },
+
+  // Returns true if a watched variable's value changed this frame.
+  // Optionally checks if the variable values have increased or decreased.
+  // Since this command requires a variable bubble, it should be used in conjunction
+  // with variableBubblesCreated.
+  // Example usage:
+  //   variableValueChanged(); // Checks if any watched variable changed.
+  //   variableValueChanged('increase'); // Checks if any watched variable increased.
+  //   variableValueChanged('decrease'); // Checks if any watched variable decreased.
+  variableValueChanged(changeType = '') {
+    const previousStudentVars = this.previous.variableBubbles;
+    if (previousStudentVars) {
+      const studentVars = this.getVariableBubbles();
+      for (const studentVar of studentVars) {
+        // Find a variable with the same name in the previous student variables
+        const matchingPreviousVar = previousStudentVars.find(
+          previousVar => previousVar.name === studentVar.name
+        );
+
+        // If the variable existed, compare its value with the value of the current student variable
+        if (matchingPreviousVar) {
+          const previousValue = matchingPreviousVar.value;
+          const currentValue = this.getVariableValue(studentVar.name);
+
+          // Compare the values
+          if (previousValue !== currentValue) {
+            switch (changeType) {
+              case '':
+                // If we're not explicitly looking for an increase or decrease,
+                // any change to the value satisfies this criterion.
+                return true;
+              case 'decrease':
+                if (
+                  typeof previousValue === 'number' &&
+                  typeof currentValue === 'number' &&
+                  currentValue < previousValue
+                ) {
+                  return true;
+                }
+                break;
+              case 'increase':
+                if (
+                  typeof previousValue === 'number' &&
+                  typeof currentValue === 'number' &&
+                  currentValue > previousValue
+                ) {
+                  return true;
+                }
+                break;
+              default:
+                console.error(
+                  `Invalid argument for variableValueChanged: ${changeType}`
+                );
+                break;
+            }
+          }
+        }
+      }
+    }
+    // If we reach this point, none of the watched variables changed in the specified way.
+    return false;
   },
 };
