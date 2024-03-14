@@ -42,9 +42,7 @@ export default function LandingPage({
             surveyUrl={lastWorkshopSurveyUrl}
           />
         )}
-        <div data-testid={'enrolled-workshops'}>
-          <EnrolledWorkshops />
-        </div>
+        <EnrolledWorkshops />
         {deeperLearningCourseData?.length >= 1 && (
           <div>
             <h2>Online Professional Learning Courses</h2>
