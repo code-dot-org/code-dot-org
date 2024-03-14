@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-03-12 04:50:16 UTC",
+    "serialized_at": "2024-03-13 17:35:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -975,7 +975,7 @@
       "position": 1,
       "properties": {
         "name": "Game Jam",
-        "progression_name": "Teamwork = Dreamwork"
+        "progression_name": "Teamwork"
       },
       "seeding_key": {
         "activity_section.key": "8e79eda0-b5d8-4e7b-97c0-b6a56e2d176a",
@@ -2368,7 +2368,7 @@
         "level_keys": [
           "game_jam_teams"
         ],
-        "progression": "Teamwork = Dreamwork"
+        "progression": "Teamwork"
       },
       "bonus": false,
       "seeding_key": {
@@ -2440,15 +2440,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "game_jam_create"
-        ],
         "progression": "Make the game!"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_jam_create"
+          "game_jam_choice_jump"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "",
@@ -2456,7 +2453,7 @@
         "activity_section.key": "ce49ad0f-8950-454f-bf65-96579914dceb"
       },
       "level_keys": [
-        "game_jam_create"
+        "game_jam_choice_jump"
       ]
     },
     {
@@ -2840,6 +2837,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_mechanics_world1a"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3077,6 +3077,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_mechanics_world_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3732,9 +3735,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_jam_create",
+        "level.key": "game_jam_choice_jump",
         "script_level.level_keys": [
-          "game_jam_create"
+          "game_jam_choice_jump"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "",

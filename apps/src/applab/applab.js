@@ -1373,9 +1373,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
 
-  // Unlisten from previous data view. This should not interfere with events listened to
-  // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
-  // only unlistening from 'value' events here.
+  // Unlisten to 'value' events from previous data view.
   getPathRef(projectStorageRef, 'keys').off('value');
   getPathRef(projectStorageRef, `tables/${oldTableName}/records`).off('value');
   getPathRef(sharedStorageRef, `tables/${oldTableName}/records`).off('value');
