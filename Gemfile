@@ -270,7 +270,7 @@ gem 'net-scp'
 gem 'net-ssh'
 gem 'oj', '~> 3.10'
 
-gem 'rest-client', '~> 2.0.1'
+gem 'rest-client', '~> 2.1.0'
 
 # A rest-client dependency
 # This is the latest version that's installing successfully
@@ -357,4 +357,4 @@ gem 'rack-cors', '~> 2.0.1'
 
 gem 'statsig', '~> 1.33'
 
-gem 'mailjet', '~> 1.7.3'
+gem 'mailjet', '~> 1.7.8'
