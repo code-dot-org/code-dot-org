@@ -1027,6 +1027,10 @@ export default class JSInterpreter {
         const varName = execResult[1];
         if (varName === '__') {
           msg = 'It looks like you left one of the parameters empty.';
+        } else if (varName === 'onRecordEvent') {
+          msg =
+            `It looks like you're trying to use the ${varName} function. ` +
+            'This function is no longer available. Try using the available data blocks.';
         } else {
           msg =
             `Oops, we can’t figure out what ${varName} is - perhaps you ` +

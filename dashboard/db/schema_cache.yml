@@ -2546,6 +2546,14 @@ columns:
     default_function:
     collation:
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: evidence
+    sql_type_metadata: *15
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
   learning_goal_evidence_levels:
   - *19
   - &56 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -13205,7 +13213,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240306184654
+version: 20240308234208
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

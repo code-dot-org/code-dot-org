@@ -211,13 +211,18 @@ function Certificate(props) {
             {certificateData.map(image => (
               <swiper-slide key={image.courseName} class={style.swiperSlide}>
                 <a href={getCertificateSharePath(image.courseName)}>
-                  {
-                    // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                    // Verify or update this alt-text as necessary
-                  }
                   <img
                     src={getCertificateImagePath(image.courseName)}
-                    alt=""
+                    alt={
+                      studentName
+                        ? i18n.certificateAltTextWithName({
+                            studentName,
+                            courseTitle: image.courseTitle,
+                          })
+                        : i18n.certificateAltTextNoName({
+                            courseTitle: image.courseTitle,
+                          })
+                    }
                     style={{width: 470}}
                   />
                 </a>
