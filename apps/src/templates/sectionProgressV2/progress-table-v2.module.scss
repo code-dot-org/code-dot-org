@@ -203,7 +203,7 @@ $level-cell-width: 52;
       }
     }
 
-    .expandedHeaderLevelCell {
+    &LevelCell {
       width: $level-cell-width + px;
       text-align: center;
       height: 32px;
@@ -212,12 +212,16 @@ $level-cell-width: 52;
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      overflow-x: hidden;
+      overflow: hidden;
       flex-wrap: nowrap;
-    }
 
-    .expandedHeaderLevelCellUnexpanded {
-      background-color: white;
+      &LevelNumber {
+        padding-top: 2px;
+      }
+
+      &Unexpanded {
+        background-color: white;
+      }
     }
 
     &ExpandedLevel {
@@ -288,6 +292,7 @@ $level-cell-width: 52;
 }
 
 .assessmentLevelIcon {
+  //margin-top: -2px;
   font-size: 12px;
   color: $neutral_dark60;
 }
