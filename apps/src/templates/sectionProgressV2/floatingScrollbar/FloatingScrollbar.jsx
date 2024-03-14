@@ -128,7 +128,6 @@ export default function FloatingScrollbar({children, childRef}) {
       </div>
     );
   }
-  console.log('lfm', scrollbarWidth);
 
   return (
     <div className={styles.scrollingContainer}>
