@@ -117,6 +117,13 @@ export default class CoreLibrary {
   }
 
   drawVariableBubbles() {
+    const config = {
+      textSize: 20,
+      padding: 10,
+      strokeWeight: 3,
+      strokeRadius: 24,
+    };
+
     this.variableBubbles.forEach(variable => {
       const {name, label, location} = variable;
       if (!name.length || !label.length || !location) {
@@ -124,10 +131,80 @@ export default class CoreLibrary {
       }
 
       const value = this.getVariableValue(name);
-      const text = `${label}: ${value}`;
+      const totalExtra = 2 * (config.padding + config.strokeWeight); // Total extra width due to padding and stroke
+      const ellipsis = '...';
 
-      // TODO: Confirm this handles shadow block locations appropriately
-      drawUtils.variableBubble(this.p5, location.x, location.y, text);
+      // Check if the value alone is too wide
+      let valueWidth =
+        drawUtils.getTextWidth(this.p5, value, config.textSize) + totalExtra;
+      if (valueWidth > APP_WIDTH) {
+        let valueToDisplay;
+        // If value exceeds APP_WIDTH, truncate the value itself
+        let truncatedValue = value;
+        let truncationNeeded = true;
+
+        while (truncationNeeded && truncatedValue.length > 0) {
+          truncatedValue = truncatedValue.slice(0, -1);
+          valueToDisplay = `${truncatedValue}${ellipsis}`;
+          let currentWidth =
+            drawUtils.getTextWidth(this.p5, valueToDisplay, config.textSize) +
+            totalExtra;
+
+          // Add ellipsis to indicate the value has been truncated, if any truncation happened
+          if (currentWidth <= APP_WIDTH) {
+            truncationNeeded = false;
+          }
+        }
+
+        // Display the truncated value without label
+        drawUtils.variableBubble(
+          this.p5,
+          location.x,
+          location.y,
+          valueToDisplay,
+          config
+        );
+        return; // Skip further processing
+      }
+
+      const fullText = `${label}: ${value}`;
+      let fullTextWidth = drawUtils.getTextWidth(
+        this.p5,
+        fullText,
+        config.textSize
+      );
+
+      let textToDisplay;
+      if (fullTextWidth > APP_WIDTH) {
+        let truncatedLabel = label;
+        let truncationNeeded = true;
+
+        while (truncationNeeded && truncatedLabel.length > 0) {
+          truncatedLabel = truncatedLabel.slice(0, -1);
+          textToDisplay = `${truncatedLabel}${ellipsis}: ${value}`;
+          let currentWidth =
+            drawUtils.getTextWidth(this.p5, textToDisplay, config.textSize) +
+            totalExtra;
+
+          if (currentWidth <= APP_WIDTH) {
+            truncationNeeded = false;
+          }
+        }
+
+        if (truncatedLabel.length === 0 && truncationNeeded) {
+          textToDisplay = `${value}`;
+        }
+      } else {
+        textToDisplay = fullText;
+      }
+
+      drawUtils.variableBubble(
+        this.p5,
+        location.x,
+        location.y,
+        textToDisplay,
+        config
+      );
     });
   }
 
