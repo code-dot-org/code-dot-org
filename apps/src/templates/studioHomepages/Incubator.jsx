@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-
-import HeaderBanner from '../HeaderBanner';
 import i18n from '@cdo/locale';
 
+import HeaderBanner from '../HeaderBanner';
+
 class Incubator extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      canvasBlockEnabled: DCDO.get('incubator-canvas-block-enabled', true),
+    };
+  }
+
   render() {
     return (
       <div>
@@ -37,24 +46,26 @@ class Incubator extends Component {
             </p>
           </div>
 
-          <TwoColumnActionBlock
-            imageUrl="/shared/images/teacher-announcement/incubator-canvas-integration.png"
-            subHeading={i18n.incubator_canvasIntegration_earlyAccess_title()}
-            description={i18n.incubator_canvasIntegration_earlyAccess_desc()}
-            marginBottom="20px"
-            buttons={[
-              {
-                url: 'https://forms.gle/x7EBBiC18yJysb5D7',
-                text: i18n.incubator_canvasIntegration_earlyAccess_signIn_button(),
-                target: '_blank',
-              },
-              {
-                url: '#',
-                text: i18n.incubator_canvasIntegration_earlyAccess_viewDemo_button(),
-                color: Button.ButtonColor.neutralDark,
-              },
-            ]}
-          />
+          {this.state.canvasBlockEnabled && (
+            <TwoColumnActionBlock
+              imageUrl="/shared/images/teacher-announcement/incubator-canvas-integration.png"
+              subHeading={i18n.incubator_canvasIntegration_earlyAccess_title()}
+              description={i18n.incubator_canvasIntegration_earlyAccess_desc()}
+              marginBottom="20px"
+              buttons={[
+                {
+                  url: 'https://forms.gle/x7EBBiC18yJysb5D7',
+                  text: i18n.incubator_canvasIntegration_earlyAccess_signIn_button(),
+                  target: '_blank',
+                },
+                {
+                  url: '#',
+                  text: i18n.incubator_canvasIntegration_earlyAccess_viewDemo_button(),
+                  color: Button.ButtonColor.neutralDark,
+                },
+              ]}
+            />
+          )}
 
           <TwoColumnActionBlock
             imageUrl={
