@@ -2,16 +2,19 @@
 
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
+import {AppName} from './types';
 
 export default class Lab2Registry {
   private projectManager: ProjectManager | null;
   private metricsReporter: LabMetricsReporter;
+  private appName: AppName | null;
 
   private static _instance: Lab2Registry;
 
   constructor() {
     this.projectManager = null;
     this.metricsReporter = new LabMetricsReporter();
+    this.appName = null;
   }
 
   public static getInstance(): Lab2Registry {
@@ -46,5 +49,13 @@ export default class Lab2Registry {
 
   public getMetricsReporter() {
     return this.metricsReporter;
+  }
+
+  public setAppName(appName: AppName) {
+    this.appName = appName;
+  }
+
+  public getAppName() {
+    return this.appName;
   }
 }
