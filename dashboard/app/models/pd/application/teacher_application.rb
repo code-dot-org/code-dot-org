@@ -367,6 +367,11 @@ module Pd::Application
       )
     end
 
+    def status_including_enrolled
+      return 'enrolled' if enrolled?
+      status
+    end
+
     # This is called by the scheduled_pd_application_emails cronjob which is run
     # on the production-daemon machine every day
     def self.send_admin_approval_reminders_to_teachers

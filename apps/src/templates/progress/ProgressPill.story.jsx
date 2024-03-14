@@ -3,7 +3,6 @@ import {UnconnectedProgressPill as ProgressPill} from './ProgressPill';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 export default {
-  title: 'ProgressPill',
   component: ProgressPill,
 };
 

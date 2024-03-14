@@ -37,7 +37,6 @@ const inputStyle = {
 };
 
 export default {
-  title: 'AnnouncementsEditor',
   component: AnnouncementsEditor,
 };
 

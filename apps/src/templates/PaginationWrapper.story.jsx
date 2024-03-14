@@ -18,7 +18,6 @@ class StorybookHarness extends React.Component {
 }
 
 export default {
-  title: 'PaginationWrapper',
   component: PaginationWrapper,
 };
 

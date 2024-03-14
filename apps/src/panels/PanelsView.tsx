@@ -169,25 +169,27 @@ const PanelsView: React.FunctionComponent = () => {
             ? commonI18n.next()
             : commonI18n.continue()}
         </button>
-        <div id="panels-bubbles">
-          {Array.from(Array(levelPanels.panels.length).keys()).map(index => {
-            return (
-              <FontAwesome
-                key={index}
-                className={classNames(
-                  'icon',
-                  styles.bubble,
-                  index === currentPanel
-                    ? styles.bubbleCurrent
-                    : styles.bubbleNotCurrent
-                )}
-                title={undefined}
-                icon="circle"
-                onClick={() => handleBubbleClick(index)}
-              />
-            );
-          })}
-        </div>
+        {levelPanels.panels.length > 1 && (
+          <div id="panels-bubbles">
+            {Array.from(Array(levelPanels.panels.length).keys()).map(index => {
+              return (
+                <FontAwesome
+                  key={index}
+                  className={classNames(
+                    'icon',
+                    styles.bubble,
+                    index === currentPanel
+                      ? styles.bubbleCurrent
+                      : styles.bubbleNotCurrent
+                  )}
+                  title={undefined}
+                  icon="circle"
+                  onClick={() => handleBubbleClick(index)}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -5,12 +5,12 @@ import {
   READY,
   IN_PROGRESS,
   SUCCESS,
+  DISABLED,
 } from './SyncOmniAuthSectionControl';
 import {action} from '@storybook/addon-actions';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 export default {
-  title: 'SyncOmniAuthSectionButton',
   component: SyncOmniAuthSectionButton,
 };
 
@@ -94,4 +94,11 @@ export const SyncLtiSuccess = Template.bind({});
 SyncLtiSuccess.args = {
   ...TemplateLti.args,
   buttonState: SUCCESS,
+};
+
+export const SyncLtiDisabled = Template.bind({});
+SyncLtiDisabled.args = {
+  ...TemplateLti.args,
+  buttonState: 'disabled',
+  syncEnabled: DISABLED,
 };

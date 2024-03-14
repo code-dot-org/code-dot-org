@@ -376,16 +376,6 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
-  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options even if start_mode is true' do
-    @is_start_mode = true
-    Experiment.stubs(:enabled?).returns(false)
-    view_options(blocklyVersion: 'google')
-    @level = build :level
-    assert use_google_blockly
-    Experiment.unstub(:enabled?)
-    reset_view_options
-  end
-
   test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options even if level uses google_blockly' do
     Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'cdo')

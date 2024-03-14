@@ -16,18 +16,15 @@ module I18n
         class SyncIn < I18n::Utils::SyncInBase
           def process
             prepare_level_content
-            progress_bar.progress = 25
-
-            prepare_project_content
             progress_bar.progress = 50
 
+            prepare_project_content
+            progress_bar.progress = 75
+
             write_to_yml(VARIABLE_NAMES_TYPE, variable_strings)
-            progress_bar.progress = 65
+            progress_bar.progress = 90
 
             write_to_yml(PARAMETER_NAMES_TYPE, parameter_strings)
-            progress_bar.progress = 80
-
-            redact_level_content
           end
 
           private
@@ -336,13 +333,12 @@ module I18n
                 else
                   File.join(I18N_SOURCE_DIR_PATH, script.version_year)
                 end
-              FileUtils.mkdir_p(script_i18n_directory)
 
-              script_i18n_name = "#{script.name}.json"
-              script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, script_i18n_name, script_i18n_filename)
+              source_file_path = File.join(script_i18n_directory, "#{script.name}.json")
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, source_file_path)
 
-              File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
+              I18nScriptUtils.write_json_file(source_file_path, script_strings)
+              redact_json_file(source_file_path)
             end
 
             write_to_yml(BLOCK_CATEGORIES_TYPE, block_category_strings)
@@ -377,7 +373,8 @@ module I18n
 
             project_strings.delete_if {|_, value| value.blank?}
 
-            File.write(project_content_file, JSON.pretty_generate(project_strings))
+            I18nScriptUtils.write_json_file(project_content_file, project_strings)
+            redact_json_file(project_content_file)
           end
 
           def select_redactable(i18n_strings)
@@ -399,22 +396,19 @@ module I18n
             redactable.delete_if {|_k, v| v.blank?}
           end
 
-          def redact_level_content
-            Dir[File.join(I18N_SOURCE_DIR_PATH, '/**/*.json')].each do |source_path|
-              source_data = JSON.load_file(source_path)
-              next if source_data.blank?
+          def redact_json_file(source_path)
+            source_data = JSON.load_file(source_path)
+            return if source_data.blank?
 
-              redactable_data = source_data.map do |level_url, i18n_strings|
-                [level_url, select_redactable(i18n_strings)]
-              end.to_h
+            redactable_data = source_data.map do |level_url, i18n_strings|
+              [level_url, select_redactable(i18n_strings)]
+            end.to_h
 
-              backup_path = source_path.sub('source', 'original')
-              FileUtils.mkdir_p(File.dirname(backup_path))
-              File.write(backup_path, JSON.pretty_generate(redactable_data))
+            backup_path = source_path.sub('source', 'original')
+            I18nScriptUtils.write_json_file(backup_path, redactable_data)
 
-              redacted_data = RedactRestoreUtils.redact_data(redactable_data, REDACT_PLUGINS)
-              File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
-            end
+            redacted_data = RedactRestoreUtils.redact_data(redactable_data, REDACT_PLUGINS)
+            I18nScriptUtils.write_json_file(source_path, source_data.deep_merge(redacted_data))
           end
         end
       end

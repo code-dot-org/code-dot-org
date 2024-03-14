@@ -6,7 +6,6 @@ import {
 } from './assessmentsTestHelpers';
 
 export default {
-  title: 'MatchAssessmentsOverviewTable',
   component: UnconnectedMatchAssessmentsOverviewTable,
 };
 

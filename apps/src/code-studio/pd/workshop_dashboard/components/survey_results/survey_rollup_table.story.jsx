@@ -3,7 +3,6 @@ import SurveyRollupTable from '../../components/survey_results/survey_rollup_tab
 import {COURSE_CSF} from '../../workshopConstants';
 
 export default {
-  title: 'SurveyRollupTable',
   component: SurveyRollupTable,
 };
 
@@ -167,16 +166,16 @@ const Template = args => (
   </div>
 );
 
-export const facilitatorRollup = Template.bind({});
-facilitatorRollup.args = {
+export const FacilitatorRollup = Template.bind({});
+FacilitatorRollup.args = {
   courseName: 'CS Principles',
   rollups: facilitator_rollups.rollups,
   questions: facilitator_rollups.questions,
   facilitators: facilitator_rollups.facilitators,
 };
 
-export const workshopRollup = Template.bind({});
-workshopRollup.args = {
+export const WorkshopRollup = Template.bind({});
+WorkshopRollup.args = {
   courseName: COURSE_CSF,
   rollups: workshop_rollups.rollups,
   questions: workshop_rollups.questions,

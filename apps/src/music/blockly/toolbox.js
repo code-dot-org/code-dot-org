@@ -426,7 +426,9 @@ export function getToolbox(toolbox) {
           ],
           Logic: ['controls_if', 'logic_compare'],
         },
-        {includeVariables: true}
+        {
+          includeVariables: true,
+        }
       );
     case BlockMode.SIMPLE2:
     default:

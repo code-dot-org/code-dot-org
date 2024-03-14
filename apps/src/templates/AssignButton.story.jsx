@@ -4,7 +4,6 @@ import {UnconnectedAssignButton as AssignButton} from './AssignButton';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 
 export default {
-  title: 'AssignButton',
   component: AssignButton,
 };
 

@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U4L7-Nested If PBT_2024",
     "teacher_markdown": "1. When we change the argument when calling the `checkAge()` method to different values, different values may print to the console (`\"Child\"`, `\"Teenager\"`, or `\"Adult\"`) depending on the argument.\r\n\r\n2. The code in the `checkAge()` method is an example of a nested `if` statement. There is an initial condition that is checked to see if the age results in a person being an adult. If `age` is less than or equal to `18`, there is another conditional to check if the age indicates a child or a teenager.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:59:01.199+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L2_2023\\\"\"],\"cloned_from\":\"CSA U4L7-L2_2023\"}]"

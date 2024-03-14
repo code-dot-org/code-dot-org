@@ -2,33 +2,79 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './progress-table-v2.module.scss';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
-import {studentLessonProgressType} from '../progress/progressTypes';
+import {
+  studentLessonProgressType,
+  studentLevelProgressType,
+} from '../progress/progressTypes';
 import {connect} from 'react-redux';
 import LessonDataCell from './LessonDataCell';
+import {studentNeedsFeedback} from '../progress/progressHelpers';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 function LessonProgressDataColumn({
   lesson,
   lessonProgressByStudent,
+  levelProgressByStudent,
   sortedStudents,
   addExpandedLesson,
 }) {
+  const lockedPerStudent = React.useMemo(
+    () =>
+      Object.fromEntries(
+        sortedStudents.map(student => [
+          student.id,
+          lesson.lockable &&
+            lesson.levels.every(
+              level => levelProgressByStudent[student.id][level.id]?.locked
+            ),
+        ])
+      ),
+    [levelProgressByStudent, sortedStudents, lesson]
+  );
+
+  const needsFeedbackByStudent = React.useMemo(
+    () =>
+      Object.fromEntries(
+        sortedStudents.map(student => [
+          student.id,
+          lesson.levels.some(level =>
+            studentNeedsFeedback(
+              levelProgressByStudent[student.id][level.id],
+              level
+            )
+          ),
+        ])
+      ),
+    [levelProgressByStudent, sortedStudents, lesson.levels]
+  );
+
+  // For lockable lessons, check whether each level is locked for each student.
+  // Used to control locked/unlocked icon in lesson header.
+  const allLocked = React.useMemo(
+    () => sortedStudents.every(student => lockedPerStudent[student.id]),
+    [sortedStudents, lockedPerStudent]
+  );
+
   return (
     <div className={styles.lessonColumn}>
       <LessonProgressColumnHeader
         lesson={lesson}
         addExpandedLesson={addExpandedLesson}
+        allLocked={allLocked}
       />
 
       <div className={styles.lessonDataColumn}>
         {sortedStudents.map(student => (
           <LessonDataCell
-            studentId={student.id}
+            locked={lockedPerStudent[student.id]}
             lesson={lesson}
             studentLessonProgress={
               lessonProgressByStudent[student.id][lesson.id]
             }
+            needsFeedback={needsFeedbackByStudent[student.id]}
             key={student.id + '.' + lesson.id}
+            studentId={student.id}
+            addExpandedLesson={addExpandedLesson}
           />
         ))}
       </div>
@@ -41,6 +87,9 @@ LessonProgressDataColumn.propTypes = {
   lessonProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLessonProgressType)
   ).isRequired,
+  levelProgressByStudent: PropTypes.objectOf(
+    PropTypes.objectOf(studentLevelProgressType)
+  ).isRequired,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
 };
@@ -50,6 +99,10 @@ export const UnconnectedLessonProgressDataColumn = LessonProgressDataColumn;
 export default connect(state => ({
   lessonProgressByStudent:
     state.sectionProgress.studentLessonProgressByUnit[
+      state.unitSelection.scriptId
+    ],
+  levelProgressByStudent:
+    state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId
     ],
 }))(LessonProgressDataColumn);

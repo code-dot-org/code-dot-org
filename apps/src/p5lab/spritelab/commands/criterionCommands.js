@@ -24,13 +24,13 @@ export const commands = {
     );
   },
 
-  // Return true if any sprite began speaking.
-  anySpriteSpeaks() {
+  // Return true if the minimum number of sprites began speaking.
+  anySpriteSpeaks(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id =>
         commands.spriteSpeechRenderedThisFrame.call(this, id)
-      ).length > 0
+      ).length >= min
     );
   },
 
@@ -44,32 +44,33 @@ export const commands = {
     );
   },
 
-  // Return true if any sprite began speaking
+  // Return true if a minimum number of sprites began speaking
   // and the text is not an empty string.
-  strictAnySpriteSpeaks() {
+  strictAnySpriteSpeaks(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id =>
         commands.strictSpriteSpeechRenderedThisFrame.call(this, id)
-      ).length > 0
+      ).length >= min
     );
   },
 
-  // Return true if any sprite was speaking.
-  anySpriteSpeaking() {
+  // Return true if a minimum number of sprites was speaking.
+  anySpriteSpeaking(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
-      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length > 0
+      spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length >=
+      1
     );
   },
 
-  // Return true if any sprite was speaking
+  // Return true if a minimum number of sprites was speaking
   // and the text is not an empty string.
-  strictAnySpriteSpeaking() {
+  strictAnySpriteSpeaking(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)?.text)
-        .length > 0
+        .length >= min
     );
   },
 
@@ -125,8 +126,25 @@ export const commands = {
   },
 
   // Returns true if some minimum number of sprites are in use.
-  minimumSprites(min) {
+  minimumSprites(min = 1) {
     return this.getSpriteIdsInUse().length >= min;
+  },
+
+  // Returns true if some minimum number of sprites have been been moved.
+  // Tests whether the location picker has been used when making sprites.
+  minimumSpritesNonDefaultLocation(min = 1) {
+    const defaultLocation = {x: 200, y: 200};
+    const spriteIds = this.getSpriteIdsInUse();
+    let spritesNonDefaultLocation = 0;
+    spriteIds.forEach(spriteId => {
+      if (
+        this.nativeSpriteMap[spriteId].x !== defaultLocation.x ||
+        this.nativeSpriteMap[spriteId].y !== defaultLocation.y
+      ) {
+        spritesNonDefaultLocation++;
+      }
+    });
+    return spritesNonDefaultLocation >= min;
   },
 
   // Returns true if any sprite(s) was removed this frame.
@@ -183,7 +201,7 @@ export const commands = {
   },
 
   // Returns true if there is at least some number of costumes in use.
-  minimumCostumeCount(count) {
+  minimumCostumeCount(count = 1) {
     return this.getAnimationsInUse().length >= count;
   },
 
@@ -349,6 +367,52 @@ export const commands = {
       }
     }
     return result;
+  },
+
+  // Returns true if sprites collectively have the minimum number of behaviors this frame.
+  minimumBehaviors(min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let totalBehaviors = 0;
+    for (const spriteId of spriteIds) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(spriteId);
+      totalBehaviors += currentBehaviors.length;
+    }
+    return totalBehaviors >= min;
+  },
+
+  // Returns true if a minimum number of sprites has the specified behavior.
+  minimumMatchingBehaviors(matchingBehavior, min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let matchingBehaviors = 0;
+    for (const spriteId of spriteIds) {
+      const hasBehavior =
+        this.getBehaviorsForSpriteId(spriteId).includes(matchingBehavior);
+      if (hasBehavior) {
+        matchingBehaviors++;
+        if (matchingBehaviors >= min) {
+          return true;
+        }
+      }
+    }
+    return false;
+  },
+
+  // Returns true if sprites collectively have the minimum number of behaviors this frame,
+  // excluding a specified default behavior.
+  minimumNonMatchingBehaviors(excludedBehavior, min = 1) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let totalNonMatchingBehaviors = 0;
+    for (const spriteId of spriteIds) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(spriteId);
+      const nonMatchingBehaviors = currentBehaviors.filter(
+        behavior => behavior !== excludedBehavior
+      );
+      totalNonMatchingBehaviors += nonMatchingBehaviors.length;
+      if (totalNonMatchingBehaviors >= min) {
+        return true;
+      }
+    }
+    return false;
   },
 
   // Special function for lesson: Mini-Project: Collector Game
@@ -519,9 +583,96 @@ export const commands = {
     return result;
   },
 
-  // Returns true if the student set a variable to any number, string, or boolean.
-  variableCreated() {
-    const result = this.studentVars.length >= 1;
-    return result;
+  // Returns true if a minimum number of foreground effects are currently active.
+  // Disregards their initial render frame.
+  foregroundEffectsActive(min = 1) {
+    return this.getForegroundEffects().length >= min;
+  },
+
+  // Returns true if a minimum number of foreground effects were first rendered
+  // this frame (e.g. using an event block)
+  foregroundEffectRenderedThisFrame(min = 1) {
+    const effects = this.getForegroundEffects();
+    const newEffects = effects.filter(
+      effect => effect.renderFrame === this.currentFrame()
+    );
+    return newEffects.length >= min;
+  },
+
+  // Returns true if a minimum number of variable bubbles are currently being drawn.
+  variableBubblesCreated(min = 1) {
+    return this.getVariableBubbles().length >= min;
+  },
+
+  // Returns true if a minimum number of watched variables have a valid value.
+  // If unset, a variable's value is an empty string.
+  variableValueSet(min = 1) {
+    const studentVars = this.getVariableBubbles();
+    const filteredVars = studentVars.filter(
+      studentVar => this.getVariableValue(studentVar.name) !== ''
+    );
+    return filteredVars.length >= min;
+  },
+
+  // Returns true if a watched variable's value changed this frame.
+  // Optionally checks if the variable values have increased or decreased.
+  // Since this command requires a variable bubble, it should be used in conjunction
+  // with variableBubblesCreated.
+  // Example usage:
+  //   variableValueChanged(); // Checks if any watched variable changed.
+  //   variableValueChanged('increase'); // Checks if any watched variable increased.
+  //   variableValueChanged('decrease'); // Checks if any watched variable decreased.
+  variableValueChanged(changeType = '') {
+    const previousStudentVars = this.previous.variableBubbles;
+    if (previousStudentVars) {
+      const studentVars = this.getVariableBubbles();
+      for (const studentVar of studentVars) {
+        // Find a variable with the same name in the previous student variables
+        const matchingPreviousVar = previousStudentVars.find(
+          previousVar => previousVar.name === studentVar.name
+        );
+
+        // If the variable existed, compare its value with the value of the current student variable
+        if (matchingPreviousVar) {
+          const previousValue = matchingPreviousVar.value;
+          const currentValue = this.getVariableValue(studentVar.name);
+
+          // Compare the values
+          if (previousValue !== currentValue) {
+            switch (changeType) {
+              case '':
+                // If we're not explicitly looking for an increase or decrease,
+                // any change to the value satisfies this criterion.
+                return true;
+              case 'decrease':
+                if (
+                  typeof previousValue === 'number' &&
+                  typeof currentValue === 'number' &&
+                  currentValue < previousValue
+                ) {
+                  return true;
+                }
+                break;
+              case 'increase':
+                if (
+                  typeof previousValue === 'number' &&
+                  typeof currentValue === 'number' &&
+                  currentValue > previousValue
+                ) {
+                  return true;
+                }
+                break;
+              default:
+                console.error(
+                  `Invalid argument for variableValueChanged: ${changeType}`
+                );
+                break;
+            }
+          }
+        }
+      }
+    }
+    // If we reach this point, none of the watched variables changed in the specified way.
+    return false;
   },
 };

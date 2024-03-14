@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:39.000Z",
   "level_num": "custom",
@@ -12,7 +13,7 @@
     "validation_enabled": "true",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \" \"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>CSS<\\/h1>\\r\\n    <p>Cascading Style Sheets are a great way to give your web pages a little extra STYLE!  You can change the color, size, and lots of other things.  It's okay if you don't remember every property, because you can always look them back up to remind yourself.<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <!-- 1) Link the stylesheet to the web page -->\\n  <head>\\n  </head>\\n  <body>\\n    <!-- content about CSS -->\\n    <h1>CSS</h1>\\n    <p>Cascading Style Sheets are a great way to give your web pages a little extra STYLE!  You can change the color, size, and lots of other things.  It's okay if you don't remember every property, because you can always look them back up to remind yourself.</p>\\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"/* 2) Make the paragraph text a different size */\\n\\n/* 3) Make the paragraph text a different color */\"\r\n    }\r\n  ]\r\n}\r\n            ",
     "display_name": "Add a style sheet",
     "bubble_choice_description": "Add a style sheet and rule-sets to this article.",
     "encrypted_examples": "1/ttHf2ufPeRaIp2yfS5u51FScl+7fbpgEHVP7VuXjBH3y3fb/YbOskBlqmd\n8SVsUNDPqlY27U4wUDxCrKqW2g==\n",
@@ -35,8 +36,7 @@
     "name_suffix": "_2024",
     "rubric_key_concept": "Create a stylesheet and link to the sheet in the HTML. The stylesheet includes a rule that changes the paragraph element of a webpage."
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:39.831+00:00\",\"changed\":[\"cloned from \\\"CSD Web CSS Assessment_2023\\\"\"],\"cloned_from\":\"CSD Web CSS Assessment_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:39.831+00:00\",\"changed\":[\"cloned from \\\"CSD Web CSS Assessment_2023\\\"\"],\"cloned_from\":\"CSD Web CSS Assessment_2023\"},{\"changed_at\":\"2024-02-15 17:39:18 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

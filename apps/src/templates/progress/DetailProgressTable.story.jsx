@@ -10,7 +10,6 @@ import {
 } from './progressTestHelpers';
 
 export default {
-  title: 'DetailProgressTable',
   component: DetailProgressTable,
 };
 

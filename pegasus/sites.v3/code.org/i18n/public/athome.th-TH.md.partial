@@ -159,7 +159,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="หลักสูตร Express สำหรับก่อนวัยเรียน"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">หลักสูตร Express สำหรับก่อนวัยเรียน</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="หลักสูตร Express สำหรับก่อนวัยเรียน"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">คอร์สด่วนสำหรับผู้อ่าน</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -228,7 +228,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ห้องปฏิบัติการแอป</h3></a>
     <p style="color:#ffffff">แอปแลปคือสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถสร้างแอปง่าย ๆ ได้ด้วยตัวเอง ออกแบบแอป เขียนโค้ดด้วยบล็อกหรือจาวาสคริปต์เพื่อทำให้แอปทำงาน ก่อนแชร์ผลงานนี้ในเวลาไม่กี่วินาที</p>
@@ -237,7 +237,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ห้องปฏิบัติการเกม</h3></a>
     <p style="color:#ffffff">เกมแลปคือสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถทำภาพเคลื่อนไหวง่าย ๆ หรือจะสร้างเกมด้วยวัตถุและตัวละครที่จะโต้ตอบกัน</p>
@@ -247,7 +247,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ห้องปฏิบัติการเว็บ</h3></a>
     <p style="color:#ffffff">เว็บแลปคือสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถใช้ HTML และ CSS เพื่อทำเว็บเพจง่าย ๆ ออกแบบเว็บเพจของคุณ และแชร์ไซต์ที่ทำขึ้นในเวลาไม่กี่วินาที</p>

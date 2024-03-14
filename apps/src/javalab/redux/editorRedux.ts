@@ -27,7 +27,7 @@ interface FileMetadata {
 // https://www.typescriptlang.org/docs/handbook/enums.html#enums-at-compile-time
 type JavalabEditorDialogOptions = keyof typeof JavalabEditorDialog;
 
-interface JavalabEditorState {
+export interface JavalabEditorState {
   fileMetadata: FileMetadata;
   orderedTabKeys: string[];
   activeTabKey: string;

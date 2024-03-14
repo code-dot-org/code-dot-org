@@ -1569,6 +1569,8 @@
   header_legal_tos: "Terms of Service"
   header_tutorials: "Tutorials"
   header_screen_reader_hamburger: "Menu"
+  header_schools: "Schools"
+  header_districts: "Districts"
   header_screen_reader_help: "Help Menu"
   app_lab_documentation: "App Lab Documentation"
   app_lab_tutorials: "App Lab Tutorials"
@@ -1583,6 +1585,7 @@
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
+  user_header_create_account: "Create Account"
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '

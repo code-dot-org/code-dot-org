@@ -311,27 +311,6 @@ const customInputTypes = {
           ],
         };
       };
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue, block);
-        }
-        block.superSetTitleValue(newValue, name);
-      };
 
       currentInputRow
         .appendField(inputConfig.label)
@@ -431,6 +410,43 @@ const customInputTypes = {
       return '';
     },
   },
+  // Custom input for a variable field that generates the name of the variable
+  // rather than the value of the variable.
+  variableFieldNamePicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(new Blockly.FieldVariable(), inputConfig.name);
+    },
+
+    generateCode(block, arg) {
+      const id = block.getFieldValue(arg.name);
+      const label = Blockly.getMainWorkspace()
+        .getVariableMap()
+        .getVariableById(id).name;
+      const name = Blockly.JavaScript.getVariableName(id);
+      return [`"${label}"`, `"${name}"`];
+    },
+  },
+
+  bitmap: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const config = {
+        height: 8,
+        width: 8,
+      };
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldBitmap(null, null, config),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      // Convert 2d array into a string.
+      return JSON.stringify(block.getFieldValue(arg.name));
+    },
+  },
 };
 
 export default {
@@ -501,19 +517,27 @@ export default {
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
-    generator.sprite_variables_get = function () {
-      return [
-        `{name: '${Blockly.JavaScript.translateVarName(
-          this.getFieldValue('VAR')
-        )}'}`,
-        Blockly.JavaScript.ORDER_ATOMIC,
-      ];
-    };
+    Blockly.customBlocks.defineNewBlockGenerator(
+      generator,
+      'sprite_variables_get',
+      function () {
+        return [
+          `{name: '${Blockly.JavaScript.translateVarName(
+            this.getFieldValue('VAR')
+          )}'}`,
+          Blockly.JavaScript.ORDER_ATOMIC,
+        ];
+      }
+    );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'
     );
-
+    Blockly.customBlocks.defineNewBlockGenerator(
+      generator,
+      'math_random_int',
+      Blockly.customBlocks.mathRandomIntGenerator
+    );
     // NOTE: On the page where behaviors are created (the functions/#/edit page)
     // blockInstallOptions is undefined.
     if (
@@ -521,6 +545,8 @@ export default {
       !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
+      // This is only used by CDO Blockly. When we are ready to remove support
+      // for CDO Blockly we can remove this call.
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {

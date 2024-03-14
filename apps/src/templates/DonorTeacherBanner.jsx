@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import fontConstants from '@cdo/apps/fontConstants';
-import {putRecord} from '../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import color from '../util/color';
@@ -31,11 +30,6 @@ export default class DonorTeacherBanner extends Component {
 
   handleSubmit = event => {
     if (this.state.participate) {
-      putRecord({
-        study: 'afe-schools',
-        event: 'submit',
-        data_string: $('input[name="nces-id"]').val(),
-      });
       analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page

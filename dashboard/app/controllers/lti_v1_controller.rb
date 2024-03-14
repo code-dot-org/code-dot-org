@@ -7,6 +7,9 @@ require "clients/lti_advantage_client"
 require "cdo/honeybadger"
 
 class LtiV1Controller < ApplicationController
+  before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
+                if: -> {Policies::Lti.early_access_closed?}, only: :create_integration
+
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.
   skip_before_action :verify_authenticity_token
@@ -123,6 +126,8 @@ class LtiV1Controller < ApplicationController
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
+      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
+
       if deployment.nil?
         deployment = Services::Lti.create_lti_deployment(integration.id, deployment_id)
       end
@@ -134,9 +139,22 @@ class LtiV1Controller < ApplicationController
         nrps_url: nrps_url,
       }
 
+      destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+
       if user
         sign_in user
-        redirect_to "#{target_link_uri}?#{redirect_params.to_query}"
+
+        # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
+        if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
+          @form_data = {
+            email: Services::Lti.get_claim(decoded_jwt, :email),
+            destination_url: destination_url
+          }
+
+          render 'lti/v1/upgrade_account' and return
+        end
+
+        redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
@@ -177,7 +195,7 @@ class LtiV1Controller < ApplicationController
   # It can respond to either HTML or JSON content requests.
   def sync_course
     return unauthorized_status unless current_user
-    unless current_user.teacher?
+    unless Policies::Lti.roster_sync_enabled?(current_user)
       return redirect_to home_path
     end
     params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
@@ -226,9 +244,9 @@ class LtiV1Controller < ApplicationController
 
       lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
       nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
-      nrps_sections = Services::Lti.parse_nrps_response(nrps_response)
+      nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
 
-      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= sync_course_roster_results
 
       # Report which sections were updated
@@ -309,7 +327,21 @@ class LtiV1Controller < ApplicationController
       {platform: key, name: value[:name]}
     end
 
-    render lti_v1_integrations_path
+    render template: Policies::Lti.early_access? ? 'lti/v1/integrations/early_access' : 'lti/v1/integrations'
+  end
+
+  # POST /lti/v1/upgrade_account
+  def confirm_upgrade_account
+    return unauthorized_status unless current_user
+
+    begin
+      params.require([:email])
+    rescue
+      render(status: :bad_request, json: {error: I18n.t('lti.upgrade_to_teacher_account.error.missing_email')}) and return
+    end
+
+    current_user.upgrade_to_teacher(params[:email])
+    render status: :ok, json: {}
   end
 
   private

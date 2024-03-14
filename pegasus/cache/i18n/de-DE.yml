@@ -258,6 +258,7 @@ de-DE:
   class_submission_out_of_school_summer_camp: Sommercamp
   classicmaze_name: Klassisches Labyrinth
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
+  code_org_logo_alt: Code.org Startseite
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   codea_beyond_gradelevel: Ab der 9. Klasse
   codea_beyond_longdescription: Mit Codea für iPad können Sie Spiele und Simulationen
@@ -1214,6 +1215,7 @@ de-DE:
   header_project_gallery: Projekte
   header_report_abuse: Missbrauch melden
   header_report_bug: Einen Fehler melden
+  header_schools: Schulen
   header_screen_reader_hamburger: Speisekarte
   header_screen_reader_help: Hilfe Menu
   header_sections: Lerngruppen
