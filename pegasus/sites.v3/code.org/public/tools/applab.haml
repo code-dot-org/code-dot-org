@@ -54,5 +54,7 @@ theme: responsive_full_width
     = view :"tools/app_lab/app_lab_lessons"
 
 %section
-  .wrapper.centered
-    %h2=hoc_s("app_lab_page.videos.heading")
+  .wrapper
+    %h2.centered
+      =hoc_s("app_lab_page.videos.heading")
+    = view :"tools/app_lab/app_lab_videos"
