@@ -1766,7 +1766,7 @@
         browsers: "Browsers:"
         languages: "Languages supported:"
         accessibility: "Accessibility:"
-      button: "View documentation:"
+      button: "View documentation"
     featured_projects:
       heading: "Featured student projects"
       desc: "Explore more featured projects built by students like you in our featured project gallery."
