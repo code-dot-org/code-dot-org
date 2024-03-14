@@ -246,12 +246,12 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
-  # deletes the entire channel in firebase
-  # used only one place, applab.js config.afterClearPuzzle()
+  # Deletes all datablock storage data for the project
+  # used in applab.js by `config.afterClearPuzzle()`
   def clear_all_data
-    # TODO: unfirebase, do we have an index on project_id alone?
+    # TODO: do we need an index on project_id alone for performance of this method?
+    # See: https://github.com/code-dot-org/code-dot-org/issues/57259
     DatablockStorageTable.where(project_id: @project_id).delete_all
-    # TODO: unfirebase, is it worth adding an index on project_id? #56997
     DatablockStorageKvp.where(project_id: @project_id).delete_all
     DatablockStorageRecord.where(project_id: @project_id).delete_all
     render json: true
