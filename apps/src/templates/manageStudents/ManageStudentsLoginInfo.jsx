@@ -12,7 +12,7 @@ import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStude
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import DownloadParentLetter from './DownloadParentLetter';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
-import LtiLogins from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo'
+import LtiLogins from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 
 import LoginExport from './LoginExport';
 
@@ -37,7 +37,9 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div style={styles.explanation}>
-        {loginType !== SectionLoginType.lti_v1 && <h2 style={styles.heading}>{i18n.setUpClass()}</h2>}
+        {loginType !== SectionLoginType.lti_v1 && (
+          <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
+        )}
         {loginType === SectionLoginType.word && (
           <div>
             <p>{i18n.setUpClassWordIntro()}</p>
@@ -160,7 +162,7 @@ class ManageStudentsLoginInfo extends Component {
           </div>
         )}
         {loginType === SectionLoginType.lti_v1 && (
-          <LtiLogins sectionProviderName={this.props.sectionProviderName}/>
+          <LtiLogins sectionProviderName={this.props.sectionProviderName} />
         )}
         <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
@@ -198,7 +200,7 @@ const styles = {
   },
 };
 
-export const UnconnectedManageStudentsLoginInfo =  ManageStudentsLoginInfo;
+export const UnconnectedManageStudentsLoginInfo = ManageStudentsLoginInfo;
 export default connect((state, props) => ({
   sectionProviderName: sectionProviderName(state, props.sectionId),
 }))(ManageStudentsLoginInfo);

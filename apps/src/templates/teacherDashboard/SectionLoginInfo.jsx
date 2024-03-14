@@ -73,7 +73,9 @@ class SectionLoginInfo extends React.Component {
         ) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
-        {section.loginType === SectionLoginType.lti_v1 && <LtiLogins sectionProviderName={this.props.sectionProviderName} />}
+        {section.loginType === SectionLoginType.lti_v1 && (
+          <LtiLogins sectionProviderName={this.props.sectionProviderName} />
+        )}
       </div>
     );
   }
@@ -90,15 +92,26 @@ export default connect(state => ({
 class LtiLogins extends React.Component {
   static propTypes = {
     sectionProviderName: PropTypes.string,
-  }
+  };
   render() {
     return (
       <div>
         <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
-        <SafeMarkdown markdown={i18n.loginInfoLtiSetupBody({providerName: this.props.sectionProviderName})} />
+        <SafeMarkdown
+          markdown={i18n.loginInfoLtiSetupBody({
+            providerName: this.props.sectionProviderName,
+          })}
+        />
         <h2 style={styles.heading}>{i18n.loginInfoLtiUpdateHeader()}</h2>
-        <SafeMarkdown markdown={i18n.loginInfoLtiUpdateBody({providerName: this.props.sectionProviderName})} />
-        <SignInInstructions loginType={SectionLoginType.lti_v1} sectionProviderName={this.props.sectionProviderName} />
+        <SafeMarkdown
+          markdown={i18n.loginInfoLtiUpdateBody({
+            providerName: this.props.sectionProviderName,
+          })}
+        />
+        <SignInInstructions
+          loginType={SectionLoginType.lti_v1}
+          sectionProviderName={this.props.sectionProviderName}
+        />
       </div>
     );
   }
