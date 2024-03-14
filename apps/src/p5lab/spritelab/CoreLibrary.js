@@ -260,6 +260,14 @@ export default class CoreLibrary {
     );
   }
 
+  getVariableBubbles() {
+    return this.variableBubbles;
+  }
+
+  getForegroundEffects() {
+    return this.foregroundEffects;
+  }
+
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
     // Sprites can only have one speech bubble at a time so first filter out
     // any existing speech bubbles for this sprite
