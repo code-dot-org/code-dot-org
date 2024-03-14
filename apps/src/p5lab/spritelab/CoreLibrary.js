@@ -132,7 +132,11 @@ export default class CoreLibrary {
     };
 
     // Define the maximum width each part can occupy, accounting for the label/value separator
-    const separatorWidth = getTextWidth(this.p5, ': ', config.textSize);
+    const separatorWidth = drawUtils.getTextWidth(
+      this.p5,
+      ': ',
+      config.textSize
+    );
     const maxPartWidth = (APP_WIDTH - separatorWidth) / 2;
 
     this.variableBubbles.forEach(variable => {
@@ -144,13 +148,13 @@ export default class CoreLibrary {
       const value = this.getVariableValue(name);
 
       // Truncate each piece of text to fit within its maximum allowed width if necessary
-      let displayLabel = truncateText(
+      let displayLabel = drawUtils.truncateText(
         this.p5,
         label,
         maxPartWidth,
         config.textSize
       );
-      let displayValue = truncateText(
+      let displayValue = drawUtils.truncateText(
         this.p5,
         value,
         maxPartWidth,
