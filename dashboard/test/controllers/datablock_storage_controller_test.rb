@@ -1,14 +1,17 @@
 require "test_helper"
 
 class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  setup_all do
     @student = create :student
-    sign_in @student
 
     project = create :project, owner: @student
     project.project_type = 'applab'
     project.save!
     @channel_id = project.channel_id
+  end
+
+  setup do
+    sign_in @student
   end
 
   def _url(action)
