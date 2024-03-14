@@ -1420,4 +1420,8 @@ table {
   padding: 1.5rem 2rem;
   border: 3px dashed var(--neutral_dark20);
   border-radius: 4px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
