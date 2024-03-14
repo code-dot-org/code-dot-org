@@ -1104,14 +1104,12 @@ FirebaseStorage.subscribeToListOfProjectTables = function (
   // Subscribe to the list of regular tables in the current project
   const tableRef = getPathRef(getProjectDatabase(), 'counters/tables');
   tableRef.on('child_added', snapshot => {
-    // TODO: unfirebase
     let tableName =
       typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
     tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
     onTableAdded(tableName);
   });
   tableRef.on('child_removed', snapshot => {
-    // TODO: unfirebase
     let tableName =
       typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
     tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
@@ -1125,17 +1123,17 @@ FirebaseStorage.subscribeToListOfProjectTables = function (
   // /v3/channels/<channel_id>/current_tables tracks which
   // current tables the project has imported. Here we initialize the
   // redux list of current tables and keep it in sync
-  let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables'); // TODO: unfirebase
+  let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables');
   currentTableRef.on('child_added', snapshot => {
     let tableName =
       typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-    tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
+    tableName = unescapeFirebaseKey(tableName);
     onTableAdded(tableName);
   });
   currentTableRef.on('child_removed', snapshot => {
     let tableName =
       typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-    tableName = unescapeFirebaseKey(tableName); // TODO: unfirebase
+    tableName = unescapeFirebaseKey(tableName);
     onTableRemoved(tableName);
   });
 };
@@ -1154,9 +1152,8 @@ FirebaseStorage.getKeyValuePairs = function (onKeyValuePairsChanged) {
       if (Array.isArray(keyValueData)) {
         keyValueData = Object.assign({}, keyValueData);
       }
-      keyValueData = _.mapKeys(
-        keyValueData,
-        (_, key) => unescapeFirebaseKey(key) // TODO: unfirebase
+      keyValueData = _.mapKeys(keyValueData, (_, key) =>
+        unescapeFirebaseKey(key)
       );
       onKeyValuePairsChanged(keyValueData);
     }
