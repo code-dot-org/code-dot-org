@@ -214,11 +214,6 @@ describe('Level tests', function () {
       window.Studio.interpreter = null;
     }
 
-    // The storage backend is only used by Applab tests, but we don't have a
-    // reliable way to test for the app type here because window.Applab is
-    // always defined because loadApplab is always required (the same is true
-    // for other app types). Therefore, rely on storageBackend() to defensively
-    // reset itself.
     if (isStorageInitialized) {
       storageBackend().resetForTesting();
     }

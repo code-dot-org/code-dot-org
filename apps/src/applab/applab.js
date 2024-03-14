@@ -419,6 +419,7 @@ Applab.init = function (config) {
 
   // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
   if (!!config.useDatablockStorage) {
+    // TODO: post-firebase-cleanup, remove this console.log: #56994
     console.log(
       '%cInitializing DATABLOCK_STORAGE',
       'background:yellow; font-size: 30px'

@@ -23,10 +23,16 @@ export function refreshCurrentDataView() {
 }
 
 /**
- * When we
+ * Given a particular view in the data sets browser, invoke appropriate
+ * commands to the storageBackend() loading the data needed for that view.
+ * @param {StorageBackend} storage - firebaseStorage or datablockStorage
  * @param {DataView} view
+ * @param {string} oldTableName - a previously subscribed table name, for firebase to unsubscribe
+ * @param {string} newTableName - name of the table being displayed, if any
  */
 export function loadDataForView(storage, view, oldTableName, newTableName) {
+  // TODO: post-firebase-cleanup, remove oldTableName: #56994
+
   // Save for later use in refreshCurrentDataView()
   lastView = view;
   lastTableName = newTableName;
@@ -36,6 +42,7 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
 
+  // TODO: post-firebase-cleanup, remove this conditional: #56994
   if (isFirebaseStorage()) {
     storage.unsubscribeFromKeyValuePairs();
     if (oldTableName) {

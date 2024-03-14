@@ -49,7 +49,7 @@ class DataLibraryPane extends React.Component {
           datasetInfo.name,
           () => {},
           this.onError
-        ); // TODO: unfirebase
+        );
       }
     } else {
       storageBackend().addSharedTable(datasetInfo.name);

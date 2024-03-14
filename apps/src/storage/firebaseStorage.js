@@ -42,10 +42,13 @@ import {tableType} from './redux/data';
 import {WarningType} from './constants';
 import _ from 'lodash';
 
-// TODO: unfirebase
-// this should NOT be imported at the firebaseStorage.js level
-// we need to remove this coupling by checking if a given firebase table
-// name is a shared table or not directly.
+// TODO: unfirebase: ideally we would not have a back-reference to redux here, however
+// coupling firebaseStorage to redux made the datablock storage version much cleaner,
+// and since this code is being removed once we're done migrating, it was preferable
+// to make firebaseStorage.js ugly rather than the datablockStorage.js API ugly.
+//
+// We only use getStore to sniff if the table is a shared table or not, whereas in
+// datablock storage, we check this on the backend and hide the abstraction.
 import {getStore} from '../redux';
 
 /**
@@ -262,6 +265,18 @@ FirebaseStorage.createRecord = function (
     .then(() => onSuccess(record), onError);
 };
 
+/**
+ * Returns true if record matches the given search parameters, which are a map
+ * from key name to expected value.
+ */
+function matchesSearch(record, searchParams) {
+  let matches = true;
+  Object.keys(searchParams || {}).forEach(key => {
+    matches = matches && record[key] === searchParams[key];
+  });
+  return matches;
+}
+
 function validateTableName(tableName) {
   try {
     validateFirebaseKey(tableName);
@@ -297,29 +312,6 @@ function validateRecord(record, hasId) {
     }
     return Promise.resolve();
   });
-}
-
-/**
- * Returns true if record matches the given search parameters, which are a map
- * from key name to expected value.
- */
-function matchesSearch(record, searchParams) {
-  let matches = true;
-  Object.keys(searchParams || {}).forEach(key => {
-    matches = matches && record[key] === searchParams[key];
-  });
-  return matches;
-}
-
-function filterRecords(recordMap, searchParams) {
-  let records = [];
-  Object.keys(recordMap).forEach(id => {
-    let record = JSON.parse(recordMap[id]);
-    if (matchesSearch(record, searchParams)) {
-      records.push(record);
-    }
-  });
-  return records;
 }
 
 /**
@@ -370,7 +362,14 @@ FirebaseStorage.readRecords = function (
         'value',
         recordsSnapshot => {
           let recordMap = recordsSnapshot.val() || {};
-          let records = filterRecords(recordMap, searchParams);
+          let records = [];
+          // Collect all of the records matching the searchParams.
+          Object.keys(recordMap).forEach(id => {
+            let record = JSON.parse(recordMap[id]);
+            if (matchesSearch(record, searchParams)) {
+              records.push(record);
+            }
+          });
           onSuccess(records);
         },
         onError
@@ -380,24 +379,6 @@ FirebaseStorage.readRecords = function (
       onSuccess(null);
     }
   });
-};
-
-FirebaseStorage.getColumn = function (
-  tableName,
-  columnName,
-  onSuccess,
-  onError
-) {
-  this.readRecords(
-    tableName,
-    {},
-    records => {
-      let columnValues = [];
-      records.forEach(row => columnValues.push(row[columnName]));
-      onSuccess(columnValues);
-    },
-    onError
-  );
 };
 
 /**
@@ -738,18 +719,6 @@ FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
       );
       return rowCountRef.set(0);
     })
-    .then(onSuccess, onError);
-};
-
-FirebaseStorage.importCsv = function (
-  tableName,
-  tableDataCsv,
-  onSuccess,
-  onError
-) {
-  parseRecordsDataFromCsv(tableDataCsv)
-    .then(recordsData => validateRecordsData(recordsData))
-    .then(recordsData => overwriteTableData(tableName, recordsData))
     .then(onSuccess, onError);
 };
 
@@ -1113,6 +1082,18 @@ function overwriteTableData(tableName, recordsData) {
     );
 }
 
+FirebaseStorage.importCsv = function (
+  tableName,
+  tableDataCsv,
+  onSuccess,
+  onError
+) {
+  parseRecordsDataFromCsv(tableDataCsv)
+    .then(recordsData => validateRecordsData(recordsData))
+    .then(recordsData => overwriteTableData(tableName, recordsData))
+    .then(onSuccess, onError);
+};
+
 // Initialize redux's list of tables from firebase, and keep it up to date as
 // new tables are added and removed.
 // TODO: unfirebase, this is ONLY implemented in FirebaseStorage, not DatablockStorage
@@ -1187,8 +1168,9 @@ FirebaseStorage.loadTable = function (
   onColumnsChanged,
   onRecordsChanged
 ) {
-  console.warn('WE SHOULD NOT BE CALLING getStore() from firebaseStorage.js');
-  // instead we should be inspecting the tables a low level to see if this is a shared table or a project table
+  // This is an ugly coupling, we use getStore() from redux to check if this is a shared table or not
+  // this code is not required in the DatablockStorage version, because the backend does the switching
+  // and hides it from the frontend.
   let newTableType = getStore().getState().data.tableListMap[tableName];
 
   const db =
@@ -1249,6 +1231,25 @@ FirebaseStorage.unsubscribeFromTable = function (tableName) {
 FirebaseStorage.unsubscribeFromKeyValuePairs = function () {
   const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
   getPathRef(projectStorageRef, 'keys').off('value');
+};
+
+// This method was added so it could be optimized in the DatablockStorage version
+FirebaseStorage.getColumn = function (
+  tableName,
+  columnName,
+  onSuccess,
+  onError
+) {
+  this.readRecords(
+    tableName,
+    {},
+    records => {
+      let columnValues = [];
+      records.forEach(row => columnValues.push(row[columnName]));
+      onSuccess(columnValues);
+    },
+    onError
+  );
 };
 
 export default FirebaseStorage;
