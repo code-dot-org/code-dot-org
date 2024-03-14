@@ -25,6 +25,7 @@ class FieldSounds extends GoogleBlockly.Field {
     this.CURSOR = 'default';
     this.backgroundElement = null;
     this.currentFieldWidth = 0;
+    this.showingEditor = false;
   }
 
   saveState() {
@@ -69,6 +70,10 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   showEditor_() {
+    if (this.showingEditor) {
+      return;
+    }
+
     super.showEditor_();
 
     const editor = this.dropdownCreate_();
@@ -83,6 +88,8 @@ class FieldSounds extends GoogleBlockly.Field {
       this,
       this.dropdownDispose_.bind(this)
     );
+
+    this.showingEditor = true;
   }
 
   dropdownCreate_() {
@@ -136,6 +143,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
   dropdownDispose_() {
     this.newDiv_ = null;
+    this.showingEditor = false;
   }
 
   hide_() {
