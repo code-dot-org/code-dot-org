@@ -5,10 +5,10 @@ import {
   isStagingEnvironment,
   isDevelopmentEnvironment,
 } from '../../utils';
+import Statsig from 'statsig-js';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
-const Statsig = require('statsig-js');
 
 class StatsigReporter {
   constructor() {
@@ -17,8 +17,12 @@ class StatsigReporter {
       network_timeout: 5,
       local_mode: !isProductionEnvironment(),
     };
-    const api_key = document.querySelector('script[statsig_api_client_key]');
-    Statsig.initialize(api_key, options);
+    const api_key = document.querySelector(
+      'script[data-statsig-api-client-key]'
+    );
+    if (this.shouldPutRecord(ALWAYS_SEND)) {
+      Statsig.initialize(api_key, options);
+    }
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
