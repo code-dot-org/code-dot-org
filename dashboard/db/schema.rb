@@ -439,6 +439,7 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.integer "project_id", null: false
     t.string "key", limit: 700, null: false
     t.json "value"
+    t.index ["project_id"], name: "index_datablock_storage_kvps_on_project_id"
   end
 
   create_table "datablock_storage_library_manifest", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -455,6 +456,7 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.integer "record_id", null: false
     t.json "record_json"
     t.index ["project_id", "table_name"], name: "index_datablock_storage_records_on_project_id_and_table_name"
+    t.index ["project_id"], name: "index_datablock_storage_records_on_project_id"
   end
 
   create_table "datablock_storage_tables", primary_key: ["project_id", "table_name"], charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -464,6 +466,7 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.string "is_shared_table", limit: 700
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_datablock_storage_tables_on_project_id"
   end
 
   create_table "delayed_jobs", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

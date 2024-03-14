@@ -9,5 +9,7 @@ class CreateDatablockStorageKvps < ActiveRecord::Migration[6.1]
       t.string :key, limit: 700
       t.json :value
     end
+
+    add_index :datablock_storage_kvps, :project_id
   end
 end

@@ -247,10 +247,7 @@ class DatablockStorageController < ApplicationController
   end
 
   # Deletes all datablock storage data for the project
-  # used in applab.js by `config.afterClearPuzzle()`
   def clear_all_data
-    # TODO: do we need an index on project_id alone for performance of this method?
-    # See: https://github.com/code-dot-org/code-dot-org/issues/57259
     DatablockStorageTable.where(project_id: @project_id).delete_all
     DatablockStorageKvp.where(project_id: @project_id).delete_all
     DatablockStorageRecord.where(project_id: @project_id).delete_all
