@@ -490,7 +490,7 @@ class FilesApi < Sinatra::Base
           # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
           return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
         end
-        # TODO: validate folders?
+        # TODO: do we need to validate folders?
       end
       return true
     end

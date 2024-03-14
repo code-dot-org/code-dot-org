@@ -6,7 +6,10 @@ import {Config} from './Config';
 
 import {CDOIDE, ConfigType, ProjectType} from 'cdo-ide-poc';
 
-import CDOEditor from './Editor';
+//import CDOEditor from './Editor';
+import {useAppSelector} from '../util/reduxHooks';
+import {MultiFileSource} from '../lab2/types';
+import Lab2Registry from '../lab2/Lab2Registry';
 
 const instructions = `Add html pages and preview them in the right pane.
 
@@ -24,7 +27,7 @@ const defaultConfig: ConfigType = {
   // showRunBar: true,
   // showDebug: true,
   activeLeftNav: 'Files',
-  EditorComponent: CDOEditor,
+  //EditorComponent: CDOEditor,
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -155,9 +158,20 @@ const defaultProject: ProjectType = {
 };
 
 const Weblab2View = () => {
-  const [project, setProject] = useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+  let project = (initialSources?.source as MultiFileSource) || defaultProject;
+
+  const setProject = (newProject: MultiFileSource) => {
+    project = newProject;
+    if (Lab2Registry.getInstance().getProjectManager()) {
+      const projectSources = {
+        source: project,
+      };
+      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+    }
+  };
 
   return (
     <div className="app-wrapper">
