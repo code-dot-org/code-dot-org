@@ -24,6 +24,10 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StudentSelector from './StudentSelector';
 import SectionSelector from './SectionSelector';
 
+// intro.js
+import 'intro.js/introjs.css';
+import {Steps} from 'intro.js-react';
+
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
   const seconds = timeSpent % 60;
@@ -100,6 +104,25 @@ export default function RubricContent({
     infoText = i18n.selectAStudentToEvaluateAlert();
   }
 
+  // intro.js
+  const [stepsEnabled, setStepsEnabled] = useState(true);
+  const initialStep = 0;
+  const steps = [
+    {
+      element: '.selectors',
+      position: 'top',
+      intro:
+        'Use these selectors to switch the section or student you are viewing.',
+    },
+    {
+      element: '.submitFeedbackButton',
+      position: 'left',
+      intro: 'Use this button to submit your feedback to the student.',
+    },
+  ];
+
+  const onExit = () => setStepsEnabled(false);
+
   return (
     <div
       id="uitest-rubric-content"
@@ -108,6 +131,12 @@ export default function RubricContent({
         [style.hiddenRubricContent]: !visible,
       })}
     >
+      <Steps
+        enabled={stepsEnabled}
+        initialStep={initialStep}
+        steps={steps}
+        onExit={onExit}
+      />
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
         <Heading3>
@@ -117,13 +146,17 @@ export default function RubricContent({
           })}
         </Heading3>
 
-        <div className={style.selectors}>
-          <SectionSelector reloadOnChange={true} />
-          <StudentSelector
-            styleName={style.studentSelector}
-            selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
-            reloadOnChange={true}
-          />
+        <div className="selectors">
+          <div className={style.selectors}>
+            <SectionSelector reloadOnChange={true} />
+            <StudentSelector
+              styleName={style.studentSelector}
+              selectedUserId={
+                studentLevelInfo ? studentLevelInfo.user_id : null
+              }
+              reloadOnChange={true}
+            />
+          </div>
         </div>
 
         {!!studentLevelInfo && (
@@ -182,28 +215,30 @@ export default function RubricContent({
       {canProvideFeedback && (
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>
-            <Button
-              id="ui-submitFeedbackButton"
-              text={i18n.submitToStudent()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={submitFeedbackToStudent}
-              className={style.submitToStudentButton}
-              disabled={isSubmittingToStudent}
-            />
-            {errorSubmitting && (
-              <BodyThreeText className={style.errorMessage}>
-                {i18n.errorSubmittingFeedback()}
-              </BodyThreeText>
-            )}
-            {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <div id="ui-feedback-submitted-timestamp">
-                <BodyThreeText>
-                  {i18n.feedbackSubmittedAt({
-                    timestamp: lastSubmittedTimestamp,
-                  })}
+            <div className="submitFeedbackButton">
+              <Button
+                id="ui-submitFeedbackButton"
+                text={i18n.submitToStudent()}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                onClick={submitFeedbackToStudent}
+                className={style.submitToStudentButton}
+                disabled={isSubmittingToStudent}
+              />
+              {errorSubmitting && (
+                <BodyThreeText className={style.errorMessage}>
+                  {i18n.errorSubmittingFeedback()}
                 </BodyThreeText>
-              </div>
-            )}
+              )}
+              {!errorSubmitting && !!lastSubmittedTimestamp && (
+                <div id="ui-feedback-submitted-timestamp">
+                  <BodyThreeText>
+                    {i18n.feedbackSubmittedAt({
+                      timestamp: lastSubmittedTimestamp,
+                    })}
+                  </BodyThreeText>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
