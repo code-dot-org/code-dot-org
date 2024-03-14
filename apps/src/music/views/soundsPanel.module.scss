@@ -44,6 +44,7 @@
     padding: 6px 0;
     margin: 1px 1px 6px 1px;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover {
       background-color: $neutral_dark90;
@@ -100,6 +101,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     &:hover {
       background-color: $neutral_dark90;
