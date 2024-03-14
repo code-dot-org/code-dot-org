@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
+import moduleStyles from './navigation.module.scss';
 
 const NavigationBar = () => {
   const [linksToHeadings, setLinksToHeadings] = useState([]);
@@ -27,7 +28,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <div>
+    <div className={moduleStyles.navBarContainer}>
       <Heading3>Navigation</Heading3>
       <ul>
         {linksToHeadings.map((link, index) => (
