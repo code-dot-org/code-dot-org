@@ -6,7 +6,7 @@ import styles from '../model-customization-workspace.module.scss';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import {
-  EMPTY_AI_CUSTOMIZATIONS,
+  EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY,
   MODEL_CARD_FIELDS_AND_LABELS,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
@@ -15,7 +15,7 @@ const PublishNotes: React.FunctionComponent = () => {
   const {modelCardInfo} = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
   );
 
   return (

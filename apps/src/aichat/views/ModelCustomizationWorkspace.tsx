@@ -7,7 +7,7 @@ import PromptCustomization from './modelCustomization/PromptCustomization';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
 import PublishNotes from './modelCustomization/PublishNotes';
 import styles from './model-customization-workspace.module.scss';
-import {EMPTY_AI_CUSTOMIZATIONS} from './modelCustomization/constants';
+import {EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY} from './modelCustomization/constants';
 import {isVisible} from './modelCustomization/utils';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
@@ -15,7 +15,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     useAppSelector(
       state =>
         (state.lab.levelProperties as AichatLevelProperties | undefined)
-          ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+          ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
     );
 
   const showPromptCustomization =

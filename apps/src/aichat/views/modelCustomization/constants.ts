@@ -1,4 +1,9 @@
-import {LevelAiCustomizations, ModelCardInfo, Visibility} from '../../types';
+import {
+  AiCustomizations,
+  LevelAiCustomizations,
+  ModelCardInfo,
+  Visibility,
+} from '../../types';
 
 export const MIN_TEMPERATURE = 0;
 export const MAX_TEMPERATURE = 2;
@@ -20,14 +25,23 @@ export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   exampleTopics: [],
 };
 
-export const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
-  botName: {value: '', visibility: Visibility.EDITABLE},
-  temperature: {value: 0.5, visibility: Visibility.EDITABLE},
-  systemPrompt: {value: '', visibility: Visibility.EDITABLE},
-  retrievalContexts: {value: [], visibility: Visibility.EDITABLE},
-  modelCardInfo: {
-    value: EMPTY_MODEL_CARD_INFO,
+export const EMPTY_AI_CUSTOMIZATIONS: AiCustomizations = {
+  botName: '',
+  temperature: 0.5,
+  systemPrompt: '',
+  retrievalContexts: [],
+  modelCardInfo: EMPTY_MODEL_CARD_INFO,
+};
+
+const emptyAiCustomizationsWithVisibility = {};
+for (const [key, value] of Object.entries(EMPTY_AI_CUSTOMIZATIONS)) {
+  emptyAiCustomizationsWithVisibility[key] = {
+    value: value,
     visibility: Visibility.EDITABLE,
-  },
+  };
+}
+
+export const EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY: LevelAiCustomizations = {
+  ...emptyAiCustomizationsWithVisibility,
   hidePresentationPanel: false,
 };

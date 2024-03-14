@@ -4,14 +4,17 @@ import React, {useCallback} from 'react';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
+import {setAiCustomization} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
+import {AichatLevelProperties, AiCustomizations} from '@cdo/apps/aichat/types';
+import {EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -19,6 +22,20 @@ const AichatView: React.FunctionComponent = () => {
   const beforeNextLevel = useCallback(() => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
+
+  const initialAiCustomization = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
+  );
+
+  const initialAiCustomizationWithoutVisibility: AiCustomizations = {};
+  for (const [key, value] of Object.entries(initialAiCustomization)) {
+    if (key !== 'hidePresentationPanel') {
+      initialAiCustomizationWithoutVisibility[key] = value.value;
+    }
+  }
+  dispatch(setAiCustomization(initialAiCustomizationWithoutVisibility));
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>

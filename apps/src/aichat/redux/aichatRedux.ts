@@ -3,6 +3,7 @@ import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
+import {EMPTY_AI_CUSTOMIZATIONS} from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
@@ -10,6 +11,7 @@ import {
   AichatLevelProperties,
   Role,
   Status,
+  AiCustomizations,
 } from '../types';
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
@@ -23,6 +25,7 @@ export interface AichatState {
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
+  aiCustomizations: AiCustomizations;
 }
 
 const initialState: AichatState = {
@@ -30,6 +33,7 @@ const initialState: AichatState = {
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
+  aiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
 };
 
 // THUNKS
@@ -98,6 +102,9 @@ export const submitChatMessage = createAsyncThunk(
   }
 );
 
+// state in redux should just be values, not visibility
+// AiCustomizations has type without visibility
+// setter that sets a given property on AiCustomizations
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
@@ -124,6 +131,16 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
+    setAiCustomization: (state, action: PayloadAction<AiCustomizations>) => {
+      state.aiCustomizations = action.payload;
+    },
+    updateAiCustomizationProperty: (
+      state,
+      action: PayloadAction<{customization: keyof AiCustomizations; value: any}>
+    ) => {
+      const {customization, value} = action.payload;
+      state.aiCustomizations[customization] = value;
+    },
   },
   extraReducers: builder => {
     builder.addCase(submitChatMessage.fulfilled, state => {
@@ -147,4 +164,6 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
+  setAiCustomization,
+  updateAiCustomizationProperty,
 } = aichatSlice.actions;

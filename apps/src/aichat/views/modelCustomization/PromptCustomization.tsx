@@ -1,19 +1,28 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {updateAiCustomizationProperty} from '../../redux/aichatRedux';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import styles from '../model-customization-workspace.module.scss';
 import {isVisible, isDisabled} from './utils';
-import {EMPTY_AI_CUSTOMIZATIONS} from './constants';
+import {EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY} from './constants';
 
 const PromptCustomization: React.FunctionComponent = () => {
-  const {botName, temperature, systemPrompt} = useSelector(
-    (state: {lab: LabState}) =>
+  const dispatch = useAppDispatch();
+
+  const {botName, temperature, systemPrompt} = useAppSelector(
+    state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
   );
+  const aiCustomizations = useAppSelector(
+    state => state.aichat.aiCustomizations
+  );
+  console.log(aiCustomizations);
+  const systemPromptUpdated = aiCustomizations.systemPrompt;
 
   const allFieldsDisabled =
     isDisabled(botName.visibility) &&
@@ -61,8 +70,16 @@ const PromptCustomization: React.FunctionComponent = () => {
             </label>
             <textarea
               id="system-prompt"
-              value={systemPrompt.value}
+              value={systemPromptUpdated}
               disabled={isDisabled(systemPrompt.visibility)}
+              onChange={event =>
+                dispatch(
+                  updateAiCustomizationProperty({
+                    customization: 'systemPrompt',
+                    value: event.target.value,
+                  })
+                )
+              }
             />
           </div>
         )}

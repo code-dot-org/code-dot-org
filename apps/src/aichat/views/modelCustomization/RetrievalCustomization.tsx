@@ -7,14 +7,14 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import {AichatLevelProperties} from '../../types';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
-import {EMPTY_AI_CUSTOMIZATIONS} from './constants';
+import {EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY} from './constants';
 import {isDisabled} from './utils';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const {retrievalContexts} = useSelector(
     (state: {lab: LabState}) =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
   );
 
   // We shouldn't actually do this once (ie, initialize state from redux) once students can update these,
