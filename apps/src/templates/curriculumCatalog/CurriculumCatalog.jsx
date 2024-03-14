@@ -21,6 +21,7 @@ const CurriculumCatalog = ({
   isInUS,
   isSignedOut,
   isTeacher,
+  curriculaTaught,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -77,7 +78,8 @@ const CurriculumCatalog = ({
   const getRecommendedSimilarCurriculum = curriculumKey => {
     const recommendations = getSimilarRecommendations(
       curriculaData,
-      curriculumKey
+      curriculumKey,
+      curriculaTaught
     );
     return recommendations[0];
   };
@@ -228,6 +230,7 @@ CurriculumCatalog.propTypes = {
   isInUS: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
+  curriculaTaught: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default CurriculumCatalog;
