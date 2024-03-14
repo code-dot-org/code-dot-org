@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './styles/Weblab2View.css';
 
@@ -158,20 +158,29 @@ const defaultProject: ProjectType = {
 };
 
 const Weblab2View = () => {
+  const [currentProject, setCurrentProject] =
+    useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
   const initialSources = useAppSelector(state => state.lab.initialSources);
-  let project = (initialSources?.source as MultiFileSource) || defaultProject;
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const setProject = (newProject: MultiFileSource) => {
-    project = newProject;
+    setCurrentProject(newProject);
     if (Lab2Registry.getInstance().getProjectManager()) {
       const projectSources = {
-        source: project,
+        source: newProject,
       };
       Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
     }
   };
+
+  useEffect(() => {
+    // We reset the project when the channelId changes, as this means we are on a new level.
+    setCurrentProject(
+      (initialSources?.source as MultiFileSource) || defaultProject
+    );
+  }, [channelId, initialSources]);
 
   return (
     <div className="app-wrapper">
@@ -185,7 +194,7 @@ const Weblab2View = () => {
       </div>
       <div className="app-ide">
         <CDOIDE
-          project={project}
+          project={currentProject}
           config={config}
           setProject={setProject}
           setConfig={setConfig}
@@ -193,7 +202,7 @@ const Weblab2View = () => {
       </div>
       {showConfig && (
         <Config
-          config={showConfig === 'project' ? project : config}
+          config={showConfig === 'project' ? currentProject : config}
           setConfig={(
             configName: string,
             newConfig: ProjectType | ConfigType
