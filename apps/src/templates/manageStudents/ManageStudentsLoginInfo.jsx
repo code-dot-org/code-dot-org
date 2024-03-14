@@ -12,7 +12,7 @@ import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStude
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import DownloadParentLetter from './DownloadParentLetter';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
-import LtiLogins from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
+import {LtiLogins} from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 
 import LoginExport from './LoginExport';
 

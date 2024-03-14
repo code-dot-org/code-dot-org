@@ -89,7 +89,7 @@ export default connect(state => ({
   students: state.teacherSections.selectedStudents,
 }))(SectionLoginInfo);
 
-class LtiLogins extends React.Component {
+export class LtiLogins extends React.Component {
   static propTypes = {
     sectionProviderName: PropTypes.string,
   };
