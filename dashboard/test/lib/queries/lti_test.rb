@@ -15,11 +15,11 @@ class Services::LtiTest < ActiveSupport::TestCase
       authentication_id: Policies::Lti.generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
     )
-
+    create :lti_user_identity, user: user, subject: id_token[:sub]
     assert_equal user, Queries::Lti.get_user(id_token)
   end
 
-  test 'finds a code.org user given LTI integration creds and an NRPS member response' do
+  test 'finds a code.org user given LTI integration creds and a NRPS member response' do
     user = create :user
     lms_user_id = SecureRandom.uuid
     lms_issuer = "http://#{SecureRandom.alphanumeric 10}.com"
@@ -33,6 +33,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       authentication_id: Policies::Lti.generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
     )
+    create :lti_user_identity, user: user, subject: lms_user_id
     mock_nrps_member = {
       user_id: lms_user_id,
     }
