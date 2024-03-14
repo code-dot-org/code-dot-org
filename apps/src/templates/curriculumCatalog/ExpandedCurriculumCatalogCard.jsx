@@ -115,7 +115,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="book" className="fa-solid" />
-                  <BodyTwoText>
+                  <BodyTwoText className={style.subjectsText}>
                     {i18n.topic() + ': ' + subjectsAndTopics.join(', ')}
                   </BodyTwoText>
                 </div>

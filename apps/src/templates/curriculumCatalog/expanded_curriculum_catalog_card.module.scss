@@ -135,8 +135,6 @@ $container-width: 960px;
   white-space: nowrap;
 
   > p {
-    overflow: hidden;
-    white-space: normal;
     font-size: 0.875em;
     margin: 0;
     color: $neutral_dark;
@@ -148,6 +146,10 @@ $container-width: 960px;
     align-self: flex-start;
     padding-top: 4px;
   }
+}
+
+p.subjectsText {
+  white-space: normal;
 }
 
 .infoContainer {
