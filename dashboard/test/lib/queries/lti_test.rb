@@ -16,6 +16,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       credential_type: AuthenticationOption::LTI_V1,
     )
     create :lti_user_identity, user: user, subject: id_token[:sub]
+
     assert_equal user, Queries::Lti.get_user(id_token)
   end
 
