@@ -1,8 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
-  "created_at": "2024-03-07T20:42:23.000Z",
+  "created_at": "2024-03-13T17:05:17.000Z",
   "level_num": "custom",
   "user_id": 833,
   "properties": {
@@ -61,13 +60,11 @@
     "skip_autosave": true,
     "encrypted_examples": "WNbw/L2bHm21vqyYxd/S1ez3SBbhJEgMIxWCBziMWNsoCGQMTIy11pR5tnZv\nhJqfTadSL4wpavw5BnQd4zA6tw==\n",
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Test\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2205e48de5f93c784733ffcca841d2b5/game_dev_freeplay.mp3\"}]"
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-07T20:42:23.124+00:00\",\"changed\":[\"cloned from \\\"coursee_helloworld_freeplay_2024\\\"\"],\"cloned_from\":\"coursee_helloworld_freeplay_2024\"},{\"changed_at\":\"2024-03-07 20:48:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 20:49:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-07 20:52:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:06:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 20:10:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 20:12:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 20:34:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-12 20:35:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-13 22:53:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "audit_log": "[{\"changed_at\":\"2024-03-13T17:05:17.417+00:00\",\"changed\":[\"cloned from \\\"game_dev_freeplay\\\"\"],\"cloned_from\":\"game_dev_freeplay\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
