@@ -22,7 +22,7 @@ export default function FloatingScrollbar({children, childRef}) {
   const [floatScrollbar, setFloatScrollbar] = React.useState(true);
 
   const canFloat = React.useMemo(
-    () => childScrollWidth > 0 && childWidth > 0,
+    () => childScrollWidth > 0 && childWidth > 0 && scrollbarWidth > 0,
     [childScrollWidth, childWidth]
   );
 
@@ -120,6 +120,7 @@ export default function FloatingScrollbar({children, childRef}) {
       </div>
     );
   }
+  console.log('lfm', scrollbarWidth);
 
   return (
     <div className={styles.scrollingContainer}>
