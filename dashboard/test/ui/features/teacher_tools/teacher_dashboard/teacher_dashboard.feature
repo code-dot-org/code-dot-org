@@ -33,6 +33,8 @@ Feature: Using the teacher dashboard
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
+    # Progress tab V2
+
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
     And I wait until element "#uitest-stats-table" is visible
@@ -111,6 +113,8 @@ Feature: Using the teacher dashboard
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I press the first ".uitest-summary-cell" element
     And I see ".uitest-detail-cell"
+
+    # Progress tab V2
 
   @eyes
   Scenario: Eyes tests for section projects with thumbnails
