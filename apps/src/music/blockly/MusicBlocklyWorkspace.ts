@@ -82,6 +82,7 @@ export default class MusicBlocklyWorkspace {
       },
       readOnly: isReadOnlyWorkspace,
       useBlocklyDynamicCategories: true,
+      isDefaultDarkMode: true,
     } as BlocklyOptions);
 
     this.resizeBlockly();

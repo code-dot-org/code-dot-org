@@ -14,6 +14,7 @@ import {
   MenuOptionStates,
   BLOCKLY_CURSOR,
   BLOCKLY_THEME,
+  BLOCKLY_THEME_DEFAULT_DARK_MODE,
   NAVIGATION_CURSOR_TYPES,
 } from '../constants';
 import LegacyDialog from '../../code-studio/LegacyDialog';
@@ -245,7 +246,10 @@ const registerDarkMode = function (weight: number) {
       const themeName =
         baseName(currentTheme.name as Themes) +
         (isDarkTheme(scope.workspace) ? '' : dark);
-      localStorage.setItem(BLOCKLY_THEME, themeName);
+      const keyName = Blockly.isDefaultDarkMode
+        ? BLOCKLY_THEME_DEFAULT_DARK_MODE
+        : BLOCKLY_THEME;
+      localStorage.setItem(keyName, themeName);
       setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
@@ -299,7 +303,10 @@ const registerTheme = function (name: Themes, label: string, weight: number) {
     callback: function (scope: ContextMenuRegistry.Scope) {
       const currentTheme = scope.workspace?.getTheme();
       const themeName = name + (isDarkTheme(scope.workspace) ? dark : '');
-      localStorage.setItem(BLOCKLY_THEME, themeName);
+      const keyName = Blockly.isDefaultDarkMode
+        ? BLOCKLY_THEME_DEFAULT_DARK_MODE
+        : BLOCKLY_THEME;
+      localStorage.setItem(keyName, themeName);
       setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,

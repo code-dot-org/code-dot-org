@@ -674,7 +674,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
     const options = {
       ...optOptionsExtended,
-      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as string),
+      theme: cdoUtils.getUserTheme(
+        optOptionsExtended.theme as string,
+        optOptionsExtended.isDefaultDarkMode
+      ),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -715,6 +718,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       ).style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
+    blocklyWrapper.isDefaultDarkMode = !!optOptionsExtended.isDefaultDarkMode;
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;

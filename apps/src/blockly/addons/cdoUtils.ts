@@ -11,6 +11,8 @@ import {
   stringIsXml,
   Themes,
   ToolboxType,
+  BLOCKLY_THEME,
+  BLOCKLY_THEME_DEFAULT_DARK_MODE,
 } from '../constants';
 import {
   appendProceduresToState,
@@ -297,11 +299,16 @@ export function getField(type: string) {
  * @returns {?Blockly.Field}
  */
 // Users can change their active theme using the context menu. Use this setting, if present.
-export function getUserTheme(themeOption: string | undefined) {
+export function getUserTheme(
+  themeOption: string | undefined,
+  isDefaultDarkMode: boolean = false
+) {
+  const keyName = isDefaultDarkMode
+    ? BLOCKLY_THEME_DEFAULT_DARK_MODE
+    : BLOCKLY_THEME;
+
   return (
-    Blockly.themes[localStorage.blocklyTheme as Themes] ||
-    themeOption ||
-    cdoTheme
+    Blockly.themes[localStorage[keyName] as Themes] || themeOption || cdoTheme
   );
 }
 

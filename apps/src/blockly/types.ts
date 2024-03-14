@@ -91,6 +91,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
   levelBlockIds: string[];
+  isDefaultDarkMode: boolean;
   isStartMode: boolean;
   isToolboxMode: boolean;
   toolboxBlocks: ToolboxDefinition | undefined;
@@ -208,6 +209,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   customSimpleDialog: (config: object) => void;
   levelBlockIds: string[];
   isBlockEditMode: boolean;
+  isDefaultDarkMode: boolean;
   editBlocks: string | undefined;
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
