@@ -80,21 +80,17 @@ export const commands = {
   // current or previous frame.
   anySpeechIncludesValues(currentVariables, previousVariables) {
     const spriteIds = this.getSpriteIdsInUse();
-    const values = Object.values(currentVariables);
-    if (previousVariables) {
-      values.push(...Object.values(previousVariables));
-    }
+    const values = Object.values(currentVariables).concat(
+      previousVariables ? Object.values(previousVariables) : []
+    );
 
     for (const spriteId of spriteIds) {
       const speechText = this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
-      if (speechText) {
-        for (const value of values) {
-          if (typeof speechText === 'string' && speechText.includes(value)) {
-            return true;
-          } else if (typeof speechText === 'number' && speechText === value) {
-            return true;
-          }
-        }
+      if (
+        speechText &&
+        values.some(value => `${speechText}`.includes(`${value}`))
+      ) {
+        return true;
       }
     }
     return false;
@@ -231,7 +227,6 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     const eventSpriteIds = validationCommands.getEventSpriteIds.call(this);
     let foundEventSpriteChange = false;
-    let foundNoneventSpriteChange = false;
 
     for (const spriteId of spriteIds) {
       const currentCostume = this.nativeSpriteMap[spriteId].getAnimationLabel();
@@ -243,16 +238,13 @@ export const commands = {
         if (eventSpriteIds.includes(spriteId)) {
           foundEventSpriteChange = true;
         } else {
-          foundNoneventSpriteChange = true;
-        }
-
-        if (foundEventSpriteChange && foundNoneventSpriteChange) {
-          return false; // Found both event and non-event sprite changes, no need to continue
+          // Fail immediately if a non-event sprite changed.
+          return false;
         }
       }
     }
 
-    return foundEventSpriteChange && !foundNoneventSpriteChange;
+    return foundEventSpriteChange;
   },
 
   anyPropChanged(prop) {
@@ -291,7 +283,6 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     const eventSpriteIds = validationCommands.getEventSpriteIds.call(this);
     let foundEventSpriteChange = false;
-    let foundNoneventSpriteChange = false;
 
     for (const spriteId of spriteIds) {
       let currentProp;
@@ -319,16 +310,13 @@ export const commands = {
         if (eventSpriteIds.includes(spriteId)) {
           foundEventSpriteChange = true;
         } else {
-          foundNoneventSpriteChange = true;
-        }
-
-        if (foundEventSpriteChange && foundNoneventSpriteChange) {
-          return false; // Found both event and non-event sprite changes, no need to continue
+          // Fail immediately if a non-event sprite changed.
+          return false;
         }
       }
     }
 
-    return foundEventSpriteChange && !foundNoneventSpriteChange;
+    return foundEventSpriteChange;
   },
 
   // Returns true if any sprite changed (started or stopped) behaviors this frame.
@@ -415,7 +403,6 @@ export const commands = {
     const eventSpriteIds = validationCommands.getEventSpriteIds.call(this);
 
     let foundEventSpriteChange = false;
-    let foundNoneventSpriteChange = false;
 
     for (const spriteId of spriteIds) {
       const currentBehaviors = this.getBehaviorsForSpriteId(spriteId);
@@ -435,16 +422,13 @@ export const commands = {
         if (isEventSprite) {
           foundEventSpriteChange = true;
         } else {
-          foundNoneventSpriteChange = true;
+          // Fail immediately if a non-event sprite changed.
+          return false;
         }
-      }
-
-      if (foundEventSpriteChange && foundNoneventSpriteChange) {
-        return false; // Found both event and non-event sprite changes, no need to continue
       }
     }
 
-    return foundEventSpriteChange && !foundNoneventSpriteChange;
+    return foundEventSpriteChange;
   },
 
   // Returns true if all sprites have the default size (100 for students)
