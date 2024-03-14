@@ -694,4 +694,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal CSV_DATA, @response.body
   end
+
+  test "clear_all_data" do
+    create_bob_record
+    set_and_get_key_value('somekey', 5)
+
+    delete _url(:clear_all_data)
+    assert_response :success
+
+    get _url(:get_table_names)
+    assert_response :success
+    assert_equal [], JSON.parse(@response.body)
+
+    get _url(:get_key_values)
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
 end
