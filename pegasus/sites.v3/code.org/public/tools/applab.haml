@@ -25,7 +25,7 @@ theme: responsive_full_width
   .wrapper.centered
     %h2=hoc_s("app_lab_page.glance.heading")
     = view :"tools/tools_glance", ages: hoc_s("app_lab_page.glance.ages"), level: hoc_s("app_lab_page.glance.level"), make: hoc_s("app_lab_page.glance.make"), devices: hoc_s("app_lab_page.glance.devices"), browsers: hoc_s("app_lab_page.glance.browsers"), languages: hoc_s("app_lab_page.glance.languages"), accessibility: hoc_s("app_lab_page.glance.accessibility")
-    %p.body-two{style: "margin-top: 2rem"}
+    %p.body-two
       =hoc_s("app_lab_page.glance.documentation_desc")
     %a.link-button.secondary{href: CDO.studio_url("/docs/ide/applab")}
       =hoc_s("tools_pages_shared.glance.button")
