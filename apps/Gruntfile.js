@@ -421,30 +421,7 @@ module.exports = function (grunt) {
     }),
   };
 
-  config['webpack-dev-server'] = {
-    watch: {
-      webpack: createWebpackConfig({
-        appsEntries,
-        minify: false,
-        watch: false,
-        piskelDevMode,
-      }),
-      keepAlive: true,
-      proxy: {
-        '**': 'http://localhost:3000',
-      },
-      publicPath: '/assets/js/',
-      hot: true,
-      inline: true,
-      port: 3001,
-      host: '0.0.0.0',
-      watchOptions: {
-        aggregateTimeout: 1000,
-        poll: 1000,
-        ignored: /^node_modules\/[^@].*/,
-      },
-    },
-  };
+  config['webpack-dev-server'] = {dev: createWebpackConfig()};
 
   config.uglify = {
     lib: {

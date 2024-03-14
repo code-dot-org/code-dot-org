@@ -8460,7 +8460,7 @@ __metadata:
     grunt-notify: 0.4.5
     grunt-sass: 3.1.0
     grunt-ts: ^6.0.0-beta.22
-    grunt-webpack: ^4.0.3
+    grunt-webpack: ^6.0.0
     hammerjs: ^2.0.8
     history: ^2.0.1
     html2canvas: ^0.5.0-beta4
@@ -15532,15 +15532,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"grunt-webpack@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "grunt-webpack@npm:4.0.3"
+"grunt-webpack@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "grunt-webpack@npm:6.0.0"
   dependencies:
     deep-for-each: ^3.0.0
-    lodash: ^4.17.19
+    lodash: ^4.17.21
   peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 53f192e66ae116e9cfa789991fab10004c130b7df34967182041b10f33002389ee09cde95b0a3fc03d43d48548545c504d2b239c305c4b2d2e7b8fcc85de182e
+    webpack: ^5.0.0
+  checksum: a5ed4d3ab4e5a668063a3e0af781a4e20b558f8b6f148c987fc807ae8eea0b6a28fe29b5840283547061569f7aa38174044233dbe8acbbd228b2479268614f8c
   languageName: node
   linkType: hard
 
