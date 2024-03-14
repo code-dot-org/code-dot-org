@@ -1,41 +1,50 @@
 import React, {useState, useCallback} from 'react';
-import {useSelector} from 'react-redux';
 
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {AichatLevelProperties} from '../../types';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
-import {EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY} from './constants';
 import {isDisabled} from './utils';
+import {updateLevelAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
-  const {retrievalContexts} = useSelector(
-    (state: {lab: LabState}) =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
+  const [newRetrievalContext, setNewRetrievalContext] = useState('');
+
+  const dispatch = useAppDispatch();
+
+  const {retrievalContexts} = useAppSelector(
+    state => state.aichat.levelAiCustomizations
   );
 
-  // We shouldn't actually do this once (ie, initialize state from redux) once students can update these,
-  // but leaving as-is temporarily until we are set up to allow a user to update these initial values
-  // and store them in redux.
-  const [messages, setMessages] = useState<string[]>(retrievalContexts.value);
-  const [newMessage, setNewMessage] = useState('');
-
   const onAdd = useCallback(() => {
-    setMessages([...messages, newMessage]);
-    setNewMessage('');
+    dispatch(
+      updateLevelAiCustomizationProperty({
+        customization: 'retrievalContexts',
+        value: [...retrievalContexts.value, newRetrievalContext],
+      })
+    );
+    setNewRetrievalContext('');
     document.getElementById('retrieval-input')?.focus();
-  }, [messages, setMessages, newMessage, setNewMessage]);
+  }, [
+    dispatch,
+    retrievalContexts,
+    newRetrievalContext,
+    setNewRetrievalContext,
+  ]);
 
   const onRemove = useCallback(
     (index: number) => {
-      const messagesCopy = [...messages];
-      messagesCopy.splice(index, 1);
-      setMessages(messagesCopy);
+      const newRetrievalContexts = [...retrievalContexts.value];
+      newRetrievalContexts.splice(index, 1);
+      dispatch(
+        updateLevelAiCustomizationProperty({
+          customization: 'retrievalContexts',
+          value: newRetrievalContexts,
+        })
+      );
     },
-    [messages, setMessages]
+    [dispatch, retrievalContexts]
   );
 
   return (
@@ -47,8 +56,8 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           </label>
           <textarea
             id="retrieval-input"
-            onChange={event => setNewMessage(event.target.value)}
-            value={newMessage}
+            onChange={event => setNewRetrievalContext(event.target.value)}
+            value={newRetrievalContext}
             disabled={isDisabled(retrievalContexts.visibility)}
           />
         </div>
@@ -56,12 +65,14 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           <button
             type="button"
             onClick={onAdd}
-            disabled={!newMessage || isDisabled(retrievalContexts.visibility)}
+            disabled={
+              !newRetrievalContext || isDisabled(retrievalContexts.visibility)
+            }
           >
             Add
           </button>
         </div>
-        {messages.map((message, index) => {
+        {retrievalContexts.value.map((message, index) => {
           return (
             <div key={index} className={styles.itemContainer}>
               <button

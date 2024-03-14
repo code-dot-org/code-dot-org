@@ -3,7 +3,7 @@ import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
-import {EMPTY_AI_CUSTOMIZATIONS} from '../views/modelCustomization/constants';
+import {EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY} from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
@@ -11,7 +11,7 @@ import {
   AichatLevelProperties,
   Role,
   Status,
-  AiCustomizations,
+  LevelAiCustomizations,
 } from '../types';
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
@@ -25,7 +25,7 @@ export interface AichatState {
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
-  aiCustomizations: AiCustomizations;
+  levelAiCustomizations: LevelAiCustomizations;
 }
 
 const initialState: AichatState = {
@@ -33,7 +33,7 @@ const initialState: AichatState = {
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
-  aiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  levelAiCustomizations: EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY,
 };
 
 // THUNKS
@@ -131,15 +131,22 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
-    setAiCustomization: (state, action: PayloadAction<AiCustomizations>) => {
-      state.aiCustomizations = action.payload;
-    },
-    updateAiCustomizationProperty: (
+    setLevelAiCustomizations: (
       state,
-      action: PayloadAction<{customization: keyof AiCustomizations; value: any}>
+      action: PayloadAction<LevelAiCustomizations>
     ) => {
+      state.levelAiCustomizations = action.payload;
+    },
+    updateLevelAiCustomizationProperty: (
+      state,
+      action: PayloadAction<{
+        customization: keyof LevelAiCustomizations;
+        value: any;
+      }>
+    ) => {
+      // need to account for presentation case
       const {customization, value} = action.payload;
-      state.aiCustomizations[customization] = value;
+      state.levelAiCustomizations[customization].value = value;
     },
   },
   extraReducers: builder => {
@@ -164,6 +171,6 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
-  setAiCustomization,
-  updateAiCustomizationProperty,
+  setLevelAiCustomizations,
+  updateLevelAiCustomizationProperty,
 } = aichatSlice.actions;

@@ -1,21 +1,17 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import styles from '../model-customization-workspace.module.scss';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-import {
-  EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY,
-  MODEL_CARD_FIELDS_AND_LABELS,
-} from './constants';
+import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
 import {isVisible, isDisabled} from './utils';
+import {updateLevelAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import styles from '../model-customization-workspace.module.scss';
 
 const PublishNotes: React.FunctionComponent = () => {
-  const {modelCardInfo} = useSelector(
-    (state: {lab: LabState}) =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
+  const dispatch = useAppDispatch();
+
+  const {modelCardInfo} = useAppSelector(
+    state => state.aichat.levelAiCustomizations
   );
 
   return (
@@ -32,6 +28,17 @@ const PublishNotes: React.FunctionComponent = () => {
                   id={id}
                   disabled={isDisabled(modelCardInfo.visibility)}
                   value={modelCardInfo.value[id]}
+                  onChange={event =>
+                    dispatch(
+                      updateLevelAiCustomizationProperty({
+                        customization: 'modelCardInfo',
+                        value: {
+                          ...modelCardInfo.value,
+                          [id]: event.target.value,
+                        },
+                      })
+                    )
+                  }
                 />
               </div>
             )
