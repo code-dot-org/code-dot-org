@@ -18,6 +18,7 @@ export interface ValidationState {
   satisfied: boolean;
   message: string | null;
   index: number;
+  showOnlyWhileRunning: boolean;
 }
 
 export const getInitialValidationState: () => ValidationState = () => ({
@@ -25,6 +26,7 @@ export const getInitialValidationState: () => ValidationState = () => ({
   satisfied: false,
   message: null,
   index: 0,
+  showOnlyWhileRunning: false,
 });
 
 export default class ProgressManager {
@@ -82,6 +84,8 @@ export default class ProgressManager {
           if (!this.currentValidationState.satisfied) {
             this.currentValidationState.satisfied = validation.next;
             this.currentValidationState.message = validation.message;
+            this.currentValidationState.showOnlyWhileRunning =
+              validation.showOnlyWhileRunning;
             this.onProgressChange();
           }
           return;
@@ -112,6 +116,7 @@ export default class ProgressManager {
       // ensures that the UI is rendered fresh, and any apperance animation is
       // played again, even if it's the same message as last time.
       index: this.currentValidationState.index + 1,
+      showOnlyWhileRunning: false,
     };
 
     this.onProgressChange();

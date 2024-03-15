@@ -15,6 +15,7 @@ export const MusicConditions: ConditionNames = {
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
   PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
   PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
+  NOT_PLAYED_MEASURES: {name: 'not_played_measures', valueType: 'number'},
 };
 
 export default class MusicValidator extends Validator {
@@ -97,9 +98,34 @@ export default class MusicValidator extends Validator {
         });
       }
     }
+
+    /*
+    // Check for a certain number of measures not yet played.
+    const maxNumberMeasures = 8;
+    for (let numberMeasures = 1; numberMeasures <= 8; numberMeasures++) {
+      if (this.player.getCurrentPlayheadPosition() < numberMeasures + 1) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.NOT_PLAYED_MEASURES.name,
+          value: numberMeasures,
+        });
+      }
+    }
+    */
   }
 
   conditionsMet(conditions: Condition[]): boolean {
+    // Take this opportunity to check any conditions that we want to reevaluate
+    // every frame, rather than can be accumulated because they stay true.
+    if (
+      conditions.length === 1 &&
+      conditions[0].name === MusicConditions.NOT_PLAYED_MEASURES.name &&
+      this.player.getCurrentPlayheadPosition() <
+        (conditions[0].value as number) + 1
+    ) {
+      return true;
+    }
+
+    // Check any accumulated success conditions.
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 

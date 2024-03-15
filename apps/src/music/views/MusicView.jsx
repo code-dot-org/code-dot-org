@@ -38,6 +38,7 @@ import {
   isReadOnlyWorkspace,
   setIsLoading,
   setPageError,
+  setIsRunning,
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
@@ -75,6 +76,7 @@ class UnconnectedMusicView extends React.Component {
     signInState: PropTypes.oneOf(Object.values(SignInState)),
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
+    setIsRunning: PropTypes.func,
     setCurrentPlayheadPosition: PropTypes.func,
     selectedBlockId: PropTypes.string,
     selectBlockId: PropTypes.func,
@@ -562,6 +564,7 @@ class UnconnectedMusicView extends React.Component {
     );
 
     this.props.setIsPlaying(true);
+    this.props.setIsRunning(true);
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
     this.props.clearSelectedBlockId();
     this.props.clearSelectedTriggerId();
@@ -578,6 +581,7 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
+    this.props.setIsRunning(false);
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
   };
 
@@ -641,6 +645,7 @@ const MusicView = connect(
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
+    setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
       dispatch(setCurrentPlayheadPosition(currentPlayheadPosition)),
     selectBlockId: blockId => dispatch(selectBlockId(blockId)),

@@ -45,6 +45,8 @@ export interface LabState {
   isLoadingProjectOrLevel: boolean;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
+  // Whether the lab is currently running.
+  isRunning: boolean;
   // Error currently on the page, if present.
   pageError: PageError | undefined;
   // channel for the current project, or undefined if there is no current project.
@@ -67,6 +69,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  isRunning: false,
 };
 
 // Thunks
@@ -238,6 +241,9 @@ const labSlice = createSlice({
   reducers: {
     setIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
+    },
+    setIsRunning(state, action: PayloadAction<boolean>) {
+      state.isRunning = action.payload;
     },
     setPageError(
       state,
@@ -420,8 +426,13 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-export const {setIsLoading, setPageError, clearPageError, setValidationState} =
-  labSlice.actions;
+export const {
+  setIsLoading,
+  setIsRunning,
+  setPageError,
+  clearPageError,
+  setValidationState,
+} = labSlice.actions;
 
 // These should not be set outside of the lab slice.
 const {setChannel, onLevelChange} = labSlice.actions;

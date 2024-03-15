@@ -44,9 +44,19 @@
               "name": "played_sounds",
               "value": 3
             }
-          ],
+        ],
           "message": "Nice work.  You successfully played three sounds.",
           "next": true
+        },
+        {
+          "conditions": [
+            {
+              "name": "not_played_measures",
+              "value": 6
+            }
+          ],
+          "message": "Let's listen...",
+          "showOnlyWhileRunning": true
         },
         {
           "conditions": [

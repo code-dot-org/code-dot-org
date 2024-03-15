@@ -95,6 +95,7 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
       message: '',
       next: false,
       conditions: [],
+      showOnlyWhileRunning: false,
     };
     setValidations([...validations, newValidation]);
   };

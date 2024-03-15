@@ -59,8 +59,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const levelIndex = useSelector(currentLevelIndex);
   const currentLevelCount = useSelector(levelCount);
-  const {hasConditions, message, satisfied, index} = useSelector(
-    (state: {lab: LabState}) => state.lab.validationState
+  const {hasConditions, message, satisfied, index, showOnlyWhileRunning} =
+    useSelector((state: {lab: LabState}) => state.lab.validationState);
+  const isRunning = useSelector(
+    (state: {lab: LabState}) => state.lab.isRunning
   );
 
   // If there are no validation conditions, we can show the next button so long as
@@ -79,6 +81,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     dispatch(navigateToNextLevel());
   }, [dispatch, beforeNextLevel]);
 
+  // Some messages should only be shown while the lab is running.
+  const messageToShow =
+    !showOnlyWhileRunning || isRunning ? message || undefined : undefined;
+
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
     return null;
@@ -87,7 +93,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   return (
     <InstructionsPanel
       text={instructionsText}
-      message={message || undefined}
+      message={messageToShow}
       messageIndex={index}
       showNextButton={showNextButton}
       onNextPanel={onNextPanel}
@@ -148,8 +154,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   };
 
   const vertical = layout === 'vertical';
-
   const canShowNextButton = showNextButton && onNextPanel;
+  const showMessage = message || canShowNextButton;
 
   return (
     <div
@@ -215,7 +221,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             />
           </div>
         )}
-        {(message || canShowNextButton) && (
+        {showMessage && (
           <div
             key={messageIndex + ' - ' + message}
             id="instructions-feedback"

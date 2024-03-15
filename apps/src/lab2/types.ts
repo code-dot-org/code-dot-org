@@ -153,6 +153,7 @@ export interface Validation {
   message: string;
   next: boolean;
   key: string;
+  showOnlyWhileRunning: boolean;
 }
 
 // TODO: these are not all the properties of app options.
