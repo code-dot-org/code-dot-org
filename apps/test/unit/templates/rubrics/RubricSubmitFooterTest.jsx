@@ -239,7 +239,7 @@ describe('RubricSubmitFooter', () => {
     // Wait until feedback is retrieved successfully
     await wait();
 
-    // See that the submit button is enabled
+    // See that the submit button and keep-working checkbox are enabled
     expect(checkbox).to.not.be.disabled;
     expect(button).to.not.be.disabled;
 
@@ -305,7 +305,7 @@ describe('RubricSubmitFooter', () => {
     // Wait until feedback is retrieved successfully
     await wait();
 
-    // See that the submit button is enabled
+    // See that the submit button and keep-working checkbox are enabled
     expect(checkbox).to.not.be.disabled;
     expect(button).to.not.be.disabled;
 
@@ -338,14 +338,14 @@ describe('RubricSubmitFooter', () => {
       </Provider>
     );
 
-    // See that the submit button and keep working checkbox is disabled
+    // See that the keep-working checkbox is not checked at first
     const checkbox = screen.getByLabelText(i18n.aiSubmitShouldKeepWorking());
-    expect(checkbox).to.be.checked;
+    expect(checkbox).to.not.be.checked;
 
     // Wait until feedback is retrieved successfully
     await wait();
 
-    // See that the submit button is enabled
+    // See that the keep-working checkbox is then checked to reflect the progress state
     expect(checkbox).to.be.checked;
   });
 
