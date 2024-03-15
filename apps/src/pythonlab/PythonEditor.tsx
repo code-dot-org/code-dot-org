@@ -36,7 +36,7 @@ const PythonEditor: React.FunctionComponent = () => {
       dispatch(appendOutput('Running code...'));
       if (source) {
         // TODO: will need to handle a potentially nested main.py
-        const code = source['main.py'];
+        const code = source['main.py']?.text;
         if (typeof code === 'string') {
           runPythonCode(code);
         }
