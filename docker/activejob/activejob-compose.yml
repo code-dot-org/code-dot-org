@@ -1,3 +1,19 @@
+# WIP - the dockerfiles have seen a lot of iteration since this was last used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Docker Compose file for running an active job worker.
 #
 # MAYBE: To run, set the following env variables (values obtainable from Circle):
@@ -20,11 +36,11 @@ version: "3"
 services:
   console:
     image: activejob:latest
-    entrypoint: ["docker/activejob/entrypoint.sh"]
+    entrypoint: ["/home/appuser/entrypoint.sh"]
     command: ["console"]
     volumes:
-      - ./entrypoint.sh:/home/appuser/code-dot-org/docker/activejob/entrypoint.sh
-      - ../../:/home/appuser/code-dot-org:delegated
+      - ./entrypoint.sh:/home/appuser/entrypoint.sh
+      # - ../../:/home/appuser/code-dot-org:delegated
     depends_on:
       - db
   
@@ -35,8 +51,8 @@ services:
       - ../../:/home/appuser/code-dot-org:delegated
     stdin_open: true
     tty: true
-    entrypoint: ["docker/activejob/entrypoint.sh"]
-    command: ["delayed_job"]
+    # entrypoint: ["docker/activejob/entrypoint.sh"]
+    # command: ["delayed_job"]
 
   db:
     container_name: db
@@ -66,3 +82,5 @@ services:
 
 # i want a docker image that already has bundle install ran, is that appropriate?
 # - or just build a nice entrypoint script that does it for me and then we can work to shift left
+
+# Need to setup the database since I reset the container

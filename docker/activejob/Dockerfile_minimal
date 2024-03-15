@@ -68,6 +68,7 @@ FROM base as primary-layer
 #########################################################
 
 # MAINLINE UBUNTU PACKAGE DEPS SHOULD BE ADDED HERE
+# TODO split this up into groups with comments on why we need them
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     apt-transport-https \
@@ -124,6 +125,8 @@ RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
 RUN locale-gen en_US.UTF-8
 
 # install pdftk & tidy
+# Used by lesson plan generator. Necessary in Staging, tested in Test.
+# Consider moving this to a later layer, used only by the resources that need it
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
     curl -sSLOJ https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb && \
     dpkg -i pdftk-java_3.0.9-1_all.deb || apt-get -fy install && \

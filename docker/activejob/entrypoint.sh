@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+
+# WIP - the dockerfiles have seen a lot of iteration since this was last used.
+
+
+
+
 set -e
 
 echo "Starting entrypoint.sh..."

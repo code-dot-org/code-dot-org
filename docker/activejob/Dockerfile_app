@@ -19,6 +19,7 @@ RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
 
 # Build things!
 # TODO: currently failing, probably because we can't load secrets
+# A wild alternative would be to install chef-client and do whatever else is in the UserData script and build like we do AMI Builder?
 RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
     rbenv global 3.0.5 && \
     bundle exec rake build
