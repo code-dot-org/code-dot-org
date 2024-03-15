@@ -6,6 +6,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import ProfessionalLearningCourseProgress from './ProfessionalLearningCourseProgress';
 import {EnrolledWorkshops} from './EnrolledWorkshops';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
@@ -45,7 +46,7 @@ export default function LandingPage({
         <EnrolledWorkshops />
         {deeperLearningCourseData?.length >= 1 && (
           <div>
-            <h2>Online Professional Learning Courses</h2>
+            <Heading2>Online Professional Learning Courses</Heading2>
             <ProfessionalLearningCourseProgress
               deeperLearningCourseData={deeperLearningCourseData}
             />
