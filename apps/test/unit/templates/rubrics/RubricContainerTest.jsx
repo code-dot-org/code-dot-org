@@ -34,20 +34,24 @@ describe('RubricContainer', () => {
     }
   }
 
+  // Stubs out getting the AI status for a particular user
   function stubFetchEvalStatusForUser(data) {
-    fetchStub
+    return fetchStub
       .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  // Stubs out getting the overall AI status, which is part of RubricSettings but
+  // useful to track alongside the user status, here
   function stubFetchEvalStatusForAll(data) {
-    fetchStub
+    return fetchStub
       .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  // This stubs out polling the AI evaluation list which can be provided by 'data'
   function stubFetchAiEvaluations(data) {
-    fetchStub
+    return fetchStub
       .withArgs(sinon.match(/rubrics\/\d+\/get_ai_evaluations.*/))
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
@@ -62,7 +66,7 @@ describe('RubricContainer', () => {
       },
     });
     fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve(new Response('')));
+    fetchStub.returns({});
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
@@ -183,7 +187,7 @@ describe('RubricContainer', () => {
   it('fetches AI evaluations and passes them to children', async () => {
     stubFetchEvalStatusForUser(successJson);
     stubFetchEvalStatusForAll(successJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    const evalFetch = stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -193,16 +197,18 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
     );
+
     // Push the `fetch`s through
     await wait();
 
     // Let the component re-render with the set state
     wrapper.update();
-    expect(fetchStub).to.have.been.calledThrice;
+    expect(evalFetch).to.have.been.called;
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
       mockAiEvaluations
     );
@@ -254,6 +260,7 @@ describe('RubricContainer', () => {
   it('shows a a button for running analysis if canProvideFeedback is true', async () => {
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations([]);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -276,9 +283,9 @@ describe('RubricContainer', () => {
   });
 
   it('shows status text when student has not attempted level', async () => {
-    stubFetchEvalStatusForUser(notAttemptedJson);
-    stubFetchEvalStatusForAll(notAttemptedJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
+    const userFetchStub = stubFetchEvalStatusForUser(notAttemptedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(notAttemptedJsonAll);
+    stubFetchAiEvaluations([]);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -288,20 +295,22 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
     );
     await wait();
     wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_not_attempted());
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
   });
 
   it('shows status text when level has already been evaluated', async () => {
-    stubFetchEvalStatusForUser(successJson);
-    stubFetchEvalStatusForAll(successJsonAll);
+    const userFetchStub = stubFetchEvalStatusForUser(successJson);
+    const allFetchStub = stubFetchEvalStatusForAll(successJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
@@ -312,6 +321,7 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
@@ -321,7 +331,8 @@ describe('RubricContainer', () => {
     await wait();
 
     wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(
       i18n.aiEvaluationStatus_already_evaluated()
     );
@@ -329,8 +340,9 @@ describe('RubricContainer', () => {
   });
 
   it('allows teacher to run analysis when level has not been evaluated', async () => {
-    stubFetchEvalStatusForUser(readyJson);
-    stubFetchEvalStatusForAll(readyJsonAll);
+    const userFetchStub = stubFetchEvalStatusForUser(readyJson);
+    const allFetchStub = stubFetchEvalStatusForAll(readyJsonAll);
+    stubFetchAiEvaluations([]);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -340,6 +352,7 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
@@ -349,7 +362,8 @@ describe('RubricContainer', () => {
     await wait();
 
     wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
     expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
   });
 
@@ -368,27 +382,7 @@ describe('RubricContainer', () => {
 
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
-    stubFetchAiEvaluations(mockAiEvaluations);
-
-    /*
-    fetchStub
-      .onCall(6)
-      .returns(Promise.resolve(new Response(JSON.stringify(runningJson))));
-
-    fetchStub
-      .onCall(7)
-      .returns(Promise.resolve(new Response(JSON.stringify(successJson))));
-
-    fetchStub
-      .onCall(8)
-      .returns(
-        Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
-      );
-    fetchStub
-      .onCall(16)
-      .returns(
-        Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
-      );*/
+    stubFetchAiEvaluations([]);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -411,8 +405,12 @@ describe('RubricContainer', () => {
     expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
 
     // 2. User clicks button to run analysis
-    stubFetchEvalStatusForUser(pendingJson);
 
+    // Stub out running the assessment and have it return pending status when asked next
+    const stubRunAiEvaluationsForUser = fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/))
+      .returns(Promise.resolve(new Response(JSON.stringify({}))));
+    stubFetchEvalStatusForUser(pendingJson);
     wrapper.find('Button').at(0).simulate('click');
 
     // Wait for fetches and re-render
@@ -421,6 +419,7 @@ describe('RubricContainer', () => {
     wrapper.update();
 
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
+    expect(stubRunAiEvaluationsForUser).to.have.been.called;
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
     expect(wrapper.text()).include(i18n.aiEvaluationStatus_pending());
 
@@ -436,6 +435,7 @@ describe('RubricContainer', () => {
     expect(wrapper.text()).include(i18n.aiEvaluationStatus_in_progress());
 
     stubFetchEvalStatusForUser(successJson);
+    stubFetchAiEvaluations(mockAiEvaluations);
 
     // 6. Move clock forward 5 seconds and re-render
     clock.tick(5000);
@@ -462,8 +462,9 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    stubFetchEvalStatusForUser(returnedJson);
-    stubFetchEvalStatusForAll(returnedJsonAll);
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -473,6 +474,7 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
@@ -482,7 +484,8 @@ describe('RubricContainer', () => {
     await wait();
 
     wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_error());
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
   });
@@ -499,8 +502,9 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    stubFetchEvalStatusForUser(returnedJson);
-    stubFetchEvalStatusForAll(returnedJsonAll);
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -510,6 +514,7 @@ describe('RubricContainer', () => {
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
           reportingData={{}}
+          sectionId={42}
           open
         />
       </Provider>
@@ -519,7 +524,8 @@ describe('RubricContainer', () => {
     await wait();
 
     wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pii_error());
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
   });
@@ -536,8 +542,9 @@ describe('RubricContainer', () => {
       csrfToken: 'abcdef',
     };
 
-    stubFetchEvalStatusForUser(returnedJson);
-    stubFetchEvalStatusForAll(returnedJsonAll);
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -546,6 +553,7 @@ describe('RubricContainer', () => {
           studentLevelInfo={defaultStudentInfo}
           teacherHasEnabledAi={true}
           currentLevelName={'test_level'}
+          sectionId={42}
           reportingData={{}}
           open
         />
@@ -556,7 +564,8 @@ describe('RubricContainer', () => {
     await wait();
 
     wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
     expect(wrapper.text()).to.include(
       i18n.aiEvaluationStatus_profanity_error()
     );
@@ -565,6 +574,10 @@ describe('RubricContainer', () => {
 
   // react testing library
   it('moves rubric container when user clicks and drags component', async () => {
+    stubFetchEvalStatusForUser(successJson);
+    stubFetchEvalStatusForAll(successJsonAll);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
     const {getByTestId} = render(
       <Provider store={store}>
         <RubricContainer
@@ -594,5 +607,48 @@ describe('RubricContainer', () => {
     const newPosition = element.style.transform;
 
     expect(newPosition).to.not.equal(initialPosition);
+  });
+
+  it('renders a RubricSubmitFooter if student data for an evaluation level', () => {
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        studentLevelInfo={{name: 'Grace Hopper'}}
+        teacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        open
+      />
+    );
+    expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+  });
+
+  it('does not render a RubricSubmitFooter if no student data', () => {
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        teacherHasEnabledAi={true}
+        currentLevelName={'test_level'}
+        reportingData={{}}
+        canProvideFeedback
+        open
+      />
+    );
+    expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
+  });
+
+  it('does not render a RubricSubmitFooter if not on an evaluated level even if student data exists', () => {
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        studentLevelInfo={{name: 'Grace Hopper'}}
+        teacherHasEnabledAi={true}
+        currentLevelName={'different_level'}
+        reportingData={{}}
+        canProvideFeedback
+        open
+      />
+    );
+    expect(wrapper.find('RubricSubmitFooter')).to.have.lengthOf(0);
   });
 });

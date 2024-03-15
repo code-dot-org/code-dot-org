@@ -28,6 +28,13 @@ function RubricSubmitFooter({
   // redux
   teacherId,
 }) {
+  const [feedbackLoaded, setFeedbackLoaded] = useState(false);
+  const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
+  const [errorSubmitting, setErrorSubmitting] = useState(false);
+  const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
+  const [keepWorking, setKeepWorking] = useState(false);
+  const [csrfToken, setCsrfToken] = useState('');
+
   // When the rubric opens, we should get the current feedback, if any
   useEffect(() => {
     if (open && studentLevelInfo) {
@@ -39,7 +46,7 @@ function RubricSubmitFooter({
       getTeacherFeedbackForStudent(studentId, levelId, scriptId).done(
         (data, _, request) => {
           // Get the token for the future submission
-          setToken(request.getResponseHeader('csrf-token'));
+          setCsrfToken(request.getResponseHeader('csrf-token'));
 
           // It returns all feedback records, we can just get the first one
           const json = data[0];
@@ -61,13 +68,6 @@ function RubricSubmitFooter({
     rubric.script.id,
     studentLevelInfo,
   ]);
-
-  const [feedbackLoaded, setFeedbackLoaded] = useState(false);
-  const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
-  const [errorSubmitting, setErrorSubmitting] = useState(false);
-  const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
-  const [keepWorking, setKeepWorking] = useState(false);
-  const [token, setToken] = useState('');
 
   // The first stage of submission is the progress state submission
   // via the teacher_feedbacks API
@@ -94,7 +94,7 @@ function RubricSubmitFooter({
     };
 
     // Submit the teacher feedback and then submit the rubric feedback
-    updateTeacherFeedback(payload, token)
+    updateTeacherFeedback(payload, csrfToken)
       .done(submitFeedbackToEndpoint)
       .fail(() => {
         setIsSubmittingToStudent(false);
@@ -160,7 +160,7 @@ function RubricSubmitFooter({
           disabled={isSubmittingToStudent || !feedbackLoaded}
         />
         {errorSubmitting && (
-          <div>
+          <div id="ui-feedback-submitted-error">
             <BodyFourText className={style.errorMessage}>
               {i18n.errorSubmittingFeedback()}
             </BodyFourText>
