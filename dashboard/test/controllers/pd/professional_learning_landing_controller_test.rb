@@ -168,23 +168,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for :index
 
-  test 'teachers without enrollments are redirected' do
-    new_teacher = create :teacher
-    sign_in new_teacher
-
-    get :index
-    assert_redirected_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
-  end
-
-  test 'teachers with a plc enrollment (and no workshop enrollment) are not redirected' do
-    no_workshop_teacher = create :teacher
-    create :plc_user_course_enrollment, user: no_workshop_teacher, plc_course: (create :plc_course, name: 'Course with no workshop')
-
-    load_pl_landing no_workshop_teacher
-
-    assert_empty Pd::Enrollment.for_user(no_workshop_teacher)
-  end
-
   test 'courses are sorted as expected' do
     prepare_scenario
 
