@@ -1,4 +1,60 @@
+// Custom styles for code.org/professional-learning/international
+// — supplemental to shared/css/design-system-pegasus.scss
 
-p {
-    color: red;
+@import "breakpoints";
+
+// Hero banner
+.hero-banner-basic {
+  background: url("/images/banners/banner-bg-maze-dots-light.png") center repeat;
+  background-color: #233346;
+
+  .text-wrapper {
+    width: 60%;
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    width: 30%;
+    text-align: center;
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .videothumbnail {
+      height: 250px;
+      width: auto;
+    }
+  }
+}
+
+.course_info_detail {
+  margin-bottom: 0 !important;
+}
+
+.bg-neutral-dark {
+  h2 {
+    color: #FFF;
+  }
+}
+
+.student_projects {
+  h2 {
+    margin-bottom: 1em;
+  }
+}
+
+.continue_learning {
+  background: #FFF;
+  margin-top: 3em;
+
+  a {
+    display: block;
+    width: fit-content;
+    margin-top: 1em;
+  }
 }

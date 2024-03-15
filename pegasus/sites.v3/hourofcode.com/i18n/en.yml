@@ -1786,6 +1786,49 @@
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button: "Explore the catalog"
 
+  poetry_page:
+    heading: "Coding with Poetry"
+    desc: "Explore how coding can bring poems to life, creating your own digital poetry masterpieces. Available in 25+ languages!"
+    skinny_banner: "Join us in celebrating Poetry Month from a new perspective!"
+    poetry_course_card:
+      format: "Format:"
+    poetry_course_content:
+      heading: "Getting started with Coding with Poetry"
+      desc: "Choose your adventure in creativity and code with our engaging lessons, designed to spark imagination and technical skills through the art of poetry."
+      poem_art:
+        overline: "One hour"
+        title: "Poem Art"
+        desc: "Embark on a creative coding journey with 'Poem Art', a popular Hour of Code activity! In just one hour, students will explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code."
+        format: "Self-paced"
+        start_course: "Start lesson"
+        start_course_aria_label: "Start Poem Art lesson"
+      coding_with_poetry:
+        overline: "One week"
+        title: "Coding with Poetry"
+        desc: "Take the next step beyond Poem Art with this week-long module. Perfect for classroom learning, encourage students to delve deeper into coding concepts and language arts, as they design, code, and share their own interactive poetry stories."
+        format: "Teacher-led (suggested)"
+        start_course: "Start module"
+        start_course_aria_label: "Start Coding with Poetry module"
+    continue_learning:
+      title: "Continue learning after Coding with Poetry"
+      desc: "Coding with Poetry is just one module in our cross-disciplinary Computer Science Connections curricula."
+      explore_pl: "Explore professional learning"
+      button_curricula: "View curricula"
+    additional_resources:
+      desc: "From diverse curriculum offerings, to short educational videos, explore all the things Code.org has to offer."
+      try_hoc:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button_label: "See Hour of Code activites"
+      NAIPI:
+        title: "NAIPI"
+        desc: "Code.org’s Native American and Indigenous Peoples Initiative presents the integration of Native American perspectives and cultural richness in education and technology. "
+        button_label: "Learn more about NIAPI"
+      curriculum_catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button_label: "Explore the catalog"
+
   app_lab_page:
     heading: "App Lab"
     subheading: "Create an app with Javascript"
