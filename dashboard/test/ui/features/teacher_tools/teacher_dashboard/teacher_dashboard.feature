@@ -115,6 +115,7 @@ Feature: Using the teacher dashboard
     And I see ".uitest-detail-cell"
 
     # Progress tab V2
+    
 
   @eyes
   Scenario: Eyes tests for section projects with thumbnails
