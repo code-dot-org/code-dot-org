@@ -297,7 +297,7 @@ const WEBPACK_BASE_CONFIG = {
               transpileOnly: true,
               configFile: 'tsconfig.build.json',
               getCustomTransformers: () => ({
-                before: [envConstants.HOT && new ReactRefreshTypeScript()],
+                before: envConstants.HOT ? [new ReactRefreshTypeScript()] : [],
               }),
             },
           },
@@ -696,7 +696,7 @@ function createWebpackConfig({
         ? [new WebpackNotifierPlugin({alwaysNotify: true})]
         : []),
       new PyodidePlugin(),
-      envConstants.HOT && new ReactRefreshWebpackPlugin(),
+      ...(envConstants.HOT ? [new ReactRefreshWebpackPlugin()] : []),
     ],
     devServer: envConstants.HOT
       ? {
