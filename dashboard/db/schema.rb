@@ -2394,7 +2394,6 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
   add_foreign_key "peer_reviews", "users", column: "submitter_id"
   add_foreign_key "plc_course_units", "scripts"
   add_foreign_key "plc_learning_modules", "stages"
-  add_foreign_key "project_use_datablock_storages", "projects"
   add_foreign_key "queued_account_purges", "users"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
