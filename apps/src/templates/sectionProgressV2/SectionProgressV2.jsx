@@ -9,7 +9,24 @@ import {connect} from 'react-redux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import styles from './progress-table-v2.module.scss';
 import UnitSelectorV2 from '../UnitSelectorV2';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
+const getLocalStorageString = (scriptId, sectionId) =>
+  `expandedLessonProgressV2-${scriptId}-${sectionId}`;
+
+const getLocalStorage = (scriptId, sectionId) => {
+  try {
+    return (
+      JSON.parse(
+        tryGetLocalStorage(getLocalStorageString(scriptId, sectionId), [])
+      ) || []
+    );
+  } catch (e) {
+    // If we fail to parse the local storage, default to nothing expanded.
+    return [];
+  }
+};
 
 function SectionProgressV2({
   scriptId,
@@ -18,7 +35,25 @@ function SectionProgressV2({
   isLoadingProgress,
   isRefreshingProgress,
 }) {
-  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+  const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
+    getLocalStorage(scriptId, sectionId)
+  );
+
+  React.useEffect(
+    () => setExpandedLessonIds(getLocalStorage(scriptId, sectionId)),
+    [scriptId, sectionId]
+  );
+
+  const setExpandedLessons = React.useCallback(
+    expandedLessonIds => {
+      setExpandedLessonIds(expandedLessonIds);
+      trySetLocalStorage(
+        getLocalStorageString(scriptId, sectionId),
+        JSON.stringify(expandedLessonIds)
+      );
+    },
+    [setExpandedLessonIds, scriptId, sectionId]
+  );
 
   const levelDataInitialized = React.useMemo(() => {
     return unitData && !isLoadingProgress && !isRefreshingProgress;
