@@ -7,9 +7,9 @@ import {Config} from './Config';
 import {CDOIDE, ConfigType, ProjectType} from 'cdo-ide-poc';
 
 //import CDOEditor from './Editor';
-import {useAppSelector} from '../util/reduxHooks';
-import {MultiFileSource} from '../lab2/types';
-import Lab2Registry from '../lab2/Lab2Registry';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 const instructions = `Add html pages and preview them in the right pane.
 

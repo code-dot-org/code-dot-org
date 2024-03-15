@@ -10,7 +10,7 @@ import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {MultiFileSource} from '../lab2/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 interface PermissionResponse {
   permissions: string[];
