@@ -360,3 +360,5 @@ gem 'rack-cors', '~> 2.0.1'
 gem 'http', '~> 5.0'
 
 gem 'statsig', '~> 1.33'
+
+gem 'mailjet', '~> 1.7.3'

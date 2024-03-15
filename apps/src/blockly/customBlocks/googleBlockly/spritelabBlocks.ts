@@ -1,5 +1,4 @@
-import _ from 'lodash';
-import msg from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
 import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
@@ -13,6 +12,16 @@ import {
   toolboxConfigurationSupportsEditButton,
 } from './proceduresBlocks';
 import {getAlphanumericId} from '@cdo/apps/utils';
+import {Block, Field, WorkspaceSvg} from 'blockly';
+import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import {Abstract} from 'blockly/core/events/events_abstract';
+import {BlockDrag} from 'blockly/core/events/events_block_drag';
+import {BlockCreate} from 'blockly/core/events/events_block_create';
+import {BlockChange} from 'blockly/core/events/events_block_change';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import CdoFieldToggle from '@cdo/apps/blockly/addons/cdoFieldToggle';
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 
 const INPUTS = {
   FLYOUT: 'flyout_input',
@@ -24,11 +33,14 @@ export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
   // miniToolboxBlocks is a backwards-compatible parameter used in CDO Blockly.
-  initializeMiniToolbox(miniToolboxBlocks, renderToolboxBeforeStack = false) {
+  initializeMiniToolbox(
+    _miniToolboxBlocks: string[],
+    renderToolboxBeforeStack = false
+  ) {
     // Function to create the flyout
-    const createFlyoutField = function (block) {
+    const createFlyoutField = function (block: Block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
-      const flyoutField = new Blockly.FieldFlyout(_, {
+      const flyoutField = new Blockly.FieldFlyout('', {
         flyoutKey: flyoutKey,
         name: 'FLYOUT',
       });
@@ -49,8 +61,11 @@ export const blocks = {
 
     // Function to toggle the flyout visibility, which actually creates or
     // deletes the flyout depending on the current visibility.
-    const toggleFlyout = function () {
+    const toggleFlyout = function (this: CdoFieldToggle) {
       const block = this.getSourceBlock();
+      if (!block) {
+        return;
+      }
       if (!block.getInput(INPUTS.FLYOUT)) {
         const flyoutField = createFlyoutField(block);
         flyoutField.showEditor();
@@ -86,8 +101,9 @@ export const blocks = {
 
   // Adds a toggle button field to a block. Requires other inputs to already exist.
   appendMiniToolboxToggle(
-    miniToolboxBlocks,
-    flyoutToggleButton,
+    this: Block,
+    miniToolboxBlocks: string[],
+    flyoutToggleButton: CdoFieldToggle,
     renderingInFunctionEditor = false
   ) {
     // In the function editor, this call prevents a dummy input from being used as a
@@ -117,12 +133,12 @@ export const blocks = {
     }
 
     if (this.workspace.rendered) {
-      this.workspace.registerToolboxCategoryCallback(
+      (this.workspace as WorkspaceSvg).registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
         () => {
-          let blocks = [];
+          const blocks: FlyoutItemInfoArray = [];
           miniToolboxBlocks.forEach(blockType => {
-            const block = {
+            const block: BlockInfo = {
               kind: 'block',
               type: blockType,
             };
@@ -162,11 +178,11 @@ export const blocks = {
 
     // XML serialization hooks
     this.mutationToDom = function () {
-      var container = Blockly.utils.xml.createElement('mutation');
+      const container = Blockly.utils.xml.createElement('mutation');
       // Ex. add <mutation useDefaultIcon="false"/> to block XML
       container.setAttribute(
         'useDefaultIcon',
-        flyoutToggleButton.useDefaultIcon
+        `${flyoutToggleButton.useDefaultIcon}`
       );
       return container;
     };
@@ -182,7 +198,7 @@ export const blocks = {
 
   // Set up this block to shadow a image source block's image, if needed. This will also
   // deserialize the image source id from the block configuration, if it exists.
-  setUpBlockShadowing() {
+  setUpBlockShadowing(this: ExtendedBlockSvg) {
     // We only set up block shadowing for blocks that have a type in spriteLabPointers.
     if (Object.keys(spriteLabPointers).includes(this.type)) {
       // saveExtraState is used to serialize the image source block ID.
@@ -222,7 +238,7 @@ export const blocks = {
     Blockly.common.defineBlocks(behaviorBlocks);
 
     const generator = Blockly.getGenerator();
-    generator.behavior_definition = function (block) {
+    generator.behavior_definition = function (block: ProcedureBlock) {
       // If we don't have a behavior id, generate a random id.
       // This ensures the hidden definition block will generate valid code.
       if (!block.behaviorId) {
@@ -270,7 +286,7 @@ export const blocks = {
       const args = [];
       args.push(
         generator.nameDB_.getName(
-          msg.thisSprite(),
+          commonI18n.thisSprite(),
           Blockly.Names.NameType.VARIABLE
         )
       );
@@ -300,7 +316,7 @@ export const blocks = {
     };
     generator.gamelab_behavior_get = function () {
       // Generating 'undefined' mimics the code for a missing block.
-      let undefinedCode = ['undefined', generator.ORDER_ATOMIC];
+      const undefinedCode = ['undefined', generator.ORDER_ATOMIC];
       // If we don't have a behavior Id, find on the definition block.
       if (!this.behaviorId) {
         const procedureModel = this.getProcedureModel();
@@ -311,7 +327,7 @@ export const blocks = {
         const definitionBlock = Blockly.Procedures.getDefinition(
           procedureModel.name,
           Blockly.getHiddenDefinitionWorkspace()
-        );
+        ) as ProcedureBlock;
         this.behaviorId = definitionBlock?.behaviorId;
         // If we somehow still don't have a behavior id, fail gracefully.
         if (!this.behaviorId) {
@@ -326,10 +342,10 @@ export const blocks = {
 
   // All logic for behavior picker custom input type
   addBehaviorPickerEditButton(
-    block,
-    inputConfig,
-    currentInputRow,
-    dropdownField
+    block: ProcedureBlock,
+    inputConfig: {name: string; label: string},
+    _currentInputRow: Field,
+    dropdownField: CdoFieldDropdown
   ) {
     const behaviorsFound =
       dropdownField.getOptions().length > 1 ||
@@ -344,7 +360,7 @@ export const blocks = {
       toolboxConfigurationSupportsEditButton(block)
     ) {
       const editButton = new Blockly.FieldButton({
-        value: msg.edit(),
+        value: commonI18n.edit(),
         onClick: editButtonHandler,
         colorOverrides: {button: 'blue', text: 'white'},
         allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
@@ -362,19 +378,20 @@ export const blocks = {
         const procedureMap = block.workspace.getProcedureMap();
         let procedure = undefined;
         for (const value of procedureMap.values()) {
-          if (value.name === fieldValue) {
+          if (value.getName() === fieldValue) {
             procedure = value;
             break;
           }
         }
-        return procedure;
+        // We should always find the procedure in the map.
+        return procedure!;
       };
     }
   },
   // Get a list of behavior options for a dropdown field, based on
   // blocks found on the main workspace.
   getAllBehaviorOptions() {
-    const noBehaviorLabel = msg.behaviorsNotFound();
+    const noBehaviorLabel = commonI18n.behaviorsNotFound();
     const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
     // Behavior definition blocks are always moved to the hidden workspace.
     const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
@@ -383,11 +400,13 @@ export const blocks = {
     }
     const behaviorBlocks = definitionWorkspace
       .getTopBlocks()
-      .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
+      .filter(
+        block => block.type === BLOCK_TYPES.behaviorDefinition
+      ) as ProcedureBlock[];
     // Menu options are an array, each option containing a human-readable part,
     // and a language-neutral string. Both are the same in this case.
     const behaviorOptions = behaviorBlocks.map(block => [
-      block.getProcedureModel().name,
+      block.getProcedureModel().getName(),
       block.behaviorId,
     ]);
     behaviorOptions.sort();
@@ -402,21 +421,27 @@ export const blocks = {
 // HELPERS
 // On change event for a block that shadows an image source block.
 // On an event, checks if the block image should change, and update it.
-function onBlockImageSourceChange(event, block) {
+function onBlockImageSourceChange(event: Abstract, block: ExtendedBlockSvg) {
   const imagePreview =
-    block.inputList && block.inputList[0] && block.inputList[0].fieldRow[1];
+    block.inputList &&
+    block.inputList[0] &&
+    (block.inputList[0].fieldRow[1] as CdoFieldImage);
   if (!imagePreview) {
     return;
   }
-  if (event.type === Blockly.Events.BLOCK_DRAG && event.blockId === block.id) {
+  if (
+    event.type === Blockly.Events.BLOCK_DRAG &&
+    (event as BlockDrag).blockId === block.id
+  ) {
     // If this is a start event, prevent image changes.
     // If it is an end event, allow image changes again.
-    imagePreview.setAllowImageChange(!event.isStart);
+    imagePreview.setAllowImageChange(!(event as BlockDrag).isStart);
   }
   if (
     (event.type === Blockly.Events.BLOCK_CREATE &&
-      event.blockId === block.id) ||
-    (event.type === Blockly.Events.BLOCK_CHANGE && event.blockId === block.id)
+      (event as BlockCreate).blockId === block.id) ||
+    (event.type === Blockly.Events.BLOCK_CHANGE &&
+      (event as BlockChange).blockId === block.id)
   ) {
     // We can skip the following events:
     // This block's create event, as we handle setting the image on block creation
