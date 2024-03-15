@@ -476,10 +476,7 @@ module.exports = function (grunt) {
   (config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: [
-        'watch',
-        envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch',
-      ],
+      tasks: ['watch', 'webpack-dev-server'],
       options: {
         logConcurrentOutput: true,
       },
