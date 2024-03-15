@@ -1,6 +1,5 @@
 require 'user'
 require 'authentication_option'
-require 'cdo/honeybadger'
 
 class Policies::Lti
   module AccessTokenScopes
