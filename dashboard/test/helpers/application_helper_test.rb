@@ -25,9 +25,9 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 'staging.code.org', CDO.canonical_hostname('code.org')
   end
 
-  test "canonical_hostname in drone" do
+  test "canonical_hostname in CI" do
     set_env :test
-    CDO.stubs(:drone_webserver?).returns(true)
+    CDO.stubs(:ci_webserver?).returns(true)
     assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
     assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
   end
