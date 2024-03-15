@@ -34,6 +34,7 @@ function SectionProgressV2({
   unitData,
   isLoadingProgress,
   isRefreshingProgress,
+  isLevelProgressLoaded,
 }) {
   const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
     getLocalStorage(scriptId, sectionId)
@@ -56,8 +57,8 @@ function SectionProgressV2({
   );
 
   const levelDataInitialized = React.useMemo(() => {
-    return unitData && !isLoadingProgress && !isRefreshingProgress;
-  }, [unitData, isLoadingProgress, isRefreshingProgress]);
+    return unitData && isLevelProgressLoaded;
+  }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
     if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
@@ -101,6 +102,7 @@ SectionProgressV2.propTypes = {
   unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
+  isLevelProgressLoaded: PropTypes.bool.isRequired,
 };
 
 export default connect(state => ({
@@ -109,4 +111,8 @@ export default connect(state => ({
   unitData: getCurrentUnitData(state),
   isLoadingProgress: state.sectionProgress.isLoadingProgress,
   isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
+  isLevelProgressLoaded:
+    !!state.sectionProgress.studentLevelProgressByUnit[
+      state.unitSelection.scriptId
+    ],
 }))(SectionProgressV2);
