@@ -65,7 +65,8 @@ module Cdo
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
       sep = (domain.include?('.code.org')) ? '-' : '.'
-      return "localhost#{sep}#{domain}" if rack_env?(:development)
+      # developers and Drone servers use localhost
+      return "localhost#{sep}#{domain}" if rack_env?(:development) || drone_webserver?
       return "translate#{sep}#{domain}" if name == 'crowdin'
       "#{rack_env}#{sep}#{domain}"
     end
@@ -272,6 +273,11 @@ module Cdo
     # we use `thin`.
     def running_web_application?
       %w(puma thin).include?(File.basename($0))
+    end
+
+    # Is this code running in a webserver managed by Drone?
+    def drone_webserver?
+      running_web_application? && ENV['CI']
     end
 
     def shared_image_url(path)
