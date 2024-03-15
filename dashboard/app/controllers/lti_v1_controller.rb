@@ -133,12 +133,12 @@ class LtiV1Controller < ApplicationController
       redirect_params = {
         lti_integration_id: integration.id,
         deployment_id: deployment.id,
-        context_id: launch_context ? launch_context[:id] : nil,
+        context_id: launch_context&.[](:id),
         rlid: resource_link_id,
         nrps_url: nrps_url,
       }
 
-      destination_url = redirect_params.values.all?(&:present?) ? "#{target_link_uri}?#{redirect_params.to_query}" : "#{target_link_uri}?issuer=#{Policies::Lti.issuer_name(extracted_issuer_id)}"
+      destination_url = redirect_params.values.all?(&:present?) ? "#{target_link_uri}?#{redirect_params.to_query}" : target_link_uri
 
       if user
         sign_in user
@@ -173,8 +173,8 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
-  def render_sync_course_error(message, status, issuer = nil, error_code = nil)
-    @lti_section_sync_result = {issuer: issuer, error_code: error_code}
+  def render_sync_course_error(message, status, error = nil)
+    @lti_section_sync_result = {error: error}
     Honeybadger.notify(
       'LTI roster sync error',
       context: {
@@ -202,7 +202,7 @@ class LtiV1Controller < ApplicationController
       begin
         params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url])
       rescue ActionController::ParameterMissing => _exception
-        return render_sync_course_error("Attempting to sync a course or section from the wrong place.", :bad_request, params[:issuer], 400)
+        return render_sync_course_error("Attempting to sync a course or section from the wrong place.", :bad_request, "wrong_context")
       end
     end
 
@@ -212,7 +212,7 @@ class LtiV1Controller < ApplicationController
       # Populate vars from the section associated with the input code.
       lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code])
       unless lti_course
-        return render_sync_course_error('We couldn\'t find the given section.', :bad_request, error_code: 404)
+        return render_sync_course_error('We couldn\'t find the given section.', :bad_request,  "no_section")
       end
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
@@ -225,7 +225,7 @@ class LtiV1Controller < ApplicationController
       begin
         lti_integration = LtiIntegration.find(params[:lti_integration_id])
       rescue
-        return render_sync_course_error('LTI Integration not found', :bad_request, error_code: 401)
+        return render_sync_course_error('LTI Integration not found', :bad_request,  "no_integration")
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]
