@@ -1011,6 +1011,7 @@
   ai_carousel_heading: "What teachers say about AI with Code.org:"
   ai_carousel_quote_01: "This lesson also gave my students the opportunity to see that there is an element of opinion in classification systems. Later, when we started to see how bias can end up in AI, I was able to pull them back and remind them that the data used to train their models was based on choices."
   ai_carousel_quote_02: "My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!"
+  ai_explore_the_resources: "Explore the resources"
   ai_pl_heading: "Preparing to teach AI"
   ai_pl_subheading: "Prepare to teach AI using our self-paced online module."
   ai_pl_list_01: "Get an introduction to artificial intelligence and machine learning."
@@ -1021,6 +1022,8 @@
   ai_pl_duration: "Duration: 2 hours"
   ai_pl_title: "Teaching AI and Machine Learning"
   ai_pl_desc: "Introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab. and engage with machine learning apps. Consider real-world implications of AI and machine learning."
+  ai_promote_literacy: "Promote AI literacy. Support innovation. Ensure safety."
+  ai_section_body: "The latest resource from TeachAI, Foundational Policy Ideas for AI in Education, provides briefs, policy considerations, and presentation materials for policymakers to craft responsible policies for teaching with and about AI. Let's #TeachAI."
   ai_video_series_title: "How AI Works"
   ai_video_series_desc: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Then delve into issues like algorithmic bias and the ethics of AI decision-making. Watch the video series below, or [check out our How AI Works lessons](%{how_ai_works_url})!"
   ai_resources_heading: "Additional resources"
@@ -1752,6 +1755,117 @@
     join:
       heading: "Don't see your country?"
       desc: "While we currently do not actively recruit new partners into our professional learning program, we encourage organizations worldwide to join us in organizing the annual Hour of Code campaign as the first step to introducing computer science in your country. [Learn more about a partnership opportunity and apply here!](%{apply_url})"
+
+  tools_pages_shared:
+    glance:
+      titles:
+        ages: "Ages:"
+        level: "Level:"
+        make: "What you can make:"
+        devices: "Devices:"
+        browsers: "Browsers:"
+        languages: "Languages supported:"
+        accessibility: "Accessibility:"
+      button: "View documentation:"
+    featured_projects:
+      heading: "Featured student projects"
+      desc: "Explore more featured projects built by students like you in our featured project gallery."
+      button: "Featured project gallery"
+    resources:
+      heading: "Additional resources"
+      labs:
+        title: "Explore more labs"
+        desc: "Our labs offer supportive programming environments that allow students to create animations, design games, build apps and more!"
+        button: "View labs"
+      widgets:
+        title: "Explore widgets"
+        desc: "Delve into the fundamentals of computer science with our interactive widgets. These tools make abstract principles tangible and engaging."
+        button: "View widgets"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+
+  app_lab_page:
+    heading: "App Lab"
+    subheading: "Create an app with Javascript"
+    top:
+      desc: "App Lab is a programming environment where you can make simple apps right in the browser. Design an app, code in JavaScript with either blocks or text, then share your app in seconds."
+      button: "Try App Lab"
+    glance:
+      heading: "App Lab at a glance"
+      ages: "13+"
+      level: "Beginner"
+      make: "Simple Javascript apps"
+      devices: "Laptop, Chromebook, Tablet"
+      browsers: "All modern browsers"
+      languages: "English"
+      accessibility: "Text-to-speech, Closed captioning, Immersive reader"
+      documentation_desc: "Extensive documentation detailing specific functionality and use is available for App Lab."
+    projects:
+      heading: "See what you can make in App Lab!"
+      desc: "Explore some project guides for App Lab to get started with building apps using Javascript!"
+      button: "Try it out"
+      slider_sketch:
+        title: "Slider Sketch"
+        desc: "Use the sliders to draw cool patterns and designs. Challenge: Add another slider to change the thickness of the line."
+        aria_label: "Try the Slider Sketch project"
+      landmark_flashcards:
+        title: "Landmark Flashcards"
+        desc: "Use this app to create flashcards to learn a new subject or practice for a test. Challenge: add more cards to the deck or create a whole new deck."
+        aria_label: "Try the Landmark Flashcards project"
+      choose_adventure:
+        title: "Choose Your Own Adventure"
+        desc: "Choose carefully as you go through this short adventure. Challenge: continue the story by adding in more choices. Or create a different story!"
+        aria_label: "Try the Choose Your Own Adventure project"
+      poke_pig:
+        title: "Poke the Pig"
+        desc: "How many times you can poke the pig before time runs out? Add a button and event to be able to play again and again, so you can improve your score."
+        aria_label: "Try the Poke the Pig project"
+      pet_poll:
+        title: "Pet Poll"
+        desc: "Vote for your favorite pet in this fun app. Challenge: Add more animals so you can vote for more favorites."
+        aria_label: "Try the Pet Poll project"
+      pensive_painter:
+        title: "Pensive Painter"
+        desc: "Take a deep breath, relax, and paint whatever you desire. Challenge: Add a click event to clear the screen so you can start painting a new masterpiece."
+        aria_label: "Try the Pensive Painter project"
+      build:
+        heading: "Build your own app in App Lab"
+        desc: "Create your first project from scratch in App Lab."
+        button: "Try App Lab"
+    lessons:
+      heading: "App Lab in our curriculum"
+      desc: "Looking for a step by step introduction to making apps? Our curriculum will help you learn everything you need to get started with App Lab."
+      button_lesson: "View lesson"
+      button_curricula: "View curricula"
+      intro:
+        ages: "Ages 13+"
+        title: "Intro to App Lab"
+        desc: "Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming. (English Only)"
+        aria_label: "View the Intro to App Lab lesson"
+      csd:
+        ages: "Grades 6-10"
+        title: "Computer Science Discoveries"
+        desc: "Our most flexible course, this curriculum introduces students to building their own websites, apps, animations, games, and physical computing systems."
+        aria_label: "View the Computer Science Discoveries curricula"
+      csp:
+        ages: "Grades 10+"
+        title: "Computer Science Principles"
+        desc: "Introduces students to the foundational concepts of computer science and challenge them to explore how computing and technology can impact the world."
+        aria_label: "View the Computer Science Principles curricula"
+      self_paced_turtle:
+        ages: "Grades 9-12"
+        title: "Self-Paced Introduction to Turtle Programming in App Lab"
+        desc: "Unlock the ability to make rich, interactive apps with JavaScript in the App Lab!"
+        aria_label: "View the Self-Paced Introduction to Turtle Programming curricula"
+      event_driven:
+        ages: "Grades 9-12"
+        title: "Event-Driven Programming in App Lab"
+        desc: "Go at your own pace with this introduction to the App Lab programming environment, in which students use JavaScript to create interactive apps."
+        aria_label: "View the Event-Driven Programming curricula"
+    videos:
+      heading: "Videos to help you get started with App Lab"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

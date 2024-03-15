@@ -4,7 +4,6 @@ import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
-import experiments from '@cdo/apps/util/experiments';
 import {
   getStore,
   registerReducers,
@@ -73,7 +72,7 @@ describe('RubricContent', () => {
   };
 
   const aiEvaluations = [
-    {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+    {id: 2, learning_goal_id: 2, understanding: 2, aiConfidencePassFail: 2},
   ];
 
   it('displays LearningGoals component with correct props when viewing student work on assessment level', async () => {
@@ -95,7 +94,6 @@ describe('RubricContent', () => {
   });
 
   it('displays Student and Section selectors', () => {
-    experiments.setEnabled('ai-rubrics-redesign', true);
     const wrapper = mount(
       <Provider store={store}>
         <RubricContent {...defaultProps} />
@@ -103,7 +101,6 @@ describe('RubricContent', () => {
     );
     expect(wrapper.find('SectionSelector').length).to.equal(1);
     expect(wrapper.find('StudentSelector').length).to.equal(1);
-    experiments.setEnabled('ai-rubrics-redesign', false);
   });
 
   it('shows learning goals with correct props when viewing student work on non assessment level', () => {

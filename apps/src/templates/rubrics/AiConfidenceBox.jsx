@@ -20,8 +20,7 @@ export default function AiConfidenceBox({aiConfidence}) {
       style.aiConfidenceBarMedium,
       style.aiConfidenceBarHigh,
     ];
-    const ratingText = confidenceStyles[aiConfidence - 1];
-    return i18n.aiConfidence({aiConfidence: ratingText});
+    return confidenceStyles[aiConfidence - 1];
   }, [aiConfidence]);
 
   return (

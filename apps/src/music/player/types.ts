@@ -61,6 +61,18 @@ export interface AudioPlayer {
 
   /** Cancel pending audio events */
   cancelPendingEvents(): void;
+
+  /** Enable/disable looping */
+  setLoopEnabled(enabled: boolean): void;
+
+  /** Set the loop start point */
+  setLoopStart(loopStart: number): void;
+
+  /** Set the loop end point */
+  setLoopEnd(loopEnd: number): void;
+
+  /** Jump to the given playback position */
+  jumpToPosition(position: number): void;
 }
 
 /** A single sound played on the timeline */

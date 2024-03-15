@@ -85,6 +85,22 @@ const optionsList = [
       {value: 'tonejs', description: 'Use the ToneJS player.'},
     ],
   },
+  {
+    name: 'advanced-controls-enabled',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Disable advanced controls for the ToneJS player (default).',
+      },
+      {
+        value: 'true',
+        description:
+          'Enable advanced controls for the ToneJS player. Requires player=tonejs to be set.',
+      },
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {

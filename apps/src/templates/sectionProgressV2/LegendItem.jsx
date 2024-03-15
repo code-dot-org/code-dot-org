@@ -5,11 +5,11 @@ import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {ITEM_TYPE_SHAPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
 
-export default function LegendItem({itemType, labelText, colorOverride}) {
+export default function LegendItem({itemType, labelText}) {
   return (
     <div className={styles.legendItem}>
       <div className={styles.legendIcon}>
-        <ProgressIcon itemType={itemType} colorOverride={colorOverride} />
+        <ProgressIcon itemType={itemType} />
       </div>
       <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
     </div>
@@ -19,5 +19,4 @@ export default function LegendItem({itemType, labelText, colorOverride}) {
 LegendItem.propTypes = {
   labelText: PropTypes.string,
   itemType: ITEM_TYPE_SHAPE,
-  colorOverride: PropTypes.string,
 };

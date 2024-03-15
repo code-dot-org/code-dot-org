@@ -17,6 +17,9 @@ import Controls from './Controls';
 import Timeline from './Timeline';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import MusicPlayer from '../player/MusicPlayer';
+import useUpdatePlayer from './hooks/useUpdatePlayer';
+import AdvancedControls from './AdvancedControls';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -29,6 +32,7 @@ interface MusicLabViewProps {
   redo: () => void;
   clearCode: () => void;
   validator: MusicValidator;
+  player: MusicPlayer;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -42,7 +46,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   redo,
   clearCode,
   validator,
+  player,
 }) => {
+  useUpdatePlayer(player);
   const dispatch = useAppDispatch();
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
@@ -165,6 +171,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [setPlaying, playTrigger, hasTrigger, hideHeaders]
   );
 
+  const showAdvancedControls =
+    AppConfig.getValue('player') === 'tonejs' &&
+    AppConfig.getValue('advanced-controls-enabled') === 'true';
+
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
       {showInstructions &&
@@ -192,6 +202,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             }
           >
             <div id={blocklyDivId} />
+            {showAdvancedControls && (
+              <div className={moduleStyles.advancedControlsContainer}>
+                <AdvancedControls />
+              </div>
+            )}
           </PanelContainer>
         </div>
 
