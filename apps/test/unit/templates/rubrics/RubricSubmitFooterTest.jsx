@@ -306,8 +306,8 @@ describe('RubricSubmitFooter', () => {
     await wait();
 
     // See that the submit button is enabled
-    expect(checkbox.disabled).to.be.false;
-    expect(button.disabled).to.be.false;
+    expect(checkbox).to.not.be.disabled;
+    expect(button).to.not.be.disabled;
 
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     await user.click(button);

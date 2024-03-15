@@ -16,6 +16,7 @@ import {Provider} from 'react-redux';
 import i18n from '@cdo/locale';
 
 describe('RubricSettings', () => {
+  let clock;
   let fetchStub;
   let store;
   let refreshAiEvaluationsSpy;
@@ -45,8 +46,11 @@ describe('RubricSettings', () => {
   });
 
   afterEach(() => {
-    utils.queryParams.restore();
+    if (clock) {
+      clock.restore();
+    }
     restoreRedux();
+    utils.queryParams.restore();
     fetchStub.restore();
   });
 
@@ -163,7 +167,7 @@ describe('RubricSettings', () => {
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
 
-    const clock = sinon.useFakeTimers();
+    clock = sinon.useFakeTimers();
 
     const wrapper = mount(
       <Provider store={store}>

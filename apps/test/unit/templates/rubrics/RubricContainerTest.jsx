@@ -22,6 +22,7 @@ import $ from 'jquery';
 import {render, fireEvent, act} from '@testing-library/react';
 
 describe('RubricContainer', () => {
+  let clock;
   let store;
   let fetchStub;
   let ajaxStub;
@@ -74,6 +75,9 @@ describe('RubricContainer', () => {
   });
 
   afterEach(() => {
+    if (clock) {
+      clock.restore();
+    }
     restoreRedux();
     utils.queryParams.restore();
     fetchStub.restore();
@@ -378,7 +382,7 @@ describe('RubricContainer', () => {
       7. Fetch returns a json object with puts AI Status into SUCCESS state
       8. Calls refreshAiEvaluations
     */
-    const clock = sinon.useFakeTimers();
+    clock = sinon.useFakeTimers();
 
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
