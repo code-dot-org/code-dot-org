@@ -453,7 +453,7 @@ class Projects
 
   # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
   def set_use_datablock_storage(project_id, project_type)
-    if DatablockStorageController::SUPPORTED_PROJECT_TYPES.include? project_type
+    if project_type == 'applab'
       # While we transition, a fraction of new projects will be set at creation
       # to use datablock storage. As we gain confidence, we can increase this
       # DCDO flag to 1.0. At that point, we're ready to migrate all the old projects.
