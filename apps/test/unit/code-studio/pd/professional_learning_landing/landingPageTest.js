@@ -18,7 +18,7 @@ describe('LandingPage', () => {
     render(<LandingPage {...DEFAULT_PROPS} {...propOverrides} />);
   }
 
-  it('page is as expected for a new teacher', () => {
+  it('page shows a getting started banner for a new teacher without an existing application, upcoming workshop, or pl course', () => {
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
@@ -34,7 +34,7 @@ describe('LandingPage', () => {
       .exist;
   });
 
-  it('page is as expected for a teacher with a pending survey', () => {
+  it('page shows a survey banner for a teacher with a pending survey', () => {
     renderDefault();
     expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).to.not
       .exist;
@@ -43,7 +43,7 @@ describe('LandingPage', () => {
     screen.getByText('Online Professional Learning Courses');
   });
 
-  it('page is as expected for a CSD/CSP teacher with a pending survey', () => {
+  it('page shows a survey banner for a CSD/CSP teacher with a pending survey', () => {
     renderDefault();
     expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).to.not
       .exist;
@@ -52,7 +52,7 @@ describe('LandingPage', () => {
     screen.getByText('Online Professional Learning Courses');
   });
 
-  it('page is as expected for a teacher with no pending survey but upcoming workshops and plc enrollments', () => {
+  it('page shows upcoming workshops and plc enrollments but no survey banner if no pending survey exists', () => {
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
