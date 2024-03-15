@@ -12,10 +12,15 @@ const ALWAYS_SEND = false;
 
 class StatsigReporter {
   constructor() {
+    const managed_test_environment = document.querySelector(
+      'script[data-managed-test-server]'
+    );
+    const local_mode =
+      isProductionEnvironment() || managed_test_environment ? false : true;
     const options = {
       environment: {tier: getEnvironment()},
       network_timeout: 5,
-      local_mode: !isProductionEnvironment(),
+      local_mode: local_mode,
     };
     const api_key = document.querySelector(
       'script[data-statsig-api-client-key]'
