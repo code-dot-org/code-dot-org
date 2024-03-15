@@ -151,7 +151,7 @@ export default class CoreLibrary {
       const value = this.getVariableValue(name);
 
       // Determine if the label needs truncation and append an ellipsis if so
-      let displayLabel =
+      const displayLabel =
         label.length > config.maxLabelLength
           ? label.slice(0, config.maxLabelLength) + '…'
           : label;
@@ -164,7 +164,7 @@ export default class CoreLibrary {
       // Truncate the value if necessary to fit within the available space
       const availableSpaceForValue =
         APP_WIDTH - totalReservedSpace - labelWidth;
-      let displayValue = drawUtils.truncateText(
+      const displayValue = drawUtils.truncateText(
         this.p5,
         `${value}`,
         availableSpaceForValue,
