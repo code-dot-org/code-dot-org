@@ -13,16 +13,11 @@ import {
   isDevelopmentEnvironment,
 } from '../../utils';
 import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
-
-import {EVENT_GROUPS} from './AnalyticsConstants';
-
+import {EVENT_GROUPS, PLATFORMS} from './AnalyticsConstants';
 import DCDO from '@cdo/apps/dcdo';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
-const AMPLITUDE = 'Amplitude';
-const STATSIG = 'Statsig';
-const BOTH = 'Both';
 
 class AnalyticsReporter {
   constructor() {
@@ -60,11 +55,11 @@ class AnalyticsReporter {
    *  StatsigReporter, or the files sending events can import that file instead
    *  and we can delete this one.
    */
-  sendEvent(eventName, payload, analyticsTool = AMPLITUDE) {
-    if ([STATSIG, BOTH].includes(analyticsTool)) {
+  sendEvent(eventName, payload, analyticsTool = PLATFORMS.AMPLITUDE) {
+    if ([PLATFORMS.STATSIG, PLATFORMS.BOTH].includes(analyticsTool)) {
       statsigReporter.sendEvent(eventName, payload);
     }
-    if ([AMPLITUDE, BOTH].includes(analyticsTool)) {
+    if ([PLATFORMS.AMPLITUDE, PLATFORMS.BOTH].includes(analyticsTool)) {
       this.sendAnalyticsEvent(eventName, payload);
     }
   }
