@@ -13,7 +13,7 @@ export default function copyToClipboard(
     // Modern technique.
     navigator.clipboard.writeText(str).then(onSuccess, onFailure);
   } else {
-    // Legacy technique.
+    // Legacy technique. Remove after July 1, 2024 when we no longer support Safari 13.
     window.getSelection().removeAllRanges();
 
     const tempDiv = document.createElement('pre');
