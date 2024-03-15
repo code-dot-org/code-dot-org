@@ -60,7 +60,8 @@ export default function LessonProgressColumnHeader({
         className={classNames(
           styles.gridBox,
           styles.lessonHeaderCell,
-          styles.pointerMouse
+          styles.pointerMouse,
+          'ui-progress-column'
         )}
         data-tip
         data-for={getTooltipId(lesson)}

@@ -33,7 +33,11 @@ Feature: Using the teacher dashboard
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
-    # Progress tab V2
+    # Toggle to V2 progress view
+    Then I click selector "#ui-test-link-to-new-progress-view"
+    And I wait until element "h6:contains(Icon key)" is visible
+    And I wait until element "#ui-test-progress-table-v2" is visible
+    And element "#ui-test-progress-table-v2" is visible 
 
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
@@ -115,7 +119,10 @@ Feature: Using the teacher dashboard
     And I see ".uitest-detail-cell"
 
     # Progress tab V2
-    
+    Then I click selector "#ui-test-link-to-new-progress-view"
+    And I wait until element "#ui-test-progress-table-v2" is visible
+    And I press the first ".ui-progress-column" element
+    And I see ".ui-level-data-cell"
 
   @eyes
   Scenario: Eyes tests for section projects with thumbnails

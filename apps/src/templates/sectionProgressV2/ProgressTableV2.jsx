@@ -115,7 +115,7 @@ function ProgressTableV2({
   }, [isSkeleton, getRenderedColumn, unitData, tableRef]);
 
   return (
-    <div className={styles.progressTableV2}>
+    <div className={styles.progressTableV2} id="ui-test-progress-table-v2">
       <StudentColumn
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
