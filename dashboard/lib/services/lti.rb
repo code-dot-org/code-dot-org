@@ -3,260 +3,236 @@ require 'queries/lti'
 require 'user'
 require 'authentication_option'
 require 'sections/section'
-require 'cdo/honeybadger'
 
-class Services::Lti
-  def self.initialize_lti_user(id_token)
-    user_type = Policies::Lti.get_account_type(id_token[Policies::Lti::LTI_ROLES_KEY])
-    user = User.new
-    user.provider = User::PROVIDER_MIGRATED
-    user.user_type = user_type
-    if user_type == User::TYPE_TEACHER
-      user.age = '21+'
-      user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
-      user.lti_roster_sync_enabled = true
-    else
-      user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
-      user.family_name = get_claim(id_token, :family_name)
-    end
-    ao = AuthenticationOption.new(
-      authentication_id: generate_auth_id(id_token),
-      credential_type: AuthenticationOption::LTI_V1,
-      email: get_claim(id_token, :email),
-    )
-    user.authentication_options = [ao]
-    # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user.
-    user
-  end
-
-  def self.create_lti_user_identity(user)
-    auth_option = user.authentication_options.find(&:lti?)
-    issuer, client_id, subject = auth_option.authentication_id.split('|')
-    lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
-    LtiUserIdentity.create(user: user, subject: subject, lti_integration: lti_integration)
-  end
-
-  def self.create_lti_integration(
-    name:,
-    client_id:,
-    issuer:,
-    platform_name:,
-    auth_redirect_url:,
-    jwks_url:,
-    access_token_url:,
-    admin_email:
-    )
-    LtiIntegration.create!(
-      name: name,
-      client_id: client_id,
-      issuer: issuer,
-      platform_name: platform_name,
-      auth_redirect_url: auth_redirect_url,
-      jwks_url: jwks_url,
-      access_token_url: access_token_url,
-      admin_email: admin_email
-    )
-  end
-
-  def self.create_lti_deployment(integration_id, deployment_id)
-    LtiDeployment.create(
-      lti_integration_id: integration_id,
-      deployment_id: deployment_id,
-    )
-  end
-
-  def self.generate_auth_id(id_token)
-    case id_token[:aud]
-    when String
-      "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
-    when Array
-      # Per LTI spec, the client ID is used to identify an LTI 1.3 app to the LMS.
-      # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
-      # TODO: Remove the error logging after the Pilot if the error is not seen.
-      if id_token[:aud].length > 1
-        Honeybadger.notify(
-          'Generate Authentication ID error',
-          context: {
-            message: 'Too many client_ids in the audience claim',
-            audience: id_token[:aud],
-          }
-        )
-        raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
+module Services
+  module Lti
+    def self.initialize_lti_user(id_token)
+      user_type = Policies::Lti.get_account_type(id_token[Policies::Lti::LTI_ROLES_KEY])
+      user = ::User.new
+      user.provider = ::User::PROVIDER_MIGRATED
+      user.user_type = user_type
+      if user_type == ::User::TYPE_TEACHER
+        user.age = '21+'
+        user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
+        user.lti_roster_sync_enabled = true
       else
-        "#{id_token[:iss]}|#{id_token[:aud].first}|#{id_token[:sub]}"
+        user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
+        user.family_name = get_claim(id_token, :family_name)
       end
-    else
-      raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with class: #{id_token[:aud].class}"
-    end
-  end
-
-  def self.get_claim_from_list(id_token, keys_array)
-    keys_array.filter_map {|key| get_claim(id_token, key)}.first
-  end
-
-  def self.get_claim(id_token, key)
-    id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym, key)
-  end
-
-  def self.lti_user_roles(nrps_section, lti_user_id)
-    nrps_member = nrps_section[:members].find {|member| member[:user_id] == lti_user_id}
-
-    if nrps_member.present?
-      nrps_member[:roles]
-    end
-  end
-
-  def self.lti_user_type(current_user, lti_integration, nrps_section)
-    lti_user_id = Queries::Lti.lti_user_id(current_user, lti_integration)
-    member_roles = lti_user_roles(nrps_section, lti_user_id)
-
-    if Policies::Lti.lti_teacher?(member_roles)
-      return User::TYPE_TEACHER
-    end
-
-    return User::TYPE_STUDENT
-  end
-
-  def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
-    nrps_member_message = Policies::Lti.issuer_accepts_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
-    user = User.new
-    user.provider = User::PROVIDER_MIGRATED
-    user.user_type = User::TYPE_STUDENT
-    user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
-    user.family_name = get_claim(nrps_member_message, :family_name)
-    id_token = {
-      sub: nrps_member[:user_id],
-      aud: client_id,
-      iss: issuer,
-    }
-    ao = AuthenticationOption.new(
-      authentication_id: generate_auth_id(id_token),
-      credential_type: AuthenticationOption::LTI_V1,
-      email: get_claim(nrps_member_message, :email),
+      ao = AuthenticationOption.new(
+        authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
+        credential_type: AuthenticationOption::LTI_V1,
+        email: get_claim(id_token, :email),
       )
-    user.authentication_options = [ao]
-    # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user.
-    user
-  end
+      user.authentication_options = [ao]
+      # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user.
+      user
+    end
 
-  def self.parse_nrps_response(nrps_response, issuer)
-    sections = {}
-    members = nrps_response[:members]
-    context_title = nrps_response.dig(:context, :title)
-    members.each do |member|
-      next if member[:status] == 'Inactive'
-      # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
+    def self.create_lti_user_identity(user)
+      auth_option = user.authentication_options.find(&:lti?)
+      issuer, client_id, subject = auth_option.authentication_id.split('|')
+      lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
+      identity = LtiUserIdentity.new(user: user, subject: subject, lti_integration: lti_integration)
+      identity.save!
+    end
 
-      # If the LMS hasn't implemented the resource link level membership service, we don't get the message property in the member object
-      if Policies::Lti.issuer_accepts_resource_link?(issuer)
-        message = member[:message].first
+    def self.create_lti_integration(
+      name:,
+      client_id:,
+      issuer:,
+      platform_name:,
+      auth_redirect_url:,
+      jwks_url:,
+      access_token_url:,
+      admin_email:
+      )
+      LtiIntegration.create!(
+        name: name,
+        client_id: client_id,
+        issuer: issuer,
+        platform_name: platform_name,
+        auth_redirect_url: auth_redirect_url,
+        jwks_url: jwks_url,
+        access_token_url: access_token_url,
+        admin_email: admin_email
+      )
+    end
 
-        # Custom variables substitutions must be configured in the LMS.
-        custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
+    def self.create_lti_deployment(integration_id, deployment_id)
+      LtiDeployment.create(
+        lti_integration_id: integration_id,
+        deployment_id: deployment_id,
+      )
+    end
 
-        # Handles the possibility of the LMS not having sectionId variable substitution configured.
-        member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
-        # :section_names from Canvas is a stringified JSON array
-        member_section_names = JSON.parse(custom_variables[:section_names])
+    def self.get_claim_from_list(id_token, keys_array)
+      keys_array.filter_map {|key| get_claim(id_token, key)}.first
+    end
 
-      else
-        member_section_ids = [nrps_response.dig(:context, :id)]
-        member_section_names = [nil]
+    def self.get_claim(id_token, key)
+      id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym, key)
+    end
+
+    def self.lti_user_roles(nrps_section, lti_user_id)
+      nrps_member = nrps_section[:members].find {|member| member[:user_id] == lti_user_id}
+
+      if nrps_member.present?
+        nrps_member[:roles]
       end
-      member_section_ids.each_with_index do |section_id, index|
-        if sections[section_id].present?
-          sections[section_id][:members] << member
+    end
+
+    def self.lti_user_type(current_user, lti_integration, nrps_section)
+      lti_user_id = Queries::Lti.lti_user_id(current_user, lti_integration)
+      member_roles = lti_user_roles(nrps_section, lti_user_id)
+
+      if Policies::Lti.lti_teacher?(member_roles)
+        return ::User::TYPE_TEACHER
+      end
+
+      return ::User::TYPE_STUDENT
+    end
+
+    def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
+      nrps_member_message = Policies::Lti.issuer_accepts_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
+      user = ::User.new
+      user.provider = ::User::PROVIDER_MIGRATED
+      user.user_type = ::User::TYPE_STUDENT
+      user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
+      user.family_name = get_claim(nrps_member_message, :family_name)
+      id_token = {
+        sub: nrps_member[:user_id],
+        aud: client_id,
+        iss: issuer,
+      }
+      ao = AuthenticationOption.new(
+        authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
+        credential_type: AuthenticationOption::LTI_V1,
+        email: get_claim(nrps_member_message, :email),
+        )
+      user.authentication_options = [ao]
+      user
+    end
+
+    def self.parse_nrps_response(nrps_response, issuer)
+      sections = {}
+      members = nrps_response[:members]
+      context_title = nrps_response.dig(:context, :title)
+      members.each do |member|
+        next if member[:status] == 'Inactive'
+        # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
+
+        # If the LMS hasn't implemented the resource link level membership service, we don't get the message property in the member object
+        if Policies::Lti.issuer_accepts_resource_link?(issuer)
+          message = member[:message].first
+
+          # Custom variables substitutions must be configured in the LMS.
+          custom_variables = message[Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
+
+          # Handles the possibility of the LMS not having sectionId variable substitution configured.
+          member_section_ids = custom_variables[:section_ids]&.split(',') || [nil]
+          # :section_names from Canvas is a stringified JSON array
+          member_section_names = JSON.parse(custom_variables[:section_names])
+
         else
-          sections[section_id] = {
-            # Schoology provides Course and section name in context_title
-            name: member_section_names[index].nil? ? context_title.to_s : "#{context_title}: #{member_section_names[index]}",
-            members: [member],
-          }
+          member_section_ids = [nrps_response.dig(:context, :id)]
+          member_section_names = [nil]
+        end
+        member_section_ids.each_with_index do |section_id, index|
+          if sections[section_id].present?
+            sections[section_id][:members] << member
+          else
+            sections[section_id] = {
+              # Schoology provides Course and section name in context_title
+              name: member_section_names[index].nil? ? context_title.to_s : "#{context_title}: #{member_section_names[index]}",
+              members: [member],
+            }
+          end
         end
       end
-    end
-    sections
-  end
-
-  # Takes an LTI section and NRPS members array and syncs a single section.
-  # @return {boolean} whether any changes were made
-  def self.sync_section_roster(lti_integration, lti_section, nrps_members)
-    had_changes = false
-    client_id = lti_integration.client_id
-    issuer = lti_integration.issuer
-    current_students = nrps_members.map do |nrps_member|
-      student = Queries::Lti.get_user_from_nrps(
-        client_id: client_id,
-        issuer: issuer,
-        nrps_member: nrps_member
-      )
-      student ||= initialize_lti_student_from_nrps(
-        client_id: client_id,
-        issuer: issuer,
-        nrps_member: nrps_member
-      )
-      had_changes ||= (student.new_record? || student.changed?)
-      student.save!
-      add_student_result = lti_section.section.add_student(student)
-      had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
-      student
+      sections
     end
 
-    # Prune students who have been removed from the section in the LMS
-    lti_section.followers.each do |follower|
-      unless current_students.find_index {|s| s.id == follower.student_user_id}
-        follower.destroy
-        had_changes = true
-      end
-    end
-    had_changes
-  end
-
-  # Syncs a course and all its sections from an NRPS response.
-  def self.sync_course_roster(lti_integration:, lti_course:, nrps_sections:, current_user:)
-    had_changes = false
-    lti_sections = LtiSection.where(lti_course_id: lti_course.id)
-
-    # Only sync the section if there are no sections or the section's owner is equal to the current user
-    return false unless lti_sections.empty? || lti_sections.first.section.user_id == current_user.id
-
-    # Prune sections that have been deleted in the LMS
-    lti_sections.each do |lti_section|
-      unless nrps_sections.key?(lti_section.lms_section_id)
-        lti_section.destroy unless nrps_sections.key?(lti_section.lms_section_id)
-        had_changes = true
-      end
-    end
-
-    nrps_sections.each do |lms_section_id, nrps_section|
-      section_name = nrps_section[:name]
-      # Check if lti_sections already contains a section with this lms_section_id
-      lti_section = lti_sections.find_by(lms_section_id: lms_section_id)
-
-      lti_user_type = lti_user_type(current_user, lti_integration, nrps_section)
-
-      # Skip if the current user is not an instructor
-      next unless lti_user_type == User::TYPE_TEACHER
-
-      if lti_section.nil?
-        section = Section.new(
-          {
-            user_id: current_user.id,
-            name: section_name,
-            login_type: Section::LOGIN_TYPE_LTI_V1,
-          }
+    # Takes an LTI section and NRPS members array and syncs a single section.
+    # @return {boolean} whether any changes were made
+    def self.sync_section_roster(lti_integration, lti_section, nrps_members)
+      had_changes = false
+      client_id = lti_integration.client_id
+      issuer = lti_integration.issuer
+      current_students = nrps_members.map do |nrps_member|
+        student = Queries::Lti.get_user_from_nrps(
+          client_id: client_id,
+          issuer: issuer,
+          nrps_member: nrps_member
         )
-        lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
-        had_changes = true
+        student ||= initialize_lti_student_from_nrps(
+          client_id: client_id,
+          issuer: issuer,
+          nrps_member: nrps_member
+        )
+        had_changes ||= (student.new_record? || student.changed?)
+        student.save!
+        add_student_result = lti_section.section.add_student(student)
+        had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
+        student
       end
 
-      unless lti_section.section.name == section_name
-        lti_section.section.update(name: section_name)
-        had_changes = true
+      # Prune students who have been removed from the section in the LMS
+      lti_section.followers.each do |follower|
+        unless current_students.find_index {|s| s.id == follower.student_user_id}
+          follower.destroy
+          had_changes = true
+        end
       end
-      sync_section_roster_result = sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id][:members])
-      had_changes ||= sync_section_roster_result
+      had_changes
     end
-    had_changes
+
+    # Syncs a course and all its sections from an NRPS response.
+    def self.sync_course_roster(lti_integration:, lti_course:, nrps_sections:, current_user:)
+      had_changes = false
+      lti_sections = LtiSection.where(lti_course_id: lti_course.id)
+
+      # Only sync the section if there are no sections or the section's owner is equal to the current user
+      return false unless lti_sections.empty? || lti_sections.first.section.user_id == current_user.id
+
+      # Prune sections that have been deleted in the LMS
+      lti_sections.each do |lti_section|
+        unless nrps_sections.key?(lti_section.lms_section_id)
+          lti_section.destroy unless nrps_sections.key?(lti_section.lms_section_id)
+          had_changes = true
+        end
+      end
+
+      nrps_sections.each do |lms_section_id, nrps_section|
+        section_name = nrps_section[:name]
+        # Check if lti_sections already contains a section with this lms_section_id
+        lti_section = lti_sections.find_by(lms_section_id: lms_section_id)
+
+        lti_user_type = lti_user_type(current_user, lti_integration, nrps_section)
+
+        # Skip if the current user is not an instructor
+        next unless lti_user_type == ::User::TYPE_TEACHER
+
+        if lti_section.nil?
+          section = Section.new(
+            {
+              user_id: current_user.id,
+              name: section_name,
+              login_type: Section::LOGIN_TYPE_LTI_V1,
+            }
+          )
+          lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
+          had_changes = true
+        end
+
+        unless lti_section.section.name == section_name
+          lti_section.section.update(name: section_name)
+          had_changes = true
+        end
+        sync_section_roster_result = sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id][:members])
+        had_changes ||= sync_section_roster_result
+      end
+      had_changes
+    end
   end
 end

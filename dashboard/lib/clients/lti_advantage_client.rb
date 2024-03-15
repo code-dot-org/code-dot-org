@@ -12,6 +12,7 @@ class LtiAdvantageClient
   # See the LTI spec for details:
   # https://www.imsglobal.org/spec/lti-nrps/v2p0/
   def get_context_membership(url, resource_link_id, page_limit = 100)
+    puts "Getting context membership"
     options = {
       headers: {
         'Accept' => Policies::Lti::MEMBERSHIP_CONTAINER_CONTENT_TYPE,

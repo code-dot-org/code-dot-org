@@ -118,7 +118,7 @@ class LtiV1Controller < ApplicationController
       message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
       return wrong_resource_type unless message_type == 'LtiResourceLinkRequest'
 
-      user = Queries::Lti.get_user(decoded_jwt)
+      user = Queries::Lti.get_user(decoded_jwt[:sub])
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
 
       launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]

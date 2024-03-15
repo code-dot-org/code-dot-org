@@ -4,7 +4,7 @@ require 'policies/lti'
 
 class Policies::LtiTest < ActiveSupport::TestCase
   setup do
-    @ids = ['http://some-iss.com', 'some-aud', 'some-sub'].freeze
+    @ids = ['http://some-iss.com', ['some-aud'], 'some-sub'].freeze
     @roles_key = Policies::Lti::LTI_ROLES_KEY
     @teacher_roles = [
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
@@ -25,7 +25,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
     @user = create :user
     @user.authentication_options.create(
-      authentication_id: Services::Lti.generate_auth_id(@id_token),
+      authentication_id: Services::Lti::AuthIdGenerator.new(@id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
     )
   end
@@ -38,10 +38,6 @@ class Policies::LtiTest < ActiveSupport::TestCase
   test 'get_account_type should return a student if id_token does not have TEACHER_ROLES' do
     @id_token[@roles_key] = ['not-a-teacher-role']
     assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_STUDENT
-  end
-
-  test 'generate_auth_id should create authentication_id string' do
-    assert_equal Services::Lti.generate_auth_id(@id_token), @ids.join('|')
   end
 
   test 'issuer should return the issuer of the LTI Platform from a users LTI authentication_options' do

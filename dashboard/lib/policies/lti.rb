@@ -1,5 +1,6 @@
 require 'user'
 require 'authentication_option'
+require 'cdo/honeybadger'
 
 class Policies::Lti
   module AccessTokenScopes
@@ -82,10 +83,6 @@ class Policies::Lti
   # Returns true if any of the user's roles is the LTI instructor role
   def self.lti_teacher?(roles)
     (Set.new(roles) & TEACHER_ROLES).any?
-  end
-
-  def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
   end
 
   def self.lti?(user)
