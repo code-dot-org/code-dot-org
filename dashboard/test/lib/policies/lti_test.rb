@@ -65,6 +65,18 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_equal nil, Policies::Lti.lti_provided_email(user)
   end
 
+  test 'lti_teacher returns false if administrator' do
+    assert_equal false, Policies::Lti.lti_teacher?(["http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator"])
+  end
+
+  test 'lti_teacher returns false if learner' do
+    assert_equal false, Policies::Lti.lti_teacher?([Policies::Lti::CONTEXT_LEARNER_ROLE])
+  end
+
+  test 'lti_teacher returns true if instructor' do
+    assert_equal true, Policies::Lti.lti_teacher?(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor'])
+  end
+
   test 'show_email_input?' do
     test_matrix = [
       [true, [:teacher, :with_lti_auth]],
@@ -149,6 +161,37 @@ class Policies::LtiTest < ActiveSupport::TestCase
       @lti_early_access_limit.returns(LtiIntegration.count)
 
       assert_equal true, Policies::Lti.early_access_closed?
+    end
+  end
+
+  class EarlyAccessBannerAvailabilityTest < ActiveSupport::TestCase
+    setup do
+      @user = build(:teacher)
+
+      Policies::Lti.stubs(:early_access?).returns(true)
+      Policies::Lti.stubs(:lti?).with(@user).returns(true)
+    end
+
+    test 'returns true when early access and user is LTI teacher' do
+      assert Policies::Lti.early_access_banner_available?(@user)
+    end
+
+    test 'returns false when user in not teacher' do
+      @user = build(:student)
+
+      refute Policies::Lti.early_access_banner_available?(@user)
+    end
+
+    test 'returns false when early access is not enabled' do
+      Policies::Lti.stubs(:early_access?).returns(false)
+
+      refute Policies::Lti.early_access_banner_available?(@user)
+    end
+
+    test 'returns false when user is not LTI' do
+      Policies::Lti.stubs(:lti?).with(@user).returns(false)
+
+      refute Policies::Lti.early_access_banner_available?(@user)
     end
   end
 end

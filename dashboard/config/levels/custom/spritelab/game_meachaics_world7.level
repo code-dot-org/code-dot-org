@@ -71,14 +71,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Get moving with a behavior!**\r\n1. Program the sprite to `begin moving with arrow keys` \r\n\r\n2. Press `Run` then tap the up arrow!",
+    "long_instructions": "**Get moving with a behavior!**\r\n1. Program the sprite to `begin moving with arrow keys` \r\n\r\n2. Press `Run` then tap the arrows to move!",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-08T20:57:16.087+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world6\\\"\"],\"cloned_from\":\"game_meachaics_world6\"},{\"changed_at\":\"2024-03-08 20:58:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 20:59:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 20:59:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 21:36:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:14:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-08T20:57:16.087+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world6\\\"\"],\"cloned_from\":\"game_meachaics_world6\"},{\"changed_at\":\"2024-03-08 20:58:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 20:59:13 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 20:59:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 21:36:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 22:14:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:50:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:50:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-11 22:55:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -132,15 +132,6 @@
                   </next>
                 </block>
               </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_keyPressed" x="15" y="462">
-          <field name="CONDITION">"when"</field>
-          <field name="KEY">"up"</field>
-          <next>
-            <block type="GameDev_playerJump">
-              <field name="STRENGTH">5</field>
             </block>
           </next>
         </block>
@@ -1234,10 +1225,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k" x="28" y="182">
-          <field name="STRENGTH">5</field>
-        </block>
-        <block type="gamelab_toggleBehaviorSimple" id="r48p2H6jy.%#JgLn#i$z" x="19" y="410">
+        <block type="gamelab_toggleBehaviorSimple" id="r48p2H6jy.%#JgLn#i$z" x="20" y="38">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id=",,*n@[ER6IrAd74k%jSr">

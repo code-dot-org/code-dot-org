@@ -1,6 +1,6 @@
 import React from 'react';
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
-import {ComponentStory} from '@storybook/react';
+import {StoryFn} from '@storybook/react';
 
 export default {
   component: LtiSectionSyncDialog,
@@ -10,7 +10,7 @@ export default {
 // TEMPLATE
 //
 
-const Template: ComponentStory<typeof LtiSectionSyncDialog> = args => (
+const Template: StoryFn<typeof LtiSectionSyncDialog> = args => (
   <LtiSectionSyncDialog {...args} />
 );
 

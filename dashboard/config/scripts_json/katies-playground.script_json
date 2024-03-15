@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2024-03-08 22:21:06 UTC",
+    "serialized_at": "2024-03-13 17:35:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -975,7 +975,7 @@
       "position": 1,
       "properties": {
         "name": "Game Jam",
-        "progression_name": "Teamwork = Dreamwork"
+        "progression_name": "Teamwork"
       },
       "seeding_key": {
         "activity_section.key": "8e79eda0-b5d8-4e7b-97c0-b6a56e2d176a",
@@ -2368,7 +2368,7 @@
         "level_keys": [
           "game_jam_teams"
         ],
-        "progression": "Teamwork = Dreamwork"
+        "progression": "Teamwork"
       },
       "bonus": false,
       "seeding_key": {
@@ -2440,15 +2440,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "game_jam_create"
-        ],
         "progression": "Make the game!"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_jam_create"
+          "game_jam_choice_jump"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "",
@@ -2456,7 +2453,7 @@
         "activity_section.key": "ce49ad0f-8950-454f-bf65-96579914dceb"
       },
       "level_keys": [
-        "game_jam_create"
+        "game_jam_choice_jump"
       ]
     },
     {
@@ -2840,6 +2837,33 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_mechanics_world1a"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_mechanics_world1a"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "53bd5d5b-d83f-486e-9c59-80f5b7d17f0e"
+      },
+      "level_keys": [
+        "game_mechanics_world1a"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_mechanics_world1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2856,11 +2880,14 @@
       ]
     },
     {
-      "chapter": 71,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 72,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_mechanics_world2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2877,11 +2904,14 @@
       ]
     },
     {
-      "chapter": 72,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 73,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_mechanics_world3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2898,11 +2928,14 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 74,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_meachaics_world4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2919,11 +2952,14 @@
       ]
     },
     {
-      "chapter": 74,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 75,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_dev_world5_sprite_types"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2940,11 +2976,14 @@
       ]
     },
     {
-      "chapter": 75,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 76,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_meachaics_world7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2961,11 +3000,14 @@
       ]
     },
     {
-      "chapter": 76,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 77,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_meachaics_world6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2982,11 +3024,14 @@
       ]
     },
     {
-      "chapter": 77,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 78,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_mechancis_world8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3003,11 +3048,14 @@
       ]
     },
     {
-      "chapter": 78,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 79,
+      "position": 10,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game_mechanics_world9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3021,6 +3069,30 @@
       },
       "level_keys": [
         "game_mechanics_world9"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "game_mechanics_world_freeplay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_mechanics_world_freeplay"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "53bd5d5b-d83f-486e-9c59-80f5b7d17f0e"
+      },
+      "level_keys": [
+        "game_mechanics_world_freeplay"
       ]
     }
   ],
@@ -3663,9 +3735,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "game_jam_create",
+        "level.key": "game_jam_choice_jump",
         "script_level.level_keys": [
-          "game_jam_create"
+          "game_jam_choice_jump"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "",
@@ -3855,6 +3927,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "game_mechanics_world1a",
+        "script_level.level_keys": [
+          "game_mechanics_world1a"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "53bd5d5b-d83f-486e-9c59-80f5b7d17f0e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "game_mechanics_world1",
         "script_level.level_keys": [
           "game_mechanics_world1"
@@ -3954,6 +4038,18 @@
         "level.key": "game_mechanics_world9",
         "script_level.level_keys": [
           "game_mechanics_world9"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "53bd5d5b-d83f-486e-9c59-80f5b7d17f0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_mechanics_world_freeplay",
+        "script_level.level_keys": [
+          "game_mechanics_world_freeplay"
         ],
         "lesson.key": "lesson-11",
         "lesson_group.key": "",

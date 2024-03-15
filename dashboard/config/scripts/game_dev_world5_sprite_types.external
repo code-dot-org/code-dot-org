@@ -3,41 +3,40 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-##How to set sprite types
+##Setting sprite types
 
 
-<img src="https://images.code.org/ba616f37b7a1db48a4407b6f88e1a48e-image-1709924855176.jpg" style="float: left;  clear: both; width: 15%; margin: 0 20px 10px 0;">
+<img src="https://images.code.org/4fb1e86f8fe374b5762dc785b3e95358-image-1710260150883.jpg" style="float: left;  clear: both; width: 25%; margin: 0 20px 60px 0;">
 
-<br>
 
-####Type: **Player** sprites are affected by the game world's gravity
-:::details [Expand for examples]
-	- This gif
-    - That pic
+####**When a sprite is set to player:**
+####- It can jump
+####- It is blocked by all environment type sprites
+
+:::details [Example]
+<img src="https://images.code.org/747fc02ad4d588718ae9e35945554667-image-1710367846655.gif" style="width: 25%;">
+    
+    
 :::
 
-<br>
-<br>
-<br>
 <br>
 
 ***
-<img src="https://images.code.org/44add82d324b56ff103088f5cf7ac197-image-1709926170803.jpg" style="float: left;  clear: both; width: 15%; margin: 0 20px 10px 0;">
-
-<br>
 
 
-####Type: **Environment** sprites block all sprites from moving past
-:::details [Expand for examples]
-	- This gif
-    - That pic
+<img src="https://images.code.org/fe823718eac0662bd3d9f348583ae6ac-image-1710261058995.jpg" style="float: left;  clear: both; width: 25%; margin: 0 20px 60px 0;">
+
+
+####**When a sprite is set to environment:**
+####- It blocks all other sprites
+####- Player sprites can stand on environment sprites
+
+:::details [Examples]
+
+<img src="https://images.code.org/f4fc6fe52c6e07f8cde61a1f46530c20-image-1710261677568.gif">
 :::
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+![]()
 MARKDOWN

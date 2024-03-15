@@ -108,6 +108,8 @@ export const setUpWithLevel = createAsyncThunk(
 
       const {isProjectLevel, usesProjects} = levelProperties;
 
+      Lab2Registry.getInstance().setAppName(levelProperties.appName);
+
       if (!usesProjects) {
         // If projects are disabled on this level, we can skip loading projects data.
         setProjectAndLevelData(
@@ -177,6 +179,8 @@ export const setUpWithoutLevel = createAsyncThunk(
       });
 
       await cleanUpProjectManager();
+
+      Lab2Registry.getInstance().setAppName(payload.appName);
 
       // Create the new project manager.
       const projectManager = ProjectManagerFactory.getProjectManager(
