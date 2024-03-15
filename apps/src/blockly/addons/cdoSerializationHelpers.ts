@@ -78,7 +78,7 @@ function getSpaceBetweenBlocks(block: ExtendedBlockSvg) {
  * for an embedded workspace for not.
  * @returns {json} stateToLoad - modern workspace serialization
  */
-export function convertXmlToJson(xml: Element, embedded: boolean) {
+export function convertXmlToJson(xml: Element, embedded?: boolean) {
   const tempWorkspace = new Blockly.Workspace();
 
   // The temporary workspace should mirror the embedded state of the workspace

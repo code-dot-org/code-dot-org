@@ -50,10 +50,24 @@ describe('ProgressTableV2', () => {
       studentLevelProgress: {
         ...PROGRESS,
         teacherFeedbackReviewState: 'keepWorking',
+        teacherFeedbackNew: true,
       },
     });
 
     screen.getByRole('link', {name: 'progressicon-rotate-left'});
+  });
+
+  it('Keep working level that the student has revisited', () => {
+    renderDefault({
+      studentLevelProgress: {
+        ...PROGRESS,
+        status: LevelStatus.perfect,
+        teacherFeedbackReviewState: 'keepWorking',
+        teacherFeedbackNew: false,
+      },
+    });
+
+    screen.getByRole('link', {name: 'progressicon-circle'});
   });
 
   it('Not tried level', () => {
