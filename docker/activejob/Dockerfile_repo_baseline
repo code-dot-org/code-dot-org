@@ -1,0 +1,46 @@
+# This Dockerfile defines a baseline image containing the code-dot-org repository.
+# It can be updated from time-to-time to cache the latest commits, but generally
+# can be allowed to age while subsequent layers simply `git pull` the latest code.
+
+FROM code-dot-org:minimal as gems
+
+ARG BRANCH=production
+
+# This user and workdir should be already set from the source image
+USER appuser
+WORKDIR /home/appuser
+
+# Pull the Gemfile and Gemfile.lock from the code.org repository
+RUN curl -o Gemfile https://raw.githubusercontent.com/code-dot-org/code-dot-org/${BRANCH}/Gemfile
+RUN curl -o Gemfile.lock https://raw.githubusercontent.com/code-dot-org/code-dot-org/${BRANCH}/Gemfile.lock
+
+# Install ruby gems
+RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
+    rbenv global 3.0.5 && \
+    bundle install
+
+#######################################################
+FROM code-dot-org:minimal as repo_baseline
+
+# This user and workdir should be already set from the source image
+USER appuser
+WORKDIR /home/appuser
+
+ARG BRANCH=production
+
+# Clone the code.org repository
+# This is intended to be a cached layer, and later layers
+# can simply `git pull` to update the code.
+RUN git clone https://github.com/code-dot-org/code-dot-org.git code-dot-org
+
+# Merge in the pre-cached gems
+# TODO: this is probably overkill, what directory do I actually need?
+COPY --from=gems --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
+
+# Install ruby gems per the production Gemfile
+WORKDIR /home/appuser/code-dot-org
+RUN git checkout ${BRANCH}
+RUN git pull
+RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
+    rbenv global 3.0.5 && \
+    bundle install

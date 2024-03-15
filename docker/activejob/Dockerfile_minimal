@@ -134,7 +134,7 @@ RUN mv /usr/bin/parallel /usr/bin/gnu_parallel && \
     mv /usr/bin/gnu_parallel /usr/bin/parallel
 
 USER ${USER}
-WORKDIR /home/${USER}/code-dot-org
+WORKDIR /home/${USER}
 
 # Merge in the ruby layer
 COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
@@ -142,12 +142,5 @@ COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.r
 # Setup Ruby environment when using bash
 RUN echo 'eval "$(~/.rbenv/bin/rbenv init -)"' >> ~/.bashrc
 
-# install gems - rbenv must be initialized within the same RUN command
-# as each RUN command runs in a new shell
-COPY --chown=${USER}:${GROUP}  ../../Gemfile ../../Gemfile.lock ./
-RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
-    rbenv global 3.0.5 && \
-    bundle install
-
-# copy the rest of the app
-# COPY --chown=${USER}:${GROUP} ../.. .
+# setup entrypoint as bash for reasons
+ENTRYPOINT ["/bin/bash"]
