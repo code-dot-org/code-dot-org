@@ -10,6 +10,7 @@ import {AnalyticsContext} from '../context';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './undo-redo-buttons.module.scss';
 import musicI18n from '../locale';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
@@ -25,6 +26,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickRedo,
   clearCode,
 }) => {
+  const canReload: boolean = !useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
     (state: {music: MusicState}) => state.music.undoStatus
   );
@@ -49,6 +51,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 
   const onClickStartOver = useCallback(() => {
+    if (!canReload) {
+      return;
+    }
+
     if (dialogControl) {
       dialogControl.showDialog(DialogType.StartOver, clearCode);
     }
@@ -56,7 +62,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     if (analyticsReporter) {
       analyticsReporter.onButtonClicked('startOver');
     }
-  }, [dialogControl, analyticsReporter, clearCode]);
+  }, [dialogControl, analyticsReporter, clearCode, canReload]);
 
   const onFeedbackClicked = () => {
     if (analyticsReporter) {
@@ -73,7 +79,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       <button
         onClick={onClickStartOver}
         type="button"
-        className={classNames(moduleStyles.button)}
+        className={classNames(
+          moduleStyles.button,
+          !canReload && moduleStyles.buttonDisabled
+        )}
       >
         <FontAwesome
           title={musicI18n.startOver()}
