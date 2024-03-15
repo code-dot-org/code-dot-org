@@ -1,13 +1,17 @@
 import * as GoogleBlockly from 'blockly/core';
-import msg from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
-import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
+import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {behaviorCallerGetDefMixin} from './mixins/behaviorCallerGetDefMixin';
 import {behaviorCreateDefMixin} from './mixins/behaviorCreateDefMixin';
+import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import {Abstract} from 'blockly/core/events/events_abstract';
+import {BlockChange} from 'blockly/core/events/events_block_change';
+import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -35,7 +39,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'field_label',
         name: 'THIS_SPRITE',
-        text: msg.withThisSprite(),
+        text: commonI18n.withThisSprite(),
       },
       {
         type: 'field_label',
@@ -110,7 +114,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         type: 'field_label',
         name: 'VAR',
         variable: '%{BKY_VARIABLES_DEFAULT_NAME}',
-        text: msg.thisSprite(),
+        text: commonI18n.thisSprite(),
       },
     ],
     output: 'Sprite',
@@ -129,50 +133,66 @@ GoogleBlockly.Extensions.registerMutator(
 
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
-GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
-  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
-    // Used to create and render an SVG frame instance.
-    const getColor = () => {
-      return Blockly.cdoUtils.getBlockColor(this);
-    };
-    this.functionalSvg_ = new BlockSvgFrame(
-      this,
-      msg.behaviorEditorHeader(),
-      'blocklyFunctionalFrame',
-      getColor
-    );
+GoogleBlockly.Extensions.register(
+  'behaviors_block_frame',
+  function (this: ExtendedBlockSvg) {
+    if (
+      !Blockly.useModalFunctionEditor &&
+      !this.workspace.noFunctionBlockFrame
+    ) {
+      // Used to create and render an SVG frame instance.
+      const getColor = () => {
+        return Blockly.cdoUtils.getBlockColor(this);
+      };
+      this.functionalSvg_ = new BlockSvgFrame(
+        this,
+        commonI18n.behaviorEditorHeader(),
+        'blocklyFunctionalFrame',
+        getColor
+      );
 
-    this.setOnChange(function () {
-      if (!this.isInFlyout) {
-        this.functionalSvg_.render();
-      }
-    });
+      this.setOnChange(function (this: ExtendedBlockSvg) {
+        if (!this.isInFlyout) {
+          this.functionalSvg_?.render();
+        }
+      });
+    }
   }
-});
+);
 
 // This extension is used to update the block's behaviorId when a behavior is renamed in start mode.
-GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
-  const nameField = this.getField('NAME');
-  nameField.setValidator(function (newValue) {
-    // The default validator provided by mainline Blockly. Strips whitespace.
-    const rename = Blockly.Procedures.rename.bind(this);
-    const legalName = rename(newValue);
-    if (
-      legalName &&
-      Blockly.isStartMode &&
-      this.sourceBlock_.behaviorId !== legalName
+GoogleBlockly.Extensions.register(
+  'behaviors_name_validator',
+  function (this: ExtendedBlockSvg) {
+    const nameField = this.getField('NAME');
+    nameField?.setValidator(function (
+      this: GoogleBlockly.Field<string>,
+      newValue
     ) {
-      this.sourceBlock_.behaviorId = legalName;
-    }
-    return legalName;
-  });
-});
+      // The default validator provided by mainline Blockly. Strips whitespace.
+      const rename = Blockly.Procedures.rename.bind(this);
+      const legalName = rename(newValue);
+      const sourceBlock = this.sourceBlock_ as ProcedureBlock;
+      if (
+        legalName &&
+        Blockly.isStartMode &&
+        sourceBlock.behaviorId !== legalName
+      ) {
+        sourceBlock.behaviorId = legalName;
+      }
+      return legalName;
+    });
+  }
+);
 
-GoogleBlockly.Extensions.register('on_behavior_def_change', function () {
-  this.workspace.addChangeListener(event => {
-    onBehaviorDefChange(event, this);
-  });
-});
+GoogleBlockly.Extensions.register(
+  'on_behavior_def_change',
+  function (this: ExtendedBlockSvg) {
+    this.workspace.addChangeListener(event => {
+      onBehaviorDefChange(event, this);
+    });
+  }
+);
 
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
@@ -209,8 +229,11 @@ GoogleBlockly.Extensions.registerMixin(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns {import('blockly/core/utils/toolbox').FlyoutDefinition} an array of XML block elements
  */
-export function flyoutCategory(workspace, functionEditorOpen = false) {
-  const blockList = [];
+export function flyoutCategory(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  functionEditorOpen = false
+) {
+  const blockList: FlyoutItemInfoArray = [];
 
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
@@ -223,7 +246,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // We convert to JSON here because the behavior_get blocks are JSON.
   const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
   if (!levelToolboxBlocks) {
-    return;
+    return [];
   }
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
@@ -238,7 +261,11 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     Blockly.getHiddenDefinitionWorkspace(),
   ];
 
-  const allBehaviors = [];
+  const allBehaviors: {
+    name: string;
+    id: string;
+    behaviorId: string | null | undefined;
+  }[] = [];
   workspaces.forEach(workspace => {
     const behaviorBlocks = workspace
       .getTopBlocks()
@@ -247,7 +274,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
       allBehaviors.push({
         name: block.getFieldValue('NAME'),
         id: block.id,
-        behaviorId: block.behaviorId,
+        behaviorId: (block as ProcedureBlock).behaviorId,
       })
     );
   });
@@ -270,7 +297,9 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewBehaviorButtonWithCallback = workspace => {
+const getNewBehaviorButtonWithCallback = (
+  workspace: GoogleBlockly.WorkspaceSvg
+) => {
   const callbackKey = 'newBehaviorCallback';
   workspace.registerButtonCallback(callbackKey, () => {
     workspace.hideChaff();
@@ -279,32 +308,37 @@ const getNewBehaviorButtonWithCallback = workspace => {
 
   return {
     kind: 'button',
-    text: msg.createBlocklyBehavior(),
+    text: commonI18n.createBlocklyBehavior(),
     callbackKey,
   };
 };
 
 // Added as a change listener. If a behavior name changes, we need to update any
 // behavior picker blocks that have the old name currently selected.
-function onBehaviorDefChange(event, block) {
+function onBehaviorDefChange(event: Abstract, block: ExtendedBlockSvg) {
+  if (event.type !== Blockly.Events.CHANGE) {
+    return;
+  }
+  const changeEvent = event as BlockChange;
   if (
-    event.type === Blockly.Events.CHANGE &&
-    block.id === event.blockId &&
+    block.id === changeEvent.blockId &&
     // Excludes changes to the description field.
-    event.name === 'NAME'
+    changeEvent.name === 'NAME'
   ) {
-    const {oldValue, newValue} = event;
-    updateBehaviorPickerBlocks(oldValue, newValue);
+    const {oldValue, newValue} = changeEvent;
+    updateBehaviorPickerBlocks(oldValue as string, newValue as string);
     if (Blockly.isStartMode) {
       // In start mode, we need up update behavior call blocks to change their behaviorIds.
       // In normal mode the behavior ids are assigned at creation and are static.
-      updateBehaviorCallBlocks(oldValue, newValue);
+      updateBehaviorCallBlocks(oldValue as string, newValue as string);
     }
   }
 }
 
-function updateBehaviorCallBlocks(oldValue, newValue) {
-  const behaviorCallBlocks = findAllBlocksOfType(BLOCK_TYPES.behaviorGet);
+function updateBehaviorCallBlocks(oldValue: string, newValue: string) {
+  const behaviorCallBlocks = findAllBlocksOfType(
+    BLOCK_TYPES.behaviorGet
+  ) as ProcedureBlock[];
   if (behaviorCallBlocks.length) {
     const blocksToUpdate = behaviorCallBlocks.filter(
       block => block.behaviorId === oldValue
@@ -315,7 +349,7 @@ function updateBehaviorCallBlocks(oldValue, newValue) {
   }
 }
 
-function updateBehaviorPickerBlocks(oldValue, newValue) {
+function updateBehaviorPickerBlocks(oldValue: string, newValue: string) {
   const behaviorPickerBlocks = findAllBlocksOfType('gamelab_behaviorPicker');
   if (behaviorPickerBlocks.length) {
     const blocksToUpdate = behaviorPickerBlocks.filter(
@@ -327,8 +361,8 @@ function updateBehaviorPickerBlocks(oldValue, newValue) {
   }
 }
 
-const findAllBlocksOfType = type => {
-  const blocks = [];
+const findAllBlocksOfType = (type: string) => {
+  const blocks: GoogleBlockly.Block[] = [];
   Blockly.Workspace.getAll().forEach(workspace =>
     blocks.push(
       ...workspace.getAllBlocks().filter(block => block.type === type)

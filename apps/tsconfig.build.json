@@ -32,5 +32,6 @@
     "resolveJsonModule": true,
     "incremental": true,
     "sourceMap": true,
+    "downlevelIteration": true,
   }
 }
