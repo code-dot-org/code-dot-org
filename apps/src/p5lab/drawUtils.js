@@ -60,26 +60,6 @@ export function variableBubble(p5, x, y, text, config) {
     y = APP_HEIGHT - halfHeight;
   }
 
-  const halfWidth = textWidthValue / 2;
-  const halfHeight = textHeightValue / 2;
-  const leftBound = x - halfWidth;
-  const rightBound = x + halfWidth;
-  const topBound = y - halfHeight;
-  const bottomBound = y + halfHeight;
-
-  // If the bubble is too close to the edge of the canvas, adjust the position so it fits.
-  if (leftBound < 0) {
-    x = halfWidth;
-  } else if (rightBound > APP_WIDTH) {
-    x = APP_WIDTH - halfWidth;
-  }
-
-  if (topBound < 0) {
-    y = halfHeight;
-  } else if (bottomBound > APP_HEIGHT) {
-    y = APP_HEIGHT - halfHeight;
-  }
-
   p5.push();
   p5.fill(colors.darkest_gray);
   p5.stroke('white');
