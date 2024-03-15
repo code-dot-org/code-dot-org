@@ -232,16 +232,16 @@ describe('RubricSubmitFooter', () => {
 
     // See that the submit button and keep working checkbox is disabled
     const checkbox = screen.getByLabelText(i18n.aiSubmitShouldKeepWorking());
-    expect(checkbox.disabled).to.be.true;
+    expect(checkbox).to.be.disabled;
     const button = screen.getByRole('button', {name: i18n.submitToStudent()});
-    expect(button.disabled).to.be.true;
+    expect(button).to.be.disabled;
 
     // Wait until feedback is retrieved successfully
     await wait();
 
     // See that the submit button is enabled
-    expect(checkbox.disabled).to.be.false;
-    expect(button.disabled).to.be.false;
+    expect(checkbox).to.not.be.disabled;
+    expect(button).to.not.be.disabled;
 
     // Assert that 'feedback submitted' appears with the old timestamp
     const priorDate = new Date(priorTimestamp);
@@ -293,9 +293,9 @@ describe('RubricSubmitFooter', () => {
 
     // See that the submit button and keep working checkbox is disabled
     const checkbox = screen.getByLabelText(i18n.aiSubmitShouldKeepWorking());
-    expect(checkbox.disabled).to.be.true;
+    expect(checkbox).to.be.disabled;
     const button = screen.getByRole('button', {name: i18n.submitToStudent()});
-    expect(button.disabled).to.be.true;
+    expect(button).to.be.disabled;
 
     // There's no prior timestamp
     expect(
@@ -340,13 +340,13 @@ describe('RubricSubmitFooter', () => {
 
     // See that the submit button and keep working checkbox is disabled
     const checkbox = screen.getByLabelText(i18n.aiSubmitShouldKeepWorking());
-    expect(checkbox.checked).to.be.false;
+    expect(checkbox).to.be.checked;
 
     // Wait until feedback is retrieved successfully
     await wait();
 
     // See that the submit button is enabled
-    expect(checkbox.checked).to.be.true;
+    expect(checkbox).to.be.checked;
   });
 
   it('handles successful submit button click by not displaying any error text', async () => {
