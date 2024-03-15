@@ -14,7 +14,7 @@ import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-import {EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -26,7 +26,7 @@ const AichatView: React.FunctionComponent = () => {
   const initialAiCustomization = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
 
   useEffect(() => {

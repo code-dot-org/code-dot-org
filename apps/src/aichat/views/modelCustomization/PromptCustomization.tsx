@@ -2,7 +2,7 @@ import React from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {updateLevelAiCustomizationProperty} from '../../redux/aichatRedux';
+import {setLevelAiCustomizationProperty} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {MAX_TEMPERATURE, MIN_TEMPERATURE} from './constants';
 import {isVisible, isDisabled} from './utils';
@@ -33,8 +33,8 @@ const PromptCustomization: React.FunctionComponent = () => {
               disabled={isDisabled(botName.visibility)}
               onChange={event =>
                 dispatch(
-                  updateLevelAiCustomizationProperty({
-                    customization: 'botName',
+                  setLevelAiCustomizationProperty({
+                    property: 'botName',
                     value: event.target.value,
                   })
                 )
@@ -60,8 +60,8 @@ const PromptCustomization: React.FunctionComponent = () => {
               disabled={isDisabled(temperature.visibility)}
               onChange={event =>
                 dispatch(
-                  updateLevelAiCustomizationProperty({
-                    customization: 'temperature',
+                  setLevelAiCustomizationProperty({
+                    property: 'temperature',
                     value: event.target.value,
                   })
                 )
@@ -80,8 +80,8 @@ const PromptCustomization: React.FunctionComponent = () => {
               disabled={isDisabled(systemPrompt.visibility)}
               onChange={event =>
                 dispatch(
-                  updateLevelAiCustomizationProperty({
-                    customization: 'systemPrompt',
+                  setLevelAiCustomizationProperty({
+                    property: 'systemPrompt',
                     value: event.target.value,
                   })
                 )

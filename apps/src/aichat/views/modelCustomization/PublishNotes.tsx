@@ -4,7 +4,7 @@ import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
 import {isVisible, isDisabled} from './utils';
-import {updateLevelAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {setModelCardProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 
 const PublishNotes: React.FunctionComponent = () => {
@@ -30,12 +30,9 @@ const PublishNotes: React.FunctionComponent = () => {
                   value={modelCardInfo.value[id]}
                   onChange={event =>
                     dispatch(
-                      updateLevelAiCustomizationProperty({
-                        customization: 'modelCardInfo',
-                        value: {
-                          ...modelCardInfo.value,
-                          [id]: event.target.value,
-                        },
+                      setModelCardProperty({
+                        property: id,
+                        value: event.target.value,
                       })
                     )
                   }

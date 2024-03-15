@@ -6,7 +6,7 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';
-import {updateLevelAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {setLevelAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
@@ -19,8 +19,8 @@ const RetrievalCustomization: React.FunctionComponent = () => {
 
   const onAdd = useCallback(() => {
     dispatch(
-      updateLevelAiCustomizationProperty({
-        customization: 'retrievalContexts',
+      setLevelAiCustomizationProperty({
+        property: 'retrievalContexts',
         value: [...retrievalContexts.value, newRetrievalContext],
       })
     );
@@ -38,8 +38,8 @@ const RetrievalCustomization: React.FunctionComponent = () => {
       const newRetrievalContexts = [...retrievalContexts.value];
       newRetrievalContexts.splice(index, 1);
       dispatch(
-        updateLevelAiCustomizationProperty({
-          customization: 'retrievalContexts',
+        setLevelAiCustomizationProperty({
+          property: 'retrievalContexts',
           value: newRetrievalContexts,
         })
       );

@@ -16,7 +16,7 @@ import {
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   EMPTY_MODEL_CARD_INFO,
-  EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY,
+  EMPTY_AI_CUSTOMIZATIONS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import MultiItemInput from './MultiItemInput';
 import FieldSection from './FieldSection';
@@ -50,7 +50,7 @@ const EditAiCustomizations: React.FunctionComponent<{
 }> = ({initialCustomizations}) => {
   const [aiCustomizations, setAiCustomizations] =
     useState<LevelAiCustomizations>(
-      initialCustomizations || EMPTY_AI_CUSTOMIZATIONS_WITH_VISIBILITY
+      initialCustomizations || EMPTY_AI_CUSTOMIZATIONS
     );
 
   const setPropertyVisibility = useCallback(
