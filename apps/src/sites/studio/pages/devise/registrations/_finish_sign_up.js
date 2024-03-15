@@ -7,6 +7,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -57,6 +58,33 @@ $(document).ready(() => {
   init();
 
   function init() {
+    try {
+      const signupFormData = JSON.parse(
+        tryGetSessionStorage('signup-form', {})
+      );
+
+      if (!signupFormData || signupFormData.expiration < Date.now()) {
+        return handleInvalidSession();
+      }
+
+      // Update the paragraph description to include the email address
+      const signupDescriptionHTML = $('#signup-description')
+        .html()
+        .replace('****', `<strong>${signupFormData.emailAddress}</strong>`);
+      $('#signup-description').html(signupDescriptionHTML);
+
+      // Add a hidden email input for the form
+      const emailInput = $(
+        `<input value='${signupFormData.emailAddress}' autocomplete='off' type='hidden' name='user[email]' id='user_email'>`
+      );
+      $('#new_user').append(emailInput);
+    } catch (e) {
+      handleInvalidSession();
+
+      // re-throw for error capturing
+      throw e;
+    }
+
     let hiddenUserType = $('#user_user_type').attr('type') === 'hidden';
     if (!hiddenUserType) {
       if (inClearerUserTypeRollout) {
@@ -281,5 +309,14 @@ $(document).ready(() => {
       };
     }
     renderSchoolInfo();
+  }
+
+  /**
+   * Handles an invalid session state (unparsable JSON or expired) by removing the state and cancelling the signup.
+   * This redirects the user back to the first step which will restore the correct state
+   */
+  function handleInvalidSession() {
+    sessionStorage.removeItem('signup-form');
+    window.location = '/users/cancel';
   }
 });

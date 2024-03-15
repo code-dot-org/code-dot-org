@@ -21,7 +21,7 @@
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
     .row
       .span10
-        %p
+        %p{id: "signup-description"}
           - if Policies::Lti.lti? @user
             - issuer_url = Policies::Lti.issuer @user
             - issuer_name = Policies::Lti.issuer_name issuer_url
