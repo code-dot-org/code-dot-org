@@ -5,7 +5,7 @@ require "rack/session/cookie"
 
 module ActionDispatch
   module Session
-    class MigrateCookiesToDatabaseStore < AbstractSecureStore
+    module DatabaseStore
       def initialize(app, options = {})
         @database = options[:database] || Redis.new # TODO: Redis initialization details
         super(app, options.except(:database))
@@ -39,6 +39,15 @@ module ActionDispatch
         session_id
       end
 
+      private
+
+      def get_session_with_fallback(session_id)
+        raw_session_data = @database.get(session_id.private_id) || @database.get(session_id.public_id)
+        Marshal.load(raw_session_data) if raw_session_data.present?
+      end
+    end
+
+    module MigrateCookiesStore
       # Ultimately loads session data from the database, after first checking
       # for session data in the cookie and persisting it to the database if we
       # find any.
@@ -72,11 +81,6 @@ module ActionDispatch
         end
       end
 
-      def get_session_with_fallback(session_id)
-        raw_session_data = @database.get(session_id.private_id) || @database.get(session_id.public_id)
-        Marshal.load(raw_session_data) if raw_session_data.present?
-      end
-
       def unpacked_cookie_data(request)
         stale_session_check! do
           if data = get_cookie(request)
@@ -93,6 +97,11 @@ module ActionDispatch
       def cookie_jar(request)
         request.cookie_jar.signed_or_encrypted
       end
+    end
+
+    class MigrateCookiesToDatabaseStore < AbstractSecureStore
+      include DatabaseStore
+      include MigrateCookiesStore
     end
   end
 end
