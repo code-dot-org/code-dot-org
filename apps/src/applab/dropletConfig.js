@@ -685,17 +685,6 @@ export var blocks = [
     nativeIsAsync: true,
     type: 'either',
   },
-  {
-    func: 'onRecordEvent',
-    parent: api,
-    category: 'Data',
-    paletteParams: ['table', 'callback'],
-    params: [
-      '"mytable"',
-      "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}",
-    ],
-    allowFunctionDrop: {1: true},
-  },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value'},
   {
     func: 'drawChart',
