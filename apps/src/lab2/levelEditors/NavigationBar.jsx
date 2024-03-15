@@ -12,16 +12,16 @@ const NavigationBar = () => {
     const linksData = Array.from(legends).map(element => {
       return {
         text: element.textContent,
-        target: element.getAttribute('data-target'),
+        target: element,
       };
     });
 
     setLinksToHeadings(linksData);
   }, []); // Empty dependency array to run once on mount
 
-  const handleClick = (event, target) => {
+  const handleClick = (event, element) => {
     event.preventDefault();
-    const element = document.querySelector(target);
+    // const element = document.querySelector(target);
     if (element) {
       element.scrollIntoView({behavior: 'smooth'});
     }
