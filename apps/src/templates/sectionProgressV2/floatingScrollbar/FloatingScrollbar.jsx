@@ -2,34 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './floating-scrollbar.module.scss';
-
+import {scrollbarWidth} from './scrollbarUtils';
 /**
  * A component that adds a horizontal scrollbar to the bottom of {children} element.
  * Scrollbar will appear at the bottom of {child} if the bottom is visible.
  * Scrollbar will at the bottom of the screen if the bottom of {child} is not visible.
  *
- * {children} must:
- *    be a single element
- *    be a container with overflow-x: hidden
- *    have a single contents component that you would like to horizontally scroll
- * setOnScroll - a function that will be called with an onScroll event.
- *    This should be added to {child} element as the `onScroll` prop
- * childContainerRef - a ref to {child} element.
- *    Set by calling `ref={childContainerRef}` on the {child} element
- * childContentsRef - a ref to the contents of {child} element.
- *    Set by calling `ref={childContentsRef}` on the contents of {child} element
+ * {children} must be a single element and not a list of elements.
+ *   {child} should have all content visible and not itself scrollable.
+ * childRef - a ref to {child} element.
+ *    Set by calling `ref={childRef}` on the {child} element
  */
-export default function FloatingScrollbar({
-  children,
-  setOnScroll,
-  childContainerRef,
-  childContentsRef,
-}) {
+export default function FloatingScrollbar({children, childRef}) {
   const scrollRef = React.useRef();
+  const childContainerRef = React.useRef();
 
-  const [childScrollWidth, setChildScrollWidth] = React.useState(0);
-  const [childWidth, setChildWidth] = React.useState(0);
-  const [scrollVisible, setScrollVisible] = React.useState(true);
+  const [childScrollWidth, setChildScrollWidth] = React.useState(1);
+  const [childWidth, setChildWidth] = React.useState(1);
+  const [floatScrollbar, setFloatScrollbar] = React.useState(true);
+
+  const canFloat = React.useMemo(() => {
+    const newCanFloat = childScrollWidth > 0 && childWidth > 0;
+    if (!newCanFloat) {
+      console.warn('FloatingScrollbar: Unable to calculate widths', {
+        childScrollWidth,
+        childWidth,
+      });
+    }
+    return newCanFloat;
+  }, [childScrollWidth, childWidth]);
 
   const childContainerResizeObserver = React.useMemo(
     () =>
@@ -52,11 +53,11 @@ export default function FloatingScrollbar({
   );
 
   React.useEffect(() => {
-    if (childContainerResizeObserver) {
+    if (childContainerResizeObserver && childContainerRef?.current) {
       childContainerResizeObserver.observe(childContainerRef.current);
     }
-    if (childContentsResizeObserver) {
-      childContentsResizeObserver.observe(childContentsRef.current);
+    if (childContentsResizeObserver && childRef?.current) {
+      childContentsResizeObserver.observe(childRef.current);
     }
     return () => {
       childContainerResizeObserver.disconnect();
@@ -66,33 +67,42 @@ export default function FloatingScrollbar({
     childContainerResizeObserver,
     childContentsResizeObserver,
     childContainerRef,
-    childContentsRef,
+    childRef,
   ]);
 
   const handleScrollAndResize = React.useCallback(() => {
     const maxVisibleY =
       window.innerHeight || document.documentElement.clientHeight;
 
-    // 20 is the height of the scrollbar.
-    const isNowVisible =
-      childContainerRef?.current.getBoundingClientRect().bottom + 20 <
+    const isTableBottomVisible =
+      childContainerRef?.current.getBoundingClientRect().bottom +
+        scrollbarWidth <
       maxVisibleY;
+    // Hide scrollbar if top is below screen or bottom is above screen.
+    const isTableOffScreen =
+      childContainerRef?.current.getBoundingClientRect().top > maxVisibleY ||
+      childContainerRef?.current.getBoundingClientRect().bottom < 0;
 
-    if (isNowVisible !== scrollVisible) {
-      setScrollVisible(isNowVisible);
+    const shouldFloatScrollbar = !isTableBottomVisible && !isTableOffScreen;
+    if (shouldFloatScrollbar !== floatScrollbar) {
+      setFloatScrollbar(shouldFloatScrollbar);
     }
-  }, [childContainerRef, scrollVisible, setScrollVisible]);
+  }, [childContainerRef, floatScrollbar, setFloatScrollbar]);
 
   React.useEffect(() => {
-    window.addEventListener('scroll', e => handleScrollAndResize(e));
-    window.addEventListener('resize', e => handleScrollAndResize(e));
+    if (canFloat) {
+      window.addEventListener('scroll', handleScrollAndResize);
+      window.addEventListener('resize', handleScrollAndResize);
+      // Call it on initial render to set the initial state
+      handleScrollAndResize();
 
-    return () => {
-      // return a cleanup function to unregister our function since it will run multiple times
-      window.removeEventListener('scroll', e => handleScrollAndResize(e));
-      window.removeEventListener('resize', e => handleScrollAndResize(e));
-    };
-  }, [handleScrollAndResize]);
+      return () => {
+        // return a cleanup function to unregister our function since it will run multiple times
+        window.removeEventListener('scroll', handleScrollAndResize);
+        window.removeEventListener('resize', handleScrollAndResize);
+      };
+    }
+  }, [handleScrollAndResize, canFloat]);
 
   const scrollChild = React.useCallback(
     scroll => {
@@ -103,29 +113,39 @@ export default function FloatingScrollbar({
     [childContainerRef]
   );
 
-  React.useEffect(() => {
-    setOnScroll(() => scroll => {
-      scrollRef.current.scrollLeft = scroll.target.scrollLeft;
-    });
-  }, [setOnScroll, scrollRef]);
-
   if (children.length > 1) {
     throw new Error('FloatingScrollbar only supports a single child');
   } else if (children.length === 0) {
     return null;
+  } else if (!canFloat) {
+    // if we can't calculate the widths we can't float the scrollbar
+    // Instead we should show the children with the default non-floating scrollbar
+    return (
+      <div className={styles.defaultScroll} ref={childContainerRef}>
+        {children}
+      </div>
+    );
   }
 
   return (
     <div className={styles.scrollingContainer}>
-      {children}
+      <div
+        className={styles.scrollingContent}
+        ref={childContainerRef}
+        onScroll={scroll => {
+          scrollRef.current.scrollLeft = scroll.target.scrollLeft;
+        }}
+      >
+        {children}
+      </div>
       <div
         className={classNames(
           styles.scrollBar,
-          !scrollVisible && styles.bottomScrollBar
+          floatScrollbar && styles.bottomScrollBar
         )}
         onScroll={scrollChild}
         ref={scrollRef}
-        style={{width: childWidth + 'px'}}
+        style={{width: childWidth + 'px', height: 1 + scrollbarWidth + 'px'}}
       >
         <div
           style={{width: childScrollWidth + 'px'}}
@@ -138,7 +158,5 @@ export default function FloatingScrollbar({
 
 FloatingScrollbar.propTypes = {
   children: PropTypes.element.isRequired,
-  setOnScroll: PropTypes.func.isRequired,
-  childContainerRef: PropTypes.object.isRequired,
-  childContentsRef: PropTypes.object.isRequired,
+  childRef: PropTypes.object.isRequired,
 };

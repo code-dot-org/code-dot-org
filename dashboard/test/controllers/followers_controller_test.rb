@@ -90,7 +90,7 @@ class FollowersControllerTest < ActionController::TestCase
       get :student_user_new, params: {section_code: @laurel_section_1.code}
     end
 
-    assert_redirected_to '/'
+    assert_redirected_to '/join'
     assert_equal(
       I18n.t(
         'follower.error.section_not_found',
@@ -108,7 +108,7 @@ class FollowersControllerTest < ActionController::TestCase
       get :student_user_new, params: {section_code: @laurel_section_1.code}
     end
 
-    assert_redirected_to '/'
+    assert_redirected_to '/join'
     assert_equal(
       I18n.t(
         'follower.error.section_not_found',
@@ -168,7 +168,7 @@ class FollowersControllerTest < ActionController::TestCase
       get :student_user_new, params: {section_code: @chris_section.code}
     end
 
-    assert_redirected_to '/'
+    assert_redirected_to '/join'
     assert_equal "Sorry, you can't join your own section.", flash[:alert]
   end
 

@@ -62,15 +62,15 @@ export const UnconnectedTeacherHomepage = ({
   /*
    * Determines whether the AFE banner will take premium space on the Teacher Homepage
    */
-  const shouldShowAFEBanner = true;
+  const shouldShowAFEBanner = false;
 
-  /* We are hiding the Census banner to free up space on the Teacher Homepage (November 2023)
-   * when we want to show the Census banner again remove the next line
+  /*
+   * Set to true to hide the census banner (Census banner live as of Mar 2024)
    */
-  const forceHideCensusBanner = true;
+  const forceHideCensusBanner = false;
 
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
-   * when we want to show the Census banner again set this to true
+   * when we want to show the PL banner again set this to true
    */
   const showPLBanner = false;
 

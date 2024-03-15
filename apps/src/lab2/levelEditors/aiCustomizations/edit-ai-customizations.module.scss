@@ -4,12 +4,28 @@
 .fieldSection {
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .fieldRow {
   display: flex;
   flex-direction: row;
+}
+
+.titleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fieldTitle {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.expandCollapseButton {
+  @include remove-button-styles;
 }
 
 .inlineLabel {

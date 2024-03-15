@@ -1,9 +1,4 @@
-import {
-  AiCustomizations,
-  LevelAiCustomizations,
-  ModelCardInfo,
-  Visibility,
-} from '../../types';
+import {LevelAiCustomizations, ModelCardInfo, Visibility} from '../../types';
 
 export const MIN_TEMPERATURE = 0;
 export const MAX_TEMPERATURE = 2;
