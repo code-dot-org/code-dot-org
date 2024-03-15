@@ -14,31 +14,10 @@ Short explanation is that we in order to use semantic tags correctly we might wa
 The long explanation [can be found here](https://github.com/code-dot-org/code-dot-org/pull/51116#discussion_r1159915772)
 
 ### Additional styling / rewriting existing styles of the components
-Since we're using scss modules and classnames inside, to overwrite the styles of the components, you need to make sure 
-overwriting styles has highest styles priority. Here's some examples:
+Since we're using scss modules and classnames inside, **to overwrite the styles of the components, you need to make sure 
+overwriting styles has highest styles priority**.
 
-```javascript
- // Assuming we want to make h1 element that will look like h1 with a different color than Typography's default.
-    <div>
-        <Heading1>
-            Some Heading
-        </Heading1>
-    </div>
-
-// Just add any classname style in your scss module to the Heading1.
-//     <style>
-//     .heading1Style {
-//       color: #f00;
-//     }
-//     </style>
-
-    <div>
-        <Heading1 className={scssModule.heading1Style}>
-            Some Heading
-        </Heading1>
-    </div>
-
-```
+Here's some examples:
 
 ```javascript
  // Assuming we want to make h1 element that will look like h5 with a different color than Typography's default.
@@ -52,8 +31,9 @@ overwriting styles has highest styles priority. Here's some examples:
 
 //     <style>
 //     .parentDiv {
-//     h1 {
+//       h1 {
 //         color: #f00;
+//       }
 //     }
 //     </style>
 
@@ -77,7 +57,7 @@ overwriting styles has highest styles priority. Here's some examples:
                 </Heading1>
             </div>
 
-// 2. Use inline styles:
+// 2. (Not recomended since we're trying to avoid inline stlyes) Use inline styles:
             <div>
                 <Heading1 visualAppearance="heading-lg" style={{color: '#f00'}}>
                     Some Heading
@@ -85,6 +65,8 @@ overwriting styles has highest styles priority. Here's some examples:
             </div>
 
 ```
+
+***Always relly on css selector priority, not the order of stylesheets being loaded.*** (Since order of stylesheets load can be changed almost randomly [example here](https://codedotorg.slack.com/archives/C0T0PNTM3/p1710363328926969))
 
 
 
