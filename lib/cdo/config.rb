@@ -95,7 +95,7 @@ module Cdo
       @table.merge!(config) {|_key, old, _new| old}
 
       # Add an accessor method for each new key/value pair
-      config.keys.each do |key|
+      config.each_key do |key|
         unless singleton_class.method_defined?(key)
           define_singleton_method(key) {self[key]}
         end

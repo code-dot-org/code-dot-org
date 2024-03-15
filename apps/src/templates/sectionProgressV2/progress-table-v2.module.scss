@@ -15,10 +15,6 @@
 
 $level-cell-width: 52;
 
-:export {
-   levelCellWidth: $level-cell-width;
-}
-
 .table {
   width: fit-content;
 
@@ -76,8 +72,6 @@ $level-cell-width: 52;
     height: 47px;
     line-height: 47px !important;
     color: inherit !important;
-    // remove overflow after data icons are added
-    overflow-x: hidden;
   }
 }
 
@@ -107,6 +101,7 @@ $level-cell-width: 52;
     height: 100%;
     min-width: 195px;
     margin-right: 12px;
+    line-height: 32px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -203,12 +198,12 @@ $level-cell-width: 52;
       flex-direction: row;
       width: fit-content;
 
-      .expandedHeaderLevelCell:last-child {
+      & .expandedHeaderChild:last-child {
         border-right: 1px solid $light_gray_200;
       }
     }
 
-    &LevelCell {
+    .expandedHeaderLevelCell {
       width: $level-cell-width + px;
       text-align: center;
       height: 32px;
@@ -219,6 +214,10 @@ $level-cell-width: 52;
       justify-content: space-evenly;
       overflow-x: hidden;
       flex-wrap: nowrap;
+    }
+
+    .expandedHeaderLevelCellUnexpanded {
+      background-color: white;
     }
 
     &ExpandedLevel {
@@ -233,14 +232,14 @@ $level-cell-width: 52;
         color: $light_white;
       }
 
-      .expandedHeaderExpandedLevelCell:last-child {
-        width: $level-cell-width + px;
-        border-right: 0;
+      .expandedHeaderExpandedLevelCell:first-child {
+        border-left: 0;
       }
     }
 
     &ExpandedLevelCell {
-      width: $level-cell-width + 1 + px;
+      // Invisible border to match sizing of table
+      border-left: 1px solid $light_primary_500;
     }
   }
   &Column {
@@ -268,8 +267,12 @@ $level-cell-width: 52;
 }
 
 .sortDropdown {
-  height: 76px;
+  height: 72px;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 4px;
 }
 
 .studentColumn {

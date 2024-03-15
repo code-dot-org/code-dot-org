@@ -44,7 +44,7 @@ class ToneJSPlayer implements AudioPlayer {
     );
   }
 
-  goToPosition(position: number) {
+  jumpToPosition(position: number) {
     Transport.position = this.playbackTimeToTransportTime(position);
   }
 

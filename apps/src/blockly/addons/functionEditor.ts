@@ -105,10 +105,10 @@ export default class FunctionEditor {
     // Editor workspace toolbox procedure category callback
     const functionEditorOpen = true;
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      functionsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
+      functionsFlyoutCategory(this.editorWorkspace!, functionEditorOpen)
     );
     this.editorWorkspace.registerToolboxCategoryCallback('Behavior', () =>
-      behaviorsFlyoutCategory(this.editorWorkspace, functionEditorOpen)
+      behaviorsFlyoutCategory(this.editorWorkspace!, functionEditorOpen)
     );
 
     // Set up the "new procedure" button in the toolbox

@@ -16,7 +16,12 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {AudioPlayer, SampleEvent, SamplerSequence} from './types';
 import SamplePlayerWrapper from './SamplePlayerWrapper';
-import {DEFAULT_PATTERN_LENGTH, DEFAULT_CHORD_LENGTH} from '../constants';
+import {
+  DEFAULT_PATTERN_LENGTH,
+  DEFAULT_CHORD_LENGTH,
+  MIN_BPM,
+  MAX_BPM,
+} from '../constants';
 import appConfig from '../appConfig';
 import ToneJSPlayer from './ToneJSPlayer';
 
@@ -82,6 +87,30 @@ export default class MusicPlayer {
 
   getBPM(): number {
     return this.bpm;
+  }
+
+  setBpm(bpm: number) {
+    this.audioPlayer.setBpm(bpm);
+  }
+
+  setKey(key: Key) {
+    this.key = this.validateKey(key);
+  }
+
+  setLoopEnabled(enabled: boolean) {
+    this.audioPlayer.setLoopEnabled(enabled);
+  }
+
+  setLoopStart(loopStart: number) {
+    this.audioPlayer.setLoopStart(loopStart);
+  }
+
+  setLoopEnd(loopEnd: number) {
+    this.audioPlayer.setLoopEnd(loopEnd);
+  }
+
+  jumpToPosition(position: number) {
+    this.audioPlayer.jumpToPosition(position);
   }
 
   /**
@@ -477,7 +506,7 @@ export default class MusicPlayer {
   }
 
   private validateBpm(bpm: number): number {
-    if (bpm < 1 || bpm > 500) {
+    if (bpm < MIN_BPM || bpm > MAX_BPM) {
       console.warn('Invalid BPM. Defaulting to 120');
       return DEFAULT_BPM;
     }
@@ -513,8 +542,8 @@ export default class MusicPlayer {
     for (const instrument of library.folders.filter(
       folder => folder.type === 'instrument' || folder.type === 'kit'
     )) {
-      console.log(`Creating sampler for ${instrument.path}`);
-      this.setupSampler(instrument.path);
+      console.log(`Creating sampler for ${instrument.id}`);
+      this.setupSampler(instrument.id);
     }
   }
 
@@ -541,11 +570,14 @@ export default class MusicPlayer {
     }
 
     const sampleMap = folder.sounds.reduce((map, sound, index) => {
-      map[sound.note || index] = `${folder.path}/${sound.src}`;
+      const soundData = library.getSoundForId(`${folder.id}/${sound.src}`);
+      if (soundData) {
+        map[sound.note || index] = library.generateSoundUrl(folder, soundData);
+      }
       return map;
     }, {} as {[note: number]: string});
 
-    return this.audioPlayer.loadInstrument(folder.path, sampleMap, {
+    return this.audioPlayer.loadInstrument(folder.id, sampleMap, {
       updateLoadProgress: this.updateLoadProgress,
       onLoadFinished,
     });

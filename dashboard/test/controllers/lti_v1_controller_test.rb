@@ -22,6 +22,27 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         members: [
           {
             status: "Active",
+            user_id: "f2a16942-ed81-4c98-96dc-5cac16e354ec",
+            roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"],
+            message: [
+              {
+                'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+                locale: "en",
+                'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                  email: "teacher0@code.org",
+                  course_id: "115",
+                  full_name: "Teacher",
+                  given_name: "Test",
+                  family_name: "Zero",
+                  section_ids: "1,2,3",
+                  display_name: "Test Teacher Zero",
+                  section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+                }
+              }
+            ]
+          },
+          {
+            status: "Active",
             user_id: "0c00f8db-a039-45e1-8e2d-f1e17a047836",
             roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
             message: [
@@ -227,7 +248,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     # stub cache reads for each test
-    LtiV1Controller.any_instance.stubs(:read_cache).returns({state: @state, nonce: @nonce})
+    LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
   end
 
@@ -254,7 +276,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
           end
     roles_key = Policies::Lti::LTI_ROLES_KEY
     custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
-    teacher_roles = Policies::Lti::TEACHER_ROLES
+    teacher_roles = Policies::Lti::STAFF_ROLES
     nrps_url_key = Policies::Lti::LTI_NRPS_CLAIM
     resource_link_key = Policies::Lti::LTI_RESOURCE_LINK_CLAIM
     deployment_id_key = Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM
@@ -484,6 +506,30 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
   end
 
+  test 'auth - should redirect to iframe route if LMS caller is Schoology AND new_tab=true param is missing' do
+    issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
+    integration = create :lti_integration, issuer: issuer
+    # Override read_cache stub with this integration
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
+    payload = {**get_valid_payload, iss: issuer, aud: integration.client_id}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_response :redirect
+    assert_redirected_to '/lti/v1/iframe' + "?id_token=#{jwt}&state=#{@state}"
+  end
+
+  test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
+    issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
+    integration = create :lti_integration, issuer: issuer
+    # Override read_cache stub with this integration
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
+    payload = {**get_valid_payload, iss: issuer, aud: integration.client_id, azp: integration.client_id}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
+    assert_response :redirect
+    assert_redirected_to '/users/sign_up'
+  end
+
   test 'sync - should redirect students to homepage without syncing' do
     user = create :student
     sign_in user
@@ -539,6 +585,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     sign_in user
     lti_integration = create :lti_integration
     lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+    create :lti_user_identity, lti_integration: lti_integration, user: user, subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec'
 
     LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)

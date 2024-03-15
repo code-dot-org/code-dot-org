@@ -16,6 +16,7 @@ import teacherSections, {
   setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
+  sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -109,6 +110,10 @@ $(document).ready(function () {
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
               showAITutorTab={showAITutorTab}
+              sectionProviderName={sectionProviderName(
+                store.getState(),
+                section.id
+              )}
             />
           )}
         />

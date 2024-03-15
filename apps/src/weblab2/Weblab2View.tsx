@@ -17,12 +17,16 @@ Add javascript files (ending in .js) and execute javascript code in the right pa
 Use the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)`;
 
 const defaultConfig: ConfigType = {
-  showSideBar: true,
-  showPreview: true,
-  showRunBar: true,
-  showDebug: true,
+  //showSideBar: true,
+  // showLeftNav: false,
+  // showEditor: false,
+  // showPreview: false,
+  // showRunBar: true,
+  // showDebug: true,
   activeLeftNav: 'Files',
   EditorComponent: CDOEditor,
+  // editableFileTypes: ["html"],
+  // previewFileTypes: ["html"],
   leftNav: [
     {
       icon: 'fa-square-check',
@@ -39,9 +43,19 @@ const defaultConfig: ConfigType = {
   ],
   sideBar: ['fa-circle-question', 'fa-folder'],
   instructions,
+  //editableFileTypes: ["html", "json", "js", "css"],
+  //previewFileTypes: ["json", "html", "js"],
+  /* PreviewComponents: {
+    html: () => <div>I am previewing HTML</div>,
+    js: () => <div>I am previewing JavaSript</div>,
+    json: () => <div>I am previewing JSON</div>,
+  }, */
+  //blankEmptyEditor: true,
+  //EmptyEditorComponent: () => <div>Nothing is open.</div>,
 };
 
 const defaultProject: ProjectType = {
+  // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
     '2': {id: '2', name: 'bar', parentId: '1'},
@@ -50,6 +64,24 @@ const defaultProject: ProjectType = {
     '5': {id: '5', name: 'f2', parentId: '1'},
     '6': {id: '6', name: 'b1', parentId: '2'},
   },
+  /*files: {
+    "1": {
+      id: "1",
+      name: "index.html",
+      language: "html",
+      contents: `<!DOCTYPE html><html>
+    <link rel="stylesheet" href="styles.css"/>
+    <body>
+      Content goes here!
+      <div class="foo">Foo class!</div>
+    </body>
+  </html>
+  `,
+      open: true,
+      active: true,
+      folderId: "0",
+    },
+  },*/
   files: {
     '1': {
       id: '1',
@@ -111,10 +143,18 @@ const defaultProject: ProjectType = {
       open: false,
       folderId: '1',
     },
+    '7': {
+      id: '7',
+      name: 'some-javascript.js',
+      language: 'js',
+      contents: 'const a = 5; const b = 7; console.log(a + b);',
+      open: false,
+      folderId: '0',
+    },
   },
 };
 
-const App = () => {
+const Weblab2View = () => {
   const [project, setProject] = useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
@@ -159,4 +199,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Weblab2View;

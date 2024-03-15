@@ -13,28 +13,29 @@ export default function ExpandedProgressColumnHeader({
   expandedChoiceLevels,
   toggleExpandedChoiceLevel,
 }) {
+  const expandedLevelHeaderRef = React.useRef();
+
+  const [headerWidth, setHeaderWidth] = React.useState(0);
+
+  React.useEffect(() => {
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      if (entry.borderBoxSize) {
+        // toFixed(1) is necessary because most browsers round to one decimal point,
+        // But with zoom, borderBoxSize can be a float with many decimal points.
+        const newWidth = entry.borderBoxSize[0].inlineSize.toFixed(1);
+        setHeaderWidth(newWidth);
+      }
+    });
+    resizeObserver.observe(expandedLevelHeaderRef.current);
+
+    return () => resizeObserver.disconnect();
+  }, [setHeaderWidth, expandedLevelHeaderRef]);
+
   // If there are 2 or less levels, we only show the number so that the text fits the cell.
   const headerText =
     lesson.levels.length < 3 && expandedChoiceLevels.length === 0
       ? lesson.relative_position
       : lesson.title;
-
-  // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
-  // Add (numLevels + 1)px to account for borders.
-  // Also count expanded lessons and account for larger borders
-  const width = React.useMemo(() => {
-    const levelWidth = parseInt(styles.levelCellWidth) + 1;
-    const lessonHeaderWidth = lesson.levels.reduce((acc, level) => {
-      if (
-        level.sublevels?.length > 0 &&
-        expandedChoiceLevels.includes(level.id)
-      ) {
-        return acc + (level.sublevels.length + 1) * levelWidth;
-      }
-      return acc + levelWidth;
-    }, 0);
-    return lessonHeaderWidth + 1 + 'px';
-  }, [lesson, expandedChoiceLevels]);
 
   return (
     <div className={styles.expandedHeader} key={lesson.id}>
@@ -44,7 +45,7 @@ export default function ExpandedProgressColumnHeader({
           styles.expandedHeaderLessonCell,
           styles.pointerMouse
         )}
-        style={{width}}
+        style={{width: headerWidth + 'px'}}
         onClick={() => removeExpandedLesson(lesson.id)}
         aria-label={headerText}
         data-tip
@@ -58,7 +59,10 @@ export default function ExpandedProgressColumnHeader({
         />
         <div className={styles.expandedHeaderLessonText}>{headerText}</div>
       </div>
-      <div className={styles.expandedHeaderSecondRow}>
+      <div
+        className={styles.expandedHeaderSecondRow}
+        ref={expandedLevelHeaderRef}
+      >
         {lesson.levels.map(level => (
           <LevelProgressHeader
             key={level.id}

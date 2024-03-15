@@ -1,6 +1,6 @@
 import {AiCustomizations, Visibility} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
-import SimpleDropdown from '@cdo/apps/componentLibrary/simpleDropdown/SimpleDropdown';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {UpdateContext} from './UpdateContext';
 
 const VisibilityDropdown: React.FunctionComponent<{
@@ -15,9 +15,9 @@ const VisibilityDropdown: React.FunctionComponent<{
       name="bot_name_visibility"
       size="s"
       items={[
-        {value: 'editable', text: 'Editable'},
-        {value: 'readonly', text: 'Read Only'},
-        {value: 'hidden', text: 'Hidden'},
+        {value: Visibility.EDITABLE, text: 'Editable'},
+        {value: Visibility.READONLY, text: 'Read Only'},
+        {value: Visibility.HIDDEN, text: 'Hidden'},
       ]}
       onChange={e => {
         setPropertyVisibility(property, e.target.value as Visibility);

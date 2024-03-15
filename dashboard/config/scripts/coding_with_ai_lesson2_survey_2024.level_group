@@ -4,7 +4,7 @@ submittable 'true'
 anonymous 'true'
 
 page
-text 'coding-with-ai-survey-2024-intro'
+text 'coding-with-ai-survey-2024-intro2'
 level 'coding-with-ai-survey-2024-q1'
 level 'coding-with-ai-survey-2024-q2'
 level 'coding-with-ai-survey-2024-q3'

@@ -1421,6 +1421,9 @@ en:
       missing_params: "Missing required param(s): School/District name, Client ID, LMS, Email"
       unsupported_lms_type: "Unsupported LMS platform type"
       wrong_resource_type: "Only LtiResourceLink is supported right now"
+    iframe_button: "Open in New Tab"
+    iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
+    iframe_title: "Opening Code.org in New Tab"
     integration:
       client_id: "LMS Client ID"
       email: "Your email"
@@ -1457,3 +1460,7 @@ en:
     upgrade_to_teacher_account:
       error:
         missing_email: "Missing required parameter: Email"
+  certificates:
+    alt_text_with_name: "Certificate for %{student_name} for completion of %{course_name}"
+    alt_text_no_name: "Certificate for completion of %{course_name}"
+    one_hour_of_code: "One Hour of Code"
