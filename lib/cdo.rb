@@ -35,7 +35,7 @@ module Cdo
       )
 
       defaults = render("#{root}/config.yml.erb").first
-      to_h.keys.each do |key|
+      to_h.each_key do |key|
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
@@ -247,6 +247,15 @@ module Cdo
       CDO.cdo_amplitude_api_key
     rescue ArgumentError
       # Return an empty string, instead of raising.
+      ''
+    end
+
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Statsig API key.
+    def safe_statsig_api_client_key
+      CDO.statsig_api_client_key
+    rescue ArgumentError
+      # Return an empty string instead of raising
       ''
     end
 

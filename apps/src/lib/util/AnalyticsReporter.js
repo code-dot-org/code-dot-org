@@ -12,9 +12,8 @@ import {
   isStagingEnvironment,
   isDevelopmentEnvironment,
 } from '../../utils';
-
-import {EVENT_GROUPS} from './AnalyticsConstants';
-
+import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
+import {EVENT_GROUPS, PLATFORMS} from './AnalyticsConstants';
 import DCDO from '@cdo/apps/dcdo';
 
 // A flag that can be toggled to send events regardless of environment
@@ -49,7 +48,23 @@ class AnalyticsReporter {
     identify(identifyObj);
   }
 
-  sendEvent(eventName, payload) {
+  /*
+   *  Allows us to temporarily send events to Amplitude, Statsig, or both
+   *  platforms without requiring a refactor of all events. If/when we move
+   *  entirely to Statsig, this file can be replaced with the contents of
+   *  StatsigReporter, or the files sending events can import that file instead
+   *  and we can delete this one.
+   */
+  sendEvent(eventName, payload, analyticsTool = PLATFORMS.AMPLITUDE) {
+    if ([PLATFORMS.STATSIG, PLATFORMS.BOTH].includes(analyticsTool)) {
+      statsigReporter.sendEvent(eventName, payload);
+    }
+    if ([PLATFORMS.AMPLITUDE, PLATFORMS.BOTH].includes(analyticsTool)) {
+      this.sendAnalyticsEvent(eventName, payload);
+    }
+  }
+
+  sendAnalyticsEvent(eventName, payload) {
     //we can enable/disable sampling based upon the event's group, which is defined in the AnalyticsConstants
     //file, in the EVENT_GROUPS variable. If an event is not listed in that mapping, it defaults to 'ungrouped'
 
