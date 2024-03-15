@@ -212,7 +212,7 @@ class LtiV1Controller < ApplicationController
       # Populate vars from the section associated with the input code.
       lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code])
       unless lti_course
-        return render_sync_course_error('We couldn\'t find the given section.', :bad_request,  "no_section")
+        return render_sync_course_error('We couldn\'t find the given section.', :bad_request, "no_section")
       end
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
@@ -225,7 +225,7 @@ class LtiV1Controller < ApplicationController
       begin
         lti_integration = LtiIntegration.find(params[:lti_integration_id])
       rescue
-        return render_sync_course_error('LTI Integration not found', :bad_request,  "no_integration")
+        return render_sync_course_error('LTI Integration not found', :bad_request, "no_integration")
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]

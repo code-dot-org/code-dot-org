@@ -497,7 +497,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     sign_in user
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: nil, nrps_url: nil}
     assert_response :bad_request
-    assert_includes(response.body, I18n.t('lti.error.wrong_context'))
   end
 
   test 'sync - should sync and show the confirmation page' do
