@@ -6,6 +6,22 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import firehoseClient from '../lib/util/firehose';
+
+const recordEvent = (eventName, sectionId, dataJson = {}) => {
+  firehoseClient.putRecord(
+    {
+      study: 'teacher_dashboard_actions',
+      study_group: 'progress_v2',
+      event: eventName,
+      data_json: JSON.stringify({
+        section_id: sectionId,
+        ...dataJson,
+      }),
+    },
+    {includeUserId: true}
+  );
+};
 
 function UnitSelectorV2({
   sectionId,
@@ -21,7 +37,7 @@ function UnitSelectorV2({
       setScriptId(newUnitId);
       loadUnitProgress(newUnitId, sectionId);
 
-      this.recordEvent('change_script_v2', {
+      recordEvent('change_script', sectionId, {
         old_script_id: unitId,
         new_script_id: newUnitId,
       });
