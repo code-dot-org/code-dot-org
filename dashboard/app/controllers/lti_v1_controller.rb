@@ -244,9 +244,9 @@ class LtiV1Controller < ApplicationController
 
       lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
       nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
-      nrps_sections = Services::Lti.parse_nrps_response(nrps_response)
+      nrps_sections = Services::Lti.parse_nrps_response(nrps_response, lti_integration.issuer)
 
-      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= sync_course_roster_results
 
       # Report which sections were updated

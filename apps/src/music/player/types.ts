@@ -16,7 +16,7 @@ export interface AudioPlayer {
 
   /** Load sounds into the cache */
   loadSounds(
-    sampleIds: string[],
+    sampleUrls: string[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void>;
 
@@ -61,14 +61,26 @@ export interface AudioPlayer {
 
   /** Cancel pending audio events */
   cancelPendingEvents(): void;
+
+  /** Enable/disable looping */
+  setLoopEnabled(enabled: boolean): void;
+
+  /** Set the loop start point */
+  setLoopStart(loopStart: number): void;
+
+  /** Set the loop end point */
+  setLoopEnd(loopEnd: number): void;
+
+  /** Jump to the given playback position */
+  jumpToPosition(position: number): void;
 }
 
 /** A single sound played on the timeline */
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
-  // ID of the sample
-  sampleId: string;
+  // URL of the sample
+  sampleUrl: string;
   // Whether the sound was triggered
   triggered: boolean;
   // Original BPM of the sample

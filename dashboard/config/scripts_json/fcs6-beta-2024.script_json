@@ -1,0 +1,3598 @@
+{
+  "script": {
+    "name": "fcs6-beta-2024",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-03-13 16:22:14 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "fcs6-beta-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "The Need for Programming Languages",
+      "name": "The Need for Programming Languages",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
+        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ro6_apaSbhb3Ff16xK9fVyJX3vszVcknaEdjnzemVP8/edit?usp=sharing)",
+        "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "Algorithms Solve Problems",
+      "name": "Algorithms Solve Problems",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
+        "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1NOrv8vcuPS_vyQfwgFuX7CO8B7-YoZouad-tOmPHsEA/edit?usp=sharing)",
+        "student_overview": "Learn how computer scientists think about problems and the way different algorithms can be designed to solve them.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "Using Simple Commands",
+      "name": "Using Simple Commands",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "preparation": "* Practice the levels yourself so you're familiar with the challenges.\n* Familiarize yourself with opening remarks and comments for background knowledge."
+      },
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "Creating Functions",
+      "name": "Creating Functions",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "APIs and Function Parameters",
+      "name": "APIs and Function Parameters",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "Creating functions with Parameters",
+      "name": "Creating functions with Parameters",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "Looping and Random Numbers",
+      "name": "Looping and Random Numbers",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "Make your own Digital Scene",
+      "name": "Make your own Digital Scene",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f595af15-8bfe-4ee8-86a4-af5832503b21",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f595af15-8bfe-4ee8-86a4-af5832503b21",
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "be6e2a24-2294-4bf7-8c21-da63afc16e63",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be6e2a24-2294-4bf7-8c21-da63afc16e63",
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6",
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "4e1dbdbc-f1d9-4b2e-a2b4-947eb1578095",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e1dbdbc-f1d9-4b2e-a2b4-947eb1578095",
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "3a56c442-dcb8-481d-ad15-26981d458f03",
+      "position": 1,
+      "properties": {
+        "name": "The Pre-Unit Pulse"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a56c442-dcb8-481d-ad15-26981d458f03",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "114f4f67-d847-4c82-b438-04f8fec9b4e6",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm  Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "114f4f67-d847-4c82-b438-04f8fec9b4e6",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "18e0060b-bb80-4f03-a53e-3169bd5c488d",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "df0bee05-f577-4ea7-b41f-b857b387d2e7",
+      "position": 4,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "1766dfa6-a75b-4ef2-80bc-f9a191b116d8",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1766dfa6-a75b-4ef2-80bc-f9a191b116d8",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "957cc737-3f5b-4efb-9b3e-96ee38a05d11",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "957cc737-3f5b-4efb-9b3e-96ee38a05d11",
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab",
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4",
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "b18c82c4-0c2f-47ec-8851-a7982bea3259",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259",
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e",
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3",
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "daaef171-c691-4426-9071-83168c86d58c",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "daaef171-c691-4426-9071-83168c86d58c",
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "3c5b1dd7-09dd-475b-928d-e9b50952db15",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15",
+        "lesson.key": "Make your own Digital Scene",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "714816f2-1a24-48eb-b043-ac458c2ed866",
+      "position": 1,
+      "properties": {
+        "description": "Today we're going to look at what it takes to write \"good\" instructions. We all use instructions all the time, whether it's directions to get somewhere, instructions to fill out a form, or even instructions from teachers. To help us get started, let's brainstorm what \"bad\" instructions\" look like.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "714816f2-1a24-48eb-b043-ac458c2ed866",
+        "lesson_activity.key": "f595af15-8bfe-4ee8-86a4-af5832503b21"
+      }
+    },
+    {
+      "key": "745406ee-ecd9-494b-84a8-762935213a7e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Write down three different reasons you would call a set of instructions \"bad\". Be ready to share with a neighbor.*\n\n**Discussion Goal:** Aim to hear a few different students share reasons that instructions are \"bad\". The point here is just to get students thinking and there's no specific answer you're driving towards. Some possible ideas, however, might include:\n\n* Instructions are not clear on what to do\n* Instructions use confusing words\n* Instructions don't actually accomplish what they're supposed to\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "745406ee-ecd9-494b-84a8-762935213a7e",
+        "lesson_activity.key": "f595af15-8bfe-4ee8-86a4-af5832503b21"
+      }
+    },
+    {
+      "key": "182a676b-fc30-4c19-a9e8-9292e006aac5",
+      "position": 3,
+      "properties": {
+        "description": "Alright, so we have an idea of what \"bad\" instructions look like. Let's see if we can use this brainstorm to help us write good instructions in the next activity!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "182a676b-fc30-4c19-a9e8-9292e006aac5",
+        "lesson_activity.key": "f595af15-8bfe-4ee8-86a4-af5832503b21"
+      }
+    },
+    {
+      "key": "ab815a7d-3efb-4e8e-b603-8808fdb0c6c2",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in groups of two, optionally forming a group of three.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a small set of blocks (either LEGO or paper cutouts). Also have each group use a blank sheet of paper or a blank page in a journal.\r\n\r\n**Display:** Use the lesson slides to guide this activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is students' first introduction to the concept of a programming language. It helps them understand why programming languages exist by giving them a first-hand experience with the problems that programming languages are designed to address. Natural language is usually too ambiguous for giving precise instructions that can be followed correctly 100% of the time. We need to create more structured and precise programming languages in order to accomplish this."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab815a7d-3efb-4e8e-b603-8808fdb0c6c2",
+        "lesson_activity.key": "be6e2a24-2294-4bf7-8c21-da63afc16e63"
+      }
+    },
+    {
+      "key": "ee731176-6e99-45a7-a21b-c69ceef353ac",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 1: Design:** Give students a couple minutes to create their design. Keep this quick since the bigger focus should be on the instructions."
+      },
+      "seeding_key": {
+        "activity_section.key": "ee731176-6e99-45a7-a21b-c69ceef353ac",
+        "lesson_activity.key": "be6e2a24-2294-4bf7-8c21-da63afc16e63"
+      }
+    },
+    {
+      "key": "4c58f906-c3ca-4d75-9b20-46bf66ad4a8e",
+      "position": 3,
+      "properties": {
+        "description": "**Step 2: Record:** Either have students sketch their design or take a picture. Make sure the image is on a separate piece of paper or the back side of a sheet of paper.\r\n\r\n**Step 3: Write Instructions:** This is the most important step and should be given about 5 minutes. Encourage students to be as clear as possible while only using words. Encourage them to think about their brainstorm of \"bad\" instructions this morning to see if it can inspire them to make \"good\" ones.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 4: Trade:** Have students take apart their design, and then trade instructions with another group. Make sure they keep their recording of the design hidden.\r\n\r\n**Step 5: Build:** Give students 3 minutes to follow the instructions from another group.\r\n\r\n**Step 6: Compare:** Give students 2 minutes to compare what they built with the picture of the actual target. In their groups they should discuss what they think went wrong or anything they're surprised worked out.\r\n\r\n**Step 7: Repeat:** Depending on how much time you have, encourage students to trade with one or two other groups. Make sure to save time for the wrap up.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 150px\">\n<img src=\"https://images.code.org/3583b6026b2be005e035a93b4a5065f0-image-1678136357579.png\" style=\"margin-right: 40px; float: left\">\n<p><strong>Make it a Gallery Walk:</strong> Depending on your room set-up you may be able to have students run this activity in a more open-ended way. Students should leave their unconstructed blocks and instructions at their table with the target image face down. They can then make their way to a few different groups' instructions over the course of 10-15 minutes. \n\n**Mark What's Confusing:** You may optionally have students leave suggestions on instructions when they use them explaining where they were confused or wanted more detail. This is a good way to practice giving and receiving feedback. It also forces groups to think more clearly about what is causing their confusion since they'll have to leave it in writing.</p>\n</div>\n\n\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c58f906-c3ca-4d75-9b20-46bf66ad4a8e",
+        "lesson_activity.key": "be6e2a24-2294-4bf7-8c21-da63afc16e63"
+      }
+    },
+    {
+      "key": "6b92d0fe-bf70-4b30-a28e-7e1251ad414d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6b92d0fe-bf70-4b30-a28e-7e1251ad414d",
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6"
+      }
+    },
+    {
+      "key": "f15c2af4-00e1-4838-9d68-2748845b1c84",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When you or your classmates made mistakes following instructions today what \"went wrong\"? Try to be as specific as possible.*\n\n**Discussion Goal:** This wrap up includes two sets of prompts and should be run as back-to-back discussions. The first set helps students synthesize the challenges they encountered during the main activity. The second set prompts students to think about how they might design a new language that avoids these challenges.\n\nWhen running the first discussion ask students to share specific experiences during the lesson and prompt them to think about what went wrong. They might say things like \"if we'd just been more clear\" or \"we just need to include more detail\". This might be true, but eventually you should point out that human language is often ambiguous. In other words, it's not their fault! It's hard to do a good job with bad tools!\n\nWhen running the second discussion push students to think about what a language designed for giving instructions would look like. While specific answers aren't important, you should push them to build on their experiences in the main activity. For example, if they saw that words having two meanings was confusing in the main activity, they should suggest redesigning the language so each word has a single well-understood meaning. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f15c2af4-00e1-4838-9d68-2748845b1c84",
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6"
+      }
+    },
+    {
+      "key": "00858dd8-82e4-4ae7-94c7-083b74098179",
+      "position": 3,
+      "properties": {
+        "description": "Even trying to be as clear as possible we struggled to write clear instructions. There are things we could do to improve, but the core challenge here is that everyday human language is bad for giving clear instructions. Words can have two or three meanings! Instructions that seem clear turn out to be vague when we actually go follow them. If we want to give clear instructions, we need to fundamentally change the language we use. We need to create a new kind of language.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "00858dd8-82e4-4ae7-94c7-083b74098179",
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6"
+      }
+    },
+    {
+      "key": "5f8f8522-0bbe-42e0-b7f7-ff2a05f1c03b",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Imagine we were going to redesign human language to be really good for giving clear instructions. What types of changes would we need to make?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f8f8522-0bbe-42e0-b7f7-ff2a05f1c03b",
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6"
+      }
+    },
+    {
+      "key": "39ff1159-db5e-4647-91fc-3c2c54fd9745",
+      "position": 5,
+      "properties": {
+        "description": "Today we talked a lot about instructions because soon we're going start programming your apps. When you write a program you're just giving instructions to a computer for what it should do to run your app. As you'll see, the programming language we use to give these instructions sometimes looks like English, but then has a lot of weird (and sometimes confusing) differences. This is because it needs to be more precise and unambiguous than normal human language. We'll dive into this more next time we meet!\r\n\r\n---",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "39ff1159-db5e-4647-91fc-3c2c54fd9745",
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6"
+      }
+    },
+    {
+      "key": "06baf804-e9aa-4a5f-8103-1931a7e32aa9",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the difference between a programming language and natural (every-day) language?",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "06baf804-e9aa-4a5f-8103-1931a7e32aa9",
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6"
+      }
+    },
+    {
+      "key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1",
+        "lesson_activity.key": "4e1dbdbc-f1d9-4b2e-a2b4-947eb1578095"
+      }
+    },
+    {
+      "key": "da906cbe-8163-44ef-bad8-0ab68cef170f",
+      "position": 1,
+      "properties": {
+        "description": "Have your students complete these questions independently some time before starting this unit. \n",
+        "progression_name": "The Pre-Unit Pulse",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/168EbC-sGJ6vhUqbJTkzPJbSedHzHpr2LLdU_SUdN4o0/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f",
+        "lesson_activity.key": "3a56c442-dcb8-481d-ad15-26981d458f03"
+      }
+    },
+    {
+      "key": "8c1e8a60-7bc4-4a94-83ee-ff3323f4eb8a",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 10 Journal ([Digital](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c1e8a60-7bc4-4a94-83ee-ff3323f4eb8a",
+        "lesson_activity.key": "114f4f67-d847-4c82-b438-04f8fec9b4e6"
+      }
+    },
+    {
+      "key": "30641348-33d4-420a-a8e1-4744e0329f2f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?*\n\n**Discussion Goal:** This is an optional discussion. If you are able to move directly to the main activity you should do so. This discussion should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "30641348-33d4-420a-a8e1-4744e0329f2f",
+        "lesson_activity.key": "114f4f67-d847-4c82-b438-04f8fec9b4e6"
+      }
+    },
+    {
+      "key": "50d8d01c-115c-4de2-a5f2-0c6ffe252b64",
+      "position": 3,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "50d8d01c-115c-4de2-a5f2-0c6ffe252b64",
+        "lesson_activity.key": "114f4f67-d847-4c82-b438-04f8fec9b4e6"
+      }
+    },
+    {
+      "key": "e85db65e-76cd-4ae6-9646-188a3184ac5f",
+      "position": 1,
+      "properties": {
+        "description": "Today we are going to kick off a short unit about how computer scientists think about problem solving. A really important skill will be recognizing patterns and similarities.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e85db65e-76cd-4ae6-9646-188a3184ac5f",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "7af7f819-7833-4230-b015-c76cadba3a66",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Ask students to take out their journals or give them some blank paper for working on the following problems\n\nShow the slides for the ten problems students will need to solve.",
+        "name": "Comparing Problems"
+      },
+      "seeding_key": {
+        "activity_section.key": "7af7f819-7833-4230-b015-c76cadba3a66",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "e1410b70-2539-4025-a122-88c893394fd0",
+      "position": 3,
+      "properties": {
+        "description": "**Circulate:** Ask students to review the problems for one minute, and then let them move around the room collecting information needed to solve the problems. This may take them several minutes."
+      },
+      "seeding_key": {
+        "activity_section.key": "e1410b70-2539-4025-a122-88c893394fd0",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "12950e31-a27d-4153-84e2-46ccca77d7b3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which problems did you need to do something similar in order to solve them?*\n\n**Discussion Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "12950e31-a27d-4153-84e2-46ccca77d7b3",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "c8b1b9a2-b50f-42bd-bfb4-ea2b2d540bc4",
+      "position": 5,
+      "properties": {
+        "description": "Have students discuss the prompt with a neighbor before asking them to share with the room. Lead a discussion on their experiences."
+      },
+      "seeding_key": {
+        "activity_section.key": "c8b1b9a2-b50f-42bd-bfb4-ea2b2d540bc4",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "b834eeb4-812a-4175-a1e3-5c6fc9f3138b",
+      "position": 6,
+      "properties": {
+        "description": "The first thing that we need to think about as computer scientists is what is a \"problem\". We just looked at 10 problems, but as we discussed, a lot of them are similar. If we solve one problem we may actually solve another, or at least have a good idea for how to start solving another. As computer scientists it's important to ask \"have I seen this problem before\" or \"how is this problem similar to others I've solved?\"",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b834eeb4-812a-4175-a1e3-5c6fc9f3138b",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "d0d8c317-5f65-4a3c-b778-5d7d5d3f9548",
+      "position": 7,
+      "properties": {
+        "description": "We just thought about whether problems are similar. Now we're going to look at whether we're actually solving the same problem.",
+        "name": "Comparing Algorithms",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d0d8c317-5f65-4a3c-b778-5d7d5d3f9548",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "e9cecd66-2a89-4622-acc3-ab8bc89d2c7b",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which of these algorithms are “the same” as one another?*\n\n**Discussion Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9cecd66-2a89-4622-acc3-ab8bc89d2c7b",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "9e31a0ab-2d14-4543-8658-d5473a75ca03",
+      "position": 9,
+      "properties": {
+        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nSample Prompt: <i> What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?</i>\n\n[Unit Journal Template](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit#slide=id.g24cbae510b7_0_100)\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c9f55c9f1b052fce6f62d8569709f071-Screenshot 2023-11-03 at 1.46.31 PM.png)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9e31a0ab-2d14-4543-8658-d5473a75ca03",
+        "lesson_activity.key": "18e0060b-bb80-4f03-a53e-3169bd5c488d"
+      }
+    },
+    {
+      "key": "e909e098-0d24-4419-b82d-3982e875a883",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: problem, algorithm, sequencing, selection, iteration."
+      },
+      "seeding_key": {
+        "activity_section.key": "e909e098-0d24-4419-b82d-3982e875a883",
+        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7"
+      }
+    },
+    {
+      "key": "f149d5ed-7eb0-4248-9d38-ae94c23a1a1d",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** *How did today’s activities change the way you think about algorithms and problems?*\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f149d5ed-7eb0-4248-9d38-ae94c23a1a1d",
+        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7"
+      }
+    },
+    {
+      "key": "bdc0d5e3-b2b2-4de5-b083-6a9d975eec49",
+      "position": 3,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** Use this discussion to reinforce vocabulary introduced in the slides and check in on whether students have begun the transition towards thinking on a higher level about algorithms and problems. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bdc0d5e3-b2b2-4de5-b083-6a9d975eec49",
+        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7"
+      }
+    },
+    {
+      "key": "07d8c6af-aef8-4eb3-833b-b8c21b55b2cb",
+      "position": 4,
+      "properties": {
+        "description": "Computer scientists don't just think about \"code\", they think about problems and the algorithms that solve them. In this unit we're going to explore what makes two problems, or two algorithms, similar or different from one another, and the way computer scientists talk about them. Not only will you be a better programmer, but you'll get to work on some really interesting problems along the way.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "07d8c6af-aef8-4eb3-833b-b8c21b55b2cb",
+        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7"
+      }
+    },
+    {
+      "key": "ac893caa-b1f7-4c37-8bac-15420193002e",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** In your own words explain the difference between a problem and an algorithm.",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac893caa-b1f7-4c37-8bac-15420193002e",
+        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7"
+      }
+    },
+    {
+      "key": "2bd8bf81-d206-4c94-b02c-25fe614aca76",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bd8bf81-d206-4c94-b02c-25fe614aca76",
+        "lesson_activity.key": "1766dfa6-a75b-4ef2-80bc-f9a191b116d8"
+      }
+    },
+    {
+      "key": "0e1de2e3-9417-4f89-a0c6-4eb9cbb4bc05",
+      "position": 1,
+      "properties": {
+        "description": "Today we'll be using a practice called pair programming. Pair progamming helps people make better programs by working together. The main idea is that two programmers use a single computer to collaboratively develop code. There's a few rules to make sure this system works effectively.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0e1de2e3-9417-4f89-a0c6-4eb9cbb4bc05",
+        "lesson_activity.key": "957cc737-3f5b-4efb-9b3e-96ee38a05d11"
+      }
+    },
+    {
+      "key": "86fc760c-aa09-4567-831c-4e9777bfb9bb",
+      "position": 2,
+      "properties": {
+        "description": "Review: Introduce the rules of pair programming below.\n\nThere is only one computer and two programmers.\nAssign one student \"driver\" and the other \"navigator\". Don't worry, you'll switch often.\nThe driver is the only one to touch the keyboard/mouse.\nThe navigator should look for problems in the code and keep track of the high-level plan.\nBoth driver and navigator should be communicating constantly by talking out loud and sharing ideas.\nDriver and navigator roles must switch when the teacher indicates, typically every 3-5 minutes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Pair Programming: Pair programming is practiced in education and in industry. Students who pair program are more confident in their abilities and are more likely to continue to study computer science. This practice is most effective if it is introduced early and the rules for switching partners are enforced by the teacher. You can read more about Pair Programming in the Computer Science Principles Curriculum Guide on page 8.\n\nEnforcing Timing: A particularly important role of the teacher of this lesson is introducing the logistics of pair programming. Enforce students trading who is driver or navigator every few minutes (3 minutes). Use a timer and actually force pairs to show you that they are switching roles.\n\nWhen to Use Pair Programming: You don't need to always pair program. You may even opt to stop pair programming after 15 minutes or so of this lesson. Introducing the practice early and reinforcing its value will ensure it's a practice you can return to throughout this unit.\n\nHere is a helpful video to show students to explain Pair Programming: [**Pair Programming CSP**](https://www.youtube.com/watch?v=q7d_JtyCq1A)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "86fc760c-aa09-4567-831c-4e9777bfb9bb",
+        "lesson_activity.key": "957cc737-3f5b-4efb-9b3e-96ee38a05d11"
+      }
+    },
+    {
+      "key": "fd2e556a-62c8-4272-8b48-fbee9c59c37e",
+      "position": 1,
+      "properties": {
+        "description": "Group: Place students in pairs. If you need to make one group of three you may do so and assign two members at each time to be \"navigators\"."
+      },
+      "seeding_key": {
+        "activity_section.key": "fd2e556a-62c8-4272-8b48-fbee9c59c37e",
+        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
+      }
+    },
+    {
+      "key": "0239fd1b-3a4d-4f7c-bcfd-bae7928b2ff4",
+      "position": 2,
+      "properties": {
+        "description": "To get you situated in App Lab there's a quick video. Once everyone is through that we'll get started. I'll keep track of time and remind you to switch who is driver and navigator every 3 minutes or so. Make sure you're ready to switch by talking out loud and sharing ideas.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0239fd1b-3a4d-4f7c-bcfd-bae7928b2ff4",
+        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
+      }
+    },
+    {
+      "key": "8af83a2f-531b-4616-a591-9b65c61fce45",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: Turtle Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "8af83a2f-531b-4616-a591-9b65c61fce45",
+        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
+      }
+    },
+    {
+      "key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using Simple Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad",
+        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
+      }
+    },
+    {
+      "key": "d2c6af2c-54d2-4282-a19e-366fba4bf181",
+      "position": 5,
+      "properties": {
+        "progression_name": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2c6af2c-54d2-4282-a19e-366fba4bf181",
+        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
+      }
+    },
+    {
+      "key": "3e912646-4955-471d-b296-274a16288ca7",
+      "position": 1,
+      "properties": {
+        "description": "Compare Solutions and Discuss: Each pair of students should get together with another pair to compare their solutions for each of the three problems to determine which is the most efficient. Once they have shared and compared their solutions they can consider the questions below.\n\nWhat strategies or reasoning did you use to identify possible solutions?\nIs the solution that you or another group found the most efficient? How do you know?\nPrompt: What is the “most efficient” way to program the solution for the 3x3 grid?\n\n Discuss: Have students share at their tables before moving to a full class discussion.\n\nPrompts:\n\nToday’s activity challenged us to find the most efficient solution to a problem. We care about efficiency when we don’t want to waste something valuable, like money, time, or space. We measured the efficiency of our programs in terms of lines of code, but there are other ways to think about efficiency when talking about code or programs that run on a computer. When we try to create efficient programs, what other valuable resources might we be concerned about conserving?\n\nList the things that students come up with somewhere that can be read by the class. These can be used to motivate portions of the next and future lessons.\n\nDiscussion Goal: The point of this discussion is to highlight the fact that \"efficiency\" can mean different things depending on the context.\n\nPotential answers to this question can include the time they take to run on a computer, the time or number of people they require to create, the number of resources they require to run, etc. Students will likely come up with others.\n\nDon’t fixate on any one solution and encourage students to come up with the most comprehensive list possible.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are a lot of points in this “What’s the Point?” section. They all go together and they are not all points you have to make in this lesson right now.\nYou should keep these big ideas in your back pocket, because you may want to refer back them in the future.\nThe short version:\nCreativity in programming comes from the fact that all programming languages have constraints; your job is to figure out how to use the language to get the computer to do what you want it to do or to solve a problem.\nCollaboration is a huge help when solving problems with programming. It’s helpful to work through problems with a partner."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e912646-4955-471d-b296-274a16288ca7",
+        "lesson_activity.key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4"
+      }
+    },
+    {
+      "key": "461e7ea6-f2e4-47d5-a757-341d689d985a",
+      "position": 2,
+      "properties": {
+        "description": "Why did we constrain you to only working with 4 possible commands? We begin programming with only a few commands for a few main reasons:\n\nWhat you did today is what you always do when programming: use a language to express a solution to a problem. Collaborative problem-solving skills are important factors in programming. Being able to get together with other people to talk about and make reasoned arguments about the best ways to code things is what professionals do.\nLearning to program isn’t just a matter of memorizing commands. The art of programming - the creative part - is always about understanding how to use the features of a programming language to solve a problem.\nWhether you know 4 commands of a language or hundreds, you will always be constrained by the programming language. The reason you need to learn how to program is because there isn’t a command to do every little thing; you have to understand the set of things that a programming language can do, and then use your creativity and problem-solving skills to get the computer to do what you want.\nIn this class, we will repeatedly run into the challenges we encountered today. Even seemingly simple problems will require us to creatively apply the tools we have available: the commands or instructions provided by the programming language.\nMultiple approaches are always possible to solve a problem. Furthermore, we may never be sure we have found the most efficient one. We may not even agree about how we should measure efficiency.\nAs we saw today, even when designing programs using four commands to draw with a turtle, the solutions are not always easy. We will definitely need to keep practicing as we start tackling more complex challenges.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "461e7ea6-f2e4-47d5-a757-341d689d985a",
+        "lesson_activity.key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4"
+      }
+    },
+    {
+      "key": "1c2bc189-6f90-4944-8e5c-69f07a93bda5",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c2bc189-6f90-4944-8e5c-69f07a93bda5",
+        "lesson_activity.key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4"
+      }
+    },
+    {
+      "key": "51c62c94-1572-46d4-aa57-0f538bbaf6db",
+      "position": 4,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "51c62c94-1572-46d4-aa57-0f538bbaf6db",
+        "lesson_activity.key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4"
+      }
+    },
+    {
+      "key": "8bf07143-d705-4efc-9ccb-f92d796246f1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Defining and Calling Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "8bf07143-d705-4efc-9ccb-f92d796246f1",
+        "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259"
+      }
+    },
+    {
+      "key": "7464b352-e04a-4790-bdad-3b1a63c62d01",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Functions With Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01",
+        "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259"
+      }
+    },
+    {
+      "key": "f9803688-aab5-4f04-9c54-a93908a7e483",
+      "position": 3,
+      "properties": {
+        "progression_name": "Challenge: Draw a Diamond Using Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9803688-aab5-4f04-9c54-a93908a7e483",
+        "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259"
+      }
+    },
+    {
+      "key": "fb805f58-f44d-46f6-8671-dad3d3d1fd02",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using Functions with Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb805f58-f44d-46f6-8671-dad3d3d1fd02",
+        "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259"
+      }
+    },
+    {
+      "key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e",
+      "position": 5,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e",
+        "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259"
+      }
+    },
+    {
+      "key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a",
+        "lesson_activity.key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e"
+      }
+    },
+    {
+      "key": "8451708b-6bdd-4771-9d6a-1cb9c764829d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Make Your Own Turtle Drawing"
+      },
+      "seeding_key": {
+        "activity_section.key": "8451708b-6bdd-4771-9d6a-1cb9c764829d",
+        "lesson_activity.key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e"
+      }
+    },
+    {
+      "key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c",
+      "position": 3,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c",
+        "lesson_activity.key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e"
+      }
+    },
+    {
+      "key": "e549e8c4-c95e-44f3-871a-387d09d3bf14",
+      "position": 1,
+      "properties": {
+        "progression_name": "Functions with Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "e549e8c4-c95e-44f3-871a-387d09d3bf14",
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+      }
+    },
+    {
+      "key": "a1a8e28a-3ea1-4780-adc1-6e3401855105",
+      "position": 2,
+      "properties": {
+        "progression_name": "Drawing Shapes With Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105",
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+      }
+    },
+    {
+      "key": "5dd8567d-d343-4a29-be4f-29b05c17f556",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding: Defining Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dd8567d-d343-4a29-be4f-29b05c17f556",
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+      }
+    },
+    {
+      "key": "a611d9d1-f475-4b9d-91a2-cc05d1a2180f",
+      "position": 4,
+      "properties": {
+        "progression_name": "How to add comments to code"
+      },
+      "seeding_key": {
+        "activity_section.key": "a611d9d1-f475-4b9d-91a2-cc05d1a2180f",
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+      }
+    },
+    {
+      "key": "be2a208e-9310-4e26-9fcb-357cb8844ec4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Under the Sea Drawing with Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4",
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+      }
+    },
+    {
+      "key": "a797b3e7-3a44-41d9-9f15-22761b6584d3",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge: Continue Your Drawing With More Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "a797b3e7-3a44-41d9-9f15-22761b6584d3",
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+      }
+    },
+    {
+      "key": "d5680202-3c62-4df4-add9-fe5bc57e7a74",
+      "position": 7,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5680202-3c62-4df4-add9-fe5bc57e7a74",
+        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+      }
+    },
+    {
+      "key": "45ddf5d8-5aff-4352-9289-d90e30c556e1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Using Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "45ddf5d8-5aff-4352-9289-d90e30c556e1",
+        "lesson_activity.key": "daaef171-c691-4426-9071-83168c86d58c"
+      }
+    },
+    {
+      "key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5",
+        "lesson_activity.key": "daaef171-c691-4426-9071-83168c86d58c"
+      }
+    },
+    {
+      "key": "c4717681-9d12-4c02-a464-394f85868ac6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using Loops to Add Detail to Your Drawing"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6",
+        "lesson_activity.key": "daaef171-c691-4426-9071-83168c86d58c"
+      }
+    },
+    {
+      "key": "f7a96a99-5571-4955-8b83-09fb5d7d43e6",
+      "position": 4,
+      "properties": {
+        "name": "Project: Under the Sea",
+        "progression_name": "Project: Under the Sea"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7a96a99-5571-4955-8b83-09fb5d7d43e6",
+        "lesson_activity.key": "daaef171-c691-4426-9071-83168c86d58c"
+      }
+    },
+    {
+      "key": "ed197c91-f575-4d0a-810d-758895a5255d",
+      "position": 1,
+      "properties": {
+        "name": "Personal Digital Scene",
+        "progression_name": "Personal Digital Scene"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed197c91-f575-4d0a-810d-758895a5255d",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L5 CSP CFU natural language_2023"
+        ],
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1"
+      },
+      "level_keys": [
+        "U3L5 CSP CFU natural language_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q1"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Algorithms Q1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Pre-Unit Pulse"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q2"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
+      },
+      "level_keys": [
+        "CSP Pre-Unit Pulse - Algorithms Q2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L01 Algorithms vs Problems_2023"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "2bd8bf81-d206-4c94-b02c-25fe614aca76"
+      },
+      "level_keys": [
+        "U6 L01 Algorithms vs Problems_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Turtle Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_turtle_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "8af83a2f-531b-4616-a591-9b65c61fce45"
+      },
+      "level_keys": [
+        "csp_applab_turtle_virtual"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Simple Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad"
+      },
+      "level_keys": [
+        "U3L2 Using Simple Commands_virtual"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Simple Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2_TurtleSquare_right_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad"
+      },
+      "level_keys": [
+        "U3L2_TurtleSquare_right_virtual"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2_Turtle3by3Grid_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "d2c6af2c-54d2-4282-a19e-366fba4bf181"
+      },
+      "level_keys": [
+        "U3L2_Turtle3by3Grid_virtual"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L1 Virtual CFU"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "51c62c94-1572-46d4-aa57-0f538bbaf6db"
+      },
+      "level_keys": [
+        "CSP U3L1 Virtual CFU"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Defining and Calling Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_functions_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "8bf07143-d705-4efc-9ccb-f92d796246f1"
+      },
+      "level_keys": [
+        "csp_applab_functions_virtual"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Define and use turnAround_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      },
+      "level_keys": [
+        "U3L03 Define and use turnAround_virtual"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Draw a T using turnAround_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      },
+      "level_keys": [
+        "U3L03 Draw a T using turnAround_virtual"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 define turnRight and draw a rectangle_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      },
+      "level_keys": [
+        "U3L03 define turnRight and draw a rectangle_virtual"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 - draw rect function_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      },
+      "level_keys": [
+        "U3L03 - draw rect function_virtual"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 - draw step_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      },
+      "level_keys": [
+        "U3L03 - draw step_virtual"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions With Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 Three Steps_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      },
+      "level_keys": [
+        "U3L03 Three Steps_virtual"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge: Draw a Diamond Using Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L03 draw diamond_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f9803688-aab5-4f04-9c54-a93908a7e483"
+      },
+      "level_keys": [
+        "U3L03 draw diamond_virtual"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions with Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L04 - snowflake_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "fb805f58-f44d-46f6-8671-dad3d3d1fd02"
+      },
+      "level_keys": [
+        "U3L04 - snowflake_virtual"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Functions with Turtle Commands"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L04 - 3 by 3 with functions_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "fb805f58-f44d-46f6-8671-dad3d3d1fd02"
+      },
+      "level_keys": [
+        "U3L04 - 3 by 3 with functions_virtual"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L2 Virtual CFU"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e"
+      },
+      "level_keys": [
+        "CSP U3L2 Virtual CFU"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 - moveForwardwithParams_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 - moveForwardwithParams_virtual"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 1 triangle_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 Challenge 1 triangle_virtual"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 2 purple square_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 Challenge 2 purple square_virtual"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 3 fill pink_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 Challenge 3 fill pink_virtual"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 4 bullseye_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 Challenge 4 bullseye_virtual"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 6 squiggles_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 Challenge 6 squiggles_virtual"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 5 overlapping circles_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 Challenge 5 overlapping circles_virtual"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 7 smiley face_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      },
+      "level_keys": [
+        "U3L06 Challenge 7 smiley face_virtual"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make Your Own Turtle Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Challenge 8 make your own_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "8451708b-6bdd-4771-9d6a-1cb9c764829d"
+      },
+      "level_keys": [
+        "U3L06 Challenge 8 make your own_virtual"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L06 Assessment2_2018_2019_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c"
+      },
+      "level_keys": [
+        "U3L06 Assessment2_2018_2019_virtual"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_functions_parameters_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "e549e8c4-c95e-44f3-871a-387d09d3bf14"
+      },
+      "level_keys": [
+        "csp_applab_functions_parameters_virtual"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - drawSquareWithParam_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      },
+      "level_keys": [
+        "U3L08 - drawSquareWithParam_virtual"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - createTriangleParam_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      },
+      "level_keys": [
+        "U3L07 - createTriangleParam_virtual"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - squareTwoParams_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      },
+      "level_keys": [
+        "U3L08 - squareTwoParams_virtual"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Drawing Shapes With Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - createTwoParamTriangle_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      },
+      "level_keys": [
+        "U3L08 - createTwoParamTriangle_virtual"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding: Defining Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "5dd8567d-d343-4a29-be4f-29b05c17f556"
+      },
+      "level_keys": [
+        "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "How to add comments to code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 how to add comments_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a611d9d1-f475-4b9d-91a2-cc05d1a2180f"
+      },
+      "level_keys": [
+        "U3L08 how to add comments_virtual"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - introUnderTheSea_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      },
+      "level_keys": [
+        "U3L08 - introUnderTheSea_virtual"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - paramsToStarfish_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      },
+      "level_keys": [
+        "U3L08 - paramsToStarfish_virtual"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - seaGrass_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      },
+      "level_keys": [
+        "U3L08 - seaGrass_virtual"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - fish_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      },
+      "level_keys": [
+        "U3L08 - fish_virtual"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - multiParamFish_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      },
+      "level_keys": [
+        "U3L08 - multiParamFish_virtual"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Under the Sea Drawing with Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - randomInput_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      },
+      "level_keys": [
+        "U3L08 - randomInput_virtual"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge: Continue Your Drawing With More Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L08 - freePlay_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a797b3e7-3a44-41d9-9f15-22761b6584d3"
+      },
+      "level_keys": [
+        "U3L08 - freePlay_virtual"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U3L4 Virtual CFU"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "d5680202-3c62-4df4-add9-fe5bc57e7a74"
+      },
+      "level_keys": [
+        "CSP U3L4 Virtual CFU"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_applab_loops_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "45ddf5d8-5aff-4352-9289-d90e30c556e1"
+      },
+      "level_keys": [
+        "csp_applab_loops_virtual"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - introSquare_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      },
+      "level_keys": [
+        "U3L07 - introSquare_virtual"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - randomSquare_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      },
+      "level_keys": [
+        "U3L07 - randomSquare_virtual"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - randomDots1_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      },
+      "level_keys": [
+        "U3L07 - randomDots1_virtual"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - loopsWithRandom_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      },
+      "level_keys": [
+        "U3L07 - loopsWithRandom_virtual"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - topDownDesign_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      },
+      "level_keys": [
+        "U3L07 - topDownDesign_virtual"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - bubbles_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      },
+      "level_keys": [
+        "U3L07 - bubbles_virtual"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - fish_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      },
+      "level_keys": [
+        "U3L07 - fish_virtual"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - seaStar_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      },
+      "level_keys": [
+        "U3L07 - seaStar_virtual"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - seaGrass_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      },
+      "level_keys": [
+        "U3L07 - seaGrass_virtual"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - allSeaGrass_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      },
+      "level_keys": [
+        "U3L07 - allSeaGrass_virtual"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 12,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Loops to Add Detail to Your Drawing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - sunBeams_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      },
+      "level_keys": [
+        "U3L07 - sunBeams_virtual"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project: Under the Sea"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L07 - Free Play Loops and Random_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f7a96a99-5571-4955-8b83-09fb5d7d43e6"
+      },
+      "level_keys": [
+        "U3L07 - Free Play Loops and Random_virtual"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Personal Digital Scene"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Free_play_digital_scene_virtual"
+        ],
+        "lesson.key": "Make your own Digital Scene",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "ed197c91-f575-4d0a-810d-758895a5255d"
+      },
+      "level_keys": [
+        "Free_play_digital_scene_virtual"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U3L5 CSP CFU natural language_2023",
+        "script_level.level_keys": [
+          "U3L5 CSP CFU natural language_2023"
+        ],
+        "lesson.key": "The Need for Programming Languages",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Algorithms Q1",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q1"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Pre-Unit Pulse - Algorithms Q2",
+        "script_level.level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q2"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6 L01 Algorithms vs Problems_2023",
+        "script_level.level_keys": [
+          "U6 L01 Algorithms vs Problems_2023"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "2bd8bf81-d206-4c94-b02c-25fe614aca76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_turtle_virtual",
+        "script_level.level_keys": [
+          "csp_applab_turtle_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "8af83a2f-531b-4616-a591-9b65c61fce45"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2 Using Simple Commands_virtual",
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2_TurtleSquare_right_virtual",
+        "script_level.level_keys": [
+          "U3L2_TurtleSquare_right_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2_Turtle3by3Grid_virtual",
+        "script_level.level_keys": [
+          "U3L2_Turtle3by3Grid_virtual"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "d2c6af2c-54d2-4282-a19e-366fba4bf181"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L1 Virtual CFU",
+        "script_level.level_keys": [
+          "CSP U3L1 Virtual CFU"
+        ],
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "51c62c94-1572-46d4-aa57-0f538bbaf6db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_functions_virtual",
+        "script_level.level_keys": [
+          "csp_applab_functions_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "8bf07143-d705-4efc-9ccb-f92d796246f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Define and use turnAround_virtual",
+        "script_level.level_keys": [
+          "U3L03 Define and use turnAround_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Draw a T using turnAround_virtual",
+        "script_level.level_keys": [
+          "U3L03 Draw a T using turnAround_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 define turnRight and draw a rectangle_virtual",
+        "script_level.level_keys": [
+          "U3L03 define turnRight and draw a rectangle_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 - draw rect function_virtual",
+        "script_level.level_keys": [
+          "U3L03 - draw rect function_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 - draw step_virtual",
+        "script_level.level_keys": [
+          "U3L03 - draw step_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 Three Steps_virtual",
+        "script_level.level_keys": [
+          "U3L03 Three Steps_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "7464b352-e04a-4790-bdad-3b1a63c62d01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L03 draw diamond_virtual",
+        "script_level.level_keys": [
+          "U3L03 draw diamond_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f9803688-aab5-4f04-9c54-a93908a7e483"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L04 - snowflake_virtual",
+        "script_level.level_keys": [
+          "U3L04 - snowflake_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "fb805f58-f44d-46f6-8671-dad3d3d1fd02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L04 - 3 by 3 with functions_virtual",
+        "script_level.level_keys": [
+          "U3L04 - 3 by 3 with functions_virtual"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "fb805f58-f44d-46f6-8671-dad3d3d1fd02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L2 Virtual CFU",
+        "script_level.level_keys": [
+          "CSP U3L2 Virtual CFU"
+        ],
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 - moveForwardwithParams_virtual",
+        "script_level.level_keys": [
+          "U3L06 - moveForwardwithParams_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 1 triangle_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 1 triangle_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 2 purple square_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 2 purple square_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 3 fill pink_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 3 fill pink_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 4 bullseye_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 4 bullseye_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 6 squiggles_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 6 squiggles_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 5 overlapping circles_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 5 overlapping circles_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 7 smiley face_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 7 smiley face_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Challenge 8 make your own_virtual",
+        "script_level.level_keys": [
+          "U3L06 Challenge 8 make your own_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "8451708b-6bdd-4771-9d6a-1cb9c764829d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L06 Assessment2_2018_2019_virtual",
+        "script_level.level_keys": [
+          "U3L06 Assessment2_2018_2019_virtual"
+        ],
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_functions_parameters_virtual",
+        "script_level.level_keys": [
+          "csp_applab_functions_parameters_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "e549e8c4-c95e-44f3-871a-387d09d3bf14"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - drawSquareWithParam_virtual",
+        "script_level.level_keys": [
+          "U3L08 - drawSquareWithParam_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - createTriangleParam_virtual",
+        "script_level.level_keys": [
+          "U3L07 - createTriangleParam_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - squareTwoParams_virtual",
+        "script_level.level_keys": [
+          "U3L08 - squareTwoParams_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - createTwoParamTriangle_virtual",
+        "script_level.level_keys": [
+          "U3L08 - createTwoParamTriangle_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a1a8e28a-3ea1-4780-adc1-6e3401855105"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual",
+        "script_level.level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "5dd8567d-d343-4a29-be4f-29b05c17f556"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 how to add comments_virtual",
+        "script_level.level_keys": [
+          "U3L08 how to add comments_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a611d9d1-f475-4b9d-91a2-cc05d1a2180f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - introUnderTheSea_virtual",
+        "script_level.level_keys": [
+          "U3L08 - introUnderTheSea_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - paramsToStarfish_virtual",
+        "script_level.level_keys": [
+          "U3L08 - paramsToStarfish_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - seaGrass_virtual",
+        "script_level.level_keys": [
+          "U3L08 - seaGrass_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - fish_virtual",
+        "script_level.level_keys": [
+          "U3L08 - fish_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - multiParamFish_virtual",
+        "script_level.level_keys": [
+          "U3L08 - multiParamFish_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - randomInput_virtual",
+        "script_level.level_keys": [
+          "U3L08 - randomInput_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "be2a208e-9310-4e26-9fcb-357cb8844ec4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L08 - freePlay_virtual",
+        "script_level.level_keys": [
+          "U3L08 - freePlay_virtual"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "a797b3e7-3a44-41d9-9f15-22761b6584d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U3L4 Virtual CFU",
+        "script_level.level_keys": [
+          "CSP U3L4 Virtual CFU"
+        ],
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "d5680202-3c62-4df4-add9-fe5bc57e7a74"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_applab_loops_virtual",
+        "script_level.level_keys": [
+          "csp_applab_loops_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "45ddf5d8-5aff-4352-9289-d90e30c556e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - introSquare_virtual",
+        "script_level.level_keys": [
+          "U3L07 - introSquare_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - randomSquare_virtual",
+        "script_level.level_keys": [
+          "U3L07 - randomSquare_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - randomDots1_virtual",
+        "script_level.level_keys": [
+          "U3L07 - randomDots1_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - loopsWithRandom_virtual",
+        "script_level.level_keys": [
+          "U3L07 - loopsWithRandom_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - topDownDesign_virtual",
+        "script_level.level_keys": [
+          "U3L07 - topDownDesign_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - bubbles_virtual",
+        "script_level.level_keys": [
+          "U3L07 - bubbles_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - fish_virtual",
+        "script_level.level_keys": [
+          "U3L07 - fish_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - seaStar_virtual",
+        "script_level.level_keys": [
+          "U3L07 - seaStar_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - seaGrass_virtual",
+        "script_level.level_keys": [
+          "U3L07 - seaGrass_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - allSeaGrass_virtual",
+        "script_level.level_keys": [
+          "U3L07 - allSeaGrass_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - sunBeams_virtual",
+        "script_level.level_keys": [
+          "U3L07 - sunBeams_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "c4717681-9d12-4c02-a464-394f85868ac6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L07 - Free Play Loops and Random_virtual",
+        "script_level.level_keys": [
+          "U3L07 - Free Play Loops and Random_virtual"
+        ],
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "f7a96a99-5571-4955-8b83-09fb5d7d43e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Free_play_digital_scene_virtual",
+        "script_level.level_keys": [
+          "Free_play_digital_scene_virtual"
+        ],
+        "lesson.key": "Make your own Digital Scene",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024",
+        "activity_section.key": "ed197c91-f575-4d0a-810d-758895a5255d"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Algorithms Solve Problems",
+      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/template/preview",
+      "key": "algorithms_solve_problems",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "name": "Algorithms (Unit Slides)",
+      "url": "https://docs.google.com/presentation/d/1bJ1adhM_5CfPlIHdlEZbhPITohq2PrE_byGwSZM2XqM/edit?usp=sharing",
+      "key": "algorithms_unit_slides_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_unit_slides_"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=q7d_JtyCq1A",
+      "key": "pair_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "The Need for Programming Languages",
+      "url": "https://docs.google.com/presentation/d/1vKDoFifrWW11cYJPtblcSb4OxFZJLKs9n4wLlWF4p3w/template/preview",
+      "key": "the_need_for_programming_languages",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_need_for_programming_languages"
+      }
+    },
+    {
+      "name": "Unit 10 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link",
+      "key": "unit_10_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 10 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link",
+      "key": "unit_10_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_interactive_notebook_"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "algorithms_unit_slides_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "unit_10_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "unit_10_journal_interactive_notebook_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "resource.key": "the_need_for_programming_languages"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "resource.key": "pair_programming"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "a finite set of instructions that accomplish a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "iteration",
+      "word": "Iteration",
+      "definition": "a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "key": "pair_programming",
+      "word": "pair programming",
+      "definition": "A method of programming in which two programmers write code using a single computer. One programmer in the \"driver\" role uses the mouse and keyboard to actually write the code while a second acts as a \"navigator\", keeping track of the big picture, catching errors, and making suggestions. Programmers switch roles frequently and communicate throughout the process.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pair_programming"
+      }
+    },
+    {
+      "key": "problem",
+      "word": "Problem",
+      "definition": "a general description of a task that can (or cannot) be solved with an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "key": "selection",
+      "word": "Selection",
+      "definition": "deciding which steps to do next",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "selection"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "putting steps in an order",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "selection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "vocabulary.key": "pair_programming"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "23aec374-d4ae-498d-b7e7-c07ed6344c27",
+      "properties": {
+        "description": "Use App Lab to write programs that create simple drawings with “turtle graphics.”"
+      },
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "objective.key": "23aec374-d4ae-498d-b7e7-c07ed6344c27"
+      }
+    },
+    {
+      "key": "625d2236-b4b9-4680-94aa-5c1245cbfd53",
+      "properties": {
+        "description": "Create a program with a partner following the pair programming model"
+      },
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "objective.key": "625d2236-b4b9-4680-94aa-5c1245cbfd53"
+      }
+    },
+    {
+      "key": "97aeb772-dc56-484e-902c-4553e7928c7a",
+      "properties": {
+        "description": "Explain different ways one might measure the efficiency of a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "objective.key": "97aeb772-dc56-484e-902c-4553e7928c7a"
+      }
+    },
+    {
+      "key": "b51587e2-595e-4b45-8679-b7e850f7a693",
+      "properties": {
+        "description": "Explain the qualities that differentiate natural languages and programming languages"
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "objective.key": "b51587e2-595e-4b45-8679-b7e850f7a693"
+      }
+    },
+    {
+      "key": "bc6f2a8e-39e4-432d-84c3-87bb0ffca77c",
+      "properties": {
+        "description": "Justify the existence of programming languages to precisely communicate instructions"
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "objective.key": "bc6f2a8e-39e4-432d-84c3-87bb0ffca77c"
+      }
+    },
+    {
+      "key": "bf21478f-d62d-49ae-80c6-cdcb8d72db0a",
+      "properties": {
+        "description": "Explain that some problems may look different but be similar or look similar but be different."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "bf21478f-d62d-49ae-80c6-cdcb8d72db0a"
+      }
+    },
+    {
+      "key": "e0b5d819-bc32-4cb6-90c4-3fb71c44c3a2",
+      "properties": {
+        "description": "Explain that some algorithms may look or operate differently but still solve the same problem."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "e0b5d819-bc32-4cb6-90c4-3fb71c44c3a2"
+      }
+    },
+    {
+      "key": "e3b47570-785e-4514-b965-4a55bb12cb46",
+      "properties": {
+        "description": "Explain the formal definitions of a problem, an algorithm, sequencing, selection, and iteration."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "e3b47570-785e-4514-b965-4a55bb12cb46"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.J.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Programming Languages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

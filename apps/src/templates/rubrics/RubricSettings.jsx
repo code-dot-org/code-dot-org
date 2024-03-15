@@ -11,7 +11,8 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {rubricShape} from './rubricShapes';
 import Button from '@cdo/apps/templates/Button';
-import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+// import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
+import SectionSelector from './SectionSelector';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 
 const STATUS = {
@@ -192,7 +193,7 @@ export default function RubricSettings({
           })}
         </Heading5>
         <div className={style.selectors}>
-          <SectionSelector reloadOnChange={true} requireSelection={false} />
+          <SectionSelector reloadOnChange={true} />
         </div>
       </div>
 
@@ -200,10 +201,14 @@ export default function RubricSettings({
         <Heading2>{i18n.aiAssessment()}</Heading2>
         <div className={style.settingsContainers}>
           <div className={style.runAiAllStatuses}>
-            <BodyTwoText className="uitest-eval-status-all-text">
+            <BodyTwoText>
               <StrongText>{summaryText()}</StrongText>
             </BodyTwoText>
-            {statusAllText() && <BodyTwoText>{statusAllText()}</BodyTwoText>}
+            {statusAllText() && (
+              <BodyTwoText className="uitest-eval-status-all-text">
+                {statusAllText()}
+              </BodyTwoText>
+            )}
           </div>
           <Button
             className="uitest-run-ai-assessment-all"

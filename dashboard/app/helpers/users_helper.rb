@@ -356,12 +356,13 @@ module UsersHelper
     if user_level.nil?
       if script_level.lesson.lockable?
         return {locked: true}
-      elsif teacher_feedback&.review_state&.present?
+      elsif teacher_feedback.present?
         return {
           status: LEVEL_STATUS.not_tried,
           teacher_feedback_review_state: teacher_feedback.review_state,
+          teacher_feedback_commented: teacher_feedback.comment.present? || nil,
           teacher_feedback_new: true
-        }
+        }.compact
       else
         return nil
       end
@@ -375,6 +376,7 @@ module UsersHelper
       last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
       time_spent: user_level.time_spent&.to_i,
       teacher_feedback_review_state: teacher_feedback&.review_state,
+      teacher_feedback_commented: teacher_feedback&.comment&.present? || nil,
       teacher_feedback_new:
         ((teacher_feedback&.updated_at&.to_i || 0) > (user_level.updated_at&.to_i || 0)) || nil
     }.compact

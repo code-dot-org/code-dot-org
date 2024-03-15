@@ -5,4 +5,4 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_ai_customizations.js'),
-        data: {aicustomizations: (@level.properties["initial_ai_customizations"] || {}).to_json, levelname: @level.name, appname: @level.game&.app}}
+        data: {aicustomizations: (@level.properties["initial_ai_customizations"]).to_json}}

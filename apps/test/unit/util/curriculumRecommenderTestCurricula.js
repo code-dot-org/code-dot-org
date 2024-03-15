@@ -213,14 +213,107 @@ const PUBLISHED_DATE_TEST_COURSES = [
   ...ONLY_RECENT_PUBLISHED_DATE_COURSES,
 ];
 
-const SIMILAR_RECOMMENDER_TEST_COURSES = [
-  ...NULL_AND_EMPTY_COURSES,
-  ONLY_FEATURED_COURSE,
-  ...ONLY_DURATION_COURSES,
-  ...ONLY_MARKETING_INIT_COURSES,
-  ...ONLY_SCHOOL_SUBJECTS_COURSES,
-  ...ONLY_TOPICS_COURSES,
-  ...ONLY_RECENT_PUBLISHED_DATE_COURSES,
+const FULL_TEST_COURSES = [
+  {
+    key: 'fullTestCourse1',
+    course_offering_id: 1,
+    display_name: 'Full Test Course 1',
+    display_name_with_latest_year: 'Full Test Course 1 (6 months ago)',
+    description: 'Full Test Course 1 description',
+    is_featured: true,
+    duration: 'week',
+    marketing_initiative: 'markInit1',
+    grade_levels: '1,2,3',
+    cs_topic: `art_and_design,${IMPORTANT_TOPICS[0]}`,
+    school_subject: 'math',
+    published_date: moment
+      .utc()
+      .subtract(6, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse1-path',
+  },
+  {
+    key: 'fullTestCourse2',
+    course_offering_id: 2,
+    display_name: 'Full Test Course 2',
+    display_name_with_latest_year: 'Full Test Course 2 (1 year ago)',
+    description: 'Full Test Course 2 description',
+    is_featured: false,
+    duration: 'month',
+    marketing_initiative: 'markInit1',
+    grade_levels: '1,2,3',
+    cs_topic: 'art_and_design,app_design',
+    school_subject: 'math',
+    published_date: moment
+      .utc()
+      .subtract(1, 'years')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse2-path',
+  },
+  {
+    key: 'fullTestCourse3',
+    course_offering_id: 3,
+    display_name: 'Full Test Course 3',
+    display_name_with_latest_year: 'Full Test Course 3 (1.5 years ago)',
+    description: 'Full Test Course 3 description',
+    is_featured: false,
+    duration: 'month',
+    marketing_initiative: 'markInit2',
+    grade_levels: '3,4,5',
+    cs_topic: `${IMPORTANT_TOPICS[0]}`,
+    school_subject: 'math',
+    published_date: moment
+      .utc()
+      .subtract(18, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse3-path',
+  },
+  {
+    key: 'fullTestCourse4',
+    course_offering_id: 4,
+    display_name: 'Full Test Course 4',
+    display_name_with_latest_year: 'Full Test Course 4 (2 years ago)',
+    description: 'Full Test Course 4 description',
+    is_featured: false,
+    duration: 'month',
+    marketing_initiative: 'markInit2',
+    grade_levels: '3,4,5,6',
+    cs_topic: 'app_design',
+    school_subject: 'science',
+    published_date: moment
+      .utc()
+      .subtract(2, 'years')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse4-path',
+  },
+  {
+    key: 'fullTestCourse5',
+    course_offering_id: 5,
+    display_name: 'Full Test Course 5',
+    display_name_with_latest_year: 'Full Test Course 5 (2.5 years ago)',
+    description: 'Full Test Course 5 description',
+    is_featured: true,
+    duration: 'month',
+    marketing_initiative: 'markInit2',
+    grade_levels: '4,5,6',
+    cs_topic: 'app_design',
+    school_subject: 'science',
+    published_date: moment
+      .utc()
+      .subtract(30, 'months')
+      .format(UTC_PUBLISHED_DATE_FORMAT),
+    device_compatibility:
+      '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"ideal"}',
+    course_version_path: '/fullTestCourse5-path',
+  },
 ];
 
 export default {
@@ -230,5 +323,5 @@ export default {
   SCHOOL_SUBJECT_TEST_COURSES,
   TOPICS_TEST_COURSES,
   PUBLISHED_DATE_TEST_COURSES,
-  SIMILAR_RECOMMENDER_TEST_COURSES,
+  FULL_TEST_COURSES,
 };
