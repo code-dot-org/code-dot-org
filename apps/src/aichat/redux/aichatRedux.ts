@@ -107,9 +107,6 @@ export const submitChatMessage = createAsyncThunk(
   }
 );
 
-// state in redux should just be values, not visibility
-// AiCustomizations has type without visibility
-// setter that sets a given property on AiCustomizations
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
