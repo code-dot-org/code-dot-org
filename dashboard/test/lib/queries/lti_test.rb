@@ -20,7 +20,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal user, Queries::Lti.get_user(id_token[:sub])
   end
 
-  test 'finds a code.org user given LTI integration creds and a NRPS member response' do
+  test 'finds a code.org user given LTI integration creds and an NRPS member response' do
     user = create :user
     lms_user_id = SecureRandom.uuid
     lms_issuer = "http://#{SecureRandom.alphanumeric 10}.com"
