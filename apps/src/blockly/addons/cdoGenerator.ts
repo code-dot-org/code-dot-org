@@ -39,8 +39,9 @@ export default function initializeGenerator(
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));
     });
-    let result = code.join('\n');
-    result = generator.finish(code);
+    const filteredCode = code.filter(item => item.trim() !== '');
+    let result = filteredCode.join('\n');
+    result = generator.finish(result);
     return result;
   };
 
