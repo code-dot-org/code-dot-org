@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import style from './library.module.scss';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 export default function LibraryIdCopier({channelId}: {channelId: string}) {
   const textContainer = useRef<HTMLInputElement>(null);
@@ -9,7 +10,7 @@ export default function LibraryIdCopier({channelId}: {channelId: string}) {
     // textContainer.current will be null prior to render. This is ok since nothing will be
     // clickable at that point anyway.
     textContainer.current?.select();
-    navigator.clipboard.writeText(channelId);
+    copyToClipboard(channelId);
   }
 
   return (
