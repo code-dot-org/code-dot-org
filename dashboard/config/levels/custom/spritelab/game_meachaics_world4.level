@@ -71,14 +71,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Let's add a player!**\r\n- Look carefully at the code. \r\n- What do you notice? ",
+    "long_instructions": "**Explore:** Applying gravity to the game world!\r\n\r\n- Look carefully at the code. What do you notice? \r\n\r\n- What happens when you change the sprite's type?\r\n- Click `Finish` when you're ready to continue on",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-08T17:56:54.593+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world3\\\"\"],\"cloned_from\":\"game_mechanics_world3\"},{\"changed_at\":\"2024-03-08 17:59:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:09:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:11:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:12:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:13:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:25:54 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 20:43:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-08T17:56:54.593+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world3\\\"\"],\"cloned_from\":\"game_mechanics_world3\"},{\"changed_at\":\"2024-03-08 17:59:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:09:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:11:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:12:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:13:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 18:25:54 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-08 20:43:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-13 17:51:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 20:46:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 20:46:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 20:56:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 20:59:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 20:59:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 21:03:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -102,7 +102,7 @@
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"dirt_snow"</field>
+                      <field name="ANIMATION_NAME">"game_penguin"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
                           <field name="LOCATION">{"x":81,"y":34}</field>
@@ -121,7 +121,7 @@
                               <field name="GROUP">"players"</field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"dirt_snow"</field>
+                                  <field name="ANIMATION">"game_penguin"</field>
                                 </block>
                               </value>
                             </block>
@@ -1274,7 +1274,38 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="GameDev_setGroup" id="s0~~e0!}K[fm;ShKs2sG" x="18" y="44">
+          <field name="GROUP">"players"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="x,sMj}}CfvGtzA+U2wfm">
+              <field name="ANIMATION">"game_penguin"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="21" y="149">
+          <field name="IMG">"gradient_02"</field>
+        </block>
+        <block type="gamelab_makeSpritesGridInput" id="%lIt9m#@H2J}unSh8[y!" x="21" y="247">
+          <field name="ANIMATION_NAME">"dirt_grass"</field>
+          <value name="GRID">
+            <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
+              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
+            </shadow>
+            <block type="gamelab_bitmap" id="%KH@7!,[}z6n_+#p*V{9">
+              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,1],[0,0,0,0,0,1,1,1],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="21" y="341">
+          <field name="ANIMATION_NAME">"game_penguin"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id=")}o!T7jG3=$uWTqjEy0+">
+              <field name="LOCATION">{"x":81,"y":34}</field>
+            </block>
+          </value>
+        </block>
+      </xml>
     </toolbox_blocks>
   </blocks>
 </GamelabJr>

@@ -116,6 +116,7 @@ function randomProgress(level) {
         lastTimestamp: timestamp,
         teacherFeedbackReviewState: randomReviewState(),
         teacherFeedbackNew: false,
+        teacherFeedbackCommented: true,
       };
     case 1:
       return {
@@ -127,6 +128,7 @@ function randomProgress(level) {
         lastTimestamp: timestamp,
         teacherFeedbackReviewState: randomReviewState(),
         teacherFeedbackNew: true,
+        teacherFeedbackCommented: false,
       };
     case 2:
       return {
@@ -138,6 +140,7 @@ function randomProgress(level) {
         lastTimestamp: timestamp,
         teacherFeedbackReviewState: randomReviewState(),
         teacherFeedbackNew: false,
+        teacherFeedbackCommented: true,
       };
     default:
       return null;

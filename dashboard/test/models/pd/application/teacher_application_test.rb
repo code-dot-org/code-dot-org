@@ -321,7 +321,7 @@ module Pd::Application
     test 'columns_to_remove' do
       ['csp', 'csd'].each do |course|
         columns = TeacherApplication.columns_to_remove(course)
-        columns.keys.each do |k|
+        columns.each_key do |k|
           columns[k].each {|c| refute_includes(c.to_s, course)}
         end
       end
