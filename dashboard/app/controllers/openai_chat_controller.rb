@@ -50,7 +50,7 @@ class OpenaiChatController < ApplicationController
       return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
     else
       test_file_contents = ""
-      level.validation.values.each do |validation|
+      level.validation.each_value do |validation|
         test_file_contents += validation["text"]
       end
       return test_file_contents
