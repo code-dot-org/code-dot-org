@@ -59,6 +59,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             onChange={event => setNewRetrievalContext(event.target.value)}
             value={newRetrievalContext}
             disabled={isDisabled(retrievalContexts.visibility)}
+            readOnly
           />
         </div>
         <div className={styles.addItemContainer}>

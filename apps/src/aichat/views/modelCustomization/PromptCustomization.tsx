@@ -4,7 +4,11 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import {setLevelAiCustomizationProperty} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
-import {MAX_TEMPERATURE, MIN_TEMPERATURE} from './constants';
+import {
+  MAX_TEMPERATURE,
+  MIN_TEMPERATURE,
+  SET_TEMPERATURE_STEP,
+} from './constants';
 import {isVisible, isDisabled} from './utils';
 
 const PromptCustomization: React.FunctionComponent = () => {
@@ -39,7 +43,6 @@ const PromptCustomization: React.FunctionComponent = () => {
                   })
                 )
               }
-              // readOnly might be preferred property for disabling inputs?
             />
           </div>
         )}
@@ -55,7 +58,7 @@ const PromptCustomization: React.FunctionComponent = () => {
               type="range"
               min={MIN_TEMPERATURE}
               max={MAX_TEMPERATURE}
-              step="0.1"
+              step={SET_TEMPERATURE_STEP}
               value={temperature.value}
               disabled={isDisabled(temperature.visibility)}
               onChange={event =>
