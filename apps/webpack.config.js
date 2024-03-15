@@ -701,9 +701,6 @@ function createWebpackConfig({
     devServer: envConstants.HOT
       ? {
           allowedHosts: ['localhost-studio.code.org'],
-          // With this config, devs enter in their browser:
-          // http://localhost-studio.code.org:9000/
-          // which connects them to webpackp-dev-server...
           port: 9000,
           proxy: [
             {
@@ -713,28 +710,6 @@ function createWebpackConfig({
               logLevel: 'debug',
             },
           ],
-          client: {
-            progress: true,
-            // this doesn't work.
-            // passing via react refresh plugin config also didn't seem to work,
-            // https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/28#issuecomment-1130634371
-            // overlay: {
-            //   errors: false,
-            //   warnings: false,
-            //   runtimeErrors: false,
-            // },
-          },
-          // Except stuff that webpack watch / webpack-dev-server will be generating
-          // like: http://localhost-studio.code.org:9000/assets/application.js
-          // or: http://localhost-studio.code.org:9000/assets/js/code-studio.js
-          //publicPath: '/assets/js/',
-
-          // Probably some of these other properties are key, relevant, or useful???
-          // Probably some more at: https://webpack.js.org/configuration/dev-server/
-          //
-          // keepAlive: true,
-          // hot: true,
-          // inline: true,
           host: '0.0.0.0',
           hot: true,
         }
