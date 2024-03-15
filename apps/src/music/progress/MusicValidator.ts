@@ -98,19 +98,6 @@ export default class MusicValidator extends Validator {
         });
       }
     }
-
-    /*
-    // Check for a certain number of measures not yet played.
-    const maxNumberMeasures = 8;
-    for (let numberMeasures = 1; numberMeasures <= 8; numberMeasures++) {
-      if (this.player.getCurrentPlayheadPosition() < numberMeasures + 1) {
-        this.conditionsChecker.addSatisfiedCondition({
-          name: MusicConditions.NOT_PLAYED_MEASURES.name,
-          value: numberMeasures,
-        });
-      }
-    }
-    */
   }
 
   conditionsMet(conditions: Condition[]): boolean {

@@ -44,7 +44,7 @@
               "name": "played_sounds",
               "value": 3
             }
-        ],
+          ],
           "message": "Nice work.  You successfully played three sounds.",
           "next": true
         },
