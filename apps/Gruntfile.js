@@ -490,7 +490,7 @@ module.exports = function (grunt) {
       sass: {options: {message: 'SASS build completed.'}},
       content: {options: {message: 'Content build completed.'}},
       ejs: {options: {message: 'EJS build completed.'}},
-      messages: {options: {message: 'i18ngi messages build completed.'}},
+      messages: {options: {message: 'i18n messages build completed.'}},
       vendor_js: {options: {message: 'vendor JS copy done.'}},
     });
 
