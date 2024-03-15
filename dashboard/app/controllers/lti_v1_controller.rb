@@ -121,7 +121,7 @@ class LtiV1Controller < ApplicationController
       user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
       launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]
-      nrps_url = Policies::Services.get_claim(decoded_jwt, :context_memberships_url)
+      nrps_url = Services::Lti.get_claim(decoded_jwt, :context_memberships_url)
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM] ? decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id] : nil
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
