@@ -23,6 +23,7 @@ function getMoocEnv(name) {
 // Export a set of environment variables used by our build process
 module.exports = {
   // If set, page will reload itself when webpack bundle changes
+  // remove?
   AUTO_RELOAD: getBoolEnv('AUTORELOAD'),
   // Can be set to build a single app
   APP: getMoocEnv('APP'),
@@ -39,8 +40,9 @@ module.exports = {
   CIRCLECI: process.env.CIRCLECI,
   DRONE: process.env.DRONE,
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
-  // If set, will turn on react hot loader and run the webpack dev server
-  HOT: process.env.HOT !== '0',
+  // webpack dev server (with hot reloading) run by default in dev
+  // unless explicitly overridden by HOT=0
+  HOT: !!getMoocEnv('DEV') && process.env.HOT !== '0',
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
 };

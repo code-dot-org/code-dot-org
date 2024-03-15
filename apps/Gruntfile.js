@@ -476,7 +476,10 @@ module.exports = function (grunt) {
   (config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack-dev-server'],
+      tasks: [
+        'watch',
+        envConstants.HOT ? 'webpack-dev-server' : 'webpack:watch',
+      ],
       options: {
         logConcurrentOutput: true,
       },
@@ -487,7 +490,7 @@ module.exports = function (grunt) {
       sass: {options: {message: 'SASS build completed.'}},
       content: {options: {message: 'Content build completed.'}},
       ejs: {options: {message: 'EJS build completed.'}},
-      messages: {options: {message: 'i18n messages build completed.'}},
+      messages: {options: {message: 'i18ngi messages build completed.'}},
       vendor_js: {options: {message: 'vendor JS copy done.'}},
     });
 
@@ -537,7 +540,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
-    // 'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
