@@ -92,6 +92,7 @@ const checkButtonPropsForErrors = ({
   onClick,
   href,
   download,
+  text,
 }: ButtonProps) => {
   if (useAsLink && !href) {
     throw new Error('Expect href prop when useAsLink is true');
@@ -119,7 +120,18 @@ const checkButtonPropsForErrors = ({
 
   if (type !== 'iconOnly' && type !== 'iconBorder' && icon) {
     throw new Error(
-      'Expect icon prop to be undefined when type is not iconOnly or iconBorder'
+      'Expect icon prop to be undefined when type is not iconOnly or iconBorder. (Please remove icon)'
+    );
+  }
+
+  if ((type === 'iconOnly' || type !== 'iconBorder') && !icon) {
+    throw new Error(
+      'Expect icon prop not to be undefined when type is iconOnly or iconBorder. (Please add icon)'
+    );
+  }
+  if (type !== 'iconOnly' && type !== 'iconBorder' && !text) {
+    throw new Error(
+      'Expect text prop not to be undefined when type is not iconOnly or iconBorder. (Please add text)'
     );
   }
 };
@@ -185,8 +197,9 @@ const Button: React.FunctionComponent<ButtonProps> = ({
         onClick,
         href,
         download,
+        text,
       }),
-    [type, icon, useAsLink, buttonType, onClick, href, download]
+    [type, icon, useAsLink, buttonType, onClick, href, download, text]
   );
 
   /** Handling isPending state content & spinner show logic here.
