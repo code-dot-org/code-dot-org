@@ -26,7 +26,11 @@ const defaultRubric = {
     position: 3,
     name: 'Testing',
   },
+  script: {
+    id: 107,
+  },
   level: {
+    id: 42,
     name: rubricLevelName,
     position: 5,
   },
