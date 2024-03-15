@@ -1,13 +1,15 @@
-import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
-import msg from '@cdo/locale';
+import {WorkspaceSvg} from 'blockly';
+import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 /**
  * Constructs the blocks required by the flyout for the variables category.
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
- * @returns {import('blockly/core/utils/toolbox').FlyoutDefinition} An array of JSON block elements.
+ * @returns {FlyoutDefinition} An array of JSON block elements.
  */
-export function flyoutCategory(workspace) {
-  const blockList = [];
+export function flyoutCategory(workspace: WorkspaceSvg) {
+  const blockList: FlyoutItemInfoArray = [];
   const newVariableButton = getNewVariableButtonWithCallback(workspace);
   blockList.push(newVariableButton);
 
@@ -15,7 +17,7 @@ export function flyoutCategory(workspace) {
   blockList.push(...categoryBlocks);
   const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('VARIABLE');
   if (!levelToolboxBlocks) {
-    return;
+    return [];
   }
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
@@ -29,12 +31,12 @@ export function flyoutCategory(workspace) {
   // If any of these blocks are found, we can remove the auto-generated block.
   // Count the 'math_change' blocks in blockList.
   const mathChangeBlocksCount = blockList.filter(
-    block => block.type === 'math_change'
+    block => (block as BlockInfo).type === 'math_change'
   ).length;
   // If there is more than one, remove the first occurrence which was auto-generated.
   if (mathChangeBlocksCount > 1) {
     const firstMathChangeIndex = blockList.findIndex(
-      block => block.type === 'math_change'
+      block => (block as BlockInfo).type === 'math_change'
     );
     if (firstMathChangeIndex !== -1) {
       blockList.splice(firstMathChangeIndex, 1);
@@ -44,12 +46,12 @@ export function flyoutCategory(workspace) {
   return blockList;
 }
 
-const getNewVariableButtonWithCallback = workspace => {
+const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
   const callbackKey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackKey, () => {
     Blockly.FieldVariable.modalPromptName(
-      msg.renameThisPromptTitle(),
-      msg.create(),
+      commonI18n.renameThisPromptTitle(),
+      commonI18n.create(),
       '',
       newName => {
         workspace.createVariable(newName);
@@ -59,7 +61,7 @@ const getNewVariableButtonWithCallback = workspace => {
 
   return {
     kind: 'button',
-    text: msg.createBlocklyVariable(),
+    text: commonI18n.createBlocklyVariable(),
     callbackKey,
   };
 };
@@ -70,7 +72,7 @@ const getNewVariableButtonWithCallback = workspace => {
  * @param workspace The workspace containing variables.
  * @returns {Array<Object>} An array of JSON block objects for a flyout.
  */
-export function flyoutCategoryBlocks(workspace) {
+export function flyoutCategoryBlocks(workspace: WorkspaceSvg) {
   const variableModelList = workspace.getVariablesOfType('');
 
   const blockList = [];

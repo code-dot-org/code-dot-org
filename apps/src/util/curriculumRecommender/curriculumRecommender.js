@@ -18,9 +18,14 @@ const now = moment().utc();
  */
 
 // Similar Curriculum Recommender:
-//    1) Filters out the curriculum with the key, mainCurriculumKey, and any curricula that do not support any of mainCurriculum's grade levels
+//    1) Filters out the curriculum with the a key of mainCurriculumKey, any curricula that do not support any of mainCurriculum's grade levels,
+//        and (if applicable) any curricula the user has taught before
 //    2) Scores the remaining curricula to find which are most similar to mainCurriculum
-export const getSimilarRecommendations = (curriculaData, mainCurriculumKey) => {
+export const getSimilarRecommendations = (
+  curriculaData,
+  mainCurriculumKey,
+  curriculaTaught
+) => {
   // Create copy of array of curricula to not affect the curriculaData array passed in
   let curricula = [...curriculaData];
 
@@ -37,6 +42,13 @@ export const getSimilarRecommendations = (curriculaData, mainCurriculumKey) => {
       ?.split(',')
       ?.some(grade => mainCurriculumGrades.includes(grade))
   );
+
+  // (if signed-in teacher) Filter out curricula the user has taught before
+  if (curriculaTaught) {
+    curricula = curricula.filter(
+      curr => !curriculaTaught.includes(curr.course_offering_id)
+    );
+  }
 
   // Score each remaining curricula
   const curriculaScores = [];

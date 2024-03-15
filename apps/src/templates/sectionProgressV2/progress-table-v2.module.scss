@@ -101,6 +101,7 @@ $level-cell-width: 52;
     height: 100%;
     min-width: 195px;
     margin-right: 12px;
+    line-height: 32px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -266,8 +267,12 @@ $level-cell-width: 52;
 }
 
 .sortDropdown {
-  height: 76px;
+  height: 72px;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 4px;
 }
 
 .studentColumn {
