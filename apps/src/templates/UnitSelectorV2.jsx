@@ -17,7 +17,7 @@ function UnitSelectorV2({
   const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
     e => {
-      const newUnitId = e.target.value;
+      const newUnitId = parseInt(e.target.value);
       setScriptId(newUnitId);
       loadUnitProgress(newUnitId, sectionId);
 
