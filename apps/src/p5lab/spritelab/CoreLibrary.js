@@ -117,11 +117,13 @@ export default class CoreLibrary {
   }
 
   /**
-   * Draws bubbles for each variable in `variableBubbles` array on the canvas. It truncates labels and values to fit within
-   * the allocated space, ensuring neither exceeds half of the available width, accounting for separators.
-   * Configuration for text size, padding, stroke weight, and stroke radius is specified within the method.
+   * Draws bubbles for each variable in the `variableBubbles` array. Labels are truncated with an ellipsis
+   * if they exceed the maximum character limit. Values are truncated as needed to fit the remaining space.
    *
-   * @param {Object[]} this.variableBubbles - Array of variable objects to be displayed, each containing `name`, `label`, and `location`.
+   * @param {Object[]} this.variableBubbles - An array of objects, each representing a variable to be displayed. Each object should include:
+   *  - `name`: A string identifier for the variable used to get the value from the JSInterpreter.
+   *  - `label`: A label for the variable to be displayed in the bubble.
+   *  - `location`: An object specifying the `x` and `y` coordinates where the bubble should be drawn.
    */
   drawVariableBubbles() {
     const config = {
@@ -129,15 +131,16 @@ export default class CoreLibrary {
       padding: 10,
       strokeWeight: 3,
       strokeRadius: 24,
+      maxLabelLength: 30, // Maximum number of characters to display in the label
     };
 
-    // Define the maximum width each part can occupy, accounting for the label/value separator
+    // Calculate the width for the label and value separator (colon and space)
     const separatorWidth = drawUtils.getTextWidth(
       this.p5,
       ': ',
       config.textSize
     );
-    const maxPartWidth = (APP_WIDTH - separatorWidth) / 2;
+    const totalReservedSpace = config.padding * 2 + separatorWidth;
 
     this.variableBubbles.forEach(variable => {
       const {name, label, location} = variable;
@@ -147,17 +150,24 @@ export default class CoreLibrary {
 
       const value = this.getVariableValue(name);
 
-      // Truncate each piece of text to fit within its maximum allowed width if necessary
-      let displayLabel = drawUtils.truncateText(
+      // Determine if the label needs truncation and append an ellipsis if so
+      let displayLabel =
+        label.length > config.maxLabelLength
+          ? label.slice(0, config.maxLabelLength) + '…'
+          : label;
+      const labelWidth = drawUtils.getTextWidth(
         this.p5,
-        label,
-        maxPartWidth,
+        displayLabel,
         config.textSize
       );
+
+      // Truncate the value if necessary to fit within the available space
+      const availableSpaceForValue =
+        APP_WIDTH - totalReservedSpace - labelWidth;
       let displayValue = drawUtils.truncateText(
         this.p5,
-        value,
-        maxPartWidth,
+        `${value}`,
+        availableSpaceForValue,
         config.textSize
       );
 
