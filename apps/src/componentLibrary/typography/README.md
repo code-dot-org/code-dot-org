@@ -17,7 +17,7 @@ The long explanation [can be found here](https://github.com/code-dot-org/code-do
 Since we're using scss modules and classnames inside, **to overwrite the styles of the components, you need to make sure 
 overwriting styles has highest styles priority**.
 
-Here's some examples:
+Here are some examples:
 
 ```javascript
  // Assuming we want to make h1 element that will look like h5 with a different color than Typography's default.
@@ -38,7 +38,7 @@ Here's some examples:
 //     </style>
 
             <div className={scssModule.parentDiv}>
-                <Heading1 visualAppearance="heading-lg">
+                <Heading1 visualAppearance="heading-sm">
                     Some Heading
                 </Heading1>
             </div>
@@ -52,7 +52,7 @@ Here's some examples:
 //     </style>
 
             <div>
-                <Heading1 visualAppearance="heading-lg" className={scssModule.customHeadingStyle}>
+                <Heading1 visualAppearance="heading-sm" className={scssModule.customHeadingStyle}>
                     Some Heading
                 </Heading1>
             </div>
@@ -91,4 +91,4 @@ import Typography from './../componentLibrary/typography';
 
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](http://localhost:9001/?path=/story/typography-component--body-one).
+For guidelines on how to use these components and the features they offer, [visit Storybook](http://localhost:9001/?path=/story/designsystem-typography--all-typography-elements).
