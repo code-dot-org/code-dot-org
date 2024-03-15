@@ -1,6 +1,6 @@
 // Common helper functions for procedure and behavior mutators.
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
-import msg from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 
 // Add a new editable input field to the block for the description
 // (if the modal function editor is enabled), or set the description
@@ -12,7 +12,7 @@ export function setBlockDescription(
   if (Blockly.useModalFunctionEditor) {
     block
       .appendEndRowInput('DESCRIPTION_ROW')
-      .appendField(`${msg.description()} `, 'DESCRIPTION_LABEL')
+      .appendField(`${commonI18n.description()} `, 'DESCRIPTION_LABEL')
       .appendField(new Blockly.FieldTextInput(description), 'DESCRIPTION');
     const inputToPrecede = block.getInput('flyout_input')
       ? 'flyout_input'
