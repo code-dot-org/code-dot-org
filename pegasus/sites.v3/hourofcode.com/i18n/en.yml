@@ -1766,7 +1766,7 @@
         browsers: "Browsers:"
         languages: "Languages supported:"
         accessibility: "Accessibility:"
-      button: "View documentation:"
+      button: "View documentation"
     featured_projects:
       heading: "Featured student projects"
       desc: "Explore more featured projects built by students like you in our featured project gallery."
@@ -1866,6 +1866,16 @@
         aria_label: "View the Event-Driven Programming curricula"
     videos:
       heading: "Videos to help you get started with App Lab"
+      captions:
+        getting_started: "App Lab - Getting Started"
+        interactive: "App Lab - Make It Interactive"
+        share: "App Lab - Share Your App"
+        design: "App Lab - Design Mode"
+        image: "App Lab - Image and Sounds"
+        intro: "App Lab: Introduction"
+        simple: "App Lab: Make a simple app"
+        emoji: "App Lab: Make a Whack-E-Moji Game"
+        how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
