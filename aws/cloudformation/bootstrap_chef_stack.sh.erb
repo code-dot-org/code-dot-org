@@ -1,3 +1,6 @@
+# TODO: revert changes to this file, these are just whitespace changes and comments for readability while investigating
+
+
 # Bootstrap prerequisites
 apt-get update
 unattended-upgrade
@@ -12,9 +15,11 @@ BRANCH=${Branch}
 BASE_DOMAIN_NAME=${BaseDomainName}
 DASHBOARD_SUBDOMAIN_NAME=${DashboardSubdomainName}
 PEGASUS_SUBDOMAIN_NAME=${PegasusSubdomainName}
+
 # Bash and CloudFormation use the same string interpolation syntax. Escape with "!" to ensure CloudFormation
 # does not modify the bash syntax.
 DASHBOARD_DOMAIN_NAME="${!DASHBOARD_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
+
 # In production the fully qualified Pegasus domain name is just "code.org"; detect if the Pegasus sub domain is empty.
 [ -z "$PEGASUS_SUBDOMAIN_NAME" ] && PEGASUS_DOMAIN_NAME=$BASE_DOMAIN_NAME || PEGASUS_DOMAIN_NAME="${!PEGASUS_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
 
@@ -31,6 +36,8 @@ RESOURCE_ID=<%=resource_id%>
 export AWS_METADATA_SERVICE_TIMEOUT=30
 export AWS_METADATA_SERVICE_NUM_ATTEMPTS=30
 
+
+# Adhoc instances have special logging and restart configuration
 <% if environment == :adhoc -%>
 <%   if options[:start_inactive_instance] -%>
 # <%= Time.now %> - trigger an EC2-instance restart by changing user-data contents.
@@ -62,6 +69,9 @@ aws logs put-retention-policy \
   --retention-in-days 1 \
   --region $REGION
 <% end -%>
+
+
+# Environments without a load balancer need their own SSL certificates
 <% unless load_balancer -%>
 # Fetch acmesmith-provisioned SSL certificate and key from S3
 aws configure set s3.signature_version s3v4
@@ -76,6 +86,8 @@ CHAIN=$(aws s3 cp $CURRENT/chain.pem - | replace_newline)
 KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 <% end -%>
 
+
+# Fetch database credentials from secrets manager (except production, as it's credentials aren't stored in secrets manager)
 <% if database && !rack_env?(:production) -%>
 apt-get install -y  jq
 DB_SECRET_NAME=${DatabaseSecretAdmin}
@@ -83,6 +95,7 @@ DB_SECRET=$(aws --region $REGION secretsmanager get-secret-value --secret-id $DB
 DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
 DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 <% end -%>
+
 
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json

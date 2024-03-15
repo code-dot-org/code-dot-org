@@ -11,6 +11,4 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | 
 
 bundle install --verbose
 
-bundle exec rake install --trace
-
 bundle exec rake build --trace

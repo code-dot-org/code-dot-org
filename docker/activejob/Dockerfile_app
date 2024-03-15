@@ -1,0 +1,25 @@
+FROM code-dot-org/repo_baseline:latest
+
+# This user and workdir should be already set from the source image
+USER appuser
+WORKDIR /home/appuser/code-dot-org
+
+ARG BRANCH=staging
+ENV CDO_ENV=${BRANCH}
+
+# Fetch the latest commits. This will bust the local Docker cache if new commits appear.
+ADD "https://api.github.com/repos/code-dot-org/code-dot-org/commits?per_page=1&sha=${BRANCH}" latest_commit
+RUN git checkout ${BRANCH}
+RUN git pull
+
+# Install ruby gems
+RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
+    rbenv global 3.0.5 && \
+    bundle install
+
+# Build things!
+# TODO: currently failing, probably because we can't load secrets
+# A wild alternative would be to install chef-client and do whatever else is in the UserData script and build it like Production-Daemon?
+RUN eval "$(~/.rbenv/bin/rbenv init -)" && \
+    rbenv global 3.0.5 && \
+    bundle exec rake build

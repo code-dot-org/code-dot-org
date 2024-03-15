@@ -1,0 +1,2 @@
+[mysqld]
+innodb_redo_log_capacity=1073741824

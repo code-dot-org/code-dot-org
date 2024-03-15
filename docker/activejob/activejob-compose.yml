@@ -1,0 +1,86 @@
+# WIP - the dockerfiles have seen a lot of iteration since this was last used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Docker Compose file for running an active job worker.
+#
+# MAYBE: To run, set the following env variables (values obtainable from Circle):
+# CLOUDFRONT_KEY_PAIR_ID
+# CLOUDFRONT_PRIVATE_KEY
+# AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY
+#
+# Also set the FIXUID and FIXGID env variables with these commands (or put them in your .bash_profile / .bashrc):
+# export FIXUID=$(id -u)
+# export FIXGID=$(id -g)
+#
+# then run:
+# docker-compose -f activejob-compose.yml up
+#
+# To clean up:
+# docker-compose -f activejob-compose.yml down
+
+version: "3"
+services:
+  console:
+    image: activejob:latest
+    entrypoint: ["/home/appuser/entrypoint.sh"]
+    command: ["console"]
+    volumes:
+      - ./entrypoint.sh:/home/appuser/entrypoint.sh
+      # - ../../:/home/appuser/code-dot-org:delegated
+    depends_on:
+      - db
+  
+  activejob:
+    image: activejob:latest
+    # user: ${FIXUID:-1000}:${FIXGID:-1000}
+    volumes:
+      - ../../:/home/appuser/code-dot-org:delegated
+    stdin_open: true
+    tty: true
+    # entrypoint: ["docker/activejob/entrypoint.sh"]
+    # command: ["delayed_job"]
+
+  db:
+    container_name: db
+    hostname: db
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    command: --connect_timeout=60
+    ports:
+    - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf:ro
+
+
+# Okay, you got your local environment working. Now you need to create a job and confirm it runs. Maybe pull up a mysql client to watch the table?
+# - dbeaver to monitor the delayed_jobs table
+# - SampleJob.perform_later("some string")
+# - cd dashboard && bin/delayed_job run
+# Then you can try to do that in a container.
+# - had to set the database url to 'db' instead of localhost, but that's just local docker shenanigans.
+# then you can make sure the container is configured and built correctly. Make it work, make it right, make it fast
+# - biggest thing will be confirming that the docker image is trustworthy, and where to build it.
+
+# i want a docker image that already has bundle install ran, is that appropriate?
+# - or just build a nice entrypoint script that does it for me and then we can work to shift left
+
+# Need to setup the database since I reset the container
