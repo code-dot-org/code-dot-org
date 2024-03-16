@@ -25,7 +25,7 @@ module Services
         email: get_claim(id_token, :email),
       )
       user.authentication_options = [ao]
-      # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user.
+      # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end
 
@@ -111,6 +111,7 @@ module Services
         email: get_claim(nrps_member_message, :email),
         )
       user.authentication_options = [ao]
+      # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end
 

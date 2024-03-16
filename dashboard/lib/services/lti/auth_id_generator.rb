@@ -26,7 +26,7 @@ module Services
         when Array
           # Per LTI spec, the client ID is used to identify an LTI 1.3 app to the LMS.
           # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
-          # TODO: Remove the error logging after the Pilot if the error is not seen.
+          # TODO: Remove the error logging after the Pilot if the error is not seen. https://codedotorg.atlassian.net/browse/P20-787
           if id_token[:aud].length > 1
             Honeybadger.notify(
               'Generate Authentication ID error',
