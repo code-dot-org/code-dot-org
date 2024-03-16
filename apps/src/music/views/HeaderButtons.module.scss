@@ -3,6 +3,10 @@
 
 .container {
   display: flex;
+
+  .subContainer {
+    display: flex;
+  }
 }
 
 .button {
@@ -22,6 +26,5 @@
   &Disabled {
     opacity: 50%;
     cursor: default;
-    pointer-events: none;
   }
 }
