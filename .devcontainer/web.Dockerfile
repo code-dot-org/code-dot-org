@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/devcontainers/base:jammy
 
 # Additional required packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev git chromium-browser parallel
+    && apt-get -y install --no-install-recommends autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev git chromium-browser parallel git-lfs
 
 # Switch to VSCode user
 USER vscode
