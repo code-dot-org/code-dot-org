@@ -26,8 +26,31 @@ import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ProgressRing from './ProgressRing';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import infoIcon from './images/info-icon.svg';
+import tipIcon from './images/AiBot_Icon.svg';
 
 const INVALID_UNDERSTANDING = -1;
+
+/**
+ * Annotation tooltip styling.
+ *
+ * Needs to be here to capture the image URL and because EditorAnnotator can
+ * better add the styling overrides directly to the element so they always
+ * apply over other styling (including those also directly added to the
+ * element by the editor implementation, aka Droplet or Ace).
+ */
+const tipStyle = {
+  backgroundImage: `url(${tipIcon})`,
+  backgroundColor: '#333',
+  backgroundPosition: '2px center',
+  backgroundSize: '24px',
+  backgroundRepeat: 'no-repeat',
+  borderColor: '#555',
+  color: 'white',
+  borderRadius: '6px',
+  padding: '6px',
+  paddingLeft: '30px',
+};
 
 /**
  * Clear prior line annotations
@@ -117,9 +140,16 @@ export function annotateLines(evidence) {
       // Annotate that first line and highlight all lines, if they were found
       if (position.firstLine && position.lastLine) {
         found = true;
-        EditorAnnotator.annotateLine(position.firstLine, message);
+        EditorAnnotator.annotateLine(
+          position.firstLine,
+          message,
+          'INFO',
+          '#3CFFF8',
+          infoIcon,
+          tipStyle
+        );
         for (let i = position.firstLine; i <= position.lastLine; i++) {
-          EditorAnnotator.highlightLine(i);
+          EditorAnnotator.highlightLine(i, '#3CFFF8');
         }
         ret.push({
           firstLine: position.firstLine,
@@ -132,9 +162,16 @@ export function annotateLines(evidence) {
     // If we have some code but couldn't find it, use the AI provided line
     // numbers, which may be inaccurate.
     if (!found && hasSnippet) {
-      EditorAnnotator.annotateLine(lineNumber, message);
+      EditorAnnotator.annotateLine(
+        lineNumber,
+        message,
+        'INFO',
+        '#3CFFF8',
+        infoIcon,
+        tipStyle
+      );
       for (let i = lineNumber; i <= lastLineNumber; i++) {
-        EditorAnnotator.highlightLine(i);
+        EditorAnnotator.highlightLine(i, '#3CFFF8');
       }
       ret.push({
         firstLine: lineNumber,
