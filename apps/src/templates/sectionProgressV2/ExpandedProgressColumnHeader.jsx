@@ -27,6 +27,8 @@ export default function ExpandedProgressColumnHeader({
       }
     });
     resizeObserver.observe(expandedLevelHeaderRef.current);
+
+    return () => resizeObserver.disconnect();
   }, [setHeaderWidth, expandedLevelHeaderRef]);
 
   // If there are 2 or less levels, we only show the number so that the text fits the cell.
