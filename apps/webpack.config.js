@@ -357,20 +357,6 @@ const WEBPACK_BASE_CONFIG = {
   ignoreWarnings: [/Failed to parse source map/],
 };
 
-// FIXME: figure out how to re-enable hot reloading with
-// the current webpack version.
-//
-// Disabled in 2023 because current webpack doesn't permit
-// a `module.loaders` property in the config.
-//
-// if (envConstants.HOT) {
-//   WEBPACK_BASE_CONFIG.module.loaders.push({
-//     test: /\.jsx?$/,
-//     loader: 'react-hot-loader',
-//     include: [p('src')],
-//   });
-// }
-
 /**
  * Adds pollyfills to each entrypoint (before the existing path(s))
  *
@@ -409,6 +395,7 @@ function createWebpackConfig({
   //////////////////////////////////////////////
   ///////// WEBPACK CONFIG BEGINS HERE /////////
   //////////////////////////////////////////////
+
   const WEBPACK_CONFIG = {
     output: {
       path: path.resolve(__dirname, 'build/package/js/'),
