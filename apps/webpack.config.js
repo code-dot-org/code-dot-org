@@ -287,10 +287,7 @@ const WEBPACK_BASE_CONFIG = {
           cacheDirectory: p('build/babel-cache'),
           compact: false,
           ...(envConstants.HOT
-            ? // FIXME @snickell & @bencodeorg: why do we need to set skipEnvCheck: true?
-              // When we don't, we get warnings about babel.env() being set to test
-              // instead of development, but can't figure out where/why that's set.
-              {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
+            ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
             : {}),
         },
       },
