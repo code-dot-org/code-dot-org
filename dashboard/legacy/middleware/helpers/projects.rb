@@ -453,15 +453,16 @@ class Projects
 
   # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
   def set_use_datablock_storage(project_id, project_type)
-    if project_type == 'applab'
+    # TODO: unfirebase, include 'gamelab' in this list, see #56995
+    if ['applab'].include? project_type
       # While we transition, a fraction of new projects will be set at creation
       # to use datablock storage. As we gain confidence, we can increase this
       # DCDO flag to 1.0. At that point, we're ready to migrate all the old projects.
       #
       # Once 100% of the old projects are migrated, we're ready to remove code
       # marked with: TODO: post-firebase-cleanup
-      ProjectUseDatablockStorage.find_or_create_by(project_id: project_id) do |storage|
-        fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
+      fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
+      DASHBOARD_DB[:project_use_datablock_storage].find_or_create(project_id: project_id) do |storage|
         storage.use_datablock_storage = rand < fraction
       end
     end
