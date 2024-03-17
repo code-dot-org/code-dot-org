@@ -14,10 +14,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     sign_in @student
   end
 
-  def _url(action)
-    return "/datablock_storage/#{@channel_id}/#{action}"
-  end
-
   def create_bob_record
     post :create_record, params: {
       table_name: 'mytable',
