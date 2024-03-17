@@ -408,13 +408,6 @@ module.exports = function (grunt) {
       piskelDevMode,
       minify: true,
     }),
-
-    // This is started by `yarn start:no-hmr`, and is not the normal dev mode
-    watch: createWebpackConfig({
-      appsEntries,
-      piskelDevMode,
-      watch: true,
-    }),
   };
 
   // This is started by `yarn start`, and is the normal dev mode with HMR
