@@ -24,7 +24,6 @@
     "build:dist:analyze": "NODE_ENV=production ANALYZE_BUNDLE=1 yarn build:dist",
     "grunt": "NODE_OPTIONS=--max-old-space-size=4096 grunt",
     "start": "yarn grunt dev",
-    "start:no-hmr": "HOT=0 yarn grunt dev",
     "start:applab": "yarn grunt dev --app=applab",
     "start:gamelab": "yarn grunt dev --app=gamelab",
     "start:craft": "yarn grunt dev --app=craft",

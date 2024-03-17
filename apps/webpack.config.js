@@ -31,34 +31,6 @@ const {
 } = require('./webpackEntryPoints');
 
 const WEBPACK_DEV_SERVER_PORT = 9000;
-const WEBPACK_DEV_SERVER_URL = `http://localhost-studio.code.org:${WEBPACK_DEV_SERVER_PORT}`;
-const RAILS_DASHBOARD_URL = 'http://localhost-studio.code.org:3000';
-
-// Prints a URL for accessing the Dashboard: either proxied thru webpack-dev-server
-// or directly to rails.
-class PrintDashboardURL {
-  apply(compiler) {
-    compiler.hooks.afterDone.tap('PrintDashboardURL', stats => {
-      if (stats.hasErrors()) return;
-
-      const TIMEOUT_SO_PRINT_IS_LAST = 1000;
-      setTimeout(() => {
-        if (envConstants.HOT) {
-          const BOLD = '\x1b[1m';
-          const MAGENTA_BG = `\x1b[45m\x1b[30m${BOLD}`;
-          const RESET = '\x1b[0m';
-          console.log(
-            `\n${MAGENTA_BG}Using webpack-dev-server, access Dashboard at:${RESET} ${BOLD}${WEBPACK_DEV_SERVER_URL}${RESET}`
-          );
-        } else {
-          console.log(
-            `\nNot using webpack-dev-server, access Dashboard directly: ${RAILS_DASHBOARD_URL}`
-          );
-        }
-      }, TIMEOUT_SO_PRINT_IS_LAST);
-    });
-  }
-}
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
@@ -404,14 +376,12 @@ function addPollyfillsToEntryPoints(entries, polyfills) {
  * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
  * @param {boolean} minify - whether to minify the output
  * @param {boolean} piskelDevMode - whether to use the piskel dev mode
- * @param {boolean} watch - whether to watch for changes
  * @returns {Object} A webpack config object for building `apps/`
  */
 function createWebpackConfig({
   appsEntries = appsEntriesFor(ALL_APPS),
   minify = false,
   piskelDevMode = false,
-  watch = undefined,
 } = {}) {
   //////////////////////////////////////////////
   ///////// WEBPACK CONFIG BEGINS HERE /////////
@@ -427,7 +397,6 @@ function createWebpackConfig({
     // Don't output >1000 lines of webpack build stats to the CI logs
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
-    watch,
     entry: addPollyfillsToEntryPoints(
       {
         ...appsEntries,
@@ -698,9 +667,33 @@ function createWebpackConfig({
         ? [
             new webpack.HotModuleReplacementPlugin({}),
             new ReactRefreshWebpackPlugin(),
+            // Prints a URL for accessing the Dashboard via webpack-dev-server
+            {
+              apply: compiler => {
+                compiler.hooks.afterDone.tap('PrintDashboardURL', stats => {
+                  if (stats.hasErrors()) return;
+
+                  if (!process.env.WEBPACK_SERVE) {
+                    console.warn(
+                      "webpack-dev-server should be running, but it doesn't seem to be, url may be wrong"
+                    );
+                  }
+
+                  const TIMEOUT_SO_PRINT_IS_LAST = 1000;
+                  setTimeout(() => {
+                    const WEBPACK_DEV_SERVER_URL = `http://localhost-studio.code.org:${WEBPACK_DEV_SERVER_PORT}`;
+                    const BOLD = '\x1b[1m';
+                    const MAGENTA_BG = `\x1b[45m\x1b[30m${BOLD}`;
+                    const RESET = '\x1b[0m';
+                    console.log(
+                      `\n${MAGENTA_BG}To use webpack-dev-server, access Dashboard at:${RESET} ${BOLD}${WEBPACK_DEV_SERVER_URL}${RESET}`
+                    );
+                  }, TIMEOUT_SO_PRINT_IS_LAST);
+                });
+              },
+            },
           ]
         : []),
-      ...(envConstants.HOT || watch ? [new PrintDashboardURL()] : []),
     ],
     devServer: envConstants.HOT
       ? {
@@ -709,13 +702,16 @@ function createWebpackConfig({
           proxy: [
             {
               context: ['**'],
-              target: RAILS_DASHBOARD_URL,
+              target: 'http://localhost-studio.code.org:3000',
               changeOrigin: false,
               logLevel: 'debug',
             },
           ],
           host: '0.0.0.0',
           hot: true,
+          devMiddleware: {
+            writeToDisk: true,
+          },
         }
       : undefined,
   };
