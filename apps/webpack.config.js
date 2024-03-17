@@ -282,7 +282,7 @@ const WEBPACK_BASE_CONFIG = {
         exclude: [p('src/lodash.js')],
         loader: 'babel-loader',
         options: {
-          cacheDirectory: p('.babel-cache'),
+          cacheDirectory: p('build/babel-cache'),
           compact: false,
         },
       },
