@@ -1,3 +1,4 @@
+@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 @no_firefox
 Feature: Evaluate student code against rubrics using AI

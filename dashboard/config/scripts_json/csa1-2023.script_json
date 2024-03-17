@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-14 04:03:33 UTC",
+    "serialized_at": "2024-03-14 18:44:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -12225,7 +12225,7 @@
     {
       "key": "2455a198-0fb2-4b93-a59b-75ab5ecb0fc7",
       "properties": {
-        "description": "Call methods with arguments"
+        "description": "Differentiate between parameters and arguments"
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -12445,7 +12445,7 @@
     {
       "key": "a70ec991-8ed5-4fa4-a90e-5c87080c4735",
       "properties": {
-        "description": "Differentiate between parameters and arguments"
+        "description": "Call methods with arguments"
       },
       "seeding_key": {
         "lesson.key": "lesson-15",

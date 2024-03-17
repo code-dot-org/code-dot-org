@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import styles from './tabs.module.scss';
 import TabPanel from './TabPanel';
 
-type Tab = {
+export type Tab = {
   title: string;
   content: React.ReactNode;
 };

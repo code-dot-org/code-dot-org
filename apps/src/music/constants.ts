@@ -2,7 +2,7 @@ import {Key} from './utils/Notes';
 
 export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
 export const baseAssetUrlRestricted =
-  'https://curriculum.code.org/restricted/musiclab/';
+  'https://studio.code.org/restricted/musiclab/';
 
 export interface Trigger {
   id: string;
