@@ -16,6 +16,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   def create_bob_record
     post :create_record, params: {
+      channel_id: @channel_id,
       table_name: 'mytable',
       record_json: {"name" => 'bob', "age" => 8}.to_json,
     }
@@ -71,6 +72,15 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_VALUE_LENGTH_EXCEEDED is not yet implemented, see #57002"
     # Is MAX_VALUE_LENGTH_EXCEEDED the right error? check the JS
     assert_equal 'MAX_VALUE_LENGTH_EXCEEDED', JSON.parse(@response.body)['type']
+  end
+
+  test "just create a record"  do
+    post :create_record, params: {
+      channel_id: @channel_id,
+      table_name: 'mytable',
+      record_json: {"name" => 'bob', "age" => 8}.to_json,
+    }
+    assert_response :success
   end
 
   test "creates a record" do

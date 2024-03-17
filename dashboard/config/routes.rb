@@ -1150,7 +1150,7 @@ Dashboard::Application.routes.draw do
         get :get_columns_for_table
 
         # Datablock Storage: Table Record API
-        post :create_record
+        post :create_record, to: 'datablock_storage#create_record', as: 'datablock_storage_create_record'
         get :read_records
         put :update_record
         delete :delete_record
