@@ -38,9 +38,7 @@ module.exports = {
   DRONE: process.env.DRONE,
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
   // If set, run webpack dev server (with hot reloading)
-  get HOT() {
-    return process.env.HOT !== '0' && !!process.env.HOT;
-  },
+  HOT: process.env.HOT !== '0' && !!process.env.HOT,
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
 };

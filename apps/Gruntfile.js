@@ -471,13 +471,18 @@ module.exports = function (grunt) {
     },
   };
 
+  grunt.registerTask('webpack-dev-server-or-watch', function () {
+    if (envConstants.HOT) {
+      grunt.task.run('webpack-dev-server');
+    } else {
+      grunt.task.run('webpack:watch');
+    }
+  });
+
   config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: [
-        'watch',
-        envConstants.HOT ? 'webpack-dev-server' : 'webpack:watch',
-      ],
+      tasks: ['watch', 'webpack-dev-server-or-watch'],
       options: {
         logConcurrentOutput: true,
       },
