@@ -284,6 +284,12 @@ const WEBPACK_BASE_CONFIG = {
         options: {
           cacheDirectory: p('build/babel-cache'),
           compact: false,
+          ...(envConstants.HOT
+            ? // FIXME @snickell & @bencodeorg: why do we need to set skipEnvCheck: true?
+              // When we don't, we get warnings about babel.env() being set to test
+              // instead of development, but can't figure out where/why that's set.
+              {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
+            : {}),
         },
       },
       {
@@ -326,19 +332,6 @@ const WEBPACK_BASE_CONFIG = {
             },
           ]
         : []),
-      // update to dev only
-      // {
-      //   test: /\.[jt]sx?$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     {
-      //       loader: require.resolve('babel-loader'),
-      //       options: {
-      //         plugins: [require.resolve('react-refresh/babel')],
-      //       },
-      //     },
-      //   ],
-      // },
       ...(process.env.DEV
         ? [
             // Enable source maps locally for Blockly for easier debugging.
