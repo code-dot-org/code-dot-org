@@ -421,8 +421,14 @@ module.exports = function (grunt) {
     }),
   };
 
-  // need to figure out right arguments to pass to createWebpackConfig
-  config['webpack-dev-server'] = {dev: createWebpackConfig()};
+  config['webpack-dev-server'] = {
+    dev: createWebpackConfig({
+      appsEntries,
+      minify: false,
+      watch: false,
+      piskelDevMode,
+    }),
+  };
 
   config.uglify = {
     lib: {
