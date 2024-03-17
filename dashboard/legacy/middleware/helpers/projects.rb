@@ -461,9 +461,12 @@ class Projects
       #
       # Once 100% of the old projects are migrated, we're ready to remove code
       # marked with: TODO: post-firebase-cleanup
-      fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
-      DASHBOARD_DB[:project_use_datablock_storage].find_or_create(project_id: project_id) do |storage|
-        storage.use_datablock_storage = rand < fraction
+      use_datablock_table = DASHBOARD_DB[:project_use_datablock_storages]
+      existing_record = use_datablock_table.where(project_id: project_id).first
+      unless existing_record
+        fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
+        should_use_datablock = rand < fraction
+        use_datablock_table.insert(project_id: project_id, use_datablock_storage: should_use_datablock)
       end
     end
   end
