@@ -39,21 +39,13 @@ const RAILS_DASHBOARD_URL = 'http://localhost-studio.code.org:3000';
 // Prints a URL for accessing the Dashboard: either proxied thru webpack-dev-server
 // or directly to rails.
 class PrintDashboardURL {
-  constructor(hot, watch) {
-    this.hot = hot;
-    this.watch = watch;
-  }
-
   apply(compiler) {
     compiler.hooks.afterDone.tap('PrintDashboardURL', stats => {
       if (stats.hasErrors()) return;
 
-      // Don't print the URL if we're building and immediately exiting
-      if (!this.hot && !this.watch) return;
-
       const TIMEOUT_SO_PRINT_IS_LAST = 1000;
       setTimeout(() => {
-        if (this.hot) {
+        if (envConstants.HOT) {
           const BOLD = '\x1b[1m';
           const MAGENTA_BG = `\x1b[45m\x1b[30m${BOLD}`;
           const RESET = '\x1b[0m';
@@ -715,7 +707,7 @@ function createWebpackConfig({
         : []),
       new PyodidePlugin(),
       ...(envConstants.HOT ? [new ReactRefreshWebpackPlugin()] : []),
-      new PrintDashboardURL(envConstants.HOT, watch),
+      ...(envConstants.HOT || watch ? [new PrintDashboardURL()] : []),
     ],
     devServer: envConstants.HOT
       ? {
