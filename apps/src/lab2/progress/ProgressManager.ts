@@ -7,6 +7,7 @@ import {Condition, Validation} from '@cdo/apps/lab2/types';
 // the validation works is up to the implementor.
 export abstract class Validator {
   abstract shouldCheckConditions(): boolean;
+  abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
@@ -75,6 +76,12 @@ export default class ProgressManager {
 
     // Go through each validation to see if we have a match.
     for (const validation of this.currentValidations) {
+      // If it's not a next validation, then make sure the lab-specific validator
+      // is ready for it.
+      if (this.validator.shouldCheckNextConditionsOnly() && !validation.next) {
+        continue;
+      }
+
       if (validation.conditions) {
         // Ask the lab-specific validator if this validation's
         // conditions are met.
