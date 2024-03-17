@@ -405,15 +405,13 @@ function addPollyfillsToEntryPoints(entries, polyfills) {
  * @param {boolean} minify - whether to minify the output
  * @param {boolean} piskelDevMode - whether to use the piskel dev mode
  * @param {boolean} watch - whether to watch for changes
- * @param {boolean} watchNotify - if watch is enabled, whether to use watch-notify
  * @returns {Object} A webpack config object for building `apps/`
  */
 function createWebpackConfig({
   appsEntries = appsEntriesFor(ALL_APPS),
-  minify,
-  piskelDevMode,
-  watch,
-  watchNotify,
+  minify = false,
+  piskelDevMode = false,
+  watch = undefined,
 } = {}) {
   //////////////////////////////////////////////
   ///////// WEBPACK CONFIG BEGINS HERE /////////

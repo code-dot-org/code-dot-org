@@ -400,32 +400,25 @@ module.exports = function (grunt) {
   config.webpack = {
     build: createWebpackConfig({
       appsEntries,
-      minify: false,
-      watch: false,
       piskelDevMode,
     }),
 
     uglify: createWebpackConfig({
       appsEntries,
-      minify: true,
-      watch: false,
       piskelDevMode,
+      minify: true,
     }),
 
     watch: createWebpackConfig({
       appsEntries,
-      minify: false,
-      watch: true,
-      watchNotify: grunt.option('watch-notify'),
       piskelDevMode,
+      watch: true,
     }),
   };
 
   config['webpack-dev-server'] = {
     dev: createWebpackConfig({
       appsEntries,
-      minify: false,
-      watch: false,
       piskelDevMode,
     }),
   };
