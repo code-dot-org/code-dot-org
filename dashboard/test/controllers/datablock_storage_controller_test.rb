@@ -19,7 +19,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   def create_bob_record
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: {"name" => 'bob', "age" => 8}.to_json,
     }
@@ -27,7 +27,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   def read_records(table_name = 'mytable')
-    get _url(:read_records), params: {
+    get :read_records, params: {
       table_name: table_name,
     }
     assert_response :success
@@ -35,12 +35,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   def set_and_get_key_value(key, value)
-    post _url(:set_key_value), params: {
+    post :set_key_value, params: {
       key: key,
       value: value.to_json,
     }
     assert_response :success
-    get _url(:get_key_value), params: {
+    get :get_key_value, params: {
       key: key
     }
     assert_response :success
@@ -66,7 +66,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   test "set_key_value should enforce MAX_VALUE_LENGTH" do
     too_many_bees = 'b' * (DatablockStorageKvp::MAX_VALUE_LENGTH + 1) # 1 more 'b' char than max
-    post _url(:set_key_value), params: {
+    post :set_key_value, params: {
       key: 'key',
       value: too_many_bees.to_json,
     }
@@ -78,12 +78,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "creates a record" do
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: {"name" => 'bob', "age" => 8}.to_json,
     }
     assert_response :success
-    get _url(:read_records), params: {
+    get :read_records, params: {
       table_name: 'mytable',
     }
     assert_response :success
@@ -92,13 +92,13 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create_record creates a table if none exists" do
-    get _url(:get_table_names)
+    get :get_table_names
     assert_response :success
     assert_equal [], JSON.parse(@response.body)
 
     create_bob_record
 
-    get _url(:get_table_names)
+    get :get_table_names
     assert_response :success
     assert_equal ['mytable'], JSON.parse(@response.body)
   end
@@ -106,14 +106,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "create_record wont create objects or arrays" do
     create_bob_record
 
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: '{"name": "badbob", "badval": {"key":"value"}}',
     }
     assert_response :bad_request
     assert_equal [{"name" => 'bob', "age" => 8, "id" => 1}], read_records
 
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: '{"name": "badbob", "badval": [1,2,3]}',
     }
@@ -126,16 +126,16 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     original_max_table_count = DatablockStorageTable::MAX_TABLE_COUNT
     DatablockStorageTable.const_set(:MAX_TABLE_COUNT, 3)
 
-    post _url(:create_record), params: {table_name: 'table1', record_json: {'name' => 'bob'}.to_json}
+    post :create_record, params: {table_name: 'table1', record_json: {'name' => 'bob'}.to_json}
     assert_response :success
 
-    post _url(:create_record), params: {table_name: 'table2', record_json: {'name' => 'bob'}.to_json}
+    post :create_record, params: {table_name: 'table2', record_json: {'name' => 'bob'}.to_json}
     assert_response :success
 
-    post _url(:create_record), params: {table_name: 'table3', record_json: {'name' => 'bob'}.to_json}
+    post :create_record, params: {table_name: 'table3', record_json: {'name' => 'bob'}.to_json}
     assert_response :success
 
-    post _url(:create_record), params: {table_name: 'table4', record_json: {'name' => 'bob'}.to_json}
+    post :create_record, params: {table_name: 'table4', record_json: {'name' => 'bob'}.to_json}
     skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_COUNT is not yet implemented so we get :success when :bad_request is desired, see #57003"
     assert_response :bad_request
     assert_equal 'MAX_TABLES_EXCEEDED', JSON.parse(@response.body)['type']
@@ -153,7 +153,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     create_bob_record
     create_bob_record
 
-    post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => 'bob'}.to_json}
+    post :create_record, params: {table_name: 'mytable', record_json: {'name' => 'bob'}.to_json}
 
     skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_ROW_COUNT is not yet implemented so we get :success when :bad_request is desired, see #57002"
     assert_response :bad_request
@@ -165,11 +165,11 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   test "create_record can't create records over MAX_RECORD_LENGTH" do
     not_too_many_bees = 'b' * (DatablockStorageRecord::MAX_RECORD_LENGTH - 20) # 20 less 'b' chars than max
-    post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => not_too_many_bees}.to_json}
+    post :create_record, params: {table_name: 'mytable', record_json: {'name' => not_too_many_bees}.to_json}
     assert_response :success
 
     too_many_bees = 'b' * (DatablockStorageRecord::MAX_RECORD_LENGTH + 1) # 1 more 'b' char than max
-    post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => too_many_bees}.to_json}
+    post :create_record, params: {table_name: 'mytable', record_json: {'name' => too_many_bees}.to_json}
     assert_response :bad_request
 
     skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageRecord::MAX_RECORD_LENGTH is not yet implemented at the DatablockStorage level, see #57001"
@@ -178,90 +178,90 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create_table" do
-    get _url(:get_table_names)
+    get :get_table_names
     assert_response :success
     assert_equal [], JSON.parse(@response.body)
 
-    post _url(:create_table), params: {table_name: 'mytable'}
+    post :create_table, params: {table_name: 'mytable'}
     assert_response :success
 
-    get _url(:get_table_names)
+    get :get_table_names
     assert_response :success
     assert_equal ['mytable'], JSON.parse(@response.body)
 
-    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    get :get_columns_for_table, params: {table_name: 'mytable'}
     assert_response :success
     assert_equal ['id'], JSON.parse(@response.body)
   end
 
   test "create_table with an emoji name" do
-    post _url(:create_table), params: {table_name: '👁️👄👁️'}
+    post :create_table, params: {table_name: '👁️👄👁️'}
     assert_response :success
 
-    get _url(:get_table_names)
+    get :get_table_names
     assert_response :success
     assert_equal ['👁️👄👁️'], JSON.parse(@response.body)
   end
 
   test "get_key_values" do
-    post _url(:set_key_value), params: {
+    post :set_key_value, params: {
       key: 'name',
       value: 'bob'.to_json,
     }
     assert_response :success
-    post _url(:set_key_value), params: {
+    post :set_key_value, params: {
       key: 'age',
       value: 8.to_json,
     }
     assert_response :success
 
-    get _url(:get_key_values)
+    get :get_key_values
     assert_response :success
     assert_equal ({"name" => 'bob', "age" => 8}), JSON.parse(@response.body)
   end
 
   test "delete_table" do
-    post _url(:create_table), params: {table_name: 'mytable'}
+    post :create_table, params: {table_name: 'mytable'}
     assert_response :success
 
     create_bob_record
 
-    delete _url(:delete_table), params: {table_name: 'mytable'}
+    delete :delete_table, params: {table_name: 'mytable'}
     assert_response :success
 
-    get _url(:get_table_names)
+    get :get_table_names
     assert_response :success
     assert_equal [], JSON.parse(@response.body)
 
     assert_response :success
-    get _url(:read_records), params: {table_name: 'mytable'}
+    get :read_records, params: {table_name: 'mytable'}
     assert_response :bad_request
   end
 
   test "clear_table" do
     create_bob_record
 
-    delete _url(:clear_table), params: {table_name: 'mytable'}
+    delete :clear_table, params: {table_name: 'mytable'}
     assert_response :success
 
     # Rows should be gone
-    get _url(:read_records), params: {table_name: 'mytable'}
+    get :read_records, params: {table_name: 'mytable'}
     assert_response :success
     assert_equal [], JSON.parse(@response.body)
 
     # Columns should still be there
-    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    get :get_columns_for_table, params: {table_name: 'mytable'}
     assert_response :success
     assert_equal ['id', 'name', 'age'], JSON.parse(@response.body)
   end
 
   test "add_column" do
-    post _url(:create_table), params: {table_name: 'mytable'}
+    post :create_table, params: {table_name: 'mytable'}
 
-    post _url(:add_column), params: {table_name: 'mytable', column_name: 'newcol'}
+    post :add_column, params: {table_name: 'mytable', column_name: 'newcol'}
     assert_response :success
 
-    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    get :get_columns_for_table, params: {table_name: 'mytable'}
     assert_response :success
     assert_equal ['id', 'newcol'], JSON.parse(@response.body)
   end
@@ -269,44 +269,44 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "delete_column" do
     create_bob_record
 
-    delete _url(:delete_column), params: {table_name: 'mytable', column_name: 'age'}
+    delete :delete_column, params: {table_name: 'mytable', column_name: 'age'}
     assert_response :success
 
-    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    get :get_columns_for_table, params: {table_name: 'mytable'}
     assert_equal ['id', 'name'], JSON.parse(@response.body)
 
     # Make sure the 'age' key has been removed from JSON values too
-    get _url(:read_records), params: {table_name: 'mytable'}
+    get :read_records, params: {table_name: 'mytable'}
     assert_equal [{"name" => 'bob', "id" => 1}], JSON.parse(@response.body)
   end
 
   test "rename_column" do
     create_bob_record
 
-    put _url(:rename_column), params: {
+    put :rename_column, params: {
       table_name: 'mytable',
       old_column_name: 'name',
       new_column_name: 'first_name'
     }
     assert_response :success
 
-    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    get :get_columns_for_table, params: {table_name: 'mytable'}
     assert_equal ['id', 'first_name', 'age'], JSON.parse(@response.body)
 
-    get _url(:read_records), params: {table_name: 'mytable'}
+    get :read_records, params: {table_name: 'mytable'}
     assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
   end
 
   test "get_column" do
     create_bob_record
-    get _url(:get_column), params: {table_name: 'mytable', column_name: 'name'}
+    get :get_column, params: {table_name: 'mytable', column_name: 'name'}
     assert_response :success
     val = JSON.parse(@response.body)
     assert_equal ['bob'], val
   end
 
   def create_record_where_foo_is(value)
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: {"foo" => value}.to_json,
     }
@@ -314,7 +314,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   def create_record_without_foo
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: {}.to_json,
     }
@@ -329,7 +329,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     create_record_without_foo
     create_record_where_foo_is(false)
 
-    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'string'}
+    put :coerce_column, params: {table_name: 'mytable', column_name: 'foo', column_type: 'string'}
     assert_response :success
 
     assert_equal [
@@ -348,7 +348,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     create_record_where_foo_is(false)
     create_record_where_foo_is('false')
 
-    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'boolean'}
+    put :coerce_column, params: {table_name: 'mytable', column_name: 'foo', column_type: 'boolean'}
     assert_response :success
 
     assert_equal [
@@ -365,7 +365,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     create_record_where_foo_is('1e3')
     create_record_where_foo_is('0.4')
 
-    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
+    put :coerce_column, params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
     assert_response :success
 
     assert_equal [
@@ -380,7 +380,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     create_record_where_foo_is(true)
     create_record_where_foo_is('bar')
 
-    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'boolean'}
+    put :coerce_column, params: {table_name: 'mytable', column_name: 'foo', column_type: 'boolean'}
 
     assert_response :bad_request
     assert_equal 'CANNOT_CONVERT_COLUMN_TYPE', JSON.parse(@response.body)['type']
@@ -395,7 +395,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     create_record_where_foo_is(1)
     create_record_where_foo_is('2xyz')
 
-    put _url(:coerce_column), params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
+    put :coerce_column, params: {table_name: 'mytable', column_name: 'foo', column_type: 'number'}
 
     assert_response :bad_request
     assert_equal 'CANNOT_CONVERT_COLUMN_TYPE', JSON.parse(@response.body)['type']
@@ -421,7 +421,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   ]
 
   test "populate_tables" do
-    put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
+    put :populate_tables, params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
     assert_response :success
 
     assert_equal POPULATE_TABLE_DATA_RECORDS, read_records('cities')
@@ -430,12 +430,12 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "populate_table does not overwrite existing data" do
     NYC_RECORD = {"city" => "New York", "state" => "NY", "id" => 1}
 
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'cities',
       record_json: NYC_RECORD.to_json,
     }
 
-    put _url(:populate_tables), params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
+    put :populate_tables, params: {tables_json: POPULATE_TABLE_DATA_JSON_STRING}
     assert_response :success
 
     assert_equal [NYC_RECORD], read_records('cities')
@@ -443,7 +443,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   test "populate_table prints a friendly error message when given bad table json" do
     BAD_JSON = '{'
-    put _url(:populate_tables), params: {tables_json: BAD_JSON}
+    put :populate_tables, params: {tables_json: BAD_JSON}
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
@@ -453,29 +453,29 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "populate_key_values" do
-    put _url(:populate_key_values), params: {key_values_json: '{"click_count": 5}'}
+    put :populate_key_values, params: {key_values_json: '{"click_count": 5}'}
     assert_response :success
 
-    get _url(:get_key_values)
+    get :get_key_values
     assert_response :success
     assert_equal ({"click_count" => 5}), JSON.parse(@response.body)
   end
 
   test "populate_key_values does not overwrite existing data" do
-    post _url(:set_key_value), params: {key: 'click_count', value: 1.to_json}
+    post :set_key_value, params: {key: 'click_count', value: 1.to_json}
     assert_response :success
 
-    put _url(:populate_key_values), params: {key_values_json: '{"click_count": 5}'}
+    put :populate_key_values, params: {key_values_json: '{"click_count": 5}'}
     assert_response :success
 
-    get _url(:get_key_values)
+    get :get_key_values
     assert_response :success
 
     assert_equal ({"click_count" => 1}), JSON.parse(@response.body)
   end
 
   test "populate_key_values prints a friendly error message when given bad key value json" do
-    put _url(:populate_key_values), params: {key_values_json: '{'}
+    put :populate_key_values, params: {key_values_json: '{'}
 
     assert_response :bad_request
 
@@ -505,7 +505,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "shared_table works with read_records" do
     expected_records, _mysharedtable = create_shared_table
 
-    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    post :add_shared_table, params: {table_name: 'mysharedtable'}
     assert_response :success
 
     assert_equal expected_records, read_records('mysharedtable')
@@ -515,10 +515,10 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     shared_records, mysharedtable = create_shared_table
     new_record = {"id" => 4, "name" => "anya", "age" => 10}
 
-    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    post :add_shared_table, params: {table_name: 'mysharedtable'}
     assert_response :success
 
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mysharedtable',
       record_json: new_record.to_json,
     }
@@ -532,10 +532,10 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "shared_table copies on write when we delete_record" do
     shared_records, mysharedtable = create_shared_table
 
-    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    post :add_shared_table, params: {table_name: 'mysharedtable'}
     assert_response :success
 
-    delete _url(:delete_record), params: {
+    delete :delete_record, params: {
       table_name: 'mysharedtable',
       record_id: 1,
     }
@@ -550,10 +550,10 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "shared_table works with get_column" do
     _expected_records, _mysharedtable = create_shared_table
 
-    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    post :add_shared_table, params: {table_name: 'mysharedtable'}
     assert_response :success
 
-    get _url(:get_column), params: {table_name: 'mysharedtable', column_name: 'name'}
+    get :get_column, params: {table_name: 'mysharedtable', column_name: 'name'}
     assert_response :success
     val = JSON.parse(@response.body)
     assert_equal ['alice', 'bob', 'charlie'], val
@@ -562,13 +562,13 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   test "add_shared_table cannot overwrite an existing table" do
     _shared_records, _mysharedtable = create_shared_table
 
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mysharedtable',
       record_json: {"name" => 'bob', "age" => 8}.to_json,
     }
     assert_response :success
 
-    post _url(:add_shared_table), params: {table_name: 'mysharedtable'}
+    post :add_shared_table, params: {table_name: 'mysharedtable'}
     assert_response :bad_request
 
     error = JSON.parse(@response.body)
@@ -578,19 +578,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "deletes a record" do
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: {'name' => 'bob', 'age' => 8}.to_json,
     }
     assert_response :success
     # assert_equal 1, JSON.parse(@response.body).id
     assert_equal 1, @response.parsed_body['id']
-    delete _url(:delete_record), params: {
+    delete :delete_record, params: {
       table_name: 'mytable',
       record_id: 1,
     }
     assert_response :success
-    get _url(:read_records), params: {
+    get :read_records, params: {
       table_name: 'mytable',
     }
     assert_response :success
@@ -599,20 +599,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "updates a record" do
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: {'name' => 'bob', 'age' => 8}.to_json,
     }
     assert_response :success
 
     assert_equal 1, @response.parsed_body['id']
-    put _url(:update_record), params: {
+    put :update_record, params: {
       table_name: 'mytable',
       record_id: 1,
       record_json: {'name' => 'sally', 'age' => 10}.to_json
     }
     assert_response :success
-    get _url(:read_records), params: {
+    get :read_records, params: {
       table_name: 'mytable',
     }
     assert_response :success
@@ -634,7 +634,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       {"id" => 3, "name" => "charlie", "age" => 9, "male" => true},
     ]
 
-    post _url(:import_csv), params: {
+    post :import_csv, params: {
       table_name: 'mytable',
       table_data_csv: CSV_DATA,
     }
@@ -644,7 +644,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "import_csv overwrites existing data" do
-    post _url(:create_record), params: {
+    post :create_record, params: {
       table_name: 'mytable',
       record_json: {"name" => 'tim', "age" => 2}.to_json,
     }
@@ -663,7 +663,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       {"id" => 3, "name" => "charlie"},
     ]
 
-    post _url(:import_csv), params: {
+    post :import_csv, params: {
       table_name: 'mytable',
       table_data_csv: CSV_DATA,
     }
@@ -681,13 +681,13 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
       3,charlie,9,true
     CSV
 
-    post _url(:import_csv), params: {
+    post :import_csv, params: {
       table_name: 'mytable',
       table_data_csv: CSV_DATA,
     }
     assert_response :success
 
-    get _url(:export_csv), params: {
+    get :export_csv, params: {
       table_name: 'mytable',
     }
     assert_response :success
@@ -699,14 +699,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     create_bob_record
     set_and_get_key_value('somekey', 5)
 
-    delete _url(:clear_all_data)
+    delete :clear_all_data
     assert_response :success
 
-    get _url(:get_table_names)
+    get :get_table_names
     assert_response :success
     assert_equal [], JSON.parse(@response.body)
 
-    get _url(:get_key_values)
+    get :get_key_values
     assert_response :success
     assert_equal({}, JSON.parse(@response.body))
   end
