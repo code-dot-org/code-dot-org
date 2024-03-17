@@ -694,7 +694,12 @@ function createWebpackConfig({
             ]),
       }),
       new PyodidePlugin(),
-      ...(envConstants.HOT ? [new ReactRefreshWebpackPlugin()] : []),
+      ...(envConstants.HOT
+        ? [
+            new webpack.HotModuleReplacementPlugin({}),
+            new ReactRefreshWebpackPlugin(),
+          ]
+        : []),
       ...(envConstants.HOT || watch ? [new PrintDashboardURL()] : []),
     ],
     devServer: envConstants.HOT
