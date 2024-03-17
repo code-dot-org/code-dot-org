@@ -32,6 +32,44 @@ const {
   OTHER_ENTRIES,
 } = require('./webpackEntryPoints');
 
+const WEBPACK_DEV_SERVER_PORT = 9000;
+const WEBPACK_DEV_SERVER_URL = `http://localhost-studio.code.org:${WEBPACK_DEV_SERVER_PORT}`;
+const RAILS_DASHBOARD_URL = 'http://localhost-studio.code.org:3000';
+
+// Prints a URL for accessing the Dashboard: either proxied thru webpack-dev-server
+// or directly to rails.
+class PrintDashboardURL {
+  constructor(hot, watch) {
+    this.hot = hot;
+    this.watch = watch;
+  }
+
+  apply(compiler) {
+    compiler.hooks.afterDone.tap('PrintDashboardURL', stats => {
+      if (stats.hasErrors()) return;
+
+      // Don't print the URL if we're building and immediately exiting
+      if (!this.hot && !this.watch) return;
+
+      const TIMEOUT_SO_PRINT_IS_LAST = 1000;
+      setTimeout(() => {
+        if (this.hot) {
+          const BOLD = '\x1b[1m';
+          const MAGENTA_BG = `\x1b[45m\x1b[30m${BOLD}`;
+          const RESET = '\x1b[0m';
+          console.log(
+            `\n${MAGENTA_BG}Using webpack-dev-server, access Dashboard at:${RESET} ${BOLD}${WEBPACK_DEV_SERVER_URL}${RESET}`
+          );
+        } else {
+          console.log(
+            `\nNot using webpack-dev-server, access Dashboard directly: ${RAILS_DASHBOARD_URL}`
+          );
+        }
+      }, TIMEOUT_SO_PRINT_IS_LAST);
+    });
+  }
+}
+
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
@@ -677,15 +715,16 @@ function createWebpackConfig({
         : []),
       new PyodidePlugin(),
       ...(envConstants.HOT ? [new ReactRefreshWebpackPlugin()] : []),
+      new PrintDashboardURL(envConstants.HOT, watch),
     ],
     devServer: envConstants.HOT
       ? {
           allowedHosts: ['localhost-studio.code.org'],
-          port: 9000,
+          port: WEBPACK_DEV_SERVER_PORT,
           proxy: [
             {
               context: ['**'],
-              target: 'http://localhost-studio.code.org:3000',
+              target: RAILS_DASHBOARD_URL,
               changeOrigin: false,
               logLevel: 'debug',
             },
