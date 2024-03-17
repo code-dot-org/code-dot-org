@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:33.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In States.java:\r\n\r\n1. Write the method `getMax()`(#e7e8ea) to find and return the largest value in the `data`(#e7e8ea) array.\r\n\r\n2. Write the method `getMin()`(#e7e8ea) to find and return the smallest value in the `data`(#e7e8ea) array.\r\n\r\n##In MyConsole.java:\r\n\r\n3. Print the result of a call to `getMax()`(#e7e8ea) on the `myStates`(#e7e8ea) object.\r\n\r\n4. Print the result of a call to `getMin()`(#e7e8ea) on the `myStates`(#e7e8ea) object.\r\n\r\n![](https://images.code.org/1d2b6e597db0bfa9288bcf1a2b3ffbd0-image-1648738095916.png)",
@@ -31,12 +35,9 @@
         "text": "4833722\n735132\n6626624\n2959373\n38332521\n5268367\n3596080\n925749\n19552860\n9992167\n1404054\n1612136\n12882135\n6570902\n3090416\n2893957\n4395295\n4625470\n1328302\n5928814\n6692824\n9895622\n5420380\n2991207\n6044171\n1015165\n1868516\n2790136\n1323459\n8899339\n2085287\n19651127\n9848060\n723393\n11570808\n3850568\n3930065\n12773801\n1051511\n4774839\n844877\n6495978\n26448193\n2900872\n626630\n8260405\n6971406\n1854304\n5742713\n582658",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:33.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:33.500+00:00\",\"changed\":[\"cloned from \\\"CSA U3L8-L3_2022\\\"\"],\"cloned_from\":\"CSA U3L8-L3_2022\"},{\"changed_at\":\"2022-09-08 23:29:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 23:31:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

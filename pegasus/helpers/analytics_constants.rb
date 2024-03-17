@@ -35,6 +35,8 @@ module AnalyticsConstants
     RP_LANDING_PAGE_VISITED_EVENT = 'Regional Partner Landing Page Visited'.freeze,
     TEACH_PAGE_VISITED_EVENT = 'Teach Page Visited'.freeze,
     TEACHER_LOGIN_EVENT = 'Teacher Login'.freeze,
-    VIDEO_LIBRARY_PAGE_VISIT_EVENT = 'Video Library Page Visited'.freeze
+    VIDEO_LIBRARY_PAGE_VISIT_EVENT = 'Video Library Page Visited'.freeze,
+    INTL_PL_PAGE_VISIT_EVENT = 'International Professional Learning Page Visited'.freeze,
+    INTL_PL_PARTNERS_PAGE_VISIT_EVENT = 'International Professional Learning Partners Page Visited'.freeze
   ].freeze
 end

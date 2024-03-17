@@ -500,7 +500,7 @@ en:
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students using micro:bits.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Creating Apps with Devices Unit** with your students using micro:bits.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Creating Apps with Devices unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Creating Apps with Devices. "
-          version_title: ''
+          version_title: "'23-'24"
         pl-csd-summer-2023:
           title: CSD In-Person PL Workshop Course
           description_short: ''
@@ -620,7 +620,7 @@ en:
           description_teacher: ''
           version_title: ''
         melissasandbox-2024:
-          title: melissasandbox-2024
+          title: k5-maker-sandbox-2024
           description_short: sandbox for melissa toohey
           description_student: ''
           description_teacher: ''
@@ -659,4 +659,37 @@ en:
             * **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and [Course Name]. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started.
 
           version_title: ''
-...
+        k5-maker-pilot-2024:
+          title: K-5 Maker Self-Paced Professional Learning
+          description_short: Professional learning module for CSF Maker with micro:bit course.
+          description_student: |
+            ####  The micro:bit course bridges the gap between digital and physical worlds, and enables students to transfer their computer programs into real-world applications.
+
+            #### **In this module, you will:**
+            - #### Prepare to teach foundational coding concepts like events, loops, conditionals, variables and functions.
+            - #### Gain practical experience in how hardware and software can work together.
+            - #### Practice key concepts included in the unit.
+            - #### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses.
+
+            ####  **Suggested total time:** 150 minutes
+
+            #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
+          description_teacher: |
+            ####  The micro:bit course bridges the gap between digital and physical worlds, and enables students to transfer their computer programs into real-world applications.
+
+            #### **In this module, you will:**
+            - #### Prepare to teach foundational coding concepts like events, loops, conditionals, variables and functions.
+            - #### Gain practical experience in how hardware and software can work together.
+            - #### Practice key concepts included in the unit.
+            - #### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses.
+
+            ####  **Suggested total time:**  150 minutes
+
+            #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
+          version_title: ''
+        foundations-of-cs-beta-2024:
+          title: Foundations of Computer Science BETA
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"

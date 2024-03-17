@@ -10,9 +10,9 @@
 #  type               :string(255)
 #  project_id         :string(255)
 #  project_version_id :string(255)
-#  prompt             :text(65535)
+#  prompt             :text(16777215)
 #  status             :string(255)
-#  ai_response        :text(65535)
+#  ai_response        :text(16777215)
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
@@ -29,5 +29,6 @@ class AiTutorInteraction < ApplicationRecord
   belongs_to :user
   belongs_to :level, optional: true
   belongs_to :script, optional: true
-  validates :type, inclusion: {in: %w(compilation validation general_chat)}
+  validates :type, inclusion: {in: SharedConstants::AI_TUTOR_TYPES.values}
+  validates :status, inclusion: {in: SharedConstants::AI_TUTOR_INTERACTION_SAVE_STATUS.values}
 end

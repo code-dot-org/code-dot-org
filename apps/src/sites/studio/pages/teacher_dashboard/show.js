@@ -16,6 +16,7 @@ import teacherSections, {
   setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
+  sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -41,6 +42,7 @@ const {
   localeCode,
   hasSeenStandardsReportInfo,
   coursesWithProgress,
+  canViewStudentAIChatMessages,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -92,6 +94,8 @@ $(document).ready(function () {
   ].reverse();
   store.dispatch(setCoursesWithProgress(reorderedCourses));
 
+  const showAITutorTab = canViewStudentAIChatMessages;
+
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
@@ -105,6 +109,11 @@ $(document).ready(function () {
               sectionName={section.name}
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
+              showAITutorTab={showAITutorTab}
+              sectionProviderName={sectionProviderName(
+                store.getState(),
+                section.id
+              )}
             />
           )}
         />

@@ -126,6 +126,15 @@ module SharedConstants
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
 
+  # The status of a featured project based on it's `featured_at` and `unfeatured_at` properties
+  FEATURED_PROJECT_STATUS = OpenStruct.new(
+    {
+      active: 'active',
+      bookmarked: 'bookmarked',
+      archived: 'archived',
+    }
+  )
+
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
@@ -197,7 +206,6 @@ module SharedConstants
       "readRecords": null,
       "updateRecord": null,
       "deleteRecord": null,
-      "onRecordEvent": null,
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
@@ -648,6 +656,9 @@ module SharedConstants
     {
       INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
+      ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
+      INTEGRATION_EARLY_ACCESS_URL: 'https://docs.google.com/forms/d/e/1FAIpQLScjfVR4CZs8Utf5vI4mz3e1q8vdH6RNIgTUWygZXN0oovBSQg/viewform',
+      INTEGRATION_BUG_REPORT_URL: 'https://support.code.org/hc/en-us/requests/new?ticket_form_id=14998494738829&tf_23889708=lms_eaf',
     }
   ).freeze
 
@@ -659,4 +670,24 @@ module SharedConstants
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
   AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
+
+  # These reflect the 'status' of an AI Tutor Interaction
+  AI_TUTOR_INTERACTION_SAVE_STATUS = {
+    ERROR: 'error',
+    PERSONAL: 'personal',
+    PROFANITY: 'profanity',
+    INAPPROPRIATE: 'inappropriate',
+    OK: 'ok',
+    UNKNOWN: 'unknown',
+    EMAIL: 'email',
+    ADDRESS: 'address',
+    PHONE: 'phone',
+  }.freeze
+
+  # These are the types of assistance AI Tutor can provide
+  AI_TUTOR_TYPES = {
+    COMPILATION: 'compilation',
+    VALIDATION: 'validation',
+    GENERAL_CHAT: 'general_chat',
+  }.freeze
 end

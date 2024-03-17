@@ -8,7 +8,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "adaptations"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -29,7 +30,7 @@
     ],
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##What happens when sprites touch? \r\n\r\n- Add a `when sprite touches sprite` event into the workspace\r\n\t\r\n    ***Tip:*** *Remember, events can go anywhere. They do not attach to the when run program.*\r\n\r\n- Connect a block under the new event\r\n- Press `Run`. Does the character turn to ice or are they removed from the game?",
+    "long_instructions": "##What happens when sprites touch? \r\n\r\n- Add a `when sprite touches sprite` event into the workspace\r\n\t\r\n    ***Tip:*** *Remember, events can go anywhere. They do not attach to the when run program.*\r\n\r\n- Connect a `change sprite costume` block under the new event\r\n- Press `Run` then use the arrows to move the sprite",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -47,14 +48,14 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-09 18:20:48 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:23:25 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:25:11 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:27:38 +0000\",\"changed\":[\"start_animations\",\"mini_toolbox\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:28:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:28:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:33:40 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:48:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:48:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:53:42 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:18:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:20:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-09 18:20:48 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:23:25 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:25:11 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:27:38 +0000\",\"changed\":[\"start_animations\",\"mini_toolbox\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:28:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:28:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 19:33:40 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:48:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:48:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-14 22:53:42 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:18:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 00:20:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 17:41:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-15 17:53:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:21:58 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:23:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:23:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:23:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:24:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-20 23:25:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-02-27 23:07:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" deletable="false" x="80" y="25">
+        <block type="when_run" deletable="false" x="91" y="53">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"ink_mountain"</field>
@@ -67,15 +68,17 @@
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNumSprites">
-                      <field name="ANIMATION_NAME">"rpgcharacter_19"</field>
+                    <block type="gamelab_makeSpritesWithSize">
+                      <field name="SIZE">50</field>
+                      <field name="COSTUME">"rpgcharacter_19"</field>
                       <value name="NUM">
                         <block type="math_number">
                           <field name="NUM">3</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_addBehaviorSimple">
+                        <block type="adaptations_toggleBehaviorSimple">
+                          <field name="TOGGLE">"begins"</field>
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
                               <field name="ANIMATION">"rpgcharacter_17"</field>
@@ -1255,30 +1258,6 @@
           <field name="ANIMATION">"ice"</field>
           <value name="THIS">
             <block type="gamelab_objectSpritePointer" id="8VO2*yQxf5:1ioS,S.~h"/>
-          </value>
-        </block>
-        <block type="gamelab_destroy" id="xQ/wpru?0[0$?`L4o`jA" x="171" y="204">
-          <value name="THIS">
-            <block type="gamelab_objectSpritePointer" id="Pk?wYal[h*{VOKabcW;:"/>
-          </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="oz@=4p]f9R_Iayz(Xq|R" x="96" y="284">
-          <field name="IMG">"blue_watercolor"</field>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="JIw3/AZ92eD,iyz@QMI#" x="58" y="381">
-          <field name="ANIMATION_NAME">"rpgcharacter_17"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="D=bbm,uR`M;-R6eXQ:/)">
-              <field name="LOCATION">{"x":106,"y":312}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_makeNumSprites" id="%{2Uw[zSdoAl}A``o)qK" x="91" y="488">
-          <field name="ANIMATION_NAME">"rpgcharacter_19"</field>
-          <value name="NUM">
-            <block type="math_number" id="xV^Q?m?#|8HS3Vm$w6y?">
-              <field name="NUM">3</field>
-            </block>
           </value>
         </block>
       </xml>

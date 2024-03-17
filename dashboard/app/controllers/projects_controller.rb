@@ -177,6 +177,9 @@ class ProjectsController < ApplicationController
     },
     ecosystems: {
       name: 'New Ecosystems Project'
+    },
+    game_design: {
+      name: 'New Game Design Project'
     }
   }.with_indifferent_access.freeze
 
@@ -217,11 +220,18 @@ class ProjectsController < ApplicationController
     extract_data_for_tables(project_featured_project_combo_data)
   end
 
+  def get_featured_project_status(featured_at, unfeatured_at)
+    return SharedConstants::FEATURED_PROJECT_STATUS.archived if featured_at && unfeatured_at
+    return SharedConstants::FEATURED_PROJECT_STATUS.active if featured_at
+    SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
+  end
+
   def extract_data_for_tables(project_featured_project_combo_data)
     @featured_project_table_rows = []
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
       channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      status = get_featured_project_status(project_details[:featured_at], project_details[:unfeatured_at])
       featured_project_row = {
         projectName: project_details_value['name'],
         channel: channel,
@@ -231,21 +241,28 @@ class ProjectsController < ApplicationController
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
         unfeaturedAt: project_details[:unfeatured_at],
+        status: status
       }
       @featured_project_table_rows << featured_project_row
     end
-    sort_projects(@featured_project_table_rows)
+    sort_featured_projects(@featured_project_table_rows)
   end
 
   # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
-  # The rows are sorted into two arrays: featured or unfeatured, based on
-  # on whether the project is currently featured or not.
-  def sort_projects(featured_project_table_rows)
-    @featured = []
-    @unfeatured = []
+  # The rows are sorted into three arrays: active, archived, or bookmarked.
+  def sort_featured_projects(featured_project_table_rows)
+    @active = []
+    @archived = []
+    @bookmarked = []
     featured_project_table_rows.each do |row|
-      featured = row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
-      featured ? @featured << row : @unfeatured << row
+      status = get_featured_project_status(row[:featuredAt], row[:unfeaturedAt])
+      if status == SharedConstants::FEATURED_PROJECT_STATUS.archived
+        @archived << row
+      elsif status == SharedConstants::FEATURED_PROJECT_STATUS.active
+        @active << row
+      else
+        @bookmarked << row
+      end
     end
   end
 

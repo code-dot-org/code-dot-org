@@ -23,6 +23,61 @@ export function getTextWidth(p5, text, size) {
 }
 
 /**
+ * Draws a bubble on the canvas that displays a piece of text, representing a variable name and value.
+ * The bubble is dynamically sized and has a black background with a white border/text and rounded corners.
+ * The x and y parameters determine the bubble's center, except the location will be adjusted if the bubble
+ * would overflow the canvas.
+ *
+ * Note: Truncating the text so it fits within the playspace width (APP_WIDTH) should be handled before this function.
+ *
+ * @param {p5} p5 - The p5 instance used to draw the bubble.
+ * @param {number} x - The x-coordinate of the center of the bubble.
+ * @param {number} y - The y-coordinate of the center of the bubble.
+ * @param {string} text - The text to display inside the bubble. This should represent the variable's name and value.
+ */
+export function variableBubble(p5, x, y, text) {
+  const padding = 10;
+  const textSizeValue = 20;
+  const textWidth = getTextWidth(p5, text, textSizeValue);
+  const textWidthValue = textWidth + 2 * padding;
+  const textHeightValue = textSizeValue + 2 * padding;
+
+  const halfWidth = textWidthValue / 2;
+  const halfHeight = textHeightValue / 2;
+  const leftBound = x - halfWidth;
+  const rightBound = x + halfWidth;
+  const topBound = y - halfHeight;
+  const bottomBound = y + halfHeight;
+
+  // If the bubble is too close to the edge of the canvas, adjust the position so it fits.
+  if (leftBound < 0) {
+    x = halfWidth;
+  } else if (rightBound > APP_WIDTH) {
+    x = APP_WIDTH - halfWidth;
+  }
+
+  if (topBound < 0) {
+    y = halfHeight;
+  } else if (bottomBound > APP_HEIGHT) {
+    y = APP_HEIGHT - halfHeight;
+  }
+
+  p5.push();
+  p5.fill(colors.darkest_gray);
+  p5.stroke('white');
+  p5.strokeWeight(3);
+  p5.rectMode(p5.CENTER);
+  p5.rect(x, y, textWidthValue, textHeightValue, 24);
+
+  p5.fill('white');
+  p5.noStroke();
+  p5.textSize(textSizeValue);
+  p5.textAlign(p5.CENTER, p5.CENTER);
+  p5.text(text, x, y);
+  p5.pop();
+}
+
+/**
  * Draw a speech bubble - a P5 shape comprised of a rectangle
  * with a tail at the bottom. The x/y values will be the
  * bottom center of the bubble body, including the height added

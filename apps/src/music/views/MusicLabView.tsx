@@ -9,15 +9,17 @@ import {
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import musicI18n from '../locale';
 import HeaderButtons from './HeaderButtons';
-import AppConfig from '../appConfig';
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import classNames from 'classnames';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import {baseAssetUrl} from '../constants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import MusicPlayer from '../player/MusicPlayer';
+import useUpdatePlayer from './hooks/useUpdatePlayer';
+import AdvancedControls from './AdvancedControls';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -30,6 +32,7 @@ interface MusicLabViewProps {
   redo: () => void;
   clearCode: () => void;
   validator: MusicValidator;
+  player: MusicPlayer;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -43,7 +46,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   redo,
   clearCode,
   validator,
+  player,
 }) => {
+  useUpdatePlayer(player);
   const dispatch = useAppDispatch();
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
@@ -76,7 +81,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     progressManager,
   ]);
 
-  usePlaybackUpdate(doPlaybackUpdate, () => progressManager?.resetValidation());
+  const resetValidation = useCallback(
+    () => progressManager?.resetValidation(),
+    [progressManager]
+  );
+  usePlaybackUpdate(doPlaybackUpdate, resetValidation);
 
   const onInstructionsTextClick = useCallback(
     (id: string) => {
@@ -103,7 +112,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             hideHeaders={hideHeaders}
           >
             <Instructions
-              baseUrl={baseAssetUrl}
+              baseUrl={getBaseAssetUrl() || ''}
               layout={
                 position !== InstructionsPosition.TOP
                   ? 'vertical'
@@ -162,6 +171,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [setPlaying, playTrigger, hasTrigger, hideHeaders]
   );
 
+  const showAdvancedControls =
+    AppConfig.getValue('player') === 'tonejs' &&
+    AppConfig.getValue('advanced-controls-enabled') === 'true';
+
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
       {showInstructions &&
@@ -189,6 +202,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             }
           >
             <div id={blocklyDivId} />
+            {showAdvancedControls && (
+              <div className={moduleStyles.advancedControlsContainer}>
+                <AdvancedControls />
+              </div>
+            )}
           </PanelContainer>
         </div>
 

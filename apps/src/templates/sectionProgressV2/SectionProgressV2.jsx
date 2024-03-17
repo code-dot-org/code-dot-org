@@ -8,6 +8,25 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {connect} from 'react-redux';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import styles from './progress-table-v2.module.scss';
+import UnitSelectorV2 from '../UnitSelectorV2';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+const getLocalStorageString = (scriptId, sectionId) =>
+  `expandedLessonProgressV2-${scriptId}-${sectionId}`;
+
+const getLocalStorage = (scriptId, sectionId) => {
+  try {
+    return (
+      JSON.parse(
+        tryGetLocalStorage(getLocalStorageString(scriptId, sectionId), [])
+      ) || []
+    );
+  } catch (e) {
+    // If we fail to parse the local storage, default to nothing expanded.
+    return [];
+  }
+};
 
 function SectionProgressV2({
   scriptId,
@@ -15,12 +34,31 @@ function SectionProgressV2({
   unitData,
   isLoadingProgress,
   isRefreshingProgress,
+  isLevelProgressLoaded,
 }) {
-  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+  const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
+    getLocalStorage(scriptId, sectionId)
+  );
+
+  React.useEffect(
+    () => setExpandedLessonIds(getLocalStorage(scriptId, sectionId)),
+    [scriptId, sectionId]
+  );
+
+  const setExpandedLessons = React.useCallback(
+    expandedLessonIds => {
+      setExpandedLessonIds(expandedLessonIds);
+      trySetLocalStorage(
+        getLocalStorageString(scriptId, sectionId),
+        JSON.stringify(expandedLessonIds)
+      );
+    },
+    [setExpandedLessonIds, scriptId, sectionId]
+  );
 
   const levelDataInitialized = React.useMemo(() => {
-    return unitData && !isLoadingProgress && !isRefreshingProgress;
-  }, [unitData, isLoadingProgress, isRefreshingProgress]);
+    return unitData && isLevelProgressLoaded;
+  }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
     if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
@@ -35,16 +73,18 @@ function SectionProgressV2({
   }, [expandedLessonIds, unitData]);
 
   return (
-    <div>
-      <Heading1>Progress</Heading1>
+    <div className={styles.progressV2Page} data-testid="section-progress-v2">
+      <Heading1>{i18n.progressBeta()}</Heading1>
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
       />
       <div className={styles.title}>
-        <Heading6 className={styles.titleStudents}>Students</Heading6>
+        <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>
         <Heading6 className={styles.titleUnitSelector}>
-          UNIT SELECTOR GOES HERE
+          {i18n.lessonsIn()}
+
+          <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
         </Heading6>
       </div>
       <ProgressTableV2
@@ -62,9 +102,8 @@ SectionProgressV2.propTypes = {
   unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
+  isLevelProgressLoaded: PropTypes.bool.isRequired,
 };
-
-export const UnconnectedSectionProgressV2 = SectionProgressV2;
 
 export default connect(state => ({
   scriptId: state.unitSelection.scriptId,
@@ -72,4 +111,8 @@ export default connect(state => ({
   unitData: getCurrentUnitData(state),
   isLoadingProgress: state.sectionProgress.isLoadingProgress,
   isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
+  isLevelProgressLoaded:
+    !!state.sectionProgress.studentLevelProgressByUnit[
+      state.unitSelection.scriptId
+    ],
 }))(SectionProgressV2);

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-24 21:10:08 UTC",
+    "serialized_at": "2024-02-21 22:16:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4001,6 +4001,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp8-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "cybersecurity_and_global_impacts_unit_slides_",
         "script.name": "csp8-2023"
       }
     },

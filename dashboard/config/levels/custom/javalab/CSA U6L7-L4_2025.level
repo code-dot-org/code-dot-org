@@ -20,7 +20,8 @@
     },
     "project_template_level_name": "CSA U6L7-Lists PBT_2025",
     "teacher_markdown": "If we add the `<Book>` back to the `ArrayList` declaration and initialization on **Line 12**, we get the error `Pet cannot be converted to Book` when we attempt to add a `Pet` object to a generic `ArrayList` of type `Book`. This is because the `ArrayList` can now only contain `Book` objects.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:15:58.048+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L4_2023\\\"\"],\"cloned_from\":\"CSA U6L7-L4_2023\"}]"

@@ -132,7 +132,7 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.6'
 gem 'puma_worker_killer'
 gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
@@ -349,8 +349,16 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.6.0'
+gem 'crowdin-api', '~> 1.8.1'
 
 gem "delayed_job_active_record", "~> 4.1"
 
 gem 'rack-cors', '~> 2.0.1'
+
+# pin http to 5.0 or greater so that statsig does not pull in an older version.
+# older versions depend on http-parser which breaks some developer builds.
+gem 'http', '~> 5.0'
+
+gem 'statsig', '~> 1.33'
+
+gem 'mailjet', '~> 1.7.3'

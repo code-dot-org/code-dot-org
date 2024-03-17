@@ -1,0 +1,8 @@
+name 'self-paced-pl-microbit_juicemind'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# JuiceMind
+
+MARKDOWN

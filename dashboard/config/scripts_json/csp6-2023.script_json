@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-14 18:38:02 UTC",
+    "serialized_at": "2024-02-21 22:23:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5721,7 +5721,7 @@
       }
     },
     {
-      "name": "Introduction to Traversal",
+      "name": "Introduction to Traversal (Processing Lists with Loops)",
       "url": "https://youtu.be/RQ6GJt9f2vg",
       "key": "introduction_to_traversal",
       "properties": {

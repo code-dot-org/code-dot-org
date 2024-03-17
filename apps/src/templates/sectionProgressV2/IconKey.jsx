@@ -7,26 +7,39 @@ import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 import styles from './progress-table-legend.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '../FontAwesome';
+import Link from '@cdo/apps/componentLibrary/link';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import MoreDetailsDialog from './MoreDetailsDialog.jsx';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(
+    tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
+  );
+  const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
+
+  const toggleIsViewingDetails = event => {
+    event.preventDefault();
+    setIconDetailsOpen(true);
+  };
 
   const isViewingLevelProgress = expandedLessonIds.length > 0;
 
   const caret = isOpenA => (isOpenA ? 'caret-down' : 'caret-right');
 
-  // TO-DO (TEACH-801): Fix spacing between boxes once width of the page is expanded
   const sectionContent = () => (
-    <div>
+    <>
       <AssignmentCompletionStatesBox
         hasValidatedLevels={isViewingValidatedLevel}
       />
       <TeacherActionsBox isViewingLevelProgress={isViewingLevelProgress} />
       {isViewingLevelProgress && <LevelTypesBox />}
-    </div>
+    </>
   );
 
-  const clickListener = () => setIsOpen(!isOpen);
+  const clickListener = () => {
+    trySetLocalStorage('iconKeyIsOpen', !isOpen);
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div
@@ -34,17 +47,33 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
       aria-expanded={isOpen}
       aria-label={i18n.iconKey()}
     >
-      <div
-        onClick={clickListener}
-        className={styles.iconKeyTitle}
-        data-testid="expandable-container"
-      >
-        <Heading6>
-          <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
-          {i18n.iconKey()}
-        </Heading6>
+      <div className={styles.iconKeyHeader}>
+        <div
+          onClick={clickListener}
+          className={styles.iconKeyTitle}
+          data-testid="expandable-container"
+        >
+          <Heading6>
+            <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
+            {i18n.iconKey()}
+          </Heading6>
+        </div>
+        <Link
+          type="primary"
+          size="s"
+          onClick={toggleIsViewingDetails}
+          className={styles.iconKeyMoreDetailsLink}
+        >
+          {i18n.moreDetails()}
+        </Link>
       </div>
       {isOpen && sectionContent()}
+      {isIconDetailsOpen && (
+        <MoreDetailsDialog
+          onClose={() => setIconDetailsOpen(false)}
+          hasValidation={isViewingValidatedLevel}
+        />
+      )}
     </div>
   );
 }
