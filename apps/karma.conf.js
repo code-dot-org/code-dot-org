@@ -9,6 +9,9 @@ process.env.TZ = 'UTC';
 // Use the babel test env defined in .babelrc
 process.env.BABEL_ENV = 'test';
 
+// Don't run tests with HOT=1
+process.env.HOT = '0';
+
 // Single spot to define command-line arguments to `karma start`.
 // e.g. `karma start --myarg=value` => KARMA_CLI_FLAGS.myarg = 'value'
 //
