@@ -471,7 +471,7 @@ module.exports = function (grunt) {
     },
   };
 
-  (config.concurrent = {
+  config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
       tasks: [
@@ -482,15 +482,16 @@ module.exports = function (grunt) {
         logConcurrentOutput: true,
       },
     },
-  }),
-    (config.notify = {
-      'js-build': {options: {message: 'JS build completed.'}},
-      sass: {options: {message: 'SASS build completed.'}},
-      content: {options: {message: 'Content build completed.'}},
-      ejs: {options: {message: 'EJS build completed.'}},
-      messages: {options: {message: 'i18n messages build completed.'}},
-      vendor_js: {options: {message: 'vendor JS copy done.'}},
-    });
+  };
+
+  config.notify = {
+    'js-build': {options: {message: 'JS build completed.'}},
+    sass: {options: {message: 'SASS build completed.'}},
+    content: {options: {message: 'Content build completed.'}},
+    ejs: {options: {message: 'EJS build completed.'}},
+    messages: {options: {message: 'i18n messages build completed.'}},
+    vendor_js: {options: {message: 'vendor JS copy done.'}},
+  };
 
   grunt.initConfig(config);
 
@@ -625,12 +626,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  grunt.registerTask('dev', [
-    'prebuild',
-    'newer:sass',
-    'concurrent:watch',
-    'postbuild',
-  ]);
+  grunt.registerTask('dev', function () {
+    // Unless explicitly overridden, set HOT=1 and DEV=1 when running `grunt dev`
+    process.env.HOT ||= 1;
+    process.env.DEV ||= 1;
+    grunt.task.run(['prebuild', 'newer:sass', 'concurrent:watch', 'postbuild']);
+  });
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

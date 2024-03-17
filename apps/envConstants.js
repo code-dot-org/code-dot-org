@@ -37,9 +37,8 @@ module.exports = {
   CIRCLECI: process.env.CIRCLECI,
   DRONE: process.env.DRONE,
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
-  // webpack dev server (with hot reloading) run by default in dev
-  // unless explicitly overridden by HOT=0
-  HOT: !!getMoocEnv('DEV') && process.env.HOT !== '0',
+  // If set, run webpack dev server (with hot reloading)
+  HOT: process.env.HOT !== '0' && !!process.env.HOT,
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
 };
