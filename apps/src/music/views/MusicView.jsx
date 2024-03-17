@@ -323,9 +323,9 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getValidationTimeout = () => {
-    // The level can specify a desired timeout, in measures, before it starts showing
+    // The level can specify a desired timeout, in measures, when it starts showing
     // non-"next" validation messages.  If a timeout is not specified, default to 2,
-    // which allows for one measure of playback.  That said, if we're already past the
+    // which allows for one measure of playback.  That said, if we're already at the
     // last measure of music, then non-"next" validation messages can start showing.
     return Math.min(
       this.props.levelData?.validationTimeout || 2,
