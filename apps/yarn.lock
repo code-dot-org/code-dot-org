@@ -8599,7 +8599,6 @@ __metadata:
     webpack-bundle-analyzer: ^4.4.2
     webpack-cli: ^5.1.4
     webpack-dev-server: ^5.0.2
-    webpack-hot-middleware: ^2.25.0
     webpack-manifest-plugin: ^4.0.2
     webpack-stats-plugin: ^1.0.3
     wgxpath: ^1.2.0
@@ -30129,7 +30128,7 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"webpack-hot-middleware@npm:^2.25.0, webpack-hot-middleware@npm:^2.25.1":
+"webpack-hot-middleware@npm:^2.25.1":
   version: 2.25.2
   resolution: "webpack-hot-middleware@npm:2.25.2"
   dependencies:
