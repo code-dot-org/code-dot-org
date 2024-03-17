@@ -68,4 +68,9 @@ export default {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
+
+  reactOptions: {
+    // Configure StoryBook to work with HOT=1
+    fastRefresh: true,
+  },
 };
