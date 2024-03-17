@@ -443,7 +443,6 @@ module.exports = function (grunt) {
       tasks: ['newer:sass', 'notify:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
         interrupt: true,
       },
     },
@@ -452,7 +451,6 @@ module.exports = function (grunt) {
       tasks: ['newer:copy', 'notify:content'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
       },
     },
     vendor_js: {
@@ -460,7 +458,6 @@ module.exports = function (grunt) {
       tasks: ['newer:copy:lib', 'notify:vendor_js'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
       },
     },
     messages: {
@@ -468,7 +465,6 @@ module.exports = function (grunt) {
       tasks: ['messages', 'notify:messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
-        livereload: envConstants.AUTO_RELOAD,
       },
     },
   };

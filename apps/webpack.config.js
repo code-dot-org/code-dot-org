@@ -5,12 +5,10 @@ const sass = require('sass');
 // Webpack Plugins:
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const CopyPlugin = require('copy-webpack-plugin');
-// const LiveReloadPlugin = require('webpack-livereload-plugin');
 const {StatsWriterPlugin} = require('webpack-stats-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const {PyodidePlugin} = require('@pyodide/webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
@@ -693,16 +691,6 @@ function createWebpackConfig({
               }),
             ]),
       }),
-      // ...(watch
-      //   ? [
-      //       new LiveReloadPlugin({
-      //         appendScriptTag: envConstants.AUTO_RELOAD,
-      //       }),
-      //     ]
-      //   : []),
-      ...(watch && watchNotify
-        ? [new WebpackNotifierPlugin({alwaysNotify: true})]
-        : []),
       new PyodidePlugin(),
       ...(envConstants.HOT ? [new ReactRefreshWebpackPlugin()] : []),
       ...(envConstants.HOT || watch ? [new PrintDashboardURL()] : []),

@@ -22,9 +22,6 @@ function getMoocEnv(name) {
 
 // Export a set of environment variables used by our build process
 module.exports = {
-  // If set, page will reload itself when webpack bundle changes
-  // remove?
-  AUTO_RELOAD: getBoolEnv('AUTORELOAD'),
   // Can be set to build a single app
   APP: getMoocEnv('APP'),
   // If set, will build uncompressed JS

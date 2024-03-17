@@ -6776,7 +6776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv-keywords@npm:^5.0.0, ajv-keywords@npm:^5.1.0":
+"ajv-keywords@npm:^5.1.0":
   version: 5.1.0
   resolution: "ajv-keywords@npm:5.1.0"
   dependencies:
@@ -6823,7 +6823,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^8.0.0, ajv@npm:^8.0.1, ajv@npm:^8.8.0":
+"ajv@npm:^8.0.0, ajv@npm:^8.0.1":
   version: 8.11.0
   resolution: "ajv@npm:8.11.0"
   dependencies:
@@ -7002,7 +7002,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"anymatch@npm:^3.0.0, anymatch@npm:^3.1.1, anymatch@npm:~3.1.2":
+"anymatch@npm:^3.0.0, anymatch@npm:~3.1.2":
   version: 3.1.2
   resolution: "anymatch@npm:3.1.2"
   dependencies:
@@ -7580,15 +7580,6 @@ __metadata:
   dependencies:
     lodash: ^4.17.11
   checksum: e5e90a3bcc4d9bf964bfc6b77d63b8f5bee8c14e9a51c3317dbcace44d5b6b1fe01cd4fd347449704a107da7fcd25e1382ee8545957b2702782ae720605cf7a4
-  languageName: node
-  linkType: hard
-
-"async@npm:^2.6.4":
-  version: 2.6.4
-  resolution: "async@npm:2.6.4"
-  dependencies:
-    lodash: ^4.17.14
-  checksum: a52083fb32e1ebe1d63e5c5624038bb30be68ff07a6c8d7dfe35e47c93fc144bd8652cbec869e0ac07d57dde387aa5f1386be3559cdee799cb1f789678d88e19
   languageName: node
   linkType: hard
 
@@ -8609,9 +8600,7 @@ __metadata:
     webpack-cli: ^5.1.4
     webpack-dev-server: ^5.0.2
     webpack-hot-middleware: ^2.25.0
-    webpack-livereload-plugin: ^3.0.1
     webpack-manifest-plugin: ^4.0.2
-    webpack-notifier: ^1.13.0
     webpack-stats-plugin: ^1.0.3
     wgxpath: ^1.2.0
     whatwg-fetch: ^2.0.3
@@ -11181,7 +11170,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.0.0, debug@npm:^3.2.7":
+"debug@npm:^3.0.0":
   version: 3.2.7
   resolution: "debug@npm:3.2.7"
   dependencies:
@@ -15344,13 +15333,6 @@ es6-shim@latest:
   version: 1.10.3
   resolution: "growl@npm:1.10.3"
   checksum: 2eb23819fad34801ac889e0031c247474917fa869f998f18391b64914a1c9c38a00547ba4f291a9b5e5f20f156bcd5e72785a833df0ffbdae737fe3f110cd5b5
-  languageName: node
-  linkType: hard
-
-"growly@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "growly@npm:1.3.0"
-  checksum: 53cdecd4c16d7d9154a9061a9ccb87d602e957502ca69b529d7d1b2436c2c0b700ec544fc6b3e4cd115d59b81e62e44ce86bd0521403b579d3a2a97d7ce72a44
   languageName: node
   linkType: hard
 
@@ -20575,7 +20557,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^0.5.3, mkdirp@npm:^0.5.6":
+"mkdirp@npm:^0.5.3":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
   dependencies:
@@ -21137,20 +21119,6 @@ es6-shim@latest:
     util: ^0.11.0
     vm-browserify: ^1.0.1
   checksum: 41fa7927378edc0cb98a8cc784d3f4a47e43378d3b42ec57a23f81125baa7287c4b54d6d26d062072226160a3ce4d8b7a62e873d2fb637aceaddf71f5a26eca0
-  languageName: node
-  linkType: hard
-
-"node-notifier@npm:^9.0.0":
-  version: 9.0.1
-  resolution: "node-notifier@npm:9.0.1"
-  dependencies:
-    growly: ^1.3.0
-    is-wsl: ^2.2.0
-    semver: ^7.3.2
-    shellwords: ^0.1.1
-    uuid: ^8.3.0
-    which: ^2.0.2
-  checksum: a75623912ec6c3fd7c4e6f1c04586adf716a3610268bdbd5adfeb95dc75a2126c10368d98051530aa0dc6fe8d72791d5033ad6dd2a5f63d009fea30f7292f07e
   languageName: node
   linkType: hard
 
@@ -22843,17 +22811,6 @@ es6-shim@latest:
     async: 0.9.0
     mkdirp: 0.5.x
   checksum: fde853556ae33eac7ce93a68e0301e5534376d237d4ff963e1ba5e09bd5641086709dacab7c811b01d17d4642ec04ee93b6e47e3960112b56316300930050ac4
-  languageName: node
-  linkType: hard
-
-"portfinder@npm:^1.0.17":
-  version: 1.0.32
-  resolution: "portfinder@npm:1.0.32"
-  dependencies:
-    async: ^2.6.4
-    debug: ^3.2.7
-    mkdirp: ^0.5.6
-  checksum: 116b4aed1b9e16f6d5503823d966d9ffd41b1c2339e27f54c06cd2f3015a9d8ef53e2a53b57bc0a25af0885977b692007353aa28f9a0a98a44335cb50487240d
   languageName: node
   linkType: hard
 
@@ -26153,18 +26110,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:>1.0.0":
-  version: 4.0.0
-  resolution: "schema-utils@npm:4.0.0"
-  dependencies:
-    "@types/json-schema": ^7.0.9
-    ajv: ^8.8.0
-    ajv-formats: ^2.1.1
-    ajv-keywords: ^5.0.0
-  checksum: c843e92fdd1a5c145dbb6ffdae33e501867f9703afac67bdf35a685e49f85b1dcc10ea250033175a64bd9d31f0555bc6785b8359da0c90bcea30cf6dfbb55a8f
-  languageName: node
-  linkType: hard
-
 "schema-utils@npm:^0.3.0":
   version: 0.3.0
   resolution: "schema-utils@npm:0.3.0"
@@ -26651,13 +26596,6 @@ es6-shim@latest:
   bin:
     shjs: ./bin/shjs
   checksum: 6e57d6bff3bb101525f251fd80358b983fb9c8175dc31593496bfcdf66701b78dba33b9319e38026ac31b2c80875794fc71bd2fdd9cdb86fbeb81fcbfce28d7b
-  languageName: node
-  linkType: hard
-
-"shellwords@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "shellwords@npm:0.1.1"
-  checksum: 8d73a5e9861f5e5f1068e2cfc39bc0002400fe58558ab5e5fa75630d2c3adf44ca1fac81957609c8320d5533e093802fcafc72904bf1a32b95de3c19a0b1c0d4
   languageName: node
   linkType: hard
 
@@ -29711,7 +29649,7 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"uuid@npm:^8.3.0, uuid@npm:^8.3.2":
+"uuid@npm:^8.3.2":
   version: 8.3.2
   resolution: "uuid@npm:8.3.2"
   bin:
@@ -30202,20 +30140,6 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"webpack-livereload-plugin@npm:^3.0.1":
-  version: 3.0.2
-  resolution: "webpack-livereload-plugin@npm:3.0.2"
-  dependencies:
-    anymatch: ^3.1.1
-    portfinder: ^1.0.17
-    schema-utils: ">1.0.0"
-    tiny-lr: ^1.1.1
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: f32464fd84e2775e1b091e6d6ff78bfbe83967276616cfd46173a4746ddc7da4f658ecf92b8c654a99ba3219a7cbf5e515a80886bc6e983634fe7cbb263f556e
-  languageName: node
-  linkType: hard
-
 "webpack-log@npm:^2.0.0":
   version: 2.0.0
   resolution: "webpack-log@npm:2.0.0"
@@ -30254,21 +30178,6 @@ temporal@latest:
     clone-deep: ^4.0.1
     wildcard: ^2.0.0
   checksum: 64fe2c23aacc5f19684452a0e84ec02c46b990423aee6fcc5c18d7d471155bd14e9a6adb02bd3656eb3e0ac2532c8e97d69412ad14c97eeafe32fa6d10050872
-  languageName: node
-  linkType: hard
-
-"webpack-notifier@npm:^1.13.0":
-  version: 1.15.0
-  resolution: "webpack-notifier@npm:1.15.0"
-  dependencies:
-    node-notifier: ^9.0.0
-    strip-ansi: ^6.0.0
-  peerDependencies:
-    "@types/webpack": ">4.41.31"
-  peerDependenciesMeta:
-    "@types/webpack":
-      optional: true
-  checksum: d6dd514b36000b6fb21feb928b0efa8f004f03d28d94bfc3513295f306bc8e5f132984e60e7995af32685f6b544d1deaad7c421527d8f48db6356bdf40190973
   languageName: node
   linkType: hard
 
