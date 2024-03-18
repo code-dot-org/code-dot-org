@@ -38,7 +38,7 @@ import teacherSections, {
 import {sections} from '../studioHomepages/fakeSectionUtils';
 import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
-import {tryGetLocalStorage} from '@cdo/apps/utils';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -71,7 +71,7 @@ describe('CurriculumCatalog', () => {
   afterEach(() => {
     restoreRedux();
     resetWindowLocation();
-    localStorage.removeItem('similarRecommenderResults');
+    sessionStorage.removeItem('similarRecommenderResults');
     window.history.replaceState = replaceStateOrig;
   });
 
@@ -752,7 +752,7 @@ describe('CurriculumCatalog', () => {
       }
     });
 
-    it('sets localStorage for Similar Curriculum Recommender result', () => {
+    it('sets sessionStorage for Similar Curriculum Recommender result', () => {
       const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
       render(
         <Provider store={store}>
@@ -775,9 +775,9 @@ describe('CurriculumCatalog', () => {
       fireEvent.click(firstQuickViewButton);
       screen.getByText(firstTestCurriculum.description);
 
-      // Check that localStorage has result of Similar Curriculum Recommender
+      // Check that sessionStorage has result of Similar Curriculum Recommender
       const storedRecommenderResults = JSON.parse(
-        tryGetLocalStorage('similarRecommenderResults', '{}')
+        tryGetSessionStorage('similarRecommenderResults', '{}')
       );
       expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
         similarCurriculumRecommendations[0].key
