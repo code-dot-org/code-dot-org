@@ -26,7 +26,12 @@ export function getProjectType(): string {
   return appOptions.projectType;
 }
 
-// Given a record of {fileId: ProjectFile}, return the file with the given name.
+/**
+ * Given a map of {fileId: ProjectFile}, return the first file with the given name.
+ * @param files - Map of {fileId: ProjectFile}
+ * @param name - Name of the file to find
+ * @returns The ProjectFile with the given name, or null if not found.
+ */
 export function getFileByName(
   files: Record<string, ProjectFile>,
   name: string
