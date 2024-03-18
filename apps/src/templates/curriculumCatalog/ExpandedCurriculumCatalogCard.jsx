@@ -103,9 +103,7 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <Heading3 style={{marginBottom: '8px'}}>
-                {courseDisplayName}
-              </Heading3>
+              <Heading3>{courseDisplayName}</Heading3>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="user" className="fa-solid" />
@@ -126,9 +124,7 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionVideoContainer}>
                   <div className={style.descriptionContainer}>
-                    <BodyTwoText className={style.descriptionText}>
-                      {description}
-                    </BodyTwoText>
+                    <BodyTwoText>{description}</BodyTwoText>
                   </div>
                   <div className={style.mediaContainer}>
                     {video ? (
@@ -288,6 +284,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </Heading4>
                 <hr className={style.thickDivider} />
                 <img
+                  id="similarCurriculumImage"
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
                   style={{height: '100%'}}
                   alt={recommendedSimilarCurriculum.display_name}

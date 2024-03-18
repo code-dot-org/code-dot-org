@@ -169,17 +169,9 @@ const CurriculumCatalog = ({
     } else {
       return (
         <div className={style.catalogContentNoResults}>
-          <img
-            className={style.noResultsImage}
-            src={CourseCatalogNoSearchResultPenguin}
-            alt=""
-          />
-          <Heading5 className={style.noResultsHeading}>
-            {i18n.noCurriculumSearchResultsHeader()}
-          </Heading5>
-          <BodyTwoText className={style.noResultsBody}>
-            {i18n.noCurriculumSearchResultsBody()}
-          </BodyTwoText>
+          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
+          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
+          <BodyTwoText>{i18n.noCurriculumSearchResultsBody()}</BodyTwoText>
         </div>
       );
     }
@@ -196,9 +188,7 @@ const CurriculumCatalog = ({
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
-            <BodyTwoText className={style.assignSuccessMessage}>
-              {assignSuccessMessage}
-            </BodyTwoText>
+            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
             <button
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -8,8 +9,10 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import DownloadParentLetter from './DownloadParentLetter';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
+import {LtiLogins} from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 
 import LoginExport from './LoginExport';
 
@@ -23,6 +26,9 @@ class ManageStudentsLoginInfo extends Component {
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string,
+
+    // Provided by Redux
+    sectionProviderName: PropTypes.string,
   };
 
   render() {
@@ -31,7 +37,9 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div style={styles.explanation}>
-        <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
+        {loginType !== SectionLoginType.lti_v1 && (
+          <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
+        )}
         {loginType === SectionLoginType.word && (
           <div>
             <p>{i18n.setUpClassWordIntro()}</p>
@@ -153,6 +161,9 @@ class ManageStudentsLoginInfo extends Component {
             <SignInInstructions loginType={SectionLoginType.clever} />
           </div>
         )}
+        {loginType === SectionLoginType.lti_v1 && (
+          <LtiLogins sectionProviderName={this.props.sectionProviderName} />
+        )}
         <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <DownloadParentLetter
@@ -189,4 +200,7 @@ const styles = {
   },
 };
 
-export default ManageStudentsLoginInfo;
+export const UnconnectedManageStudentsLoginInfo = ManageStudentsLoginInfo;
+export default connect((state, props) => ({
+  sectionProviderName: sectionProviderName(state, props.sectionId),
+}))(ManageStudentsLoginInfo);

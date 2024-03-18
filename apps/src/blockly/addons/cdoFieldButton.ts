@@ -1,9 +1,9 @@
 import GoogleBlockly, {BlockSvg, FieldValidator} from 'blockly/core';
 
 interface ColorOverrides {
-  button: string | undefined;
-  icon: string | undefined;
-  text: string | undefined;
+  button?: string;
+  icon?: string;
+  text?: string;
 }
 
 interface CdoFieldButtonOptions {
