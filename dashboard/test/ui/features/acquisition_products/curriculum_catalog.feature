@@ -142,12 +142,14 @@ Feature: Curriculum Catalog Page
 
   #Expanded card scenarios
   @no_mobile
-  Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card
+  Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card and view recommendations
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I wait until element "a:contains(See curriculum details)" is visible
+    And I wait until element "#similarCurriculumImage" is visible
+    And I wait until element "#similarCurriculumButton" is visible
 
   @no_mobile
   Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card

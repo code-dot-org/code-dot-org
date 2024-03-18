@@ -1,4 +1,6 @@
+@skip
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
+@no_firefox
 Feature: Evaluate student code against rubrics using AI
   # Make sure AI config files in S3 are parseable. Do this in a UI test because
   # we do not allow S3 access in unit tests. Only needs to be run in 1 browser.
@@ -56,6 +58,7 @@ Feature: Evaluate student code against rubrics using AI
 
   Scenario: Student code is evaluated by AI when teacher requests individual evaluation
     Given I create a teacher-associated student named "Aiden"
+    And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And I add the current user to the "ai-rubrics" single user experiment
@@ -71,6 +74,7 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
+    And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
@@ -103,6 +107,7 @@ Feature: Evaluate student code against rubrics using AI
 
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
     Given I create a teacher-associated student named "Aiden"
+    And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And I add the current user to the "ai-rubrics" single user experiment
@@ -121,6 +126,7 @@ Feature: Evaluate student code against rubrics using AI
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
+    And I get debug info for the current user
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load

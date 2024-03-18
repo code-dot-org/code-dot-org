@@ -483,6 +483,7 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.5.0)
+    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
@@ -538,6 +539,10 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailjet (1.7.3)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
+      rest-client (>= 2.0.0)
     marcel (1.0.2)
     memoist (0.16.2)
     memory_profiler (1.0.1)
@@ -1037,6 +1042,7 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
