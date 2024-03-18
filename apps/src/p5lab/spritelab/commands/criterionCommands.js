@@ -79,25 +79,21 @@ export const commands = {
   // like to give students the flexibility of using the value from either the
   // current or previous frame.
   anySpeechIncludesValues(currentVariables, previousVariables) {
-    // const spriteIds = this.getSpriteIdsInUse();
-    // const values = Object.values(currentVariables).concat(
-    //   previousVariables ? Object.values(previousVariables) : []
-    // );
+    const spriteIds = this.getSpriteIdsInUse();
+    const values = Object.values(currentVariables).concat(
+      previousVariables ? Object.values(previousVariables) : []
+    );
 
-    // for (const spriteId of spriteIds) {
-    //   const speechText = this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
-    //   if (
-    //     speechText &&
-    //     values.some(value => `${speechText}`.includes(`${value}`))
-    //   ) {
-    //     return true;
-    //   }
-    // }
-    // return false;
-
-    // TODO: Reenable this once we get this validation working again
-    // https://codedotorg.atlassian.net/browse/CT-409
-    return true;
+    for (const spriteId of spriteIds) {
+      const speechText = this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
+      if (
+        speechText &&
+        values.some(value => `${speechText}`.includes(`${value}`))
+      ) {
+        return true;
+      }
+    }
+    return false;
   },
 
   // Return true if exactly one sprite began speaking.
