@@ -1,6 +1,5 @@
-%div{style: "display: flex;"}
-  %div{style: "display: flex; width: 10%; padding: 20px;", id: "table-of-contents-mount-point"}
-    %h1="hello world"
+%div{style: "display: flex; gap: 20px;"}
+  %div{style: "flex: 0 auto; min-width: 18%;", id: "table-of-contents-mount-point"}
   %div{style: "flex: 1;"}
     %h1= @page_title = @level.new_record? ? "New #{@level.class.to_s} level" : "Editing #{@level.name}"
 

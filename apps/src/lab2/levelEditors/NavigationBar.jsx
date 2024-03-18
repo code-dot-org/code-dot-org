@@ -6,7 +6,6 @@ const NavigationBar = () => {
   const [linksToHeadings, setLinksToHeadings] = useState([]);
 
   useEffect(() => {
-    // Find all h1 elements with the class 'control-legend'
     const legends = document.querySelectorAll('h1.control-legend');
 
     const linksData = Array.from(legends).map(element => {
@@ -21,7 +20,6 @@ const NavigationBar = () => {
 
   const handleClick = (event, element) => {
     event.preventDefault();
-    // const element = document.querySelector(target);
     if (element) {
       element.scrollIntoView({behavior: 'smooth'});
     }
@@ -30,7 +28,7 @@ const NavigationBar = () => {
   return (
     <div className={moduleStyles.navBarContainer}>
       <Heading3>Navigation</Heading3>
-      <ul>
+      <ul className={moduleStyles.narrowList}>
         {linksToHeadings.map((link, index) => (
           <li key={index}>
             <a
