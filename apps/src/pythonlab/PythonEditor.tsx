@@ -11,6 +11,7 @@ import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 
 interface PermissionResponse {
   permissions: string[];
@@ -26,7 +27,9 @@ const PythonEditor: React.FunctionComponent = () => {
   let startCode = 'print("Hello world!")';
 
   if (initialSources?.source && typeof initialSources.source !== 'string') {
-    startCode = initialSources.source.files['main.py']?.contents || startCode;
+    startCode =
+      getFileByName(initialSources.source.files, 'main.py')?.contents ||
+      startCode;
   }
 
   const handleRun = () => {
@@ -35,8 +38,12 @@ const PythonEditor: React.FunctionComponent = () => {
     if (parsedData.permissions.includes('levelbuilder')) {
       dispatch(appendOutput('Running code...'));
       if (source) {
-        const code = source.files['main.py']?.contents;
-        runPythonCode(code);
+        const code = getFileByName(source.files, 'main.py')?.contents;
+        if (code) {
+          runPythonCode(code);
+        } else {
+          appendOutput('No main.py to run.');
+        }
       }
     } else {
       alert('You do not have permission to run python code.');
@@ -47,7 +54,7 @@ const PythonEditor: React.FunctionComponent = () => {
     // TODO: handle multiple files. For now everything is "main.py".
     const updatedSource: MultiFileSource = {
       files: {
-        'main.py': {
+        '0': {
           id: '0',
           name: 'main.py',
           language: 'python',

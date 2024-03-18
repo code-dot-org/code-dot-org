@@ -7,6 +7,7 @@ import {
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import {BLOCKLY_LABS} from './constants';
+import {getFileByName} from './projects/utils';
 
 // Validator for Blockly sources.
 const BlocklySourceResponseValidator: ResponseValidator<
@@ -39,8 +40,7 @@ const PythonSourceResponseValidator: ResponseValidator<
       throw new ValidationError('Python sources must be a JSON object');
     }
     const source = responseToValidate.source as MultiFileSource;
-    // TODO: support a nested main.py
-    if (!source?.files?.['main.py']) {
+    if (!source?.files || getFileByName(source.files, 'main.py') === null) {
       throwMissingFieldError('main.py');
     }
   };
