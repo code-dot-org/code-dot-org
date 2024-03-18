@@ -38,7 +38,6 @@ const scriptData = JSON.parse(script.dataset.dashboard);
 const {
   section,
   sections,
-  validCourseOfferings,
   localeCode,
   hasSeenStandardsReportInfo,
   coursesWithProgress,
@@ -68,7 +67,6 @@ $(document).ready(function () {
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setRosterProviderName(section.login_type_name));
   store.dispatch(setLoginType(section.login_type));
-  store.dispatch(setCourseOfferings(validCourseOfferings));
   store.dispatch(setLocaleCode(localeCode));
 
   // DCDO Flag - show/hide Lock Section field

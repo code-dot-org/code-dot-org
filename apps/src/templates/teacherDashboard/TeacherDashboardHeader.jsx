@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
 import {
+  asyncLoadCourseOfferings,
   beginEditingSection,
   getAssignmentName,
   sortedSectionsList,
@@ -23,12 +24,18 @@ class TeacherDashboardHeader extends React.Component {
     selectedSection: sectionShape.isRequired,
     openEditSectionDialog: PropTypes.func.isRequired,
     assignmentName: PropTypes.string,
+    asyncLoadCourseOfferings: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.getDropdownOptions = this.getDropdownOptions.bind(this);
   }
+
+  componentDidMount() {
+    this.props.asyncLoadCourseOfferings();
+  }
+
   getDropdownOptions(optionMetricName) {
     let self = this;
 
@@ -192,6 +199,7 @@ export default connect(
   dispatch => {
     return {
       openEditSectionDialog: id => dispatch(beginEditingSection(id)),
+      asyncLoadCourseOfferings: () => dispatch(asyncLoadCourseOfferings()),
     };
   }
 )(TeacherDashboardHeader);
