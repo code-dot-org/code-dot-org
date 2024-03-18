@@ -76,8 +76,8 @@ export default class ProgressManager {
 
     // Go through each validation to see if we have a match.
     for (const validation of this.currentValidations) {
-      // If it's not a next validation, then make sure the lab-specific validator
-      // is ready for it.
+      // If it's a non-successful validation (i.e. validation.next is false), then
+      // make sure the lab-specific validator is ready for it.
       if (this.validator.shouldCheckNextConditionsOnly() && !validation.next) {
         continue;
       }
