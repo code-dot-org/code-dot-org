@@ -791,6 +791,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace =
       new Blockly.Workspace() as ExtendedWorkspace;
+    hiddenDefinitionWorkspace.addChangeListener(disableOrphans);
     // The hidden definition workspace is not rendered, so do not try to add
     // svg frames around the definitions.
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
