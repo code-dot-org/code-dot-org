@@ -1759,13 +1759,13 @@
   tools_pages_shared:
     glance:
       titles:
-        ages: "Ages"
-        level: "Level"
-        make: "What you can make"
-        devices: "Devices"
-        browsers: "Browsers"
-        languages: "Languages supported"
-        accessiblity: "Accessibility"
+        ages: "Ages:"
+        level: "Level:"
+        make: "What you can make:"
+        devices: "Devices:"
+        browsers: "Browsers:"
+        languages: "Languages supported:"
+        accessibility: "Accessibility:"
       button: "View documentation"
     featured_projects:
       heading: "Featured student projects"
@@ -1800,7 +1800,7 @@
       devices: "Laptop, Chromebook, Tablet"
       browsers: "All modern browsers"
       languages: "English"
-      accessiblity: "Text-to-speech, Closed captioning, Immersive reader"
+      accessibility: "Text-to-speech, Closed captioning, Immersive reader"
       documentation_desc: "Extensive documentation detailing specific functionality and use is available for App Lab."
     projects:
       heading: "See what you can make in App Lab!"
@@ -1866,6 +1866,16 @@
         aria_label: "View the Event-Driven Programming curricula"
     videos:
       heading: "Videos to help you get started with App Lab"
+      captions:
+        getting_started: "App Lab - Getting Started"
+        interactive: "App Lab - Make It Interactive"
+        share: "App Lab - Share Your App"
+        design: "App Lab - Design Mode"
+        image: "App Lab - Image and Sounds"
+        intro: "App Lab: Introduction"
+        simple: "App Lab: Make a simple app"
+        emoji: "App Lab: Make a Whack-E-Moji Game"
+        how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

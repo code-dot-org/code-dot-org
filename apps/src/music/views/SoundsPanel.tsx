@@ -220,7 +220,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const libraryGroupPath = library.libraryJson.path;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getFolderForSoundId(currentValue) || folders[0]
+    library.getAllowedFolderForSoundId(undefined, currentValue) || folders[0]
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');
@@ -304,7 +304,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 {label: 'Bass', value: 'bass'},
                 {label: 'Leads', value: 'lead'},
                 {label: 'Effects', value: 'fx'},
-                {label: 'Vocals', value: 'vocal'},
               ]}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}

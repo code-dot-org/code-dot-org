@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-11 07:29:44 UTC",
+    "serialized_at": "2024-03-18 06:49:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4865,7 +4865,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
-        "progression_name": "Predict and Run: The substring() Method"
+        "progression_name": "Predict and Run: A Standard String Algorithm"
       },
       "seeding_key": {
         "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b",
@@ -4902,7 +4902,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
-        "progression_name": "Investigate and Modify: The substring() Method"
+        "progression_name": "Investigate and Modify: Reversing a String"
       },
       "seeding_key": {
         "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
@@ -4927,7 +4927,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level on Levels 6 and 7 to practice using the `substring()` method to retrieve characters between a starting and ending index and from a starting index to the end of a `String` object. On Level 8, students complete a choice level to use the `indexOf()` and `substring()` methods.",
         "duration": "15",
         "name": "Using the substring() Method",
-        "progression_name": "Practice: The substring() Method",
+        "progression_name": "Practice: Standard String Algorithms",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -7073,7 +7073,7 @@
         "level_keys": [
           "CSA U6L2-L1_-modular"
         ],
-        "progression": "Predict and Run: The substring() Method"
+        "progression": "Predict and Run: A Standard String Algorithm"
       },
       "bonus": false,
       "seeding_key": {
@@ -7098,7 +7098,7 @@
         "level_keys": [
           "CSA U6L2-L2_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7123,7 +7123,7 @@
         "level_keys": [
           "CSA U6L2-L3_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7148,7 +7148,7 @@
         "level_keys": [
           "CSA U6L2-L4_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7173,7 +7173,7 @@
         "level_keys": [
           "CSA U6L2-L5_-modular"
         ],
-        "progression": "Practice: The substring() Method"
+        "progression": "Practice: Standard String Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -7198,7 +7198,7 @@
         "level_keys": [
           "CSA U6L2-L6_-modular"
         ],
-        "progression": "Practice: The substring() Method"
+        "progression": "Practice: Standard String Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -7223,7 +7223,7 @@
         "level_keys": [
           "CSA U6L2-L7_-modular"
         ],
-        "progression": "Practice: The substring() Method"
+        "progression": "Practice: Standard String Algorithms"
       },
       "bonus": false,
       "seeding_key": {

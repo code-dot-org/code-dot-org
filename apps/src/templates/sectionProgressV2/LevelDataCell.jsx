@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
-import {feedbackLeft, studentNeedsFeedback} from '../progress/progressHelpers';
+import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 import {studentLevelProgressType} from '../progress/progressTypes';
 
 import {ITEM_TYPE} from './ItemType';
@@ -45,7 +45,10 @@ function LevelDataCell({
     if (expandedChoiceLevel) {
       return ITEM_TYPE.CHOICE_LEVEL;
     }
-    if (studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking') {
+    if (
+      studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking' &&
+      studentLevelProgress?.teacherFeedbackNew
+    ) {
       return ITEM_TYPE.KEEP_WORKING;
     }
     if (
@@ -75,13 +78,16 @@ function LevelDataCell({
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   const feedbackStyle = React.useMemo(() => {
-    if (feedbackLeft(studentLevelProgress)) {
+    if (expandedChoiceLevel) {
+      return;
+    }
+    if (commentLeft(studentLevelProgress)) {
       return legendStyles.feedbackGiven;
     }
     if (studentNeedsFeedback(studentLevelProgress, level)) {
       return legendStyles.needsFeedback;
     }
-  }, [studentLevelProgress, level]);
+  }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   return (
     <Link

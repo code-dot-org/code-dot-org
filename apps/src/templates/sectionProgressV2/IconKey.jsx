@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 import Link from '@cdo/apps/componentLibrary/link';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../FontAwesome';
@@ -15,7 +16,9 @@ import TeacherActionsBox from './TeacherActionsBox';
 import styles from './progress-table-legend.module.scss';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(
+    tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
+  );
   const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
 
   const toggleIsViewingDetails = event => {
@@ -37,7 +40,10 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
     </>
   );
 
-  const clickListener = () => setIsOpen(!isOpen);
+  const clickListener = () => {
+    trySetLocalStorage('iconKeyIsOpen', !isOpen);
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div

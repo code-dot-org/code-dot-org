@@ -72,11 +72,6 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             i18n.validated(),
             i18n.progressLegendDetailsValidated()
           )}
-        {renderItem(
-          ITEM_TYPE.KEEP_WORKING,
-          i18n.markedAsKeepWorking(),
-          i18n.progressLegendDetailsKeepGoing()
-        )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
           ITEM_TYPE.NEEDS_FEEDBACK,
@@ -87,6 +82,11 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           ITEM_TYPE.FEEDBACK_GIVEN,
           i18n.feedbackGiven(),
           i18n.progressLegendDetailsFeedbackGiven()
+        )}
+        {renderItem(
+          ITEM_TYPE.KEEP_WORKING,
+          i18n.markedAsKeepWorking(),
+          i18n.progressLegendDetailsKeepGoing()
         )}
         <Heading6>{i18n.levelTypes()}</Heading6>
         {renderItem(
