@@ -13,7 +13,6 @@ import teacherSections, {
   selectSection,
   setRosterProvider,
   setRosterProviderName,
-  setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
   sectionProviderName,
