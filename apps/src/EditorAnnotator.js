@@ -1,6 +1,7 @@
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import {interpolateColors} from '@cdo/apps/utils';
+import {border_gray} from '@cdo/apps/util/color';
 import RGBColor from 'rgbcolor';
 import md5 from 'md5';
 
@@ -226,8 +227,6 @@ export class DropletAnnotator extends Annotator {
 
   patch() {
     const droplet = this.droplet();
-
-    // Inject some styling overrides
 
     // Need a reference to a BlockViewNode so that we can patch its draw
     // function to add the opacity after it creates the <path> for each block.
@@ -472,6 +471,11 @@ export class DropletAnnotator extends Annotator {
     // Create the highlighted line's style to apply the color
     const colorHash = md5(color);
     const highlightClass = `editor-annotator-highlight-line-${colorHash}`;
+    // Not too ideal. This styling ensures it exists for the particular class
+    // since adding a class is all we can do. We want this function to be abstract
+    // from the point of view of the caller to what editor technology is being used.
+    // Therefore, we just ask for a color and then have to inject the styling once
+    // per color to the page's <head>.
     const stylesheet = `
       <style>
         .ace_editor .ace_marker-layer .ace_step.${highlightClass} {
@@ -550,6 +554,17 @@ export class DropletAnnotator extends Annotator {
         icon = `url(${icon})`;
       }
       const background = icon && color ? `${icon}, ${color}` : icon || color;
+      // Not too ideal. This is noted in 'highlightLine' as well, but the gist is that
+      // the icon is not easy to override, so we can just cover it up with our
+      // provided one. The tooltip is also difficult to style since we would want to
+      // style different annotations in unique ways, but also because tooltips are
+      // created and destroyed more or less on demand. They are then styled by Ace
+      // Editor via direct styles so the specificity is high. So we add generic
+      // properties here and then also override others when we see the page add the
+      // tooltip to the screen.
+      // The point of the Annotator is to abstract this behavior from the
+      // variety of editing environments that we have. So this requieres a bit
+      // of dirty hacks like these.
       const stylesheet = `
         <style>
           .ace_editor .ace_gutter-layer .ace_gutter-cell.ace_info {
@@ -568,7 +583,7 @@ export class DropletAnnotator extends Annotator {
             background-size: 9px;
             background-repeat: no-repeat;
             border-radius: 50%;
-            border: 1px solid #b7b7b7;
+            border: 1px solid ${border_gray};
             box-sizing: border-box;
           }
 
@@ -593,7 +608,8 @@ export class DropletAnnotator extends Annotator {
     // The problem is that there is no easy way to style the tooltips individually.
     // So, we have to set up an observer to do it. This will ping a callback
     // function whenever a new element is added to the editor and we can check
-    // against it.
+    // against it. (For a thorough reasoning why, see the comment above near the
+    // stylesheet logic.)
 
     // Patch in this observer to spot the creation of the tooltip so we can
     // append the class to it. We do that by matching its inner text with the

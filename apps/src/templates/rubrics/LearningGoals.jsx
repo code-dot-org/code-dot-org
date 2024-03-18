@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import style from './rubrics.module.scss';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import {ai_rubric_cyan} from '@cdo/apps/util/color';
 import {
   learningGoalShape,
   reportingDataShape,
@@ -144,12 +145,12 @@ export function annotateLines(evidence) {
           position.firstLine,
           message,
           'INFO',
-          '#3CFFF8',
+          ai_rubric_cyan,
           infoIcon,
           tipStyle
         );
         for (let i = position.firstLine; i <= position.lastLine; i++) {
-          EditorAnnotator.highlightLine(i, '#3CFFF8');
+          EditorAnnotator.highlightLine(i, ai_rubric_cyan);
         }
         ret.push({
           firstLine: position.firstLine,
@@ -166,12 +167,12 @@ export function annotateLines(evidence) {
         lineNumber,
         message,
         'INFO',
-        '#3CFFF8',
+        ai_rubric_cyan,
         infoIcon,
         tipStyle
       );
       for (let i = lineNumber; i <= lastLineNumber; i++) {
-        EditorAnnotator.highlightLine(i, '#3CFFF8');
+        EditorAnnotator.highlightLine(i, ai_rubric_cyan);
       }
       ret.push({
         firstLine: lineNumber,
