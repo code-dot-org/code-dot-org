@@ -114,6 +114,7 @@ export enum BLOCK_TYPES {
   procedureDefinition = 'procedures_defnoreturn',
   whenRun = 'when_run',
   behaviorGet = 'gamelab_behavior_get',
+  behaviorPicker = 'gamelab_behaviorPicker',
   spriteParameterGet = 'sprite_parameter_get',
   procedureCall = 'procedures_callnoreturn',
   variableGet = 'variables_get',
