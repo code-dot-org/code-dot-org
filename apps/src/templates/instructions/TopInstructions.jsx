@@ -1,18 +1,22 @@
+import classNames from 'classnames';
 import $ from 'jquery';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
 import {connect} from 'react-redux';
-import _ from 'lodash';
-import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
-import ContainedLevel from '../ContainedLevel';
-import ContainedLevelAnswer from '../ContainedLevelAnswer';
-import HelpTabContents from './HelpTabContents';
-import DocumentationTab from './DocumentationTab';
-import CommitsAndReviewTab from './CommitsAndReviewTab';
+import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
+import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
+import i18n from '@cdo/locale';
+
+import commonStyles from '../../commonStyles';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
@@ -20,26 +24,28 @@ import {
   setAllowInstructionsResize,
   getDynamicInstructions,
 } from '../../redux/instructions';
-import color from '../../util/color';
 import styleConstants from '../../styleConstants';
-import commonStyles from '../../commonStyles';
+import color from '../../util/color';
+import Button from '../Button';
+import ContainedLevel from '../ContainedLevel';
+import ContainedLevelAnswer from '../ContainedLevelAnswer';
+import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
+
+import CommitsAndReviewTab from './CommitsAndReviewTab';
+import ContainedLevelResetButton from './ContainedLevelResetButton';
+import DocumentationTab from './DocumentationTab';
+import HelpTabContents from './HelpTabContents';
+import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+
 import Instructions from './Instructions';
 import DynamicInstructions from './DynamicInstructions';
 import HeightResizer from './HeightResizer';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {hasInstructions} from './utils';
 import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
-import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import ContainedLevelResetButton from './ContainedLevelResetButton';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
-import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
+import {hasInstructions} from './utils';
+
+
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];

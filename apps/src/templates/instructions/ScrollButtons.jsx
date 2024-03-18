@@ -1,11 +1,13 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
-import FontAwesome from '../../templates/FontAwesome';
-import moduleStyles from './scroll-buttons.module.scss';
 
 import {addMouseUpTouchEvent} from '../../dom';
+import FontAwesome from '../../templates/FontAwesome';
+
 import {getOuterHeight, scrollBy} from './utils';
+
+import moduleStyles from './scroll-buttons.module.scss';
 
 // By how many pixels should we scroll when clicked?
 const SCROLL_BY = 100;
