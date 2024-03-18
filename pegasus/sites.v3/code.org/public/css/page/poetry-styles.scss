@@ -1,7 +1,7 @@
 // Custom styles for code.org/professional-learning/international
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import "breakpoints";
+@import 'color', 'breakpoints';
 
 // Hero banner
 .hero-banner-basic {
@@ -9,7 +9,7 @@
   background-color: #233346;
 
   .text-wrapper {
-    width: 60%;
+    width: 50%;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
@@ -17,7 +17,7 @@
   }
 
   figure {
-    width: 30%;
+    width: 40%;
     text-align: center;
 
     @media screen and (max-width: $width-sm) {
@@ -32,24 +32,35 @@
   }
 }
 
+.naipi-banner {
+  background: url('/images/banners/banner-naipi-pattern.png') center center;
+  background-color: #6C468A;
+
+  figure {
+    margin-top: 3em;
+  }
+}
+
 .course_info_detail {
   margin-bottom: 0 !important;
 }
 
 .bg-neutral-dark {
   h2 {
-    color: #FFF;
+    color: $neutral_white;
   }
 }
 
 .student_projects {
+  padding-bottom: 2em;
+
   h2 {
     margin-bottom: 1em;
   }
 }
 
 .continue_learning {
-  background: #FFF;
+  background: $neutral_white;
   margin-top: 3em;
 
   a {

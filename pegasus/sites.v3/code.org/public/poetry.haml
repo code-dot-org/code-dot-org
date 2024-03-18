@@ -66,7 +66,7 @@ set_dir: true
 
 = view :top_skinny_banner, banner_id: "banner-poetry", banner_url: nil, banner_icon: "fa fa-pen-nib", banner_text: hoc_s('poetry_page.skinny_banner'), light_theme: true
 
-%section.hero-banner-basic
+%section.hero-banner-basic.naipi-banner
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
       %h1{style: "color: white"}
@@ -74,7 +74,7 @@ set_dir: true
       %p.body-one{style: "color: white"}
         =hoc_s('poetry_page.desc')
     %figure
-      = view :display_video_thumbnail, id: "indigenous_and_tech", video_code: "lFkFi2jGs70", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csa.mp4"
+      = view :display_video_thumbnail, id: "indigenous_and_tech", video_code: "f-Jsn9gmVtE", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/naipi/jael_whitney_v6_sm.mp4"
     .clear
 
 %section
@@ -108,8 +108,8 @@ set_dir: true
             %a.link-button.secondary{href: "#{poetry_course[:course_details_url]}", "aria-label": "#{poetry_course[:course_details_aria_label]}"}
               = poetry_course[:course_details]
 
-%section.hero-banner-basic.bg-neutral-dark
-  .wrapper.student_projects
+%section.hero-banner-basic.bg-neutral-dark.student_projects
+  .wrapper
     %h2.centered
       =hoc_s('heading_featured_student_projects')
     #student_poetry_projects
@@ -122,7 +122,7 @@ set_dir: true
       =hoc_s('poetry_page.continue_learning.desc')
     .action-block.action-block--two-col.continue_learning
       .media-wrapper.col-50
-        = view :display_video_thumbnail, id: "csc_curricula", video_code: "lFkFi2jGs70", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csa.mp4"
+        = view :display_video_thumbnail, id: "csc_curricula", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csc.mp4"
       .text-wrapper.col-50
         .flex-container.justify-space-between.align-items-start
           %p.overline
