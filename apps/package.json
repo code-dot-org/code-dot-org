@@ -206,6 +206,7 @@
     "@react-bootstrap/pagination": "^1.0.0",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/htmlhint": "^1.1.5",
+    "@types/qrcode.react": "^1.0.5",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "aws-sdk": "2.1231.0",
