@@ -205,18 +205,20 @@ class FieldSounds extends GoogleBlockly.Field {
     // Add an image for the sound type.
     const soundType = this.options
       .getLibrary()
-      .getSoundForId(this.getValue()).type;
+      .getSoundForId(this.getValue())?.type;
 
-    GoogleBlockly.utils.dom.createSvgElement(
-      'image',
-      {
-        x: 6,
-        y: 3,
-        width: 15,
-        href: `/blockly/media/music/icon-${soundType}.png`,
-      },
-      this.backgroundElement
-    );
+    if (soundType) {
+      GoogleBlockly.utils.dom.createSvgElement(
+        'image',
+        {
+          x: 6,
+          y: 3,
+          width: 15,
+          href: `/blockly/media/music/icon-${soundType}.png`,
+        },
+        this.backgroundElement
+      );
+    }
 
     // Now attach the text element to the background parent.  It will
     // render on top of the background rectangle.
@@ -230,7 +232,7 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   getText() {
-    return this.options.getLibrary().getSoundForId(this.getValue()).name;
+    return this.options.getLibrary().getSoundForId(this.getValue())?.name || '';
   }
 
   updateSize_() {
