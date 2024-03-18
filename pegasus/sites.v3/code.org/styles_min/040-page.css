@@ -294,6 +294,13 @@ input[type="submit"] {
       align-items: center;
       gap: 0.75rem;
     }
+    &.has-external-link {
+      display: inline-flex;
+
+      &::after {
+        margin: 2px 0 0 12px;
+      }
+    }
   }
 
   /* Disabled button styles */
