@@ -263,6 +263,7 @@ GEM
     aws-sigv4 (1.6.0)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
+    base64 (0.2.0)
     bcrypt (3.1.13)
     benchmark-ips (2.7.2)
     better_errors (2.10.1)
@@ -476,16 +477,16 @@ GEM
     hashie (3.6.0)
     highline (1.6.21)
     honeybadger (4.12.1)
-    http (4.4.1)
-      addressable (~> 2.3)
+    http (5.2.0)
+      addressable (~> 2.8)
+      base64 (~> 0.1)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
-      http-parser (~> 1.2.0)
+      llhttp-ffi (~> 0.5.0)
+    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.3)
-      ffi-compiler (>= 1.0, < 2.0)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -525,6 +526,9 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    llhttp-ffi (0.5.0)
+      ffi-compiler (~> 1.0)
+      rake (~> 13.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -535,6 +539,10 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailjet (1.7.3)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
+      rest-client (>= 2.0.0)
     marcel (1.0.2)
     memoist (0.16.2)
     memory_profiler (1.0.1)
@@ -725,7 +733,7 @@ GEM
       thor (~> 1.0)
     rainbow (3.1.1)
     raindrops (0.20.0)
-    rake (12.3.3)
+    rake (13.1.0)
     rambling-trie (2.3.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
@@ -856,7 +864,7 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machine (1.2.0)
-    statsig (1.33.0)
+    statsig (1.33.2)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
       http (>= 4.4, < 6.0)
@@ -922,7 +930,7 @@ GEM
     vcr (3.0.3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (4.2.0)
+    web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -1021,6 +1029,7 @@ DEPENDENCIES
   haml_lint
   highline (~> 1.6.21)
   honeybadger (>= 4.5.6)
+  http (~> 5.0)
   httparty
   image_optim!
   image_optim_pack (~> 0.5.0)!
@@ -1033,6 +1042,7 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer

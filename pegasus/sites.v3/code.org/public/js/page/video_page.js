@@ -51,27 +51,11 @@ function handleScreenSize(carouselId) {
 }
 
 $(document).ready(function () {
-  let idCollections = "#collections_carousel";
-  handleScreenSize("collections_carousel");
-  $(idCollections + " .slides").carouFredSel({
+  let idHowAiWorks = "#how-ai-works-videos";
+  handleScreenSize("how-ai-works-videos");
+  $(idHowAiWorks + " .slides").carouFredSel({
     auto: false,
-    pagination: "#collections_carousel-pagination",
-    prev: "#prev_2",
-    next: "#next_2",
-    responsive: true,
-    height: "490",
-    scroll: 1,
-    swipe: {
-      onTouch: true,
-      onMouse: true,
-    },
-  });
-
-  let idFlexible = "#flexible_units_carousel";
-  handleScreenSize("flexible_units_carousel");
-  $(idFlexible + " .slides").carouFredSel({
-    auto: false,
-    pagination: "#flexible_units_carousel-pagination",
+    pagination: "#how-ai-works-videos-pagination",
     prev: "#prev_1",
     next: "#next_1",
     responsive: true,

@@ -1,16 +1,11 @@
-import {ModelCardInfo} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
 import MultiItemInput from './MultiItemInput';
 import moduleStyles from './edit-ai-customizations.module.scss';
-import {MAX_ASK_ABOUT_TOPICS} from '@cdo/apps/aichat/constants';
+import {
+  MAX_ASK_ABOUT_TOPICS,
+  MODEL_CARD_FIELDS_AND_LABELS,
+} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {UpdateContext} from './UpdateContext';
-
-const modelCardFieldsAndLabels: [keyof ModelCardInfo, string][] = [
-  ['description', 'Description'],
-  ['intendedUse', 'Intended Use'],
-  ['limitationsAndWarnings', 'Limitations and Warnings'],
-  ['testingAndEvaluation', 'Testing and Evaluation'],
-];
 
 const ModelCardFields: React.FunctionComponent = () => {
   const {setModelCardPropertyValue, aiCustomizations} =
@@ -18,7 +13,7 @@ const ModelCardFields: React.FunctionComponent = () => {
   const exampleTopics = aiCustomizations.modelCardInfo?.value?.exampleTopics;
   return (
     <div className={moduleStyles['model-card-fields']}>
-      {modelCardFieldsAndLabels.map(([property, label]) => {
+      {MODEL_CARD_FIELDS_AND_LABELS.map(([property, label]) => {
         return (
           <div key={property}>
             <label htmlFor={`modelCard-${property}`}>{label}</label>

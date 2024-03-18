@@ -378,7 +378,7 @@ class Blockly < Level
         success_condition: 'fn_successCondition',
         failure_condition: 'fn_failureCondition',
       }
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         blockly = overrides[dashboard.to_sym] || dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values

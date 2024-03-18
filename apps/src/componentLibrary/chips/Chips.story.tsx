@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Meta, Story} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react';
 
 import {Chips, ChipsProps} from './index';
 
@@ -11,7 +11,7 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: Story<ChipsProps> = args => {
+const SingleTemplate: StoryFn<ChipsProps> = args => {
   const [values, setValues] = useState<string[]>([]);
 
   return (
@@ -23,7 +23,7 @@ const SingleTemplate: Story<ChipsProps> = args => {
   );
 };
 
-const MultipleTemplate: Story<{groups: ChipsProps[]}> = args => {
+const MultipleTemplate: StoryFn<{groups: ChipsProps[]}> = args => {
   const [values, setValues] = useState([]);
   const {groups} = args;
 

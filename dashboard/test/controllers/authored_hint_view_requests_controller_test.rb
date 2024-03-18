@@ -98,7 +98,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
 
     record = AuthoredHintViewRequest.last
 
-    data.keys.each do |key|
+    data.each_key do |key|
       assert_equal data[key], record[key.to_s.underscore.to_sym]
     end
   end
