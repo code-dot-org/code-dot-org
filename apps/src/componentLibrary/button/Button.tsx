@@ -124,7 +124,7 @@ const checkButtonPropsForErrors = ({
     );
   }
 
-  if ((type === 'iconOnly' || type !== 'iconBorder') && !icon) {
+  if ((type === 'iconOnly' || type === 'iconBorder') && !icon) {
     throw new Error(
       'Expect icon prop not to be undefined when type is iconOnly or iconBorder. (Please add icon)'
     );
@@ -193,13 +193,12 @@ const Button: React.FunctionComponent<ButtonProps> = ({
         type,
         icon,
         useAsLink,
-        buttonType,
         onClick,
         href,
         download,
         text,
       }),
-    [type, icon, useAsLink, buttonType, onClick, href, download, text]
+    [type, icon, useAsLink, onClick, href, download, text]
   );
 
   /** Handling isPending state content & spinner show logic here.
