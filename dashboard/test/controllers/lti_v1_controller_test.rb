@@ -492,7 +492,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal home_path, '/' + @response.redirect_url.split('/').last
   end
 
-  test 'sync - should display error message when required param missing' do
+  test 'sync - should not sync when required param missing' do
     user = create :teacher, :with_lti_auth
     sign_in user
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: nil, nrps_url: nil}
