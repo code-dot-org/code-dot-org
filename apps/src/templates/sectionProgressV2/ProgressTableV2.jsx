@@ -7,21 +7,18 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 import {lessonHasLevels} from '../progress/progressHelpers';
+import {studentLevelProgressType} from '../progress/progressTypes';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
+import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
 import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
-<<<<<<< HEAD
 import LessonProgressDataColumn from './LessonProgressDataColumn';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
 import StudentColumn from './StudentColumn';
 
 import styles from './progress-table-v2.module.scss';
-=======
-import {studentLevelProgressType} from '../progress/progressTypes';
-import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
->>>>>>> origin/staging
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];
