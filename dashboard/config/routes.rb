@@ -915,6 +915,8 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
+        get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
+
         patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
         patch 'user_school_infos', to: 'user_school_infos#update'
