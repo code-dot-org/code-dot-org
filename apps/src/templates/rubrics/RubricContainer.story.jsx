@@ -26,7 +26,11 @@ const defaultRubric = {
     position: 3,
     name: 'Testing',
   },
+  script: {
+    id: 107,
+  },
   level: {
+    id: 42,
     name: rubricLevelName,
     position: 5,
   },
@@ -95,6 +99,7 @@ const defaultStudentLevelInfo = {
   attempts: 2,
   timeSpent: 404,
   lastAttempt: '5/26/23',
+  user_id: 107,
 };
 
 const Template = args => (
