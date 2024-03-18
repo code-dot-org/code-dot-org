@@ -9,9 +9,9 @@ import popupWindow from '@cdo/apps/code-studio/popup-window';
 /**
  * Wrapper around ShareDialog that plumbs in the necessary props for a Lab2 project.
  */
-const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
-  shareUrl,
-}) => {
+const Lab2ShareDialogWrapper: React.FunctionComponent<
+  Lab2ShareDialogWrapperProps
+> = ({shareUrl}) => {
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
@@ -79,8 +79,8 @@ const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
   );
 };
 
-interface Lab2ShareDialogProps {
+interface Lab2ShareDialogWrapperProps {
   shareUrl: string;
 }
 
-export default Lab2ShareDialog;
+export default Lab2ShareDialogWrapper;
