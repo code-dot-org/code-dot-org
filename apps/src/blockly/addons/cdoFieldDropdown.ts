@@ -3,7 +3,7 @@ import GoogleBlockly, {
   FieldDropdownValidator,
   MenuGeneratorFunction,
 } from 'blockly/core';
-import {EMPTY_OPTION} from '../constants';
+import {BLOCK_TYPES, EMPTY_OPTION} from '../constants';
 import {
   printerStyleNumberRangeToList,
   numberListToString,
@@ -43,7 +43,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     } else {
       // For behavior picker blocks, we need to regenerate menu options each time,
       // in case a behavior has been renamed.
-      const useCache = sourceBlock?.type === 'gamelab_behaviorPicker';
+      const useCache = sourceBlock?.type === BLOCK_TYPES.behaviorPicker;
       for (const option of this.getOptions(useCache, newValue)) {
         if (option[1] === newValue) {
           return newValue;
@@ -83,7 +83,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     const sourceBlock = this.getSourceBlock();
 
     // Behavior pickers do not populate correctly until the workspace has been loaded.
-    if (sourceBlock?.type === 'gamelab_behaviorPicker' && newValue) {
+    if (sourceBlock?.type === BLOCK_TYPES.behaviorPicker && newValue) {
       // Check whether the initial newValue option already exists
       const optionExists = options.some(option => option[0] === newValue);
       // The hidden workspace is created after the main workspace flyout is populated.
