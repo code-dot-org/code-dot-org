@@ -1,10 +1,13 @@
-import React from 'react';
-import i18n from '@cdo/locale';
 import classNames from 'classnames';
-import LegendItem from './LegendItem';
-import {ITEM_TYPE} from './ItemType';
-import styles from './progress-table-legend.module.scss';
+import React from 'react';
+
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
+import {ITEM_TYPE} from './ItemType';
+import LegendItem from './LegendItem';
+
+import styles from './progress-table-legend.module.scss';
 
 export default function LevelTypesBox() {
   return (

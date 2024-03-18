@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
+
+import styles from './progress-table-v2.module.scss';
 
 export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
   return (
