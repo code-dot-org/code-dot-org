@@ -37,12 +37,13 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    * by quotes in xml.
    */
   doClassValidation_(newValue?: string) {
+    const sourceBlock = this.getSourceBlock();
     if (newValue === EMPTY_OPTION) {
       return newValue;
     } else {
       // For behavior picker blocks, we need to regenerate menu options each time,
       // in case a behavior has been renamed.
-      const useCache = this.name !== 'BEHAVIOR';
+      const useCache = sourceBlock?.type === 'gamelab_behaviorPicker';
       for (const option of this.getOptions(useCache, newValue)) {
         if (option[1] === newValue) {
           return newValue;
@@ -51,11 +52,11 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
         }
       }
 
-      if (this.sourceBlock_) {
+      if (sourceBlock) {
         console.warn(
           "Cannot set the dropdown's value to an unavailable option." +
             ' Block type: ' +
-            this.sourceBlock_.type +
+            sourceBlock.type +
             ', Field name: ' +
             this.name +
             ', Value: ' +
@@ -79,9 +80,10 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
    */
   getOptions(useCache?: boolean, newValue?: string) {
     const options = super.getOptions(useCache);
+    const sourceBlock = this.getSourceBlock();
 
     // Behavior pickers do not populate correctly until the workspace has been loaded.
-    if (this.name === 'BEHAVIOR' && newValue) {
+    if (sourceBlock?.type === 'gamelab_behaviorPicker' && newValue) {
       // Check whether the initial newValue option already exists
       const optionExists = options.some(option => option[0] === newValue);
       // The hidden workspace is created after the main workspace flyout is populated.
