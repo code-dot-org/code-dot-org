@@ -177,7 +177,8 @@ const EVENTS = {
   SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
 
   // Project sharing via 'Finish' button
-  FINISH_SHARING_LINK_COPY: 'User Clicks Project Copy Link In Finish Congrats Dialog',
+  FINISH_SHARING_LINK_COPY:
+    'User Clicks Project Copy Link In Finish Congrats Dialog',
   FINISH_SHARING_PUBLISH: 'User Clicks Publish In Finish Congrats Dialog',
   FINISH_SHARING_FB: 'User Clicks Facebook Icon In Finish Congrats Dialog',
   FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Finish Congrats Dialog',
