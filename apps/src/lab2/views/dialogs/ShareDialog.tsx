@@ -7,17 +7,18 @@ import moduleStyles from './ShareDialog.module.scss';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import i18n from '@cdo/locale';
 
 const CopyToClipboardButton: React.FunctionComponent<{shareUrl: string}> = ({
   shareUrl,
 }) => {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false);
 
-  const handleCopyToClipboard = () => {
+  const handleCopyToClipboard = useCallback(() => {
     copyToClipboard(shareUrl, () => {
       setCopiedToClipboard(true);
     });
-  };
+  }, [shareUrl]);
 
   return (
     <button
@@ -30,11 +31,15 @@ const CopyToClipboardButton: React.FunctionComponent<{shareUrl: string}> = ({
         iconStyle="thin"
         className={moduleStyles.copyToClipboardIcon}
       />
-      Copy link to project
+      {i18n.copyLinkToProject()}
     </button>
   );
 };
 
+/**
+ * A new implementation of the project share dialog for Lab2 labs.  Currently only used
+ * by Music Lab and only supports a minimal subset of functionality.
+ */
 const ShareDialog: React.FunctionComponent<{shareUrl: string}> = ({
   shareUrl,
 }) => {
@@ -50,7 +55,7 @@ const ShareDialog: React.FunctionComponent<{shareUrl: string}> = ({
       <div className={moduleStyles.dialogContainer}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
           <Typography semanticTag="h1" visualAppearance="heading-lg">
-            Share Project
+            {i18n.shareTitle()}
           </Typography>
           <div className={moduleStyles.itemsContainer}>
             <CopyToClipboardButton shareUrl={shareUrl} />
