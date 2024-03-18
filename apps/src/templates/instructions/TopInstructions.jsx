@@ -34,18 +34,15 @@ import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import CommitsAndReviewTab from './CommitsAndReviewTab';
 import ContainedLevelResetButton from './ContainedLevelResetButton';
 import DocumentationTab from './DocumentationTab';
-import HelpTabContents from './HelpTabContents';
-import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-
-import Instructions from './Instructions';
 import DynamicInstructions from './DynamicInstructions';
 import HeightResizer from './HeightResizer';
+import HelpTabContents from './HelpTabContents';
+import Instructions from './Instructions';
 import InstructionsCSF from './InstructionsCSF';
+import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
 import {hasInstructions} from './utils';
-
-
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
