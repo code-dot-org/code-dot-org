@@ -8,5 +8,7 @@ export const getRosterSyncErrorMessage = (error: string) => {
       return i18n.ltiSectionSyncDialogErrorNoIntegration();
     case 'no_section':
       return i18n.ltiSectionSyncDialogErrorNoSectionFound();
+    default:
+      return i18n.ltiSectionSyncDialogError();
   }
 };

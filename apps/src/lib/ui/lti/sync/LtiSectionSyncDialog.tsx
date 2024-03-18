@@ -50,7 +50,6 @@ export default function LtiSectionSyncDialog({
     return (
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
-        <p>{i18n.ltiSectionSyncDialogError()}</p>
         {error && <p>{getRosterSyncErrorMessage(error)}</p>}
       </div>
     );

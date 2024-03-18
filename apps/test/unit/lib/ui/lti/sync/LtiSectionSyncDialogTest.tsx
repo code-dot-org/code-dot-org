@@ -141,14 +141,13 @@ describe('LTI Section Sync Dialog', () => {
   describe('error view', () => {
     it('should render an error', () => {
       const errorSyncResult: LtiSectionSyncResult = {
-        error: 'no_integration',
+        error: 'Error!!',
       };
 
       render(<LtiSectionSyncDialog isOpen syncResult={errorSyncResult} />);
 
       screen.getByText(i18n.errorOccurredTitle());
       screen.getByText(i18n.ltiSectionSyncDialogError());
-      screen.getByText(i18n.ltiSectionSyncDialogErrorNoIntegration());
     });
   });
 });
