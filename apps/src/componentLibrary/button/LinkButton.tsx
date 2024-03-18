@@ -2,15 +2,11 @@ import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import BaseButton from './_baseButton/_BaseButton';
 import {ButtonType, ButtonColor} from './types';
 
-export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
-  purple: 'purple',
-  black: 'black',
-  white: 'white',
-};
-
-export interface ButtonProps {
+export interface LinkButtonProps {
   /** Button Component type */
   type?: ButtonType;
   /** Custom class name */
@@ -39,29 +35,23 @@ export interface ButtonProps {
    * If we want button to redirect to another page or download some file we should use \<a> tag.
    * If we want button to call some function or submit some form we should use \<button> tag.
    * */
-  useAsLink?: boolean;
-  /** (\<button> specific prop)
-   * Button html element type */
-  buttonType?: 'submit' | 'button';
-  /** (\<button> specific prop)
-   *  Button onClick */
-  onClick?: (
-    event:
-      | React.MouseEvent<HTMLButtonElement>
-      // This is a workaround to fix TS error not allowing us to use Tag and tagSpecificProps logic.
-      //   onClick Should only be applied to <button> elements, but not to <a> elements.
-      | React.MouseEvent<HTMLAnchorElement>
-  ) => void;
-  /** (\<button> specific prop)
-   *  Button value */
-  value?: string;
-  /** (\<button> specific prop)
-   *  Button name */
-  name?: string;
+  useAsLink: boolean;
+  /** (\<a> specific prop)
+   *  Button target (when used as link) */
+  target?: string;
+  /** (\<a> specific prop)
+   * Button href */
+  href: string;
+  /** (\<a> specific prop)
+   * Button download (when used as link) */
+  download?: boolean | string;
+  /** (\<a> specific prop)
+   * Button title */
+  title?: string;
 }
 
-const Button: React.FunctionComponent<ButtonProps> = props => (
-  <Button {...props} />
+const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
+  <BaseButton {...props} />
 );
 
 /**
@@ -77,4 +67,4 @@ const Button: React.FunctionComponent<ButtonProps> = props => (
  * Design System: Button Component.
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
-export default Button;
+export default LinkButton;

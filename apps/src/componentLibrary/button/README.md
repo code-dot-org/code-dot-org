@@ -2,10 +2,11 @@
 
 ## Consuming This Component
 
-This package exports one styled React component: [Button](Button.tsx). You can import it like this:
+This package exports one styled React component which actually consists of two aliases: [Button](Button.tsx), [LinkButton](LinkButton.tsx). You can import it like this:
 
 ```javascript
 import Button from '@cdo/apps/componentLibrary/button';
+import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 ```
 
 For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_) 

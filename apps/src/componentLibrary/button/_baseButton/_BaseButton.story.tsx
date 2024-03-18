@@ -1,9 +1,10 @@
 import React from 'react';
-import Button, {ButtonProps, buttonColors} from './index';
 import {Meta, StoryFn} from '@storybook/react';
+import {buttonColors} from './../index';
+import Button, {BaseButtonProps} from './_BaseButton';
 
 export default {
-  title: 'DesignSystem/Button', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/Button/_BaseButton', // eslint-disable-line storybook/no-title-property-in-meta
   /**
    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
    * This workaround (component: Component.type instead of component: Component) is taken from
@@ -18,10 +19,10 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<ButtonProps> = args => <Button {...args} />;
+const SingleTemplate: StoryFn<BaseButtonProps> = args => <Button {...args} />;
 
 const MultipleTemplate: StoryFn<{
-  components: ButtonProps[];
+  components: BaseButtonProps[];
 }> = args => (
   <div
     style={{
