@@ -1,19 +1,32 @@
-Scenario: Teacher can view lesson progress
-  # Teacher can view lesson progress when a student has not started a lesson
-  # Teacher can view lesson progress when student has finished all levels in a lesson
-  # Teacher can view lesson progress when student has started but not finished a lesson
-
-Scenario: Teacher can view level progress
-  # Teacher can view level progress when a student has not started a non-choice-validated-assessment level 
-  # Teacher can view level progress when student has started but not finished a non-choice-validated-assessment  level
-  # Teacher can view level progress of a choice level in both an expanded and closed state
-  # Teacher can view level progress of an assessment level
-  # Teacher can view level progress of a validated level (ex L44.12)
-
-Scenario: Teacher actions in mini-assessments are reflected in the progress view
-  # Teacher can view progress, give feedback, and indicate the student needs to keep working in a mini-rubric level (ex L38.3)
+@no_mobile
+Feature: Using the V2 teacher dashboard
 
 Scenario: Teacher can open and close Icon Key and details
+  Given I create an authorized teacher-associated student named "Sally"
+  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+
+  When I sign in as "Teacher_Sally" and go home
+  And I get levelbuilder access
+  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I wait until element "#uitest-teacher-dashboard-nav" is visible
+  And check that the URL contains "/teacher_dashboard/sections/"
+  And I wait until element "#uitest-course-dropdown" is visible
+
+  # toggle to V2 progress view
+  Then I click selector "#ui-test-link-to-new-progress-view"
+  And I wait until element "h6:contains(Icon key)" is visible
+  And I wait until element "#ui-test-progress-table-v2" is visible
+  And element "#ui-test-progress-table-v2" is visible 
+
   # Teacher can minimize icon key
+  And I wait until element "strong:contains(Assignment Completion States)" is visible
+  Then I click selector "h6:contains('Icon key')"
+  And element "strong:contains(Assignment Completion States)" is hidden
+  Then I click selector "h6:contains('Icon key')"
+  And I wait until element "strong:contains(Assignment Completion States)" is visible
+
   # Teacher can open the more details of the icon key and close it
-  # Teacher can re-order students
+  Then I click selector "a:contains('More Details')"
+  And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
+  And I click selector "#ui-close-dialog"
+  And element "h3:contains(Progress Tracking Icon Key)" is hidden
