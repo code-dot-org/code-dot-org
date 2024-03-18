@@ -554,7 +554,7 @@ p.errorMessage {
   }
 }
 
-.aiAssessmentScoreText {
+p.aiAssessmentScoreText {
   strong::after {
     content: ' ';
   }
@@ -759,7 +759,7 @@ p.aiFeedbackRadioBoxText {
   gap: 0.5rem;
 }
 
-.aiFeedbackReceived {
+em.aiFeedbackReceived {
   i {
     margin-right: 0.5rem;
   }
@@ -1109,12 +1109,12 @@ button.infoAlertRight {
   gap: 1rem;
 }
 
-.detailsVisible {
+p.detailsVisible {
   display: inline;
   padding-inline-end: 1rem;
 }
 
-.detailsHidden {
+p.detailsHidden {
   display: none;
 }
 
