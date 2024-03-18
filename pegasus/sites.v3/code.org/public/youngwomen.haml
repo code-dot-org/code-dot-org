@@ -52,7 +52,7 @@ theme: responsive_full_width
         %p.body-three
           =hoc_s((!applications_closed ? :cs_ambassador_application_questions : :cs_ambassador_application_closed_subhead), markdown: :inline, locals:{email_url: "mailto:youngwomen@code.org"})
         %p.body-three
-          =hoc_s(:cs_ambassador_application_parter_program)
+          =hoc_s(:cs_ambassador_application_parter_program, markdown: :inline)
       - if !applications_closed
         = view :"young_women_in_cs/yw_apply_button"
 
@@ -82,7 +82,7 @@ theme: responsive_full_width
       .centered
         = view :"young_women_in_cs/yw_apply_button"
 
-%section.partner-program.bg-neutral-light
+%section#partner-program.bg-neutral-light
   .wrapper
     %h2=hoc_s(:cs_ambassador_partner_program_heading)
     %p.body-three
