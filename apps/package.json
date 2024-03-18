@@ -215,7 +215,7 @@
     "bootstrap-sass": "^3.3.6",
     "buffer": "^6.0.3",
     "canvg": "gabelerner/canvg",
-    "cdo-ide-poc": "git+https://github.com/code-dot-org/cdo-ide-poc.git#6dfb0916fda9fdb65065a24cab512a727404568c",
+    "cdo-ide-poc": "git+https://github.com/code-dot-org/cdo-ide-poc.git#8bc9e56d690fa793d3d6149430cafaa1c1f8eea1",
     "classnames": "^2.3.2",
     "codemirror": "5.5",
     "codemirror-spell-checker": "^1.1.2",
