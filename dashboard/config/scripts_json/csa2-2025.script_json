@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-18 06:49:58 UTC",
+    "serialized_at": "2024-03-18 08:19:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7168,31 +7168,6 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "progression": "Practice: Standard String Algorithms"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L5_-modular"
-      ]
-    },
-    {
-      "chapter": 87,
-      "position": 6,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -7215,9 +7190,9 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 87,
+      "position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -7240,8 +7215,8 @@
       ]
     },
     {
-      "chapter": 89,
-      "position": 8,
+      "chapter": 88,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7265,7 +7240,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7289,7 +7264,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7314,7 +7289,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8358,18 +8333,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
         "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L5_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
       }
     },
     {
