@@ -10,7 +10,8 @@ import {useFetch} from '@cdo/apps/util/useFetch';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {SourceFileData} from '../lab2/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 
 interface PermissionResponse {
   permissions: string[];
@@ -26,7 +27,9 @@ const PythonEditor: React.FunctionComponent = () => {
   let startCode = 'print("Hello world!")';
 
   if (initialSources?.source && typeof initialSources.source !== 'string') {
-    startCode = (initialSources.source['main.py'] as SourceFileData).text;
+    startCode =
+      getFileByName(initialSources.source.files, 'main.py')?.contents ||
+      startCode;
   }
 
   const handleRun = () => {
@@ -35,10 +38,11 @@ const PythonEditor: React.FunctionComponent = () => {
     if (parsedData.permissions.includes('levelbuilder')) {
       dispatch(appendOutput('Running code...'));
       if (source) {
-        // TODO: will need to handle a potentially nested main.py
-        const code = source['main.py']?.text;
-        if (typeof code === 'string') {
+        const code = getFileByName(source.files, 'main.py')?.contents;
+        if (code) {
           runPythonCode(code);
+        } else {
+          appendOutput('No main.py to run.');
         }
       }
     } else {
@@ -48,7 +52,24 @@ const PythonEditor: React.FunctionComponent = () => {
 
   const onCodeUpdate = (updatedCode: string) => {
     // TODO: handle multiple files. For now everything is "main.py".
-    const updatedSource = {'main.py': {text: updatedCode}};
+    const updatedSource: MultiFileSource = {
+      files: {
+        '0': {
+          id: '0',
+          name: 'main.py',
+          language: 'python',
+          contents: updatedCode,
+          folderId: '1',
+        },
+      },
+      folders: {
+        '1': {
+          id: '1',
+          name: 'src',
+          parentId: '0',
+        },
+      },
+    };
     dispatch(setSource(updatedSource));
     if (Lab2Registry.getInstance().getProjectManager()) {
       const projectSources = {
