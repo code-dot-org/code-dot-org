@@ -608,7 +608,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
   // read only workspaces.
   blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
-    const theme = cdoUtils.getUserTheme(options.theme as string) as Theme;
+    const theme = cdoUtils.getUserTheme(options.theme as Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
       theme: theme,
@@ -674,7 +674,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
     const options = {
       ...optOptionsExtended,
-      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as string),
+      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as Theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
