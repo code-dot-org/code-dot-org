@@ -1,5 +1,6 @@
 %div{style: "display: flex; gap: 20px;"}
   %div{style: "flex: 0 auto; min-width: 18%;", id: "table-of-contents-mount-point"}
+  = render partial: 'levels/editors/navigation_bar'
   %div{style: "flex: 1;"}
     %h1= @page_title = @level.new_record? ? "New #{@level.class.to_s} level" : "Editing #{@level.name}"
 
@@ -134,5 +135,3 @@
     = link_to t('crud.back'), levels_path
     = '|' unless @level.new_record?
     = link_to t('crud.destroy'), @level, method: :delete, data: { confirm: t('crud.confirm') } unless @level.new_record?
-
-%script{src: webpack_asset_path('js/levels/editors/_navigation_bar.js')}
