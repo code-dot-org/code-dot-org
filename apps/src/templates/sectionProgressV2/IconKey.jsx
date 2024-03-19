@@ -1,15 +1,19 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import LevelTypesBox from './LevelTypesBox';
-import TeacherActionsBox from './TeacherActionsBox';
-import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
-import styles from './progress-table-legend.module.scss';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '../FontAwesome';
+import React, {useState} from 'react';
+
 import Link from '@cdo/apps/componentLibrary/link';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../FontAwesome';
+
+import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
+import LevelTypesBox from './LevelTypesBox';
 import MoreDetailsDialog from './MoreDetailsDialog.jsx';
+import TeacherActionsBox from './TeacherActionsBox';
+
+import styles from './progress-table-legend.module.scss';
 
 export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const [isOpen, setIsOpen] = useState(

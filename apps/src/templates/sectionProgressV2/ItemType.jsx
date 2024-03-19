@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import color from '@cdo/apps/util/color';
 
 export const ITEM_TYPE = Object.freeze({

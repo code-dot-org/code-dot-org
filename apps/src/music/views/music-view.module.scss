@@ -26,6 +26,7 @@ $default-spacing: 2px;
   flex-direction: row;
   max-height: calc(100% - $timeline-area-height);
   gap: $default-spacing;
+  overflow: hidden;
 }
 
 .playArea {

@@ -769,6 +769,7 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 def jquery_element_exists(selector)
+  wait_for_jquery
   "return $(#{selector.dump}).length > 0"
 end
 
@@ -790,6 +791,10 @@ end
 
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
+end
+
+Then /^element "([^"]*)" does exist/ do |selector|
+  expect(element_exists?(selector)).to eq(true)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
