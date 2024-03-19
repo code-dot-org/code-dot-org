@@ -493,6 +493,7 @@ Resources:
     Properties:
       Name: !Sub "AutoscalerTargGrp-${AWS::StackName}"
       VpcId: !Ref VpcId
+      TargetType: ip
       Port: 8080
       Protocol: HTTP
       HealthCheckPath: /healthz
