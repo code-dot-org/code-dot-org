@@ -14,6 +14,8 @@ import firehoseClient from '../util/firehose';
 import {combineReducers, createStore} from 'redux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const FIREHOSE_EVENTS = {
   // Interstitial is displayed to the teacher.
@@ -135,6 +137,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   componentDidMount() {
     this.logEvent(FIREHOSE_EVENTS.SHOW);
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SHOW);
   }
 
   buildSchoolData() {
@@ -243,6 +246,10 @@ export default class SchoolInfoInterstitial extends React.Component {
       attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
     });
 
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SUBMIT, {
+      attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+    });
+
     const schoolData = this.buildSchoolData();
     const {formUrl, authTokenName, authTokenValue} = this.props.scriptData;
     $.post({
@@ -259,10 +266,18 @@ export default class SchoolInfoInterstitial extends React.Component {
           attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
         });
 
+        analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS, {
+          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+        });
+
         this.props.onClose();
       })
       .fail(() => {
         this.logEvent(FIREHOSE_EVENTS.SAVE_FAILURE, {
+          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+        });
+
+        analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE, {
           attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
         });
 
@@ -278,6 +293,7 @@ export default class SchoolInfoInterstitial extends React.Component {
   };
 
   dismissSchoolInfoForm = () => {
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS);
     this.setState({isOpen: false});
     this.props.onClose();
   };
