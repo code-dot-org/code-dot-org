@@ -1,5 +1,5 @@
+import {formatForPlayspace} from '@cdo/apps/p5lab/utils';
 import {expect} from '../../util/reconfiguredChai';
-import {formatForPlayspace} from './formatForPlayspace';
 
 describe('formatForPlayspace', function () {
   it('formats large numbers in scientific notation with 2 significant digits', function () {
