@@ -1,0 +1,52 @@
+:scss
+  .poetry-banner {
+    background: url('/images/banners/banner-naipi-pattern.png') center center;
+    background-color: #6C468A;
+    background-position: top;
+    padding: 0 2em;
+
+    h5 {
+      color: var(--neutral_white);
+    }
+
+    p {
+      color: var(--neutral_white);
+      margin-bottom: 0.5rem;
+    }
+
+    img {
+      max-height: 10.5em;
+      margin-top: 1em;
+    }
+
+    @media (min-width: 753px) {
+      .text-wrapper {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 753px) {
+      padding: 2em;
+
+      .wrapper {
+        justify-content: center;
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+%section.poetry-banner
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h5
+        =hoc_s('poetry_banner_title')
+      %p
+        =hoc_s('poetry_banner_desc')
+    %figure.col-30.centered
+      %img{src:"/images/marketing/octopus-poetry.png", alt: ""}
+    .cta-wrapper.col-30
+      %a.link-button.white{href: CDO.code_org_url("/poetry"), target: "_blank", rel: "noopener noreferrer", "aria-label": hoc_s('poetry_banner_explore_aria_label')}
+        =hoc_s('call_to_action_explore_activities')
