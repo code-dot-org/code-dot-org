@@ -610,7 +610,7 @@ Dashboard::Application.routes.draw do
     post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
     namespace :lti do
       namespace :v1 do
-        resources :feedbacks, only: %i[create]
+        resources :feedback, only: %i[create]
       end
     end
 

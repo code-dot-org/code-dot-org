@@ -4,7 +4,7 @@
   %a.close{aria: {label: t('to_close')}, role: 'button', data: {dismiss: 'modal'}, href: '#'}
     %span{aria: {hidden: 'true'}} ×
 
-  = form_for Lti::Feedback.new, url: lti_v1_feedbacks_path, remote: true, html: {style: feedback_provided ? 'display: none;' : ''} do |f|
+  = form_for Lti::Feedback.new, url: lti_v1_feedback_index_path, remote: true, html: {style: feedback_provided ? 'display: none;' : ''} do |f|
     = f.hidden_field :satisfaction_level
     .modal-header
       %h4.heading-md#lti-feedback-modal-title= t('lti.feedback.modal.title')
@@ -28,6 +28,6 @@
     .modal-footer
       %input{type: 'button', value: t('to_close'), data: {dismiss: 'modal'}}
 
-  = javascript_include_tag webpack_asset_path('js/lti/v1/feedbacks/_modal.js'),
+  = javascript_include_tag webpack_asset_path('js/lti/v1/feedback/_modal.js'),
                            data: {modalSelector: JSON.dump('#lti-feedback-modal'),
                                   userKey: JSON.dump(Digest::MD5.hexdigest(current_user.id.to_s))}

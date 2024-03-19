@@ -1,6 +1,6 @@
 module Lti
   module V1
-    class FeedbacksController < ApplicationController
+    class FeedbackController < ApplicationController
       before_action :authenticate_user!
       before_action -> {head :forbidden}, unless: -> {Policies::Lti.feedback_available?(current_user)}, on: :create
 
