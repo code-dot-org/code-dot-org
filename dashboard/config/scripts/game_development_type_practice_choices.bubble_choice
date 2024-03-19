@@ -1,0 +1,9 @@
+name 'game_development_type_practice_choices'
+display_name 'Sprite Type Practice'
+description 'Choose a game to practice with sprite types!'
+
+sublevels
+level 'game_development_type_practice_choices_b'
+level 'game_development_type_practice_choices_c'
+level 'game_development_type_practice_choices_a'
+

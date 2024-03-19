@@ -6,12 +6,13 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
+      "pilot_experiment": "spring-2024-k5-pilot",
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "music-intro-elementary",
-    "serialized_at": "2024-02-23 17:43:08 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-03-18 19:58:06 UTC",
+    "published_state": "pilot",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -372,6 +373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_intro_panels_trigger_elementary"
+        ],
         "progression": "Play live"
       },
       "bonus": false,
