@@ -1,4 +1,5 @@
-import ShareDialog from '@cdo/apps/code-studio/components/ShareDialog';
+import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
+import ShareDialog from './dialogs/ShareDialog';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {LabState} from '../lab2Redux';
@@ -8,9 +9,9 @@ import popupWindow from '@cdo/apps/code-studio/popup-window';
 /**
  * Wrapper around ShareDialog that plumbs in the necessary props for a Lab2 project.
  */
-const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
-  shareUrl,
-}) => {
+const Lab2ShareDialogWrapper: React.FunctionComponent<
+  Lab2ShareDialogWrapperProps
+> = ({shareUrl}) => {
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
@@ -28,6 +29,9 @@ const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
   );
   const is13Plus = useSelector(
     (state: {currentUser: {under13: boolean}}) => !state.currentUser.under13
+  );
+  const isOpen = useSelector(
+    (state: {shareDialog: {isOpen: boolean}}) => state.shareDialog.isOpen
   );
 
   // We don't currently support dance party projects in Lab2.
@@ -47,8 +51,16 @@ const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
     return null;
   }
 
+  if (appType === 'music') {
+    if (!isOpen) {
+      return null;
+    }
+
+    return <ShareDialog shareUrl={shareUrl} />;
+  }
+
   return (
-    <ShareDialog
+    <ShareDialogLegacy
       isProjectLevel={isProjectLevel}
       allowSignedOutShare={appType === 'dance'}
       shareUrl={shareUrl}
@@ -67,8 +79,8 @@ const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
   );
 };
 
-interface Lab2ShareDialogProps {
+interface Lab2ShareDialogWrapperProps {
   shareUrl: string;
 }
 
-export default Lab2ShareDialog;
+export default Lab2ShareDialogWrapper;

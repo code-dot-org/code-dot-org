@@ -118,6 +118,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
+      this.getValidationTimeout,
       this.player
     );
 
@@ -271,6 +272,11 @@ class UnconnectedMusicView extends React.Component {
       }
       this.loadCode(codeToLoad);
     }
+
+    Globals.setShowSoundFilters(
+      AppConfig.getValue('show-sound-filters') === 'true' ||
+        levelData.showSoundFilters
+    );
   }
 
   // Load the library and initialize the music player, if not already loaded.
@@ -319,6 +325,21 @@ class UnconnectedMusicView extends React.Component {
 
   getIsPlaying = () => {
     return this.props.isPlaying;
+  };
+
+  getValidationTimeout = () => {
+    // The level can specify a desired timeout, in measures, when we can start showing
+    // non-success validation messages.  That said, if we've just completed playing the
+    // last measure before reaching that specified value, we can start showing the
+    // messages.
+    // If no timeout is specified, then we can starting showing the non-success messages
+    // at measure 2.
+    return this.props.levelData?.validationTimeout
+      ? Math.min(
+          this.props.levelData?.validationTimeout,
+          this.sequencer.getLastMeasure()
+        )
+      : 2;
   };
 
   getPlaybackEvents = () => {
