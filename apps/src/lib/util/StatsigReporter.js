@@ -2,7 +2,6 @@ import logToCloud from '@cdo/apps/logToCloud';
 import {
   getEnvironment,
   isProductionEnvironment,
-  isStagingEnvironment,
   isDevelopmentEnvironment,
 } from '../../utils';
 import Statsig from 'statsig-js';
@@ -12,19 +11,22 @@ const ALWAYS_SEND = false;
 
 class StatsigReporter {
   constructor() {
-    const managed_test_environment = document.querySelector(
+    const api_element = document.querySelector(
+      'script[data-statsig-api-client-key]'
+    );
+    const api_key = api_element ? api_element.dataset.statsigApiClientKey : '';
+    const managed_test_environment_element = document.querySelector(
       'script[data-managed-test-server]'
     );
-    const local_mode =
-      isProductionEnvironment() || managed_test_environment ? false : true;
+    const managed_test_environment = managed_test_environment_element
+      ? managed_test_environment_element.dataset.managedTestServer === 'true'
+      : false;
+    this.local_mode = !(isProductionEnvironment() || managed_test_environment);
     const options = {
       environment: {tier: getEnvironment()},
       network_timeout: 5,
-      local_mode: local_mode,
+      local_mode: this.local_mode,
     };
-    const api_key = document.querySelector(
-      'script[data-statsig-api-client-key]'
-    );
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       Statsig.initialize(api_key, options);
     }
@@ -96,7 +98,7 @@ class StatsigReporter {
     if (alwaysPut) {
       return true;
     }
-    if (isProductionEnvironment() || isStagingEnvironment()) {
+    if (!this.local_mode) {
       return true;
     }
     return false;
