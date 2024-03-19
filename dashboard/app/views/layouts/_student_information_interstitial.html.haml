@@ -6,7 +6,7 @@
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}
         = t('parent_mailer.parent_email_added_subject')
         = t('activerecord.attributes.user.finish_sign_up_header_account_information')
-        = t('age_interstitial.disclaimer')
+        = t('age_interstitial.disclaimer', url: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, markdown: :inline).html_safe
       = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
         .form-group
           %div{style: 'display: flex;'}
@@ -19,7 +19,7 @@
             %div{style: 'display: flex;'}
               = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-title'
               .state-required *
-            = f.select :us_state, User::US_STATE_DROPDOWN_OPTIONS, include_blank: t('school_info.select_state')
+            = f.select :us_state, us_state_options, include_blank: t('school_info.select_state')
             .required-message.state-required= t('activerecord.attributes.user.required')
           .field
             = f.label :gender_student_input, t('gender'), class: 'label-title'

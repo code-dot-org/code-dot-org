@@ -3,6 +3,7 @@ import {
   BlockSvg,
   BlocklyOptions,
   CodeGenerator,
+  Cursor,
   Input,
   Procedures,
   Theme,
@@ -25,6 +26,7 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {
   ObservableParameterModel,
@@ -33,9 +35,10 @@ import {
 import {Abstract} from 'blockly/core/events/events_abstract';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import {IProcedureBlock} from 'blockly/core/procedures';
+import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
+import CdoFieldVariable from './addons/cdoFieldVariable';
 
 export interface BlockDefinition {
   category: string;
@@ -62,6 +65,8 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  getNewCursor: (type: string) => Cursor;
+  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -82,7 +87,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldImageDropdown: typeof CdoFieldImageDropdown;
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
-  JavaScript: typeof javascriptGenerator;
+  FieldBitmap: typeof CdoFieldBitmap;
+  FieldVariable: typeof CdoFieldVariable;
+  JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
   levelBlockIds: string[];
@@ -118,7 +125,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     blockspace: Workspace,
     handler: (e: Abstract) => void
   ) => void;
-  getGenerator: () => typeof javascriptGenerator;
+  getGenerator: () => JavascriptGeneratorType;
   addEmbeddedWorkspace: (workspace: Workspace) => void;
   isEmbeddedWorkspace: (workspace: Workspace) => boolean;
   findEmptyContainerBlock: () => void;
@@ -158,6 +165,7 @@ export interface ExtendedBlockSvg extends BlockSvg {
   thumbnailSize?: number;
   // used for function blocks
   functionalSvg_?: BlockSvgFrame;
+  workspace: ExtendedWorkspaceSvg;
 }
 
 export interface ExtendedInput extends Input {
@@ -206,6 +214,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   editBlocks: string | undefined;
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
+  useBlocklyDynamicCategories: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -277,8 +286,35 @@ export interface ExtendedVariables extends VariablesType {
   getVars: (opt_category?: string) => {[key: string]: string[]};
 }
 
-export interface ProcedureBlock extends Block, IProcedureBlock {
+export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
   userCreated: boolean;
+  getTargetWorkspace_(): Workspace;
+  hasReturn_: boolean;
+  renameProcedure(
+    oldName: string,
+    newName: string,
+    userCreated?: boolean
+  ): void;
+  defType_: string;
+  model_: IProcedureModel;
+  paramsFromSerializedState_: string[];
+  updateArgsMap_: () => void;
+  eventIsCreatingThisBlockDuringPaste_: (event: Abstract) => boolean;
+  defMatches_: (defBlock: ProcedureBlock) => boolean;
+  createDef_: (name: string, params?: string[]) => IProcedureModel;
+  findProcedureModel_: (name: string, params?: string[]) => IProcedureModel;
+  initBlockWithProcedureModel_: () => void;
+  noBlockHasClaimedModel_: (procedureId: string) => boolean;
+  setStatements_: (hasStatements: boolean) => void;
+  deserialize_: (name: string, params: string[]) => void;
+  createArgInputs_: (params: string[]) => void;
+  updateName_: () => void;
+  updateEnabled_: () => void;
+  updateParameters_: () => void;
+  hasStatements_: boolean;
+  description?: string | null;
+  // used for behavior blocks
+  behaviorId?: string | null;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.
@@ -329,3 +365,6 @@ export type PointerMetadataMap = {
 };
 
 export type BlockColor = [number, number, number];
+
+// Blockly defines this as any.
+export type JavascriptGeneratorType = typeof javascriptGenerator;

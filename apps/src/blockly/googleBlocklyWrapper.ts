@@ -6,7 +6,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {NavigationController} from '@blockly/keyboard-navigation';
+import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -18,6 +18,7 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldVariable from './addons/cdoFieldVariable';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
@@ -81,7 +82,7 @@ import {
   GoogleBlocklyInstance,
 } from './types';
 import {FieldProto} from 'blockly/core/field';
-import {Options, Theme} from 'blockly';
+import {Options, Theme, Workspace} from 'blockly';
 
 const options = {
   contextMenu: true,
@@ -93,6 +94,8 @@ plugin.init(options);
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+const MAX_GET_CODE_RETRIES = 2;
+const RETRY_GET_CODE_INTERVAL_MS = 500;
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -184,22 +187,35 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
+    return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
+  };
+
+  const getWorkspaceCodeHelper = (
+    retryCount: number,
+    hiddenWorkspace: Workspace | undefined
+  ): string => {
     let workspaceCode = '';
     try {
       workspaceCode = Blockly.JavaScript.workspaceToCode(
         Blockly.mainBlockSpace
       );
-      if (this.getHiddenDefinitionWorkspace()) {
-        workspaceCode += Blockly.JavaScript.workspaceToCode(
-          this.getHiddenDefinitionWorkspace()
-        );
+      if (hiddenWorkspace) {
+        workspaceCode += Blockly.JavaScript.workspaceToCode(hiddenWorkspace);
       }
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
-      handleCodeGenerationFailure(
-        MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
-        e as Error
-      );
+      if (retryCount < MAX_GET_CODE_RETRIES) {
+        // Sometimes we need to wait for Google Blockly change handlers to complete
+        // before the code will generate correctly. Retry after a short delay.
+        setTimeout(() => {
+          return getWorkspaceCodeHelper(retryCount + 1, hiddenWorkspace);
+        }, RETRY_GET_CODE_INTERVAL_MS);
+      } else {
+        handleCodeGenerationFailure(
+          MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
+          e as Error
+        );
+      }
     }
     return workspaceCode;
   };
@@ -208,6 +224,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
   blocklyWrapper.wrapReadOnlyProperty('applab_locale');
+  blocklyWrapper.wrapReadOnlyProperty('BasicCursor');
   blocklyWrapper.wrapReadOnlyProperty('blockRendering');
   blocklyWrapper.wrapReadOnlyProperty('Block');
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
@@ -226,6 +243,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('createBlockDefinitionsFromJsonArray');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
+  blocklyWrapper.wrapReadOnlyProperty('Cursor');
   blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
@@ -297,6 +315,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    // CdoFieldBitmap extends from a JavaScript class without typing.
+    // We know it's a field, so it's safe to cast as unknown.
+    ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -423,9 +444,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
 
   blocklyWrapper.JavaScript = javascriptGenerator;
+  blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
   blocklyWrapper.navigationController.init();
+  blocklyWrapper.navigationController.cursorType = cdoUtils.getUserCursorType();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -585,7 +608,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
   // read only workspaces.
   blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
-    const theme = cdoUtils.getUserTheme(options.theme as string) as Theme;
+    const theme = cdoUtils.getUserTheme(options.theme as Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
       theme: theme,
@@ -651,7 +674,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
     const options = {
       ...optOptionsExtended,
-      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as string),
+      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as Theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -706,6 +729,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
+    blocklyWrapper.getNewCursor = function (type) {
+      switch (type) {
+        case 'basic':
+          return new blocklyWrapper.BasicCursor();
+        case 'line':
+          return new blocklyWrapper.LineCursor();
+        case 'default':
+        default:
+          return new blocklyWrapper.Cursor();
+      }
+    };
+
     if (!blocklyWrapper.isStartMode && !optOptionsExtended.isBlockEditMode) {
       workspace.addChangeListener(disableOrphans);
     }
@@ -735,16 +770,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     blocklyWrapper.setMainWorkspace(workspace);
 
-    // Same flyout callbacks are used for both main workspace categories
-    // and categories when modal function editor is enabled.
-    workspace.registerToolboxCategoryCallback(
-      'PROCEDURE',
-      functionsFlyoutCategory
-    );
-    workspace.registerToolboxCategoryCallback(
-      'VARIABLE',
-      variablesFlyoutCategory
-    );
+    if (!optOptionsExtended.useBlocklyDynamicCategories) {
+      // Same flyout callbacks are used for both main workspace categories
+      // and categories when modal function editor is enabled.
+      workspace.registerToolboxCategoryCallback(
+        'PROCEDURE',
+        functionsFlyoutCategory
+      );
+      workspace.registerToolboxCategoryCallback(
+        'VARIABLE',
+        variablesFlyoutCategory
+      );
+    }
 
     workspace.registerToolboxCategoryCallback(
       'Behavior',
@@ -754,6 +791,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace =
       new Blockly.Workspace() as ExtendedWorkspace;
+    hiddenDefinitionWorkspace.addChangeListener(disableOrphans);
     // The hidden definition workspace is not rendered, so do not try to add
     // svg frames around the definitions.
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;

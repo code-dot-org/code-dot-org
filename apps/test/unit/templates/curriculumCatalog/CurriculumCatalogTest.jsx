@@ -36,6 +36,8 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sections} from '../studioHomepages/fakeSectionUtils';
+import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 
 describe('CurriculumCatalog', () => {
   const defaultProps = {
@@ -45,6 +47,7 @@ describe('CurriculumCatalog', () => {
     isSignedOut: true,
     isInUS: true,
     isTeacher: false,
+    curriculaTaught: null,
   };
   let store;
 
@@ -648,6 +651,91 @@ describe('CurriculumCatalog', () => {
       fireEvent.click(translatedToggle);
       assert(!translatedToggle.checked);
       assert(replacedLocation.includes('translated=false'));
+    });
+  });
+
+  describe('with recommender test curricula', () => {
+    it('renders image and link of similar recommended curriculum', () => {
+      const props = {...defaultProps, curriculaData: FULL_TEST_COURSES};
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const quickViewButtons = screen.getAllByText('Quick View', {
+        exact: false,
+      });
+
+      for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        const currCurriculum = FULL_TEST_COURSES[i];
+
+        // Get the Similar Recommended Curriculum for the current test curriculum
+        const recommendedSimilarCurriculum = getSimilarRecommendations(
+          FULL_TEST_COURSES,
+          currCurriculum.key,
+          null
+        )[0];
+
+        // Open expanded card of the current test curriculum
+        fireEvent.click(quickViewButtons[i]);
+        screen.getByText(currCurriculum.description);
+
+        // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
+        // Image's alt text is the curriculum's display name.
+        screen.getByAltText(recommendedSimilarCurriculum.display_name);
+
+        assert(
+          document
+            .querySelector('#similarCurriculumButton')
+            .innerHTML.includes(recommendedSimilarCurriculum.display_name)
+        );
+      }
+    });
+
+    it('does not recommend similar curriculum the user has already taught', () => {
+      // fullTestCourse5 is the top-ranked similar curriculum for 2 other curricula
+      const curriculaTaughtBefore = [FULL_TEST_COURSES[4].course_offering_id];
+      const props = {
+        ...defaultProps,
+        curriculaData: FULL_TEST_COURSES,
+        curriculaTaught: curriculaTaughtBefore,
+      };
+      render(
+        <Provider store={store}>
+          <CurriculumCatalog {...props} />
+        </Provider>
+      );
+      const quickViewButtons = screen.getAllByText('Quick View', {
+        exact: false,
+      });
+
+      for (let i = 0; i < FULL_TEST_COURSES.length; i++) {
+        const currCurriculum = FULL_TEST_COURSES[i];
+
+        // Get the Similar Recommended Curriculum for the current test curriculum
+        const recommendedSimilarCurriculum = getSimilarRecommendations(
+          FULL_TEST_COURSES,
+          currCurriculum.key,
+          curriculaTaughtBefore
+        )[0];
+
+        // Open expanded card of the current test curriculum
+        fireEvent.click(quickViewButtons[i]);
+        screen.getByText(currCurriculum.description);
+
+        // Ensure none of the recommendations are ones the user has taught before
+        assert(
+          curriculaTaughtBefore[0].key !== recommendedSimilarCurriculum.key
+        );
+
+        // Image's alt text is the curriculum's display name.
+        screen.getByAltText(recommendedSimilarCurriculum.display_name);
+        assert(
+          document
+            .querySelector('#similarCurriculumButton')
+            .innerHTML.includes(recommendedSimilarCurriculum.display_name)
+        );
+      }
     });
   });
 });

@@ -5,10 +5,6 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
-    if Pd::Enrollment.for_user(current_user).empty? && Plc::UserCourseEnrollment.where(user: current_user).empty?
-      redirect_to CDO.code_org_url('educate/professional-learning', CDO.default_scheme)
-      return
-    end
 
     enrollments_with_pending_surveys = Pd::Enrollment.filter_for_survey_completion(
       Pd::Enrollment.for_user(current_user).with_surveys,

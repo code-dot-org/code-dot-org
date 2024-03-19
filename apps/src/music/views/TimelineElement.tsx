@@ -15,6 +15,7 @@ const typeToColorClass: {[key in SoundType | PlaybackEvent['type']]?: string} =
     bass: moduleStyles.timelineElementBlue,
     lead: moduleStyles.timelineElementGreen,
     fx: moduleStyles.timelineElementYellow,
+    vocal: moduleStyles.timelineElementOrange,
     pattern: moduleStyles.timelineElementPattern,
     chord: moduleStyles.timelineElementChord,
   };

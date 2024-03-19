@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import color from '@cdo/apps/util/color';
 
 export const ITEM_TYPE = Object.freeze({
@@ -6,7 +7,7 @@ export const ITEM_TYPE = Object.freeze({
   VIEWED: 2,
   NEEDS_FEEDBACK: 3,
   FEEDBACK_GIVEN: 4,
-  ASSESSMENT_LEVEL: ['star', color.neutral_dark],
+  ASSESSMENT_LEVEL: ['star', color.neutral_dark60],
   CHOICE_LEVEL: ['split', color.neutral_dark60],
   KEEP_WORKING: ['rotate-left', color.neutral_dark],
   NO_ONLINE_WORK: ['dash', color.neutral_dark],
