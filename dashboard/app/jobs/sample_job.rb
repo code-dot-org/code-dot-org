@@ -1,9 +1,9 @@
-# This is a sample job handy for exercising the queue locally From
-# dashboard-console, enqueue via SampleJob.perform_later('world') By default
-# you'll be using the 'async' adapter, which will run the job immediately If you
-# want to test the job with the 'delayed_job' adapter, you can do so by editing
-# "dashboard/config/environments/development.rb". See comments near
-# `config.active_job.queue_adapter` for more detail.
+# This is a sample job handy for exercising the queue locally from
+# dashboard-console, enqueue via `SampleJob.perform_later('world')`.
+# By default you'll be using the 'async' adapter, which will run the job
+# immediately If you want to test the job with the 'delayed_job' adapter, you
+# can do so by editing "dashboard/config/environments/development.rb". See
+# comments near `config.active_job.queue_adapter` for more detail.
 
 class SampleJob < ApplicationJob
   queue_as :default
