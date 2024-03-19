@@ -117,6 +117,10 @@ h6,
   margin-bottom: 0.5em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
 p {
   line-height: 1.48;
   margin-bottom: 1em;
