@@ -2,37 +2,35 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode, viewAnimationJson} from './actions';
-import {startInAnimationTab} from './stateQueries';
-import {P5LabInterfaceMode, APP_WIDTH} from './constants';
+
+import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {TestResults, ResultType} from '@cdo/apps/constants';
 import {
-  SpritelabReservedWords,
-  valueTypeTabShapeMap,
-} from './spritelab/constants';
-import {TOOLBOX_EDIT_MODE} from '../constants';
-import experiments from '@cdo/apps/util/experiments';
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel,
+} from '@cdo/apps/containedLevels';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
-import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var apiJavascript = require('./gamelab/apiJavascript');
-var consoleApi = require('@cdo/apps/consoleApi');
-var utils = require('@cdo/apps/utils');
-var dropletConfig = require('./gamelab/dropletConfig');
-var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
-var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var P5Wrapper = require('./P5Wrapper');
-var p5SpriteWrapper = require('./P5SpriteWrapper');
-var p5GroupWrapper = require('./P5GroupWrapper');
-var gamelabCommands = require('./gamelab/commands');
-import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
-var dom = require('@cdo/apps/dom');
-import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {getStore} from '@cdo/apps/redux';
+import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
+import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
+import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
+import experiments from '@cdo/apps/util/experiments';
+
+import {TOOLBOX_EDIT_MODE} from '../constants';
+
+import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   allAnimationsSingleFrameSelector,
   setInitialAnimationList,
@@ -40,24 +38,38 @@ import {
   withAbsoluteSourceUrls,
 } from './redux/animationList';
 import {getSerializedAnimationList} from './shapes';
-import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
-var reducers = require('./reducers');
-var P5LabView = require('./P5LabView');
-var Provider = require('react-redux').Provider;
-import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
-  getContainedLevelResultInfo,
-  postContainedLevelAttempt,
-  runAfterPostContainedLevel,
-} from '@cdo/apps/containedLevels';
-import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+  SpritelabReservedWords,
+  valueTypeTabShapeMap,
+} from './spritelab/constants';
+import {startInAnimationTab} from './stateQueries';
+
+var Provider = require('react-redux').Provider;
+
+var consoleApi = require('@cdo/apps/consoleApi');
+var dom = require('@cdo/apps/dom');
+var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
+var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+var utils = require('@cdo/apps/utils');
+
+var apiJavascript = require('./gamelab/apiJavascript');
+var gamelabCommands = require('./gamelab/commands');
+var dropletConfig = require('./gamelab/dropletConfig');
+var p5GroupWrapper = require('./P5GroupWrapper');
+var P5LabView = require('./P5LabView');
+var p5SpriteWrapper = require('./P5SpriteWrapper');
+var P5Wrapper = require('./P5Wrapper');
+var reducers = require('./reducers');
+
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
+
 import {addConsoleMessage, clearConsole} from './redux/textConsole';
+
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
-import {TestResults, ResultType} from '@cdo/apps/constants';
-import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
+
 import wrap from './gamelab/debugger/replay';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   clearMarks,
@@ -66,9 +78,10 @@ import {
   mark,
   measure,
 } from '@cdo/apps/util/performance';
+
 import MobileControls from './gamelab/MobileControls';
 import Exporter from './gamelab/Exporter';
-import project from '@cdo/apps/code-studio/initApp/project';
+
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';

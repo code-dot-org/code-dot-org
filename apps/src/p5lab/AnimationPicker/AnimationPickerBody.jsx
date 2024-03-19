@@ -1,24 +1,28 @@
 /** Body of the animation picker dialog */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import msg from '@cdo/locale';
-import ScrollableList from '../AnimationTab/ScrollableList.jsx';
-import * as dialogStyles from './styles';
-import AnimationPickerListItem, {
-  getCategory,
-} from './AnimationPickerListItem.jsx';
-import SearchBar from '@cdo/apps/templates/SearchBar';
+
 import {
   searchAssets,
   filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
-import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import Button from '@cdo/apps/templates/Button';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import color from '@cdo/apps/util/color';
+import msg from '@cdo/locale';
+
+import ScrollableList from '../AnimationTab/ScrollableList.jsx';
+
 import {PICKER_TYPE} from './AnimationPicker.jsx';
-import style from './animation-picker-body.module.scss';
+import AnimationPickerListItem, {
+  getCategory,
+} from './AnimationPickerListItem.jsx';
 import AnimationUploadButton from './AnimationUploadButton.jsx';
+import * as dialogStyles from './styles';
+
+import style from './animation-picker-body.module.scss';
 
 const MAX_SEARCH_RESULTS = 40;
 const LEVEL_COSTUMES = 'level_costumes';

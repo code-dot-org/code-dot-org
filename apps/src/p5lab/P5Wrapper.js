@@ -1,11 +1,14 @@
-import {getStore} from '@cdo/apps/redux';
-import {allAnimationsSingleFrameSelector} from './redux/animationList';
 import p5 from '@code-dot-org/p5';
+
+import {getStore} from '@cdo/apps/redux';
+
+import {allAnimationsSingleFrameSelector} from './redux/animationList';
 window.p5 = p5;
 import '@code-dot-org/p5.play/lib/p5.play';
 import p5SpriteWrapper from './P5SpriteWrapper';
 import p5GroupWrapper from './P5GroupWrapper';
 import {backgrounds} from './spritelab/backgrounds.json';
+
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
