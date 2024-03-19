@@ -93,13 +93,23 @@ module Services
       return ::User::TYPE_STUDENT
     end
 
-    def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
+    def self.initialize_lti_user_from_nrps(client_id:, issuer:, nrps_member:)
       nrps_member_message = Policies::Lti.issuer_accepts_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
+      email_address = get_claim(nrps_member_message, :email)
+      account_type = Policies::Lti.get_account_type(nrps_member[:roles])
+
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
-      user.user_type = ::User::TYPE_STUDENT
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
-      user.family_name = get_claim(nrps_member_message, :family_name)
+
+      if account_type == ::User::TYPE_TEACHER && email_address.present?
+        user.user_type = ::User::TYPE_TEACHER
+        user.update_primary_contact_info(new_email: email_address, new_hashed_email: ::User.hash_email(email_address))
+      else
+        user.user_type = ::User::TYPE_STUDENT
+        user.family_name = get_claim(nrps_member_message, :family_name)
+      end
+
       id_token = {
         sub: nrps_member[:user_id],
         aud: client_id,
@@ -108,7 +118,7 @@ module Services
       ao = AuthenticationOption.new(
         authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
         credential_type: AuthenticationOption::LTI_V1,
-        email: get_claim(nrps_member_message, :email),
+        email: email_address,
         )
       user.authentication_options = [ao]
       # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
@@ -160,22 +170,32 @@ module Services
       had_changes = false
       client_id = lti_integration.client_id
       issuer = lti_integration.issuer
+      section = lti_section.section
+
       current_students = nrps_members.map do |nrps_member|
-        student = Queries::Lti.get_user_from_nrps(
+        account_type = Policies::Lti.get_account_type(nrps_member[:roles])
+
+        user = Queries::Lti.get_user_from_nrps(
           client_id: client_id,
           issuer: issuer,
           nrps_member: nrps_member
         )
-        student ||= initialize_lti_student_from_nrps(
+        user ||= initialize_lti_user_from_nrps(
           client_id: client_id,
           issuer: issuer,
           nrps_member: nrps_member
         )
-        had_changes ||= (student.new_record? || student.changed?)
-        student.save!
-        add_student_result = lti_section.section.add_student(student)
-        had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
-        student
+        had_changes ||= (user.new_record? || user.changed?)
+        user.save!
+        if account_type == ::User::TYPE_STUDENT
+          section.remove_instructor(user)
+          add_student_result = section.add_student(user)
+          had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
+        else
+          add_instructor_result = section.add_instructor(user)
+          had_changes ||= add_instructor_result
+        end
+        user
       end
 
       # Prune students who have been removed from the section in the LMS

@@ -248,17 +248,7 @@ class Section < ApplicationRecord
   def ensure_owner_is_active_instructor
     return if user.blank?
 
-    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
-    if si.blank?
-      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
-    elsif si.deleted?
-      si.restore
-      si.status = :active
-      si.save!
-    elsif si.status != 'active'
-      si.status = :active
-      si.save!
-    end
+    add_instructor(user)
   end
 
   # return a version of self.students in which all students' names are
@@ -578,7 +568,36 @@ class Section < ApplicationRecord
   end
   before_validation :strip_emoji_from_name
 
-  public def add_instructor(email, current_user)
+  # Adds an instructor to the section
+  # If the instructor was previously deleted, restore the instructor
+  # If the instructor was invited or inactive, reactive the instructor
+  # If the instructor did not previously exist, create the section instructor relationship
+  # Returns true if the instructor could be added, false otherwise
+  public def add_instructor(user)
+    return false unless user.teacher?
+
+    Follower.find_by(section: self, student_user: user)&.destroy
+
+    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
+    if si.blank?
+      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
+    elsif si.deleted?
+      si.restore
+      si.status = :active
+      si.save!
+    elsif si.status != 'active'
+      si.status = :active
+      si.save!
+    end
+
+    true
+  end
+
+  public def remove_instructor(user)
+    SectionInstructor.find_by(instructor: user, section_id: id)&.destroy
+  end
+
+  public def invite_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
     raise ArgumentError.new('inviting self') if instructor == current_user
 
