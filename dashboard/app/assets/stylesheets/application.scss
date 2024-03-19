@@ -4085,6 +4085,12 @@ a {
   }
 }
 
+#teacher-dashboard::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #lti-integration-portal {
   $signup-info-background: #f7f7f7;
   $signup-info-border-color: #e5e5e5;
