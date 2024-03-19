@@ -24,6 +24,7 @@ import {getStore} from '@cdo/apps/redux';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
+import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import experiments from '@cdo/apps/util/experiments';
 
 import {TOOLBOX_EDIT_MODE} from '../constants';
@@ -43,6 +44,8 @@ import {
 } from './spritelab/constants';
 import {startInAnimationTab} from './stateQueries';
 
+var Provider = require('react-redux').Provider;
+
 var consoleApi = require('@cdo/apps/consoleApi');
 var dom = require('@cdo/apps/dom');
 var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
@@ -56,13 +59,8 @@ var p5GroupWrapper = require('./P5GroupWrapper');
 var P5LabView = require('./P5LabView');
 var p5SpriteWrapper = require('./P5SpriteWrapper');
 var P5Wrapper = require('./P5Wrapper');
-
-
 var reducers = require('./reducers');
 
-var Provider = require('react-redux').Provider;
-
-import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
 
 import {addConsoleMessage, clearConsole} from './redux/textConsole';
