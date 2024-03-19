@@ -2,7 +2,7 @@
 import {combineReducers} from 'redux';
 import $ from 'jquery';
 import _ from 'lodash';
-import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
+import {Galleries} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
@@ -453,7 +453,7 @@ export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+      url: `/api/v1/projects/gallery/public/all`,
       dataType: 'json',
     }).done(projectLists => {
       dispatch(setProjectLists(projectLists));

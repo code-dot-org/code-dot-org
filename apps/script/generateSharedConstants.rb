@@ -99,6 +99,7 @@ def main
     AI_TUTOR_INTERACTION_SAVE_STATUS
     AI_TUTOR_TYPES
     FEATURED_PROJECT_STATUS
+    FEATURED_PROJECT_CONSTANTS
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
