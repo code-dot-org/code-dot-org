@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-03-08 22:53:26 UTC",
+    "serialized_at": "2024-03-18 23:59:53 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -66,9 +66,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How can AI assist in during the initial stages of the programming process, and what ethical considerations should be noted?**\n\nThis lesson engages students in using AI to kick-start their programming projects through brainstorming, refining problem statements, selecting suitable libraries, and generating pseudocode. Throughout each activity, students will document their process and engage in thoughtful discussions on the ethical considerations of employing AI in the creative and problem-solving aspects of coding, focusing on topics like privacy, originality, and the balance between AI assistance and personal creativity. Through these activities and reflections, students will develop value statements concerning the role of AI in initiating programming projects, fostering a balanced understanding of AI's potential and limitations in the software development process.",
+        "overview": "**How can AI assist during the initial stages of the programming process, and what ethical considerations should be noted?**\n\nThis lesson engages students in using AI to kick-start their programming projects through brainstorming, refining problem statements, selecting suitable libraries, and generating pseudocode. Throughout each activity, students will document their process and engage in thoughtful discussions on the ethical considerations of employing AI in the creative and problem-solving aspects of coding, focusing on topics like privacy, originality, and the balance between AI assistance and personal creativity. Through these activities and reflections, students will develop value statements concerning the role of AI in initiating programming projects, fostering a balanced understanding of AI's potential and limitations in the software development process.",
         "preparation": "* Determine which version of the Digital Journal your students will need to use based on if you are teaching all five lessons or just this individual lesson.\n* Print copies of the following activity guides:\n   * AI-Assisted Program Prep Strategies (one for each pair of students)\n   * My Coding with AI Values (one for each student)\n   * Reflection Stations (one for each student)",
-        "student_overview": "**How can AI assist in during the initial stages of the programming process, and what ethical considerations should be noted?**\n\nIn this lesson, you'll use AI tools for project ideation and pseudocode drafting, while discussing the ethical implications of AI in creativity. Through reflection, you'll establish your own value statements for employing AI in your programming journey."
+        "student_overview": "**How can AI assist during the initial stages of the programming process, and what ethical considerations should be noted?**\n\nIn this lesson, you'll use AI tools for project ideation and pseudocode drafting, while discussing the ethical implications of AI in creativity. Through reflection, you'll establish your own value statements for employing AI in your programming journey."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -275,6 +275,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "key": "0863588c-b28c-40fe-9571-96761bcad61e",
+      "position": 6,
+      "properties": {
+        "name": "Optional Strategy"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0863588c-b28c-40fe-9571-96761bcad61e",
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "coding-with-ai"
@@ -1260,6 +1273,17 @@
       }
     },
     {
+      "key": "d4821426-e9a5-4ea4-bd31-8e5a6c9f9929",
+      "position": 18,
+      "properties": {
+        "name": "[Optional Additional Reflection Questions]"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4821426-e9a5-4ea4-bd31-8e5a6c9f9929",
+        "lesson_activity.key": "4de954ae-dc51-45ad-83fd-4591668ab651"
+      }
+    },
+    {
       "key": "01048f79-37d9-4a51-8cd9-884d7099ec88",
       "position": 1,
       "properties": {
@@ -1360,6 +1384,16 @@
       "seeding_key": {
         "activity_section.key": "b13e9138-df8a-402c-bad0-5a6476f945aa",
         "lesson_activity.key": "269bd526-267b-4e9b-a683-48fcd467a726"
+      }
+    },
+    {
+      "key": "d64dc648-e2d7-4f6b-8310-e62e7c50d73e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d64dc648-e2d7-4f6b-8310-e62e7c50d73e",
+        "lesson_activity.key": "0863588c-b28c-40fe-9571-96761bcad61e"
       }
     },
     {
