@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-14T21:49:35.000Z",
   "level_num": "custom",
@@ -72,13 +71,11 @@
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
     "long_instructions": "**Practice:** ",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-14T21:49:35.504+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world4\\\"\"],\"cloned_from\":\"game_meachaics_world4\"},{\"changed_at\":\"2024-03-14 22:22:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:26:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:27:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:28:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:29:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:40:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:40:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:50:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:50:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:51:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:55:50 +0000\",\"changed\":[\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-14T21:49:35.504+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world4\\\"\"],\"cloned_from\":\"game_meachaics_world4\"},{\"changed_at\":\"2024-03-14 22:22:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:26:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:27:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:28:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:29:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:40:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:40:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:50:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:50:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:51:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-14 22:55:50 +0000\",\"changed\":[\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-18 18:23:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-18 18:25:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -90,19 +87,15 @@
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"background_landscape_21"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeSpritesGrid">
                   <field name="ANIMATION_NAME">"ground_stone"</field>
-                  <value name="LOCATION">
-                    <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":297,"y":333}</field>
-                    </block>
-                  </value>
+                  <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"ground_grass"</field>
+                      <field name="ANIMATION_NAME">"ground_stone"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":215,"y":313}</field>
+                          <field name="LOCATION">{"x":297,"y":333}</field>
                         </block>
                       </value>
                       <next>
@@ -110,43 +103,47 @@
                           <field name="ANIMATION_NAME">"ground_stone"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":136,"y":279}</field>
+                              <field name="LOCATION">{"x":305,"y":102}</field>
                             </block>
                           </value>
                           <next>
                             <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"ground_grass"</field>
+                              <field name="ANIMATION_NAME">"ground_stone"</field>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":65,"y":252}</field>
+                                  <field name="LOCATION">{"x":125,"y":281}</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"ground_grass"</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":183,"y":177}</field>
+                                <block type="GameDev_setGroup">
+                                  <field name="GROUP">"walls"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"ground_stone"</field>
                                     </block>
                                   </value>
                                   <next>
                                     <block type="gamelab_makeNewSpriteAnon">
-                                      <field name="ANIMATION_NAME">"ground_stone"</field>
+                                      <field name="ANIMATION_NAME">"ground_grass"</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":315,"y":120}</field>
+                                          <field name="LOCATION">{"x":206,"y":307}</field>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="gamelab_makeSpritesGrid">
-                                          <field name="ANIMATION_NAME">"ground_stone"</field>
-                                          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
+                                        <block type="gamelab_makeNewSpriteAnon">
+                                          <field name="ANIMATION_NAME">"ground_grass"</field>
+                                          <value name="LOCATION">
+                                            <block type="gamelab_location_picker">
+                                              <field name="LOCATION">{"x":42,"y":219}</field>
+                                            </block>
+                                          </value>
                                           <next>
-                                            <block type="GameDev_setGroup">
-                                              <field name="GROUP">"walls"</field>
-                                              <value name="SPRITE">
-                                                <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"ground_stone"</field>
+                                            <block type="gamelab_makeNewSpriteAnon">
+                                              <field name="ANIMATION_NAME">"ground_grass"</field>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_location_picker">
+                                                  <field name="LOCATION">{"x":179,"y":166}</field>
                                                 </block>
                                               </value>
                                               <next>
@@ -162,7 +159,7 @@
                                                       <field name="ANIMATION_NAME">"alien_10"</field>
                                                       <value name="LOCATION">
                                                         <block type="gamelab_location_picker">
-                                                          <field name="LOCATION">{"x":313,"y":85}</field>
+                                                          <field name="LOCATION">{"x":309,"y":70}</field>
                                                         </block>
                                                       </value>
                                                       <next>
@@ -214,7 +211,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_keyPressed" x="365" y="482">
+        <block type="gamelab_keyPressed" x="19" y="832">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
           <next>
