@@ -14,6 +14,8 @@ import {
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import {getRosterSyncErrorMessage} from './LtiSectionSyncDialogHelpers';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // This dialog is shown to the teacher whenever they have requested Code.org to
 // import/sync the teacher's sections and students managed by their LMS.
@@ -21,6 +23,7 @@ export default function LtiSectionSyncDialog({
   syncResult,
   onClose,
   disableRosterSyncButtonEnabled,
+  lmsType,
 }: LtiSectionSyncDialogProps) {
   const initialView = syncResult.error ? SubView.ERROR : SubView.SYNC_RESULT;
   const [currentView, setCurrentView] = useState<SubView>(initialView);
@@ -56,6 +59,14 @@ export default function LtiSectionSyncDialog({
   };
 
   const disableRosterSyncView = () => {
+    const eventPayload = {
+      lms_type: lmsType,
+    };
+    analyticsReporter.sendEvent(
+      'lti_opt_out_dialogue',
+      eventPayload,
+      PLATFORMS.STATSIG
+    );
     return (
       <div data-testid={'disable-roster-sync'}>
         <div>
@@ -80,11 +91,29 @@ export default function LtiSectionSyncDialog({
     return $.post({
       url: `/api/v1/users/disable_lti_roster_sync`,
       success: () => {
+        const eventPayload = {
+          lms_type: lmsType,
+        };
+        analyticsReporter.sendEvent(
+          'lti_opt_out_confirm',
+          eventPayload,
+          PLATFORMS.STATSIG
+        );
         handleClose();
       },
     });
   };
 
+  const handleDocsClick = () => {
+    const eventPayload = {
+      lms_type: lmsType,
+    };
+    analyticsReporter.sendEvent(
+      'lti_opt_out_documentation',
+      eventPayload,
+      PLATFORMS.STATSIG
+    );
+  };
   /**
    * Displays a summary of the changes after a successful sync with the LMS
    * @param syncResult
@@ -122,7 +151,9 @@ export default function LtiSectionSyncDialog({
           <h2 style={styles.dialogHeader} id={'roster-sync-status'}>
             {dialogTitle}
           </h2>
-          <SafeMarkdown markdown={dialogDescription} />
+          <div onClick={handleDocsClick}>
+            <SafeMarkdown markdown={dialogDescription} />
+          </div>
           <ul aria-labelledby={'roster-sync-status'}> {sectionListItems} </ul>
         </div>
         <DialogFooter rightAlign={!disableRosterSyncButtonEnabled}>
@@ -198,4 +229,5 @@ LtiSectionSyncDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   syncResult: LtiSectionSyncResultShape.isRequired,
   onClose: PropTypes.func,
+  lmsType: PropTypes.string.isRequired,
 };

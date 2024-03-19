@@ -16,6 +16,11 @@ class Queries::Lti
     LtiIntegration.find_by(issuer: issuer, client_id: client_id)
   end
 
+  def self.get_lms_name_from_user(user)
+    return nil unless Policies::Lti.lti? user
+    user.lti_user_identities.first.lti_integration&.platform_name
+  end
+
   def self.get_user_from_nrps(client_id:, issuer:, nrps_member:)
     id_token = {
       sub: nrps_member[:user_id],

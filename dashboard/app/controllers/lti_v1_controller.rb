@@ -85,7 +85,9 @@ class LtiV1Controller < ApplicationController
     return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
-
+    # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
+    # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
+    # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
     integration = read_cache(integration_cache_key) || LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
     return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
     # Cache integration for fast retrieval on subsequent LTI launches. Set
@@ -296,7 +298,21 @@ class LtiV1Controller < ApplicationController
       had_changes ||= !result[:changed].empty?
     end
 
+    metadata = {
+      'number_of_sections' => total_sections,
+      'number_of_students' => total_students,
+    }
+    # If section code present, this is a sync from the teacher dashboard by button, otherwise it's a sync
+    # by LTI launch
+    event_name = params[:section_code] ? 'lti_section_update_by_button' : 'lti_section_update_by_launch'
+    Metrics::Events.log_event(
+      user: current_user,
+      event_name: event_name,
+      metadata: metadata,
+    )
+
     @lti_section_sync_result = result
+    @lms_type = lti_integration.platform_name
 
     respond_to do |format|
       format.html do
