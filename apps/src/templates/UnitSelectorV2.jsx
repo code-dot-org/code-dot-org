@@ -1,11 +1,15 @@
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import React from 'react';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  setScriptId,
+  asyncLoadCoursesWithProgress,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../lib/util/firehose';
 
 const recordEvent = (eventName, sectionId, dataJson = {}) => {
@@ -29,7 +33,14 @@ function UnitSelectorV2({
   coursesWithProgress,
   className,
   setScriptId,
+  asyncLoadCoursesWithProgress,
+  isLoadingCourses,
 }) {
+  React.useEffect(() => {
+    console.log('lfm', 'UnitSelectorV2 useEffect');
+    asyncLoadCoursesWithProgress();
+  }, [asyncLoadCoursesWithProgress]);
+
   const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
     e => {
@@ -59,7 +70,22 @@ function UnitSelectorV2({
     })),
   }));
 
-  return (
+  const loadingDropdown = () => (
+    <SimpleDropdown
+      items={[{value: 'loading', text: 'Loading...'}]}
+      selectedValue="loading"
+      name="unitSelector"
+      onChange={onSelectUnit}
+      className={classNames(className)}
+      isLabelVisible={false}
+      size="s"
+      disabled={true}
+    />
+  );
+
+  return isLoadingCourses ? (
+    loadingDropdown()
+  ) : (
     <SimpleDropdown
       itemGroups={itemGroups}
       selectedValue={unitId}
@@ -78,6 +104,8 @@ UnitSelectorV2.propTypes = {
   coursesWithProgress: PropTypes.array.isRequired,
   setScriptId: PropTypes.func.isRequired,
   className: PropTypes.string,
+  asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
+  isLoadingCourses: PropTypes.bool,
 };
 
 export default connect(
@@ -85,10 +113,14 @@ export default connect(
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
+    isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
   }),
   dispatch => ({
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
+    },
+    asyncLoadCoursesWithProgress() {
+      dispatch(asyncLoadCoursesWithProgress());
     },
   })
 )(UnitSelectorV2);

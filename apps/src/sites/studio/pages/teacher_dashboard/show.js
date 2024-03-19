@@ -39,7 +39,6 @@ const {
   sections,
   localeCode,
   hasSeenStandardsReportInfo,
-  coursesWithProgress,
   canViewStudentAIChatMessages,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -68,8 +67,6 @@ $(document).ready(function () {
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setLocaleCode(localeCode));
 
-  console.log('lfm', section);
-
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
@@ -82,16 +79,6 @@ $(document).ready(function () {
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
-  // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-  const reorderedCourses = [
-    ...coursesWithProgress.filter(
-      course => course.id !== section.course_version_id
-    ),
-    ...coursesWithProgress.filter(
-      course => course.id === section.course_version_id
-    ),
-  ].reverse();
-  store.dispatch(setCoursesWithProgress(reorderedCourses));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
@@ -109,7 +96,7 @@ $(document).ready(function () {
               section
               studentCount={section.students.length}
               isSectionAssignedCurriculum={
-                section.course_offering_id && section.course_version_id
+                !!section.course_offering_id && !!section.course_version_id
               }
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(

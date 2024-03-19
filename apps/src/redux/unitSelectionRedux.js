@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 // Reducer for script selection in teacher dashboard.
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.
@@ -6,11 +8,22 @@
 export const SET_SCRIPT = 'unitSelection/SET_SCRIPT';
 export const SET_COURSES = 'unitSelection/SET_COURSES';
 
+export const START_LOADING_COURSES = 'unitSelection/START_LOADING_COURSES';
+export const FINISHED_LOADING_COURSES =
+  'unitSelection/FINISHED_LOADING_COURSES';
+
 // Action creators
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
 export const setCoursesWithProgress = coursesWithProgress => ({
   type: SET_COURSES,
   coursesWithProgress,
+});
+
+export const startLoadingCoursesWithProgress = () => ({
+  type: START_LOADING_COURSES,
+});
+export const finishedLoadingCoursesWithProgress = () => ({
+  type: FINISHED_LOADING_COURSES,
 });
 
 // Selectors
@@ -48,10 +61,53 @@ export const doesCurrentCourseUseFeedback = state => {
   return !!getSelectedUnit(state)?.is_feedback_enabled;
 };
 
+export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
+  const state = getState();
+  const selectedSection =
+    state.teacherSections.sections[state.teacherSections.selectedSectionId];
+  dispatch(startLoadingCoursesWithProgress());
+  fetchJSON(`/dashboardapi/section_courses/${selectedSection.id}`)
+    .then(coursesWithProgress => {
+      // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
+      const reorderedCourses = [
+        ...coursesWithProgress.filter(
+          course => course.id !== selectedSection.course_version_id
+        ),
+        ...coursesWithProgress.filter(
+          course => course.id === selectedSection.course_version_id
+        ),
+      ].reverse();
+      dispatch(setCoursesWithProgress(reorderedCourses));
+      dispatch(finishedLoadingCoursesWithProgress());
+    })
+    .catch(err => {
+      console.error(err.message);
+      dispatch(finishedLoadingCoursesWithProgress());
+    });
+};
+
+function fetchJSON(url, params) {
+  return new Promise((resolve, reject) => {
+    $.getJSON(url, params)
+      .done(resolve)
+      .fail(jqxhr =>
+        reject(
+          new Error(`
+        url: ${url}
+        status: ${jqxhr.status}
+        statusText: ${jqxhr.statusText}
+        responseText: ${jqxhr.responseText}
+      `)
+        )
+      );
+  });
+}
+
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
   coursesWithProgress: [],
+  isLoadingCoursesWithProgress: false,
 };
 
 export default function unitSelection(state = initialState, action) {
@@ -71,6 +127,20 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
+    };
+  }
+
+  if (action.type === START_LOADING_COURSES) {
+    return {
+      ...state,
+      isLoadingCoursesWithProgress: true,
+    };
+  }
+
+  if (action.type === FINISHED_LOADING_COURSES) {
+    return {
+      ...state,
+      isLoadingCoursesWithProgress: false,
     };
   }
 
