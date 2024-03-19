@@ -33,6 +33,9 @@
 
       & h4.heading-md {
         margin: 0;
+        font-family: $barlowSemiCondensed-medium;
+        font-size: 1.5rem;
+        line-height: 1.3rem;
       }
     }
 
@@ -46,11 +49,20 @@
       }
 
       & a {
-        color: $link_color;
-        text-decoration: none;
+        &#share-more {
+          @include button-with-color($brand_secondary_default);
 
-        &:hover, &:focus {
-          text-decoration: underline;
+          border: none;
+          border-radius: 4px;
+          display: table;
+          text-decoration: none;
+          height: auto;
+          margin: auto;
+          padding: 8px 14px;
+
+          &:hover, &:disabled {
+            background-color: $brand_secondary_dark;
+          }
         }
       }
     }
@@ -60,8 +72,11 @@
       border: none;
       border-top: $border-line;
       padding: 0;
-      padding-top: $indent;
       margin-top: $indent;
+
+      &:not(:empty) {
+        padding-top: $indent;
+      }
 
       & input[type="button"], input[type="submit"] {
         @include button-with-color($brand_secondary_default);

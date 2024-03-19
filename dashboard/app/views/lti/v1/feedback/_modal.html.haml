@@ -22,11 +22,12 @@
     .modal-header
       %h4.heading-md= t('lti.feedback.modal.provided.title')
     .modal-body
-      %p= t('lti.feedback.modal.provided.additional_feedback')
-      %br
-      != t('lti.feedback.modal.provided.additional_feedback_link', url: SharedConstants::LMS_LINKS.ADDITIONAL_FEEDBACK_URL, markdown: true)
+      %p= t('lti.feedback.modal.provided.share_more_request')
+      %a#share-more{href: SharedConstants::LMS_LINKS.ADDITIONAL_FEEDBACK_URL, target: '_blank', role: 'button'}
+        = t('lti.feedback.modal.provided.share_more_button')
+        &nbsp;
+        %i.fa.fa-external-link
     .modal-footer
-      %input{type: 'button', value: t('to_close'), data: {dismiss: 'modal'}}
 
   = javascript_include_tag webpack_asset_path('js/lti/v1/feedback/_modal.js'),
                            data: {modalSelector: JSON.dump('#lti-feedback-modal'),

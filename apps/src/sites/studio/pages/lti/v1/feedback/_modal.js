@@ -8,6 +8,7 @@ class LtiFeedbackModalHandler {
   constructor(modalSelector, userKey) {
     this.modal = $(modalSelector);
     this.form = this.modal.find('form');
+    this.shareMoreButton = this.modal.find('#share-more');
     this.modalKey = `lti-fm-${userKey}`;
 
     this.init();
@@ -20,9 +21,14 @@ class LtiFeedbackModalHandler {
       this.modal.modal('show');
     }
 
+    this.shareMoreButton.on('click', () => this.onShareMore());
     this.modal.on('hidden', () => this.onClose());
     this.form.on('ajax:success', () => this.onSuccess());
     this.form.on('ajax:error', (event, xhr) => this.onError(xhr));
+  }
+
+  onShareMore() {
+    this.modal.modal('hide');
   }
 
   onClose() {

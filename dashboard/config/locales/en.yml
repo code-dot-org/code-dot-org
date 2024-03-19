@@ -1440,8 +1440,11 @@ en:
         satisfaction_level: How would you rate your experience with the Code.org LMS integration?
         provided:
           title: Thank you for your feedback! Can you tell us more?
-          additional_feedback: Your feedback is important to us. Are you open to telling us a little bit more?
-          additional_feedback_link: "[Click here to provide additional feedback](%{url})"
+          share_more_request:
+            Are you open to telling us a little bit more?
+            Your feedback will help us improve our platform.
+            The survey will take ~3 minutes to complete.
+          share_more_button: Share More Feedback
 
     iframe_button: "Open in New Tab"
     iframe_message: "Code.org cannot be run in an embedded window. Please open it in a new tab."
