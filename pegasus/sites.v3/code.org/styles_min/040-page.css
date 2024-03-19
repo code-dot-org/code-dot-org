@@ -298,7 +298,8 @@ input[type="submit"] {
       display: inline-flex;
 
       &::after {
-        margin: 2px 0 0 12px;
+        margin-top: 2px;
+        margin-inline-start: 12px;
       }
     }
   }
