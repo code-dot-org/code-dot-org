@@ -586,34 +586,31 @@ aside.top-skinny-banner {
   &.light-theme {
     background: var(--neutral_dark10);
 
-    a > *,
-    button > i {
-      color: var(--neutral_dark);
+    & * {
+      color: var(--neutral_dark) !important;
     }
   }
 
-  & a {
+  & * {
+    color: var(--neutral_white);
+  }
+
+  & .content-wrapper {
     width: 100%;
     padding: 1rem;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
 
-    & > * {
-      color: var(--neutral_white);
-    }
-
     & > i {
       margin-top: 2px;
     }
 
-    & > p {
-      margin-bottom: 0;
+    & > a {
       text-decoration: none;
-    }
+      font-weight: var(--normal-font-weight);
 
-    &:hover {
-      & > p {
+      &:hover {
         text-decoration: underline;
       }
     }
@@ -639,10 +636,6 @@ aside.top-skinny-banner {
       &:not(:focus-visible) {
         outline: none;
       }
-    }
-
-    & > i {
-      color: var(--neutral_white);
     }
   }
 }
