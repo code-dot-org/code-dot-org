@@ -21,14 +21,8 @@ import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbl
 function TeacherDashboardHeader({
   sections,
   selectedSection,
-  assignmentName,
   openEditSectionDialog,
-  asyncLoadCourseOfferings,
 }) {
-  React.useEffect(() => {
-    asyncLoadCourseOfferings();
-  }, [asyncLoadCourseOfferings]);
-
   const getDropdownOptions = optionMetricName => {
     let options = sections.map(function (section, i) {
       let optionOnClick = () => {
@@ -100,12 +94,12 @@ function TeacherDashboardHeader({
       <div style={styles.header}>
         <div>
           <h1>{selectedSection.name}</h1>
-          {assignmentName && (
+          {selectedSection.courseDisplayName && (
             <div id="assignment-name">
               <span style={styles.sectionPrompt}>
                 {i18n.assignedToWithColon()}{' '}
               </span>
-              {assignmentName}
+              {selectedSection.courseDisplayName}
             </div>
           )}
         </div>
@@ -139,8 +133,6 @@ TeacherDashboardHeader.propTypes = {
   sections: PropTypes.arrayOf(sectionShape).isRequired,
   selectedSection: sectionShape.isRequired,
   openEditSectionDialog: PropTypes.func.isRequired,
-  assignmentName: PropTypes.string,
-  asyncLoadCourseOfferings: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -184,15 +176,10 @@ export default connect(
     ),
     selectedSection:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    assignmentName: getAssignmentName(
-      state,
-      state.teacherSections.selectedSectionId
-    ),
   }),
   dispatch => {
     return {
       openEditSectionDialog: id => dispatch(beginEditingSection(id)),
-      asyncLoadCourseOfferings: () => dispatch(asyncLoadCourseOfferings()),
     };
   }
 )(TeacherDashboardHeader);

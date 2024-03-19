@@ -32,7 +32,7 @@ function TeacherDashboard({
   sectionId,
   sectionName,
   studentCount,
-  coursesWithProgress,
+  isSectionAssignedCurriculum,
   location,
   showAITutorTab,
   sectionProviderName,
@@ -154,7 +154,7 @@ function TeacherDashboard({
             applyV1TeacherDashboardWidth(<StatsTableWithData />)
           }
         />
-        {coursesWithProgress.length === 0 && (
+        {!isSectionAssignedCurriculum && (
           <Route
             component={() =>
               applyV1TeacherDashboardWidth(
@@ -201,7 +201,7 @@ TeacherDashboard.propTypes = {
   sectionId: PropTypes.number.isRequired,
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.array.isRequired,
+  isSectionAssignedCurriculum: PropTypes.bool.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
 

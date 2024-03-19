@@ -68,6 +68,8 @@ $(document).ready(function () {
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setLocaleCode(localeCode));
 
+  console.log('lfm', section);
+
   // DCDO Flag - show/hide Lock Section field
   store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
@@ -104,8 +106,11 @@ $(document).ready(function () {
               studioUrlPrefix={scriptData.studioUrlPrefix}
               sectionId={section.id}
               sectionName={section.name}
+              section
               studentCount={section.students.length}
-              coursesWithProgress={coursesWithProgress}
+              isSectionAssignedCurriculum={
+                section.course_offering_id && section.course_version_id
+              }
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(
                 store.getState(),
