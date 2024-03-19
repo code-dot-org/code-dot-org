@@ -3,10 +3,7 @@ import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
-import {
-  EMPTY_AI_CUSTOMIZATIONS,
-  EMPTY_MODEL_CARD_INFO,
-} from '../views/modelCustomization/constants';
+import {EMPTY_AI_CUSTOMIZATIONS_STUDENT} from '../views/modelCustomization/constants';
 import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
@@ -30,7 +27,7 @@ export interface AichatState {
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
-  levelAiCustomizations: LevelAiCustomizations;
+  aiCustomizations: AiCustomizations;
 }
 
 const initialState: AichatState = {
@@ -38,7 +35,7 @@ const initialState: AichatState = {
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
-  levelAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
+  aiCustomizations: EMPTY_AI_CUSTOMIZATIONS_STUDENT,
 };
 
 // THUNKS
@@ -133,36 +130,37 @@ const aichatSlice = createSlice({
         chatMessage.status = status;
       }
     },
-    setLevelAiCustomizations: (
-      state,
-      action: PayloadAction<LevelAiCustomizations>
-    ) => {
-      state.levelAiCustomizations = action.payload;
+    setAiCustomizations: (state, action: PayloadAction<AiCustomizations>) => {
+      state.aiCustomizations = action.payload;
     },
-    setLevelAiCustomizationProperty: (
+    setAiCustomizationProperty: (
       state,
       action: PayloadAction<{
         property: keyof AiCustomizations;
-        value: string | number | string[];
+        value: AiCustomizations[typeof property];
       }>
     ) => {
       const {property, value} = action.payload;
-      state.levelAiCustomizations[property].value = value;
+      const updatedAiCustomizations: AiCustomizations = {
+        ...state.aiCustomizations,
+        [property]: value,
+      };
+      state.aiCustomizations = updatedAiCustomizations;
     },
     setModelCardProperty: (
       state,
       action: PayloadAction<{
         property: keyof ModelCardInfo;
-        value: string | string[];
+        value: ModelCardInfo[typeof property];
       }>
     ) => {
       const {property, value} = action.payload;
 
       const updatedModelCardInfo: ModelCardInfo = {
-        ...state.levelAiCustomizations.modelCardInfo.value,
+        ...state.aiCustomizations.modelCardInfo,
         [property]: value,
       };
-      state.levelAiCustomizations.modelCardInfo.value = updatedModelCardInfo;
+      state.aiCustomizations.modelCardInfo = updatedModelCardInfo;
     },
   },
   extraReducers: builder => {
@@ -187,7 +185,7 @@ export const {
   setIsWaitingForChatResponse,
   setShowWarningModal,
   updateChatMessageStatus,
-  setLevelAiCustomizations,
-  setLevelAiCustomizationProperty,
+  setAiCustomizations,
+  setAiCustomizationProperty,
   setModelCardProperty,
 } = aichatSlice.actions;

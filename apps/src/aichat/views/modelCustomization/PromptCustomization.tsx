@@ -2,20 +2,27 @@ import React from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {setLevelAiCustomizationProperty} from '../../redux/aichatRedux';
+import {setAiCustomizationProperty} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
+  EMPTY_AI_CUSTOMIZATIONS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const PromptCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const {botName, temperature, systemPrompt} = useAppSelector(
-    state => state.aichat.levelAiCustomizations
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  );
+  const aiCustomizations = useAppSelector(
+    state => state.aichat.aiCustomizations
   );
 
   const allFieldsDisabled =
@@ -33,11 +40,11 @@ const PromptCustomization: React.FunctionComponent = () => {
             </label>
             <input
               id="chatbot-name"
-              value={botName.value}
+              value={aiCustomizations.botName}
               disabled={isDisabled(botName.visibility)}
               onChange={event =>
                 dispatch(
-                  setLevelAiCustomizationProperty({
+                  setAiCustomizationProperty({
                     property: 'botName',
                     value: event.target.value,
                   })
@@ -52,18 +59,18 @@ const PromptCustomization: React.FunctionComponent = () => {
               <label htmlFor="temperature">
                 <StrongText>Temperature</StrongText>
               </label>
-              {temperature.value}
+              {aiCustomizations.temperature}
             </div>
             <input
               type="range"
               min={MIN_TEMPERATURE}
               max={MAX_TEMPERATURE}
               step={SET_TEMPERATURE_STEP}
-              value={temperature.value}
+              value={aiCustomizations.temperature}
               disabled={isDisabled(temperature.visibility)}
               onChange={event =>
                 dispatch(
-                  setLevelAiCustomizationProperty({
+                  setAiCustomizationProperty({
                     property: 'temperature',
                     value: event.target.value,
                   })
@@ -79,11 +86,11 @@ const PromptCustomization: React.FunctionComponent = () => {
             </label>
             <textarea
               id="system-prompt"
-              value={systemPrompt.value}
+              value={aiCustomizations.systemPrompt}
               disabled={isDisabled(systemPrompt.visibility)}
               onChange={event =>
                 dispatch(
-                  setLevelAiCustomizationProperty({
+                  setAiCustomizationProperty({
                     property: 'systemPrompt',
                     value: event.target.value,
                   })

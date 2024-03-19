@@ -6,22 +6,29 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';
-import {setLevelAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
 
   const dispatch = useAppDispatch();
 
+  const {visibility} = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  ).retrievalContexts;
   const {retrievalContexts} = useAppSelector(
-    state => state.aichat.levelAiCustomizations
+    state => state.aichat.aiCustomizations
   );
 
   const onAdd = useCallback(() => {
     dispatch(
-      setLevelAiCustomizationProperty({
+      setAiCustomizationProperty({
         property: 'retrievalContexts',
-        value: [...retrievalContexts.value, newRetrievalContext],
+        value: [...retrievalContexts, newRetrievalContext],
       })
     );
     setNewRetrievalContext('');
@@ -35,10 +42,10 @@ const RetrievalCustomization: React.FunctionComponent = () => {
 
   const onRemove = useCallback(
     (index: number) => {
-      const newRetrievalContexts = [...retrievalContexts.value];
+      const newRetrievalContexts = [...retrievalContexts];
       newRetrievalContexts.splice(index, 1);
       dispatch(
-        setLevelAiCustomizationProperty({
+        setAiCustomizationProperty({
           property: 'retrievalContexts',
           value: newRetrievalContexts,
         })
@@ -58,29 +65,26 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             id="retrieval-input"
             onChange={event => setNewRetrievalContext(event.target.value)}
             value={newRetrievalContext}
-            disabled={isDisabled(retrievalContexts.visibility)}
-            readOnly
+            disabled={isDisabled(visibility)}
           />
         </div>
         <div className={styles.addItemContainer}>
           <button
             type="button"
             onClick={onAdd}
-            disabled={
-              !newRetrievalContext || isDisabled(retrievalContexts.visibility)
-            }
+            disabled={!newRetrievalContext || isDisabled(visibility)}
           >
             Add
           </button>
         </div>
-        {retrievalContexts.value.map((message, index) => {
+        {retrievalContexts.map((message, index) => {
           return (
             <div key={index} className={styles.itemContainer}>
               <button
                 type="button"
                 onClick={() => onRemove(index)}
                 className={styles.removeItemButton}
-                disabled={isDisabled(retrievalContexts.visibility)}
+                disabled={isDisabled(visibility)}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
@@ -93,10 +97,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button
-          type="button"
-          disabled={isDisabled(retrievalContexts.visibility)}
-        >
+        <button type="button" disabled={isDisabled(visibility)}>
           Update
         </button>
       </div>

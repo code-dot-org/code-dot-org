@@ -2,16 +2,25 @@ import React from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {MODEL_CARD_FIELDS_AND_LABELS} from './constants';
+import {
+  EMPTY_AI_CUSTOMIZATIONS,
+  MODEL_CARD_FIELDS_AND_LABELS,
+} from './constants';
 import {isVisible, isDisabled} from './utils';
 import {setModelCardProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
+import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
+  const {visibility} = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  ).modelCardInfo;
   const {modelCardInfo} = useAppSelector(
-    state => state.aichat.levelAiCustomizations
+    state => state.aichat.aiCustomizations
   );
 
   return (
@@ -19,15 +28,15 @@ const PublishNotes: React.FunctionComponent = () => {
       <div>
         {MODEL_CARD_FIELDS_AND_LABELS.map(([id, text]) => {
           return (
-            isVisible(modelCardInfo.visibility) && (
+            isVisible(visibility) && (
               <div className={styles.inputContainer} key={id}>
                 <label htmlFor={id}>
                   <StrongText>{text}</StrongText>
                 </label>
                 <textarea
                   id={id}
-                  disabled={isDisabled(modelCardInfo.visibility)}
-                  value={modelCardInfo.value[id]}
+                  disabled={isDisabled(visibility)}
+                  value={modelCardInfo[id]}
                   onChange={event =>
                     dispatch(
                       setModelCardProperty({
@@ -43,7 +52,7 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={isDisabled(modelCardInfo.visibility)}>
+        <button type="button" disabled={isDisabled(visibility)}>
           Publish
         </button>
       </div>
