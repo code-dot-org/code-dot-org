@@ -793,7 +793,7 @@
   cs_ambassador_application_closed_title: "Applications have now closed."
   cs_ambassador_application_closed_subhead: "Questions about future opportunities or want to learn more? Please contact [youngwomen@code.org](%{email_url})."
   cs_ambassador_application_questions: "Questions? Please contact [youngwomen@code.org](%{email_url})"
-  cs_ambassador_application_parter_program: "Not a high school student or teacher? Check out our [Partner Program.](#partner-program)"
+  cs_ambassador_application_parter_program: "Not a high school student or teacher? Check out our [Partner Program](#partner-program)."
   cs_ambassador_do_heading: "What do CS Ambassadors do?"
   cs_ambassador_do_desc: "CS Ambassadors encourage young women to explore the subject, and lift each other up as they reclaim their place in computer science. CS Ambassadors connect with their peers to share their excitement and love of computer science. They visit classrooms, host tables at lunch, and speak at assemblies and club meetings. CS Ambassadors work with teachers and school administrators to breakdown stereotypes that hold young women back."
   cs_ambassador_steps_heading: "What do I need to become a CS Ambassador?"
