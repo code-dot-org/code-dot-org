@@ -6045,6 +6045,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/qrcode.react@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@types/qrcode.react@npm:1.0.5"
+  dependencies:
+    "@types/react": "*"
+  checksum: eea7526180988a1bc4937f12c0b82951a9be9a68817a01ab10cfae68796f9a4629cdbf3a47d24b87cb10a9ca55ebd3d0690516d33637f95767a46e1961eb6b9d
+  languageName: node
+  linkType: hard
+
 "@types/qs@npm:*":
   version: 6.9.12
   resolution: "@types/qs@npm:6.9.12"
@@ -8558,6 +8567,7 @@ __metadata:
     "@types/htmlhint": ^1.1.5
     "@types/jquery": ^3.5.16
     "@types/mocha": ^10.0.1
+    "@types/qrcode.react": ^1.0.5
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     "@types/sinon": ^10.0.14
