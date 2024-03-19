@@ -73,10 +73,7 @@ DatablockStorage.createRecord = function (
   onSuccess,
   onError
 ) {
-  createRecord(tableName, record).then(
-    newRecord => onSuccess(newRecord),
-    onError
-  );
+  createRecord(tableName, record).then(onSuccess, onError);
 };
 
 DatablockStorage.updateRecord = function (
