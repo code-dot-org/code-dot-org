@@ -1,7 +1,7 @@
-// Custom styles for code.org/professional-learning/international
+// Custom styles for code.org/poetry
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'color', 'breakpoints';
+@import 'breakpoints';
 
 // Hero banner
 .hero-banner-basic {
@@ -41,13 +41,9 @@
   }
 }
 
-.course_info_detail {
-  margin-bottom: 0 !important;
-}
-
 .bg-neutral-dark {
   h2 {
-    color: $neutral_white;
+    color: var(--neutral_white);
   }
 }
 
@@ -60,7 +56,6 @@
 }
 
 .continue_learning {
-  background: $neutral_white;
   margin-top: 3em;
 
   a {

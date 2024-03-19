@@ -4,59 +4,6 @@ theme: responsive_full_width
 set_dir: true
 ---
 
-:ruby
-  poetry_courses = [
-    {
-      overline: hoc_s('poetry_page.poetry_course_content.poem_art.overline'),
-      title: hoc_s('poetry_page.poetry_course_content.poem_art.title'),
-      image: "/images/csc-module-poem-art.png",
-      desc: hoc_s('poetry_page.poetry_course_content.poem_art.desc'),
-      format: hoc_s('poetry_page.poetry_course_content.poem_art.format'),
-      start_course: hoc_s('poetry_page.poetry_course_content.poem_art.start_course'),
-      start_course_url: CDO.studio_url("/s/poem-art-2021/reset"),
-      start_course_aria_label: hoc_s('poetry_page.poetry_course_content.poem_art.start_course_aria_label'),
-      course_details: hoc_s('call_to_action_see_lesson_details'),
-      course_details_url: CDO.studio_url("/s/poem-art-2021/lessons/1"),
-      course_details_aria_label: hoc_s(:aria_label_call_to_action_module_poem_art)
-    },
-    {
-      overline: hoc_s('poetry_page.poetry_course_content.coding_with_poetry.overline'),
-      title: hoc_s('poetry_page.poetry_course_content.coding_with_poetry.title'),
-      image: "/images/csc-module-coding-w-poetry.png",
-      desc: hoc_s('poetry_page.poetry_course_content.coding_with_poetry.desc'),
-      format: hoc_s('poetry_page.poetry_course_content.coding_with_poetry.format'),
-      start_course: hoc_s('poetry_page.poetry_course_content.coding_with_poetry.start_course'),
-      start_course_url: CDO.studio_url("/s/poetry"),
-      start_course_aria_label: hoc_s('poetry_page.poetry_course_content.coding_with_poetry.start_course_aria_label'),
-      course_details: hoc_s('call_to_action_see_module_details'),
-      course_details_url: CDO.studio_url("/s/poetry?viewAs=Instructor"),
-      course_details_aria_label: hoc_s(:aria_label_call_to_action_module_coding_w_poetry)
-    }
-  ]
-  additional_resources = [
-    {
-      title: hoc_s('poetry_page.additional_resources.try_hoc.title'),
-      image: "/shared/images/social-media/hoc2023_social.png",
-      desc: hoc_s('poetry_page.additional_resources.try_hoc.desc'),
-      url: CDO.code_org_url("/hourofcode"),
-      button_label: hoc_s('poetry_page.additional_resources.try_hoc.button_label'),
-    },
-    {
-      title: hoc_s('poetry_page.additional_resources.NAIPI.title'),
-      image: "/images/naipi_card.png",
-      desc: hoc_s('poetry_page.additional_resources.NAIPI.desc'),
-      url: CDO.code_org_url("/naipi"),
-      button_label: hoc_s('poetry_page.additional_resources.NAIPI.button_label'),
-    },
-    {
-      title: hoc_s('poetry_page.additional_resources.curriculum_catalog.title'),
-      image: "/images/course-catalog-illustration.png",
-      desc: hoc_s('poetry_page.additional_resources.curriculum_catalog.desc'),
-      url: CDO.studio_url("/catalog"),
-      button_label: hoc_s('poetry_page.additional_resources.curriculum_catalog.button_label'),
-    }
-  ]
-
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/code.org/public/poetry.js')}
@@ -83,30 +30,7 @@ set_dir: true
       =hoc_s('poetry_page.poetry_course_content.heading')
     %p
       =hoc_s('poetry_page.poetry_course_content.desc')
-    .action-block__wrapper.action-block__wrapper--two-col
-      - poetry_courses.each do |poetry_course|
-        .action-block.action-block--one-col.flex-space-between
-          .content-wrapper
-            %p.overline
-              = poetry_course[:overline]
-            %h3
-              = poetry_course[:title]
-            %img{src: "#{poetry_course[:image]}", alt: ""}
-            %p
-              = poetry_course[:desc]
-            %p.course_info_detail
-              %strong
-                =hoc_s('module_label_grades')
-              =hoc_s('module_grade_3_5')
-            %p.course_info_detail
-              %strong
-                =hoc_s('poetry_page.poetry_course_card.format')
-              = poetry_course[:format]
-          .content-footer
-            %a.link-button{href: "#{poetry_course[:start_course_url]}", "aria-label": "#{poetry_course[:start_course_aria_label]}"}
-              = poetry_course[:start_course]
-            %a.link-button.secondary{href: "#{poetry_course[:course_details_url]}", "aria-label": "#{poetry_course[:course_details_aria_label]}"}
-              = poetry_course[:course_details]
+    = view :"poetry/poetry_courses"
 
 %section.hero-banner-basic.bg-neutral-dark.student_projects
   .wrapper
@@ -120,7 +44,7 @@ set_dir: true
       =hoc_s('poetry_page.continue_learning.title')
     %p.centered
       =hoc_s('poetry_page.continue_learning.desc')
-    .action-block.action-block--two-col.continue_learning
+    .action-block.action-block--two-col.white.continue_learning
       .media-wrapper.col-50
         = view :display_video_thumbnail, id: "csc_curricula", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csc.mp4"
       .text-wrapper.col-50
@@ -144,15 +68,4 @@ set_dir: true
       =hoc_s('heading_additional_resources')
     %p.centered
       =hoc_s('poetry_page.additional_resources.desc')
-    .action-block__wrapper.action-block__wrapper--three-col
-      - additional_resources.each do |additional_resource|
-        .action-block.action-block--one-col.flex-space-between
-          .content-wrapper
-            %h3
-              = additional_resource[:title]
-            %img{src: "#{additional_resource[:image]}", alt: ""}
-            %p
-              = additional_resource[:desc]
-          .content-footer
-            %a.link-button{href: "#{additional_resource[:url]}"}
-              = additional_resource[:button_label]
+    = view :"poetry/additional_resources"
