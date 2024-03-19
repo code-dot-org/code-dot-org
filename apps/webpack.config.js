@@ -1,24 +1,23 @@
-const webpack = require('webpack');
+/* eslint-disable import/order */
 const path = require('path');
 const sass = require('sass');
+const webpack = require('webpack');
 
 // Webpack Plugins:
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+const {PyodidePlugin} = require('@pyodide/webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ReactRefreshTypeScript = require('react-refresh-typescript');
 const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const {PyodidePlugin} = require('@pyodide/webpack-plugin');
-const CircularDependencyPlugin = require('circular-dependency-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const ReactRefreshTypeScript = require('react-refresh-typescript');
+const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
 const circularDependencies = require('./circular_dependencies.json');
-
 const envConstants = require('./envConstants');
-
 const {
   ALL_APPS,
   appsEntriesFor,
