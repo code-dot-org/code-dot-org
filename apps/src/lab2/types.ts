@@ -24,9 +24,8 @@ export type DefaultChannel = Pick<Channel, 'name'>;
 
 // Represents the structure of the full project sources object (i.e. the main.json file)
 export interface ProjectSources {
-  // Stringified source code. Some labs (ex. Javalab) store multiple files
-  // as nested JSON which we'll need to support eventually.
-  source: string;
+  // Source code can either be a string or a nested JSON object (for multi-file).
+  source: string | MultiFileSource;
   // Optional lab-specific configuration for this project
   labConfig?: {[key: string]: object};
   // Add other properties (animations, html, etc) as needed.
@@ -54,6 +53,33 @@ export interface BlocklySource {
     blocks: BlocklyBlock[];
   };
   variables: BlocklyVariable[];
+}
+
+// This structure (as well as ProjectFolder and ProjectFile) is still in flux
+// and may change going forward. It should only be used for labs that are not released
+// yet.
+// Note that if it changes files_api.has_valid_encoding? may need to be updated to correctly validate
+// the new structure.
+export interface MultiFileSource {
+  folders: Record<string, ProjectFolder>;
+  files: Record<string, ProjectFile>;
+}
+
+export interface ProjectFile {
+  id: string;
+  name: string;
+  language: string;
+  contents: string;
+  open?: boolean;
+  active?: boolean;
+  folderId: string;
+}
+
+export interface ProjectFolder {
+  id: string;
+  name: string;
+  parentId: string;
+  open?: boolean;
 }
 
 export interface BlocklyBlock {
@@ -92,11 +118,7 @@ export interface LevelProperties {
   // Not a complete list; add properties as needed.
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
-  // TODO: Rework this field into an "enableProjects" or more complex list of
-  // "enabledFeatures" that is calculated on the back end. For now, since
-  // the only labs we support have projects enabled, it's easier to make this a
-  // disabled flag for specific exceptions.
-  disableProjects?: boolean;
+  usesProjects?: boolean;
   levelData?: LevelData;
   appName: AppName;
   longInstructions?: string;
@@ -106,6 +128,9 @@ export interface LevelProperties {
   skin?: string;
   toolboxBlocks?: string;
   sharedBlocks?: BlockDefinition[];
+  // We are moving level validations out of level data and into level properties.
+  // Temporarily keeping them in both places to avoid breaking existing code.
+  validations?: Validation[];
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -135,7 +160,6 @@ export interface Condition {
 
 export interface ConditionType {
   name: string;
-  hasValue: boolean;
   valueType?: 'string' | 'number';
 }
 

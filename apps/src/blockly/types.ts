@@ -3,9 +3,11 @@ import {
   BlockSvg,
   BlocklyOptions,
   CodeGenerator,
+  Cursor,
   Input,
   Procedures,
   Theme,
+  Variables,
   VariableMap,
   Workspace,
   WorkspaceSvg,
@@ -24,17 +26,19 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
+import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {
   ObservableParameterModel,
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {Abstract} from 'blockly/core/events/events_abstract';
-import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import {IProcedureBlock} from 'blockly/core/procedures';
+import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
+import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
+import CdoFieldVariable from './addons/cdoFieldVariable';
 
 export interface BlockDefinition {
   category: string;
@@ -61,6 +65,8 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  getNewCursor: (type: string) => Cursor;
+  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -81,13 +87,15 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldImageDropdown: typeof CdoFieldImageDropdown;
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
-  JavaScript: typeof javascriptGenerator;
+  FieldBitmap: typeof CdoFieldBitmap;
+  FieldVariable: typeof CdoFieldVariable;
+  JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
   levelBlockIds: string[];
   isStartMode: boolean;
   isToolboxMode: boolean;
-  toolboxBlocks: Element | ToolboxDefinition | undefined;
+  toolboxBlocks: ToolboxDefinition | undefined;
   useModalFunctionEditor: boolean;
   functionEditor: FunctionEditor;
   mainBlockSpace: ExtendedWorkspaceSvg;
@@ -103,6 +111,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   Procedures: ExtendedProcedures;
   BlockValueType: {[key: string]: string};
   SNAP_RADIUS: number;
+  Variables: ExtendedVariables;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -116,7 +125,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     blockspace: Workspace,
     handler: (e: Abstract) => void
   ) => void;
-  getGenerator: () => typeof javascriptGenerator;
+  getGenerator: () => JavascriptGeneratorType;
   addEmbeddedWorkspace: (workspace: Workspace) => void;
   isEmbeddedWorkspace: (workspace: Workspace) => boolean;
   findEmptyContainerBlock: () => void;
@@ -133,10 +142,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   getFunctionEditorWorkspace: () => ExtendedWorkspaceSvg | undefined;
   clearAllStudentWorkspaces: () => void;
   getPointerBlockImageUrl: (
-    block: Block,
-    pointerMetadataMap: {
-      [blockType: string]: {imageSourceType: string; imageIndex: number};
-    },
+    block: ExtendedBlockSvg,
+    pointerMetadataMap: PointerMetadataMap,
     imageSourceId: string
   ) => string;
 }
@@ -151,8 +158,14 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 export interface ExtendedBlockSvg extends BlockSvg {
   isVisible: () => boolean;
   isUserVisible: () => boolean;
+  // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
+  imageSourceId?: string;
+  shortString?: string;
+  longString?: string;
+  thumbnailSize?: number;
   // used for function blocks
   functionalSvg_?: BlockSvgFrame;
+  workspace: ExtendedWorkspaceSvg;
 }
 
 export interface ExtendedInput extends Input {
@@ -201,6 +214,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   editBlocks: string | undefined;
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
+  useBlocklyDynamicCategories: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -221,7 +235,7 @@ type XmlType = typeof Xml;
 export interface ExtendedXml extends XmlType {
   textToDom: (text: string) => Element;
   blockSpaceToDom: (workspace: Workspace, opt_noId?: boolean) => Element;
-  domToBlockSpace: (workspace: Workspace, xml: Document) => XmlBlockConfig[];
+  domToBlockSpace: (workspace: Workspace, xml: Element) => XmlBlockConfig[];
 }
 
 // This type is likely incomplete. We should add to it if we discover
@@ -235,7 +249,7 @@ export interface XmlBlockConfig {
 // This type is likely incomplete. We should add to it if we discover
 // more properties it contains.
 export interface JsonBlockConfig {
-  id: string;
+  id?: string;
   x?: number;
   y?: number;
   movable?: boolean;
@@ -243,6 +257,11 @@ export interface JsonBlockConfig {
   // extraState can be any object. We may be able to define this better.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
+  type: string;
+  fields: {[key: string]: {name: string; type: string; id?: string}};
+  inputs: {[key: string]: {block: JsonBlockConfig}};
+  next: {block: JsonBlockConfig};
+  kind: string;
 }
 
 export interface Collider {
@@ -258,13 +277,68 @@ export interface ExtendedProcedures extends ProceduresType {
   DEFINITION_BLOCK_TYPES: string[];
 }
 
-export interface ProcedureBlock extends Block, IProcedureBlock {
-  userCreated: boolean;
+type VariablesType = typeof Variables;
+export interface ExtendedVariables extends VariablesType {
+  DEFAULT_CATEGORY: string;
+  getters: {[key: string]: string};
+  registerGetter: (category: string, blockName: string) => void;
+  allVariablesFromBlock: (block: Block) => string[];
+  getVars: (opt_category?: string) => {[key: string]: string[]};
 }
 
-// Blockly uses any here. We may be able to define this better.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type WorkspaceSerialization = {[key: string]: any};
+export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
+  userCreated: boolean;
+  getTargetWorkspace_(): Workspace;
+  hasReturn_: boolean;
+  renameProcedure(
+    oldName: string,
+    newName: string,
+    userCreated?: boolean
+  ): void;
+  defType_: string;
+  model_: IProcedureModel;
+  paramsFromSerializedState_: string[];
+  updateArgsMap_: () => void;
+  eventIsCreatingThisBlockDuringPaste_: (event: Abstract) => boolean;
+  defMatches_: (defBlock: ProcedureBlock) => boolean;
+  createDef_: (name: string, params?: string[]) => IProcedureModel;
+  findProcedureModel_: (name: string, params?: string[]) => IProcedureModel;
+  initBlockWithProcedureModel_: () => void;
+  noBlockHasClaimedModel_: (procedureId: string) => boolean;
+  setStatements_: (hasStatements: boolean) => void;
+  deserialize_: (name: string, params: string[]) => void;
+  createArgInputs_: (params: string[]) => void;
+  updateName_: () => void;
+  updateEnabled_: () => void;
+  updateParameters_: () => void;
+  hasStatements_: boolean;
+  description?: string | null;
+  // used for behavior blocks
+  behaviorId?: string | null;
+}
+
+// Blockly uses {[key: string]: any} to define workspace serialization.
+// We have defined this more specifically, and therefore need to cast
+// to this value when getting the serialzation of a workspace.
+export type WorkspaceSerialization =
+  | {
+      blocks: {blocks: JsonBlockConfig[]};
+      procedures?: ProcedureDefinitionConfig[];
+      variables?: VariableConfig[];
+    }
+  | Record<string, never>; // empty object
+
+export interface ProcedureDefinitionConfig {
+  id: string;
+  name: string;
+  // As of now we only use null. Will we ever use return types?
+  returnTypes: null;
+}
+
+export interface VariableConfig {
+  name: string;
+  id: string;
+}
 
 export interface ProcedureBlockConfiguration {
   kind: 'block';
@@ -282,3 +356,15 @@ export interface ProcedureBlockConfiguration {
 export type ProcedureType =
   | BLOCK_TYPES.procedureDefinition
   | BLOCK_TYPES.behaviorDefinition;
+
+export type PointerMetadataMap = {
+  [blockType: string]: {
+    imageSourceType: string;
+    imageIndex: number;
+  };
+};
+
+export type BlockColor = [number, number, number];
+
+// Blockly defines this as any.
+export type JavascriptGeneratorType = typeof javascriptGenerator;

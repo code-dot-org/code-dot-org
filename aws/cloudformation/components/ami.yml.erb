@@ -140,6 +140,13 @@ frontend_device_name ||= '/dev/sda1'
       <%=indent(add_properties(frontend_properties), 6)%>
       MetricsCollection:
         - Granularity: 1Minute
+      Tags:
+        - Key: "Name"
+          Value: !Sub "Frontend-${AWS::StackName}"
+          PropagateAtLaunch: true
+        - Key: "environment"
+          Value: <%=environment%>
+          PropagateAtLaunch: true
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     DependsOn: FastSnapshotRestore

@@ -78,7 +78,7 @@ function getSpaceBetweenBlocks(block: ExtendedBlockSvg) {
  * for an embedded workspace for not.
  * @returns {json} stateToLoad - modern workspace serialization
  */
-export function convertXmlToJson(xml: Document, embedded: boolean) {
+export function convertXmlToJson(xml: Element, embedded?: boolean) {
   const tempWorkspace = new Blockly.Workspace();
 
   // The temporary workspace should mirror the embedded state of the workspace
@@ -92,13 +92,15 @@ export function convertXmlToJson(xml: Document, embedded: boolean) {
   //   x: the x attribute found in <block/> element
   //   y: the y attribute found in <block/> element
   const xmlBlocks = Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
-  const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
+  const stateToLoad = Blockly.serialization.workspaces.save(
+    tempWorkspace
+  ) as WorkspaceSerialization;
 
   if (xmlBlocks.length && hasBlocks(stateToLoad)) {
     // Create a map of ids (key) and block serializations (value).
     const blockIdMap = stateToLoad.blocks.blocks.reduce(
       (map: Map<string, JsonBlockConfig>, blockJson: JsonBlockConfig) =>
-        map.set(blockJson.id, blockJson),
+        map.set(blockJson.id || '', blockJson),
       new Map()
     );
 
@@ -341,15 +343,18 @@ export function partitionJsonBlocksByType(
  * @returns {Object} The combined JSON serialization of the workspace and the hidden definition workspace.
  */
 export function getProjectSerialization(workspace: WorkspaceSvg) {
-  const workspaceSerialization =
-    Blockly.serialization.workspaces.save(workspace);
+  const workspaceSerialization = Blockly.serialization.workspaces.save(
+    workspace
+  ) as WorkspaceSerialization;
 
   if (shouldSkipHiddenWorkspace(workspace)) {
     return workspaceSerialization;
   }
   const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
   const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
-    ? Blockly.serialization.workspaces.save(hiddenDefinitionWorkspace)
+    ? (Blockly.serialization.workspaces.save(
+        hiddenDefinitionWorkspace
+      ) as WorkspaceSerialization)
     : null;
 
   // Blocks rendered in the hidden workspace get extra properties that need to be
@@ -414,8 +419,10 @@ export function convertFunctionsXmlToJson(functionsXml: string) {
   const parser = new DOMParser();
   const xml = parser.parseFromString(`<xml>${functionsXml}</xml>`, 'text/xml');
   const tempWorkspace = new Blockly.Workspace();
-  Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
-  const proceduresState = Blockly.serialization.workspaces.save(tempWorkspace);
+  Blockly.Xml.domToBlockSpace(tempWorkspace, xml.children[0]);
+  const proceduresState = Blockly.serialization.workspaces.save(
+    tempWorkspace
+  ) as WorkspaceSerialization;
   tempWorkspace.dispose();
   return proceduresState;
 }
@@ -432,18 +439,14 @@ export function convertFunctionsXmlToJson(functionsXml: string) {
  * TODO: define a type for projectState and proceduresState. Blockly defines these as any.
  */
 export function appendProceduresToState(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  projectState: any,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  proceduresState: any
+  projectState: WorkspaceSerialization,
+  proceduresState: WorkspaceSerialization
 ) {
   const projectBlocks = projectState.blocks?.blocks || [];
   const projectProcedures = projectState.procedures || [];
 
-  // TODO: define these types better.
-  const sharedBlocks =
-    (proceduresState.blocks?.blocks as JsonBlockConfig[]) || [];
-  const sharedProcedures = (proceduresState.procedures as {id: string}[]) || [];
+  const sharedBlocks = proceduresState.blocks?.blocks || [];
+  const sharedProcedures = proceduresState.procedures || [];
 
   sharedBlocks.forEach(block => {
     const {behaviorId, procedureId} = block.extraState;
@@ -451,9 +454,12 @@ export function appendProceduresToState(
     if (!blockExists(behaviorId, projectBlocks)) {
       // If the block doesn't exist, add it to the student project
       projectBlocks.push(block);
-      projectProcedures.push(
-        sharedProcedures.find(procedure => procedure.id === procedureId)
+      const procedure = sharedProcedures.find(
+        procedure => procedure.id === procedureId
       );
+      if (procedure) {
+        projectProcedures.push(procedure);
+      }
     }
   });
   projectState.blocks = {blocks: projectBlocks};
@@ -463,8 +469,7 @@ export function appendProceduresToState(
 
 // Function to check if a block with the given behaviorId exists in the project
 // TODO: define type for projectBlocks.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function blockExists(behaviorId: string, projectBlocks: any[]) {
+function blockExists(behaviorId: string, projectBlocks: JsonBlockConfig[]) {
   return projectBlocks.some(
     block =>
       block.type === BLOCK_TYPES.behaviorDefinition &&

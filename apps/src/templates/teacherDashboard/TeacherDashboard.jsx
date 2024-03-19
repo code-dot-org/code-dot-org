@@ -35,6 +35,7 @@ function TeacherDashboard({
   coursesWithProgress,
   location,
   showAITutorTab,
+  sectionProviderName,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -119,7 +120,10 @@ function TeacherDashboard({
         <Route
           path={TeacherDashboardPath.loginInfo}
           component={props => (
-            <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
+            <SectionLoginInfo
+              studioUrlPrefix={studioUrlPrefix}
+              sectionProviderName={sectionProviderName}
+            />
           )}
         />
         <Route
@@ -199,6 +203,7 @@ TeacherDashboard.propTypes = {
   studentCount: PropTypes.number.isRequired,
   coursesWithProgress: PropTypes.array.isRequired,
   showAITutorTab: PropTypes.bool,
+  sectionProviderName: PropTypes.string,
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,

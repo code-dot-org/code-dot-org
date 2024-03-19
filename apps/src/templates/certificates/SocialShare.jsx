@@ -13,6 +13,7 @@ export default function SocialShare({
   print,
   under13,
   isPlCourse,
+  userType,
 }) {
   const [isTwitterAvailable, setIsTwitterAvailable] = useState(false);
   const [isFacebookAvailable, setIsFacebookAvailable] = useState(false);
@@ -38,7 +39,9 @@ export default function SocialShare({
   }, []);
 
   const onShare = (e, platform) => {
-    analyticsReporter.sendEvent(EVENTS.CERTIFICATE_SHARED, {platform});
+    if (userType === 'teacher') {
+      analyticsReporter.sendEvent(EVENTS.CERTIFICATE_SHARED, {platform});
+    }
     window.dashboard?.popupWindow(e);
   };
 
@@ -115,6 +118,7 @@ SocialShare.propTypes = {
   print: PropTypes.string.isRequired,
   under13: PropTypes.bool,
   isPlCourse: PropTypes.bool,
+  userType: PropTypes.string,
 };
 
 const styles = {

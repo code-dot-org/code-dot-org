@@ -19,6 +19,7 @@ style_min: true
 ### Graduation Requirement Resources
 
 - [South Carolina Graduation Requirement Case Study](/sccasestudy.pdf)
+- [Graduation Requirement One Pager](/Grad_Requirement_1_Pager.pdf)
 - [How States Have Approached Graduation Requirements](https://docs.google.com/document/d/14dK5gokDAP1psYbvJFIn6f04_7ANB6ZFz6RByPwuQA8/edit)
 
 ### State Plan Resources
