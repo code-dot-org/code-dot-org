@@ -292,8 +292,9 @@ input[type="submit"] {
     .flex-wrapper {
       display: flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.5rem;
     }
+
     &.has-external-link {
       display: inline-flex;
       gap: 0.25rem;
