@@ -14,6 +14,7 @@
 #
 class DatablockStorageRecord < ApplicationRecord
   # Stores student-owned records for App Lab's data features, see datablock_storage_controller.rb
+  # Most code that manipulates records lives in datablock_storage_table.rb
 
   self.primary_keys = :project_id, :table_name, :record_id
 

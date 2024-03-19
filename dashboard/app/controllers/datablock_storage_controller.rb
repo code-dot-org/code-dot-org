@@ -4,13 +4,14 @@
 #
 # These backend methods are accessed by a thin wrapper on the JS side: datablockStorage.js
 #
-# Student data is stored in corresponding ActiveRecord models:
-# - DatablockStorageTable: stores a list of tables and their columns
-# - DatablockStorageRecord: stores the records in each table
-# - DatablockStorageKvp: stores key-value pairs
+# Student data is stored in MySQL in corresponding ActiveRecord models:
+# - datablock_storage_table.rb: stores a list of tables and their columns, after this file
+#   this model contains the most code.
+# - datablock_storage_record.rb: stores the records in each table
+# - datablock_storage_kvp.rb: stores key-value pairs
 #
 # Metadata for the code.org defined datasets are stored in:
-# - DatablockStorageLibraryManifest
+# - datablock_storage_library_manifest.rb
 
 class DatablockStorageController < ApplicationController
   before_action :validate_channel_id
