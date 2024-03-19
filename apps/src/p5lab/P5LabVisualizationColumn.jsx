@@ -23,7 +23,6 @@ import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
-
 import GridOverlay from './gamelab/GridOverlay';
 import {
   cancelLocationSelection,
@@ -33,7 +32,6 @@ import {
 } from './redux/locationPicker';
 import SpritelabInput from './spritelab/SpritelabInput';
 import TextConsole from './spritelab/TextConsole';
-
 
 const MODAL_Z_INDEX = 1050;
 const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;

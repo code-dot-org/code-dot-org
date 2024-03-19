@@ -17,13 +17,13 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import AnimationJsonViewer from './AnimationJsonViewer';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import AnimationTab from './AnimationTab/AnimationTab';
-import ErrorDialogStack from './ErrorDialogStack';
 import {
   P5LabInterfaceMode,
   P5LabType,
   APP_WIDTH,
   APP_HEIGHT,
 } from './constants';
+import ErrorDialogStack from './ErrorDialogStack';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
 import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import {allowAnimationMode} from './stateQueries';

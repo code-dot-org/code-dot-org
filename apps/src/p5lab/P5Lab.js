@@ -14,46 +14,22 @@ import {
   runAfterPostContainedLevel,
 } from '@cdo/apps/containedLevels';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
-import experiments from '@cdo/apps/util/experiments';
-import {TOOLBOX_EDIT_MODE} from '../constants';
-import {changeInterfaceMode, viewAnimationJson} from './actions';
-import {startInAnimationTab} from './stateQueries';
-import {P5LabInterfaceMode, APP_WIDTH} from './constants';
-import {
-  SpritelabReservedWords,
-  valueTypeTabShapeMap,
-} from './spritelab/constants';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-
-var consoleApi = require('@cdo/apps/consoleApi');
-var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
-var utils = require('@cdo/apps/utils');
-
-var apiJavascript = require('./gamelab/apiJavascript');
-var gamelabCommands = require('./gamelab/commands');
-var dropletConfig = require('./gamelab/dropletConfig');
-
-
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
-
-
-var p5GroupWrapper = require('./P5GroupWrapper');
-var P5LabView = require('./P5LabView');
-var p5SpriteWrapper = require('./P5SpriteWrapper');
-var P5Wrapper = require('./P5Wrapper');
-
-import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
-
-var dom = require('@cdo/apps/dom');
-
-import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {getStore} from '@cdo/apps/redux';
+import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
+import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
+import experiments from '@cdo/apps/util/experiments';
 
+import {TOOLBOX_EDIT_MODE} from '../constants';
+
+import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   allAnimationsSingleFrameSelector,
   setInitialAnimationList,
@@ -61,8 +37,26 @@ import {
   withAbsoluteSourceUrls,
 } from './redux/animationList';
 import {getSerializedAnimationList} from './shapes';
+import {
+  SpritelabReservedWords,
+  valueTypeTabShapeMap,
+} from './spritelab/constants';
+import {startInAnimationTab} from './stateQueries';
 
-import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
+var consoleApi = require('@cdo/apps/consoleApi');
+var dom = require('@cdo/apps/dom');
+var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
+var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+var utils = require('@cdo/apps/utils');
+
+var apiJavascript = require('./gamelab/apiJavascript');
+var gamelabCommands = require('./gamelab/commands');
+var dropletConfig = require('./gamelab/dropletConfig');
+var p5GroupWrapper = require('./P5GroupWrapper');
+var P5LabView = require('./P5LabView');
+var p5SpriteWrapper = require('./P5SpriteWrapper');
+var P5Wrapper = require('./P5Wrapper');
+
 
 var reducers = require('./reducers');
 
