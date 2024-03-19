@@ -491,7 +491,7 @@ Resources:
   DroneAutoscalerTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
-      Name: !Sub "AutoscalerTargGrp-${AWS::StackName}"
+      Name: !Sub "AutoscalerTrgGrp-${AWS::StackName}"
       VpcId: !Ref VpcId
       TargetType: ip
       Port: 8080
