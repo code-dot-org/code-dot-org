@@ -4085,10 +4085,8 @@ a {
   }
 }
 
-#teacher-dashboard::after {
-  content: "";
-  clear: both;
-  display: table;
+#teacher-dashboard {
+  overflow: auto;
 }
 
 #lti-integration-portal {
