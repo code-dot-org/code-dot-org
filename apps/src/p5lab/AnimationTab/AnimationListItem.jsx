@@ -1,9 +1,12 @@
 /** A single list item representing an animation. */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import color from '@cdo/apps/util/color';
-import * as shapes from '../shapes';
+
+import {P5LabInterfaceMode} from '../constants';
 import {
   setAnimationName,
   cloneAnimation,
@@ -13,10 +16,10 @@ import {
   isNameUnique,
 } from '../redux/animationList';
 import {selectAnimation, selectBackground} from '../redux/animationTab';
+import * as shapes from '../shapes';
+
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
-import _ from 'lodash';
-import {P5LabInterfaceMode} from '../constants';
 
 /**
  * A single list item representing an animation.  Displays an animated

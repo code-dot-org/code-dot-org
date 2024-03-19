@@ -2,16 +2,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
+import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import AnimationPicker, {PICKER_TYPE} from '../AnimationPicker/AnimationPicker';
+import {P5LabInterfaceMode, P5LabType} from '../constants.js';
 import P5LabVisualizationHeader from '../P5LabVisualizationHeader';
 import {setColumnSizes} from '../redux/animationTab';
-import AnimationList from './AnimationList';
-import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
-import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
-import i18n from '@cdo/locale';
-import {P5LabInterfaceMode, P5LabType} from '../constants.js';
+
+import AnimationList from './AnimationList';
+import PiskelEditor from './PiskelEditor';
+
 /**
  * Root of the animation editor interface mode for GameLab
  */

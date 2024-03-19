@@ -1,20 +1,22 @@
 /** @file Redux reducer functions for Game Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
+import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import locales from '@cdo/apps/redux/localesRedux';
+
 import {
   CHANGE_INTERFACE_MODE,
   VIEW_ANIMATION_JSON,
   HIDE_ANIMATION_JSON,
   TOGGLE_GRID_OVERLAY,
 } from './actions';
-import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import animationList from './redux/animationList';
 import animationPicker from './redux/animationPicker';
 import animationTab from './redux/animationTab';
 import locationPicker from './redux/locationPicker';
-import textConsole from './redux/textConsole';
-import spritelabInputList from './redux/spritelabInput';
 import poetry from './redux/poetry';
-import locales from '@cdo/apps/redux/localesRedux';
+import spritelabInputList from './redux/spritelabInput';
+import textConsole from './redux/textConsole';
+
 var errorDialogStack = require('./redux/errorDialogStack').default;
 var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
 

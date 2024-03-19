@@ -1,12 +1,14 @@
 /** @file A clickable item in the scroll area of the animation picker */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
-import AnimationPreview from './AnimationPreview';
-import style from './animation-picker-list-item.module.scss';
 
-import classNames from 'classnames';
+import AnimationPreview from './AnimationPreview';
+
+import style from './animation-picker-list-item.module.scss';
 
 export default class AnimationPickerListItem extends React.Component {
   static propTypes = {

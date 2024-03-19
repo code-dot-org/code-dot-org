@@ -1,7 +1,8 @@
-import {commands as behaviorCommands} from './behaviorCommands';
-import {layoutSpriteGroup} from '../../layoutUtils';
 import {APP_HEIGHT} from '../../constants';
+import {layoutSpriteGroup} from '../../layoutUtils';
 import {createSpriteCollider} from '../../utils';
+
+import {commands as behaviorCommands} from './behaviorCommands';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);

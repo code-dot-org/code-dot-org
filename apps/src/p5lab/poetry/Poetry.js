@@ -1,11 +1,13 @@
-import msg from '@cdo/poetry/locale';
 import {getStore} from '@cdo/apps/redux';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import {setPoem, hasSelectedPoemChanged, setPoemList} from '../redux/poetry';
+import msg from '@cdo/poetry/locale';
+
 import {P5LabType} from '../constants';
+import {setPoem, hasSelectedPoemChanged, setPoemList} from '../redux/poetry';
 import SpriteLab from '../spritelab/SpriteLab';
-import PoetryLibrary from './PoetryLibrary';
+
 import {getPoem, getPoemsFromListOrDefault} from './poem';
+import PoetryLibrary from './PoetryLibrary';
 
 export default class Poetry extends SpriteLab {
   init(config) {

@@ -1,17 +1,20 @@
 /** @file Row of controls above the visualization. */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
-import {P5LabInterfaceMode, P5LabType} from './constants';
-import msg from '@cdo/locale';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
-import {allowAnimationMode, countAllowedModes} from './stateQueries';
-import PoemSelector from './poetry/PoemSelector';
-import * as utils from '../utils';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import color from '@cdo/apps/util/color';
+import msg from '@cdo/locale';
+
+import * as utils from '../utils';
+
+import {changeInterfaceMode} from './actions';
+import {P5LabInterfaceMode, P5LabType} from './constants';
+import PoemSelector from './poetry/PoemSelector';
+import {allowAnimationMode, countAllowedModes} from './stateQueries';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.

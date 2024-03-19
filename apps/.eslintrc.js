@@ -224,7 +224,6 @@ module.exports = {
         'src/music/**',
         'src/musicMenu/*',
         'src/netsim/*',
-        'src/p5lab/**',
         'src/panels/*',
         'src/publicKeyCryptography/*',
         'src/pythonlab/*',
