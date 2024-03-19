@@ -1,9 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const CodeReviewError = ({messageTitle, messageText, style = {}}) => {
   const title = messageTitle || javalabMsg.genericError();

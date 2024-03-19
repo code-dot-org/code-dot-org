@@ -10,7 +10,6 @@ import MusicLibrary, {
 } from '../player/MusicLibrary';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-const AppConfig = require('../appConfig').default;
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -19,6 +18,11 @@ const AppConfig = require('../appConfig').default;
 
 type Mode = 'packs' | 'sounds';
 type Filter = 'all' | SoundType;
+
+type SoundEntry = {
+  folder: SoundFolder;
+  sound: SoundData;
+};
 
 const getLengthRepresentation = (length: number) => {
   const lengthToSymbol: {[length: number]: string} = {
@@ -90,6 +94,9 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
       </div>
       <div className={styles.folderRowMiddle}>
         <div className={styles.folderRowMiddleName}>{folder.name}</div>
+        {folder.artist && (
+          <div className={styles.folderRowMiddleSubTitle}>{folder.artist}</div>
+        )}
       </div>
       <div className={styles.folderRowRight}>
         <div className={styles.length}>&nbsp;</div>
@@ -116,6 +123,7 @@ interface SoundsPanelRowProps {
   playingPreview: string;
   folder: SoundFolder;
   sound: SoundData;
+  showingSoundsOnly: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
   currentSoundRefCallback: (ref: HTMLDivElement) => void;
@@ -126,6 +134,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   playingPreview,
   folder,
   sound,
+  showingSoundsOnly,
   onSelect,
   onPreview,
   currentSoundRefCallback,
@@ -164,8 +173,13 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
     >
       <div className={styles.soundRowLeft}>
         <img src={typeIconPath} className={styles.typeIcon} alt="" />
+        <div className={styles.name}>{sound.name}</div>
       </div>
-      <div className={styles.soundRowMiddle}>{sound.name}</div>
+      {showingSoundsOnly && (
+        <div className={styles.soundRowMiddle}>
+          {folder.name} &bull; {folder.artist}
+        </div>
+      )}
       <div className={styles.soundRowRight}>
         <div className={styles.length}>
           {getLengthRepresentation(sound.length)}
@@ -190,6 +204,7 @@ interface SoundsPanelProps {
   library: MusicLibrary;
   currentValue: string;
   playingPreview: string;
+  showSoundFilters: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -198,6 +213,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   library,
   currentValue,
   playingPreview,
+  showSoundFilters,
   onSelect,
   onPreview,
 }) => {
@@ -205,7 +221,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const libraryGroupPath = library.libraryJson.path;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getFolderForSoundId(currentValue) || folders[0]
+    library.getAllowedFolderForSoundId(undefined, currentValue) || folders[0]
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');
@@ -239,26 +255,29 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     currentSoundRef.current = ref;
   };
 
-  let possibleSounds: SoundData[] = [];
-  let rightColumnSounds: SoundData[] = [];
+  let possibleSoundEntries: SoundEntry[] = [];
+  let rightColumnSoundEntries: SoundEntry[] = [];
 
   if (mode === 'packs') {
-    possibleSounds = selectedFolder.sounds;
+    possibleSoundEntries = selectedFolder.sounds.map(sound => ({
+      folder: selectedFolder,
+      sound,
+    }));
   } else {
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
-        possibleSounds.push(sound);
+        possibleSoundEntries.push({folder, sound});
       });
     });
   }
 
   if (filter === 'all') {
-    rightColumnSounds = possibleSounds;
+    rightColumnSoundEntries = possibleSoundEntries;
   } else {
-    rightColumnSounds = possibleSounds.filter(sound => sound.type === filter);
+    rightColumnSoundEntries = possibleSoundEntries.filter(
+      soundEntry => soundEntry.sound.type === filter
+    );
   }
-
-  const showSoundFilters = AppConfig.getValue('show-sound-filters') === 'true';
 
   return (
     <FocusLock>
@@ -284,7 +303,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 {label: 'Bass', value: 'bass'},
                 {label: 'Leads', value: 'lead'},
                 {label: 'Effects', value: 'fx'},
-                {label: 'Vocals', value: 'vocal'},
               ]}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}
@@ -311,14 +329,15 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             </div>
           )}
           <div id="sounds-panel-right" className={styles.rightColumn}>
-            {rightColumnSounds.map((sound, soundIndex) => {
+            {rightColumnSoundEntries.map((soundEntry, soundIndex) => {
               return (
                 <SoundsPanelRow
                   key={soundIndex}
                   currentValue={currentValue}
                   playingPreview={playingPreview}
-                  folder={selectedFolder}
-                  sound={sound}
+                  folder={soundEntry.folder}
+                  sound={soundEntry.sound}
+                  showingSoundsOnly={mode === 'sounds'}
                   onSelect={onSelect}
                   onPreview={onPreview}
                   currentSoundRefCallback={currentSoundRefCallback}

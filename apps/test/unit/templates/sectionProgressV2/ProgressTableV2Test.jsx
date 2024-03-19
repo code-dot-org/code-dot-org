@@ -1,24 +1,24 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
+import React from 'react';
+import {Provider} from 'react-redux';
 
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import teacherSections, {
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser, {
   setSortByFamilyName,
 } from '@cdo/apps/templates/currentUserRedux';
-import {Provider} from 'react-redux';
-
 import {
   fakeLessonWithLevels,
   fakeUnitData,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {createStore} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
+import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
+import teacherSections, {
+  setStudentsForCurrentSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};

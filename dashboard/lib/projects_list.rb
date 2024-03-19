@@ -127,7 +127,7 @@ module ProjectsList
     def include_featured(limit:)
       published = fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
       featured = fetch_featured_published_projects
-      PUBLISHED_PROJECT_TYPE_GROUPS.keys.each do |project_type|
+      PUBLISHED_PROJECT_TYPE_GROUPS.each_key do |project_type|
         featured[project_type].push(published[project_type]).flatten!.uniq!
       end
       return featured

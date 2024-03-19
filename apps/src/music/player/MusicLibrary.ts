@@ -83,6 +83,28 @@ export default class MusicLibrary {
     return this.folders.find(folder => folder.id === folderId) || null;
   }
 
+  // Given a folderType and a sound ID (e.g. "pack1/sound1"), return only an
+  // allowed SoundFolder containing the allowed sounds.
+  getAllowedFolderForSoundId(
+    folderType: string | undefined,
+    id: string
+  ): SoundFolder | null {
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+
+    return this.getAllowedFolderForFolderId(folderType, folderId);
+  }
+
+  // Given a folderType and a folder ID (e.g. "pack1"), return only an
+  // allowed SoundFolder containing the allowed sounds.
+  getAllowedFolderForFolderId(
+    folderType: string | undefined,
+    folderId: string
+  ): SoundFolder | null {
+    const folders = this.getAllowedSounds(folderType);
+    return folders.find(folder => folder.id === folderId) || null;
+  }
+
   // A progression step might specify a smaller set of allowed sounds.
   setAllowedSounds(allowedSounds: Sounds): void {
     this.allowedSounds = allowedSounds;
@@ -186,6 +208,7 @@ export type SoundFolderType = 'sound' | 'kit' | 'instrument';
 
 export interface SoundFolder {
   name: string;
+  artist?: string;
   id: string;
   type?: SoundFolderType;
   path: string;

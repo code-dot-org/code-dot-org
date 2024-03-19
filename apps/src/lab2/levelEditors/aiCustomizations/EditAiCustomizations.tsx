@@ -7,7 +7,6 @@ import {
 import React, {useCallback, useState} from 'react';
 import {
   BodyFourText,
-  BodyOneText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './edit-ai-customizations.module.scss';
@@ -15,30 +14,16 @@ import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
-} from '@cdo/apps/aichat/constants';
+  EMPTY_MODEL_CARD_INFO,
+  EMPTY_AI_CUSTOMIZATIONS,
+} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import MultiItemInput from './MultiItemInput';
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import VisibilityDropdown from './VisibilityDropdown';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {UpdateContext} from './UpdateContext';
-
-const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
-  description: '',
-  intendedUse: '',
-  limitationsAndWarnings: '',
-  testingAndEvaluation: '',
-  exampleTopics: [],
-};
-
-const EMPTY_AI_CUSTOMIZATIONS: LevelAiCustomizations = {
-  botName: {value: '', visibility: 'editable'},
-  temperature: {value: 0, visibility: 'editable'},
-  systemPrompt: {value: '', visibility: 'editable'},
-  retrievalContexts: {value: [], visibility: 'editable'},
-  modelCardInfo: {value: EMPTY_MODEL_CARD_INFO, visibility: 'editable'},
-  hidePresentationPanel: false,
-};
+import CollapsibleSection from './CollapsibleSection';
 
 // Make sure all fields have a visibility specified.
 function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
@@ -51,7 +36,7 @@ function sanitizeData(data: LevelAiCustomizations): LevelAiCustomizations {
       continue;
     }
     if (field.visibility === undefined) {
-      field.visibility = 'editable';
+      field.visibility = Visibility.EDITABLE;
     }
   }
   return data;
@@ -105,7 +90,8 @@ const EditAiCustomizations: React.FunctionComponent<{
         ...aiCustomizations,
         modelCardInfo: {
           value: updatedModelCardInfo,
-          visibility: aiCustomizations.modelCardInfo?.visibility || 'editable',
+          visibility:
+            aiCustomizations.modelCardInfo?.visibility || Visibility.EDITABLE,
         },
       });
     },
@@ -192,45 +178,51 @@ const EditAiCustomizations: React.FunctionComponent<{
         />
         <div className={moduleStyles.fieldSection}>
           <hr />
-          <BodyOneText>Model Card</BodyOneText>
-          <div className={moduleStyles.fieldRow}>
-            <ModelCardFields />
-            <VisibilityDropdown
-              value={aiCustomizations.modelCardInfo?.visibility || 'editable'}
-              property="modelCardInfo"
-            />
-          </div>
+          <CollapsibleSection title="Model Card">
+            <div className={moduleStyles.fieldRow}>
+              <ModelCardFields />
+              <VisibilityDropdown
+                value={
+                  aiCustomizations.modelCardInfo?.visibility ||
+                  Visibility.EDITABLE
+                }
+                property="modelCardInfo"
+              />
+            </div>
+          </CollapsibleSection>
         </div>
         <div className={moduleStyles.fieldSection}>
           <hr />
-          <BodyOneText>Additional Configuration</BodyOneText>
-          <BodyFourText>
-            <i>
-              Students always have access to the Edit View, where they can
-              customize their chatbot. Published chatbots are able to be viewed
-              in a Presentation View which mimics a user-centered experience by
-              hiding instructions and displaying the model card. Use the setting
-              below to hide the option to enter presentation view in a level.
-            </i>
-          </BodyFourText>
-          <div className={moduleStyles.fieldRow}>
-            <label
-              htmlFor="hidePresentationPanel"
-              className={moduleStyles.inlineLabel}
-            >
-              Hide Presentation Panel
-            </label>
-            <Checkbox
-              name="hidePresentationPanel"
-              checked={aiCustomizations.hidePresentationPanel || false}
-              onChange={e => {
-                setAiCustomizations({
-                  ...aiCustomizations,
-                  hidePresentationPanel: e.target.checked,
-                });
-              }}
-            />
-          </div>
+          <CollapsibleSection title="Additional Configuration">
+            <BodyFourText>
+              <i>
+                Students always have access to the Edit View, where they can
+                customize their chatbot. Published chatbots are able to be
+                viewed in a Presentation View which mimics a user-centered
+                experience by hiding instructions and displaying the model card.
+                Use the setting below to hide the option to enter presentation
+                view in a level.
+              </i>
+            </BodyFourText>
+            <div className={moduleStyles.fieldRow}>
+              <label
+                htmlFor="hidePresentationPanel"
+                className={moduleStyles.inlineLabel}
+              >
+                Hide Presentation Panel
+              </label>
+              <Checkbox
+                name="hidePresentationPanel"
+                checked={aiCustomizations.hidePresentationPanel || false}
+                onChange={e => {
+                  setAiCustomizations({
+                    ...aiCustomizations,
+                    hidePresentationPanel: e.target.checked,
+                  });
+                }}
+              />
+            </div>
+          </CollapsibleSection>
         </div>
         <hr />
       </div>

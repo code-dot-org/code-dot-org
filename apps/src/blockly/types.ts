@@ -38,6 +38,7 @@ import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
 import BlockSvgFrame from './addons/blockSvgFrame';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
+import CdoFieldVariable from './addons/cdoFieldVariable';
 
 export interface BlockDefinition {
   category: string;
@@ -87,7 +88,8 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
-  JavaScript: typeof javascriptGenerator;
+  FieldVariable: typeof CdoFieldVariable;
+  JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
   levelBlockIds: string[];
@@ -123,7 +125,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     blockspace: Workspace,
     handler: (e: Abstract) => void
   ) => void;
-  getGenerator: () => typeof javascriptGenerator;
+  getGenerator: () => JavascriptGeneratorType;
   addEmbeddedWorkspace: (workspace: Workspace) => void;
   isEmbeddedWorkspace: (workspace: Workspace) => boolean;
   findEmptyContainerBlock: () => void;
@@ -163,6 +165,7 @@ export interface ExtendedBlockSvg extends BlockSvg {
   thumbnailSize?: number;
   // used for function blocks
   functionalSvg_?: BlockSvgFrame;
+  workspace: ExtendedWorkspaceSvg;
 }
 
 export interface ExtendedInput extends Input {
@@ -211,6 +214,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   editBlocks: string | undefined;
   noFunctionBlockFrame: boolean;
   useModalFunctionEditor: boolean;
+  useBlocklyDynamicCategories: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -282,7 +286,7 @@ export interface ExtendedVariables extends VariablesType {
   getVars: (opt_category?: string) => {[key: string]: string[]};
 }
 
-export interface ProcedureBlock extends Block, IProcedureBlock {
+export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
   userCreated: boolean;
   getTargetWorkspace_(): Workspace;
   hasReturn_: boolean;
@@ -304,6 +308,9 @@ export interface ProcedureBlock extends Block, IProcedureBlock {
   setStatements_: (hasStatements: boolean) => void;
   deserialize_: (name: string, params: string[]) => void;
   createArgInputs_: (params: string[]) => void;
+  updateName_: () => void;
+  updateEnabled_: () => void;
+  updateParameters_: () => void;
   hasStatements_: boolean;
   description?: string | null;
   // used for behavior blocks
@@ -358,3 +365,6 @@ export type PointerMetadataMap = {
 };
 
 export type BlockColor = [number, number, number];
+
+// Blockly defines this as any.
+export type JavascriptGeneratorType = typeof javascriptGenerator;

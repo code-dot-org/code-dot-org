@@ -92,7 +92,7 @@ module Cdo
     end
 
     def self.flush!
-      BUFFERS.values.each(&:flush!)
+      BUFFERS.each_value(&:flush!)
     end
   end
 end

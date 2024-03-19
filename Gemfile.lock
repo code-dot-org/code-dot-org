@@ -1,4 +1,55 @@
 GIT
+  remote: https://github.com/code-dot-org/image_optim.git
+  revision: 939996f7ad102227c73b42bfda0058f9c66698aa
+  ref: cdo
+  specs:
+    image_optim (0.24.2)
+      exifr (~> 1.2, >= 1.2.2)
+      fspath (~> 3.0)
+      image_size (~> 1.5)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+
+GIT
+  remote: https://github.com/code-dot-org/image_optim_pack.git
+  revision: 41e063908e1b038a852f18504dd52721aac5ea6a
+  ref: guetzli
+  specs:
+    image_optim_pack (0.5.0)
+      fspath (>= 2.1, < 4)
+      image_optim (~> 0.19)
+
+GIT
+  remote: https://github.com/code-dot-org/lograge.git
+  revision: 8d55ad595c0af229bb144bbe73c9e7404ce0b32c
+  ref: debug_exceptions
+  specs:
+    lograge (0.10.0)
+      actionpack (>= 4)
+      activesupport (>= 4)
+      railties (>= 4)
+      request_store (~> 1.0)
+
+GIT
+  remote: https://github.com/code-dot-org/omniauth-openid-connect.git
+  revision: 2397b1415896e2639a7582a36e26c90b9211f99f
+  ref: cdo
+  specs:
+    omniauth-openid-connect (0.2.2)
+      addressable (~> 2.3)
+      omniauth (~> 1.1)
+      openid_connect (~> 1.0, >= 1.0.3)
+
+GIT
+  remote: https://github.com/code-dot-org/omniauth-windowslive.git
+  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
+  ref: cdo
+  specs:
+    omniauth-windowslive (0.0.11)
+      multi_json (>= 1.0.3)
+      omniauth-oauth2 (~> 1.4)
+
+GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -18,6 +69,15 @@ GIT
       sprockets (> 3.0)
       sprockets-rails
       tilt
+
+GIT
+  remote: https://github.com/code-dot-org/sprockets.git
+  revision: 35caa45a78b739362b7db087b141f89e27d107c7
+  ref: concurrent_asset_bundle_3.x
+  specs:
+    sprockets (3.7.1)
+      concurrent-ruby (~> 1.1)
+      rack (> 1, < 3)
 
 GIT
   remote: https://github.com/daynew/omniauth-clever.git
@@ -47,66 +107,6 @@ GIT
   specs:
     full-name-splitter (0.1.2)
 
-GIT
-  remote: https://github.com/wjordan/image_optim.git
-  revision: 939996f7ad102227c73b42bfda0058f9c66698aa
-  ref: cdo
-  specs:
-    image_optim (0.24.2)
-      exifr (~> 1.2, >= 1.2.2)
-      fspath (~> 3.0)
-      image_size (~> 1.5)
-      in_threads (~> 1.3)
-      progress (~> 3.0, >= 3.0.1)
-
-GIT
-  remote: https://github.com/wjordan/image_optim_pack.git
-  revision: 41e063908e1b038a852f18504dd52721aac5ea6a
-  ref: guetzli
-  specs:
-    image_optim_pack (0.5.0)
-      fspath (>= 2.1, < 4)
-      image_optim (~> 0.19)
-
-GIT
-  remote: https://github.com/wjordan/lograge.git
-  revision: 1ef23fb6fe78e73e782e6393477a9953fb3f4515
-  ref: debug_exceptions
-  specs:
-    lograge (0.10.0)
-      actionpack (>= 4)
-      activesupport (>= 4)
-      railties (>= 4)
-      request_store (~> 1.0)
-
-GIT
-  remote: https://github.com/wjordan/omniauth-openid-connect.git
-  revision: 2397b1415896e2639a7582a36e26c90b9211f99f
-  ref: cdo
-  specs:
-    omniauth-openid-connect (0.2.2)
-      addressable (~> 2.3)
-      omniauth (~> 1.1)
-      openid_connect (~> 1.0, >= 1.0.3)
-
-GIT
-  remote: https://github.com/wjordan/omniauth-windowslive.git
-  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
-  ref: cdo
-  specs:
-    omniauth-windowslive (0.0.11)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.4)
-
-GIT
-  remote: https://github.com/wjordan/sprockets.git
-  revision: 35caa45a78b739362b7db087b141f89e27d107c7
-  ref: concurrent_asset_bundle_3.x
-  specs:
-    sprockets (3.7.1)
-      concurrent-ruby (~> 1.1)
-      rack (> 1, < 3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -120,40 +120,40 @@ GEM
       aws-sdk-route53
       aws-sdk-s3
       thor
-    actioncable (6.1.7.3)
-      actionpack (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    actioncable (6.1.7.7)
+      actionpack (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
-    actionmailbox (6.1.7.3)
-      actionpack (= 6.1.7.3)
-      activejob (= 6.1.7.3)
-      activerecord (= 6.1.7.3)
-      activestorage (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    actionmailbox (6.1.7.7)
+      actionpack (= 6.1.7.7)
+      activejob (= 6.1.7.7)
+      activerecord (= 6.1.7.7)
+      activestorage (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       mail (>= 2.7.1)
-    actionmailer (6.1.7.3)
-      actionpack (= 6.1.7.3)
-      actionview (= 6.1.7.3)
-      activejob (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    actionmailer (6.1.7.7)
+      actionpack (= 6.1.7.7)
+      actionview (= 6.1.7.7)
+      activejob (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 2.0)
-    actionpack (6.1.7.3)
-      actionview (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    actionpack (6.1.7.7)
+      actionview (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       rack (~> 2.0, >= 2.0.9)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.2.0)
-    actiontext (6.1.7.3)
-      actionpack (= 6.1.7.3)
-      activerecord (= 6.1.7.3)
-      activestorage (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    actiontext (6.1.7.7)
+      actionpack (= 6.1.7.7)
+      activerecord (= 6.1.7.7)
+      activestorage (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       nokogiri (>= 1.8.5)
-    actionview (6.1.7.3)
-      activesupport (= 6.1.7.3)
+    actionview (6.1.7.7)
+      activesupport (= 6.1.7.7)
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
@@ -166,24 +166,24 @@ GEM
     active_record_query_trace (1.5.3)
     active_record_union (1.3.0)
       activerecord (>= 4.0)
-    activejob (6.1.7.3)
-      activesupport (= 6.1.7.3)
+    activejob (6.1.7.7)
+      activesupport (= 6.1.7.7)
       globalid (>= 0.3.6)
-    activemodel (6.1.7.3)
-      activesupport (= 6.1.7.3)
-    activerecord (6.1.7.3)
-      activemodel (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    activemodel (6.1.7.7)
+      activesupport (= 6.1.7.7)
+    activerecord (6.1.7.7)
+      activemodel (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
     activerecord-import (1.0.8)
       activerecord (>= 3.2)
-    activestorage (6.1.7.3)
-      actionpack (= 6.1.7.3)
-      activejob (= 6.1.7.3)
-      activerecord (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    activestorage (6.1.7.7)
+      actionpack (= 6.1.7.7)
+      activejob (= 6.1.7.7)
+      activerecord (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       marcel (~> 1.0)
       mini_mime (>= 1.1.0)
-    activesupport (6.1.7.3)
+    activesupport (6.1.7.7)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -193,14 +193,14 @@ GEM
       activerecord (>= 4.2)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    aes_key_wrap (1.0.1)
+    aes_key_wrap (1.1.0)
     afm (0.2.2)
     annotate (3.1.1)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
     ansi (1.5.0)
     ast (2.4.2)
-    attr_required (1.0.1)
+    attr_required (1.0.2)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.2.0)
@@ -263,13 +263,14 @@ GEM
     aws-sigv4 (1.6.0)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
+    base64 (0.2.0)
     bcrypt (3.1.13)
     benchmark-ips (2.7.2)
     better_errors (2.10.1)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
       rouge (>= 1.0.0)
-    bindata (2.4.10)
+    bindata (2.5.0)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -293,7 +294,7 @@ GEM
     colorize (0.8.1)
     composite_primary_keys (13.0.4)
       activerecord (~> 6.1.0)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crack (0.4.5)
       rexml
@@ -476,16 +477,15 @@ GEM
     hashie (3.6.0)
     highline (1.6.21)
     honeybadger (4.12.1)
-    http (4.4.1)
-      addressable (~> 2.3)
+    http (5.2.0)
+      addressable (~> 2.8)
+      base64 (~> 0.1)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
-      http-parser (~> 1.2.0)
+      llhttp-ffi (~> 0.5.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.3)
-      ffi-compiler (>= 1.0, < 2.0)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
@@ -507,10 +507,11 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (2.6.2)
-    json-jwt (1.10.0)
+    json-jwt (1.15.3.1)
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
+      httpclient
     json-schema (2.8.1)
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
@@ -525,6 +526,9 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    llhttp-ffi (0.5.0)
+      ffi-compiler (~> 1.0)
+      rake (~> 13.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -535,6 +539,10 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailjet (1.7.3)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
+      rest-client (>= 2.0.0)
     marcel (1.0.2)
     memoist (0.16.2)
     memory_profiler (1.0.1)
@@ -621,18 +629,21 @@ GEM
       actionpack (>= 4.2)
       omniauth (>= 1.3.1)
     open-uri (0.1.0)
+      stringio
+      time
+      uri
     open_uri_redirections (0.2.1)
-    openid_connect (1.0.3)
+    openid_connect (1.4.2)
       activemodel
       attr_required (>= 1.0.0)
-      json (>= 1.4.3)
-      json-jwt (>= 1.5.0)
-      rack-oauth2 (>= 1.3.1)
-      swd (>= 1.0.0)
+      json-jwt (>= 1.15.0)
+      net-smtp
+      rack-oauth2 (~> 1.21)
+      swd (~> 1.3)
       tzinfo
       validate_email
       validate_url
-      webfinger (>= 1.0.1)
+      webfinger (~> 1.2)
     orm_adapter (0.5.0)
     os (1.1.4)
     parallel (1.23.0)
@@ -674,12 +685,12 @@ GEM
       rack (>= 2.0.0)
     rack-mini-profiler (3.0.0)
       rack (>= 1.2.0)
-    rack-oauth2 (1.5.1)
-      activesupport (>= 2.3)
-      attr_required (>= 0.0.5)
-      httpclient (>= 2.4)
-      multi_json (>= 1.3.6)
-      rack (>= 1.1)
+    rack-oauth2 (1.21.3)
+      activesupport
+      attr_required
+      httpclient
+      json-jwt (>= 1.11.0)
+      rack (>= 2.1.0)
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
@@ -690,20 +701,20 @@ GEM
       rack (>= 1.3)
     rack_csrf (2.7.0)
       rack (>= 1.1.0)
-    rails (6.1.7.3)
-      actioncable (= 6.1.7.3)
-      actionmailbox (= 6.1.7.3)
-      actionmailer (= 6.1.7.3)
-      actionpack (= 6.1.7.3)
-      actiontext (= 6.1.7.3)
-      actionview (= 6.1.7.3)
-      activejob (= 6.1.7.3)
-      activemodel (= 6.1.7.3)
-      activerecord (= 6.1.7.3)
-      activestorage (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    rails (6.1.7.7)
+      actioncable (= 6.1.7.7)
+      actionmailbox (= 6.1.7.7)
+      actionmailer (= 6.1.7.7)
+      actionpack (= 6.1.7.7)
+      actiontext (= 6.1.7.7)
+      actionview (= 6.1.7.7)
+      activejob (= 6.1.7.7)
+      activemodel (= 6.1.7.7)
+      activerecord (= 6.1.7.7)
+      activestorage (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       bundler (>= 1.15.0)
-      railties (= 6.1.7.3)
+      railties (= 6.1.7.7)
       sprockets-rails (>= 2.0.0)
     rails-controller-testing (1.0.5)
       actionpack (>= 5.0.1.rc1)
@@ -714,15 +725,15 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
-    railties (6.1.7.3)
-      actionpack (= 6.1.7.3)
-      activesupport (= 6.1.7.3)
+    railties (6.1.7.7)
+      actionpack (= 6.1.7.7)
+      activesupport (= 6.1.7.7)
       method_source
       rake (>= 12.2)
       thor (~> 1.0)
     rainbow (3.1.1)
     raindrops (0.20.0)
-    rake (12.3.3)
+    rake (13.1.0)
     rambling-trie (2.3.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
@@ -737,7 +748,7 @@ GEM
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
       uber (< 0.2.0)
-    request_store (1.4.1)
+    request_store (1.6.0)
       rack (>= 1.4)
     require_all (2.0.0)
     rerun (0.14.0)
@@ -853,19 +864,18 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machine (1.2.0)
-    statsig (1.33.0)
+    statsig (1.33.2)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
       http (>= 4.4, < 6.0)
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
-    swd (1.0.1)
+    stringio (3.1.0)
+    swd (1.3.0)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
       httpclient (>= 2.4)
-      i18n
-      json (>= 1.4.3)
     sysexits (1.2.0)
     systemu (2.6.5)
     tableschema (1.0.4)
@@ -882,6 +892,8 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
+    time (0.3.0)
+      date
     timecop (0.8.1)
     timeout (0.3.2)
     tod (2.1.1)
@@ -901,21 +913,22 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
+    uri (0.13.0)
     user_agent_parser (2.15.0)
     uuid (2.3.9)
       macaddr (~> 1.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
       mail (>= 2.2.5)
-    validate_url (1.0.2)
+    validate_url (1.0.15)
       activemodel (>= 3.0.0)
-      addressable
+      public_suffix
     validates_email_format_of (1.6.3)
       i18n
     vcr (3.0.3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (4.2.0)
+    web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -924,10 +937,9 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
-    webfinger (1.0.2)
+    webfinger (1.2.0)
       activesupport
       httpclient (>= 2.4)
-      multi_json
     webmock (3.14.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -1014,6 +1026,7 @@ DEPENDENCIES
   haml_lint
   highline (~> 1.6.21)
   honeybadger (>= 4.5.6)
+  http (~> 5.0)
   httparty
   image_optim!
   image_optim_pack (~> 0.5.0)!
@@ -1026,6 +1039,7 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer

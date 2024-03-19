@@ -40,6 +40,7 @@ import {
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode, LEGACY_DEFAULT_LIBRARY, DEFAULT_LIBRARY} from '../constants';
 import {Key} from '../utils/Notes';
@@ -117,6 +118,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
+      this.getValidationTimeout,
       this.player
     );
 
@@ -270,6 +272,11 @@ class UnconnectedMusicView extends React.Component {
       }
       this.loadCode(codeToLoad);
     }
+
+    Globals.setShowSoundFilters(
+      AppConfig.getValue('show-sound-filters') === 'true' ||
+        levelData.showSoundFilters
+    );
   }
 
   // Load the library and initialize the music player, if not already loaded.
@@ -295,6 +302,8 @@ class UnconnectedMusicView extends React.Component {
 
     if (getBlockMode() === BlockMode.SIMPLE2) {
       this.sequencer = new Simple2Sequencer();
+    } else if (getBlockMode() === BlockMode.ADVANCED) {
+      this.sequencer = new AdvancedSequencer();
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
     }
@@ -316,6 +325,21 @@ class UnconnectedMusicView extends React.Component {
 
   getIsPlaying = () => {
     return this.props.isPlaying;
+  };
+
+  getValidationTimeout = () => {
+    // The level can specify a desired timeout, in measures, when we can start showing
+    // non-success validation messages.  That said, if we've just completed playing the
+    // last measure before reaching that specified value, we can start showing the
+    // messages.
+    // If no timeout is specified, then we can starting showing the non-success messages
+    // at measure 2.
+    return this.props.levelData?.validationTimeout
+      ? Math.min(
+          this.props.levelData?.validationTimeout,
+          this.sequencer.getLastMeasure()
+        )
+      : 2;
   };
 
   getPlaybackEvents = () => {
@@ -429,6 +453,7 @@ class UnconnectedMusicView extends React.Component {
     if (this.props.onProjectBeats) {
       this.analyticsReporter.onButtonClicked('trigger', {id});
     }
+
     const triggerStartPosition =
       this.musicBlocklyWorkspace.getTriggerStartPosition(
         id,
@@ -446,7 +471,7 @@ class UnconnectedMusicView extends React.Component {
       lastMeasure: this.sequencer.getLastMeasure(),
     });
     this.props.addOrderedFunctions({
-      orderedFunctions: this.sequencer.getOrderedFunctions(),
+      orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
     this.player.playEvents(playbackEvents);
 
@@ -480,7 +505,7 @@ class UnconnectedMusicView extends React.Component {
       lastMeasure: this.sequencer.getLastMeasure(),
     });
     this.props.addOrderedFunctions({
-      orderedFunctions: this.sequencer.getOrderedFunctions(),
+      orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
 
     return this.player.preloadSounds(
@@ -608,6 +633,7 @@ class UnconnectedMusicView extends React.Component {
           redo={this.redo}
           clearCode={this.clearCode}
           validator={this.musicValidator}
+          player={this.player}
         />
         <Callouts />
       </AnalyticsContext.Provider>

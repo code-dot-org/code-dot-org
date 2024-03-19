@@ -14,13 +14,16 @@ class Policies::Lti
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
+
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
-  TEACHER_ROLES = Set.new(
+  TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
+).freeze
+  STAFF_ROLES = Set.new(
     [
+      *TEACHER_ROLES,
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/membership#Administrator',
-      'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
       'http://purl.imsglobal.org/vocab/lis/v2/system/person#Administrator',
     ]
 ).freeze
@@ -71,13 +74,14 @@ class Policies::Lti
 
   def self.get_account_type(roles)
     roles.each do |role|
-      return User::TYPE_TEACHER if TEACHER_ROLES.include? role
+      return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end
     return User::TYPE_STUDENT
   end
 
-  def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
+  # Returns true if any of the user's roles is the LTI instructor role
+  def self.lti_teacher?(roles)
+    (Set.new(roles) & TEACHER_ROLES).any?
   end
 
   def self.lti?(user)
@@ -129,5 +133,19 @@ class Policies::Lti
     return false unless lti_early_access_limit.is_a?(Integer)
 
     LtiIntegration.count >= lti_early_access_limit
+  end
+
+  def self.early_access_banner_available?(user)
+    user.teacher? && early_access? && lti?(user)
+  end
+
+  # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
+  def self.issuer_accepts_resource_link?(issuer)
+    ['Canvas'].include?(issuer_name(issuer))
+  end
+
+  # Force Schoology through iframe mitigation flow
+  def self.force_iframe_launch?(issuer)
+    ['Schoology'].include?(issuer_name(issuer))
   end
 end

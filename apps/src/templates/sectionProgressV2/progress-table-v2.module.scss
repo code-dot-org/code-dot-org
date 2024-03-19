@@ -15,17 +15,14 @@
 
 $level-cell-width: 52;
 
-:export {
-   levelCellWidth: $level-cell-width;
-}
-
 .table {
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  width: fit-content;
 
   &Loading {
     overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
 
   .expandedColumn:first-child {
@@ -75,8 +72,6 @@ $level-cell-width: 52;
     height: 47px;
     line-height: 47px !important;
     color: inherit !important;
-    // remove overflow after data icons are added
-    overflow-x: hidden;
   }
 }
 
@@ -106,6 +101,7 @@ $level-cell-width: 52;
     height: 100%;
     min-width: 195px;
     margin-right: 12px;
+    line-height: 32px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -202,7 +198,7 @@ $level-cell-width: 52;
       flex-direction: row;
       width: fit-content;
 
-      .expandedHeaderLevelCell:last-child {
+      & .expandedHeaderChild:last-child {
         border-right: 1px solid $light_gray_200;
       }
     }
@@ -216,8 +212,16 @@ $level-cell-width: 52;
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      overflow-x: hidden;
+      overflow: hidden;
       flex-wrap: nowrap;
+
+      &LevelNumber {
+        margin-top: 0.0625em;
+      }
+
+      &Unexpanded {
+        background-color: white;
+      }
     }
 
     &ExpandedLevel {
@@ -232,14 +236,14 @@ $level-cell-width: 52;
         color: $light_white;
       }
 
-      .expandedHeaderExpandedLevelCell:last-child {
-        width: $level-cell-width + px;
-        border-right: 0;
+      .expandedHeaderExpandedLevelCell:first-child {
+        border-left: 0;
       }
     }
 
     &ExpandedLevelCell {
-      width: $level-cell-width + 1 + px;
+      // Invisible border to match sizing of table
+      border-left: 1px solid $light_primary_500;
     }
   }
   &Column {
@@ -267,8 +271,12 @@ $level-cell-width: 52;
 }
 
 .sortDropdown {
-  height: 76px;
+  height: 72px;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 4px;
 }
 
 .studentColumn {

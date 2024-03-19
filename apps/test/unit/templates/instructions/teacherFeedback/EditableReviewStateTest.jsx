@@ -1,10 +1,12 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import i18n from '@cdo/locale';
+import React from 'react';
 import sinon from 'sinon';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   latestReviewState: null,
