@@ -45,7 +45,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "parent_level_id": 21671,
-    "display_name": "Create a Sprite Lab project",
+    "display_name": "Icy Setup",
     "block_pool": "gamelab",
     "include_shared_functions": "true",
     "name_suffix": "_2023",
@@ -62,7 +62,7 @@
       "upButton",
       "downButton"
     ],
-    "thumbnail_url": "https://code.org/shared/images/courses/logo_gamelab_square.png",
+    "thumbnail_url": "https://images.code.org/46e3ebafbc01d609750763db448be53f-choice.jpg",
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",
@@ -70,12 +70,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Explore:** Applying gravity to the game world!\r\n\r\n- Look carefully at the code. What do you notice? \r\n\r\n- What happens when you change the sprite's type?\r\n- Click `Finish` when you're ready to continue on",
+    "long_instructions": "**Sprite Type Practice**\r\n\r\nSomething is not quite right in this simple game design.\r\n\r\n- Can you fix the sprite types so the penguin can stand on the icy ground?",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-14T21:49:42.432+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world4\\\"\"],\"cloned_from\":\"game_meachaics_world4\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-14T21:49:42.432+00:00\",\"changed\":[\"cloned from \\\"game_meachaics_world4\\\"\"],\"cloned_from\":\"game_meachaics_world4\"},{\"changed_at\":\"2024-03-18 20:20:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-18 20:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-18 20:34:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-18 20:36:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -86,29 +88,32 @@
               <field name="IMG">"gradient_02"</field>
               <next>
                 <block type="gamelab_makeSpritesGridInput">
-                  <field name="ANIMATION_NAME">"dirt_grass"</field>
+                  <field name="ANIMATION_NAME">"stone_snow"</field>
                   <value name="GRID">
                     <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
                       <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
                     </shadow>
                     <block type="gamelab_bitmap">
-                      <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,1],[0,0,0,0,0,1,1,1],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
+                      <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"game_penguin"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":81,"y":34}</field>
+                    <block type="gamelab_makeSpritesGridInput">
+                      <field name="ANIMATION_NAME">"water"</field>
+                      <value name="GRID">
+                        <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
+                          <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
+                        </shadow>
+                        <block type="gamelab_bitmap">
+                          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
                         </block>
                       </value>
                       <next>
-                        <block type="GameDev_setGroup">
-                          <field name="GROUP">"walls"</field>
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"dirt_grass"</field>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <field name="ANIMATION_NAME">"game_penguin"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <field name="LOCATION">{"x":81,"y":34}</field>
                             </block>
                           </value>
                           <next>
@@ -116,9 +121,19 @@
                               <field name="GROUP">"players"</field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"game_penguin"</field>
+                                  <field name="ANIMATION">"stone_snow"</field>
                                 </block>
                               </value>
+                              <next>
+                                <block type="GameDev_setGroup">
+                                  <field name="GROUP">"walls"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"game_penguin"</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
