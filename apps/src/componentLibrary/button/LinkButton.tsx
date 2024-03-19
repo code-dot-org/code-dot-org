@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {memo} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
-import BaseButton from './_baseButton/_BaseButton';
+import _BaseButton from './_baseButton/_BaseButton';
 import {ButtonType, ButtonColor} from './types';
 
 export interface LinkButtonProps {
@@ -31,11 +31,6 @@ export interface LinkButtonProps {
   icon?: FontAwesomeV6IconProps;
   /** Left Button icon */
   iconRight?: FontAwesomeV6IconProps;
-  /** Whether we use \<a> (when set to true) or \<button> (when false) html tag for Button component.
-   * If we want button to redirect to another page or download some file we should use \<a> tag.
-   * If we want button to call some function or submit some form we should use \<button> tag.
-   * */
-  useAsLink: boolean;
   /** (\<a> specific prop)
    *  Button target (when used as link) */
   target?: string;
@@ -51,7 +46,7 @@ export interface LinkButtonProps {
 }
 
 const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
-  <BaseButton {...props} />
+  <_BaseButton {...props} useAsLink />
 );
 
 /**
@@ -67,4 +62,4 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
  * Design System: Button Component.
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
-export default LinkButton;
+export default memo(LinkButton);

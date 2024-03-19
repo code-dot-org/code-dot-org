@@ -5,17 +5,17 @@ import sinon from 'sinon';
 
 import {expect} from '../../util/reconfiguredChai';
 
-import Button from '@cdo/apps/componentLibrary/button';
+import _BaseButton from '@cdo/apps/componentLibrary/button/_baseButton/_BaseButton';
 
-describe('Design System - Button', () => {
-  it('Button - renders with correct text', () => {
-    render(<Button text="Button test" onClick={() => null} />);
+describe('Design System - _BaseButton', () => {
+  it('_BaseButton - renders with correct text', () => {
+    render(<_BaseButton text="_BaseButton test" onClick={() => null} />);
 
-    const button = screen.getByText('Button test');
+    const button = screen.getByText('_BaseButton test');
     expect(button).to.exist;
   });
 
-  it('Button - can be clicked', async () => {
+  it('_BaseButton - can be clicked', async () => {
     const user = userEvent.setup();
     const spyOnChange = sinon.spy();
 
@@ -23,14 +23,18 @@ describe('Design System - Button', () => {
       spyOnChange();
     };
 
-    const ButtonToRender = () => (
-      <Button text="Button" ariaLabel="ButtonLabel" onClick={onClick} />
+    const _BaseButtonToRender = () => (
+      <_BaseButton
+        text="_BaseButton"
+        ariaLabel="_BaseButtonLabel"
+        onClick={onClick}
+      />
     );
 
     // Initial render
-    const {rerender} = render(<ButtonToRender />);
+    const {rerender} = render(<_BaseButtonToRender />);
 
-    let button = screen.getByLabelText('ButtonLabel');
+    let button = screen.getByLabelText('_BaseButtonLabel');
     expect(button).to.exist;
 
     expect(button.disabled).to.be.false;
@@ -38,9 +42,9 @@ describe('Design System - Button', () => {
     await user.click(button);
 
     // Re-render after user's first click
-    rerender(<ButtonToRender />);
+    rerender(<_BaseButtonToRender />);
 
-    button = screen.getByLabelText('ButtonLabel');
+    button = screen.getByLabelText('_BaseButtonLabel');
 
     expect(spyOnChange).to.have.been.calledOnce;
     expect(button.disabled).to.be.false;
@@ -48,15 +52,15 @@ describe('Design System - Button', () => {
     await user.click(button);
 
     // Re-render after user's second click
-    rerender(<ButtonToRender />);
+    rerender(<_BaseButtonToRender />);
 
-    button = screen.getByLabelText('ButtonLabel');
+    button = screen.getByLabelText('_BaseButtonLabel');
 
     expect(spyOnChange).to.have.been.calledTwice;
     expect(button.disabled).to.be.false;
   });
 
-  it("Button - renders disabled button, can't click it", async () => {
+  it("_BaseButton - renders disabled button, can't click it", async () => {
     const user = userEvent.setup();
     const spyOnClick = sinon.spy();
 
@@ -64,27 +68,27 @@ describe('Design System - Button', () => {
       spyOnClick();
     };
 
-    const ButtonToRender = () => (
-      <Button
-        text="Button test"
+    const _BaseButtonToRender = () => (
+      <_BaseButton
+        text="_BaseButton test"
         onClick={onClick}
-        ariaLabel="Button aria label"
+        ariaLabel="_BaseButton aria label"
         disabled={true}
       />
     );
 
     // Initial render
-    const {rerender} = render(<ButtonToRender />);
+    const {rerender} = render(<_BaseButtonToRender />);
 
-    let button = screen.getByLabelText('Button aria label');
+    let button = screen.getByLabelText('_BaseButton aria label');
     expect(button).to.exist;
 
     await user.click(button);
 
     // Re-render after user's first click
-    rerender(<ButtonToRender />);
+    rerender(<_BaseButtonToRender />);
 
-    button = screen.getByLabelText('Button aria label');
+    button = screen.getByLabelText('_BaseButton aria label');
 
     expect(spyOnClick).to.not.have.been.called;
     expect(button.disabled).to.be.true;
@@ -92,9 +96,9 @@ describe('Design System - Button', () => {
     await user.click(button);
 
     // Re-render after user's second click
-    rerender(<ButtonToRender />);
+    rerender(<_BaseButtonToRender />);
 
-    button = screen.getByLabelText('Button aria label');
+    button = screen.getByLabelText('_BaseButton aria label');
 
     expect(spyOnClick).to.not.have.been.called;
     expect(button.disabled).to.be.true;

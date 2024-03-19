@@ -9,7 +9,7 @@ import {ButtonType, ButtonColor} from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './_baseButton.module.scss';
 
-export interface BaseButtonProps {
+export interface _BaseButtonProps {
   /** Button Component type */
   type?: ButtonType;
   /** Custom class name */
@@ -79,7 +79,7 @@ const checkButtonPropsForErrors = ({
   href,
   download,
   text,
-}: BaseButtonProps) => {
+}: _BaseButtonProps) => {
   if (useAsLink && !href) {
     throw new Error('Expect href prop when useAsLink is true');
   }
@@ -128,7 +128,7 @@ const spinnerIcon: FontAwesomeV6IconProps = {
   animationType: 'spin',
 };
 
-const BaseButton: React.FunctionComponent<BaseButtonProps> = ({
+const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   className,
   id,
   text,

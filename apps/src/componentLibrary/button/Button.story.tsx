@@ -1,30 +1,19 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
-import {buttonColors} from './../index';
-import _BaseButton, {_BaseButtonProps} from './_BaseButton';
+import Button, {ButtonProps, buttonColors} from './Button';
 
 export default {
-  title: 'DesignSystem/Button/_BaseButton', // eslint-disable-line storybook/no-title-property-in-meta
-  /**
-   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
-   * This workaround (component: Component.type instead of component: Component) is taken from
-   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
-   * Feel free to remove this workaround when storybook fixes this issue.
-   */
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore-next-line
-  component: _BaseButton.type,
+  title: 'DesignSystem/Button/Button', // eslint-disable-line storybook/no-title-property-in-meta
+  component: Button,
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<_BaseButtonProps> = args => (
-  <_BaseButton {...args} />
-);
+const SingleTemplate: StoryFn<ButtonProps> = args => <Button {...args} />;
 
 const MultipleTemplate: StoryFn<{
-  components: _BaseButtonProps[];
+  components: ButtonProps[];
 }> = args => (
   <div
     style={{
@@ -35,7 +24,7 @@ const MultipleTemplate: StoryFn<{
     }}
   >
     {args.components?.map(componentArg => (
-      <_BaseButton
+      <Button
         key={`${componentArg.size}-${componentArg.text}`}
         {...componentArg}
       />
@@ -43,31 +32,31 @@ const MultipleTemplate: StoryFn<{
   </div>
 );
 
-export const Default_BaseButton = SingleTemplate.bind({});
-Default_BaseButton.args = {
+export const DefaultButton = SingleTemplate.bind({});
+DefaultButton.args = {
   text: 'Button',
   onClick: () => null,
   size: 'm',
 };
 
-export const Disabled_BaseButton = SingleTemplate.bind({});
-Disabled_BaseButton.args = {
+export const DisabledButton = SingleTemplate.bind({});
+DisabledButton.args = {
   text: 'Button',
   onClick: () => null,
   disabled: true,
   size: 'm',
 };
 
-export const Pending_BaseButton = SingleTemplate.bind({});
-Pending_BaseButton.args = {
+export const PendingButton = SingleTemplate.bind({});
+PendingButton.args = {
   text: 'Button',
   onClick: () => null,
   isPending: true,
   size: 'm',
 };
 
-export const _BaseButtonWithIcons = SingleTemplate.bind({});
-_BaseButtonWithIcons.args = {
+export const ButtonWithIcons = SingleTemplate.bind({});
+ButtonWithIcons.args = {
   text: 'Button',
   onClick: () => null,
   iconLeft: {iconName: 'house', iconStyle: 'solid'},
@@ -75,42 +64,16 @@ _BaseButtonWithIcons.args = {
   size: 'm',
 };
 
-export const Icon_BaseButton = SingleTemplate.bind({});
-Icon_BaseButton.args = {
+export const IconButton = SingleTemplate.bind({});
+IconButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
   type: 'iconBorder',
   onClick: () => null,
   size: 'm',
 };
 
-export const Link_BaseButton = SingleTemplate.bind({});
-Link_BaseButton.args = {
-  text: 'Link',
-  useAsLink: true,
-  href: 'https://www.google.com',
-  size: 'm',
-};
-
-export const ButtonButtonVsLinkButton = MultipleTemplate.bind({});
-ButtonButtonVsLinkButton.args = {
-  components: [
-    {
-      text: 'Button',
-      onClick: () => null,
-      size: 'm',
-    },
-    {
-      text: 'Link',
-      useAsLink: true,
-      href: 'https://www.google.com',
-      size: 'm',
-      target: '_blank',
-    },
-  ],
-};
-
-export const GroupOfColorsOf_BaseButtons = MultipleTemplate.bind({});
-GroupOfColorsOf_BaseButtons.args = {
+export const GroupOfColorsOfButtons = MultipleTemplate.bind({});
+GroupOfColorsOfButtons.args = {
   components: [
     {
       text: 'Button Primary Purple',
@@ -217,8 +180,8 @@ GroupOfColorsOf_BaseButtons.args = {
   ],
 };
 
-export const GroupOfSizesOf_BaseButtons = MultipleTemplate.bind({});
-GroupOfSizesOf_BaseButtons.args = {
+export const GroupOfSizesOfButtons = MultipleTemplate.bind({});
+GroupOfSizesOfButtons.args = {
   components: [
     {
       text: 'Button xs',

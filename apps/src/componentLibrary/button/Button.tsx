@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {memo} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+
+import _BaseButton from './_baseButton/_BaseButton';
 import {ButtonType, ButtonColor} from './types';
 
 export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
@@ -61,7 +63,7 @@ export interface ButtonProps {
 }
 
 const Button: React.FunctionComponent<ButtonProps> = props => (
-  <Button {...props} />
+  <_BaseButton {...props} />
 );
 
 /**
@@ -77,4 +79,4 @@ const Button: React.FunctionComponent<ButtonProps> = props => (
  * Design System: Button Component.
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
-export default Button;
+export default memo(Button);

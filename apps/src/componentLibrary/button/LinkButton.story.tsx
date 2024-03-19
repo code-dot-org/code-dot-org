@@ -1,30 +1,24 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
-import {buttonColors} from './../index';
-import _BaseButton, {_BaseButtonProps} from './_BaseButton';
+import {buttonColors} from './index';
+import LinkButton, {LinkButtonProps} from './LinkButton';
 
 export default {
-  title: 'DesignSystem/Button/_BaseButton', // eslint-disable-line storybook/no-title-property-in-meta
-  /**
-   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
-   * This workaround (component: Component.type instead of component: Component) is taken from
-   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
-   * Feel free to remove this workaround when storybook fixes this issue.
-   */
+  title: 'DesignSystem/Button/LinkButton', // eslint-disable-line storybook/no-title-property-in-meta
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore-next-line
-  component: _BaseButton.type,
+  component: LinkButton.type,
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<_BaseButtonProps> = args => (
-  <_BaseButton {...args} />
+const SingleTemplate: StoryFn<LinkButtonProps> = args => (
+  <LinkButton {...args} />
 );
 
 const MultipleTemplate: StoryFn<{
-  components: _BaseButtonProps[];
+  components: LinkButtonProps[];
 }> = args => (
   <div
     style={{
@@ -35,210 +29,186 @@ const MultipleTemplate: StoryFn<{
     }}
   >
     {args.components?.map(componentArg => (
-      <_BaseButton
-        key={`${componentArg.size}-${componentArg.text}`}
+      <LinkButton
+        key={`${componentArg.size}-${componentArg.text}-${
+          componentArg.icon?.iconName
+        }-${Math.random()}`}
         {...componentArg}
       />
     ))}
   </div>
 );
 
-export const Default_BaseButton = SingleTemplate.bind({});
-Default_BaseButton.args = {
+export const DefaultLinkButton = SingleTemplate.bind({});
+DefaultLinkButton.args = {
   text: 'Button',
-  onClick: () => null,
+  href: 'https://www.google.com',
   size: 'm',
 };
 
-export const Disabled_BaseButton = SingleTemplate.bind({});
-Disabled_BaseButton.args = {
+export const DisabledLinkButton = SingleTemplate.bind({});
+DisabledLinkButton.args = {
   text: 'Button',
-  onClick: () => null,
+  href: 'https://www.google.com',
   disabled: true,
   size: 'm',
 };
 
-export const Pending_BaseButton = SingleTemplate.bind({});
-Pending_BaseButton.args = {
+export const PendingLinkButton = SingleTemplate.bind({});
+PendingLinkButton.args = {
   text: 'Button',
-  onClick: () => null,
+  href: 'https://www.google.com',
   isPending: true,
   size: 'm',
 };
 
-export const _BaseButtonWithIcons = SingleTemplate.bind({});
-_BaseButtonWithIcons.args = {
+export const LinkButtonWithIcons = SingleTemplate.bind({});
+LinkButtonWithIcons.args = {
   text: 'Button',
-  onClick: () => null,
+  href: 'https://www.google.com',
   iconLeft: {iconName: 'house', iconStyle: 'solid'},
   iconRight: {iconName: 'smile', iconStyle: 'solid'},
   size: 'm',
 };
 
-export const Icon_BaseButton = SingleTemplate.bind({});
-Icon_BaseButton.args = {
+export const IconLinkButton = SingleTemplate.bind({});
+IconLinkButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
   type: 'iconBorder',
-  onClick: () => null,
-  size: 'm',
-};
-
-export const Link_BaseButton = SingleTemplate.bind({});
-Link_BaseButton.args = {
-  text: 'Link',
-  useAsLink: true,
   href: 'https://www.google.com',
   size: 'm',
 };
 
-export const ButtonButtonVsLinkButton = MultipleTemplate.bind({});
-ButtonButtonVsLinkButton.args = {
-  components: [
-    {
-      text: 'Button',
-      onClick: () => null,
-      size: 'm',
-    },
-    {
-      text: 'Link',
-      useAsLink: true,
-      href: 'https://www.google.com',
-      size: 'm',
-      target: '_blank',
-    },
-  ],
-};
-
-export const GroupOfColorsOf_BaseButtons = MultipleTemplate.bind({});
-GroupOfColorsOf_BaseButtons.args = {
+export const GroupOfColorsOfLinkButtons = MultipleTemplate.bind({});
+GroupOfColorsOfLinkButtons.args = {
   components: [
     {
       text: 'Button Primary Purple',
       color: buttonColors.purple,
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Primary Black',
       color: buttonColors.black,
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Primary White',
       color: buttonColors.white,
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Secondary Purple',
       color: buttonColors.purple,
       type: 'secondary',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Secondary Black',
       color: buttonColors.black,
       type: 'secondary',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Secondary White',
       color: buttonColors.white,
       type: 'secondary',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Tertiary Purple',
       color: buttonColors.purple,
       type: 'tertiary',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Tertiary Black',
       color: buttonColors.black,
       type: 'tertiary',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button Tertiary White',
       color: buttonColors.white,
       type: 'tertiary',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.purple,
       type: 'iconBorder',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.black,
       type: 'iconBorder',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.white,
       type: 'iconBorder',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.purple,
       type: 'iconOnly',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.black,
       type: 'iconOnly',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.white,
       type: 'iconOnly',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
   ],
 };
 
-export const GroupOfSizesOf_BaseButtons = MultipleTemplate.bind({});
-GroupOfSizesOf_BaseButtons.args = {
+export const GroupOfSizesOfLinkButtons = MultipleTemplate.bind({});
+GroupOfSizesOfLinkButtons.args = {
   components: [
     {
       text: 'Button xs',
       size: 'xs',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button s',
       size: 's',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button m',
       size: 'm',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
     {
       text: 'Button l',
       size: 'l',
-      onClick: () => null,
+      href: 'https://www.google.com',
     },
   ],
 };
