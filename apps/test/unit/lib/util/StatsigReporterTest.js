@@ -3,7 +3,7 @@ import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import * as utils from '@cdo/apps/utils';
 import {stub} from 'sinon';
 
-describe('AnalyticsReporter', () => {
+describe('StatsigReporter', () => {
   describe('formatUserId', () => {
     it('prepends environment in test', () => {
       stub(utils, 'getEnvironment').returns('test');
