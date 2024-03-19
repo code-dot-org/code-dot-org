@@ -295,6 +295,7 @@ Resources:
     Type: AWS::ECS::TaskDefinition
     Properties:
       Family: !Sub "${AWS::StackName}-drone-autoscaler"
+      NetworkMode: awsvpc
       RequiresCompatibilities:
         - EC2
       ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
@@ -417,6 +418,7 @@ Resources:
           AssignPublicIp: DISABLED
           SecurityGroups:
             - !Ref AutoscalerEcsServiceSecurityGroup
+          Subnets: !Ref ServiceSubnetIds
       TaskDefinition: !Ref DroneAutoscalerTaskDefinition
 
   DroneAutoscalerECSCluster:
