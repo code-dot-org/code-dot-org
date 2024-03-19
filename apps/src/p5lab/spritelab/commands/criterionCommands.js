@@ -548,11 +548,12 @@ export const commands = {
   },
 
   // Returns true if a minimum number of watched variables have a valid value.
-  // If unset, a variable's value is an empty string.
+  // If unset, a variable's value is undefined.
   variableValueSet(min = 1) {
     const studentVars = this.getVariableBubbles();
     const filteredVars = studentVars.filter(
-      studentVar => this.getVariableValue(studentVar.name) !== ''
+      studentVar =>
+        typeof this.getVariableValue(studentVar.name) !== 'undefined'
     );
     return filteredVars.length >= min;
   },
