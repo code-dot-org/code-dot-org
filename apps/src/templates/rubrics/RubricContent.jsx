@@ -16,11 +16,7 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoals from './LearningGoals';
-import Button from '@cdo/apps/templates/Button';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StudentSelector from './StudentSelector';
 import SectionSelector from './SectionSelector';
 
@@ -48,50 +44,11 @@ export default function RubricContent({
   reportingData,
   visible,
   aiEvaluations,
+  feedbackAdded,
+  setFeedbackAdded,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
-
-  const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
-  const [errorSubmitting, setErrorSubmitting] = useState(false);
-  const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
-  const [feedbackAdded, setFeedbackAdded] = useState(false);
-  const submitFeedbackToStudent = () => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
-      ...reportingData,
-      studentId: studentLevelInfo.user_id,
-    });
-    setIsSubmittingToStudent(true);
-    setErrorSubmitting(false);
-    const body = JSON.stringify({
-      student_id: studentLevelInfo.user_id,
-    });
-    const endPoint = `/rubrics/${rubric.id}/submit_evaluations`;
-    HttpClient.post(endPoint, body, true, {'Content-Type': 'application/json'})
-      .then(response => response.json())
-      .then(json => {
-        setIsSubmittingToStudent(false);
-        if (!json.submittedAt) {
-          throw new Error('Unexpected response object');
-        }
-        const lastSubmittedDateObj = new Date(json.submittedAt);
-        setLastSubmittedTimestamp(lastSubmittedDateObj.toLocaleString());
-      })
-      .catch(() => {
-        setIsSubmittingToStudent(false);
-        setErrorSubmitting(true);
-      });
-    if (feedbackAdded) {
-      analyticsReporter.sendEvent(
-        EVENTS.TA_RUBRIC_SUBMITTEED_WRITTEN_FEEDBACK,
-        {
-          ...reportingData,
-          studentId: studentLevelInfo.user_id,
-        }
-      );
-      setFeedbackAdded(false);
-    }
-  };
 
   let infoText = null;
   if (!onLevelForEvaluation) {
@@ -179,34 +136,6 @@ export default function RubricContent({
           aiEvaluations={aiEvaluations}
         />
       </div>
-      {canProvideFeedback && (
-        <div className={style.rubricContainerFooter}>
-          <div className={style.submitToStudentButtonAndError}>
-            <Button
-              id="ui-submitFeedbackButton"
-              text={i18n.submitToStudent()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={submitFeedbackToStudent}
-              className={style.submitToStudentButton}
-              disabled={isSubmittingToStudent}
-            />
-            {errorSubmitting && (
-              <BodyThreeText className={style.errorMessage}>
-                {i18n.errorSubmittingFeedback()}
-              </BodyThreeText>
-            )}
-            {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <div id="ui-feedback-submitted-timestamp">
-                <BodyThreeText>
-                  {i18n.feedbackSubmittedAt({
-                    timestamp: lastSubmittedTimestamp,
-                  })}
-                </BodyThreeText>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -221,6 +150,8 @@ RubricContent.propTypes = {
   teacherHasEnabledAi: PropTypes.bool,
   visible: PropTypes.bool,
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
 };
 
 export const InfoAlert = ({text, dismissable}) => {

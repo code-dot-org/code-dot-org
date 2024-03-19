@@ -13,6 +13,8 @@ import LearningGoals, {
   annotateLines,
 } from '@cdo/apps/templates/rubrics/LearningGoals';
 import {render, screen} from '@testing-library/react';
+import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
+import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
 
 const learningGoals = [
   {
@@ -271,9 +273,62 @@ describe('LearningGoals - Enzyme', () => {
       sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
     });
 
+    it('should pass along the correct info type for the annotation', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        'INFO'
+      );
+    });
+
+    it('should pass along a hex color', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match('#')
+      );
+    });
+
+    it('should pass along the appropriate image as an icon', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match('#'),
+        infoIconImage
+      );
+    });
+
+    it('should pass along the appropriate image as an icon for the tooltip', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+
+      sinon.assert.calledWith(
+        annotateLineStub,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match.any,
+        sinon.match({backgroundImage: sinon.match(tipIconImage)})
+      );
+    });
+
     it('should highlight the last line of code when referenced by the AI', () => {
       annotateLines('Line 55: This is a line of code `draw();`');
       sinon.assert.calledWith(highlightLineStub, 8);
+    });
+
+    it('should highlight the line with a hex color', () => {
+      annotateLines('Line 55: This is a line of code `draw();`');
+      sinon.assert.calledWith(highlightLineStub, 8, sinon.match('#'));
     });
 
     it('should ignore code snippets that are empty', () => {

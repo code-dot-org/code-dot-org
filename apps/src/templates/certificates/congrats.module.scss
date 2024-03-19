@@ -6,7 +6,7 @@
   margin-top: 50px;
 }
 
-.header {
+h1.header {
   color: $neutral_dark;
 }
 
@@ -26,7 +26,7 @@
   width: 50%;
 }
 
-.heading {
+h1.heading {
   width: 100%;
 }
 
@@ -36,7 +36,7 @@
   width: 100%;
 }
 
-.mobileHeading {
+h1.mobileHeading {
   font-size: 24px;
   line-height: 1.5;
 }
@@ -69,9 +69,9 @@
 .confetti {
   top: 100px;
 }
-.enterName {
-  font-weight: bold !important;
-  margin: 0 !important;
+p.enterName {
+  font-weight: bold;
+  margin: 0;
 }
 
 .inputButtonContainer {

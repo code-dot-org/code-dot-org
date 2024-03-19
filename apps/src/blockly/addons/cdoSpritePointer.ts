@@ -16,7 +16,7 @@ import CdoFieldImage from './cdoFieldImage';
 export function getPointerBlockImageUrl(
   block: ExtendedBlockSvg,
   pointerMetadataMap: PointerMetadataMap,
-  imageSourceId: string
+  imageSourceId?: string
 ) {
   const pointerData = pointerMetadataMap[block.type];
   if (!pointerData || !block.inputList || block.inputList.length === 0) {
@@ -65,7 +65,7 @@ export function getPointerBlockImageUrl(
 export function updatePointerBlockImage(
   block: ExtendedBlockSvg,
   pointerMetadataMap: PointerMetadataMap,
-  imageSourceId: string
+  imageSourceId?: string
 ) {
   const url = getPointerBlockImageUrl(block, pointerMetadataMap, imageSourceId);
   changePointerImage(url, block);

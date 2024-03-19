@@ -248,7 +248,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     # stub cache reads for each test
-    LtiV1Controller.any_instance.stubs(:read_cache).returns({state: @state, nonce: @nonce})
+    LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
   end
 
@@ -477,11 +478,16 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
-
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
+    )
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    create :lti_user_identity, user: user, subject: payload[:sub]
     assert deployment
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
@@ -494,8 +500,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
-
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
+    )
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
@@ -503,6 +513,30 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
     assert_response :redirect
+  end
+
+  test 'auth - should redirect to iframe route if LMS caller is Schoology AND new_tab=true param is missing' do
+    issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
+    integration = create :lti_integration, issuer: issuer
+    # Override read_cache stub with this integration
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
+    payload = {**get_valid_payload, iss: issuer, aud: integration.client_id}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_response :redirect
+    assert_redirected_to '/lti/v1/iframe' + "?id_token=#{jwt}&state=#{@state}"
+  end
+
+  test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
+    issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
+    integration = create :lti_integration, issuer: issuer
+    # Override read_cache stub with this integration
+    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
+    payload = {**get_valid_payload, iss: issuer, aud: integration.client_id, azp: integration.client_id}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
+    assert_response :redirect
+    assert_redirected_to '/users/sign_up'
   end
 
   test 'sync - should redirect students to homepage without syncing' do
@@ -525,6 +559,50 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :ok
+  end
+
+  test 'sync_course as json - syncs and returns course sections data' do
+    lti_course_context_id = SecureRandom.uuid
+    lti_course_resource_link_id = SecureRandom.uuid
+    lti_course_nrps_url = 'https://example.com/nrps'
+
+    user = create :teacher, :with_lti_auth
+    lti_integration = create :lti_integration
+    create(
+      :lti_course,
+      lti_integration: lti_integration,
+      context_id: lti_course_context_id,
+      resource_link_id: lti_course_resource_link_id,
+      nrps_url: lti_course_nrps_url
+    )
+
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id)
+    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+    Services::Lti.expects(:sync_course_roster).returns(true)
+
+    sign_in user
+
+    assert_no_difference 'LtiCourse.count' do
+      get '/lti/v1/sync_course', params: {
+        lti_integration_id: lti_integration.id,
+        deployment_id: 'foo',
+        context_id: lti_course_context_id,
+        rlid: lti_course_resource_link_id,
+        nrps_url: lti_course_nrps_url
+      }, as: :json
+    end
+
+    expected_sections_data = {
+      'all' => {
+        '1' => {'name' => 'Section 1', 'size' => 3},
+        '2' => {'name' => 'Section 2', 'size' => 3},
+        '3' => {'name' => 'Section 3', 'size' => 3}
+      },
+      'changed' => {},
+    }
+
+    assert_response :ok
+    assert_equal expected_sections_data, JSON.parse(response.body)
   end
 
   test 'sync - should not sync given no changes' do

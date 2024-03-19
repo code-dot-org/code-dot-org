@@ -25,7 +25,7 @@ export type DefaultChannel = Pick<Channel, 'name'>;
 // Represents the structure of the full project sources object (i.e. the main.json file)
 export interface ProjectSources {
   // Source code can either be a string or a nested JSON object (for multi-file).
-  source: string | NestedSourceCode;
+  source: string | MultiFileSource;
   // Optional lab-specific configuration for this project
   labConfig?: {[key: string]: object};
   // Add other properties (animations, html, etc) as needed.
@@ -55,16 +55,32 @@ export interface BlocklySource {
   variables: BlocklyVariable[];
 }
 
-// A potentially deeply nested object of source code, where keys are file or folder names
-// and values are folders or individual file contents. This is used in labs with multi-file.
-export type NestedSourceCode = {
-  [key: string]: SourceFileData | NestedSourceCode;
-};
-// TODO: There may be more properties that we want to track in the future. For example, Java Lab uses tabOrder
-// and isVisible.
-export type SourceFileData = {
-  text: string;
-};
+// This structure (as well as ProjectFolder and ProjectFile) is still in flux
+// and may change going forward. It should only be used for labs that are not released
+// yet.
+// Note that if it changes files_api.has_valid_encoding? may need to be updated to correctly validate
+// the new structure.
+export interface MultiFileSource {
+  folders: Record<string, ProjectFolder>;
+  files: Record<string, ProjectFile>;
+}
+
+export interface ProjectFile {
+  id: string;
+  name: string;
+  language: string;
+  contents: string;
+  open?: boolean;
+  active?: boolean;
+  folderId: string;
+}
+
+export interface ProjectFolder {
+  id: string;
+  name: string;
+  parentId: string;
+  open?: boolean;
+}
 
 export interface BlocklyBlock {
   type: string;

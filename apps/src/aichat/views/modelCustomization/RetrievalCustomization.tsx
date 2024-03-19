@@ -1,12 +1,26 @@
 import React, {useState, useCallback} from 'react';
+import {useSelector} from 'react-redux';
 
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {AichatLevelProperties} from '../../types';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
+import {EMPTY_AI_CUSTOMIZATIONS} from './constants';
+import {isDisabled} from './utils';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
-  const [messages, setMessages] = useState<string[]>([]);
+  const {retrievalContexts} = useSelector(
+    (state: {lab: LabState}) =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  );
+
+  // We shouldn't actually do this once (ie, initialize state from redux) once students can update these,
+  // but leaving as-is temporarily until we are set up to allow a user to update these initial values
+  // and store them in redux.
+  const [messages, setMessages] = useState<string[]>(retrievalContexts.value);
   const [newMessage, setNewMessage] = useState('');
 
   const onAdd = useCallback(() => {
@@ -35,10 +49,15 @@ const RetrievalCustomization: React.FunctionComponent = () => {
             id="retrieval-input"
             onChange={event => setNewMessage(event.target.value)}
             value={newMessage}
+            disabled={isDisabled(retrievalContexts.visibility)}
           />
         </div>
         <div className={styles.addItemContainer}>
-          <button type="button" onClick={onAdd} disabled={!newMessage}>
+          <button
+            type="button"
+            onClick={onAdd}
+            disabled={!newMessage || isDisabled(retrievalContexts.visibility)}
+          >
             Add
           </button>
         </div>
@@ -49,6 +68,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
                 type="button"
                 onClick={() => onRemove(index)}
                 className={styles.removeItemButton}
+                disabled={isDisabled(retrievalContexts.visibility)}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
@@ -61,7 +81,12 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button type="button">Update</button>
+        <button
+          type="button"
+          disabled={isDisabled(retrievalContexts.visibility)}
+        >
+          Update
+        </button>
       </div>
     </div>
   );

@@ -25,9 +25,8 @@ export class CdoFieldBitmap extends FieldBitmap {
 
   /**
    * Show the bitmap editor dialog. The parent class provides two buttons labeled
-   * "Randomize" and "Clear" which are not translatable. In our version, we find
-   * these buttons after they are added so that we can provide translatable
-   * strings.
+   * "Randomize" and "Clear". In our version, we remove the randomize button and
+   * replace the clear button text with a translation string.
    * @param {!Event=} e Optional mouse event that triggered the field to
    *     open, or undefined if triggered programmatically.
    * @param {boolean=} _quietInput Quiet input.
@@ -42,11 +41,11 @@ export class CdoFieldBitmap extends FieldBitmap {
       '.dropdownEditor .controlButton'
     );
 
-    // Update the button text to use our translations.
+    // Remove the button or update its text to use our translations.
     buttons.forEach(button => {
       switch (button.innerHTML.trim()) {
         case 'Randomize':
-          button.innerHTML = commonI18n.blocklyRandomize();
+          button.remove();
           break;
         case 'Clear':
           button.innerHTML = commonI18n.blocklyClear();

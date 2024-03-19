@@ -101,6 +101,7 @@ $level-cell-width: 52;
     height: 100%;
     min-width: 195px;
     margin-right: 12px;
+    line-height: 32px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -202,7 +203,7 @@ $level-cell-width: 52;
       }
     }
 
-    .expandedHeaderLevelCell {
+    &LevelCell {
       width: $level-cell-width + px;
       text-align: center;
       height: 32px;
@@ -211,12 +212,16 @@ $level-cell-width: 52;
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      overflow-x: hidden;
+      overflow: hidden;
       flex-wrap: nowrap;
-    }
 
-    .expandedHeaderLevelCellUnexpanded {
-      background-color: white;
+      &LevelNumber {
+        margin-top: 0.0625em;
+      }
+
+      &Unexpanded {
+        background-color: white;
+      }
     }
 
     &ExpandedLevel {
@@ -266,8 +271,12 @@ $level-cell-width: 52;
 }
 
 .sortDropdown {
-  height: 76px;
+  height: 72px;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 4px;
 }
 
 .studentColumn {
