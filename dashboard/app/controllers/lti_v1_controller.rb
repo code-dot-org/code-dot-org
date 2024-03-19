@@ -280,9 +280,13 @@ class LtiV1Controller < ApplicationController
 
       # Report which sections were updated
       nrps_sections.each do |section_id, section|
+        student_count = section[:members].count do |member|
+          member[:roles].include?(Policies::Lti::CONTEXT_LEARNER_ROLE)
+        end
+
         result[:all][section_id] = {
           name: section[:name],
-          size: section[:members].size,
+          size: student_count,
         }
       end
     end

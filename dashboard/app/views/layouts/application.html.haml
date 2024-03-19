@@ -4,7 +4,7 @@
 %html{dir: locale_dir}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
-    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true}
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title

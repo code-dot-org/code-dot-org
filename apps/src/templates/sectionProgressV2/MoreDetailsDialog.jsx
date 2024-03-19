@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+
 import {
   Heading3,
   Heading6,
   StrongText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
+
 import styles from './progress-table-legend.module.scss';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {

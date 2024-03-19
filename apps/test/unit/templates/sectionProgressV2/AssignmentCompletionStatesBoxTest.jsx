@@ -1,7 +1,9 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import AssignmentCompletionStatesBox from '@cdo/apps/templates/sectionProgressV2/AssignmentCompletionStatesBox';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AssignmentCompletionStatesBox Component', () => {
   it('renders all but the "Validated" icon when user is viewing the Assignment Completion States without a validated level open', () => {

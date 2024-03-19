@@ -1,15 +1,18 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
-import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import {studentNeedsFeedback} from '../progress/progressHelpers';
 import {
   studentLessonProgressType,
   studentLevelProgressType,
 } from '../progress/progressTypes';
-import {connect} from 'react-redux';
+import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+
 import LessonDataCell from './LessonDataCell';
-import {studentNeedsFeedback} from '../progress/progressHelpers';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
+
+import styles from './progress-table-v2.module.scss';
 
 function LessonProgressDataColumn({
   lesson,
