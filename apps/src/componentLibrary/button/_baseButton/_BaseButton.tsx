@@ -242,7 +242,9 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: Button Component.
- * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
+ * Design System: ***_BaseButton*** Component.
+ *
+ * ***(!IMPORTANT!)*** This is a private component for Designs System use only. It provides a base for ***Button***
+ * and ***LinkButton*** components, implementing all of the logic and styles for them.
  */
 export default memo(BaseButton);

@@ -4,7 +4,9 @@ import Button, {ButtonProps, buttonColors} from './Button';
 
 export default {
   title: 'DesignSystem/Button/Button', // eslint-disable-line storybook/no-title-property-in-meta
-  component: Button,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore-next-line
+  component: Button.type,
 } as Meta;
 
 //
