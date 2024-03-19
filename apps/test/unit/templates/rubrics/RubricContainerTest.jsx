@@ -258,7 +258,7 @@ describe('RubricContainer', () => {
       await Promise.resolve();
     });
     wrapper.update();
-    expect(wrapper.find('Button')).to.have.lengthOf(3);
+    expect(wrapper.find('Button')).to.have.lengthOf(4);
     expect(wrapper.find('Button').first().props().text).to.equal(
       i18n.runAiAssessment()
     );

@@ -145,8 +145,9 @@ describe('RubricSettings', () => {
       .onCall(0)
       .returns(Promise.resolve(new Response(JSON.stringify(ready))));
     fetchStub.onCall(1).returns(Promise.resolve({ok: true}));
+    fetchStub.onCall(2).returns(Promise.resolve({ok: true}));
     fetchStub
-      .onCall(2)
+      .onCall(3)
       .returns(Promise.resolve(new Response(JSON.stringify(noUnevaluated))));
 
     const clock = sinon.useFakeTimers();
@@ -177,7 +178,7 @@ describe('RubricSettings', () => {
       await Promise.resolve();
     });
     wrapper.update();
-    expect(fetchStub).to.have.callCount(3);
+    expect(fetchStub).to.have.callCount(4);
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
   });
