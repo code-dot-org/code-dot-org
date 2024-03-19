@@ -26,7 +26,6 @@ export default function RubricContainer({
   open,
   closeRubric,
   sectionId,
-  sectionName,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
@@ -135,7 +134,6 @@ export default function RubricContainer({
               rubric={rubric}
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
-              sectionName={sectionName}
             />
           )}
         </div>
@@ -153,7 +151,6 @@ RubricContainer.propTypes = {
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,
-  sectionName: PropTypes.string,
 };
 
 const HeaderTab = ({text, isSelected, onClick}) => {

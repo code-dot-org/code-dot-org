@@ -24,7 +24,6 @@ function RubricFloatingActionButton({
   reportingData,
   aiEnabled,
   sectionId,
-  sectionName,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
   const [isOpen, setIsOpen] = useState(
@@ -119,7 +118,6 @@ function RubricFloatingActionButton({
         open={isOpen}
         closeRubric={handleClick}
         sectionId={sectionId}
-        sectionName={sectionName}
       />
     </div>
   );
@@ -132,12 +130,10 @@ RubricFloatingActionButton.propTypes = {
   reportingData: reportingDataShape,
   aiEnabled: PropTypes.bool,
   sectionId: PropTypes.number,
-  sectionName: PropTypes.string,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
 
 export default connect(state => ({
   sectionId: selectedSection(state)?.id,
-  sectionName: selectedSection(state)?.name,
 }))(RubricFloatingActionButton);
