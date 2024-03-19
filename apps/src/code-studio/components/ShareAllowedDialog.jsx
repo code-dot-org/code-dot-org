@@ -29,8 +29,8 @@ function recordShare(type, appType) {
   if (!window.dashboard) {
     return;
   }
-  if (Object.prototype.hasOwnProperty.call(EVENTS, type)) {
-    analyticsReporter.sendEvent(type, {
+  if (EVENTS[type]) {
+    analyticsReporter.sendEvent(EVENTS[type], {
       lab_type: appType,
       channel_id: dashboard.project && dashboard.project.getCurrentId(),
     });
@@ -490,6 +490,7 @@ class ShareAllowedDialog extends React.Component {
                       onExpand={this.showAdvancedOptions}
                       channelId={channelId}
                       embedOptions={embedOptions}
+                      appType={this.props.appType}
                     />
                   )}
                 </div>

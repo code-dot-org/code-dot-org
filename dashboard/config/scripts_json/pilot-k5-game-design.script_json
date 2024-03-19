@@ -1,0 +1,1788 @@
+{
+  "script": {
+    "name": "pilot-k5-game-design",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "pilot-k5-game-design",
+    "serialized_at": "2024-03-18 20:43:38 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "pilot-k5-game-design"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Game Design",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Variables as Score",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Environment and Players",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Game Jam Day 1: Create",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Game Jam Day 2: Play",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e75bef9e-12f9-4bd1-874d-f37d1678a25b",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e75bef9e-12f9-4bd1-874d-f37d1678a25b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "9d8c3e1a-eeac-4e79-a54f-33e89166f4c6",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9d8c3e1a-eeac-4e79-a54f-33e89166f4c6",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "c14c66c5-7bad-45ef-ab3c-9cc2dd7eadc1",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c14c66c5-7bad-45ef-ab3c-9cc2dd7eadc1",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "31ffd212-2686-4791-addf-c5829c268a9a",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31ffd212-2686-4791-addf-c5829c268a9a",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "64e8d93f-372c-4d5d-b274-d22c59265ecf",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "64e8d93f-372c-4d5d-b274-d22c59265ecf",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "0e526a56-adff-4766-800e-2eb5546edee4",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e526a56-adff-4766-800e-2eb5546edee4",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "48f1cba7-a698-4fde-b1b4-ae0a21ceb371",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48f1cba7-a698-4fde-b1b4-ae0a21ceb371",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "bfae4e5c-bc33-453b-ae30-288c3f3f0380",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bfae4e5c-bc33-453b-ae30-288c3f3f0380",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "6ae173e0-0bf1-4dd5-bef2-2980efad3942",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ae173e0-0bf1-4dd5-bef2-2980efad3942",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "5047dbcb-c051-499a-ad72-6ef20bae3aec",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5047dbcb-c051-499a-ad72-6ef20bae3aec",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "6a89d69c-551d-4219-b537-dd905307f99d",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a89d69c-551d-4219-b537-dd905307f99d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    },
+    {
+      "key": "2d281cc2-c442-451f-9c87-d23c13cdb5e3",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2d281cc2-c442-451f-9c87-d23c13cdb5e3",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f3be5057-b5a1-4aa6-a190-d00e9c37596f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f3be5057-b5a1-4aa6-a190-d00e9c37596f",
+        "lesson_activity.key": "e75bef9e-12f9-4bd1-874d-f37d1678a25b"
+      }
+    },
+    {
+      "key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba",
+        "lesson_activity.key": "9d8c3e1a-eeac-4e79-a54f-33e89166f4c6"
+      }
+    },
+    {
+      "key": "72dfcc13-a356-4308-94b3-1948ab465a37",
+      "position": 1,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "72dfcc13-a356-4308-94b3-1948ab465a37",
+        "lesson_activity.key": "c14c66c5-7bad-45ef-ab3c-9cc2dd7eadc1"
+      }
+    },
+    {
+      "key": "6f18a1b1-b30a-4613-8ea9-9b4e179d9b55",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f18a1b1-b30a-4613-8ea9-9b4e179d9b55",
+        "lesson_activity.key": "31ffd212-2686-4791-addf-c5829c268a9a"
+      }
+    },
+    {
+      "key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0",
+        "lesson_activity.key": "64e8d93f-372c-4d5d-b274-d22c59265ecf"
+      }
+    },
+    {
+      "key": "ac410466-393e-4dd3-aa11-f2b03d2145a8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ac410466-393e-4dd3-aa11-f2b03d2145a8",
+        "lesson_activity.key": "0e526a56-adff-4766-800e-2eb5546edee4"
+      }
+    },
+    {
+      "key": "c3750d2f-a32a-40fd-bd61-96777417dd45",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c3750d2f-a32a-40fd-bd61-96777417dd45",
+        "lesson_activity.key": "48f1cba7-a698-4fde-b1b4-ae0a21ceb371"
+      }
+    },
+    {
+      "key": "bd04b925-dc2f-4875-9f53-d735a231439a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a",
+        "lesson_activity.key": "bfae4e5c-bc33-453b-ae30-288c3f3f0380"
+      }
+    },
+    {
+      "key": "1cd4714a-ed1b-4c75-ae00-e04b692a4d3e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1cd4714a-ed1b-4c75-ae00-e04b692a4d3e",
+        "lesson_activity.key": "6ae173e0-0bf1-4dd5-bef2-2980efad3942"
+      }
+    },
+    {
+      "key": "6d8ae6be-244b-4b89-943c-e78f23b30aff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6d8ae6be-244b-4b89-943c-e78f23b30aff",
+        "lesson_activity.key": "5047dbcb-c051-499a-ad72-6ef20bae3aec"
+      }
+    },
+    {
+      "key": "e0ab3184-89fe-40f2-acf7-b06a576f4408",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408",
+        "lesson_activity.key": "6a89d69c-551d-4219-b537-dd905307f99d"
+      }
+    },
+    {
+      "key": "1a90ff4d-f286-4201-8d5c-70cabb354433",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1a90ff4d-f286-4201-8d5c-70cabb354433",
+        "lesson_activity.key": "2d281cc2-c442-451f-9c87-d23c13cdb5e3"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_intro_video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_intro_video"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_player"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_player"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_location"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_location"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_say"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_say"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_behavior"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_behavior"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_two_behaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_two_behaviors"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_about_events"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_about_events"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_event_click"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_event_click"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_event_touch"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_event_touch"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_video_lots"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_video_lots"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_make_lots"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_make_lots"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_toolbox_object"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_toolbox_object"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_remove_object"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_remove_object"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_change_costume"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_change_costume"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_design_practice_lots_choice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      },
+      "level_keys": [
+        "game_design_practice_lots_choice"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_intro_choices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_intro_choices"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_intro_video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_intro_video"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_about_variables"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_about_variables"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_show"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_show"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_increase"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_increase"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_conditional"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_conditional"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_match"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_match"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_show_two"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_show_two"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_decrease"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_decrease"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_predict_condition"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_predict_condition"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_fix_choices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_fix_choices"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_variables_freeplay"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      },
+      "level_keys": [
+        "game_variables_freeplay"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_try_it"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_try_it"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_make_grid"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_make_grid"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_customize_grids"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_customize_grids"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_explore_types"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_explore_types"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_about_types"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_about_types"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_jump"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_jump"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_type_practice_choices"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_type_practice_choices"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_collectible"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_collectible"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_scoreboard"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_scoreboard"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_development_freeplay"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      },
+      "level_keys": [
+        "game_development_freeplay"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_teams"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      },
+      "level_keys": [
+        "game_jam_create_teams"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_theme_generator"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      },
+      "level_keys": [
+        "game_jam_theme_generator"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_plan"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      },
+      "level_keys": [
+        "game_jam_create_plan"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game_jam_create_game"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      },
+      "level_keys": [
+        "game_jam_create_game"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "game_design_intro_video",
+        "script_level.level_keys": [
+          "game_design_intro_video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_player",
+        "script_level.level_keys": [
+          "game_design_player"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_location",
+        "script_level.level_keys": [
+          "game_design_location"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_say",
+        "script_level.level_keys": [
+          "game_design_say"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_behavior",
+        "script_level.level_keys": [
+          "game_design_behavior"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_two_behaviors",
+        "script_level.level_keys": [
+          "game_design_two_behaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_about_events",
+        "script_level.level_keys": [
+          "game_design_about_events"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_event_click",
+        "script_level.level_keys": [
+          "game_design_event_click"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_event_touch",
+        "script_level.level_keys": [
+          "game_design_event_touch"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_video_lots",
+        "script_level.level_keys": [
+          "game_design_video_lots"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_make_lots",
+        "script_level.level_keys": [
+          "game_design_make_lots"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_toolbox_object",
+        "script_level.level_keys": [
+          "game_design_toolbox_object"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_remove_object",
+        "script_level.level_keys": [
+          "game_design_remove_object"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_change_costume",
+        "script_level.level_keys": [
+          "game_design_change_costume"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_design_practice_lots_choice",
+        "script_level.level_keys": [
+          "game_design_practice_lots_choice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "2e8f6e21-2657-4f02-93b5-4912224cb0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_intro_choices",
+        "script_level.level_keys": [
+          "game_variables_intro_choices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_intro_video",
+        "script_level.level_keys": [
+          "game_variables_intro_video"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_about_variables",
+        "script_level.level_keys": [
+          "game_variables_about_variables"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_show",
+        "script_level.level_keys": [
+          "game_variables_show"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_increase",
+        "script_level.level_keys": [
+          "game_variables_increase"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_conditional",
+        "script_level.level_keys": [
+          "game_variables_conditional"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_match",
+        "script_level.level_keys": [
+          "game_variables_match"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_show_two",
+        "script_level.level_keys": [
+          "game_variables_show_two"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_decrease",
+        "script_level.level_keys": [
+          "game_variables_decrease"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_predict_condition",
+        "script_level.level_keys": [
+          "game_variables_predict_condition"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_fix_choices",
+        "script_level.level_keys": [
+          "game_variables_fix_choices"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_variables_freeplay",
+        "script_level.level_keys": [
+          "game_variables_freeplay"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bff50a72-0a87-43cb-99ec-ec81e1e891d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_try_it",
+        "script_level.level_keys": [
+          "game_development_try_it"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_make_grid",
+        "script_level.level_keys": [
+          "game_development_make_grid"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_customize_grids",
+        "script_level.level_keys": [
+          "game_development_customize_grids"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_explore_types",
+        "script_level.level_keys": [
+          "game_development_explore_types"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_about_types",
+        "script_level.level_keys": [
+          "game_development_about_types"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_jump",
+        "script_level.level_keys": [
+          "game_development_jump"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_type_practice_choices",
+        "script_level.level_keys": [
+          "game_development_type_practice_choices"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_collectible",
+        "script_level.level_keys": [
+          "game_development_collectible"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_scoreboard",
+        "script_level.level_keys": [
+          "game_development_scoreboard"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_development_freeplay",
+        "script_level.level_keys": [
+          "game_development_freeplay"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "bd04b925-dc2f-4875-9f53-d735a231439a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_teams",
+        "script_level.level_keys": [
+          "game_jam_create_teams"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_theme_generator",
+        "script_level.level_keys": [
+          "game_jam_theme_generator"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_plan",
+        "script_level.level_keys": [
+          "game_jam_create_plan"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game_jam_create_game",
+        "script_level.level_keys": [
+          "game_jam_create_game"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pilot-k5-game-design",
+        "activity_section.key": "e0ab3184-89fe-40f2-acf7-b06a576f4408"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -1,19 +1,19 @@
 import GoogleBlockly, {BlockSvg, FieldValidator} from 'blockly/core';
 
 interface ColorOverrides {
-  button: string | undefined;
-  icon: string | undefined;
-  text: string | undefined;
+  button?: string;
+  icon?: string;
+  text?: string;
 }
 
 interface CdoFieldButtonOptions {
-  value: string | undefined;
-  validator: FieldValidator<string> | null;
+  value?: string;
+  validator?: FieldValidator<string> | null;
   onClick: () => void;
-  transformText: ((text: string) => string) | undefined;
-  icon: SVGElement | undefined;
-  colorOverrides: ColorOverrides | undefined;
-  allowReadOnlyClick: boolean | undefined;
+  transformText?: (text: string) => string;
+  icon?: SVGElement;
+  colorOverrides?: ColorOverrides;
+  allowReadOnlyClick?: boolean;
 }
 
 export default class CdoFieldButton extends GoogleBlockly.Field {

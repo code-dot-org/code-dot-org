@@ -142,6 +142,53 @@ class Services::LtiTest < ActiveSupport::TestCase
         }
       ]
     }.deep_symbolize_keys
+
+    @nrps_response_no_rlid_provided = {
+      id: "https://lti-service.svc.schoology.com/lti-service/tool/115/services/names-roles/v2p0/membership/115",
+      context: {
+        id: "115",
+        title: @course_name,
+        label: nil
+      },
+      members: [
+        {
+          status: "Active",
+          name: "Test Teacher",
+          given_name: "Test",
+          family_name: "Teacher",
+          email: "teacher@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"],
+          user_id: 'user-id-1'
+        },
+        {
+          status: "Active",
+          name: "Test Zero",
+          given_name: "Test",
+          family_name: "Zero",
+          email: "test0@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+          user_id: SecureRandom.uuid
+        },
+        {
+          status: "Active",
+          name: "Test One",
+          given_name: "Test",
+          family_name: "One",
+          email: "test1@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+          user_id: SecureRandom.uuid
+        },
+        {
+          status: "Active",
+          name: "Test Two",
+          given_name: "Test",
+          family_name: "Two",
+          email: "test2@code.org",
+          roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+          user_id: SecureRandom.uuid
+        }
+      ]
+    }.deep_symbolize_keys
   end
 
   test 'initialize_lti_user should create User::TYPE_TEACHER when id_token contains teacher/admin roles' do
@@ -165,7 +212,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     refute user.authentication_options.empty?
     assert_equal user.authentication_options[0].credential_type, AuthenticationOption::LTI_V1
-    assert_equal user.authentication_options[0].authentication_id, Policies::Lti.generate_auth_id(@id_token)
+    assert_equal user.authentication_options[0].authentication_id, Services::Lti::AuthIdGenerator.new(@id_token).call
   end
 
   test 'initialize_lti_user should create User::TYPE_STUDENT when id_token contains student roles' do
@@ -236,27 +283,50 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'should parse the members response from NRPS and return a hash of sections' do
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     assert_empty parsed_response.keys - @lms_section_ids.map(&:to_s)
     parsed_response.each do |_, v|
       assert_empty v.keys - [:name, :members]
-      assert_equal v[:members].length, 3
+      assert_equal v[:members].length, 4
+    end
+  end
+
+  test 'should parse the members response from NRPS with no resource link provided and return a hash of sections' do
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_rlid_provided, @id_token[:iss])
+    assert_equal parsed_response.keys.length, 1
+    parsed_response.each do |_, v|
+      assert_empty v.keys - [:name, :members]
+      assert_equal v[:members].length, 4
     end
   end
 
   test 'should append the course name to each section name when parsing NRPS response' do
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     actual_section_names = parsed_response.values.map {|v| v[:name]}
     assert_empty expected_section_names - actual_section_names
+  end
+
+  test 'course name should match section name when parsing NRPS response with no resource link provided' do
+    expected_section_name = [@course_name]
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_rlid_provided, @id_token[:iss])
+    actual_section_name = parsed_response.values.map {|v| v[:name]}
+    assert_empty expected_section_name - actual_section_name
   end
 
   test 'should update a section name if it has changed' do
     teacher = create :teacher
     lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
     lti_course = create :lti_course, lti_integration: lti_integration
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    section = create :section, user: teacher
+
+    create :lti_section, lti_course: lti_course, section: section
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
     # initial names
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
@@ -269,48 +339,148 @@ class Services::LtiTest < ActiveSupport::TestCase
     new_response[:members].each do |member|
       member[:message][0][@custom_claims_key][:section_names] = new_names
     end
-    parsed_response = Services::Lti.parse_nrps_response(new_response)
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(new_response, @id_token[:iss])
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name}: #{name}"}
     actual_section_names = lti_course.reload.sections.map(&:name)
     assert_empty new_expected_names - actual_section_names
   end
 
   test 'should add or remove student users when syncing a section' do
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration
-    lti_section = create :lti_section, lti_course: lti_course
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
+    user = create :teacher
+    create :lti_authentication_option, user: user, authentication_id: auth_id
+    create :lti_user_identity, lti_integration: @lti_integration, user: user, subject: 'user-id-1'
+
+    section = create :section, user: user
+
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     members = parsed_response[@lms_section_ids.first.to_s][:members]
 
     # Create and add brand new users
-    Services::Lti.sync_section_roster(lti_integration, lti_section, members)
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, members)
     assert_equal lti_section.followers.length, 3
 
     # Remove a user
     user_to_remove = lti_section.followers.last
-    Services::Lti.sync_section_roster(lti_integration, lti_section, members[0...-1])
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, members[0...-1])
     assert_equal lti_section.reload.followers.length, 2
 
     # Find an existing user add them back in
-    Services::Lti.sync_section_roster(lti_integration, lti_section, members)
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, members)
     assert_equal lti_section.reload.followers.length, 3
     assert_equal lti_section.followers.last, user_to_remove
+  end
+
+  test 'should not sync if the current user is not the section owner' do
+    teacher = build :teacher
+    teacher.authentication_options << build(:lti_authentication_option, user: teacher)
+    teacher.save
+    different_teacher = create :teacher
+
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    create :lti_section, lti_course: lti_course
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+
+    # Sync once as the section owner
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 3
+
+    # Sync again as a different teacher with the section deleted (it should not delete)
+    parsed_response.delete(@lms_section_ids.first.to_s)
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: different_teacher)
+    assert lti_course.reload.sections.length, 3
+
+    # The same deletion as section owner should delete
+    Services::Lti.sync_course_roster(lti_integration: @lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 2
   end
 
   test 'should add or remove sections when syncing a course' do
     teacher = create :teacher
     lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher
     lti_course = create :lti_course, lti_integration: lti_integration
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    create :lti_section, lti_course: lti_course
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
 
     # Adding new sections
     assert lti_course.reload.sections.length, 3
 
     # Removing old sections
     parsed_response.delete(@lms_section_ids.first.to_s)
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
     assert lti_course.reload.sections.length, 2
+
+    # Remove empty sections with no users
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 1
+  end
+
+  test 'should remove empty sections when syncing a course' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher
+    lti_course = create :lti_course, lti_integration: lti_integration
+    create :lti_section, lti_course: lti_course
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+
+    assert lti_course.reload.sections.length, 3
+
+    # Remove empty sections with no users
+    @nrps_full_response[:members] = []
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+    assert lti_course.reload.sections.length, 2
+  end
+
+  test 'should NOT sync if the user is not a teacher on the LMS' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-2'
+    lti_course = create :lti_course, lti_integration: lti_integration
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    had_changes = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, current_user: teacher)
+
+    assert_equal false, had_changes
+  end
+
+  test 'lti_user_roles should return the LTI roles for a given user' do
+    roles = Services::Lti.lti_user_roles(@nrps_full_response, "user-id-1")
+
+    assert_equal ["http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor"], roles
+  end
+
+  test 'lti_user_roles should return nil if the user cannot be found' do
+    roles = Services::Lti.lti_user_roles(@nrps_full_response, "unknown")
+
+    assert_nil roles
+  end
+
+  test 'lti_user_type should return teacher if LTI user role is instructor' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-1'
+    user_type = Services::Lti.lti_user_type(teacher, lti_integration, @nrps_full_response)
+
+    assert_equal User::TYPE_TEACHER, user_type
+  end
+
+  test 'lti_user_type should return student if LTI user role is not instructor' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    create :lti_user_identity, lti_integration: lti_integration, user: teacher, subject: 'user-id-2'
+    user_type = Services::Lti.lti_user_type(teacher, lti_integration, @nrps_full_response)
+
+    assert_equal User::TYPE_STUDENT, user_type
   end
 end

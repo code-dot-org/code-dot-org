@@ -405,6 +405,8 @@
   call_to_action_see_district_partners: "See our District Partners"
   call_to_action_read_full_story: "Read the full story"
   call_to_action_learn_about_pl: "Learn about Professional Learning"
+  call_to_action_pilot_web_dev_unit: "Pilot our newly updated Web Development unit!"
+  call_to_action_hide_banner: "Hide banner"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -1127,9 +1129,9 @@
   admins_page_district_program_desc: "District leaders around the United States have joined the Code.org District Program—at no cost!—to bring computer science to their district, empower their educators, and teach students the skills of the future."
   admins_page_driving_change_heading: "Districts and schools driving change"
   admins_page_driving_change_desc: "Join pioneering districts and schools nationwide that are driving educational change and shaping the future of computer science education with the support of Code.org"
-  admins_page_driving_change_stat_desc_01: "Increase in CS access"
+  admins_page_driving_change_stat_desc_01: "Increase in elementary students participating in CS"
   admins_page_driving_change_desc_01: "Broward County's commitment to computer science resulted in all high schools offering CS courses within three years, underpinned by a district-wide, cross-departmental team and robust Hour of Code initiatives."
-  admins_page_driving_change_stat_desc_02: "New educators teaching CS"
+  admins_page_driving_change_stat_desc_02: "Percent of female students taking an introductory CS course"
   admins_page_driving_change_desc_02: "In Charles County, a passionate teacher's vision and superintendent support fueled a district-wide computer science initiative, integrating CS into graduation requirements and achieving notable diversity in student participation."
   admins_page_pl_heading: "Professional learning to empower educators"
   admins_page_pl_desc: "Our Professional Learning programs are crafted to turn educators at any level into confident CS teachers. Discover accessible, comprehensive, and flexible learning that equips your educators with the skills to empower their students."
@@ -1682,6 +1684,9 @@
     support:
       heading: "Educator support at every level"
       desc: "Our comprehensive support network caters to educators at all stages, offering year-round assistance, additional programming, and access to vibrant teacher communities. Stay connected, continually develop your skills, and find inspiration within a supportive peer network."
+    share:
+      heading: "Share your accomplishment"
+      desc: "All of our professional learning offerings provide a certificate of completion to share with your network or share with your administrator. Check with your school to find out if you can use the certificates to get professional development credits."
     resources:
       heading: "Additional resources and support for educators"
       intl:

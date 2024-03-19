@@ -1,5 +1,37 @@
 @import 'color.scss';
-@import "style-constants";
+@import 'style-constants';
+
+.navContainer {
+  background-color: $neutral_dark;
+  display: flex;
+  position: relative;
+  padding-left: 64px;
+  overflow-x: auto;
+
+  a.linkContainer {
+    white-space: nowrap;
+    text-decoration: none;
+    background-color: $neutral_dark70;
+    color: $neutral_white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 8px 0 0;
+    padding: 0 10px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  a.activeLinkContainer {
+    background-color: $neutral_white;
+    color: #007785;
+  }
+
+  .link {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
 
 .dashboardPage {
   max-width: $content-width;

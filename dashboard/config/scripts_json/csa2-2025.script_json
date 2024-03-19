@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-19 07:42:39 UTC",
+    "serialized_at": "2024-03-18 08:19:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -374,14 +374,13 @@
       "name": "Implementing String Algorithms",
       "absolute_position": 16,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "overview": "**What methods can I use to write algorithms for parsing String objects?**\n\nIn this lesson, students are exposed to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. Students first investigate reversing a `String` object in order to determine if a sentence is a palindrome. Then, students practice using the `substring()` method and conditional expressions to determine if a `String` object meets a certain criteria. Finally, they practice creating algorithms to count how many `String` objects meet a certain criteria.\n",
-        "preparation": "* **(Optional)** Print copies of the U6L2 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I implement algorithms for parsing String objects?**\n\nIn this lesson, you will be introduced to the `String` class and learn how to implement standard `String` algorithms using the `substring()` method. You will start by exploring how to reverse a `String` object to determine if a sentence is a palindrome. Next, you will practice using the `substring()` method along with conditional expressions to evaluate whether a `String` object meets a specific criteria. Finally, you will develop algorithms to count the occurrences of `String` objects that meet certain criteria.",
-        "unplugged": true
+        "overview": "**Question of the Day**\n\nTeacher-facing overview.",
+        "preparation": "* **(Optional)** Print copies of the Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-6-2-substrings/37923) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**Question of the Day**\n\nStudent-facing overview"
       },
       "seeding_key": {
         "lesson.key": "Substrings",
@@ -4812,8 +4811,6 @@
       "key": "b535d28b-119d-4b46-9c79-3a81dda42e2b",
       "position": 1,
       "properties": {
-        "description": "You've probably used a smart assistant before. These use natural language processing techniques to break up the things you say and get the meaning of the individual words in your statement or question.",
-        "name": "Smart Assistants",
         "remarks": true
       },
       "seeding_key": {
@@ -4868,7 +4865,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
-        "progression_name": "Predict and Run: The substring() Method"
+        "progression_name": "Predict and Run: A Standard String Algorithm"
       },
       "seeding_key": {
         "activity_section.key": "a7c9530a-a7da-4ed0-99f9-21fdcc4bb91b",
@@ -4905,7 +4902,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
-        "progression_name": "Investigate and Modify: The substring() Method"
+        "progression_name": "Investigate and Modify: Reversing a String"
       },
       "seeding_key": {
         "activity_section.key": "f7c966a9-a933-4d4b-8bf1-98221cdd88a3",
@@ -4930,7 +4927,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level on Levels 6 and 7 to practice using the `substring()` method to retrieve characters between a starting and ending index and from a starting index to the end of a `String` object. On Level 8, students complete a choice level to use the `indexOf()` and `substring()` methods.",
         "duration": "15",
         "name": "Using the substring() Method",
-        "progression_name": "Practice: The substring() Method",
+        "progression_name": "Practice: Standard String Algorithms",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -7076,7 +7073,7 @@
         "level_keys": [
           "CSA U6L2-L1_-modular"
         ],
-        "progression": "Predict and Run: The substring() Method"
+        "progression": "Predict and Run: A Standard String Algorithm"
       },
       "bonus": false,
       "seeding_key": {
@@ -7101,7 +7098,7 @@
         "level_keys": [
           "CSA U6L2-L2_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7126,7 +7123,7 @@
         "level_keys": [
           "CSA U6L2-L3_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7151,7 +7148,7 @@
         "level_keys": [
           "CSA U6L2-L4_-modular"
         ],
-        "progression": "Investigate and Modify: The substring() Method"
+        "progression": "Investigate and Modify: Reversing a String"
       },
       "bonus": false,
       "seeding_key": {
@@ -7171,37 +7168,12 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "progression": "Practice: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L5_-modular"
-      ]
-    },
-    {
-      "chapter": 87,
-      "position": 6,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSA U6L2-L6_-modular"
         ],
-        "progression": "Practice: The substring() Method"
+        "progression": "Practice: Standard String Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -7218,15 +7190,15 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 87,
+      "position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSA U6L2-L7_-modular"
         ],
-        "progression": "Practice: The substring() Method"
+        "progression": "Practice: Standard String Algorithms"
       },
       "bonus": false,
       "seeding_key": {
@@ -7243,33 +7215,8 @@
       ]
     },
     {
-      "chapter": 89,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U6L2-L8_-modular"
-        ],
-        "progression": "Practice: The substring() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U6L2-L8_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      },
-      "level_keys": [
-        "CSA U6L2-L8_-modular"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 9,
+      "chapter": 88,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7293,7 +7240,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7317,7 +7264,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7342,7 +7289,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8390,18 +8337,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U6L2-L5_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L5_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U6L2-L6_-modular",
         "script_level.level_keys": [
           "CSA U6L2-L6_-modular"
@@ -8417,18 +8352,6 @@
         "level.key": "CSA U6L2-L7_-modular",
         "script_level.level_keys": [
           "CSA U6L2-L7_-modular"
-        ],
-        "lesson.key": "Substrings",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-2025",
-        "activity_section.key": "345f5975-d8f2-4082-a30d-f9361dee45ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6L2-L8_-modular",
-        "script_level.level_keys": [
-          "CSA U6L2-L8_-modular"
         ],
         "lesson.key": "Substrings",
         "lesson_group.key": "lessonGroup-4",

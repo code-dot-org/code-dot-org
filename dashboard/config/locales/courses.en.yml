@@ -660,9 +660,36 @@ en:
 
           version_title: ''
         k5-maker-pilot-2024:
-          title: k5-maker-pilot-2024
+          title: K-5 Maker Self-Paced Professional Learning
+          description_short: Professional learning module for CSF Maker with micro:bit course.
+          description_student: |
+            ####  The micro:bit course bridges the gap between digital and physical worlds, and enables students to transfer their computer programs into real-world applications.
+
+            #### **In this module, you will:**
+            - #### Prepare to teach foundational coding concepts like events, loops, conditionals, variables and functions.
+            - #### Gain practical experience in how hardware and software can work together.
+            - #### Practice key concepts included in the unit.
+            - #### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses.
+
+            ####  **Suggested total time:** 150 minutes
+
+            #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
+          description_teacher: |
+            ####  The micro:bit course bridges the gap between digital and physical worlds, and enables students to transfer their computer programs into real-world applications.
+
+            #### **In this module, you will:**
+            - #### Prepare to teach foundational coding concepts like events, loops, conditionals, variables and functions.
+            - #### Gain practical experience in how hardware and software can work together.
+            - #### Practice key concepts included in the unit.
+            - #### Prepare to teach any of the CS Fundamentals Maker with micro:bit courses.
+
+            ####  **Suggested total time:**  150 minutes
+
+            #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
+          version_title: ''
+        foundations-of-cs-beta-2024:
+          title: Foundations of Computer Science BETA
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
-...
+          version_title: "'24-'25"
