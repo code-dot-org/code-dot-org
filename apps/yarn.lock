@@ -7258,13 +7258,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"amdefine@npm:>=0.0.4":
-  version: 1.0.1
-  resolution: "amdefine@npm:1.0.1"
-  checksum: 9d4e15b94641643a9385b2841b4cb2bcf4e8e2f741ea4bd475c93ad7bab261ad4ed827a32e9c549b38b98759c4526c173ae4e6dde8caeb75ee5cebedc9863762
-  languageName: node
-  linkType: hard
-
 "ansi-html-community@npm:0.0.8, ansi-html-community@npm:^0.0.8":
   version: 0.0.8
   resolution: "ansi-html-community@npm:0.0.8"
@@ -8643,7 +8636,6 @@ __metadata:
     react-draggable: ^4.4.6
     react-focus-lock: ^2.11.2
     react-google-charts: 2
-    react-hot-loader: ^1.3.1
     react-idle-timer: ^4.2.7
     react-inspector: 2.3.1
     react-lazy-load: ~3.0.13
@@ -22158,25 +22150,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"react-hot-api@npm:^0.4.5":
-  version: 0.4.7
-  resolution: "react-hot-api@npm:0.4.7"
-  peerDependencies:
-    react: ">=0.11.0 || ^0.14.0-rc"
-  checksum: bf3c3592901105d1793856ebfb9103c417fd77676b0ad0d064c74ab8e07590281e7ec333a7868a63440143048000936b645b4df8b62e4810365a3d5ed461dc32
-  languageName: node
-  linkType: hard
-
-"react-hot-loader@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "react-hot-loader@npm:1.3.1"
-  dependencies:
-    react-hot-api: ^0.4.5
-    source-map: ^0.4.4
-  checksum: b4fe95b22a3194d26b238d67af0233ef16cc58f22f9d4627c2f7718bb641b46ddbc545e34c720a56199270e481ad79c1706b19a1e66cbde721e232637d3748e9
-  languageName: node
-  linkType: hard
-
 "react-idle-timer@npm:^4.2.7":
   version: 4.2.7
   resolution: "react-idle-timer@npm:4.2.7"
@@ -24909,15 +24882,6 @@ es6-shim@latest:
   version: 0.4.0
   resolution: "source-map-url@npm:0.4.0"
   checksum: 63ed54045fcd7b4ec7ca17513f48fdc23b573eef679326ecf1a31333e1aaecc0a9c085adaa7d118283b160e65b71cc72da9e1385f2de4ac5ed68294e3920d719
-  languageName: node
-  linkType: hard
-
-"source-map@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "source-map@npm:0.4.4"
-  dependencies:
-    amdefine: ">=0.0.4"
-  checksum: b31992fcb4a2a6c335617f187bd36f392896dfcc111830ebdb8b716923cf6554b665833b975fc998bdf3a63881b2c8b4c5c34fda0280357b8c18fe6aa5d148ea
   languageName: node
   linkType: hard
 
