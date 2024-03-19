@@ -94,7 +94,9 @@ export default function RubricSettings({
     })
   );
 
-  console.log(headers);
+  const getHeadersSlice = () => {
+    return headers.slice(2, headers.length);
+  };
 
   const statusAllText = () => {
     switch (statusAll) {
@@ -180,7 +182,7 @@ export default function RubricSettings({
               } else {
                 // add dummy values to keep the shape for students
                 // with no evaluations
-                headers.slice(2, headers.length).forEach(h => {
+                getHeadersSlice().forEach(h => {
                   teachEvalRow[String(h.key)] = '';
                 });
               }
@@ -188,12 +190,12 @@ export default function RubricSettings({
             });
             setTeacherEval(teachEvalArr);
             setTeacherEvalCount(count);
-            console.log(teachEvalArr);
           });
         }
       });
     }
-  }, [rubricId, sectionId, headers]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rubricId, sectionId]);
 
   useEffect(() => {
     if (polling && !!rubricId && !!sectionId) {
