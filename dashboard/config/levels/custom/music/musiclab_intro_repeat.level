@@ -36,7 +36,8 @@
           ]
         },
         "type": "flyout"
-      }
+      },
+      "validationTimeout": 6
     },
     "instructions_important": "false",
     "hide_share_and_remix": "true",

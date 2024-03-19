@@ -1,8 +1,10 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import MoreDetailsDialog from '@cdo/apps/templates/sectionProgressV2/MoreDetailsDialog';
+import React from 'react';
 import sinon from 'sinon';
+
+import MoreDetailsDialog from '@cdo/apps/templates/sectionProgressV2/MoreDetailsDialog';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('MoreDetailsDialog', () => {
   it('renders the dialog with required elements', () => {

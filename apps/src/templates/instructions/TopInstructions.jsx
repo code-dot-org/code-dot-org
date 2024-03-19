@@ -759,7 +759,7 @@ class TopInstructions extends Component {
                 }
               />
             )}
-            {!fetchingData && (
+            {!fetchingData && displayFeedbackTab && (
               <TeacherFeedbackTab
                 teacherViewingStudentWork={teacherViewingStudentWork}
                 visible={tabSelected === TabType.COMMENTS}
