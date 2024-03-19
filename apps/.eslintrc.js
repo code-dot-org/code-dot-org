@@ -177,6 +177,9 @@ module.exports = {
       },
     },
     {
+      rules: {
+        'import/order': 'off',
+      },
       // We are actively working to decrease the number of folders in this list.
       // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
       // Commit any changes made.
@@ -352,9 +355,6 @@ module.exports = {
         'test/util/tutorialExplorer/**',
         'test/util/weblab/**',
       ],
-      rules: {
-        'import/order': 'off',
-      },
     },
   ],
 };
