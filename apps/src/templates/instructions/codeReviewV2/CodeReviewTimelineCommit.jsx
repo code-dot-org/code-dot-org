@@ -1,12 +1,13 @@
-import React from 'react';
+import moment from 'moment';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
-import moment from 'moment';
-import javalabMsg from '@cdo/javalab/locale';
 import {commitShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-import fontConstants from '@cdo/apps/fontConstants';
+import javalabMsg from '@cdo/javalab/locale';
 
 const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
   const {createdAt, comment, projectVersion} = commit;

@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import ReactDOM from 'react-dom';
 
 /**
  * Checks the given inputs to determine whether the instruction panel should be displayed
