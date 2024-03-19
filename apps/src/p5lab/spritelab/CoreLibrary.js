@@ -116,7 +116,32 @@ export default class CoreLibrary {
     });
   }
 
+  /**
+   * Draws bubbles for each variable in the `variableBubbles` array. Labels are truncated with an ellipsis
+   * if they exceed the maximum character limit. Values are truncated as needed to fit the remaining space.
+   *
+   * @param {Object[]} this.variableBubbles - An array of objects, each representing a variable to be displayed. Each object should include:
+   *  - `name`: A string identifier for the variable used to get the value from the JSInterpreter.
+   *  - `label`: A label for the variable to be displayed in the bubble.
+   *  - `location`: An object specifying the `x` and `y` coordinates where the bubble should be drawn.
+   */
   drawVariableBubbles() {
+    const config = {
+      textSize: 20,
+      padding: 10,
+      strokeWeight: 3,
+      strokeRadius: 24,
+      maxLabelLength: 30, // Maximum number of characters to display in the label
+    };
+
+    // Calculate the width for the label and value separator (colon and space)
+    const separatorWidth = drawUtils.getTextWidth(
+      this.p5,
+      ': ',
+      config.textSize
+    );
+    const totalReservedSpace = config.padding * 2 + separatorWidth;
+
     this.variableBubbles.forEach(variable => {
       const {name, label, location} = variable;
       if (!name.length || !label.length || !location) {
@@ -124,10 +149,36 @@ export default class CoreLibrary {
       }
 
       const value = this.getVariableValue(name);
-      const text = `${label}: ${value}`;
 
-      // TODO: Confirm this handles shadow block locations appropriately
-      drawUtils.variableBubble(this.p5, location.x, location.y, text);
+      // Determine if the label needs truncation and append an ellipsis if so
+      const displayLabel =
+        label.length > config.maxLabelLength
+          ? label.slice(0, config.maxLabelLength) + '…'
+          : label;
+      const labelWidth = drawUtils.getTextWidth(
+        this.p5,
+        displayLabel,
+        config.textSize
+      );
+
+      // Truncate the value if necessary to fit within the available space
+      const availableSpaceForValue =
+        APP_WIDTH - totalReservedSpace - labelWidth;
+      const displayValue = drawUtils.truncateText(
+        this.p5,
+        `${value}`,
+        availableSpaceForValue,
+        config.textSize
+      );
+
+      const displayText = `${displayLabel}: ${displayValue}`;
+      drawUtils.variableBubble(
+        this.p5,
+        location.x,
+        location.y,
+        displayText,
+        config
+      );
     });
   }
 

@@ -14,42 +14,45 @@ function filterSprites(costume) {
 
 //Equivalent of layoutAsGrid({costume: costume})
 function helperGrid(costume) {
-    spriteIds = filterSprites(costume);
-    count = spriteIds.length;
-    //Now this is essentially the same code as layoutGrid block
-    var numRows = Math.ceil(Math.sqrt(count));
-    var numCols = Math.ceil(count / numRows);
-    for (var i = 0; i < count; i++) {
-      var spriteIdArg = {id: spriteIds[i]};
-      var row = Math.floor(i / numCols);
-      var col = i % numCols;
-      var colFraction = col / (numCols - 1) || 0;
-      var x = MIN_XY + colFraction * (MAX_XY - MIN_XY);
-      var rowFraction = row / (numRows - 1) || 0;
-      var y = MIN_XY + rowFraction * (MAX_XY - MIN_XY);
+  var SPRITE_SIZE = 25;
+  var MIN_XY = SPRITE_SIZE / 2 + 5;
+  var MAX_XY = 400 - MIN_XY;
+  spriteIds = filterSprites(costume);
+  count = spriteIds.length;
+  //Now this is essentially the same code as layoutGrid block
+  var numRows = Math.ceil(Math.sqrt(count));
+  var numCols = Math.ceil(count / numRows);
+  for (var i = 0; i < count; i++) {
+    var spriteIdArg = {id: spriteIds[i]};
+    var row = Math.floor(i / numCols);
+    var col = i % numCols;
+    var colFraction = col / (numCols - 1) || 0;
+    var x = MIN_XY + colFraction * (MAX_XY - MIN_XY);
+    var rowFraction = row / (numRows - 1) || 0;
+    var y = MIN_XY + rowFraction * (MAX_XY - MIN_XY);
 
-      jumpTo(spriteIdArg, {x: x, y: y});
-    }
+    jumpTo(spriteIdArg, {x: x, y: y});
+  }
 }
 
 function statesOfMatter2(costume, behaviorStr) {
-    //For Validation
-    if(typeof checkValidation === 'function' && checkValidation()) {
-      var newBlockObj = {
-        blockName: 'statesOfMatter',
-        costume: costume,
-        matter: behaviorStr
-      };
-      addParticlesBlock(newBlockObj);
-    }
-  
+  //For Validation
+  if(typeof checkValidation === 'function' && checkValidation()) {
+    var newBlockObj = {
+      blockName: 'statesOfMatter',
+      costume: costume,
+      matter: behaviorStr
+    };
+    addParticlesBlock(newBlockObj);
+  }
+
   if(behaviorStr == "solid"){
     helperGrid(costume);
     addBehaviorSimple(({costume: costume}), new Behavior(wobbling, []));
   } else if(behaviorStr == "liquid"){
     var liquidSprites = filterSprites(costume);
     for(var i = 0; i < liquidSprites.length; i++) {
-    	setProp(({id: liquidSprites[i]}), "y", math_random_int(0, 151));
+      setProp(({id: liquidSprites[i]}), "y", math_random_int(0, 151));
     }
     addBehaviorSimple(({costume: costume}), new Behavior(liquid2, []));
   } else if(behaviorStr == "gas"){

@@ -87,7 +87,7 @@ export const commands = {
     for (const spriteId of spriteIds) {
       const speechText = this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
       if (
-        speechText &&
+        speechText !== undefined &&
         values.some(value => `${speechText}`.includes(`${value}`))
       ) {
         return true;

@@ -1,12 +1,6 @@
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
-const PLATFORMS = {
-  AMPLITUDE: 'Amplitude',
-  STATSIG: 'Statsig',
-  BOTH: 'Both',
-};
-
 const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
@@ -183,10 +177,11 @@ const EVENTS = {
   SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
 
   // Project sharing via 'Finish' button
-  FINISH_SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
-  FINISH_SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
-  FINISH_SHARING_FB: 'User Clicks Facebook Icon In Project Share Dialog',
-  FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Project Share Dialog',
+  FINISH_SHARING_LINK_COPY:
+    'User Clicks Project Copy Link In Finish Congrats Dialog',
+  FINISH_SHARING_PUBLISH: 'User Clicks Publish In Finish Congrats Dialog',
+  FINISH_SHARING_FB: 'User Clicks Facebook Icon In Finish Congrats Dialog',
+  FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Finish Congrats Dialog',
   FINISH_SHARING_LINK_SEND_TO_PHONE:
     'User Clicks Send To Phone In Finish Congrats Dialog',
   FINISH_BUTTON_CERTIFICATE:
@@ -241,4 +236,4 @@ const EVENT_GROUPS = {
   [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};
