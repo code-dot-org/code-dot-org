@@ -12968,8 +12968,8 @@ es6-shim@latest:
 
 "eslint-plugin-cdo-custom-rules@file:./eslint::locator=blockly-mooc%40workspace%3A.":
   version: 1.0.0
-  resolution: "eslint-plugin-cdo-custom-rules@file:./eslint#./eslint::hash=3b1b2e&locator=blockly-mooc%40workspace%3A."
-  checksum: 21d579564f7fe12466047fc34ec12b8e490b75e01c8163e9cf6742e5bc5ed491701ef8137c57631caa87c0f995ed99eb68d84d78dcc03d8aad05823aac114527
+  resolution: "eslint-plugin-cdo-custom-rules@file:./eslint#./eslint::hash=88f2b0&locator=blockly-mooc%40workspace%3A."
+  checksum: e6c39734d93346f3c9a8c988d06d087fb5bd4cc78802c1c0b81b0006014e8023171a8bbc214068bb663df34aba32e1128393edaa732b561d5db803beb44cc046
   languageName: node
   linkType: hard
 
