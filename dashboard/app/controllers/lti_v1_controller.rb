@@ -206,7 +206,7 @@ class LtiV1Controller < ApplicationController
         when :context_id, :nrps_url
           return render_sync_course_error('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
         else
-          return render_sync_course_error(`Missing #{exception.param}.`, :bad_request)
+          return render_sync_course_error("Missing #{exception.param}.", :bad_request)
         end
       end
     end
