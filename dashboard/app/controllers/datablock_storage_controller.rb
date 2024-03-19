@@ -34,7 +34,6 @@ class DatablockStorageController < ApplicationController
     @tables = DatablockStorageTable.where(project_id: @project_id)
     @library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     @storage_backend = ProjectUseDatablockStorage.use_data_block_storage_for?(params[:channel_id]) ? "Datablock Storage" : "Firebase"
-    puts "####################################################"
   end
 
   ##########################################################
