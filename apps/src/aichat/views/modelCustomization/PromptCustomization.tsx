@@ -22,7 +22,7 @@ const PromptCustomization: React.FunctionComponent = () => {
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
   const aiCustomizations = useAppSelector(
-    state => state.aichat.aiCustomizations
+    state => state.aichat.currentAiCustomizations
   );
 
   const allFieldsDisabled =

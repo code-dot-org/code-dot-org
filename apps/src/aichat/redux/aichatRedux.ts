@@ -27,7 +27,7 @@ export interface AichatState {
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
-  aiCustomizations: AiCustomizations;
+  currentAiCustomizations: AiCustomizations;
 }
 
 const initialState: AichatState = {
@@ -35,7 +35,7 @@ const initialState: AichatState = {
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
-  aiCustomizations: EMPTY_AI_CUSTOMIZATIONS_STUDENT,
+  currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS_STUDENT,
 };
 
 // THUNKS
@@ -131,7 +131,7 @@ const aichatSlice = createSlice({
       }
     },
     setAiCustomizations: (state, action: PayloadAction<AiCustomizations>) => {
-      state.aiCustomizations = action.payload;
+      state.currentAiCustomizations = action.payload;
     },
     setAiCustomizationProperty: (
       state,
@@ -142,10 +142,10 @@ const aichatSlice = createSlice({
     ) => {
       const {property, value} = action.payload;
       const updatedAiCustomizations: AiCustomizations = {
-        ...state.aiCustomizations,
+        ...state.currentAiCustomizations,
         [property]: value,
       };
-      state.aiCustomizations = updatedAiCustomizations;
+      state.currentAiCustomizations = updatedAiCustomizations;
     },
     setModelCardProperty: (
       state,
@@ -157,10 +157,10 @@ const aichatSlice = createSlice({
       const {property, value} = action.payload;
 
       const updatedModelCardInfo: ModelCardInfo = {
-        ...state.aiCustomizations.modelCardInfo,
+        ...state.currentAiCustomizations.modelCardInfo,
         [property]: value,
       };
-      state.aiCustomizations.modelCardInfo = updatedModelCardInfo;
+      state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
     },
   },
   extraReducers: builder => {

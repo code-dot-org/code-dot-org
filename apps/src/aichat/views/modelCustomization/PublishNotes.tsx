@@ -20,7 +20,7 @@ const PublishNotes: React.FunctionComponent = () => {
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   ).modelCardInfo;
   const {modelCardInfo} = useAppSelector(
-    state => state.aichat.aiCustomizations
+    state => state.aichat.currentAiCustomizations
   );
 
   return (

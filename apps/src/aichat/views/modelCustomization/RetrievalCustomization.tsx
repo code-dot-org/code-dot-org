@@ -21,7 +21,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   ).retrievalContexts;
   const {retrievalContexts} = useAppSelector(
-    state => state.aichat.aiCustomizations
+    state => state.aichat.currentAiCustomizations
   );
 
   const onAdd = useCallback(() => {
