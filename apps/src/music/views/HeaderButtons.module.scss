@@ -3,6 +3,10 @@
 
 .container {
   display: flex;
+
+  .subContainer {
+    display: flex;
+  }
 }
 
 .button {

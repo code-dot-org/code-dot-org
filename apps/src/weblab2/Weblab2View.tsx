@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './styles/Weblab2View.css';
 
@@ -6,7 +6,10 @@ import {Config} from './Config';
 
 import {CDOIDE, ConfigType, ProjectType} from 'cdo-ide-poc';
 
-import CDOEditor from './Editor';
+//import CDOEditor from './Editor';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 const instructions = `Add html pages and preview them in the right pane.
 
@@ -24,7 +27,7 @@ const defaultConfig: ConfigType = {
   // showRunBar: true,
   // showDebug: true,
   activeLeftNav: 'Files',
-  EditorComponent: CDOEditor,
+  //EditorComponent: CDOEditor,
   // editableFileTypes: ["html"],
   // previewFileTypes: ["html"],
   leftNav: [
@@ -155,9 +158,29 @@ const defaultProject: ProjectType = {
 };
 
 const Weblab2View = () => {
-  const [project, setProject] = useState<ProjectType>(defaultProject);
+  const [currentProject, setCurrentProject] =
+    useState<ProjectType>(defaultProject);
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const [showConfig, setShowConfig] = useState<'project' | 'config' | ''>('');
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+
+  const setProject = (newProject: MultiFileSource) => {
+    setCurrentProject(newProject);
+    if (Lab2Registry.getInstance().getProjectManager()) {
+      const projectSources = {
+        source: newProject,
+      };
+      Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
+    }
+  };
+
+  useEffect(() => {
+    // We reset the project when the channelId changes, as this means we are on a new level.
+    setCurrentProject(
+      (initialSources?.source as MultiFileSource) || defaultProject
+    );
+  }, [channelId, initialSources]);
 
   return (
     <div className="app-wrapper">
@@ -171,7 +194,7 @@ const Weblab2View = () => {
       </div>
       <div className="app-ide">
         <CDOIDE
-          project={project}
+          project={currentProject}
           config={config}
           setProject={setProject}
           setConfig={setConfig}
@@ -179,7 +202,7 @@ const Weblab2View = () => {
       </div>
       {showConfig && (
         <Config
-          config={showConfig === 'project' ? project : config}
+          config={showConfig === 'project' ? currentProject : config}
           setConfig={(
             configName: string,
             newConfig: ProjectType | ConfigType

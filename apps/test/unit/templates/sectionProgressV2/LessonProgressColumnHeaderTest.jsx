@@ -1,17 +1,17 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-
-import FontAwesome from '@cdo/apps/templates//FontAwesome';
-import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
-import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
+import React from 'react';
 import sinon from 'sinon';
 
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import FontAwesome from '@cdo/apps/templates//FontAwesome';
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
+import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
