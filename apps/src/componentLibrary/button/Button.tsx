@@ -37,11 +37,6 @@ export interface ButtonProps {
   icon?: FontAwesomeV6IconProps;
   /** Left Button icon */
   iconRight?: FontAwesomeV6IconProps;
-  /** Whether we use \<a> (when set to true) or \<button> (when false) html tag for Button component.
-   * If we want button to redirect to another page or download some file we should use \<a> tag.
-   * If we want button to call some function or submit some form we should use \<button> tag.
-   * */
-  useAsLink?: boolean;
   /** (\<button> specific prop)
    * Button html element type */
   buttonType?: 'submit' | 'button';
