@@ -15,11 +15,7 @@ import RubricTabButtons from './RubricTabButtons';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import Draggable from 'react-draggable';
-
-const TAB_NAMES = {
-  RUBRIC: 'rubric',
-  SETTINGS: 'settings',
-};
+import {TAB_NAMES} from './rubricHelpers';
 
 export default function RubricContainer({
   rubric,
@@ -30,6 +26,7 @@ export default function RubricContainer({
   open,
   closeRubric,
   sectionId,
+  sectionName,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
@@ -137,6 +134,8 @@ export default function RubricContainer({
               visible={selectedTab === TAB_NAMES.SETTINGS}
               rubric={rubric}
               sectionId={sectionId}
+              tabSelectCallback={tabSelectCallback}
+              sectionName={sectionName}
             />
           )}
         </div>
@@ -154,6 +153,7 @@ RubricContainer.propTypes = {
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,
+  sectionName: PropTypes.string,
 };
 
 const HeaderTab = ({text, isSelected, onClick}) => {
