@@ -1,0 +1,330 @@
+- responsive ||= false
+
+-# Some programatically-generated styling to accompany that in course-explorer.scss.
+
+- (1..13).each do |n|
+  :css
+    .courses .bar-#{n} {
+      float: left;
+      width: #{n * 74.5}px;
+    }
+
+- (0..12).each do |n|
+  :css
+    .smallresponsive .arrow-offset-#{n}:after {
+      left: 34px;
+    }
+
+    .arrow-offset-#{n}:after {
+      left: #{n * 74.5 + 34}px;
+    }
+
+- (0..4).each do |n|
+  :css
+    .tools-arrow-offset-#{n}:after {
+      left: #{n * 140 + 60}px;
+    }
+
+-# Sometimes there's a responsive alternative, and sometimes there isn't.
+
+- if responsive
+  :css
+    @media screen and (min-width: 992px)
+    {
+      .courseexplorer.smallresponsive {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 991px)
+    {
+      .courseexplorer.nonresponsive {
+        display: none !important;
+      }
+    }
+
+:ruby
+  courses = []
+
+  csp_pl_link = CDO.code_org_url('/educate/professional-learning/middle-high')
+
+  courses << {
+    id: "csa",
+    name: "AP® CSA",
+    starts: 10,
+    ends: 12,
+    range: "Grades 10-12",
+    regular_order: 0,
+    responsive_small_order: 0,
+    subtitle: "Full year course",
+    link: CDO.code_org_url('/educate/csa'),
+    img: "/shared/images/teacher-announcement/csa-upsell.png",
+    description: "AP® Computer Science A invites students to learn programming using Java and can be taken after completing an introductory course such as Computer Science Principles or Computer Science Discoveries.
+      <ul>
+        <li> <strong>Audience:</strong> High school students, grades 9 - 12</li>
+        <li> <strong>Curriculum length:</strong> A minimum of 140 class hours; should be taught as a full-year course. Contains 9 units, which includes an AP Exam Prep unit.</li>
+        <li> <strong>Prior knowledge:</strong> For students, Computer Science Principles, Computer Science Discoveries, and/or a similar introductory computer science course. Teachers who are able to independently write and debug an error-free function (or procedure) with one or more parameters and that uses conditional logic, loops, and an array (or a list) will be best positioned to use our CSA curriculum with students.
+        </li>
+        <li> <strong>Optional <a href='#{csp_pl_link}'>professional learning</a>:</strong> Our year-long program is intended to support both teachers experienced with Code.org curriculum and tools and teachers who are new to Code.org.  Read more about the robust support structure for teachers in our Professional Learning program on the <a href='#{csp_pl_link}'>Professional Learning page</a>.
+        </li>
+        <li> <strong>Cost to use curriculum:</strong> None</li>
+        <li> <strong>Languages:</strong> English only</li>
+      </ul>"
+  }
+
+  courses << {
+    id: "csp",
+    name: "CS Principles",
+    starts: 9,
+    ends: 12,
+    range: "Grades 9-12",
+    regular_order: 1,
+    responsive_small_order: 1,
+    subtitle: "Full year course",
+    link: CDO.code_org_url("/educate/csp"),
+    course_link: CDO.studio_url("/courses/csp"),
+    img: "/shared/images/teacher-announcement/csp-widgets.png",
+    description: "Computer Science Principles covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms. The curriculum is flexible to be taught as an AP or non-AP course.
+      <ul>
+        <li> <strong>Audience:</strong> High school students, grades 9 - 12</li>
+        <li> <strong>Curriculum length:</strong> 100-180 hours, should be taught as a full-year course. Contains 10 units, including a Create Performance Task prep unit.</li>
+        <li> <strong>Prior knowledge:</strong> None! Just bring your curiosity.</li>
+        <li> <strong>Optional <a href='#{csp_pl_link}'>professional learning</a>:</strong> Our yearlong program includes a 1-week summer workshop, 24 hours' worth of follow up workshops during the academic year, and online support through the Code.org teacher forum.</li>
+        <li> <strong>Cost to use curriculum:</strong> None</li>
+        <li> <strong>Languages:</strong> English only</li>
+      </ul>"
+  }
+
+  csd_pl_link = CDO.code_org_url('/educate/professional-learning/middle-high')
+  courses << {
+    id: "csd",
+    name: "CS Discoveries",
+    starts: 6,
+    ends: 10,
+    range: "Grades 6-10",
+    regular_order: 2,
+    responsive_small_order: 2,
+    subtitle: "Semester or full year course",
+    link: CDO.code_org_url("/educate/csd"),
+    course_link: CDO.studio_url("/courses/csd"),
+    img: "/shared/images/fit-500/courses/logo_csd.jpg",
+    description: "Computer Science Discoveries is an introductory course that empowers students to engage with computer science as a medium for creativity, communication, problem solving, and fun!
+      <ul>
+        <li> <strong>Audience:</strong> Middle and high school students, grades 6 - 10</li>
+        <li> <strong>Curriculum length:</strong> 50-150 hours, can be taught as a semester or full-year course</li>
+        <li> <strong>Prior knowledge:</strong> None! Just bring your curiosity.</li>
+        <li> <strong>Optional <a href='#{csd_pl_link}'>professional learning</a>:</strong> Our yearlong program includes a 1-week summer workshop, 24 hours' worth of follow up workshops during the academic year, and online support through the Code.org teacher forum.</li>
+        <li> <strong>Cost to use curriculum:</strong> None</li>
+        <li> <strong>Languages:</strong> English only</li>
+      </ul>"
+  }
+
+  csf_pl_link = CDO.code_org_url('/professional-development-workshops')
+  courses << {
+    id: "csf",
+    name: "CS Fundamentals",
+    starts: 0,
+    ends: 5,
+    regular_order: 3,
+    responsive_small_order: 3,
+    range: "Grades K-5",
+    subtitle: "12+ lesson courses for each grade can be taught once a week",
+    link: CDO.code_org_url("/educate/curriculum/elementary-school"),
+    course_link: CDO.code_org_url("/educate/curriculum/csf"),
+    img: "/shared/images/courses/logo_tall_course1.jpg",
+    description: "Designed to be fun and engaging, Code.org’s progression of Computer Science Fundamentals courses blend online and \"unplugged\" non-computer activities to teach students computational thinking, problem solving, programming concepts and digital citizenship.
+      <ul>
+        <li> <strong>Audience:</strong> Elementary students, ages 4-11</li>
+        <li> <strong>Curriculum length:</strong> 6 courses, 10-25 hours each, optimized for grades K-5</li>
+        <li> <strong>Prior Knowledge:</strong> None! Just bring your curiosity</li>
+        <li> <strong>Optional <a href='#{csf_pl_link}'>professional learning</a>:</strong> 1-day workshop, in-person in the US and online globally.</li>
+        <li> <strong>Cost to use curriculum:</strong> None</li>
+        <li> <strong>Languages:</strong>
+          English, Spanish, French, Arabic, Portuguese, Hindi, Chinese,
+          Russian, and 10 other languages.
+        </li>
+      </ul>"
+  }
+
+  k5_curriculum_link = CDO.code_org_url('/educate/curriculum/elementary-school')
+  courses << {
+    id: "pre",
+    name: "Pre-reader Express",
+    starts: 0,
+    ends: 2,
+    range: "Grades K-2",
+    regular_order: 4,
+    responsive_small_order: 5,
+    subtitle: "",
+    link: CDO.code_org_url("/educate/curriculum/express-course"),
+    course_link: CDO.studio_url("/s/pre-express"),
+    img: "/shared/images/courses/logo_tall_pre-express.jpg",
+    description: "This single condensed 14-lesson course covers the core concepts from the kindergarten and first grade courses in <a href='#{k5_curriculum_link}'>CS Fundamentals</a> at an accelerated pace.
+      <ul>
+        <li> <strong>Audience:</strong> Pre-readers, ages 4-8</li>
+        <li> <strong>Curriculum length:</strong> 10-14 hours</li>
+        <li> <strong>Prior knowledge:</strong> None! Just bring your curiosity.</li>
+        <li> <strong>Cost to use curriculum:</strong> None</li>
+        <li> <strong>Languages:</strong> English only</li>
+      </ul>",
+    lighter: true
+  }
+
+  k5_curriculum_link = CDO.code_org_url('/educate/curriculum/elementary-school')
+  courses << {
+    id: "exp",
+    name: "CS Fundamentals: Express",
+    starts: 3,
+    ends: 12,
+    range: "Grades 3-12",
+    regular_order: 5,
+    responsive_small_order: 4,
+    subtitle: "Condensed version of curriculum in one 30 hour course for older students",
+    link: CDO.code_org_url("/educate/curriculum/express-course"),
+    course_link: CDO.studio_url("/s/express"),
+    img: "/shared/images/courses/logo_tall_express.jpg",
+    description: "For a lightweight option that can be integrated as a supplemental resource in an existing technology or programming class, or as an after-school program, Code.org offers the 30-hour Computer Science Fundamentals Express Course. This course covers all the core concepts from the elementary school curriculum <a href='#{k5_curriculum_link}'>Computer Science Fundamentals</a>, but at an accelerated pace designed for older students.
+      <ul>
+        <li> <strong>Audience:</strong> Students ages 9-18</li>
+        <li> <strong>Curriculum length:</strong> 30 hours</li>
+        <li> <strong>Prior Knowledge:</strong> None! Just bring your curiosity</li>
+        <li> <strong>Cost to use curriculum:</strong> None</li>
+        <li> <strong>Languages:</strong>
+          English, Spanish, French, Arabic, Portuguese, Hindi, Chinese,
+          Russian, and 10 other languages.
+        </li>
+      </ul>",
+    lighter: true
+  }
+
+-# Generate the detail containers ahead of time
+- detail_containers = []
+- courses.each_with_index do |course, course_index|
+  - detail_containers[course_index] = capture_haml do
+    .course.detailcontainer{class: "courseextra-#{course[:regular_order]}", style: "display: none; color: grey; cursor: auto"}
+      .arrow_box{class: "arrow-offset-#{course[:starts]}"}
+        .arrow_box_content{style: "overflow: hidden"}
+          - if course[:img]
+            .left{style: "float: left; width: 30%"}
+              %a.linktag{id: "image-#{course[:id]}", href: course[:link] || course[:course_link]}
+                %img.courseimage{src: course[:img]}
+          .right{style: "float: left; width: 65%"}
+            .title
+              =course[:name]
+            %br/
+            - if course[:description]
+              .description
+                !=course[:description]
+                - if course[:description2]
+                  %br/
+                  %br/
+                  =course[:description2]
+            - if course[:link]
+              %a.linktag{id: "link-#{course[:id]}", href: course[:link], style: "text-decoration: none"}
+                %button.launch{style: "font-size: 12px"}
+                  Learn more
+            - if course[:course_link]
+              &nbsp;
+              %a.linktag{id: "course-link-#{course[:id]}", href: course[:course_link]}
+                %button.course-explorer-gray-button{style: "font-size: 12px"}
+                  View course
+        .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course[:regular_order]}}
+          %i.fa.fa-times{"aria-hidden" => "true"}
+
+-#
+  We support two courses on the same line.  This is the index of the first of
+  those two courses.
+- index_course_first_same_line = 4
+
+- if responsive
+  .courseexplorer.courses.smallresponsive{style: "margin-left: 0px; margin-top: 30px;"}
+    .coursebodycontainer{style: "position: relative; overflow: hidden; clear: both"}
+      .coursebodymain{style: "width: 100%"}
+        - courses.sort_by {|i| i[:responsive_small_order]}.each_with_index do |course, course_index|
+          .course.breakable{class: "course-#{course[:regular_order]}", data: {courseindex: course[:regular_order]}}
+            .courserow.clicktag{id: "click-#{course[:id]}", style: "float: left; width: 100%"}
+              .left
+                .title
+                  =course[:name]
+              .arrow
+                %i.arrow-down{class: "fa fa-caret-down"}
+                %i.arrow-up{class: "fa fa-caret-up"}
+              - if course[:range] || course[:announcement]
+                %br/
+                = course[:range]
+                != course[:announcement]
+          = detail_containers[course[:regular_order]]
+          .cleardiv{style: "clear: both"}
+      .professional-learning{style: "width: 100%; height: 56px"}
+        .left
+          .title
+            Professional Learning
+        .right{style: 'float:right; margin-top: -26px;'}
+          %a.linktag#professional-learning{:href => CDO.code_org_url('/educate/professional-learning')}
+            .course-explorer-gray-button.professional-learning-button.mobile-button
+              Learn more
+    .cleardiv{style: "clear: both"}
+
+
+.courseexplorer.courses.nonresponsive{style: "margin-left: 0px; margin-top: 30px; width: 970px;"}
+  .group{style: "overflow: hidden"}
+    .grouprow.bar-6{style: "opacity: 0.7; opacity: 1"}
+      %h6 Elementary school
+    .grouprow.bar-3{style: "opacity: 0.85; opacity: 1"}
+      %h6 Middle school
+    .grouprow.bar-4{style: "opacity: 1"}
+      %h6 High school
+  .grade.break
+    .graderow.numbered.bar-1
+      K
+    - (1..12).each do |n|
+      - opacity = 1
+      .graderow.numbered.bar-1{style: "opacity: #{opacity}"}
+        = n
+  .coursebodycontainer{ style: "position: relative; overflow: hidden; clear: both"}
+    .coursebodyback{ style: "position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: -100"}
+      - (1..13).each do |n|
+        - opacity = n.between?(0,6) ? 0.6 : n.between?(7,9) ? 0.8 : 1
+        .graderow.bar-1{style: "height: 100%; background-color: rgba(200, 200, 200, #{opacity})"}
+    .coursebodymain{style: "width: 100%"}
+      - courses.each_with_index do |course, course_index|
+        - if course[:heading]
+          %h2.course.breakable
+            = course[:heading]
+        - else
+          - break_class = course_index == (index_course_first_same_line + 1) ? "" : "break"
+          .course.breakable{class: "#{break_class} course-#{course_index}", data: {courseindex: course_index}}
+            - unless course[:starts] == 0 || course_index == (index_course_first_same_line + 1)
+              %div{class: "bar-#{course[:starts]}"}
+                &nbsp;
+            - courserow_class = "courserow clicktag bar-#{course[:ends] - course[:starts] + 1}"
+            - courserow_class += " lighter" if course[:lighter]
+            - courserow_class += " announcement" if course[:announcement]
+            %div{id: "click-#{course[:id]}", class: courserow_class}
+              .left
+                - if course[:announcement]
+                  != course[:announcement]
+                .title
+                  =course[:name]
+              .arrow
+                %i.arrow-down{class: "fa fa-caret-down"}
+                %i.arrow-up{class: "fa fa-caret-up"}
+          %div{style: "width: 968px;"}
+            - if course_index == index_course_first_same_line
+            - elsif course_index == index_course_first_same_line + 1
+              = detail_containers[index_course_first_same_line]
+              = detail_containers[index_course_first_same_line + 1]
+            - else
+              = detail_containers[course_index]
+
+          - unless course_index == index_course_first_same_line
+            .cleardiv{style: "clear: both"}
+    .professional-learning{style: "width: 100%"}
+      .left
+        .title
+          Professional Learning for all grade levels
+      .right{style: 'float:right; margin-top: -26px;'}
+        %a.linktag#professional-learning-nonresponsive{:href => CDO.code_org_url('/educate/professional-learning')}
+          .course-explorer-gray-button.professional-learning-button
+            Learn more
+  .cleardiv{style: "clear: both"}
