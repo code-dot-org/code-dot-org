@@ -36,7 +36,6 @@ class ApplicationJob < ActiveJob::Base
       dimensions: job.class.common_dimensions,
     }
 
-    pp metric
     Cdo::Metrics.put_metric(METRICS_NAMESPACE, metric)
   end
 
