@@ -60,7 +60,7 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length >=
-      1
+      min
     );
   },
 
