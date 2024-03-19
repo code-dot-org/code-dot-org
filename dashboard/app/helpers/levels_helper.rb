@@ -581,7 +581,8 @@ module LevelsHelper
   def datablock_storage_options
     storage_options = {}
 
-    if @level.game.use_datablock_storage?
+    # TODO: post-firebase-cleanup, remove this whole if statement: #56994
+    if DatablockStorageController::SUPPORTED_PROJECT_TYPES.include? @level.game.app
       channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
 
       # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage: #56994

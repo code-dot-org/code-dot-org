@@ -23,7 +23,10 @@ class DatablockStorageController < ApplicationController
     render json: {msg: exception.message, type: exception.type}, status: :bad_request
   end
 
-  SUPPORTED_PROJECT_TYPES = ['applab', 'gamelab']
+  SUPPORTED_PROJECT_TYPES = [
+    Game::APPLAB,
+    Game::GAMELAB,
+  ]
 
   ##########################################################
   #   Debug View                                           #

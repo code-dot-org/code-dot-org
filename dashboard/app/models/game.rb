@@ -266,10 +266,6 @@ class Game < ApplicationRecord
     !([NETSIM].include? app)
   end
 
-  def use_datablock_storage?
-    [APPLAB, GAMELAB].include? app
-  end
-
   def use_azure_speech_service?
     [APPLAB, GAMELAB, SPRITELAB].include? app
   end
