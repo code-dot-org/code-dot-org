@@ -1,9 +1,11 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {setExternalGlobals} from '../../../util/testUtils';
 import React from 'react';
+import sinon from 'sinon';
+
 import {StatelessInlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
+
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {setExternalGlobals} from '../../../util/testUtils';
 
 const DEFAULT_PROPS = {
   assetUrl: () => {},

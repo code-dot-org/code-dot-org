@@ -173,7 +173,14 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
     >
       <div className={styles.soundRowLeft}>
         <img src={typeIconPath} className={styles.typeIcon} alt="" />
-        <div className={styles.name}>{sound.name}</div>
+        <div
+          className={classNames(
+            styles.name,
+            sound.type === 'vocal' && styles.nameVocal
+          )}
+        >
+          {sound.name}
+        </div>
       </div>
       {showingSoundsOnly && (
         <div className={styles.soundRowMiddle}>

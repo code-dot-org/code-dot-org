@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   rubric: {

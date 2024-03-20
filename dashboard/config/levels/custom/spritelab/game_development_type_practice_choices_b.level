@@ -71,21 +71,21 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Practice:** ",
+    "long_instructions": "**Sprite Type Debugging Practice**\r\n\r\nSomething is not quite right in this simple game design.\r\n\r\n- Can you add another `set sprite type to environment` so the monster can land on the green platforms?",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:37:02.898+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_type_choice2\\\"\"],\"cloned_from\":\"game_mechanics_type_choice2\"},{\"changed_at\":\"2024-03-18 20:37:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 20:41:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:37:02.898+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_type_choice2\\\"\"],\"cloned_from\":\"game_mechanics_type_choice2\"},{\"changed_at\":\"2024-03-18 20:37:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 20:41:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 16:49:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 16:51:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 19:33:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:35:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:35:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 21:11:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:38:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:39:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:39:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="24" y="19">
+        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" movable="false" x="24" y="19">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"background_landscape_21"</field>
@@ -214,7 +214,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_keyPressed" x="19" y="832">
+        <block type="gamelab_keyPressed" x="23" y="860">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
           <next>
@@ -1258,6 +1258,56 @@
           <field name="button_behavior_definition"/>
           <field name="NAME">moving with arrow keys</field>
           <field name="DESCRIPTION"/>
+          <statement name="STACK">
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed">
+                  <field name="KEY">"left"</field>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveInDirection">
+                  <field name="DIRECTION">"West"</field>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get"/>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp">
+                      <field name="PROPERTY">"speed"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed">
+                      <field name="KEY">"right"</field>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveInDirection">
+                      <field name="DIRECTION">"East"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get"/>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp">
+                          <field name="PROPERTY">"speed"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>
@@ -1267,15 +1317,15 @@
           <field name="GROUP">"players"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="x,sMj}}CfvGtzA+U2wfm">
-              <field name="ANIMATION">"game_penguin"</field>
+              <field name="ANIMATION">"ground_stone"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs" id="e_w.RAW8aDDfs68bKi=U" x="21" y="149">
-          <field name="IMG">"gradient_02"</field>
+          <field name="IMG">"background_landscape_09"</field>
         </block>
         <block type="gamelab_makeSpritesGridInput" id="%lIt9m#@H2J}unSh8[y!" x="21" y="247">
-          <field name="ANIMATION_NAME">"dirt_grass"</field>
+          <field name="ANIMATION_NAME">"ground_stone"</field>
           <value name="GRID">
             <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
               <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
@@ -1286,12 +1336,33 @@
           </value>
         </block>
         <block type="gamelab_makeNewSpriteAnon" id="IM+:ZqBn5NT-ZZL!04b:" x="21" y="341">
-          <field name="ANIMATION_NAME">"game_penguin"</field>
+          <field name="ANIMATION_NAME">"ground_stone"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id=")}o!T7jG3=$uWTqjEy0+">
               <field name="LOCATION">{"x":81,"y":34}</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_toggleBehaviorSimple" id="F12)GN$fi`0@5X[#*J#g" x="100" y="413">
+          <field name="TOGGLE">"begins"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="_#4pjTcUuGz`kx#b^GU]">
+              <field name="ANIMATION">"alien_06"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get" id="ue?yh`6bJ`d6^soUexUz">
+              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+              <field name="NAME">moving with arrow keys</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_keyPressed" id="L%ZBf,IQ@||cA9uc/;hC" x="38" y="520">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
+        </block>
+        <block type="GameDev_playerJump" id="#:ilJiw4mfZ]hEYbH1;T" x="39" y="592">
+          <field name="STRENGTH">6.5</field>
         </block>
       </xml>
     </toolbox_blocks>
