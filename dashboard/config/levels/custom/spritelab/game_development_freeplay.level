@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:38:32.000Z",
   "level_num": "custom",
@@ -72,25 +71,23 @@
     "short_instructions": "Now try building your own game!",
     "standalone_app_name": "spritelab",
     "long_instructions": "**Free Play!**\r\n- Try building your own game\r\n\r\n- Share your project with a friend when you're done\r\n",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:32.823+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world_freeplay\\\"\"],\"cloned_from\":\"game_mechanics_world_freeplay\"},{\"changed_at\":\"2024-03-18 20:38:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:32.823+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world_freeplay\\\"\"],\"cloned_from\":\"game_mechanics_world_freeplay\"},{\"changed_at\":\"2024-03-18 20:38:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:45:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:45:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:47:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="16" y="16"/>
-        <block type="gamelab_keyPressed" x="15" y="195">
+        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" movable="false" x="16" y="16"/>
+        <block type="gamelab_keyPressed" x="16" y="200">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
         </block>
-        <block type="gamelab_checkTouching" x="13" y="303">
+        <block type="gamelab_checkTouching" x="16" y="300">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
@@ -1293,7 +1290,10 @@
         <variables>
           <variable id="!o-[3E0/qE%Z0V!G#dn$">Score</variable>
         </variables>
-        <block type="gamelab_showVariable" id="_2~iJ[jg7Hjp8QKvrC,w" x="16" y="52">
+        <block type="gamelab_setBackgroundImageAs" id="/2XSqqz8!CCbNbkbZWN|" x="367" y="4">
+          <field name="IMG">"gradient_02"</field>
+        </block>
+        <block type="gamelab_showVariable" id="_2~iJ[jg7Hjp8QKvrC,w" x="25" y="82">
           <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="1nF~2/0Fw#i:(?/KkQ97">
@@ -1301,7 +1301,7 @@
             </block>
           </value>
         </block>
-        <block type="variables_set" id="I)lhdMV5WGSh,`TlR^yF" x="16" y="92">
+        <block type="variables_set" id="I)lhdMV5WGSh,`TlR^yF" x="45" y="138">
           <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
           <value name="VALUE">
             <block type="math_number" id="22)bHoex:[Gi=)vq-tcX">
@@ -1309,7 +1309,7 @@
             </block>
           </value>
         </block>
-        <block type="math_change" id="0I1_nmfPS,Yqq?tTh;%=" x="16" y="132">
+        <block type="math_change" id="0I1_nmfPS,Yqq?tTh;%=" x="51" y="193">
           <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
           <value name="DELTA">
             <shadow type="math_number" id="p:f]5``s}2;CF~Sg8;`Y">
@@ -1320,7 +1320,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_ifVarEquals" id="T0v(ULL_IKOvn;2;L?o;" x="16" y="172">
+        <block type="gamelab_ifVarEquals" id="T0v(ULL_IKOvn;2;L?o;" x="16" y="242">
           <field name="NUM" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
           <value name="VAL">
             <block type="math_number" id="bwaBdzn3+W^x1B4m`Zbn">
@@ -1328,15 +1328,8 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="/2XSqqz8!CCbNbkbZWN|" x="16" y="255">
-          <field name="IMG">"gradient_02"</field>
-        </block>
-        <block type="gamelab_playSound" id="@@xcv,av$zmHAx%,RYOa" x="16" y="329">
+        <block type="gamelab_playSound" id="@@xcv,av$zmHAx%,RYOa" x="53" y="323">
           <field name="SOUND">sound://category_digital/ping.mp3</field>
-        </block>
-        <block type="gamelab_behavior_get" id="??V,F!g-jB|WS*!jj]g;" x="387" y="317">
-          <mutation behaviorId="wandering" name="wandering"/>
-          <field name="NAME">wandering</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon" id="3]]t*LAw6PLK|-o*^6rv" x="16" y="369">
           <field name="ANIMATION_NAME">"dirt_snow"</field>
@@ -1385,9 +1378,8 @@
             </block>
           </value>
           <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get" id="yf*T0|()Ufr%3+7V==qK">
-              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-              <field name="NAME">moving with arrow keys</field>
+            <block type="gamelab_behaviorPicker" id="+1d3R*_[T;50j)I!zz1N">
+              <field name="BEHAVIOR">moving with arrow keys</field>
             </block>
           </value>
         </block>

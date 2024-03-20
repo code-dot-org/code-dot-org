@@ -71,14 +71,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Develop your game!**\r\n1. Set up the environment\r\n\r\n- Add the player sprite & code their movement\r\n- Add the opponent or collectible sprite(s) & code their movement\r\n- Add the scoreboard & code it to change with an event\r\n- Add a winning condition\r\n\r\n",
+    "long_instructions": "**Develop your game!**\r\n1. Set up the environment\r\n\r\n- Add the player sprite & code their movement\r\n- Add the collectible or enemy sprite(s) & code their movement\r\n- Add your variable & code it to change with an event\r\n- Add a winning and/or losing condition\r\n\r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:42:46.889+00:00\",\"changed\":[\"cloned from \\\"game_jam_choice_jump\\\"\"],\"cloned_from\":\"game_jam_choice_jump\"},{\"changed_at\":\"2024-03-18 20:42:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:42:46.889+00:00\",\"changed\":[\"cloned from \\\"game_jam_choice_jump\\\"\"],\"cloned_from\":\"game_jam_choice_jump\"},{\"changed_at\":\"2024-03-18 20:42:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:22:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:26:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 18:26:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:05:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:07:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:15:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:16:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:17:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 22:20:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -706,6 +706,56 @@
                       </value>
                     </block>
                   </statement>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isKeyPressed">
+                          <field name="KEY">"up"</field>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_moveInDirection">
+                          <field name="DIRECTION">"North"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get"/>
+                          </value>
+                          <value name="DISTANCE">
+                            <block type="gamelab_getProp">
+                              <field name="PROPERTY">"speed"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if">
+                          <value name="IF0">
+                            <block type="gamelab_isKeyPressed">
+                              <field name="KEY">"down"</field>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_moveInDirection">
+                              <field name="DIRECTION">"South"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get"/>
+                              </value>
+                              <value name="DISTANCE">
+                                <block type="gamelab_getProp">
+                                  <field name="PROPERTY">"speed"</field>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get"/>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -1274,24 +1324,26 @@
         <variables>
           <variable id="!o-[3E0/qE%Z0V!G#dn$">Score</variable>
         </variables>
-        <category name="Environment  World">
+        <category name="World">
           <block type="gamelab_setBackgroundImageAs" id="r(E.fkuhHSRU_ftumD*U">
             <field name="IMG">"gradient_02"</field>
           </block>
-          <block type="gamelab_setBackground" id="#!.yvUw93xbJV-q;HiYC"/>
-          <block type="gamelab_makeSpritesGridInput" id="7aKJ1+YZxOSu|Klw^89H">
-            <field name="ANIMATION_NAME">"dirt_grass"</field>
-            <value name="GRID">
-              <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
-                <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
-              </shadow>
-              <block type="gamelab_bitmap" id="GMVHM0N@K8ICoP8;2I,+">
-                <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
+          <block type="gamelab_setBackground" id="#!.yvUw93xbJV-q;HiYC">
+            <value name="COLOR">
+              <block type="colour_picker" id="0eDKvBX#c:en#4rK,5Nz">
+                <field name="COLOUR">#99ff99</field>
               </block>
             </value>
           </block>
           <block type="GameDev_playSoundOptions" id="9rnQp[uD[i[V$iZ1:/M~">
             <field name="SOUND">'sound://category_digital/boing_2.mp3'</field>
+          </block>
+          <block type="gamelab_printText" id="67@D_2,9u@+Nk$0/@NE$">
+            <value name="TEXT">
+              <block type="text" id="FX[/+4_f*pL-=mPg#:=w">
+                <field name="TEXT"/>
+              </block>
+            </value>
           </block>
           <block type="gamelab_showTitleScreen" id="zY;,XnU+g`pwe%t?)_6~">
             <value name="TITLE">
@@ -1306,6 +1358,7 @@
             </value>
           </block>
           <block type="gamelab_hideTitleScreen" id="h^FIL}y;3[k7LGU6!lD{"/>
+          <block type="gamelab_randomColor" id="h5agMi5;,Iaf],AP~$Oh"/>
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon" id="5|=`/jipO.IDs[ehM~07">
@@ -1325,8 +1378,111 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_makeSpritesGridInput" id="7aKJ1+YZxOSu|Klw^89H">
+            <field name="ANIMATION_NAME">"dirt_grass"</field>
+            <value name="GRID">
+              <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
+                <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
+              </shadow>
+              <block type="gamelab_bitmap" id="GMVHM0N@K8ICoP8;2I,+">
+                <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_makeBurst" id=".YsTmI$1M4Zg6x}F337G">
+            <field name="EFFECT">"burst"</field>
+            <field name="ANIMATION_NAME">"dirt_snow"</field>
+            <value name="NUM">
+              <block type="math_number" id="_q6G$H[=q+/bMITY$-?a">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_destroy" id="($GG/Y[.3T/$]h2t1(0c">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation" id="C^T+)/W^AO~m4jcu/fj%">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp" id="mn7c9k(7Ih_*1p?8!4tg">
+            <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="nW:wS:{cRtLdxx8df7Ww">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number" id="WhFB~w(UX+dFSmry10iG">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_turn" id="%OG*Tb#DD]P1iy$,e6qK">
+            <field name="DIRECTION">"right"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="wfypnn:7X0T0_rML2A3T">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+            <value name="N">
+              <block type="math_number" id="3t=JP[8(CdSPV[_w;Lz,">
+                <field name="NUM">90</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_spriteSay" id="+p$K;1=b3$EZybAqFA.H">
+            <field name="SPEECH">Hello, world!</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="WU!,|w?=Chyp4*z27.RV">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setTint" id="}hSLwYYy]vGd#m2)S~`s">
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation" id="rnr:XzH0oXYW00KEX8gN">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+            <value name="COLOR">
+              <block type="colour_picker" id="{kE}zXSKN,dasMpGFl;v">
+                <field name="COLOUR">#ff0000</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_changePropBy" id="3=~[((==TXFu|9X@:7Y+">
+            <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="p,7?JqDvR$iF2`n;yzN9">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number" id="Ra.8r{HFbO{~gor{;F87">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_getAllSprites" id="}j0t94A2EVB|Tk}O?#!I"/>
+          <block type="gamelab_setAnimation" id="q/5cf;QLkJ^6UAJ3@5m1">
+            <field name="ANIMATION">"dirt_snow"</field>
+            <value name="THIS">
+              <block type="gamelab_allSpritesWithAnimation" id="%y~2p4/m!?}r6@Iy8M.7">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+          </block>
+          <block type="GameDev_setGroup" id="_=JrrV:WR7u$[SDOcRr/">
+            <field name="GROUP">"players"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="AhJjL~Q.RK?)ZTMAFcYT">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+          </block>
         </category>
-        <category name="Movement  Behaviors">
+        <category name="Behaviors">
           <block type="gamelab_toggleBehaviorSimple" id="r48p2H6jy.%#JgLn#i$z">
             <field name="TOGGLE">"begins"</field>
             <value name="SPRITE">
@@ -1335,26 +1491,13 @@
               </block>
             </value>
             <value name="BEHAVIOR">
-              <block type="gamelab_behavior_get" id="yf*T0|()Ufr%3+7V==qK">
-                <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-                <field name="NAME">moving with arrow keys</field>
+              <block type="gamelab_behaviorPicker" id="{U-yrom%JR6H!2-9dD~l">
+                <field name="BEHAVIOR">driving with arrow keys</field>
               </block>
             </value>
           </block>
           <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k">
             <field name="STRENGTH">6.5</field>
-          </block>
-          <block type="gamelab_jumpTo" id="mJ0:,Y:+h@=uvUVv,ay@">
-            <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation" id="h}/{~o~;quXJ]6uNu*87">
-                <field name="ANIMATION">"game_penguin"</field>
-              </block>
-            </value>
-            <value name="LOCATION">
-              <block type="gamelab_location_picker" id="|aw9`zmTp=dKw~X*4OVj">
-                <field name="LOCATION">{"x":200,"y":200}</field>
-              </block>
-            </value>
           </block>
         </category>
         <category name="Events">
@@ -1387,8 +1530,16 @@
             <field name="CONDITION">"when"</field>
             <field name="KEY">"up"</field>
           </block>
+          <block type="gamelab_atTime" id="UDTDW$5M,#G=k)`lZIuE">
+            <field name="UNIT">"seconds"</field>
+            <value name="N">
+              <block type="math_number" id="o3~@DxI)(9#k%LuJhEvJ">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
         </category>
-        <category name="Scoreboard Variables">
+        <category name="Variables" custom="VARIABLE">
           <block type="gamelab_showVariable" id="_2~iJ[jg7Hjp8QKvrC,w">
             <field name="VAR" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
             <value name="LOCATION">
@@ -1415,6 +1566,57 @@
                 <field name="NUM">1</field>
               </block>
             </value>
+          </block>
+          <block type="gamelab_ifVarEquals" id="rMDd$s]b`VStWa._=q$H">
+            <field name="NUM" id="!o-[3E0/qE%Z0V!G#dn$">Score</field>
+            <value name="VAL">
+              <block type="math_number" id="f8bE?RepV[dswUs?nhlf">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number" id="D-|^Ntl~?AQXnAp)To]=">
+            <field name="NUM">0</field>
+          </block>
+          <block type="gamelab_countByAnimation" id="XHVzQO=,Jl%1[mm4Zag[">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="`CiT+Z=IR1eH;k~0jj3f">
+                <field name="ANIMATION">"dirt_snow"</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_random_int" id="qc]m(%W*@!gsIN=F0t5:">
+            <value name="FROM">
+              <block type="math_number" id="!zADB$D!{^Tj]-I[WCd4">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number" id="hGt*2UopN[2,}vd)ifo*">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_arithmetic" id="PQ*OP]{.$vdYX4S,@}[T">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <block type="math_number" id="p7f=oxW{be*Ie+u6;FA1">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="Su?2W{`EVSGy3~?D!Tza">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+          <block type="logic_compare" id="s7xHqRmX_bg;j,x;A`z7">
+            <field name="OP">EQ</field>
+          </block>
+          <block type="logic_operation" id="^jW?yFX%0)e`W(trel8O">
+            <field name="OP">AND</field>
           </block>
         </category>
       </xml>
