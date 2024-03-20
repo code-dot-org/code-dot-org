@@ -70,11 +70,11 @@ export default class CdoFieldBehaviorPicker extends CdoFieldDropdown {
   getOptions(useCache?: boolean, newValue?: string) {
     const options = super.getOptions(useCache);
 
-    // Behavior pickers do not populate correctly until the workspace has been loaded.
+    // Behavior pickers do not populate correctly until the hidden workspace has been loaded
+    // with blocks.
     if (newValue) {
       // Check whether the initial newValue option already exists
       const optionExists = options.some(option => option[0] === newValue);
-      // The hidden workspace is created after the main workspace flyout is populated.
       const loadingFinished = Blockly.hasLoadedBlocks;
       if (!optionExists && !loadingFinished) {
         // Assume initial value is valid and add it to the menu if not yet present.

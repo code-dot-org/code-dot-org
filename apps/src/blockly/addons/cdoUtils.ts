@@ -43,6 +43,7 @@ export function loadBlocksToWorkspace(
   source: string,
   includeHiddenDefinitions = true
 ) {
+  Blockly.hasLoadedBlocks = false;
   const embedded = Blockly.isEmbeddedWorkspace(workspace);
   const {mainSource, hiddenDefinitionSource} = prepareSourcesForWorkspaces(
     source,
