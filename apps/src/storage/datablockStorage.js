@@ -372,12 +372,14 @@ DatablockStorage.getColumnsForTable = function (tableName) {
   return getColumnsForTable({tableName});
 };
 
-// @return {Promise<boolean>} whether the project channelID exists
-DatablockStorage.channelExists = function () {
-  return _fetch('channel_exists', 'GET', {});
+// @return {Promise<boolean>} whether the project has any data in it
+DatablockStorage.projectHasData = function () {
+  return _fetch('project_has_data', 'GET', {}).then(response =>
+    response.json()
+  );
 };
 
-// deletes all datablock storage data for this channel,
+// deletes all datablock storage data for this project,
 // used only one place, applab.js config.afterClearPuzzle()
 DatablockStorage.clearAllData = function (onSuccess, onError) {
   _fetch('clear_all_data', 'DELETE', {}).then(onSuccess, onError);

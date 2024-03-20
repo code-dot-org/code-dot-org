@@ -1159,8 +1159,8 @@ Dashboard::Application.routes.draw do
         get :get_library_manifest
         put :set_library_manifest
 
-        # Datablock Storage: Channel API
-        get :channel_exists
+        # Datablock Storage: Project API
+        get :project_has_data
         delete :clear_all_data
 
         # TODO: post-firebase-cleanup, remove

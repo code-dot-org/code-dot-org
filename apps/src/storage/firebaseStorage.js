@@ -77,7 +77,7 @@ FirebaseStorage.getColumnsForTable = function (tableName, tableType) {
 /**
  * @return {Promise<boolean>} whether the project channel exists
  */
-FirebaseStorage.channelExists = function () {
+FirebaseStorage.projectHasData = function () {
   return getProjectDatabase()
     .once('value')
     .then(snapshot => snapshot.val() !== null);

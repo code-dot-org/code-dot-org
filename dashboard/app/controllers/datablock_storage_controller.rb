@@ -18,7 +18,7 @@
 # - datablock_storage_library_manifest.rb
 #
 # Methods are broken into sections, for example the Key-Value-Pair API, Table API,
-# Table Column API, Table Record API, Library Manifest API & Channel API
+# Table Column API, Table Record API, Library Manifest API & Project API
 #
 # More details can be found in the PR that initially created Datablock Storage:
 # https://github.com/code-dot-org/code-dot-org/pull/56279
@@ -276,12 +276,13 @@ class DatablockStorageController < ApplicationController
   end
 
   ##########################################################
-  #   Channel API                                          #
+  #   Project API                                          #
   ##########################################################
 
-  # Returns true if validation checks pass
-  def channel_exists
-    render json: true
+  # Returns true if there is any data for the project
+  def project_has_data
+    is_there_data = DatablockStorageTable.exists?(project_id: @project_id) || DatablockStorageKvp.exists?(project_id: @project_id)
+    render json: is_there_data
   end
 
   # Deletes all datablock storage data for the project
