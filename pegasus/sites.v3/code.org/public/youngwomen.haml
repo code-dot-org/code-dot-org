@@ -13,9 +13,9 @@ theme: responsive_full_width
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"}
+      %h1.white
         =hoc_s(:yw_page_top_heading)
-      %p.body-one{style: "color: white"}
+      %p.body-one.white
         =hoc_s(:yw_page_top_desc)
       - if !applications_closed
         %a.link-button.white.has-external-link{href: "https://docs.google.com/forms/d/e/1FAIpQLScKoT8ttOeWU3mWp_fDaFV0qQ5niXk3tSi1INALHhGWFQtVjw/viewform", target: "_blank", rel: "noopener noreferrer"}
