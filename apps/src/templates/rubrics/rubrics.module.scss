@@ -1,5 +1,6 @@
 @import 'color';
 @import 'font';
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 @keyframes pulse {
   0% {
@@ -258,6 +259,8 @@
   border-right: 2px solid $neutral_dark;
   border-left: 2px solid $neutral_dark;
 
+  padding-inline-start: 0.75rem;
+
   display: flex;
   height: 40px;
   justify-content: space-between;
@@ -267,11 +270,18 @@
 
 .rubricHeaderLeftSide {
   display: flex;
-  gap: 4px;
-  align-items: flex-start;
-  margin-left: 20px;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 0.25rem;
+  align-items: center;
+
+  .aiBotOutlineIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  span {
+    @include label-two;
+    margin: 0;
+  }
 }
 
 .rubricHeaderRightSide {
