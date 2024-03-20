@@ -32,7 +32,7 @@ class StatsigReporter {
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
-  setUserProperties(userId, userType, enabledExperiments) {
+  async setUserProperties(userId, userType, enabledExperiments) {
     const formattedUserId = this.formatUserId(userId);
     const user = {
       userID: formattedUserId,
@@ -46,7 +46,7 @@ class StatsigReporter {
         `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${!!userId}`
       );
     }
-    Statsig.updateUser(user);
+    await Statsig.updateUser(user);
   }
 
   sendEvent(eventName, payload) {
