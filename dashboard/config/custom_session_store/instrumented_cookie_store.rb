@@ -33,9 +33,9 @@ module ActionDispatch
 
         if @session_info_last_logged_at < Time.now - METRICS_LOG_WINDOW
           num_sessions = @session_info.size
-          Cdo::Metrics.put(METRICS_NAMESPACE, 'num_sessions_seen', num_sessions, {Environment: CDO.rack_env})
+          Cdo::Metrics.put(METRICS_NAMESPACE, 'NumSessionsSeen', num_sessions, {Environment: CDO.rack_env})
           average_size = @session_info.values.sum / num_sessions
-          Cdo::Metrics.put(METRICS_NAMESPACE, 'average_max_session_size', average_size, {Environment: CDO.rack_env})
+          Cdo::Metrics.put(METRICS_NAMESPACE, 'AverageMaxSessionSize', average_size, {Environment: CDO.rack_env})
           @session_info = {}
           @session_info_last_logged_at = Time.now
         end
