@@ -817,6 +817,11 @@ em.aiFeedbackReceived {
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
+  gap: 0.75rem;
+
+  h3 {
+    margin: 0;
+  }
 }
 
 .learningGoalsWrapper {
