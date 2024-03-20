@@ -993,7 +993,7 @@ ActiveRecord::Schema.define(version: 2024_03_20_051410) do
     t.index ["user_id"], name: "index_pd_applications_on_user_id"
   end
 
-  create_table "pd_applications_status_logs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "pd_applications_status_logs", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "pd_application_id", null: false
     t.string "status", null: false
     t.datetime "timestamp", null: false
