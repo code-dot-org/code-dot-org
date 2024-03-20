@@ -48,7 +48,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:06.395+00:00\",\"changed\":[\"cloned from \\\"game_dev_fix_choice3\\\"\"],\"cloned_from\":\"game_dev_fix_choice3\"},{\"changed_at\":\"2024-03-18 20:25:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:06.395+00:00\",\"changed\":[\"cloned from \\\"game_dev_fix_choice3\\\"\"],\"cloned_from\":\"game_dev_fix_choice3\"},{\"changed_at\":\"2024-03-18 20:25:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:11:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:31:55 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:50:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:49 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -58,57 +58,57 @@
         <variables>
           <variable id="TPks;#qQ]AsS/}K=XrX$">ballCount</variable>
         </variables>
-        <block type="when_run" deletable="false" x="32" y="26">
+        <block type="when_run" deletable="false" x="16" y="16">
           <next>
-            <block type="gamelab_showTitleScreen">
+            <block type="gamelab_showTitleScreen" deletable="false">
               <value name="TITLE">
-                <block type="text">
+                <block type="text" deletable="false">
                   <field name="TEXT">Sports Ball!</field>
                 </block>
               </value>
               <value name="SUBTITLE">
-                <block type="text">
+                <block type="text" deletable="false">
                   <field name="TEXT">Click on 8 balls to win</field>
                 </block>
               </value>
               <next>
-                <block type="gamelab_setBackgroundImageAs">
+                <block type="gamelab_setBackgroundImageAs" deletable="false">
                   <field name="IMG">"sports_soccer"</field>
                   <next>
-                    <block type="gamelab_makeNumSprites">
+                    <block type="gamelab_makeNumSprites" deletable="false">
                       <field name="ANIMATION_NAME">"soccer_bw"</field>
                       <value name="NUM">
-                        <block type="math_number">
+                        <block type="math_number" deletable="false">
                           <field name="NUM">8</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_layoutSprites">
+                        <block type="gamelab_layoutSprites" deletable="false">
                           <field name="GROUP">"soccer_bw"</field>
                           <field name="FORMAT">"grid"</field>
                           <next>
-                            <block type="gamelab_setProp">
+                            <block type="gamelab_setProp" deletable="false">
                               <field name="PROPERTY">"scale"</field>
                               <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
+                                <block type="gamelab_allSpritesWithAnimation" deletable="false">
                                   <field name="ANIMATION">"soccer_bw"</field>
                                 </block>
                               </value>
                               <value name="VAL">
-                                <block type="math_number">
+                                <block type="math_number" deletable="false">
                                   <field name="NUM">75</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="adaptations_toggleBehaviorSimple">
+                                <block type="adaptations_toggleBehaviorSimple" deletable="false">
                                   <field name="TOGGLE">"begins"</field>
                                   <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation">
+                                    <block type="gamelab_allSpritesWithAnimation" deletable="false">
                                       <field name="ANIMATION">"soccer_bw"</field>
                                     </block>
                                   </value>
                                   <value name="BEHAVIOR">
-                                    <block type="gamelab_behavior_get">
+                                    <block type="gamelab_behavior_get" deletable="false">
                                       <mutation behaviorId="wandering" name="wandering"/>
                                       <field name="NAME">wandering</field>
                                     </block>
@@ -126,41 +126,41 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="30" y="467">
+        <block type="gamelab_spriteClicked" deletable="false" x="16" y="430">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_spriteClicked"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false">
               <field name="ANIMATION">"soccer_bw"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_showVariable">
+            <block type="gamelab_showVariable" deletable="false">
               <field name="VAR" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
               <value name="LOCATION">
-                <block type="gamelab_location_picker">
+                <block type="gamelab_location_picker" deletable="false">
                   <field name="LOCATION">{"x":200,"y":300}</field>
                 </block>
               </value>
               <next>
-                <block type="gamelab_hideTitleScreen">
+                <block type="gamelab_hideTitleScreen" deletable="false">
                   <next>
-                    <block type="gamelab_destroy">
+                    <block type="gamelab_destroy" deletable="false">
                       <value name="THIS">
-                        <block type="gamelab_clickedSpritePointer"/>
+                        <block type="gamelab_clickedSpritePointer" deletable="false"/>
                       </value>
                       <next>
-                        <block type="gamelab_playSoundOptions">
+                        <block type="gamelab_playSoundOptions" deletable="false">
                           <field name="SOUND">'sound://category_digital/boing_2.mp3'</field>
                           <next>
-                            <block type="math_change">
+                            <block type="math_change" deletable="false">
                               <field name="VAR" id="TPks;#qQ]AsS/}K=XrX$">ballCount</field>
                               <value name="DELTA">
                                 <shadow type="math_number" id="@u5:ckTU^62I@)bjo9hQ">
                                   <field name="NUM">1</field>
                                 </shadow>
-                                <block type="math_number">
+                                <block type="math_number" deletable="false">
                                   <field name="NUM">1</field>
                                 </block>
                               </value>

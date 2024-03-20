@@ -25,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** The carrot is too slow to run away!\r\n\r\n**Fix:** Change the carrot's speed by updating the `speed` variable",
+    "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** The rabbit is too slow to collect the carrot!\r\n\r\n**Fix:** Change the rabbit's speed by updating the `speed` variable",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -45,15 +45,15 @@
       "upButton",
       "downButton"
     ],
-    "display_name": "Emma's Game 1",
-    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect\r\n\r\n**Problem:** The carrot moves too slow to escape!",
+    "display_name": "Carrot Chaser",
+    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect\r\n\r\n**Problem:** The bunny moves too slow to catch the carrot!",
     "thumbnail_url": "https://images.code.org/3f3479d9e6a1a20dd0aea6fb3109cd94-bunnyescape.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:17.649+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_emma_1\\\"\"],\"cloned_from\":\"game_dev_bad_example_emma_1\"},{\"changed_at\":\"2024-03-18 20:25:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:17.649+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_emma_1\\\"\"],\"cloned_from\":\"game_dev_bad_example_emma_1\"},{\"changed_at\":\"2024-03-18 20:25:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:45:03 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:45:36 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:58:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:59:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:01:06 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:01:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:02:01 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:05:16 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,88 +63,88 @@
         <variables>
           <variable id="r[GkJc@uY0o`[{8pH_Om">speed</variable>
         </variables>
-        <block type="when_run" deletable="false" movable="false" x="58" y="30">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
-            <block type="variables_set">
+            <block type="variables_set" deletable="false">
               <field name="VAR" id="r[GkJc@uY0o`[{8pH_Om">speed</field>
               <value name="VALUE">
-                <block type="math_number">
+                <block type="math_number" deletable="false">
                   <field name="NUM">1</field>
                 </block>
               </value>
               <next>
-                <block type="gamelab_setBackgroundImageAs">
+                <block type="gamelab_setBackgroundImageAs" deletable="false">
                   <field name="IMG">"grid"</field>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"purple bunny"</field>
+                    <block type="gamelab_makeNewSpriteAnon" deletable="false">
+                      <field name="ANIMATION_NAME">"carrot"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker">
+                        <block type="gamelab_location_picker" deletable="false">
                           <field name="LOCATION">{"x":344,"y":63}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"carrot"</field>
+                        <block type="gamelab_makeNewSpriteAnon" deletable="false">
+                          <field name="ANIMATION_NAME">"purple bunny"</field>
                           <value name="LOCATION">
-                            <block type="gamelab_location_picker">
+                            <block type="gamelab_location_picker" deletable="false">
                               <field name="LOCATION">{"x":64,"y":351}</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_spriteSay">
-                              <field name="SPEECH">Help me run away from the bunny!</field>
+                            <block type="gamelab_spriteSay" deletable="false">
+                              <field name="SPEECH">Help me collect the carrot!</field>
                               <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"carrot"</field>
+                                <block type="gamelab_allSpritesWithAnimation" deletable="false">
+                                  <field name="ANIMATION">"purple bunny"</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_setProp">
+                                <block type="gamelab_setProp" deletable="false">
                                   <field name="PROPERTY">"speed"</field>
                                   <value name="SPRITE">
-                                    <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"carrot"</field>
+                                    <block type="gamelab_allSpritesWithAnimation" deletable="false">
+                                      <field name="ANIMATION">"purple bunny"</field>
                                     </block>
                                   </value>
                                   <value name="VAL">
-                                    <block type="variables_get">
+                                    <block type="variables_get" deletable="false">
                                       <field name="VAR" id="r[GkJc@uY0o`[{8pH_Om">speed</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="adaptations_toggleBehaviorSimple">
+                                    <block type="adaptations_toggleBehaviorSimple" deletable="false">
                                       <field name="TOGGLE">"begins"</field>
                                       <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"carrot"</field>
+                                        <block type="gamelab_allSpritesWithAnimation" deletable="false">
+                                          <field name="ANIMATION">"purple bunny"</field>
                                         </block>
                                       </value>
                                       <value name="BEHAVIOR">
-                                        <block type="gamelab_behavior_get">
+                                        <block type="gamelab_behavior_get" deletable="false">
                                           <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
                                           <field name="NAME">moving with arrow keys</field>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="adaptations_toggleBehaviorSimple">
+                                        <block type="adaptations_toggleBehaviorSimple" deletable="false">
                                           <field name="TOGGLE">"begins"</field>
                                           <value name="SPRITE">
-                                            <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"purple bunny"</field>
+                                            <block type="gamelab_allSpritesWithAnimation" deletable="false">
+                                              <field name="ANIMATION">"carrot"</field>
                                             </block>
                                           </value>
                                           <value name="BEHAVIOR">
-                                            <block type="gamelab_behavior_get">
+                                            <block type="gamelab_behavior_get" deletable="false">
                                               <mutation behaviorId="wandering" name="wandering"/>
                                               <field name="NAME">wandering</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
+                                            <block type="gamelab_showVariable" deletable="false">
                                               <field name="VAR" id="r[GkJc@uY0o`[{8pH_Om">speed</field>
                                               <value name="LOCATION">
-                                                <block type="adaptations_location_picker">
+                                                <block type="adaptations_location_picker" deletable="false">
                                                   <field name="LOCATION">{"x":55,"y":29}</field>
                                                 </block>
                                               </value>
@@ -167,30 +167,30 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="52" y="690">
+        <block type="gamelab_checkTouching" deletable="false" x="16" y="540">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false">
               <field name="ANIMATION">"purple bunny"</field>
             </block>
           </value>
           <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" deletable="false">
               <field name="ANIMATION">"carrot"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_removeAllBehaviors">
+            <block type="gamelab_removeAllBehaviors" deletable="false">
               <value name="SPRITE">
-                <block type="gamelab_getAllSprites"/>
+                <block type="gamelab_getAllSprites" deletable="false"/>
               </value>
               <next>
-                <block type="gamelab_spriteSay">
+                <block type="gamelab_spriteSay" deletable="false">
                   <field name="SPEECH">Got ya!</field>
                   <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation">
+                    <block type="gamelab_allSpritesWithAnimation" deletable="false">
                       <field name="ANIMATION">"purple bunny"</field>
                     </block>
                   </value>

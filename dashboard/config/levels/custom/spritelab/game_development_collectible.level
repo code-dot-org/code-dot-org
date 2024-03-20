@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:38:14.000Z",
   "level_num": "custom",
@@ -72,20 +71,18 @@
     "short_instructions": "Add at least 3 sprites for the player to collect. Then `remove object` when the player touches the collectible.\r\n",
     "standalone_app_name": "spritelab",
     "long_instructions": "**Add a collectible!**\r\n1. Add at least 3 sprites for the player to collect\r\n- Then use an event to `remove object` when the player sprite touches the collectible  \r\n\r\n- Press `Run` when you are finished\r\n\r\n***\r\n**Bonus:** Program the collectible to move with a behavior\r\n",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:14.523+00:00\",\"changed\":[\"cloned from \\\"game_mechancis_world8\\\"\"],\"cloned_from\":\"game_mechancis_world8\"},{\"changed_at\":\"2024-03-18 20:38:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:14.523+00:00\",\"changed\":[\"cloned from \\\"game_mechancis_world8\\\"\"],\"cloned_from\":\"game_mechancis_world8\"},{\"changed_at\":\"2024-03-18 20:38:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 16:53:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 19:40:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:40:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="16" y="16">
+        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" movable="false" x="16" y="16">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"gradient_02"</field>
@@ -156,7 +153,7 @@
           <field name="KEY">"up"</field>
           <next>
             <block type="GameDev_playerJump">
-              <field name="STRENGTH">7</field>
+              <field name="STRENGTH">6.5</field>
             </block>
           </next>
         </block>
@@ -1323,12 +1320,12 @@
             </block>
           </value>
         </block>
-        <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k" x="324" y="786">
-          <field name="STRENGTH">6.5</field>
-        </block>
         <block type="gamelab_keyPressed" id="@DrM_xA#I39:c@NHb?f-" x="238" y="834">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
+        </block>
+        <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k" x="166" y="905">
+          <field name="STRENGTH">6.5</field>
         </block>
       </xml>
     </toolbox_blocks>
