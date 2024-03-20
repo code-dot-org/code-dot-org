@@ -8,6 +8,7 @@ import Statsig from 'statsig-js';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
+const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 
 class StatsigReporter {
   constructor() {
@@ -26,8 +27,18 @@ class StatsigReporter {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
     };
+    this.initialize(api_key, options);
+  }
+
+  initialize(api_key, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      Statsig.initialize(api_key, options);
+      new Promise(resolve => {
+        Statsig.initialize(api_key, options).then(resolve());
+        err => {
+          console.error(err);
+          resolve();
+        };
+      });
     }
   }
 
@@ -58,9 +69,13 @@ class StatsigReporter {
             payload: payload,
           }
         );
-        Statsig.logEvent('NO_VALID_EVENT_NAME_LOG_ERROR', payload);
+        Statsig.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
       } else {
-        Statsig.logEvent(eventName, payload);
+        // Statsig expects a name, value and data. Because we are unifying this
+        // with our Amplitude logging, we are bypassing the 'value' and sending
+        // event name twice. If we want to use this field moving forward, we
+        // will need to refactor all AnalyticsReporting event calls accordingly.
+        Statsig.logEvent(eventName, eventName, payload);
       }
     } else {
       this.log(
