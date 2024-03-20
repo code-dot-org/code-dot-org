@@ -39,10 +39,16 @@ module ActionDispatch
           @session_info = {}
           @session_info_last_logged_at = Time.now
         end
-      rescue => e
+      rescue => exception
         # Something went wrong logging. Lets fail in a way that lets write_session
         # continue uninterrupted, and doesn't fill our server's RAM up to failure.
         @session_info = {}
+        Honeybadger.notify(exception,
+          error_message: 'Error logging session info',
+          context: {
+            last_logged_at: @session_info_last_logged_at
+          }
+        )
       end
     end
   end
