@@ -115,6 +115,7 @@ class FieldSounds extends GoogleBlockly.Field {
         library={this.options.getLibrary()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
+        showSoundFilters={this.options.getShowSoundFilters()}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();
@@ -169,6 +170,14 @@ class FieldSounds extends GoogleBlockly.Field {
       height: 20,
     });
 
+    const soundType = this.options
+      .getLibrary()
+      .getSoundForId(this.getValue())?.type;
+
+    if (soundType === 'vocal') {
+      textElement.setAttribute('font-style', 'italic');
+    }
+
     // Attach the actual text.
     textElement.appendChild(document.createTextNode(fieldText));
 
@@ -203,10 +212,6 @@ class FieldSounds extends GoogleBlockly.Field {
     );
 
     // Add an image for the sound type.
-    const soundType = this.options
-      .getLibrary()
-      .getSoundForId(this.getValue())?.type;
-
     if (soundType) {
       GoogleBlockly.utils.dom.createSvgElement(
         'image',

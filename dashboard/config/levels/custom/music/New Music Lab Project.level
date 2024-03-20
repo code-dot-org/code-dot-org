@@ -11,6 +11,8 @@
     "encrypted": "false",
     "background": "music-black",
     "level_data": {
+      "library": "launch2024",
+      "showSoundFilters": true,
       "startSources": {
         "blocks": {
           "languageVersion": 0,
