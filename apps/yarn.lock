@@ -25605,16 +25605,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"static-extend@npm:^0.1.1":
-  version: 0.1.2
-  resolution: "static-extend@npm:0.1.2"
-  dependencies:
-    define-property: ^0.2.5
-    object-copy: ^0.1.0
-  checksum: 8657485b831f79e388a437260baf22784540417a9b29e11572c87735df24c22b84eda42107403a64b30861b2faf13df9f7fc5525d51f9d1d2303aba5cbf4e12c
-  languageName: node
-  linkType: hard
-
 "statsig-js@npm:^4.50.0":
   version: 4.50.0
   resolution: "statsig-js@npm:4.50.0"
