@@ -1192,7 +1192,7 @@
   pl_middle_high_additional_programs_heading: "Additional programs to meet diverse teacher needs"
   pl_middle_high_additional_programs_desc: "In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers."
 
-  self_paced_pl_hero_heading: "Self-Paced Professional Learning For Educators"
+  self_paced_pl_hero_heading: "Self-paced professional learning for educators"
   self_paced_pl_hero_desc: "Professional learning offerings to support teachers in every stage of their computer science teaching journey."
   self_paced_pl_intro_heading: "Professional learning on your timeline"
   self_paced_pl_intro_desc: "Code.org is pleased to offer self-paced modules for teachers. These modules are available at no cost to any educator with a Code.org account worldwide!"
@@ -1221,6 +1221,11 @@
   self_paced_pl_resources_desc_02: "Join the world's largest Computer Science department! Connect with over 19,000 CS teachers from around the globe, find strength in your local community, and get support from other CS teachers."
   self_paced_pl_resources_title_03: "Amazon Future Engineer"
   self_paced_pl_resources_desc_03: "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! Find out if your school is eligible."
+  self_paced_pl_elementary_school_teachers: "Elementary school teachers"
+  self_paced_pl_middle_school_teachers: "Middle school teachers"
+  self_paced_pl_high_school_teachers: "High school teachers"
+  self_paced_pl_share_accomplishment_heading: "Share your accomplishment"
+  self_paced_pl_share_accomplishment_desc: "All of our professional learning offerings provide a certificate of completion to share with your network or share with your administrator. Check with your school to find out if you can use the certificates to get professional development credits."
 
   tenth_anniversary_homepage_blurb: "Code.org is 10 years old!"
   tenth_anniversary_homepage_link: "Check out the impact we've had."

@@ -11,26 +11,28 @@ theme: responsive_full_width
 - icon_person_rays = "fa-solid fa-person-rays"
 - icon_star = "fa-solid fa-star"
 
-%section.hero-banner-basic.bg-neutral-dark
+%section.hero-banner-basic.bg-pattern-dark
   .wrapper.flex-container.align-items-center
     .text-wrapper
-      %h1{style: "color: white"}=hoc_s(:self_paced_pl_hero_heading)
-      %p.body-one{style: "color: white"}=hoc_s(:self_paced_pl_hero_desc)
+      %h1.white{style: "color: white"}
+        =hoc_s(:self_paced_pl_hero_heading)
+      %p.body-one.wrap-balance.white{style: "color: white"}
+        =hoc_s(:self_paced_pl_hero_desc)
     %img{src: "../shared/images/banners/self-paced-pl-hero.png", alt: ""}
 
 %section
   .wrapper
     %h2=hoc_s(:self_paced_pl_intro_heading)
     %p=hoc_s(:self_paced_pl_intro_desc)
-    %div.flex-container.justify-space-between.align-items-start.wrap
-      %div.col-45
+    .grid-container.two-col.justify-space-between.align-items-center.gap-4
+      %div
         %ul.icon-bullet-list.full-width
           %li
             %div
               %i{class: "#{icon_calendar_clock}"}
             .text-wrapper
               %h3=hoc_s(:self_paced_pl_intro_list_title_01)
-              %p.no-margin-bottom=hoc_s(:self_paced_pl_intro_list_desc_01)
+              %p.no-margin-bottom.wrap-balance=hoc_s(:self_paced_pl_intro_list_desc_01)
           %li
             %div
               %i{class: "#{icon_person_rays}"}
@@ -42,11 +44,9 @@ theme: responsive_full_width
               %i{class: "#{icon_star}"}
             .text-wrapper
               %h3=hoc_s(:self_paced_pl_intro_list_title_03)
-              %p=hoc_s(:self_paced_pl_intro_list_desc_03)
-        %a.link-button{href: "#modules"} Explore modules
-      %figure.col-50
-        %img{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%; margin-top: 2.5rem;"}
-    .clear
+              %p.no-margin-bottom=hoc_s(:self_paced_pl_intro_list_desc_03)
+      %figure
+        %img.rounded-corners{src: "/images/self-paced-pl-teacher-student-top.png", alt: "", style: "width: 100%"}
 
 = view :professional_learning_skinny_banner
 
@@ -57,7 +57,7 @@ theme: responsive_full_width
 -#       =hoc_s(:self_paced_pl_callout)
 -#       %a{href: "/professional-learning"}=hoc_s(:self_paced_pl_callout_link)
 
-%section{id: "modules"}
+%section#modules
   .wrapper
     %h2=hoc_s(:self_paced_pl_modules_heading)
     %p=hoc_s(:self_paced_pl_modules_desc)
@@ -67,7 +67,42 @@ theme: responsive_full_width
       %li=hoc_s(:self_paced_pl_modules_list_01)
       %li=hoc_s(:self_paced_pl_modules_list_02)
       %li=hoc_s(:self_paced_pl_modules_list_03)
-    = view :self_paced_pl_modules_carousel
+    .flex-container.wrap.gap-1-5{style: "margin-top: 2rem;"}
+      %a.body-two.no-margin-bottom{href: "#elementary-school"}
+        =hoc_s(:self_paced_pl_elementary_school_teachers)
+      %a.body-two.no-margin-bottom{href: "#middle-school"}
+        =hoc_s(:self_paced_pl_middle_school_teachers)
+      %a.body-two.no-margin-bottom{href: "#high-school"}
+        =hoc_s(:self_paced_pl_high_school_teachers)
+
+= view :section_divider_line
+
+%section#elementary-school
+  .wrapper
+    %h2=hoc_s(:self_paced_pl_elementary_school_teachers)
+
+= view :section_divider_line
+
+%section#middle-school
+  .wrapper
+    %h2=hoc_s(:self_paced_pl_middle_school_teachers)
+
+= view :section_divider_line
+
+%section#high-school
+  .wrapper
+    %h2=hoc_s(:self_paced_pl_high_school_teachers)
+
+%section.bg-pattern-dark
+  .wrapper
+    .grid-container.two-col.justify-space-between.align-items-center.gap-4
+      %figure.action-wrapper.solid-bg
+        %img.rounded-corners.box-shadow-soft-neutral{src: "/images/certificate-example.png", alt: "", style: "width: 100%"}
+      .text-wrapper
+        %h2.white{style: "color: white"}
+          =hoc_s(:self_paced_pl_share_accomplishment_heading)
+        %p.white{style: "color: white"}
+          =hoc_s(:self_paced_pl_share_accomplishment_desc)
 
 %section.bg-neutral-light
   .wrapper
