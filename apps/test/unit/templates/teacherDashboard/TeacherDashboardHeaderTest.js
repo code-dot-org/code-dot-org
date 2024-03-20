@@ -18,6 +18,7 @@ const MOCK_SECTIONS = [
     studentCount: 5,
     code: 'VQGSJR',
     providerManaged: false,
+    courseDisplayName: 'Course D (2019)',
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const MOCK_SECTIONS = [
     studentCount: 4,
     code: 'TQGSJR',
     providerManaged: false,
+    courseDisplayName: 'Course A (2019)',
   },
   {
     id: 1,
@@ -38,19 +40,14 @@ const MOCK_SECTIONS = [
     studentCount: 6,
     code: 'XQGSJR',
     providerManaged: false,
+    courseDisplayName: 'Course B (2019)',
   },
 ];
-
-const MOCK_SCRIPT = {
-  name: 'Course D (2019)',
-};
 
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
   selectedSection: MOCK_SECTIONS[0],
-  assignmentName: MOCK_SCRIPT.name,
   openEditSectionDialog: () => {},
-  asyncLoadCourseOfferings: () => {},
 };
 
 describe('TeacherDashboardHeader', () => {
@@ -69,7 +66,10 @@ describe('TeacherDashboardHeader', () => {
 
   it('does not render script name if not assigned', () => {
     const wrapper = shallow(
-      <TeacherDashboardHeader {...DEFAULT_PROPS} assignmentName="" />
+      <TeacherDashboardHeader
+        {...DEFAULT_PROPS}
+        selectedSection={{...MOCK_SECTIONS[0], courseDisplayName: null}}
+      />
     );
     expect(wrapper.find('#assignment-name')).to.have.lengthOf(0);
     expect(wrapper.contains('Course D (2019)')).to.equal(false);

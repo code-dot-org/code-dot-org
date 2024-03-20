@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
-import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const DEFAULT_PROPS = {
   studioUrlPrefix: 'https://studio.code.org',
@@ -11,8 +10,8 @@ const DEFAULT_PROPS = {
   sectionName: 'My Section',
   location: {},
   studentCount: 5,
-  coursesWithProgress: fakeCoursesWithProgress,
   sectionVersionId: 2,
+  isSectionAssignedCurriculum: true,
 };
 
 describe('TeacherDashboard', () => {
