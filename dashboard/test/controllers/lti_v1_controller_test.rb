@@ -495,7 +495,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'sync - should not sync when required param missing' do
     user = create :teacher, :with_lti_auth
     sign_in user
-    get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: nil, nrps_url: nil}
+    get '/lti/v1/sync_course'
     assert_response :bad_request
   end
 

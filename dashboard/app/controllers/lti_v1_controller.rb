@@ -138,7 +138,7 @@ class LtiV1Controller < ApplicationController
         nrps_url: nrps_url,
       }
 
-      destination_url = redirect_params.values.all?(&:present?) ? "#{target_link_uri}?#{redirect_params.to_query}" : target_link_uri
+      destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
 
       if user
         sign_in user
