@@ -1,6 +1,6 @@
 // Adds carousel functionality to code.org/educate/professional-development-online
 
-// This installs the Swiper library WebComponent.
+// This uses the Swiper library WebComponent.
 // See docs here: https://swiperjs.com/swiper-api#web-component.
 
 // import function to register Swiper custom elements
