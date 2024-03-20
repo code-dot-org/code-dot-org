@@ -8,7 +8,8 @@ module ActionDispatch
     # collect some data about current usage patterns, to inform our decisions
     # about a possible switch to a centralized session store.
     #
-    # TODO infra: remove this helper after we've gathered enough data.
+    # TODO infra: merge https://github.com/code-dot-org/code-dot-org/pull/57411
+    # to remove this helper after we've gathered enough data.
     class InstrumentedCookieStore < CookieStore
       METRICS_NAMESPACE = 'code-dot-org/ActionDispatch'.freeze
       METRICS_LOG_WINDOW = 1.minute
