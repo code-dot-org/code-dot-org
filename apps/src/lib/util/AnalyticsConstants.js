@@ -196,6 +196,11 @@ const EVENTS = {
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
+
+  // Curriculumm Recommender
+  RECOMMENDED_SIMILAR_CURRICULUM_SHOWN: 'Recommended Similar Curriculum Shown',
+  RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
+    'Recommended Similar Curriculum Clicked',
 };
 
 const EVENT_GROUP_NAMES = {

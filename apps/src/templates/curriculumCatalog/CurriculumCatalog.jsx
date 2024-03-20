@@ -81,7 +81,14 @@ const CurriculumCatalog = ({
       curriculumKey,
       curriculaTaught
     );
-    return recommendations[0];
+    const recommendedCurriculum = recommendations[0];
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_SHOWN, {
+      current_curriculum_offering: curriculumKey,
+      recommended_curriculum_offering: recommendedCurriculum.key,
+    });
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
