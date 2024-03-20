@@ -82,7 +82,7 @@ function UnitSelectorV2({
     />
   );
 
-  return true ? (
+  return isLoadingCourses ? (
     loadingDropdown()
   ) : (
     <SimpleDropdown

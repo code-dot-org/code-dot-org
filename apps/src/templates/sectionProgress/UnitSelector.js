@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {asyncLoadCoursesWithProgress} from '@cdo/apps/redux/unitSelectionRedux';
 
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+
 export const dropdownStyles = {
   dropdown: {
     display: 'block',
@@ -12,6 +14,9 @@ export const dropdownStyles = {
     paddingLeft: 5,
     paddingRight: 5,
     width: 300,
+  },
+  skeletonDropdown: {
+    borderRadius: '4px',
   },
 };
 
@@ -33,18 +38,18 @@ class UnitSelector extends Component {
     const {scriptId, onChange, coursesWithProgress} = this.props;
 
     if (this.props.isLoadingCourses) {
-      <div>
-        <select
-          disabled={true}
-          value={'loading'}
-          style={dropdownStyles.dropdown}
-          id="uitest-course-dropdown"
-        >
-          <option key="loading" value="loading">
-            Loading...
-          </option>
-        </select>
-      </div>;
+      return (
+        <div>
+          <div
+            className={skeletonizeContent.skeletonizeContent}
+            style={{
+              ...dropdownStyles.dropdown,
+              ...dropdownStyles.skeletonDropdown,
+            }}
+            id="uitest-course-dropdown"
+          />
+        </div>
+      );
     }
 
     return (
