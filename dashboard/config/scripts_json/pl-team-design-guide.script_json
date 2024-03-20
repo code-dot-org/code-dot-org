@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pl-team-design-guide",
-    "serialized_at": "2024-03-18 16:24:49 UTC",
+    "serialized_at": "2024-03-19 18:22:05 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -362,6 +362,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_OrientingTheLearner2"
+        ],
         "progression": "Overview Pages"
       },
       "bonus": false,
@@ -755,31 +758,6 @@
     },
     {
       "chapter": 21,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "PLGuide_L2_Images5"
-        ],
-        "progression": "Images"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PLGuide_L2_Images5"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "pl-team-design-guide",
-        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
-      },
-      "level_keys": [
-        "PLGuide_L2_Images5"
-      ]
-    },
-    {
-      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -804,7 +782,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -829,7 +807,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -854,7 +832,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -878,7 +856,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1136,18 +1114,6 @@
         "level.key": "PLGuide_L2_Images4",
         "script_level.level_keys": [
           "PLGuide_L2_Images4"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "pl-team-design-guide",
-        "activity_section.key": "2a6724df-2da3-4769-99d9-3b940075e011"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "PLGuide_L2_Images5",
-        "script_level.level_keys": [
-          "PLGuide_L2_Images5"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

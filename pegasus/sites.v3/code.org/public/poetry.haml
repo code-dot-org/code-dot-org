@@ -13,7 +13,7 @@ set_dir: true
 
 = view :top_skinny_banner, banner_id: "banner-poetry", banner_url: nil, banner_icon: "fa fa-pen-nib", banner_text: hoc_s('poetry_page.skinny_banner'), light_theme: true
 
-%section.hero-banner-basic.naipi-banner
+%section.hero-banner-basic
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
       %h1{style: "color: white"}
@@ -32,9 +32,9 @@ set_dir: true
       =hoc_s('poetry_page.poetry_course_content.desc')
     = view :"poetry/poetry_courses"
 
-%section.hero-banner-basic.bg-neutral-dark.student_projects
+%section.bg-pattern-dark
   .wrapper
-    %h2.centered
+    %h2.centered.white
       =hoc_s('heading_featured_student_projects')
     #student_poetry_projects
 

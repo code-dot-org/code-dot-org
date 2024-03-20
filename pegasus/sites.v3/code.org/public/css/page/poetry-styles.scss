@@ -5,8 +5,8 @@
 
 // Hero banner
 .hero-banner-basic {
-  background: url("/images/banners/banner-bg-maze-dots-light.png") center repeat;
-  background-color: #233346;
+  background: url('/images/banners/banner-naipi-pattern.png') center center;
+  background-color: #6C468A;
 
   .text-wrapper {
     width: 50%;
@@ -17,6 +17,7 @@
   }
 
   figure {
+    margin-top: 3em;
     width: 40%;
     text-align: center;
 
@@ -32,22 +33,10 @@
   }
 }
 
-.naipi-banner {
-  background: url('/images/banners/banner-naipi-pattern.png') center center;
-  background-color: #6C468A;
-
-  figure {
-    margin-top: 3em;
-  }
-}
-
-.bg-neutral-dark {
-  h2 {
-    color: var(--neutral_white);
-  }
-}
-
-.student_projects {
+section.bg-pattern-dark {
+  background: url("/images/banners/banner-bg-maze-dots-light.png") center repeat;
+  background-size: 12rem;
+  background-color: var(--neutral_dark);
   padding-bottom: 2em;
 
   h2 {
