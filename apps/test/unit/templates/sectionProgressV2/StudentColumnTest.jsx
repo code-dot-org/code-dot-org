@@ -1,9 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
+import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import styles from '@cdo/apps/templates/sectionProgressV2/progress-table-v2.module.scss';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const studentA = {
   name: 'Sherlock',

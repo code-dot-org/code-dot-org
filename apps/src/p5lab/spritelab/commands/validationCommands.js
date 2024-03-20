@@ -246,9 +246,10 @@ export const commands = {
     variableBubbles.forEach(variableBubble => {
       this.previous.variableBubbles.push({
         ...variableBubble,
-        // Run the variable name through the JS interpreter to get its value.
+        // Run the variable name through the JS interpreter to get its value,
+        // using an empty string for undefined variables.
         // We need to store the previous value to validate changes between frames.
-        value: this.getVariableValue(variableBubble.name),
+        value: this.getVariableValue(variableBubble.name, ''),
       });
     });
   },
@@ -318,6 +319,32 @@ export const commands = {
     if (firstFailed > -1) {
       return criteria[firstFailed].feedback;
     }
+  },
+
+  // Returns an object with properties representing student Blockly variables.
+  // Typically called in validation code to set `varLog` - a global variable
+  // initialized by the interpreted variableLog helper library.
+  buildVariableLog() {
+    const studentVariables = {};
+
+    const blocklyVariables = Blockly.getMainWorkspace()
+      .getVariableMap()
+      .getAllVariables();
+    const variableNames = blocklyVariables.map(blocklyVariable =>
+      Blockly.JavaScript.getName(blocklyVariable.name)
+    );
+
+    for (const name of variableNames) {
+      const value = this.getVariableValue(name);
+      if (
+        ['number', 'string', 'boolean'].includes(typeof value) |
+        Array.isArray(value)
+      ) {
+        studentVariables[name] = value;
+      }
+    }
+
+    return studentVariables;
   },
 };
 

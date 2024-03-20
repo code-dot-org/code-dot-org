@@ -50,6 +50,7 @@ const DEFAULT_PROPS = {
   selectedSection: MOCK_SECTIONS[0],
   assignmentName: MOCK_SCRIPT.name,
   openEditSectionDialog: () => {},
+  asyncLoadCourseOfferings: () => {},
 };
 
 describe('TeacherDashboardHeader', () => {

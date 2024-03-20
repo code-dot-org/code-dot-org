@@ -1,8 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './floating-scrollbar.module.scss';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import {scrollbarWidth} from './scrollbarUtils';
+
+import styles from './floating-scrollbar.module.scss';
 /**
  * A component that adds a horizontal scrollbar to the bottom of {children} element.
  * Scrollbar will appear at the bottom of {child} if the bottom is visible.

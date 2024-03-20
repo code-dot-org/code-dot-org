@@ -21,6 +21,7 @@ export default class MusicValidator extends Validator {
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
+    private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
@@ -31,6 +32,12 @@ export default class MusicValidator extends Validator {
 
   shouldCheckConditions() {
     return this.getIsPlaying();
+  }
+
+  shouldCheckNextConditionsOnly() {
+    return (
+      this.player.getCurrentPlayheadPosition() < this.getValidationTimeout()
+    );
   }
 
   checkConditions() {

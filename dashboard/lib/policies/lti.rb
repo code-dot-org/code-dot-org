@@ -84,10 +84,6 @@ class Policies::Lti
     (Set.new(roles) & TEACHER_ROLES).any?
   end
 
-  def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
-  end
-
   def self.lti?(user)
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end

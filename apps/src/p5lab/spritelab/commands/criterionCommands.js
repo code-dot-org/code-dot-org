@@ -60,7 +60,7 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     return (
       spriteIds.filter(id => this.getLastSpeechBubbleForSpriteId(id)).length >=
-      1
+      min
     );
   },
 
@@ -79,25 +79,21 @@ export const commands = {
   // like to give students the flexibility of using the value from either the
   // current or previous frame.
   anySpeechIncludesValues(currentVariables, previousVariables) {
-    // const spriteIds = this.getSpriteIdsInUse();
-    // const values = Object.values(currentVariables).concat(
-    //   previousVariables ? Object.values(previousVariables) : []
-    // );
+    const spriteIds = this.getSpriteIdsInUse();
+    const values = Object.values(currentVariables).concat(
+      previousVariables ? Object.values(previousVariables) : []
+    );
 
-    // for (const spriteId of spriteIds) {
-    //   const speechText = this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
-    //   if (
-    //     speechText &&
-    //     values.some(value => `${speechText}`.includes(`${value}`))
-    //   ) {
-    //     return true;
-    //   }
-    // }
-    // return false;
-
-    // TODO: Reenable this once we get this validation working again
-    // https://codedotorg.atlassian.net/browse/CT-409
-    return true;
+    for (const spriteId of spriteIds) {
+      const speechText = this.getLastSpeechBubbleForSpriteId(spriteId)?.text;
+      if (
+        speechText !== undefined &&
+        values.some(value => `${speechText}`.includes(`${value}`))
+      ) {
+        return true;
+      }
+    }
+    return false;
   },
 
   // Return true if exactly one sprite began speaking.
@@ -552,11 +548,12 @@ export const commands = {
   },
 
   // Returns true if a minimum number of watched variables have a valid value.
-  // If unset, a variable's value is an empty string.
+  // If unset, a variable's value is undefined.
   variableValueSet(min = 1) {
     const studentVars = this.getVariableBubbles();
     const filteredVars = studentVars.filter(
-      studentVar => this.getVariableValue(studentVar.name) !== ''
+      studentVar =>
+        typeof this.getVariableValue(studentVar.name) !== 'undefined'
     );
     return filteredVars.length >= min;
   },
