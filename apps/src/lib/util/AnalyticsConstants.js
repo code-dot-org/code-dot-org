@@ -18,6 +18,13 @@ const EVENTS = {
   CONFIRM_SCHOOL_CLICKED: 'Confirm School Clicked',
   UPDATE_SCHOOL_CLICKED: 'Update School Clicked',
 
+  // School Interstitial
+  SCHOOL_INTERSTITIAL_SHOW: 'School Interstitial Shown',
+  SCHOOL_INTERSTITIAL_SUBMIT: 'School Interstitial Submitted',
+  SCHOOL_INTERSTITIAL_SAVE_SUCCESS: 'School Interstitial Save Success',
+  SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
+  SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
+
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Course Overview Page Visited By Teacher',
@@ -177,10 +184,11 @@ const EVENTS = {
   SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
 
   // Project sharing via 'Finish' button
-  FINISH_SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
-  FINISH_SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
-  FINISH_SHARING_FB: 'User Clicks Facebook Icon In Project Share Dialog',
-  FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Project Share Dialog',
+  FINISH_SHARING_LINK_COPY:
+    'User Clicks Project Copy Link In Finish Congrats Dialog',
+  FINISH_SHARING_PUBLISH: 'User Clicks Publish In Finish Congrats Dialog',
+  FINISH_SHARING_FB: 'User Clicks Facebook Icon In Finish Congrats Dialog',
+  FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Finish Congrats Dialog',
   FINISH_SHARING_LINK_SEND_TO_PHONE:
     'User Clicks Send To Phone In Finish Congrats Dialog',
   FINISH_BUTTON_CERTIFICATE:

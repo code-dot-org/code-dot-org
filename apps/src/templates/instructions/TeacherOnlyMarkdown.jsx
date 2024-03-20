@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import color from '../../util/color';
-import i18n from '@cdo/locale';
 import fontConstants from '@cdo/apps/fontConstants';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
 
 export default class TeacherOnlyMarkdown extends Component {
   static propTypes = {

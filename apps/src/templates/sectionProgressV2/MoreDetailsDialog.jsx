@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+
 import {
   Heading3,
   Heading6,
   StrongText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
+
 import styles from './progress-table-legend.module.scss';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
@@ -69,11 +72,6 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             i18n.validated(),
             i18n.progressLegendDetailsValidated()
           )}
-        {renderItem(
-          ITEM_TYPE.KEEP_WORKING,
-          i18n.markedAsKeepWorking(),
-          i18n.progressLegendDetailsKeepGoing()
-        )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
           ITEM_TYPE.NEEDS_FEEDBACK,
@@ -84,6 +82,11 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           ITEM_TYPE.FEEDBACK_GIVEN,
           i18n.feedbackGiven(),
           i18n.progressLegendDetailsFeedbackGiven()
+        )}
+        {renderItem(
+          ITEM_TYPE.KEEP_WORKING,
+          i18n.markedAsKeepWorking(),
+          i18n.progressLegendDetailsKeepGoing()
         )}
         <Heading6>{i18n.levelTypes()}</Heading6>
         {renderItem(

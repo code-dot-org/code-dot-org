@@ -177,6 +177,9 @@ class ProjectsController < ApplicationController
     },
     ecosystems: {
       name: 'New Ecosystems Project'
+    },
+    game_design: {
+      name: 'New Game Design Project'
     }
   }.with_indifferent_access.freeze
 

@@ -447,6 +447,14 @@ export const asyncLoadSectionData = id => dispatch => {
     });
 };
 
+export const asyncLoadCourseOfferings = () => dispatch => {
+  fetchJSON('/dashboardapi/sections/valid_course_offerings')
+    .then(offerings => dispatch(setCourseOfferings(offerings)))
+    .catch(err => {
+      console.error(err.message);
+    });
+};
+
 /**
  * Load coteacher invites
  */

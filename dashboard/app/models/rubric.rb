@@ -26,11 +26,15 @@ class Rubric < ApplicationRecord
     {
       id: id,
       learningGoals: learning_goals.map(&:summarize),
+      script: {
+        id: get_script_level.script.id,
+      },
       lesson: {
         name: lesson.name,
         position: lesson.relative_position,
       },
       level: {
+        id: level.id,
         name: level.name,
         position: script_level&.position,
       }

@@ -10,7 +10,6 @@ import MusicLibrary, {
 } from '../player/MusicLibrary';
 import FocusLock from 'react-focus-lock';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-const AppConfig = require('../appConfig').default;
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -174,7 +173,14 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
     >
       <div className={styles.soundRowLeft}>
         <img src={typeIconPath} className={styles.typeIcon} alt="" />
-        <div className={styles.name}>{sound.name}</div>
+        <div
+          className={classNames(
+            styles.name,
+            sound.type === 'vocal' && styles.nameVocal
+          )}
+        >
+          {sound.name}
+        </div>
       </div>
       {showingSoundsOnly && (
         <div className={styles.soundRowMiddle}>
@@ -205,6 +211,7 @@ interface SoundsPanelProps {
   library: MusicLibrary;
   currentValue: string;
   playingPreview: string;
+  showSoundFilters: boolean;
   onSelect: (path: string) => void;
   onPreview: (path: string) => void;
 }
@@ -213,6 +220,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   library,
   currentValue,
   playingPreview,
+  showSoundFilters,
   onSelect,
   onPreview,
 }) => {
@@ -220,7 +228,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const libraryGroupPath = library.libraryJson.path;
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getFolderForSoundId(currentValue) || folders[0]
+    library.getAllowedFolderForSoundId(undefined, currentValue) || folders[0]
   );
   const [mode, setMode] = useState<Mode>('packs');
   const [filter, setFilter] = useState<Filter>('all');
@@ -278,8 +286,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     );
   }
 
-  const showSoundFilters = AppConfig.getValue('show-sound-filters') === 'true';
-
   return (
     <FocusLock>
       <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
@@ -304,7 +310,6 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 {label: 'Bass', value: 'bass'},
                 {label: 'Leads', value: 'lead'},
                 {label: 'Effects', value: 'fx'},
-                {label: 'Vocals', value: 'vocal'},
               ]}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}

@@ -159,7 +159,7 @@ export default class SvgFrame {
    * @param {number} [width] - The optional width of the frame.
    * @param {number} [height] - The optional height of the frame.
    */
-  render(width: number, height: number) {
+  render(width?: number, height?: number) {
     if (
       !this.frameGroup_ ||
       !this.frameClipRect_ ||

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import Lab2Registry from '../Lab2Registry';
 import {getStore} from '@cdo/apps/redux';
-import Lab2ShareDialog from '../views/Lab2ShareDialog';
+import Lab2ShareDialogWrapper from '../views/Lab2ShareDialogWrapper';
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 
 const PROJECT_SHARE_DIALOG_ID = 'project-share-dialog';
@@ -27,7 +27,7 @@ export function shareLab2Project(shareUrl) {
     }
     ReactDOM.render(
       <Provider store={getStore()}>
-        <Lab2ShareDialog shareUrl={shareUrl} />
+        <Lab2ShareDialogWrapper shareUrl={shareUrl} />
       </Provider>,
       dialogDom
     );

@@ -1,8 +1,10 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
+import React from 'react';
+
 import {UnconnectedLevelDataCell} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
-import {expect} from '../../../util/reconfiguredChai';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const TEST_URL = 'https://www.test.com/';
 const PROGRESS = {
@@ -50,10 +52,24 @@ describe('ProgressTableV2', () => {
       studentLevelProgress: {
         ...PROGRESS,
         teacherFeedbackReviewState: 'keepWorking',
+        teacherFeedbackNew: true,
       },
     });
 
     screen.getByRole('link', {name: 'progressicon-rotate-left'});
+  });
+
+  it('Keep working level that the student has revisited', () => {
+    renderDefault({
+      studentLevelProgress: {
+        ...PROGRESS,
+        status: LevelStatus.perfect,
+        teacherFeedbackReviewState: 'keepWorking',
+        teacherFeedbackNew: false,
+      },
+    });
+
+    screen.getByRole('link', {name: 'progressicon-circle'});
   });
 
   it('Not tried level', () => {
