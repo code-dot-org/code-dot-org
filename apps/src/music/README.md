@@ -25,7 +25,7 @@ This is the client-side code for **Music Lab**, as instantiated by a `music` lev
 
 ## Use of **Lab2**
 
-**Music Lab** is also the first lab to use the new [Lab2](/../lab2/) framework, and showcases some features and components unique to that framework, when used in a level progression:
+**Music Lab** is also the first lab to use the new [Lab2](../lab2/) framework, and showcases some features and components unique to that framework, when used in a level progression:
 
 - A very simple layout manager that determines all panel sizes automatically, so that the student doesn't have to do any panel management.
 - A new instructions and feedback component.
@@ -51,6 +51,7 @@ For a long time, the code supported running in any of these models, so that we c
 There were some open questions around UI such as:
 - Should instructions be across the top, or a narrow column on the left, or a narrow column on the right?
 - Should the timeline be at the top, or at the bottom?
+- Should each panel have a header with a title?
 
 We built keyboard shortcuts to cycle through the various possibilities, and it proved invaluable.  After using the app for a while and playing with these variants, we settled on the options that felt the best.  It was a great way to solve the open questions through regular usage, and saved on abstract debates.
 

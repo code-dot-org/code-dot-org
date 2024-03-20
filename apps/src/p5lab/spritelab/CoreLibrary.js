@@ -116,22 +116,74 @@ export default class CoreLibrary {
     });
   }
 
+  /**
+   * Draws bubbles for each variable in the `variableBubbles` array. Labels are truncated with an ellipsis
+   * if they exceed the maximum character limit. Values are truncated as needed to fit the remaining space.
+   *
+   * @param {Object[]} this.variableBubbles - An array of objects, each representing a variable to be displayed. Each object should include:
+   *  - `name`: A string identifier for the variable used to get the value from the JSInterpreter.
+   *  - `label`: A label for the variable to be displayed in the bubble.
+   *  - `location`: An object specifying the `x` and `y` coordinates where the bubble should be drawn.
+   */
   drawVariableBubbles() {
+    const config = {
+      textSize: 20,
+      padding: 10,
+      strokeWeight: 3,
+      strokeRadius: 24,
+      maxLabelLength: 30, // Maximum number of characters to display in the label
+    };
+
+    // Calculate the width for the label and value separator (colon and space)
+    const separatorWidth = drawUtils.getTextWidth(
+      this.p5,
+      ': ',
+      config.textSize
+    );
+    const totalReservedSpace = config.padding * 2 + separatorWidth;
+
     this.variableBubbles.forEach(variable => {
       const {name, label, location} = variable;
       if (!name.length || !label.length || !location) {
         return;
       }
 
-      const value = this.getVariableValue(name);
-      const text = `${label}: ${value}`;
+      // Use variable value or empty string (if undefined).
+      const value = this.getVariableValue(name, '');
 
-      // TODO: Confirm this handles shadow block locations appropriately
-      drawUtils.variableBubble(this.p5, location.x, location.y, text);
+      // Determine if the label needs truncation and append an ellipsis if so
+      const displayLabel =
+        label.length > config.maxLabelLength
+          ? label.slice(0, config.maxLabelLength) + '…'
+          : label;
+      const labelWidth = drawUtils.getTextWidth(
+        this.p5,
+        displayLabel,
+        config.textSize
+      );
+
+      // Truncate the value if necessary to fit within the available space
+      const availableSpaceForValue =
+        APP_WIDTH - totalReservedSpace - labelWidth;
+      const displayValue = drawUtils.truncateText(
+        this.p5,
+        `${value}`,
+        availableSpaceForValue,
+        config.textSize
+      );
+
+      const displayText = `${displayLabel}: ${displayValue}`;
+      drawUtils.variableBubble(
+        this.p5,
+        location.x,
+        location.y,
+        displayText,
+        config
+      );
     });
   }
 
-  getVariableValue(variableName) {
+  getVariableValue(variableName, defaultValue) {
     if (!this.jsInterpreter) {
       console.error('JS Interpreter not set in CoreLibrary');
       return;
@@ -141,7 +193,7 @@ export default class CoreLibrary {
       // Blockly does not execute code or track the runtime values of variables, so we need to
       // evaluate the variable's value using the JSInterpreter.
       const result = this.jsInterpreter.evaluateWatchExpression(variableName);
-      return typeof result === 'undefined' ? '' : result;
+      return typeof result === 'undefined' ? defaultValue : result;
     } catch (e) {
       console.error(`Error evaluating variable '${variableName}': ${e}`);
       return '';
@@ -258,6 +310,14 @@ export default class CoreLibrary {
     this.variableBubbles = this.variableBubbles.filter(
       variable => variable.label !== label
     );
+  }
+
+  getVariableBubbles() {
+    return this.variableBubbles;
+  }
+
+  getForegroundEffects() {
+    return this.foregroundEffects;
   }
 
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {

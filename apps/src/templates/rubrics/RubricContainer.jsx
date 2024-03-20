@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
+import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -12,8 +13,8 @@ import {
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
+import RubricSubmitFooter from './RubricSubmitFooter';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
 import Draggable from 'react-draggable';
 import {TAB_NAMES} from './rubricHelpers';
 
@@ -36,6 +37,8 @@ export default function RubricContainer({
       TAB_NAMES.RUBRIC
   );
   const [aiEvaluations, setAiEvaluations] = useState(null);
+
+  const [feedbackAdded, setFeedbackAdded] = useState(false);
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -127,16 +130,29 @@ export default function RubricContainer({
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
             aiEvaluations={aiEvaluations}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
           />
           {showSettings && (
             <RubricSettings
               visible={selectedTab === TAB_NAMES.SETTINGS}
+              refreshAiEvaluations={fetchAiEvaluations}
               rubric={rubric}
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
             />
           )}
         </div>
+        {canProvideFeedback && (
+          <RubricSubmitFooter
+            open={open}
+            rubric={rubric}
+            reportingData={reportingData}
+            studentLevelInfo={studentLevelInfo}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
+          />
+        )}
       </div>
     </Draggable>
   );

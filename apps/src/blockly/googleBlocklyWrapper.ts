@@ -12,6 +12,7 @@ import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
@@ -82,7 +83,7 @@ import {
   GoogleBlocklyInstance,
 } from './types';
 import {FieldProto} from 'blockly/core/field';
-import {Options, Theme} from 'blockly';
+import {Options, Theme, Workspace} from 'blockly';
 
 const options = {
   contextMenu: true,
@@ -94,6 +95,8 @@ plugin.init(options);
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+const MAX_GET_CODE_RETRIES = 2;
+const RETRY_GET_CODE_INTERVAL_MS = 500;
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -185,22 +188,35 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
+    return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
+  };
+
+  const getWorkspaceCodeHelper = (
+    retryCount: number,
+    hiddenWorkspace: Workspace | undefined
+  ): string => {
     let workspaceCode = '';
     try {
       workspaceCode = Blockly.JavaScript.workspaceToCode(
         Blockly.mainBlockSpace
       );
-      if (this.getHiddenDefinitionWorkspace()) {
-        workspaceCode += Blockly.JavaScript.workspaceToCode(
-          this.getHiddenDefinitionWorkspace()
-        );
+      if (hiddenWorkspace) {
+        workspaceCode += Blockly.JavaScript.workspaceToCode(hiddenWorkspace);
       }
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
-      handleCodeGenerationFailure(
-        MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
-        e as Error
-      );
+      if (retryCount < MAX_GET_CODE_RETRIES) {
+        // Sometimes we need to wait for Google Blockly change handlers to complete
+        // before the code will generate correctly. Retry after a short delay.
+        setTimeout(() => {
+          return getWorkspaceCodeHelper(retryCount + 1, hiddenWorkspace);
+        }, RETRY_GET_CODE_INTERVAL_MS);
+      } else {
+        handleCodeGenerationFailure(
+          MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
+          e as Error
+        );
+      }
     }
     return workspaceCode;
   };
@@ -320,6 +336,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.FieldToggle = CdoFieldToggle;
   blocklyWrapper.FieldFlyout = CdoFieldFlyout;
+  blocklyWrapper.FieldBehaviorPicker = CdoFieldBehaviorPicker;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -593,7 +610,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // We used to refer to these as "readOnlyBlockSpaces", which was confusing with normal,
   // read only workspaces.
   blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
-    const theme = cdoUtils.getUserTheme(options.theme as string) as Theme;
+    const theme = cdoUtils.getUserTheme(options.theme as Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
       theme: theme,
@@ -659,7 +676,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     const optOptionsExtended = opt_options as ExtendedBlocklyOptions;
     const options = {
       ...optOptionsExtended,
-      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as string),
+      theme: cdoUtils.getUserTheme(optOptionsExtended.theme as Theme),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -776,6 +793,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace =
       new Blockly.Workspace() as ExtendedWorkspace;
+    hiddenDefinitionWorkspace.addChangeListener(disableOrphans);
     // The hidden definition workspace is not rendered, so do not try to add
     // svg frames around the definitions.
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;

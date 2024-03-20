@@ -273,10 +273,14 @@ export default function RubricSettings({
         <Heading2>{i18n.aiAssessment()}</Heading2>
         <div className={style.settingsContainers}>
           <div className={style.runAiAllStatuses}>
-            <BodyTwoText className="uitest-eval-status-all-text">
+            <BodyTwoText>
               <StrongText>{summaryText()}</StrongText>
             </BodyTwoText>
-            {statusAllText() && <BodyTwoText>{statusAllText()}</BodyTwoText>}
+            {statusAllText() && (
+              <BodyTwoText className="uitest-eval-status-all-text">
+                {statusAllText()}
+              </BodyTwoText>
+            )}
           </div>
           <Button
             className="uitest-run-ai-assessment-all"

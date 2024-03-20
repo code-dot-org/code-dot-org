@@ -27,7 +27,6 @@ const CODE_STUDIO_ENTRIES = {
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
-  'courses/index': './src/sites/studio/pages/courses/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
   'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
   'courses/resources': './src/sites/studio/pages/courses/resources.js',

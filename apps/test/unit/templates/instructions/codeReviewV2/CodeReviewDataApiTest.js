@@ -1,9 +1,11 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon';
+
 import CodeReviewDataApi, {
   timelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const fakeCommitData = [
   {
