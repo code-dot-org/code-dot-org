@@ -23,6 +23,9 @@ export default class MusicLibrary {
   private bpm: number | undefined;
   private key: Key | undefined;
 
+  // Whether this library contains vocals.
+  private hasVocals: boolean;
+
   constructor(name: string, libraryJson: LibraryJson) {
     this.name = name;
     this.libraryJson = libraryJson;
@@ -42,6 +45,8 @@ export default class MusicLibrary {
     if (libraryJson.key) {
       this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
     }
+
+    this.hasVocals = !!libraryJson.hasVocals;
   }
 
   getDefaultSound(): string | undefined {
@@ -154,6 +159,10 @@ export default class MusicLibrary {
   getKey(): Key | undefined {
     return this.key;
   }
+
+  getHasVocals(): boolean {
+    return this.hasVocals;
+  }
 }
 
 export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
@@ -223,6 +232,7 @@ export type LibraryJson = {
   path: string;
   bpm?: number;
   key?: string;
+  hasVocals?: boolean;
   defaultSound?: string;
   folders: SoundFolder[];
   instruments: SoundFolder[];
