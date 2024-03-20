@@ -215,17 +215,15 @@ module I18n
           sleep(REQUEST_RETRY_DELAY)
           retry
         else
-          # re-raise the exception with added details
-          modified_message = exception.message
-          modified_message << "\nProject:  #{project}"
-          modified_message << "\nSourceID: #{source_file_id}"
-          modified_message << "\nLangID:   #{language_id}"
-          modified_message << "\nDestPath: #{dest_path}"
-          modified_message << "\nEtag:     #{etag.inspect}"
-          modified_message << "\nResponse: #{translation_build.inspect}"
-          modified_message << "\nAttempt:  #{attempt}"
+          exception.message << "\nProject:  #{project}"
+          exception.message << "\nSourceID: #{source_file_id}"
+          exception.message << "\nLangID:   #{language_id}"
+          exception.message << "\nDestPath: #{dest_path}"
+          exception.message << "\nEtag:     #{etag.inspect}"
+          exception.message << "\nResponse: #{translation_build.inspect}"
+          exception.message << "\nAttempt:  #{attempt}"
 
-          raise exception.class, modified_message, exception.backtrace
+          raise exception
         end
       end
 
@@ -303,14 +301,12 @@ module I18n
           sleep(REQUEST_RETRY_DELAY)
           retry
         else
-          # re-raise the exception with added details
-          modified_message = exception.message
-          modified_message << "\nProject:  #{project}"
-          modified_message << "\nEndpoint: #{endpoint}"
-          modified_message << "\nParams:   #{params.inspect}"
-          modified_message << "\nAttempt:  #{attempt}"
+          exception.message << "\nProject:  #{project}"
+          exception.message << "\nEndpoint: #{endpoint}"
+          exception.message << "\nParams:   #{params.inspect}"
+          exception.message << "\nAttempt:  #{attempt}"
 
-          raise exception.class, modified_message, exception.backtrace
+          raise exception
         end
       end
 
@@ -325,14 +321,12 @@ module I18n
           sleep(REQUEST_RETRY_DELAY)
           retry
         else
-          # re-raise the exception with added details
-          modified_message = exception.message
-          modified_message << "\nProject:  #{project}"
-          modified_message << "\nURL:      #{url}"
-          modified_message << "\nDest:     #{dest}"
-          modified_message << "\nAttempt:  #{attempt}"
+          exception.message << "\nProject:  #{project}"
+          exception.message << "\nURL:      #{url}"
+          exception.message << "\nDest:     #{dest}"
+          exception.message << "\nAttempt:  #{attempt}"
 
-          raise exception.class, modified_message, exception.backtrace
+          raise exception
         end
       end
     end
