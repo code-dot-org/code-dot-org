@@ -351,7 +351,6 @@ class Services::LtiTest < ActiveSupport::TestCase
     auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
     user = create :teacher
     create :lti_authentication_option, user: user, authentication_id: auth_id
-    create :lti_user_identity, lti_integration: @lti_integration, user: user, subject: 'user-id-1'
 
     section = create :section, user: user
 
