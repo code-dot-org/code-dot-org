@@ -65,9 +65,8 @@ module Cdo
       @values[key] ||= client_promise.then do |client|
         parse_json(get_secret_value(client, key))
       rescue => exception
-        # re-raise the exception with the sought-after key included
-        modified_message = "#{exception.message} Key: #{key}"
-        raise exception.class, modified_message, exception.backtrace
+        exception.message << " Key: #{key}"
+        raise
       end
     end
 
