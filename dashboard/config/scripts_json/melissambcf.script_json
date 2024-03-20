@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-28 20:50:58 UTC",
+    "serialized_at": "2024-03-01 22:38:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -198,6 +198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Course_F_CSFmaker"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -725,7 +728,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Outro to Course_F_CSFmaker"
+          "CSF_maker_microbit_PL_end_naviagtion_F"
         ],
         "lesson.key": "Data and Variables",
         "lesson_group.key": "",
@@ -733,7 +736,7 @@
         "activity_section.key": "cfc7d877-d4e6-4f4b-b1c8-dd75ca95f05c"
       },
       "level_keys": [
-        "Outro to Course_F_CSFmaker"
+        "CSF_maker_microbit_PL_end_naviagtion_F"
       ]
     }
   ],
@@ -992,9 +995,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Outro to Course_F_CSFmaker",
+        "level.key": "CSF_maker_microbit_PL_end_naviagtion_F",
         "script_level.level_keys": [
-          "Outro to Course_F_CSFmaker"
+          "CSF_maker_microbit_PL_end_naviagtion_F"
         ],
         "lesson.key": "Data and Variables",
         "lesson_group.key": "",

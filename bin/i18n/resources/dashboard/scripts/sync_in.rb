@@ -24,7 +24,7 @@ module I18n
             i18n_data = YAML.load_file(ORIGIN_I18N_FILE_PATH)
 
             # Redacts script markdown data
-            i18n_data.dig('en', 'data', 'script', 'name').values.each do |script_i18n_data|
+            i18n_data.dig('en', 'data', 'script', 'name').each_value do |script_i18n_data|
               redactable_i18n_data = script_i18n_data.slice(*REDACTABLE_DATA_KEYS)
 
               redacted_i18n_data = RedactRestoreUtils.redact_data(redactable_i18n_data, REDACT_PLUGINS, REDACT_FORMAT)

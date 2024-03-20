@@ -1,10 +1,12 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
+import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import ProgressIcon, {
   PROGRESS_ICON_TITLE_PREFIX,
 } from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
-import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgressIconComponent', () => {
   it('renders the FontAwesome icon for a specific itemType represented with a FontAwesomeIcon', () => {
@@ -19,12 +21,6 @@ describe('ProgressIconComponent', () => {
 
   it('renders the not started box when itemType is NOT_STARTED', () => {
     render(<ProgressIcon itemType={ITEM_TYPE.NOT_STARTED} />);
-    const progressBox = screen.getByTestId('progress-box');
-    expect(progressBox).to.be.visible;
-  });
-
-  it('renders the viewed box when itemType is VIEWED', () => {
-    render(<ProgressIcon itemType={ITEM_TYPE.VIEWED} />);
     const progressBox = screen.getByTestId('progress-box');
     expect(progressBox).to.be.visible;
   });

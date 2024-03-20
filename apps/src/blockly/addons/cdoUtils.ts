@@ -7,6 +7,7 @@ import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/procedure
 import {
   BLOCK_TYPES,
   CLAMPED_NUMBER_REGEX,
+  DARK_THEME_SUFFIX,
   DEFAULT_SOUND,
   stringIsXml,
   Themes,
@@ -26,8 +27,10 @@ import {
   getProjectXml,
   processIndividualBlock,
 } from '@cdo/apps/blockly/addons/cdoXml';
-import {Block, BlockSvg, Field, WorkspaceSvg} from 'blockly';
+import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
 import {BlockColor, JsonBlockConfig, WorkspaceSerialization} from '../types';
+import experiments from '@cdo/apps/util/experiments';
+import {getBaseName} from '../utils';
 
 /**
  * Loads blocks to a workspace.
@@ -292,16 +295,44 @@ export function getField(type: string) {
 
 /**
  * Returns a theme object, based on the presence of an option in the browser's localStorage.
- * @param {string} type
+ * @param {?Theme} themeOption
  * @returns {?Blockly.Field}
  */
-// Users can change their active theme using the context menu. Use this setting, if present.
-export function getUserTheme(themeOption: string | undefined) {
-  return (
-    Blockly.themes[localStorage.blocklyTheme as Themes] ||
-    themeOption ||
-    cdoTheme
-  );
+export function getUserTheme(themeOption: Theme | undefined) {
+  // Today we only store the theme's base name in localStorage, which never includes 'dark'.
+  // Until March, 2024 we stored the full theme name, so we need to convert it now.
+  // getBaseName strips the 'dark' suffix from a theme name, if present.
+  const localStorageThemeBaseName = getBaseName(localStorage.blocklyTheme);
+
+  // For labs that use dark mode by default, ensure we are returning a dark theme.
+  if (themeOption?.name.endsWith(DARK_THEME_SUFFIX)) {
+    return localStorageThemeBaseName
+      ? Blockly.themes[
+          (localStorageThemeBaseName + DARK_THEME_SUFFIX) as Themes
+        ]
+      : themeOption;
+  } else {
+    // For all other labs, return a light mode theme.
+    return (
+      Blockly.themes[localStorageThemeBaseName as Themes] ||
+      themeOption ||
+      cdoTheme
+    );
+  }
+}
+
+/**
+ * Returns a cursor type, based on the presence of an option in the browser's localStorage.
+ * @param {string} type
+ * @returns {string} one of 'default', 'basic', or 'line'
+ */
+export function getUserCursorType() {
+  const defaultCursorType = experiments.isEnabled(
+    experiments.KEYBOARD_NAVIGATION
+  )
+    ? 'line'
+    : 'default';
+  return localStorage.blocklyCursor || defaultCursorType;
 }
 
 /**

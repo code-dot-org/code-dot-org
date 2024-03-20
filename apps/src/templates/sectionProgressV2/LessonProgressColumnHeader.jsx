@@ -1,11 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import i18n from '@cdo/locale';
+
 import FontAwesome from '../FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+
+import styles from './progress-table-v2.module.scss';
 
 const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (
@@ -63,10 +68,14 @@ export default function LessonProgressColumnHeader({
         )}
         data-tip
         data-for={getTooltipId(lesson)}
-        onClick={() => addExpandedLesson(lesson.id)}
+        onClick={() => addExpandedLesson(lesson)}
       >
         <LessonTitleTooltip lesson={lesson} />
-        <FontAwesome icon="caret-right" className={styles.lessonHeaderCaret} />
+        <FontAwesome
+          icon="caret-right"
+          className={styles.lessonHeaderCaret}
+          title={i18n.expand()}
+        />
         {lesson.relative_position}
       </div>
     </div>

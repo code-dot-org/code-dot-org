@@ -3,6 +3,7 @@ import CdoBlockFlyout from './cdoBlockFlyout';
 
 interface FieldFlyoutConfig extends FieldConfig {
   flyoutKey: string;
+  name: string;
 }
 
 export default class CdoFieldFlyout extends GoogleBlockly.Field {
@@ -47,8 +48,10 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    */
   initView() {
     this.workspace_ = this.getSourceBlock()?.workspace as WorkspaceSvg;
+    const options =
+      Blockly.getMainWorkspace()?.options || this.workspace_?.options || {};
     this.flyout_ = new CdoBlockFlyout({
-      ...Blockly.getMainWorkspace().options,
+      ...options,
       parentWorkspace: this.workspace_,
       RTL: this.workspace_.RTL,
       minWidth: this.minWidth_,

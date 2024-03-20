@@ -16,7 +16,7 @@ social:
 
 # Coding with Poetry
 
-{{ tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", alt_text: "A cute pink octopus character wearing a purple beanie hat performing a poem under a spotlight on a stage with a stool and microphone", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "View module" }}
+{{tutorial_promo2, background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg “, alt_text: “මලපහ සහ මයික්රොෆෝනයක් සහිත වේදිකාවක් මත ස්පොට් එකක් යටතේ කවියක් ඉටු කරමින් දම් පැහැති රෝස බූවල්ලා චරිතයක්”, text_color: “සුදු”, box_background_color: “rgb (0,0,0,0.4)”, left_header: “කවිය කලාව”, left_description: “කලා එකතු කරන්න සහ මෙම Hour of Code ක්රියාකාරිත්වයේ සම්භාව්ය කවියකට සජීවීකරණය!” , left_spec: "”, left_button_url: "https://studio.code.org/s/poem-art-2021/reset “, left_button_text: “අරඹන්න”, right_header: “කවි සමඟ කේතීකරණය”, right_description: “මෙම පාඩම් මාලාව සමඟ ඔබේ පන්ති කාමරයේ පරිගණක විද්යාව සහ කවි සම්බන්ධ කරන්න. “, right_spec:"”, right_button_url: "https://studio.code.org/s/poetry?viewAs=Instructor “, right_button_text: “මොඩියුලය බලන්න”}}
 
 ## Learn more about Coding with Poetry
 

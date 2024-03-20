@@ -4,6 +4,9 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
+  # Redirect studio.code.org/courses to code.org/students
+  get "/courses", to: redirect(CDO.code_org_url("/students"))
+
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -594,10 +597,13 @@ Dashboard::Application.routes.draw do
     get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+    get '/admin/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
+    post '/admin/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
-    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+    match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
+    get '/lti/v1/iframe', to: 'lti_v1#iframe'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
@@ -889,6 +895,7 @@ Dashboard::Application.routes.draw do
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
+        post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'

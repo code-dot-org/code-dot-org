@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "explore-data-1",
-    "serialized_at": "2022-09-07 17:32:09 UTC",
+    "serialized_at": "2024-03-12 16:27:25 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -449,6 +449,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

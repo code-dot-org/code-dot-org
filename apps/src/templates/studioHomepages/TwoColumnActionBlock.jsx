@@ -5,8 +5,10 @@ import {
   Heading2,
   BodyOneText,
   BodyThreeText,
+  BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
 import styles from './twoColumnActionBlock.module.scss';
+import classNames from 'classnames';
 
 export default function TwoColumnActionBlock({
   id,
@@ -18,13 +20,22 @@ export default function TwoColumnActionBlock({
   marginBottom = '64px',
 }) {
   return (
-    <div id={id} className={styles.container}>
+    <div
+      id={id}
+      className={styles.container}
+      data-testid="two-column-action-block"
+    >
       {heading && <Heading2>{heading}</Heading2>}
       <div
         className={styles.actionBlockWrapper}
         style={{marginBottom: marginBottom}}
       >
-        <img src={imageUrl} alt="" className={styles.image} />
+        <img
+          src={imageUrl}
+          alt=""
+          className={styles.image}
+          data-testid="two-column-action-block-img"
+        />
         <div className={styles.contentWrapper}>
           {subHeading && (
             <BodyOneText
@@ -35,9 +46,15 @@ export default function TwoColumnActionBlock({
             </BodyOneText>
           )}
           <BodyThreeText>{description}</BodyThreeText>
-          <div className={styles.buttonsContainer}>
+          <div
+            className={classNames(
+              styles.buttonsContainer,
+              buttons.some(button => button.extraText) &&
+                styles.buttonsContainerVerticalButtons
+            )}
+          >
             {buttons.map((button, index) => (
-              <span key={index}>
+              <div key={index}>
                 <Button
                   __useDeprecatedTag
                   href={button.url}
@@ -49,7 +66,10 @@ export default function TwoColumnActionBlock({
                   id={button.id}
                   onClick={button.onClick}
                 />
-              </span>
+                {button.extraText && (
+                  <BodyFourText>{button.extraText}</BodyFourText>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -68,6 +88,7 @@ TwoColumnActionBlock.propTypes = {
     PropTypes.shape({
       url: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
+      extraText: PropTypes.string,
       target: PropTypes.string,
       id: PropTypes.string,
       color: PropTypes.oneOf(Object.values(Button.ButtonColor)),

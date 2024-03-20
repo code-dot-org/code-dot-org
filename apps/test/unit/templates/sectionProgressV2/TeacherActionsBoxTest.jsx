@@ -1,7 +1,9 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import TeacherActionsBox from '@cdo/apps/templates/sectionProgressV2/TeacherActionsBox';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('TeacherActionsBox Component', () => {
   it('renders the box with only "Needs feedback" when user does not have a lesson open', () => {
@@ -9,7 +11,6 @@ describe('TeacherActionsBox Component', () => {
     expect(screen.getByText('Teacher Actions')).to.exist;
     expect(screen.getByText('Needs feedback')).to.exist;
     expect(screen.queryByText('Feedback given')).to.be.null;
-    expect(screen.queryByText('Viewed')).to.be.null;
     expect(screen.queryByText("Marked as 'keep working'")).to.be.null;
   });
 
@@ -18,7 +19,6 @@ describe('TeacherActionsBox Component', () => {
     expect(screen.getByText('Teacher Actions')).to.exist;
     expect(screen.getByText('Needs feedback')).to.exist;
     expect(screen.getByText('Feedback given')).to.exist;
-    expect(screen.getByText('Viewed')).to.exist;
     expect(screen.getByText("Marked as 'keep working'")).to.exist;
   });
 });
