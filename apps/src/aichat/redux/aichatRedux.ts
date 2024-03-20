@@ -11,7 +11,6 @@ import {
   AichatLevelProperties,
   Role,
   Status,
-  LevelAiCustomizations,
   AiCustomizations,
   ModelCardInfo,
 } from '../types';
@@ -141,11 +140,7 @@ const aichatSlice = createSlice({
       }>
     ) => {
       const {property, value} = action.payload;
-      const updatedAiCustomizations: AiCustomizations = {
-        ...state.currentAiCustomizations,
-        [property]: value,
-      };
-      state.currentAiCustomizations = updatedAiCustomizations;
+      state.currentAiCustomizations[property] = value;
     },
     setModelCardProperty: (
       state,

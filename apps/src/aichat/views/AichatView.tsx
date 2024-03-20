@@ -23,22 +23,23 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
 
-  const initialAiCustomization = useAppSelector(
+  const initialAiCustomizations = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
-  const aiCustomizations: AiCustomizations = {
-    botName: initialAiCustomization.botName.value,
-    temperature: initialAiCustomization.temperature.value,
-    systemPrompt: initialAiCustomization.systemPrompt.value,
-    retrievalContexts: initialAiCustomization.retrievalContexts.value,
-    modelCardInfo: initialAiCustomization.modelCardInfo.value,
-  };
 
   useEffect(() => {
+    const aiCustomizations: AiCustomizations = {
+      botName: initialAiCustomizations.botName.value,
+      temperature: initialAiCustomizations.temperature.value,
+      systemPrompt: initialAiCustomizations.systemPrompt.value,
+      retrievalContexts: initialAiCustomizations.retrievalContexts.value,
+      modelCardInfo: initialAiCustomizations.modelCardInfo.value,
+    };
+
     dispatch(setAiCustomizations(aiCustomizations));
-  }, [dispatch, setAiCustomizations]);
+  }, [dispatch, initialAiCustomizations]);
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
