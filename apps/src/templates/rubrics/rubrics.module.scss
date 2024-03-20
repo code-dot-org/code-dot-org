@@ -446,6 +446,8 @@ h2.studentName {
 
 
   .tipsDetailsSummary {
+    font-size: 0.875rem;
+
     &:hover {
       background-color: unset;
     }
@@ -632,7 +634,8 @@ p.aiAssessmentEvidenceBlock {
 }
 
 .aiConfidenceBoxText {
-  p {
+  p.labelThree {
+    @include label-three;
     white-space: nowrap;
     margin: 0;
   }
@@ -741,6 +744,7 @@ i.infoAlertIcon {
 }
 
 p.aiFeedbackRadioBoxText {
+  @include label-three;
   margin: 0;
   white-space: nowrap;
 }
