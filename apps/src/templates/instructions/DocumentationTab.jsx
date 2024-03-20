@@ -1,12 +1,14 @@
+import {TextLink} from '@dsco_/link';
+import PropTypes from 'prop-types';
 import React, {useState, useEffect, forwardRef} from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {useFetch} from '@cdo/apps/util/useFetch';
-import ProgrammingClassOverview from '../codeDocs/ProgrammingClassOverview';
-import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {useFetch} from '@cdo/apps/util/useFetch';
+import i18n from '@cdo/locale';
+
+import ProgrammingClassOverview from '../codeDocs/ProgrammingClassOverview';
 
 const DEFAULT_CLASS_KEY = 'MainMethod';
 

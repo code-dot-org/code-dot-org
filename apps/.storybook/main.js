@@ -1,7 +1,9 @@
+import {serverRequire} from '@storybook/core-common';
+import {loadCsf} from '@storybook/csf-tools';
+
 import envConstants from '../envConstants';
 import storybookWebpackConfig from '../webpackStorybook.config';
-import {loadCsf} from '@storybook/csf-tools';
-import {serverRequire} from '@storybook/core-common';
+
 import {compile} from './compile';
 
 const staticDirs = envConstants.STORYBOOK_STATIC_ASSETS
@@ -67,5 +69,10 @@ export default {
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
+  },
+
+  reactOptions: {
+    // Configure StoryBook to work with HOT=1
+    fastRefresh: true,
   },
 };

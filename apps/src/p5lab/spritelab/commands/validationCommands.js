@@ -246,9 +246,10 @@ export const commands = {
     variableBubbles.forEach(variableBubble => {
       this.previous.variableBubbles.push({
         ...variableBubble,
-        // Run the variable name through the JS interpreter to get its value.
+        // Run the variable name through the JS interpreter to get its value,
+        // using an empty string for undefined variables.
         // We need to store the previous value to validate changes between frames.
-        value: this.getVariableValue(variableBubble.name),
+        value: this.getVariableValue(variableBubble.name, ''),
       });
     });
   },

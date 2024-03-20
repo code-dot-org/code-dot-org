@@ -70,14 +70,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Try out this game! Press up to jump and use the arrows to move. Collect 5 gems to win.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Try it out!**\r\n1. Collect 5 gems to win\r\n\r\n- Press up to jump and use the arrows to move \r\n- Press `Run` to begin the game!\r\n- Press `Finish` when you are ready to move on\r\n",
+    "long_instructions": "**Try it out!**\r\n1. Collect 5 gems to win\r\n\r\n- Press up to jump and use the arrows to move \r\n- Press `Run` to begin the game\r\n- Press `Finish` when you are ready to move on\r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:34:34.020+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world1a\\\"\"],\"cloned_from\":\"game_mechanics_world1a\"},{\"changed_at\":\"2024-03-18 20:34:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:34:34.020+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world1a\\\"\"],\"cloned_from\":\"game_mechanics_world1a\"},{\"changed_at\":\"2024-03-18 20:34:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 16:32:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

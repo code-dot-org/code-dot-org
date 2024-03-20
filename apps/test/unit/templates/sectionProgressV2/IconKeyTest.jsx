@@ -11,7 +11,7 @@ describe('IconKey Component', () => {
   it('renders the open state initially', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns('true');
     render(<IconKey isViewingValidatedLevel={false} expandedLessonIds={[]} />);
-    expect(screen.getByLabelText('Icon key')).be.visible;
+    expect(screen.getByLabelText('Icon Key')).be.visible;
     expect(screen.queryByText('More Details')).be.visible;
     screen.getByText('Assignment Completion States');
     screen.getByText('Teacher Actions');

@@ -1,11 +1,14 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ImmersiveReaderButton from './ImmersiveReaderButton';
+
 import i18n from '@cdo/locale';
+
 import styleConstants from '../../styleConstants';
 import SafeMarkdown from '../SafeMarkdown';
-import _ from 'lodash';
+
+import ImmersiveReaderButton from './ImmersiveReaderButton';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
