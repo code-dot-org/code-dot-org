@@ -140,7 +140,11 @@ const aichatSlice = createSlice({
       }>
     ) => {
       const {property, value} = action.payload;
-      state.currentAiCustomizations[property] = value;
+      const updatedAiCustomizations = {
+        ...state.currentAiCustomizations,
+        [property]: value,
+      };
+      state.currentAiCustomizations = updatedAiCustomizations;
     },
     setModelCardProperty: (
       state,
