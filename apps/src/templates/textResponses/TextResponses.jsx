@@ -25,13 +25,7 @@ const CSV_HEADERS = [
 ];
 const PADDING = 8;
 
-function TextResponses({
-  sectionId,
-  coursesWithProgress,
-  scriptId,
-  scriptName,
-  setScriptId,
-}) {
+function TextResponses({sectionId, scriptId, scriptName, setScriptId}) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
@@ -100,11 +94,7 @@ function TextResponses({
     <div>
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
-        <UnitSelector
-          coursesWithProgress={coursesWithProgress}
-          scriptId={scriptId}
-          onChange={onChangeScript}
-        />
+        <UnitSelector scriptId={scriptId} onChange={onChangeScript} />
       </div>
       {filteredResponses.length > 0 && (
         <div id="uitest-response-actions" style={styles.actionRow}>
@@ -142,7 +132,6 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
   setScriptId: PropTypes.func.isRequired,
@@ -178,7 +167,6 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    coursesWithProgress: state.unitSelection.coursesWithProgress,
     scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state),
   }),
