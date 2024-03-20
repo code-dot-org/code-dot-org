@@ -47,7 +47,7 @@ export const RightPane = () => {
   ); //*/
 
   useEffect(() => {
-    if (previewFileType(activeFile?.language, previewFileTypes)) {
+    if (activeFile && previewFileType(activeFile.language, previewFileTypes)) {
       setPreviewFile(activeFile);
     }
   }, [activeFile, previewFileTypes, setPreviewFile]);

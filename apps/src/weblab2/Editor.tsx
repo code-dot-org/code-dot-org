@@ -53,7 +53,7 @@ const Editor = () => {
       {file && (
         <CodeEditor
           key={`${file.id}/${1}`}
-          darkMode={false}
+          darkMode={true}
           onCodeChange={onChange}
           startCode={file.contents}
           editorConfigExtensions={[codeMirrorLangMapping[file.language]]}
