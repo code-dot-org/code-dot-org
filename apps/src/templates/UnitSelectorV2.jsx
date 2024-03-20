@@ -1,6 +1,5 @@
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import React from 'react';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -74,12 +73,11 @@ function UnitSelectorV2({
     <SimpleDropdown
       items={[{value: 'loading', text: 'Loading...'}]}
       selectedValue="loading"
+      disabled={true}
       name="unitSelector"
-      onChange={onSelectUnit}
-      className={classNames(className)}
+      className={className}
       isLabelVisible={false}
       size="s"
-      disabled={true}
     />
   );
 

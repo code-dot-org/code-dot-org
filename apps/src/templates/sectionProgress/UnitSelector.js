@@ -1,7 +1,7 @@
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-
-// TODO: Can/should we share any logic with AssignmentSelector?
+import {asyncLoadCoursesWithProgress} from '@cdo/apps/redux/unitSelectionRedux';
 
 export const dropdownStyles = {
   dropdown: {
@@ -15,16 +15,37 @@ export const dropdownStyles = {
   },
 };
 
-export default class UnitSelector extends Component {
+class UnitSelector extends Component {
   static propTypes = {
     coursesWithProgress: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
     style: PropTypes.object,
+    asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
+    isLoadingCourses: PropTypes.bool,
   };
+
+  componentDidMount() {
+    this.props.asyncLoadCoursesWithProgress();
+  }
 
   render() {
     const {scriptId, onChange, coursesWithProgress} = this.props;
+
+    if (this.props.isLoadingCourses) {
+      <div>
+        <select
+          disabled={true}
+          value={'loading'}
+          style={dropdownStyles.dropdown}
+          id="uitest-course-dropdown"
+        >
+          <option key="loading" value="loading">
+            Loading...
+          </option>
+        </select>
+      </div>;
+    }
 
     return (
       <div>
@@ -48,3 +69,17 @@ export default class UnitSelector extends Component {
     );
   }
 }
+
+export const UnconnectedUnitSelector = UnitSelector;
+
+export default connect(
+  state => ({
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
+    isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
+  }),
+  dispatch => ({
+    asyncLoadCoursesWithProgress() {
+      dispatch(asyncLoadCoursesWithProgress());
+    },
+  })
+)(UnitSelector);
