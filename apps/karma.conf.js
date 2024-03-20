@@ -1,7 +1,7 @@
-var webpackKarmaConfig = require('./webpackKarma.config');
-var envConstants = require('./envConstants');
-
 var path = require('path');
+
+var envConstants = require('./envConstants');
+var webpackKarmaConfig = require('./webpackKarma.config');
 
 // We run all tests in the UTC timezone so datetimes don't vary by local timezone
 process.env.TZ = 'UTC';

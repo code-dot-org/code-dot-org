@@ -177,6 +177,9 @@ module.exports = {
       },
     },
     {
+      rules: {
+        'import/order': 'off',
+      },
       // We are actively working to decrease the number of folders in this list.
       // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
       // Commit any changes made.
@@ -247,7 +250,6 @@ module.exports = {
         'src/templates/feedback/**',
         'src/templates/images/**',
         'src/templates/imageUploadWarning/**',
-        'src/templates/instructions/**',
         'src/templates/jobBoard/**',
         'src/templates/lessonOverview/**',
         'src/templates/levelSummary/**',
@@ -320,7 +322,6 @@ module.exports = {
         'test/unit/templates/dataDocs/**',
         'test/unit/templates/feedback/**',
         'test/unit/templates/imageUploadWarning/**',
-        'test/unit/templates/instructions/**',
         'test/unit/templates/lessonOverview/**',
         'test/unit/templates/levelSummary/**',
         'test/unit/templates/manageStudents/**',
@@ -352,9 +353,6 @@ module.exports = {
         'test/util/tutorialExplorer/**',
         'test/util/weblab/**',
       ],
-      rules: {
-        'import/order': 'off',
-      },
     },
   ],
 };
