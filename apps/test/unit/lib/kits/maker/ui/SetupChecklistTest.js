@@ -19,11 +19,10 @@ import microBitReducer, {
 } from '@cdo/apps/lib/kits/maker/microBitRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
+// Speed up the tests by reducing the artificial delay between steps
 const STEP_DELAY_MS = 1;
 
 describe('SetupChecklist', () => {
-  // Speed up the tests by reducing the artificial delay between steps
-
   beforeEach(() => {
     sinon.stub(utils, 'reload');
     sinon.stub(window.console, 'error');
