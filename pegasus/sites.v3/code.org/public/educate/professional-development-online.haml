@@ -87,12 +87,14 @@ theme: responsive_full_width
 %section#middle-school
   .wrapper
     %h2=hoc_s(:self_paced_pl_middle_school_teachers)
+    = view :"self_paced_pl/self_paced_pl_modules_carousel_middle"
 
 = view :section_divider_line
 
 %section#high-school
   .wrapper
     %h2=hoc_s(:self_paced_pl_high_school_teachers)
+    = view :"self_paced_pl/self_paced_pl_modules_carousel_high"
 
 %section.bg-pattern-dark
   .wrapper
@@ -149,3 +151,5 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_learn_more)
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::SELF_PACED_PL_PAGE_VISITED_EVENT
+
+= view :swiper_page_self_paced_pl
