@@ -94,11 +94,14 @@ Some functionality will not work on your local site without this, for example, s
 ### For external contributors
 
 External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
-          - slack_bot_token: localoverride
-          - pardot_private_key: localoverride
-          - firebase_secret: localoverride
-          - firebase_shared_secret: localoverride
-          - properties_encryption_key: ''
+
+```
+slack_bot_token: localoverride
+pardot_private_key: localoverride
+firebase_secret: localoverride
+firebase_shared_secret: localoverride
+properties_encryption_key: ''
+```
 
 ## OS-specific prerequisites
 
