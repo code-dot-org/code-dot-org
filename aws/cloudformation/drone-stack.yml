@@ -147,7 +147,7 @@ Resources:
           IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 0.0.0.0/0
+          CidrIp: 3.90.82.166/32
 
   DroneMasterECSCluster:
     Type: AWS::ECS::Cluster
@@ -396,9 +396,13 @@ Resources:
   AutoscalerEcsServiceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Placeholder SecurityGroup for Drone Autoscaler Service
+      GroupDescription: SecurityGroup for Drone Autoscaler ECS Service
       VpcId: !Ref VpcId
-      # No Ingress rules specified - doesn't open new inbound traffic paths
+      SecurityGroupIngress:
+        -
+          IpProtocol: tcp
+          FromPort: 8080
+          SourceSecurityGroupId: !Ref ElbSecurityGroup
       SecurityGroupEgress:
         - IpProtocol: -1 # Allows all protocols
           CidrIp: 0.0.0.0/0 # Allows all destinations
@@ -463,8 +467,8 @@ Resources:
       SecurityGroupIngress:
         -
           IpProtocol: tcp
-          FromPort: 1
-          ToPort: 65535
+          FromPort: 8080
+          ToPort: 8080
           SourceSecurityGroupId: !Ref ElbSecurityGroup
         - IpProtocol: tcp
           FromPort: 8080
@@ -474,7 +478,7 @@ Resources:
           IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 0.0.0.0/0
+          CidrIp: 3.90.82.166/32
 
   AutoscalerLoadBalancerListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
