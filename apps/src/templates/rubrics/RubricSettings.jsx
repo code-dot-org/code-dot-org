@@ -161,7 +161,6 @@ export default function RubricSettings({
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
           response.json().then(data => {
-            // setTeacherEval(data);
             var teachEvalArr = [];
             var count = 0;
             data.forEach(student => {
@@ -171,9 +170,9 @@ export default function RubricSettings({
                   ? student.user_family_name
                   : '',
               };
-              if (student['eval'].length > 0) {
+              if (student.eval.length > 0) {
                 count++;
-                student['eval'].forEach(e => {
+                student.eval.forEach(e => {
                   teachEvalRow[String(e.learning_goal_id)] =
                     e.understanding !== null
                       ? UNDERSTANDING_LEVEL_STRINGS_V2[e.understanding]
