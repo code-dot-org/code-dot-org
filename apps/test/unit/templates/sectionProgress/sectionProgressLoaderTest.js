@@ -152,6 +152,7 @@ const fullExpectedResult = {
           timeSpent: undefined,
           teacherFeedbackReviewState: undefined,
           teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
           lastTimestamp: 12345,
         },
         2001: {
@@ -163,6 +164,7 @@ const fullExpectedResult = {
           timeSpent: 12345,
           teacherFeedbackReviewState: undefined,
           teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
           lastTimestamp: 12345,
         },
       },
@@ -176,6 +178,7 @@ const fullExpectedResult = {
           timeSpent: 6789,
           teacherFeedbackReviewState: undefined,
           teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
           lastTimestamp: 6789,
         },
       },

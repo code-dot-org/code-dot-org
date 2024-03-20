@@ -2,6 +2,7 @@ import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
 import {layoutSpriteGroup} from '../../layoutUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
+import {APP_HEIGHT} from '../../constants';
 
 export const commands = {
   countByAnimation(spriteArg) {
@@ -67,6 +68,10 @@ export const commands = {
     return this.addSprite({animation, location});
   },
 
+  makeNewGroupSprite(animation, group, location) {
+    return this.addSprite({animation, group, location});
+  },
+
   makeNumSprites(numSprites, animation) {
     if (this.reachedSpriteMax()) {
       return;
@@ -79,6 +84,26 @@ export const commands = {
         animation,
         location: locationCommands.randomLocation(),
       });
+    }
+  },
+
+  makeEnvironmentSprites(animation, group, bitmap) {
+    // The scale is determined based on the app height (400) and the number of rows in the array.
+    // For example, with a 4x4 grid, the scale is 100 and the sprites are 100x100.
+    const scale = APP_HEIGHT / bitmap.length;
+    for (let i = 0; i < bitmap.length; i++) {
+      for (let j = 0; j < bitmap[0].length; j++) {
+        // Array values are either 0 or 1. Create a sprite for each 1.
+        if (bitmap[j][i]) {
+          // Sprite x/y coordinates represent the center of the sprite.
+          // To position the sprites, we offset x and y by half of the scale.
+          const location = {
+            x: scale / 2 + scale * i,
+            y: scale / 2 + scale * j,
+          };
+          this.addSprite({animation, group, location, scale});
+        }
+      }
     }
   },
 

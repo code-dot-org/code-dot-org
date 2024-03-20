@@ -1,4 +1,4 @@
-import cdoBlockStyles from './cdoBlockStyles.mjs';
+import cdoBlockStyles from './cdoBlockStyles.js';
 import nearestColor from 'nearest-color';
 
 // The colors here come Martin Krzywinski's 24-color palette for colorblindness:

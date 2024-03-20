@@ -111,12 +111,14 @@ namespace :circle do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
+      # Use --local to configure the UI tests to run against localhost and
+      # use --config to override the local webdriver so SauceLabs is used
+      # instead.
       RakeUtils.system_stream_output "bundle exec ./runner.rb " \
           "--feature #{container_features.join(',')} " \
-          "--pegasus localhost.code.org:3000 " \
-          "--dashboard localhost-studio.code.org:3000 " \
+          "--local " \
           "--circle " \
-          "--#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'} " \
+          "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
           "--parallel #{use_saucelabs ? 16 : 8} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
@@ -128,8 +130,7 @@ namespace :circle do
             "--eyes " \
             "--feature #{container_eyes_features.join(',')} " \
             "--config Chrome,iPhone " \
-            "--pegasus localhost.code.org:3000 " \
-            "--dashboard localhost-studio.code.org:3000 " \
+            "--local " \
             "--circle " \
             "--parallel 10 " \
             "--retry_count 1 " \

@@ -1366,7 +1366,19 @@ class User < ApplicationRecord
     user_levels_by_level = user_levels_by_level(script)
 
     script.script_levels.none? do |script_level|
-      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      user_levels = []
+      script_level.levels.each do |level|
+        curr_user_level = user_levels_by_level[level.id]
+
+        # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
+        if !curr_user_level && !level.contained_levels.empty?
+          level.contained_levels.each do |contained_level|
+            user_levels.push(user_levels_by_level[contained_level.id])
+          end
+        else
+          user_levels.push(curr_user_level)
+        end
+      end
       unpassed_progression_level?(script_level, user_levels)
     end
   end

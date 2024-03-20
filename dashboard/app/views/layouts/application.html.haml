@@ -4,7 +4,7 @@
 %html{dir: locale_dir}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
-    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true}
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
@@ -85,6 +85,8 @@
         = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}
       - if view_options[:code_studio_logo]
         = render partial: 'layouts/logo'
+      - if current_user && Policies::Lti.early_access_banner_available?(current_user)
+        = render partial: 'lti/v1/early_access_banner'
       - page = yield
 
       - if view_options[:full_width]

@@ -40,7 +40,7 @@ export default function initializeGenerator(
       code.push(blocklyWrapper.JavaScript.blockToCode(block));
     });
     let result = code.join('\n');
-    result = generator.finish(code);
+    result = generator.finish(result);
     return result;
   };
 

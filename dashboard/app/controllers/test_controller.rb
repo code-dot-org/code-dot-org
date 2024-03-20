@@ -341,6 +341,15 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def set_single_section_experiment
+    SingleSectionExperiment.find_or_create_by!(
+      name: params[:experiment_name],
+      section: current_user.sections.first,
+      script: Unit.find_by(name: params[:script_name])
+    )
+    head :ok
+  end
+
   def get_validate_rubric_ai_config
     EvaluateRubricJob.new.validate_ai_config
     render plain: 'OK'

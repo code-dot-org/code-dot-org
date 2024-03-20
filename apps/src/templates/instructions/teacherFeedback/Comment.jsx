@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
 
 class Comment extends React.Component {
   static propTypes = {
