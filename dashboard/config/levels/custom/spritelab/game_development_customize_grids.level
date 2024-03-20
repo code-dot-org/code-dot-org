@@ -78,14 +78,14 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:34:49.367+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world3\\\"\"],\"cloned_from\":\"game_mechanics_world3\"},{\"changed_at\":\"2024-03-18 20:34:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:22:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:34:49.367+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world3\\\"\"],\"cloned_from\":\"game_mechanics_world3\"},{\"changed_at\":\"2024-03-18 20:34:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:22:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 16:40:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 16:41:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 19:27:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 21:14:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-19 21:32:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="16" y="16">
+        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" movable="false" x="16" y="16">
           <next>
             <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"gradient_09"</field>
@@ -1270,30 +1270,7 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="gamelab_makeSpritesGridInput" id="|Gk^`dCqi6SJ~%I|,Nhb" x="40" y="36">
-          <field name="ANIMATION_NAME">"dirt_sand"</field>
-          <value name="GRID">
-            <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
-              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
-            </shadow>
-            <block type="gamelab_bitmap" id=";-1QxHXjOLo`5+i7J6b7">
-              <field name="GRID">[[1,0,0,0,0,0,0,0],[0,1,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,1]]</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setBackgroundImageAs" id="!62:}BfszK_YKUj52fqv" x="49" y="122">
-          <field name="IMG">"gradient_02"</field>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon" id="%vW?n1q^}@2B*.`#EqtI" x="42" y="232">
-          <field name="ANIMATION_NAME">"dirt_sand"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="PEN@Y=r`{EB[IwneH|9A">
-              <field name="LOCATION">{"x":200,"y":200}</field>
-            </block>
-          </value>
-        </block>
-      </xml>
+      <xml/>
     </toolbox_blocks>
   </blocks>
 </GamelabJr>
