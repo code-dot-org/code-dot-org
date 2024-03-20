@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,6 +11,9 @@ import {
   asyncLoadCoursesWithProgress,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../lib/util/firehose';
+
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import styles from './unit-selector-v2.module.scss';
 
 const recordEvent = (eventName, sectionId, dataJson = {}) => {
   firehoseClient.putRecord(
@@ -70,18 +74,15 @@ function UnitSelectorV2({
   }));
 
   const loadingDropdown = () => (
-    <SimpleDropdown
-      items={[{value: 'loading', text: 'Loading...'}]}
-      selectedValue="loading"
-      disabled={true}
-      name="unitSelector"
-      className={className}
-      isLabelVisible={false}
-      size="s"
+    <div
+      className={classNames(
+        skeletonizeContent.skeletonizeContent,
+        styles.skeleton
+      )}
     />
   );
 
-  return isLoadingCourses ? (
+  return true ? (
     loadingDropdown()
   ) : (
     <SimpleDropdown
