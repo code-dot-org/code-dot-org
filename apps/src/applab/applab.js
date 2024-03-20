@@ -807,7 +807,7 @@ Applab.init = function (config) {
 };
 
 async function initDataTab(levelOptions) {
-  const channelExists = await Applab.storage.channelExists();
+  const projectHasData = await Applab.storage.projectHasData();
   if (levelOptions.dataTables) {
     Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
   }
@@ -820,7 +820,7 @@ async function initDataTab(levelOptions) {
   }
   if (levelOptions.dataLibraryTables) {
     const libraryManifest = await Applab.storage.getLibraryManifest();
-    if (!channelExists) {
+    if (!projectHasData) {
       const tables = levelOptions.dataLibraryTables.split(',');
       tables.forEach(table => {
         const datasetInfo = getDatasetInfo(table, libraryManifest.tables);

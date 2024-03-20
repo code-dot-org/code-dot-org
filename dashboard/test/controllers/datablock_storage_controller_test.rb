@@ -695,6 +695,44 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal CSV_DATA, @response.body
   end
 
+  test "project_has_data" do
+    get _url(:project_has_data)
+    assert_response :success
+    assert_equal false, JSON.parse(@response.body)
+
+    create_bob_record
+
+    get _url(:project_has_data)
+    assert_response :success
+    assert_equal true, JSON.parse(@response.body)
+
+    delete _url(:delete_table), params: {
+      table_name: 'mytable',
+    }
+
+    get _url(:project_has_data)
+    assert_response :success
+    assert_equal false, JSON.parse(@response.body)
+
+    post _url(:set_key_value), params: {
+      key: 'name',
+      value: 'bob'.to_json,
+    }
+
+    get _url(:project_has_data)
+    assert_response :success
+    assert_equal true, JSON.parse(@response.body)
+
+    delete _url(:delete_key_value), params: {
+      key: 'name',
+    }
+    assert_response :success
+
+    get _url(:project_has_data)
+    assert_response :success
+    assert_equal false, JSON.parse(@response.body)
+  end
+
   test "clear_all_data" do
     create_bob_record
     set_and_get_key_value('somekey', 5)
