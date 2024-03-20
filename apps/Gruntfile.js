@@ -1,15 +1,15 @@
 var chalk = require('chalk');
 var child_process = require('child_process');
-var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
+var path = require('path');
 var sass = require('sass');
-var envConstants = require('./envConstants');
-var checkEntryPoints = require('./script/checkEntryPoints');
 
-const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
-const {createWebpackConfig} = require('./webpack.config');
+var envConstants = require('./envConstants');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
+var checkEntryPoints = require('./script/checkEntryPoints');
+const {createWebpackConfig} = require('./webpack.config');
+const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
 // Review every couple of years to see if an increase improves test performance
 const MEM_PER_KARMA_PROCESS_MB = 4300;
