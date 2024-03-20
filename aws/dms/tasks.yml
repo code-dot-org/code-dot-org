@@ -50,7 +50,9 @@ cron-pii:
 - dashboard.potential_teachers
 cron:
 - dashboard.ai_tutor_interactions:
-    remove_column: [prompt]
+    remove_column:
+        - prompt
+        - ai_response
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
 - dashboard.hint_view_requests
