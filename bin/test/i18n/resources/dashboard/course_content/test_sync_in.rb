@@ -615,8 +615,6 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       }
     ]
 
-    p level.validations
-
     expected_result = {
       'validations' => {
         'validation-1' => 'message-1',
