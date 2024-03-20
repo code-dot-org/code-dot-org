@@ -1,20 +1,24 @@
-import {connect} from 'react-redux';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import StudentColumn from './StudentColumn';
-import styles from './progress-table-v2.module.scss';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
-import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
-import LessonProgressDataColumn from './LessonProgressDataColumn';
-import classNames from 'classnames';
-import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
+
 import {lessonHasLevels} from '../progress/progressHelpers';
-import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 import {studentLevelProgressType} from '../progress/progressTypes';
+import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
+import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
+
+import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
+import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
+import LessonProgressDataColumn from './LessonProgressDataColumn';
+import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
+import StudentColumn from './StudentColumn';
+
+import styles from './progress-table-v2.module.scss';
 
 const NUM_STUDENT_SKELETON_ROWS = 6;
 const STUDENT_SKELETON_IDS = [...Array(NUM_STUDENT_SKELETON_ROWS).keys()];

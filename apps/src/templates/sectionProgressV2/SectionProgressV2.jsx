@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
-import ProgressTableV2 from './ProgressTableV2';
-import IconKey from './IconKey';
-import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import {connect} from 'react-redux';
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
-import styles from './progress-table-v2.module.scss';
-import UnitSelectorV2 from '../UnitSelectorV2';
+
+import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
+import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
+import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
+import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
+import UnitSelectorV2 from '../UnitSelectorV2';
+
+import IconKey from './IconKey';
+import ProgressTableV2 from './ProgressTableV2';
+
+import styles from './progress-table-v2.module.scss';
 
 const getLocalStorageString = (scriptId, sectionId) =>
   `expandedLessonProgressV2-${scriptId}-${sectionId}`;

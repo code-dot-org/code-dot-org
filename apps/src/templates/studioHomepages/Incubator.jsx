@@ -50,7 +50,7 @@ class Incubator extends Component {
                   'Learn how to use Project Beats in a step by step intro.',
               },
               {
-                url: '/projectbeats',
+                url: '/projects/music/new',
                 text: 'Make Music',
                 extraText: 'Skip directly to creating a Project Beats project.',
                 color: Button.ButtonColor.neutralDark,

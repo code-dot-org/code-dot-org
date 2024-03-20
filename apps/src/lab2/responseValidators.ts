@@ -2,11 +2,12 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {
   BlocklySource,
   LevelProperties,
-  NestedSourceCode,
+  MultiFileSource,
   ProjectSources,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import {BLOCKLY_LABS} from './constants';
+import {getFileByName} from './projects/utils';
 
 // Validator for Blockly sources.
 const BlocklySourceResponseValidator: ResponseValidator<
@@ -38,9 +39,8 @@ const PythonSourceResponseValidator: ResponseValidator<
     if (typeof responseToValidate.source === 'string') {
       throw new ValidationError('Python sources must be a JSON object');
     }
-    const source = responseToValidate.source as NestedSourceCode;
-    // TODO: support a nested main.py
-    if (!source['main.py']) {
+    const source = responseToValidate.source as MultiFileSource;
+    if (!source?.files || getFileByName(source.files, 'main.py') === null) {
       throwMissingFieldError('main.py');
     }
   };

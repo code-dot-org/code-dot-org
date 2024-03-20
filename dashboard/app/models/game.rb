@@ -271,7 +271,7 @@ class Game < ApplicationRecord
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB, WEBLAB2].include? app
   end
 
   def use_restricted_songs?
