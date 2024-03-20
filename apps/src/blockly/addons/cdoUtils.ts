@@ -54,6 +54,7 @@ export function loadBlocksToWorkspace(
   }
   Blockly.serialization.workspaces.load(mainSource, workspace);
   positionBlocksOnWorkspace(workspace);
+  Blockly.hasLoadedBlocks = true;
 }
 
 /**
