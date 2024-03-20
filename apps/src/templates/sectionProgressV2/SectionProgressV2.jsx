@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
+import EmptySection from '../teacherDashboard/EmptySection';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
 import IconKey from './IconKey';
@@ -39,6 +40,7 @@ function SectionProgressV2({
   isLoadingProgress,
   isRefreshingProgress,
   isLevelProgressLoaded,
+  studentCount,
 }) {
   const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
     getLocalStorage(scriptId, sectionId)
@@ -79,23 +81,31 @@ function SectionProgressV2({
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
       <Heading1>{i18n.progressBeta()}</Heading1>
-      <IconKey
-        isViewingValidatedLevel={isViewingValidatedLevel}
-        expandedLessonIds={expandedLessonIds}
-      />
-      <div className={styles.title}>
-        <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>
-        <Heading6 className={styles.titleUnitSelector}>
-          {i18n.lessonsIn()}
+      {studentCount === 0 ? (
+        <EmptySection sectionId={sectionId} />
+      ) : (
+        <div>
+          <IconKey
+            isViewingValidatedLevel={isViewingValidatedLevel}
+            expandedLessonIds={expandedLessonIds}
+          />
+          <div className={styles.title}>
+            <Heading6 className={styles.titleStudents}>
+              {i18n.students()}
+            </Heading6>
+            <Heading6 className={styles.titleUnitSelector}>
+              {i18n.lessonsIn()}
 
-          <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-        </Heading6>
-      </div>
-      <ProgressTableV2
-        expandedLessonIds={expandedLessonIds}
-        setExpandedLessons={setExpandedLessons}
-        isSkeleton={!levelDataInitialized}
-      />
+              <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+            </Heading6>
+          </div>
+          <ProgressTableV2
+            expandedLessonIds={expandedLessonIds}
+            setExpandedLessons={setExpandedLessons}
+            isSkeleton={!levelDataInitialized}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -107,6 +117,7 @@ SectionProgressV2.propTypes = {
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
   isLevelProgressLoaded: PropTypes.bool.isRequired,
+  studentCount: PropTypes.number,
 };
 
 export default connect(state => ({

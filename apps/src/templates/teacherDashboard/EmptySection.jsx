@@ -36,5 +36,6 @@ const styles = {
     textAlign: 'center',
     paddingTop: 10,
     maxWidth: '538px',
+    margin: 'auto',
   },
 };

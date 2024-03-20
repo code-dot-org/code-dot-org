@@ -11,14 +11,11 @@ import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionPro
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
-import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import i18n from '@cdo/locale';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
@@ -130,16 +127,6 @@ function TeacherDashboard({
           path={TeacherDashboardPath.standardsReport}
           component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
-        {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
-        {studentCount === 0 && (
-          <Route
-            component={props =>
-              applyV1TeacherDashboardWidth(
-                <EmptySection sectionId={sectionId} />
-              )
-            }
-          />
-        )}
         <Route
           path={TeacherDashboardPath.projects}
           component={props =>
@@ -154,7 +141,8 @@ function TeacherDashboard({
             applyV1TeacherDashboardWidth(<StatsTableWithData />)
           }
         />
-        {coursesWithProgress.length === 0 && (
+        {/* {I think we want to change this to courses assigned, eventually...} */}
+        {/* {coursesWithProgress.length === 0 && (
           <Route
             component={() =>
               applyV1TeacherDashboardWidth(
@@ -164,10 +152,15 @@ function TeacherDashboard({
               )
             }
           />
-        )}
+        )} */}
         <Route
           path={TeacherDashboardPath.progress}
-          component={props => <SectionProgressSelector />}
+          component={props => (
+            <SectionProgressSelector
+              studentCount={studentCount}
+              sectionId={sectionId}
+            />
+          )}
         />
         <Route
           path={TeacherDashboardPath.textResponses}

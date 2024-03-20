@@ -18,6 +18,7 @@ function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
   progressTableV2ClosedBeta,
+  studentCount,
 }) {
   const onShowProgressTableV2Change = useCallback(
     e => {
@@ -37,7 +38,7 @@ function SectionProgressSelector({
   const allowSelection =
     DCDO.get('progress-table-v2-enabled', false) || isInClosedBeta;
   if (!allowSelection) {
-    return <SectionProgress />;
+    return <SectionProgress studentCount={studentCount} />;
   }
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
@@ -59,7 +60,11 @@ function SectionProgressSelector({
   return (
     <div>
       {toggleV1OrV2Link()}
-      {displayV2 ? <SectionProgressV2 /> : <SectionProgress />}
+      {displayV2 ? (
+        <SectionProgressV2 studentCount={studentCount} />
+      ) : (
+        <SectionProgress studentCount={studentCount} />
+      )}
     </div>
   );
 }
@@ -68,6 +73,7 @@ SectionProgressSelector.propTypes = {
   showProgressTableV2: PropTypes.bool,
   progressTableV2ClosedBeta: PropTypes.bool,
   setShowProgressTableV2: PropTypes.func.isRequired,
+  studentCount: PropTypes.number.isRequired,
 };
 
 export const UnconnectedSectionProgressSelector = SectionProgressSelector;
