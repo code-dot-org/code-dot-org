@@ -8,6 +8,8 @@ export interface Panel {
   imageUrl: string;
   text: string;
   nextUrl?: string;
-  layout?: string;
+  layout?: PanelLayout;
   key: string;
 }
+
+export type PanelLayout = 'text-bottom-left' | 'text-top-right';
