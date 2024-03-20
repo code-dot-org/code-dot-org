@@ -729,7 +729,8 @@ class Level < ApplicationRecord
 
   def localized_validations
     if should_localize?
-      validations.each do |validation|
+      validations_clone = validations.map(&:clone)
+      validations_clone.each do |validation|
         validation['message'] = I18n.t(
           validation["key"],
           scope: [:data, :validations, name],
@@ -737,8 +738,10 @@ class Level < ApplicationRecord
           smart: true
         )
       end
+      validations_clone
+    else
+      validations
     end
-    validations
   end
 
   # There's a bit of trickery here. We consider a level to be
