@@ -28,7 +28,10 @@ class DatablockStorageTable < ApplicationRecord
   # Methods that read records, or write records, should be placed in the
   # appropriate sections (below).
 
+  # Composite primary key:
   self.primary_keys = :project_id, :table_name
+
+  # Data reading methods should use read_records instead of directly accessing records
   has_many :records,
     -> {order(record_id: :asc)},
     autosave: true,

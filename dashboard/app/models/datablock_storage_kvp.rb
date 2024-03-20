@@ -12,6 +12,8 @@
 #
 class DatablockStorageKvp < ApplicationRecord
   # Stores student-owned KVP data for App Lab's data features, see datablock_storage_controller.rb
+  # Each key-value-pair is per-project, and is stored as a row in the table,
+  # which has a key column and a value column.
 
   self.primary_keys = :project_id, :key
 

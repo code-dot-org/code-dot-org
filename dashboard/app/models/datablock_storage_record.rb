@@ -15,15 +15,13 @@
 class DatablockStorageRecord < ApplicationRecord
   # Stores student-owned records for App Lab's data features, see datablock_storage_controller.rb
   # Most code that manipulates records lives in datablock_storage_table.rb
+  # Data is stored as a mysql-row-per-student-record
 
+  # Composite primary key:
   self.primary_keys = :project_id, :table_name, :record_id
 
   # TODO: #57001, implement enforcement of MAX_RECORD_LENGTH, we already have
   # a test for this, but we're skipping it until this is implemented. This
   # should ensure the string form of .json is less than 4096 bytes.
   MAX_RECORD_LENGTH = 4096
-
-  # Enabling this was adding an extra `SELECT `datablock_storage_tables`.*` query to update_record
-  # and we aren't using it, soooo...
-  # belongs_to :table, class_name: 'DatablockStorageTable', foreign_key: [:project_id, :table_name]
 end
