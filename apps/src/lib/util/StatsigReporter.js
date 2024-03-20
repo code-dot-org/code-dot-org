@@ -24,8 +24,7 @@ class StatsigReporter {
     this.local_mode = !(isProductionEnvironment() || managed_test_environment);
     const options = {
       environment: {tier: getEnvironment()},
-      network_timeout: 5,
-      local_mode: this.local_mode,
+      localMode: this.local_mode,
     };
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       Statsig.initialize(api_key, options);
@@ -33,18 +32,21 @@ class StatsigReporter {
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
-  setUserProperties(userId, userType) {
-    let user;
+  setUserProperties(userId, userType, enabledExperiments) {
     const formattedUserId = this.formatUserId(userId);
-    user.id = formattedUserId;
-    user.type = userType;
-    Statsig.updateUser(user);
-
+    const user = {
+      userID: formattedUserId,
+      custom: {
+        type: userType,
+        experiments: enabledExperiments,
+      },
+    };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
         `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${!!userId}`
       );
     }
+    Statsig.updateUser(user);
   }
 
   sendEvent(eventName, payload) {
