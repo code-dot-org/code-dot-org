@@ -1,8 +1,12 @@
 # DatablockStorage is the backend for the 'Data' tab of Applab, the 'Data' blocks
-# and the dataset browser. DatablockStorage stores student-controlled data generated
+# and the data browser. DatablockStorage stores student-controlled data generated
 # by and with the data blocks like `createRecord`, `updateRecord`, `setKeyValue`, etc.
 #
-# These backend methods are accessed by a thin wrapper on the JS side: datablockStorage.js
+# These backend methods are accessed exclusively by a thin wrapper on the JS side:
+# datablockStorage.js. Each method in this controller has a corresponding method there.
+#
+# Methods in this controller are available as (see `:datablock_storage` in routes.rb):
+# /datablock_storage/:channel_id/:method_name
 #
 # Student data is stored in MySQL in corresponding ActiveRecord models:
 # - datablock_storage_table.rb: stores a list of tables and their columns, after this file
@@ -12,6 +16,12 @@
 #
 # Metadata for the code.org defined datasets are stored in:
 # - datablock_storage_library_manifest.rb
+#
+# Methods are broken into sections, for example the Key-Value-Pair API, Table API,
+# Table Column API, Table Record API, Library Manifest API & Channel API
+#
+# More details can be found in the PR that initially created Datablock Storage:
+# https://github.com/code-dot-org/code-dot-org/pull/56279
 
 class DatablockStorageController < ApplicationController
   before_action :validate_channel_id
@@ -20,10 +30,17 @@ class DatablockStorageController < ApplicationController
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
+  # A StudentFacingError can be thrown by any of the Datablock Storage models
+  # and indicates that the error should show up in the Applab "Debug Console".
+  #
+  # Here we catch any of these errors, and return it in the expected JSON format to
+  # datablockStorage.js, who in turn calls its onError() callback with appropriate data.
   rescue_from StudentFacingError do |exception|
     render json: {msg: exception.message, type: exception.type}, status: :bad_request
   end
 
+  # We only permit requests to /datablock_storage/:channel_id for projects with
+  # the appropriate project_type (aka game.app).
   SUPPORTED_PROJECT_TYPES = [
     Game::APPLAB,
     Game::GAMELAB,
@@ -89,6 +106,7 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  # Imports a table from the Data Library into the student's project
   def add_shared_table
     DatablockStorageTable.add_shared_table @project_id, params[:table_name]
 
@@ -140,6 +158,8 @@ class DatablockStorageController < ApplicationController
     render json: table_names
   end
 
+  # populate_tables is used by levelbuilder to inject curriculum defined
+  # initial table data into a project.
   def populate_tables
     tables_json = JSON.parse params[:tables_json]
     DatablockStorageTable.populate_tables @project_id, tables_json
@@ -168,6 +188,7 @@ class DatablockStorageController < ApplicationController
     render json: true
   end
 
+  # Typecast a column
   def coerce_column
     table = find_table
     table.coerce_column params[:column_name], params[:column_type]

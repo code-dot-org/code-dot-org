@@ -5,6 +5,8 @@ import _ from 'lodash';
 //
 // DatablockStorage.* methods are thin wrappers over the corresponding methods
 // found in apps/controllers/datablock_storage_controller.rb
+//
+// See datablock_storage_controller.rb for more detailed documentation.
 
 const DatablockStorage = {};
 let channelId = undefined;
@@ -370,7 +372,7 @@ DatablockStorage.getColumnsForTable = function (tableName) {
   return getColumnsForTable({tableName});
 };
 
-// @return {Promise<boolean>} whether the project channelID (configured at initF*rebaseStorage) exists
+// @return {Promise<boolean>} whether the project channelID exists
 DatablockStorage.channelExists = function () {
   return _fetch('channel_exists', 'GET', {});
 };

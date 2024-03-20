@@ -15,7 +15,18 @@
 #
 class DatablockStorageTable < ApplicationRecord
   # Stores student-owned tables for App Lab's data features, see datablock_storage_controller.rb
-  # Row data for each table is stored in DatablockStorageRecord, but most code lives here
+  # Row data for each table is stored in datablock_storage_record.rb, but most code lives here
+  #
+  # Student data tables are stored as a single row in this model, and a row-per-record in
+  # DatablockStorageRecord.
+  #
+  # Student data is stored in a single JSON column in DatablockStorageRecord.record_json,
+  # which is a map of column-names to the value for that row/column.
+  # DatablockStorageTable.columns is the superset of all possible keys in the various
+  # DatablockStorageRecord.json records that comprise the table.
+  #
+  # Methods that read records, or write records, should be placed in the
+  # appropriate sections (below).
 
   self.primary_keys = :project_id, :table_name
   has_many :records,
@@ -27,6 +38,8 @@ class DatablockStorageTable < ApplicationRecord
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
+  # These are errors that should show up in the Applab Debug Console
+  # see description in datablock_storage_controller.rb.
   class StudentFacingError < StandardError
     attr_reader :type
 
@@ -36,6 +49,10 @@ class DatablockStorageTable < ApplicationRecord
     end
   end
 
+  # Shared tables are those defined by code.org and imported from the
+  # Data Library. They are referenced by name in is_shared_table. However,
+  # like all tables, they are required to have a project_id. We use 0 as
+  # the special project_id to indicate it's a shared table.
   SHARED_TABLE_PROJECT_ID = 0
 
   # TODO: #57003, implement enforcement of MAX_TABLE_COUNT, we already have
@@ -80,10 +97,67 @@ class DatablockStorageTable < ApplicationRecord
     is_shared_table ? shared_table.records : records
   end
 
+  ##########################################################
+  #   Table methods that read record data:                 #
+  ##########################################################
+  #
+  # Methods that access records should do so using `read_records` (vs using table.records)
+  # as tables with `is_shared_table` set do not have individual copies of their records,
+  # but instead "point to" the records of a table imported from the Data Library.
+  #
+  # See comments on our Copy-On-Write strategy below for more details.
+
+  def export_csv
+    column_names = get_columns
+
+    CSV.generate do |csv|
+      csv << column_names
+      read_records.map(&:record_json).each do |record_json|
+        csv << column_names.map {|x| record_json[x]}
+      end
+    end
+  end
+
+  def get_columns
+    is_shared_table ? shared_table.columns : columns
+  end
+
+  def get_column(column_name)
+    if get_columns.include? column_name
+      read_records.map do |record|
+        record.record_json[column_name]
+      end
+    else
+      [] # javascript expects a list with every element undefined to indicate column doesn't exists error
+    end
+  end
+
+  ##########################################################
+  #   Table methods that write record data:                #
+  ##########################################################
+  #
+  # DatablockStorageTable uses a Copy-On-Write strategy for 'shared' tables,
+  # that is: tables imported using the Data Library. Rather than copying the
+  # records immediately into a local table, we create a table row with
+  # is_shared_table set to the name of the shared table. When any write event
+  # occurs for the table, we immediately copy all the records into the local
+  # table, before applying the write. This avoids unnecessary duplication of
+  # data (80% of student data was unchanged imports of data library tables).
+  #
+  # To ensure consistent copy-on-write behavior, all "write methods" (those
+  # that modify record data) should start with a call to:
+  def if_shared_table_copy_on_write
+    copy_shared_table if is_shared_table
+  end
+
   def create_records(record_jsons)
     if_shared_table_copy_on_write
 
     DatablockStorageRecord.transaction do
+      # Because we're using a composite primary key for records: (project_id, table_name, record_id)
+      # and we want an incrementing record_id unique to that (project_id, table_name), we lock
+      # the first record in a DatablockStorageTable when we begin to insert new records,
+      # and release it once we close the transaction.
       DatablockStorageRecord.where(project_id: project_id, table_name: table_name).lock.minimum(:record_id)
 
       max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id)
@@ -134,6 +208,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def import_csv(table_data_csv)
+    if_shared_table_copy_on_write
+
     records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
 
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
@@ -154,21 +230,6 @@ class DatablockStorageTable < ApplicationRecord
     create_records(records)
   end
 
-  def export_csv
-    column_names = get_columns
-
-    CSV.generate do |csv|
-      csv << column_names
-      read_records.map(&:record_json).each do |record_json|
-        csv << column_names.map {|x| record_json[x]}
-      end
-    end
-  end
-
-  def get_columns
-    is_shared_table ? shared_table.columns : columns
-  end
-
   def add_column(column_name)
     if_shared_table_copy_on_write
 
@@ -187,16 +248,6 @@ class DatablockStorageTable < ApplicationRecord
     self.columns.delete column_name
   end
 
-  def get_column(column_name)
-    if get_columns.include? column_name
-      read_records.map do |record|
-        record.record_json[column_name]
-      end
-    else
-      [] # javascript expects a list with every element undefined to indicate column doesn't exists error
-    end
-  end
-
   def rename_column(old_column_name, new_column_name)
     if_shared_table_copy_on_write
 
@@ -209,7 +260,40 @@ class DatablockStorageTable < ApplicationRecord
     self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
   end
 
-  def _coerce_type(value, column_type)
+  # Convert all values in a column to a new type
+  def coerce_column(column_name, column_type)
+    if_shared_table_copy_on_write
+
+    unless ['string', 'number', 'boolean'].include? column_type
+      raise "column_type must be one of: string, number, boolean"
+    end
+
+    records.each do |record|
+      # column type is one of: string, number, boolean, date
+      if record.record_json.key?(column_name)
+        record.record_json[column_name] = coerce_type(record.record_json[column_name], column_type)
+      end
+    end
+  end
+
+  ##########################################################
+  #   Private                                              #
+  ##########################################################
+
+  private def shared_table
+    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: is_shared_table)
+  end
+
+  # This is where we do the actual copy-on-write
+  private def copy_shared_table
+    to_copy = shared_table
+    self.columns = to_copy.columns
+    records.insert_all to_copy.records.map(&:as_json)
+    self.is_shared_table = nil
+    save!
+  end
+
+  private def coerce_type(value, column_type)
     case column_type
     when 'string'
       if value.nil?
@@ -228,36 +312,5 @@ class DatablockStorageTable < ApplicationRecord
         raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to boolean"
       end
     end
-  end
-
-  def coerce_column(column_name, column_type)
-    if_shared_table_copy_on_write
-
-    unless ['string', 'number', 'boolean'].include? column_type
-      raise "column_type must be one of: string, number, boolean"
-    end
-
-    records.each do |record|
-      # column type is one of: string, number, boolean, date
-      if record.record_json.key?(column_name)
-        record.record_json[column_name] = _coerce_type(record.record_json[column_name], column_type)
-      end
-    end
-  end
-
-  def shared_table
-    DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: is_shared_table)
-  end
-
-  def copy_shared_table
-    to_copy = shared_table
-    self.columns = to_copy.columns
-    records.insert_all to_copy.records.map(&:as_json)
-    self.is_shared_table = nil
-    save!
-  end
-
-  def if_shared_table_copy_on_write
-    copy_shared_table if is_shared_table
   end
 end
