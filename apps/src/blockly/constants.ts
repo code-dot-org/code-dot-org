@@ -28,6 +28,8 @@ export enum Themes {
   TRITANOPIA_DARK = 'cdotritanopiadark',
 }
 
+export const DARK_THEME_SUFFIX = 'dark';
+
 export enum BlockStyles {
   DEFAULT = 'default',
   SETUP = 'setup_blocks',

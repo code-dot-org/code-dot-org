@@ -1,14 +1,18 @@
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
-import DCDO from '@cdo/apps/dcdo';
-import SectionProgress from '../sectionProgress/SectionProgress';
-import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
-import SectionProgressV2 from './SectionProgressV2';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import styles from './progress-header.module.scss';
+import {connect} from 'react-redux';
+
 import Link from '@cdo/apps/componentLibrary/link';
+import DCDO from '@cdo/apps/dcdo';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
+import i18n from '@cdo/locale';
+
+import SectionProgress from '../sectionProgress/SectionProgress';
+
+import SectionProgressV2 from './SectionProgressV2';
+
+import styles from './progress-header.module.scss';
 
 function SectionProgressSelector({
   showProgressTableV2,

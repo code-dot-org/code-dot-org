@@ -333,7 +333,7 @@ const customInputTypes = {
   },
   behaviorPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const dropdownField = new Blockly.FieldDropdown(
+      const dropdownField = new Blockly.FieldBehaviorPicker(
         Blockly.customBlocks.getAllBehaviorOptions
       );
       currentInputRow

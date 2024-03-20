@@ -8,6 +8,7 @@ import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   allowConsoleWarnings,
   createMouseEvent,
+  sandboxDocumentBody,
 } from '../../../../util/testUtils.js';
 import * as utils from '@cdo/apps/utils';
 import {
@@ -18,7 +19,6 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import {sandboxDocumentBody} from '../../../../util/testUtils';
 import dom from '@cdo/apps/dom';
 
 describe('The JSDebugger component', () => {
