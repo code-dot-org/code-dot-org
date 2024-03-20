@@ -290,33 +290,32 @@ class DatablockStorageController < ApplicationController
   ##########################################################
   #   Private                                              #
   ##########################################################
-  private
 
-  def shared_table?
+  private def shared_table?
     ActiveRecord::Type::Boolean.new.cast(params[:is_shared_table])
   end
 
-  def find_table_or_shared_table
+  private def find_table_or_shared_table
     shared_table? ?
       DatablockStorageTable.find_shared_table(params[:table_name]) :
       find_table
   end
 
-  def find_table
+  private def find_table
     DatablockStorageTable.find([@project_id, params[:table_name]])
   rescue ActiveRecord::RecordNotFound
     raise StudentFacingError, "You tried to use a table called \"#{params[:table_name]}\" but that table doesn't exist in this app"
   end
 
-  def where_table
+  private def where_table
     DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
   end
 
-  def table_or_create
+  private def table_or_create
     where_table.first_or_create
   end
 
-  def validate_channel_id
+  private def validate_channel_id
     project = Project.find_by_channel_id(params[:channel_id])
     unless SUPPORTED_PROJECT_TYPES.include? project.project_type
       raise "DatablockStorage is only available for applab and gamelab projects"
