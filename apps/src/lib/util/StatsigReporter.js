@@ -30,15 +30,9 @@ class StatsigReporter {
     this.initialize(api_key, options);
   }
 
-  initialize(api_key, options) {
+  async initialize(api_key, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      new Promise(resolve => {
-        Statsig.initialize(api_key, options).then(resolve());
-        err => {
-          console.error(err);
-          resolve();
-        };
-      });
+      await Statsig.initialize(api_key, options);
     }
   }
 
