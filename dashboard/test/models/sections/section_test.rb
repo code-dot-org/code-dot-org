@@ -905,13 +905,6 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 1, section.instructors.length
   end
 
-  test 'add_instructor returns false if not an instructor' do
-    section = create(:section)
-    user = create :student
-
-    assert_equal false, section.add_instructor(user)
-  end
-
   test 'add_instructor returns true and adds the teacher if not previously a co-teacher' do
     section = create(:section)
     user = create :teacher
@@ -961,6 +954,17 @@ class SectionTest < ActiveSupport::TestCase
     si.reload
 
     assert_equal true, si.deleted?
+  end
+
+  test 'remove_instructor does not remove the primary teacher' do
+    user = create :teacher
+    section = create(:section, user: user)
+
+    si = SectionInstructor.find_by(instructor: user, section_id: section.id)
+    section.remove_instructor(user)
+    si.reload
+
+    assert_equal false, si.deleted?
   end
 
   def set_up_code_review_groups

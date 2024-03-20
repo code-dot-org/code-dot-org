@@ -451,7 +451,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     co_teacher_si.reload
 
-    assert_equal 3, lti_section.followers.length
+    assert_equal 2, lti_section.followers.length
     assert_equal true, co_teacher_si.deleted?
   end
 

@@ -3,6 +3,7 @@ require 'queries/lti'
 require 'user'
 require 'authentication_option'
 require 'sections/section'
+require 'set'
 
 module Services
   module Lti
@@ -171,8 +172,10 @@ module Services
       client_id = lti_integration.client_id
       issuer = lti_integration.issuer
       section = lti_section.section
+      current_students = Set.new
+      current_teachers = Set.new
 
-      current_students = nrps_members.map do |nrps_member|
+      nrps_members.each do |nrps_member|
         account_type = Policies::Lti.get_account_type(nrps_member[:roles])
 
         user = Queries::Lti.get_user_from_nrps(
@@ -188,23 +191,33 @@ module Services
         had_changes ||= (user.new_record? || user.changed?)
         user.save!
         if account_type == ::User::TYPE_STUDENT
-          section.remove_instructor(user)
           add_student_result = section.add_student(user)
           had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
+          current_students.add(user.id)
         else
           add_instructor_result = section.add_instructor(user)
           had_changes ||= add_instructor_result
+          current_teachers.add(user.id)
         end
-        user
       end
 
       # Prune students who have been removed from the section in the LMS
       lti_section.followers.each do |follower|
-        unless current_students.find_index {|s| s.id == follower.student_user_id}
+        unless current_students.include?(follower.student_user_id)
           follower.destroy
           had_changes = true
         end
       end
+
+      # Prune teachers who have been removed from the section in the LMS
+      section.section_instructors.each do |section_instructor|
+        instructor = section_instructor.instructor
+        unless current_teachers.include?(instructor.id)
+          section.remove_instructor(instructor)
+          had_changes = true
+        end
+      end
+
       had_changes
     end
 
