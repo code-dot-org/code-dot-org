@@ -478,11 +478,16 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
-
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
+    )
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    create :lti_user_identity, user: user, subject: payload[:sub]
     assert deployment
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
@@ -495,8 +500,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
-
-    ao = AuthenticationOption.new(user: user, email: Services::Lti.get_claim(payload, :email), credential_type: AuthenticationOption::LTI_V1, authentication_id: Policies::Lti.generate_auth_id(payload))
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
+    )
     ao.save!
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)

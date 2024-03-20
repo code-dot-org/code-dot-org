@@ -1,13 +1,16 @@
+import classNames from 'classnames';
+import md5 from 'md5';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
-import trackEvent from '../../util/trackEvent';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import md5 from 'md5';
-import moduleStyles from './inline-audio.module.scss';
-import classNames from 'classnames';
 import i18n from '@cdo/locale';
+
+import trackEvent from '../../util/trackEvent';
+
+import moduleStyles from './inline-audio.module.scss';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
