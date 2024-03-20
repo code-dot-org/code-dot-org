@@ -1,15 +1,18 @@
+import classNames from 'classnames';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import {connect} from 'react-redux';
-import PromptIcon from './PromptIcon';
-import HintDisplayLightbulb from '../HintDisplayLightbulb';
-import {getOuterHeight} from './utils';
-import commonStyles from '../../commonStyles';
+
 import {KeyCodes} from '@cdo/apps/constants';
 import i18n from '@cdo/locale';
+
+import commonStyles from '../../commonStyles';
+import HintDisplayLightbulb from '../HintDisplayLightbulb';
+
+import PromptIcon from './PromptIcon';
+import {getOuterHeight} from './utils';
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon

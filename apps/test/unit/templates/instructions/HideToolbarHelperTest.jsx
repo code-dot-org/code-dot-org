@@ -1,8 +1,10 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
+import React from 'react';
 import sinon from 'sinon';
+
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('HideToolbarHelper', function () {
   it('shows the hide toolbar helper', function () {
