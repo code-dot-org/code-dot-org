@@ -433,6 +433,13 @@ h2.studentName {
   flex-direction: column;
   gap: 1rem;
   align-self: stretch;
+
+
+  .tipsDetailsSummary {
+    &:hover {
+      background-color: unset;
+    }
+  }
 }
 
 .learningGoalTips {
