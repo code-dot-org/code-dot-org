@@ -1,79 +1,67 @@
+import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import {asyncLoadCoursesWithProgress} from '@cdo/apps/redux/unitSelectionRedux';
 
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import styles from './unit-selector.module.scss';
 
-export const dropdownStyles = {
-  dropdown: {
-    display: 'block',
-    boxSizing: 'border-box',
-    fontSize: 'medium',
-    height: 34,
-    paddingLeft: 5,
-    paddingRight: 5,
-    width: 300,
-  },
-  skeletonDropdown: {
-    borderRadius: '4px',
-  },
-};
+function UnitSelector({
+  scriptId,
+  onChange,
+  coursesWithProgress,
+  asyncLoadCoursesWithProgress,
+  isLoadingCourses,
+}) {
+  React.useEffect(() => {
+    asyncLoadCoursesWithProgress();
+  }, [asyncLoadCoursesWithProgress]);
 
-class UnitSelector extends Component {
-  static propTypes = {
-    coursesWithProgress: PropTypes.array.isRequired,
-    scriptId: PropTypes.number,
-    onChange: PropTypes.func.isRequired,
-    style: PropTypes.object,
-    asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
-    isLoadingCourses: PropTypes.bool,
-  };
+  const loadingSkeleton = () => (
+    <div>
+      <div
+        className={classNames(
+          styles.dropdown,
+          styles.skeletonDropdown,
+          skeletonizeContent.skeletonizeContent
+        )}
+        id="uitest-course-dropdown"
+      />
+    </div>
+  );
 
-  componentDidMount() {
-    this.props.asyncLoadCoursesWithProgress();
-  }
-
-  render() {
-    const {scriptId, onChange, coursesWithProgress} = this.props;
-
-    if (this.props.isLoadingCourses) {
-      return (
-        <div>
-          <div
-            className={skeletonizeContent.skeletonizeContent}
-            style={{
-              ...dropdownStyles.dropdown,
-              ...dropdownStyles.skeletonDropdown,
-            }}
-            id="uitest-course-dropdown"
-          />
-        </div>
-      );
-    }
-
-    return (
-      <div>
-        <select
-          value={scriptId || undefined}
-          onChange={event => onChange(parseInt(event.target.value))}
-          style={dropdownStyles.dropdown}
-          id="uitest-course-dropdown"
-        >
-          {coursesWithProgress.map((version, index) => (
-            <optgroup key={index} label={version.display_name}>
-              {version.units.map(unit => (
-                <option key={unit.id} value={unit.id}>
-                  {unit.name}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
-      </div>
-    );
-  }
+  return isLoadingCourses ? (
+    loadingSkeleton()
+  ) : (
+    <div>
+      <select
+        value={scriptId || undefined}
+        onChange={event => onChange(parseInt(event.target.value))}
+        className={styles.dropdown}
+        id="uitest-course-dropdown"
+      >
+        {coursesWithProgress.map((version, index) => (
+          <optgroup key={index} label={version.display_name}>
+            {version.units.map(unit => (
+              <option key={unit.id} value={unit.id}>
+                {unit.name}
+              </option>
+            ))}
+          </optgroup>
+        ))}
+      </select>
+    </div>
+  );
 }
+
+UnitSelector.propTypes = {
+  coursesWithProgress: PropTypes.array.isRequired,
+  scriptId: PropTypes.number,
+  onChange: PropTypes.func.isRequired,
+  asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
+  isLoadingCourses: PropTypes.bool,
+};
 
 export const UnconnectedUnitSelector = UnitSelector;
 
