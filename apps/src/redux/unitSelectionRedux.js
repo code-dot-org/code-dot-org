@@ -64,6 +64,8 @@ export const doesCurrentCourseUseFeedback = state => {
 export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   const state = getState();
 
+  console.log('lfm, shouldnt show');
+
   if (state.unitSelection.isLoadingCoursesWithProgress) {
     return;
   }

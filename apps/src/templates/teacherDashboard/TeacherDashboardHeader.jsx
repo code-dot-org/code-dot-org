@@ -7,12 +7,7 @@ import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
-import {
-  asyncLoadCourseOfferings,
-  beginEditingSection,
-  getAssignmentName,
-  sortedSectionsList,
-} from './teacherSectionsRedux';
+import {beginEditingSection, sortedSectionsList} from './teacherSectionsRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';

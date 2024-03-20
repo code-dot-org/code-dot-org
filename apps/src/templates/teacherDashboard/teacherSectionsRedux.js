@@ -740,7 +740,6 @@ export default function teacherSections(state = initialState, action) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section)
     );
-    console.log('sections', sections[0], action.sections[0]);
 
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
@@ -1417,7 +1416,6 @@ export const assignmentNames = (courseOfferings, section) => {
   const assignments = assignmentsForSection(courseOfferings, section);
   // we might not have an assignment object if we have a section that was somehow
   // assigned to a hidden unit (and we dont have permissions to see hidden units)
-  console.log('lfm1', assignments, section, courseOfferings);
   return assignments.map(assignment => (assignment ? assignment.name : ''));
 };
 

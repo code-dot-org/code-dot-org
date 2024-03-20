@@ -40,7 +40,6 @@ function UnitSelectorV2({
   isLoadingCourses,
 }) {
   React.useEffect(() => {
-    console.log('lfm', 'UnitSelectorV2 useEffect');
     asyncLoadCoursesWithProgress();
   }, [asyncLoadCoursesWithProgress]);
 
@@ -65,7 +64,7 @@ function UnitSelectorV2({
     [unitId, setScriptId, sectionId]
   );
 
-  const itemGroups = coursesWithProgress.map(version => ({
+  const itemGroups = coursesWithProgress.map((version, index) => ({
     label: version.display_name,
     groupItems: version.units.map(unit => ({
       value: unit.id,
@@ -106,6 +105,8 @@ UnitSelectorV2.propTypes = {
   asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
   isLoadingCourses: PropTypes.bool,
 };
+
+export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 
 export default connect(
   state => ({

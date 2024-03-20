@@ -1,21 +1,32 @@
 import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedUnitSelector} from '@cdo/apps/templates/sectionProgress/UnitSelector';
+import {expect} from '../../util/reconfiguredChai';
+import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/UnitSelectorV2';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
   coursesWithProgress: fakeCoursesWithProgress,
-  scriptId: null,
+  scriptId: 2, // Course A (2018)
+  sectionId: 1,
+  setScriptId: () => {},
   onChange: () => {},
   asyncLoadCoursesWithProgress: () => {},
   isLoadingCourses: false,
 };
 
 describe('UnitSelector', () => {
+  beforeEach(() => {
+    sinon.stub(sectionProgressLoader, 'loadUnitProgress');
+  });
+
+  afterEach(() => {
+    sinon.restore();
+  });
+
   it('loads the correct number of course versions', () => {
-    render(<UnconnectedUnitSelector {...DEFAULT_PROPS} />);
+    render(<UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} />);
     const dropdown = screen.getByRole('combobox');
     fireEvent.click(dropdown);
 
@@ -30,10 +41,24 @@ describe('UnitSelector', () => {
     screen.getByRole('option', {name: 'Flappy'});
   });
 
+  it('sets scriptId on change', () => {
+    const setScriptId = sinon.spy();
+    render(
+      <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} setScriptId={setScriptId} />
+    );
+    const dropdown = screen.getByRole('combobox');
+    fireEvent.click(dropdown);
+
+    const option = screen.getByRole('option', {name: 'Flappy'});
+    fireEvent.change(dropdown, {target: {value: option.value}});
+
+    expect(setScriptId).to.have.been.calledOnce;
+  });
+
   it('loads courses on initial render', () => {
     const asyncLoadCoursesWithProgress = sinon.spy();
     render(
-      <UnconnectedUnitSelector
+      <UnconnectedUnitSelectorV2
         {...DEFAULT_PROPS}
         asyncLoadCoursesWithProgress={asyncLoadCoursesWithProgress}
       />
@@ -44,8 +69,8 @@ describe('UnitSelector', () => {
 
   it('shows skeleton if loading', () => {
     render(
-      <UnconnectedUnitSelector {...DEFAULT_PROPS} isLoadingCourses={true} />
+      <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} isLoadingCourses={true} />
     );
-    expect(screen.queryByRole('combobox')).to.be.null;
+    expect(screen.queryByRole('select')).to.be.null;
   });
 });

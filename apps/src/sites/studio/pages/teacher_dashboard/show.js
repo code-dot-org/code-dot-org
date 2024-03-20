@@ -26,10 +26,7 @@ import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashbo
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo,
 } from '@cdo/apps/templates/currentUserRedux';
-import {
-  setCoursesWithProgress,
-  setScriptId,
-} from '../../../../redux/unitSelectionRedux';
+import {setScriptId} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
