@@ -115,7 +115,7 @@
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
 
   # Aurora Engine 2.x (MySQL 5.x) ParameterGroups
-  Aurora2ClusterDBParameters:
+  AuroraClusterDBParameters:
     Type: AWS::RDS::DBClusterParameterGroup
     Properties:
       Description: !Sub "Aurora Engine 2.x (MySQL 5.7) Cluster DB Parameters for ${AWS::StackName}."
@@ -143,7 +143,7 @@
         # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
         innodb_flush_log_at_trx_commit: 0
         # END: Dynamic configuration settings.
-  Aurora2WriterDBParameters:
+  AuroraWriterDBParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:
       Description: !Sub "Aurora Engine 2.x (MySQL 5.7) Writer DB Parameters for ${AWS::StackName}."
@@ -331,11 +331,11 @@
       # 1) Provision future new production cluster via CloudFormation as a clone of existing cluster (which was created manually).
       # 2) Make clone a binary log client, replicating from production cluster.
       # 3) Upgrade clone to Aurora 3 / MySQL 8
-      SourceDBClusterIdentifier: staging-cluster
+      SourceDBClusterIdentifier: production-aurora-cluster
       RestoreType: copy-on-write
       UseLatestRestorableTime: true
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: !Ref Aurora2ClusterDBParameters
+      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
@@ -359,7 +359,7 @@
     Properties:
       DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
       # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
-      DBParameterGroupName: !Ref Aurora2WriterDBParameters
+      DBParameterGroupName: !Ref AuroraWriterDBParameters
       DBClusterIdentifier: !Ref AuroraCluster
       DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
