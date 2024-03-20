@@ -402,6 +402,7 @@ Resources:
         -
           IpProtocol: tcp
           FromPort: 8080
+          ToPort: 8080
           SourceSecurityGroupId: !Ref ElbSecurityGroup
       SecurityGroupEgress:
         - IpProtocol: -1 # Allows all protocols
