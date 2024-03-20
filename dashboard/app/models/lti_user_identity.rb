@@ -9,10 +9,12 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  deleted_at         :datetime
+#  issuer             :string(255)      not null
 #
 # Indexes
 #
 #  index_lti_user_identities_on_deleted_at          (deleted_at)
+#  index_lti_user_identities_on_issuer              (issuer)
 #  index_lti_user_identities_on_lti_integration_id  (lti_integration_id)
 #  index_lti_user_identities_on_subject             (subject)
 #  index_lti_user_identities_on_user_id             (user_id)

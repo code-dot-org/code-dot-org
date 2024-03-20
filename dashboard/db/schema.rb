@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_08_234208) do
+ActiveRecord::Schema.define(version: 2024_03_20_051410) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -867,7 +867,9 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
+    t.string "issuer", null: false
     t.index ["deleted_at"], name: "index_lti_user_identities_on_deleted_at"
+    t.index ["issuer"], name: "index_lti_user_identities_on_issuer"
     t.index ["lti_integration_id"], name: "index_lti_user_identities_on_lti_integration_id"
     t.index ["subject"], name: "index_lti_user_identities_on_subject"
     t.index ["user_id"], name: "index_lti_user_identities_on_user_id"
@@ -991,7 +993,7 @@ ActiveRecord::Schema.define(version: 2024_03_08_234208) do
     t.index ["user_id"], name: "index_pd_applications_on_user_id"
   end
 
-  create_table "pd_applications_status_logs", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "pd_applications_status_logs", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "pd_application_id", null: false
     t.string "status", null: false
     t.datetime "timestamp", null: false
