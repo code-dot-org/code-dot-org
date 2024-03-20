@@ -63,13 +63,13 @@ export const doesCurrentCourseUseFeedback = state => {
 
 export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   const state = getState();
+  const selectedSection =
+    state.teacherSections.sections[state.teacherSections.selectedSectionId];
 
-  if (state.unitSelection.isLoadingCoursesWithProgress) {
+  if (state.unitSelection.isLoadingCoursesWithProgress || !selectedSection) {
     return;
   }
 
-  const selectedSection =
-    state.teacherSections.sections[state.teacherSections.selectedSectionId];
   dispatch(startLoadingCoursesWithProgress());
   fetchJSON(`/dashboardapi/section_courses/${selectedSection.id}`)
     .then(coursesWithProgress => {
