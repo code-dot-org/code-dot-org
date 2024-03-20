@@ -1,10 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
 import {Factory} from 'rosie';
+
 import './CodeReviewTestHelper';
-import color from '@cdo/apps/util/color';
 import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
+import color from '@cdo/apps/util/color';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_COMMENT = Factory.build('CodeReviewV2Comment');
 const DEFAULT_PROPS = {
