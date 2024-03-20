@@ -163,13 +163,12 @@ class LtiV1Controller < ApplicationController
         sign_in user
 
         metadata = {
-          'LMS_Type' => integration.platform_name,
           'User_Type' => user.user_type,
+          'LMS_Type' => integration[:platform_name],
         }
         Metrics::Events.log_event(
           user: user,
-          event_type: 'LTI_EVENT',
-          event_name: 'LTI_EXISTING_USER_LOGIN',
+          event_name: 'LTI_User_Signin',
           metadata: metadata,
         )
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
