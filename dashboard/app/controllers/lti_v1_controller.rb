@@ -121,8 +121,8 @@ class LtiV1Controller < ApplicationController
       user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
       launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]
-      nrps_url = Services::Lti.get_claim(decoded_jwt, :context_memberships_url)
-      resource_link_id = Services::Lti.get_claim(decoded_jwt, :id)
+      nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM]&.[](:context_memberships_url)
+      resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM]&.[](:id)
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
@@ -205,8 +205,8 @@ class LtiV1Controller < ApplicationController
         case exception.param
         when :context_id, :nrps_url
           return render_sync_course_error('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
-        else
-          return render_sync_course_error("Missing #{exception.param}.", :bad_request)
+        when :lti_integration_id, :deployment_id, :rlid
+          return render_sync_course_error("Missing #{exception.param}.", :bad_request, 'missing_param')
         end
       end
     end

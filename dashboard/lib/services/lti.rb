@@ -68,7 +68,7 @@ class Services::Lti
   end
 
   def self.get_claim(id_token, key)
-    id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym, key) || id_token.dig(Policies::Lti::LTI_RESOURCE_LINK_CLAIM.to_sym, key) || id_token.dig(Policies::Lti::LTI_NRPS_CLAIM.to_sym, key)
+    id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym, key)
   end
 
   def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
