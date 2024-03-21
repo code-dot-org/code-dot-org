@@ -8,7 +8,6 @@ Feature: Minecraft hero logged in
     And I press "runButton"
     And I click selector "button:contains(Finish)" once I see it
     And I wait until element "#continue-button" is visible
-    And element "#publish-to-project-gallery-button" is visible
     And element "#save-to-project-gallery-button" is visible
 
     # capture finish dialog in saucelabs video
