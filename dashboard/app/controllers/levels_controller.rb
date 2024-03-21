@@ -161,6 +161,8 @@ class LevelsController < ApplicationController
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     if @level.is_a? Applab
+      # TODO: unfirebase, migrate this to datablock storage, ok to be migrated but not enabled: #56998
+      # TODO: post-firebase-cleanup, remove this code: #56994
       fb = FirebaseHelper.new('shared')
       @dataset_library_manifest = fb.get_library_manifest
     end
@@ -571,13 +573,11 @@ class LevelsController < ApplicationController
     # Parse a few specific JSON fields used by modern (Lab2) labs so that they are
     # stored in the database as a first-order member of the properties JSON, rather
     # than simply as a string of JSON belonging to a single property.
-    [:level_data, :initial_ai_customizations].each do |key|
+    [:level_data, :initial_ai_customizations, :validations].each do |key|
       level_params[key] = JSON.parse(level_params[key]) if level_params[key]
     end
-    # Update level data with validations, and remove from level properties.
-    # We can remove this once validations are read from level properties directly.
-    level_params[:level_data]["validations"] = JSON.parse(level_params[:validations]) if level_params[:validations]
-    level_params[:validations] = nil if level_params[:validations]
+    # Delete validations from level data if present. We'll use the validations in level properties instead.
+    level_params[:level_data].delete('validations') if level_params[:level_data]&.key?('validations')
     level_params
   end
 

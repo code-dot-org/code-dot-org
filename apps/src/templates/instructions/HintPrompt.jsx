@@ -1,9 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ChatBubble from './ChatBubble';
+import React from 'react';
+
 import msg from '@cdo/locale';
+
 import LegacyButton from '../LegacyButton';
+
+import ChatBubble from './ChatBubble';
 
 const HintPrompt = ({
   onConfirm,

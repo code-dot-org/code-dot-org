@@ -384,6 +384,7 @@ class UsersHelperTest < ActionView::TestCase
           },
           sublevel2.id => {
             status: LEVEL_STATUS.not_tried,
+            teacher_feedback_commented: true,
             teacher_feedback_new: true
           },
           level.id => {

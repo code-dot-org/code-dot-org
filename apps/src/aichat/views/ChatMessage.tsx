@@ -108,11 +108,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
 
       {isAssistant(message.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
-          <Typography
-            className={moduleStyles.messageHeaderContainer}
-            semanticTag="h5"
-            visualAppearance="heading-xs"
-          >
+          <Typography semanticTag="h5" visualAppearance="heading-xs">
             {botTitle} ({message.role})
           </Typography>
           {displayAssistantMessage(message.status, message.chatMessageText)}

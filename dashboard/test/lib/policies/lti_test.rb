@@ -4,7 +4,7 @@ require 'policies/lti'
 
 class Policies::LtiTest < ActiveSupport::TestCase
   setup do
-    @ids = ['http://some-iss.com', 'some-aud', 'some-sub'].freeze
+    @ids = ['http://some-iss.com', ['some-aud'], 'some-sub'].freeze
     @roles_key = Policies::Lti::LTI_ROLES_KEY
     @teacher_roles = [
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
@@ -25,7 +25,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
     @user = create :user
     @user.authentication_options.create(
-      authentication_id: Policies::Lti.generate_auth_id(@id_token),
+      authentication_id: Services::Lti::AuthIdGenerator.new(@id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
     )
   end
@@ -38,10 +38,6 @@ class Policies::LtiTest < ActiveSupport::TestCase
   test 'get_account_type should return a student if id_token does not have TEACHER_ROLES' do
     @id_token[@roles_key] = ['not-a-teacher-role']
     assert_equal Policies::Lti.get_account_type(@id_token[Policies::Lti::LTI_ROLES_KEY]), User::TYPE_STUDENT
-  end
-
-  test 'generate_auth_id should create authentication_id string' do
-    assert_equal Policies::Lti.generate_auth_id(@id_token), @ids.join('|')
   end
 
   test 'issuer should return the issuer of the LTI Platform from a users LTI authentication_options' do
@@ -65,6 +61,18 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_equal nil, Policies::Lti.lti_provided_email(user)
   end
 
+  test 'lti_teacher returns false if administrator' do
+    assert_equal false, Policies::Lti.lti_teacher?(["http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator"])
+  end
+
+  test 'lti_teacher returns false if learner' do
+    assert_equal false, Policies::Lti.lti_teacher?([Policies::Lti::CONTEXT_LEARNER_ROLE])
+  end
+
+  test 'lti_teacher returns true if instructor' do
+    assert_equal true, Policies::Lti.lti_teacher?(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor'])
+  end
+
   test 'show_email_input?' do
     test_matrix = [
       [true, [:teacher, :with_lti_auth]],
@@ -78,6 +86,11 @@ class Policies::LtiTest < ActiveSupport::TestCase
       failure_msg = "Expected show_email_input?(#{traits}) to be #{expected} but it was #{actual}"
       assert_equal expected, actual, failure_msg
     end
+  end
+
+  test `force_iframe_launch? should return true for Schoology and false for other LMS platforms` do
+    assert Policies::Lti.force_iframe_launch?('https://schoology.schoology.com')
+    refute Policies::Lti.force_iframe_launch?('https://canvas.instructure.com')
   end
 
   class EarlyAccessTest < ActiveSupport::TestCase

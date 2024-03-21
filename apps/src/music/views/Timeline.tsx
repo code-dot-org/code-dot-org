@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineTrackEvents from './TimelineTrackEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
-import {getBlockMode} from '../appConfig';
+import appConfig, {getBlockMode} from '../appConfig';
 import {BlockMode, MIN_NUM_MEASURES} from '../constants';
 import {useDispatch} from 'react-redux';
 import {
@@ -56,6 +56,9 @@ const Timeline: React.FunctionComponent = () => {
     MIN_NUM_MEASURES,
     useMusicSelector(state => state.music.lastMeasure)
   );
+  const loopEnabled = useMusicSelector(state => state.music.loopEnabled);
+  const loopStart = useMusicSelector(state => state.music.loopStart);
+  const loopEnd = useMusicSelector(state => state.music.loopEnd);
   const playheadRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -79,8 +82,8 @@ const Timeline: React.FunctionComponent = () => {
 
   const onMeasuresBackgroundClick = useCallback(
     (event: MouseEvent) => {
-      // Ignore if playing
-      if (isPlaying) {
+      // Ignore if playing unless using ToneJS player
+      if (isPlaying && appConfig.getValue('player') !== 'tonejs') {
         return;
       }
       const offset =
@@ -204,7 +207,43 @@ const Timeline: React.FunctionComponent = () => {
           &nbsp;
         </div>
       </div>
+      {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
     </div>
+  );
+};
+
+const LoopMarkers: React.FunctionComponent<{
+  loopStart: number;
+  loopEnd: number;
+}> = ({loopStart, loopEnd}) => {
+  const startOffset = (loopStart - 1) * barWidth;
+  const endOffset = (loopEnd - 1) * barWidth;
+
+  return (
+    <>
+      <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+        <div
+          className={classNames(
+            moduleStyles.playhead,
+            moduleStyles.playheadLoop
+          )}
+          style={{left: paddingOffset + startOffset}}
+        >
+          &nbsp;
+        </div>
+      </div>
+      <div id="timeline-playhead" className={moduleStyles.fullWidthOverlay}>
+        <div
+          className={classNames(
+            moduleStyles.playhead,
+            moduleStyles.playheadLoop
+          )}
+          style={{left: paddingOffset + endOffset}}
+        >
+          &nbsp;
+        </div>
+      </div>
+    </>
   );
 };
 

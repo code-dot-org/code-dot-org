@@ -1,26 +1,28 @@
-import React from 'react';
-import $ from 'jquery';
 import {render, screen, fireEvent} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
-import DCDO from '@cdo/apps/dcdo';
-import sinon from 'sinon';
-import currentUser, {
-  setShowProgressTableV2,
-  setProgressTableV2ClosedBeta,
-} from '@cdo/apps/templates/currentUserRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import $ from 'jquery';
+import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import DCDO from '@cdo/apps/dcdo';
 import {
   getStore,
   registerReducers,
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setShowProgressTableV2,
+  setProgressTableV2ClosedBeta,
+} from '@cdo/apps/templates/currentUserRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const V1_PAGE_LINK_TEXT = 'Switch to new progress view';
+import {expect} from '../../../util/reconfiguredChai';
+
+const V1_PAGE_LINK_TEXT = 'Try out new progress view (beta)';
 const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
 const V1_TEST_ID = 'section-progress-v1';
 const V2_TEST_ID = 'section-progress-v2';

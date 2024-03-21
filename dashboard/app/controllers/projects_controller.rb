@@ -177,6 +177,9 @@ class ProjectsController < ApplicationController
     },
     ecosystems: {
       name: 'New Ecosystems Project'
+    },
+    game_design: {
+      name: 'New Game Design Project'
     }
   }.with_indifferent_access.freeze
 
@@ -529,6 +532,7 @@ class ProjectsController < ApplicationController
 
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
+    # TODO: post-firebase-cleanup, remove both branches of this conditional: #56994
     if params[:script_call]
       render js: "#{params[:script_call]}(#{firebase_options.to_json});"
     else
