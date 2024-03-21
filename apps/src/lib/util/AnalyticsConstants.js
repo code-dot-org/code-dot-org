@@ -18,6 +18,13 @@ const EVENTS = {
   CONFIRM_SCHOOL_CLICKED: 'Confirm School Clicked',
   UPDATE_SCHOOL_CLICKED: 'Update School Clicked',
 
+  // School Interstitial
+  SCHOOL_INTERSTITIAL_SHOW: 'School Interstitial Shown',
+  SCHOOL_INTERSTITIAL_SUBMIT: 'School Interstitial Submitted',
+  SCHOOL_INTERSTITIAL_SAVE_SUCCESS: 'School Interstitial Save Success',
+  SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
+  SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
+
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Course Overview Page Visited By Teacher',
