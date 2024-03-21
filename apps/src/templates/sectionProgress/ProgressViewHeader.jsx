@@ -40,11 +40,6 @@ class ProgressViewHeader extends Component {
       },
       {includeUserId: true}
     );
-
-    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-      sectionId: this.props.sectionId,
-      unitId: this.props.scriptId,
-    });
   };
 
   render() {

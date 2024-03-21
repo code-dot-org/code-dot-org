@@ -72,11 +72,6 @@ function TeacherDashboard({
       },
       {includeUserId: true}
     );
-    if (newTab === 'progress') {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId,
-      });
-    }
   });
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.

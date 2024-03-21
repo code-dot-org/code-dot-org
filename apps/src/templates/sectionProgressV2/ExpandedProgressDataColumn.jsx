@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
@@ -21,8 +24,16 @@ function ExpandedProgressDataColumn({
   const toggleExpandedChoiceLevel = level => {
     if (expandedChoiceLevels.includes(level.id)) {
       setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== level.id));
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_CHOICE_LEVEL, {
+        sectionId: this.props.sectionId,
+        levelId: level.id,
+      });
     } else if (level?.sublevels?.length > 0) {
       setExpandedChoiceLevels([...expandedChoiceLevels, level.id]);
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_CHOICE_LEVEL, {
+        sectionId: this.props.sectionId,
+        levelId: level.id,
+      });
     }
   };
 
