@@ -79,7 +79,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   // Reset to last panel if number of panels has reduced
   useEffect(() => {
     if (currentPanel >= panels.length) {
-      setCurrentPanel(panels.length - 1);
+      setCurrentPanel(Math.max(panels.length - 1, 0));
     }
   }, [currentPanel, panels]);
 
