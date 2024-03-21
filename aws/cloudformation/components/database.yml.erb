@@ -331,7 +331,7 @@
       # 1) Provision future new production cluster via CloudFormation as a clone of existing cluster (which was created manually).
       # 2) Make clone a binary log client, replicating from production cluster.
       # 3) Upgrade clone to Aurora 3 / MySQL 8
-      SourceDBClusterIdentifier: production-aurora-cluster
+      SourceDBClusterIdentifier: staging-cluster
       RestoreType: copy-on-write
       UseLatestRestorableTime: true
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
