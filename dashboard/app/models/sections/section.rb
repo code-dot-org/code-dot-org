@@ -570,9 +570,9 @@ class Section < ApplicationRecord
 
   # Adds an instructor to the section
   # If the instructor was previously deleted, restore the instructor
-  # If the instructor was invited or inactive, reactive the instructor
+  # Make the instructor active if they had a different status
   # If the instructor did not previously exist, create the section instructor relationship
-  # Returns true if the instructor could be added, false otherwise
+  # Returns true if successful
   def add_instructor(user)
     transaction do
       Follower.find_by(section: self, student_user: user)&.destroy

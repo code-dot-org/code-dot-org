@@ -909,9 +909,7 @@ class SectionTest < ActiveSupport::TestCase
     section = create(:section)
     user = create :teacher
 
-    result = section.add_instructor(user)
-
-    assert_equal true, result
+    assert section.add_instructor(user)
     assert_equal user, section.section_instructors.last.instructor
   end
 
@@ -964,7 +962,7 @@ class SectionTest < ActiveSupport::TestCase
     section.remove_instructor(user)
     si.reload
 
-    assert_equal false, si.deleted?
+    refute si.deleted?
   end
 
   def set_up_code_review_groups
