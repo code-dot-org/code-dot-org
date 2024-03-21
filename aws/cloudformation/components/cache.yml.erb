@@ -36,3 +36,31 @@
       AZMode: cross-az
       PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
+
+  SessionStoreSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Session Store Subnet Group
+      SubnetIds: <%= subnets.to_json %>
+  SessionStoreGroup:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Session Store Replication Group
+      CacheNodeType: 'cache.r4.large'
+        <%# TODO: pick a node type%>
+        <%# https://aws.amazon.com/elasticache/pricing/%>
+        <%# https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html#CacheNodes.SelectSize%>
+        <%# https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html%>
+
+      Engine: Redis
+      EngineVersion: 7.1
+
+      ClusterMode: Disabled
+      NumCacheClusters: 3 # 1 primary and 2 replicas
+      AutomaticFailoverEnabled: true
+      MultiAZEnabled: true
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
+
+      SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
+      CacheSubnetGroupName: !Ref SessionStoreSubnetGroup

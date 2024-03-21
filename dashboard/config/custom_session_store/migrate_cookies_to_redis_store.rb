@@ -1,52 +1,8 @@
-require "action_dispatch/middleware/session/abstract_store"
-require "active_support/core_ext/hash/keys"
-require "rack/session/abstract/id"
-require "rack/session/cookie"
+require 'rack/session/abstract/id'
+require 'redis-actionpack'
 
 module ActionDispatch
   module Session
-    module DatabaseStore
-      def initialize(app, options = {})
-        @database = options[:database] || Redis.new # TODO: Redis initialization details
-        super(app, options.except(:database))
-      end
-
-      # Delete all session info from both the database and the cookie.
-      def delete_session(request, session_id, options)
-        @database.del(session_id.private_id)
-        @database.del(session_id.public_id)
-        generate_sid
-      end
-
-      # Get a session from the database
-      def find_session(request, session_id)
-        unless session_id && (session = get_session_with_fallback(session_id))
-          session_id = generate_sid
-          session = {}
-        end
-        [session_id, session]
-      end
-
-      # Set a session in the database
-      def write_session(request, session_id, session, options)
-        if session
-          serialized_session_data = Marshal.dump(session)
-          # TODO: verify format of expiry option
-          @database.set(session_id.private_id, serialized_session_data, ex: options[:expire_after])
-        else
-          @database.del(session_id.private_id)
-        end
-        session_id
-      end
-
-      private
-
-      def get_session_with_fallback(session_id)
-        raw_session_data = @database.get(session_id.private_id) || @database.get(session_id.public_id)
-        Marshal.load(raw_session_data) if raw_session_data.present?
-      end
-    end
-
     module MigrateCookiesStore
       # Ultimately loads session data from the database, after first checking
       # for session data in the cookie and persisting it to the database if we
@@ -70,7 +26,7 @@ module ActionDispatch
       def migrate_session_data(request)
         stale_session_check! do
           session_data = unpacked_cookie_data(request)
-          unless session_data.empty?
+          if session_data.is_a?(Hash) && !session_data.empty?
             session_id = Rack::Session::SessionId.new(session_data["session_id"])
             request.set_header("action_dispatch.request.unsigned_session_cookie", {})
             # TODO: check for existing session data before overwriting?
@@ -83,7 +39,7 @@ module ActionDispatch
 
       def unpacked_cookie_data(request)
         stale_session_check! do
-          if data = get_cookie(request)
+          if data = get_cookie(request) && data.is_a?(Hash)
             data.stringify_keys!
           end
           data || {}
@@ -99,8 +55,7 @@ module ActionDispatch
       end
     end
 
-    class MigrateCookiesToDatabaseStore < AbstractSecureStore
-      include DatabaseStore
+    class MigrateCookiesToRedisStore < RedisStore
       include MigrateCookiesStore
     end
   end
