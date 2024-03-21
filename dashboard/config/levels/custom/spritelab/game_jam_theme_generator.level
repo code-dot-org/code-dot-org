@@ -41,7 +41,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:42:25.426+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme\\\"\"],\"cloned_from\":\"game_jam_theme\"},{\"changed_at\":\"2024-03-18 20:42:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:42:25.426+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme\\\"\"],\"cloned_from\":\"game_jam_theme\"},{\"changed_at\":\"2024-03-18 20:42:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 13:44:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 13:45:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 13:47:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 13:48:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 13:52:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -49,15 +49,18 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
-          <variable id="o%Gf]w6X~I1cV0-KtV+5">Die3</variable>
+          <variable id="2l356B?RW,)`H50jHAJ4">cabbageClicked</variable>
+          <variable id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</variable>
+          <variable id="]Si3({hy[g/eACL0uF(.">bowlClicked</variable>
           <variable id="y.k{y^@L5/J4KC8JOUSO">Die1</variable>
+          <variable id="o%Gf]w6X~I1cV0-KtV+5">Die3</variable>
           <variable id="*bwUIgam]yqliB@J}i=(">Die2</variable>
           <variable id="fJ=JTldFL5I=dWWsSn}J">rollNoun</variable>
-          <variable id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</variable>
           <variable id="?1eJD=(A_xClmS/E+:BK">rollMechanic</variable>
+          <variable id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</variable>
           <variable id="]:qyT]mk3}%~UJU1Sq%3">Noun</variable>
-          <variable id="cxYbdAjtcM//b3vlHf}O">Adj.</variable>
           <variable id="B80_KR;E@llHzrc:A#(h">Mechanic</variable>
+          <variable id="cxYbdAjtcM//b3vlHf}O">Adj.</variable>
         </variables>
         <block type="when_run" deletable="false" x="144" y="5">
           <next>
@@ -165,6 +168,36 @@
                                                           <field name="LOCATION">{"x":39,"y":396}</field>
                                                         </block>
                                                       </value>
+                                                      <next>
+                                                        <block type="variables_set">
+                                                          <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
+                                                          <value name="VALUE">
+                                                            <block type="logic_boolean">
+                                                            <field name="BOOL">FALSE</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="variables_set">
+                                                            <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
+                                                            <value name="VALUE">
+                                                            <block type="logic_boolean">
+                                                            <field name="BOOL">FALSE</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="variables_set">
+                                                            <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</field>
+                                                            <value name="VALUE">
+                                                            <block type="logic_boolean">
+                                                            <field name="BOOL">FALSE</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -188,7 +221,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="739" y="737">
+        <block type="gamelab_spriteClicked" x="902" y="565">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
@@ -196,53 +229,44 @@
             </block>
           </value>
           <next>
-            <block type="gamelab_makeBurst">
-              <field name="EFFECT">"pop"</field>
-              <field name="ANIMATION_NAME">"twinkling_star"</field>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">50</field>
+            <block type="variables_set">
+              <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
+              <value name="VALUE">
+                <block type="logic_boolean">
+                  <field name="BOOL">TRUE</field>
                 </block>
               </value>
               <next>
-                <block type="gamelab_jumpTo">
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"twinkling_star"</field>
+                <block type="gamelab_makeBurst">
+                  <field name="EFFECT">"pop"</field>
+                  <field name="ANIMATION_NAME">"twinkling_star"</field>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">50</field>
                     </block>
                   </value>
-                  <value name="LOCATION">
-                    <block type="gamelab_locationMouse"/>
-                  </value>
                   <next>
-                    <block type="gamelab_playSound">
-                      <field name="SOUND">sound://category_bell/bells_win_low.mp3</field>
+                    <block type="gamelab_jumpTo">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"twinkling_star"</field>
+                        </block>
+                      </value>
+                      <value name="LOCATION">
+                        <block type="gamelab_locationMouse"/>
+                      </value>
                       <next>
-                        <block type="gamelab_changePropBy">
-                          <field name="PROPERTY">"rotation"</field>
-                          <value name="SPRITE">
-                            <block type="sprite_variables_get">
-                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
-                            </block>
-                          </value>
-                          <value name="VAL">
-                            <block type="math_random_int">
-                              <value name="FROM">
-                                <block type="math_number">
-                                  <field name="NUM">1</field>
-                                </block>
-                              </value>
-                              <value name="TO">
-                                <block type="math_number">
-                                  <field name="NUM">100</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
+                        <block type="gamelab_playSound">
+                          <field name="SOUND">sound://category_bell/bells_win_low.mp3</field>
                           <next>
-                            <block type="variables_set">
-                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
-                              <value name="VALUE">
+                            <block type="gamelab_changePropBy">
+                              <field name="PROPERTY">"rotation"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_variables_get">
+                                  <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                </block>
+                              </value>
+                              <value name="VAL">
                                 <block type="math_random_int">
                                   <value name="FROM">
                                     <block type="math_number">
@@ -251,269 +275,397 @@
                                   </value>
                                   <value name="TO">
                                     <block type="math_number">
-                                      <field name="NUM">6</field>
+                                      <field name="NUM">100</field>
                                     </block>
                                   </value>
                                 </block>
                               </value>
                               <next>
-                                <block type="controls_if">
-                                  <mutation elseif="5" else="1"/>
-                                  <value name="IF0">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
+                                <block type="variables_set">
+                                  <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                  <value name="VALUE">
+                                    <block type="math_random_int">
+                                      <value name="FROM">
                                         <block type="math_number">
                                           <field name="NUM">1</field>
                                         </block>
                                       </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO0">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieRed1"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Bumble Bees</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":146,"y":257}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF1">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
+                                      <value name="TO">
                                         <block type="math_number">
-                                          <field name="NUM">2</field>
+                                          <field name="NUM">6</field>
                                         </block>
                                       </value>
                                     </block>
                                   </value>
-                                  <statement name="DO1">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieRed2"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                  <next>
+                                    <block type="controls_if">
+                                      <mutation elseif="4" else="1"/>
+                                      <value name="IF0">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Unicorns</field>
+                                      <statement name="DO0">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieRed1"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
+                                            <block type="variables_set">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":246,"y":207}</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Bumble Bees</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF2">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                      </statement>
+                                      <value name="IF1">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">2</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">3</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO2">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieRed3"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Foods</field>
+                                      <statement name="DO1">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieRed2"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
+                                            <block type="variables_set">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":246,"y":207}</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Unicorns</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF3">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                      </statement>
+                                      <value name="IF2">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">3</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">4</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO3">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieRed4"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Plants</field>
+                                      <statement name="DO2">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieRed3"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
+                                            <block type="variables_set">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":246,"y":207}</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Foods</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF4">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                      </statement>
+                                      <value name="IF3">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">4</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">5</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO4">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieRed5"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Pizzas</field>
+                                      <statement name="DO3">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieRed4"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
+                                            <block type="variables_set">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":246,"y":207}</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Plants</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <statement name="ELSE">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieRed6"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                      </statement>
+                                      <value name="IF4">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">5</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Rainbows</field>
+                                      <statement name="DO4">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieRed5"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
+                                            <block type="variables_set">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":246,"y":207}</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Pizzas</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
+                                      </statement>
+                                      <statement name="ELSE">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieRed6"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Rainbows</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":246,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="controls_if">
+                                          <mutation elseif="0" else="1"/>
+                                          <value name="IF0">
+                                            <block type="logic_operation">
+                                              <field name="OP">AND</field>
+                                              <value name="A">
+                                                <block type="logic_compare">
+                                                  <field name="OP">EQ</field>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="logic_boolean">
+                                                      <field name="BOOL">TRUE</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="logic_compare">
+                                                  <field name="OP">EQ</field>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="logic_boolean">
+                                                      <field name="BOOL">TRUE</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="gamelab_spriteSayTime">
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <field name="ANIMATION">"face_avocado"</field>
+                                                </block>
+                                              </value>
+                                              <value name="TEXT1">
+                                                <block type="text_join_simple">
+                                                  <mutation items="2"/>
+                                                  <value name="ADD0">
+                                                    <block type="text_join_simple">
+                                                      <mutation items="2"/>
+                                                      <value name="ADD0">
+                                                        <block type="text">
+                                                          <field name="TEXT">You will make a game about </field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ADD1">
+                                                        <block type="text_join_simple">
+                                                          <mutation items="2"/>
+                                                          <value name="ADD0">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ADD1">
+                                                            <block type="text_join_simple">
+                                                            <mutation items="2"/>
+                                                            <value name="ADD0">
+                                                            <block type="text">
+                                                            <field name="TEXT"> </field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ADD1">
+                                                    <block type="text_join_simple">
+                                                      <mutation items="2"/>
+                                                      <value name="ADD0">
+                                                        <block type="text">
+                                                          <field name="TEXT">. Using the game mechanic: </field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ADD1">
+                                                        <block type="variables_get">
+                                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <value name="NUM">
+                                                <block type="math_number">
+                                                  <field name="NUM">60</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                        </block>
                                       </next>
                                     </block>
-                                  </statement>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -527,23 +679,28 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="35" y="818">
+        <block type="gamelab_spriteClicked" x="1669" y="699">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"face_ramen"</field>
+              <field name="ANIMATION">"face_burger"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_playSound">
-              <field name="SOUND">sound://category_bell/bells_win_high.mp3</field>
+            <block type="variables_set">
+              <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</field>
+              <value name="VALUE">
+                <block type="logic_boolean">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
               <next>
                 <block type="gamelab_makeBurst">
                   <field name="EFFECT">"burst"</field>
                   <field name="ANIMATION_NAME">"twinkling_star"</field>
                   <value name="NUM">
                     <block type="math_number">
-                      <field name="NUM">30</field>
+                      <field name="NUM">50</field>
                     </block>
                   </value>
                   <next>
@@ -561,7 +718,7 @@
                           <field name="PROPERTY">"rotation"</field>
                           <value name="SPRITE">
                             <block type="sprite_variables_get">
-                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                              <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                             </block>
                           </value>
                           <value name="VAL">
@@ -579,280 +736,394 @@
                             </block>
                           </value>
                           <next>
-                            <block type="variables_set">
-                              <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
-                              <value name="VALUE">
-                                <block type="math_random_int">
-                                  <value name="FROM">
-                                    <block type="math_number">
-                                      <field name="NUM">1</field>
-                                    </block>
-                                  </value>
-                                  <value name="TO">
-                                    <block type="math_number">
-                                      <field name="NUM">6</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
+                            <block type="gamelab_playSound">
+                              <field name="SOUND">sound://category_bell/bells_win_high.mp3</field>
                               <next>
-                                <block type="controls_if">
-                                  <mutation elseif="5" else="1"/>
-                                  <value name="IF0">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
+                                <block type="variables_set">
+                                  <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
+                                  <value name="VALUE">
+                                    <block type="math_random_int">
+                                      <value name="FROM">
                                         <block type="math_number">
                                           <field name="NUM">1</field>
                                         </block>
                                       </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO0">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite1"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">mad</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":56,"y":176}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF1">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
+                                      <value name="TO">
                                         <block type="math_number">
-                                          <field name="NUM">2</field>
+                                          <field name="NUM">6</field>
                                         </block>
                                       </value>
                                     </block>
                                   </value>
-                                  <statement name="DO1">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite2"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                  <next>
+                                    <block type="controls_if">
+                                      <mutation elseif="4" else="1"/>
+                                      <value name="IF0">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">fast</field>
+                                      <statement name="DO0">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite1"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":56,"y":207}</field>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Collecting</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF2">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                      </statement>
+                                      <value name="IF1">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">2</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">3</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO2">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite3"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">colorful</field>
+                                      <statement name="DO1">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite2"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":56,"y":207}</field>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Chasing</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF3">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                      </statement>
+                                      <value name="IF2">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">3</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">4</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO3">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite4"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">dizzy</field>
+                                      <statement name="DO2">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite3"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":56,"y":207}</field>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Falling</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF4">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                      </statement>
+                                      <value name="IF3">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">4</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">5</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO4">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite5"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">smooth</field>
+                                      <statement name="DO3">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite4"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":56,"y":207}</field>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Jumping</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <statement name="ELSE">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite6"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                      </statement>
+                                      <value name="IF4">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">5</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">slow</field>
+                                      <statement name="DO4">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite5"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":56,"y":207}</field>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Avoiding</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
+                                      </statement>
+                                      <statement name="ELSE">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite6"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">Clicking</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="controls_if">
+                                          <mutation elseif="0" else="1"/>
+                                          <value name="IF0">
+                                            <block type="logic_operation">
+                                              <field name="OP">AND</field>
+                                              <value name="A">
+                                                <block type="logic_compare">
+                                                  <field name="OP">EQ</field>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="logic_boolean">
+                                                      <field name="BOOL">TRUE</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="logic_compare">
+                                                  <field name="OP">EQ</field>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="logic_boolean">
+                                                      <field name="BOOL">TRUE</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="gamelab_spriteSayTime">
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <field name="ANIMATION">"face_avocado"</field>
+                                                </block>
+                                              </value>
+                                              <value name="TEXT1">
+                                                <block type="text_join_simple">
+                                                  <mutation items="2"/>
+                                                  <value name="ADD0">
+                                                    <block type="text_join_simple">
+                                                      <mutation items="2"/>
+                                                      <value name="ADD0">
+                                                        <block type="text">
+                                                          <field name="TEXT">You will make a game about </field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ADD1">
+                                                        <block type="text_join_simple">
+                                                          <mutation items="2"/>
+                                                          <value name="ADD0">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ADD1">
+                                                            <block type="text_join_simple">
+                                                            <mutation items="2"/>
+                                                            <value name="ADD0">
+                                                            <block type="text">
+                                                            <field name="TEXT"> </field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ADD1">
+                                                    <block type="text_join_simple">
+                                                      <mutation items="2"/>
+                                                      <value name="ADD0">
+                                                        <block type="text">
+                                                          <field name="TEXT">. Using the game mechanic: </field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ADD1">
+                                                        <block type="variables_get">
+                                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <value name="NUM">
+                                                <block type="math_number">
+                                                  <field name="NUM">60</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </statement>
+                                        </block>
                                       </next>
                                     </block>
-                                  </statement>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -866,61 +1137,52 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="1493" y="896">
+        <block type="gamelab_spriteClicked" x="83" y="894">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"face_burger"</field>
+              <field name="ANIMATION">"face_ramen"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_makeBurst">
-              <field name="EFFECT">"burst"</field>
-              <field name="ANIMATION_NAME">"twinkling_star"</field>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">50</field>
+            <block type="variables_set">
+              <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
+              <value name="VALUE">
+                <block type="logic_boolean">
+                  <field name="BOOL">TRUE</field>
                 </block>
               </value>
               <next>
-                <block type="gamelab_jumpTo">
-                  <value name="SPRITE">
-                    <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"twinkling_star"</field>
-                    </block>
-                  </value>
-                  <value name="LOCATION">
-                    <block type="gamelab_locationMouse"/>
-                  </value>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/bells_win_high.mp3</field>
                   <next>
-                    <block type="gamelab_changePropBy">
-                      <field name="PROPERTY">"rotation"</field>
-                      <value name="SPRITE">
-                        <block type="sprite_variables_get">
-                          <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                        </block>
-                      </value>
-                      <value name="VAL">
-                        <block type="math_random_int">
-                          <value name="FROM">
-                            <block type="math_number">
-                              <field name="NUM">1</field>
-                            </block>
-                          </value>
-                          <value name="TO">
-                            <block type="math_number">
-                              <field name="NUM">100</field>
-                            </block>
-                          </value>
+                    <block type="gamelab_makeBurst">
+                      <field name="EFFECT">"burst"</field>
+                      <field name="ANIMATION_NAME">"twinkling_star"</field>
+                      <value name="NUM">
+                        <block type="math_number">
+                          <field name="NUM">30</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_playSound">
-                          <field name="SOUND">sound://category_bell/bells_win_high.mp3</field>
+                        <block type="gamelab_jumpTo">
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"twinkling_star"</field>
+                            </block>
+                          </value>
+                          <value name="LOCATION">
+                            <block type="gamelab_locationMouse"/>
+                          </value>
                           <next>
-                            <block type="variables_set">
-                              <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
-                              <value name="VALUE">
+                            <block type="gamelab_changePropBy">
+                              <field name="PROPERTY">"rotation"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_variables_get">
+                                  <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                </block>
+                              </value>
+                              <value name="VAL">
                                 <block type="math_random_int">
                                   <value name="FROM">
                                     <block type="math_number">
@@ -929,293 +1191,367 @@
                                   </value>
                                   <value name="TO">
                                     <block type="math_number">
-                                      <field name="NUM">6</field>
+                                      <field name="NUM">100</field>
                                     </block>
                                   </value>
                                 </block>
                               </value>
                               <next>
-                                <block type="controls_if">
-                                  <mutation elseif="5" else="1"/>
-                                  <value name="IF0">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
+                                <block type="variables_set">
+                                  <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                  <value name="VALUE">
+                                    <block type="math_random_int">
+                                      <value name="FROM">
                                         <block type="math_number">
                                           <field name="NUM">1</field>
                                         </block>
                                       </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO0">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite1"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Collecting</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":257,"y":364}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF1">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
+                                      <value name="TO">
                                         <block type="math_number">
-                                          <field name="NUM">2</field>
+                                          <field name="NUM">6</field>
                                         </block>
                                       </value>
                                     </block>
                                   </value>
-                                  <statement name="DO1">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite2"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Chasing</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":295,"y":358}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF2">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">3</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO2">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite3"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Falling</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":295,"y":358}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF3">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">4</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO3">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite4"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Jumping</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":295,"y":358}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <value name="IF4">
-                                    <block type="logic_compare">
-                                      <field name="OP">EQ</field>
-                                      <value name="A">
-                                        <block type="variables_get">
-                                          <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <block type="math_number">
-                                          <field name="NUM">5</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <statement name="DO4">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite5"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Avoiding</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":295,"y":358}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                  <statement name="ELSE">
-                                    <block type="gamelab_setAnimation">
-                                      <field name="ANIMATION">"dieWhite6"</field>
-                                      <value name="THIS">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="variables_set">
-                                          <field name="VAR" id="?1eJD=(A_xClmS/E+:BK">rollMechanic</field>
-                                          <value name="VALUE">
-                                            <block type="text">
-                                              <field name="TEXT">Clicking</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_showVariable">
-                                              <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":295,"y":358}</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
                                   <next>
-                                    <block type="gamelab_spriteSayTime">
-                                      <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"face_avocado"</field>
+                                    <block type="controls_if">
+                                      <mutation elseif="4" else="1"/>
+                                      <value name="IF0">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
                                         </block>
                                       </value>
-                                      <value name="TEXT1">
-                                        <block type="text_join_simple">
-                                          <mutation items="2"/>
-                                          <value name="ADD0">
-                                            <block type="text_join_simple">
-                                              <mutation items="2"/>
-                                              <value name="ADD0">
+                                      <statement name="DO0">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite1"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                              <value name="VALUE">
                                                 <block type="text">
-                                                  <field name="TEXT">You will make a game about </field>
+                                                  <field name="TEXT">mad</field>
                                                 </block>
                                               </value>
-                                              <value name="ADD1">
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":56,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <value name="IF1">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">2</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO1">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite2"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">fast</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":56,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <value name="IF2">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">3</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO2">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite3"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">colorful</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":56,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <value name="IF3">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">4</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO3">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite4"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">dizzy</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":56,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <value name="IF4">
+                                        <block type="logic_compare">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get">
+                                              <field name="VAR" id="P+f,;S*@+T#aU)JZZ#kB">rollAdjective</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="math_number">
+                                              <field name="NUM">5</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO4">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite5"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">smooth</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":56,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <statement name="ELSE">
+                                        <block type="gamelab_setAnimation">
+                                          <field name="ANIMATION">"dieWhite6"</field>
+                                          <value name="THIS">
+                                            <block type="sprite_variables_get">
+                                              <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="variables_set">
+                                              <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                              <value name="VALUE">
+                                                <block type="text">
+                                                  <field name="TEXT">slow</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="gamelab_showVariable">
+                                                  <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                  <value name="LOCATION">
+                                                    <block type="gamelab_location_picker">
+                                                      <field name="LOCATION">{"x":56,"y":207}</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="controls_if">
+                                          <mutation elseif="0" else="1"/>
+                                          <value name="IF0">
+                                            <block type="logic_operation">
+                                              <field name="OP">AND</field>
+                                              <value name="A">
+                                                <block type="logic_compare">
+                                                  <field name="OP">EQ</field>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="logic_boolean">
+                                                      <field name="BOOL">TRUE</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="logic_compare">
+                                                  <field name="OP">EQ</field>
+                                                  <value name="A">
+                                                    <block type="variables_get">
+                                                      <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="logic_boolean">
+                                                      <field name="BOOL">TRUE</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="gamelab_spriteSayTime">
+                                              <value name="SPRITE">
+                                                <block type="gamelab_allSpritesWithAnimation">
+                                                  <field name="ANIMATION">"face_avocado"</field>
+                                                </block>
+                                              </value>
+                                              <value name="TEXT1">
                                                 <block type="text_join_simple">
                                                   <mutation items="2"/>
                                                   <value name="ADD0">
-                                                    <block type="variables_get">
-                                                      <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                    <block type="text_join_simple">
+                                                      <mutation items="2"/>
+                                                      <value name="ADD0">
+                                                        <block type="text">
+                                                          <field name="TEXT">You will make a game about </field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ADD1">
+                                                        <block type="text_join_simple">
+                                                          <mutation items="2"/>
+                                                          <value name="ADD0">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Adj.</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ADD1">
+                                                            <block type="text_join_simple">
+                                                            <mutation items="2"/>
+                                                            <value name="ADD0">
+                                                            <block type="text">
+                                                            <field name="TEXT"> </field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                            <block type="variables_get">
+                                                            <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
                                                     </block>
                                                   </value>
                                                   <value name="ADD1">
@@ -1223,42 +1559,27 @@
                                                       <mutation items="2"/>
                                                       <value name="ADD0">
                                                         <block type="text">
-                                                          <field name="TEXT"> </field>
+                                                          <field name="TEXT">. Using the game mechanic: </field>
                                                         </block>
                                                       </value>
                                                       <value name="ADD1">
                                                         <block type="variables_get">
-                                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Noun</field>
+                                                          <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
                                                         </block>
                                                       </value>
                                                     </block>
                                                   </value>
                                                 </block>
                                               </value>
-                                            </block>
-                                          </value>
-                                          <value name="ADD1">
-                                            <block type="text_join_simple">
-                                              <mutation items="2"/>
-                                              <value name="ADD0">
-                                                <block type="text">
-                                                  <field name="TEXT">. Using the game mechanic: </field>
-                                                </block>
-                                              </value>
-                                              <value name="ADD1">
-                                                <block type="variables_get">
-                                                  <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Mechanic</field>
+                                              <value name="NUM">
+                                                <block type="math_number">
+                                                  <field name="NUM">60</field>
                                                 </block>
                                               </value>
                                             </block>
-                                          </value>
+                                          </statement>
                                         </block>
-                                      </value>
-                                      <value name="NUM">
-                                        <block type="math_number">
-                                          <field name="NUM">60</field>
-                                        </block>
-                                      </value>
+                                      </next>
                                     </block>
                                   </next>
                                 </block>
