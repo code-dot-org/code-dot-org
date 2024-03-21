@@ -25,14 +25,14 @@ class FeaturedProjectsController < ApplicationController
   def unfeature
     _, project_id = storage_decrypt_channel_id(params[:project_id])
     return render_404 unless project_id
+    @featured_project = FeaturedProject.find_by! project_id: project_id
+    @featured_project.update! unfeatured_at: DateTime.now
     project = Project.find_by(id: project_id)
     project_value = JSON.parse(project.value)
     project_value["frozen"] = false
     project_value["hidden"] = false
     updated_value = project_value.to_json
     project.update(value: updated_value)
-    @featured_project = FeaturedProject.find_by! project_id: project_id
-    @featured_project.update! unfeatured_at: DateTime.now
   end
 
   def destroy

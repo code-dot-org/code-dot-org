@@ -162,15 +162,14 @@ var base = {
 
   /**
    * Update the frozen status of a project.
-   * @param {string} childPath The path underneath api_base_url
-   * @param {Object} value - The new collection contents.
-   * @param {NodeStyleCallback} callback - Expected result is the new collection
-   *        object.
+   * @param {string} channelId
+   * @param {boolean} frozenStatusUpdate
+   * @param {function} callback
    */
-  updateFrozenStatus: function (childPath, frozenStatusUpdate, callback) {
+  updateFrozenStatus: function (channelId, frozenStatusUpdate, callback) {
     const frozenStatusPath = frozenStatusUpdate ? 'freeze' : 'unfreeze';
     $.ajax({
-      url: '/projects/' + frozenStatusPath + '/' + childPath,
+      url: '/projects/' + frozenStatusPath + '/' + channelId,
       type: 'put',
       contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({frozen: frozenStatusUpdate}),
