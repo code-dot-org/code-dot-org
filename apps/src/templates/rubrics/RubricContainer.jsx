@@ -141,6 +141,7 @@ export default function RubricContainer({
             aiEvaluations={aiEvaluations}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
+            sectionId={sectionId}
           />
           {showSettings && (
             <RubricSettings
