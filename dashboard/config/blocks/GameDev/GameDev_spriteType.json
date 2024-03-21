@@ -17,14 +17,6 @@
           [
             "environment",
             "\"walls\""
-          ],
-          [
-            "objects",
-            "\"objects\""
-          ],
-          [
-            "enemies",
-            "\"enemies\""
           ]
         ]
       }

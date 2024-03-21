@@ -1,4 +1,3 @@
-import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import PendingButton from '../../templates/PendingButton';
@@ -7,6 +6,8 @@ import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import _ from 'lodash';
 import msg from '@cdo/locale';
+import {refreshCurrentDataView} from './loadDataForView';
+import {storageBackend} from '../storage';
 
 const INITIAL_STATE = {
   isDeleting: false,
@@ -57,10 +58,10 @@ class EditTableRow extends React.Component {
         castValue(inputString, /* allowUnquotedStrings */ false)
       );
       this.setState({isSaving: true});
-      FirebaseStorage.updateRecord(
+      storageBackend().updateRecord(
         this.props.tableName,
         newRecord,
-        this.resetState,
+        this.onRecordChanged,
         msg => console.warn(msg)
       );
     } catch (e) {
@@ -69,11 +70,13 @@ class EditTableRow extends React.Component {
     }
   };
 
-  resetState = () => {
+  onRecordChanged = () => {
     // Deleting a row may have caused this component to become unmounted.
     if (this.isMounted_) {
       this.setState(INITIAL_STATE);
     }
+
+    refreshCurrentDataView();
   };
 
   handleEdit = () => {
@@ -85,10 +88,10 @@ class EditTableRow extends React.Component {
 
   handleDelete = () => {
     this.setState({isDeleting: true});
-    FirebaseStorage.deleteRecord(
+    storageBackend().deleteRecord(
       this.props.tableName,
       this.props.record,
-      this.resetState,
+      this.onRecordChanged,
       msg => console.warn(msg)
     );
   };

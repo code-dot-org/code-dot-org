@@ -16,6 +16,7 @@ import RubricTabButtons from './RubricTabButtons';
 import RubricSubmitFooter from './RubricSubmitFooter';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import Draggable from 'react-draggable';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -97,8 +98,12 @@ export default function RubricContainer({
       >
         <div className={style.rubricHeaderRedesign}>
           <div className={style.rubricHeaderLeftSide}>
-            <FontAwesome icon="house" />
-            {i18n.rubricAiHeaderText()}
+            <img
+              src={aiBotOutlineIcon}
+              className={style.aiBotOutlineIcon}
+              alt={i18n.rubricAiHeaderText()}
+            />
+            <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
             <button

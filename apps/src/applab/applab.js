@@ -17,14 +17,12 @@ import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
-import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
 import {
-  getProjectDatabase,
-  getSharedDatabase,
-  getPathRef,
-  unescapeFirebaseKey,
-} from '../storage/firebaseUtils';
+  initStorage,
+  isFirebaseStorage,
+  DATABLOCK_STORAGE,
+  FIREBASE_STORAGE,
+} from '../storage/storage';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -44,17 +42,13 @@ import {add as addWatcher} from '../redux/watchedExpressions';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
-import {DataView} from '../storage/constants';
 import consoleApi from '../consoleApi';
 import {
-  tableType,
-  addTableName,
-  deleteTableName,
   updateTableColumns,
   updateTableRecords,
-  updateKeyValueData,
   setLibraryManifest,
 } from '../storage/redux/data';
+import {loadDataForView} from '../storage/dataBrowser/loadDataForView';
 import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,
@@ -422,14 +416,23 @@ Applab.init = function (config) {
     }));
   }
   Applab.channelId = config.channel;
-  Applab.storage = initFirebaseStorage({
-    channelId: config.channel,
-    firebaseName: config.firebaseName,
-    firebaseAuthToken: config.firebaseAuthToken,
-    firebaseSharedAuthToken: config.firebaseSharedAuthToken,
-    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-    showRateLimitAlert: studioApp().showRateLimitAlert,
-  });
+
+  // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
+  if (!!config.useDatablockStorage) {
+    Applab.storage = initStorage(DATABLOCK_STORAGE, {
+      channelId: config.channel,
+    });
+  } else {
+    Applab.storage = initStorage(FIREBASE_STORAGE, {
+      channelId: config.channel,
+      firebaseName: config.firebaseName,
+      firebaseAuthToken: config.firebaseAuthToken,
+      firebaseSharedAuthToken: config.firebaseSharedAuthToken,
+      firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
+      showRateLimitAlert: studioApp().showRateLimitAlert,
+    });
+  }
+
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -804,7 +807,7 @@ Applab.init = function (config) {
 };
 
 async function initDataTab(levelOptions) {
-  const channelExists = await Applab.storage.channelExists();
+  const projectHasData = await Applab.storage.projectHasData();
   if (levelOptions.dataTables) {
     Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
   }
@@ -817,25 +820,32 @@ async function initDataTab(levelOptions) {
   }
   if (levelOptions.dataLibraryTables) {
     const libraryManifest = await Applab.storage.getLibraryManifest();
-    if (!channelExists) {
+    if (!projectHasData) {
       const tables = levelOptions.dataLibraryTables.split(',');
       tables.forEach(table => {
         const datasetInfo = getDatasetInfo(table, libraryManifest.tables);
         if (!datasetInfo) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
-        } else if (datasetInfo.current) {
-          Applab.storage.addCurrentTableToProject(
-            table,
-            () => console.log('success'),
-            outputError
-          );
         } else {
-          Applab.storage.copyStaticTable(
-            table,
-            () => console.log('success'),
-            outputError
-          );
+          // TODO: post-firebase-cleanup, remove this conditional when we're done with firebase: #56994
+          if (isFirebaseStorage()) {
+            if (datasetInfo.current) {
+              Applab.storage.addCurrentTableToProject(
+                table,
+                () => console.log('success'),
+                outputError
+              );
+            } else {
+              Applab.storage.copyStaticTable(
+                table,
+                () => console.log('success'),
+                outputError
+              );
+            }
+          } else {
+            Applab.storage.addSharedTable(table);
+          }
         }
       });
     }
@@ -873,7 +883,8 @@ function setupReduxSubscribers(store) {
       (isDataMode && view !== lastView) ||
       changedToDataMode(state, lastState)
     ) {
-      onDataViewChange(
+      loadDataForView(
+        Applab.storage,
         state.data.view,
         lastState.data.tableName,
         state.data.tableName
@@ -883,7 +894,13 @@ function setupReduxSubscribers(store) {
     const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;
     const isPreview = state.data && state.data.isPreviewOpen;
     if (isDataMode && isPreview && !lastIsPreview) {
-      onDataPreview(state.data.tableName);
+      const tableName = state.data.tableName;
+      Applab.storage.previewSharedTable(
+        tableName,
+        columnNames =>
+          getStore().dispatch(updateTableColumns(tableName, columnNames)),
+        records => getStore().dispatch(updateTableRecords(tableName, records))
+      );
     }
 
     if (
@@ -894,49 +911,11 @@ function setupReduxSubscribers(store) {
     }
   });
 
-  // Initialize redux's list of tables from firebase, and keep it up to date as
-  // new tables are added and removed.
-  let subscribeToTable = function (tableRef, tableType) {
-    tableRef.on('child_added', snapshot => {
-      let tableName =
-        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
-      store.dispatch(addTableName(tableName, tableType));
-    });
-    tableRef.on('child_removed', snapshot => {
-      let tableName =
-        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
-      store.dispatch(deleteTableName(tableName));
-    });
-  };
-
   if (store.getState().pageConstants.hasDataMode) {
-    subscribeToTable(
-      getPathRef(getProjectDatabase(), 'counters/tables'),
-      tableType.PROJECT
-    );
-
     // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
     Applab.storage
       .getLibraryManifest()
       .then(result => store.dispatch(setLibraryManifest(result)));
-    // /v3/channels/<channel_id>/current_tables tracks which
-    // current tables the project has imported. Here we initialize the
-    // redux list of current tables and keep it in sync
-    let currentTableRef = getPathRef(getProjectDatabase(), 'current_tables');
-    currentTableRef.on('child_added', snapshot => {
-      let tableName =
-        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
-      store.dispatch(addTableName(tableName, tableType.SHARED));
-    });
-    currentTableRef.on('child_removed', snapshot => {
-      let tableName =
-        typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
-      tableName = unescapeFirebaseKey(tableName);
-      store.dispatch(deleteTableName(tableName));
-    });
   }
 }
 
@@ -1347,90 +1326,6 @@ function onInterfaceModeChange(mode) {
     }
   }
   requestAnimationFrame(() => showHideWorkspaceCallouts());
-}
-
-function onDataPreview(tableName) {
-  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
-    getStore().dispatch(updateTableColumns(tableName, columnNames));
-  });
-  getPathRef(getSharedDatabase(), `storage/tables/${tableName}/records`).once(
-    'value',
-    snapshot => {
-      getStore().dispatch(updateTableRecords(tableName, snapshot.val()));
-    }
-  );
-}
-
-/**
- * Handle a view change within data mode.
- * @param {DataView} view
- */
-function onDataViewChange(view, oldTableName, newTableName) {
-  if (!getStore().getState().pageConstants.hasDataMode) {
-    throw new Error('onDataViewChange triggered without data mode enabled');
-  }
-
-  const projectStorageRef = getPathRef(getProjectDatabase(), 'storage');
-  const sharedStorageRef = getPathRef(getSharedDatabase(), 'storage');
-
-  // Unlisten to 'value' events from previous data view.
-  getPathRef(projectStorageRef, 'keys').off('value');
-  getPathRef(projectStorageRef, `tables/${oldTableName}/records`).off('value');
-  getPathRef(sharedStorageRef, `tables/${oldTableName}/records`).off('value');
-  getColumnsRef(getProjectDatabase(), oldTableName).off();
-
-  switch (view) {
-    case DataView.PROPERTIES:
-      getPathRef(projectStorageRef, 'keys').on('value', snapshot => {
-        if (snapshot) {
-          let keyValueData = snapshot.val();
-          // "if all of the keys are integers, and more than half of the keys between 0 and
-          // the maximum key in the object have non-empty values, then Firebase will render
-          // it as an array."
-          // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-          // Coerce it to an object here, if needed, so we can unescape the keys
-          if (Array.isArray(keyValueData)) {
-            keyValueData = Object.assign({}, keyValueData);
-          }
-          keyValueData = _.mapKeys(keyValueData, (_, key) =>
-            unescapeFirebaseKey(key)
-          );
-          getStore().dispatch(updateKeyValueData(keyValueData));
-        }
-      });
-      return;
-    case DataView.TABLE: {
-      let newTableType = getStore().getState().data.tableListMap[newTableName];
-      let storageRef;
-      if (newTableType === tableType.SHARED) {
-        storageRef = getPathRef(
-          sharedStorageRef,
-          `tables/${newTableName}/records`
-        );
-      } else {
-        storageRef = getPathRef(
-          projectStorageRef,
-          `tables/${newTableName}/records`
-        );
-      }
-      onColumnsChange(
-        newTableType === tableType.PROJECT
-          ? getProjectDatabase()
-          : getSharedDatabase(),
-        newTableName,
-        columnNames => {
-          getStore().dispatch(updateTableColumns(newTableName, columnNames));
-        }
-      );
-
-      storageRef.on('value', snapshot => {
-        getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
-      });
-      return;
-    }
-    default:
-      return;
-  }
 }
 
 Applab.onPuzzleFinish = function () {
