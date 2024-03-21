@@ -7,6 +7,7 @@
 .hero-banner-basic {
   background: url('/images/banners/banner-naipi-pattern.png') center center;
   background-color: #6C468A;
+  padding: 2rem;
 
   .text-wrapper {
     width: 50%;
@@ -17,27 +18,20 @@
   }
 
   figure {
-    margin-top: 3em;
     width: 40%;
-    text-align: center;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
-      margin-top: 2rem;
     }
 
     .videothumbnail {
-      height: 250px;
-      width: auto;
+      margin-top: 1rem;
     }
   }
 }
 
-section.bg-pattern-dark {
-  background: url("/images/banners/banner-bg-maze-dots-light.png") center repeat;
-  background-size: 12rem;
-  background-color: var(--neutral_dark);
-  padding-bottom: 2em;
+.bg-pattern-dark {  
+  padding: 4rem 2rem 2rem 2rem;
 
   h2 {
     margin-bottom: 1em;
