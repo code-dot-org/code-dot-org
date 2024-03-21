@@ -4,6 +4,8 @@ export interface PanelsLevelData {
   panels: Panel[];
 }
 
+export type PanelLayout = 'text-bottom-left' | 'text-top-right';
+
 export interface Panel {
   imageUrl: string;
   text: string;
@@ -11,5 +13,3 @@ export interface Panel {
   layout?: PanelLayout;
   key: string;
 }
-
-export type PanelLayout = 'text-bottom-left' | 'text-top-right';
