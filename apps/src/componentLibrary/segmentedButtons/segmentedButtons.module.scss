@@ -26,15 +26,21 @@
   .selectedSegmentedButton {
     background-color: $light_primary_500;
     border-color: $light_primary_500;
-    border-left-color: $light_gray_200;
     color: $light_white;
+
+    &:not(:first-child) {
+      border-left-color: $light_gray_200;
+    }
 
     // Hover styles
     &:hover {
       background-color: $light_primary_500;
       border-color: $light_primary_500;
-      border-left-color: $light_gray_200;
       color: $light_white;
+
+      &:not(:first-child) {
+        border-left-color: $light_gray_200;
+      }
     }
 
     // Focus styles
@@ -48,16 +54,23 @@
     &:active {
       background-color: $light_primary_500;
       border-color: $light_primary_500;
-      border-left-color: $light_gray_200;
       color: $light_white;
+
+      &:not(:first-child) {
+        // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
+        border-left-color: $light_gray_200 !important;
+      }
     }
 
     // Disabled styles
     &:disabled {
       background-color: $light_primary_100;
       border-color: $light_primary_100;
-      border-left-color: $light_gray_200;
       color: $light_white;
+
+      &:not(:first-child) {
+        border-left-color: $light_gray_200;
+      }
     }
   }
 }
