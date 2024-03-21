@@ -420,6 +420,8 @@ export default class CoreLibrary {
       }
     }
     if (typeof spriteArg.group === 'string') {
+      // The group property is undefined for sprites unless explicitly set.
+      // We're using '' as a way to signal that we want to return the ones without a group.
       if (spriteArg.group === '') {
         return Object.values(this.nativeSpriteMap).filter(
           sprite => !sprite.group
