@@ -1,0 +1,19 @@
+---
+title: Coding with AI
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/coding-with-ai-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1.white
+        =hoc_s(:csa_ai_page_hero_title)
+      %p.white
+        =hoc_s(:csa_ai_page_hero_description, markdown: :inline, locals: {csa_url: "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a"})
+      %a.link-button.white{href: CDO.studio_url("/s/csa-software-engineering")}
+        =hoc_s(:call_to_action_explore_course)
+    %figure
+      %img{src: "/images/ai/page/coding-with-ai/coding-with-ai-banner.png", alt: ""}
