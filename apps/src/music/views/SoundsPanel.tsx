@@ -262,6 +262,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     currentSoundRef.current = ref;
   };
 
+  const allSoundEntries: SoundEntry[] = [];
+  folders.forEach(folder => {
+    folder.sounds.forEach(sound => {
+      allSoundEntries.push({folder, sound});
+    });
+  });
+
   let possibleSoundEntries: SoundEntry[] = [];
   let rightColumnSoundEntries: SoundEntry[] = [];
 
@@ -271,11 +278,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       sound,
     }));
   } else {
-    folders.forEach(folder => {
-      folder.sounds.forEach(sound => {
-        possibleSoundEntries.push({folder, sound});
-      });
-    });
+    possibleSoundEntries = allSoundEntries;
   }
 
   if (filter === 'all') {
@@ -285,6 +288,27 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
       soundEntry => soundEntry.sound.type === filter
     );
   }
+
+  const showFilterTypes: {[key: string]: boolean} = {
+    all: true,
+  };
+
+  allSoundEntries.forEach(soundEntry => {
+    showFilterTypes[soundEntry.sound.type] = true;
+  });
+
+  const allFilterButtons = [
+    {label: 'All', value: 'all'},
+    {label: 'Beats', value: 'beat'},
+    {label: 'Bass', value: 'bass'},
+    {label: 'Leads', value: 'lead'},
+    {label: 'Effects', value: 'fx'},
+    {label: 'Vocals', value: 'vocal'},
+  ];
+
+  const filterButtons = allFilterButtons.filter(
+    filterButton => showFilterTypes[filterButton.value]
+  );
 
   return (
     <FocusLock>
@@ -304,13 +328,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
             <SegmentedButtons
               selectedButtonValue={filter}
-              buttons={[
-                {label: 'All', value: 'all'},
-                {label: 'Beats', value: 'beat'},
-                {label: 'Bass', value: 'bass'},
-                {label: 'Leads', value: 'lead'},
-                {label: 'Effects', value: 'fx'},
-              ]}
+              buttons={filterButtons}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}
             />
