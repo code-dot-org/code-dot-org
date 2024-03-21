@@ -669,6 +669,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    // Set the default value for hasLoadedBlocks to false.
     blocklyWrapper.hasLoadedBlocks = false;
     if (!opt_options) {
       opt_options = {};

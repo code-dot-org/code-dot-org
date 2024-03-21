@@ -43,6 +43,8 @@ export function loadBlocksToWorkspace(
   source: string,
   includeHiddenDefinitions = true
 ) {
+  // Reset hasLoadedBlocks to false so we can accurately track if blocks have been loaded.
+  // This function may be called multiple times to reload blocks (ex. when starting over).
   Blockly.hasLoadedBlocks = false;
   const embedded = Blockly.isEmbeddedWorkspace(workspace);
   const {mainSource, hiddenDefinitionSource} = prepareSourcesForWorkspaces(
