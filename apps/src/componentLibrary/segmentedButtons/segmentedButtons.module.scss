@@ -119,6 +119,8 @@
     span {
       @include button-one-text;
       margin-bottom: 0;
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 1px;
     }
 
     i {
@@ -148,6 +150,8 @@
     span {
       @include button-two-text;
       margin-bottom: 0;
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 2px;
     }
 
     i {
@@ -177,6 +181,8 @@
     span {
       @include button-three-text;
       margin-bottom: 0;
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 2px;
     }
 
     i {
@@ -206,6 +212,9 @@
     span {
       @include button-four-text;
       margin-bottom: 0;
+
+      // Margin-top for correct vertical alignment of the metropolis font
+      margin-top: 1px;
     }
 
     i {
