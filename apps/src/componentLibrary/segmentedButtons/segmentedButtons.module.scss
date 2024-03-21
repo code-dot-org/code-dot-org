@@ -29,7 +29,7 @@
     color: $light_white;
 
     &:not(:first-child) {
-      border-left-color: $light_gray_200;
+      border-inline-start-color: $light_gray_200;
     }
 
     // Hover styles
@@ -39,7 +39,7 @@
       color: $light_white;
 
       &:not(:first-child) {
-        border-left-color: $light_gray_200;
+        border-inline-start-color: $light_gray_200;
       }
     }
 
@@ -58,7 +58,7 @@
 
       &:not(:first-child) {
         // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
-        border-left-color: $light_gray_200 !important;
+        border-inline-start-color: $light_gray_200 !important;
       }
     }
 
@@ -69,7 +69,7 @@
       color: $light_white;
 
       &:not(:first-child) {
-        border-left-color: $light_gray_200;
+        border-inline-start-color: $light_gray_200;
       }
     }
   }
