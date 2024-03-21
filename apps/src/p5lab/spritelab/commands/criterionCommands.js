@@ -393,7 +393,7 @@ export const commands = {
     return groupSpriteIds.length >= min;
   },
 
-  // Returns true if sprites with a minimum number of costume are in the specified group.
+  // Returns true if sprites with a minimum number of costumes are in the specified group.
   minimumCostumesForGroup(group, min = 1) {
     const uniqueCostumes = [];
     const spriteIds = this.getSpriteIdsInUse();
