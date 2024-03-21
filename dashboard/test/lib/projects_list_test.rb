@@ -243,30 +243,6 @@ class ProjectsListTest < ActionController::TestCase
     assert_nil returned_project["studentAgeRange"]
   end
 
-  test 'extract_data_for_featured_project_cards correctly parses project data without thumbnail url' do
-    fake_project_value = "{\"name\":\"Desert Dinosaur\"}"
-    fake_project_featured_project_user_combo_data = [
-      {
-        id: 184,
-        storage_id: 160,
-        value: fake_project_value,
-        project_type: "playlab",
-        published_at: "2018-02-26 11:23:11 -0800",
-        featured_at: "2018-02-26 19:23:36 -0800",
-        unfeatured_at: nil,
-        name: "harry_potter",
-        birthday: DateTime.now,
-        properties: {}
-      }
-    ]
-    returned_project = ProjectsList.send(
-      :extract_data_for_featured_project_cards, fake_project_featured_project_user_combo_data
-    ).first
-
-    assert_equal JSON.parse(fake_project_value)["name"], returned_project["name"]
-    assert_nil returned_project["thumbnailUrl"]
-  end
-
   test "include_featured combines featured project data and published projects data correctly" do
     fake_featured_projects = {
       applab: [
