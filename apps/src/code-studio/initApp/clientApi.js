@@ -161,6 +161,31 @@ var base = {
   },
 
   /**
+   * Update the frozen status of a project.
+   * @param {string} childPath The path underneath api_base_url
+   * @param {Object} value - The new collection contents.
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
+  updateFrozenStatus: function (childPath, frozenStatusUpdate, callback) {
+    const frozenStatusPath = frozenStatusUpdate ? 'freeze' : 'unfreeze';
+    $.ajax({
+      url: '/projects/' + frozenStatusPath + '/' + childPath,
+      type: 'put',
+      contentType: 'application/json; charset=utf-8',
+      data: JSON.stringify({frozen: frozenStatusUpdate}),
+    })
+      .done(function (data, text) {
+        callback(null, data);
+      })
+      .fail(function (request, status, error) {
+        var err = new Error('status: ' + status + '; error: ' + error);
+        err.responseText = request.responseText;
+        callback(err, false);
+      });
+  },
+
+  /**
    * Copy to the destination collection, since we expect the destination
    * to be empty. A true rest API would replace the destination collection:
    * @see https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services

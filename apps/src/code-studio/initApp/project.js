@@ -1252,6 +1252,12 @@ var projects = (module.exports = {
     );
   },
 
+  updateFrozenStatus_(frozenStatus, callback) {
+    channels.updateFrozenStatus(current.id, frozenStatus, (err, data) =>
+      this.onUpdateChannel(callback, err, data)
+    );
+  },
+
   onUpdateChannel(callback, err, data) {
     initialSaveComplete = true;
     this.updateCurrentData_(err, data);
@@ -1569,12 +1575,11 @@ var projects = (module.exports = {
    * deleting/renaming in the user's project list.
    */
   freeze(callback) {
-    if (!(current && current.isOwner)) {
+    if (!current) {
       return;
     }
     current.frozen = true;
-    current.hidden = true;
-    this.updateChannels_(callback);
+    this.updateFrozenStatus_(current.frozen, callback);
   },
 
   /**
@@ -1582,12 +1587,12 @@ var projects = (module.exports = {
    * deleting/renaming in the user's project list.
    */
   unfreeze(callback) {
-    if (!(current && current.isOwner)) {
+    if (!current) {
       return;
     }
     current.frozen = false;
     current.hidden = false;
-    this.updateChannels_(callback);
+    this.updateFrozenStatus_(current.frozen, callback);
   },
 
   /**

@@ -231,6 +231,10 @@ Dashboard::Application.routes.draw do
     put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
     put '/featured_projects/:project_id/bookmark', to: 'featured_projects#bookmark'
 
+    # Route used by the project validator to freeze/unfreeze project
+    put '/projects/freeze/:project_id', to: 'projects#freeze_project'
+    put '/projects/unfreeze/:project_id', to: 'projects#unfreeze_project'
+
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|

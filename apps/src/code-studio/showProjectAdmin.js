@@ -6,7 +6,7 @@ import $ from 'jquery';
  */
 export default project => {
   if ($('.project_admin').length) {
-    if (project.isProjectLevel() && project.isOwner()) {
+    if (project.isProjectLevel()) {
       if (project.isFrozen()) {
         $('.project_admin').html(
           $(

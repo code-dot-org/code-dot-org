@@ -266,6 +266,31 @@ class ProjectsController < ApplicationController
     end
   end
 
+  # PUT /projects/freeze/:project_id
+  def freeze_project
+    channel_id = params[:project_id]    
+    return unless current_user&.project_validator?
+    _, project_id = storage_decrypt_channel_id(channel_id)
+    project = Project.find_by(id: project_id)
+    project_value = JSON.parse(project.value)
+    project_value["frozen"] = true
+    updated_value = project_value.to_json
+    project.update(value: updated_value)
+  end
+
+  # PUT /projects/unfreeze/:project_id
+  def unfreeze_project
+    channel_id = params[:project_id]    
+    return unless current_user&.project_validator?
+    _, project_id = storage_decrypt_channel_id(channel_id)
+    project = Project.find_by(id: project_id)
+    project_value = JSON.parse(project.value)
+    project_value["frozen"] = false
+    project_value["hidden"] = false
+    updated_value = project_value.to_json
+    project.update(value: updated_value)
+  end
+
   # GET /projects/featured
   # Access is restricted to those with project_validator permission
   def featured
