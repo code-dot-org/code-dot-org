@@ -5,8 +5,8 @@ import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import {
   BodyTwoText,
-  Heading2,
-  Heading5,
+  Heading3,
+  Heading4,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import {rubricShape} from './rubricShapes';
@@ -186,19 +186,19 @@ export default function RubricSettings({
       })}
     >
       <div className={style.studentInfoGroup}>
-        <Heading5>
+        <Heading3>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
             lessonName: lesson.name,
           })}
-        </Heading5>
+        </Heading3>
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
         </div>
       </div>
 
       <div className={style.settingsGroup}>
-        <Heading2>{i18n.aiAssessment()}</Heading2>
+        <Heading4>{i18n.aiAssessment()}</Heading4>
         <div className={style.settingsContainers}>
           <div className={style.runAiAllStatuses}>
             <BodyTwoText>

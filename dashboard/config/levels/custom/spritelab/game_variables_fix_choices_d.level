@@ -25,7 +25,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** How many coins do I have?\r\n\r\n**Fix:** Add the scoreboard by with the block `show score`",
+    "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** How many coins do I have?\r\n\r\n**Fix:** Add the scoreboard with the block `show coins`",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -46,14 +46,15 @@
       "downButton"
     ],
     "display_name": "Coin Collector",
-    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect\r\n\r\n**Problem:** We don't know what the score is!",
+    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect & Avoid\r\n\r\n**Problem:** We don't know what the score is!",
     "thumbnail_url": "https://images.code.org/b97faf7231b9f04f450f48cfcd4d6de6-coin.jpg",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "short_instructions": "Update the scoreboard to show the number of coins you collected."
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:13.534+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_intro\\\"\"],\"cloned_from\":\"game_dev_bad_example_intro\"},{\"changed_at\":\"2024-03-18 20:25:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:34:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:43:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:44:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:13.534+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_intro\\\"\"],\"cloned_from\":\"game_dev_bad_example_intro\"},{\"changed_at\":\"2024-03-18 20:25:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:34:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:43:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:44:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:32:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:45:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 16:06:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

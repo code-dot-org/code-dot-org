@@ -5,6 +5,7 @@ require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
 require "cdo/honeybadger"
+require 'metrics/events'
 
 class LtiV1Controller < ApplicationController
   before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
@@ -161,6 +162,15 @@ class LtiV1Controller < ApplicationController
       if user
         sign_in user
 
+        metadata = {
+          'user_type' => user.user_type,
+          'lms_type' => integration[:platform_name],
+        }
+        Metrics::Events.log_event(
+          user: user,
+          event_name: 'lti_user_signin',
+          metadata: metadata,
+        )
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
           @form_data = {
