@@ -138,10 +138,9 @@ class LtiV1Controller < ApplicationController
 
       user = Queries::Lti.get_user(decoded_jwt[:sub])
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
-
       launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]
-      nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM][:context_memberships_url]
-      resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
+      nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM]&.[](:context_memberships_url)
+      resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM]&.[](:id)
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
@@ -152,7 +151,7 @@ class LtiV1Controller < ApplicationController
       redirect_params = {
         lti_integration_id: integration[:id],
         deployment_id: deployment.id,
-        context_id: launch_context[:id],
+        context_id: launch_context&.[](:id),
         rlid: resource_link_id,
         nrps_url: nrps_url,
       }
@@ -185,7 +184,7 @@ class LtiV1Controller < ApplicationController
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = "#{target_link_uri}?#{redirect_params.to_query}"
+        session[:user_return_to] = destination_url
         redirect_to new_user_registration_url
       end
     else
@@ -201,8 +200,8 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
-  def render_sync_course_error(message, status)
-    @lti_section_sync_result = {error: message}
+  def render_sync_course_error(message, status, error = nil)
+    @lti_section_sync_result = {error: error}
     Honeybadger.notify(
       'LTI roster sync error',
       context: {
@@ -237,7 +236,19 @@ class LtiV1Controller < ApplicationController
     unless Policies::Lti.roster_sync_enabled?(current_user)
       return redirect_to home_path
     end
-    params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
+
+    if params[:section_code].blank?
+      begin
+        params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url])
+      rescue ActionController::ParameterMissing => exception
+        case exception.param
+        when :context_id, :nrps_url
+          return render_sync_course_error('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
+        when :lti_integration_id, :deployment_id, :rlid
+          return render_sync_course_error("Missing #{exception.param}.", :bad_request, 'missing_param')
+        end
+      end
+    end
 
     lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
     if params[:section_code].present?
@@ -245,7 +256,7 @@ class LtiV1Controller < ApplicationController
       # Populate vars from the section associated with the input code.
       lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code])
       unless lti_course
-        return render_sync_course_error('We couldn\'t find the given section.', :bad_request)
+        return render_sync_course_error('We couldn\'t find the given section.', :bad_request, 'no_section')
       end
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
@@ -258,7 +269,7 @@ class LtiV1Controller < ApplicationController
       begin
         lti_integration = LtiIntegration.find(params[:lti_integration_id])
       rescue
-        return render_sync_course_error('LTI Integration not found', :bad_request)
+        return render_sync_course_error('LTI Integration not found', :bad_request, 'no_integration')
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]
