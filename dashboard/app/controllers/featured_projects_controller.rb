@@ -17,7 +17,8 @@ class FeaturedProjectsController < ApplicationController
     project = Project.find_by(id: project_id)
     project_value = JSON.parse(project.value)
     project_value["frozen"] = true
-    project.update(value: project_value.to_json)
+    project_value["updatedAt"] = DateTime.now.to_s
+    project.update! value: project_value.to_json
     buffer_abuse_score
   end
 
@@ -29,8 +30,10 @@ class FeaturedProjectsController < ApplicationController
     project = Project.find_by(id: project_id)
     project_value = JSON.parse(project.value)
     project_value["frozen"] = false
+    # Unhide in case this project was frozen manually.
     project_value["hidden"] = false
-    project.update(value: project_value.to_json)
+    project_value["updatedAt"] = DateTime.now.to_s
+    project.update! value: project_value.to_json
   end
 
   def destroy
