@@ -2,7 +2,7 @@
 import {combineReducers} from 'redux';
 import $ from 'jquery';
 import _ from 'lodash';
-import {Galleries} from './projectConstants';
+import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
@@ -37,10 +37,10 @@ const SET_CAPTCHA_KEY = 'projects/SET_CAPTCHA_KEY';
 /**
  * Select a gallery to display on the projects page.
  * @param {string} projectType Default: 'PUBLIC'
- * @returns {{type: string, galleryType: string}}
+ * @returns {{type: string, projectType: string}}
  */
-export function selectGallery(galleryType = Galleries.PUBLIC) {
-  return {type: TOGGLE_GALLERY, galleryType};
+export function selectGallery(projectType = Galleries.PUBLIC) {
+  return {type: TOGGLE_GALLERY, projectType};
 }
 
 /**
@@ -134,7 +134,7 @@ const initialSelectedGalleryState = Galleries.PUBLIC;
 function selectedGallery(state = initialSelectedGalleryState, action) {
   switch (action.type) {
     case TOGGLE_GALLERY:
-      return action.galleryType;
+      return action.projectType;
     default:
       return state;
   }
@@ -453,7 +453,7 @@ export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/all`,
+      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
       dataType: 'json',
     }).done(projectLists => {
       dispatch(setProjectLists(projectLists));

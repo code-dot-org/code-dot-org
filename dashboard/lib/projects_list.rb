@@ -3,8 +3,6 @@ require_relative '../legacy/middleware/helpers/user_helpers'
 module ProjectsList
   # Maximum number of projects of each type that can be requested.
   MAX_LIMIT = 100
-  # Maximum number of featured projects of each type that can be requested.
-  FEATURED_MAX_LIMIT = SharedConstants::FEATURED_PROJECT_CONSTANTS.MAX_REQUESTS_PER_CATEGORY
 
   # A hash map from project group name to a list of publishable project types in
   # that group.
@@ -135,29 +133,13 @@ module ProjectsList
       return featured
     end
 
-    # @param project_group [String] Project group to retrieve. Must be one of
-    #   PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
-    # @param featured_before [string] String representing a DateTime before
-    #   which to search for the requested featured projects. Optional.
-    # @return [Hash<Array<Hash>>] A hash of lists of active published feature projects.
-    def fetch_active_published_featured_projects(project_group, featured_before: nil)
-      if project_group == 'all'
-        return fetch_featured_published_projects(featured_before: featured_before)
-      end
-      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      fetch_featured_projects_by_type([project_group.to_sym], featured_before: featured_before)
-    end
-
-    def fetch_featured_published_projects(featured_before: nil)
+    def fetch_featured_published_projects
       featured_published_projects = {}
       PUBLISHED_PROJECT_TYPE_GROUPS.each do |project_group, project_types|
-        if project_group == :library
-          next
-        end
         featured_published_projects[project_group] = []
         project_types.each do |project_type|
           featured_published_projects[project_group] <<
-            fetch_featured_projects_by_type(project_type, featured_before: featured_before)
+            fetch_featured_projects_by_type(project_type)
         end
         featured_published_projects[project_group].flatten!
       end
@@ -240,7 +222,7 @@ module ProjectsList
       ]
     end
 
-    def fetch_featured_projects_by_type(project_type, featured_before: nil)
+    def fetch_featured_projects_by_type(project_type)
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
@@ -254,11 +236,9 @@ module ProjectsList
           project_type: project_type.to_s,
           state: 'active'
         ).
-        where {featured_before.nil? || featured_at < DateTime.parse(featured_before)}.
-        exclude(featured_at: nil).
         exclude(published_at: nil).
         exclude(abuse_score: 0...).
-        order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
+        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
@@ -275,8 +255,7 @@ module ProjectsList
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
           "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
-          "isFeatured" => true,
-          "featuredAt" => project_details[:featured_at]
+          "isFeatured" => true
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end
@@ -305,8 +284,7 @@ module ProjectsList
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at],
-        frozen: project_value['frozen'],
+        publishedAt: project[:published_at]
       }
 
       if with_library

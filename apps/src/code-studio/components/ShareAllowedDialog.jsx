@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
+import PendingButton from '../../templates/PendingButton';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
@@ -20,6 +21,7 @@ import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '../../templates/Button';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import fontConstants from '@cdo/apps/fontConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -256,6 +258,12 @@ class ShareAllowedDialog extends React.Component {
       channelId,
     } = this.props;
 
+    const {
+      isAccountOldEnoughToPublish,
+      isProjectOldEnoughToPublish,
+      isLoadingAccountAndProjectAge,
+    } = this.state;
+
     const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
@@ -308,6 +316,10 @@ class ShareAllowedDialog extends React.Component {
     }
 
     const showPublishInfo = this.isPublishAllowed() && !isPublished;
+    const disablePublishButton =
+      !hasThumbnail ||
+      !isAccountOldEnoughToPublish ||
+      !isProjectOldEnoughToPublish;
 
     const warningText = this.getWarningText(showPublishInfo);
 
@@ -411,6 +423,41 @@ class ShareAllowedDialog extends React.Component {
                       {i18n.sendToPhone()}
                     </span>
                   </Button>
+
+                  {showPublishInfo &&
+                    (isLoadingAccountAndProjectAge ? (
+                      <Spinner size="medium" style={styles.loadingSpinner} />
+                    ) : (
+                      <Button
+                        type="button"
+                        color={Button.ButtonColor.neutralDark}
+                        id="share-dialog-publish-button"
+                        style={
+                          hasThumbnail ? styles.button : styles.buttonDisabled
+                        }
+                        onClick={wrapShareClick(
+                          this.publish,
+                          'SHARING_PUBLISH',
+                          this.props.appType
+                        )}
+                        disabled={disablePublishButton}
+                        className="no-mc"
+                      >
+                        <span>{i18n.publish()}</span>
+                      </Button>
+                    ))}
+                  {this.isPublishAllowed() && isPublished && (
+                    <PendingButton
+                      id="share-dialog-unpublish-button"
+                      isPending={isUnpublishPending}
+                      onClick={this.unpublish}
+                      pendingText={i18n.unpublishPending()}
+                      style={styles.button}
+                      text={i18n.unpublish()}
+                      className="no-mc"
+                    />
+                  )}
+
                   {canPrint && hasThumbnail && (
                     <a href="#" onClick={wrapShareClick(this.print, 'print')}>
                       <FontAwesome icon="print" style={{fontSize: 26}} />

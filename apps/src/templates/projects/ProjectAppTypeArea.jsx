@@ -2,10 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProjectCardRow from './ProjectCardRow';
-import {
-  MAX_PROJECTS_PER_CATEGORY,
-  publishedFeaturedProjectPropType,
-} from './projectConstants';
+import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
@@ -20,27 +17,26 @@ class ProjectAppTypeArea extends React.Component {
   static propTypes = {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
+    labViewMoreString: PropTypes.string.isRequired,
     // Ability to hide link for Applab and Gamelab
     hideViewMoreLink: PropTypes.bool,
-    projectList: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+    projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
+    navigateFunction: PropTypes.func.isRequired,
+
+    // Only show one project type.
+    isDetailView: PropTypes.bool.isRequired,
+
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
-    // We are temporarily not using the following props since we are not using the 'View more' link
-    // in the updated featured projects public gallery.
-    // However, there are plans to update the featured projects public gallery with
-    // sections and use the view more links in the future. See https://docs.google.com/document/d/1vU68tzXG72Z80MvM6xYEDwF5hLDf7V097P-0dDfpouc/edit?disco=AAABGLQtJe0.
-    labViewMoreString: PropTypes.string,
-    navigateFunction: PropTypes.func,
-    // Only show one project type.
-    isDetailView: PropTypes.bool,
     // from redux state
-    hasOlderProjects: PropTypes.bool,
+    hasOlderProjects: PropTypes.bool.isRequired,
+
     // from redux dispatch
-    appendProjects: PropTypes.func,
-    setHasOlderProjects: PropTypes.func,
+    appendProjects: PropTypes.func.isRequired,
+    setHasOlderProjects: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -113,26 +109,17 @@ class ProjectAppTypeArea extends React.Component {
    *   completed and the done handler has been run (if successful).
    */
   fetchOlderProjects() {
-    const projectType =
-      this.props.labKey === 'featured' ? 'all' : this.props.labKey;
-    const {projectList} = this.props;
-    const projectListToSort = [...projectList];
-    // Sort from least recent (oldest) to most recent featured_at date.
-    projectListToSort.sort((a, b) => {
-      const projectAFeaturedAt = a.projectData.featuredAt;
-      const projectBFeaturedAt = b.projectData.featuredAt;
-      return projectAFeaturedAt.localeCompare(projectBFeaturedAt);
-    });
-    const oldestProject = projectListToSort[0];
-    const oldestFeaturedAt =
-      oldestProject && oldestProject.projectData.featuredAt;
+    const {projectList, labKey: projectType} = this.props;
+    const oldestProject = projectList[projectList.length - 1];
+    const oldestPublishedAt =
+      oldestProject && oldestProject.projectData.publishedAt;
 
     return $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/${projectType}/${oldestFeaturedAt}`,
+      url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
       dataType: 'json',
     }).done(data => {
-      // olderProjects all have an older featuredAt date than oldestProject.
+      // olderProjects all have an older publishedAt date than oldestProject.
       const olderProjects = data[projectType];
 
       // Don't try to fetch projects of this projectType again in the future if we

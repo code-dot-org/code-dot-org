@@ -16,7 +16,12 @@ import {
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
-import moduleStyles from './personal-projects-table-actions-cell.module.scss';
+
+export const styles = {
+  xIcon: {
+    paddingRight: 5,
+  },
+};
 
 export class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
@@ -32,7 +37,6 @@ export class PersonalProjectsTableActionsCell extends Component {
     remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     unsetNameFailure: PropTypes.func.isRequired,
-    isFrozen: PropTypes.bool,
   };
 
   onDelete = () => {
@@ -66,24 +70,17 @@ export class PersonalProjectsTableActionsCell extends Component {
       <div>
         {!isEditing && (
           <QuickActionsCell>
-            {!this.props.isFrozen && (
-              <PopUpMenu.Item onClick={this.onRename}>
-                {i18n.rename()}
-              </PopUpMenu.Item>
-            )}
+            <PopUpMenu.Item onClick={this.onRename}>
+              {i18n.rename()}
+            </PopUpMenu.Item>
             <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
-            {!this.props.isFrozen && <MenuBreak />}
-            {!this.props.isFrozen && (
-              <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-                <FontAwesome
-                  icon="times-circle"
-                  className={moduleStyles.xIcon}
-                />
-                {i18n.delete()}
-              </PopUpMenu.Item>
-            )}
+            <MenuBreak />
+            <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+              <FontAwesome icon="times-circle" style={styles.xIcon} />
+              {i18n.delete()}
+            </PopUpMenu.Item>
           </QuickActionsCell>
         )}
         {isEditing && (
@@ -93,6 +90,7 @@ export class PersonalProjectsTableActionsCell extends Component {
               onClick={this.onSave}
               color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
+              style={styles.saveButton}
               disabled={isSaving}
               className="ui-projects-rename-save"
             />
