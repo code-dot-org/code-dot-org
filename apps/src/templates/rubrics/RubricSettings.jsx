@@ -310,7 +310,7 @@ export default function RubricSettings({
       </div>
 
       <div className={style.settingsGroup}>
-        <Heading2>{i18n.rubricSummaryClassScore()}</Heading2>
+        <Heading4>{i18n.rubricSummaryClassScore()}</Heading4>
         <div className={style.settingsContainers}>
           <div className={style.runAiAllStatuses}>
             {teacherEvalCount === 0 && (
