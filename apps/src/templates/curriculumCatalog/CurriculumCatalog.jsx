@@ -12,7 +12,10 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {
+  getSimilarRecommendations,
+  getStretchRecommendations,
+} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -77,6 +80,17 @@ const CurriculumCatalog = ({
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
     const recommendations = getSimilarRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    return recommendations[0];
+  };
+
+  // Get the top recommended stretch curriculum based on the curriculum with the given
+  // curriculumKey
+  const getRecommendedStretchCurriculum = curriculumKey => {
+    const recommendations = getStretchRecommendations(
       curriculaData,
       curriculumKey,
       curriculaTaught
@@ -159,6 +173,9 @@ const CurriculumCatalog = ({
                   isTeacher={isTeacher}
                   getRecommendedSimilarCurriculum={
                     getRecommendedSimilarCurriculum
+                  }
+                  getRecommendedStretchCurriculum={
+                    getRecommendedStretchCurriculum
                   }
                   {...props}
                 />

@@ -41,6 +41,7 @@ const ExpandedCurriculumCatalogCard = ({
   isSignedOut,
   isTeacher,
   getRecommendedSimilarCurriculum,
+  getRecommendedStretchCurriculum,
 }) => {
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
@@ -81,6 +82,13 @@ const ExpandedCurriculumCatalogCard = ({
 
   const recommendedSimilarCurriculum =
     getRecommendedSimilarCurriculum(courseKey);
+
+  const recommendedStretchCurriculum =
+    getRecommendedStretchCurriculum(courseKey);
+
+  console.log(courseKey);
+  console.log(recommendedSimilarCurriculum.display_name);
+  console.log(recommendedStretchCurriculum.display_name);
 
   useEffect(() => {
     const yOffset =
@@ -300,6 +308,23 @@ const ExpandedCurriculumCatalogCard = ({
                     setExpandedCardKey(recommendedSimilarCurriculum.key)
                   }
                 />
+                <img
+                  id="stretchCurriculumImage"
+                  src={recommendedStretchCurriculum.image || defaultImageSrc}
+                  style={{height: '100%'}}
+                  alt={recommendedStretchCurriculum.display_name}
+                />
+                <Button
+                  id="stretchCurriculumButton"
+                  name={recommendedStretchCurriculum.display_name}
+                  type="button"
+                  styleAsText
+                  className={style.relatedCurriculaLink}
+                  text={recommendedStretchCurriculum.display_name}
+                  onClick={() =>
+                    setExpandedCardKey(recommendedStretchCurriculum.key)
+                  }
+                />
               </div>
             </div>
           </div>
@@ -332,5 +357,6 @@ ExpandedCurriculumCatalogCard.propTypes = {
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
+  getRecommendedStretchCurriculum: PropTypes.func.isRequired,
 };
 export default ExpandedCurriculumCatalogCard;
