@@ -72,7 +72,6 @@ const EVENTS = {
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
-  PROGRESS_HORIZONTAL_SCROLL: 'Section Progress Horizontal Scroll',
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
@@ -83,7 +82,6 @@ const EVENTS = {
   PROGRESS_V2_CHANGE_UNIT: 'Section New Progress Unit Changed',
   PROGRESS_V2_LESSON_EXPAND: 'Section New Progress Lesson Expand',
   PROGRESS_V2_LESSON_COLLAPSE: 'Section New Progress Lesson Collapse',
-  PROGRESS_V2_HORIZONTAL_SCROLL: 'Section New Progress Scroll to Lesson',
   PROGRESS_V2_EXPAND_CHOICE_LEVEL: 'Section New Progress Choice Expand',
   PROGRESS_V2_COLLAPSE_CHOICE_LEVEL: 'Section New Progress Choice Collapse',
   PROGRESS_V2_EXPAND_ICON_KEY: 'Section New Progress Icon Key Expand',
