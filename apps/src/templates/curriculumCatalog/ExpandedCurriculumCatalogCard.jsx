@@ -83,8 +83,10 @@ const ExpandedCurriculumCatalogCard = ({
   const recommendedSimilarCurriculum =
     getRecommendedSimilarCurriculum(courseKey);
 
-  const recommendedStretchCurriculum =
-    getRecommendedStretchCurriculum(courseKey);
+  const recommendedStretchCurriculum = getRecommendedStretchCurriculum(
+    courseKey,
+    recommendedSimilarCurriculum.key
+  );
 
   useEffect(() => {
     const yOffset =

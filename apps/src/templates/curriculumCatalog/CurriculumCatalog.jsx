@@ -88,14 +88,21 @@ const CurriculumCatalog = ({
   };
 
   // Get the top recommended stretch curriculum based on the curriculum with the given
-  // curriculumKey
-  const getRecommendedStretchCurriculum = curriculumKey => {
+  // curriculumKey. If the top result is the same as the similar curriculum, show the
+  // second result.
+  const getRecommendedStretchCurriculum = (
+    curriculumKey,
+    similarCurriculumKey
+  ) => {
     const recommendations = getStretchRecommendations(
       curriculaData,
       curriculumKey,
       curriculaTaught
     );
-    return recommendations[0];
+
+    return similarCurriculumKey === recommendations[0].key
+      ? recommendations[1]
+      : recommendations[0];
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
