@@ -14,12 +14,23 @@ class FeaturedProjectsController < ApplicationController
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
     @featured_project.update! unfeatured_at: nil, featured_at: DateTime.now
+    project = Project.find_by(id: project_id)
+    project_value = JSON.parse(project.value)
+    project_value["frozen"] = true
+    updated_value = project_value.to_json
+    project.update(value: updated_value)
     buffer_abuse_score
   end
 
   def unfeature
     _, project_id = storage_decrypt_channel_id(params[:project_id])
     return render_404 unless project_id
+    project = Project.find_by(id: project_id)
+    project_value = JSON.parse(project.value)
+    project_value["frozen"] = false
+    project_value["hidden"] = false
+    updated_value = project_value.to_json
+    project.update(value: updated_value)
     @featured_project = FeaturedProject.find_by! project_id: project_id
     @featured_project.update! unfeatured_at: DateTime.now
   end
