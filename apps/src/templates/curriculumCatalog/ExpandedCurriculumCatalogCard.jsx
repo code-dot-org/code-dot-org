@@ -86,10 +86,6 @@ const ExpandedCurriculumCatalogCard = ({
   const recommendedStretchCurriculum =
     getRecommendedStretchCurriculum(courseKey);
 
-  console.log(courseKey);
-  console.log(recommendedSimilarCurriculum.display_name);
-  console.log(recommendedStretchCurriculum.display_name);
-
   useEffect(() => {
     const yOffset =
       expandedCardRef.current.getBoundingClientRect().top +
