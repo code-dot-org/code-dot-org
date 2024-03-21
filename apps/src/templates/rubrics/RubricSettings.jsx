@@ -246,10 +246,6 @@ export default function RubricSettings({
     tabSelectCallback(TAB_NAMES.RUBRIC);
   };
 
-  const onClickDownloadCSV = () => {
-    // pass
-  };
-
   return (
     <div
       className={classnames('uitest-rubric-settings', {
@@ -343,7 +339,7 @@ export default function RubricSettings({
                 className="uitest-rubric-download-csv"
                 text={i18n.downloadCSV()}
                 color={Button.ButtonColor.brandSecondaryDefault}
-                onClick={onClickDownloadCSV}
+                onClick={() => {}}
                 style={{margin: 0}}
               />
             </CSVLink>
