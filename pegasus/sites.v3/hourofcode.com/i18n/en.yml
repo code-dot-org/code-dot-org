@@ -10349,7 +10349,7 @@
       languages: "English"
     support:
       heading: "Resources to support you every step of the way"
-      desc: "Get access to materials that will help you teach computer science with confidence—even without prior CS teaching experience—when you create a *free* Code.org account."
+      desc: "Get access to materials that will help you teach computer science with confidence—even without prior CS teaching experience—when you create a **free** Code.org account."
       button: "Create a free account"
     lessons:
       heading: "Lessons in this course"
@@ -10363,7 +10363,7 @@
       lesson_02:
         overline: "Lesson 2"
         title: "AI as Your Ideation Partner for Programming Prep"
-        desc: "How can AI assist in during the initial stages of the programming process, and what ethical considerations should be noted?"
+        desc: "How can AI assist during the initial stages of the programming process, and what ethical considerations should be noted?"
         aria_label: "View AI as Your Ideation Partner for Programming Prep lesson"
       lesson_03:
         overline: "Lesson 3"
@@ -10396,7 +10396,7 @@
         desc: "This series of short videos and accompanying lessons will introduce you and your students to how artificial intelligence works and why it matters."
         button: "View lessons"
         aria_label: "View How AI Works lessons"
-      dance_party:
+      ai_101:
         overline: "Professional Learning"
         title: "AI 101 for Teachers"
         desc: "Discover the groundbreaking world of AI and its transformative potential in education with our foundational online learning series for teachers."
@@ -10412,13 +10412,13 @@
         answer: "There are no required prerequisites, but you may choose to teach one or more of the [How AI Works lessons](%{ai_url}) before these to provide additional context about chatbots and large language models, algorithmic bias, and ethical considerations of AI."
       tools:
         question: "What tools and setup are required for teaching this module?"
-        answer: "Students need to have their own devices to type on. They also need access to Bing, Bard, ChatGPT, or some other general chatbot on their computers. Check with your principal or IT department to make sure students can access one of these LLMs."
+        answer: "Students need to have their own devices to type on. They also need access to Bing, Bard, ChatGPT, or some other general chatbot on their computers. Check with your principal or IT department to make sure students can access one of these LLMs (Large Language Models)."
       timing:
         question: "What is the recommended timing for teaching this module?"
         answer: "Due to the flexibility of these lessons, you could choose to teach these lessons in any order, in sequence, spread out over multiple weeks, or back-to-back within one week."
       answer_keys:
         question: "How can I access answer keys?"
-        answer: "With an approved teacher account, you can find answer keys in a blue "Teacher Only” panel that shows in the online lessons and activities.If you need an approved teacher account, you can apply for access to protected teacher-only materials (answer keys, etc) through [this form](%{form_url}). Please keep in mind that it may take 3-5 business days to verify your account."
+        answer: "With an approved teacher account, you can find answer keys in a blue "Teacher Only” panel that shows in the online lessons and activities. If you need an approved teacher account, you can apply for access to protected teacher-only materials (answer keys, etc) through [this form](%{form_url}). Please keep in mind that it may take 3-5 business days to verify your account."
       standards:
         question: "Is this module mapped to standards?"
         answer: "Yes, the Coding with AI curriculum is mapped to the [CSTA K-12 Standards](%{csta_url}) and the [AI for K-12 Guidelines](%{k12_url})."
