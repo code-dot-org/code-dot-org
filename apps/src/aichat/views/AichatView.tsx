@@ -15,6 +15,7 @@ import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
 import {AichatLevelProperties, AiCustomizations} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
+// import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -23,23 +24,35 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
 
-  const initialAiCustomizations = useAppSelector(
+  const levelAiCustomizationsWithVisibility = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
   );
 
+  const studentAiCustomizations = JSON.parse(
+    useAppSelector(
+      state => (state.lab.initialSources?.source as string) || '{}'
+    )
+  );
+
   useEffect(() => {
-    const aiCustomizations: AiCustomizations = {
-      botName: initialAiCustomizations.botName.value,
-      temperature: initialAiCustomizations.temperature.value,
-      systemPrompt: initialAiCustomizations.systemPrompt.value,
-      retrievalContexts: initialAiCustomizations.retrievalContexts.value,
-      modelCardInfo: initialAiCustomizations.modelCardInfo.value,
+    const levelAiCustomizations: AiCustomizations = {
+      botName: levelAiCustomizationsWithVisibility.botName.value,
+      temperature: levelAiCustomizationsWithVisibility.temperature.value,
+      systemPrompt: levelAiCustomizationsWithVisibility.systemPrompt.value,
+      retrievalContexts:
+        levelAiCustomizationsWithVisibility.retrievalContexts.value,
+      modelCardInfo: levelAiCustomizationsWithVisibility.modelCardInfo.value,
     };
 
-    dispatch(setAiCustomizations(aiCustomizations));
-  }, [dispatch, initialAiCustomizations]);
+    const reconciledAiCustomizations = Object.keys(studentAiCustomizations)
+      .length
+      ? studentAiCustomizations
+      : levelAiCustomizations;
+
+    dispatch(setAiCustomizations(reconciledAiCustomizations));
+  }, [dispatch, studentAiCustomizations, levelAiCustomizationsWithVisibility]);
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>

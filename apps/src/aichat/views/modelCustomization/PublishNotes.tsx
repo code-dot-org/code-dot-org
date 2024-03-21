@@ -2,6 +2,7 @@ import React from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import Lab2Registry from '../../../lab2/Lab2Registry';
 import {
   EMPTY_AI_CUSTOMIZATIONS,
   MODEL_CARD_FIELDS_AND_LABELS,
@@ -22,6 +23,14 @@ const PublishNotes: React.FunctionComponent = () => {
   const {modelCardInfo} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+  const aiCustomizations = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+
+  const save = () =>
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save({source: JSON.stringify(aiCustomizations)}, true);
 
   return (
     <div className={styles.verticalFlexContainer}>
@@ -52,7 +61,7 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={styles.footerButtonContainer}>
-        <button type="button" disabled={isDisabled(visibility)}>
+        <button type="button" disabled={false} onClick={save}>
           Publish
         </button>
       </div>

@@ -1,6 +1,7 @@
 import React, {useState, useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
@@ -23,6 +24,14 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+  const aiCustomizations = useAppSelector(
+    state => state.aichat.currentAiCustomizations
+  );
+
+  const onUpdate = () =>
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save({source: JSON.stringify(aiCustomizations)}, true);
 
   const onAdd = useCallback(() => {
     dispatch(
@@ -97,7 +106,11 @@ const RetrievalCustomization: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <button type="button" disabled={isDisabled(visibility)}>
+        <button
+          type="button"
+          disabled={isDisabled(visibility)}
+          onClick={onUpdate}
+        >
           Update
         </button>
       </div>
