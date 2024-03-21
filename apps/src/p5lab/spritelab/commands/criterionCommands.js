@@ -387,10 +387,10 @@ export const commands = {
   // Returns true if a minimum number of sprites have no group.
   minimumNonGroupSprites(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
-    const groupSpriteIds = spriteIds.filter(
+    const nonGroupSpriteIds = spriteIds.filter(
       id => !this.nativeSpriteMap[id].group
     );
-    return groupSpriteIds.length >= min;
+    return nonGroupSpriteIds.length >= min;
   },
 
   // Returns true if sprites with a minimum number of costumes are in the specified group.
