@@ -2850,9 +2850,13 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     );
 
     const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    // An empty toolbox should be treated as no toolbox.
     if (
       toolboxWithoutWhitespace === '<xml></xml>' ||
-      toolboxWithoutWhitespace === '<xml/>'
+      toolboxWithoutWhitespace === '<xml/>' ||
+      // Google Blockly always adds the xmlns attribute.
+      toolboxWithoutWhitespace ===
+        '<xmlxmlns="https://developers.google.com/blockly/xml"/>'
     ) {
       config.level.toolbox = undefined;
     }
