@@ -124,7 +124,13 @@ function ProgressTableV2({
         );
       }
     },
-    [isSkeleton, sortedStudents, expandedLessonIds, setExpandedLessons]
+    [
+      isSkeleton,
+      sortedStudents,
+      expandedLessonIds,
+      removeExpandedLesson,
+      addExpandedLesson,
+    ]
   );
 
   const table = React.useMemo(() => {
