@@ -10418,7 +10418,7 @@
         answer: "Due to the flexibility of these lessons, you could choose to teach these lessons in any order, in sequence, spread out over multiple weeks, or back-to-back within one week."
       answer_keys:
         question: "How can I access answer keys?"
-        answer: "With an approved teacher account, you can find answer keys in a blue "Teacher Only” panel that shows in the online lessons and activities. If you need an approved teacher account, you can apply for access to protected teacher-only materials (answer keys, etc) through [this form](%{form_url}). Please keep in mind that it may take 3-5 business days to verify your account."
+        answer: "With an approved teacher account, you can find answer keys in a blue \"Teacher Only\" panel that shows in the online lessons and activities. If you need an approved teacher account, you can apply for access to protected teacher-only materials (answer keys, etc) through [this form](%{form_url}). Please keep in mind that it may take 3-5 business days to verify your account."
       standards:
         question: "Is this module mapped to standards?"
         answer: "Yes, the Coding with AI curriculum is mapped to the [CSTA K-12 Standards](%{csta_url}) and the [AI for K-12 Guidelines](%{k12_url})."
