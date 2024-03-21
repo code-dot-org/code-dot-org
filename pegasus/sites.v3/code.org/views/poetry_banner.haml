@@ -5,12 +5,7 @@
     background-position: top;
     padding: 0 2em;
 
-    h5 {
-      color: var(--neutral_white);
-    }
-
     p {
-      color: var(--neutral_white);
       margin-bottom: 0.5rem;
     }
 
@@ -41,9 +36,9 @@
 %section.poetry-banner
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h5
+      %h5.white
         =hoc_s('poetry_banner_title')
-      %p
+      %p.white
         =hoc_s('poetry_banner_desc')
     %figure.col-30.centered
       %img{src:"/images/marketing/octopus-poetry.png", alt: ""}
