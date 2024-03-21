@@ -44,16 +44,6 @@ module ScriptLevelsHelper
     video_info_response
   end
 
-  def script_completion_redirect(script)
-    if script.hoc?
-      script.hoc_finish_url
-    elsif script.csf?
-      script.csf_finish_url
-    else
-      root_path
-    end
-  end
-
   def tracking_pixel_url(script)
     if script.name == Unit::HOC_2013_NAME
       CDO.code_org_url '/api/hour/begin_codeorg.png'
