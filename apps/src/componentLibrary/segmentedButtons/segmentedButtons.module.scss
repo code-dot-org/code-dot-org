@@ -26,12 +26,14 @@
   .selectedSegmentedButton {
     background-color: $light_primary_500;
     border-color: $light_primary_500;
+    border-left-color: $light_gray_200;
     color: $light_white;
 
     // Hover styles
     &:hover {
       background-color: $light_primary_500;
       border-color: $light_primary_500;
+      border-left-color: $light_gray_200;
       color: $light_white;
     }
 
@@ -46,6 +48,7 @@
     &:active {
       background-color: $light_primary_500;
       border-color: $light_primary_500;
+      border-left-color: $light_gray_200;
       color: $light_white;
     }
 
@@ -53,6 +56,7 @@
     &:disabled {
       background-color: $light_primary_100;
       border-color: $light_primary_100;
+      border-left-color: $light_gray_200;
       color: $light_white;
     }
   }
