@@ -378,28 +378,28 @@ export const commands = {
   // Returns true if a minimum number of sprites are in the specified group.
   minimumGroupSprites(group, min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
-    const groupSprites = spriteIds.filter(
+    const groupSpriteIds = spriteIds.filter(
       id => this.nativeSpriteMap[id].group === group
     );
-    return groupSprites.length >= min;
+    return groupSpriteIds.length >= min;
   },
 
   // Returns true if a minimum number of sprites have no group.
   minimumNonGroupSprites(min = 1) {
     const spriteIds = this.getSpriteIdsInUse();
-    const groupSprites = spriteIds.filter(
+    const groupSpriteIds = spriteIds.filter(
       id => !this.nativeSpriteMap[id].group
     );
-    return groupSprites.length >= min;
+    return groupSpriteIds.length >= min;
   },
 
   // Returns true if sprites with a minimum number of costume are in the specified group.
   minimumCostumesForGroup(group, min = 1) {
-    const spriteIds = this.getSpriteIdsInUse();
     const uniqueCostumes = [];
-    const groupSprites = spriteIds.filter(
-      id => this.nativeSpriteMap[id].group === group
-    );
+    const spriteIds = this.getSpriteIdsInUse();
+    const spritesInUse = spriteIds.map(id => this.nativeSpriteMap[id]);
+    const groupSprites = spritesInUse.filter(sprite => sprite.group === group);
+
     for (const sprite of groupSprites) {
       const costume = sprite.getAnimationLabel();
       if (!uniqueCostumes.includes(costume)) {
@@ -412,10 +412,10 @@ export const commands = {
   // Returns true if there is exactly one sprite with the "players" group.
   playerSpriteFound() {
     const spriteIds = this.getSpriteIdsInUse();
-    const groupSprites = spriteIds.filter(
+    const groupSpriteIds = spriteIds.filter(
       id => this.nativeSpriteMap[id].group === 'players'
     );
-    return groupSprites.length === 1;
+    return groupSpriteIds.length === 1;
   },
 
   // Returns true if a player sprite has an upward vertical velocity
