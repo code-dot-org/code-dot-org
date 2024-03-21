@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-18 08:19:30 UTC",
+    "serialized_at": "2024-03-21 07:16:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -389,12 +389,30 @@
       }
     },
     {
-      "key": "Sandbox: Console",
-      "name": "Sandbox: Console",
+      "key": "lesson-3",
+      "name": "Nested Iteration",
       "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 17,
+      "properties": {
+        "overview": "**How can I adjust loop control variables of nested loops to produce different output?**\n\nStudents have already been exposed to loops, and will now discover nested iteration through nested `for` loops. Students explore a hands-on activity to recognize similarities between nested `for` loops and the movement of hands on a clock. Students then investigate different ways nested iteration can be used to produce printed patterns and then practice tracing nested loops. Finally, they automate repetitive programming tasks by writing their own nested `for` loops. ",
+        "preparation": "* **(Optional)** Print copies of the Nested Iteration Guided Notes (one for each student)\n* Choose to use the clock face cutouts or the online version\n* Preview the *Nested Iteration* video",
+        "student_overview": "**How can I adjust loop control variables of nested loops to produce different output?**\n\nYou have already seen and used `for` loops. Now, you will discover nested iteration through nested `for` loops. You explore a hands-on activity wherein you will recognize similarities between nested `for` loops and the movement of hands on a clock. You’ll then investigate different ways nested iteration can be used to produce printed patterns and then practice tracing nested loops. Finally, you will automate repetitive programming tasks by writing your own nested `for` loops. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "Sandbox: Console",
+      "name": "Sandbox: Console",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -406,10 +424,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -1056,6 +1074,48 @@
       "seeding_key": {
         "lesson_activity.key": "cc53851c-af76-48ac-8c45-967351db8bf7",
         "lesson.key": "Substrings",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "e0189af7-daf7-47be-8ff9-2288c1e54d99",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "8d15bd13-d5a9-40ab-813b-aa21151afd53",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025"
       }
@@ -5006,6 +5066,179 @@
       }
     },
     {
+      "key": "416d1d0c-c9cc-4385-9fbd-b6bbfcd8d83d",
+      "position": 1,
+      "properties": {
+        "description": "You’ve all probably seen the hands moving on a clock, but have you ever stopped to consider how you might use a loop to simulate moving these clock hands in Java?",
+        "name": "Clock Hands",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "416d1d0c-c9cc-4385-9fbd-b6bbfcd8d83d",
+        "lesson_activity.key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d"
+      }
+    },
+    {
+      "key": "1d39681e-8d4c-45ff-98fa-370a492be260",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many times did the second hand “tick” before the minute hand “ticked”? \nHow could you use iteration statements to represent the ticking of a clock?*\n\n**Discussion Goal:** Students should recognize that two loops, one for the ticking of the minutes and one for the ticking of the seconds, would be required.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will likely have varying comfort levels with constructing these for loops prior to the lesson. Teachers should celebrate a wide variety of ideas and not linger overlong on this warm up. This will ensure that the problem-solving and prior knowledge of some students is honored, but that all students are given the opportunity to move up to speed. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d39681e-8d4c-45ff-98fa-370a492be260",
+        "lesson_activity.key": "ddb691f6-7f84-490a-ac5f-6cbdcd9cc04d"
+      }
+    },
+    {
+      "key": "2894a5fc-ac10-4e3a-ac3f-e42cc07587a8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "10",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2894a5fc-ac10-4e3a-ac3f-e42cc07587a8",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "12dd0a16-a578-4265-8df0-a096a8d574f8",
+      "position": 2,
+      "properties": {
+        "description": "Now that we have explored nested loops using the hands of a clock, let’s see other ways we can apply nested loops to Java programs. ",
+        "progression_name": "Predict and Run: Nested Loops",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12dd0a16-a578-4265-8df0-a096a8d574f8",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "4bbf9786-5bce-490c-9b00-4f7aa5f37a14",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to display the prompts.*\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students recognize the nested loops allow them to simulate the same clock movements they explored in the warm up. They should notice the different variables used in the loop headers and discuss the roles each variable plays in the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "4bbf9786-5bce-490c-9b00-4f7aa5f37a14",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "6ba70380-d817-4e18-957e-b370680093f7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video - *Nested Loops.*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the Guide to Curriculum Videos."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6ba70380-d817-4e18-957e-b370680093f7",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2",
+      "position": 5,
+      "properties": {
+        "description": "Nested loops are like building blocks in programming, letting us create complex patterns by repeating actions within each other. Just like laying bricks to form a wall, nested loops offer a structured approach to handling repetitive tasks. Let’s look more carefully at the syntax and logic for using nested loops. ",
+        "duration": "10",
+        "name": "Syntax and Logic",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "bb975541-aedb-4e69-b136-f2f6c6051a5c",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Define nested loop and explain that when a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to demonstrate tracing a nested loop.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Model tracing the first two iterations of the loop, then ask students to assist in completing the rest of the trace table."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb975541-aedb-4e69-b136-f2f6c6051a5c",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "9023f2b4-7105-43e4-bd8a-9c23e7bb9f16",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students trace the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to explain the solution.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9023f2b4-7105-43e4-bd8a-9c23e7bb9f16",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "9a5647bb-0714-4b81-acee-3db21eb0590a",
+      "position": 8,
+      "properties": {
+        "description": "Now we know how to handle two important parts of using nested iteration in a Java program — the syntax for the loops and the way trace tables are used to check the logic of those loops. These are both important steps in helping us use nested iteration successfully.",
+        "duration": "15",
+        "name": "Nested Iteration",
+        "progression_name": "Practice: Nested Iteration",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of tracing and writing nested loops."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "fbbaa320-6278-433b-9541-86e86f0a89bd",
+      "position": 1,
+      "properties": {
+        "description": "Software engineers use nested loops to solve a wide variety of problems. Many of these problems use the same types of loops we wrote today. We have done a lot today to grow our programming abilities!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Three W’s",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbbaa320-6278-433b-9541-86e86f0a89bd",
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53"
+      }
+    },
+    {
+      "key": "230aaa0c-7742-473e-befd-89c35780385a",
+      "position": 2,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.\n",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "230aaa0c-7742-473e-befd-89c35780385a",
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53"
+      }
+    },
+    {
       "key": "1326569d-a3c6-4750-b5c7-006a5d9d71e3",
       "position": 1,
       "properties": {
@@ -7245,6 +7478,114 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L2_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+      },
+      "level_keys": [
+        "CSA U2L-NestedIteration_L2_2025"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L3_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+      },
+      "level_keys": [
+        "CSA U2L-NestedIteration_L3_2025"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Nested Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L4_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      },
+      "level_keys": [
+        "CSA U2L-NestedIteration_L4_2025"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Nested Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L5_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      },
+      "level_keys": [
+        "CSA U2L-NestedIteration_L5_2025"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L6_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "230aaa0c-7742-473e-befd-89c35780385a"
+      },
+      "level_keys": [
+        "CSA U2L-NestedIteration_L6_2025"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSA 2023 Console Sandbox_2025"
         ]
@@ -7264,7 +7605,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7289,7 +7630,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8373,6 +8714,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U2L-NestedIteration_L2_2025",
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L2_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L-NestedIteration_L3_2025",
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L3_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L-NestedIteration_L4_2025",
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L4_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L-NestedIteration_L5_2025",
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L5_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L-NestedIteration_L6_2025",
+        "script_level.level_keys": [
+          "CSA U2L-NestedIteration_L6_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "230aaa0c-7742-473e-befd-89c35780385a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA 2023 Console Sandbox_2025",
         "script_level.level_keys": [
           "CSA 2023 Console Sandbox_2025"
@@ -9033,6 +9434,18 @@
       },
       "seeding_key": {
         "resource.key": "mutator_methods_1"
+      }
+    },
+    {
+      "name": "nested_iteration",
+      "url": "https://docs.google.com/presentation/d/1rhcMwM5-4IHiS-hJY2Ah-5AtwKBBB4DZsug--KmReh0/edit#slide=id.gca418c6afa_0_1070",
+      "key": "nested_iteration",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "nested_iteration"
       }
     },
     {
@@ -10135,6 +10548,12 @@
         "lesson.key": "Variables",
         "resource.key": "variables"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "nested_iteration"
+      }
     }
   ],
   "scripts_resources": [
@@ -10437,6 +10856,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "mutator_method"
+      }
+    },
+    {
+      "key": "nested_loop",
+      "word": "nested loop",
+      "definition": "a loop inside of another loop",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nested_loop"
       }
     },
     {
@@ -10786,6 +11215,12 @@
         "lesson.key": "Variables",
         "vocabulary.key": "reference_type"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "nested_loop"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -10833,6 +11268,16 @@
       }
     },
     {
+      "key": "12195f70-3588-4cdd-90cc-2bfc4470eac1",
+      "properties": {
+        "description": "Explore the functionality of nested loops"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "12195f70-3588-4cdd-90cc-2bfc4470eac1"
+      }
+    },
+    {
       "key": "19796383-31e1-43e1-bdf3-2ee511ecbe93",
       "properties": {
         "description": "Write a `toString()` method to display information about the state of an object to the console"
@@ -10863,6 +11308,16 @@
       }
     },
     {
+      "key": "20b6b9a0-7b30-4ec1-8a0a-8aa272f58381",
+      "properties": {
+        "description": "Trace nested loops in order to determine what will be output"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "20b6b9a0-7b30-4ec1-8a0a-8aa272f58381"
+      }
+    },
+    {
       "key": "2ab1bfc7-6bdb-4cc5-bd39-c6ac53f0fb39",
       "properties": {
         "description": "Write a parameterized constructor to specify formal parameters"
@@ -10880,6 +11335,16 @@
       "seeding_key": {
         "lesson.key": "Constructors and Inheritance",
         "objective.key": "2ff24dc0-ef4a-485e-87dc-de7f1108b699"
+      }
+    },
+    {
+      "key": "38b5abcf-d4f3-4ff7-9144-55a20d00d9e4",
+      "properties": {
+        "description": "Modify loop control variables in nested loops to produce different output"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "38b5abcf-d4f3-4ff7-9144-55a20d00d9e4"
       }
     },
     {

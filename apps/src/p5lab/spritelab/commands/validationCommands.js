@@ -320,6 +320,32 @@ export const commands = {
       return criteria[firstFailed].feedback;
     }
   },
+
+  // Returns an object with properties representing student Blockly variables.
+  // Typically called in validation code to set `varLog` - a global variable
+  // initialized by the interpreted variableLog helper library.
+  buildVariableLog() {
+    const studentVariables = {};
+
+    const blocklyVariables = Blockly.getMainWorkspace()
+      .getVariableMap()
+      .getAllVariables();
+    const variableNames = blocklyVariables.map(blocklyVariable =>
+      Blockly.JavaScript.getName(blocklyVariable.name)
+    );
+
+    for (const name of variableNames) {
+      const value = this.getVariableValue(name);
+      if (
+        ['number', 'string', 'boolean'].includes(typeof value) |
+        Array.isArray(value)
+      ) {
+        studentVariables[name] = value;
+      }
+    }
+
+    return studentVariables;
+  },
 };
 
 /**
