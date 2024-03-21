@@ -66,6 +66,7 @@ describe('CurriculumCatalogCard', () => {
       isTeacher: true,
       setExpandedCardKey: () => {},
       getRecommendedSimilarCurriculum: () => {},
+      getRecommendedStretchCurriculum: () => {},
     };
   });
 
