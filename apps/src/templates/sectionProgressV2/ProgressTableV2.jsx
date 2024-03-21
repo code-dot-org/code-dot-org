@@ -107,6 +107,7 @@ function ProgressTableV2({
       if (expandedLessonIds.includes(lesson.id)) {
         return (
           <ExpandedProgressDataColumn
+            sectionId={sectionId}
             lesson={lesson}
             sortedStudents={sortedStudents}
             removeExpandedLesson={removeExpandedLesson}
@@ -128,6 +129,7 @@ function ProgressTableV2({
       isSkeleton,
       sortedStudents,
       expandedLessonIds,
+      sectionId,
       removeExpandedLesson,
       addExpandedLesson,
     ]

@@ -55,11 +55,11 @@ export default function IconKey({
     setIsOpen(!isOpen);
 
     if (!isOpen) {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_ICON_KEY, {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_ICON_KEY, {
         sectionId: sectionId,
       });
     } else {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_ICON_KEY, {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_ICON_KEY, {
         sectionId: sectionId,
       });
     }
