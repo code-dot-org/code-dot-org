@@ -419,7 +419,12 @@ export default class CoreLibrary {
         );
       }
     }
-    if (spriteArg.group) {
+    if (typeof spriteArg.group === 'string') {
+      if (spriteArg.group === '') {
+        return Object.values(this.nativeSpriteMap).filter(
+          sprite => !sprite.group
+        );
+      }
       return Object.values(this.nativeSpriteMap).filter(
         sprite => sprite.group === spriteArg.group
       );
