@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+
+# TODO: unfirebase, also update datablock storage: #56993
+# TODO: post-firebase-cleanup, remove the firebase version: #56994
+
 require_relative '../only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
@@ -11,6 +15,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../../deployment'
 require 'ostruct'
+# TODO: post-firebase-cleanup, remove the firebase reference: #56994
 require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 require 'cdo/profanity_filter'
 require 'rest-client'
@@ -130,6 +135,7 @@ end
 
 def main
   get_token
+  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
   fb = FirebaseHelper.new('shared')
 
   if $token.nil? || $token.empty?
