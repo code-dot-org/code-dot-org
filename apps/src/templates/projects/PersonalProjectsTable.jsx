@@ -10,11 +10,17 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
+import {
+  AlwaysPublishableProjectTypes,
+  ConditionallyPublishableProjectTypes,
+  RestrictedPublishProjectTypes,
+} from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
+import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
-import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/FrozenProjectInfoDialog';
 import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -28,7 +34,8 @@ export const COLUMNS = {
   PROJECT_NAME: 1,
   APP_TYPE: 2,
   LAST_EDITED: 3,
-  ACTIONS: 4,
+  LAST_PUBLISHED: 4,
+  ACTIONS: 5,
 };
 
 class PersonalProjectsTable extends React.Component {
@@ -50,6 +57,24 @@ class PersonalProjectsTable extends React.Component {
     },
   };
 
+  publishedAtFormatter = (publishedAt, {rowData}) => {
+    const {canShare} = this.props;
+    const isPublishable =
+      AlwaysPublishableProjectTypes.includes(rowData.type) ||
+      (ConditionallyPublishableProjectTypes.includes(rowData.type) &&
+        canShare) ||
+      RestrictedPublishProjectTypes.includes(rowData.type);
+
+    return (
+      <PersonalProjectsPublishedCell
+        isPublishable={isPublishable}
+        isPublished={!!rowData.publishedAt}
+        projectId={rowData.channel}
+        projectType={rowData.type}
+      />
+    );
+  };
+
   actionsFormatter = (actions, {rowData}) => {
     return (
       <PersonalProjectsTableActionsCell
@@ -58,7 +83,6 @@ class PersonalProjectsTable extends React.Component {
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
         projectNameFailure={rowData.projectNameFailure}
-        isFrozen={rowData.frozen}
       />
     );
   };
@@ -133,7 +157,7 @@ class PersonalProjectsTable extends React.Component {
       {
         property: 'type',
         header: {
-          label: i18n.projectTypeTable(),
+          label: i18n.projectType(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -141,6 +165,7 @@ class PersonalProjectsTable extends React.Component {
           formatters: [typeFormatter],
           props: {
             style: {
+              ...styles.cellType,
               ...tableLayoutStyles.cell,
             },
           },
@@ -156,6 +181,23 @@ class PersonalProjectsTable extends React.Component {
         cell: {
           formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell},
+        },
+      },
+      {
+        property: 'publishedAt',
+        header: {
+          label: i18n.published(),
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [this.publishedAtFormatter],
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.centeredCell,
+            },
+          },
         },
       },
       {
@@ -235,8 +277,8 @@ class PersonalProjectsTable extends React.Component {
             )}
           </div>
         )}
+        <PublishDialog />
         <DeleteProjectDialog />
-        <FrozenProjectInfoDialog />
       </div>
     );
   }
@@ -278,6 +320,9 @@ export const styles = {
     borderWidth: '0px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
+  },
+  cellType: {
+    width: 120,
   },
   centeredCell: {
     textAlign: 'center',
@@ -326,7 +371,6 @@ const nameFormatter = (projectName, {rowData}) => {
       projectName={projectName}
       isEditing={rowData.isEditing}
       updatedName={updatedName}
-      isFrozen={rowData.frozen}
     />
   );
 };
