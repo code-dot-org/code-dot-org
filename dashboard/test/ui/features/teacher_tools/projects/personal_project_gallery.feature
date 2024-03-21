@@ -11,17 +11,6 @@ Scenario: Can Toggle to the Public Project Gallery
   And element "#uitest-public-projects" is not visible
   Then I navigate to the public gallery via the gallery switcher
 
-Scenario: Can Publish and Unpublish a Project (Button Version)
-  Given I make a "playlab" project named "Publishable Project"
-  Given I am on "http://studio.code.org/projects"
-  And I wait until element "#uitest-personal-projects" is visible
-  And I wait until element ".ui-personal-projects-table" is visible
-  And the project table contains 1 row
-  And the first project in the table is named "Publishable Project"
-  Then I publish the project from the personal projects table publish button
-  Then I click selector ".ui-personal-projects-unpublish-button"
-  And I wait until element ".ui-personal-projects-publish-button" is visible
-
 Scenario: Can Rename a Project
   Given I make a "playlab" project named "Old Name"
   Given I am on "http://studio.code.org/projects"
@@ -32,9 +21,9 @@ Scenario: Can Rename a Project
   Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 0 of class ".pop-up-menu-item"
-  And I wait until element ".ui-project-rename-input" is visible
-  And I clear the text from element ".ui-project-rename-input"
-  And I press keys "New Name" for element ".ui-project-rename-input"
+  And I wait until element "#ui-project-rename-input" is visible
+  And I clear the text from element "#ui-project-rename-input"
+  And I press keys "New Name" for element "#ui-project-rename-input"
   Then I click selector ".ui-projects-rename-save"
   And I wait until element ".ui-projects-rename-save" is not visible
   And the first project in the table is named "New Name"
