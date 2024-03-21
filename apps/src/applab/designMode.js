@@ -1227,6 +1227,7 @@ function sanitizeLevelDom(levelDom) {
     '#codeApp',
     '#visualizationColumn',
     '#visualizationResizeBar',
+    '#null',
     '.editor-column',
   ];
 
