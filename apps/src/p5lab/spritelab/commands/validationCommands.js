@@ -223,6 +223,8 @@ export const commands = {
     this.previous.printLogLength = this.printLog.length || 0;
     this.previous.soundLogLength = this.soundLog.length || 0;
     this.previous.foregroundEffectsLength = this.foregroundEffects.length || 0;
+    this.previous.background = this.background;
+    this.previous.screenText = this.screenText;
 
     // Store basic information about sprites.
     this.previous.sprites = [];
