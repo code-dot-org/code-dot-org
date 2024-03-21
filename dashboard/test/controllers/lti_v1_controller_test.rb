@@ -492,11 +492,25 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal home_path, '/' + @response.redirect_url.split('/').last
   end
 
-  test 'sync - should not sync when required param missing' do
+  test 'sync - should not sync when section code is blank and required param missing' do
     user = create :teacher, :with_lti_auth
     sign_in user
-    get '/lti/v1/sync_course'
+    get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: nil, context_id: nil, rlid: nil, nrps_url: nil}
     assert_response :bad_request
+  end
+
+  test 'sync - should not sync when launching from wrong context' do
+    user = create :teacher, :with_lti_auth
+    sign_in user
+    LtiV1Controller.any_instance.expects(:render_sync_course_error).with('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
+    get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
+  end
+
+  test 'sync - should not sync and render sync course error when missing a param' do
+    user = create :teacher, :with_lti_auth
+    sign_in user
+    LtiV1Controller.any_instance.expects(:render_sync_course_error).with("Missing lti_integration_id.", :bad_request, 'missing_param')
+    get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: 'qux', context_id: 'foo', rlid: 'quux', nrps_url: 'bar'}
   end
 
   test 'sync - should sync and show the confirmation page' do
