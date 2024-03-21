@@ -229,10 +229,10 @@ describe('stretchRecommender', () => {
     // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
     // and fullTestCourse5 should be filtered out because it does not support any of the same grade levels as fullTestCourse1.
     expect(recommendedCurricula).to.deep.equal([
-      'fullTestCourse3' /* 6 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(2) + overlappingDesiredSchoolSubject(1) +
+      'fullTestCourse3' /* 6 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + hasImportantButNotDesiredTopic(2) +
                            publishedWithinTwoYearsAgo(1) */,
-      'fullTestCourse4' /* 5 points =  */,
-      'fullTestCourse2' /* AAAAAAAAAAAA */,
+      'fullTestCourse4' /* 4 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + overlappingDesiredSchoolSubject(1) */,
+      'fullTestCourse2' /* 3 points = hasDesiredDuration(2) + publishedWithinTwoYearsAgo(1) */,
     ]);
   });
 });
