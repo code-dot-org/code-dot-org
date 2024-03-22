@@ -65,3 +65,9 @@
     }
   }
 }
+
+@media (max-width: $width-sm) {
+  section.bg-primary-light > .flex-container {
+    flex-direction: column;
+  }
+}

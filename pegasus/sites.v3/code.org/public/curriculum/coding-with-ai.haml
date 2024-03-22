@@ -3,6 +3,9 @@ title: Coding with AI
 theme: responsive_full_width
 ---
 
+- button_url = CDO.studio_url("/s/coding-with-ai?viewAs=Instructor")
+- button_string = hoc_s("coding_with_ai_page.button")
+
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/coding-with-ai-styles.css", rel: "stylesheet"}
 
@@ -10,10 +13,50 @@ theme: responsive_full_width
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
       %h1.white
-        =hoc_s(:csa_ai_page_hero_title)
+        =hoc_s("coding_with_ai_page.heading")
       %p.white
-        =hoc_s(:csa_ai_page_hero_description, markdown: :inline, locals: {csa_url: "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a"})
-      %a.link-button.white{href: CDO.studio_url("/s/csa-software-engineering")}
-        =hoc_s(:call_to_action_explore_course)
+        =hoc_s("coding_with_ai_page.desc")
+      %a.link-button.white{href: button_url}=button_string
     %figure
       %img{src: "/images/ai/page/coding-with-ai/coding-with-ai-banner.png", alt: ""}
+
+%section
+  .wrapper.centered
+    %h2=hoc_s("coding_with_ai_page.empower.heading")
+    %p=hoc_s("coding_with_ai_page.empower.desc")
+    = view :"coding_with_ai/coding_with_ai_editorial_cards"
+    %a.link-button{href: button_url}=button_string
+
+%section.bg-neutral-light
+  .wrapper
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s("coding_with_ai_page.glance.grades"), duration: hoc_s("coding_with_ai_page.glance.duration"), level: hoc_s("coding_with_ai_page.glance.level"), tools: hoc_s("coding_with_ai_page.glance.tools"), devices: hoc_s("coding_with_ai_page.glance.devices"), professional_learning: hoc_s("coding_with_ai_page.glance.professional_learning"), topics: hoc_s("coding_with_ai_page.glance.topics"), accessibility_features: hoc_s("coding_with_ai_page.glance.accessibility_features"), languages: hoc_s("coding_with_ai_page.glance.languages")
+
+%section.bg-primary-light
+  .wrapper
+    .flex-container.align-items-center.wrap.gap-2
+      .text-wrapper.flex-1
+        %h2.heading-sm
+          =hoc_s("coding_with_ai_page.support.heading")
+        %p.no-margin-bottom
+          =hoc_s("coding_with_ai_page.support.desc", markdown: :inline)
+      .button-wrapper
+        %a.link-button{href: CDO.studio_url("/users/sign_up")}
+          =hoc_s(:"coding_with_ai_page.support.button")
+
+%section
+  .wrapper
+    LESSONS
+
+%section.bg-neutral-light
+  .wrapper
+    LEARN MORE
+
+%section
+  .wrapper
+    FAQ
+
+%section
+  .wrapper
+    %h2=hoc_s("coding_with_ai_page.resources.heading")
+    %p=hoc_s("coding_with_ai_page.resources.desc")
+    = view :"coding_with_ai/coding_with_ai_resources"
