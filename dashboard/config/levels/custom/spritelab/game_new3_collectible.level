@@ -75,7 +75,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-20T21:40:44.431+00:00\",\"changed\":[\"cloned from \\\"game_development_collectible\\\"\"],\"cloned_from\":\"game_development_collectible\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-20T21:40:44.431+00:00\",\"changed\":[\"cloned from \\\"game_development_collectible\\\"\"],\"cloned_from\":\"game_development_collectible\"},{\"changed_at\":\"2024-03-21 14:45:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 14:45:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -83,10 +83,10 @@
         <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" movable="false" x="16" y="16">
           <next>
             <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"gradient_02"</field>
+              <field name="IMG">"gradient_01"</field>
               <next>
                 <block type="gamelab_makeSpritesGridInput">
-                  <field name="ANIMATION_NAME">"stone_snow"</field>
+                  <field name="ANIMATION_NAME">"dirt_grass"</field>
                   <value name="GRID">
                     <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
                       <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
@@ -97,7 +97,7 @@
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"game_penguin"</field>
+                      <field name="ANIMATION_NAME">"game_panda"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
                           <field name="LOCATION">{"x":81,"y":34}</field>
@@ -108,7 +108,7 @@
                           <field name="GROUP">"walls"</field>
                           <value name="SPRITE">
                             <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"stone_snow"</field>
+                              <field name="ANIMATION">"dirt_grass"</field>
                             </block>
                           </value>
                           <next>
@@ -116,7 +116,7 @@
                               <field name="GROUP">"players"</field>
                               <value name="SPRITE">
                                 <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"game_penguin"</field>
+                                  <field name="ANIMATION">"game_panda"</field>
                                 </block>
                               </value>
                               <next>
@@ -124,7 +124,7 @@
                                   <field name="TOGGLE">"begins"</field>
                                   <value name="SPRITE">
                                     <block type="gamelab_allSpritesWithAnimation">
-                                      <field name="ANIMATION">"game_penguin"</field>
+                                      <field name="ANIMATION">"game_panda"</field>
                                     </block>
                                   </value>
                                   <value name="BEHAVIOR">
@@ -1260,7 +1260,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation" id="32qVZ(oqYv[=5ld5LX9a">
-              <field name="ANIMATION">"game_penguin"</field>
+              <field name="ANIMATION">"game_panda"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -1278,7 +1278,7 @@
           <field name="IMG">"gradient_02"</field>
         </block>
         <block type="gamelab_makeSpritesGridInput" id="n(v/V{3=G~TA,+}g8([:" x="52" y="469">
-          <field name="ANIMATION_NAME">"stone_snow"</field>
+          <field name="ANIMATION_NAME">"dirt_grass"</field>
           <value name="GRID">
             <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
               <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
@@ -1300,7 +1300,7 @@
           <field name="GROUP">"walls"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="CyAw64G[#|~P7rHjF5Yx">
-              <field name="ANIMATION">"stone_snow"</field>
+              <field name="ANIMATION">"dirt_grass"</field>
             </block>
           </value>
         </block>
@@ -1308,7 +1308,7 @@
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="lN$}ma*7wmwyEBBgthuy">
-              <field name="ANIMATION">"game_penguin"</field>
+              <field name="ANIMATION">"game_panda"</field>
             </block>
           </value>
           <value name="BEHAVIOR">

@@ -14,7 +14,7 @@ public class Purse {
 
   private double currency;
 
-  public double addCurrenyToPurse(int amount) {
+  public double addCurrencyToPurse(int amount) {
     /* missing code */
   }
 }
