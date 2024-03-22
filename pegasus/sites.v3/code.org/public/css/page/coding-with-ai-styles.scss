@@ -36,7 +36,7 @@
     }
   }
 
-  @media screen and (max-width: $width-sm) {
+  @media (max-width: $width-sm) {
     background-size: 50%;
   }
 
@@ -56,12 +56,13 @@
   figure {
     width: 35%;
 
-    img {
+    @media (max-width: $width-sm) {
       width: 100%;
+      margin-top: 2rem;
     }
 
-    @media screen and (max-width: $width-sm) {
-      display: none;
+    img {
+      width: 100%;
     }
   }
 }
