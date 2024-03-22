@@ -18,6 +18,10 @@
   text-decoration: none;
   cursor: pointer;
 
+  &:focus-visible, &:focus {
+    text-decoration: none;
+  }
+
   // Pending state button with hidden text and spinner in the middle of the button.
   &.buttonPendingWithHiddenText {
     span {
