@@ -189,6 +189,24 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     render json: {display_theme: @user.display_theme}
   end
 
+  # POST /api/v1/users/<user_id>/disable_ai_tutor_access
+  def disable_ai_tutor_access
+    # TODO: Do we check that the current_user (a teacher) has permission to disable AI tutor access for this student?
+    # i.e., Can any teacher disable AI tutor access for any student?
+    return head :unauthorized unless current_user&.teacher?
+
+    @user.ai_tutor_access_denied = true
+    @user.save
+  
+    # TODO: Do we need to handle errors here?
+    # if @user.save
+    #   head :no_content
+    # else
+    #   render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+    # end
+    head :no_content
+  end
+
   # POST /api/v1/users/accept_data_transfer_agreement
   def accept_data_transfer_agreement
     unless @user.data_transfer_agreement_accepted
