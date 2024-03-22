@@ -1120,5 +1120,55 @@ Dashboard::Application.routes.draw do
       'policy_compliance#child_account_consent'
     post '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent_request'
+
+    # DatablockStorageController powers the data features of applab,
+    # and the key/value pair store feature of gamelab
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+      collection do
+        # Datablock Storage: Key-Value-Pair API
+        post :set_key_value
+        get :get_key_value
+        delete :delete_key_value
+        get :get_key_values
+        put :populate_key_values
+
+        # Datablock Storage: Table API
+        post :create_table
+        post :add_shared_table
+        post :import_csv
+        get :export_csv
+        delete :clear_table
+        delete :delete_table
+        get :get_table_names
+        put :populate_tables
+
+        # Datablock Storage: Table Column API
+        post :add_column
+        put :rename_column
+        put :coerce_column
+        delete :delete_column
+        get :get_column
+        get :get_columns_for_table
+
+        # Datablock Storage: Table Record API
+        post :create_record
+        get :read_records
+        put :update_record
+        delete :delete_record
+
+        # Datablock Storage: Library Manifest API (=shared table metadata)
+        get :get_library_manifest
+        put :set_library_manifest
+
+        # Datablock Storage: Project API
+        get :project_has_data
+        delete :clear_all_data
+
+        # TODO: post-firebase-cleanup, remove
+        # Project Use Datablock Storage API
+        put :use_datablock_storage
+        put :use_firebase_storage
+      end
+    end
   end
 end
