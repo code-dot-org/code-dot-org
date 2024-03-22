@@ -89,8 +89,8 @@ class ReportAbuseControllerTest < ActionController::TestCase
     user = create(:student)
     sign_in user
 
-    assert_equal -50, @controller.update_channel_abuse_score(@channel_id)
-    assert_equal -50, Projects.get_abuse(@channel_id)
+    assert_equal (-50, @controller.update_channel_abuse_score(@channel_id))
+    assert_equal (-50, Projects.get_abuse(@channel_id))
   end
 
   test "get abuse score" do
