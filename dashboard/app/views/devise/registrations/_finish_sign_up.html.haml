@@ -34,7 +34,6 @@
           = link_to t('cancel'), users_cancel_path
 
     = f.hidden_field :locale, value: locale
-    = f.hidden_field :encrypted_password
     - if @user.errors.any?
       .row
         .span8

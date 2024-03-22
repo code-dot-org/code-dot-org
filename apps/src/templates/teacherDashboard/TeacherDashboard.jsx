@@ -13,8 +13,6 @@ import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAs
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
@@ -69,11 +67,6 @@ function TeacherDashboard({
       },
       {includeUserId: true}
     );
-    if (newTab === 'progress') {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId,
-      });
-    }
   });
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -116,12 +109,14 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
-          component={props => (
-            <SectionLoginInfo
-              studioUrlPrefix={studioUrlPrefix}
-              sectionProviderName={sectionProviderName}
-            />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                sectionProviderName={sectionProviderName}
+              />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.standardsReport}

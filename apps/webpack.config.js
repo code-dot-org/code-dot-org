@@ -693,7 +693,8 @@ function createWebpackConfig({
     ],
     devServer: envConstants.HOT
       ? {
-          allowedHosts: ['localhost-studio.code.org'],
+          allowedHosts: ['localhost-studio.code.org', 'localhost.code.org'],
+          client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,
           proxy: [
             {

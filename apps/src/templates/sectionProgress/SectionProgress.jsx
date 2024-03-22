@@ -63,9 +63,14 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     loadUnitProgress(this.props.scriptId, this.props.sectionId);
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+    });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
         logToCloud.PageAction.SectionProgressRenderedWithData,
@@ -75,6 +80,16 @@ class SectionProgress extends Component {
         }
       );
       this.setState({reportedInitialRender: true});
+    }
+
+    if (
+      prevProps.scriptId !== this.props.scriptId ||
+      prevProps.sectionId !== this.props.sectionId
+    ) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+        sectionId: this.props.sectionId,
+        unitId: this.props.scriptId,
+      });
     }
   }
 

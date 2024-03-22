@@ -3,13 +3,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-import EmptySection from '../teacherDashboard/EmptySection';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
 import IconKey from './IconKey';
@@ -46,18 +47,25 @@ function SectionProgressV2({
     getLocalStorage(scriptId, sectionId)
   );
 
-  React.useEffect(
-    () => setExpandedLessonIds(getLocalStorage(scriptId, sectionId)),
-    [scriptId, sectionId]
-  );
+  React.useEffect(() => {
+    setExpandedLessonIds(getLocalStorage(scriptId, sectionId));
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
+      sectionId: sectionId,
+      unitId: scriptId,
+    });
+  }, [scriptId, sectionId]);
 
   const setExpandedLessons = React.useCallback(
-    expandedLessonIds => {
-      setExpandedLessonIds(expandedLessonIds);
-      trySetLocalStorage(
-        getLocalStorageString(scriptId, sectionId),
-        JSON.stringify(expandedLessonIds)
-      );
+    updateFunction => {
+      const newUpdateFunction = currentExpandedLessonIds => {
+        const newExpandedLessonIds = updateFunction(currentExpandedLessonIds);
+        trySetLocalStorage(
+          getLocalStorageString(scriptId, sectionId),
+          JSON.stringify(newExpandedLessonIds)
+        );
+        return newExpandedLessonIds;
+      };
+      setExpandedLessonIds(newUpdateFunction);
     },
     [setExpandedLessonIds, scriptId, sectionId]
   );
@@ -81,31 +89,24 @@ function SectionProgressV2({
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
       <Heading1>{i18n.progressBeta()}</Heading1>
-      {studentCount === 0 ? (
-        <EmptySection sectionId={sectionId} />
-      ) : (
-        <div>
-          <IconKey
-            isViewingValidatedLevel={isViewingValidatedLevel}
-            expandedLessonIds={expandedLessonIds}
-          />
-          <div className={styles.title}>
-            <Heading6 className={styles.titleStudents}>
-              {i18n.students()}
-            </Heading6>
-            <Heading6 className={styles.titleUnitSelector}>
-              {i18n.lessonsIn()}
+      <IconKey
+        isViewingValidatedLevel={isViewingValidatedLevel}
+        expandedLessonIds={expandedLessonIds}
+        sectionId={sectionId}
+      />
+      <div className={styles.title}>
+        <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>
+        <Heading6 className={styles.titleUnitSelector}>
+          {i18n.lessonsIn()}
 
-              <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-            </Heading6>
-          </div>
-          <ProgressTableV2
-            expandedLessonIds={expandedLessonIds}
-            setExpandedLessons={setExpandedLessons}
-            isSkeleton={!levelDataInitialized}
-          />
-        </div>
-      )}
+          <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+        </Heading6>
+      </div>
+      <ProgressTableV2
+        expandedLessonIds={expandedLessonIds}
+        setExpandedLessons={setExpandedLessons}
+        isSkeleton={!levelDataInitialized}
+      />
     </div>
   );
 }
