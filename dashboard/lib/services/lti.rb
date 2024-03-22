@@ -190,14 +190,14 @@ module Services
         )
         had_changes ||= (user.new_record? || user.changed?)
         user.save!
-        if account_type == ::User::TYPE_STUDENT
-          add_student_result = section.add_student(user)
-          had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
-          current_students.add(user.id)
-        else
+        if account_type == ::User::TYPE_TEACHER
           add_instructor_result = section.add_instructor(user)
           had_changes ||= add_instructor_result
           current_teachers.add(user.id)
+        else
+          add_student_result = section.add_student(user)
+          had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
+          current_students.add(user.id)
         end
       end
 
