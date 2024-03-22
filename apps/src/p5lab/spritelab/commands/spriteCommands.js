@@ -178,6 +178,7 @@ export const commands = {
         }
         default:
       }
+      spriteOptions.group = 'effects';
       const spriteId = this.addSprite(spriteOptions);
       const sprite = this.getSpriteArray({id: spriteId})[0];
       this.addBehavior(sprite, {

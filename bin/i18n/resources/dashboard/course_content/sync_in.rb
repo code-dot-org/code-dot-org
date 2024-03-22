@@ -173,6 +173,15 @@ module I18n
                 end
               end
 
+              # Lab2 Validations
+              if level.uses_lab2? && level.try(:validations)
+                validations = level.validations
+                i18n_strings['validations'] = Hash.new unless validations.empty?
+                validations.each do |validation|
+                  i18n_strings['validations'][validation['key']] = validation['message']
+                end
+              end
+
               level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
               blocks = level_xml.xpath('//blocks').first
               if blocks
@@ -383,6 +392,7 @@ module I18n
               long_instructions
               short_instructions
               teacher_markdown
+              validations
             )
 
             redactable = i18n_strings.select do |key, _|

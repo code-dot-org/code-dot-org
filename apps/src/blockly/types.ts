@@ -114,6 +114,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   BlockValueType: {[key: string]: string};
   SNAP_RADIUS: number;
   Variables: ExtendedVariables;
+  hasLoadedBlocks: boolean;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;

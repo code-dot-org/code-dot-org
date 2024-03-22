@@ -578,7 +578,7 @@ export default function LearningGoals({
               )}
             {learningGoals[currentLearningGoal].tips && !isStudent && (
               <details>
-                <summary>
+                <summary className={style.tipsDetailsSummary}>
                   <strong>{i18n.tipsForEvaluation()}</strong>
                 </summary>
 
