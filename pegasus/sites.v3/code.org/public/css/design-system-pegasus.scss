@@ -638,6 +638,7 @@ form {
   margin-top: 2rem;
   display: grid;
   grid-gap: 1.5rem;
+  text-align: initial;
 
   @media screen and (min-width: $width-sm) {
     grid-template-columns: repeat(2, 1fr);

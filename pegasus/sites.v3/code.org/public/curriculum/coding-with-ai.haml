@@ -41,7 +41,7 @@ theme: responsive_full_width
           =hoc_s("coding_with_ai_page.support.desc", markdown: :inline)
       .button-wrapper
         %a.link-button{href: CDO.studio_url("/users/sign_up")}
-          =hoc_s(:"coding_with_ai_page.support.button")
+          =hoc_s("coding_with_ai_page.support.button")
 
 %section
   .wrapper
@@ -50,8 +50,14 @@ theme: responsive_full_width
     = view :"coding_with_ai/coding_with_ai_lessons"
 
 %section.bg-neutral-light
-  .wrapper
-    LEARN MORE
+  .wrapper.centered
+    %h2=hoc_s("coding_with_ai_page.learn_more.heading")
+    = view :"coding_with_ai/coding_with_ai_learn_more"
+    %hr.light
+    %h3=hoc_s("coding_with_ai_page.learn_more.subheading")
+    %p=hoc_s("coding_with_ai_page.learn_more.desc")
+    %a.link-button.secondary{href: "/ai"}
+      =hoc_s("coding_with_ai_page.learn_more.button")
 
 %section.no-padding-bottom
   .wrapper
