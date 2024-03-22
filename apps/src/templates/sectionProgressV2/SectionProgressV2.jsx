@@ -3,6 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -44,18 +46,25 @@ function SectionProgressV2({
     getLocalStorage(scriptId, sectionId)
   );
 
-  React.useEffect(
-    () => setExpandedLessonIds(getLocalStorage(scriptId, sectionId)),
-    [scriptId, sectionId]
-  );
+  React.useEffect(() => {
+    setExpandedLessonIds(getLocalStorage(scriptId, sectionId));
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
+      sectionId: sectionId,
+      unitId: scriptId,
+    });
+  }, [scriptId, sectionId]);
 
   const setExpandedLessons = React.useCallback(
-    expandedLessonIds => {
-      setExpandedLessonIds(expandedLessonIds);
-      trySetLocalStorage(
-        getLocalStorageString(scriptId, sectionId),
-        JSON.stringify(expandedLessonIds)
-      );
+    updateFunction => {
+      const newUpdateFunction = currentExpandedLessonIds => {
+        const newExpandedLessonIds = updateFunction(currentExpandedLessonIds);
+        trySetLocalStorage(
+          getLocalStorageString(scriptId, sectionId),
+          JSON.stringify(newExpandedLessonIds)
+        );
+        return newExpandedLessonIds;
+      };
+      setExpandedLessonIds(newUpdateFunction);
     },
     [setExpandedLessonIds, scriptId, sectionId]
   );
@@ -82,6 +91,7 @@ function SectionProgressV2({
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
+        sectionId={sectionId}
       />
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>

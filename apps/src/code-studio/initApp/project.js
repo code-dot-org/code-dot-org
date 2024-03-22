@@ -1580,7 +1580,8 @@ var projects = (module.exports = {
   },
 
   /**
-   * Unfreezes the project. Also unhides the project if it was hidden.
+   * Unfreezes the project. Also unhides so that it's available for
+   * deleting/renaming in the user's project list.
    */
   unfreeze(callback) {
     if (!(current && current.isOwner)) {

@@ -20,7 +20,6 @@ export const stubFakePersonalProjectData = [
     type: 'gamelab',
     channel: 'abcd1',
     publishedAt: '2015-12-31T23:59:59.999-08:00',
-    frozen: true,
   },
   {
     name: 'Personal Project 2',
