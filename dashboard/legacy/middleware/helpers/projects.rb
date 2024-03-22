@@ -16,6 +16,8 @@ class Projects
   class PublishError < StandardError
   end
 
+  BUFFERED_ABUSE_SCORE = -50
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -266,7 +268,7 @@ class Projects
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? BUFFERED_ABUSE_SCORE : amount)
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
@@ -287,12 +289,11 @@ class Projects
   end
 
   def buffer_abuse_score(channel_id)
-    buffered_abuse_score = -50
     # Reset to 0 first so projects that are featured,
     # unfeatured, then re-featured don't have super low
     # abuse scores.
     reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score)
+    increment_abuse(channel_id, BUFFERED_ABUSE_SCORE)
   end
 
   def content_moderation_disabled?(channel_id)

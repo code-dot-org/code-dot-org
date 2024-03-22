@@ -214,6 +214,7 @@ module ProjectsList
         :projects__value___value,
         :projects__project_type___project_type,
         :projects__published_at___published_at,
+        :projects__abuse_score___abuse_score,
         :featured_projects__featured_at___featured_at,
         :featured_projects__unfeatured_at___unfeatured_at,
         :users__name___name,
@@ -237,7 +238,7 @@ module ProjectsList
           state: 'active'
         ).
         exclude(published_at: nil).
-        exclude(abuse_score: 0...).
+        exclude(abuse_score: 1...).
         order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
@@ -255,7 +256,9 @@ module ProjectsList
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
           "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
-          "isFeatured" => true
+          "isFeatured" => true,
+          "featuredAt" => project_details[:featured_at],
+          "abuseScore" => project_details[:abuse_score],
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end

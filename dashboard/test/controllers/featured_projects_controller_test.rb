@@ -5,12 +5,13 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     @project_validator = create :project_validator
     # @featured_project has a project_id of 456
     @featured_project = create :featured_project
+    @project = create :project, id: 456, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
     @teacher = create :teacher
   end
 
   test 'project validators can bookmark a project as a featured project' do
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
+    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     put :bookmark, params: {project_id: "789"}
     assert_response :success
   end
@@ -18,7 +19,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   test 'project validators can feature projects' do
     skip 'Investigate flaky test'
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
+    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     put :feature, params: {project_id: "789"}
     assert_response :success
   end

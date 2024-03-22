@@ -1565,7 +1565,10 @@ var projects = (module.exports = {
     });
   },
   /**
-   * Freezes the project.
+   * Freezes the project. Also hides so that it's not available for
+   * deleting/renaming in the user's project list.
+   * Only the owner of the project can freeze it and this is used for
+   * exemplar projects in curriculum.
    */
   freeze(callback) {
     if (!(current && current.isOwner)) {
