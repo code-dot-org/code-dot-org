@@ -366,7 +366,6 @@
   "gameDesignTouchEnvironment": "Try making your player bump into the environment around it.",
   "gameDesignNoPlayerSprite": "You need to make a player sprite.",
   "gameDesignEventNoJump": "Make sure your player jumps when you press a key.",
-  "gameDesignMissingType": "You need to add another block so the monster can land on the green platforms:\n\n<xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"GameDev_setGroup\" id=\"s0~~e0!}K[fm;ShKs2sG\">\n  <field name=\"GROUP\">\"walls\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" id=\"x,sMj}}CfvGtzA+U2wfm\">\n      <field name=\"ANIMATION\">\"ground_grass\"</field>\n    </block>\n  </value>\n</block></xml>",
   "gameDesignNeedMoreCostumes": "You need to add at least 3 different `make new sprite` blocks in your program.",
   "gameDesignMissingSpriteCostumes": "You need to add at least 3 sprites for the player to collect. Make sure  to not set them as player or environment.",
   "gameDesignWhenTouchingEvent": "Make sure to add a `when sprite touches` event block in your code. Then make your player touch the collectible sprites.",
