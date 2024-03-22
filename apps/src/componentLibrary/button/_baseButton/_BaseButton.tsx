@@ -9,7 +9,25 @@ import FontAwesomeV6Icon, {
 
 import moduleStyles from './_baseButton.module.scss';
 
-export interface _BaseButtonProps {
+export interface TextButtonSpecificProps {
+  /** Left Button icon */
+  iconLeft?: FontAwesomeV6IconProps;
+  /** Button text */
+  text?: string;
+  /** Left Button icon */
+  iconRight?: FontAwesomeV6IconProps;
+}
+
+export interface IconOnlyButtonSpecificProps {
+  /** Whether button should be icon only (meaning that only 1 icon will be rendered) */
+  isIconOnly?: boolean;
+  /** Button icon (When used in IconOnly mode)*/
+  icon?: FontAwesomeV6IconProps;
+}
+
+export interface CoreButtonProps
+  extends TextButtonSpecificProps,
+    IconOnlyButtonSpecificProps {
   /** Button Component type */
   type?: ButtonType;
   /** Custom class name */
@@ -18,8 +36,6 @@ export interface _BaseButtonProps {
   id?: string;
   /** Button color */
   color?: ButtonColor;
-  /** Button text */
-  text?: string;
   /** Is button disabled */
   disabled?: boolean;
   /** Is button pending */
@@ -28,20 +44,32 @@ export interface _BaseButtonProps {
   ariaLabel?: string;
   /** Size of button */
   size?: ComponentSizeXSToL;
-  /** Left Button icon */
-  iconLeft?: FontAwesomeV6IconProps;
-  /** Button icon (When used in IconOnly mode)*/
-  icon?: FontAwesomeV6IconProps;
-  /** Left Button icon */
-  iconRight?: FontAwesomeV6IconProps;
+}
+
+export interface LinkButtonSpecificProps {
   /** Whether we use \<a> (when set to true) or \<button> (when false) html tag for Button component.
    * If we want button to redirect to another page or download some file we should use \<a> tag.
    * If we want button to call some function or submit some form we should use \<button> tag.
    * */
   useAsLink?: boolean;
+  /** (\<a> specific prop)
+   *  Button target (when used as link) */
+  target?: string;
+  /** (\<a> specific prop)
+   * Button href */
+  href?: string;
+  /** (\<a> specific prop)
+   * Button download (when used as link) */
+  download?: boolean | string;
+  /** (\<a> specific prop)
+   * Button title */
+  title?: string;
+}
+
+export interface ButtonSpecificProps {
   /** (\<button> specific prop)
    * Button html element type */
-  buttonType?: 'submit' | 'button';
+  buttonTagTypeAttribute?: 'submit' | 'button';
   /** (\<button> specific prop)
    *  Button onClick */
   onClick?: (
@@ -57,19 +85,12 @@ export interface _BaseButtonProps {
   /** (\<button> specific prop)
    *  Button name */
   name?: string;
-  /** (\<a> specific prop)
-   *  Button target (when used as link) */
-  target?: string;
-  /** (\<a> specific prop)
-   * Button href */
-  href?: string;
-  /** (\<a> specific prop)
-   * Button download (when used as link) */
-  download?: boolean | string;
-  /** (\<a> specific prop)
-   * Button title */
-  title?: string;
 }
+
+export interface _BaseButtonProps
+  extends CoreButtonProps,
+    LinkButtonSpecificProps,
+    ButtonSpecificProps {}
 
 const checkButtonPropsForErrors = ({
   type,
@@ -79,29 +100,59 @@ const checkButtonPropsForErrors = ({
   href,
   download,
   text,
+  isIconOnly,
 }: _BaseButtonProps) => {
-  if (useAsLink && !href) {
-    throw new Error('Expect href prop when useAsLink is true');
+  if (useAsLink) {
+    if (!href) {
+      throw new Error('Expect href prop when useAsLink is true');
+    }
+
+    if (onClick) {
+      throw new Error(
+        'Expect onClick prop to be undefined when useAsLink is true'
+      );
+    }
   }
 
-  if (useAsLink && onClick) {
-    throw new Error(
-      'Expect onClick prop to be undefined when useAsLink is true'
-    );
+  if (!useAsLink) {
+    if (!onClick) {
+      throw new Error('Expect onClick prop when useAsLink is false');
+    }
+
+    if (href) {
+      throw new Error(
+        'Expect href prop to be undefined when useAsLink is false'
+      );
+    }
+
+    if (download) {
+      throw new Error(
+        'Expect download prop to be undefined when useAsLink is false'
+      );
+    }
   }
 
-  if (!useAsLink && !onClick) {
-    throw new Error('Expect onClick prop when useAsLink is false');
+  if (isIconOnly) {
+    if (!icon) {
+      throw new Error('Expect icon prop when isIconOnly is true');
+    }
+    if (text) {
+      throw new Error(
+        'Expect text prop to be undefined when isIconOnly is true'
+      );
+    }
   }
 
-  if (!useAsLink && href) {
-    throw new Error('Expect href prop to be undefined when useAsLink is false');
-  }
+  if (!isIconOnly) {
+    if (icon) {
+      throw new Error(
+        'Expect icon prop to be undefined when isIconOnly is false'
+      );
+    }
 
-  if (!useAsLink && download) {
-    throw new Error(
-      'Expect download prop to be undefined when useAsLink is false'
-    );
+    if (!text) {
+      throw new Error('Expect text prop when isIconOnly is false');
+    }
   }
 
   if (type !== 'iconOnly' && type !== 'iconBorder' && icon) {
@@ -131,17 +182,21 @@ const spinnerIcon: FontAwesomeV6IconProps = {
 const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   className,
   id,
-  text,
   disabled = false,
   isPending = false,
   ariaLabel,
-  iconLeft,
-  iconRight,
-  icon,
+
   size = 'm',
   type = 'primary',
   color = 'purple',
-  buttonType = 'button',
+  buttonTagTypeAttribute = 'button',
+  /** Text button specific props */
+  iconLeft,
+  iconRight,
+  text,
+  /** IconOnly button specific props*/
+  isIconOnly = false,
+  icon,
   /** <a> specific props */
   useAsLink = false,
   href,
@@ -170,7 +225,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
           download,
           title,
         }
-      : {type: buttonType, onClick, value, name};
+      : {type: buttonTagTypeAttribute, onClick, value, name};
 
   // Check if correct props combination is passed
   useMemo(
@@ -183,8 +238,9 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
         href,
         download,
         text,
+        isIconOnly,
       }),
-    [type, icon, useAsLink, onClick, href, download, text]
+    [type, icon, useAsLink, onClick, href, download, text, isIconOnly]
   );
 
   /** Handling isPending state content & spinner show logic here.
