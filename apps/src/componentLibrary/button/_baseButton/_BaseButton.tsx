@@ -154,23 +154,6 @@ const checkButtonPropsForErrors = ({
       throw new Error('Expect text prop when isIconOnly is false');
     }
   }
-
-  if (type !== 'iconOnly' && type !== 'iconBorder' && icon) {
-    throw new Error(
-      'Expect icon prop to be undefined when type is not iconOnly or iconBorder. (Please remove icon)'
-    );
-  }
-
-  if ((type === 'iconOnly' || type === 'iconBorder') && !icon) {
-    throw new Error(
-      'Expect icon prop not to be undefined when type is iconOnly or iconBorder. (Please add icon)'
-    );
-  }
-  if (type !== 'iconOnly' && type !== 'iconBorder' && !text) {
-    throw new Error(
-      'Expect text prop not to be undefined when type is not iconOnly or iconBorder. (Please add text)'
-    );
-  }
 };
 
 const spinnerIcon: FontAwesomeV6IconProps = {
@@ -264,6 +247,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
         moduleStyles[`button-${type}`],
         moduleStyles[`button-${color}`],
         moduleStyles[`button-${size}`],
+        isIconOnly && moduleStyles['button-iconOnly'],
         addPendingButtonWithHiddenTextClass &&
           moduleStyles.buttonPendingWithHiddenText,
         className
