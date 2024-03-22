@@ -4,6 +4,10 @@ require 'webmock/minitest'
 class LevelsHelperTest < ActionView::TestCase
   include Devise::Test::ControllerHelpers
 
+  setup_all do
+    I18n.load_path += Dir[Rails.root.join('config/locales/block_categories.it-IT.*')]
+  end
+
   def sign_in(user)
     user.reload
     # override the default sign_in helper because we don't actually have a request or anything here
