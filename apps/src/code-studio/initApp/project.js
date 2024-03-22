@@ -1575,13 +1575,11 @@ var projects = (module.exports = {
       return;
     }
     current.frozen = true;
-    current.hidden = true;
     this.updateChannels_(callback);
   },
 
   /**
-   * Unfreezes the project. Also unhides so that it's available for
-   * deleting/renaming in the user's project list.
+   * Unfreezes the project. Also unhides the project if it was hidden.
    */
   unfreeze(callback) {
     if (!(current && current.isOwner)) {

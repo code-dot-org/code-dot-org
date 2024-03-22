@@ -287,7 +287,8 @@ module ProjectsList
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at]
+        publishedAt: project[:published_at],
+        frozen: project_value['frozen'],
       }
 
       if with_library
