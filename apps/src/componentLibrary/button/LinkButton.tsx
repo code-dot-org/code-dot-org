@@ -18,7 +18,7 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = props => (
  *
  * Design System: Link Button Component.
  *
- * Alias for ***_BaseButton*** Component. Renders a Button with <a> tag.
+ * Alias for ***_BaseButton*** Component. Renders a Button with ```<a>``` html tag.
  *
  * Can be used to render a button or as a part of bigger/more complex components (e.g. Some forms, blocks/cards).
  */
