@@ -14,7 +14,6 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
-import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/FrozenProjectInfoDialog';
 import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -58,7 +57,6 @@ class PersonalProjectsTable extends React.Component {
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
         projectNameFailure={rowData.projectNameFailure}
-        isFrozen={rowData.frozen}
       />
     );
   };
@@ -236,7 +234,6 @@ class PersonalProjectsTable extends React.Component {
           </div>
         )}
         <DeleteProjectDialog />
-        <FrozenProjectInfoDialog />
       </div>
     );
   }
@@ -326,7 +323,6 @@ const nameFormatter = (projectName, {rowData}) => {
       projectName={projectName}
       isEditing={rowData.isEditing}
       updatedName={updatedName}
-      isFrozen={rowData.frozen}
     />
   );
 };
