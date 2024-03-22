@@ -39,6 +39,8 @@ theme: responsive_full_width
         =hoc_s(:call_to_action_discover_district_program)
       %a.link-button.secondary.white{href: "/educate/district/partners"}
         =hoc_s(:call_to_action_see_district_partners)
+    %p.body-three.white.no-margin-bottom{style: "margin-top: 1rem"}
+      =hoc_s(:admins_page_district_program_disclaimer, markdown: :inline, locals: {intl_url: "/professional-learning/international-partners"})
 
 %section.driving-change.bg-neutral-light
   .wrapper
