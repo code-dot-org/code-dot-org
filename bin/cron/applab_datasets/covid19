@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-# TODO: unfirebase, also update datablock storage: #56993
-# TODO: post-firebase-cleanup, remove the firebase version: #56994
-
 # This script fetches covid19 data and uploads to the shared firebase channel.
 require_relative '../../../deployment'
 require 'cdo/only_one'
@@ -10,8 +7,6 @@ require 'net/http'
 require 'csv'
 require 'date'
 require 'datapackage'
-
-# TODO: post-firebase-cleanup, remove the firebase reference: #56994
 require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 
 US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
@@ -108,7 +103,6 @@ def get_world_covid19_data
 end
 
 def main
-  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
   fb = FirebaseHelper.new('shared')
   records, columns = get_us_covid19_data
   fb.upload_live_table('COVID-19 Cases per US State', records, columns)
