@@ -17,6 +17,9 @@ import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
+import EmptySection from './EmptySection';
+import {Heading1} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
 
 const applyV1TeacherDashboardWidth = children => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;
@@ -122,6 +125,31 @@ function TeacherDashboard({
           path={TeacherDashboardPath.standardsReport}
           component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
+        {studentCount === 0 && (
+          <Route
+            component={props =>
+              applyV1TeacherDashboardWidth(
+                <div>
+                  {location.pathname === TeacherDashboardPath.progress && (
+                    <div>
+                      <Heading1>{i18n.progress()}</Heading1>
+                      <EmptySection
+                        className={dashboardStyles.emptyClassroomProgress}
+                        sectionId={sectionId}
+                      />
+                    </div>
+                  )}
+                  {location.pathname !== TeacherDashboardPath.progress && (
+                    <EmptySection
+                      className={dashboardStyles.emptyClassroom}
+                      sectionId={sectionId}
+                    />
+                  )}
+                </div>
+              )
+            }
+          />
+        )}
         <Route
           path={TeacherDashboardPath.projects}
           component={props =>

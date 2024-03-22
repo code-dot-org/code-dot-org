@@ -8,13 +8,14 @@ import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.sv
 export default class EmptySection extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
+    className: PropTypes.string,
   };
 
   render() {
-    const {sectionId} = this.props;
+    const {sectionId, className} = this.props;
 
     return (
-      <div style={styles.text}>
+      <div className={className}>
         <img src={emptyDesk} alt={'empty desk'} />
         <Heading3>{i18n.emptySectionHeadline()}</Heading3>
         <BodyTwoText>{i18n.emptySectionDescription()}</BodyTwoText>
@@ -30,12 +31,3 @@ export default class EmptySection extends React.Component {
     );
   }
 }
-
-const styles = {
-  text: {
-    textAlign: 'center',
-    paddingTop: 10,
-    maxWidth: '538px',
-    margin: 'auto',
-  },
-};
