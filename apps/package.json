@@ -317,6 +317,7 @@
     "slate-react": "^0.81.0",
     "sortabular": "^1.6.0",
     "sprintf-js": "^1.0.3",
+    "statsig-js": "^4.50.0",
     "stream-browserify": "^3.0.0",
     "survey-react": "^1.9.28",
     "swiper": "^11.0.5",

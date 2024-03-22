@@ -1,6 +1,12 @@
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
+const PLATFORMS = {
+  AMPLITUDE: 'Amplitude',
+  STATSIG: 'Statsig',
+  BOTH: 'Both',
+};
+
 const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
@@ -196,6 +202,11 @@ const EVENTS = {
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
+
+  // Curriculumm Recommender
+  RECOMMENDED_SIMILAR_CURRICULUM_SHOWN: 'Recommended Similar Curriculum Shown',
+  RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
+    'Recommended Similar Curriculum Clicked',
 };
 
 const EVENT_GROUP_NAMES = {
@@ -243,4 +254,4 @@ const EVENT_GROUPS = {
   [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS};
