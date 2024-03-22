@@ -1,14 +1,38 @@
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
-import {StudentAccessData} from './types';
+import {StudentServerData} from './types';
 
-const formatDataForToggle = (student: StudentAccessData) => {
-  const studentDataForToggle: Record<string, any> = {};
-  studentDataForToggle['id'] = student.id;
-  studentDataForToggle['name'] = student.name;
-  studentDataForToggle['aiTutorAccessDenied'] = student.aiTutorAccessDenied;
-  return studentDataForToggle;
+const formatServerData = (student: StudentServerData) => ({
+  id: student.id,
+  name: student.name,
+  aiTutorAccessDenied: student.ai_tutor_access_denied,
+});
+
+export const handleUpdateAITutorAccess = async (
+  userId: number,
+  newAccess: boolean
+) => {
+  try {
+    const response = await fetch(`/api/v1/users/${userId}/ai_tutor_access`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify({ai_tutor_access: newAccess}),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+  } catch (error) {
+    // MetricsReporter.logError({
+    //   event: MetricEvent.AI_TUTOR_CHAT_DISABLE_ACCESS_FAIL,
+    //   errorMessage: error.message,
+    // });
+    // We need to rethrow the error so that the toggle can revert to its original state.
+    throw error;
+  }
 };
 
 // Fetch students and whether they have access to AI Tutor or not.
@@ -24,13 +48,16 @@ export const fetchStudents = async (sectionId: number) => {
         },
       }
     );
-    const data = await response.json();
-    const students = data.map(formatDataForToggle);
-    return students;
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const studentData = await response.json();
+    return studentData.map(formatServerData);
   } catch (error) {
     //   MetricsReporter.logError({
     //     event: MetricEvent.AI_TUTOR_CHAT_FETCH_FAIL,
-    //     errorMessage: error,
+    //     errorMessage: error.message,
     //   });
+    throw error;
   }
 };

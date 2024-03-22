@@ -16,6 +16,14 @@ const AITutorTeacherControls: React.FunctionComponent<
   AITutorTeacherControlsProps
 > = ({sectionId}) => {
   const [students, setStudents] = useState<StudentAccessData[]>([]);
+  const [globalErrorMessage, setGlobalErrorMessage] = useState<string | null>(
+    null
+  );
+
+  const displayGlobalError = (error: string) => {
+    setGlobalErrorMessage(error);
+    setTimeout(() => setGlobalErrorMessage(null), 5000);
+  };
 
   useEffect(() => {
     (async () => {
@@ -23,13 +31,16 @@ const AITutorTeacherControls: React.FunctionComponent<
         const students = await fetchStudents(sectionId);
         setStudents(students);
       } catch (error) {
-        console.log('error', error);
+        displayGlobalError('Failed to fetch students. Please try again.');
       }
     })();
   }, [sectionId]);
 
   return (
     <div>
+      {globalErrorMessage && (
+        <div className={style.alert}>{globalErrorMessage}</div>
+      )}
       <table>
         <thead>
           <tr>
@@ -46,7 +57,14 @@ const AITutorTeacherControls: React.FunctionComponent<
         </thead>
         <tbody>
           {students.map(student => (
-            <StudentAccessToggle key={student.id} student={student} />
+            <StudentAccessToggle
+              key={student.id}
+              student={student}
+              displayGlobalError={error => {
+                setGlobalErrorMessage(error);
+                setTimeout(() => setGlobalErrorMessage(null), 3000);
+              }}
+            />
           ))}
         </tbody>
       </table>

@@ -1,23 +1,34 @@
 import React, {useState} from 'react';
-import style from './chat-messages-table.module.scss';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 
-interface StudentAccesToggleProps {
+import {handleUpdateAITutorAccess} from '@cdo/apps/aiTutor/accessControlsApi';
+import {StudentAccessData} from '@cdo/apps/aiTutor/types';
+import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
+
+import style from './chat-messages-table.module.scss';
+
+interface StudentAccessToggleProps {
   student: StudentAccessData;
+  displayGlobalError: (error: string) => void;
 }
 
-const StudentAccessToggle: React.FunctionComponent<StudentAccesToggleProps> = ({
-  student,
-}) => {
+const StudentAccessToggle: React.FunctionComponent<
+  StudentAccessToggleProps
+> = ({student, displayGlobalError}) => {
+  console.log('student', student);
   const [hasAITutorAccess, setHasAITutorAccess] = useState(
     !student.aiTutorAccessDenied
   );
 
   // TODO: Implement this functionality
   const handleToggle = () => {
-    setHasAITutorAccess(!hasAITutorAccess);
-    console.log('hasAITutorAccess', hasAITutorAccess);
+    const originalValue = hasAITutorAccess;
+    const newValue = !hasAITutorAccess;
+
+    setHasAITutorAccess(newValue);
+    handleUpdateAITutorAccess(student.id, newValue).catch(() => {
+      setHasAITutorAccess(originalValue);
+      displayGlobalError('Failed to update student access. Please try again.');
+    });
   };
 
   return (

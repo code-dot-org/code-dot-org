@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -189,22 +189,27 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     render json: {display_theme: @user.display_theme}
   end
 
-  # POST /api/v1/users/<user_id>/disable_ai_tutor_access
-  def disable_ai_tutor_access
-    # TODO: Do we check that the current_user (a teacher) has permission to disable AI tutor access for this student?
-    # i.e., Can any teacher disable AI tutor access for any student?
+  # POST /api/v1/users/<user_id>/ai_tutor_access
+  def update_ai_tutor_access
     return head :unauthorized unless current_user&.teacher?
+    target_user = User.find_by_id(params[:user_id])
 
-    @user.ai_tutor_access_denied = true
-    @user.save
+    # TODO: Refactor to specific before action, ex. authorize_teacher_for_user
+    unless target_user && current_user.teacher?
+      return head :unauthorized
+    end
+
+    puts "new value: #{!params[:ai_tutor_access].try(:to_bool)}"
+    target_user.ai_tutor_access_denied = !params[:ai_tutor_access].try(:to_bool)
+    # target_user.save
   
-    # TODO: Do we need to handle errors here?
-    # if @user.save
-    #   head :no_content
-    # else
-    #   render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
-    # end
-    head :no_content
+    # TODO: Do we need to handle errors here? Ex.
+    if target_user.save
+      head :no_content
+    else
+      render json: { errors: target_user.errors.full_messages }, status: :unprocessable_entity
+    end
+    # head :no_content
   end
 
   # POST /api/v1/users/accept_data_transfer_agreement
