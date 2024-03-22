@@ -33,6 +33,8 @@ CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
+# Loads only English i18n files to speed up the env loading
+I18n.load_path.select! {|path| path.match?(/en-US|en\./)}
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
