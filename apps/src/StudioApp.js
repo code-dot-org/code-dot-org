@@ -2841,7 +2841,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
-  // behavior. We want a way to specify no toolbox, which is <xml></xml>
+  // behavior. We want a way to specify no toolbox, which is <xml></xml>.
+  // Google Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
     // Update CDO Blockly XML so it is compatible with mainline Google Blockly
     // (Nothing is changed if we are using CDO Blockly.)
@@ -2850,13 +2851,14 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     );
 
     const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
-    // An empty toolbox should be treated as no toolbox.
+    const emptyToolboxOptionsWithoutWhitespace = [
+      '<xml></xml>',
+      '<xml/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"></xml>',
+    ];
     if (
-      toolboxWithoutWhitespace === '<xml></xml>' ||
-      toolboxWithoutWhitespace === '<xml/>' ||
-      // Google Blockly always adds the xmlns attribute.
-      toolboxWithoutWhitespace ===
-        '<xmlxmlns="https://developers.google.com/blockly/xml"/>'
+      emptyToolboxOptionsWithoutWhitespace.includes(toolboxWithoutWhitespace)
     ) {
       config.level.toolbox = undefined;
     }
