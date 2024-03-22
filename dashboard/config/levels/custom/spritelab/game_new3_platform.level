@@ -75,7 +75,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-20T21:40:15.032+00:00\",\"changed\":[\"cloned from \\\"game_development_type_practice_choices_b\\\"\"],\"cloned_from\":\"game_development_type_practice_choices_b\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-20T21:40:15.032+00:00\",\"changed\":[\"cloned from \\\"game_development_type_practice_choices_b\\\"\"],\"cloned_from\":\"game_development_type_practice_choices_b\"},{\"changed_at\":\"2024-03-21 14:40:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 14:40:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 14:42:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -87,29 +87,25 @@
               <next>
                 <block type="gamelab_makeSpritesGrid">
                   <field name="ANIMATION_NAME">"ground_stone"</field>
-                  <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
+                  <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,1,0,0],[1,1,1,1,1,1,1,1]]</field>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"ground_stone"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":297,"y":333}</field>
-                        </block>
-                      </value>
+                    <block type="gamelab_makeSpritesGrid">
+                      <field name="ANIMATION_NAME">"ground_grass"</field>
+                      <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,1,0,0,0,0],[1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
                       <next>
                         <block type="gamelab_makeNewSpriteAnon">
-                          <field name="ANIMATION_NAME">"ground_stone"</field>
+                          <field name="ANIMATION_NAME">"alien_06"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":305,"y":102}</field>
+                              <field name="LOCATION">{"x":364,"y":345}</field>
                             </block>
                           </value>
                           <next>
                             <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"ground_stone"</field>
+                              <field name="ANIMATION_NAME">"alien_10"</field>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":125,"y":281}</field>
+                                  <field name="LOCATION">{"x":325,"y":91}</field>
                                 </block>
                               </value>
                               <next>
@@ -121,77 +117,27 @@
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_makeNewSpriteAnon">
-                                      <field name="ANIMATION_NAME">"ground_grass"</field>
-                                      <value name="LOCATION">
-                                        <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":206,"y":307}</field>
+                                    <block type="GameDev_setGroup">
+                                      <field name="GROUP">"players"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"alien_06"</field>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="gamelab_makeNewSpriteAnon">
-                                          <field name="ANIMATION_NAME">"ground_grass"</field>
-                                          <value name="LOCATION">
-                                            <block type="gamelab_location_picker">
-                                              <field name="LOCATION">{"x":42,"y":219}</field>
+                                        <block type="gamelab_toggleBehaviorSimple">
+                                          <field name="TOGGLE">"begins"</field>
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"alien_06"</field>
                                             </block>
                                           </value>
-                                          <next>
-                                            <block type="gamelab_makeNewSpriteAnon">
-                                              <field name="ANIMATION_NAME">"ground_grass"</field>
-                                              <value name="LOCATION">
-                                                <block type="gamelab_location_picker">
-                                                  <field name="LOCATION">{"x":179,"y":166}</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="gamelab_makeNewSpriteAnon">
-                                                  <field name="ANIMATION_NAME">"alien_06"</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":364,"y":345}</field>
-                                                    </block>
-                                                  </value>
-                                                  <next>
-                                                    <block type="gamelab_makeNewSpriteAnon">
-                                                      <field name="ANIMATION_NAME">"alien_10"</field>
-                                                      <value name="LOCATION">
-                                                        <block type="gamelab_location_picker">
-                                                          <field name="LOCATION">{"x":309,"y":70}</field>
-                                                        </block>
-                                                      </value>
-                                                      <next>
-                                                        <block type="GameDev_setGroup">
-                                                          <field name="GROUP">"players"</field>
-                                                          <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"alien_06"</field>
-                                                            </block>
-                                                          </value>
-                                                          <next>
-                                                            <block type="gamelab_toggleBehaviorSimple">
-                                                            <field name="TOGGLE">"begins"</field>
-                                                            <value name="SPRITE">
-                                                            <block type="gamelab_allSpritesWithAnimation">
-                                                            <field name="ANIMATION">"alien_06"</field>
-                                                            </block>
-                                                            </value>
-                                                            <value name="BEHAVIOR">
-                                                            <block type="gamelab_behavior_get">
-                                                            <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-                                                            <field name="NAME">moving with arrow keys</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
+                                          <value name="BEHAVIOR">
+                                            <block type="gamelab_behavior_get">
+                                              <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+                                              <field name="NAME">moving with arrow keys</field>
                                             </block>
-                                          </next>
+                                          </value>
                                         </block>
                                       </next>
                                     </block>
@@ -209,7 +155,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_keyPressed" x="23" y="860">
+        <block type="gamelab_keyPressed" x="20" y="562">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
           <next>

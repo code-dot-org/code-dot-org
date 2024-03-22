@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-03-20T21:37:52.000Z",
   "level_num": "custom",
@@ -70,12 +71,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "You have reached the end of the module! Create your own GameDev project.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**Sprite Type Practice**\r\n\r\nCan you add to the program so the pig must stay on the path and cannot go in the grass? \r\n- Which block needs to be added?\r\n- Press `Run` then use the arrows to try it out. ",
-    "preload_asset_list": null
+    "long_instructions": "**Environment Sprite Type Practice**\r\n\r\nCan you add to the program so the pig cannot go in the grass and must stay on the path? \r\n- Which block needs to be added?\r\n- Press `Run` then use the arrows to try it out. ",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-20T21:37:52.029+00:00\",\"changed\":[\"cloned from \\\"game_development_type_practice_choices_a\\\"\"],\"cloned_from\":\"game_development_type_practice_choices_a\"},{\"changed_at\":\"2024-03-20 22:05:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:07:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:08:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-20T21:37:52.029+00:00\",\"changed\":[\"cloned from \\\"game_development_type_practice_choices_a\\\"\"],\"cloned_from\":\"game_development_type_practice_choices_a\"},{\"changed_at\":\"2024-03-20 22:05:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:07:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:08:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 15:18:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

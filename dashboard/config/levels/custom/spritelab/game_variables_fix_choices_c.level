@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:25:06.000Z",
   "level_num": "custom",
@@ -43,13 +42,11 @@
     "thumbnail_url": "https://images.code.org/26b14d1fc0555c73efaf4c4e662fddcf-soccer.jpg",
     "bubble_choice_description": "**Difficulty:** 🌶️🌶️\r\n\r\n**Game Mechanics:** Click & Collect \r\n\r\n**Problem:** Nothing happens if the player wins",
     "long_instructions": " **Fix the game!**\r\n \r\n1. Press `Run` and try out the game\r\n\r\n- Program something to happen if a player wins the game\r\n\r\n***\r\n\r\n***Hint:*** *In level 6 we learned how to check if the variable equals winning condition.*",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "short_instructions": "Add to your program so something happens if a player wins the game!"
+    "short_instructions": "Add to your program so something happens if a player wins the game!",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:06.395+00:00\",\"changed\":[\"cloned from \\\"game_dev_fix_choice3\\\"\"],\"cloned_from\":\"game_dev_fix_choice3\"},{\"changed_at\":\"2024-03-18 20:25:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:11:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:31:55 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:50:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:49 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:44:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 15:47:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:06.395+00:00\",\"changed\":[\"cloned from \\\"game_dev_fix_choice3\\\"\"],\"cloned_from\":\"game_dev_fix_choice3\"},{\"changed_at\":\"2024-03-18 20:25:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:11:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:31:55 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:50:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:51:49 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:44:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 15:47:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-21 18:26:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1297,10 +1294,10 @@
     <toolbox_blocks>
       <xml>
         <variables>
-          <variable id="n`_IY?HES|9qQ/cu*1co">Score</variable>
+          <variable id="n`_IY?HES|9qQ/cu*1co">ballCount</variable>
         </variables>
         <block type="gamelab_ifVarEquals" id="M/gCD$xcQAi@;(xYGB%;" x="391" y="15">
-          <field name="NUM" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="NUM" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="VAL">
             <block type="math_number" id="4k.$ts7E5)WO(|_4LA29">
               <field name="NUM">8</field>
@@ -1308,7 +1305,7 @@
           </value>
         </block>
         <block type="gamelab_showVariable" id="/)UBq5TH4YJjZD-`%IZQ" x="16" y="52">
-          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="p$Ph8wEe0XoP#ks5#9Nt">
               <field name="LOCATION">{"x":200,"y":200}</field>
@@ -1316,7 +1313,7 @@
           </value>
         </block>
         <block type="variables_set" id="fXn,U[?LRWWvSKOhe=bn" x="47" y="91">
-          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="VALUE">
             <block type="math_number" id="Sg~0tgXZ+$|x:hXADq~L">
               <field name="NUM">0</field>
@@ -1324,7 +1321,7 @@
           </value>
         </block>
         <block type="math_change" id="Xtk0Wuz]qYA2a}VYyuSn" x="16" y="132">
-          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">Score</field>
+          <field name="VAR" id="n`_IY?HES|9qQ/cu*1co">ballCount</field>
           <value name="DELTA">
             <shadow type="math_number" id="MIV.zaN{.y8?~;([e*,B">
               <field name="NUM">1</field>
@@ -1334,7 +1331,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="l8$mN@=wg,pKFYRD:+aw" x="16" y="172">
+        <block type="gamelab_setBackgroundImageAs" id="l8$mN@=wg,pKFYRD:+aw" x="52" y="191">
           <field name="IMG">"tennis_court"</field>
         </block>
         <block type="gamelab_playSound" id="2=6uV8c=c%-F8R:pdSeT" x="16" y="246">
@@ -1451,7 +1448,7 @@
           </value>
           <value name="BEHAVIOR">
             <block type="gamelab_behaviorPicker" id="h]]+8LOkLIuH(Zy=zbgU">
-              <field name="BEHAVIOR">uninitialized</field>
+              <field name="BEHAVIOR">driving with arrow keys</field>
             </block>
           </value>
         </block>

@@ -53,6 +53,6 @@ export const Error = Template.bind({});
 Error.args = {
   isOpen: true,
   syncResult: {
-    error: 'LTI Integration not found',
+    error: 'no_integration',
   },
 };
