@@ -1,5 +1,6 @@
 import {makeEnum} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -181,6 +182,13 @@ export default function currentUser(state = initialState, action) {
       progress_table_v2_closed_beta,
     } = action.serverUser;
     analyticsReport.setUserProperties(
+      id,
+      user_type,
+      experiments.getEnabledExperiments()
+    );
+    // Calling Statsig separately to emphasize different user integrations
+    // and because dual reporting is aspirationally temporary (March 2024)
+    statsigReporter.setUserProperties(
       id,
       user_type,
       experiments.getEnabledExperiments()

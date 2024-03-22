@@ -14,6 +14,7 @@ import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
+  SET_TEMPERATURE_STEP,
   EMPTY_MODEL_CARD_INFO,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
@@ -136,7 +137,7 @@ const EditAiCustomizations: React.FunctionComponent<{
           inputType="number"
           min={MIN_TEMPERATURE}
           max={MAX_TEMPERATURE}
-          step={0.1}
+          step={SET_TEMPERATURE_STEP}
           description="Temperature setting for the model. A higher temperature induces more randomness."
         />
         <FieldSection

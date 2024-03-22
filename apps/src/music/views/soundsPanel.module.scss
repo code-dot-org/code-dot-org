@@ -132,9 +132,12 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        &Vocal {
+          font-style: italic;
+        }
       }
     }
-
 
     &Middle {
       font-size: 11px;

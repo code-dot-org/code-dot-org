@@ -4,7 +4,7 @@
 import TableControls from './TableControls';
 import {DataView, WarningType} from '../constants';
 import DataTable from './DataTable';
-import FirebaseStorage from '../firebaseStorage';
+import {storageBackend, isFirebaseStorage} from '../storage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -15,6 +15,7 @@ import TableDescription from './TableDescription';
 import classNames from 'classnames';
 import style from './data-table-view.module.scss';
 import msg from '@cdo/locale';
+import {refreshCurrentDataView} from './loadDataForView';
 
 const INITIAL_STATE = {
   showDebugView: false,
@@ -46,10 +47,11 @@ class DataTableView extends React.Component {
   }
 
   importCsv = (csvData, onComplete) => {
-    FirebaseStorage.importCsv(
+    storageBackend().importCsv(
       this.props.tableName,
       csvData,
       () => {
+        refreshCurrentDataView();
         this.setState(INITIAL_STATE);
         onComplete();
       },
@@ -65,18 +67,23 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
-    const isSharedTable =
-      this.props.tableListMap[this.props.tableName] === tableType.SHARED;
-    const tableName = encodeURIComponent(this.props.tableName);
-    const channelId = isSharedTable ? 'shared' : Applab.channelId;
-    location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
+    // TODO: post-firebase-cleanup, remove this conditional, leave only logic from the else clause #56994
+    if (isFirebaseStorage()) {
+      const isSharedTable =
+        this.props.tableListMap[this.props.tableName] === tableType.SHARED;
+      const tableName = encodeURIComponent(this.props.tableName);
+      const channelId = isSharedTable ? 'shared' : Applab.channelId;
+      location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
+    } else {
+      location.href = storageBackend().exportCsvUrl(this.props.tableName);
+    }
   };
 
   /** Delete all rows, but preserve the columns. */
   clearTable = () => {
-    FirebaseStorage.clearTable(
+    storageBackend().clearTable(
       this.props.tableName,
-      () => {},
+      refreshCurrentDataView,
       msg => console.warn(msg)
     );
   };
