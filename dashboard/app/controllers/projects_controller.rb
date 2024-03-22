@@ -533,9 +533,9 @@ class ProjectsController < ApplicationController
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
     if params[:script_call]
-      render js: "#{params[:script_call]}(#{datablock_storage_options.to_json});"
+      render js: "#{params[:script_call]}(#{firebase_options.to_json});"
     else
-      render json: datablock_storage_options
+      render json: firebase_options
     end
   end
 
