@@ -1,9 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
-  load_resource only: [:get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -106,6 +106,29 @@ class RubricsController < ApplicationController
         group_by(&:learning_goal_id).
         map {|_, eval_list| eval_list.max_by(&:submitted_at)}
     render json: teacher_evaluations.map(&:summarize_for_participant)
+  end
+
+  def get_teacher_evaluations_for_all
+    section_id = params.transform_keys(&:underscore).require(:section_id)
+    return head :forbidden unless current_user&.teacher?
+
+    # Find the rubric (must have something to evaluate)
+    return head :bad_request unless @rubric
+
+    teacher_evals = []
+    user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
+    user_ids.each do |user_id|
+      @user = User.find(user_id)
+      next unless @user&.student_of?(current_user)
+
+      learning_goal_ids = @rubric.learning_goals.pluck(:id)
+      teacher_evaluations =
+        LearningGoalTeacherEvaluation.where(user_id: user_id, learning_goal_id: learning_goal_ids).where.not(submitted_at: nil).
+          group_by(&:learning_goal_id).
+          map {|_, eval_list| eval_list.max_by(&:submitted_at)}
+      teacher_evals.append({user_name: @user.name, user_family_name: @user.family_name, user_id: user_id, eval: teacher_evaluations.map(&:summarize_for_participant)})
+    end
+    render json: teacher_evals
   end
 
   def run_ai_evaluations_for_user

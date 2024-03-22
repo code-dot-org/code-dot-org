@@ -1,6 +1,7 @@
 /* eslint-env node, phantomjs */
-
 var system = require('system');
+var webpage = require('webpage');
+
 var args = system.args;
 
 if (args.indexOf('--help') !== -1 || args.indexOf('-h') !== -1) {
@@ -23,12 +24,12 @@ if (args.indexOf('--visualization-only') !== -1) {
 
 var COURSE = args[1] || 'course1';
 
-var page = require('webpage').create();
+var page = webpage.create();
 
 // viewportSize being the actual size of the headless browser
 page.viewportSize = {
   width: 1024,
-  height: 768
+  height: 768,
 };
 
 // the clipRect is the portion of the page you are taking a screenshot of
@@ -36,7 +37,7 @@ page.clipRect = {
   top: 0,
   left: 0,
   width: 1024,
-  height: 768
+  height: 768,
 };
 
 /**
@@ -46,9 +47,9 @@ page.clipRect = {
  * @param {function} checker
  * @param {function} cb
  */
-var waitUntil = function(checker, cb) {
+var waitUntil = function (checker, cb) {
   var loaded = false;
-  var interval = setInterval(function() {
+  var interval = setInterval(function () {
     loaded = checker();
     if (loaded) {
       cb(loaded);
@@ -57,14 +58,14 @@ var waitUntil = function(checker, cb) {
     }
   }, 100);
 
-  var timeout = setTimeout(function() {
+  var timeout = setTimeout(function () {
     clearInterval(interval);
     cb();
   }, 5000);
 };
 
-var closeDialog = function(p, cb) {
-  waitUntil(dialogIsVisible.bind(p), function(rect) {
+var closeDialog = function (p, cb) {
+  waitUntil(dialogIsVisible.bind(p), function (rect) {
     if (rect) {
       p.sendEvent(
         'click',
@@ -76,8 +77,8 @@ var closeDialog = function(p, cb) {
   });
 };
 
-var dialogIsVisible = function() {
-  return this.evaluate(function(s) {
+var dialogIsVisible = function () {
+  return this.evaluate(function (s) {
     var element = document.querySelector(s);
     if (element) {
       return element.getBoundingClientRect();
@@ -85,14 +86,14 @@ var dialogIsVisible = function() {
   }, '.x-close');
 };
 
-var dialogIsGone = function() {
-  return this.evaluate(function(s) {
+var dialogIsGone = function () {
+  return this.evaluate(function (s) {
     return !document.querySelector(s);
   }, '.x-close');
 };
 
-var extractTitle = function(page) {
-  return page.evaluate(function() {
+var extractTitle = function (page) {
+  return page.evaluate(function () {
     var titleRegex = /\/s\/([^\/]*)\/lessons\/(\d*)\/levels\/(\d*)/;
     // location.pathname should look something like
     // '/s/course1/lessons/2/levels/3'
@@ -114,24 +115,24 @@ var extractTitle = function(page) {
   });
 };
 
-var drawGridLines = function(page) {
-  page.evaluate(function() {
+var drawGridLines = function (page) {
+  page.evaluate(function () {
     var vis = document.getElementById('visualization');
     var svg = document.getElementById('svgMaze');
     var pegman = document.getElementById('pegman');
     if (vis && svg && pegman) {
       Array.prototype.filter
-        .call(vis.getElementsByTagName('clipPath'), function(clipPath) {
+        .call(vis.getElementsByTagName('clipPath'), function (clipPath) {
           return (
             clipPath.id &&
             clipPath.id.startsWith('tile') &&
             clipPath.childNodes.length
           );
         })
-        .map(function(tile) {
+        .map(function (tile) {
           return tile.childNodes[0].cloneNode();
         })
-        .forEach(function(rect) {
+        .forEach(function (rect) {
           rect.setAttribute('stroke', 'white');
           rect.setAttribute('fill-opacity', 0);
           svg.insertBefore(rect, pegman);
@@ -140,9 +141,9 @@ var drawGridLines = function(page) {
   });
 };
 
-var generateClipRect = function(page) {
+var generateClipRect = function (page) {
   if (VISUALIZATION_ONLY) {
-    var clipRect = page.evaluate(function() {
+    var clipRect = page.evaluate(function () {
       var vis = document.getElementById('visualization');
       if (vis) {
         return vis.getBoundingClientRect();
@@ -156,17 +157,17 @@ var generateClipRect = function(page) {
       top: 0,
       left: 0,
       width: page.viewportSize.width,
-      height: page.viewportSize.height
+      height: page.viewportSize.height,
     };
   }
 };
 
-var screenshot = function(url, cb) {
-  page.open(url, function() {
+var screenshot = function (url, cb) {
+  page.open(url, function () {
     var title = extractTitle(page);
     console.log(title);
-    closeDialog(page, function() {
-      waitUntil(dialogIsGone.bind(page), function() {
+    closeDialog(page, function () {
+      waitUntil(dialogIsGone.bind(page), function () {
         var clipRect = generateClipRect(page);
         if (clipRect && clipRect.height && clipRect.width) {
           page.clipRect = clipRect;
@@ -181,11 +182,11 @@ var screenshot = function(url, cb) {
 };
 
 // Main method:
-page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function() {
-  var pages = page.evaluate(function() {
+page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function () {
+  var pages = page.evaluate(function () {
     return Array.prototype.map.call(
       document.querySelectorAll('.react_stage a'),
-      function(a) {
+      function (a) {
         return a.href;
       }
     );
@@ -194,11 +195,11 @@ page.open('https://levelbuilder-studio.code.org/s/' + COURSE, function() {
   var finished = 0;
   var total = pages.length;
 
-  var next = function() {
+  var next = function () {
     if (finished === total) {
       phantom.exit();
     }
-    screenshot(pages[finished] + '?noautoplay=true', function() {
+    screenshot(pages[finished] + '?noautoplay=true', function () {
       finished++;
       console.log(finished + '/' + total);
       next();

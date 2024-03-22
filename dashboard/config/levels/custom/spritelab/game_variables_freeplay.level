@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:23:35.000Z",
   "level_num": "custom",
@@ -64,8 +63,9 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Test\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2205e48de5f93c784733ffcca841d2b5/game_dev_freeplay.mp3\"}]",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:23:35.125+00:00\",\"changed\":[\"cloned from \\\"game_dev_freeplay\\\"\"],\"cloned_from\":\"game_dev_freeplay\"},{\"changed_at\":\"2024-03-18 20:23:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:23:35.125+00:00\",\"changed\":[\"cloned from \\\"game_dev_freeplay\\\"\"],\"cloned_from\":\"game_dev_freeplay\"},{\"changed_at\":\"2024-03-18 20:23:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:54:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-21 19:20:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -150,6 +150,14 @@
           <value name="NUM">
             <block type="math_number" id="Pj0ty(Z(Gqv=5~:RN;`E">
               <field name="NUM">10</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeSpritesGridInput" id="2A:g!Cy)bjHxC1)IHyqa" x="413" y="573">
+          <field name="ANIMATION_NAME">"game_cow"</field>
+          <value name="GRID">
+            <block type="gamelab_bitmap" id="s3mow6Fx.@iH;;9cA)_Z">
+              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
             </block>
           </value>
         </block>

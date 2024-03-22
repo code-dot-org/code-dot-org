@@ -27,7 +27,6 @@ const CODE_STUDIO_ENTRIES = {
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
-  'courses/index': './src/sites/studio/pages/courses/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
   'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
   'courses/resources': './src/sites/studio/pages/courses/resources.js',
@@ -190,6 +189,8 @@ const PEGASUS_ENTRIES = {
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
   'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
   'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
+  'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
+  'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
   'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
