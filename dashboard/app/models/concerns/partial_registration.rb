@@ -11,11 +11,12 @@ module PartialRegistration
   SESSION_KEY = 'partial_registration'
 
   module ClassMethods
-    def new_from_partial_registration(session, &block)
+    def new_from_partial_registration(user_attributes, session, &block)
       raise 'No partial registration was in progress' unless PartialRegistration.in_progress? session
       cache_key = session[SESSION_KEY]
       json = CDO.shared_cache.read(cache_key)
       attributes = JSON.parse(json)
+      attributes = attributes.merge(user_attributes)
       user = new(attributes, &block)
       if user.primary_contact_info.nil?
         user.primary_contact_info = user.authentication_options&.first

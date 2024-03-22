@@ -907,7 +907,7 @@ class User < ApplicationRecord
 
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
-    new_from_partial_registration session do |user|
+    new_from_partial_registration(params.permit(:email), session) do |user|
       Services::User.assign_form_params(user, params)
     end
   end
