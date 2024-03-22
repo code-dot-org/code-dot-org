@@ -26,6 +26,7 @@ class StatsigReporter {
     const options = {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
+      disableErrorLogging: true,
     };
     this.initialize(api_key, options);
   }
