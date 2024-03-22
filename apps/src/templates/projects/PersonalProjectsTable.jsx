@@ -21,7 +21,6 @@ import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
-import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/FrozenProjectInfoDialog';
 import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -84,7 +83,6 @@ class PersonalProjectsTable extends React.Component {
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
         projectNameFailure={rowData.projectNameFailure}
-        isFrozen={rowData.frozen}
       />
     );
   };
@@ -281,7 +279,6 @@ class PersonalProjectsTable extends React.Component {
         )}
         <PublishDialog />
         <DeleteProjectDialog />
-        <FrozenProjectInfoDialog />
       </div>
     );
   }
@@ -374,7 +371,6 @@ const nameFormatter = (projectName, {rowData}) => {
       projectName={projectName}
       isEditing={rowData.isEditing}
       updatedName={updatedName}
-      isFrozen={rowData.frozen}
     />
   );
 };
