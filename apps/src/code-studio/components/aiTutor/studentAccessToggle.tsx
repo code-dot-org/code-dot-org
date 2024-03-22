@@ -13,6 +13,8 @@ const StudentAccessToggle: React.FunctionComponent<StudentAccesToggleProps> = ({
   const [hasAITutorAccess, setHasAITutorAccess] = useState(
     !student.aiTutorAccessDenied
   );
+
+  // TODO: Implement this functionality
   const handleToggle = () => {
     setHasAITutorAccess(!hasAITutorAccess);
     console.log('hasAITutorAccess', hasAITutorAccess);

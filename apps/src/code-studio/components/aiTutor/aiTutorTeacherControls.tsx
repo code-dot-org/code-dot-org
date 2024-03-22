@@ -28,7 +28,6 @@ const AITutorTeacherControls: React.FunctionComponent<
     })();
   }, [sectionId]);
 
-  console.log('students in aiTutorTeacherControls', students);
   return (
     <div>
       <table>
