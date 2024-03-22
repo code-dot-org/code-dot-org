@@ -31,9 +31,10 @@ class StatsigReporter {
     this.initialize(api_key, options);
   }
 
+  // Initialize with a null user object- current user redux will update on sign in
   async initialize(api_key, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      await Statsig.initialize(api_key, options);
+      await Statsig.initialize(api_key, {}, options);
     }
   }
 
