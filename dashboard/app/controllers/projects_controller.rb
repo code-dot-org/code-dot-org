@@ -532,7 +532,6 @@ class ProjectsController < ApplicationController
 
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
-    # TODO: post-firebase-cleanup, remove both branches of this conditional: #56994
     if params[:script_call]
       render js: "#{params[:script_call]}(#{datablock_storage_options.to_json});"
     else
