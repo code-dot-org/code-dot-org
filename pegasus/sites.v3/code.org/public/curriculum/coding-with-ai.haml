@@ -45,13 +45,15 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    LESSONS
+    %h2=hoc_s("coding_with_ai_page.lessons.heading")
+    %p=hoc_s("coding_with_ai_page.lessons.desc")
+    = view :"coding_with_ai/coding_with_ai_lessons"
 
 %section.bg-neutral-light
   .wrapper
     LEARN MORE
 
-%section
+%section.no-padding-bottom
   .wrapper
     %h2=hoc_s("coding_with_ai_page.faq.heading")
     = view :"coding_with_ai/coding_with_ai_faq"
