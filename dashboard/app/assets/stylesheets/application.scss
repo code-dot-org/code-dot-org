@@ -18,6 +18,7 @@
  * Application assets
  *= require_self
  *= require_directory .
+ *= require_directory ./lti
  *
  * Shared
  *= require barlow-semi-condensed-font
@@ -4082,6 +4083,10 @@ a {
   .clickable-text {
     cursor: pointer;
   }
+}
+
+#teacher-dashboard {
+  overflow: auto;
 }
 
 #lti-integration-portal {

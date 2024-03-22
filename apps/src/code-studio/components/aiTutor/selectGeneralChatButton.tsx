@@ -15,7 +15,7 @@ const SelectGeneralChatButton: React.FunctionComponent = () => {
     <Button
       color={Button.ButtonColor.brandSecondaryDefault}
       icon={'question'}
-      key="validation"
+      key="general"
       onClick={onClick}
       size={Button.ButtonSize.default}
       text="My own question"

@@ -8,6 +8,7 @@ export enum BlocklyVersion {
 
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
+export const BLOCKLY_CURSOR = 'blocklyCursor';
 export const MenuOptionStates = {
   ENABLED: 'enabled',
   DISABLED: 'disabled',
@@ -26,6 +27,8 @@ export enum Themes {
   TRITANOPIA = 'cdotritanopia',
   TRITANOPIA_DARK = 'cdotritanopiadark',
 }
+
+export const DARK_THEME_SUFFIX = 'dark';
 
 export enum BlockStyles {
   DEFAULT = 'default',
@@ -65,6 +68,7 @@ export const Renderers = {
   DEFAULT: 'cdo_renderer_thrasos',
 };
 
+export const NAVIGATION_CURSOR_TYPES = ['default', 'basic', 'line'];
 // Used for custom field type ClampedNumber(,)
 // Captures two optional arguments from the type string
 // Allows:
@@ -114,6 +118,8 @@ export enum BLOCK_TYPES {
   behaviorGet = 'gamelab_behavior_get',
   spriteParameterGet = 'sprite_parameter_get',
   procedureCall = 'procedures_callnoreturn',
+  variableGet = 'variables_get',
+  variableSet = 'variables_set',
 }
 
 // A list of block types that are procedure definitions. These are sorted
@@ -124,6 +130,11 @@ export const PROCEDURE_DEFINITION_TYPES: string[] = [
   BLOCK_TYPES.procedureDefinition,
 ];
 
+// A list of blocks for getting and setting variables.
+export const VARIABLE_BLOCK_TYPES: string[] = [
+  BLOCK_TYPES.variableGet,
+  BLOCK_TYPES.variableSet,
+];
 // A list of block types associated with the Run button.
 export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.danceWhenSetup];
 

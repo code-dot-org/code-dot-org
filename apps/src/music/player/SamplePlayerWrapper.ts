@@ -3,6 +3,9 @@ import {SoundLoadCallbacks} from '../types';
 import SamplePlayer from './SamplePlayer';
 import {AudioPlayer, SampleEvent} from './types';
 
+/**
+ * An {@link AudioPlayer} implementation that wraps the {@link SamplePlayer}.
+ */
 class SamplePlayerWrapper implements AudioPlayer {
   constructor(
     private readonly samplePlayer: SamplePlayer,
@@ -29,25 +32,39 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   async loadSounds(
-    sampleIds: string[],
+    sampleUrls: string[],
     callbacks?: SoundLoadCallbacks
   ): Promise<void> {
-    return this.samplePlayer.loadSounds(sampleIds, callbacks);
+    return this.samplePlayer.loadSounds(sampleUrls, callbacks);
   }
 
   async loadInstrument(): Promise<void> {
-    console.log('Not supported');
+    console.warn('loadInstrument not supported');
+  }
+
+  isInstrumentLoaded(): boolean {
+    return false;
   }
 
   async playSampleImmediately(
     sample: SampleEvent,
     onStop?: () => void
   ): Promise<void> {
-    return this.samplePlayer.previewSample(sample.sampleId, onStop);
+    return this.samplePlayer.previewSample(sample.sampleUrl, onStop);
+  }
+
+  async playSamplesImmediately(
+    samples: SampleEvent[],
+    onStop?: () => void
+  ): Promise<void> {
+    return this.samplePlayer.previewSamples(
+      samples.map(sample => this.getSampleWithOffset(sample)),
+      onStop
+    );
   }
 
   async playSequenceImmediately(): Promise<void> {
-    console.log('Not supported');
+    console.warn('playSequenceImmediately not supported');
   }
 
   cancelPreviews(): void {
@@ -63,7 +80,7 @@ class SamplePlayerWrapper implements AudioPlayer {
   }
 
   scheduleSamplerSequence(): void {
-    console.log('Not supported');
+    console.warn('scheduleSamplerSequence not supported');
   }
 
   async start(startPosition = 1) {
@@ -77,6 +94,26 @@ class SamplePlayerWrapper implements AudioPlayer {
 
   stop() {
     this.samplePlayer.stopPlayback();
+  }
+
+  cancelPendingEvents(): void {
+    this.samplePlayer.stopAllSamplesStillToPlay();
+  }
+
+  setLoopEnabled(): void {
+    console.warn('setLoopEnabled not supported');
+  }
+
+  setLoopStart() {
+    console.warn('setLoopStart not supported');
+  }
+
+  setLoopEnd() {
+    console.warn('setLoopEnd not supported');
+  }
+
+  jumpToPosition() {
+    console.warn('jumpToPosition not supported');
   }
 
   // Converts actual seconds used by the audio system into a playhead

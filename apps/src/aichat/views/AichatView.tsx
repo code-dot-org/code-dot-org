@@ -1,16 +1,20 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
+import {setAiCustomizations} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
+import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
+import {AichatLevelProperties, AiCustomizations} from '@cdo/apps/aichat/types';
+import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -18,6 +22,24 @@ const AichatView: React.FunctionComponent = () => {
   const beforeNextLevel = useCallback(() => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
+
+  const initialAiCustomizations = useAppSelector(
+    state =>
+      (state.lab.levelProperties as AichatLevelProperties | undefined)
+        ?.initialAiCustomizations || EMPTY_AI_CUSTOMIZATIONS
+  );
+
+  useEffect(() => {
+    const aiCustomizations: AiCustomizations = {
+      botName: initialAiCustomizations.botName.value,
+      temperature: initialAiCustomizations.temperature.value,
+      systemPrompt: initialAiCustomizations.systemPrompt.value,
+      retrievalContexts: initialAiCustomizations.retrievalContexts.value,
+      modelCardInfo: initialAiCustomizations.modelCardInfo.value,
+    };
+
+    dispatch(setAiCustomizations(aiCustomizations));
+  }, [dispatch, initialAiCustomizations]);
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
@@ -27,6 +49,14 @@ const AichatView: React.FunctionComponent = () => {
           headerText={commonI18n.instructions()}
         >
           <Instructions beforeNextLevel={beforeNextLevel} />
+        </PanelContainer>
+      </div>
+      <div className={moduleStyles.customizationArea}>
+        <PanelContainer
+          id="aichat-model-customization-panel"
+          headerText="Model Customization"
+        >
+          <ModelCustomizationWorkspace />
         </PanelContainer>
       </div>
       <div className={moduleStyles.chatWorkspaceArea}>

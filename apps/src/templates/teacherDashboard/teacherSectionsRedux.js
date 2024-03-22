@@ -447,6 +447,14 @@ export const asyncLoadSectionData = id => dispatch => {
     });
 };
 
+export const asyncLoadCourseOfferings = () => dispatch => {
+  fetchJSON('/dashboardapi/sections/valid_course_offerings')
+    .then(offerings => dispatch(setCourseOfferings(offerings)))
+    .catch(err => {
+      console.error(err.message);
+    });
+};
+
 /**
  * Load coteacher invites
  */
@@ -1232,6 +1240,10 @@ export function ltiSyncResult(state) {
   return getRoot(state).ltiSyncResult;
 }
 
+export function syncEnabled(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).syncEnabled;
+}
+
 export function sectionUnitName(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).courseVersionName;
 }
@@ -1340,6 +1352,7 @@ export const sectionFromServerSection = serverSection => ({
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.section_instructors,
+  syncEnabled: serverSection.sync_enabled,
 });
 
 /**

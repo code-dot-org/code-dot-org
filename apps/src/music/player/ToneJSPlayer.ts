@@ -19,7 +19,7 @@ class ToneJSPlayer implements AudioPlayer {
   private samplers: {[instrument: string]: Sampler};
   private activePlayers: Source<SourceOptions>[];
   private currentPreview: {
-    id: string;
+    url: string;
     player: Source<SourceOptions>;
   } | null;
 
@@ -44,7 +44,7 @@ class ToneJSPlayer implements AudioPlayer {
     );
   }
 
-  goToPosition(position: number) {
+  jumpToPosition(position: number) {
     Transport.position = this.playbackTimeToTransportTime(position);
   }
 
@@ -60,8 +60,8 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.loopEnd = this.playbackTimeToTransportTime(endPosition);
   }
 
-  async loadSounds(sampleIds: string[], callbacks?: SoundLoadCallbacks) {
-    return this.soundCache.loadSounds(sampleIds, callbacks);
+  async loadSounds(sampleUrls: string[], callbacks?: SoundLoadCallbacks) {
+    return this.soundCache.loadSounds(sampleUrls, callbacks);
   }
 
   async loadInstrument(
@@ -69,6 +69,9 @@ class ToneJSPlayer implements AudioPlayer {
     sampleMap: {[note: number]: string},
     callbacks?: SoundLoadCallbacks
   ) {
+    if (this.samplers[instrumentName]) {
+      return;
+    }
     const urls: {[note: number]: AudioBuffer} = {};
     await this.soundCache.loadSounds(Object.values(sampleMap), callbacks);
     Object.keys(sampleMap).forEach(note => {
@@ -82,17 +85,21 @@ class ToneJSPlayer implements AudioPlayer {
     this.samplers[instrumentName] = sampler;
   }
 
+  isInstrumentLoaded(instrumentName: string): boolean {
+    return this.samplers[instrumentName] !== undefined;
+  }
+
   async playSampleImmediately(sample: SampleEvent, onStop?: () => void) {
     await this.startContextIfNeeded();
     if (this.currentPreview) {
       this.currentPreview.player.stop();
     }
 
-    const buffer = await this.soundCache.loadSound(sample.sampleId);
+    const buffer = await this.soundCache.loadSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
-          sample.sampleId
+          sample.sampleUrl
       );
       return;
     }
@@ -107,7 +114,7 @@ class ToneJSPlayer implements AudioPlayer {
     player.onstop = () => {
       player.dispose();
 
-      if (this.currentPreview?.id === sample.sampleId) {
+      if (this.currentPreview?.url === sample.sampleUrl) {
         this.currentPreview = null;
       }
 
@@ -115,7 +122,13 @@ class ToneJSPlayer implements AudioPlayer {
     };
 
     player.start();
-    this.currentPreview = {id: sample.sampleId, player};
+    this.currentPreview = {url: sample.sampleUrl, player};
+  }
+
+  async playSamplesImmediately() {
+    console.log(
+      'Not supported. Use playSequenceImmediately for previewing note sequences.'
+    );
   }
 
   async playSequenceImmediately({instrument, events}: SamplerSequence) {
@@ -148,11 +161,11 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   scheduleSample(sample: SampleEvent) {
-    const buffer = this.soundCache.getSound(sample.sampleId);
+    const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
-          sample.sampleId
+          sample.sampleUrl
       );
       return;
     }
@@ -197,7 +210,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.stopAllPlayers();
   }
 
-  cancelAllEvents() {
+  cancelPendingEvents() {
     this.stopAllPlayers();
     Transport.cancel();
   }

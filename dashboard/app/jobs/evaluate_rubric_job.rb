@@ -11,7 +11,7 @@ class EvaluateRubricJob < ApplicationJob
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-02-07-ai-rubrics-pilot-line-annotations/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-15-ai-rubrics-json-evidence/'.freeze
 
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
@@ -52,6 +52,10 @@ class EvaluateRubricJob < ApplicationJob
 
       super("Too many requests for #{response.request.uri}")
     end
+  end
+
+  # For testing purposes, we can raise this error to simulate a missing key
+  class StubNoSuchKey < StandardError
   end
 
   # The CloudWatch metric namespace
@@ -252,8 +256,10 @@ class EvaluateRubricJob < ApplicationJob
     ai_evaluations = response['data']
     validate_evaluations(ai_evaluations, rubric)
 
-    ai_confidence_levels = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
-    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+    ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    confidence_exact_json = read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
+    ai_confidence_levels_exact_match = confidence_exact_json ? JSON.parse(confidence_exact_json) : nil
+    merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
   end
@@ -297,7 +303,7 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def read_file_from_s3(lesson_s3_name, key_suffix)
+  private def read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)
     key = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/#{key_suffix}"
     if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
       puts "Note: Reading AI prompt from local file: #{key}"
@@ -305,9 +311,13 @@ class EvaluateRubricJob < ApplicationJob
     else
       s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
     end
+  rescue Aws::S3::Errors::NoSuchKey, StubNoSuchKey => exception
+    raise exception unless allow_missing
+    nil
   end
 
-  private def read_examples(lesson_s3_name)
+  private def read_examples(lesson_s3_name, response_type)
+    raise "invalid response type #{response_type.inspect}" unless ['tsv', 'json'].include?(response_type)
     prefix = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/examples/"
     response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
     file_names = response.contents.map(&:key)
@@ -316,7 +326,7 @@ class EvaluateRubricJob < ApplicationJob
     js_files.map do |file_name|
       base_name = file_name.gsub('.js', '')
       code = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{file_name}")[:body].read
-      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.tsv")[:body].read
+      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.#{response_type}")[:body].read
       [code, response]
     end
   end
@@ -325,7 +335,8 @@ class EvaluateRubricJob < ApplicationJob
     params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    examples = read_examples(lesson_s3_name)
+    response_type = params['response-type'] || 'tsv'
+    examples = read_examples(lesson_s3_name, response_type)
     params.merge(
       'code' => code,
       'prompt' => prompt,
@@ -348,7 +359,7 @@ class EvaluateRubricJob < ApplicationJob
     # from the S3 release directory
     get_openai_params(lesson_s3_name, code)
   rescue Aws::S3::Errors::NoSuchKey => exception
-    raise "Error validating AI config for lesson #{lesson_s3_name}: #{e.message}\n request params: #{exception.context.params.to_h}"
+    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
   end
 
   private def get_openai_evaluations(openai_params)
@@ -388,11 +399,21 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels)
+  private def merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
     ai_evaluations.map do |evaluation|
       learning_goal = evaluation['Key Concept']
-      confidence_level = ai_confidence_levels[learning_goal]
-      evaluation.merge('Confidence' => confidence_s_to_i(confidence_level))
+      confidence_pass_fail = ai_confidence_levels_pass_fail[learning_goal]
+      evaluation['Confidence Pass Fail'] = confidence_s_to_i(confidence_pass_fail)
+
+      if ai_confidence_levels_exact_match
+        label = evaluation['Label']
+        confidence_exact_match = ai_confidence_levels_exact_match[learning_goal][label]
+        unless confidence_exact_match
+          raise "No confidence_exact_match for learning goal: #{learning_goal}, label: #{label} evaluation: #{JSON.pretty_generate(evaluation)} ai_confidence_levels_exact_match: #{JSON.pretty_generate(ai_confidence_levels_exact_match)}"
+        end
+        evaluation['Confidence Exact Match'] = confidence_s_to_i(confidence_exact_match)
+      end
+      evaluation
     end
   end
 
@@ -420,8 +441,10 @@ class EvaluateRubricJob < ApplicationJob
           learning_goal_id: lg.id,
           rubric_ai_evaluation_id: rubric_ai_evaluation.id,
           understanding: understanding_s_to_i(label),
-          ai_confidence: ai_evaluation['Confidence'],
+          ai_confidence: ai_evaluation['Confidence Pass Fail'],
+          ai_confidence_exact_match: ai_evaluation['Confidence Exact Match'],
           observations: ai_evaluation['Observations'] || '',
+          evidence: ai_evaluation['Evidence'] || '',
         )
       end
 
@@ -447,7 +470,7 @@ class EvaluateRubricJob < ApplicationJob
 
   private def confidence_s_to_i(confidence_level)
     confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
-    raise "Unexpected confidence level: #{confidence_level}" unless confidence_levels.include?(confidence_level)
+    raise "Unexpected confidence level: #{confidence_level.inspect}" unless confidence_levels.include?(confidence_level)
     LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 end

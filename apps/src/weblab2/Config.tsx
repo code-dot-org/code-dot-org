@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './styles/config.css';
 
-import {ProjectType, ConfigType} from './CDOIDE/types';
+import {ProjectType, ConfigType} from 'cdo-ide-poc';
 
 type ConfigProps = {
   config: ProjectType | ConfigType;

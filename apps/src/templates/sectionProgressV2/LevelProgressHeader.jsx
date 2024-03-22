@@ -1,8 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import FontAwesome from '../FontAwesome';
+
+import styles from './progress-table-v2.module.scss';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -17,6 +19,7 @@ export default function ExpandedProgressColumnHeader({
       <div
         key={lesson.id + '.' + level.id + '-h'}
         className={classNames(
+          styles.expandedHeaderChild,
           styles.expandedHeaderExpandedLevel,
           isExpandable && styles.pointerMouse
         )}
@@ -28,19 +31,24 @@ export default function ExpandedProgressColumnHeader({
             styles.expandedHeaderExpandedLevelCell
           )}
         >
-          {level.sublevels?.length > 0 && (
+          {level.sublevels?.length > 0 && <FontAwesome icon="caret-down" />}
+          <div className={styles.expandedHeaderLevelCellLevelNumber}>
+            {lesson.relative_position + '.' + level.bubbleText}
+          </div>
+          {level.kind === 'assessment' && (
             <FontAwesome
-              icon="caret-down"
-              className={styles.expandedHeaderLevelCaret}
+              icon="star"
+              aria-label="assessment"
+              className={styles.assessmentLevelIcon}
             />
           )}
-          {lesson.relative_position + '.' + level.bubbleText}
         </div>
         {level.sublevels?.map(sublevel => (
           <div
             className={classNames(
               styles.expandedHeaderLevelCell,
-              styles.expandedHeaderExpandedLevelCell
+              styles.expandedHeaderExpandedLevelCell,
+              styles.expandedHeaderLevelCellLevelNumber
             )}
             key={lesson.id + '.' + level.id + '-h-' + sublevel.id}
           >
@@ -57,19 +65,27 @@ export default function ExpandedProgressColumnHeader({
       <div
         className={classNames(
           styles.gridBox,
+          styles.expandedHeaderChild,
           styles.expandedHeaderLevelCell,
+          styles.expandedHeaderLevelCellUnexpanded,
           isExpandable && styles.pointerMouse
         )}
         key={lesson.id + '.' + level.id + '-h'}
         onClick={() => toggleExpandedChoiceLevel(level)}
       >
-        {level.sublevels?.length > 0 && (
+        {level.sublevels?.length > 0 && <FontAwesome icon="caret-right" />}
+        <div className={styles.expandedHeaderLevelCellLevelNumber}>
+          {`${lesson.relative_position}.${
+            level.isUnplugged ? 0 : level.bubbleText
+          }`}
+        </div>
+        {level.kind === 'assessment' && (
           <FontAwesome
-            icon="caret-right"
-            className={styles.expandedHeaderLevelCaret}
+            icon="star"
+            aria-label="assessment"
+            className={styles.assessmentLevelIcon}
           />
         )}
-        {lesson.relative_position + '.' + level.bubbleText}
       </div>
     ),
     [lesson, level, toggleExpandedChoiceLevel, isExpandable]

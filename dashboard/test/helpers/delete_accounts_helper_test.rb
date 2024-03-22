@@ -50,6 +50,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
 
     # Skip real Firebase operations
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     FirebaseHelper.stubs(:delete_channel)
     FirebaseHelper.stubs(:delete_channels)
 
@@ -1585,6 +1587,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.ai_tutor_interactions
+  #
+
+  test "deletes all of a purged user's ai tutor interactions (chat messages)" do
+    student = create :student_with_ai_tutor_access
+    num_ai_tutor_interactions = 3
+    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
+
+    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
+      purge_user student
+    end
+  end
+
+  #
   # Table: dashboard.projects
   #
 
@@ -1907,6 +1923,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
                             storage_encrypt_channel_id(storage_id, project_id_b)]
+
+        # TODO: unfirebase, write a version of this for Datablock Storage: #57004
+        # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
         FirebaseHelper.
           expects(:delete_channels).
           with(student_channels)

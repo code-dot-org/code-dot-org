@@ -16,8 +16,8 @@
           %td=value[:description_t]
           %td
             - if value[:url_email_s]
-              %a{href: "mailto:#{value[:url_email_s]}"}
+              %a{href: "mailto:#{value[:url_email_s]}", style: "display: block;"}
                 = value[:url_email_s]
             - if value[:url_site_s]
-              %a.has-external-link{href: value[:url_site_s], target: "_blank", rel: "noopener noreferrer"}
+              %a.has-external-link{href: value[:url_site_s], target: "_blank", rel: "noopener noreferrer", style: "display: block;"}
                 = value[:url_site_s]

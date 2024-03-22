@@ -1,10 +1,13 @@
+import classNames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import styles from './progress-table-v2.module.scss';
-import classNames from 'classnames';
-import SortByNameDropdown from '../SortByNameDropdown';
-import _ from 'lodash';
+
 import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+
+import SortByNameDropdown from '../SortByNameDropdown';
+
+import styles from './progress-table-v2.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
@@ -16,6 +19,7 @@ const skeletonCell = key => (
         styles.gridBoxSkeleton
       )}
       style={{width: _.random(30, 90) + '%'}}
+      data-testid="skeleton-cell"
     />
   </div>
 );

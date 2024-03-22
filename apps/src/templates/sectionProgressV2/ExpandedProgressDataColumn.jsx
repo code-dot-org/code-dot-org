@@ -1,26 +1,40 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
-import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
-import {studentLevelProgressType} from '../progress/progressTypes';
+import React from 'react';
 import {connect} from 'react-redux';
-import LevelDataCell from './LevelDataCell';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+import {studentLevelProgressType} from '../progress/progressTypes';
+import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
+import LevelDataCell from './LevelDataCell';
+
+import styles from './progress-table-v2.module.scss';
 
 function ExpandedProgressDataColumn({
   lesson,
-  sectionId,
   levelProgressByStudent,
   sortedStudents,
   removeExpandedLesson,
+  sectionId,
 }) {
   const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
   const toggleExpandedChoiceLevel = level => {
     if (expandedChoiceLevels.includes(level.id)) {
       setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== level.id));
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_CHOICE_LEVEL, {
+        sectionId: sectionId,
+        levelId: level.id,
+      });
     } else if (level?.sublevels?.length > 0) {
       setExpandedChoiceLevels([...expandedChoiceLevels, level.id]);
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_CHOICE_LEVEL, {
+        sectionId: sectionId,
+        levelId: level.id,
+      });
     }
   };
 
@@ -88,12 +102,12 @@ function ExpandedProgressDataColumn({
 
 ExpandedProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.arrayOf(studentShape),
-  sectionId: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
+  sectionId: PropTypes.number,
 };
 
 export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;

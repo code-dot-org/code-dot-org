@@ -1,15 +1,6 @@
-import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-
-import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
-
+import React from 'react';
 import {Provider} from 'react-redux';
-import sectionProgress, {
-  addDataByUnit,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 
 import {
   getStore,
@@ -17,12 +8,22 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-
+import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   fakeLessonWithLevels,
   fakeStudentLevelProgress,
   fakeLevelWithSubLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import sectionProgress, {
+  addDataByUnit,
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
+import {PROGRESS_ICON_TITLE_PREFIX} from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
+import teacherSections, {
+  selectSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -42,12 +43,13 @@ describe('ExpandedProgressDataColumn', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress, unitSelection});
+    registerReducers({sectionProgress, unitSelection, teacherSections});
     store = getStore();
     store.dispatch(setScriptId(1));
     store.dispatch(
       addDataByUnit({studentLevelProgressByUnit: {1: LEVEL_PROGRESS}})
     );
+    store.dispatch(selectSection(1));
   });
 
   afterEach(() => {
@@ -131,7 +133,7 @@ describe('ExpandedProgressDataColumn', () => {
     );
 
     expect(
-      screen.queryAllByTitle(PROGRESS_ICON_TITLE_PREFIX + 'split')
+      screen.queryAllByLabelText(PROGRESS_ICON_TITLE_PREFIX + 'split')
     ).to.have.length(STUDENTS.length);
   });
 

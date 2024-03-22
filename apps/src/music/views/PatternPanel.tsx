@@ -36,20 +36,19 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
 
   const availableKits = useMemo(() => {
-    return library.groups[0].folders.filter(folder => folder.type === 'kit');
-  }, [library.groups]);
+    return library.libraryJson.kits;
+  }, [library.libraryJson.kits]);
 
   const currentFolder = useMemo(() => {
     // Default to the first available kit if the current kit is not found in this library.
     return (
-      availableKits.find(kit => kit.path === currentValue.kit) ||
-      availableKits[0]
+      availableKits.find(kit => kit.id === currentValue.kit) || availableKits[0]
     );
   }, [availableKits, currentValue.kit]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = useCallback(
-    (sound: SoundData, tick: number) => {
+    (sound: SoundData, tick: number, note: number) => {
       const index = currentValue.events.findIndex(
         event => event.src === sound.src && event.tick === tick
       );
@@ -58,7 +57,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
         currentValue.events.splice(index, 1);
       } else {
         // Not found, so add.
-        currentValue.events.push({src: sound.src, tick});
+        currentValue.events.push({src: sound.src, tick, note});
         previewSound(`${currentValue.kit}/${sound.src}`);
       }
 
@@ -112,12 +111,12 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
     <div className={styles.patternPanel}>
       <select value={currentValue.kit} onChange={handleFolderChange}>
         {availableKits.map(folder => (
-          <option key={folder.path} value={folder.path}>
+          <option key={folder.id} value={folder.id}>
             {folder.name}
           </option>
         ))}
       </select>
-      {currentFolder.sounds.map(sound => {
+      {currentFolder.sounds.map((sound, index) => {
         return (
           <div className={styles.row} key={sound.src}>
             <div className={styles.nameContainer}>
@@ -135,7 +134,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
                     styles.outerCell,
                     tick === currentPreviewTick && styles.outerCellPlaying
                   )}
-                  onClick={() => toggleEvent(sound, tick)}
+                  onClick={() => toggleEvent(sound, tick, index)}
                   key={tick}
                 >
                   <div className={getCellClasses(sound, tick)} />

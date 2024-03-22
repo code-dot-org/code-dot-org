@@ -37,6 +37,7 @@
 require 'full-name-splitter'
 require 'cdo/code_generation'
 require 'cdo/safe_names'
+require 'policies/lti'
 
 class Section < ApplicationRecord
   include SerializedProperties
@@ -212,6 +213,10 @@ class Section < ApplicationRecord
 
   def unit_group
     UnitGroup.get_from_cache(course_id) if course_id
+  end
+
+  def course_offering_id
+    unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id
   end
 
   def workshop_section?
@@ -440,7 +445,7 @@ class Section < ApplicationRecord
         login_type: login_type,
         login_type_name: login_type_name,
         participant_type: participant_type,
-        course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
+        course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
@@ -458,7 +463,8 @@ class Section < ApplicationRecord
         is_assigned_csa: assigned_csa?,
         # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
-        code_review_expires_at: code_review_expires_at
+        code_review_expires_at: code_review_expires_at,
+        sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
       }
     end
   end

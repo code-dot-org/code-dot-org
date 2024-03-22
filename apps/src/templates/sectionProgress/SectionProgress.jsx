@@ -60,9 +60,14 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     loadUnitProgress(this.props.scriptId, this.props.sectionId);
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+    });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
         logToCloud.PageAction.SectionProgressRenderedWithData,
@@ -72,6 +77,16 @@ class SectionProgress extends Component {
         }
       );
       this.setState({reportedInitialRender: true});
+    }
+
+    if (
+      prevProps.scriptId !== this.props.scriptId ||
+      prevProps.sectionId !== this.props.sectionId
+    ) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+        sectionId: this.props.sectionId,
+        unitId: this.props.scriptId,
+      });
     }
   }
 
@@ -150,7 +165,10 @@ class SectionProgress extends Component {
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
-      <div className={dashboardStyles.dashboardPage}>
+      <div
+        className={dashboardStyles.dashboardPage}
+        data-testid="section-progress-v1"
+      >
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>

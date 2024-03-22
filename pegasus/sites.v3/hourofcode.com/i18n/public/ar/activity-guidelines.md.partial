@@ -197,7 +197,7 @@ layout: wide
     
     بالإضافة إلى ذلك، لكي يتم إدراج النشاط ضمن القائمة، يجب على كل الأنشطة أن:
     
-    بالنسبة للأنشطة الموجهة ذاتيًا للمعلمين والطلاب الجدد، ستبحث لجنة المراجعة عما إذا كان:
+    In addition, in order to be listed, all activities must:
     
     - تتناسب مع الفصول الدراسية في المدارس العامة (بدون أسلحة، أو محتوى فاضح / جنسي، أو محتوى ديني، وما إلى ذلك)
     - لا تتطلب تسجيل الدخول
@@ -213,9 +213,9 @@ layout: wide
     
     - تعليقات وملاحظات إيجابية - ما الذي يعمل بشكل جيد؟
     - تعليقات وملاحظات نقدية - ما الذي يمكن تحسينه؟
-    - الأنشطة جذابة لمجموعة واسعة من المستخدمين (عبر المنصات واللغات والفئات العمرية المختلفة)
+    - Appeal to a wide range of users (across platforms, languages, and ages)
     - هل يشجِّع هذا النشاط الطلاب على إنشاء شيء فريد؟
-    - جديدة ومُحدَّثة
+    - Are new this year
     
     [**عودة إلى الأعلى**](#top)
     
@@ -228,7 +228,7 @@ layout: wide
     
     Activities do not have to include AI, though we are looking to offer more AI related activities.
     
-    **تضمين ملاحظات المعلم.** يجب أن تكون معظم الأنشطة موجَّهة من قِبل الطلاب، ولكن إذا تم تسهيل النشاط أو إدارته من قِبل المعلم، يرجى تضمين توجيهات واضحة وبسيطة للمعلم في شكل ملاحظات المعلم في عنوان إلكتروني منفصل يتم إرساله مع نشاطك. ليس فقط الطلاب المبتدئين، ولكن بعض المعلمين كذلك. كما يجب تضمين معلومات مثل:
+    You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
     
     ستتلقى جميع الأنشطة المقدَّمة للمراجعة المبكرة تعليقات وملاحظات قبل 1 سبتمبر. سنوفر أيضًا رابطًا لنموذج يمكنك استخدامه لشرح تغييرات معينة تم إجراؤها على النشاط ردًا على التعليقات والملاحظات.
     
@@ -260,13 +260,13 @@ layout: wide
     
     Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
     
-    1. استخدم «ساعة البرمجة» فقط فيما يتعلق بأنشطة CS Education غير التجارية في سياق حملة «ساعة البرمجة»، وليس لأي غرض آخر.
-    2. يجب استخدام أي إشارة إلى "ساعة من البرمجة" بطريقة لا توحي بأنها اسم علامتك التجارية الخاصة، ولكنها تشير بدلًا من ذلك إلى "ساعة من البرمجة" باعتبارها مبادرة مجتمعية. مثال جيد: «شارك في ساعة البرمجة® على Acmecorp.com». مثال سيئ: "جرِّب أنشطة ساعة من البرمجة المقدَّمة من شركة ACME Corp".
-    3. استخدم الحرف العلوي «®» في أبرز الأماكن التي ذكرت فيها «ساعة البرمجة»، سواء على موقع الويب الخاص بك أو في أوصاف التطبيق.
-    4. قم بتضمين اللغة على الصفحة (أو في التذييل)، بما في ذلك الروابط إلى مواقع الويب الخاصة بـ «ساعة البرمجة» و CSedWeek و Code.org، والتي تكشف عن كل ما يلي: أ. تُعد ساعة البرمجة® وهورا ديل كوديجو® علامتين تجاريتين مسجلتين لشركة Code.org؛ و b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-    5. لا تستخدم «ساعة البرمجة» في أسماء التطبيقات.
-    6. لا تستخدم «ساعة البرمجة» فيما يتعلق بأي استخدام أو غرض تجاري (على سبيل المثال، وضع نشاط «ساعة البرمجة» الخاص بك خلف جدار حماية؛ الترويج لخدمة مدفوعة أخرى كجزء من نشاط «ساعة البرمجة» الخاص بك؛ بيع سلع «ساعة البرمجة»).
-    7. لا تستخدم «ساعة البرمجة» فيما يتعلق بأي نشاط يتطلب تسجيل الدخول أو إنشاء حساب.
+    1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+    2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+    3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+    4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+    5. Do not use "Hour of Code" in app names.
+    6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+    7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
     
     [**عودة إلى الأعلى**](#top)
     
@@ -277,13 +277,13 @@ layout: wide
     
     ## إرشادات العلامات التجارية
     
-    إذا تمت الموافقة على البرنامج التعليمي الخاص بك وتم تضمينه في صفحة البرنامج التعليمي النهائية، فستوفر لك منظمة Code.org برنامج تتبع فريد لتتمكن من الاندماج في البرنامج التعليمي الخاص بك. انظر المثال أدناه. Do not include on any interim pages of your tutorial.
+    In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
     
     This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
     
     If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
     
-    IMG SRC = <http://code.org/api/hour/begin_dance.png>
+    NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
     
     Example tracking pixels for Dance Party:
     

@@ -1,6 +1,12 @@
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
+const PLATFORMS = {
+  AMPLITUDE: 'Amplitude',
+  STATSIG: 'Statsig',
+  BOTH: 'Both',
+};
+
 const EVENTS = {
   // Sign-up flow
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
@@ -17,6 +23,13 @@ const EVENTS = {
   UPDATE_SCHOOL_INFO_DIALOG_CLOSED: 'Update School Info Dialog Closed',
   CONFIRM_SCHOOL_CLICKED: 'Confirm School Clicked',
   UPDATE_SCHOOL_CLICKED: 'Update School Clicked',
+
+  // School Interstitial
+  SCHOOL_INTERSTITIAL_SHOW: 'School Interstitial Shown',
+  SCHOOL_INTERSTITIAL_SUBMIT: 'School Interstitial Submitted',
+  SCHOOL_INTERSTITIAL_SAVE_SUCCESS: 'School Interstitial Save Success',
+  SCHOOL_INTERSTITIAL_SAVE_FAILURE: 'School Interstitial Save Failure',
+  SCHOOL_INTERSTITIAL_DISMISS: 'School Interstitial Dismissed',
 
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
@@ -68,6 +81,19 @@ const EVENTS = {
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
+  // Section progress v2
+  PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
+  PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
+  PROGRESS_V2_VIEW_OLD_PROGRESS: 'Old Progress Link Clicked',
+  PROGRESS_V2_CHANGE_UNIT: 'Section New Progress Unit Changed',
+  PROGRESS_V2_LESSON_EXPAND: 'Section New Progress Lesson Expand',
+  PROGRESS_V2_LESSON_COLLAPSE: 'Section New Progress Lesson Collapse',
+  PROGRESS_V2_EXPAND_CHOICE_LEVEL: 'Section New Progress Choice Expand',
+  PROGRESS_V2_COLLAPSE_CHOICE_LEVEL: 'Section New Progress Choice Collapse',
+  PROGRESS_V2_EXPAND_ICON_KEY: 'Section New Progress Icon Key Expand',
+  PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
+  PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
+
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
   RUBRIC_LEVEL_VIEWED_EVENT: 'Rubric Level Viewed',
@@ -115,6 +141,7 @@ const EVENTS = {
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
   AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
   AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
+  AI_TUTOR_ASK_GENERAL_CHAT: 'AI Tutor was asked a question in general chat',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
@@ -164,7 +191,7 @@ const EVENTS = {
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
 
-  // Project sharing
+  // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
   SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',
   SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
@@ -173,12 +200,32 @@ const EVENTS = {
   SHARING_LINK_SEND_TO_PHONE:
     'User Clicks Send To Phone In Project Share Dialog',
   SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
+
+  // Project sharing via 'Finish' button
+  FINISH_SHARING_LINK_COPY:
+    'User Clicks Project Copy Link In Finish Congrats Dialog',
+  FINISH_SHARING_PUBLISH: 'User Clicks Publish In Finish Congrats Dialog',
+  FINISH_SHARING_FB: 'User Clicks Facebook Icon In Finish Congrats Dialog',
+  FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Finish Congrats Dialog',
+  FINISH_SHARING_LINK_SEND_TO_PHONE:
+    'User Clicks Send To Phone In Finish Congrats Dialog',
+  FINISH_BUTTON_CERTIFICATE:
+    'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
+
+  // Export app
+  EXPORT_APP: 'User Exports App From Share Advanced Options',
+
+  // Curriculumm Recommender
+  RECOMMENDED_SIMILAR_CURRICULUM_SHOWN: 'Recommended Similar Curriculum Shown',
+  RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
+    'Recommended Similar Curriculum Clicked',
 };
 
 const EVENT_GROUP_NAMES = {
   VIDEO_EVENTS: 'video-events',
   DANCE_PARTY: 'dance-party-events',
   PROJECT_SHARING: 'project-sharing-events',
+  FINISH_PROJECT_SHARING: 'finish-project-sharing-events',
 };
 
 const EVENT_GROUPS = {
@@ -201,13 +248,22 @@ const EVENT_GROUPS = {
   [EVENTS.VIDEO_PAUSED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
   [EVENTS.VIDEO_ENDED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
 
-  // Project sharing
-  [EVENTS.SHARING_LINK_COPIED]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+  // Project sharing via 'Share' button
+  [EVENTS.SHARING_LINK_COPY]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_PUBLISH]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_FB]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_TWITTER]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_LINK_SEND_TO_PHONE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
   [EVENTS.SHARING_CLOSE_ESCAPE]: EVENT_GROUP_NAMES.PROJECT_SHARING,
+
+  // Project sharing via 'Finish' button
+  [EVENTS.FINISH_SHARING_LINK_COPY]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_PUBLISH]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_FB]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_TWITTER]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_SHARING_LINK_SEND_TO_PHONE]:
+    EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
+  [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS};

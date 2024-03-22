@@ -1,5 +1,6 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
   "game_id": 23,
   "created_at": "2023-03-14T20:51:40.000Z",
   "level_num": "custom",
@@ -45,11 +46,15 @@
     "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
     "validation_enabled": "false",
     "enable_download_image": "false",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:51:40.438+00:00\",\"changed\":[\"cloned from \\\"Course E: Artist Project_examples2022\\\"\"],\"cloned_from\":\"Course E: Artist Project_examples2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:51:40.438+00:00\",\"changed\":[\"cloned from \\\"Course E: Artist Project_examples2022\\\"\"],\"cloned_from\":\"Course E: Artist Project_examples2022\"},{\"changed_at\":\"2024-02-28 22:47:41 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-02-29 19:32:31 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -97,5 +102,245 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="draw_move">
+            <field name="DIR">moveForward</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn">
+            <field name="DIR">turnRight</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn">
+            <field name="DIR">turnLeft</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="jump">
+            <field name="DIR">jumpForward</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="jump_to">
+            <field name="VALUE">7</field>
+          </block>
+          <block type="jump_to_xy">
+            <field name="XPOS">0</field>
+            <field name="YPOS">0</field>
+          </block>
+          <block type="point_to_param">
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Brushes">
+          <block type="draw_colour" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
+          <block type="draw_colour" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_rgb">
+                <value name="RED">
+                  <block type="math_number">
+                    <field name="NUM">255</field>
+                  </block>
+                </value>
+                <value name="GREEN">
+                  <block type="math_number">
+                    <field name="NUM">255</field>
+                  </block>
+                </value>
+                <value name="BLUE">
+                  <block type="math_number">
+                    <field name="NUM">255</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+          <block type="alpha">
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="draw_width">
+            <value name="WIDTH">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="draw_line_style_pattern">
+            <field name="VALUE">DEFAULT</field>
+          </block>
+          <block type="sticker">
+            <field name="VALUE">Elephant</field>
+          </block>
+          <block type="turtle_sticker_with_size">
+            <field name="VALUE">Alien</field>
+            <value name="SIZE">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_for">
+            <field name="VAR">i</field>
+            <value name="FROM">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="controls_repeat_ext">
+            <value name="TIMES">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+          <block type="math_arithmetic">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">???</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_random_int">
+            <value name="FROM">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if">
+            <value name="IF0">
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a square">
+              <arg name="length"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a triangle">
+              <arg name="length"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a circle">
+              <arg name="radius"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a shape">
+              <arg name="sides"/>
+              <arg name="length"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a house">
+              <arg name="length"/>
+            </mutation>
+          </block>
+          <block type="procedures_callnoreturn">
+            <mutation name="draw a pinwheel">
+              <arg name="sides"/>
+              <arg name="length"/>
+              <arg name="repeat"/>
+            </mutation>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_get">
+            <field name="VAR">counter</field>
+          </block>
+          <block type="variables_get">
+            <field name="VAR">sides</field>
+          </block>
+          <block type="variables_get">
+            <field name="VAR">length</field>
+          </block>
+          <block type="math_change">
+            <field name="VAR">length</field>
+            <value name="DELTA">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <field name="TEXT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
   </blocks>
 </Artist>

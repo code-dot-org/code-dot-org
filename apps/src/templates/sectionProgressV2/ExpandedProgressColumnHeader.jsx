@@ -1,11 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './progress-table-v2.module.scss';
 import classNames from 'classnames';
-import FontAwesome from '../FontAwesome';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import i18n from '@cdo/locale';
-import LevelProgressHeader from './LevelProgressHeader';
+
+import FontAwesome from '../FontAwesome';
+
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
+import LevelProgressHeader from './LevelProgressHeader';
+
+import styles from './progress-table-v2.module.scss';
 
 export default function ExpandedProgressColumnHeader({
   lesson,
@@ -13,54 +17,56 @@ export default function ExpandedProgressColumnHeader({
   expandedChoiceLevels,
   toggleExpandedChoiceLevel,
 }) {
+  const expandedLevelHeaderRef = React.useRef();
+
+  const [headerWidth, setHeaderWidth] = React.useState(0);
+
+  React.useEffect(() => {
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      if (entry.borderBoxSize) {
+        // toFixed(1) is necessary because most browsers round to one decimal point,
+        // But with zoom, borderBoxSize can be a float with many decimal points.
+        const newWidth = entry.borderBoxSize[0].inlineSize.toFixed(1);
+        setHeaderWidth(newWidth);
+      }
+    });
+    resizeObserver.observe(expandedLevelHeaderRef.current);
+
+    return () => resizeObserver.disconnect();
+  }, [setHeaderWidth, expandedLevelHeaderRef]);
+
   // If there are 2 or less levels, we only show the number so that the text fits the cell.
   const headerText =
     lesson.levels.length < 3 && expandedChoiceLevels.length === 0
       ? lesson.relative_position
-      : i18n.lessonNumbered({
-          lessonNumber: lesson.relative_position,
-          lessonName: lesson.name,
-        });
-
-  // Manual width is necessary so that overflow text is hidden and lesson header exactly fits levels.
-  // Add (numLevels + 1)px to account for borders.
-  // Also count expanded lessons and account for larger borders
-  const width = React.useMemo(() => {
-    const levelWidth = parseInt(styles.levelCellWidth);
-    const lessonHeaderWidth = lesson.levels.reduce((acc, level) => {
-      if (
-        level.sublevels?.length > 0 &&
-        expandedChoiceLevels.includes(level.id)
-      ) {
-        return acc + ((level.sublevels.length + 1) * levelWidth + 4);
-      }
-      return acc + levelWidth + 1;
-    }, 0);
-    return lessonHeaderWidth + 1 + 'px';
-  }, [lesson, expandedChoiceLevels]);
+      : lesson.title;
 
   return (
-    <div
-      className={styles.expandedHeader}
-      key={lesson.id}
-      data-tip
-      data-for={getTooltipId(lesson)}
-    >
-      <LessonTitleTooltip lesson={lesson} />
+    <div className={styles.expandedHeader} key={lesson.id}>
       <div
         className={classNames(
           styles.gridBox,
           styles.expandedHeaderLessonCell,
           styles.pointerMouse
         )}
-        style={{width}}
+        style={{width: headerWidth + 'px'}}
         onClick={() => removeExpandedLesson(lesson.id)}
         aria-label={headerText}
+        data-tip
+        data-for={getTooltipId(lesson)}
       >
-        <FontAwesome icon="caret-down" className={styles.expandedHeaderCaret} />
+        <LessonTitleTooltip lesson={lesson} />
+        <FontAwesome
+          icon="caret-down"
+          className={styles.expandedHeaderCaret}
+          title={i18n.unexpand()}
+        />
         <div className={styles.expandedHeaderLessonText}>{headerText}</div>
       </div>
-      <div className={styles.expandedHeaderSecondRow}>
+      <div
+        className={styles.expandedHeaderSecondRow}
+        ref={expandedLevelHeaderRef}
+      >
         {lesson.levels.map(level => (
           <LevelProgressHeader
             key={level.id}
