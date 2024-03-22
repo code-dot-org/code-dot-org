@@ -10,6 +10,7 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+import LtiFeedbackBanner from '@cdo/apps/lib/ui/lti/feedback/LtiFeedbackBanner';
 
 import {recordImpression} from './impressionHelpers';
 import OwnedSectionsTable from './OwnedSectionsTable';
@@ -79,6 +80,7 @@ class OwnedSections extends React.Component {
       >
         {hasSections && (
           <div>
+            <LtiFeedbackBanner />
             <OwnedSectionsTable
               isPlSections={isPlSections}
               sectionIds={visibleSectionIds}

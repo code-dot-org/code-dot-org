@@ -195,4 +195,30 @@ class Policies::LtiTest < ActiveSupport::TestCase
       refute Policies::Lti.early_access_banner_available?(@user)
     end
   end
+
+  class FeedbackAvailabilityTest < ActiveSupport::TestCase
+    test 'returns true when user is a teacher, LTI user and created more than 2 days ago' do
+      user = create(:teacher, :with_lti_auth, created_at: 3.days.ago)
+
+      assert Policies::Lti.feedback_available?(user)
+    end
+
+    test 'returns false when user is not a teacher' do
+      user = create(:student, :with_lti_auth, created_at: 3.days.ago)
+
+      refute Policies::Lti.feedback_available?(user)
+    end
+
+    test 'returns false when user is not an LTI user' do
+      user = create(:teacher, created_at: 3.days.ago)
+
+      refute Policies::Lti.feedback_available?(user)
+    end
+
+    test 'returns false when user is created less than 2 days ago' do
+      user = create(:teacher, :with_lti_auth, created_at: 1.day.ago)
+
+      refute Policies::Lti.feedback_available?(user)
+    end
+  end
 end
