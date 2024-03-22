@@ -257,7 +257,7 @@ module ProjectsList
         where {featured_before.nil? || featured_at < DateTime.parse(featured_before)}.
         exclude(featured_at: nil).
         exclude(published_at: nil).
-        exclude(abuse_score: 0...).
+        exclude(abuse_score: 1...).
         order(Sequel.desc(:featured_at)).limit(FEATURED_MAX_LIMIT)
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
