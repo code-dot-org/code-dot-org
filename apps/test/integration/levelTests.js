@@ -22,10 +22,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
-import {
-  isInitialized as isStorageInitialized,
-  storageBackend,
-} from '@cdo/apps/storage/storage';
+import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import loadSource from './util/loadSource';
 import projectRedux from '@cdo/apps/code-studio/projectRedux';
@@ -214,9 +211,12 @@ describe('Level tests', function () {
       window.Studio.interpreter = null;
     }
 
-    if (isStorageInitialized) {
-      storageBackend().resetForTesting();
-    }
+    // Firebase is only used by Applab tests, but we don't have a reliable way
+    // to test for the app type here because window.Applab is always defined
+    // because loadApplab is always required (the same is true for other app
+    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
+
+    FirebaseStorage.resetForTesting();
 
     LegacyDialog.prototype.hide.restore();
     LegacyDialog.prototype.show.restore();

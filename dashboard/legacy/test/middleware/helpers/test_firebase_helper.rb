@@ -1,5 +1,3 @@
-# TODO: post-firebase-cleanup, remove this file: #56994
-
 require_relative '../middleware_test_helper'
 require_relative '../../../middleware/helpers/firebase_helper'
 

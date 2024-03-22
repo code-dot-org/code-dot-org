@@ -1,5 +1,3 @@
-// TODO: post-firebase-cleanup, remove this file #56994
-
 import Firebase from 'firebase';
 import {
   loadConfig,

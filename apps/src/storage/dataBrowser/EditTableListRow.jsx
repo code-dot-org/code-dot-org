@@ -1,12 +1,11 @@
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import {DataView} from '../constants';
 import EditLink from './EditLink';
+import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import dataStyles from './data-styles.module.scss';
 import msg from '@cdo/locale';
-import {refreshCurrentDataView} from './loadDataForView';
-import {storageBackend, isFirebaseStorage} from '../storage';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
@@ -20,19 +19,7 @@ class EditTableListRow extends React.Component {
   };
 
   handleDelete = () => {
-    // TODO: post-firebase-cleanup, remove this conditional: #56994
-    if (isFirebaseStorage()) {
-      storageBackend().deleteTable(
-        this.props.tableName,
-        this.props.tableType,
-        refreshCurrentDataView
-      );
-    } else {
-      storageBackend().deleteTable(
-        this.props.tableName,
-        refreshCurrentDataView
-      );
-    }
+    FirebaseStorage.deleteTable(this.props.tableName, this.props.tableType);
   };
 
   render() {
