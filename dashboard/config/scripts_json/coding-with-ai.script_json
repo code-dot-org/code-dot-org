@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-03-20 20:57:00 UTC",
+    "serialized_at": "2024-03-22 19:11:07 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -930,7 +930,7 @@
       "key": "77755000-ce58-44a0-93ab-8a17aaba4453",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Display**: Show the video *What is pseudocode?* *[coming soon]*\n\n**Do This**: Have students translate the pseudocode into a programming language.\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #1\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #2",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Display**: Show the video [r _optional_what_is_pseudocode_/coding-with-ai/unversioned]\n\n**Do This**: Have students translate the pseudocode into a programming language.\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #1\n * <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Practice #2",
         "tips": [
           {
             "type": "teachingTip",
@@ -3748,6 +3748,18 @@
       }
     },
     {
+      "name": "[OPTIONAL] What is Pseudocode?",
+      "url": "https://www.youtube.com/watch?v=wKe31Xi2Ck8",
+      "key": "_optional_what_is_pseudocode_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_what_is_pseudocode_"
+      }
+    },
+    {
       "name": "AI as Your Debugging Partner",
       "url": "https://docs.google.com/presentation/d/1ZhOYKtkFmCncnAJ43AVa1BcM4WF05aBUsrcBAxYhREc/template/preview",
       "key": "ai_as_your_debugging_partner",
@@ -4106,6 +4118,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_optional_pseudocode_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_optional_what_is_pseudocode_"
       }
     },
     {
