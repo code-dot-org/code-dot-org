@@ -1,6 +1,6 @@
 name 'game_new3_environment_choices'
-display_name 'Sprite Type Practice'
-description 'Choose a game to practice with sprite types!'
+display_name 'Sprite Type: Environment'
+description 'Choose a game to check out how environment type sprites block all of the others!'
 
 sublevels
 level 'game_mechanics_type_choice1'

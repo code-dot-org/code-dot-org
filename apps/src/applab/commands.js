@@ -1865,24 +1865,25 @@ applabCommands.getColumn = function (opts) {
 
   Applab.storage.readRecords(
     opts.table,
-    opts.column,
+    {},
     handleGetColumn.bind(this, opts),
     handleGetColumnError.bind(this, opts)
   );
 };
 
-var handleGetColumn = function (opts, columnValues) {
+var handleGetColumn = function (opts, records) {
+  let columnList = [];
   let columnName = opts.column;
   let tableName = opts.table;
-  if (columnValues === null) {
+  if (records === null) {
     outputError(i18n.tableDoesNotExistError({tableName}));
   } else {
-    if (columnValues.every(element => element === undefined)) {
+    records.forEach(row => columnList.push(row[opts.column]));
+    if (columnList.every(element => element === undefined)) {
       outputError(i18n.columnDoesNotExistError({columnName, tableName}));
     }
   }
-
-  opts.callback(columnValues);
+  opts.callback(columnList);
 };
 
 var handleGetColumnError = function (opts, message) {

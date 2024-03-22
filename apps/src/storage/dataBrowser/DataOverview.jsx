@@ -4,8 +4,7 @@
  * a new data table.
  */
 import {DataView, WarningType} from '../constants';
-import {storageBackend} from '../storage';
-import {refreshCurrentDataView} from './loadDataForView';
+import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {changeView, showWarning} from '../redux/data';
@@ -27,12 +26,9 @@ class DataOverview extends React.Component {
   };
 
   onTableAdd = tableName => {
-    storageBackend().createTable(
+    FirebaseStorage.createTable(
       tableName,
-      () => {
-        refreshCurrentDataView();
-        this.props.onViewChange(DataView.TABLE, tableName);
-      },
+      () => this.props.onViewChange(DataView.TABLE, tableName),
       error => {
         if (
           error.type &&

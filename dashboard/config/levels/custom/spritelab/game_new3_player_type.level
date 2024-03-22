@@ -71,14 +71,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Explore what happens when we apply gravity! Click `Finish` when you're ready to continue on.",
     "standalone_app_name": "spritelab",
-    "long_instructions": "**When the sprite's type is set to player, it will slowly fall as if there is gravity.**\r\n\r\nPlayer types can also stand on top of environment type sprites! \r\n\r\n1. Add the new `set sprite type to player` to the `When run` program\r\n\r\n- Click `Run` and watch the player drop and land on the ground",
+    "long_instructions": "##Sprite Type: Player\r\n\r\n**When the sprite's type is set to player, it will slowly fall as if there is gravity and it will stand on top of environment type sprites!**\r\n\r\n1. Add the new `set sprite type to player` to the `When run` program\r\n\r\n- Click `Run` and watch the player drop and land on the ground",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-20T21:38:32.189+00:00\",\"changed\":[\"cloned from \\\"game_development_explore_types\\\"\"],\"cloned_from\":\"game_development_explore_types\"},{\"changed_at\":\"2024-03-20 22:09:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:09:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:15:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-20T21:38:32.189+00:00\",\"changed\":[\"cloned from \\\"game_development_explore_types\\\"\"],\"cloned_from\":\"game_development_explore_types\"},{\"changed_at\":\"2024-03-20 22:09:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:09:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-20 22:15:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-21 15:12:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

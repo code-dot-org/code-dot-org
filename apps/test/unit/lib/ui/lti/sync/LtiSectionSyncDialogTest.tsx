@@ -148,7 +148,6 @@ describe('LTI Section Sync Dialog', () => {
 
       screen.getByText(i18n.errorOccurredTitle());
       screen.getByText(i18n.ltiSectionSyncDialogError());
-      screen.getByText(errorSyncResult.error!);
     });
   });
 });

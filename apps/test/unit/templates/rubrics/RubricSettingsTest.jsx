@@ -56,7 +56,7 @@ describe('RubricSettings', () => {
 
   const defaultRubric = {
     id: 1,
-    learningGoals: [],
+    learningGoals: [{id: 1, learningGoal: 'Key Concept'}],
     lesson: {
       position: 3,
       name: 'Data Structures',
@@ -84,6 +84,36 @@ describe('RubricSettings', () => {
     attemptedUnevaluatedCount: 0,
     csrfToken: 'abcdef',
   };
+
+  const noEvals = [
+    {
+      user_name: 'Stilgar',
+      user_id: 1,
+      eval: [],
+    },
+    {
+      user_name: 'Chani',
+      user_id: 1,
+      eval: [],
+    },
+  ];
+
+  const evals = [
+    {
+      user_name: 'Stilgar',
+      user_id: 1,
+      eval: [
+        {id: 1, learning_goal_id: 1, understanding: 1, feedback: 'feedback1'},
+      ],
+    },
+    {
+      user_name: 'Chani',
+      user_id: 2,
+      eval: [
+        {id: 1, learning_goal_id: 1, understanding: 2, feedback: 'feedback1'},
+      ],
+    },
+  ];
 
   it('displays Section selector', () => {
     stubFetchEvalStatusForAll(ready);
@@ -202,9 +232,81 @@ describe('RubricSettings', () => {
     // Perform fetches and re-renders
     await wait();
     wrapper.update();
-
-    expect(fetchStub).to.have.callCount(3);
+    expect(fetchStub).to.have.callCount(4);
     expect(wrapper.find('Button').first().props().disabled).to.be.true;
     expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
+  });
+
+  it('displays switch tab text and button when there are no evaluations', async () => {
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
+    expect(wrapper.find('Button').at(1).text()).to.include(
+      i18n.rubricViewStudentRubric()
+    );
+  });
+
+  it('displays generate CSV button when there are evaluations to export', async () => {
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    // fetchStub.onCall(2).returns(
+    //   Promise.resolve(new Response(JSON.stringify(evals)))
+    // );
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    //fetch for get_teacher_evaluations_all is the 2nd fetch
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+    // await act(async () => {
+    //   await Promise.resolve();
+    // });
+    // wrapper.update();
+    expect(wrapper.text()).to.include(
+      i18n.rubricNumberStudentEvals({
+        teacherEvalCount: 2,
+      })
+    );
+    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
   });
 });

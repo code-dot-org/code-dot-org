@@ -24,7 +24,7 @@ import ProgressContainer from '../progress/ProgressContainer';
 import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
-import PanelsView from '@cdo/apps/panels/PanelsView';
+import PanelsLabView from '@cdo/apps/panels/PanelsLabView';
 import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 import Loading from './Loading';
 
@@ -94,7 +94,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   },
   panels: {
     backgroundMode: false,
-    node: <PanelsView />,
+    node: <PanelsLabView />,
   },
   weblab2: {
     backgroundMode: false,

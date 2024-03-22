@@ -1,5 +1,4 @@
-import {storageBackend} from '../storage';
-import {refreshCurrentDataView} from './loadDataForView';
+import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -39,13 +38,10 @@ class AddTableRow extends React.Component {
         castValue(inputString, /* allowUnquotedStrings */ false)
       );
       this.setState({isAdding: true});
-      storageBackend().createRecord(
+      FirebaseStorage.createRecord(
         this.props.tableName,
         record,
-        () => {
-          refreshCurrentDataView();
-          this.setState(INITIAL_STATE);
-        },
+        () => this.setState(INITIAL_STATE),
         msg => console.warn(msg)
       );
     } catch (e) {

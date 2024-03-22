@@ -621,6 +621,80 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal submitted_teacher_evaluation.feedback, json_response[0]['feedback']
   end
 
+  test "does not get teacher evaluations for students in section if not logged in" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+
+    get :get_teacher_evaluations_for_all, params: {
+      id: @rubric.id,
+      section_id: follower.section,
+    }
+
+    assert_response :forbidden
+  end
+
+  test "gets empty teacher evaluations for students when no student has evaualuations" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    2.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+    sign_in @teacher
+
+    create :learning_goal, rubric: @rubric
+    create :learning_goal, rubric: @rubric
+
+    get :get_teacher_evaluations_for_all, params: {
+      id: @rubric.id,
+      section_id: follower.section,
+    }
+
+    assert_response :success
+    assert_equal 3, json_response.length
+    json_response.each do |j|
+      assert_equal 0, j['eval'].length
+    end
+  end
+
+  test "gets teacher evaluations for students in section when 1 student has evaluations" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    2.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+    sign_in @teacher
+
+    learning_goal1 = create :learning_goal, rubric: @rubric
+    learning_goal2 = create :learning_goal, rubric: @rubric
+    teacher_evaluation1 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1'
+    teacher_evaluation2 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+
+    get :get_teacher_evaluations_for_all, params: {
+      id: @rubric.id,
+      section_id: follower.section,
+    }
+
+    assert_response :success
+    assert_equal 3, json_response.length
+    count_eval = 0
+    json_response.each do |j|
+      if j['user_id'] == student.id
+        assert_equal teacher_evaluation1.feedback, j['eval'][0]['feedback']
+        assert_equal teacher_evaluation2.feedback, j['eval'][1]['feedback']
+        count_eval += 1
+      else
+        assert_equal 0, j['eval'].length
+      end
+    end
+    assert_equal 1, count_eval
+  end
+
   test "run ai evaluations for user calls EvaluateRubricJob" do
     sign_in @teacher
 
