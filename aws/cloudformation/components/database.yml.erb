@@ -336,6 +336,7 @@
       UseLatestRestorableTime: true
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
+      DBInstanceParameterGroupName: !Ref AuroraWriterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
@@ -359,7 +360,6 @@
     Properties:
       DBInstanceIdentifier: !Sub "${AWS::StackName}-<%=i%>"
       # Use same ParameterGroup for writer and all readers so that any reader can be promoted to writer during a Failover.
-      DBParameterGroupName: !Ref AuroraWriterDBParameters
       DBClusterIdentifier: !Ref AuroraCluster
       DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
