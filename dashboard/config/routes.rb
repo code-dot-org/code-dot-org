@@ -927,7 +927,7 @@ Dashboard::Application.routes.draw do
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
-        get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+        get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}

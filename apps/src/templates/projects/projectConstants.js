@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const publishedFeaturedProjectDataPropType = PropTypes.shape({
+export const projectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   name: PropTypes.string,
   studentName: PropTypes.string,
@@ -9,7 +9,6 @@ export const publishedFeaturedProjectDataPropType = PropTypes.shape({
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
   publishedToPublic: PropTypes.bool.isRequired,
-  featuredAt: PropTypes.string,
 });
 
 export const personalProjectDataPropType = PropTypes.shape({
@@ -34,9 +33,9 @@ export const featuredProjectDataPropType = PropTypes.shape({
   unfeaturedAt: PropTypes.string,
 });
 
-export const publishedFeaturedProjectPropType = PropTypes.shape({
-  projectData: publishedFeaturedProjectDataPropType,
-  currentGallery: PropTypes.string,
+export const projectPropType = PropTypes.shape({
+  projectData: projectDataPropType.isRequired,
+  currentGallery: PropTypes.string.isRequired,
 });
 
 export const Galleries = {
