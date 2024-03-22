@@ -12,6 +12,7 @@ import {BlocklyVersion, WORKSPACE_EVENTS} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
@@ -337,6 +338,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.FieldToggle = CdoFieldToggle;
   blocklyWrapper.FieldFlyout = CdoFieldFlyout;
   blocklyWrapper.FieldBehaviorPicker = CdoFieldBehaviorPicker;
+  blocklyWrapper.FieldAnimationDropdown = CdoFieldAnimationDropdown;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,

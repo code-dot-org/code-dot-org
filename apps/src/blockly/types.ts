@@ -22,6 +22,7 @@ import {
   WORKSPACE_EVENTS,
 } from './constants';
 import {Field, FieldProto} from 'blockly/core/field';
+import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldButton from './addons/cdoFieldButton';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldToggle from './addons/cdoFieldToggle';
@@ -87,6 +88,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;
   FieldButton: typeof CdoFieldButton;
   FieldImageDropdown: typeof CdoFieldImageDropdown;
+  FieldAnimationDropdown: typeof CdoFieldAnimationDropdown;
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
