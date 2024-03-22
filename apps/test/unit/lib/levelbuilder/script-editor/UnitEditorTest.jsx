@@ -19,6 +19,7 @@ import createResourcesReducer, {
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
+import {render, screen, fireEvent} from '@testing-library/react';
 import {
   PublishedState,
   InstructionType,
@@ -104,15 +105,24 @@ describe('UnitEditor', () => {
     );
   };
 
+  function renderDefault(overrideProps = {}) {
+    const combinedProps = {...defaultProps, ...overrideProps};
+    render(
+      <Provider store={store}>
+        <UnitEditor {...combinedProps} />
+      </Provider>
+    )
+  }
+
   describe('Script Editor', () => {
-    it('does not show publishing editor if hasCourse is true', () => {
-      const wrapper = createWrapper({hasCourse: true});
-      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 0);
+    it('does not show publishing editor if hasCourse is true', () => {  
+      renderDefault({hasCourse: true});
+      expect(screen.queryByTestId('course-version-publishing-editor')).to.not.exist;
     });
 
     it('shows publishing editor if hasCourse is false', () => {
-      const wrapper = createWrapper({hasCourse: false});
-      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+      renderDefault({hasCourse: false});
+      screen.queryByTestId('course-version-publishing-editor');
     });
 
     it('shows hide this unit in course if hasCourse and course is not in development', () => {
