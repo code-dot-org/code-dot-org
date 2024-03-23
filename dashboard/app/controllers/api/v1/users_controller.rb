@@ -194,22 +194,20 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     return head :unauthorized unless current_user&.teacher?
     target_user = User.find_by_id(params[:user_id])
 
-    # TODO: Refactor to specific before action, ex. authorize_teacher_for_user
-    unless target_user && current_user.teacher?
+    unless target_user && current_user.student_of?(target_user)
       return head :unauthorized
     end
 
-    puts "new value: #{!params[:ai_tutor_access].try(:to_bool)}"
-    target_user.ai_tutor_access_denied = !params[:ai_tutor_access].try(:to_bool)
-    # target_user.save
+    target_user.ai_tutor_access_denied = !params[:ai_tutor_access]
+    target_user.save
   
     # TODO: Do we need to handle errors here? Ex.
-    if target_user.save
-      head :no_content
-    else
-      render json: { errors: target_user.errors.full_messages }, status: :unprocessable_entity
-    end
-    # head :no_content
+    # if target_user.save
+    #   head :no_content
+    # else
+    #   render json: { errors: target_user.errors.full_messages }, status: :unprocessable_entity
+    # end
+    head :no_content
   end
 
   # POST /api/v1/users/accept_data_transfer_agreement
