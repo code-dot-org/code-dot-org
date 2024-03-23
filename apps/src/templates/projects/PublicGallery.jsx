@@ -33,6 +33,15 @@ class PublicGallery extends Component {
    * See the PropTypes of each component for a definition of each format.
    */
   mapProjectData(projectLists) {
+    // The updated public gallery now displays only featured projects selected by
+    // a project validator. There is now only one section 'Featured Projects' which
+    // contains a mix of all project types. In the future, we may implement
+    // a public gallery with sections for each project type.
+    // For now, the public gallery displays a mix of project types so that we convert
+    // projectLists (an object with key project type (e.g. 'applab' and value
+    // an array of project data objects (e.g., [{name: 'My Project', channel: 'abc1--def234', ...}, {...}])
+    // to an object with a single key 'featured' and value an array of modified project data
+    // objects with different project types.
     let allFeaturedProjects = [];
     for (const projectListName in projectLists) {
       projectLists[projectListName].forEach(projectData => {
