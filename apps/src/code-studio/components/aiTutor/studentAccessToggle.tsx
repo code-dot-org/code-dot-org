@@ -14,7 +14,6 @@ interface StudentAccessToggleProps {
 const StudentAccessToggle: React.FunctionComponent<
   StudentAccessToggleProps
 > = ({student, displayGlobalError}) => {
-  console.log('student', student);
   const [hasAITutorAccess, setHasAITutorAccess] = useState(
     !student.aiTutorAccessDenied
   );
