@@ -190,8 +190,7 @@ export default function currentUser(state = initialState, action) {
     // and because dual reporting is aspirationally temporary (March 2024)
     statsigReporter.setUserProperties(
       id,
-      user_type,
-      experiments.getEnabledExperiments()
+      user_type
     );
     return {
       ...state,

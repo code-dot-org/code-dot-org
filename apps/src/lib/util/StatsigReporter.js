@@ -12,6 +12,17 @@ const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 
 class StatsigReporter {
   constructor() {
+    let user = {};
+    user_id_element = document.querySelector('script[data-user-id]');
+    user_id = user_id_element ? user_id_element.dataset.userId : null;
+    user_type_element = document.querySelector('script[data-user-type');
+    user_type = user_type_element ? user_type_element.dataset.userType : null;
+    if (user_id) {
+      user = {
+        userID: this.formatUserId(user_id),
+        custom: {type: user_type},
+      };
+    }
     const api_element = document.querySelector(
       'script[data-statsig-api-client-key]'
     );
@@ -28,13 +39,13 @@ class StatsigReporter {
       localMode: this.local_mode,
       disableErrorLogging: true,
     };
-    this.initialize(api_key, options);
+    this.initialize(api_key, user, options);
   }
 
   // Initialize with a null user object- current user redux will update on sign in
-  async initialize(api_key, options) {
+  async initialize(api_key, user, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      await Statsig.initialize(api_key, {}, options);
+      await Statsig.initialize(api_key, user, options);
     }
   }
 
