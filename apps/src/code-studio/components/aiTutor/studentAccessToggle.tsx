@@ -19,7 +19,6 @@ const StudentAccessToggle: React.FunctionComponent<
     !student.aiTutorAccessDenied
   );
 
-  // TODO: Implement this functionality
   const handleToggle = () => {
     const originalValue = hasAITutorAccess;
     const newValue = !hasAITutorAccess;
