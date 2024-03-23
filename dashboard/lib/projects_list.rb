@@ -232,6 +232,7 @@ module ProjectsList
         :projects__value___value,
         :projects__project_type___project_type,
         :projects__published_at___published_at,
+        :projects__abuse_score___abuse_score,
         :featured_projects__featured_at___featured_at,
         :featured_projects__unfeatured_at___unfeatured_at,
         :users__name___name,
@@ -276,7 +277,8 @@ module ProjectsList
           "studentName" => UserHelpers.initial(project_details[:name]),
           "studentAgeRange" => UserHelpers.age_range_from_birthday(project_details[:birthday]),
           "isFeatured" => true,
-          "featuredAt" => project_details[:featured_at]
+          "featuredAt" => project_details[:featured_at],
+          "abuseScore" => project_details[:abuse_score],
         }
         data_for_featured_project_cards << data_for_featured_project_card
       end
@@ -305,7 +307,8 @@ module ProjectsList
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at]
+        publishedAt: project[:published_at],
+        frozen: project_value['frozen'],
       }
 
       if with_library

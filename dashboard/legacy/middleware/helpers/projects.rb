@@ -16,6 +16,8 @@ class Projects
   class PublishError < StandardError
   end
 
+  BUFFERED_ABUSE_SCORE = -50
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -49,9 +51,6 @@ class Projects
       standalone: standalone,
     }
     row[:id] = @table.insert(row)
-
-    # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage: #56994
-    set_use_datablock_storage row[:id], project_type
 
     storage_encrypt_channel_id(row[:storage_id], row[:id])
   end
@@ -266,7 +265,7 @@ class Projects
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? BUFFERED_ABUSE_SCORE : amount)
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
@@ -287,12 +286,11 @@ class Projects
   end
 
   def buffer_abuse_score(channel_id)
-    buffered_abuse_score = -50
     # Reset to 0 first so projects that are featured,
     # unfeatured, then re-featured don't have super low
     # abuse scores.
     reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score)
+    increment_abuse(channel_id, BUFFERED_ABUSE_SCORE)
   end
 
   def content_moderation_disabled?(channel_id)
@@ -450,26 +448,6 @@ class Projects
   end
 
   private
-
-  # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
-  def set_use_datablock_storage(project_id, project_type)
-    # TODO: unfirebase, include 'gamelab' in this list, see #56995
-    if ['applab'].include? project_type
-      # While we transition, a fraction of new projects will be set at creation
-      # to use datablock storage. As we gain confidence, we can increase this
-      # DCDO flag to 1.0. At that point, we're ready to migrate all the old projects.
-      #
-      # Once 100% of the old projects are migrated, we're ready to remove code
-      # marked with: TODO: post-firebase-cleanup
-      use_datablock_table = DASHBOARD_DB[:project_use_datablock_storages]
-      existing_record = use_datablock_table.where(project_id: project_id).first
-      unless existing_record
-        fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
-        should_use_datablock = rand < fraction
-        use_datablock_table.insert(project_id: project_id, use_datablock_storage: should_use_datablock)
-      end
-    end
-  end
 
   #
   # Discovering a channel's project type is a real mess.  We don't usually

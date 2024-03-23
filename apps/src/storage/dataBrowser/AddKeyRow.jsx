@@ -1,4 +1,5 @@
 /** @overview Component for adding a key/value pair row. */
+import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,8 +8,6 @@ import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import {WarningType} from '../constants';
 import msg from '@cdo/locale';
-import {refreshCurrentDataView} from './loadDataForView';
-import {storageBackend} from '../storage';
 
 const INITIAL_STATE = {
   isAdding: false,
@@ -42,13 +41,10 @@ class AddKeyRow extends React.Component {
           this.state.value,
           /* allowUnquotedStrings */ false
         );
-        storageBackend().setKeyValue(
+        FirebaseStorage.setKeyValue(
           this.state.key,
           value,
-          () => {
-            this.setState(INITIAL_STATE);
-            refreshCurrentDataView();
-          },
+          () => this.setState(INITIAL_STATE),
           err => {
             if (
               err.type === WarningType.KEY_INVALID ||

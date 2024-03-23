@@ -1,8 +1,4 @@
 #!/usr/bin/env ruby
-
-# TODO: unfirebase, also update datablock storage: #56993
-# TODO: post-firebase-cleanup, remove the firebase version: #56994
-
 require_relative '../only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
@@ -12,8 +8,7 @@ require 'net/http'
 require 'json'
 require 'ostruct'
 require 'date'
-# TODO: post-firebase-cleanup, remove the firebase reference: #56994
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper' # TODO: unfirebase, remaining firebase reference
+require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 require 'honeybadger/ruby'
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip_code)
@@ -212,7 +207,6 @@ def get_weather_data
 end
 
 def main
-  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
   fb = FirebaseHelper.new('shared')
   records, columns = get_weather_data
   if records.empty?

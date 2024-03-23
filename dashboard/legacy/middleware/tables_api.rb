@@ -1,5 +1,3 @@
-# TODO: post-firebase-cleanup, consider removing this file, see https://github.com/code-dot-org/code-dot-org/issues/56996#issuecomment-1977935612, post-firebase-cleanup issue is: #56994
-
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/rack/request'
@@ -24,7 +22,6 @@ class TablesApi < Sinatra::Base
   # Exports a csv file from a table where the first row is the column names
   # and additional rows are the column values.
   #
-  # TODO: post-firebase-cleanup, remove this method at the least, probably remove whole file: #56994
   get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name|
     dont_cache
     content_type :csv
