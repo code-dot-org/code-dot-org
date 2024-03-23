@@ -26,10 +26,10 @@ export const handleUpdateAITutorAccess = async (
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
   } catch (error) {
-    // MetricsReporter.logError({
-    //   event: MetricEvent.AI_TUTOR_CHAT_DISABLE_ACCESS_FAIL,
-    //   errorMessage: error.message,
-    // });
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_UPDATE_USER_ACCESS_FAIL,
+      errorMessage: JSON.stringify(error),
+    });
     // We need to rethrow the error so that the toggle can revert to its original state.
     throw error;
   }
@@ -54,10 +54,10 @@ export const fetchStudents = async (sectionId: number) => {
     const studentData = await response.json();
     return studentData.map(formatServerData);
   } catch (error) {
-    //   MetricsReporter.logError({
-    //     event: MetricEvent.AI_TUTOR_CHAT_FETCH_FAIL,
-    //     errorMessage: error.message,
-    //   });
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_CHAT_FETCH_FAIL,
+      errorMessage: JSON.stringify(error),
+    });
     throw error;
   }
 };
