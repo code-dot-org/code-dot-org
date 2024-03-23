@@ -6,6 +6,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     # @featured_project has a project_id of 456
     @featured_project = create :featured_project
     @teacher = create :teacher
+    @project = create :project, id: 456, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
   end
 
   test 'project validators can bookmark a project as a featured project' do
