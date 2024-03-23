@@ -201,12 +201,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     target_user.ai_tutor_access_denied = !params[:ai_tutor_access]
     target_user.save
   
-    # TODO: Do we need to handle errors here? Ex.
-    # if target_user.save
-    #   head :no_content
-    # else
-    #   render json: { errors: target_user.errors.full_messages }, status: :unprocessable_entity
-    # end
+    # TODO: Do we need to handle errors here?
     head :no_content
   end
 
