@@ -5,7 +5,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
     @project_validator = create :project_validator
     # @featured_project has a project_id of 456
     @featured_project = create :featured_project
-    @teacher = create :teacher    
+    @teacher = create :teacher
   end
 
   test 'project validators can bookmark a project as a featured project' do
