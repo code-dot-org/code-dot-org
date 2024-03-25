@@ -103,7 +103,6 @@ export const updateAiCustomization = createAsyncThunk(
       .getProjectManager()
       ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
 
-    // set up to only happen on success
     const changedProperties = findChangedProperties(
       previouslySavedAiCustomizations,
       currentAiCustomizations
