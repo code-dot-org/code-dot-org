@@ -8,8 +8,9 @@ import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 import {AnalyticsContext} from '../context';
 import {MusicState} from '../redux/musicRedux';
-import moduleStyles from './undo-redo-buttons.module.scss';
+import moduleStyles from './HeaderButtons.module.scss';
 import musicI18n from '../locale';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
@@ -25,6 +26,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickRedo,
   clearCode,
 }) => {
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
     (state: {music: MusicState}) => state.music.undoStatus
   );
@@ -70,37 +72,51 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   return (
     <div className={moduleStyles.container}>
-      <button
-        onClick={onClickStartOver}
-        type="button"
-        className={classNames(moduleStyles.button)}
-      >
-        <FontAwesome
-          title={musicI18n.startOver()}
-          icon="refresh"
-          className={'icon'}
-        />
-      </button>
-      <button
-        onClick={() => onClickUndoRedo('undo')}
-        type="button"
-        className={classNames(
-          moduleStyles.button,
-          !canUndo && moduleStyles.buttonDisabled
-        )}
-      >
-        <FontAwesome title={musicI18n.undo()} icon="undo" className={'icon'} />
-      </button>
-      <button
-        onClick={() => onClickUndoRedo('redo')}
-        type="button"
-        className={classNames(
-          moduleStyles.button,
-          !canRedo && moduleStyles.buttonDisabled
-        )}
-      >
-        <FontAwesome title={musicI18n.redo()} icon="redo" className={'icon'} />
-      </button>
+      {!readOnlyWorkspace && (
+        <div className={moduleStyles.subContainer}>
+          <button
+            onClick={onClickStartOver}
+            type="button"
+            className={classNames(moduleStyles.button)}
+          >
+            <FontAwesome
+              title={musicI18n.startOver()}
+              icon="refresh"
+              className={'icon'}
+            />
+          </button>
+          <button
+            onClick={() => onClickUndoRedo('undo')}
+            type="button"
+            className={classNames(
+              moduleStyles.button,
+              !canUndo && moduleStyles.buttonDisabled
+            )}
+            disabled={!canUndo}
+          >
+            <FontAwesome
+              title={musicI18n.undo()}
+              icon="undo"
+              className={'icon'}
+            />
+          </button>
+          <button
+            onClick={() => onClickUndoRedo('redo')}
+            type="button"
+            className={classNames(
+              moduleStyles.button,
+              !canRedo && moduleStyles.buttonDisabled
+            )}
+            disabled={!canRedo}
+          >
+            <FontAwesome
+              title={musicI18n.redo()}
+              icon="redo"
+              className={'icon'}
+            />
+          </button>
+        </div>
+      )}
       <button
         onClick={onFeedbackClicked}
         type="button"

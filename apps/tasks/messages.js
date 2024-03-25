@@ -1,8 +1,8 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   var path = require('path');
   var MessageFormat = require('messageformat');
 
-  grunt.registerMultiTask('messages', 'Compile messages!', function() {
+  grunt.registerMultiTask('messages', 'Compile messages!', function () {
     var locales = new Set();
     var namespaces = new Set();
 
@@ -10,8 +10,8 @@ module.exports = function(grunt) {
     const errors = [];
     // Loop through all the I18n content used by "apps" and process it so it is usable to our
     // javascript code.
-    this.files.forEach(function(filePair) {
-      filePair.src.forEach(function(src) {
+    this.files.forEach(function (filePair) {
+      filePair.src.forEach(function (src) {
         var locale = path.basename(src, '.json');
         locales.add(locale);
         var namespace = path.basename(filePair.dest).split('.js')[0];
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
         var englishData = grunt.file.readJSON(src.replace(locale, 'en_us'));
         var localeData = grunt.file.readJSON(src);
-        Object.keys(localeData).forEach(function(key) {
+        Object.keys(localeData).forEach(function (key) {
           if (localeData[key] === '') {
             delete localeData[key];
           }
@@ -84,8 +84,8 @@ module.exports = function(grunt) {
      * simply clone said file from english.
      */
     const {dest} = this.options();
-    locales.forEach(function(locale) {
-      namespaces.forEach(function(namespace) {
+    locales.forEach(function (locale) {
+      namespaces.forEach(function (namespace) {
         const expected = path.join(dest, locale, namespace + '.js');
         if (!grunt.file.exists(expected)) {
           const fallback = expected.replace(locale, 'en_us');
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
   function checkForFormatIssues(locale, namespace, json, src) {
     const errors = [];
     // Process each individual key so we can quickly identify which string is having an issue.
-    Object.keys(json).forEach(function(key) {
+    Object.keys(json).forEach(function (key) {
       try {
         process(locale, namespace, json[key]);
       } catch (e) {

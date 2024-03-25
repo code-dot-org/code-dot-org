@@ -1010,11 +1010,12 @@ FactoryBot.define do
     end
   end
 
-  # WARNING: Using this factory in new tests may cause other tests, including
-  # ProjectsController tests, to fail.
   factory :project_storage do
   end
 
+  # WARNING: using this factory in new tests may cause other tests, including
+  # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
+  # See: https://codedotorg.atlassian.net/browse/TEACH-230
   factory :project do
     transient do
       owner {create :user}

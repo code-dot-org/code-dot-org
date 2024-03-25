@@ -6,7 +6,7 @@
         {
           "type": "panel",
           "name": "post_lesson_2_survey_questions_panel",
-          "visibleIf": "{survey_variable}='post_lesson_2'",
+          "visibleIf": "{survey_variable_name}='post_lesson_2'",
           "elements": [
             {
               "type": "html",
@@ -391,7 +391,7 @@
         {
           "type": "panel",
           "name": "post_lesson_4_survey_questions_panel",
-          "visibleIf": "{survey_variable}='post_lesson_4'",
+          "visibleIf": "{survey_variable_name}='post_lesson_4'",
           "elements": [
             {
               "type": "html",
@@ -624,7 +624,7 @@
         {
           "type": "panel",
           "name": "post_lesson_5_survey_questions_panel",
-          "visibleIf": "{survey_variable}='post_lesson_5'",
+          "visibleIf": "{survey_variable_name}='post_lesson_5'",
           "elements": [
             {
               "type": "html",
@@ -803,7 +803,7 @@
         {
           "type": "panel",
           "name": "post_lesson_6_survey_questions_panel",
-          "visibleIf": "{survey_variable}='post_lesson_6'",
+          "visibleIf": "{survey_variable_name}='post_lesson_6'",
           "elements": [
             {
               "type": "html",
@@ -982,7 +982,7 @@
         {
           "type": "panel",
           "name": "post_lesson_7_survey_questions_panel",
-          "visibleIf": "{survey_variable}='post_lesson_7'",
+          "visibleIf": "{survey_variable_name}='post_lesson_7'",
           "elements": [
             {
               "type": "html",
@@ -1161,19 +1161,19 @@
         {
           "type": "panel",
           "name": "post_lesson_survey_header_panel",
-          "visibleIf": "{survey_variable}<>'pre_module' and {survey_variable} <> 'post_module'",
+          "visibleIf": "{survey_variable_name}<>'pre_module' and {survey_variable_name} <> 'post_module'",
           "elements": [
             {
               "type": "html",
               "name": "survey_preamble_header_and_text",
-              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision's {survey_variable}</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching Code.org's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision's {survey_variable_name}</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching Code.org's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
             }
           ]
         },
         {
           "type": "panel",
           "name": "post_module_survey_header_panel",
-          "visibleIf": "{survey_variable}='post_module'",
+          "visibleIf": "{survey_variable_name}='post_module'",
           "elements": [
             {
               "type": "html",
@@ -1185,7 +1185,7 @@
         {
           "type": "panel",
           "name": "post_module_survey_questions_panel",
-          "visibleIf": "{survey_variable}='post_module'",
+          "visibleIf": "{survey_variable_name}='post_module'",
           "elements": [
             {
               "type": "html",
@@ -1900,7 +1900,7 @@
         {
           "type": "panel",
           "name": "pre_module_survey_header_panel",
-          "visibleIf": "{survey_variable}='pre_module'",
+          "visibleIf": "{survey_variable_name}='pre_module'",
           "elements": [
             {
               "type": "html",
@@ -1912,7 +1912,7 @@
         {
           "type": "panel",
           "name": "pre_module_survey_questions_panel",
-          "visibleIf": "{survey_variable}='pre_module'",
+          "visibleIf": "{survey_variable_name}='pre_module'",
           "elements": [
             {
               "type": "html",

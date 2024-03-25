@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+import React from 'react';
 import sinon from 'sinon';
+
+import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   isEditable: true,

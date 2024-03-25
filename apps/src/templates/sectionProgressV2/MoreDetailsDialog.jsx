@@ -1,23 +1,25 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+
 import {
   Heading3,
   Heading6,
   StrongText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
 import {ITEM_TYPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
+
 import styles from './progress-table-legend.module.scss';
-import color from '@cdo/apps/util/color';
 
 export default function MoreDetailsDialog({hasValidation, onClose}) {
-  const renderItem = (itemType, itemTitle, itemDetails, colorOverride) => (
+  const renderItem = (itemType, itemTitle, itemDetails) => (
     <div className={styles.item}>
-      <ProgressIcon itemType={itemType} colorOverride={colorOverride} />
+      <ProgressIcon itemType={itemType} />
       <BodyThreeText>
         <StrongText>{itemTitle + ': '}</StrongText>
         {itemDetails}
@@ -70,11 +72,6 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
             i18n.validated(),
             i18n.progressLegendDetailsValidated()
           )}
-        {renderItem(
-          ITEM_TYPE.KEEP_WORKING,
-          i18n.markedAsKeepWorking(),
-          i18n.progressLegendDetailsKeepGoing()
-        )}
         <Heading6>{i18n.teacherActions()}</Heading6>
         {renderItem(
           ITEM_TYPE.NEEDS_FEEDBACK,
@@ -86,6 +83,11 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
           i18n.feedbackGiven(),
           i18n.progressLegendDetailsFeedbackGiven()
         )}
+        {renderItem(
+          ITEM_TYPE.KEEP_WORKING,
+          i18n.markedAsKeepWorking(),
+          i18n.progressLegendDetailsKeepGoing()
+        )}
         <Heading6>{i18n.levelTypes()}</Heading6>
         {renderItem(
           ITEM_TYPE.ASSESSMENT_LEVEL,
@@ -95,8 +97,7 @@ export default function MoreDetailsDialog({hasValidation, onClose}) {
         {renderItem(
           ITEM_TYPE.CHOICE_LEVEL,
           i18n.choiceLevel(),
-          i18n.progressLegendDetailsChoiceLevels(),
-          color.neutral_dark
+          i18n.progressLegendDetailsChoiceLevels()
         )}
       </div>
     </AccessibleDialog>

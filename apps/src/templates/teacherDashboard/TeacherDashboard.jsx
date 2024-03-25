@@ -14,8 +14,6 @@ import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginI
 import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
@@ -35,6 +33,7 @@ function TeacherDashboard({
   coursesWithProgress,
   location,
   showAITutorTab,
+  sectionProviderName,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -71,11 +70,6 @@ function TeacherDashboard({
       },
       {includeUserId: true}
     );
-    if (newTab === 'progress') {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId,
-      });
-    }
   });
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -118,9 +112,14 @@ function TeacherDashboard({
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
-          component={props => (
-            <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                sectionProviderName={sectionProviderName}
+              />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.standardsReport}
@@ -199,6 +198,7 @@ TeacherDashboard.propTypes = {
   studentCount: PropTypes.number.isRequired,
   coursesWithProgress: PropTypes.array.isRequired,
   showAITutorTab: PropTypes.bool,
+  sectionProviderName: PropTypes.string,
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,

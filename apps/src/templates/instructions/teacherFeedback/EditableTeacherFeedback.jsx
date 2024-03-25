@@ -1,25 +1,26 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '@cdo/apps/templates/Button';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
-import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
+import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 import {
   teacherFeedbackShape,
   rubricShape,
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
-import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
-import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
+import i18n from '@cdo/locale';
 
 const ErrorType = {
   NoError: 'NoError',

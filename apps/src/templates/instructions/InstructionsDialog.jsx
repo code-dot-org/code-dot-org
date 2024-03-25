@@ -1,13 +1,14 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
+
 import StylizedBaseDialog, {
   FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 import ExampleImage from '@cdo/apps/templates/instructions/ExampleImage';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
-import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
+import i18n from '@cdo/locale';
 
 export function InstructionsDialog(props) {
   function body() {

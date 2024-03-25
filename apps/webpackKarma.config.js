@@ -1,5 +1,5 @@
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require('webpack');
 
 const envConstants = require('./envConstants');
 const {localeDoNotImport, WEBPACK_BASE_CONFIG} = require('./webpack.config');
@@ -35,6 +35,7 @@ const karmaConfig = {
             localeDoNotImportTest('@cdo/weblab/locale'),
           ]),
           ...{
+            // TODO: post-firebase-cleanup, remove this: #56994
             firebase: path.resolve(__dirname, 'test/util/MockFirebase.js'),
             // Use mock-firmata to unit test playground-io maker components
             firmata: 'mock-firmata/mock-firmata',
