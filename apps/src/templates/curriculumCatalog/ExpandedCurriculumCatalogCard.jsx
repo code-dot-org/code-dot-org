@@ -16,6 +16,8 @@ import {
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
 import {defaultImageSrc} from './curriculumCatalogConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const ExpandedCurriculumCatalogCard = ({
   courseKey,
@@ -87,6 +89,14 @@ const ExpandedCurriculumCatalogCard = ({
     courseKey,
     recommendedSimilarCurriculum.key
   );
+
+  const handleClickRecommendedSimilarCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_curriculum_offering: recommendedSimilarCurriculum.key,
+    });
+    setExpandedCardKey(recommendedSimilarCurriculum.key);
+  };
 
   useEffect(() => {
     const yOffset =
@@ -302,9 +312,7 @@ const ExpandedCurriculumCatalogCard = ({
                   styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedSimilarCurriculum.display_name}
-                  onClick={() =>
-                    setExpandedCardKey(recommendedSimilarCurriculum.key)
-                  }
+                  onClick={handleClickRecommendedSimilarCurriculum}
                 />
                 <img
                   id="stretchCurriculumImage"

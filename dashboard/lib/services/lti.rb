@@ -3,6 +3,7 @@ require 'queries/lti'
 require 'user'
 require 'authentication_option'
 require 'sections/section'
+require 'set'
 
 module Services
   module Lti
@@ -33,8 +34,7 @@ module Services
       auth_option = user.authentication_options.find(&:lti?)
       issuer, client_id, subject = auth_option.authentication_id.split('|')
       lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
-      identity = LtiUserIdentity.new(user: user, subject: subject, lti_integration: lti_integration)
-      identity.save!
+      LtiUserIdentity.create(user: user, subject: subject, lti_integration: lti_integration)
     end
 
     def self.create_lti_integration(
@@ -93,13 +93,23 @@ module Services
       return ::User::TYPE_STUDENT
     end
 
-    def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
+    def self.initialize_lti_user_from_nrps(client_id:, issuer:, nrps_member:)
       nrps_member_message = Policies::Lti.issuer_accepts_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
+      email_address = get_claim(nrps_member_message, :email)
+      account_type = Policies::Lti.get_account_type(nrps_member[:roles])
+
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
-      user.user_type = ::User::TYPE_STUDENT
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
-      user.family_name = get_claim(nrps_member_message, :family_name)
+
+      if account_type == ::User::TYPE_TEACHER && email_address.present?
+        user.user_type = ::User::TYPE_TEACHER
+        user.update_primary_contact_info(new_email: email_address, new_hashed_email: ::User.hash_email(email_address))
+      else
+        user.user_type = ::User::TYPE_STUDENT
+        user.family_name = get_claim(nrps_member_message, :family_name)
+      end
+
       id_token = {
         sub: nrps_member[:user_id],
         aud: client_id,
@@ -108,7 +118,7 @@ module Services
       ao = AuthenticationOption.new(
         authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
         credential_type: AuthenticationOption::LTI_V1,
-        email: get_claim(nrps_member_message, :email),
+        email: email_address,
         )
       user.authentication_options = [ao]
       # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
@@ -160,31 +170,53 @@ module Services
       had_changes = false
       client_id = lti_integration.client_id
       issuer = lti_integration.issuer
-      current_students = nrps_members.map do |nrps_member|
-        student = Queries::Lti.get_user_from_nrps(
+      section = lti_section.section
+      current_students = Set.new
+      current_teachers = Set.new
+
+      nrps_members.each do |nrps_member|
+        account_type = Policies::Lti.get_account_type(nrps_member[:roles])
+
+        user = Queries::Lti.get_user_from_nrps(
           client_id: client_id,
           issuer: issuer,
           nrps_member: nrps_member
         )
-        student ||= initialize_lti_student_from_nrps(
+        user ||= initialize_lti_user_from_nrps(
           client_id: client_id,
           issuer: issuer,
           nrps_member: nrps_member
         )
-        had_changes ||= (student.new_record? || student.changed?)
-        student.save!
-        add_student_result = lti_section.section.add_student(student)
-        had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
-        student
+        had_changes ||= (user.new_record? || user.changed?)
+        user.save!
+        if account_type == ::User::TYPE_TEACHER
+          add_instructor_result = section.add_instructor(user)
+          had_changes ||= add_instructor_result
+          current_teachers.add(user.id)
+        else
+          add_student_result = section.add_student(user)
+          had_changes ||= add_student_result == Section::ADD_STUDENT_SUCCESS
+          current_students.add(user.id)
+        end
       end
 
       # Prune students who have been removed from the section in the LMS
       lti_section.followers.each do |follower|
-        unless current_students.find_index {|s| s.id == follower.student_user_id}
+        unless current_students.include?(follower.student_user_id)
           follower.destroy
           had_changes = true
         end
       end
+
+      # Prune teachers who have been removed from the section in the LMS
+      section.section_instructors.each do |section_instructor|
+        instructor = section_instructor.instructor
+        unless current_teachers.include?(instructor.id)
+          section.remove_instructor(instructor)
+          had_changes = true
+        end
+      end
+
       had_changes
     end
 

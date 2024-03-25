@@ -129,7 +129,14 @@ function iconFor(stepStatus) {
   };
   switch (stepStatus) {
     case Status.WAITING:
-      return <FontAwesome icon="clock-o" className="fa-fw" style={iconStyle} />;
+      return (
+        <FontAwesome
+          icon="clock-o"
+          className="fa-fw"
+          style={iconStyle}
+          title="waiting"
+        />
+      );
     case Status.ATTEMPTING:
       return (
         <FontAwesome
@@ -141,7 +148,12 @@ function iconFor(stepStatus) {
     case Status.SUCCEEDED:
     case Status.SUCCEEDEDTEAL:
       return (
-        <FontAwesome icon="check-circle" className="fa-fw" style={iconStyle} />
+        <FontAwesome
+          icon="check-circle"
+          className="fa-fw"
+          style={iconStyle}
+          title="success"
+        />
       );
     case Status.CELEBRATING:
       return (
