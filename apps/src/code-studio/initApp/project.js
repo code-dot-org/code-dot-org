@@ -1307,9 +1307,11 @@ var projects = (module.exports = {
    * @private
    */
   getUpdatedSourceAndHtml_(callback) {
-    this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler
-        .getLevelSource()
+    this.sourceHandler.getAnimationList(animations => {
+      const test = this.sourceHandler.getLevelSource();
+      if (!test) throw 'SOMETHINGWELLNOTICE';
+
+      test
         .then(source => {
           const html = this.sourceHandler.getLevelHtml();
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
@@ -1332,8 +1334,8 @@ var projects = (module.exports = {
             teacherHasConfirmedUploadWarning,
           });
         })
-        .catch(error => callback({error}))
-    );
+        .catch(error => callback({error}));
+    });
   },
 
   getSelectedSong() {
