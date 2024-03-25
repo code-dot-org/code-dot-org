@@ -10,7 +10,7 @@ class TeacherDashboardController < ApplicationController
 
   def parent_letter
     @section_summary = @section.summarize
-    @sections = current_user.sections_instructed.map(&:summarize)
+    @sections = current_user.sections_instructed.map(&:concise_summarize)
     render layout: false
   end
 end

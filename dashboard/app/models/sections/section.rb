@@ -389,30 +389,37 @@ class Section < ApplicationRecord
   def concise_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
+      num_students = students.distinct(&:id).size
+
+      course_version_name = unit_group ? unit_group.name : script&.name
+
       {
         id: id,
         name: name,
+        courseVersionName: course_version_name,
         createdAt: created_at,
-        sectionInstructors: serialized_section_instructors,
-        code: code,
+        login_type: login_type,
+        grades: grades,
+        providerManaged: provider_managed?,
         lesson_extras: lesson_extras,
         pairing_allowed: pairing_allowed,
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
-        login_type: login_type,
-        participant_type: participant_type,
+        studentCount: num_students,
+        code: code,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
-        grades: grades,
-        providerManaged: provider_managed?,
         hidden: hidden,
         restrict_section: restrict_section,
-        is_assigned_csa: assigned_csa?,
         # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
         code_review_expires_at: code_review_expires_at,
+        is_assigned_csa: assigned_csa?,
+        participant_type: participant_type,
+        sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
       }
     end
