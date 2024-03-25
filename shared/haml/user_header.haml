@@ -28,6 +28,8 @@
   user_type = request.cookies[cookie_key]
 
 %script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
+%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 
 - if show_create_menu
   .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button"}

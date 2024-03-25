@@ -563,7 +563,7 @@ class SectionTest < ActiveSupport::TestCase
       section = create :section
       coteacher_user = create :teacher
       primary_section_instructor_id = section.section_instructors[0].id
-      coteacher_section_instructor = section.add_instructor(coteacher_user.email, current_user)
+      coteacher_section_instructor = section.invite_instructor(coteacher_user.email, current_user)
       section.reload
 
       expected = {
@@ -903,6 +903,66 @@ class SectionTest < ActiveSupport::TestCase
     section.save!
 
     assert_equal 1, section.instructors.length
+  end
+
+  test 'add_instructor returns true and adds the teacher if not previously a co-teacher' do
+    section = create(:section)
+    user = create :teacher
+
+    assert section.add_instructor(user)
+    assert_equal user, section.section_instructors.last.instructor
+  end
+
+  test 'add_instructor returns true and restores the teacher if previously deleted co-teacher' do
+    section = create(:section)
+    user = create :teacher
+
+    # Add instructor, then delete the instructor
+    section.add_instructor(user)
+    section.section_instructors.last.destroy
+
+    # Re-add the deleted instructor
+    result = section.add_instructor(user)
+
+    assert_equal true, result
+    assert_equal user, section.section_instructors.last.instructor
+  end
+
+  test 'add_instructor returns true and activates the teacher if the teacher was previously invited' do
+    section = create(:section)
+    inviter = create :teacher
+    user = create :teacher
+
+    section.invite_instructor(user.email, inviter)
+    result = section.add_instructor(user)
+    si = section.section_instructors.last
+
+    assert_equal true, result
+    assert_equal user, si.instructor
+    assert_equal "active", si.status
+  end
+
+  test 'remove_instructor destroys the applicable SectionInstructor' do
+    section = create(:section)
+    user = create :teacher
+
+    section.add_instructor(user)
+    si = section.section_instructors.last
+    section.remove_instructor(user)
+    si.reload
+
+    assert_equal true, si.deleted?
+  end
+
+  test 'remove_instructor does not remove the primary teacher' do
+    user = create :teacher
+    section = create(:section, user: user)
+
+    si = SectionInstructor.find_by(instructor: user, section_id: section.id)
+    section.remove_instructor(user)
+    si.reload
+
+    refute si.deleted?
   end
 
   def set_up_code_review_groups

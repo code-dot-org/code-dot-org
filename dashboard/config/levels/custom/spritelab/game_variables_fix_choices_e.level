@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:25:17.000Z",
   "level_num": "custom",
@@ -25,7 +24,7 @@
     "encrypted": "false",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##Game Mechanic: COLLECT\r\n**Problem:** The rabbit is too slow to collect the carrot!\r\n\r\n**Fix:** Change the rabbit's speed by updating the `speed` variable",
+    "long_instructions": "##Game Mechanic: CHASING\r\n**Problem:** The rabbit is too slow to get the carrot!\r\n\r\n**Fix:** Change the rabbit's speed by updating the `speed` variable to 3 or faster.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -46,14 +45,13 @@
       "downButton"
     ],
     "display_name": "Carrot Chaser",
-    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Collect\r\n\r\n**Problem:** The bunny moves too slow to catch the carrot!",
+    "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanics:** Chasing\r\n\r\n**Problem:** The bunny moves too slow to catch the carrot!",
     "thumbnail_url": "https://images.code.org/3f3479d9e6a1a20dd0aea6fb3109cd94-bunnyescape.png",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "short_instructions": "Increase the rabbit's speed to 3 or more so it can catch the carrot!",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:17.649+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_emma_1\\\"\"],\"cloned_from\":\"game_dev_bad_example_emma_1\"},{\"changed_at\":\"2024-03-18 20:25:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:45:03 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:45:36 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:58:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:59:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:01:06 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:01:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:02:01 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:05:16 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:25:17.649+00:00\",\"changed\":[\"cloned from \\\"game_dev_bad_example_emma_1\\\"\"],\"cloned_from\":\"game_dev_bad_example_emma_1\"},{\"changed_at\":\"2024-03-18 20:25:38 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:45:03 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:45:36 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:58:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 22:59:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:01:06 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:01:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:02:01 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 23:05:16 +0000\",\"changed\":[\"start_blocks\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:35:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:35:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:36:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:37:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:46:03 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:55:23 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:57:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:59:02 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:01:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:02:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:05:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:13:22 +0000\",\"changed\":[\"start_blocks\",\"short_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:25:52 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"short_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:28:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:30:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:32:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:33:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:37:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 16:38:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -80,7 +78,7 @@
                       <field name="ANIMATION_NAME">"carrot"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker" deletable="false">
-                          <field name="LOCATION">{"x":344,"y":63}</field>
+                          <field name="LOCATION">{"x":177,"y":208}</field>
                         </block>
                       </value>
                       <next>
@@ -127,7 +125,7 @@
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="adaptations_toggleBehaviorSimple" deletable="false">
+                                        <block type="gamelab_toggleBehaviorSimple" deletable="false">
                                           <field name="TOGGLE">"begins"</field>
                                           <value name="SPRITE">
                                             <block type="gamelab_allSpritesWithAnimation" deletable="false">
@@ -141,13 +139,36 @@
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_showVariable" deletable="false">
-                                              <field name="VAR" id="r[GkJc@uY0o`[{8pH_Om">speed</field>
-                                              <value name="LOCATION">
-                                                <block type="adaptations_location_picker" deletable="false">
-                                                  <field name="LOCATION">{"x":55,"y":29}</field>
+                                            <block type="gamelab_setProp" deletable="false">
+                                              <field name="PROPERTY">"scale"</field>
+                                              <value name="SPRITE">
+                                                <block type="gamelab_getAllSprites" deletable="false"/>
+                                              </value>
+                                              <value name="VAL">
+                                                <block type="math_number" deletable="false">
+                                                  <field name="NUM">50</field>
                                                 </block>
                                               </value>
+                                              <next>
+                                                <block type="gamelab_startAvoiding" deletable="false">
+                                                  <field name="TARGET">"purple bunny"</field>
+                                                  <value name="SPRITE">
+                                                    <block type="gamelab_allSpritesWithAnimation" deletable="false">
+                                                      <field name="ANIMATION">"carrot"</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="gamelab_showVariable" deletable="false">
+                                                      <field name="VAR" id="r[GkJc@uY0o`[{8pH_Om">speed</field>
+                                                      <value name="LOCATION">
+                                                        <block type="adaptations_location_picker" deletable="false">
+                                                          <field name="LOCATION">{"x":55,"y":29}</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -167,7 +188,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" deletable="false" x="16" y="540">
+        <block type="gamelab_checkTouching" deletable="false" x="17" y="627">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>
