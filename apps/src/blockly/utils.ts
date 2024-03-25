@@ -5,6 +5,7 @@ import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import {DARK_THEME_SUFFIX, Themes} from './constants';
 
 type xmlAttribute = string | null;
 
@@ -143,5 +144,12 @@ export function handleCodeGenerationFailure(
       errorMessage: error.message,
       stackTrace: error.stack,
     });
+  }
+}
+
+// Returns the current theme name without the 'dark' suffix, if present.
+export function getBaseName(themeName: Themes) {
+  if (themeName) {
+    return themeName.replace(DARK_THEME_SUFFIX, '');
   }
 }

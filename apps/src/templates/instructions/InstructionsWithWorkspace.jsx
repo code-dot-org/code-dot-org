@@ -2,9 +2,11 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
-import TopInstructions from './TopInstructions';
+
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
+
+import TopInstructions from './TopInstructions';
 
 /**
  * A component representing the right side of the screen in our app. In particular

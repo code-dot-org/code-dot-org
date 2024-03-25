@@ -1,8 +1,10 @@
-import React from 'react';
 import {render, screen} from '@testing-library/react';
-import {expect} from '../../../util/reconfiguredChai';
-import LegendItem from '@cdo/apps/templates/sectionProgressV2/LegendItem';
+import React from 'react';
+
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
+import LegendItem from '@cdo/apps/templates/sectionProgressV2/LegendItem';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('LegendItem ', () => {
   it('renders with provided label text', () => {

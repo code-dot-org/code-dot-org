@@ -4,7 +4,7 @@
 %html{dir: locale_dir}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
-    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true}
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
@@ -26,6 +26,10 @@
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
     -# auth key needed for amplitude analytics.
     %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
+    -# auth key needed for statsig analytics
+    %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+    -# for statsig to recognized managed test server
+    %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
     -# webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: webpack_asset_path('js/webpack-runtime.js')}
     -# essential.js is ordered above application.js to filter new relic errors

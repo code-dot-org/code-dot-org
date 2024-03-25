@@ -6,6 +6,7 @@ import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/Segmen
 import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
 import {rubricShape} from './rubricShapes';
 import {InfoAlert} from './RubricContent';
+import {TAB_NAMES} from './rubricHelpers';
 
 export default function RubricTabButtons({
   tabSelectCallback,
@@ -18,11 +19,6 @@ export default function RubricTabButtons({
   rubric,
   studentName,
 }) {
-  const TAB_NAMES = {
-    RUBRIC: 'rubric',
-    SETTINGS: 'settings',
-  };
-
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
 
   const statusText = () => {

@@ -1,15 +1,38 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
-import ProgressTableV2 from './ProgressTableV2';
-import IconKey from './IconKey';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-import {connect} from 'react-redux';
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
-import styles from './progress-table-v2.module.scss';
 import UnitSelectorV2 from '../UnitSelectorV2';
-import i18n from '@cdo/locale';
+
+import IconKey from './IconKey';
+import ProgressTableV2 from './ProgressTableV2';
+
+import styles from './progress-table-v2.module.scss';
+
+const getLocalStorageString = (scriptId, sectionId) =>
+  `expandedLessonProgressV2-${scriptId}-${sectionId}`;
+
+const getLocalStorage = (scriptId, sectionId) => {
+  try {
+    return (
+      JSON.parse(
+        tryGetLocalStorage(getLocalStorageString(scriptId, sectionId), [])
+      ) || []
+    );
+  } catch (e) {
+    // If we fail to parse the local storage, default to nothing expanded.
+    return [];
+  }
+};
 
 function SectionProgressV2({
   scriptId,
@@ -17,12 +40,38 @@ function SectionProgressV2({
   unitData,
   isLoadingProgress,
   isRefreshingProgress,
+  isLevelProgressLoaded,
 }) {
-  const [expandedLessonIds, setExpandedLessons] = React.useState([]);
+  const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
+    getLocalStorage(scriptId, sectionId)
+  );
+
+  React.useEffect(() => {
+    setExpandedLessonIds(getLocalStorage(scriptId, sectionId));
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
+      sectionId: sectionId,
+      unitId: scriptId,
+    });
+  }, [scriptId, sectionId]);
+
+  const setExpandedLessons = React.useCallback(
+    updateFunction => {
+      const newUpdateFunction = currentExpandedLessonIds => {
+        const newExpandedLessonIds = updateFunction(currentExpandedLessonIds);
+        trySetLocalStorage(
+          getLocalStorageString(scriptId, sectionId),
+          JSON.stringify(newExpandedLessonIds)
+        );
+        return newExpandedLessonIds;
+      };
+      setExpandedLessonIds(newUpdateFunction);
+    },
+    [setExpandedLessonIds, scriptId, sectionId]
+  );
 
   const levelDataInitialized = React.useMemo(() => {
-    return unitData && !isLoadingProgress && !isRefreshingProgress;
-  }, [unitData, isLoadingProgress, isRefreshingProgress]);
+    return unitData && isLevelProgressLoaded;
+  }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
     if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
@@ -42,6 +91,7 @@ function SectionProgressV2({
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
+        sectionId={sectionId}
       />
       <div className={styles.title}>
         <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>
@@ -66,6 +116,7 @@ SectionProgressV2.propTypes = {
   unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
+  isLevelProgressLoaded: PropTypes.bool.isRequired,
 };
 
 export default connect(state => ({
@@ -74,4 +125,8 @@ export default connect(state => ({
   unitData: getCurrentUnitData(state),
   isLoadingProgress: state.sectionProgress.isLoadingProgress,
   isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
+  isLevelProgressLoaded:
+    !!state.sectionProgress.studentLevelProgressByUnit[
+      state.unitSelection.scriptId
+    ],
 }))(SectionProgressV2);

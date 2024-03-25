@@ -326,7 +326,7 @@ dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
 # Poste (internal transactional email processing framework)
-poste_host: <%= code_org_url.sub('//', '') %>
+poste_host: '<%= code_org_url.sub('//', '') %>'
 poste_attachment_dir:
 poste_smtp_password: !Secret
 poste_smtp_server:   email-smtp.us-east-1.amazonaws.com
@@ -361,7 +361,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co'
 
 skip_locales:
 secret_pictures_csv:
@@ -642,3 +642,7 @@ ai_proxy_origin: https://aiproxy-test.code.org
 # local_mode.
 statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'
+
+# MailJet API keys
+mailjet_api_key:
+mailjet_secret_key:

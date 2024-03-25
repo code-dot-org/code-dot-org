@@ -1,9 +1,12 @@
+import classNames from 'classnames';
 import React from 'react';
-import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
-import styles from './progress-table-legend.module.scss';
+
 import FontAwesome from '../FontAwesome';
 import ProgressBox from '../sectionProgress/ProgressBox';
-import classNames from 'classnames';
+
+import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
+
+import styles from './progress-table-legend.module.scss';
 
 export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
