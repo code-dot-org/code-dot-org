@@ -143,10 +143,24 @@ i.fa-fw {
 }
 
 // Grid container
-// Apply class to containers that use grid, but declare
-// column/row characteristics on a case-by-case basis
+// Apply class to containers that use grid
 .grid-container {
   display: grid;
+
+  &.two-col {
+    @media (min-width: $width-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+  &.align-items-center {
+    align-items: center;
+  }
+  &.gap-4 {
+    gap: 4rem;
+  }
 }
 
 // Line divider for use between sections
@@ -182,6 +196,11 @@ div.divider {
 // See code.org/teach for an example
 .box-shadow-primary {
   box-shadow: 8px 8px 0 var(--brand_primary_light);
+}
+
+// Add a soft box shadow to an element
+.box-shadow-soft-neutral {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .2);
 }
 
 // Lines (<hr>)
@@ -1376,6 +1395,10 @@ section.quote {
   background-color: var(--brand_primary_default);
   border-radius: $border-radius;
   padding: 2rem;
+
+  &.solid-bg {
+    background: var(--brand_primary_default);
+  }
 }
 
 // Tables

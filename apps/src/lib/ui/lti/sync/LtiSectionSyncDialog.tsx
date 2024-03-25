@@ -13,6 +13,7 @@ import {
 } from './types';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
+import {getRosterSyncErrorMessage} from './LtiSectionSyncDialogHelpers';
 
 // This dialog is shown to the teacher whenever they have requested Code.org to
 // import/sync the teacher's sections and students managed by their LMS.
@@ -49,8 +50,7 @@ export default function LtiSectionSyncDialog({
     return (
       <div>
         <h2 style={styles.dialogHeader}>{i18n.errorOccurredTitle()}</h2>
-        <p>{i18n.ltiSectionSyncDialogError()}</p>
-        <p>{error}</p>
+        {error && <SafeMarkdown markdown={getRosterSyncErrorMessage(error)} />}
       </div>
     );
   };

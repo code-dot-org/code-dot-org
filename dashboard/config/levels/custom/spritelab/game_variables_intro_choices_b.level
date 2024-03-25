@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:19:29.000Z",
   "level_num": "custom",
@@ -48,13 +47,12 @@
     "display_name": "Star Catcher ",
     "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Game Mechanic:** Moving & Collecting \r\n\r\n**How to win:** Use the arrows to catch 10 stars\r\n\r\n",
     "thumbnail_url": "https://images.code.org/05a8e10715bf857d91cd1dcde6794f31-warp_zone.jpg",
-    "long_instructions": " **Play the game!**\r\n \r\n Press `Run` and play the game. What do you notice?",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "long_instructions": " **Play the game!**\r\n \r\n - Press `Run` and play the game. \r\n \r\n - What do you notice?\r\n - Press `Finish` to play another game or move on.",
+    "short_instructions": "Play the game!",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:29.796+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice4\\\"\"],\"cloned_from\":\"game_dev_choice4\"},{\"changed_at\":\"2024-03-18 20:19:42 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:53:11 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:56:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:57:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:58:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:19:29.796+00:00\",\"changed\":[\"cloned from \\\"game_dev_choice4\\\"\"],\"cloned_from\":\"game_dev_choice4\"},{\"changed_at\":\"2024-03-18 20:19:42 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:53:11 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:56:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:57:17 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:58:24 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 21:03:08 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:06:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-03-22 21:09:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,29 +84,29 @@
                         </block>
                       </value>
                       <next>
-                        <block type="adaptations_toggleBehaviorSimple" deletable="false" movable="false">
+                        <block type="gamelab_toggleBehaviorSimple" deletable="false" movable="false" editable="false">
                           <field name="TOGGLE">"begins"</field>
                           <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false">
+                            <block type="gamelab_allSpritesWithAnimation">
                               <field name="ANIMATION">"space_astronaut_cat"</field>
                             </block>
                           </value>
                           <value name="BEHAVIOR">
-                            <block type="gamelab_behavior_get" deletable="false" movable="false">
+                            <block type="gamelab_behavior_get">
                               <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
                               <field name="NAME">moving with arrow keys</field>
                             </block>
                           </value>
                           <next>
-                            <block type="adaptations_toggleBehaviorSimple" deletable="false" movable="false">
+                            <block type="gamelab_toggleBehaviorSimple" deletable="false" movable="false">
                               <field name="TOGGLE">"begins"</field>
                               <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation" deletable="false" movable="false">
+                                <block type="gamelab_allSpritesWithAnimation">
                                   <field name="ANIMATION">"night_star"</field>
                                 </block>
                               </value>
                               <value name="BEHAVIOR">
-                                <block type="gamelab_behavior_get" deletable="false" movable="false">
+                                <block type="gamelab_behavior_get">
                                   <mutation behaviorId="moving south and looping" name="moving south and looping"/>
                                   <field name="NAME">moving south and looping</field>
                                 </block>
@@ -217,6 +215,52 @@
                           <field name="NUM">1</field>
                         </block>
                       </value>
+                      <next>
+                        <block type="gamelab_ifVarEquals" deletable="false" movable="false">
+                          <field name="NUM" id="]~{fSy[rAAw;{0vd~%e-">Stars</field>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">10</field>
+                            </block>
+                          </value>
+                          <statement name="STATEMENT">
+                            <block type="gamelab_setForegroundEffect" deletable="false" movable="false">
+                              <field name="EFFECT">"starburst"</field>
+                              <next>
+                                <block type="gamelab_spriteSay" deletable="false" movable="false">
+                                  <field name="SPEECH">Yay!</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"space_astronaut_cat"</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_playSound" deletable="false" movable="false">
+                                      <field name="SOUND">sound://category_space/Bullet_cluster_SFX.mp3</field>
+                                      <next>
+                                        <block type="gamelab_toggleBehaviorSimple" deletable="false" movable="false">
+                                          <field name="TOGGLE">"stops"</field>
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"night_star"</field>
+                                            </block>
+                                          </value>
+                                          <value name="BEHAVIOR">
+                                            <block type="gamelab_behavior_get">
+                                              <mutation behaviorId="moving south and looping" name="moving south and looping"/>
+                                              <field name="NAME">moving south and looping</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>

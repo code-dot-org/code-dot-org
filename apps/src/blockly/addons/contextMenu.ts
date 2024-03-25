@@ -164,6 +164,38 @@ const registerUnshadow = function (weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
 
+const registerAllBlocksUndeletable = function (weight: number) {
+  const workspaceBlocksUndeletableOption = {
+    displayText: function (scope: ContextMenuRegistry.Scope) {
+      return 'Make ALL Blocks Undeletable';
+    },
+    preconditionFn: function (scope: ContextMenuRegistry.Scope) {
+      if (Blockly.isStartMode) {
+        if (
+          scope.workspace?.getAllBlocks().every(block => !block.isDeletable())
+        ) {
+          return MenuOptionStates.DISABLED;
+        }
+        return MenuOptionStates.ENABLED;
+      }
+      return MenuOptionStates.HIDDEN;
+    },
+    callback: function (scope: ContextMenuRegistry.Scope) {
+      if (scope.workspace) {
+        scope.workspace
+          .getAllBlocks()
+          .forEach(block => block.setDeletable(false));
+      }
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'workspaceBlocksUndeletable',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(
+    workspaceBlocksUndeletableOption
+  );
+};
+
 const registerKeyboardNavigation = function (weight: number) {
   const keyboardNavigationOption = {
     displayText: function (scope: ContextMenuRegistry.Scope) {
@@ -488,4 +520,5 @@ function registerCustomWorkspaceOptions() {
   registerKeyboardNavigation(nextWeight++);
   registerAllCursors(nextWeight++, NAVIGATION_CURSOR_TYPES);
   registerThemes(nextWeight++, themes);
+  registerAllBlocksUndeletable(nextWeight++);
 }
