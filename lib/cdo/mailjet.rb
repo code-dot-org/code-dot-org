@@ -23,7 +23,6 @@ module MailJet
     end
   end
 
-  WELCOME_TEMPLATE_ID = 5_421_128
   def self.create_contact_and_send_welcome_email(user)
     return unless enabled?
 
