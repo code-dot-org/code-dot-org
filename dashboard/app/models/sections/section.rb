@@ -421,6 +421,33 @@ class Section < ApplicationRecord
     end
   end
 
+  # Provides some information about a section. This only provides information (other than name and id) that
+  # cannot be found in `concise_summarize`. This is only needed for the teacher dashboard selected section.
+  def selected_section_summarize
+    ActiveRecord::Base.connected_to(role: :reading) do
+      login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
+      if login_type == LOGIN_TYPE_LTI_V1
+        issuer = lti_course.lti_integration.issuer
+        login_type_name = Policies::Lti.issuer_name(issuer)
+      end
+
+      {
+        id: id,
+        name: name,
+        students: students.distinct(&:id).map(&:summarize),
+        login_type: login_type,
+        login_type_name: login_type_name,
+        sharing_disabled: sharing_disabled?,
+        script: {
+          id: script_id,
+          name: script.try(:name),
+          project_sharing: script.try(:project_sharing),
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+        },
+      }
+    end
+  end
+
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
