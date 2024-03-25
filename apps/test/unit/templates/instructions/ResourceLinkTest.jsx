@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import ResourceLink from '@cdo/apps/templates/instructions/ResourceLink';
+import React from 'react';
 import sinon from 'sinon';
+
+import ResourceLink from '@cdo/apps/templates/instructions/ResourceLink';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ResourceLink', () => {
   it('opens reference in new tab if openReferenceInNewTab is set', () => {

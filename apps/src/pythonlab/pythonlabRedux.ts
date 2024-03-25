@@ -1,9 +1,9 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {NestedSourceCode} from '@cdo/apps/lab2/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 export interface PythonlabState {
-  source: NestedSourceCode | undefined;
+  source: MultiFileSource | undefined;
   output: string[];
 }
 
@@ -16,7 +16,7 @@ const pythonlabSlice = createSlice({
   name: 'pythonlab',
   initialState,
   reducers: {
-    setSource(state, action: PayloadAction<NestedSourceCode>) {
+    setSource(state, action: PayloadAction<MultiFileSource>) {
       state.source = action.payload;
     },
     appendOutput(state, action: PayloadAction<string>) {

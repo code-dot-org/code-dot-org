@@ -2,7 +2,7 @@ import {Key} from './utils/Notes';
 
 export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
 export const baseAssetUrlRestricted =
-  'https://curriculum.code.org/restricted/musiclab/';
+  'https://studio.code.org/restricted/musiclab/';
 
 export interface Trigger {
   id: string;
@@ -48,7 +48,7 @@ export const BlockMode = {
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
 export const DEFAULT_PATTERN = {
-  kit: 'glitch',
+  kit: 'drums',
   events: [],
 };
 

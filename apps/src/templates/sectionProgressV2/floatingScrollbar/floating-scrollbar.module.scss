@@ -6,7 +6,7 @@
 }
 
 .scrollBar {
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: visible;
 }
 
@@ -32,4 +32,11 @@
 .scrollingContent::-webkit-scrollbar { /* WebKit */
   width: 0;
   height: 0;
+}
+
+.defaultScroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
 }

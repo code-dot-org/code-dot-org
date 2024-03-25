@@ -84,10 +84,6 @@ class Policies::Lti
     (Set.new(roles) & TEACHER_ROLES).any?
   end
 
-  def self.generate_auth_id(id_token)
-    "#{id_token[:iss]}|#{id_token[:aud]}|#{id_token[:sub]}"
-  end
-
   def self.lti?(user)
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
@@ -146,5 +142,10 @@ class Policies::Lti
   # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
   def self.issuer_accepts_resource_link?(issuer)
     ['Canvas'].include?(issuer_name(issuer))
+  end
+
+  # Force Schoology through iframe mitigation flow
+  def self.force_iframe_launch?(issuer)
+    ['Schoology'].include?(issuer_name(issuer))
   end
 end

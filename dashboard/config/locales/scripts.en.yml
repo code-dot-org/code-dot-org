@@ -10431,6 +10431,8 @@ en:
               name: Game Jam - Play
             lesson-11:
               name: Game Mechanics
+            lesson-12:
+              name: New Game Design Lesson 3
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -13785,8 +13787,8 @@ en:
           title: Getting Started with Code.org
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
         self-paced-pl-csd-unit2-2-2023:
           lessons: {}
           lesson_groups: {}
@@ -13794,8 +13796,28 @@ en:
           title: Preparing to Teach Web Development
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 90 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to Web Development.
+            * Practice key concepts included in the unit.
+            * Engage with Web Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time**: 90 minutes
         self-paced-pl-csd-unit3-1-2023:
           lessons: {}
           lesson_groups: {}
@@ -14535,7 +14557,9 @@ en:
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: Conditonals New Practice
           name: csp4-2024
         csp5-2024:
           lesson_groups:
@@ -14676,6 +14700,8 @@ en:
           lessons:
             lesson-2:
               name: Implementing String Algorithms
+            lesson-3:
+              name: Nested Iteration
           name: csa2-2025
         csa3-2025:
           lesson_groups:
@@ -15063,7 +15089,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Data and Variables'
           title: Course C - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course C booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSdyteQu5k4LtIl4XythmgLDK4YZTtOOy7LVKV3efO7awzTwhw/viewform) to share your feedback with the Code.org team.\n"
           student_description: ''
           description_short: Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit.
           description_audience: ''
@@ -15112,7 +15138,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Functions'
           title: Course E - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course E booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSdyteQu5k4LtIl4XythmgLDK4YZTtOOy7LVKV3efO7awzTwhw/viewform) to share your feedback with the Code.org team.\n"
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -15127,7 +15153,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Conditionals and Text Inputs '
           title: Course D - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course D booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSdyteQu5k4LtIl4XythmgLDK4YZTtOOy7LVKV3efO7awzTwhw/viewform) to share your feedback with the Code.org team.\n"
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -15142,7 +15168,7 @@ en:
             lessonGroup-4:
               display_name: 'Stretch: Events, Conditionals, and Variables'
           title: Course F - Maker with micro:bit
-          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/self-paced-pl-microbit-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nChoose between Beginner, Intermediate, and Stretch pathways. Not sure where to begin? Start at the Beginner pathway and work your way up. Each of the three pathways has two components. First, students will develop their coding knowledge in skill-building lessons from CS Fundamentals. Then, students will go to the micro:bit platform to code their physical computing projects. Check out the micro:bit Course F booklet <a href=\"https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf\" target=\"_blank\">here</a>.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/k5-maker-pilot-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n\n**After teaching this course:**\n\nComplete the [Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSdyteQu5k4LtIl4XythmgLDK4YZTtOOy7LVKV3efO7awzTwhw/viewform) to share your feedback with the Code.org team."
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -15239,7 +15265,7 @@ en:
               name: Create an AI Poster
           lesson_groups: {}
           name: pilot-k5-ai
-          title: Elementary AI Module [Pilot]
+          title: "[Pilot] Elementary AI Module "
           description_audience: ''
           description_short: ''
           description: ''
@@ -15413,3 +15439,76 @@ en:
           description_short: ''
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/csd6a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::"
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
+        pilot-k5-game-design:
+          lessons:
+            lesson-1:
+              name: Game Design
+            lesson-2:
+              name: Variables as Score
+            lesson-3:
+              name: Environment and Players
+            lesson-4:
+              name: 'Game Jam Day 1: Create'
+            lesson-5:
+              name: 'Game Jam Day 2: Play'
+          lesson_groups: {}
+          name: pilot-k5-game-design
+          title: "[Pilot] Game Design"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-humanities:
+          lessons: {}
+          lesson_groups: {}
+          name: gen-ai-humanities
+          title: Generative AI for Humanities
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csd1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          title: 'Module 1: Welcome '
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating Code.org
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n\n\n\n\n"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Overview of CS Discoveries
+          title: 'Module 3: Overview of CS Discoveries'
+          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching and learning CS Discoveries
+          title: 'Module 4: Teaching and learning CS Discoveries'
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          student_description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Artificial Intelligence and Machine Learning
+          title: "[Hidden - Do Not Use] Preparing to Teach AI and Machine Learning"
+          description: "**Note:** This unit is hidden within the CSD Self-Paced Course. The content of this unit has instead been moved to [https://studio.code.org/courses/self-paced-pl-aiml-2023](https://studio.code.org/courses/self-paced-pl-aiml-2023)\n\nThis professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit.  \n\n**In this professional learning module, you will:**\n* Get an introduction to artificial intelligence and machine learning. \n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects. \n* Make a plan for implementing the unit with your students.\n\n**Suggested Time:** 120 minutes"
+          description_short: ''
+          description_audience: ''
