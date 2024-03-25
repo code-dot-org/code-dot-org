@@ -2225,7 +2225,7 @@ class User < ApplicationRecord
       age: age,
       sharing_disabled: sharing_disabled?,
       has_ever_signed_in: has_ever_signed_in?,
-      ai_tutor_access_denied: !!ai_tutor_access_denied,
+      ai_tutor_access_denied: ai_tutor_access_denied?,
     }
   end
 
