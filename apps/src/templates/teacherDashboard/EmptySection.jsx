@@ -3,23 +3,29 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
+import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import {NavLink} from 'react-router-dom';
 import {TeacherDashboardPath} from './TeacherDashboardNavigation';
 import styles from './teacher-dashboard.module.scss';
+import Button from '@cdo/apps/templates/Button';
 
-export default class EmptySection extends React.Component {
-  static propTypes = {
-    className: PropTypes.string,
-  };
+function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
+  const textDescription = !hasStudents
+    ? i18n.emptySectionDescription()
+    : i18n.noCurriculumAssigned();
 
-  render() {
-    const {className} = this.props;
+  const displayedImage = !hasStudents ? (
+    <img src={emptyDesk} alt="empty desk" />
+  ) : (
+    <img src={blankScreen} alt="blank screen" />
+  );
 
-    return (
-      <div className={className}>
-        <img src={emptyDesk} alt={'empty desk'} />
-        <Heading3>{i18n.emptySectionHeadline()}</Heading3>
-        <BodyTwoText>{i18n.emptySectionDescription()}</BodyTwoText>
+  return (
+    <div className={className}>
+      {displayedImage}
+      <Heading3>{i18n.emptySectionHeadline()}</Heading3>
+      <BodyTwoText>{textDescription}</BodyTwoText>
+      {!hasStudents && (
         <NavLink
           key={TeacherDashboardPath.manageStudents}
           to={TeacherDashboardPath.manageStudents}
@@ -27,7 +33,24 @@ export default class EmptySection extends React.Component {
         >
           {i18n.addStudents()}
         </NavLink>
-      </div>
-    );
-  }
+      )}
+      {!hasCurriculumAssigned && hasStudents && (
+        <Button
+          __useDeprecatedTag
+          href="/catalog"
+          text={i18n.browseCurriculum()}
+          color={Button.ButtonColor.brandSecondaryDefault}
+          style={{margin: 0}}
+        />
+      )}
+    </div>
+  );
 }
+
+EmptySection.propTypes = {
+  className: PropTypes.string,
+  hasStudents: PropTypes.bool,
+  hasCurriculumAssigned: PropTypes.bool,
+};
+
+export default EmptySection;

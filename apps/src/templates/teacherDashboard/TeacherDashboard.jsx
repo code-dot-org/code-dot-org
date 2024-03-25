@@ -20,7 +20,6 @@ import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/a
 import EmptySection from './EmptySection';
 import {Heading1} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
-import SafeMarkdown from '../SafeMarkdown';
 
 const applyV1TeacherDashboardWidth = children => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;
@@ -135,6 +134,7 @@ function TeacherDashboard({
                     <Heading1>{i18n.progress()}</Heading1>
                     <EmptySection
                       className={dashboardStyles.emptyClassroomProgress}
+                      hasStudents={false}
                     />
                   </div>
                 )}
@@ -142,6 +142,7 @@ function TeacherDashboard({
                   <EmptySection
                     className={dashboardStyles.emptyClassroom}
                     sectionId={sectionId}
+                    hasStudents={false}
                   />
                 )}
               </div>
@@ -164,13 +165,28 @@ function TeacherDashboard({
         />
         {coursesWithProgress.length === 0 && (
           <Route
-            component={() =>
-              applyV1TeacherDashboardWidth(
-                <div className={dashboardStyles.text}>
-                  <SafeMarkdown markdown={i18n.noProgressSection()} />
-                </div>
-              )
-            }
+            component={props => (
+              <div className={dashboardStyles.emptyClassroomDiv}>
+                {location.pathname === TeacherDashboardPath.progress && (
+                  <div>
+                    <Heading1>{i18n.progress()}</Heading1>
+                    <EmptySection
+                      className={dashboardStyles.emptyClassroomProgress}
+                      hasStudents={true}
+                      hasCurriculumAssigned={false}
+                    />
+                  </div>
+                )}
+                {location.pathname !== TeacherDashboardPath.progress && (
+                  <EmptySection
+                    className={dashboardStyles.emptyClassroom}
+                    sectionId={sectionId}
+                    hasStudents={true}
+                    hasCurriculumAssigned={false}
+                  />
+                )}
+              </div>
+            )}
           />
         )}
         <Route
