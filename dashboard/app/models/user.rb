@@ -49,6 +49,9 @@
 #  urm                      :boolean
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
+#  failed_attempts          :integer          default(0), not null
+#  unlock_token             :string(255)
+#  locked_at                :datetime
 #
 # Indexes
 #
@@ -186,7 +189,7 @@ class User < ApplicationRecord
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable
+    :recoverable, :rememberable, :trackable, :custom_lockable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
