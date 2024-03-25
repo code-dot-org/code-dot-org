@@ -1018,7 +1018,6 @@ FactoryBot.define do
   factory :project do
     transient do
       owner {create :user}
-      id {1}
       value {nil}
     end
 
@@ -1027,7 +1026,6 @@ FactoryBot.define do
     after(:build) do |project, evaluator|
       project_storage = create :project_storage, user_id: evaluator.owner.id
       project.storage_id = project_storage.id
-      project.id = evaluator.id if evaluator.id
       project.value = evaluator.value if evaluator.value
     end
   end
