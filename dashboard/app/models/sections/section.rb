@@ -390,14 +390,10 @@ class Section < ApplicationRecord
     ActiveRecord::Base.connected_to(role: :reading) do
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
 
-      num_students = students.distinct(&:id).size
-
-      course_version_name = unit_group ? unit_group.name : script&.name
-
       {
         id: id,
         name: name,
-        courseVersionName: course_version_name,
+        courseVersionName: unit_group ? unit_group.name : script&.name,
         createdAt: created_at,
         login_type: login_type,
         grades: grades,
@@ -406,7 +402,7 @@ class Section < ApplicationRecord
         pairing_allowed: pairing_allowed,
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
-        studentCount: num_students,
+        studentCount: students.distinct(&:id).size,
         code: code,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
