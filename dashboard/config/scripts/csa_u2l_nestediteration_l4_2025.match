@@ -3,15 +3,15 @@ title 'Check for Understanding'
 description 'Match each term to its correct definition.'
 height '100'
 
-question 'algorithm'
-answer 'a finite set of instructions that accomplish a task'
+question 'loop control variable'
+answer 'a variable that is changed by a constant value and determines the end of a loop'
 
-question 'iteration statement'
-answer 'a control structure that repeatedly executes a block of code'
+question 'increment'
+answer 'to increase a value by one'
 
-question 'condition'
-answer 'determines whether or not to execute a block of code'
+question 'nested loop'
+answer 'a loop inside of another loop'
 
-question 'method'
-answer 'a named set of instructions to perform a task'
+question 'off-by-one error'
+answer 'when a loop repeats one time too many or one time too few'
 allow_multiple_attempts true
