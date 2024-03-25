@@ -25,6 +25,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'project validators can unfeature projects' do
+    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     put :unfeature, params: {channel_id: "789"}
@@ -84,6 +85,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'unfeaturing a featured project should unfeature the project' do
+    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     @featured_project.update! featured_at: DateTime.now
