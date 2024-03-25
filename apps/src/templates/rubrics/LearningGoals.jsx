@@ -92,10 +92,20 @@ export function clearAnnotations() {
  * In this case, we might find this code on lines 8 through 10. So, we would
  * annotate line 8 and highlight lines 8 through 10.
  *
+ * Another case requiring a fallback is when the evidence feedback does not
+ * contain a message. Something like: `Lines 5-6: `if (something) {...}`.
+ * In this case, we can highlight the line, but we want to annotate the line
+ * with the full observations. This is why we also pass those along.
+ *
+ * Also seen above is the way the AI might truncate code. In that case, we
+ * fallback to finding the first partial code match using the code before the
+ * ellipsis (...).
+ *
  * This will return a list of annotation blocks containing the line numbers
  * and the description.
  *
  * @param {string} evidence - A text block described above.
+ * @param {string} observations - The text block for the overall observations, if needed.
  * @returns {Array} The ordered list of annotations.
  */
 export function annotateLines(evidence, observations) {
