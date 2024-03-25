@@ -1,6 +1,5 @@
-import React, {useCallback, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
-import {Editable, withReact, Slate} from 'slate-react';
+import React, {useCallback, useMemo, useState} from 'react';
 import {
   Editor,
   Transforms,
@@ -8,12 +7,16 @@ import {
   Text,
   Element as SlateElement,
 } from 'slate';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {Editable, withReact, Slate} from 'slate-react';
+
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
-import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import '@cdo/apps/templates/instructions/codeReviewV2/codeReviewCommentEditor.scss';
+
+import CodeReviewError from './CodeReviewError';
+
+import moduleStyles from './code-review-comment-editor.module.scss';
 
 const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const renderElement = useCallback(props => <Element {...props} />, []);
@@ -85,24 +88,25 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
       <div style={styles.textareaWrapper}>
         <Slate editor={editor} value={initialValue} onChange={onChange}>
           <div style={styles.buttonsArea}>
-            <div
-              role="button"
+            <button
+              type="button"
               style={styles.codeButton}
-              onMouseDown={event => {
+              className={moduleStyles.codeButton}
+              onClick={event => {
                 event.preventDefault();
                 toggleBlock(editor, 'code_block');
               }}
             >
               <FontAwesome icon="code" />
-            </div>
+            </button>
           </div>
           <Editable
+            id="ui-test-code-review-comment-input"
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             placeholder={javalabMsg.addACommentToReview()}
-            className="editable-text-area"
+            className={moduleStyles.editableTextArea}
             spellCheck
-            autoFocus
           />
         </Slate>
       </div>

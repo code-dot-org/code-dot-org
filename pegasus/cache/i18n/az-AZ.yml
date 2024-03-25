@@ -265,6 +265,7 @@ az-AZ:
   class_submission_out_of_school_summer_camp: Yay düşərgəsi
   classicmaze_name: Ənənəvi labirint
   code_hoc_coming: Kod Saatı artıq buradadır - 8-14 dekabr!
+  code_org_logo_alt: Code.org Evi
   code_sign_up: CS Təhsil Həftəsində iştirak etmək üçün qeydiyyatdan keçin
   codea_beyond_gradelevel: Ali məktəb +
   codea_beyond_longdescription: iPad üçün Codea sizə oyunlar və simulyasiyalar yaratmağa
@@ -1213,9 +1214,10 @@ az-AZ:
   header_incubator: İnkubator
   header_learn: Öyrənin
   header_legal: Məxfilik və Hüquq
+  header_legal_cookie_notice: Kuki Xəbərdarlığı
   header_legal_privacy: Məxfilik siyasəti
   header_legal_tos: Xidmət şərtləri
-  header_my_dashboard: İdarəetmə panelim
+  header_my_dashboard: İdarəetmə Panelim
   header_professional_learning: Peşəkar təhsil
   header_project_gallery: Layihə qalereyası
   header_report_abuse: Şikayət etmək
@@ -1378,7 +1380,7 @@ az-AZ:
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition Minecraft-da standartlara
     uyğunlaşdırılmış kurikulum, təlim və kodlaşdırma təmin edir.'
   hoc2018_mc_educators_box1_title: Minecraft ilə kod
-  hoc2018_mc_educators_box2_button: yüklə
+  hoc2018_mc_educators_box2_button: Yüklə
   hoc2018_mc_educators_box2_desc: Bu alət dəsti sizə Kod Saatı keçirməyə və tələbələrinizi
     kompüter elminə cəlb etməyə kömək edəcək.
   hoc2018_mc_educators_box2_title: Fasilitator Bələdçisini yükləyin

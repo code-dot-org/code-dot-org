@@ -26,7 +26,7 @@ class CdoTest < Minitest::Test
     assert_equal CDO.curriculum_url("es-mx", "https://code.org/test"), "https://code.org/test"
 
     # leaves link as-is if autocomplete_partial_path == false
-    assert_equal CDO.curriculum_url("es-mx", "/test", false), "/test"
+    assert_equal CDO.curriculum_url("es-mx", "/test", autocomplete_partial_path: false), "/test"
 
     # correctly handles full CB link
     assert_equal CDO.curriculum_url("es-mx", "https://curriculum.code.org/test"), "https://curriculum.code.org/es-mx/test"

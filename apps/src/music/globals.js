@@ -7,23 +7,23 @@
 // "view", and so that non-React code can also work more naturally with
 // this data.
 
-let libraryRef = null;
 let playerRef = null;
+let showSoundFilters = false;
 
 export default {
-  setLibrary(library) {
-    libraryRef = library;
-  },
-
-  getLibrary() {
-    return libraryRef;
-  },
-
   setPlayer(player) {
     playerRef = player;
   },
 
   getPlayer() {
     return playerRef;
+  },
+
+  setShowSoundFilters(show) {
+    showSoundFilters = show;
+  },
+
+  getShowSoundFilters() {
+    return showSoundFilters;
   },
 };

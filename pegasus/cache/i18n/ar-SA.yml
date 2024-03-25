@@ -233,6 +233,7 @@ ar-SA:
   class_submission_out_of_school_summer_camp: مخيم صيفي
   classicmaze_name: المتاهة الكلاسيكية
   code_hoc_coming: إرسال رسالة إلكترونية
+  code_org_logo_alt: الصفحة الرئيسية Code.org
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علم الحاسوب
   codea_beyond_gradelevel: الثانوية +
   codea_beyond_longdescription: يتيح الآيباد Codea إنشاء ألعاب ومحاكاة و &mdash;؛
@@ -1100,6 +1101,7 @@ ar-SA:
   header_incubator: حاضنة
   header_learn: تعلّم
   header_legal: الخصوصية والقانونية
+  header_legal_cookie_notice: إشعار ملفات تعريف الارتباط
   header_legal_privacy: سياسة الخصوصية
   header_legal_tos: شروط الخدمة
   header_my_dashboard: لوحة التحكم
@@ -1107,6 +1109,7 @@ ar-SA:
   header_project_gallery: المشاريع
   header_report_abuse: الإبلاغ عن سوء استخدام
   header_report_bug: أبلغ عن وجود خلل
+  header_schools: مدارس
   header_screen_reader_hamburger: قائمة
   header_screen_reader_help: قائمة المساعدة
   header_sections: الأقسام

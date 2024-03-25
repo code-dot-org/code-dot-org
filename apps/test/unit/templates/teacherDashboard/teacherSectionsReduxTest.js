@@ -464,6 +464,7 @@ describe('teacherSectionsRedux', () => {
             instructor_email: 'coteacher@code.org',
           },
         ],
+        syncEnabled: undefined,
       });
     });
   });
@@ -782,6 +783,7 @@ describe('teacherSectionsRedux', () => {
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
           sectionInstructors: [],
+          syncEnabled: undefined,
         },
       });
     });
@@ -1681,6 +1683,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           studentCount: 10,
           code: 'PMTKVH',
+          courseOfferingsAreLoaded: true,
           grades: ['2'],
           participantType: 'student',
           providerManaged: false,
@@ -1695,6 +1698,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           studentCount: 1,
           code: 'DWGMFX',
+          courseOfferingsAreLoaded: true,
           grades: ['11'],
           participantType: 'student',
           providerManaged: false,

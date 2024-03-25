@@ -263,7 +263,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.</description>
           </mutation>
-          <field name="NAME" id="moving west and looping">fishing within fishing zone</field>
+          <field name="NAME" id="moving west and looping">fishing only in fishing zone</field>
           <statement name="STACK">
             <block type="gamelab_moveForward">
               <value name="SPRITE">

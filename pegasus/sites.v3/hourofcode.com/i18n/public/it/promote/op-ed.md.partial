@@ -1,5 +1,5 @@
 ---
-title: Un esempio di articolo per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice
+title: Un esempio di articolo per supportare la Settimana Internazionale di Educazione all'Informatica e l'Ora del Codice
 layout: wide
 nav: promote_nav
 ---
@@ -44,6 +44,6 @@ Abbiamo bisogno di assumere più insegnanti di informatica e favorire lo svilupp
 
 Secondo l'Ufficio di Statistiche sul Lavoro americano, entro il 2020, ci saranno nei soli Stati Uniti 9,2 milioni di posti di lavoro in campo scientifico, ingegneristico, matematico e informatico. La metà di quei lavori — 4,6 milioni — sarà rivolta ad esperti di informatica o di tecnologie informatiche. E l'informatica è una conoscenza sempre più importante per il XXI secolo. Chi occuperà questi posti lavori se ai nostri figli non verrà data l'opportunità di acquisire le competenze necessarie?
 
-Questa settimana, {{ campaign_date/full }}, è la Settimana dell'Educazione Informatica. Nelle scuole in **[STATE]**, i nostri studenti parteciperanno a un'Ora del Codice nazionale, demistificando l'argomento informatica e, auspicabilmente, risvegliando il loro interesse per continuare e imparare di più. Io mi unirò a loro e invito anche voi a partecipare. Tutti dovrebbero imparare a programmare. Visita https://hourofcode.com/{{ country }} per ulteriori informazioni e per iniziare. E supporta i nostri sforzi per portare l'informatica in più scuole in **[STATE]**.
+Questa settimana, {{ campaign_date/full }}, è la Settimana dell'Educazione Informatica. Nelle scuole di tutta **[STATE]**, i nostri studenti parteciperanno a un evento nazionale L'Ora del Codice, per fare chiarezza sul tema dell'informatica e, auspicabilmente, per risvegliare il loro interesse a continuare e imparare di più. Io mi unirò a loro e invito anche voi a partecipare. Tutti dovrebbero imparare a programmare. Visita https://hourofcode.com/{{ country }} per ulteriori informazioni e per iniziare. E supporta i nostri sforzi per portare l'informatica in più scuole in **[STATE]**.
 
 {{ signup_button }}

@@ -1,14 +1,9 @@
 {
   "category": "Unused",
   "config": {
-    "color": [
-      140,
-      1,
-      0.74
-    ],
     "style": "event_blocks",
     "func": "whileTouching",
-    "docFunc": "gamelab_whileTouching",
+    "docFunc": "gamelab_whenTouching",
     "blockText": "while {SPRITE1} is touching {SPRITE2}",
     "callbackParams": [
       "extraArgs"

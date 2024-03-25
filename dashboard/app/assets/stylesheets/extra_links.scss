@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22abb2142280633b2afd3229ff11d71039caa9c798285cbdbe143d384cc87c21
-size 564
+@import "color";
+@import "font";
+@import "mixins";
+
+.extra-links {
+  @include selectable;
+  border: 2px solid $light_gray;
+  padding: 10px;
+  background: $lighter_gray;
+  position: fixed;
+  bottom: 27px; /* just above small footer */
+  left: 0;
+  h4 {
+    font-size: 14px;
+    @include main-font-bold;
+    margin: 0 0 5px 0;
+  }
+  opacity: 0.98;
+  color: $black;
+
+  /* don't take over the whole window*/
+  max-height: 50%;
+  /* only display scrollbars when needed */
+  overflow: auto;
+  /* admin box appears in front of the rest of the level */
+  z-index: 1000;
+}

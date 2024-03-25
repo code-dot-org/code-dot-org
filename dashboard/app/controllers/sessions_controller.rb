@@ -9,10 +9,6 @@ class SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
     session[:user_return_to] ||= params[:user_return_to]
-    if params[:maker]
-      redirect_to maker_google_oauth_confirm_login_path
-      return
-    end
     @hide_sign_in_option = true
     @is_english = request.language == 'en'
     if params[:providerNotLinked]

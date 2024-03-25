@@ -13,6 +13,16 @@ class TablesTest < Minitest::Test
 
   def setup
     @table_name = '_testTable'
+
+    CDO.stubs(:firebase_name).returns('my-firebase-name')
+    CDO.stubs(:firebase_secret).returns('my-firebase-secret')
+    CDO.stubs(:firebase_channel_id_suffix).returns(TEST_SUFFIX)
+  end
+
+  def teardown
+    CDO.unstub(:firebase_name)
+    CDO.unstub(:firebase_secret)
+    CDO.unstub(:firebase_channel_id_suffix)
   end
 
   # channel id suffix, used by firebase in development and circleci environments
@@ -59,13 +69,8 @@ class TablesTest < Minitest::Test
     assert last_response.successful?
   end
 
+  # TODO: unfirebase, this should moved to datablock_storage_controler, see: #56996
   def export_firebase(table_name = @table_name)
-    CDO.stub(:firebase_name, 'my-firebase-name') do
-      CDO.stub(:firebase_secret, 'my-firebase-secret') do
-        CDO.stub(:firebase_channel_id_suffix, TEST_SUFFIX) do
-          get "/v3/export-firebase-tables/#{@channel_id}/#{table_name}"
-        end
-      end
-    end
+    get "/v3/export-firebase-tables/#{@channel_id}/#{table_name}"
   end
 end

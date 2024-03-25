@@ -70,16 +70,17 @@ theme: responsive
 
 모든 Code.org 콘텐츠를 가장 잘 경험할 수 있도록 하기 위해, 학교 또는 교육구의 IT 부서와 협의하여 다음의 사이트를 허용하여 차단되지 않게 할 것을 권고합니다.
 
-| 우선순위                                  | URL                                                                                                        |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **필수**                                | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **선택**                                | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **유튜브 동영상을 사용하기 위해 (향상된 개인정보 보호 모드)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Code.org 동영상을 사용하기 위해**             | `https://videos.code.org`                                                                                  |
-| **인터넷 시뮬레이터를 사용하기 위해**                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **웹 랩을 사용하기 위해**                      | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Google Classroom 공유 버튼을 사용하기 위해**   | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| 우선순위                                                        | URL                                                                                                        |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **필수**                                                      | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **CAPTCHA 시스템이 사용자의 사용을 자동화된 사기 (“봇”) 활동과 구별할 수 있도록 하기 위해** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **선택**                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **유튜브 동영상을 사용하기 위해 (향상된 개인정보 보호 모드)**                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org 동영상을 사용하기 위해**                                   | `https://videos.code.org`                                                                                  |
+| **인터넷 시뮬레이터를 사용하기 위해**                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **웹 랩을 사용하기 위해**                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Google Classroom 공유 버튼을 사용하기 위해**                         | `https://apis.google.com`                                                                                  |
+| **App Lab 데이터세트를 사용하려면**                                    | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## 모바일 및 태블릿 지원 세부사항
 
@@ -104,7 +105,7 @@ Code.org의 온라인 과정을 시작하기 전, 아래 동영상의 재생 여
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

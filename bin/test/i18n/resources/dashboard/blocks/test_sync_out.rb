@@ -2,31 +2,26 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/dashboard/blocks/sync_out'
 
 describe I18n::Resources::Dashboard::Blocks::SyncOut do
-  let(:sync_out) {I18n::Resources::Dashboard::Blocks::SyncOut.new}
+  let(:described_class) {I18n::Resources::Dashboard::Blocks::SyncOut}
+  let(:described_instance) {described_class.new}
 
   let(:malformed_i18n_reporter) {stub}
 
-  def around
-    FakeFS.with_fresh {yield}
+  let(:i18n_locale) {'expected_i18n_locale'}
+  let(:language) {{locale_s: i18n_locale}}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
-  before do
-    STDOUT.stubs(:print)
+  it 'inherits from I18n::Utils::SyncOutBase' do
+    assert_equal I18n::Utils::SyncOutBase, described_class.superclass
   end
 
-  describe '.perform' do
-    it 'calls #execute' do
-      I18n::Resources::Dashboard::Blocks::SyncOut.any_instance.expects(:execute).once
+  describe '#process' do
+    let(:process_language) {described_instance.process(language)}
 
-      I18n::Resources::Dashboard::Blocks::SyncOut.perform
-    end
-  end
-
-  describe '#execute' do
-    let(:crowdin_locale) {'Not English'}
-    let(:i18n_locale) {'not-EN'}
-
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale)}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale)}
     let(:crowdin_file_path) {File.join(crowdin_locale_dir, 'dashboard/blocks.yml')}
     let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/blocks.yml')}
 
@@ -51,12 +46,12 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
         crowdin_file_path, CDO.dir('i18n/locales', i18n_locale, 'dashboard/blocks.yml')
       )
     end
-    let(:expect_empty_crowdin_locale_dir_removing) do
-      I18nScriptUtils.expects(:remove_empty_dir).with(crowdin_locale_dir)
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
     end
 
     before do
-      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}])
+      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{locale_s: i18n_locale}])
       I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
 
       FileUtils.mkdir_p(File.dirname(crowdin_file_path))
@@ -76,11 +71,10 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
 
       # Distribution
       expect_localization_distribution.in_sequence(execution_sequence)
-
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-      expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
-      sync_out.execute
+      process_language
     end
 
     context 'when the Crowdin file does not exist' do
@@ -89,8 +83,6 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
       end
 
       it 'does not try to process the file' do
-        execution_sequence = sequence('execution')
-
         # Restoration
         expect_crowdin_file_restoration.never
         expect_mailformed_i18n_reporter_file_processing.never
@@ -98,11 +90,10 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
 
         # Distribution
         expect_localization_distribution.never
-
         expect_crowdin_file_to_i18n_locale_dir_moving.never
-        expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
+        expect_crowdin_resource_dir_removing.never
 
-        sync_out.execute
+        process_language
       end
     end
 
@@ -121,33 +112,10 @@ describe I18n::Resources::Dashboard::Blocks::SyncOut do
 
         # Distribution
         expect_localization_distribution.in_sequence(execution_sequence)
-
         expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-        expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
+        expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
-        sync_out.execute
-      end
-    end
-
-    context 'when the locale is en-US' do
-      let(:crowdin_locale) {'English'}
-      let(:i18n_locale) {'en-US'}
-
-      it 'does not process the file' do
-        execution_sequence = sequence('execution')
-
-        # Restoration
-        expect_crowdin_file_restoration.never
-        expect_mailformed_i18n_reporter_file_processing.never
-        expect_mailformed_i18n_reporting.never
-
-        # Distribution
-        expect_localization_distribution.never
-
-        expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-        expect_empty_crowdin_locale_dir_removing.in_sequence(execution_sequence)
-
-        sync_out.execute
+        process_language
       end
     end
   end

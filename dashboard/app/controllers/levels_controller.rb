@@ -48,9 +48,11 @@ class LevelsController < ApplicationController
     Music,
     NetSim,
     Odometer,
+    Panels,
     Pixelation,
     Poetry,
     PublicKeyCryptography,
+    Pythonlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -58,7 +60,8 @@ class LevelsController < ApplicationController
     TextMatch,
     Unplugged,
     Vigenere,
-    Weblab
+    Weblab,
+    Weblab2
   ]
 
   # GET /levels
@@ -144,7 +147,7 @@ class LevelsController < ApplicationController
   # Get a JSON summary of a level's properties, used in modern labs that don't
   # reload the page between level views.
   def level_properties
-    render json: @level.summarize_for_lab2_properties
+    render json: @level.summarize_for_lab2_properties(nil)
   end
 
   # GET /levels/1/edit
@@ -158,6 +161,8 @@ class LevelsController < ApplicationController
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     if @level.is_a? Applab
+      # TODO: unfirebase, migrate this to datablock storage, ok to be migrated but not enabled: #56998
+      # TODO: post-firebase-cleanup, remove this code: #56994
       fb = FirebaseHelper.new('shared')
       @dataset_library_manifest = fb.get_library_manifest
     end
@@ -294,15 +299,7 @@ class LevelsController < ApplicationController
     end
 
     update_level_params = level_params.to_h
-
-    # Parse the incoming level_data JSON so that it's stored in the database as a
-    # first-order member of the properties JSON, rather than simply as a string of
-    # JSON belonging to a single property.
-    update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
-    # Update level data with validations, and remove from level properties.
-    # We can remove this once validations are read from level properties directly.
-    update_level_params[:level_data]["validations"] = JSON.parse(update_level_params[:validations]) if update_level_params[:validations]
-    update_level_params[:validations] = nil if level_params[:validations]
+    handle_json_params(update_level_params)
 
     @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
@@ -377,6 +374,7 @@ class LevelsController < ApplicationController
     # safely convert params to hash now so that if they are modified later, it
     # will not result in a ActionController::UnfilteredParameters error.
     create_level_params = level_params.to_h
+    handle_json_params(create_level_params)
 
     # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
@@ -448,6 +446,12 @@ class LevelsController < ApplicationController
         @game = Game.music
       elsif @type_class == Aichat
         @game = Game.aichat
+      elsif @type_class == Pythonlab
+        @game = Game.pythonlab
+      elsif @type_class == Panels
+        @game = Game.panels
+      elsif @type_class == Weblab2
+        @game = Game.weblab2
       end
       @level = @type_class.new
       render :edit
@@ -563,6 +567,18 @@ class LevelsController < ApplicationController
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)
+  end
+
+  private def handle_json_params(level_params)
+    # Parse a few specific JSON fields used by modern (Lab2) labs so that they are
+    # stored in the database as a first-order member of the properties JSON, rather
+    # than simply as a string of JSON belonging to a single property.
+    [:level_data, :initial_ai_customizations, :validations].each do |key|
+      level_params[key] = JSON.parse(level_params[key]) if level_params[key]
+    end
+    # Delete validations from level data if present. We'll use the validations in level properties instead.
+    level_params[:level_data].delete('validations') if level_params[:level_data]&.key?('validations')
+    level_params
   end
 
   private def set_solution_image_url(level)

@@ -38,7 +38,7 @@ export default function ProgrammingExpressionOverview({
       const blocksDom = parseElement(
         `<block type='${programmingExpression.blockName}' />`
       );
-      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+      const blockSpace = Blockly.createEmbeddedWorkspace(
         titleRef.current,
         blocksDom,
         {
@@ -75,7 +75,11 @@ export default function ProgrammingExpressionOverview({
       );
     }
     if (programmingExpression.imageUrl) {
-      return <img src={programmingExpression.imageUrl} style={styles.image} />;
+      return (
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
+        <img src={programmingExpression.imageUrl} style={styles.image} alt="" />
+      );
     }
     return <h1>{programmingExpression.name}</h1>;
   };

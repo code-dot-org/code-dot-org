@@ -5,7 +5,6 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import {configureStore} from '@reduxjs/toolkit';
 
 export default {
-  title: 'CurriculumCatalogCard',
   component: CurriculumCatalogCard,
 };
 
@@ -25,7 +24,10 @@ const defaultArgs = {
   isEnglish: true,
   pathToCourse: '/s/course',
   isSignedOut: false,
+  isTeacher: true,
   onQuickViewClick: () => {},
+  setExpandedCardKey: () => {},
+  getRecommendedSimilarCurriculum: () => {},
 };
 
 export const AllOptionsCard = Template.bind({});

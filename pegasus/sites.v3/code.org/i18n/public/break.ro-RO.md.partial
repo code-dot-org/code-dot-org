@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
 <h1>Luați o Pauză de cod</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Activități săptămânale &amp; Episoade anterioare</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Activități săptămânale &amp; Episoade anterioare</h1></div>
 <h2>Episodul 1 - Algoritmi cu Hill Harper</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 3/25</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 3/25</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>Urmăriți pe Youtube</a></i> I <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">Urmăriți pe Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Algoritmi</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Algoritmi</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 2 - Prototipuri cu Mark Cuban și Lyndsey Scott</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 4/1</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 4/1</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>Urmăriți pe Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>Urmăriți pe Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Prototipuri</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Prototipuri</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 3 - Criptare cu Ashton Kutcher și Mia Gil Epner</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 4/8</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 4/8</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>Urmăriți pe Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i>Urmăriți pe Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Criptare</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Criptare</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -116,12 +116,12 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 4 - Informații digitale cu Mike Krieger și Alice Keeler</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 4/15</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 4/15</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/
 ">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Informații digitale</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Informații digitale</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -140,11 +140,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 5 - Simulări și date cu Bill Gates</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 4/22</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 4/22</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Simulări și date</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Simulări și date</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -163,11 +163,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 6 - Internetul cu Keegan-Michael Key și Vint Cerf</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 4/29</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 4/29</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Internetul</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Internetul</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -186,11 +186,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 7 - Relații de condiționalitate cu Sal Khan și Flo Vaughn</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 5/6</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 5/6</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Relații de condiționalitate</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Relații de condiționalitate</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -207,11 +207,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 8 - Variabile cu Yara Shahidi și Fuzzy Khosrowshahi</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 5/13</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 5/13</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Variabile</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Variabile</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -228,11 +228,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 9 - Evenimente cu Macklemore și Scott Forstall</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 5/20</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 5/20</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Evenimente</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Evenimente</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -249,11 +249,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 10 - Inteligența artificială cu Kat Graham și Kate Park</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 5/27</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 5/27</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Inteligența artificială (AI)</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Inteligența artificială (AI)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -270,11 +270,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 11 - Abstracție cu Susan Wojcicki & China Anne McClain</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 6/3</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 6/3</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Abstracție</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Abstracție</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -291,11 +291,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episodul 12 - Hardware cu Aloe Blacc, Bret Taylor și Paola Mejia Minaya</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Urmăriți episodul 6/10</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Urmăriți episodul 6/10</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>Urmăriți pe Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">Urmăriți pe Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Activitate săptămânală - Hardware</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Activitate săptămânală - Hardware</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Elevi mai mici:</span> Nu este nevoie de autentificare</p>
@@ -315,3 +315,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

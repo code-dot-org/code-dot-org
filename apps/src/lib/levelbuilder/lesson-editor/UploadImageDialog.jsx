@@ -81,8 +81,11 @@ export default function UploadImageDialog({
   return (
     <LessonEditorDialog isOpen={isOpen} handleClose={handleDialogClose}>
       <h2>Upload Image</h2>
-
-      {imgUrl && <img src={imgUrl} />}
+      {
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
+      }
+      {imgUrl && <img src={imgUrl} alt="" />}
       <input
         type="file"
         name="file"

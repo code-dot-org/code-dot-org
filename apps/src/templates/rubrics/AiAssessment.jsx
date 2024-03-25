@@ -2,25 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
-const icon = require('@cdo/static/ai-bot.png');
+import {aiEvaluationShape, aiEvidenceShape} from './rubricShapes';
+import aiBotImage from './images/AiBot_2x.png';
 
 export default function AiAssessment({
   isAiAssessed,
   studentName,
   aiUnderstandingLevel,
   aiConfidence,
+  aiEvidence,
+  aiEvalInfo,
 }) {
   return (
-    <div>
-      <Heading6>{i18n.aiAssessment()}</Heading6>
+    <div className="uitest-ai-assessment">
+      <Heading6 visualAppearance={'body-three'}>
+        <StrongText>{i18n.aiAssessment()}</StrongText>
+      </Heading6>
       <div className={style.aiAssessmentBlock}>
-        <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
+        <img alt={i18n.aiBot()} src={aiBotImage} className={style.aiBotImg} />
         <AiAssessmentBox
           isAiAssessed={isAiAssessed}
+          aiEvidence={aiEvidence}
           aiUnderstandingLevel={aiUnderstandingLevel}
           studentName={studentName}
+          aiEvalInfo={aiEvalInfo}
           aiConfidence={aiConfidence}
         />
       </div>
@@ -33,4 +40,6 @@ AiAssessment.propTypes = {
   studentName: PropTypes.string,
   aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
+  aiEvidence: PropTypes.arrayOf(aiEvidenceShape),
+  aiEvalInfo: aiEvaluationShape,
 };

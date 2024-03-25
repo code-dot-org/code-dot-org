@@ -2,7 +2,6 @@ import React from 'react';
 import TextResponsesTable from './TextResponsesTable';
 
 export default {
-  title: 'TextResponsesTable',
   component: TextResponsesTable,
 };
 

@@ -267,8 +267,6 @@ class BucketHelper
           # tab making this request. This is for diagnosing problems with writes from multiple browser
           # tabs.
           firstSaveTimestamp: timestamp,
-
-          versions: versions,
         }.to_json
       }
     )

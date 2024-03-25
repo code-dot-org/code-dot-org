@@ -17,7 +17,7 @@ class Tutorials
   # We alias the database columns with names that have the datatype suffixes stripped off for
   # backwards-compatibility with some existing tutorial pages
   # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.
-  def initialize(table, no_cache: false)
+  def initialize(table, no_cache = false)
     @table = "cdo_#{table}".to_sym
 
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
@@ -28,9 +28,14 @@ class Tutorials
         "#{db_column_name}___#{column_alias}".to_sym
       end
     end
-    @contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
-      DB[@table].select(*@column_aliases).all
+
+    json_contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
+      DB[@table].select(*@column_aliases).all.to_json
     end.deep_dup
+
+    @contents = JSON.parse(json_contents, object_class: DB[@table]).each do |tutorial|
+      tutorial.values.symbolize_keys!
+    end
   end
 
   # Returns an array of the tutorials.  Includes launch_url for each.
@@ -112,9 +117,34 @@ def search_for_address(address)
   Geocoder.search(address).first
 end
 
+# Temporary helper method to help us determine which version of MySQL is
+# available in the local environment, so we can conditionally apply
+# version-specific logic as we transition from MySQL 5.7 to MySQL 8.
+#
+# TODO infra: remove this once we've updated everything to MySQL 8.
+def current_mysql_version
+  $current_mysql_version ||= begin
+    raw_version = DB.fetch('SELECT VERSION()').first[:'VERSION()']
+    case raw_version
+    when /^8.0.\d+/
+      8.0
+    when /^5.7.\d+/
+      5.7
+    else
+      raise "cannot parse MySQL version #{raw_version.inspect}"
+    end
+  end
+end
+
 def geocode_address(address)
   location = search_for_address(address)
   return nil unless location
   return nil unless location.latitude && location.longitude
-  "#{location.latitude},#{location.longitude}"
+  # TODO infra: once we've updated everything to MySQL 8+, we can reduce this
+  # back to a single case.
+  if current_mysql_version < 8
+    "#{location.latitude},#{location.longitude}"
+  else
+    "#{location.longitude},#{location.latitude}"
+  end
 end

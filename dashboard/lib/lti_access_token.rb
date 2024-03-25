@@ -27,14 +27,14 @@ module LtiAccessToken
     }
 
     jwt = sign_jwt(jwt_payload)
-    query = {
+    body = {
       grant_type: 'client_credentials',
       client_assertion_type: Policies::Lti::JWT_CLIENT_ASSERTION_TYPE,
       client_assertion: jwt,
       scope: scopes.join(' '),
     }
 
-    res = HTTParty.post(access_token_url, query: query, headers: {'Content-Type' => 'application/x-www-form-urlencoded'})
+    res = HTTParty.post(access_token_url, body: body, headers: {'Content-Type' => 'application/x-www-form-urlencoded'})
     # get access_token and exp from response
     token_response = JSON.parse(res.body).transform_keys(&:to_sym)
     access_token = token_response[:access_token]

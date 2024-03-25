@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-11 22:30:42 UTC",
+    "serialized_at": "2023-11-06 16:34:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9869,6 +9869,7 @@
       "key": "functions",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

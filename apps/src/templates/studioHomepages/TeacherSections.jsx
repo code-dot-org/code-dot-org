@@ -14,9 +14,7 @@ import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import RosterDialog from '../teacherDashboard/RosterDialog';
 import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
-import CoteacherInviteNotification, {
-  showCoteacherInviteNotification,
-} from './CoteacherInviteNotification';
+import CoteacherInviteNotification from './CoteacherInviteNotification';
 
 class TeacherSections extends Component {
   static propTypes = {
@@ -24,6 +22,7 @@ class TeacherSections extends Component {
     asyncLoadSectionData: PropTypes.func.isRequired,
     asyncLoadCoteacherInvite: PropTypes.func.isRequired,
     coteacherInvite: PropTypes.object,
+    coteacherInviteForPl: PropTypes.object,
     studentSectionIds: PropTypes.array,
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -38,8 +37,13 @@ class TeacherSections extends Component {
 
   shouldRenderSections() {
     return (
-      this.props.studentSectionIds?.length > 0 ||
-      showCoteacherInviteNotification(this.props.coteacherInvite)
+      this.props.studentSectionIds?.length > 0 || !!this.props.coteacherInvite
+    );
+  }
+
+  shouldRenderPlSections() {
+    return (
+      this.props.plSectionIds?.length > 0 || !!this.props.coteacherInviteForPl
     );
   }
 
@@ -61,15 +65,16 @@ class TeacherSections extends Component {
         </ContentContainer>
         {this.shouldRenderSections() && (
           <ContentContainer heading={i18n.sectionsTitle()}>
-            <CoteacherInviteNotification />
+            <CoteacherInviteNotification isForPl={false} />
             <OwnedSections
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
             />
           </ContentContainer>
         )}
-        {this.props.plSectionIds?.length > 0 && (
+        {this.shouldRenderPlSections() && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
+            <CoteacherInviteNotification isForPl={true} />
             <OwnedSections
               isPlSections={true}
               sectionIds={plSectionIds}
@@ -87,6 +92,7 @@ export const UnconnectedTeacherSections = TeacherSections;
 export default connect(
   state => ({
     coteacherInvite: state.teacherSections.coteacherInvite,
+    coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),

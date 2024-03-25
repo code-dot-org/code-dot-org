@@ -1565,9 +1565,12 @@
   header_report_abuse: "Report abuse"
   header_legal: "Privacy & Legal"
   header_legal_privacy: "Privacy Policy"
+  header_legal_cookie_notice: "Cookie Notice"
   header_legal_tos: "Terms of Service"
   header_tutorials: "Tutorials"
   header_screen_reader_hamburger: "Menu"
+  header_schools: "Schools"
+  header_districts: "Districts"
   header_screen_reader_help: "Help Menu"
   app_lab_documentation: "App Lab Documentation"
   app_lab_tutorials: "App Lab Tutorials"
@@ -1582,6 +1585,7 @@
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
+  user_header_create_account: "Create Account"
   user_header_create: 'Create '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artist '
@@ -1821,6 +1825,7 @@
   footer_store: "Store"
   footer_support: "Support"
   footer_terms: "Terms"
+  footer_trademark: '"&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and %{cs_discoveries} are trademarks of Code.org."'
   ai_for_oceans: "AI for Oceans"
   ai_for_oceans_lesson_plan: "lesson plan"
   ai_for_oceans_tile_description: "Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View"
@@ -1896,3 +1901,4 @@
   hoc2022_nasa_banner_description: "Premiering 10AM ET, December 5th on NASA STEM's YouTube channel."
   hoc2022_nasa_banner_heading_posthoc: "Check out NASA's special Hour of Code feature about computer science in space!"
   microsoft_logo_alt: "Microsoft logo"
+  code_org_logo_alt: "Code.org Home"

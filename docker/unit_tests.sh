@@ -40,4 +40,5 @@ set -x
 bundle install --quiet
 bundle exec rake install
 bundle exec rake build
+bundle exec ruby tools/hooks/lint.rb origin/$DRONE_TARGET_BRANCH $DRONE_SOURCE_BRANCH
 bundle exec rake circle:run_tests

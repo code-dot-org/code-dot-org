@@ -1,5 +1,6 @@
 import {makeEnum} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -13,6 +14,9 @@ const SET_HAS_SEEN_STANDARDS_REPORT =
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
+const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
+const SET_PROGRESS_TABLE_V2_CLOSED_BETA =
+  'currentUser/SET_PROGRESS_TABLE_V2_CLOSED_BETA';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -64,6 +68,14 @@ export const setSortByFamilyName = (
   sectionId,
   unitName,
   source,
+});
+export const setShowProgressTableV2 = showProgressTableV2 => ({
+  type: SET_SHOW_PROGRESS_TABLE_V2,
+  showProgressTableV2,
+});
+export const setProgressTableV2ClosedBeta = progressTableV2ClosedBeta => ({
+  type: SET_PROGRESS_TABLE_V2_CLOSED_BETA,
+  progressTableV2ClosedBeta,
 });
 
 const initialState = {
@@ -145,10 +157,38 @@ export default function currentUser(state = initialState, action) {
       isSortedByFamilyName: action.isSortedByFamilyName,
     };
   }
+  if (action.type === SET_SHOW_PROGRESS_TABLE_V2) {
+    return {
+      ...state,
+      showProgressTableV2: action.showProgressTableV2,
+    };
+  }
+  if (action.type === SET_PROGRESS_TABLE_V2_CLOSED_BETA) {
+    return {
+      ...state,
+      progressTableV2ClosedBeta: action.progressTableV2ClosedBeta,
+    };
+  }
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type, mute_music, under_13, over_21} =
-      action.serverUser;
+    const {
+      id,
+      username,
+      user_type,
+      mute_music,
+      under_13,
+      over_21,
+      sort_by_family_name,
+      show_progress_table_v2,
+      progress_table_v2_closed_beta,
+    } = action.serverUser;
     analyticsReport.setUserProperties(
+      id,
+      user_type,
+      experiments.getEnabledExperiments()
+    );
+    // Calling Statsig separately to emphasize different user integrations
+    // and because dual reporting is aspirationally temporary (March 2024)
+    statsigReporter.setUserProperties(
       id,
       user_type,
       experiments.getEnabledExperiments()
@@ -161,6 +201,9 @@ export default function currentUser(state = initialState, action) {
       isBackgroundMusicMuted: mute_music,
       under13: under_13,
       over21: over_21,
+      isSortedByFamilyName: sort_by_family_name,
+      showProgressTableV2: show_progress_table_v2,
+      progressTableV2ClosedBeta: progress_table_v2_closed_beta,
     };
   }
 

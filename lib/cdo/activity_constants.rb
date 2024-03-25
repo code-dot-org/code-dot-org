@@ -1,6 +1,6 @@
 module ActivityConstants
   # These values correspond to constants from
-  # /blockly/src/constants.js and help describe the meaning of the
+  # /apps/src/constants.js and help describe the meaning of the
   # numeric score/result of a user attempting a blockly level. In
   # dashboard these are stored in Activity.result and
   # UserLevel.best_result (UserLevel is an aggregate of Activity)

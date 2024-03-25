@@ -3,26 +3,41 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Implementing Debugging
+# Debugging
+
+#### In this section of this professional learning module, you will be formerly introduced to debugging. You probably have already been debugging throughout this module when your code did not run correctly and you needed to fix your code.  
+
+<img style=" float: left; width:10%;" src="https://images.code.org/3168407cff8a2336f81a99ef14c40fe6-image-1699468057611.png" alt = "icon of a bug from the ecosystems module" />
+
+#### **Bug** - Part of a program that does not work correctly.
+
+#### **Debugging** - Finding and fixing problems in an algorithm or program.
+
+#### **Persistence** - Not giving up.
+* #### *Persistence works best when you try things many different ways, many different times.*
+
+
+
+## Implementing Debugging
 
 <img src="https://images.code.org/777a7b74cb2c3607d956c0c672d04f6f-image-1679964913802.png" alt="Image of octopus with glasses, pen, journal, and ink" style="float: right; padding-center:; height: 400px;">
 
-## General Steps for Debugging
+### General Steps for Debugging
 
-##### **Search** for bugs
-##### **Discuss** the bugs
-##### **Fix** bugs through trial and error
-##### **Collect** bugs as references to help with future problems
-##### **Celebrate** students' challenges and successes
+* #### 🔎 **Search** for bugs
+* #### 🗣️ **Discuss** the bugs
+* #### ⚙️ **Fix** bugs through trial and error
+* #### 🧩 **Collect** bugs as references to help with future problems
+* #### 🎉 **Celebrate** students' challenges and successes
 
 ## General Debugging Teaching Strategies
 
-##### Pause lessons for **whole group discussions**
+#### Pause lessons for **whole group discussions**
 
-##### Display an **anchor chart** with steps for debugging
-* ##### List the general debugging steps for students to refer to throughout lessons.
+#### Display an **anchor chart** with steps for debugging
+* #### List the general debugging steps for students to refer to throughout lessons.
 
-##### Use **guiding prompts**
+#### Use **guiding prompts**
 
 * 	<i>What is your code doing?
     
@@ -32,7 +47,7 @@ markdown <<MARKDOWN
     
 *    Why?</i>
 
-
+#### Watch the  <a href= "https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer"> How to Debug Video </a> to learn more. 
 
 ## Let's keep learning! 
 

@@ -49,15 +49,15 @@
       "https://curriculum.code.org/images/sprites/dance_20191106/frog_22.png",
       "https://curriculum.code.org/images/sprites/dance_20191106/frog_23.png"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_02\",\r\n  \"callout_text\": \"Add the AI generate effects block here. \",\r\n  \"element_id\": \"[data-id=\\\"S4!uAzkx{%vw@UFZX8hY\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": null,\r\n    \"at\": null,\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_02\",\r\n  \"callout_text\": \"Add the AI generate effect block here. \",\r\n  \"element_id\": \"[data-id=\\\"S4!uAzkx{%vw@UFZX8hY\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"ai_dance_callout_02_b\",\r\n  \"callout_text\": \"⬆️ Use this block.\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"Ru3$z|81JlKgT/;fMb]K\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "parent_level_id": 14644,
     "name_suffix": "_draft3",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add a new `AI generate stage` block to the `At 2 measures` event in your workspace.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a997effad70af07bfa9bc182914ab823/draft_ai_dance_party_key_press_events_2_draft3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Connect a `AI generate effect` block to the `at 2 measures` event in your workspace. \",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fac4bf6f39d9081f043084c753704c2e/draft_ai_dance_party_key_press_events_2_draft3.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Click on the `AI generate effect` block** to make a new effect. \",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5ebc3dbfd3b7d51f39e8451f3e38d30c/draft_ai_dance_party_key_press_events_2_draft3.mp3\"}]",
     "default_song": "cheapthrills_sia",
     "video_key": "hoc_dance_measures_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "long_instructions": "*Now you can set the effects to change when the song changes!* \r\n- After the `at measure 2` event connect & set up the `AI bot to generate effects`.\r\n- Watch for the dance party change when the song gets to measure 2.\r\n",
+    "long_instructions": "**Your turn! Code your dance to change effects at specific times in the song.** \r\n- Connect an `AI generate effect` block to the new event block in your workspace. \r\n- Press Run to watch your dance change at measure 2. \r\n",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "soft_buttons": [
@@ -66,7 +66,7 @@
       "upButton",
       "downButton"
     ],
-    "short_instructions": "Use AI bot to generate a new stage after measure 4.",
+    "short_instructions": "**Code your dance to change effects at specific times in the song.**",
     "song_selection": [
       "notearslefttocry_arianagrande",
       "breakmysoul_beyonce",
@@ -97,26 +97,26 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:03.158+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2_b\"},{\"changed_at\":\"2023-10-30 15:30:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:31:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:35:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:38:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:45:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:47:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-30T13:44:03.158+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_key_press_events_2_b\\\"\"],\"cloned_from\":\"draft_ai_dance_party_key_press_events_2_b\"},{\"changed_at\":\"2023-10-30 15:30:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:31:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:35:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 15:38:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:45:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-30 20:47:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-31 23:26:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:26:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-10-31 23:27:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-11-01 14:05:58 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 14:07:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 14:07:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 14:08:42 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 18:14:30 +0000\",\"changed\":[\"toolbox_blocks\",\"callout_json\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 18:15:05 +0000\",\"changed\":[\"toolbox_blocks\",\"callout_json\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 18:21:50 +0000\",\"changed\":[\"toolbox_blocks\",\"callout_json\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-01 21:37:11 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 01:19:59 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 01:20:37 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-02 02:16:59 +0000\",\"changed\":[\"toolbox_blocks\",\"short_instructions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="Dancelab_whenSetup" id=";fui020!Iaz!kp-n0K[8" movable="false" x="60" y="46">
+        <block type="Dancelab_whenSetup" id=";fui020!Iaz!kp-n0K[8" movable="false" x="114" y="38">
           <statement name="DO">
             <block type="Dancelab_ai" id="$t|1h(lDU)g@x0QEjCKi">
               <field name="VALUE">{"inputs":["rainbow","party","sparkle"],"backgroundEffect":"sparkles","backgroundColor":"warm","foregroundEffect":"color_lights"}</field>
               <next>
-                <block type="Dancelab_makeNewDanceSpriteGroup" id="oWSy9:P-H52:7V`dqyo+">
-                  <field name="N">10</field>
-                  <field name="COSTUME">"PINEAPPLE"</field>
-                  <field name="LAYOUT">"circle"</field>
+                <block type="Dancelab_makeAnonymousDanceSprite" id="-a9aM{7I9v?xs^67zj9N">
+                  <field name="COSTUME">"SLOTH"</field>
+                  <field name="LOCATION">{x: 200, y: 200}</field>
                   <next>
-                    <block type="Dancelab_makeAnonymousDanceSprite" id="-a9aM{7I9v?xs^67zj9N">
-                      <field name="COSTUME">"SLOTH"</field>
-                      <field name="LOCATION">{x: 200, y: 200}</field>
+                    <block type="Dancelab_makeNewDanceSpriteGroup" id="oWSy9:P-H52:7V`dqyo+">
+                      <field name="N">10</field>
+                      <field name="COSTUME">"PINEAPPLE"</field>
+                      <field name="LAYOUT">"circle"</field>
                       <next>
                         <block type="Dancelab_changeMoveEachLR" id="K{#p7Lx-6L`Zof@Yaa}a">
                           <field name="GROUP">sprites</field>
@@ -131,7 +131,7 @@
             </block>
           </statement>
         </block>
-        <block type="Dancelab_atTimestampNotAfter" id="S4!uAzkx{%vw@UFZX8hY" deletable="false" movable="false" editable="false" x="68" y="307">
+        <block type="Dancelab_atTimestampNotAfter" id="S4!uAzkx{%vw@UFZX8hY" deletable="false" editable="false" x="29" y="284">
           <field name="TIMESTAMP">2</field>
           <field name="UNIT">"measures"</field>
         </block>
@@ -145,6 +145,11 @@
         <block type="Dancelab_makeAnonymousDanceSprite" id="{U-DOxMPz$)-j8dIS#O|" x="121" y="120">
           <field name="COSTUME">"DUCK"</field>
           <field name="LOCATION">{x: 200, y: 200}</field>
+        </block>
+        <block type="Dancelab_makeNewDanceSpriteGroup" id="|ZwzvF3=nUV~yu*H?HG/" x="331" y="167">
+          <field name="N">10</field>
+          <field name="COSTUME">"PINEAPPLE"</field>
+          <field name="LAYOUT">"circle"</field>
         </block>
         <block type="Dancelab_doMoveEachLR" id="*hCDocpHXqlku@f[[rK=" x="18" y="224">
           <field name="GROUP">"DOG"</field>

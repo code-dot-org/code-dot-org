@@ -83,6 +83,7 @@ const SILENCED = [
   // referenced by multiple sites
   'tutorialExplorer',
   'cookieBanner',
+  'userHeaderEventLogger',
   'regionalPartnerMiniContact',
 
   // other entry points

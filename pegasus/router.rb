@@ -2,7 +2,6 @@ require_relative 'src/env'
 require 'rack'
 require 'cdo/rack/locale'
 require 'sinatra/base'
-require 'sinatra/verbs'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
@@ -220,8 +219,10 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
+        # rubocop:disable CustomCops/DashboardDbUsage
         not_authorized! unless dashboard_user_helper
         forbidden! unless dashboard_user_helper.admin?
+        # rubocop:enable CustomCops/DashboardDbUsage
       end
       pass
     end
@@ -319,7 +320,9 @@ class Documents < Sinatra::Base
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
       return nil if (id = dashboard_user_id).nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       @dashboard_user ||= Dashboard.db[:users][id: id]
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     # Get the current dashboard user wrapped in a helper
@@ -328,7 +331,9 @@ class Documents < Sinatra::Base
     # TODO: When we are using this everywhere, rename to just `dashboard_user`
     def dashboard_user_helper
       return nil if (id = dashboard_user_id).nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       @dashboard_user_helper ||= Dashboard::User.get(id)
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     # Get the current dashboard user ID

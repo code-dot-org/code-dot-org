@@ -15,7 +15,6 @@ const migratedSampleResources = [
 ];
 
 export default {
-  title: 'ResourcesDropdown',
   component: ResourcesDropdown,
 };
 

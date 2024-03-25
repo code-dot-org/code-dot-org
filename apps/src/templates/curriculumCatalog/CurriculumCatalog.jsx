@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {curriculumDataShape} from './curriculumCatalogShapes';
+import {curriculumDataShape} from './curriculumCatalogConstants';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import HeaderBanner from '../HeaderBanner';
@@ -12,12 +12,17 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
   languageNativeName,
   isInUS,
+  isSignedOut,
+  isTeacher,
+  curriculaTaught,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -67,6 +72,41 @@ const CurriculumCatalog = ({
       );
     }
     setExpandedCardKey(expandedCardKey === key ? null : key);
+  };
+
+  // Get the top recommended similar curriculum based on the curriculum with the given
+  // curriculumKey
+  const getRecommendedSimilarCurriculum = curriculumKey => {
+    // Check if Similar Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const similarRecommenderResults =
+      JSON.parse(tryGetSessionStorage('similarRecommenderResults', '{}')) || {};
+    const similarRecommenderCurrKeyResult =
+      similarRecommenderResults[curriculumKey];
+    if (similarRecommenderCurrKeyResult) {
+      return similarRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended similar curriculum
+    const recommendations = getSimilarRecommendations(
+      curriculaData,
+      curriculumKey,
+      curriculaTaught
+    );
+    const recommendedCurriculum = recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    similarRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'similarRecommenderResults',
+      JSON.stringify(similarRecommenderResults)
+    );
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_SHOWN, {
+      current_curriculum_offering: curriculumKey,
+      recommended_curriculum_offering: recommendedCurriculum.key,
+    });
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -136,9 +176,15 @@ const CurriculumCatalog = ({
                     self_paced_pl_course_offering_path
                   }
                   isExpanded={expandedCardKey === key}
+                  setExpandedCardKey={setExpandedCardKey}
                   onQuickViewClick={() => handleExpandedCardChange(key)}
                   isInUS={isInUS}
                   availableResources={available_resources}
+                  isSignedOut={isSignedOut}
+                  isTeacher={isTeacher}
+                  getRecommendedSimilarCurriculum={
+                    getRecommendedSimilarCurriculum
+                  }
                   {...props}
                 />
               )
@@ -148,17 +194,9 @@ const CurriculumCatalog = ({
     } else {
       return (
         <div className={style.catalogContentNoResults}>
-          <img
-            className={style.noResultsImage}
-            src={CourseCatalogNoSearchResultPenguin}
-            alt=""
-          />
-          <Heading5 className={style.noResultsHeading}>
-            {i18n.noCurriculumSearchResultsHeader()}
-          </Heading5>
-          <BodyTwoText className={style.noResultsBody}>
-            {i18n.noCurriculumSearchResultsBody()}
-          </BodyTwoText>
+          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
+          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
+          <BodyTwoText>{i18n.noCurriculumSearchResultsBody()}</BodyTwoText>
         </div>
       );
     }
@@ -173,17 +211,17 @@ const CurriculumCatalog = ({
         imageUrl={CourseCatalogIllustration01}
       />
       {showAssignSuccessMessage && (
-        <div className={style.assignSuccessMessageContainer}>
-          <BodyTwoText className={style.assignSuccessMessage}>
-            {assignSuccessMessage}
-          </BodyTwoText>
-          <button
-            aria-label="close success message"
-            onClick={handleCloseAssignSuccessMessage}
-            type="button"
-          >
-            <strong>X</strong>
-          </button>
+        <div className={style.assignSuccessMessageCenter}>
+          <div className={style.assignSuccessMessageContainer}>
+            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
+            <button
+              aria-label="close success message"
+              onClick={handleCloseAssignSuccessMessage}
+              type="button"
+            >
+              <strong>X</strong>
+            </button>
+          </div>
         </div>
       )}
       <CurriculumCatalogFilters
@@ -205,6 +243,9 @@ CurriculumCatalog.propTypes = {
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
   isInUS: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
+  isTeacher: PropTypes.bool.isRequired,
+  curriculaTaught: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default CurriculumCatalog;

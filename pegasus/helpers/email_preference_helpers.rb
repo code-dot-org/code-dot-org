@@ -25,6 +25,7 @@ class EmailPreferenceHelper
     # between the value of the opt_in column in the existing row and the new/input value.
     input_opt_in = opt_in
 
+    # rubocop:disable CustomCops/DashboardDbUsage
     existing_email_preference = Dashboard.db[:email_preferences].where(email: email).first
     if !existing_email_preference
       Dashboard.db[:email_preferences].insert(
@@ -52,6 +53,7 @@ class EmailPreferenceHelper
         }
       )
     end
+    # rubocop:enable CustomCops/DashboardDbUsage
     # This is a write-only helper method.  Don't return data to the caller.
     return
   end

@@ -59,7 +59,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:48:44.495+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events72022\\\"\"],\"cloned_from\":\"courseC_PlayLab_events72022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:48:44.495+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events72022\\\"\"],\"cloned_from\":\"courseC_PlayLab_events72022\"},{\"changed_at\":\"2024-01-11 21:18:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-01-11 21:18:30 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-01-11 21:23:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,
@@ -69,35 +69,35 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenUp">
+        <block type="studio_whenUp" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">1</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">1</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenDown">
+        <block type="studio_whenDown" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">4</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">4</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenLeft">
+        <block type="studio_whenLeft" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">8</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">8</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenRight">
+        <block type="studio_whenRight" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">2</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">2</field>
             </block>
           </next>
         </block>

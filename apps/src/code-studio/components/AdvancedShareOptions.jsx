@@ -8,6 +8,8 @@ import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 import Button from '../../templates/Button';
 import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const style = {
   nav: {
@@ -63,6 +65,15 @@ const style = {
     fontSize: 'large',
     height: 40,
   },
+  embedCodeCheckbox: {
+    accentColor: color.brand_primary_default,
+    margin: 0,
+  },
+  embedCodeCheckboxLabel: {
+    display: 'inline-block',
+    paddingLeft: 8,
+    paddingTop: 8,
+  },
 };
 
 const ShareOptions = {
@@ -84,6 +95,7 @@ class AdvancedShareOptions extends React.Component {
       iframeHeight: PropTypes.number.isRequired,
       iframeWidth: PropTypes.number.isRequired,
     }).isRequired,
+    appType: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -99,6 +111,9 @@ class AdvancedShareOptions extends React.Component {
   }
 
   downloadExport = () => {
+    analyticsReporter.sendEvent(EVENTS.EXPORT_APP, {
+      lab_type: this.props.appType,
+    });
     this.setState({exporting: true});
     this.props
       .exportApp()
@@ -137,21 +152,28 @@ class AdvancedShareOptions extends React.Component {
         <textarea
           type="text"
           onClick={e => e.target.select()}
-          readOnly="true"
+          readOnly={true}
           value={iframeHtml}
           style={style.embedInput}
+          aria-label={i18n.codeToEmbed()}
         />
-        <label style={{display: 'flex'}}>
+        <div>
           <input
+            id="embedCodeCheckbox"
             type="checkbox"
-            style={{accentColor: color.brand_primary_default}}
+            style={style.embedCodeCheckbox}
             checked={this.state.embedWithoutCode}
             onChange={() =>
               this.setState({embedWithoutCode: !this.state.embedWithoutCode})
             }
           />
-          <span style={{marginLeft: 5}}>Hide ability to view code</span>
-        </label>
+          <label
+            htmlFor="embedCodeCheckbox"
+            style={style.embedCodeCheckboxLabel}
+          >
+            {i18n.hideAbilityToViewCode()}
+          </label>
+        </div>
       </div>
     );
   }

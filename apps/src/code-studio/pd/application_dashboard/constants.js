@@ -31,6 +31,7 @@ export const StatusColors = {
   pending: STATUS_ORANGE,
   pending_space_availability: STATUS_ORANGE,
   accepted: STATUS_GREEN,
+  enrolled: STATUS_GREEN,
   declined: {
     backgroundColor: color.red,
     color: color.white,
@@ -70,6 +71,7 @@ export const getApplicationStatuses = (addAutoEmail = false) => ({
   pending: 'Pending',
   pending_space_availability: `Pending Space Availability`,
   accepted: `Accepted${autoEmailText(addAutoEmail)}`,
+  enrolled: 'Enrolled',
   declined: `Declined${autoEmailText(addAutoEmail)}`,
   withdrawn: 'Withdrawn',
 });

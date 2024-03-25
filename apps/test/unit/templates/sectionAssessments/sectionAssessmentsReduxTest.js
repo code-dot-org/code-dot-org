@@ -28,7 +28,6 @@ import sectionAssessments, {
   getCurrentQuestion,
   getStudentAnswersForCurrentQuestion,
   setFeedback,
-  doesCurrentCourseUseFeedback,
   getExportableFeedbackData,
   isCurrentScriptCSD,
   notStartedFakeTimestamp,
@@ -182,7 +181,7 @@ describe('sectionAssessmentsRedux', () => {
   });
 
   describe('getCurrentScriptAssessmentList', () => {
-    it('gets a list of assessments - script is not csd or csp', () => {
+    it('gets a list of assessments - teacher feedback disabled', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
@@ -190,7 +189,7 @@ describe('sectionAssessmentsRedux', () => {
             {
               id: 321,
               name: 'fake-name',
-              units: [{id: 123, key: 'csf'}],
+              units: [{id: 123, key: 'csx', is_feedback_enabled: false}],
             },
           ],
         },
@@ -220,7 +219,7 @@ describe('sectionAssessmentsRedux', () => {
       assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
     });
 
-    it('gets a list of assessments - script is csd or csp', () => {
+    it('gets a list of assessments - teacher feedback enabled', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
@@ -228,7 +227,7 @@ describe('sectionAssessmentsRedux', () => {
             {
               id: 321,
               name: 'fake-name',
-              units: [{id: 123, key: 'csd'}],
+              units: [{id: 123, key: 'csx', is_feedback_enabled: true}],
             },
           ],
         },
@@ -758,36 +757,6 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = isCurrentScriptCSD(state);
-        assert.deepEqual(result, false);
-      });
-    });
-
-    describe('doesCurrentCourseUseFeedback', () => {
-      it('returns true when the current script is CSD or CSP', () => {
-        const state = {
-          ...rootState,
-          unitSelection: {
-            scriptId: 2,
-            coursesWithProgress: [
-              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]},
-            ],
-          },
-        };
-        const result = doesCurrentCourseUseFeedback(state);
-        assert.deepEqual(result, true);
-      });
-
-      it('returns false when the current script is not CSD or CSP', () => {
-        const state = {
-          ...rootState,
-          unitSelection: {
-            scriptId: 2,
-            coursesWithProgress: [
-              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]},
-            ],
-          },
-        };
-        const result = doesCurrentCourseUseFeedback(state);
         assert.deepEqual(result, false);
       });
     });

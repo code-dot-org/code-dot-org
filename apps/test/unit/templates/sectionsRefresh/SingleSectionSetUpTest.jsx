@@ -24,7 +24,7 @@ describe('SingleSectionSetUp', () => {
     expect(updateSectionSpy).to.have.been.calledOnce;
   });
 
-  it('renders MultiSelectGroup with expected props', () => {
+  it('renders Chips with expected props', () => {
     const wrapper = shallow(
       <SingleSectionSetUp
         sectionNum={1}
@@ -34,12 +34,12 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    const multiSelectGroup = wrapper.find('MultiSelectGroup');
-    expect(multiSelectGroup.length).to.equal(1);
-    expect(multiSelectGroup.prop('name')).to.eq('grades');
-    expect(multiSelectGroup.prop('required')).to.eq(true);
-    expect(multiSelectGroup.prop('options').length).to.eq(14); // K + 12 + Other
-    expect(multiSelectGroup.prop('values')).to.eql([]);
+    const chips = wrapper.find('Chips');
+    expect(chips.length).to.equal(1);
+    expect(chips.prop('name')).to.eq('grades');
+    expect(chips.prop('required')).to.eq(true);
+    expect(chips.prop('options').length).to.eq(14); // K + 12 + Other
+    expect(chips.prop('values')).to.eql([]);
   });
 
   it('does not render grade selector when participantType is teacher', () => {
@@ -52,7 +52,7 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    expect(wrapper.find('MultiSelectGroup').length).to.equal(0);
+    expect(wrapper.find('Chips').length).to.equal(0);
   });
 
   it('calls updateSection when grade selection is updated', () => {

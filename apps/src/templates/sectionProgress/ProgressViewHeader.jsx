@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {getCurrentUnitData} from './sectionProgressRedux';
-import {ViewType, scriptDataPropType} from './sectionProgressConstants';
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
 import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
@@ -19,7 +17,7 @@ class ProgressViewHeader extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
   };
 
   getLinkToOverview() {
@@ -40,11 +38,6 @@ class ProgressViewHeader extends Component {
       },
       {includeUserId: true}
     );
-
-    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-      sectionId: this.props.sectionId,
-      unitId: this.props.scriptId,
-    });
   };
 
   render() {

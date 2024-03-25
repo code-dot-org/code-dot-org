@@ -18,6 +18,7 @@ export default function EvidenceLevelsForTeachers({
   understanding,
   radioButtonCallback,
   canProvideFeedback,
+  isAutosaving,
 }) {
   const radioGroupName = `evidence-levels-${learningGoalKey}`;
   if (canProvideFeedback) {
@@ -42,6 +43,7 @@ export default function EvidenceLevelsForTeachers({
                 radioButtonCallback(evidenceLevel.understanding);
               }}
               checked={understanding === evidenceLevel.understanding}
+              disabled={isAutosaving}
             />
             <BodyThreeText
               className={classNames(style.evidenceLevelDescriptionIndented)}
@@ -78,4 +80,5 @@ EvidenceLevelsForTeachers.propTypes = {
   understanding: PropTypes.number,
   radioButtonCallback: PropTypes.func,
   canProvideFeedback: PropTypes.bool,
+  isAutosaving: PropTypes.bool,
 };

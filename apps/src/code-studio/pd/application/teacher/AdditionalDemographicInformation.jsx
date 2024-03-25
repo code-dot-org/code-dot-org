@@ -45,11 +45,9 @@ const AdditionalDemographicInformation = props => {
               {data.csaAlreadyKnow === 'No' && (
                 <p style={styles.error}>
                   We don’t recommend this program for teachers completely new to
-                  CS. If possible, consider teaching CS Principles in the
-                  upcoming school year and applying for our CS Principles
-                  Professional Learning program. If this is not possible, plan
-                  to spend at least 40 hours learning foundational CS concepts
-                  prior to attending our professional learning for CSA.
+                  computer science. Consider starting with CS Principles
+                  Professional Learning or plan for additional onboarding in
+                  preparation for this program.
                 </p>
               )}
               <LabeledRadioButtons name="csaPhoneScreen" />
@@ -57,10 +55,8 @@ const AdditionalDemographicInformation = props => {
                 <p style={styles.error}>
                   We recommend deepening your content knowledge prior to
                   starting this program. This can be accomplished by completing
-                  some additional onboarding prior to attending the CSA
-                  Professional Learning program. Your regional partner will
-                  share this with you after you have been accepted into the
-                  program.
+                  additional pre-work that will be shared with you once accepted
+                  to the program. This pre-work usually takes approx 10 hours.
                 </p>
               )}
             </>

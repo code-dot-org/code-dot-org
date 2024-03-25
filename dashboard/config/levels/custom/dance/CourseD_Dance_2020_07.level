@@ -51,15 +51,14 @@
     "video_key": "hoc_dance_properties_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"setprop_hint\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"setprop_hint\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"6\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom center\",\"at\":\"top center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"6\\\"]\",\"localization_key\":\"setprop_hint\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom center\",\"at\":\"top center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "downButton",
       "upButton"
     ],
-    "tts_long_instructions_override": "Every dancer has a set of properties that controls what it looks like.\r\n\r\nUse a set size block under a green event block to make dancers appear closer or farther away.",
-    "contained_level_names": null
+    "tts_long_instructions_override": "Every dancer has a set of properties that controls what it looks like.\r\n\r\nUse a set size block under a green event block to make dancers appear closer or farther away."
   },
   "published": true,
   "notes": "",
@@ -138,7 +137,7 @@
           <title name="MOVE">"rand"</title>
           <title name="DIR">-1</title>
         </block>
-        <block type="Dancelab_setPropEach">
+        <block type="Dancelab_setPropEach" id="6">
           <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"PINEAPPLE"</title>
           <title name="PROPERTY">"scale"</title>
           <title name="VAL">50</title>

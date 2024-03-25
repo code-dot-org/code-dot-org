@@ -5,8 +5,8 @@ import i18n from '@cdo/locale';
 import {
   BodyThreeText,
   BodyTwoText,
-  Heading2,
-  Heading5,
+  Heading3,
+  Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -15,12 +15,10 @@ import {
   rubricShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import LearningGoal from './LearningGoal';
-import Button from '@cdo/apps/templates/Button';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import LearningGoals from './LearningGoals';
 import classnames from 'classnames';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import StudentSelector from './StudentSelector';
+import SectionSelector from './SectionSelector';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -39,94 +37,55 @@ const formatLastAttempt = lastAttempt => {
 export default function RubricContent({
   studentLevelInfo,
   rubric,
+  open,
   teacherHasEnabledAi,
   canProvideFeedback,
   onLevelForEvaluation,
   reportingData,
   visible,
   aiEvaluations,
+  feedbackAdded,
+  setFeedbackAdded,
+  sectionId,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
-  const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
-  const [errorSubmitting, setErrorSubmitting] = useState(false);
-  const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
-  const submitFeedbackToStudent = () => {
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
-      ...reportingData,
-      studentId: studentLevelInfo.user_id,
-    });
-    setIsSubmittingToStudent(true);
-    setErrorSubmitting(false);
-    const body = JSON.stringify({
-      student_id: studentLevelInfo.user_id,
-    });
-    const endPoint = `/rubrics/${rubric.id}/submit_evaluations`;
-    HttpClient.post(endPoint, body, true, {'Content-Type': 'application/json'})
-      .then(response => response.json())
-      .then(json => {
-        setIsSubmittingToStudent(false);
-        if (!json.submittedAt) {
-          throw new Error('Unexpected response object');
-        }
-        const lastSubmittedDateObj = new Date(json.submittedAt);
-        setLastSubmittedTimestamp(lastSubmittedDateObj.toLocaleString());
-      })
-      .catch(() => {
-        setIsSubmittingToStudent(false);
-        setErrorSubmitting(true);
-      });
-  };
-
-  const getAiUnderstanding = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo?.understanding;
-    } else {
-      return null;
-    }
-  };
-
-  const getAiConfidence = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo?.ai_confidence;
-    } else {
-      return null;
-    }
-  };
-
   let infoText = null;
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
+  } else if (!sectionId) {
+    infoText = i18n.selectASectionToEvaluateAlert();
   } else if (!studentLevelInfo) {
     infoText = i18n.selectAStudentToEvaluateAlert();
   }
+
   return (
     <div
-      className={classnames(style.rubricContent, {
+      id="uitest-rubric-content"
+      className={classnames({
         [style.visibleRubricContent]: visible,
         [style.hiddenRubricContent]: !visible,
       })}
     >
       {infoText && <InfoAlert text={infoText} />}
-      <div>
-        {!!studentLevelInfo && (
-          <Heading2 className={style.studentName}>
-            {studentLevelInfo.name}
-          </Heading2>
-        )}
-        <Heading5>
+      <div className={style.studentInfoGroup}>
+        <Heading3>
           {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.name,
+            lessonNumber: lesson?.position,
+            lessonName: lesson?.name,
           })}
-        </Heading5>
+        </Heading3>
+
+        <div className={style.selectors}>
+          <SectionSelector reloadOnChange={true} />
+          <StudentSelector
+            styleName={style.studentSelector}
+            selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
+            reloadOnChange={true}
+          />
+        </div>
+
         {!!studentLevelInfo && (
           <div className={style.studentInfo}>
             <div className={style.levelAndStudentDetails}>
@@ -165,46 +124,21 @@ export default function RubricContent({
           </div>
         )}
       </div>
-      <div className={style.learningGoalContainer}>
-        {rubric.learningGoals.map(lg => (
-          <LearningGoal
-            key={lg.key}
-            learningGoal={lg}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            aiUnderstanding={getAiUnderstanding(lg.id)}
-            aiConfidence={getAiConfidence(lg.id)}
-            isStudent={false}
-          />
-        ))}
+      <div className={style.learningGoalsWrapper}>
+        <Heading4>{i18n.rubric()}</Heading4>
+        <LearningGoals
+          open={open}
+          learningGoals={rubric.learningGoals}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+          studentLevelInfo={studentLevelInfo}
+          isStudent={false}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+          aiEvaluations={aiEvaluations}
+        />
       </div>
-      {canProvideFeedback && (
-        <div className={style.rubricContainerFooter}>
-          <div className={style.submitToStudentButtonAndError}>
-            <Button
-              text={i18n.submitToStudent()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={submitFeedbackToStudent}
-              className={style.submitToStudentButton}
-              disabled={isSubmittingToStudent}
-            />
-            {errorSubmitting && (
-              <BodyThreeText className={style.errorMessage}>
-                {i18n.errorSubmittingFeedback()}
-              </BodyThreeText>
-            )}
-            {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <BodyThreeText>
-                {i18n.feedbackSubmittedAt({
-                  timestamp: lastSubmittedTimestamp,
-                })}
-              </BodyThreeText>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -213,22 +147,49 @@ RubricContent.propTypes = {
   onLevelForEvaluation: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
+  open: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
   visible: PropTypes.bool,
   aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
+  sectionId: PropTypes.number,
 };
 
-const InfoAlert = ({text}) => {
+export const InfoAlert = ({text, dismissable}) => {
+  const [closed, setClosed] = useState(false);
+  const closeButtonCallback = () => {
+    setClosed(true);
+  };
+
   return (
-    <div className={style.infoAlert}>
-      <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
-      <BodyTwoText>{text}</BodyTwoText>
+    <div
+      className={classnames('uitest-info-alert', {
+        [style.infoAlert]: !closed,
+        [style.infoAlertClosed]: !!closed,
+      })}
+    >
+      <div className={style.infoAlertLeft}>
+        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <BodyTwoText>{text}</BodyTwoText>
+      </div>
+      {!!dismissable && (
+        <button
+          type="button"
+          onClick={closeButtonCallback}
+          className={classnames('close', style.infoAlertRight)}
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      )}
     </div>
   );
 };
 
 InfoAlert.propTypes = {
   text: PropTypes.string.isRequired,
+  dismissable: PropTypes.bool,
 };

@@ -24,6 +24,7 @@
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #
@@ -36,6 +37,7 @@
 require 'full-name-splitter'
 require 'cdo/code_generation'
 require 'cdo/safe_names'
+require 'policies/lti'
 
 class Section < ApplicationRecord
   include SerializedProperties
@@ -66,6 +68,9 @@ class Section < ApplicationRecord
   has_many :section_instructors, dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
+  has_one :lti_section
+  has_one :lti_course, through: :lti_section
+  after_destroy :soft_delete_lti_section
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
@@ -98,6 +103,10 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
+
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -152,7 +161,8 @@ class Section < ApplicationRecord
     LOGIN_TYPE_PICTURE = 'picture'.freeze,
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
-    LOGIN_TYPE_CLEVER = 'clever'.freeze
+    LOGIN_TYPE_CLEVER = 'clever'.freeze,
+    LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
   ]
 
   LOGIN_TYPES_OAUTH = [
@@ -203,6 +213,10 @@ class Section < ApplicationRecord
 
   def unit_group
     UnitGroup.get_from_cache(course_id) if course_id
+  end
+
+  def course_offering_id
+    unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id
   end
 
   def workshop_section?
@@ -305,6 +319,7 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
+    return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
     return ADD_STUDENT_FORBIDDEN unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
@@ -403,6 +418,11 @@ class Section < ApplicationRecord
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
 
+      login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
+      if login_type == LOGIN_TYPE_LTI_V1
+        issuer = lti_course.lti_integration.issuer
+        login_type_name = Policies::Lti.issuer_name(issuer)
+      end
       {
         id: id,
         name: name,
@@ -423,8 +443,9 @@ class Section < ApplicationRecord
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
         login_type: login_type,
+        login_type_name: login_type_name,
         participant_type: participant_type,
-        course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
+        course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
@@ -442,13 +463,14 @@ class Section < ApplicationRecord
         is_assigned_csa: assigned_csa?,
         # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
-        code_review_expires_at: code_review_expires_at
+        code_review_expires_at: code_review_expires_at,
+        sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
       }
     end
   end
 
   def provider_managed?
-    false
+    login_type == LOGIN_TYPE_LTI_V1
   end
 
   def at_capacity?
@@ -495,36 +517,6 @@ class Section < ApplicationRecord
     elsif hidden_script.nil? && should_hide
       SectionHiddenScript.create(script_id: script.id, section_id: id)
     end
-  end
-
-  # One of the constraints for teachers looking for discount codes is that they
-  # have a section in which 10+ students have made progress on 5+ levels in both
-  # csd2 and csd3
-  # Note: This code likely belongs in CircuitPlaygroundDiscountCodeApplication
-  # once such a thing exists
-  def has_sufficient_discount_code_progress?
-    return false if students.length < 10
-    csd2 = Unit.get_from_cache('csd2-2019')
-    csd3 = Unit.get_from_cache('csd3-2019')
-    raise 'Missing scripts' unless csd2 && csd3
-
-    csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)
-    csd3_programming_level_ids = csd3.levels.select {|level| level.is_a?(Gamelab)}.map(&:id)
-
-    # Return true if 10+ students meet our progress condition
-    num_students_with_sufficient_progress = 0
-    students.each do |student|
-      csd2_progress_level_ids = student.user_levels_by_level(csd2).keys
-      csd3_progress_level_ids = student.user_levels_by_level(csd3).keys
-
-      # Count students who have made progress on 5+ programming levels in both units
-      next unless (csd2_progress_level_ids & csd2_programming_level_ids).count >= 5 &&
-        (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
-
-      num_students_with_sufficient_progress += 1
-      return true if num_students_with_sufficient_progress >= 10
-    end
-    false
   end
 
   # Returns the ids of all units which any participant in this section has ever
@@ -588,6 +580,7 @@ class Section < ApplicationRecord
 
   public def add_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
+    raise ArgumentError.new('inviting self') if instructor == current_user
 
     deleted_section_instructor = validate_instructor(instructor)
     deleted_section_instructor&.really_destroy!
@@ -614,6 +607,8 @@ class Section < ApplicationRecord
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
       raise ArgumentError.new('already invited')
+    elsif students.exists?(email: instructor.email)
+      raise ArgumentError.new('already a student')
     end
   end
 end

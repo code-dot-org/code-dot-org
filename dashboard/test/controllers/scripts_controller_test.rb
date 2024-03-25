@@ -1523,14 +1523,18 @@ class ScriptsControllerTest < ActionController::TestCase
 
   class CoursePilotTests < ActionController::TestCase
     setup do
+      @pilot_section_owner = create :teacher, pilot_experiment: 'my-experiment'
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
       @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-      @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
+      @pilot_section = create :section, user: @pilot_section_owner, script: @pilot_unit
+      create :section_instructor, instructor: @pilot_teacher, section: @pilot_section, status: :active
       @pilot_student = create(:follower, section: @pilot_section).student_user
 
+      @pilot_pl_section_owner = create :teacher, pilot_experiment: 'my-pl-experiment'
       @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
       @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-      @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_unit
+      @pilot_pl_section = create :section, user: @pilot_pl_section_owner, script: @pilot_pl_unit
+      create :section_instructor, instructor: @pilot_instructor, section: @pilot_pl_section, status: :active
       @pilot_pl_participant = create :facilitator
       create(:follower, section: @pilot_pl_section, student_user: @pilot_pl_participant)
     end

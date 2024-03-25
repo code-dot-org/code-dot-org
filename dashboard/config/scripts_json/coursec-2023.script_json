@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "5e525b35-494e-4562-9c38-323b8955d134",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -21,7 +33,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2023-08-21 20:16:03 UTC",
+    "serialized_at": "2024-01-31 21:32:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1549,7 +1561,7 @@
       "key": "3a022037-8f9b-4a68-9b81-5fc14814e711",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When would you need to complete a list of steps in order?_\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** _When would you need to complete a list of steps in order?_\n\n**Discussion Goal:** Students will think of examples of when they would need to complete a list of steps in order. Such as steps to turn on the light in your classroom or to get a drink of water.\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -4064,7 +4076,7 @@
       "key": "7bfb14bd-9435-45d5-9d41-8f6838e74400",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course C, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-C-v8.pdf) cover the following topics: Meet your micro:bit, Events, Inputs and outputs, Sequencing, Loops, Data, and Variables.",
+        "description": "To build on the skills you learned in CS Fundamentals Course C, [click here to check out Extension Lessons with the micro:bit](https://code.org/maker/csf-microbit). These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Events, Inputs and outputs, Sequencing, Loops, Data, and Variables.",
         "name": "Extension Lessons with the micro:bit"
       },
       "seeding_key": {
@@ -10683,6 +10695,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Flappy Game",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -10693,6 +10712,13 @@
         "lesson.key": "Build a Flappy Game",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-01"
       }
     },
     {
@@ -10742,6 +10768,13 @@
         "lesson.key": "Debugging in Maze",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-03"
       }
     },
     {
@@ -10774,6 +10807,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Harvesting Crops with Loops",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -10844,6 +10884,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Chase Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: Sticker Art",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -10896,6 +10943,13 @@
         "lesson.key": "My Loopy Robotic Friends Jr",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "My Robotic Friends Jr",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-08"
       }
     },
     {

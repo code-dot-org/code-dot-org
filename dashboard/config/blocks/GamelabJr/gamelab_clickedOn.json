@@ -1,13 +1,9 @@
 {
   "category": "Unused",
   "config": {
-    "color": [
-      140,
-      1,
-      0.74
-    ],
     "style": "event_blocks",
     "func": "clickedOn",
+    "docFunc": "gamelab_spriteClicked",
     "blockText": "when {SPRITE} clicked",
     "callbackParams": [
       "extraArgs"

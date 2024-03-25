@@ -31,6 +31,7 @@ export default class SignInCallout extends React.Component {
         <img
           style={styles.imageContainer}
           src="/shared/images/user-not-signed-in.png"
+          alt=""
         />
         <div style={styles.textContainer}>
           <h2 style={styles.textHeader}>{i18n.notSignedInHeader()}</h2>

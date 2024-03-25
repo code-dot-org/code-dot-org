@@ -70,16 +70,17 @@ theme: responsive
 
 Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لیے، ہم آپ کے اسکول یا ضلع کے آئی ٹی ڈیپارٹمنٹ سے مشورہ کرنے کی تجویز کرتے ہیں تاکہ یہ یقینی بنایا جا سکے کہ درج ذیل سائٹس کھولنے کی اجازت ہے اور وہ بلاک نہیں ہیں۔
 
-| ترجیح                                                           | URL                                                                                                        |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **ضروری**                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **اختیاری**                                                     | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **YouTube پر ویڈیوز استعمال کرنے کے لیے (بہتر رازداری کا موڈ)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Code.org پر ویڈیوز استعمال کرنے کے لیے**                      | `https://videos.code.org`                                                                                  |
-| **انٹرنیٹ سیمولیٹر استعمال کرنے کے لیے**                        | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **ویب لیب استعمال کرنے کے لیے**                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **گوگل کلاس روم شیئر بٹن استعمال کرنے کے لیے**                  | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                     | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| ترجیح                                                                                                       | URL                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **ضروری**                                                                                                   | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **اس بات کو یقینی بنانے کے لئے کیپچا سسٹم آپ کے استعمال کو خودکار جعلی (“بوٹ”) سرگرمی سے ممتاز کرسکتے ہیں** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **اختیاری**                                                                                                 | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube پر ویڈیوز استعمال کرنے کے لیے (بہتر رازداری کا موڈ)**                                             | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org پر ویڈیوز استعمال کرنے کے لیے**                                                                  | `https://videos.code.org`                                                                                  |
+| **انٹرنیٹ سیمولیٹر استعمال کرنے کے لیے**                                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **ویب لیب استعمال کرنے کے لیے**                                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **گوگل کلاس روم شیئر بٹن استعمال کرنے کے لیے**                                                              | `https://apis.google.com`                                                                                  |
+| **ایپ لیب ڈیٹا سیٹ استعمال کرنے کے لئے**                                                                    | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## موبائل اور ٹیبلٹ سپورٹ کی تفصیلات
 
@@ -104,7 +105,7 @@ All other content, such as K-5 courses (Computer Science Fundamentals) and Hour 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

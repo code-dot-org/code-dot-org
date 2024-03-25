@@ -4,14 +4,22 @@ import {shallow} from 'enzyme';
 import AiAssessment from '@cdo/apps/templates/rubrics/AiAssessment';
 
 describe('AiAssessment', () => {
+  const mockAiInfo = {
+    id: 2,
+    learning_goal_id: 2,
+    understanding: 2,
+    aiConfidencePassFail: 2,
+  };
   const props = {
     isAiAssessed: true,
     studentName: 'Jane Doe',
     aiUnderstandingLevel: 3,
     aiConfidence: 70,
+    learningGoalKey: 'learning_goal',
+    aiEvalInfo: mockAiInfo,
   };
 
-  it('renders AiAssessmentBox if it is assessessed by AI', () => {
+  it('renders AiAssessmentBox and passes down properties', () => {
     const wrapper = shallow(<AiAssessment {...props} />);
     expect(wrapper.find('AiAssessmentBox')).to.have.lengthOf(1);
     expect(wrapper.find('AiAssessmentBox').props().isAiAssessed).to.equal(

@@ -1,7 +1,14 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {MIN_NUM_MEASURES} from '../constants';
+import {
+  DEFAULT_BPM,
+  DEFAULT_KEY,
+  MAX_BPM,
+  MIN_BPM,
+  MIN_NUM_MEASURES,
+} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -9,18 +16,11 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
  * State, reducer, and actions for Music Lab.
  */
 
-enum InstructionsPosition {
+export enum InstructionsPosition {
   TOP = 'TOP',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
 }
-
-// Exporting enum as object for use in JS files
-export const InstructionsPositions = {
-  TOP: InstructionsPosition.TOP,
-  LEFT: InstructionsPosition.LEFT,
-  RIGHT: InstructionsPosition.RIGHT,
-};
 
 export interface MusicState {
   /** If the song is currently playing */
@@ -29,6 +29,8 @@ export interface MusicState {
   currentPlayheadPosition: number;
   /** The ID of the currently selected block, or undefined if no block is selected */
   selectedBlockId: string | undefined;
+  /** The trigger ID of the currently selected trigger block, or undefined if no trigger block is selected */
+  selectedTriggerId: string | undefined;
   /** If the timeline should be positioned at the top above the workspace */
   timelineAtTop: boolean;
   /** If instructions should be shown */
@@ -37,8 +39,6 @@ export interface MusicState {
   instructionsPosition: InstructionsPosition;
   /** If the headers should be hidden */
   hideHeaders: boolean;
-  /** If the Control Pad (Beat Pad) is showing */
-  isBeatPadShowing: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
   /** The current ordered functions */
@@ -55,26 +55,51 @@ export interface MusicState {
     canUndo: boolean;
     canRedo: boolean;
   };
+  /** A callout that's currently being shown.  The index lets the same callout be
+   * reshown multiple times in a row.
+   */
+  currentCallout: {
+    id?: string;
+    index: number;
+  };
+
+  // State used by advanced controls (currently internal-only) with the ToneJS player
+  loopEnabled: boolean;
+  loopStart: number;
+  loopEnd: number;
+  key: Key;
+  bpm: number;
 }
 
 const initialState: MusicState = {
   isPlaying: false,
   currentPlayheadPosition: 0,
   selectedBlockId: undefined,
+  selectedTriggerId: undefined,
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
   hideHeaders: false,
-  isBeatPadShowing: true,
   playbackEvents: [],
   orderedFunctions: [],
   lastMeasure: 0,
-  soundLoadingProgress: 0,
+  // Default to 1 (fully loaded). When loading a new sound, the progress will be set back to 0 before the load starts.
+  // This is to prevent the progress bar from showing if there are no sounds to load initially.
+  soundLoadingProgress: 1,
   startingPlayheadPosition: 1,
   undoStatus: {
     canUndo: false,
     canRedo: false,
   },
+  currentCallout: {
+    id: undefined,
+    index: 0,
+  },
+  loopEnabled: false,
+  loopStart: 1,
+  loopEnd: 5,
+  key: DEFAULT_KEY,
+  bpm: DEFAULT_BPM,
 };
 
 const musicSlice = createSlice({
@@ -107,6 +132,15 @@ const musicSlice = createSlice({
     clearSelectedBlockId: state => {
       state.selectedBlockId = undefined;
     },
+    setSelectedTriggerId: (state, action: PayloadAction<string>) => {
+      if (state.isPlaying) {
+        return;
+      }
+      state.selectedTriggerId = action.payload;
+    },
+    clearSelectedTriggerId: state => {
+      state.selectedTriggerId = undefined;
+    },
     toggleTimelinePosition: state => {
       state.timelineAtTop = !state.timelineAtTop;
     },
@@ -137,15 +171,6 @@ const musicSlice = createSlice({
     },
     toggleHeaders: state => {
       state.hideHeaders = !state.hideHeaders;
-    },
-    showBeatPad: state => {
-      state.isBeatPadShowing = true;
-    },
-    hideBeatPad: state => {
-      state.isBeatPadShowing = false;
-    },
-    toggleBeatPad: state => {
-      state.isBeatPadShowing = !state.isBeatPadShowing;
     },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
@@ -191,6 +216,40 @@ const musicSlice = createSlice({
     ) => {
       state.undoStatus = action.payload;
     },
+    showCallout: (state, action: PayloadAction<string>) => {
+      state.currentCallout.id = action.payload;
+      state.currentCallout.index = state.currentCallout.index + 1;
+    },
+    clearCallout: state => {
+      state.currentCallout.id = undefined;
+    },
+    setLoopEnabled: (state, action: PayloadAction<boolean>) => {
+      state.loopEnabled = action.payload;
+    },
+    setLoopStart: (state, action: PayloadAction<number>) => {
+      state.loopStart = action.payload;
+    },
+    setLoopEnd: (state, action: PayloadAction<number>) => {
+      state.loopEnd = action.payload;
+    },
+    setKey: (state, action: PayloadAction<Key>) => {
+      let key = action.payload;
+      if (Key[key] === undefined) {
+        console.warn('Invalid key. Defaulting to C');
+        key = Key.C;
+      }
+
+      state.key = key;
+    },
+    setBpm: (state, action: PayloadAction<number>) => {
+      let bpm = action.payload;
+      if (bpm < MIN_BPM || bpm > MAX_BPM) {
+        console.warn('Invalid BPM. Defaulting to 120');
+        bpm = DEFAULT_BPM;
+      }
+
+      state.bpm = bpm;
+    },
   },
 });
 
@@ -232,6 +291,8 @@ export const {
   setIsPlaying,
   setCurrentPlayheadPosition,
   selectBlockId,
+  setSelectedTriggerId,
+  clearSelectedTriggerId,
   clearSelectedBlockId,
   toggleTimelinePosition,
   setShowInstructions,
@@ -241,9 +302,6 @@ export const {
   showHeaders,
   hideHeaders,
   toggleHeaders,
-  showBeatPad,
-  hideBeatPad,
-  toggleBeatPad,
   clearPlaybackEvents,
   clearOrderedFunctions,
   addPlaybackEvents,
@@ -253,4 +311,11 @@ export const {
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
   setUndoStatus,
+  showCallout,
+  clearCallout,
+  setLoopEnabled,
+  setLoopStart,
+  setLoopEnd,
+  setKey,
+  setBpm,
 } = musicSlice.actions;

@@ -224,7 +224,7 @@ Feature: Using the teacher dashboard
     Given I am a teacher
     And I create a new student section and go home
     And I attempt to join the section
-    Then I wait until element "#flashes" is visible
+    Then I wait until element "div.alert" is visible
     And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
   Scenario: Attempt to join an invalid section through the homepage
@@ -242,4 +242,4 @@ Feature: Using the teacher dashboard
     And I enter the section code into "input.ui-test-join-section"
     And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
-    And element ".announcement-notification" contains text matching "You are already the owner of section"
+    And element ".announcement-notification" contains text matching "You are already an instructor for section"

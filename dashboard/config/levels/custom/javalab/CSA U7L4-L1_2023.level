@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2023-04-11T14:04:10.000Z",
   "level_num": "custom",
@@ -20,11 +19,10 @@
       }
     },
     "project_template_level_name": "CSA U7L4-L1 Private PBT_2023",
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "Students will see the following error displayed in the console:\r\n\r\n```\r\n/RecipeRunner.java:20: error: filterByDiet(java.util.ArrayList<Recipe>,java.lang.String) has private access in RecipeBlog\r\n    ArrayList<Recipe> meatRecipes = blog.filterByDiet(recipes, \"meat\");\r\n                                        ^\r\n```\r\n\r\nSince the `filterByDiet()` method is a `private` method, it can only be accessed within the `RecipeBlog` class."
+    "teacher_markdown": "Students will see the following error displayed in the console:\r\n\r\n```\r\n/RecipeRunner.java:20: error: filterByDiet(java.util.ArrayList<Recipe>,java.lang.String) has private access in RecipeBlog\r\n    ArrayList<Recipe> meatRecipes = blog.filterByDiet(recipes, \"meat\");\r\n                                        ^\r\n```\r\n\r\nSince the `filterByDiet()` method is a `private` method, it can only be accessed within the `RecipeBlog` class.",
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-11T14:04:10.697+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L4_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L4_2023\"},{\"changed_at\":\"2023-04-11 14:04:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:41:23 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:42:07 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-09 15:02:18 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-09 15:07:45 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
