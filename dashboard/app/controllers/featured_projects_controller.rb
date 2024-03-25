@@ -5,7 +5,7 @@ class FeaturedProjectsController < ApplicationController
   # in the list of featured projects at 'projects/featured', but will not be displayed in the
   # public gallery until its status is 'active'.
   def bookmark
-    _, project_id = storage_decrypt_channel_id(params[:project_id])
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
     @featured_project.update! unfeatured_at: nil, featured_at: nil
@@ -14,7 +14,7 @@ class FeaturedProjectsController < ApplicationController
 
   # Set the featured project to 'active', i.e., project will be displayed in public gallery.
   def feature
-    _, project_id = storage_decrypt_channel_id(params[:project_id])
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
     @featured_project.update! unfeatured_at: nil, featured_at: DateTime.now
@@ -25,7 +25,7 @@ class FeaturedProjectsController < ApplicationController
 
   # Set the featured project to 'archived', i.e., project will not be displayed in public gallery.
   def unfeature
-    _, project_id = storage_decrypt_channel_id(params[:project_id])
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_by! project_id: project_id
     @featured_project.update! unfeatured_at: DateTime.now
@@ -33,7 +33,7 @@ class FeaturedProjectsController < ApplicationController
   end
 
   def destroy
-    _, project_id = storage_decrypt_channel_id(params[:project_id])
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_by! project_id: project_id
     @featured_project.destroy!
