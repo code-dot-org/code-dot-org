@@ -2,7 +2,7 @@ require 'test_helper'
 
 class FeaturedProjectsControllerTest < ActionController::TestCase
   setup do
-    @project_validator = create :project_validator   
+    @project_validator = create :project_validator
     # @featured_project has a project_id of 456
     @featured_project = create :featured_project
     @teacher = create :teacher
