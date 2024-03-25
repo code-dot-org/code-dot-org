@@ -11,11 +11,14 @@ import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './HeaderButtons.module.scss';
 import musicI18n from '../locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import MusicLibrary from '../player/MusicLibrary';
+import {getBaseAssetUrl} from '../appConfig';
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
   onClickRedo: () => void;
   clearCode: () => void;
+  currentPackName: string;
 }
 
 /**
@@ -25,6 +28,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickUndo,
   onClickRedo,
   clearCode,
+  currentPackName,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
   const {canUndo, canRedo} = useSelector(
@@ -32,6 +36,26 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useContext(DialogContext);
+
+  let packFolder = null;
+  let packImageSrc = null;
+  const library = MusicLibrary.getInstance();
+  if (library) {
+    packFolder = library.getAllowedFolderForFolderId(
+      undefined,
+      currentPackName
+    );
+
+    if (packFolder) {
+      const libraryGroupPath = library.libraryJson.path;
+
+      packImageSrc =
+        packFolder.imageSrc &&
+        `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
+          packFolder.imageSrc
+        }`;
+    }
+  }
 
   const onClickUndoRedo = useCallback(
     (action: 'undo' | 'redo') => {
@@ -77,8 +101,20 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           <button
             onClick={onClickStartOver}
             type="button"
-            className={classNames(moduleStyles.button)}
+            className={classNames(moduleStyles.button, moduleStyles.buttonWide)}
           >
+            {packFolder && packImageSrc && (
+              <span>
+                <img
+                  src={packImageSrc}
+                  style={{height: 19, borderRadius: 2}}
+                  alt=""
+                />
+                &nbsp; &nbsp;
+                {packFolder.name} &bull; {packFolder.artist}
+                &nbsp; &nbsp;
+              </span>
+            )}
             <FontAwesome
               title={musicI18n.startOver()}
               icon="refresh"

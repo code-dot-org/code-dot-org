@@ -208,6 +208,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 onClickUndo={undo}
                 onClickRedo={redo}
                 clearCode={clearCode}
+                currentPackName={currentPackName}
               />
             }
           >
