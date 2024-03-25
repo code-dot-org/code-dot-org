@@ -386,7 +386,7 @@ class Section < ApplicationRecord
   # Provides some information about a section. This provides a more concise set of information than
   # 'summarize' and is used for the list of sections in the teacher dashboard. The teacher dashboard
   # selected section still returns `summarize` to provide more information.
-  def concise_summarize()
+  def concise_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
       {
@@ -485,9 +485,9 @@ class Section < ApplicationRecord
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
         script: {
-                  id: script_id,
-                  name: script.try(:name),
-                  project_sharing: script.try(:project_sharing)
+          id: script_id,
+          name: script.try(:name),
+          project_sharing: script.try(:project_sharing)
         },
         studentCount: num_students,
         grades: grades,
