@@ -383,6 +383,41 @@ class Section < ApplicationRecord
     summarize(include_students: false)
   end
 
+  # Provides some information about a section. This provides a more concise set of information than
+  # 'summarize' and is used for the list of sections in the teacher dashboard. The teacher dashboard
+  # selected section still returns `summarize` to provide more information.
+  def concise_summarize()
+    ActiveRecord::Base.connected_to(role: :reading) do
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+      {
+        id: id,
+        name: name,
+        createdAt: created_at,
+        sectionInstructors: serialized_section_instructors,
+        code: code,
+        lesson_extras: lesson_extras,
+        pairing_allowed: pairing_allowed,
+        tts_autoplay_enabled: tts_autoplay_enabled,
+        sharing_disabled: sharing_disabled?,
+        login_type: login_type,
+        participant_type: participant_type,
+        course_offering_id: course_offering_id,
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+        unit_id: unit_group ? script_id : nil,
+        course_id: course_id,
+        grades: grades,
+        providerManaged: provider_managed?,
+        hidden: hidden,
+        restrict_section: restrict_section,
+        is_assigned_csa: assigned_csa?,
+        # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+        post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+        code_review_expires_at: code_review_expires_at,
+        sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+      }
+    end
+  end
+
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
@@ -412,8 +447,8 @@ class Section < ApplicationRecord
       # Remove ordering from scope when not including full
       # list of students, in order to improve query performance.
       unique_students = include_students ?
-        students.distinct(&:id) :
-        students.unscope(:order).distinct(&:id)
+                          students.distinct(&:id) :
+                          students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
@@ -450,9 +485,9 @@ class Section < ApplicationRecord
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
         script: {
-          id: script_id,
-          name: script.try(:name),
-          project_sharing: script.try(:project_sharing)
+                  id: script_id,
+                  name: script.try(:name),
+                  project_sharing: script.try(:project_sharing)
         },
         studentCount: num_students,
         grades: grades,
