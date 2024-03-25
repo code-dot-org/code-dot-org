@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-21 07:16:56 UTC",
+    "serialized_at": "2024-03-25 06:24:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5164,10 +5164,22 @@
       }
     },
     {
-      "key": "bb975541-aedb-4e69-b136-f2f6c6051a5c",
+      "key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Define nested loop and explain that when a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to demonstrate tracing a nested loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate & Modify: Nested Iteration"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401",
+        "lesson_activity.key": "e0189af7-daf7-47be-8ff9-2288c1e54d99"
+      }
+    },
+    {
+      "key": "bb975541-aedb-4e69-b136-f2f6c6051a5c",
+      "position": 7,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Define nested loop and explain that when a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to demonstrate tracing a nested loop.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5182,7 +5194,7 @@
     },
     {
       "key": "9023f2b4-7105-43e4-bd8a-9c23e7bb9f16",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students trace the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to explain the solution.\n"
       },
@@ -5193,7 +5205,7 @@
     },
     {
       "key": "9a5647bb-0714-4b81-acee-3db21eb0590a",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Now we know how to handle two important parts of using nested iteration in a Java program — the syntax for the loops and the way trace tables are used to check the logic of those loops. These are both important steps in helping us use nested iteration successfully.",
         "duration": "15",
@@ -7478,48 +7490,75 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict and Run: Nested Loops"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L-NestedIteration_L2_2025"
+          "CSA U2 Nested Iteration-L1 _2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+        "activity_section.key": "12dd0a16-a578-4265-8df0-a096a8d574f8"
       },
       "level_keys": [
-        "CSA U2L-NestedIteration_L2_2025"
+        "CSA U2 Nested Iteration-L1 _2025"
       ]
     },
     {
       "chapter": 90,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Investigate & Modify: Nested Iteration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L-NestedIteration_L3_2025"
+          "CSA U2 Nested Iteration-L2_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
       },
       "level_keys": [
-        "CSA U2L-NestedIteration_L3_2025"
+        "CSA U2 Nested Iteration-L2_2025"
       ]
     },
     {
       "chapter": 91,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate & Modify: Nested Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2 Nested Iteration-L3_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
+      },
+      "level_keys": [
+        "CSA U2 Nested Iteration-L3_2025"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L-NestedIteration_L4_2025"
+        ],
         "progression": "Practice: Nested Iteration"
       },
       "bonus": false,
@@ -7537,8 +7576,8 @@
       ]
     },
     {
-      "chapter": 92,
-      "position": 4,
+      "chapter": 93,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -7547,7 +7586,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L-NestedIteration_L5_2025"
+          "CSA U2 Nested Iteration-L6_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
@@ -7555,15 +7594,18 @@
         "activity_section.key": "9a5647bb-0714-4b81-acee-3db21eb0590a"
       },
       "level_keys": [
-        "CSA U2L-NestedIteration_L5_2025"
+        "CSA U2 Nested Iteration-L6_2025"
       ]
     },
     {
-      "chapter": 93,
-      "position": 5,
+      "chapter": 94,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L-NestedIteration_L6_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7581,7 +7623,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7605,7 +7647,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7630,7 +7672,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8714,26 +8756,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L-NestedIteration_L2_2025",
+        "level.key": "CSA U2 Nested Iteration-L1 _2025",
         "script_level.level_keys": [
-          "CSA U2L-NestedIteration_L2_2025"
+          "CSA U2 Nested Iteration-L1 _2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+        "activity_section.key": "12dd0a16-a578-4265-8df0-a096a8d574f8"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L-NestedIteration_L3_2025",
+        "level.key": "CSA U2 Nested Iteration-L2_2025",
         "script_level.level_keys": [
-          "CSA U2L-NestedIteration_L3_2025"
+          "CSA U2 Nested Iteration-L2_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2025",
-        "activity_section.key": "a8f350e3-b8bf-4a2e-89c8-3fd0650311a2"
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2 Nested Iteration-L3_2025",
+        "script_level.level_keys": [
+          "CSA U2 Nested Iteration-L3_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2025",
+        "activity_section.key": "ea52f335-99b1-46dc-8f2d-1a436e2d1401"
       }
     },
     {
@@ -8750,9 +8804,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L-NestedIteration_L5_2025",
+        "level.key": "CSA U2 Nested Iteration-L6_2025",
         "script_level.level_keys": [
-          "CSA U2L-NestedIteration_L5_2025"
+          "CSA U2 Nested Iteration-L6_2025"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-4",
