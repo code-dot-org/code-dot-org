@@ -1,0 +1,26 @@
+%center
+  %h1 Info for Student
+
+%h2 Assume Identity
+
+- if @user.deleted?
+  %p [Deleted User]
+- else
+  = form_tag assume_identity_path, method: :post do
+    = hidden_field_tag :user_id, @user.id
+    = submit_tag 'Go!', data: {confirm: 'You really are going to be careful, right?'}
+
+%h2 Basic Info
+
+= render partial: 'admin_search/users', locals: {users: [@user]}
+
+%h2 Authentication
+
+= render partial: 'admin_search/user_authentication', locals: {user: @user}
+
+%h2 Assigned Sections
+
+- sections = Section.with_deleted.where(id: Follower.with_deleted.where(student_user_id: @user.id).select(:section_id)).order(created_at: :desc)
+= render partial: 'admin_search/sections', locals: {sections: sections}
+
+= render partial: 'home/admin'

@@ -1,0 +1,27 @@
+%center
+  %h1 Info for Teacher
+
+%h2 Assume Identity
+
+- if @user.deleted?
+  %p [Deleted User]
+- else
+  = form_tag assume_identity_path, method: :post do
+    = hidden_field_tag :user_id, @user.id
+    = submit_tag 'Go!', data: {confirm: 'You really are going to be careful, right?'}
+
+%h2 Basic Info
+
+= render partial: 'admin_search/users', locals: {users: [@user]}
+
+%h2 Authentication
+
+= render partial: 'admin_search/user_authentication', locals: {user: @user}
+
+%h2 Teaching Sections
+
+= link_to 'Search Students', find_students_path(teacherEmailFilter: @user.email)
+
+= render partial: 'admin_search/sections', locals: {sections: @user.sections.limit(100).order(created_at: :desc)}
+
+= render partial: 'home/admin'

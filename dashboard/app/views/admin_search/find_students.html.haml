@@ -41,30 +41,7 @@
 %h2 #{@total_count}#{@total_count == AdminSearchController::MAX_TOTAL_SIZE ? '+' : ''} Users
 - if @total_count > 0
   = paginate @users, total_pages: (@total_count / AdminSearchController::MAX_PAGE_SIZE.to_f).ceil
-  %table.users
-    %tr
-      - ['ID', 'Name', 'Email', 'Provider', 'Can Share?', 'Deleted At', 'Undelete', 'Delete'].each do |field|
-        %th
-          %span= field
-    - @users.each do |user|
-      %tr
-        - [:id, :name, :email, :provider].each do |field|
-          %td
-            %span= user[field]
-        %td
-          %span= !user.sharing_disabled?
-        - if user.deleted?
-          %td
-            %span= user[:deleted_at]
-          %td
-            =link_to 'Undelete User', undelete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure?"}
-        - else
-          %td
-          %td
-          %td
-            =link_to delete_user_path(user_id: user[:id]), method: :post, class: "btn", data: {confirm: "Are you sure you want to DELETE this user?"} do
-              %i.fa.fa-trash
-              Delete User
+  = render partial: 'admin_search/users', locals: {users: @users}
 - else
   No users met the specified search criteria.
 
