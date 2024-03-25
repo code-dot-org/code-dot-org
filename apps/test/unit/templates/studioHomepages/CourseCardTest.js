@@ -29,7 +29,6 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}
@@ -55,7 +54,6 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}

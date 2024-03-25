@@ -92,7 +92,8 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
-    start_html
+    start_libraries
+    ai_tutor_available
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -330,9 +331,11 @@ class Level < ApplicationRecord
     'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
+    'Panels', # no ideal solution
     'Pixelation', # widget
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
+    'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
@@ -340,6 +343,7 @@ class Level < ApplicationRecord
     'Unplugged', # no solutions
     'Vigenere', # widget
     'Weblab', # no ideal solution
+    'Weblab2', # no ideal solution
     'Widget', # widget
   ].freeze
   TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(
@@ -515,7 +519,9 @@ class Level < ApplicationRecord
       level_id: id.to_s,
       type: self.class.to_s,
       name: name,
-      display_name: display_name
+      display_name: display_name,
+      is_validated: validated?,
+      can_have_feedback: can_have_feedback?
     }
   end
 
@@ -721,6 +727,23 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_validations
+    if should_localize?
+      validations_clone = validations.map(&:clone)
+      validations_clone.each do |validation|
+        validation['message'] = I18n.t(
+          validation["key"],
+          scope: [:data, :validations, name],
+          default: validation["message"],
+          smart: true
+        )
+      end
+      validations_clone
+    else
+      validations
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -746,17 +769,10 @@ class Level < ApplicationRecord
     }
   end
 
-  def get_level_for_progress(student, script)
-    if is_a?(BubbleChoice)
-      sublevel_for_progress = try(:get_sublevel_for_progress, student, script)
-      return sublevel_for_progress || self
-    elsif contained_levels.any?
-      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
-      # We only display our first contained level, display progress for that level.
-      return contained_levels.first
-    else
-      return self
-    end
+  def get_level_for_progress(student = nil, script = nil)
+    # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
+    # We only display our first contained level, display progress for that level.
+    contained_levels.first || self
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
@@ -785,18 +801,29 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties
+  def summarize_for_lab2_properties(script)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
+    properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    # Localized properties
+    properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
     properties_camelized
   end
 
   def project_type
     return game&.app
+  end
+
+  # Whether this level has validation for the completion of student work.
+  def validated?
+    if uses_lab2?
+      return properties.dig('level_data', 'validations').present?
+    end
+    properties['validation_code'].present? || properties['success_condition'].present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

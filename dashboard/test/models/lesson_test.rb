@@ -104,7 +104,9 @@ class LessonTest < ActiveSupport::TestCase
         level_id: level.id.to_s,
         type: level.class.to_s,
         name: level.name,
-        display_name: level.display_name
+        display_name: level.display_name,
+        is_validated: false,
+        can_have_feedback: level.can_have_feedback?
       }
     ]
 
@@ -881,7 +883,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'uncached lesson path helpers' do
-    hoc_unit = create :script, name: 'dance'
+    hoc_unit = create :script, name: 'dance-ai-2023'
     hoc_lesson_group = create :lesson_group, script: hoc_unit
     hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group
 

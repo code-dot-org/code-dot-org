@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
@@ -45,7 +46,7 @@ export default class LessonGroupInfoDialog extends Component {
 const styles = {
   description: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
   dialog: {
     paddingLeft: 20,
@@ -53,8 +54,7 @@ const styles = {
     paddingBottom: 20,
   },
   bigQuestion: {
-    fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   lessonGroupName: {
     color: color.purple,

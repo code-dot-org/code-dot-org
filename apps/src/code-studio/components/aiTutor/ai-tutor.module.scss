@@ -1,0 +1,76 @@
+@import 'color.scss';
+
+.floatingActionButton {
+    position: fixed;
+    left: 10px;
+    bottom: 48px;
+  
+    height: 60px;
+    width: 60px;
+    background-size: 60px;
+    padding: 0;
+  
+    border-width: 0;
+    border-radius: 30px;
+}
+
+.aiBotImg {
+    width: 42px;
+    height: 68px;
+    margin: 20px;
+    float: left;
+}
+
+.helpTypeSelect {
+    float: left;
+}
+
+.tutorContainer {
+    margin: 20px; 
+}
+  
+.hiddenAITutorPanel {
+    display: none;
+}
+
+.aiTutorPanel {
+    position: fixed;
+    left: 10px;
+    bottom: 116px;
+    width: 760px;
+    z-index: 400;
+    
+    h3 {
+        border-radius: 4px 4px 0 0;
+        background: $neutral_dark;
+        color: $neutral_white;
+        padding: 9px 15px 8px;
+
+        border-top: 2px solid $neutral_dark;
+        border-right: 2px solid $neutral_dark;
+        border-left: 2px solid $neutral_dark;
+
+        display: flex;
+        height: 30px;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+  }
+
+  .aiTutorPanelContent {
+    border-radius: 0 0 4px 4px;
+    border-right: 2px solid $neutral_dark;
+    border-left: 2px solid $neutral_dark;
+    border-bottom: 2px solid $neutral_dark;
+    background: $neutral_light;
+    box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
+  
+    height: 408px;
+  
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    padding: 16px;
+  }
+  

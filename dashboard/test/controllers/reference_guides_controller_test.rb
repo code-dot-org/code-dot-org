@@ -61,7 +61,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     sign_in @levelbuilder
 
-    assert_not_equal editable_reference_guide.content, 'new content'
+    refute_equal editable_reference_guide.content, 'new content'
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
 
     post :update, params: {
@@ -80,7 +80,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     sign_in @levelbuilder
 
-    assert_not_equal editable_reference_guide.content, 'new content'
+    refute_equal editable_reference_guide.content, 'new content'
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
 
     old_last_position = ReferenceGuide.where(course_version_id: @unit_group.course_version.id, parent_reference_guide_key: @reference_guide.key).last.position

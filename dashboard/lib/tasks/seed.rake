@@ -233,7 +233,7 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task_with_logging dsls: :environment do
     DSLDefined.transaction do
-      level_md5s_by_name = Hash[DSLDefined.pluck(:name, :md5)]
+      level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
 
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
@@ -335,6 +335,11 @@ namespace :seed do
   # Seeds the data in schools
   timed_task_with_logging schools: :environment do
     School.seed_all
+  end
+
+  # Seeds the data in census_summaries
+  timed_task_with_logging census_summaries: :environment do
+    Census::CensusSummary.seed_all
   end
 
   timed_task_with_logging sample_data: :environment do
@@ -451,7 +456,7 @@ namespace :seed do
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 

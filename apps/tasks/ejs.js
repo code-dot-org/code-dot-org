@@ -1,6 +1,4 @@
 module.exports = function (grunt) {
-  'use strict';
-
   var ejs = require('ejs');
   // Don't let ejs overload how the ejs extension is loaded, as this confuses
   // browserify
@@ -14,7 +12,7 @@ module.exports = function (grunt) {
       filename: filename,
       client: true,
       cache: false,
-      compileDebug: false
+      compileDebug: false,
     });
     code += ';\n';
     code += '  return function(locals) {\n';
@@ -25,7 +23,6 @@ module.exports = function (grunt) {
   };
 
   grunt.registerMultiTask('ejs', 'compile ejs templates', function () {
-
     var srcBase = this.data.srcBase;
     var destBase = this.data.destBase;
 
@@ -35,7 +32,7 @@ module.exports = function (grunt) {
       rename: function (destBase, destPath) {
         var filename = destPath.replace('src/', '');
         return path.join(destBase, filename);
-      }
+      },
     });
 
     files.forEach(function (file) {
@@ -43,7 +40,5 @@ module.exports = function (grunt) {
       var code = compile(filename, grunt.file.read(filename));
       grunt.file.write(file.dest, code);
     });
-
   });
-
 };

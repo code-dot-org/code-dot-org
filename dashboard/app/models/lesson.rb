@@ -257,7 +257,7 @@ class Lesson < ApplicationRecord
 
   def student_lesson_plan_pdf_url
     if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan
-      Services::CurriculumPdfs.get_lesson_plan_url(self, true)
+      Services::CurriculumPdfs.get_lesson_plan_url(self, student_facing: true)
     end
   end
 

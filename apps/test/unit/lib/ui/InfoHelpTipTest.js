@@ -5,6 +5,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 // "it renders" test that checks for FontAwesome and ReactTooltip
 
@@ -24,7 +25,8 @@ describe('InfoHelpTip', () => {
     const wrapper = shallow(<InfoHelpTip {...DEFAULT_PROPS} />);
     expect(wrapper.find(ReactTooltip)).to.have.lengthOf(1);
     expect(wrapper.find(ReactTooltip).props().id).to.equal('test-id');
-    expect(wrapper.find(ReactTooltip).children().text()).to.equal(
+    expect(wrapper.find(BodyTwoText)).to.have.lengthOf(1);
+    expect(wrapper.find(BodyTwoText).at(0).props().children).to.equal(
       'test content'
     );
   });

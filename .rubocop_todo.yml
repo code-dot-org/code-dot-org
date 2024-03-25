@@ -124,10 +124,6 @@ Naming/MethodParameterName:
 Naming/VariableNumber:
   Enabled: false
 
-# Offense count: 20
-Performance/MethodObjectAsBlock:
-  Enabled: false
-
 # Offense count: 7
 # This cop supports safe auto-correction (--auto-correct).
 Rails/ApplicationMailer:
@@ -169,14 +165,6 @@ Rails/Pluck:
 # Configuration parameters: Include.
 # Include: **/Rakefile, **/*.rake
 Rails/RakeEnvironment:
-  Enabled: false
-
-# Offense count: 1975
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, Include.
-# SupportedStyles: assert_not, refute
-# Include: **/test/**/*
-Rails/RefuteMethods:
   Enabled: false
 
 # Offense count: 106
@@ -222,10 +210,6 @@ Style/CombinableLoops:
 # Configuration parameters: Keywords, RequireColon.
 # Keywords: TODO, FIXME, OPTIMIZE, HACK, REVIEW, NOTE
 Style/CommentAnnotation:
-  Enabled: false
-
-# Offense count: 2
-Style/DocumentDynamicEvalDefinition:
   Enabled: false
 
 # Offense count: 2
@@ -277,18 +261,6 @@ Style/GlobalStdStream:
 # Offense count: 325
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowSplatArgument.
-Style/HashConversion:
-  Enabled: false
-
-# Offense count: 31
-# This cop supports unsafe auto-correction (--auto-correct-all).
-# Configuration parameters: AllowedReceivers.
-Style/HashEachMethods:
   Enabled: false
 
 # Offense count: 2

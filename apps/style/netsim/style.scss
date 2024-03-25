@@ -195,12 +195,12 @@ $wide-column-width: 121px;
   }
 
   h1 {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 
   p,
   label {
-    font-family: $gotham-regular;
+    @include main-font-regular;
   }
 
   table {
@@ -213,14 +213,14 @@ $wide-column-width: 121px;
     }
 
     th {
+      @include main-font-regular;
       border: solid $charcoal 1px;
-      font-family: $gotham-regular;
       font-size: 10pt;
     }
 
     td {
+      @include main-font-regular;
       border: solid $lighter_gray 1px;
-      font-family: $gotham-regular;
 
       // Make sure table text can be selected and copied
       @include user-select(text);
@@ -258,11 +258,11 @@ $wide-column-width: 121px;
 
   // Orange SPAN button
   .netsim-button {
+    @include main-font-regular;
     display: inline-block;
     color: $white;
     background-color: $orange;
     border-radius: 3px;
-    font-family: $gotham-regular;
     font-size: 8pt;
     line-height: 14pt;
     padding: 0 10px;
@@ -534,11 +534,10 @@ $wide-column-width: 121px;
     padding: 0;
 
     h1 {
+      @include main-font-regular;
       margin: 0;
       padding: 0.3em;
-      font-family: $gotham-regular;
       font-size: 110%;
-      font-weight: bold;
       line-height: 110%;
       background-color: $cyan;
       color: $white;
@@ -945,7 +944,7 @@ $wide-column-width: 121px;
         border: none;
         margin-right: 2px;
         a {
-          font-family: $gotham-bold;
+          @include main-font-semi-bold;
           font-size: 8pt;
           padding: 0 1em;
         }

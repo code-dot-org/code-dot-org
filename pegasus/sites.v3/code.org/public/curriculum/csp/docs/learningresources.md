@@ -110,12 +110,12 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       </td>
     </tr>
     <tr>
-      <td rowspan="1" style="color: white; border:1px solid white; background-color:#00adbc; text-align: center;">Practice PT</td>
-      <td style="color: white; border:1px solid white; background-color:#00adbc">
+      <td rowspan="1" style="color: white; border:1px solid white; background-color:var(--brand_primary_default); text-align: center;">Practice PT</td>
+      <td style="color: white; border:1px solid white; background-color:var(--brand_primary_default)">
         <a href="https://code.org/curriculum/cspunit3/8/Teacher">U3L08 - Design a Digital Scene</a>
       </td>
-      <td style="color: white; border:1px solid white; background-color:#00adbc"></td>
-      <td style="color: white; border:1px solid white; background-color:#00adbc"></td>
+      <td style="color: white; border:1px solid white; background-color:var(--brand_primary_default)"></td>
+      <td style="color: white; border:1px solid white; background-color:var(--brand_primary_default)"></td>
     </tr>
     <tr>
       <td rowspan="5" style="color: white; border:1px solid white; text-align: center;">Event-Driven Programming and Apps</td>
@@ -291,12 +291,12 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;"></td>
     </tr>
     <tr>
-      <td rowspan="1" style="color: white; border:1px solid white; background-color:#00adbc; text-align: center;">Practice PT</td>
-      <td style="color: white; border:1px solid white; background-color:#00adbc">
+      <td rowspan="1" style="color: white; border:1px solid white; background-color:var(--brand_primary_default); text-align: center;">Practice PT</td>
+      <td style="color: white; border:1px solid white; background-color:var(--brand_primary_default)">
         <a href="https://code.org/curriculum/cspunit3/29/Teacher">U3L29 - Improve Your App</a>
       </td>
-      <td style="color: white; border:1px solid white; background-color:#00adbc"></td>
-      <td style="color: white; border:1px solid white; background-color:#00adbc"></td>
+      <td style="color: white; border:1px solid white; background-color:var(--brand_primary_default)"></td>
+      <td style="color: white; border:1px solid white; background-color:var(--brand_primary_default)"></td>
     </tr>
   </tbody>
 </table>

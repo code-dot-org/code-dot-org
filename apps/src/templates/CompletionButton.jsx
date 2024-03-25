@@ -48,7 +48,7 @@ class CompletionButton extends Component {
           className="share"
           style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
         >
-          <img src="/blockly/media/1x1.gif" />
+          <img src="/blockly/media/1x1.gif" alt="" />
           {contents}
         </button>
       </ProtectedStatefulDiv>

@@ -283,6 +283,10 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
   wait_until {@browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')")}
 end
 
+Then /^I wait until element "([^"]*)" is (not )?open$/ do |selector, negation|
+  wait_until {element_open?(selector) == negation.nil?}
+end
+
 When /^I wait until jQuery Ajax requests are finished$/ do
   wait_short_until {@browser.execute_script("return $.active == 0")}
 end
@@ -765,6 +769,7 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 def jquery_element_exists(selector)
+  wait_for_jquery
   "return $(#{selector.dump}).length > 0"
 end
 
@@ -788,6 +793,10 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
+Then /^element "([^"]*)" does exist/ do |selector|
+  expect(element_exists?(selector)).to eq(true)
+end
+
 Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
 end
@@ -805,9 +814,13 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
+  dropdown_selection = age
+  if age == 21
+    dropdown_selection = "21+"
+  end
   steps <<~GHERKIN
     And element ".age-dialog" is visible
-    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I select the "#{dropdown_selection}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
   GHERKIN
 end
@@ -887,6 +900,11 @@ end
 Then /^I wait for image "([^"]*)" to load$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
+end
+
+Then /^I wait for the video thumbnails to load$/ do
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return Array.from(document.querySelectorAll('img.thumbnail-image')).filter((img) => !img.complete).length == 0;")}
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
@@ -1049,6 +1067,13 @@ And /^I dismiss the teacher panel$/ do
   steps <<~GHERKIN
     And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
     And I wait until I see selector ".teacher-panel > .show-handle > .fa-chevron-left"
+  GHERKIN
+end
+
+And /^I dismiss the hoc guide dialog$/ do
+  steps <<~GHERKIN
+    And I click selector "#uitest-no-email-guide" if I see it
+    And I wait until I don't see selector "#uitest-no-email-guide"
   GHERKIN
 end
 
@@ -1445,4 +1470,12 @@ And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/)
   params = JSON.parse(Base64.urlsafe_decode64(encoded_params))
   expect(params['name']).to eq(name)
   expect(params['course']).to eq(course)
+end
+
+And(/^I validate rubric ai config for all lessons$/) do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_validate_rubric_ai_config"))
+    response_code = response.code
+    expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
+  end
 end

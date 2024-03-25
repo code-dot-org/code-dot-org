@@ -10,6 +10,7 @@ RUBY_BUILD_VERSION = '20221225'.freeze
 
 remote_file '/tmp/ruby-build.tar.gz' do
   source "https://github.com/rbenv/ruby-build/archive/refs/tags/v#{RUBY_BUILD_VERSION}.tar.gz"
+  action :create_if_missing
 end
 
 archive_file '/tmp/ruby-build.tar.gz' do

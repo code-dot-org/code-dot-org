@@ -23,6 +23,7 @@
 #  funded              :boolean
 #  funding_type        :string(255)
 #  properties          :text(65535)
+#  module              :string(255)
 #
 # Indexes
 #
@@ -147,7 +148,7 @@ class Pd::Workshop < ApplicationRecord
   def self.enrolled_in_by(teacher)
     base_query = joins(:enrollments)
     user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
-    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
+    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email_for_enrollments})
 
     user_id_where_clause.or(email_where_clause).distinct
   end
@@ -528,7 +529,7 @@ class Pd::Workshop < ApplicationRecord
   def self.send_teacher_pre_work_csa
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
-    scheduled_start_in_days(20).each do |workshop|
+    scheduled_start_in_days(20).select {|ws| ws.course == COURSE_CSA && ws.subject == Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP}.each do |workshop|
       workshop.enrollments.each do |enrollment|
         Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment).deliver_now
       rescue => exception
@@ -545,7 +546,7 @@ class Pd::Workshop < ApplicationRecord
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
-    send_teacher_pre_work_csa if course == COURSE_CSA
+    send_teacher_pre_work_csa
   end
 
   # Updates enrollments with resolved users.
@@ -705,7 +706,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Get all teachers who have attended all sessions of this workshop.
-  def teachers_attending_all_sessions(filter_by_cdo_scholarship = false)
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship: false)
     teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
 
     # Filter attendances to only scholarship teachers
@@ -804,8 +805,6 @@ class Pd::Workshop < ApplicationRecord
   def survey_responses
     if teachercon?
       Pd::TeacherconSurvey.where(pd_enrollment: enrollments)
-    elsif local_summer?
-      Pd::LocalSummerWorkshopSurvey.where(pd_enrollment: enrollments)
     else
       raise 'Not supported for this workshop type'
     end
@@ -913,5 +912,13 @@ class Pd::Workshop < ApplicationRecord
 
   def user_attended?(user)
     attending_teachers.include?(user)
+  end
+
+  def summarize_for_my_pl_page
+    {
+      course_name: course_name,
+      dates: workshop_date_range_string,
+      location: location_address,
+    }
   end
 end

@@ -1,12 +1,12 @@
-@import "color.scss";
+@import 'color', 'font';
 
 %control-button {
+  @include main-font-regular;
   float: left;
   font-size: 15px;
   width: 140px;
   background-color: $orange;
   border-color: $orange;
-  font-family: "Gotham 5r", sans-serif;
   padding: 5px 12px;
   margin: 5px 0 5px 5px;
   justify-content: center;

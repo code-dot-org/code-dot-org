@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "curriculum_umbrella": "AI",
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2023-04-15 03:51:09 UTC",
+    "serialized_at": "2023-10-11 15:47:24 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -517,6 +517,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -17,7 +17,6 @@ const examplePLCard = {
 };
 
 export default {
-  title: 'CourseCard',
   component: CourseCard,
 };
 

@@ -1,4 +1,5 @@
 require 'cdo/shared_cache'
+require 'policies/user'
 
 # Persist user attributes into the session and/or a shared cache during a multi-step
 # registration process.
@@ -15,7 +16,11 @@ module PartialRegistration
       cache_key = session[SESSION_KEY]
       json = CDO.shared_cache.read(cache_key)
       attributes = JSON.parse(json)
-      new(attributes, &block)
+      user = new(attributes, &block)
+      if user.primary_contact_info.nil?
+        user.primary_contact_info = user.authentication_options&.first
+      end
+      user
     end
   end
 
@@ -26,7 +31,8 @@ module PartialRegistration
   def self.persist_attributes(session, user)
     # Push the potential user's attributes into our application cache.
     cache_key = PartialRegistration.cache_key(user)
-    CDO.shared_cache.write(cache_key, user.attributes.compact.to_json)
+    user_attributes = Policies::User.user_attributes(user)
+    CDO.shared_cache.write(cache_key, user_attributes.to_json)
 
     # Put the cache key into the session, to
     # 1. track that a partial registration is in progress
@@ -47,11 +53,14 @@ module PartialRegistration
     # interacting with the cache or doing deserialization.
     # Assumption: Provider names will not contain hyphens
     cache_key = session[SESSION_KEY]
-    /^([^-]+)-.+-partial-sso$/.match(cache_key)&.captures&.first
+    /^([^-]+)-.+-partial-sso.*$/.match(cache_key)&.captures&.first
   end
 
   def self.cache_key(user)
-    if user.uid.present?
+    if user.migrated? && user.authentication_options.present?
+      ao = user.authentication_options.first
+      "#{ao.credential_type}-#{ao.authentication_id}-partial-sso-migrated"
+    elsif user.uid.present?
       "#{user.provider}-#{user.uid}-partial-sso"
     else
       "#{User.hash_email(user.email)}-partial-email"

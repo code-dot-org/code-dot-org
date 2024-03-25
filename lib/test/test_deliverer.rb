@@ -36,8 +36,10 @@ class DelivererTest < Minitest::Test
     contact = Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})
 
     # Sequel doesn't have a "find or create by", so we implement it manually
+    # rubocop:disable CustomCops/PegasusDbUsage
     message = POSTE_DB[:poste_messages].where(name: "dashboard").first
     message_id = message.nil? ? POSTE_DB[:poste_messages].insert({name: "dashboard"}) : message[:id]
+    # rubocop:enable CustomCops/PegasusDbUsage
 
     delivery = {
       id: 1,

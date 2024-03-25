@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -177,6 +177,9 @@ class ProjectsController < ApplicationController
     },
     ecosystems: {
       name: 'New Ecosystems Project'
+    },
+    game_design: {
+      name: 'New Game Design Project'
     }
   }.with_indifferent_access.freeze
 
@@ -217,11 +220,18 @@ class ProjectsController < ApplicationController
     extract_data_for_tables(project_featured_project_combo_data)
   end
 
+  def get_featured_project_status(featured_at, unfeatured_at)
+    return SharedConstants::FEATURED_PROJECT_STATUS.archived if featured_at && unfeatured_at
+    return SharedConstants::FEATURED_PROJECT_STATUS.active if featured_at
+    SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
+  end
+
   def extract_data_for_tables(project_featured_project_combo_data)
     @featured_project_table_rows = []
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
       channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      status = get_featured_project_status(project_details[:featured_at], project_details[:unfeatured_at])
       featured_project_row = {
         projectName: project_details_value['name'],
         channel: channel,
@@ -231,21 +241,28 @@ class ProjectsController < ApplicationController
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
         unfeaturedAt: project_details[:unfeatured_at],
+        status: status
       }
       @featured_project_table_rows << featured_project_row
     end
-    sort_projects(@featured_project_table_rows)
+    sort_featured_projects(@featured_project_table_rows)
   end
 
   # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
-  # The rows are sorted into two arrays: featured or unfeatured, based on
-  # on whether the project is currently featured or not.
-  def sort_projects(featured_project_table_rows)
-    @featured = []
-    @unfeatured = []
+  # The rows are sorted into three arrays: active, archived, or bookmarked.
+  def sort_featured_projects(featured_project_table_rows)
+    @active = []
+    @archived = []
+    @bookmarked = []
     featured_project_table_rows.each do |row|
-      featured = row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
-      featured ? @featured << row : @unfeatured << row
+      status = get_featured_project_status(row[:featuredAt], row[:unfeaturedAt])
+      if status == SharedConstants::FEATURED_PROJECT_STATUS.archived
+        @archived << row
+      elsif status == SharedConstants::FEATURED_PROJECT_STATUS.active
+        @active << row
+      else
+        @bookmarked << row
+      end
     end
   end
 
@@ -451,6 +468,21 @@ class ProjectsController < ApplicationController
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  def can_publish_age_status
+    project = Project.find_by_channel_id(params[:channel_id])
+    unless project.apply_project_age_publish_limits?
+      return render json: {
+        project_existed_long_enough_to_publish: true,
+        user_existed_long_enough_to_publish: true
+      }
+    end
+
+    render json: {
+      project_existed_long_enough_to_publish: project.existed_long_enough_to_publish?,
+      user_existed_long_enough_to_publish: project.owner_existed_long_enough_to_publish?
+    }
   end
 
   private def uses_asset_bucket?(project_type)

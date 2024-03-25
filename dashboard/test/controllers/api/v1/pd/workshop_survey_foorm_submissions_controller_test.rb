@@ -23,8 +23,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ActionControll
     response = post :create, params: @default_params
     assert_response :created
     response_body = JSON.parse(response.body)
-    assert_not_nil response_body['submission_id']
-    assert_not_nil response_body['survey_submission_id']
+    refute_nil response_body['submission_id']
+    refute_nil response_body['survey_submission_id']
   end
 
   # this enforces a requirement which the RED team depends on
@@ -41,8 +41,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ActionControll
     response = post :create, params: @default_params.except(:answers)
     assert_response :created
     response_body = JSON.parse(response.body)
-    assert_not_nil response_body['submission_id']
-    assert_not_nil response_body['survey_submission_id']
+    refute_nil response_body['submission_id']
+    refute_nil response_body['survey_submission_id']
 
     # A submission's answers cannot be null, so we store a blank JSON object string if a submission has no answers
     assert_equal "{}", Pd::WorkshopSurveyFoormSubmission.find(response_body['survey_submission_id']).foorm_submission.answers
@@ -54,8 +54,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ActionControll
     response = post :create, params: params
     assert_response :created
     response_body = JSON.parse(response.body)
-    assert_not_nil response_body['submission_id']
-    assert_not_nil response_body['survey_submission_id']
+    refute_nil response_body['submission_id']
+    refute_nil response_body['survey_submission_id']
 
     post :create, params: params
     assert_response :conflict
@@ -67,8 +67,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ActionControll
     response = post :create, params: params
     assert_response :created
     response_body = JSON.parse(response.body)
-    assert_not_nil response_body['submission_id']
-    assert_not_nil response_body['survey_submission_id']
+    refute_nil response_body['submission_id']
+    refute_nil response_body['survey_submission_id']
 
     post :create, params: params
     assert_response :conflict

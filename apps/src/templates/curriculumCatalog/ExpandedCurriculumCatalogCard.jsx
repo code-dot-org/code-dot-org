@@ -15,8 +15,12 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
+import {defaultImageSrc} from './curriculumCatalogConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const ExpandedCurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradeRange,
@@ -31,11 +35,16 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonOnClick,
   assignButtonDescription,
   onClose,
+  setExpandedCardKey,
   isInUS,
   imageSrc,
   imageAltText,
   availableResources,
+  isSignedOut,
+  isTeacher,
+  getRecommendedSimilarCurriculum,
 }) => {
+  const isTeacherOrSignedOut = isSignedOut || isTeacher;
   const expandedCardRef = useRef(null);
   const iconData = {
     ideal: {
@@ -62,10 +71,25 @@ const ExpandedCurriculumCatalogCard = ({
     'Rubric',
   ];
 
+  const availableResourcesCount = availableResources
+    ? Object.keys(availableResources).length
+    : 0;
+
   let availableResourceCounter = 0;
 
   const displayDivider = () => {
-    return ++availableResourceCounter < Object.keys(availableResources).length;
+    return ++availableResourceCounter < availableResourcesCount;
+  };
+
+  const recommendedSimilarCurriculum =
+    getRecommendedSimilarCurriculum(courseKey);
+
+  const handleClickRecommendedSimilarCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_curriculum_offering: recommendedSimilarCurriculum.key,
+    });
+    setExpandedCardKey(recommendedSimilarCurriculum.key);
   };
 
   useEffect(() => {
@@ -76,6 +100,10 @@ const ExpandedCurriculumCatalogCard = ({
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
 
+  const quickViewButtonColor = !isTeacherOrSignedOut
+    ? Button.ButtonColor.brandSecondaryDefault
+    : Button.ButtonColor.neutralDark;
+
   return (
     <div ref={expandedCardRef}>
       <div
@@ -85,9 +113,7 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <Heading3 style={{marginBottom: '8px'}}>
-                {courseDisplayName}
-              </Heading3>
+              <Heading3>{courseDisplayName}</Heading3>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="user" className="fa-solid" />
@@ -108,9 +134,7 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionVideoContainer}>
                   <div className={style.descriptionContainer}>
-                    <BodyTwoText className={style.descriptionText}>
-                      {description}
-                    </BodyTwoText>
+                    <BodyTwoText>{description}</BodyTwoText>
                   </div>
                   <div className={style.mediaContainer}>
                     {video ? (
@@ -138,7 +162,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {availableResources && (
+                    {availableResourcesCount > 0 && (
                       <div>
                         <Heading4 visualAppearance="heading-xs">
                           {i18n.availableResources()}
@@ -161,6 +185,7 @@ const ExpandedCurriculumCatalogCard = ({
                     )}
                   </div>
                   {isInUS &&
+                    (isSignedOut || isTeacher) &&
                     (professionalLearningProgram ||
                       selfPacedPlCourseOfferingPath) && (
                       <div className={style.professionalLearningContainer}>
@@ -223,23 +248,35 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.buttonsContainer}>
                 <Button
                   __useDeprecatedTag
-                  color={Button.ButtonColor.neutralDark}
+                  color={quickViewButtonColor}
                   type="button"
                   href={pathToCourse}
-                  aria-label={i18n.quickViewDescription({
-                    course_name: courseDisplayName,
-                  })}
-                  text={i18n.seeCurriculumDetails()}
-                  style={{flex: 1}}
+                  aria-label={
+                    isTeacherOrSignedOut
+                      ? i18n.quickViewDescription({
+                          course_name: courseDisplayName,
+                        })
+                      : i18n.tryCourseNow({
+                          course_name: courseDisplayName,
+                        })
+                  }
+                  text={
+                    isTeacherOrSignedOut
+                      ? i18n.seeCurriculumDetails()
+                      : i18n.tryNow()
+                  }
+                  className={centererStyle.buttonFlex}
                 />
-                <Button
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  type="button"
-                  onClick={() => assignButtonOnClick('expanded-card')}
-                  aria-label={assignButtonDescription}
-                  text={i18n.assignToClassSections()}
-                  style={{flex: 1}}
-                />
+                {isTeacherOrSignedOut && (
+                  <Button
+                    color={Button.ButtonColor.brandSecondaryDefault}
+                    type="button"
+                    onClick={() => assignButtonOnClick('expanded-card')}
+                    aria-label={assignButtonDescription}
+                    text={i18n.assignToClassSections()}
+                    className={centererStyle.buttonFlex}
+                  />
+                )}
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
@@ -251,11 +288,26 @@ const ExpandedCurriculumCatalogCard = ({
                   aria-label="Close Button"
                 />
               </div>
-              <div className={style.relatedContainer} style={{display: 'none'}}>
+              <div className={style.relatedContainer}>
                 <Heading4 visualAppearance="heading-xs">
                   {i18n.relatedCurricula()}
                 </Heading4>
                 <hr className={style.thickDivider} />
+                <img
+                  id="similarCurriculumImage"
+                  src={recommendedSimilarCurriculum.image || defaultImageSrc}
+                  style={{height: '100%'}}
+                  alt={recommendedSimilarCurriculum.display_name}
+                />
+                <Button
+                  id="similarCurriculumButton"
+                  name={recommendedSimilarCurriculum.display_name}
+                  type="button"
+                  styleAsText
+                  className={style.relatedCurriculaLink}
+                  text={recommendedSimilarCurriculum.display_name}
+                  onClick={handleClickRecommendedSimilarCurriculum}
+                />
               </div>
             </div>
           </div>
@@ -265,6 +317,7 @@ const ExpandedCurriculumCatalogCard = ({
   );
 };
 ExpandedCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string.isRequired,
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
@@ -279,9 +332,13 @@ ExpandedCurriculumCatalogCard.propTypes = {
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
+  setExpandedCardKey: PropTypes.func.isRequired,
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
   availableResources: PropTypes.object,
+  isTeacher: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
+  getRecommendedSimilarCurriculum: PropTypes.func.isRequired,
 };
 export default ExpandedCurriculumCatalogCard;

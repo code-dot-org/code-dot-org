@@ -5,7 +5,7 @@ import moment from 'moment';
 import i18n from '@cdo/locale';
 import {
   ViewType,
-  scriptDataPropType,
+  unitDataPropType,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {
   studentLessonProgressType,
@@ -16,7 +16,6 @@ import {
   getCurrentUnitData,
   jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import styleConstants from '@cdo/apps/styleConstants';
 import ProgressTableStudentList from './ProgressTableStudentList';
 import ProgressTableContentView from './ProgressTableContentView';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
@@ -27,9 +26,9 @@ import {
   getLevelIconHeaderFormatter,
 } from './progressTableHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import letterCompare from '@cdo/apps/util/letterCompare';
 import classnames from 'classnames';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -74,7 +73,7 @@ class ProgressTableView extends React.Component {
     // redux
     sectionId: PropTypes.number.isRequired,
     students: PropTypes.arrayOf(studentShape),
-    scriptData: scriptDataPropType.isRequired,
+    scriptData: unitDataPropType.isRequired,
     lessonProgressByStudent: PropTypes.objectOf(
       PropTypes.objectOf(studentLessonProgressType)
     ).isRequired,
@@ -110,20 +109,10 @@ class ProgressTableView extends React.Component {
     // objects also include an `expansionIndex` to determine which lesson
     // formatter to use to render the row.
 
-    // Returns a comparator function that sorts objects a and b by the given
-    // keys, in order of priority.
-    // Example: comparator(['familyName', 'name']) will sort by familyName
-    // first, looking at name if necessary to break ties.
-    const comparator = keys => (a, b) =>
-      keys.reduce(
-        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
-        0
-      );
-
     // Sort students, in-place.
     const sortedStudents = props.isSortedByFamilyName
-      ? props.students.sort(comparator(['familyName', 'name']))
-      : props.students.sort(comparator(['name', 'familyName']));
+      ? props.students.sort(stringKeyComparator(['familyName', 'name']))
+      : props.students.sort(stringKeyComparator(['name', 'familyName']));
 
     this.state = {
       rows: sortedStudents.map((student, index) => {
@@ -162,12 +151,7 @@ class ProgressTableView extends React.Component {
 
   sortTableRows() {
     const comparator = keys => (a, b) =>
-      keys.reduce(
-        (result, key) =>
-          result || letterCompare(a.student[key] || '', b.student[key] || ''),
-        0
-      );
-
+      stringKeyComparator(keys)(a.student, b.student);
     const sortedRows = this.props.isSortedByFamilyName
       ? this.state.rows.sort(comparator(['familyName', 'name']))
       : this.state.rows.sort(comparator(['name', 'familyName']));
@@ -416,7 +400,7 @@ class ProgressTableView extends React.Component {
 
 const styles = {
   container: {
-    width: styleConstants['content-width'],
+    width: parseInt(progressTableStyleConstants.TABLE_WIDTH),
   },
   studentList: {
     display: 'inline-block',

@@ -105,6 +105,7 @@ export class Workshop extends React.Component {
             'virtual',
             'suppress_email',
             'third_party_provider',
+            'module',
           ]),
         });
       })

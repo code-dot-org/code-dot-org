@@ -1,12 +1,17 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+import {act} from 'react-dom/test-utils';
+import sinon from 'sinon';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   UnconnectedTopInstructions as TopInstructions,
   TabType,
 } from '@cdo/apps/templates/instructions/TopInstructions';
+import * as TopInstructionsDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -265,12 +270,26 @@ describe('TopInstructions', () => {
           .be.false;
       });
 
-      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and cannot leave feedback', () => {
         const props = {...DEFAULT_PROPS, displayReviewTab: true};
         const wrapper = shallow(<TopInstructions {...props} />);
 
         wrapper.setState({
           teacherViewingStudentWork: true,
+          teacherCanLeaveFeedback: false,
+        });
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
+      });
+
+      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and can leave feedback', () => {
+        const props = {...DEFAULT_PROPS, displayReviewTab: true};
+        const wrapper = shallow(<TopInstructions {...props} />);
+
+        wrapper.setState({
+          teacherViewingStudentWork: true,
+          teacherCanLeaveFeedback: true,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
@@ -382,6 +401,76 @@ describe('TopInstructions', () => {
         expect(wrapper.find(TopInstructionsHeader).props().displayReviewTab).to
           .be.true;
       });
+    });
+  });
+
+  describe('viewing the TA Rubric Tab', () => {
+    let getTaRubricFeedbackForStudentStub;
+    beforeEach(() => {
+      getTaRubricFeedbackForStudentStub = sinon.stub(
+        TopInstructionsDataApi,
+        'getTaRubricFeedbackForStudent'
+      );
+    });
+    afterEach(() => {
+      getTaRubricFeedbackForStudentStub.restore();
+    });
+
+    it('defaults to the rubrics tab if there is feedback', async () => {
+      getTaRubricFeedbackForStudentStub.returns(
+        Promise.resolve({
+          value: [{feedback: 'feedback', understanding: 3}],
+        })
+      );
+      const wrapper = shallow(
+        <TopInstructions
+          {...DEFAULT_PROPS}
+          viewAs={ViewType.Participant}
+          taRubric={{learningGoals: []}}
+        />
+      );
+      await act(async () => {
+        await Promise.resolve();
+      });
+      wrapper.update();
+      expect(getTaRubricFeedbackForStudentStub).to.have.been.calledOnce;
+      expect(wrapper.find('StudentRubricView')).to.have.lengthOf(1);
+    });
+
+    it('does not default to the rubrics tab if there is no feedback', async () => {
+      getTaRubricFeedbackForStudentStub.returns(
+        Promise.resolve({
+          value: [],
+        })
+      );
+      const wrapper = shallow(
+        <TopInstructions
+          {...DEFAULT_PROPS}
+          viewAs={ViewType.Participant}
+          taRubric={{learningGoals: []}}
+        />
+      );
+      await act(async () => {
+        await Promise.resolve();
+      });
+      wrapper.update();
+      expect(getTaRubricFeedbackForStudentStub).to.have.been.calledOnce;
+      expect(wrapper.find('StudentRubricView')).to.have.lengthOf(0);
+      expect(wrapper.find('TopInstructionsHeader').props().displayTaRubricTab)
+        .to.be.true;
+    });
+
+    it('does not try to fetch TA rubric feedback if no rubric exists', () => {
+      const wrapper = shallow(
+        <TopInstructions
+          {...DEFAULT_PROPS}
+          viewAs={ViewType.Participant}
+          taRubric={null}
+        />
+      );
+      expect(getTaRubricFeedbackForStudentStub).to.not.have.been.called;
+      expect(wrapper.find('TopInstructionsHeader').props().displayTaRubricTab)
+        .to.be.false;
     });
   });
 });

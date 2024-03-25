@@ -3,7 +3,6 @@ import {CohortViewTable} from './cohort_view_table';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default {
-  title: 'CohortViewTable',
   component: CohortViewTable,
 };
 

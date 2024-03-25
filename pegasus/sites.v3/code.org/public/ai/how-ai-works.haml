@@ -9,8 +9,8 @@ theme: responsive_full_width
 %section.hero-banner-basic
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
-      %h1{style: "color: white"}=hoc_s(:how_ai_works_hero_heading)
-      %p.body-one{style: "color: white"}=hoc_s(:how_ai_works_hero_desc)
+      %h1.white=hoc_s(:how_ai_works_hero_heading)
+      %p.body-one.white=hoc_s(:how_ai_works_hero_desc)
     %figure
       %img{src: "/images/banners/ai-bot-artist-w-trophy.png", alt: ""}
 
@@ -31,6 +31,8 @@ theme: responsive_full_width
       %a.link-button{href: "#how-ai-works-lessons"}
         =hoc_s(:call_to_action_explore_lessons)
     .clear
+
+= view :dance_party_ai_skinny_banner
 
 %section#how-ai-works-lessons
   .wrapper

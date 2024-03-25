@@ -32,15 +32,8 @@ module Policies
 
     # Return a glob which can be used either to find the specified level file
     # by name if provided, or all level files if not.
-    #
-    # Supports both our old level file location at
-    # "config/scripts/**/{name}.level" and our new level file location at
-    # "config/levels/(custom|dsl_defined)/{game}/{name}.level"
-    #
-    # TODO: once all old level files have been moved out of the config/scripts
-    # directory, update this to just inspect config/levels/**
     def self.level_file_glob(level_name)
-      level_name ? "config/**/#{level_name}.level" : 'config/**/*.level'
+      level_name ? "config/levels/**/#{level_name}.level" : 'config/levels/**/*.level'
     end
   end
 end

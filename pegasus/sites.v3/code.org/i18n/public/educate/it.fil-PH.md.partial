@@ -70,16 +70,17 @@ theme: responsive
 
 Para sa pinakamagandang karanasan sa lahat ng nilalaman ng Code.org, inirerekumenda namin ang pagkonsulta sa departamento ng IT ng paaralan o distrito mo upang matiyak na ang mga sumusunod na site ay pinapayagan at hindi na-block.
 
-| Priyoridad                                                                                  | URL                                                                                                        |
-| ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Kinakailangan**                                                                           | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opsyonal**                                                                                | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Upang gamitin ang mga video na naka-host sa YouTube (Pinahusay na Mode ng Pagkapribado)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Upang gamitin ang Code.org na naka-host na mga video**                                    | `https://videos.code.org`                                                                                  |
-| **Upang gamitin ang Internet Simulator**                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Upang gamitin ang Web Lab**                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Para gamitin ang Google Classroom Share na Button**                                       | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                                 | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priyoridad                                                                                          | URL                                                                                                        |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Kinakailangan**                                                                                   | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **To ensure CAPTCHA systems can distinguish your usage from automated fraudulent (“bot”) activity** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opsyonal**                                                                                        | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Upang gamitin ang mga video na naka-host sa YouTube (Pinahusay na Mode ng Pagkapribado)**         | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Upang gamitin ang Code.org na naka-host na mga video**                                            | `https://videos.code.org`                                                                                  |
+| **Upang gamitin ang Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Upang gamitin ang Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Para gamitin ang Google Classroom Share na Button**                                               | `https://apis.google.com`                                                                                  |
+| **To use App Lab datasets**                                                                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Mga Detalye ng Suporta sa Mobile at Tablet
 
@@ -104,7 +105,7 @@ Bago mo simulan ang mga online na kurso ng Code.org, subukan ang pag-playback ng
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

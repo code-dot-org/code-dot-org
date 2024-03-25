@@ -50,7 +50,7 @@ end
 # Returns a CSS Media Query string matching devices with 'retina' displays.
 # Ref: https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/
 # Setting `is_retina` to `false` matches non-retina displays.
-def css_retina?(is_retina = true)
+def css_retina?(is_retina: true)
   css_query_parts = ['-webkit-min-device-pixel-ratio: 2', 'min-resolution: 192dpi']
   css_query_parts.map {|q| "#{is_retina ? '' : 'not all and '}(#{q})"}.join(', ')
 end
@@ -64,7 +64,7 @@ def combine_css(*paths)
   request_site = request.site == "advocacy.code.org" ? "code.org" : request.site
 
   files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request_site, path, '*.css'))}.flatten
-  css = files.sort_by(&File.method(:basename)).map do |i|
+  css = files.sort_by {|file| File.basename(file)}.map do |i|
     File.read(i)
   end.join("\n\n")
   css_min = Sass::Engine.new(css,

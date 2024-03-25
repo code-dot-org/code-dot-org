@@ -1,6 +1,7 @@
 ---
 layout: wide_index
 ---
+- hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
 :ruby
   @header["title"] = hoc_s(:map_title)
@@ -13,5 +14,11 @@ layout: wide_index
 
   = view :header
 %h2.center-text= view :hoc_events_counter
-= view :hoc_events_map
-.footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals:{events_url: resolve_url('/events')})
+
+#maparea.full-width{style: "margin-top: 2rem"}
+  -# Show a picture of the map unless the user is located in Morocco (border disputes misrepresented in map)
+  -if @country == 'ma'
+    %img{src: '/images/fit-2276/map.jpg', style: 'width: 100%;'}
+  -else
+    = view :hoc_events_map
+  .footnote!=hoc_s(:map_warning_markdown, markdown: :inline, locals:{events_url: resolve_url('/events')})

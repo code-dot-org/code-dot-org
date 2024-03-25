@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import HeaderBanner from '../HeaderBanner';
-import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import Button from '@cdo/apps/templates/Button';
 
 class Incubator extends Component {
   render() {
@@ -43,8 +44,16 @@ class Incubator extends Component {
             }
             buttons={[
               {
-                url: '/projectbeats',
-                text: 'Try it out!',
+                url: '/s/music-intro-2024/reset',
+                text: 'Get Started',
+                extraText:
+                  'Learn how to use Project Beats in a step by step intro.',
+              },
+              {
+                url: '/projects/music/new',
+                text: 'Make Music',
+                extraText: 'Skip directly to creating a Project Beats project.',
+                color: Button.ButtonColor.neutralDark,
               },
             ]}
           />

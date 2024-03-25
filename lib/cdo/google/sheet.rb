@@ -17,7 +17,7 @@ end
 module Google
   class Sheet
     def initialize(document_key)
-      @drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
+      @drive = Google::Drive.new
       @document_key = document_key
     end
 

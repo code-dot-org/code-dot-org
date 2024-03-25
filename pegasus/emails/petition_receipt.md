@@ -12,7 +12,7 @@ subject: 'Thanks!'
 
 ## 1) Learn yourself (or have your child learn)
 
-[Learn online](https://code.org/learn) or [find local schools, camps, or workshops](https://code.org/learn/local) that teach coding.
+[Learn online](https://code.org/learn).
 
 <% if defined?(role_s) && ['educator'].include?(role_s) %>
 
@@ -38,7 +38,7 @@ You can teach these self-serve [intro courses](https://studio.code.org), with pr
 
 ## 3) Ask your local school to [teach computer science](https://code.org/educate)
 
-Here's a [sample letter](https://code.org/promote/letter) to send to your school! Your local school can teach these [intro courses](https://studio.code.org), partner with us to bring computer science [to your entire district or region](https://code.org/educate/partner), and inspire students with [these videos](https://code.org/educate/inspire). Check [our map](https://code.org/learn/local) to see if your school teaches computer science. If not, ask them to.
+Here's a [sample letter](https://code.org/promote/letter) to send to your school! Your local school can teach these [intro courses](https://studio.code.org), partner with us to bring computer science [to your entire district or region](https://code.org/educate/partner), and inspire students with [these videos](https://code.org/educate/inspire). Check [our map](https://code.org/yourschool) to see if your school teaches computer science. If not, ask them to.
 
 <% end %>
 

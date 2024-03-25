@@ -2,7 +2,7 @@ name 'vpl-csa-module-6-overview_2023'
 editor_experiment ''
 display_name 'CSA Module 1 Overview'
 
-title 'Module 1: CSA Virtual Professional Learning'
+title 'Module 6: CSA Virtual Professional Learning'
 markdown <<MARKDOWN
 # Module 6: CSA Virtual Professional Learning
 
@@ -10,16 +10,17 @@ markdown <<MARKDOWN
 
 ## Module 6 Overview
 
-Welcome to Module 6. In this Module you will continue to look at Unit 6 with a focus on the `String` methods.
+Welcome to Module 6. In this Module you will continue to explore ArrayLists, this time in the context of Natural Language Processing (NLP).
 
 **During this asynchronous work you will:**
 
-* Work with `String` methods introduced in Unit 6 and on the AP exam
+* Work with the `ArrayList` and `String` classes to develop algorithms for basic NLP techniques.
 
 
 **After this asynchronous work you will:**
 
-* Understand how students will learn and practice using `String` methods.
+* Be able to explain some of the vocabulary surrounding NLP
+* Implement an algorithm to search or modify elements in an `ArrayList` of `String` objects.
 
 
 **Let's get started!**

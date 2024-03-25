@@ -70,16 +70,17 @@ theme: responsive
 
 为了获得所有Code.org内容的最佳体验，我们建议咨询学校或学区的IT部门，以确保以下网站允许访问，没有被屏蔽。
 
-| 优先级                         | 地址                                                                                                         |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **必需**                      | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **可选**                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **使用YouTube托管视频（增强隐私模式）**   | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **使用Code.org托管视频**          | `https://videos.code.org`                                                                                  |
-| **使用互联网模拟器**                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **使用网络实验室**                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **使用谷歌课堂共享按钮**              | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets** | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| 优先级                                       | 地址                                                                                                         |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **必需**                                    | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **确保 CAPTCHA 系统能够将您的使用与自动欺诈（“机器人”）活动区分开** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **可选**                                    | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **使用YouTube托管视频（增强隐私模式）**                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **使用Code.org托管视频**                        | `https://videos.code.org`                                                                                  |
+| **使用互联网模拟器**                              | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **使用网络实验室**                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **使用谷歌课堂共享按钮**                            | `https://apis.google.com`                                                                                  |
+| **使用 App Lab 数据集**                        | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## 移动设备/平板电脑支持详情
 
@@ -104,7 +105,7 @@ All other content, such as K-5 courses (Computer Science Fundamentals) and Hour 
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

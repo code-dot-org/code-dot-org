@@ -12,6 +12,7 @@ const DEFAULT_PROPS = {
   location: {},
   studentCount: 5,
   coursesWithProgress: fakeCoursesWithProgress,
+  sectionVersionId: 2,
 };
 
 describe('TeacherDashboard', () => {

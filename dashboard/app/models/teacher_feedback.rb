@@ -66,11 +66,12 @@ class TeacherFeedback < ApplicationRecord
   end
 
   # returns the latest feedback from each teacher for the student on the level
-  def self.get_latest_feedbacks_received(student_id, level_id, script_id)
+  def self.get_latest_feedbacks_received(student_id, level_id, script_id, teacher_id = nil)
     query = {
       student_id: student_id,
       level_id: level_id,
-      script_id: script_id
+      script_id: script_id,
+      teacher_id: teacher_id,
     }.compact
 
     where(query).
@@ -107,8 +108,8 @@ class TeacherFeedback < ApplicationRecord
   def self.latest_per_teacher
     # Only select feedback from teachers who lead sections in which the student is still enrolled
     # and get the latest feedback per teacher for each student on each level
-    where(id: joins(:student_sections).
-        where('sections.user_id = teacher_id').
+    where(id: joins(student_sections: :instructors).
+        where('instructor_id = teacher_id').
         group([:teacher_id, :student_id, :level_id]).
         # This SQL string is not at risk for injection vulnerabilites because
         # it's just a hardcoded string, so it's safe to wrap in Arel.sql

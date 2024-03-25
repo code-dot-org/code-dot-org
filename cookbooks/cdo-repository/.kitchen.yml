@@ -15,7 +15,6 @@ platforms:
   - name: ubuntu-18.04
     run_list:
       - recipe[apt]
-      - recipe[sudo-user]
 suites:
   - name: default
     run_list:

@@ -193,7 +193,7 @@ MARKDOWN
     non_plc_evaluation = LevelGroup.create_from_level_builder({}, {name: 'non_evaluation_multi', dsl_text: non_evaluation_level_group_dsl})
 
     assert plc_evaluation.plc_evaluation?
-    assert_not non_plc_evaluation.plc_evaluation?
+    refute non_plc_evaluation.plc_evaluation?
   end
 
   test "get_sublevel_last_attempt" do

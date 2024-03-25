@@ -735,4 +735,8 @@ class Craft < Blockly
       #{common_blocks(type)}
     XML
   end
+
+  def validated?
+    properties['free_play'] == 'false'
+  end
 end

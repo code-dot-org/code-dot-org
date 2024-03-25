@@ -1639,18 +1639,6 @@ bn-BD:
     যা একটি ঘন্টা কম্পিউটার বিজ্ঞানের সূচনার বিষয়গুলি শিখানোর চেষ্টার মধ্যমে ১৮০ বেশি
     দেশে দশ লক্ষাধিক ছাত্রের কাছে পৌঁছনোর চেষ্টা করে। দয়া করে ডিসেম্বর ৭-১৩ তে কম্পিউটার
     বিজ্ঞান শিক্ষা সপ্তাহে, সংশ্লিষ্ট হন।
-  volunteer_engineer_submission_intro_links: স্বেচ্ছাসেবক খুজছেন না? এখনে নিজের এক
-    ঘন্টা কোড আয়োজন করার জন্য <a href="%{learn_more}">আরো জানুন</a>  <a href="%{volunteer_local}">
-    </a> এবং স্বেচ্ছাসেবক মানচিত্রে স্থানীয় স্বেচ্ছাসেবক খুজুন।
-  volunteer_engineer_submission_intro_recruit: 'এই শিক্ষকরা এমন কাউকে পেলে খুশি হবেন<span
-    style="font-family: ''Gotham 7r'', sans-serif;">যারা কম্পিউটার বিজ্ঞান শিক্ষায়
-    উত্সাহী</span>যারা তাদের শ্রেনীকক্ষে সাহায্য করতে পারবে বা তাদের <span style="font-family:
-    ''Gotham 7r'', sans-serif;"> যারা অনুপ্রাণিত করতে পারবে</span> তাদের ছাত্রদের
-    কম্পিউটার বিজ্ঞানের প্রসার সম্ভাবনা নিয়ে কথা বলে (যা একটি ভিডিও আলাপের মাধ্যমেও
-    করা সম্ভব)।'
-  volunteer_engineer_submission_intro_signup: |2-
-     প্রয়োজন হয়।
-    আপনি কম্পিউটার বিজ্ঞানের ছাত্র বা সফটওয়্যার পেশাদার হলে নিম্নবর্ণিত তথ্য জমা দিন। <span class="form-required-field">*</span> চিহ্নিত স্থানগুলি অবশ্যক।
   volunteer_engineer_submission_location_flexibility_curriculum: ওপেন-সোর্স কারিকুলাম
     প্রকল্পে অবদান রাখতে সহায়তা করার ইচ্ছা
   volunteer_engineer_submission_location_flexibility_onsite: 'স্কুলের প্রাঙ্গণে '

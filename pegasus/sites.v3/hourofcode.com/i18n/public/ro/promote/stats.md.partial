@@ -1,5 +1,5 @@
 ---
-title: Prezentări reclame și statistici utile
+title: Recomandări și informații utile
 layout: wide
 nav: promote_nav
 ---
@@ -8,7 +8,7 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Prezentări reclame și statistici utile
+# Recomandări și informații utile
 
 ### Folosiți următoarele mesaje dacă sunteți în căutarea unor modalități de promovare a Hour of Code în buletinele de știri și comunicările dumneavoastră.
 
@@ -16,11 +16,11 @@ nav: promote_nav
 
 ## Folosiți acest scurt rezumat în buletinele de știri
 
-#### Adu stiinta compitarelor la scoala ta. Incepe cu Ora de Cod!
+#### Adu tehnologia computerelor si programarea la școala ta. Începe cu Hour of Code (Ora de Cod)!
 
-Având în vedere că tehnologia schimbă fiecare industrie de pe planetă, cunoștințele de informatică au devenit parte integrantă a unui set de competențe bine pus la punct. But just half of all schools offer computer science! Vestea bună e că suntem pe cale să schimbăm acest lucru. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Având în vedere că tehnologia schimbă fiecare industrie de pe planetă, cunoștințele de informatică au devenit parte integrantă a unui set de competențe bine fundamentate. Cu toate acestea, doar jumătate dintre școlile existente oferă cursuri de informatică! Vestea bună e că suntem pe cale să schimbăm acest lucru. Dacă ați mai auzit de Hour of Code, probabil știți că a făcut istorie. Mai mult de 100 de milioane de elevi au descoperit acum cât de accesibilă și distractivă poate fi informatica, făcând doar o singură sesiune de Hour of Code.
 
-[ Hour of Code ](<%= hoc_uri('/') %>) este o introducere de o oră in programare, proiectata să desluseasca limbajul de programare şi sa arate că oricine poate învăţa elementele lui de bază. Aflați mai multe la [http://HourOfCode.com](http://HourofCode.com), încercați și dumneavoastră o oră sau găzduiți un eveniment Hour of Code pentru a-i introduce pe alții în lumea informaticii!
+[ Hour of Code ](<%= hoc_uri('/') %>) este o introducere de o oră in programare, proiectata să desluseasca limbajul de programare şi sa arate că oricine poate învăţa elementele lui de bază. Aflați mai multe la [http://HourOfCode.com](http://HourofCode.com), încercați și dumneavoastră o oră sau găzduiți un eveniment Hour of Code pentru a-i introduce pe alții în lumea tehnologiei!
 
 ## Mesaje pentru întrebări frecvente
 
@@ -32,7 +32,7 @@ Sperăm că va trezi interesul elevilor si ca acestia vor continua învăţarea.
 
 #### De ce este important acest lucru?
 
-There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
+În Statele Unite există aproape 700.000 de locuri de muncă deschise în domeniul tehnologiei, dar doar 80.000 de studenți absolviți în informatică au intrat pe piața muncii anul trecut. Și, 47% dintre școlile din SUA nu oferă cursuri de informatică. Este momentul să ne adap­tăm cerințelor secolului XXI. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
 
 #### Un citat pe care puteți să îl folosiți în materiale
 

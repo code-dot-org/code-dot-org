@@ -1,20 +1,23 @@
-const webpack = require('webpack');
+/* eslint-disable import/order */
 const path = require('path');
 const sass = require('sass');
+const webpack = require('webpack');
 
 // Webpack Plugins:
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+const {PyodidePlugin} = require('@pyodide/webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
-const {StatsWriterPlugin} = require('webpack-stats-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ReactRefreshTypeScript = require('react-refresh-typescript');
 const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const {StatsWriterPlugin} = require('webpack-stats-plugin');
 
+const circularDependencies = require('./circular_dependencies.json');
 const envConstants = require('./envConstants');
-
 const {
   ALL_APPS,
   appsEntriesFor,
@@ -25,6 +28,8 @@ const {
   SHARED_ENTRIES,
   OTHER_ENTRIES,
 } = require('./webpackEntryPoints');
+
+const WEBPACK_DEV_SERVER_PORT = 9000;
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
@@ -40,6 +45,7 @@ const nodeModulesToTranspile = [
   '@blockly/field-grid-dropdown',
   '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
+  '@blockly/field-bitmap',
   'blockly',
   '@code-dot-org/dance-party',
   '@code-dot-org/johnny-five',
@@ -65,6 +71,13 @@ const nodeModulesToTranspile = [
 // As of Webpack 5, Node APIs are no longer automatically polyfilled.
 // resolve.fallback resolves the API to its NPM package, and the plugin
 // makes the API available as a global.
+
+// map our circular dependency JSON to a set.
+const circularDependenciesSet = new Set(circularDependencies);
+
+// as we see our known circular dependencies, we're gonna remove them from our list. That way,
+// we can report at the end if any circular dependencies have been cleaned up.
+let seenCircles = new Set();
 const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
@@ -74,6 +87,46 @@ const nodePolyfillConfig = {
       path: 'path-browserify',
       process: 'process/browser',
       timers: 'timers-browserify',
+    }),
+    new CircularDependencyPlugin({
+      // ignore everything in a build directory or mode_modules
+      exclude: /node_modules|build/,
+      failOnError: true,
+      allowAsyncCycles: false,
+      cwd: process.cwd(),
+      // when we start, we re-initialize our list of previously seen circles to whatever
+      // we loaded from circular_depencies.json. If that file changes and you need to update, restart
+      // webpack
+      onStart: () => {
+        seenCircles.clear();
+        seenCircles = new Set(Array.from(circularDependenciesSet));
+      },
+      onDetected: ({module: webpackModuleRecord, paths, compilation}) => {
+        const pathString = paths.join(' -> ');
+        // if the path is not a known existing one, then note as an error
+        if (!circularDependenciesSet.has(pathString)) {
+          compilation.errors.push(
+            new Error(
+              `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
+            )
+          );
+        }
+        // and since we've seen that path, we can delete it from our set of seen values
+        seenCircles.delete(pathString);
+      },
+      // finally, at the end, if we still have any circles that we previously knew about but did not see
+      // this time, note it as a warning.
+      onEnd: ({compilation}) => {
+        if (seenCircles.size > 0) {
+          compilation.warnings.push(
+            new Error(
+              `Circular Dependency Checker : Resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
+                seenCircles
+              ).join('\n  ')}`
+            )
+          );
+        }
+      },
     }),
   ],
   resolve: {
@@ -85,6 +138,7 @@ const nodePolyfillConfig = {
       stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
       crypto: false,
+      vm: require.resolve('vm-browserify'),
     },
   },
 };
@@ -97,7 +151,7 @@ function devtool({minify} = {}) {
   } else if (process.env.DEBUG_MINIFIED) {
     return 'eval-source-map';
   } else if (process.env.DEV) {
-    return 'inline-cheap-source-map';
+    return 'eval-source-map';
   } else {
     return 'inline-source-map';
   }
@@ -118,13 +172,16 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
 // including our main config, the karma config, and the storybook config.
 //
 // To find our main webpack config (that runs on e.g. `yarn build`),
-// see `createWepbackConfig()` below. That function extends this config
+// see `createWebpackConfig()` below. That function extends this config
 // with many more plugins etc.
 const WEBPACK_BASE_CONFIG = {
   plugins: [
     ...nodePolyfillConfig.plugins,
     // Run TypeScript type checking in parallel with the build
-    new ForkTsCheckerWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      // tsconfig.build.json only type-checks TypeScript files.
+      typescript: {configFile: 'tsconfig.build.json'},
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -226,8 +283,11 @@ const WEBPACK_BASE_CONFIG = {
         exclude: [p('src/lodash.js')],
         loader: 'babel-loader',
         options: {
-          cacheDirectory: p('.babel-cache'),
+          cacheDirectory: p('build/babel-cache'),
           compact: false,
+          ...(envConstants.HOT
+            ? {plugins: [['react-refresh/babel', {skipEnvCheck: true}]]}
+            : {}),
         },
       },
       {
@@ -239,6 +299,10 @@ const WEBPACK_BASE_CONFIG = {
               // Half the build time was waiting for ts-loader to typecheck.
               // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
               transpileOnly: true,
+              configFile: 'tsconfig.build.json',
+              getCustomTransformers: () => ({
+                before: envConstants.HOT ? [new ReactRefreshTypeScript()] : [],
+              }),
             },
           },
         ],
@@ -266,24 +330,23 @@ const WEBPACK_BASE_CONFIG = {
             },
           ]
         : []),
+      ...(process.env.DEV
+        ? [
+            // Enable source maps locally for Blockly for easier debugging.
+            {
+              test: /(blockly\/.*\.js)$/,
+              use: ['source-map-loader'],
+              enforce: 'pre',
+            },
+          ]
+        : []),
     ],
     noParse: [/html2canvas/],
   },
+  // Ignore spurious warnings from source-map-loader.
+  // It can't find source maps for some Closure modules in Blockly and that is expected.
+  ignoreWarnings: [/Failed to parse source map/],
 };
-
-// FIXME: figure out how to re-enable hot reloading with
-// the current webpack version.
-//
-// Disabled in 2023 because current webpack doesn't permit
-// a `module.loaders` property in the config.
-//
-// if (envConstants.HOT) {
-//   WEBPACK_BASE_CONFIG.module.loaders.push({
-//     test: /\.jsx?$/,
-//     loader: 'react-hot-loader',
-//     include: [p('src')],
-//   });
-// }
 
 /**
  * Adds pollyfills to each entrypoint (before the existing path(s))
@@ -309,16 +372,12 @@ function addPollyfillsToEntryPoints(entries, polyfills) {
  * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
  * @param {boolean} minify - whether to minify the output
  * @param {boolean} piskelDevMode - whether to use the piskel dev mode
- * @param {boolean} watch - whether to watch for changes
- * @param {boolean} watchNotify - if watch is enabled, whether to use watch-notify
  * @returns {Object} A webpack config object for building `apps/`
  */
 function createWebpackConfig({
   appsEntries = appsEntriesFor(ALL_APPS),
-  minify,
-  piskelDevMode,
-  watch,
-  watchNotify,
+  minify = false,
+  piskelDevMode = false,
 } = {}) {
   //////////////////////////////////////////////
   ///////// WEBPACK CONFIG BEGINS HERE /////////
@@ -331,8 +390,9 @@ function createWebpackConfig({
       // When minifying, this generates a 20-hex-character hash.
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
+    // Don't output >1000 lines of webpack build stats to the CI logs
+    stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
-    watch,
     entry: addPollyfillsToEntryPoints(
       {
         ...appsEntries,
@@ -403,108 +463,113 @@ function createWebpackConfig({
       runtimeChunk: {
         name: 'webpack-runtime',
       },
-      splitChunks: {
-        // Override the default limit of 3 concurrent downloads on page load,
-        // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
-        // been observed to degrade only with > 200 simultaneous downloads.
-        maxInitialRequests: 100,
-        cacheGroups: {
-          // Pull any module shared by 2+ appsEntries into the "common" chunk.
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: chunk => {
-              return Object.keys(appsEntries).includes(chunk.name);
-            },
-          },
-          // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
-          // "code-studio-common" chunk.
-          'code-studio-common': {
-            name: 'code-studio-common',
-            minChunks: 2,
-            chunks: chunk => {
-              const chunkNames = Object.keys(CODE_STUDIO_ENTRIES);
-              return chunkNames.includes(chunk.name);
-            },
-            priority: 10,
-          },
-          // With just the cacheGroups listed above, we end up with many
-          // duplicate modules between the "common" and "code-studio-common"
-          // chunks. The next cache group eliminates some of this duplication
-          // by pulling more modules from "common" into "code-studio-common".
-          //
-          // The use of minChunks provides a guarantee that we don't
-          // unnecessarily move things into "code-studio-common" which are
-          // needed only by appsEntries. This avoids increasing the download
-          // size for code studio pages which include code-studio-common.js
-          // but not common.js.
-          //
-          // There is no converse guarantee that this strategy will eliminate
-          // all duplication between "common" and "code-studio-common".
-          // However, at the time of this writing, bundle analysis indicates
-          // that is currently effective in eliminating any duplication.
-          //
-          // In the future, we want to move toward asynchronous imports, which
-          // allow webpack to manage bundle splitting and sharing behind the
-          // scenes. Once we adopt this approach, the need for predefined
-          // cacheGroups will go away.
-          //
-          // For more information see: https://webpack.js.org/guides/code-splitting/
-          'code-studio-multi': {
-            name: 'code-studio-common',
-            minChunks: Object.keys(appsEntries).length + 1,
-            chunks: chunk => {
-              const chunkNames = Object.keys(CODE_STUDIO_ENTRIES).concat(
-                Object.keys(appsEntries)
-              );
-              return chunkNames.includes(chunk.name);
-            },
-            priority: 20,
-          },
-          vendors: {
-            name: 'vendors',
-            priority: 30,
-            chunks: chunk => {
-              // all 'initial' chunks except OTHER_ENTRIES
-              const chunkNames = Object.keys({
-                ...appsEntries,
-                ...CODE_STUDIO_ENTRIES,
-                ...INTERNAL_ENTRIES,
-                ...PEGASUS_ENTRIES,
-                ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-                ...SHARED_ENTRIES,
-              });
 
-              return chunkNames.includes(chunk.name);
-            },
-            test(module) {
-              return [
-                '@babel/polyfill/noConflict',
-                'immutable',
-                'lodash',
-                'moment',
-                'pepjs',
-                'radium',
-                'react',
-                'react-dom',
-                'wgxpath',
-              ].some(libName =>
-                new RegExp(`/apps/node_modules/${libName}/`).test(
-                  module.resource
-                )
-              );
+      // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
+      // by 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
+      splitChunks: process.env.DEV
+        ? undefined
+        : {
+            // Override the default limit of 3 concurrent downloads on page load,
+            // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
+            // been observed to degrade only with > 200 simultaneous downloads.
+            maxInitialRequests: 100,
+            cacheGroups: {
+              // Pull any module shared by 2+ appsEntries into the "common" chunk.
+              common: {
+                name: 'common',
+                minChunks: 2,
+                chunks: chunk => {
+                  return Object.keys(appsEntries).includes(chunk.name);
+                },
+              },
+              // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
+              // "code-studio-common" chunk.
+              'code-studio-common': {
+                name: 'code-studio-common',
+                minChunks: 2,
+                chunks: chunk => {
+                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES);
+                  return chunkNames.includes(chunk.name);
+                },
+                priority: 10,
+              },
+              // With just the cacheGroups listed above, we end up with many
+              // duplicate modules between the "common" and "code-studio-common"
+              // chunks. The next cache group eliminates some of this duplication
+              // by pulling more modules from "common" into "code-studio-common".
+              //
+              // The use of minChunks provides a guarantee that we don't
+              // unnecessarily move things into "code-studio-common" which are
+              // needed only by appsEntries. This avoids increasing the download
+              // size for code studio pages which include code-studio-common.js
+              // but not common.js.
+              //
+              // There is no converse guarantee that this strategy will eliminate
+              // all duplication between "common" and "code-studio-common".
+              // However, at the time of this writing, bundle analysis indicates
+              // that is currently effective in eliminating any duplication.
+              //
+              // In the future, we want to move toward asynchronous imports, which
+              // allow webpack to manage bundle splitting and sharing behind the
+              // scenes. Once we adopt this approach, the need for predefined
+              // cacheGroups will go away.
+              //
+              // For more information see: https://webpack.js.org/guides/code-splitting/
+              'code-studio-multi': {
+                name: 'code-studio-common',
+                minChunks: Object.keys(appsEntries).length + 1,
+                chunks: chunk => {
+                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES).concat(
+                    Object.keys(appsEntries)
+                  );
+                  return chunkNames.includes(chunk.name);
+                },
+                priority: 20,
+              },
+              vendors: {
+                name: 'vendors',
+                priority: 30,
+                chunks: chunk => {
+                  // all 'initial' chunks except OTHER_ENTRIES
+                  const chunkNames = Object.keys({
+                    ...appsEntries,
+                    ...CODE_STUDIO_ENTRIES,
+                    ...INTERNAL_ENTRIES,
+                    ...PEGASUS_ENTRIES,
+                    ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+                    ...SHARED_ENTRIES,
+                  });
+
+                  return chunkNames.includes(chunk.name);
+                },
+                test(module) {
+                  return [
+                    '@babel/polyfill/noConflict',
+                    'immutable',
+                    'lodash',
+                    'moment',
+                    'pepjs',
+                    'radium',
+                    'react',
+                    'react-dom',
+                    'wgxpath',
+                  ].some(libName =>
+                    new RegExp(`/apps/node_modules/${libName}/`).test(
+                      module.resource
+                    )
+                  );
+                },
+              },
+              p5lab: {
+                name: 'p5-dependencies',
+                priority: 10,
+                minChunks: 2,
+                chunks: chunk =>
+                  ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
+                test: module => /p5/.test(module.resource),
+              },
             },
           },
-          p5lab: {
-            name: 'p5-dependencies',
-            priority: 10,
-            minChunks: 2,
-            chunks: chunk =>
-              ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
-            test: module => /p5/.test(module.resource),
-          },
-        },
-      },
     },
     mode: minify ? 'production' : 'development',
     plugins: [
@@ -526,9 +591,6 @@ function createWebpackConfig({
             }),
           ]
         : []),
-      new StatsWriterPlugin({
-        fields: ['assetsByChunkName', 'assets'],
-      }),
       // The [contenthash] placeholder generates a 32-character hash when
       // used within the copy plugin.
       new CopyPlugin({
@@ -586,18 +648,69 @@ function createWebpackConfig({
           }
           return file;
         },
+        ...(process.env.DEV
+          ? []
+          : [
+              // Using splitChunks and/or StatsWriterPlugin in dev mode increases rebuild+reload time
+              // by 2x-10x. See: https://github.com/code-dot-org/code-dot-org/pull/55707
+              new StatsWriterPlugin({
+                fields: ['assetsByChunkName', 'assets'],
+              }),
+            ]),
       }),
-      ...(watch
+      new PyodidePlugin(),
+      ...(envConstants.HOT
         ? [
-            new LiveReloadPlugin({
-              appendScriptTag: envConstants.AUTO_RELOAD,
-            }),
+            new webpack.HotModuleReplacementPlugin({}),
+            new ReactRefreshWebpackPlugin(),
+            // Prints a URL for accessing the Dashboard via webpack-dev-server
+            {
+              apply: compiler => {
+                compiler.hooks.afterDone.tap('PrintDashboardURL', stats => {
+                  if (stats.hasErrors()) return;
+
+                  if (!process.env.WEBPACK_SERVE) {
+                    console.warn(
+                      "webpack-dev-server should be running, but it doesn't seem to be, url may be wrong"
+                    );
+                  }
+
+                  const TIMEOUT_SO_PRINT_IS_LAST = 1000;
+                  setTimeout(() => {
+                    const WEBPACK_DEV_SERVER_URL = `http://localhost-studio.code.org:${WEBPACK_DEV_SERVER_PORT}`;
+                    const BOLD = '\x1b[1m';
+                    const MAGENTA_BG = `\x1b[45m\x1b[30m${BOLD}`;
+                    const RESET = '\x1b[0m';
+                    console.log(
+                      `\n${MAGENTA_BG}To use webpack-dev-server, access Dashboard at:${RESET} ${BOLD}${WEBPACK_DEV_SERVER_URL}${RESET}`
+                    );
+                  }, TIMEOUT_SO_PRINT_IS_LAST);
+                });
+              },
+            },
           ]
         : []),
-      ...(watch && watchNotify
-        ? [new WebpackNotifierPlugin({alwaysNotify: true})]
-        : []),
     ],
+    devServer: envConstants.HOT
+      ? {
+          allowedHosts: ['localhost-studio.code.org', 'localhost.code.org'],
+          client: {overlay: false},
+          port: WEBPACK_DEV_SERVER_PORT,
+          proxy: [
+            {
+              context: ['**'],
+              target: 'http://localhost-studio.code.org:3000',
+              changeOrigin: false,
+              logLevel: 'debug',
+            },
+          ],
+          host: '0.0.0.0',
+          hot: true,
+          devMiddleware: {
+            writeToDisk: true,
+          },
+        }
+      : undefined,
   };
 
   //////////////////////////////////////////////

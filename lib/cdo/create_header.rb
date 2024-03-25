@@ -64,6 +64,6 @@ class CreateHeader
       entries.unshift(options[:project_type])
     end
 
-    entries.map(&method(:get_project_info))
+    entries.map {|entry| get_project_info(entry)}
   end
 end

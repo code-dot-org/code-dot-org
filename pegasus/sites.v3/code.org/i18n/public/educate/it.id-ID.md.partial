@@ -70,16 +70,17 @@ theme: responsive
 
 Untuk mendapatkan pengalaman terbaik dengan semua konten Code.org, kami sarankan untuk berkonsultasi dengan bagian IT sekolah atau distrik Anda untuk memastikan situs berikut boleh diakses dan tidak diblokir.
 
-| Prioritas                                                                               | URL                                                                                                        |
-| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Diperlukan**                                                                          | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opsional**                                                                            | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Untuk menggunakan video yang dihosting di YouTube (Mode Privasi yang Disempurnakan)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Untuk menggunakan video yang di-hosting oleh Code.org**                               | `https://videos.code.org`                                                                                  |
-| **Untuk menggunakan Internet Simulator**                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Untuk menggunakan Web Lab**                                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Untuk menggunakan Tombol Berbagi Google Classroom**                                   | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                             | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Prioritas                                                                                                     | URL                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Diperlukan**                                                                                                | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Untuk memastikan sistem CAPTCHA dapat membedakan penggunaan Anda dari aktivitas penipuan otomatis (“bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opsional**                                                                                                  | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Untuk menggunakan video yang dihosting di YouTube (Mode Privasi yang Disempurnakan)**                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Untuk menggunakan video yang di-hosting oleh Code.org**                                                     | `https://videos.code.org`                                                                                  |
+| **Untuk menggunakan Internet Simulator**                                                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Untuk menggunakan Web Lab**                                                                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Untuk menggunakan Tombol Berbagi Google Classroom**                                                         | `https://apis.google.com`                                                                                  |
+| **Untuk menggunakan kumpulan data App Lab**                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Detail Dukungan untuk Ponsel dan Tablet
 
@@ -104,7 +105,7 @@ Sebelum memulai kursus online Code.org, cobalah memutar video berikut untuk mema
 
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

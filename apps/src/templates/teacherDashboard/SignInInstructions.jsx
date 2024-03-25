@@ -11,6 +11,7 @@ export default class SignInInstructions extends React.Component {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     sectionCode: PropTypes.string,
     studioUrlPrefix: PropTypes.string,
+    sectionProviderName: PropTypes.string,
   };
   render() {
     const {loginType, sectionCode, studioUrlPrefix} = this.props;
@@ -84,6 +85,21 @@ export default class SignInInstructions extends React.Component {
             <img
               style={styles.sublistAlign}
               src="/shared/images/clever_code_org_logo.png"
+              alt=""
+            />
+          </div>
+        )}
+        {loginType === SectionLoginType.lti_v1 && (
+          <div>
+            <h2 style={styles.heading}>
+              {i18n.signingInLtiLoginHeader({
+                providerName: this.props.sectionProviderName,
+              })}
+            </h2>
+            <SafeMarkdown
+              markdown={i18n.signingInLtiLoginBody({
+                providerName: this.props.sectionProviderName,
+              })}
             />
           </div>
         )}

@@ -65,11 +65,12 @@ export function getTagString(prefix, tagString) {
     'length_1hour-follow': i18n.filterLength1HourFollow(),
     'length_few-hours': i18n.filterLengthFewHours(),
 
-    subject_science: i18n.filterTopicsScience(),
-    subject_math: i18n.filterTopicsMath(),
-    subject_history: i18n.filterTopicsHistory(),
-    subject_la: i18n.filterTopicsLa(),
     subject_art: i18n.filterTopicsArt(),
+    subject_ai: i18n.filterTopicsArtificialIntelligence(),
+    subject_la: i18n.filterTopicsLa(),
+    subject_math: i18n.filterTopicsMath(),
+    subject_science: i18n.filterTopicsScience(),
+    subject_history: i18n.filterTopicsHistory(),
     'subject_cs-only': i18n.filterTopicsCsOnly(),
 
     student_experience_beginner: i18n.filterStudentExperienceBeginner(),

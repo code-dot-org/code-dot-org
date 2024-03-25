@@ -26,7 +26,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     user.reload
     assert_response :ok
     assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
-    assert_not_empty user.child_account_compliance_state_last_updated
+    refute_empty user.child_account_compliance_state_last_updated
   end
 
   test "making the same request twice is ok and email is sent once" do
@@ -128,7 +128,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
       assert_redirected_to lockout_path
       user.reload
       assert_equal Policies::ChildAccount::ComplianceState::REQUEST_SENT, user.child_account_compliance_state
-      assert_not_empty user.child_account_compliance_state_last_updated
+      refute_empty user.child_account_compliance_state_last_updated
     end
   end
 

@@ -111,6 +111,10 @@ export const BUTTON_TYPES = {
         backgroundColor: color.neutral_dark20,
         boxShadow: 'none',
       },
+      ':focus': {
+        backgroundColor: color.neutral_dark20,
+        boxShadow: 'none',
+      },
     },
   },
   primary: {

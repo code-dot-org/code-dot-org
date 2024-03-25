@@ -530,110 +530,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
   end
 
-  test 'maker_google_oauth2: returns an error if no token' do
-    # Go to function with no parameters
-    post :maker_google_oauth2
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_no_code')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: returns an error if token is expired' do
-    #Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    #Generate token from 6 minutes ago
-    secret_code = Encryption.encrypt_string_utf8(
-      (Time.now - 6.minutes).strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_token_expired')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: returns an error if provider is incorrect' do
-    #Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    #Generate token with incorrect provider
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "Clever"
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_wrong_provider')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: returns an error if user if is invalid' do
-    #Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    #Generate token with corrupted authentication id
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "test" + user_auth['credential_type']
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    assert_template 'maker/login_code'
-
-    # Check that flash alert displays desired message
-    expected_error = I18n.t('maker.google_oauth.error_invalid_user')
-    assert_select ".container .alert-danger", expected_error
-  end
-
-  test 'maker_google_oauth2: logs migrated in user if valid token' do
-    # Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
-    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-
-    # Generate token
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    # Then I am signed in
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test 'maker_google_oauth2: logs non-migrated in user if valid token' do
-    # Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider, :demigrated
-
-    # Generate token
-    secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user.uid + user.provider
-    )
-
-    # Go to function
-    post :maker_google_oauth2, params: {secret_code: secret_code}
-
-    # Then I am signed in
-    assert_equal user.id, signed_in_user_id
-  end
-
   test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create :student, :google_sso_provider
@@ -804,7 +700,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
-    assert_not_equal 'google_oauth2', user.provider
+    refute_equal 'google_oauth2', user.provider
   end
 
   test 'login: microsoft_v2_auth silently takes over unmigrated student with matching email' do
@@ -865,7 +761,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
     user.reload
-    assert_not_equal 'google_oauth2', user.provider
+    refute_equal 'google_oauth2', user.provider
     assert_nil signed_in_user_id
   end
 
@@ -894,7 +790,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user.reload
     takeover_auth = user.authentication_options.last
-    assert_not_equal 'microsoft_v2_auth', takeover_auth.credential_type
+    refute_equal 'microsoft_v2_auth', takeover_auth.credential_type
     assert_nil signed_in_user_id
   end
 
@@ -911,7 +807,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert_not found_google
+    refute found_google
   end
 
   test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
@@ -948,7 +844,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert_not found_google
+    refute found_google
     assert_nil signed_in_user_id
   end
 
@@ -1603,7 +1499,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     user.reload
     google_oauth = user.authentication_options.find {|a| a.credential_type == AuthenticationOption::GOOGLE}
-    assert_not_nil google_oauth
+    refute_nil google_oauth
 
     # Verify that we signed the user into the taken-over account
     assert_equal user.id, signed_in_user_id

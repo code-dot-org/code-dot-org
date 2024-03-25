@@ -327,7 +327,6 @@ const styles = {
   },
   instructionsAndPreview: {
     color: color.black,
-    right: '15px',
   },
   editorAndConsole: {
     right: '15px',

@@ -9,7 +9,7 @@ class SchoolTest < ActiveSupport::TestCase
 
     schools = School.merge_from_csv(School.get_seed_filename(true))
     assert_equal(20, schools.size, 'test data contains 20 schools')
-    assert_not_nil School.find_by(
+    refute_nil School.find_by(
       {
         id: '10000500871',
         school_district_id: 100005,
@@ -59,78 +59,6 @@ class SchoolTest < ActiveSupport::TestCase
       assert_includes exception.message, 'This was a dry run'
       assert_equal before_count, School.count
     end
-  end
-
-  test 'maker high needs false when no stats data' do
-    school = create :school
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when null students total' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999'
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when null frl eligible total' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 100
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs false when frl eligible below 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 100,
-        frl_eligible_total: 49
-      }
-    )
-    school.save!
-    refute school.maker_high_needs?
-  end
-
-  test 'maker high needs true when frl eligible equal to 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 500
-      }
-    )
-    school.save!
-    assert school.maker_high_needs?
-  end
-
-  test 'maker high needs true when frl eligible above 50 percent of students' do
-    school = create :school
-    school.school_stats_by_year << SchoolStatsByYear.new(
-      {
-        school_id: school.id,
-        school_year: '1998-1999',
-        students_total: 1000,
-        frl_eligible_total: 501
-      }
-    )
-    school.save!
-    assert school.maker_high_needs?
   end
 
   test 'AFE high needs false when no stats data' do
@@ -275,7 +203,6 @@ class SchoolTest < ActiveSupport::TestCase
     Census::CensusSummary.delete_all
     SchoolInfo.delete_all
     SchoolStatsByYear.delete_all
-    CircuitPlaygroundDiscountApplication.delete_all
 
     School.delete_all
   end

@@ -61,7 +61,7 @@
     right: 0;
     position: absolute;
     top: 55px;
-    background-color: $teal;
+    background-color: $light_primary_500;
     // We want the z-index to be greater than the teacher panel, which is currently 1021.
     // Teacher panel z-index is defined in teacher-panel.scss
     z-index: 1022;
@@ -100,7 +100,7 @@
         margin-right: 0;
       }
       a {
-        font-family: $gotham-regular;
+        @include main-font-regular;
         color: $white;
         text-decoration: none;
         html[dir=rtl], .rtl & {
@@ -109,13 +109,13 @@
       }
 
       #about-more {
-        font-family: $gotham-regular;
+        @include main-font-regular;
         color: $white;
         text-decoration: none;
         cursor: pointer;
       }
       #educate-more {
-        font-family: $gotham-regular;
+        @include main-font-regular;
         color: $white;
         text-decoration: none;
         cursor: pointer;
@@ -239,7 +239,7 @@
   #hamburger-icon {
     padding: 10px 28px 16px 0;
     float: right;
-    margin-top: 8px;
+    margin-top: 7px;
     display: inline-block;
 
     %extend_burger {

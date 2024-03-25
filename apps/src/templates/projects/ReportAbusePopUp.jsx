@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import fontConstants from '@cdo/apps/fontConstants';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import style from './report-abuse-pop-up.module.scss';
@@ -246,7 +247,10 @@ class UnconnectedReportAbusePopUp extends React.Component {
                 onClick={this.cancel}
                 text={i18n.cancel()}
                 color={Button.ButtonColor.neutralDark}
-                style={{fontSize: '1rem', fontFamily: 'Gotham 4r, sans-serif'}}
+                style={{
+                  fontSize: '1rem',
+                  ...fontConstants['main-font-regular'],
+                }}
               />
               <Button
                 onClick={this.handleSubmit}
@@ -256,7 +260,10 @@ class UnconnectedReportAbusePopUp extends React.Component {
                 }
                 text={i18n.submit()}
                 className={style.submitButton}
-                style={{fontSize: '1rem', fontFamily: 'Gotham 4r, sans-serif'}}
+                style={{
+                  fontSize: '1rem',
+                  ...fontConstants['main-font-regular'],
+                }}
                 color={Button.ButtonColor.brandSecondaryDefault}
               />
             </div>

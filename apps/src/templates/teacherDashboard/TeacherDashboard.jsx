@@ -6,7 +6,6 @@ import TeacherDashboardNavigation, {
 } from './TeacherDashboardNavigation';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
-import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
@@ -15,11 +14,16 @@ import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginI
 import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
+import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
+
+const applyV1TeacherDashboardWidth = children => {
+  return <div className={dashboardStyles.dashboardPage}>{children}</div>;
+};
 
 function TeacherDashboard({
   studioUrlPrefix,
@@ -28,6 +32,8 @@ function TeacherDashboard({
   studentCount,
   coursesWithProgress,
   location,
+  showAITutorTab,
+  sectionProviderName,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -64,11 +70,6 @@ function TeacherDashboard({
       },
       {includeUserId: true}
     );
-    if (newTab === 'progress') {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId,
-      });
-    }
   });
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -97,61 +98,94 @@ function TeacherDashboard({
             components using Connect/Redux. Library we could use to fix issue:
             https://github.com/supasate/connected-react-router */}
           <TeacherDashboardHeader />
-          <TeacherDashboardNavigation />
+          <TeacherDashboardNavigation showAITutorTab={showAITutorTab} />
         </div>
       )}
       <Switch>
         <Route
           path={TeacherDashboardPath.manageStudents}
-          component={props => (
-            <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.loginInfo}
-          component={props => (
-            <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                sectionProviderName={sectionProviderName}
+              />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.standardsReport}
-          component={props => <StandardsReport />}
+          component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
         {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
         {studentCount === 0 && (
-          <Route component={props => <EmptySection sectionId={sectionId} />} />
+          <Route
+            component={props =>
+              applyV1TeacherDashboardWidth(
+                <EmptySection sectionId={sectionId} />
+              )
+            }
+          />
         )}
         <Route
           path={TeacherDashboardPath.projects}
-          component={props => (
-            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-          )}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )
+          }
         />
         <Route
           path={TeacherDashboardPath.stats}
-          component={props => <StatsTableWithData />}
+          component={props =>
+            applyV1TeacherDashboardWidth(<StatsTableWithData />)
+          }
         />
         {coursesWithProgress.length === 0 && (
           <Route
-            component={() => (
-              <div style={styles.text}>
-                <SafeMarkdown markdown={i18n.noProgressSection()} />
-              </div>
-            )}
+            component={() =>
+              applyV1TeacherDashboardWidth(
+                <div className={dashboardStyles.text}>
+                  <SafeMarkdown markdown={i18n.noProgressSection()} />
+                </div>
+              )
+            }
           />
         )}
         <Route
           path={TeacherDashboardPath.progress}
-          component={props => <SectionProgress />}
+          component={props => <SectionProgressSelector />}
         />
         <Route
           path={TeacherDashboardPath.textResponses}
-          component={props => <TextResponses />}
+          component={props => applyV1TeacherDashboardWidth(<TextResponses />)}
         />
         <Route
           path={TeacherDashboardPath.assessments}
-          component={props => <SectionAssessments sectionName={sectionName} />}
+          component={props =>
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          }
         />
+        {showAITutorTab && (
+          <Route
+            path={TeacherDashboardPath.aiTutorChatMessages}
+            component={props =>
+              applyV1TeacherDashboardWidth(
+                <AITutorChatMessagesTable sectionId={sectionId} />
+              )
+            }
+          />
+        )}
       </Switch>
     </div>
   );
@@ -163,17 +197,11 @@ TeacherDashboard.propTypes = {
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
   coursesWithProgress: PropTypes.array.isRequired,
+  showAITutorTab: PropTypes.bool,
+  sectionProviderName: PropTypes.string,
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,
-};
-
-const styles = {
-  text: {
-    fontStyle: 'italic',
-    textAlign: 'center',
-    paddingTop: 10,
-  },
 };
 
 export default TeacherDashboard;

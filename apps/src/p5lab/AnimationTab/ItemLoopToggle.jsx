@@ -34,7 +34,11 @@ class ItemLoopToggle extends React.Component {
           className={style.loopToggle}
           onClick={this.toggleClicked}
         >
-          <img src={iconImageSrc} />
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          <img src={iconImageSrc} alt="" />
         </div>
       </OverlayTrigger>
     );

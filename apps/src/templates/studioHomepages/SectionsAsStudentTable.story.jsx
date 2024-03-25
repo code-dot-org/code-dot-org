@@ -65,7 +65,6 @@ const sections = [
 ];
 
 export default {
-  title: 'SectionAsStudentTable',
   component: SectionsAsStudentTable,
 };
 

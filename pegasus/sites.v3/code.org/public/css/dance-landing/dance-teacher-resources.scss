@@ -38,7 +38,8 @@ div[dir='rtl'] .resource-text-box{
 .resource-title {
   font-size: 20px;
   color: $neutral_dark;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin-bottom: 20px;
 }
 
@@ -53,7 +54,6 @@ div[dir='rtl'] .resource-text-box{
   background-color: $brand_secondary_default;
   border: 2px solid $brand_secondary_default;
   color: $neutral_white;
-  font-family: $gotham-bold;
   margin: 5px 0;
   font-size: 16px;
   line-height: 16px;

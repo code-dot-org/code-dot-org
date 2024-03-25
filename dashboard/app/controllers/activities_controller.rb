@@ -119,6 +119,13 @@ class ActivitiesController < ApplicationController
       else
         track_progress_in_session
       end
+
+      # If a student in the pilot is submitting work on an AI-enabled level, trigger the AI evaluation job.
+      is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: @script_level&.script, experiment_name: 'ai-rubrics')
+      is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(@script_level)
+      if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+        EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
+      end
     end
 
     render json: milestone_response(

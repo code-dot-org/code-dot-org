@@ -9,7 +9,7 @@ end
 # Returns the state name associated with the state abbreviation abbr.
 # abbr: A two character (uppercase or lowercase) symbol or string.
 # include_dc: (default: false) Whether to include Washington DC as a state.
-def get_us_state_from_abbr(abbr, include_dc = false)
+def get_us_state_from_abbr(abbr, include_dc: false)
   abbr = get_uppercase_symbol(abbr)
   return include_dc ? STATE_ABBR_WITH_DC_HASH[abbr] : STATE_ABBR_HASH[abbr]
 end
@@ -18,7 +18,7 @@ end
 # @param [String|Symbol] name - full state name, e.g. "Washington"
 # @param [Boolean] include_dc - (default: false) Whether to include Washington DC as a state.
 # @returns [String] state abbreviation, or nil
-def get_us_state_abbr_from_name(name, include_dc = false)
+def get_us_state_abbr_from_name(name, include_dc: false)
   titleized_name = name.to_s.strip.titleize
 
   # special case for DC
@@ -32,15 +32,15 @@ end
 # @param [String|Symbol] name_or_abbr - full state name or state abbreviation
 # @param [Boolean] include_dc - (default: false) Whether to include Washington DC as a state.
 # @returns [String] two-letter state abbreviation, or nil
-def get_us_state_abbr(name_or_abbr, include_dc = false)
-  name = get_us_state_from_abbr(name_or_abbr, include_dc) || name_or_abbr
-  get_us_state_abbr_from_name name, include_dc
+def get_us_state_abbr(name_or_abbr, include_dc: false)
+  name = get_us_state_from_abbr(name_or_abbr, include_dc: include_dc) || name_or_abbr
+  get_us_state_abbr_from_name(name, include_dc: include_dc)
 end
 
 # Returns whether the abbreviation is a state (including Washington DC)
 # abbreviation.
-def us_state_abbr?(abbr, include_dc = false)
-  return !get_us_state_from_abbr(abbr, include_dc).nil?
+def us_state_abbr?(abbr, include_dc: false)
+  return !get_us_state_from_abbr(abbr, include_dc: include_dc).nil?
 end
 
 # Returns the entire list of states (including Washington DC)

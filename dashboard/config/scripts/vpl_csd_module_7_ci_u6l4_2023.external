@@ -4,17 +4,18 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Unit 6 - Lesson 4:  Board Events
-**Estimated time: 10 minutes**
+# Creating Apps with Devices - Lesson 5: Board Events
 
-### Tasks
+> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/5" target="blank">U6AL5 Lesson Plan: Board Events</a> (Circuit Playground)
+> ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/5" target="blank">U6BL5 Lesson Plan: Board Events</a> (micro:bit)
 
-* <a href="https://studio.code.org/s/csd6-2022/lessons/4" target="_blank">Read the lesson plan </a>
-* Identify how students will use onBoardEvent() in order to get input from their Circuit Playgrounds
+## Tasks
 
-**Next up:**  Click continue to revisit how input is taken in using Game Lab and App Lab in comparison to how Circuit Playgrounds get input.
+* ##### Choose the appropriate lesson plan above and read through
+* ##### Identify how students will use onBoardEvent() in order to get input from their devices
 
-
+### Next Up (Levels 11 & 12)
+##### Click continue to revisit how input is taken in using Game Lab and App Lab in comparison to how devices get input.
 
 
 

@@ -51,7 +51,7 @@ class Services::CSTAEnrollment
         "submission[17_st1]" => titleize_address(street_1),
         "submission[17_st2]" => titleize_address(street_2),
         "submission[17_city]" => city.titleize,
-        "submission[17_state]" => get_us_state_abbr(state, true),
+        "submission[17_state]" => get_us_state_abbr(state, include_dc: true),
         "submission[17_zip]" => zip,
         "submission[19]" => "Yes, I provide my consent.",
         "submission[25]" => professional_role,

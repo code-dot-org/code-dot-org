@@ -8,6 +8,8 @@
     vertical-align: top;
   }
 
+= render partial: 'workshop_notes'
+
 - if @workshop.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
   %h3
     Before the Workshop
@@ -22,18 +24,6 @@
       There is no requirement that you are familiar with the course before you
       join the workshop - we will walk you through what you need to know in our
       time together.
-
-- if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
-  %h3
-    Pre-Workshop Tech Setup
-  %p
-    During the workshop, we will explore Unit 6 of the CS Discoveries course.
-    Unit 6 uses the Circuit Playground and Maker App to get students hands-on experience with physical computing.
-    In order to save time during the workshop for more exploration, we ask that you install the Maker App
-    before attending the workshop. Directions for setting up the Maker App can be found at
-    = link_to('https://studio.code.org/maker/setup', 'https://studio.code.org/maker/setup') + '.'
-    School- or district-owned laptops may require administrator permission to download Maker App,
-    so we encourage you to start this process soon.
 
 - if @workshop.virtual?
   = render partial: 'virtual_tips'
@@ -55,12 +45,7 @@
 %p
   Thank you,
   %br
-  - if @workshop.course == Pd::Workshop::COURSE_CSF
-    Dave Frye
-    %br
-    Director of Program Development and Operations, Code.org
-  - else
-    = @workshop.organizer.name
+  = @workshop.organizer.name
 
 %p
   P.S. Connect with other computer science teachers on Twitter

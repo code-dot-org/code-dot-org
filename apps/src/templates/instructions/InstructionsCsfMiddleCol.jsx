@@ -1,19 +1,24 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import LegacyButton from '../LegacyButton';
+import SafeMarkdown from '../SafeMarkdown';
+
+import ChatBubble from './ChatBubble';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
-import ChatBubble from './ChatBubble';
-import LegacyButton from '../LegacyButton';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '../SafeMarkdown';
-import {scrollTo, shouldDisplayChatTips} from './utils';
-import color from '../../util/color';
 import Instructions from './Instructions';
+import {scrollTo, shouldDisplayChatTips} from './utils';
 
 var instructions = require('../../redux/instructions');
+const VERY_LIGHT_BLUE_COLOR = '#f0ffff';
+const VERY_LIGHT_YELLOW_COLOR = '#fffff0';
 
 class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {
@@ -179,7 +184,8 @@ class InstructionsCsfMiddleCol extends React.Component {
           this.props.hints.map(hint => (
             <InlineHint
               key={hint.hintId}
-              borderColor={color.yellow}
+              borderColor={color.light_info_500}
+              backgroundColor={VERY_LIGHT_BLUE_COLOR}
               markdown={hint.markdown}
               ttsUrl={hint.ttsUrl}
               ttsMessage={hint.ttsMessage}
@@ -197,7 +203,12 @@ class InstructionsCsfMiddleCol extends React.Component {
         {this.props.feedback && !this.props.collapsed && (
           <InlineFeedback
             key={this.props.feedback.message}
-            borderColor={this.props.isMinecraft ? color.white : color.charcoal}
+            borderColor={
+              this.props.isMinecraft
+                ? color.white
+                : color.product_caution_default
+            }
+            backgroundColor={VERY_LIGHT_YELLOW_COLOR}
             message={this.props.feedback.message}
             isMinecraft={this.props.isMinecraft}
             skinId={this.props.skinId}
@@ -206,7 +217,8 @@ class InstructionsCsfMiddleCol extends React.Component {
         )}
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
-            borderColor={color.yellow}
+            borderColor={color.light_info_500}
+            backgroundColor={VERY_LIGHT_BLUE_COLOR}
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
             isMinecraft={this.props.isMinecraft}

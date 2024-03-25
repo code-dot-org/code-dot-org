@@ -9,10 +9,25 @@ module I18n
         Labs.sync_in
       end
 
-      def self.sync_out
-        Animations.sync_out
+      def self.sync_up(**opts)
+        Animations.sync_up(**opts)
+        ExternalSources.sync_up(**opts)
+        Labs.sync_up(**opts)
+      end
+
+      def self.sync_down(**opts)
+        Animations.sync_down(**opts)
+        ExternalSources.sync_down(**opts)
+        Labs.sync_down(**opts)
+      end
+
+      def self.sync_out(**opts)
+        Animations.sync_out(**opts)
         ExternalSources.sync_out
         Labs.sync_out
+
+        # Should be called when Labs have been synced-out
+        TextToSpeech.sync_out
       end
     end
   end

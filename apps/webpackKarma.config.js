@@ -1,5 +1,5 @@
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require('webpack');
 
 const envConstants = require('./envConstants');
 const {localeDoNotImport, WEBPACK_BASE_CONFIG} = require('./webpack.config');

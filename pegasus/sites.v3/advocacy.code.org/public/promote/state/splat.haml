@@ -10,7 +10,7 @@ theme: none
   state = File.basename(request.path_info)
   raise Sinatra::NotFound unless state.downcase == state
   state.upcase!
-  raise Sinatra::NotFound unless us_state_abbr?(state, true)
+  raise Sinatra::NotFound unless us_state_abbr?(state, include_dc: true)
 
 #promote-page
   -if state.nil_or_empty?

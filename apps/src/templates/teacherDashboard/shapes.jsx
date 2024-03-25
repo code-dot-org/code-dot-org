@@ -20,6 +20,7 @@ export const sectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
   restrictSection: PropTypes.bool,
   postMilestoneDisabled: PropTypes.bool,
+  syncEnabled: PropTypes.bool,
 });
 
 export const assignmentUnitShape = PropTypes.shape({
@@ -83,9 +84,4 @@ export const sectionForDropdownShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   isAssigned: PropTypes.bool.isRequired,
-});
-
-export const multiSelectOptionShape = PropTypes.shape({
-  value: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
 });

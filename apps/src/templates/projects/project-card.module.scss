@@ -33,28 +33,28 @@
 }
 
 .lastEdit {
+  @include main-font-regular;
   padding-left: 15px;
   padding-right: 10px;
   padding-bottom: 10px;
   font-size: 0.6875rem;
-  font-family: $gotham-regular;
   color: $neutral-dark;
 }
 
 .ageRange {
+  @include main-font-regular;
   padding-left: 10px;
   padding-top: 5px;
   font-size: 0.6875rem;
-  font-family: $gotham-regular;
   color: $neutral-dark;
 }
 
 .firstInitial {
+  @include main-font-regular;
   padding-top: 5px;
   font-size: 0.6875rem;
   padding-left: 15px;
   padding-right: 15px;
-  font-family: $gotham-regular;
   color: $neutral-dark;
 }
 
@@ -65,12 +65,12 @@
 }
 
 .bold {
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
 }
 
 .reported {
+  @include main-font-semi-bold;
   margin: auto;
   color: $product_negative_default;
-  font-family: $gotham-bold;
   font-size: 0.75rem;
 }

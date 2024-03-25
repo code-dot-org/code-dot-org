@@ -68,19 +68,19 @@
 }
 
 .petition-message {
+  @include main-font-semi-bold;
   margin: 0;
   font-size: 21px;
   line-height: 28px;
-  font-family: $gotham-bold;
   color: #5b6770;
 }
 
 .petition-sign-message {
+  @include main-font-regular;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
   margin: 10px 0 2px 0;
-  font-family: $gotham-regular;
   color: #5b6770;
 }
 
@@ -96,21 +96,21 @@
 }
 
 .petition-space {
+  @include main-font-bold;
   flex: 1 100%;
   height: 18px;
   margin: 0 0 2px 0;
   color: #ff8000;
-  font-family: $gotham-extra-bold;
   font-size: 14px;
   text-align: center;
 }
 
 .petition-button {
+  @include main-font-semi-bold;
   min-width: 100px;
   margin: 0;
   padding: 4px 12px;
   height: 30px;
-  font-family: $gotham-bold;
 }
 
 // Mobile and anything less than 970px

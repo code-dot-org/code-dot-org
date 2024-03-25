@@ -8,14 +8,10 @@ SHARED_JS_DIR = "#{REPO_DIR}/shared/js".freeze
 SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}".freeze
 
 def filter_eslint_apps(modified_files)
+  full_apps_dir = File.expand_path(APPS_DIR)
+
   modified_files.select do |f|
-    (f.end_with?(".js", ".jsx", ".ts", ".tsx")) &&
-      !(f.end_with?('.min.js') ||
-        f.match(/public\/.+package\//) ||
-        f.include?('apps/lib/') ||
-        f.include?('shared/') ||
-        f.include?('dashboard/config/')
-       )
+    f.start_with?(full_apps_dir) && f.end_with?(".js", ".jsx", ".ts", ".tsx")
   end
 end
 
@@ -86,8 +82,23 @@ def lint_failure(output)
   raise "Lint failed"
 end
 
-def do_linting
-  modified_files = HooksUtils.get_staged_files
+# Helper method for running the appropriate linter on each of a subset of
+# files. If no branches are specified, that subset will be all the files staged
+# in git to be committed; this is useful for running linting in a pre-commit
+# hook. If branches are specified, that subset will be those files that have
+# been changed between branches; this is useful for a continuous integration or
+# pre-merge hook.
+def do_linting(base = nil, current = nil)
+  modified_files =
+    if base.nil? || current.nil?
+      HooksUtils.get_staged_files
+    else
+      # Because one way for a file to be changed between branches is for it to
+      # have been deleted, we want to make sure we're only trying to lint files
+      # that actually exist on the filesystem.
+      HooksUtils.get_changed_files_between_branches(base, current).select {|f| File.exist?(f)}
+    end
+
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_scss_dashboard) => filter_scss(modified_files),
@@ -105,4 +116,4 @@ def do_linting
   end
 end
 
-do_linting
+do_linting(*ARGV)

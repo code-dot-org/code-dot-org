@@ -29,6 +29,7 @@ function showHomepage() {
   const isEnglish = homepageData.isEnglish;
   const announcementOverride = homepageData.announcement;
   const specialAnnouncement = homepageData.specialAnnouncement;
+  const studentSpecialAnnouncement = homepageData.studentSpecialAnnouncement;
   const query = queryString.parse(window.location.search);
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
@@ -95,7 +96,6 @@ function showHomepage() {
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            isEnglish={isEnglish}
             ncesSchoolId={homepageData.ncesSchoolId}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
@@ -115,9 +115,6 @@ function showHomepage() {
             hasFeedback={homepageData.hasFeedback}
             showIncubatorBanner={homepageData.showIncubatorBanner}
             currentUserId={homepageData.currentUserId}
-            showDeprecatedCalcAndEvalWarning={
-              homepageData.showDeprecatedCalcAndEvalWarning
-            }
           />
         )}
         {!isTeacher && (
@@ -132,9 +129,7 @@ function showHomepage() {
             showVerifiedTeacherWarning={
               homepageData.showStudentAsVerifiedTeacherWarning
             }
-            showDeprecatedCalcAndEvalWarning={
-              homepageData.showDeprecatedCalcAndEvalWarning
-            }
+            specialAnnouncement={studentSpecialAnnouncement}
           />
         )}
       </div>

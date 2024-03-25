@@ -1,21 +1,22 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+
+import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   setFeedback,
   setHasAuthoredHints,
   setInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
-import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
-import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import InstructionsCSF from './InstructionsCSF';
-import SmallStaticAvatar from '@cdo/static/skins/bee/small_static_avatar.png';
 import FailureAvatar from '@cdo/static/skins/bee/failure_avatar.png';
+import SmallStaticAvatar from '@cdo/static/skins/bee/small_static_avatar.png';
+
+import InstructionsCSF from './InstructionsCSF';
 
 export default {
-  title: 'InstructionsCSF',
   component: InstructionsCSF,
 };
 

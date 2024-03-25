@@ -4,13 +4,12 @@
 
 .docs-pages {
   th {
+    @include main-font-semi-bold;
     background-color: $charcoal;
     color: $white;
     border: 1px solid $white;
     text-align: left;
     font-size: 120%;
-    font-family: $gotham-bold;
-    font-weight: normal;
     padding: 5px;
   }
 

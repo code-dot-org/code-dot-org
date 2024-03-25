@@ -63,7 +63,7 @@
       <xml>
         <block type="when_run" deletable="false">
           <next>
-            <block type="gamelab_createNewSprite" inline="false" deletable="false">
+            <block type="gamelab_createNewSprite" inline="false" deletable="false" id="make-new-sprite">
               <title name="NAME">dusty</title>
               <title name="COSTUME">"tumbleweed"</title>
               <value name="LOCATION">

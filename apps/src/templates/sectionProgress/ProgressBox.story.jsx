@@ -2,7 +2,6 @@ import React from 'react';
 import ProgressBox from './ProgressBox';
 
 export default {
-  title: 'ProgressBox',
   component: ProgressBox,
 };
 

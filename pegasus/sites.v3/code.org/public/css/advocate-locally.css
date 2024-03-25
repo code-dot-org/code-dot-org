@@ -25,7 +25,8 @@
 }
 
 .join-coalition-wrapper .right .title {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   padding: 0px;
   margin: 0px;
   font-size: 26px;

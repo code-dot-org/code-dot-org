@@ -1,7 +1,9 @@
 require 'test_helper'
 require 'testing/projects_test_utils'
 require 'cdo/delete_accounts_helper'
+# rubocop:disable CustomCops/PegasusRequires
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
+# rubocop:enable CustomCops/PegasusRequires
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -17,7 +19,7 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # Getting this right is important for compliance with various privacy
 # regulations around the globe, so changes to this behavior should be carefully
 # reviewed by the product team.
-#
+# rubocop:disable CustomCops/PegasusDbUsage
 class DeleteAccountsHelperTest < ActionView::TestCase
   include ProjectsTestUtils
 
@@ -436,7 +438,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "hard-deletes all of a hard-deleted student's follower rows" do
-    DCDO.stubs(:get).with('family-name-features', false).returns(false)
     user = create :student
     section = create :section
     section.students << user
@@ -451,7 +452,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty user.sections_as_student
     refute_includes section.students, user
     assert_empty Follower.with_deleted.where(student_user: user)
-    DCDO.unstub(:get)
   end
 
   #
@@ -619,6 +619,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "removes lti user identities rows" do
+    lti_user_identity = create :lti_user_identity
+    user = lti_user_identity.user
+
+    assert_equal 1, user.lti_user_identities.with_deleted.count,
+    'Expected user to have one lti user identities'
+
+    purge_user user
+
+    assert_equal 0, user.lti_user_identities.with_deleted.count,
+      'Expected user to have no lti user identities'
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -729,52 +742,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     Census::CensusSubmission.expects(:where).never
 
     purge_user student
-  end
-
-  #
-  # Table: dashboard.circuit_playground_discount_applications
-  #
-
-  test 'anonymizes signature on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, signature: 'Will Halloway'
-    user = application.user
-
-    assert_equal 'Will Halloway', application.signature
-
-    purge_user user
-    application.reload
-
-    assert_equal '(anonymized signature)', application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'leaves blank signature blank on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application
-    user = application.user
-
-    assert_nil application.signature
-
-    purge_user user
-    application.reload
-
-    assert_nil application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'removes school id from circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, school_id: create(:school).id
-    user = application.user
-
-    refute_nil application.school_id
-
-    purge_user user
-    application.reload
-
-    assert_nil application.school_id
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   #
@@ -1224,22 +1191,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.pd_workshop_surveys
-  # Associated via enrollment
-  #
-
-  test "clears form_data from pd_workshop_surveys" do
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_workshop_survey, pd_enrollment: enrollment
-    refute_equal '{}', survey.form_data
-
-    purge_user survey.pd_enrollment.user
-
-    survey.reload
-    assert_equal '{}', survey.form_data
-  end
-
-  #
   # Table dashboard.peer_reviews
   # Could delete submitter or viewer
   #
@@ -1634,6 +1585,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.ai_tutor_interactions
+  #
+
+  test "deletes all of a purged user's ai tutor interactions (chat messages)" do
+    student = create :student_with_ai_tutor_access
+    num_ai_tutor_interactions = 3
+    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
+
+    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
+      purge_user student
+    end
+  end
+
+  #
   # Table: dashboard.projects
   #
 
@@ -1848,12 +1813,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1864,12 +1829,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       purge_user student
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1883,14 +1848,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
     end
@@ -2356,3 +2321,4 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

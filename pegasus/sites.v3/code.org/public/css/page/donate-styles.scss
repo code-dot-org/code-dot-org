@@ -21,13 +21,6 @@ section.fundraise {
   }
 }
 
-section.bg-primary-light {
-
-  p {
-    font-family: $gotham-regular;
-  }
-}
-
 section.donate-options {
 
   @media screen and (max-width: $width-md) {
@@ -57,8 +50,20 @@ section.donate-options {
   }
 }
 
+section.supporters {
+
+  .logos {
+    margin-block: 3rem;
+    gap: 3rem;
+
+    img {
+      width: 100px;
+      align-self: center;
+    }
+  }
+}
+
 section.seals{
-  padding-bottom: 0;
 
   @media screen and (max-width: $width-sm) {
     padding: 0;

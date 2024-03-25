@@ -16,7 +16,7 @@ class BackpacksControllerTest < ActionController::TestCase
     assert_nil Backpack.find_by_user_id(@user.id)
     response = get :get_channel
     assert_response :success
-    assert_not_nil Backpack.find_by_user_id(@user.id)
+    refute_nil Backpack.find_by_user_id(@user.id)
     body = JSON.parse(response.body)
     channel = body['channel']
     storage_id, project_id = storage_decrypt_channel_id(channel)

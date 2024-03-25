@@ -2,7 +2,7 @@ require 'net/http'
 require 'open-uri'
 require 'json'
 require 'dynamic_config/gatekeeper'
-require_relative '../../pegasus/src/env'
+require 'dynamic_config/dcdo'
 
 module WebPurify
   # WebPurify limits us to 30,000 characters per request and 4 simultaneous requests per API key

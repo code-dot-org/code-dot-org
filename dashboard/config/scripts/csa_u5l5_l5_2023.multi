@@ -1,8 +1,8 @@
 name 'CSA U5L5-L5_2023'
 title 'Check for Understanding'
 
-right '`24`'
-wrong '`20`'
+right '`20`'
+wrong '`24`'
 wrong '`28`'
 wrong '`22`'
 wrong '`26`'
@@ -36,5 +36,5 @@ What will be output when this code segment is executed?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-In the given code segment, we use enhanced `for` loops to traverse the 2D array and calculate the sum of all even numbers in the array. The even numbers in the array are `4`, `6`, `2`, and `8`. The sum of these numbers is 4 + 6 + 2 + 8 = 24.
+In the given code segment, we use enhanced `for` loops to traverse the 2D array and calculate the sum of all even numbers in the array. The even numbers in the array are `4`, `6`, `2`, and `8`. The sum of these numbers is 4 + 6 + 2 + 8 = 20.
 MARKDOWN

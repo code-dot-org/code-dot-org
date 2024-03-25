@@ -7,7 +7,7 @@
   }
 
   a {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
     font-size: 1rem;
     color: $brand_secondary_default;
     margin: 1rem 0;

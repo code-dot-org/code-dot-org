@@ -68,35 +68,31 @@ class SoundLibraryTest < FilesApiTestBase
     url = "/restricted/#{RESTRICTED_SOUND_TEST_FILENAME}"
 
     # no cloudfront policy
-    CDO.stub(:rack_env, :development) do
-      get url
-      assert last_response.client_error?
-    end
+    CDO.stubs(:rack_env).returns(:development)
+    get url
+    assert last_response.client_error?
 
     Timecop.freeze
     expires = Time.now + 1
     @session.set_cookie("CloudFront-Policy=#{stub_policy(expires)}")
 
     # cloudfront policy is current
-    CDO.stub(:rack_env, :development) do
-      get url
-      assert last_response.ok?
-      assert_equal content, last_response.body
-    end
+    CDO.stubs(:rack_env).returns(:development)
+    get url
+    assert last_response.ok?
+    assert_equal content, last_response.body
 
     # production raises even with current policy
-    CDO.stub(:rack_env, :production) do
-      assert_raises do
-        get url
-      end
+    CDO.stubs(:rack_env).returns(:production)
+    assert_raises do
+      get url
     end
 
     # policy has expired
     Timecop.travel 2
-    CDO.stub(:rack_env, :development) do
-      get url
-      assert last_response.client_error?
-    end
+    CDO.stubs(:rack_env).returns(:development)
+    get url
+    assert last_response.client_error?
 
     s3.delete_object(
       bucket: RESTRICTED_BUCKET,

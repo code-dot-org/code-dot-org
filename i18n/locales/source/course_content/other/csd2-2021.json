@@ -409,17 +409,7 @@
       "CSD U2 RGB intro_2021": {
         "display_name": "Introduction to RGB",
         "bubble_choice_description": "Learn about RGB and how it can be used to make custom colors.",
-        "long_instructions": "# RGB Colors\r\n\r\nAll colors, whether they have names or not, can be described by the level of red, green, and blue light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You can use the widget on your left to try out different RGB values and see what colors they make.\r\n\r\n* Use the sliders to adjust the levels of red, green, and blue light.\r\n* For each of the colors below, match it to its RGB value.\r\n\r\nA) red: 216, green: 191, blue: 216 - rgb(216,191,216)\r\n\r\nB) red: 255, green: 239, blue: 213 - rgb(255,239,213)\r\n\r\nC) red: 250, green: 128, blue: 114 - rgb(250,128,114)\r\n\r\nD) red: 70, green: 130, blue: 180 - rgb(70, 130, 180)\r\n\r\nE) red: 107, green: 142, blue: 35 - rgb(107,142,35)\r\n\r\n\r\n<div style=\"font-size: 16px\">\r\n\r\n::: details [**Why do red and green make yellow?**]\r\n\r\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\r\n\r\n:::\r\n\r\n::: details [**How many colors can I make with RGB color mixing?**]\r\n\r\nYou can make over sixteen million different colors with RGB color mixing.\r\n\r\n:::\r\n</div>\r\n",
-        "start_html": {
-          "red: 128": "red: 128",
-          "green: 128": "green: 128",
-          "blue: 128": "blue: 128",
-          "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5"
-        }
+        "long_instructions": "# RGB Colors\r\n\r\nAll colors, whether they have names or not, can be described by the level of red, green, and blue light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You can use the widget on your left to try out different RGB values and see what colors they make.\r\n\r\n* Use the sliders to adjust the levels of red, green, and blue light.\r\n* For each of the colors below, match it to its RGB value.\r\n\r\nA) red: 216, green: 191, blue: 216 - rgb(216,191,216)\r\n\r\nB) red: 255, green: 239, blue: 213 - rgb(255,239,213)\r\n\r\nC) red: 250, green: 128, blue: 114 - rgb(250,128,114)\r\n\r\nD) red: 70, green: 130, blue: 180 - rgb(70, 130, 180)\r\n\r\nE) red: 107, green: 142, blue: 35 - rgb(107,142,35)\r\n\r\n\r\n<div style=\"font-size: 16px\">\r\n\r\n::: details [**Why do red and green make yellow?**]\r\n\r\nWhen you mix paint, red and green make brown, but RGB color mixing uses light instead of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In additive color mixing, red and green make yellow, red and blue make magenta, and blue and green make cyan.  When you mix the three primary colors together (red, green, and blue), they make white.  You can read more at <a href=\"https://en.wikipedia.org/wiki/Additive_color\" target=\"_new\">Wikipedia - Additive Color</a>\r\n\r\n:::\r\n\r\n::: details [**How many colors can I make with RGB color mixing?**]\r\n\r\nYou can make over sixteen million different colors with RGB color mixing.\r\n\r\n:::\r\n</div>\r\n"
       },
       "CSD U2 rgb practice shades_2021": {
         "display_name": "Using RGB Colors",

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 import styleConstants from '../styleConstants';
 import FontAwesome from './FontAwesome';
 import color from '../util/color';
@@ -177,7 +178,7 @@ const styles = {
   description: {
     fontSize: 14,
     lineHeight: '22px',
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     zIndex: 2,
     color: color.neutral_dark,
     width: '100%',
@@ -190,7 +191,7 @@ const styles = {
   },
   linkToViewAll: {
     fontSize: 14,
-    fontFamily: `'Gotham 5r', sans-serif`,
+    ...fontConstants['main-font-semi-bold'],
     marginTop: -2,
     display: 'inline',
   },

@@ -2,8 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAnimationUploadButton as AnimationUploadButton} from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import AnimationPickerListItem from '../../../../src/p5lab/AnimationPicker/AnimationPickerListItem';
+import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 
 const emptyFunction = () => {};
 
@@ -26,7 +26,7 @@ describe('AnimationUploadButton', function () {
       const body = shallow(<AnimationUploadButton {...defaultProps} />);
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog).at(0);
+      const warningModal = body.find(ImageUploadModal).at(0);
       expect(warningModal.props().isOpen).to.be.true;
     });
 
@@ -39,7 +39,7 @@ describe('AnimationUploadButton', function () {
       const body = shallow(<AnimationUploadButton {...combinedProps} />);
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog);
+      const warningModal = body.find(ImageUploadModal);
       expect(warningModal.at(0).props().isOpen).to.be.false;
     });
 
@@ -52,22 +52,8 @@ describe('AnimationUploadButton', function () {
       const body = shallow(<AnimationUploadButton {...combinedProps} />);
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog);
+      const warningModal = body.find(ImageUploadModal);
       expect(warningModal.at(0).props().isOpen).to.be.false;
-    });
-
-    it('warning message requires both checkboxes to be checked to go forward', () => {
-      const body = shallow(<AnimationUploadButton {...defaultProps} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog).at(0);
-      let confirmButton = warningModal.find('button').at(1);
-      expect(confirmButton.props().disabled).to.be.true;
-      const checkboxes = warningModal.find('input');
-      checkboxes.at(0).simulate('change', {target: {checked: true}});
-      checkboxes.at(1).simulate('change', {target: {checked: true}});
-      confirmButton = body.find('button').at(1);
-      expect(confirmButton.props().disabled).to.be.false;
     });
   });
 
@@ -81,7 +67,7 @@ describe('AnimationUploadButton', function () {
       const body = shallow(<AnimationUploadButton {...defaultPropsTeacher} />);
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog).at(0);
+      const warningModal = body.find(ImageUploadModal).at(0);
       expect(warningModal.props().isOpen).to.be.true;
     });
 
@@ -94,7 +80,7 @@ describe('AnimationUploadButton', function () {
       const body = shallow(<AnimationUploadButton {...combinedProps} />);
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog);
+      const warningModal = body.find(ImageUploadModal);
       expect(warningModal.at(0).props().isOpen).to.be.false;
     });
 
@@ -107,21 +93,8 @@ describe('AnimationUploadButton', function () {
       const body = shallow(<AnimationUploadButton {...combinedProps} />);
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog);
+      const warningModal = body.find(ImageUploadModal);
       expect(warningModal.at(0).props().isOpen).to.be.false;
-    });
-
-    it('warning message requires PII checkbox to be checked to go forward', () => {
-      const body = shallow(<AnimationUploadButton {...defaultPropsTeacher} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(BaseDialog).at(0);
-      let confirmButton = warningModal.find('button').at(1);
-      expect(confirmButton.props().disabled).to.be.true;
-      const checkboxes = warningModal.find('input');
-      checkboxes.at(0).simulate('change', {target: {checked: true}});
-      confirmButton = body.find('button').at(1);
-      expect(confirmButton.props().disabled).to.be.false;
     });
   });
 });

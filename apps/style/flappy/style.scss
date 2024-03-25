@@ -61,9 +61,9 @@ $root: "/blockly/media/flappy/"; //TODO: Parameterize for asset pipeline
 }
 
 .flappy-score {
+  @include main-font-bold;
   text-anchor: middle;
   font-size: xx-large;
-  font-family: $gotham-extra-bold;
   fill: white;
   stroke: black;
   stroke-width: 2;

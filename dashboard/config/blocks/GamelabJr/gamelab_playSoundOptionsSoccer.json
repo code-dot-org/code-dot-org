@@ -2,7 +2,7 @@
   "category": "HoC",
   "config": {
     "func": "playSoundOptionsSoccer",
-    "docFunc": "gamelab_playSoundOptions",
+    "docFunc": "gamelab_playSound",
     "blockText": "play sound {SOUND}",
     "args": [
       {

@@ -14,8 +14,8 @@ import {
   setLessonOfInterest,
   setCurrentView,
 } from './sectionProgressRedux';
-import {loadScriptProgress} from './sectionProgressLoader';
-import {ViewType, scriptDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -23,8 +23,8 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import DCDO from '@cdo/apps/dcdo';
 import styleConstants from './progressTables/progress-table-constants.module.scss';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
 
@@ -42,7 +42,7 @@ class SectionProgress extends Component {
     coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
@@ -59,10 +59,15 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    loadScriptProgress(this.props.scriptId, this.props.sectionId);
+    loadUnitProgress(this.props.scriptId, this.props.sectionId);
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+    });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
         logToCloud.PageAction.SectionProgressRenderedWithData,
@@ -73,11 +78,21 @@ class SectionProgress extends Component {
       );
       this.setState({reportedInitialRender: true});
     }
+
+    if (
+      prevProps.scriptId !== this.props.scriptId ||
+      prevProps.sectionId !== this.props.sectionId
+    ) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+        sectionId: this.props.sectionId,
+        unitId: this.props.scriptId,
+      });
+    }
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    loadScriptProgress(scriptId, this.props.sectionId);
+    loadUnitProgress(scriptId, this.props.sectionId);
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,
@@ -148,8 +163,12 @@ class SectionProgress extends Component {
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
+
     return (
-      <div>
+      <div
+        className={dashboardStyles.dashboardPage}
+        data-testid="section-progress-v1"
+      >
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
@@ -174,13 +193,14 @@ class SectionProgress extends Component {
           )}
         </div>
         <div style={styles.topRowContainer}>
-          {showProgressTable && !!DCDO.get('family-name-features', false) && (
-            <SortByNameDropdown
-              selectStyles={styles.sortOrderSelect}
-              sectionId={sectionId}
-              unitName={scriptData?.title}
-              source={SECTION_PROGRESS}
-            />
+          {showProgressTable && (
+            <div style={styles.sortOrderSelect}>
+              <SortByNameDropdown
+                sectionId={sectionId}
+                unitName={scriptData?.title}
+                source={SECTION_PROGRESS}
+              />
+            </div>
           )}
           {levelDataInitialized && <ProgressViewHeader />}
         </div>
@@ -217,6 +237,7 @@ const styles = {
     display: 'flex',
     alignItems: 'flex-end',
     marginBottom: 10,
+    width: '100%',
   },
   chevronLink: {
     display: 'flex',

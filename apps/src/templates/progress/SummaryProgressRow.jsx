@@ -15,6 +15,7 @@ import {
   lessonIsLockedForUser,
   lessonIsVisible,
 } from './progressHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 
 function SummaryProgressRow({
   dark,
@@ -175,7 +176,7 @@ export const styles = {
   },
   colText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 12,
     overflow: 'hidden',
     textOverflow: 'ellipsis',

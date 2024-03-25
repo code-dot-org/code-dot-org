@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
+import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import RubricField from '@cdo/apps/templates/instructions/teacherFeedback/RubricField';
 import {rubricShape} from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const rubricLevels = [
   'performanceLevel1',
@@ -77,8 +79,7 @@ const styles = {
     color: color.charcoal,
     fontSize: 18,
     lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal',
+    ...fontConstants['main-font-semi-bold'],
   },
   keyConcepts: {
     fontSize: 12,

@@ -4,7 +4,7 @@
 .label {
   display: flex;
   gap: 8px;
-  align-items: start;
+  align-items: center;
 
   i {
     vertical-align: bottom;
@@ -20,7 +20,6 @@
 
   span {
     margin-bottom: 0;
-    line-height: initial;
   }
 
   input[type="checkbox"] {
@@ -37,7 +36,8 @@
 
     &:indeterminate + i::before {
       content: "\e404";
-      color: $neutral_dark;
+      color: $neutral_white;
+      background: $light_primary_500;
       border: 2px solid $light_primary_500;
       border-radius: 4px;
     }

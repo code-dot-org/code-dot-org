@@ -14,7 +14,13 @@
     in partnership with Code.org!
   - else
     = @application.course_name + "!"
-  Please read on for more details, and then make
+
+  - if @application.scholarship_status == Pd::ScholarshipInfoConstants::YES_CDO
+    %p
+      In addition, we are excited to offer you a scholarship to cover your registration in the Professional Learning Program.
+
+%p
+  Please read this entire email for more details, and then make
   sure to register using
   = link_to('this link', registration_url)
   %strong within two weeks

@@ -30,7 +30,7 @@ ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
 instance_type ||= {Ref: 'InstanceType'}.to_json
 
 ami_timeout ||= 'PT10M'
-frontend_timeout ||= 'PT10M'
+frontend_timeout ||= 'PT20M'
 lifecycle_timeout ||= 1200 # seconds = 20 minutes
 frontend_volume_size ||= 16
 frontend_device_name ||= '/dev/sda1'
@@ -140,6 +140,13 @@ frontend_device_name ||= '/dev/sda1'
       <%=indent(add_properties(frontend_properties), 6)%>
       MetricsCollection:
         - Granularity: 1Minute
+      Tags:
+        - Key: "Name"
+          Value: !Sub "Frontend-${AWS::StackName}"
+          PropagateAtLaunch: true
+        - Key: "environment"
+          Value: <%=environment%>
+          PropagateAtLaunch: true
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     DependsOn: FastSnapshotRestore

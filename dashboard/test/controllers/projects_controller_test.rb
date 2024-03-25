@@ -382,7 +382,7 @@ class ProjectsControllerTest < ActionController::TestCase
     level = create(:level, :blockly)
     get :get_or_create_for_level, params: {level_id: level.id}
     assert_response :success
-    assert_not_nil @response.body['channel']
+    refute_nil @response.body['channel']
   end
 
   test 'get_or_create_for_level without script returns existing channel' do
@@ -390,7 +390,7 @@ class ProjectsControllerTest < ActionController::TestCase
     get :get_or_create_for_level, params: {level_id: level.id}
     assert_response :success
     channel_id = @response.body['channel']
-    assert_not_nil channel_id
+    refute_nil channel_id
 
     get :get_or_create_for_level, params: {level_id: level.id}
     assert_response :success
@@ -403,7 +403,7 @@ class ProjectsControllerTest < ActionController::TestCase
     create(:script_level, script: script, levels: [level])
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
-    assert_not_nil @response.body['channel']
+    refute_nil @response.body['channel']
   end
 
   test 'get_or_create_for_level with script restricts usage for young students in app lab' do
@@ -422,7 +422,7 @@ class ProjectsControllerTest < ActionController::TestCase
     create(:script_level, script: script, levels: [level])
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
-    assert_not_nil @response.body['channel']
+    refute_nil @response.body['channel']
   end
 
   test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do

@@ -2,6 +2,7 @@
   "category": "Control",
   "config": {
     "func": "ifVarEquals",
+    "docFunc": "codestudio_ifStatement",
     "blockText": "if {NUM} ={VAL}\n{STATEMENT}",
     "args": [
       {
@@ -15,11 +16,6 @@
         "name": "STATEMENT",
         "statement": true
       }
-    ],
-    "color": [
-      197,
-      0.88,
-      0.78
     ],
     "style": "logic_blocks"
   }

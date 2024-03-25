@@ -75,7 +75,7 @@ class LevelTest < ActiveSupport::TestCase
   test "cannot create two custom levels with same name" do
     assert_does_not_create(Level) do
       level2 = Level.create(@custom_maze_data)
-      assert_not level2.valid?
+      refute level2.valid?
       assert_includes(level2.errors, :name)
     end
   end
@@ -84,7 +84,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_does_not_create(Level) do
       name_upcase = @custom_maze_data[:name].upcase
       level2 = Level.create(@custom_maze_data.merge(name: name_upcase))
-      assert_not level2.valid?
+      refute level2.valid?
       assert_includes(level2.errors, :name)
     end
   end
@@ -100,7 +100,7 @@ class LevelTest < ActiveSupport::TestCase
   test "reject bad chars in custom level name" do
     assert_does_not_create(Level) do
       level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
-      assert_not level.valid?
+      refute level.valid?
       assert_includes(level.errors, :name)
     end
   end
@@ -591,6 +591,16 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes(levels, level_with_ideal_level_source_already)
     refute_includes(levels, freeplay_artist)
     assert_includes(levels, regular_artist)
+  end
+
+  test 'validated? requires free_play false on Artist levels' do
+    true_artist = Artist.create(name: 'freeplay true artist', free_play: 'true')
+    false_artist = Artist.create(name: 'freeplay false artist', free_play: 'false')
+    nil_artist = Artist.create(name: 'freeplay nil artist', free_play: nil)
+
+    assert false_artist.validated?
+    refute nil_artist.validated?
+    refute true_artist.validated?
   end
 
   test 'calculate_ideal_level_source_id does nothing if no level sources' do
@@ -1245,9 +1255,9 @@ class LevelTest < ActiveSupport::TestCase
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
-      "Odometer", "Pixelation", "Poetry", "PublicKeyCryptography", "StandaloneVideo",
+      "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
-      "Vigenere", "Weblab"
+      "Vigenere", "Weblab", "Weblab2"
     ]
     scripts = [
       "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
@@ -1327,7 +1337,7 @@ class LevelTest < ActiveSupport::TestCase
     contained_level = create :multi
     level_with_contained = create :level, contained_level_names: [contained_level.name]
 
-    assert_not level_with_contained.can_have_feedback_review_state?
+    refute level_with_contained.can_have_feedback_review_state?
   end
 
   test 'next_unused_name_for_copy finds next available level name' do

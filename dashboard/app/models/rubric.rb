@@ -17,16 +17,24 @@ class Rubric < ApplicationRecord
   belongs_to :level
   belongs_to :lesson
 
+  def get_script_level
+    lesson.script_levels.find {|sl| sl.levels.include?(level)}
+  end
+
   def summarize
-    script_level = lesson.script_levels.find {|sl| sl.levels.include?(level)}
+    script_level = get_script_level
     {
       id: id,
       learningGoals: learning_goals.map(&:summarize),
+      script: {
+        id: get_script_level.script.id,
+      },
       lesson: {
         name: lesson.name,
         position: lesson.relative_position,
       },
       level: {
+        id: level.id,
         name: level.name,
         position: script_level&.position,
       }

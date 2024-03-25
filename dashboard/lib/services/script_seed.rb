@@ -75,7 +75,7 @@ module Services
 
       rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
-      learning_goal_evidence_levels = learning_goals.map(&:learning_goal_evidence_levels).flatten.sort_by(&:understanding)
+      learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -888,7 +888,7 @@ module Services
       def seeding_key
         # Just in case the data stored in the level_keys property is out of sync somehow,
         # don't use that data during serialization.
-        object.seeding_key(@scope[:seed_context], false)
+        object.seeding_key(@scope[:seed_context], use_existing_level_keys: false)
       end
 
       def level_keys
@@ -904,7 +904,7 @@ module Services
       attributes :seeding_key
 
       def seeding_key
-        object.seeding_key(@scope[:seed_context], false)
+        object.seeding_key(@scope[:seed_context], use_existing_level_keys: false)
       end
     end
 

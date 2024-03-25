@@ -84,6 +84,7 @@ export default class Alert extends React.Component {
         <button
           type="button"
           style={styles.closeButton}
+          className="no-mc"
           onClick={this.props.onClose}
         >
           <span>&times;</span>

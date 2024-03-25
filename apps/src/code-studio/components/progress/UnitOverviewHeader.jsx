@@ -11,6 +11,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
@@ -229,7 +230,7 @@ const styles = {
     alignItems: 'baseline',
   },
   versionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 15,
     color: color.charcoal,
   },

@@ -1,12 +1,16 @@
-import MD5 from 'crypto-js/md5';
+import classNames from 'classnames';
+import md5 from 'md5';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
-import trackEvent from '../../util/trackEvent';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import trackEvent from '../../util/trackEvent';
+
 import moduleStyles from './inline-audio.module.scss';
-import classNames from 'classnames';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -178,7 +182,7 @@ class InlineAudio extends React.Component {
       const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
 
       const message = this.props.message.replace('"???"', 'the question marks');
-      const hash = MD5(message).toString();
+      const hash = md5(message);
       const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
 
       return `${TTS_URL}/${voicePath}/${contentPath}`;
@@ -271,6 +275,7 @@ class InlineAudio extends React.Component {
           )}
           style={this.props.style && this.props.style.wrapper}
           onClick={this.toggleAudio}
+          aria-label={i18n.textToSpeech()}
           type="button"
         >
           <div

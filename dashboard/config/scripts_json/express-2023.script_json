@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2023-08-22 18:51:31 UTC",
+    "serialized_at": "2024-01-11 22:03:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1175,7 +1175,8 @@
       "key": "ca6b9610-b612-418d-87bf-bc1776fbd110",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "ca6b9610-b612-418d-87bf-bc1776fbd110",
@@ -1188,7 +1189,7 @@
       "key": "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f",
       "position": 3,
       "properties": {
-        "duration": 7,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -3308,7 +3309,7 @@
       "position": 1,
       "properties": {
         "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What is something you enjoyed about today's activity?\n\n- What is the connection between creativity and computer science?\n\n- What is CS and why does it matter.",
-        "duration": "5",
+        "duration": "10",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -19139,7 +19140,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/express-2022/resources",
+      "url": "/s/express-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -19150,7 +19151,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/express-2022/standards",
+      "url": "/s/express-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -19161,13 +19162,13 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/express-2022/vocab",
-      "key": "all_vocabulary",
+      "url": "/s/express-2023/vocab",
+      "key": "all_vocabulary_1",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_1"
       }
     },
     {
@@ -19793,7 +19794,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_1",
         "script.name": "express-2023"
       }
     },

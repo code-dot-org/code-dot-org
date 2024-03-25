@@ -65,7 +65,7 @@ class CertificatesControllerTest < ActionController::TestCase
     assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
   end
 
-  test_user_gets_response_for :batch, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :batch, user: nil, response: :success
   test_user_gets_response_for :batch, user: :student, response: :redirect, redirected_to: '/'
   test_user_gets_response_for :batch, user: :teacher, response: :success
 

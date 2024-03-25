@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import {STATES} from '../geographyConstants';
 import {styles} from './census2017/censusFormStyles';
 import MapboxLocationSearchField from './MapboxLocationSearchField';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const schoolTypes = [
   '',
@@ -19,7 +20,7 @@ const singleLineLayoutStyles = {
   verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
-  fontFamily: '"Gotham 4r", sans-serif',
+  ...fontConstants['main-font-regular'],
   color: '#333',
   padding: 0,
 };

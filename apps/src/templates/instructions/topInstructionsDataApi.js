@@ -1,5 +1,7 @@
 import $ from 'jquery';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 export function getTeacherFeedbackForStudent(studentId, levelId, scriptId) {
   return $.ajax({
     url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${studentId}&level_id=${levelId}&script_id=${scriptId}`,
@@ -36,4 +38,8 @@ export function incrementVisitCount(latestFeedbackId, token) {
     contentType: 'application/json;charset=UTF-8',
     headers: {'X-CSRF-Token': token},
   });
+}
+
+export function getTaRubricFeedbackForStudent(rubricId) {
+  return HttpClient.fetchJson(`/rubrics/${rubricId}/get_teacher_evaluations`);
 }
