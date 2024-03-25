@@ -2,8 +2,7 @@ require 'test_helper'
 
 class FeaturedProjectsControllerTest < ActionController::TestCase
   setup do
-    @project_validator = create :project_validator
-    @project = create :project, owner: @project_validator, id: 456, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
+    @project_validator = create :project_validator   
     # @featured_project has a project_id of 456
     @featured_project = create :featured_project
     @teacher = create :teacher
@@ -25,7 +24,6 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'project validators can unfeature projects' do
-    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     put :unfeature, params: {channel_id: "789"}
@@ -85,7 +83,6 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   end
 
   test 'unfeaturing a featured project should unfeature the project' do
-    skip 'Investigate flaky test'
     sign_in @project_validator
     @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
     @featured_project.update! featured_at: DateTime.now
