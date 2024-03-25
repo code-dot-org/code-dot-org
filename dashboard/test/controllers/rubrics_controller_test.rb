@@ -46,17 +46,20 @@ class RubricsControllerTest < ActionController::TestCase
     @rubric.destroy
 
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{@lesson.script.name}.script_json" && contents.include?('learning goal example 1')
+      filename == "#{Rails.root}/config/scripts_json/#{@lesson.script.name}.script_json" && contents.include?('ai-configured learning goal 1')
     end.once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
 
     assert_creates(Rubric) do
       post :create, params: {
         level_id: @level.id,
         lesson_id: @lesson.id,
         learning_goals_attributes: [
-          {learning_goal: 'learning goal example 1', ai_enabled: true, position: 1},
-          {learning_goal: 'learning goal example 2', ai_enabled: false, position: 2}
+          {learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 1},
+          {learning_goal: 'ai-configured learning goal 2', ai_enabled: false, position: 2}
         ]
       }
     end
@@ -71,6 +74,30 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 2, learning_goals.length
   end
 
+  test "cannot create ai-enabled learning goal without ai config" do
+    sign_in @levelbuilder
+    @rubric.destroy
+
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    refute_creates(Rubric) do
+      post :create, params: {
+        level_id: @level.id,
+        lesson_id: @lesson.id,
+        learning_goals_attributes: [
+          {learning_goal: 'non-ai learning goal', ai_enabled: true, position: 1},
+        ]
+      }
+    end
+    assert_response :bad_request
+    errors = JSON.parse(response.body)
+    assert_equal "no valid AI config in S3 for ai-enabled learning goal 'non-ai learning goal'", errors['learning_goals.learning_goal'].first
+  end
+
   test 'updates rubric and learning goals with valid params' do
     sign_in @levelbuilder
 
@@ -78,21 +105,74 @@ class RubricsControllerTest < ActionController::TestCase
     level = create :level
     create :script_level, script: lesson.script, lesson: lesson, levels: [level]
     rubric = create :rubric, lesson: lesson, level: level
-    learning_goal = create :learning_goal, rubric: rubric
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'original learning goal', ai_enabled: false, position: 0
     unit_name = rubric.lesson.script.name
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && contents.include?(learning_goal.key)
     end.once
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
     post :update, params: {
       id: rubric.id,
       learning_goals_attributes: [
-        {id: learning_goal.id, learning_goal: 'updated learning goal', ai_enabled: true, position: 0},
+        {id: learning_goal.id, learning_goal: 'updated learning goal', ai_enabled: false, position: 0},
       ]
     }
     learning_goal.reload
     assert_equal 'updated learning goal', learning_goal.learning_goal
+  end
+
+  test 'cannot update ai_enabled learning goal to non-ai-configured name' do
+    sign_in @levelbuilder
+
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    lesson = create :lesson, :with_lesson_group
+    level = create :level
+    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
+    rubric = create :rubric, lesson: lesson, level: level
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'ai-configured learning goal 1', ai_enabled: true, position: 0
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'non-ai learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    assert_response :bad_request
+    learning_goal.reload
+    assert_equal 'ai-configured learning goal 1', learning_goal.learning_goal
+  end
+
+  test 'cannot set ai_enabled field for non-ai-configured learning goal' do
+    sign_in @levelbuilder
+
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    lesson = create :lesson, :with_lesson_group
+    level = create :level
+    create :script_level, script: lesson.script, lesson: lesson, levels: [level]
+    rubric = create :rubric, lesson: lesson, level: level
+    learning_goal = create :learning_goal, rubric: rubric, learning_goal: 'non-ai learning goal', ai_enabled: false, position: 0
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'non-ai learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    assert_response :bad_request
+    learning_goal.reload
+    refute learning_goal.ai_enabled
   end
 
   test 'submits rubric evaluations of a student' do
@@ -912,5 +992,32 @@ class RubricsControllerTest < ActionController::TestCase
       last_modified: DateTime.now
     }
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
+  private def stub_lesson_s3_data
+    s3_client = Aws::S3::Client.new(stub_responses: true)
+    EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
+
+    fake_rubric_csv = <<~CSV
+      Key Concept,Extensive Evidence,Convincing Evidence,Limited Evidence,No Evidence
+      ai-configured learning goal 1,abc,def,ghi,jkl
+      ai-configured learning goal 2,abc,def,ghi,jkl
+      ai-configured learning goal 3,abc,def,ghi,jkl
+    CSV
+
+    path_prefix = EvaluateRubricJob::S3_AI_RELEASE_PATH
+    bucket = {
+      "#{path_prefix}fake-lesson-s3-name/standard_rubric.csv" => fake_rubric_csv,
+    }
+
+    s3_client.stub_responses(
+      :get_object,
+      ->(context) do
+        key = context.params[:key]
+        obj = bucket[key]
+        raise EvaluateRubricJob::StubNoSuchKey.new(key) unless obj
+        {body: StringIO.new(obj)}
+      end
+    )
   end
 end
