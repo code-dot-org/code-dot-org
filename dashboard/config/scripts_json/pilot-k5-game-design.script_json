@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pilot-k5-game-design",
-    "serialized_at": "2024-03-22 18:23:55 UTC",
+    "serialized_at": "2024-03-22 19:17:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -458,7 +458,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "game_design_intro_video"
+          "game_design_video_sprites"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -466,7 +466,7 @@
         "activity_section.key": "fd1c7d84-d04f-4f22-94d1-3095f1aa49f7"
       },
       "level_keys": [
-        "game_design_intro_video"
+        "game_design_video_sprites"
       ]
     },
     {
@@ -1445,9 +1445,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "game_design_intro_video",
+        "level.key": "game_design_video_sprites",
         "script_level.level_keys": [
-          "game_design_intro_video"
+          "game_design_video_sprites"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
