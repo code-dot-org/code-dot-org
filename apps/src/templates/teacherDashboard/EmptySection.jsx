@@ -4,6 +4,9 @@ import i18n from '@cdo/locale';
 import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
+import {NavLink} from 'react-router-dom';
+import {TeacherDashboardPath} from './TeacherDashboardNavigation';
+import color from '@cdo/apps/util/color';
 
 export default class EmptySection extends React.Component {
   static propTypes = {
@@ -27,7 +30,26 @@ export default class EmptySection extends React.Component {
           style={{margin: 0}}
           aria-label={i18n.addStudentsToCurrentSection()}
         />
+        <NavLink
+          key={TeacherDashboardPath.manageStudents}
+          to={TeacherDashboardPath.manageStudents}
+          className={styles.navLink}
+          // activeClassName={styles.activeLinkContainer}
+        >
+          <div style={{height: '24px', color: 'purple'}}>
+            {i18n.addStudents()}
+          </div>
+        </NavLink>
       </div>
     );
   }
 }
+
+const styles = {
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px',
+  },
+};
