@@ -16,33 +16,55 @@ import {
   ModelCardInfo,
 } from '../types';
 
-// const haveDifferentValues = (value1, value2) => {
-//   if (Array.isArray(value1) && Array.isArray(value2)) {
-//     return (
-//       value1.length !== value2.length ||
-//       value1.some((item, index) => item !== value2[index])
-//     );
-//   }
-//   return value1 !== value2;
-// };
-//
-// const findChangedProperties = (
-//   previous: AiCustomizations | undefined,
-//   next: AiCustomizations
-// ) => {
-//   if (!previous) {
-//     return Object.keys(next);
-//   }
-//
-//   const changedProperties = [];
-//   Object.keys(previous).forEach(key => {
-//     if (haveDifferentValues(previous[key], next[key])) {
-//       changedProperties.push(key);
-//     }
-//   });
-//
-//   return changedProperties;
-// };
+const haveDifferentValuesStringArray = (
+  value1: string[],
+  value2: string[]
+): boolean =>
+  value1.length !== value2.length ||
+  value1.some((item, index) => item !== value2[index]);
+
+const haveDifferentValues = (
+  value1: string[] | string | number | ModelCardInfo,
+  value2: string[] | string | number | ModelCardInfo
+): boolean => {
+  if (Array.isArray(value1) && Array.isArray(value2)) {
+    return haveDifferentValuesStringArray(value1, value2);
+  }
+
+  if (typeof value1 === 'object' && typeof value2 === 'object') {
+    return Object.keys(value1).some(key =>
+      haveDifferentValues(
+        (value1 as ModelCardInfo)[key as keyof ModelCardInfo],
+        (value2 as ModelCardInfo)[key as keyof ModelCardInfo]
+      )
+    );
+  }
+
+  return value1 !== value2;
+};
+
+const findChangedProperties = (
+  previous: AiCustomizations | undefined,
+  next: AiCustomizations
+) => {
+  if (!previous) {
+    return Object.keys(next);
+  }
+
+  const changedProperties: string[] = [];
+  Object.keys(next).forEach(key => {
+    if (
+      haveDifferentValues(
+        previous[key as keyof AiCustomizations],
+        next[key as keyof AiCustomizations]
+      )
+    ) {
+      changedProperties.push(key);
+    }
+  });
+
+  return changedProperties;
+};
 
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
 
@@ -70,26 +92,36 @@ const initialState: AichatState = {
 
 // THUNKS
 
-// export const updateAiCustomization = createAsyncThunk(
-//   'aichat/updateAiCustomization',
-//   async (_, thunkApi) => {
-//     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
-//     const {currentAiCustomizations, previouslySavedAiCustomizations} =
-//       state.aichat;
-//
-//     await Lab2Registry.getInstance()
-//       .getProjectManager()
-//       ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
-//
-//     // only on success
-//     console.log(
-//       findChangedProperties(
-//         previouslySavedAiCustomizations,
-//         currentAiCustomizations
-//       )
-//     );
-//   }
-// );
+export const updateAiCustomization = createAsyncThunk(
+  'aichat/updateAiCustomization',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
+    const {currentAiCustomizations, previouslySavedAiCustomizations} =
+      state.aichat;
+
+    await Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
+
+    // set up to only happen on success
+    const changedProperties = findChangedProperties(
+      previouslySavedAiCustomizations,
+      currentAiCustomizations
+    );
+
+    thunkAPI.dispatch(
+      setPreviouslySavedAiCustomizations(currentAiCustomizations)
+    );
+    thunkAPI.dispatch(
+      addChatMessage({
+        id: 0,
+        role: Role.ASSISTANT,
+        chatMessageText: `${changedProperties} were updated`,
+        status: Status.OK,
+      })
+    );
+  }
+);
 
 // This thunk's callback function submits a user chat message to the chat completion endpoint,
 // waits for a chat completion response, and updates the user message state.
@@ -190,6 +222,12 @@ const aichatSlice = createSlice({
     setAiCustomizations: (state, action: PayloadAction<AiCustomizations>) => {
       state.currentAiCustomizations = action.payload;
     },
+    setPreviouslySavedAiCustomizations: (
+      state,
+      action: PayloadAction<AiCustomizations>
+    ) => {
+      state.previouslySavedAiCustomizations = action.payload;
+    },
     setAiCustomizationProperty: (
       state,
       action: PayloadAction<{
@@ -243,6 +281,7 @@ export const {
   setShowWarningModal,
   updateChatMessageStatus,
   setAiCustomizations,
+  setPreviouslySavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
 } = aichatSlice.actions;

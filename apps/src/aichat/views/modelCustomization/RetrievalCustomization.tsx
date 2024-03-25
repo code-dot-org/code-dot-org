@@ -1,13 +1,15 @@
 import React, {useState, useCallback} from 'react';
 
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 import styles from './retrieval-customization.module.scss';
 import {isDisabled} from './utils';
-import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {
+  setAiCustomizationProperty,
+  updateAiCustomization,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 
@@ -24,14 +26,8 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   const {retrievalContexts} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
-  const aiCustomizations = useAppSelector(
-    state => state.aichat.currentAiCustomizations
-  );
 
-  const onUpdate = () =>
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save({source: JSON.stringify(aiCustomizations)}, true);
+  const onUpdate = () => dispatch(updateAiCustomization());
 
   const onAdd = useCallback(() => {
     dispatch(

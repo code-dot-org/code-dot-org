@@ -1,9 +1,11 @@
 import React from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {setAiCustomizationProperty} from '../../redux/aichatRedux';
+import {
+  setAiCustomizationProperty,
+  updateAiCustomization,
+} from '../../redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
 import {
   EMPTY_AI_CUSTOMIZATIONS,
@@ -31,10 +33,7 @@ const PromptCustomization: React.FunctionComponent = () => {
     isDisabled(temperature.visibility) &&
     isDisabled(systemPrompt.visibility);
 
-  const onUpdate = () =>
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save({source: JSON.stringify(aiCustomizations)}, true);
+  const onUpdate = () => dispatch(updateAiCustomization());
 
   return (
     <div className={styles.verticalFlexContainer}>
