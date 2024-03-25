@@ -1,11 +1,20 @@
 module Devise
   module Models
     module CustomLockable
-      include Devise::Models::Lockable
-      # Only track failed attempts for teachers
       def increment_failed_attempts
+        # Only track failed attempts for teachers
         return unless user_type == User::TYPE_TEACHER
-        super
+
+        # The original implementation uses
+        # ActiveRecord::CounterCache#increment_counter, which is intended to
+        # make it easier to update frequently-referenced aggregate values in
+        # SQL; because we store the count of failed attempts in a properties
+        # blob rather than raw SQL, and because this value would not benefit
+        # from the optimization even if it were in SQL, we instead simply issue
+        # an `update`.
+        updated_failed_attempts = (failed_attempts || 0) + 1
+        update!(failed_attempts: updated_failed_attempts)
+        reload
       end
     end
   end

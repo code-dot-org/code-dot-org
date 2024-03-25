@@ -49,9 +49,7 @@
 #  urm                      :boolean
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
-#  failed_attempts          :integer          default(0), not null
 #  unlock_token             :string(255)
-#  locked_at                :datetime
 #
 # Indexes
 #
