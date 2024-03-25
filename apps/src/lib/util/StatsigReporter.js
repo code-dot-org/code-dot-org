@@ -50,8 +50,9 @@ class StatsigReporter {
       this.log(
         `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${!!userId}`
       );
+    } else {
+      await Statsig.updateUser(user);
     }
-    await Statsig.updateUser(user);
   }
 
   sendEvent(eventName, payload) {

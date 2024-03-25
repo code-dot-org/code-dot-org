@@ -77,10 +77,22 @@ const EVENTS = {
   PROGRESS_VIEWED: 'Section Progress Viewed',
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
-  PROGRESS_V2_CHANGE_UNIT: 'Section Progress V2 Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
+
+  // Section progress v2
+  PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
+  PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
+  PROGRESS_V2_VIEW_OLD_PROGRESS: 'Old Progress Link Clicked',
+  PROGRESS_V2_CHANGE_UNIT: 'Section New Progress Unit Changed',
+  PROGRESS_V2_LESSON_EXPAND: 'Section New Progress Lesson Expand',
+  PROGRESS_V2_LESSON_COLLAPSE: 'Section New Progress Lesson Collapse',
+  PROGRESS_V2_EXPAND_CHOICE_LEVEL: 'Section New Progress Choice Expand',
+  PROGRESS_V2_COLLAPSE_CHOICE_LEVEL: 'Section New Progress Choice Collapse',
+  PROGRESS_V2_EXPAND_ICON_KEY: 'Section New Progress Icon Key Expand',
+  PROGRESS_V2_COLLAPSE_ICON_KEY: 'Section New Progress Icon Key Collapse',
+  PROGRESS_V2_VIEW_MORE_DETAILS: 'Section New Progress More Details',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',

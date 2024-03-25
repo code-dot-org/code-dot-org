@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 
 import Link from '@cdo/apps/componentLibrary/link';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -15,15 +17,23 @@ import TeacherActionsBox from './TeacherActionsBox';
 
 import styles from './progress-table-legend.module.scss';
 
-export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
+export default function IconKey({
+  isViewingValidatedLevel,
+  expandedLessonIds,
+  sectionId,
+}) {
   const [isOpen, setIsOpen] = useState(
     tryGetLocalStorage('iconKeyIsOpen', 'true') !== 'false'
   );
   const [isIconDetailsOpen, setIconDetailsOpen] = useState(false);
 
-  const toggleIsViewingDetails = event => {
+  const openMoreDetailsDialog = event => {
     event.preventDefault();
     setIconDetailsOpen(true);
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_MORE_DETAILS, {
+      sectionId: sectionId,
+    });
   };
 
   const isViewingLevelProgress = expandedLessonIds.length > 0;
@@ -43,6 +53,16 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
   const clickListener = () => {
     trySetLocalStorage('iconKeyIsOpen', !isOpen);
     setIsOpen(!isOpen);
+
+    if (!isOpen) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_ICON_KEY, {
+        sectionId: sectionId,
+      });
+    } else {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_ICON_KEY, {
+        sectionId: sectionId,
+      });
+    }
   };
 
   return (
@@ -65,7 +85,7 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
         <Link
           type="primary"
           size="s"
-          onClick={toggleIsViewingDetails}
+          onClick={openMoreDetailsDialog}
           className={styles.iconKeyMoreDetailsLink}
         >
           {i18n.moreDetails()}
@@ -85,4 +105,5 @@ export default function IconKey({isViewingValidatedLevel, expandedLessonIds}) {
 IconKey.propTypes = {
   isViewingValidatedLevel: PropTypes.bool,
   expandedLessonIds: PropTypes.array,
+  sectionId: PropTypes.number,
 };

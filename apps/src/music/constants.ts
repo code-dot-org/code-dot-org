@@ -48,7 +48,7 @@ export const BlockMode = {
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
 export const DEFAULT_PATTERN = {
-  kit: 'glitch',
+  kit: 'drums',
   events: [],
 };
 
