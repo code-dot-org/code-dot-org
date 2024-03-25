@@ -337,13 +337,15 @@ class ApplicationController < ActionController::Base
 
   # Clean up a big cookie session
   def shrink_cookie
-    # Ensure the callouts_seen is an Array
-    session[:callouts_seen] ||= []
-    session[:callouts_seen] = session[:callouts_seen].to_a
+    if session.key? :callouts_seen
+      # Ensure the callouts_seen is an Array
+      session[:callouts_seen] ||= []
+      session[:callouts_seen] = session[:callouts_seen].to_a
 
-    # Just re-add the last callout to ensure that the list is maintained
-    # ClientState should be truncating the list
-    client_state.add_callout_seen(session[:callouts_seen][-1]) if session[:callouts_seen].any?
+      # Just re-add the last callout to ensure that the list is maintained
+      # ClientState should be truncating the list
+      client_state.add_callout_seen(session[:callouts_seen][-1]) if session[:callouts_seen].any?
+    end
   end
 
   # Check that the user is compliant with the Child Account Policy. If they
