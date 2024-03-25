@@ -13,10 +13,12 @@ const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 class StatsigReporter {
   constructor() {
     let user = {};
-    user_id_element = document.querySelector('script[data-user-id]');
-    user_id = user_id_element ? user_id_element.dataset.userId : null;
-    user_type_element = document.querySelector('script[data-user-type');
-    user_type = user_type_element ? user_type_element.dataset.userType : null;
+    const user_id_element = document.querySelector('script[data-user-id]');
+    const user_id = user_id_element ? user_id_element.dataset.userId : null;
+    const user_type_element = document.querySelector('script[data-user-type');
+    const user_type = user_type_element
+      ? user_type_element.dataset.userType
+      : null;
     if (user_id) {
       user = {
         userID: this.formatUserId(user_id),
