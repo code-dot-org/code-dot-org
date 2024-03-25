@@ -19,7 +19,7 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
   test 'project validators can feature projects' do
     skip 'Investigate flaky test'
     sign_in @project_validator
-    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 456])
+    @controller.expects(:storage_decrypt_channel_id).with("789").returns([123, 654])
     put :feature, params: {channel_id: "789"}
     assert_response :success
   end
