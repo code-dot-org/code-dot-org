@@ -7,7 +7,7 @@
         =hoc_s('poetry_banner_title')
       %p.white.no-margin-bottom
         =hoc_s('poetry_banner_desc')
-    .button-wrapper
+    .flex-container.justify-center.align-items-center.wrap-reverse{style: "column-gap: 5rem;"}
+      %img{src:"/images/marketing/octopus-poetry.png", alt: ""}
       %a.link-button.white{href: CDO.code_org_url("/poetry"), "aria-label": hoc_s('poetry_banner_explore_aria_label')}
         =hoc_s('call_to_action_explore_activities')
-    %img{src:"/images/marketing/octopus-poetry.png", alt: ""}
