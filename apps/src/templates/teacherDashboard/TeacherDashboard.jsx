@@ -135,7 +135,6 @@ function TeacherDashboard({
                       <Heading1>{i18n.progress()}</Heading1>
                       <EmptySection
                         className={dashboardStyles.emptyClassroomProgress}
-                        sectionId={sectionId}
                       />
                     </div>
                   )}
