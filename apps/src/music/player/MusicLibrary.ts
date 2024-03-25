@@ -18,6 +18,7 @@ export default class MusicLibrary {
   libraryJson: LibraryJson;
   folders: SoundFolder[];
   private allowedSounds: Sounds | null;
+  private currentPackName: string | null;
 
   // BPM & Key associated with this library, or undefined if not present.
   private bpm: number | undefined;
@@ -42,6 +43,12 @@ export default class MusicLibrary {
     if (libraryJson.key) {
       this.key = Key[libraryJson.key.toUpperCase() as keyof typeof Key];
     }
+
+    this.currentPackName = null;
+  }
+
+  setCurrentPackName(packName: string) {
+    this.currentPackName = packName;
   }
 
   getDefaultSound(): string | undefined {
@@ -129,7 +136,11 @@ export default class MusicLibrary {
 
     // Whether or not we have allowedSounds, we need to filter by type.
     foldersCopy = foldersCopy.filter(
-      (folder: SoundFolder) => folder.type === folderType
+      (folder: SoundFolder) =>
+        folder.type === folderType &&
+        ((!this.currentPackName && folder.restricted) ||
+          (this.currentPackName &&
+            (!folder.restricted || this.currentPackName === folder.id)))
     );
 
     if (this.allowedSounds) {
@@ -213,6 +224,7 @@ export interface SoundFolder {
   type?: SoundFolderType;
   path: string;
   imageSrc: string;
+  restricted?: boolean;
   sounds: SoundData[];
 }
 

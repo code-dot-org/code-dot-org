@@ -1,0 +1,124 @@
+@import 'color.scss';
+//@import '../common.scss';
+
+// A translucent overlay that covers the entire container.
+%full-container-overlay {
+  background-color: rgba(0 0 0 / 0.5);
+  color: $neutral_dark;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 80;
+}
+
+%dialog {
+  background-color: $neutral_light;
+  border-radius: 5px;
+  padding: 20px 50px;
+  width: 80%;
+}
+
+%button {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: none !important;
+
+  &:hover /*, &:active */ {
+    box-shadow: none;
+  }
+}
+
+.dialogContainer {
+  @extend %full-container-overlay;
+
+  .packDialog {
+    @extend %dialog;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    //height: 80%;
+    background-color: $neutral_dark;
+    color: $neutral_light;
+    border: solid 1px $neutral_dark40;
+
+    .heading {
+      color: $ai_rubric_cyan;
+    }
+
+    .packs {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      flex: 1;
+      display: grid;
+      grid-template-columns: 33.333% 33.333% 33.333%;
+
+      .pack {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 8px;
+        cursor: pointer;
+
+        &Description {
+          margin-top: 10px;
+        }
+
+        &Name {
+          font-size: 16px;
+        }
+
+        &Artist {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .closeButton {
+      color: $neutral_light;
+    }
+
+    .itemsContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 12px;
+
+      .copyToClipboard {
+        @extend %button;
+        background-color: $light_secondary_500;
+        color: $neutral_light;
+
+        &:hover {
+          background-color: $light_secondary_500;
+        }
+
+        &Icon {
+          font-size: 24px;
+          margin-right: 10px;
+          padding-bottom: 3px;
+        }
+      }
+    }
+
+    .closeButton {
+      background-color: initial;
+      box-shadow: initial;
+      border: none !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &Icon {
+        font-size: 24px;
+      }
+    }
+  }
+}

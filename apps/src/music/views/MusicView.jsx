@@ -133,6 +133,7 @@ class UnconnectedMusicView extends React.Component {
     this.state = {
       loadedLibrary: false,
       currentLibraryName: null,
+      currentPackName: null,
       hasLoadedInitialSounds: false,
     };
 
@@ -357,6 +358,8 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
+    this.setState({currentPackName: null});
+    this.library.setCurrentPackName(null);
     this.loadCode(this.getStartSources());
     this.setPlaying(false);
   };
@@ -558,6 +561,24 @@ class UnconnectedMusicView extends React.Component {
       };
     }
 
+    // Also save the current pack to sources as part of labConfig.
+    if (this.state.currentPackName) {
+      sourcesToSave ??= {};
+      sourcesToSave.labConfig ??= {};
+      sourcesToSave.labConfig.music ??= {};
+      /*
+      if (!sourcesToSave) {
+        sourcesToSave = {};
+      }
+      if (!sourcesToSave.labConfig) {
+        sourcesToSave.labConfig = {};
+      }
+      if (!sourcesToSave.labConfig.music) {
+        sourcesToSave.labConfig.music = {};
+      }*/
+      sourcesToSave.labConfig.music.pack = this.state.currentPackName;
+    }
+
     Lab2Registry.getInstance()
       .getProjectManager()
       ?.save(sourcesToSave, forceSave);
@@ -634,6 +655,11 @@ class UnconnectedMusicView extends React.Component {
           clearCode={this.clearCode}
           validator={this.musicValidator}
           player={this.player}
+          currentPackName={this.state.currentPackName}
+          setCurrentPackName={packName => {
+            this.setState({currentPackName: packName});
+            this.library.setCurrentPackName(packName);
+          }}
         />
         <Callouts />
       </AnalyticsContext.Provider>

@@ -247,7 +247,8 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   }, []);
 
   useEffect(() => {
-    // This timeout allows the scrolling to work when wrapping the content with FocusLock.
+    // This timeout allows the initial scroll-to-current-selection to work
+    // when wrapping the content with FocusLock.
     setTimeout(() => {
       currentFolderRef.current?.scrollIntoView();
       currentSoundRef.current?.scrollIntoView();
