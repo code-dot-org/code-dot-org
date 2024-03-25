@@ -685,7 +685,6 @@ function newSectionData(participantType) {
     courseVersionId: null,
     unitId: null,
     hidden: false,
-    isAssigned: undefined,
     restrictSection: false,
   };
 }
