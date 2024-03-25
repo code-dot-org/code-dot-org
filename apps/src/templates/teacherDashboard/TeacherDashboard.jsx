@@ -20,6 +20,7 @@ import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/a
 import EmptySection from './EmptySection';
 import {Heading1} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
+import SafeMarkdown from '../SafeMarkdown';
 
 const applyV1TeacherDashboardWidth = children => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;
@@ -127,26 +128,24 @@ function TeacherDashboard({
         />
         {studentCount === 0 && (
           <Route
-            component={props =>
-              applyV1TeacherDashboardWidth(
-                <div>
-                  {location.pathname === TeacherDashboardPath.progress && (
-                    <div>
-                      <Heading1>{i18n.progress()}</Heading1>
-                      <EmptySection
-                        className={dashboardStyles.emptyClassroomProgress}
-                      />
-                    </div>
-                  )}
-                  {location.pathname !== TeacherDashboardPath.progress && (
+            component={props => (
+              <div className={dashboardStyles.emptyClassroomDiv}>
+                {location.pathname === TeacherDashboardPath.progress && (
+                  <div>
+                    <Heading1>{i18n.progress()}</Heading1>
                     <EmptySection
-                      className={dashboardStyles.emptyClassroom}
-                      sectionId={sectionId}
+                      className={dashboardStyles.emptyClassroomProgress}
                     />
-                  )}
-                </div>
-              )
-            }
+                  </div>
+                )}
+                {location.pathname !== TeacherDashboardPath.progress && (
+                  <EmptySection
+                    className={dashboardStyles.emptyClassroom}
+                    sectionId={sectionId}
+                  />
+                )}
+              </div>
+            )}
           />
         )}
         <Route
@@ -163,8 +162,7 @@ function TeacherDashboard({
             applyV1TeacherDashboardWidth(<StatsTableWithData />)
           }
         />
-        {/* {I think we want to change this to courses assigned, eventually...} */}
-        {/* {coursesWithProgress.length === 0 && (
+        {coursesWithProgress.length === 0 && (
           <Route
             component={() =>
               applyV1TeacherDashboardWidth(
@@ -174,7 +172,7 @@ function TeacherDashboard({
               )
             }
           />
-        )} */}
+        )}
         <Route
           path={TeacherDashboardPath.progress}
           component={props => (
