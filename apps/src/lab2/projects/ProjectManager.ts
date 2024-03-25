@@ -71,6 +71,10 @@ export default class ProjectManager {
     return this.channelId;
   }
 
+  getLastSource(): string | undefined {
+    return this.lastSource;
+  }
+
   // Load the project from the sources and channels store.
   async load(): Promise<Project> {
     if (this.destroyed) {
@@ -462,6 +466,7 @@ export default class ProjectManager {
   }
 
   // LISTENERS
+  // diffing of what changed can happen in redux
   private executeSaveSuccessListeners(channel: Channel) {
     this.saveSuccessListeners.forEach(listener => listener(channel));
   }

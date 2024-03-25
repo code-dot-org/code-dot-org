@@ -5,17 +5,22 @@ import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
-import {setAiCustomizations} from '../redux/aichatRedux';
+import {addChatMessage, setAiCustomizations} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import CopyButton from './CopyButton';
 import moduleStyles from './aichatView.module.scss';
-import {AichatLevelProperties, AiCustomizations} from '@cdo/apps/aichat/types';
+import {
+  AichatLevelProperties,
+  AiCustomizations,
+  Role,
+  Status,
+} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
-// import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -23,6 +28,28 @@ const AichatView: React.FunctionComponent = () => {
   const beforeNextLevel = useCallback(() => {
     dispatch(sendSuccessReport('aichat'));
   }, [dispatch]);
+
+  // on successful save, compare new vs old sources
+  // need save success callback to know what old and new sources were
+  // we get content to save from aiCustomizations in redux
+  // we can get previous successful save from getLastSource() in project manager
+  useEffect(() => {
+    const lastSource = Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.getLastSource();
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.addSaveSuccessListener(() =>
+        dispatch(
+          addChatMessage({
+            id: 0,
+            role: Role.ASSISTANT,
+            chatMessageText: 'Something was updated',
+            status: Status.OK,
+          })
+        )
+      );
+  });
 
   const levelAiCustomizationsWithVisibility = useAppSelector(
     state =>

@@ -8,9 +8,12 @@ import {
   MODEL_CARD_FIELDS_AND_LABELS,
 } from './constants';
 import {isVisible, isDisabled} from './utils';
-import {setModelCardProperty} from '@cdo/apps/aichat/redux/aichatRedux';
+import {
+  setModelCardProperty,
+  addChatMessage,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 import styles from '../model-customization-workspace.module.scss';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import {AichatLevelProperties, Role, Status} from '@cdo/apps/aichat/types';
 
 const PublishNotes: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -27,10 +30,11 @@ const PublishNotes: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const save = () =>
+  const save = () => {
     Lab2Registry.getInstance()
       .getProjectManager()
       ?.save({source: JSON.stringify(aiCustomizations)}, true);
+  };
 
   return (
     <div className={styles.verticalFlexContainer}>

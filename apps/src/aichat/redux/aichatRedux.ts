@@ -1,6 +1,7 @@
 import moment from 'moment';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
 import {EMPTY_AI_CUSTOMIZATIONS_STUDENT} from '../views/modelCustomization/constants';
@@ -15,7 +16,36 @@ import {
   ModelCardInfo,
 } from '../types';
 
+// const haveDifferentValues = (value1, value2) => {
+//   if (Array.isArray(value1) && Array.isArray(value2)) {
+//     return (
+//       value1.length !== value2.length ||
+//       value1.some((item, index) => item !== value2[index])
+//     );
+//   }
+//   return value1 !== value2;
+// };
+//
+// const findChangedProperties = (
+//   previous: AiCustomizations | undefined,
+//   next: AiCustomizations
+// ) => {
+//   if (!previous) {
+//     return Object.keys(next);
+//   }
+//
+//   const changedProperties = [];
+//   Object.keys(previous).forEach(key => {
+//     if (haveDifferentValues(previous[key], next[key])) {
+//       changedProperties.push(key);
+//     }
+//   });
+//
+//   return changedProperties;
+// };
+
 const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
+
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
@@ -27,6 +57,7 @@ export interface AichatState {
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
+  previouslySavedAiCustomizations?: AiCustomizations;
 }
 
 const initialState: AichatState = {
@@ -38,6 +69,27 @@ const initialState: AichatState = {
 };
 
 // THUNKS
+
+// export const updateAiCustomization = createAsyncThunk(
+//   'aichat/updateAiCustomization',
+//   async (_, thunkApi) => {
+//     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
+//     const {currentAiCustomizations, previouslySavedAiCustomizations} =
+//       state.aichat;
+//
+//     await Lab2Registry.getInstance()
+//       .getProjectManager()
+//       ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
+//
+//     // only on success
+//     console.log(
+//       findChangedProperties(
+//         previouslySavedAiCustomizations,
+//         currentAiCustomizations
+//       )
+//     );
+//   }
+// );
 
 // This thunk's callback function submits a user chat message to the chat completion endpoint,
 // waits for a chat completion response, and updates the user message state.
@@ -108,7 +160,13 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+      const newMessageId =
+        state.chatMessages[state.chatMessages.length - 1].id + 1;
+      const newMessage = {
+        ...action.payload,
+        id: newMessageId,
+      };
+      state.chatMessages.push(newMessage);
     },
     clearChatMessages: state => {
       state.chatMessages = initialChatMessages;
