@@ -48,13 +48,13 @@
     ],
     "name_suffix": "_simplified",
     "short_instructions": "Change the score by 1 and check that the scoreboard updated.",
+    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(); // Check whether variable bubble is visible on screen. \r\n  }, \"variableBubbles\");  // Failure message: \"Make sure to display your variable on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(); // Check whether variable has been set to something. \r\n  }, \"variableSetValue\");  // Failure message: \"You need to set the value of your variable.\"\r\n  \r\n    addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueChanged(); // Check whether variable has been set to something. \r\n  }, \"variableChangeValue\");  // Failure message: \"The value of your variable didn't change\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "validation_code": "if (World.frameCount == 1) {\r\n\r\n  addCriteria(function() {\r\n    return variableBubblesCreated(); // Check whether variable bubble is visible on screen. \r\n  }, \"variableBubbles\");  // Failure message: \"Make sure to display your variable on screen.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueSet(); // Check whether variable has been set to something. \r\n  }, \"variableSetValue\");  // Failure message: \"You need to set the value of your variable.\"\r\n  \r\n    addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'spritelabFeedbackClickSprite'); // Failure message: \"Make sure to click on your sprite after pressing *\"Run\"*.\"\r\n  \r\n   addCriteria(function() {\r\n    return variableValueChanged(); // Check whether variable has been set to something. \r\n  }, \"variableChangeValue\");  // Failure message: \"The value of your variable didn't change\"\r\n  \r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();"
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:21:38.814+00:00\",\"changed\":[\"cloned from \\\"hello_games_score_variable_simplified\\\"\"],\"cloned_from\":\"hello_games_score_variable_simplified\"},{\"changed_at\":\"2024-03-18 20:22:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:09:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:09:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 14:52:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 14:56:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:00:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:00:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:21:38.814+00:00\",\"changed\":[\"cloned from \\\"hello_games_score_variable_simplified\\\"\"],\"cloned_from\":\"hello_games_score_variable_simplified\"},{\"changed_at\":\"2024-03-18 20:22:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 22:59:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:09:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-18 23:09:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 14:52:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 14:56:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:00:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-20 15:00:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-22 22:31:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1254,7 +1254,7 @@
         <variables>
           <variable id="@-=S@3O,n:QRq]zW8kK+">Score</variable>
         </variables>
-        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="26" y="65">
+        <block type="math_change" id="~0jqmFx/!a[v4n)xN]$F" x="0" y="100">
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
           <value name="DELTA">
             <shadow type="math_number" id="Dsygy)_vgya%_J|C?^+(">
@@ -1265,7 +1265,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_showVariable" id="CX]E4@VU[,b3Rb$gNv6@" x="46" y="121">
+        <block type="gamelab_showVariable" id="CX]E4@VU[,b3Rb$gNv6@" x="0" y="100">
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" id="-OyFO}@bmFm.tQyEPF8L">
@@ -1273,7 +1273,7 @@
             </block>
           </value>
         </block>
-        <block type="variables_set" id="vfHl|%AE}ZTDYwycPNsB" x="16" y="168">
+        <block type="variables_set" id="vfHl|%AE}ZTDYwycPNsB" x="0" y="100">
           <field name="VAR" id="@-=S@3O,n:QRq]zW8kK+">Score</field>
           <value name="VALUE">
             <block type="math_number" id="it,if~~;$kMchS*:VO!|">
