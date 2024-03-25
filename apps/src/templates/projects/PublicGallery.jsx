@@ -31,32 +31,30 @@ class PublicGallery extends Component {
    * Transform the projectLists data from the format expected by the
    * PublicGallery to the format expected by the ProjectCardGrid.
    * See the PropTypes of each component for a definition of each format.
+   * Note that the updated public gallery now displays only featured projects selected by
+   * a project validator. There is now only one section 'Featured Projects' which
+   * contains a mix of all project types.
+   * In the future, we plan to implement a public gallery with sections for each project type.
+   * For now, the public gallery displays one section of mixed project types so that we convert
+   * projectLists (an object with key project type (e.g. 'applab' and value an array of project data objects
+   * (e.g., [{name: 'My Project', channel: 'abc1--def234', ...}, {...}])
+   * to an object with a single key 'featured' and value an array of modified project data
+   * objects with different project types.
    */
   mapProjectData(projectLists) {
-    // The updated public gallery now displays only featured projects selected by
-    // a project validator. There is now only one section 'Featured Projects' which
-    // contains a mix of all project types. In the future, we may implement
-    // a public gallery with sections for each project type.
-    // For now, the public gallery displays a mix of project types so that we convert
-    // projectLists (an object with key project type (e.g. 'applab' and value
-    // an array of project data objects (e.g., [{name: 'My Project', channel: 'abc1--def234', ...}, {...}])
-    // to an object with a single key 'featured' and value an array of modified project data
-    // objects with different project types.
-    let allFeaturedProjects = [];
-    for (const projectListName in projectLists) {
-      projectLists[projectListName].forEach(projectData => {
-        allFeaturedProjects.push({
-          projectData: {
-            ...projectData,
-            publishedToPublic: true,
-            publishedToClass: false,
-          },
-          currentGallery: 'public',
-        });
-      });
-    }
+    // allProjectData is an array of project data objects with all lab types.
+    const allProjectData = Object.values(projectLists).flat();
+    // Update each project data object to format expected by ProjectCardGrid
+    const updatedAllProjectData = allProjectData.map(data => ({
+      projectData: {
+        ...data,
+        publishedToPublic: true,
+        publishedToClass: false,
+      },
+      currentGallery: 'public',
+    }));
     return {
-      featured: _.shuffle(allFeaturedProjects),
+      featured: _.shuffle(updatedAllProjectData),
     };
   }
 
