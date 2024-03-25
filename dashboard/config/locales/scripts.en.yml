@@ -15459,14 +15459,27 @@ en:
           description: ''
           student_description: ''
         gen-ai-humanities:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Writing Process
+            lesson-2:
+              name: Research Process
           lesson_groups: {}
           name: gen-ai-humanities
           title: Generative AI for Humanities
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Learn how to effectively and ethically use generative AI chatbots in the writing and research process in these standalone lessons.
+          description: This unit consists of two standalone lessons -- one about writing with AI and one about researching with AI. Both are meant to be used in Humanities classes, to help demystify ethical and effective use of chatbots in humanities subject areas. You may use either or both at a time that makes sense for your class. Both lessons encourage students to explore the uses of these rapidly growing technologies and reflect on when and where to use them.
+          student_description: |-
+            In the Writing Process Lesson you will:
+            * Prompt a chatbot to help brainstorm, draft or revise an essay.
+            * Discuss with your classmates which of these uses supported your learning, versus detracted from it, and why.
+            * Build Values for using AI with your class.
+
+            In the Research Process Lesson, you will:
+            * Use a chatbot and a search engine to research and verify information.
+            * Learn how to more effectively prompt a chatbot in the process.
+            * Discuss what kind of research AI is helpful for.
         self-paced-pl-csd1-2024:
           lesson_groups:
             lessonGroup-2:
