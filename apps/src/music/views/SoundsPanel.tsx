@@ -267,6 +267,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   let rightColumnSoundEntries: SoundEntry[] = [];
 
   if (mode === 'packs') {
+    folders.sort((a, b) =>
+      a.restricted === b.restricted ? 0 : a.restricted ? -1 : 1
+    );
     possibleSoundEntries = selectedFolder.sounds.map(sound => ({
       folder: selectedFolder,
       sound,
@@ -280,10 +283,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   }
 
   if (filter === 'all') {
-    rightColumnSoundEntries = possibleSoundEntries;
+    rightColumnSoundEntries = possibleSoundEntries.filter(
+      soundEntry => !soundEntry.sound.preview
+    );
   } else {
     rightColumnSoundEntries = possibleSoundEntries.filter(
-      soundEntry => soundEntry.sound.type === filter
+      soundEntry =>
+        soundEntry.sound.type === filter && !soundEntry.sound.preview
     );
   }
 

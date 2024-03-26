@@ -57,9 +57,14 @@ export default class MusicLibrary {
       return this.libraryJson?.defaultSound;
     }
 
-    // The fallback is the first non-instrument/kit folder's first sound.
-    const firstFolder = this.folders.find(group => !group.type);
-    return `${firstFolder?.id}/${firstFolder?.sounds[0].src}`;
+    // The fallback is the first non-instrument/kit folder's first non-preview sound.
+    // We will skip restricted folders unless it's the currently selected pack.
+    const firstFolder = this.folders.find(
+      group =>
+        !group.type && (!group.restricted || group.id === this.currentPackName)
+    );
+    const firstSound = firstFolder?.sounds.find(sound => !sound.preview);
+    return `${firstFolder?.id}/${firstSound?.src}`;
   }
 
   // Given a sound ID (e.g. "pack1/sound1"), return the SoundData.

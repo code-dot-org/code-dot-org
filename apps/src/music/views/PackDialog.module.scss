@@ -1,5 +1,4 @@
 @import 'color.scss';
-//@import '../common.scss';
 
 // A translucent overlay that covers the entire container.
 %full-container-overlay {
@@ -32,7 +31,7 @@
   padding-right: 16px;
   border: none !important;
 
-  &:hover /*, &:active */ {
+  &:hover, &:active {
     box-shadow: none;
   }
 }
@@ -45,7 +44,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    //height: 80%;
     background-color: $neutral_dark;
     color: $neutral_light;
     border: solid 1px $neutral_dark40;
