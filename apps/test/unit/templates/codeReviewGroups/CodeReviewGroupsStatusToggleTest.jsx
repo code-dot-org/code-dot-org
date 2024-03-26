@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {UnconnectedCodeReviewGroupsStatusToggle} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsStatusToggle';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Code Review Groups Status Toggle', () => {
   let setCodeReviewExpiration, fakeSectionId;

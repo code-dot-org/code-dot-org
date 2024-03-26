@@ -93,7 +93,8 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
         buttonElement.innerHTML = button.text;
         buttonElement.addEventListener('click', button.action);
         buttonElement.addEventListener('click', () =>
-          Blockly.DropDownDiv.hideIfOwner(this, true)
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          Blockly.DropDownDiv.hideIfOwner(this as any, true)
         );
         const menuItem = new Blockly.MenuItem(buttonElement, '');
         menuItem.setRole(Blockly.utils.aria.Role.OPTION);
@@ -141,42 +142,10 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     (this as any).updateColumnsStyling_();
 
     Blockly.DropDownDiv.showPositionedByField(
-      this,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      this as any,
       this.dropdownDispose_.bind(this)
     );
-  }
-
-  /**
-   * @override
-   * Ensure that the input value is a valid language-neutral option.
-   * The only change we made from the parent method is to not use the cache,
-   * as the list of options can change.
-   *
-   * @param newValue The input value.
-   * @returns A valid language-neutral option, or null if invalid.
-   */
-  doClassValidation_(newValue: string) {
-    /* Begin CDO Customization */
-    const options = this.getOptions(false); // false = do not use cache
-    /* End CDO Customization */
-
-    const isValueValid = options.some(option => option[1] === newValue);
-
-    if (!isValueValid) {
-      if (this.sourceBlock_) {
-        console.warn(
-          "Cannot set the dropdown's value to an unavailable option." +
-            ' Block type: ' +
-            this.sourceBlock_.type +
-            ', Field name: ' +
-            this.name +
-            ', Value: ' +
-            newValue
-        );
-      }
-      return null;
-    }
-    return newValue;
   }
 }
 

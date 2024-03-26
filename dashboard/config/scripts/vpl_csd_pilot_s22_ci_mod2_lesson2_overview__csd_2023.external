@@ -3,22 +3,20 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+
+
 # Build A Website With HTML
+<img src="https://images.code.org/f62db1f1df60f7e4fb895c3d6a4be429-image-1710963667819.40.25 PM.png" alt="Two students with headphones and sitting in front of laptops smile at the camera." style="border-radius:40px; float: right; padding-right: 10px; height: 250px; clear: both; margin: 20px 20px 0px 20px;">
+<br>
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+#### In the next section of this professional learning module, you will practice building the structure of a web page in Web Lab using HTML.
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">In the next session of this professional learning module, you will practice building the structure of a web page in Web Lab using HTML.  </p></div>
+#### You will:
 
-## You will:
+* #### Get an introduction to using Web Lab.
+* #### Add structure to a web page using HML.
+* #### Add images to a web page. 
+<br>
 
-* ##### Get an introduction to using Web Lab.
-* ##### Add structure to a web page using HML.
-* ##### Add images to a web page. 
-
-### **Suggested time:** 30 minutes
-
-## Let's keep learning! 
-
-
-
+#### **Suggested time:** 30 minutes
 MARKDOWN

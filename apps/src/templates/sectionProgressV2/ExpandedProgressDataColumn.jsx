@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
@@ -15,14 +18,23 @@ function ExpandedProgressDataColumn({
   levelProgressByStudent,
   sortedStudents,
   removeExpandedLesson,
+  sectionId,
 }) {
   const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
   const toggleExpandedChoiceLevel = level => {
     if (expandedChoiceLevels.includes(level.id)) {
       setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== level.id));
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_CHOICE_LEVEL, {
+        sectionId: sectionId,
+        levelId: level.id,
+      });
     } else if (level?.sublevels?.length > 0) {
       setExpandedChoiceLevels([...expandedChoiceLevels, level.id]);
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_CHOICE_LEVEL, {
+        sectionId: sectionId,
+        levelId: level.id,
+      });
     }
   };
 
@@ -95,6 +107,7 @@ ExpandedProgressDataColumn.propTypes = {
   ).isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
+  sectionId: PropTypes.number,
 };
 
 export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;

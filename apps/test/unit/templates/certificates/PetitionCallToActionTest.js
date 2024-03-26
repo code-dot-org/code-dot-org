@@ -1,6 +1,8 @@
-import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
-import React from 'react';
 import {isolateComponent} from 'isolate-react';
+import React from 'react';
+
+import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
+
 import {expect} from '../../../util/reconfiguredChai';
 
 const isolateCallToAction = props =>

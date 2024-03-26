@@ -1,9 +1,11 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
+import React from 'react';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedLessonGroup as LessonGroup} from '@cdo/apps/templates/progress/LessonGroup';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   isPlc: false,
