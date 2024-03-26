@@ -103,13 +103,13 @@ export const updateAiCustomization = createAsyncThunk(
       .getProjectManager()
       ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
 
+    thunkAPI.dispatch(
+      setPreviouslySavedAiCustomizations(currentAiCustomizations)
+    );
+
     const changedProperties = findChangedProperties(
       previouslySavedAiCustomizations,
       currentAiCustomizations
-    );
-
-    thunkAPI.dispatch(
-      setPreviouslySavedAiCustomizations(currentAiCustomizations)
     );
     thunkAPI.dispatch(
       addChatMessage({

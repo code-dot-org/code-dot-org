@@ -8,7 +8,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
 
-import {setAiCustomizations} from '../redux/aichatRedux';
+import {
+  setAiCustomizations,
+  setPreviouslySavedAiCustomizations,
+} from '../redux/aichatRedux';
 import ChatWorkspace from './ChatWorkspace';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import CopyButton from './CopyButton';
@@ -35,8 +38,6 @@ const AichatView: React.FunctionComponent = () => {
     )
   );
 
-  // need some initial step here that saves to a student's project?
-  // (and doesn't log to chat window)?
   useEffect(() => {
     const levelAiCustomizations: AiCustomizations = {
       botName: levelAiCustomizationsWithVisibility.botName.value,
@@ -52,6 +53,7 @@ const AichatView: React.FunctionComponent = () => {
       ? studentAiCustomizations
       : levelAiCustomizations;
 
+    dispatch(setPreviouslySavedAiCustomizations(reconciledAiCustomizations));
     dispatch(setAiCustomizations(reconciledAiCustomizations));
   }, [dispatch, studentAiCustomizations, levelAiCustomizationsWithVisibility]);
 
