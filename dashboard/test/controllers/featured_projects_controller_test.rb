@@ -80,17 +80,9 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
 
   test 'featuring a currently unfeatured project should update the correct featured project' do
     sign_in @project_validator
-    puts "featuring a currently unfeatured project"
     @controller.expects(:storage_decrypt_channel_id).with("567").returns([345, 888])
-    puts "@archived_featured_project #{@archived_featured_project}"
-    puts "@archived_featured_project.featured_at #{@archived_featured_project.featured_at}"
-    puts "@archived_featured_project.unfeatured_at #{@archived_featured_project.unfeatured_at}"
     refute @archived_featured_project.active?
     put :feature, params: {channel_id: "567"}
-    puts "@archived_featured_project after call to :feature - back IN TEST #{@archived_featured_project}"
-    puts "@archived_featured_project.featured_at #{@archived_featured_project.featured_at}"
-    puts "@archived_featured_project.unfeatured_at #{@archived_featured_project.unfeatured_at}"
-
     assert @archived_featured_project.active? # FAIL
   end
 

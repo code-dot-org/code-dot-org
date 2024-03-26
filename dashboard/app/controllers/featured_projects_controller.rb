@@ -17,14 +17,7 @@ class FeaturedProjectsController < ApplicationController
     _, project_id = storage_decrypt_channel_id(params[:channel_id])
     return render_404 unless project_id
     @featured_project = FeaturedProject.find_or_create_by!(project_id: project_id)
-    puts "@featured_project in controller - feature #{@featured_project}"
-    puts "@featured_project.featured_at #{@featured_project.featured_at}"
-    puts "@featured_project.unfeatured_at #{@featured_project.unfeatured_at}"
     @featured_project.update! unfeatured_at: nil, featured_at: DateTime.now
-    puts "@featured_project in feature#{@featured_project}"
-    puts "@featured_project after UPDATE #{@featured_project}"
-    puts "@featured_project.featured_at #{@featured_project.featured_at}"
-    puts "@featured_project.unfeatured_at #{@featured_project.unfeatured_at}"
     # Set the featured project's abuse score to -50.
     buffer_abuse_score
     freeze_featured_project(project_id)
