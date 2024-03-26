@@ -312,8 +312,8 @@ module RakeUtils
   # - execute the block
   # - revert streams to original pipes and return output
   def self.capture(&block)
-    old_stdout = STDOUT.clone
-    old_stderr = STDERR.clone
+    old_stdout = $stdout.clone
+    old_stderr = $stderr.clone
     pipe_r, pipe_w = IO.pipe
     pipe_r.sync = true
     output = StringIO.new('', 'w')
@@ -324,12 +324,12 @@ module RakeUtils
     rescue EOFError
       # Do nothing.
     end
-    STDOUT.reopen(pipe_w)
-    STDERR.reopen(pipe_w)
+    $stdout.reopen(pipe_w)
+    $stderr.reopen(pipe_w)
     yield
   ensure
-    STDOUT.reopen(old_stdout)
-    STDERR.reopen(old_stderr)
+    $stdout.reopen(old_stdout)
+    $stderr.reopen(old_stderr)
     pipe_w.close
     reader.join
     pipe_r.close
