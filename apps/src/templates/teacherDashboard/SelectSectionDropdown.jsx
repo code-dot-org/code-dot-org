@@ -1,9 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {switchToSection, recordSwitchToSection} from './sectionHelpers';
+
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 
 class SelectSectionDropdown extends React.Component {
   static propTypes = {
