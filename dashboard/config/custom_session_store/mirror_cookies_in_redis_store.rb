@@ -5,7 +5,6 @@ module ActionDispatch
   module Session
     class MirrorCookiesInRedisStore < CookieStore
       def initialize(app, options = {})
-        puts options
         @redis = Redis.new(url: options[:server])
         super(app, options.except(:server))
       end
@@ -18,7 +17,6 @@ module ActionDispatch
 
       private def mirror_session_in_redis(session_id, session_data)
         serialized_session_data = Marshal.dump(session_data)
-        puts "@redis.set(#{session_id.private_id}, #{serialized_session_data})"
         @redis.set(session_id.private_id, serialized_session_data)
       rescue => exception
         # Something went wrong writing session data to redis. Fail in a way
