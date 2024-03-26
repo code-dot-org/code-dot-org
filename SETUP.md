@@ -107,11 +107,20 @@ Setup steps for macOS:
 
 1. Open a Terminal.
 
-1. Install **Xcode Command Line Tools**: `xcode-select --install`
+1. Install **Xcode Command Line Tools**:
+    ```sh
+    xcode-select --install
+    ```
 
-1. Install **[brew](https://brew.sh/)**: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+1. Install **[brew](https://brew.sh/)**: 
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
-1. Install **brew packages**: `brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java`
+1. Install **brew packages**:
+   ```
+   brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   ```
 
 1. Initialize **Git LFS**: `git lfs install --skip-repo`
 
