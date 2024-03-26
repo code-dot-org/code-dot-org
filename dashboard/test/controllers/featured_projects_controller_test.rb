@@ -8,7 +8,6 @@ class FeaturedProjectsControllerTest < ActionController::TestCase
 
   setup_all do
     @project_validator = create :project_validator
-    # @project has a id of 456
     @project = create :project, id: 456, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
     # @featured_project has a project_id of 456
     @featured_project = create :featured_project
