@@ -16,28 +16,12 @@ import {
   ModelCardInfo,
 } from '../types';
 
-const haveDifferentValuesStringArray = (
-  value1: string[],
-  value2: string[]
-): boolean =>
-  value1.length !== value2.length ||
-  value1.some((item, index) => item !== value2[index]);
-
 const haveDifferentValues = (
   value1: string[] | string | number | ModelCardInfo,
   value2: string[] | string | number | ModelCardInfo
 ): boolean => {
-  if (Array.isArray(value1) && Array.isArray(value2)) {
-    return haveDifferentValuesStringArray(value1, value2);
-  }
-
   if (typeof value1 === 'object' && typeof value2 === 'object') {
-    return Object.keys(value1).some(key =>
-      haveDifferentValues(
-        (value1 as ModelCardInfo)[key as keyof ModelCardInfo],
-        (value2 as ModelCardInfo)[key as keyof ModelCardInfo]
-      )
-    );
+    return JSON.stringify(value1) !== JSON.stringify(value2);
   }
 
   return value1 !== value2;
