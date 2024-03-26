@@ -29,8 +29,6 @@ module ActionDispatch
           if session_data.is_a?(Hash) && !session_data.empty?
             session_id = Rack::Session::SessionId.new(session_data["session_id"])
             request.set_header("action_dispatch.request.unsigned_session_cookie", {})
-            # TODO: check for existing session data before overwriting?
-            # TODO: Confirm same value for warden.user.user.key?
             write_session(request, session_id, session_data.except("session_id"), request.session_options)
             return session_id
           end
