@@ -266,6 +266,8 @@ class UnconnectedMusicView extends React.Component {
       !!levelData?.text || !!this.props.longInstructions
     );
 
+    this.setState({currentPackName: initialSources?.labConfig?.music.pack});
+
     if (this.getStartSources() || initialSources) {
       let codeToLoad = this.getStartSources();
       if (initialSources?.source) {
@@ -563,19 +565,8 @@ class UnconnectedMusicView extends React.Component {
 
     // Also save the current pack to sources as part of labConfig.
     if (this.state.currentPackName) {
-      sourcesToSave ??= {};
       sourcesToSave.labConfig ??= {};
       sourcesToSave.labConfig.music ??= {};
-      /*
-      if (!sourcesToSave) {
-        sourcesToSave = {};
-      }
-      if (!sourcesToSave.labConfig) {
-        sourcesToSave.labConfig = {};
-      }
-      if (!sourcesToSave.labConfig.music) {
-        sourcesToSave.labConfig.music = {};
-      }*/
       sourcesToSave.labConfig.music.pack = this.state.currentPackName;
     }
 
