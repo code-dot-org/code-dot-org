@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {UnconnectedStatsTable as StatsTable} from '@cdo/apps/templates/teacherDashboard/StatsTable';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const students = [
   {id: 3, name: 'Student C', familyName: 'Lastname A'},

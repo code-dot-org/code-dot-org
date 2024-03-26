@@ -1,20 +1,22 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import {render, screen, fireEvent} from '@testing-library/react';
+import {shallow} from 'enzyme';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
-import {Provider} from 'react-redux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   rubric: {

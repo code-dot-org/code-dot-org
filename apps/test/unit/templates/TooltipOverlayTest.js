@@ -1,6 +1,6 @@
-import {expect} from '../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
 import React from 'react';
+
 import TooltipOverlay, {
   textProvider,
   coordinatesProvider,
@@ -10,6 +10,8 @@ import TooltipOverlay, {
   TEXT_RECT_RADIUS,
   BETWEEN_RECT_MARGIN,
 } from '@cdo/apps/templates/TooltipOverlay';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('TooltipOverlay', () => {
   const TEST_APP_WIDTH = 300,

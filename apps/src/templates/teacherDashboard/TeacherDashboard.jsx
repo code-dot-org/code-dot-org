@@ -1,25 +1,28 @@
-import React, {useEffect, useRef} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
 import {Route, Switch} from 'react-router-dom';
-import TeacherDashboardNavigation, {
-  TeacherDashboardPath,
-} from './TeacherDashboardNavigation';
-import TeacherDashboardHeader from './TeacherDashboardHeader';
-import StatsTableWithData from './StatsTableWithData';
+
+import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
+import {Heading1} from '@cdo/apps/componentLibrary/typography';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
-import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
-import _ from 'lodash';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
+import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import i18n from '@cdo/locale';
+
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
-import AITutorChatMessagesTable from '@cdo/apps/code-studio/components/aiTutor/aiTutorChatMessagesTable';
+
 import EmptySection from './EmptySection';
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
-import i18n from '@cdo/locale';
+import StatsTableWithData from './StatsTableWithData';
+import TeacherDashboardHeader from './TeacherDashboardHeader';
+import TeacherDashboardNavigation, {
+  TeacherDashboardPath,
+} from './TeacherDashboardNavigation';
 
 const applyV1TeacherDashboardWidth = children => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;

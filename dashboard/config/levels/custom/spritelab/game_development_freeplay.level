@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-03-18T20:38:32.000Z",
   "level_num": "custom",
@@ -71,11 +72,13 @@
     "short_instructions": "Now try building your own game!",
     "standalone_app_name": "spritelab",
     "long_instructions": "**Free Play!**\r\n- Try building your own game\r\n\r\n- Share your project with a friend when you're done\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:32.823+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world_freeplay\\\"\"],\"cloned_from\":\"game_mechanics_world_freeplay\"},{\"changed_at\":\"2024-03-18 20:38:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:45:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:45:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:47:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-18T20:38:32.823+00:00\",\"changed\":[\"cloned from \\\"game_mechanics_world_freeplay\\\"\"],\"cloned_from\":\"game_mechanics_world_freeplay\"},{\"changed_at\":\"2024-03-18 20:38:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:45:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:45:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-19 19:47:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-25 21:05:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-25 21:07:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1330,6 +1333,9 @@
         </block>
         <block type="gamelab_playSound" id="@@xcv,av$zmHAx%,RYOa" x="53" y="323">
           <field name="SOUND">sound://category_digital/ping.mp3</field>
+        </block>
+        <block type="gamelab_setForegroundEffect" id="DzmiQ[P@?/{e$aXuC|1," x="296" y="335">
+          <field name="EFFECT">"bubbles"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon" id="3]]t*LAw6PLK|-o*^6rv" x="16" y="369">
           <field name="ANIMATION_NAME">"dirt_snow"</field>

@@ -1,8 +1,10 @@
-import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
-import {expect} from '../../util/deprecatedChai';
+import React from 'react';
+
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../util/deprecatedChai';
 
 describe('SchoolDataInputs', () => {
   function renderDefault(propOverrides = {}) {

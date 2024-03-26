@@ -1,13 +1,16 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React from 'react';
+import {NavLink} from 'react-router-dom';
+
 import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import Button from '@cdo/apps/templates/Button';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
-import {NavLink} from 'react-router-dom';
+import i18n from '@cdo/locale';
+
 import {TeacherDashboardPath} from './TeacherDashboardNavigation';
+
 import styles from './teacher-dashboard.module.scss';
-import Button from '@cdo/apps/templates/Button';
 
 function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
   const textDescription = !hasStudents

@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import Example from '@cdo/apps/templates/codeDocs/Example';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Example', () => {
   it('embeds app without code', () => {
