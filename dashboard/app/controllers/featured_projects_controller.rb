@@ -93,6 +93,11 @@ class FeaturedProjectsController < ApplicationController
     return if project.nil?
     project_value = JSON.parse(project.value)
     project_value["frozen"] = false
+    # Unhide in case this project was frozen manually by the project owner.
+    # If a project was frozen manually by the project owner before a project was featured
+    # in the public gallery, the project will be hidden.
+    # Since we are unfreezing the project, we unhide it as well.
+    project_value["hidden"] = false
     project_value["updatedAt"] = DateTime.now.to_s
     project.update! value: project_value.to_json
   end
