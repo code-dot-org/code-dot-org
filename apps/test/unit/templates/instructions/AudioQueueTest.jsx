@@ -1,11 +1,13 @@
-import React from 'react';
 import {render} from '@testing-library/react';
+import React from 'react';
+import sinon from 'sinon';
+
+import {AudioQueueContext} from '@cdo/apps/templates/instructions/AudioQueue';
+import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
+import {playNextAudio} from '@cdo/apps/templates/utils/audioQueueUtils';
+
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
-import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
-import {AudioQueueContext} from '@cdo/apps/templates/instructions/AudioQueue';
-import sinon from 'sinon';
-import {playNextAudio} from '@cdo/apps/templates/utils/audioQueueUtils';
 
 const DEFAULT_PROPS = {
   assetUrl: () => {},
