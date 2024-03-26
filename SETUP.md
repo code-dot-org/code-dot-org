@@ -110,11 +110,11 @@ Setup steps for macOS:
 
 1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
 
-1. Install/Update **Xcode Command Line Tools** via `xcode-select --install`
+1. Install **Xcode Command Line Tools**: `xcode-select --install`
 
 1. Install **homebrew & packages**:
-   1. Install [Homebrew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-   2. Install packages: `brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi`
+   1. Install [brew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+   2. Install packages: `brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java`
 
 1. Initialize **Git LFS**: `git lfs install --skip-repo`
 
@@ -139,20 +139,12 @@ Setup steps for macOS:
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail.
-    1. Install the **Java 8 JDK**
-       1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
-       2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
-          1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
-          2. `sdk install java <version identifier>` to install a version
-          3. `sdk default java <installed version>` to ensure it is the default for future shells.
-
-    2. Install **pdftk.rb**
-       ```sh
-       curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
-       brew install ./pdftk.rb
-       rm ./pdftk.rb
-       ```
+1. *(Optional)* Install **pdftk.rb**. Skipping this will cause some PDF related tests to fail.
+    ```sh
+    curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
+    brew install ./pdftk.rb
+    rm ./pdftk.rb
+    ```
 
 1. Return to the [Overview](#overview) to clone the code-dot-org repo and continue installation.
 
