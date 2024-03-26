@@ -169,26 +169,6 @@ module I18n
         request(:delete_storage, crowdin_storage_id) if crowdin_storage_id
       end
 
-      # Uploads the given i18n source files to Crowdin project
-      #
-      # @param source_files [Array<String>] the i18n source file paths
-      # @param :base_path [String] the i18n source base path
-      # @yield [Hash] the uploaded Crowdin source file data
-      # @return [Array<Hash>] the Crowdin source files data
-      def upload_source_files(source_files, base_path:)
-        mutex = Thread::Mutex.new
-        Parallel.map(source_files, in_threads: MAX_CONCURRENT_REQUESTS) do |source_file_path|
-          crowdin_file_path = File.join File::SEPARATOR, source_file_path.delete_prefix(base_path)
-          crowdin_dir_path = File.dirname(crowdin_file_path)
-
-          source_file_data = upload_source_file(source_file_path, crowdin_dir_path)
-
-          mutex.synchronize {yield source_file_data} if block_given?
-
-          source_file_data
-        end
-      end
-
       # Builds the given Crowdin source file translations
       # @see https://developer.crowdin.com/api/v2/#operation/api.projects.translations.builds.files.post
       #

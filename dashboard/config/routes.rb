@@ -226,10 +226,10 @@ Dashboard::Application.routes.draw do
     get "/gallery", to: redirect("/projects/public")
 
     get 'projects/featured', to: 'projects#featured'
-    delete '/featured_projects/:project_id', to: 'featured_projects#destroy'
-    put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
-    put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
-    put '/featured_projects/:project_id/bookmark', to: 'featured_projects#bookmark'
+    delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
+    put '/featured_projects/:channel_id/unfeature', to: 'featured_projects#unfeature'
+    put '/featured_projects/:channel_id/feature', to: 'featured_projects#feature'
+    put '/featured_projects/:channel_id/bookmark', to: 'featured_projects#bookmark'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -927,7 +927,7 @@ Dashboard::Application.routes.draw do
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
-        get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+        get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
