@@ -435,11 +435,14 @@ class Section < ApplicationRecord
         id: id,
         name: name,
         students: students.distinct(&:id).map(&:summarize),
+        login_type: login_type,
         login_type_name: login_type_name,
+        sharing_disabled: sharing_disabled?,
         script: {
           id: script_id,
           name: script.try(:name),
           project_sharing: script.try(:project_sharing),
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         },
       }
     end
