@@ -43,9 +43,10 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
   const [toastMessage, setToastMessage] = useState('');
   const [toastIndex, setToastIndex] = useState(0);
 
+  // Update a panel. Replaces a panel with the given key with the new panel.
   const updatePanel = useCallback(
-    (panel: Panel, index: number) => {
-      setPanels([...panels.slice(0, index), panel, ...panels.slice(index + 1)]);
+    (panel: Panel) => {
+      setPanels(panels.map(p => (p.key === panel.key ? panel : p)));
     },
     [panels]
   );
@@ -144,7 +145,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
 interface EditPanelProps {
   panel: Panel;
   index: number;
-  updatePanel: (panel: Panel, index: number) => void;
+  updatePanel: (panel: Panel) => void;
   movePanel: (key: string, direction: 'up' | 'down') => void;
   deletePanel: (key: string) => void;
   last?: boolean;
@@ -196,17 +197,17 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           className={moduleStyles.textarea}
           name={panel.text}
           value={panel.text}
-          onChange={e => updatePanel({...panel, text: e.target.value}, index)}
+          onChange={e => updatePanel({...panel, text: e.target.value})}
         />
         <SimpleDropdown
           labelText="Position"
           name="position"
           size="s"
           onChange={e =>
-            updatePanel(
-              {...panel, layout: e.target.value as PanelLayout},
-              index
-            )
+            updatePanel({
+              ...panel,
+              layout: e.target.value as PanelLayout,
+            })
           }
           selectedValue={panel.layout}
           items={[
@@ -219,7 +220,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
         <ImageInput
           initialImageUrl={panel.imageUrl}
           updateImageUrl={imageUrl => {
-            updatePanel({...panel, imageUrl: imageUrl}, index);
+            updatePanel({...panel, imageUrl: imageUrl});
           }}
         />
       </div>
@@ -232,10 +233,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
             name={panel.nextUrl}
             value={panel.nextUrl}
             onChange={e =>
-              updatePanel(
-                {...panel, nextUrl: e.target.value || undefined},
-                index
-              )
+              updatePanel({...panel, nextUrl: e.target.value || undefined})
             }
           />
         </div>
