@@ -12,6 +12,7 @@ def push_queue_length_metric
   Cdo::Metrics.push(METRICS_NAMESPACE,
     [
       {
+        # Same metric as "dashboard/app/jobs/application_job.rb"
         metric_name: 'JobCount',
         value: job_count,
         unit: 'Count',

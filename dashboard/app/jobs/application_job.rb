@@ -30,7 +30,8 @@ class ApplicationJob < ActiveJob::Base
 
     metrics = [
       {
-        metric_name: 'JobsInQueue',
+        # Same metric as "bin/cron/report_activejob_metrics"
+        metric_name: 'JobCount',
         value: jobs_in_queue,
         unit: 'Count',
         dimensions: job.class.common_dimensions,
