@@ -1,0 +1,43 @@
+@mixin approval-animation {
+  @keyframes approval-animation {
+    0%   { transform: rotate(0deg) }
+    25%  { transform: rotate(-10deg) }
+    50%  { transform: rotate(5deg) }
+    75%  { transform: rotate(0deg) }
+    100% { transform: rotate(0deg) }
+  }
+
+  animation-name: approval-animation;
+  animation-duration: .75s;
+  animation-iteration-count: 0;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  transform-origin: -10% 100%;
+
+  &:hover {
+    animation-iteration-count: infinite !important;
+  }
+}
+
+@mixin wave-animation {
+  @keyframes wave-animation {
+    0%   { transform: rotate(0deg) }
+    25%  { transform: rotate(-10deg) }
+    75%  { transform: rotate(12deg) }
+    100% { transform: rotate(0deg) }
+  }
+
+  animation-name: wave-animation;
+  animation-duration: .75s;
+  animation-iteration-count: 0;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  transform-origin: 70% 70%;
+
+  &:hover {
+    animation-iteration-count: infinite !important;
+  }
+}
+
+.approval-animation { @include approval-animation; }
+.wave-animation { @include wave-animation; }

@@ -109,7 +109,7 @@ const LtiFeedbackBanner: React.FC = () => {
       >
         <FontAwesome
           icon="hand-wave"
-          className="fa-fw"
+          className="fa-fw wave-animation"
           title=""
           aria-hidden="true"
         />
@@ -129,7 +129,7 @@ const LtiFeedbackBanner: React.FC = () => {
                 >
                   <FontAwesome
                     icon="thumbs-o-up"
-                    className="fa-fw"
+                    className="fa-fw approval-animation"
                     title=""
                     aria-hidden="true"
                   />
@@ -142,7 +142,7 @@ const LtiFeedbackBanner: React.FC = () => {
                 >
                   <FontAwesome
                     icon="thumbs-o-down"
-                    className="fa-fw"
+                    className="fa-fw approval-animation"
                     title=""
                     aria-hidden="true"
                   />

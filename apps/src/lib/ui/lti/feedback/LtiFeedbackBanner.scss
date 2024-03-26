@@ -13,6 +13,11 @@
     margin-right: $indent;
     font-weight: 400;
     vertical-align: middle;
+
+    &.wave-animation {
+      cursor: grab;
+      animation-iteration-count: 2;
+    }
   }
 
   & i {
@@ -47,11 +52,11 @@
         margin-right: 0.5rem;
       }
 
-      & i {
-        &.fa-thumbs-o-down {
-          transform: scaleX(-1);
-        }
+      &:has(.fa-thumbs-o-down) {
+        transform: scaleX(-1);
+      }
 
+      & i {
         &:hover {
           color: rgb(0 0 0 / 0.6);
         }
