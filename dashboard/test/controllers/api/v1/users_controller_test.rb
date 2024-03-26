@@ -322,7 +322,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
     sign_in(teacher)
 
-    post :update_ai_tutor_access, params: {user_id: student_in_section.id, ai_tutor_access: false}    
+    post :update_ai_tutor_access, params: {user_id: student_in_section.id, ai_tutor_access: false}
     assert_response :no_content
     student.reload
     assert_equal true, student.ai_tutor_access_denied
@@ -353,7 +353,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(teacher)
 
     post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
-    
+
     assert_response :unauthorized
   end
 end
