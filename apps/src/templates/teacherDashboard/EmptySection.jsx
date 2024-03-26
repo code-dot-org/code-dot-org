@@ -23,7 +23,9 @@ function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
   return (
     <div className={className}>
       {displayedImage}
-      <Heading3>{i18n.emptySectionHeadline()}</Heading3>
+      <Heading3 className={styles.topPadding}>
+        {i18n.emptySectionHeadline()}
+      </Heading3>
       <BodyTwoText>{textDescription}</BodyTwoText>
       {!hasStudents && (
         <NavLink
