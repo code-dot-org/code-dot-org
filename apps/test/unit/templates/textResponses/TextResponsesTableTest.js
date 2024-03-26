@@ -1,7 +1,9 @@
-import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import React from 'react';
+
 import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesTable';
+
+import {expect} from '../../../util/deprecatedChai';
 
 const responses = [
   {

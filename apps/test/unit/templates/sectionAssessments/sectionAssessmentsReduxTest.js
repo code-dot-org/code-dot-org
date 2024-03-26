@@ -1,4 +1,4 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import sectionAssessments, {
   setAssessmentResponses,
   setSurveys,
@@ -32,7 +32,8 @@ import sectionAssessments, {
   isCurrentScriptCSD,
   notStartedFakeTimestamp,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});

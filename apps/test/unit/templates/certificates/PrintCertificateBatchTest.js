@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import PrintCertificateBatch from '@cdo/apps/templates/certificates/PrintCertificateBatch';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('PrintCertificateBatch', () => {
   it('renders zero certificates', () => {

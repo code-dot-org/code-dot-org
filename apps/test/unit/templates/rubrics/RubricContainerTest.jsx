@@ -1,25 +1,27 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
+import {render, fireEvent, act} from '@testing-library/react';
 import {mount, shallow} from 'enzyme';
+import $ from 'jquery';
+import React from 'react';
+import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+
+import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import * as utils from '@cdo/apps/code-studio/utils';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {Provider} from 'react-redux';
-import * as utils from '@cdo/apps/code-studio/utils';
+import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
-import $ from 'jquery';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 // react testing library import
-import {render, fireEvent, act} from '@testing-library/react';
 
 describe('RubricContainer', () => {
   let clock;
