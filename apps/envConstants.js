@@ -39,6 +39,8 @@ module.exports = {
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
   // If set, run webpack dev server (with hot reloading)
   HOT: !!process.env.HOT,
+  // If set, hides error overlay in browser in development
+  HIDE_ERROR_OVERLAY: !!process.env.HIDE_ERROR_OVERLAY,
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
 };

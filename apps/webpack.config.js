@@ -662,7 +662,9 @@ function createWebpackConfig({
       ...(envConstants.HOT
         ? [
             new webpack.HotModuleReplacementPlugin({}),
-            new ReactRefreshWebpackPlugin(),
+            new ReactRefreshWebpackPlugin({
+              overlay: !envConstants.HIDE_ERROR_OVERLAY,
+            }),
             // Prints a URL for accessing the Dashboard via webpack-dev-server
             {
               apply: compiler => {
