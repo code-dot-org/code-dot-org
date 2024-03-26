@@ -3,7 +3,7 @@
 
 This document describes how to set up your workstation to develop for Code.org.
 
-You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
+You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
 
 ## Overview
 
