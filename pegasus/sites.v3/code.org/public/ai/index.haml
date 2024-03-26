@@ -74,13 +74,13 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
-    = view :ai_curricula_blocks
+    = view :ai_carousel_curricula_blocks
 
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_carousel_heading)
     .quotes-wrapper
-      = view :ai_carousel
+      = view :ai_carousel_quotes
 
 %section#ai-pl
   .wrapper
@@ -181,5 +181,7 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :donors_block_microsoft_infosys
+
+= view :swiper_page_ai
 
 = view :visit_partial_event_logger
