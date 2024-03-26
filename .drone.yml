@@ -1,6 +1,6 @@
 ---
 # Drone CI pipeline running at: https://drone.cdn-code.org/code-dot-org/code-dot-org/
-# 
+#
 # Docs here: https://docs.google.com/document/d/1Qls20xfNN6T_DErOMwVQOFJsxAEAdMWFHzBDIbxyUQQ/edit#heading=h.9bln2fv2lgqd
 #
 # NOTE: after making changes to this file, you'll need to sign them using
@@ -18,8 +18,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
-      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - 'IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")'
+      - 'hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)'
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -111,8 +111,9 @@ volumes:
 
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "test"
   event:
     - pull_request
 
@@ -135,8 +136,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
-      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - 'IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")'
+      - 'hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)'
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -250,7 +251,6 @@ trigger:
     - pull_request
 
 ---
-
 # On push, cache a clone of staging to drone's S3 bucket.
 # The staging cache reduces git bandwidth in PR pipelines.
 kind: pipeline
@@ -261,12 +261,11 @@ clone:
   disable: true
 
 steps:
-
   - name: clone
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -281,12 +280,11 @@ steps:
 
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "test"
   event:
     - push
 ---
 kind: signature
 hmac: a16fa2865512ffb9127b4d8a311fa8fdc078145723a8aa2767bea7cce97c1ed5
-
-...
