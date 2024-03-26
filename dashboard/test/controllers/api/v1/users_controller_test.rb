@@ -322,7 +322,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
     sign_in(teacher)
 
-    post :update_ai_tutor_access, params: { user_id: student_in_section.id, ai_tutor_access: false }    
+    post :update_ai_tutor_access, params: {user_id: student_in_section.id, ai_tutor_access: false}    
     assert_response :no_content
     student.reload
     assert_equal true, student.ai_tutor_access_denied
@@ -331,11 +331,11 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   test 'teacher cannot update ai tutor access for student not in section' do
     teacher = create :teacher
     student_not_in_section = create :student
-    section = create :section, teacher: @teacher
+    create :section, teacher: @teacher
 
     sign_in(teacher)
 
-    post :update_ai_tutor_access, params: { user_id: student_not_in_section.id, ai_tutor_access: false }
+    post :update_ai_tutor_access, params: {user_id: student_not_in_section.id, ai_tutor_access: false}
     assert_response :unauthorized
   end
 
@@ -344,7 +344,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
     sign_in(student)
 
-    post :update_ai_tutor_access, params: { user_id: student.id, ai_tutor_access: false }
+    post :update_ai_tutor_access, params: {user_id: student.id, ai_tutor_access: false}
     assert_response :unauthorized
   end
 
@@ -352,7 +352,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    post :update_ai_tutor_access, params: { user_id: -1, ai_tutor_access: false }
+    post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
     
     assert_response :unauthorized
   end

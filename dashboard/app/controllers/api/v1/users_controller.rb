@@ -195,7 +195,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     return head :unauthorized unless current_user&.teacher?
     target_user = User.find_by_id(params[:user_id])
 
-    unless target_user && target_user.student_of?(current_user)
+    unless target_user&.student_of?(current_user)
       return head :unauthorized
     end
 
