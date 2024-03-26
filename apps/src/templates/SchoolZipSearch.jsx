@@ -5,6 +5,7 @@ import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import style from './school-association.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
+import Button from '@cdo/apps/templates/Button';
 
 const SEARCH_ITEMS = [
   {value: 'selectASchool', text: i18n.selectASchool()},
@@ -46,8 +47,14 @@ export default function SchoolZipSearch({fieldNames}) {
       )}
       {inputManually && (
         <div>
-          <SchoolNameInput fieldNames={fieldNames.schoolName} />
-          {i18n.returnToResults()}
+          <SchoolNameInput fieldNames={{schoolName: fieldNames.schoolName}} />
+          <Button
+            text={i18n.returnToResults()}
+            styleAsText={true}
+            onClick={() => {
+              setInputManually(false);
+            }}
+          />
         </div>
       )}
     </div>
