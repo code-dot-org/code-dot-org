@@ -1019,8 +1019,6 @@ FactoryBot.define do
   factory :project do
     transient do
       owner {create :user}
-      id {nil}
-      value {nil}
     end
 
     updated_ip {'127.0.0.1'}
@@ -1028,32 +1026,18 @@ FactoryBot.define do
     after(:build) do |project, evaluator|
       project_storage = create :project_storage, user_id: evaluator.owner.id
       project.storage_id = project_storage.id
-      project.id = evaluator.id if evaluator.id
       project.value = evaluator.value if evaluator.value
     end
   end
 
   factory :featured_project do
-    factory :new_featured_project do
-      project_id {456}
-    end
-
     factory :active_featured_project do
-      project_id {777}
-      after(:create) do |active_featured_project|
-        active_featured_project.featured_at = DateTime.now
-        active_featured_project.unfeatured_at = nil
-        active_featured_project.save
-      end
+      featured_at {DateTime.now}
     end
 
     factory :archived_featured_project do
-      project_id {888}
-      after(:create) do |archived_featured_project|
-        archived_featured_project.featured_at = DateTime.now
-        archived_featured_project.unfeatured_at = DateTime.now
-        archived_featured_project.save
-      end
+      featured_at {DateTime.now}
+      unfeatured_at {DateTime.now}
     end
   end
 
