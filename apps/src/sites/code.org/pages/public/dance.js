@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
 
 const DANCE_PROJECTS = [
@@ -37,6 +37,14 @@ const DANCE_PROJECTS = [
   thumbnailUrl: `/images/dance-hoc/${project.key}.gif`,
   ...project,
 }));
+
+$.ajax({
+  method: 'GET',
+  url: studio(`/dashboardapi/projects/gallery/public/all`),
+  dataType: 'json',
+}).done(projectLists => {
+  console.log('projectLists', projectLists);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('student_dance_projects');

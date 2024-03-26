@@ -151,6 +151,7 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/sections/transfers', to: 'transfers#create'
     post '/api/sections/transfers', to: 'transfers#create'
 
+    get '/dashboardapi/projects/gallery/public/:project_type', to: 'api/v1/projects/public_gallery#index'
     get '/sh/:id', to: redirect('/c/%{id}')
     get '/sh/:id/:action_id', to: redirect('/c/%{id}/%{action_id}')
 
