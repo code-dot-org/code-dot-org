@@ -108,12 +108,12 @@ Setup steps for macOS:
 1. Open a Terminal.
 
 1. Install **Xcode Command Line Tools**:
-    ```sh
+    ```
     xcode-select --install
     ```
 
 1. Install **[brew](https://brew.sh/)**: 
-   ```sh
+   ```
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
@@ -122,7 +122,10 @@ Setup steps for macOS:
    brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
-1. Initialize **Git LFS**: `git lfs install --skip-repo`
+1. Initialize **Git LFS**:
+   ```
+   git lfs install --skip-repo
+   ```
 
 1. Setup your local **[MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) server**
    1. Force link 5.7 version via `brew link mysql@5.7 --force`
@@ -134,19 +137,34 @@ Setup steps for macOS:
        4. Confirm MySQL has started by running `brew services` again.
 
 1.  Install **Ruby**
-    1. Configure zsh to load rbenv: `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc`
+    1. Configure zsh to load rbenv: 
+        ```
+        echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc
+        ```
        - For other shells, see: https://github.com/rbenv/rbenv#basic-git-checkoutshells.
-    2. Install ruby: `rbenv install --skip-existing` from the project root directory
+    2. Install ruby:
+        ```
+        rbenv install --skip-existing`    # run from the project root directory
+        ```
 
 1.  Install **Node.js**
-    1. Install node: `nvm install` from the project root directory
-    2. Set default node version: `nvm alias default $(cat ./.nvmrc)` 
-    3. Enable corepack to install **yarn**: `corepack enable`
+    1. Install node:
+        ```
+        nvm install    # run from the project root directory
+        ```
+    2. Set default node version:
+        ```
+        nvm alias default $(cat ./.nvmrc)
+        ```
+    3. Enable corepack to install **yarn**:
+        ```
+        corepack enable
+        ```
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
 1. *(Optional)* Install **pdftk.rb**. Skipping this will cause some PDF related tests to fail.
-    ```sh
+    ```
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
     brew install ./pdftk.rb
     rm ./pdftk.rb
