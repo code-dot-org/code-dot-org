@@ -266,7 +266,8 @@ class UnconnectedMusicView extends React.Component {
       !!levelData?.text || !!this.props.longInstructions
     );
 
-    this.setState({currentPackName: initialSources?.labConfig?.music.pack});
+    let packName = levelData?.packName || initialSources?.labConfig?.music.pack;
+    this.setState({currentPackName: packName});
 
     if (this.getStartSources() || initialSources) {
       let codeToLoad = this.getStartSources();
