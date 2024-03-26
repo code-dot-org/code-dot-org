@@ -19,6 +19,7 @@ export default class MusicLibrary {
   folders: SoundFolder[];
   private allowedSounds: Sounds | null;
   private currentPackName: string | null;
+  private hasRestrictedPacks: boolean;
 
   // BPM & Key associated with this library, or undefined if not present.
   private bpm: number | undefined;
@@ -45,10 +46,16 @@ export default class MusicLibrary {
     }
 
     this.currentPackName = null;
+
+    this.hasRestrictedPacks = libraryJson.packs.some(pack => pack.restricted);
   }
 
   setCurrentPackName(packName: string) {
     this.currentPackName = packName;
+  }
+
+  getHasRestrictedPacks(): boolean {
+    return this.hasRestrictedPacks;
   }
 
   getDefaultSound(): string | undefined {

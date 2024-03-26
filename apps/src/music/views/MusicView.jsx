@@ -648,6 +648,7 @@ class UnconnectedMusicView extends React.Component {
           clearCode={this.clearCode}
           validator={this.musicValidator}
           player={this.player}
+          hasRestrictedPacks={this.library?.getHasRestrictedPacks()}
           currentPackName={this.state.currentPackName}
           setCurrentPackName={packName => {
             this.setState({currentPackName: packName});
