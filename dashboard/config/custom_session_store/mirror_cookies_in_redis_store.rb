@@ -3,6 +3,13 @@ require 'action_dispatch/middleware/session/cookie_store'
 
 module ActionDispatch
   module Session
+    # Simple extension to the standard Rails cookie-based session storage that
+    # also writes cookie data to Redis without attempting to read or rely on
+    # that data.
+    #
+    # Intended for short-term use, just to confirm that our assessment of our
+    # Redis needs is accurate and build some confidence in stability in advance
+    # of the actual switchover.
     class MirrorCookiesInRedisStore < CookieStore
       def initialize(app, options = {})
         @redis = Redis.new(url: options[:server])
@@ -11,7 +18,7 @@ module ActionDispatch
 
       # @see https://github.com/rails/rails/blob/ac87f58207cff18880593263be9d83456aa3a2ef/actionpack/lib/action_dispatch/middleware/session/cookie_store.rb#L104-L107
       private def write_session(req, session_id, session_data, options)
-        mirror_session_in_redis(session_id, session_data)
+        mirror_session_in_redis(session_id, session_data) if DCDO.get('mirror_session_in_redis_enabled', false)
         super(req, session_id, session_data, options)
       end
 
