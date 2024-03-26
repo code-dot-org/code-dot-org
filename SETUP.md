@@ -128,20 +128,32 @@ Setup steps for macOS:
    ```
 
 1. Setup your local **[MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) server**
-   1. Force link 5.7 version via `brew link mysql@5.7 --force`
-   2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
-   3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first:
-       1. `brew services stop mysql@5.7`
-       2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
-       3. `brew services start mysql@5.7`
-       4. Confirm MySQL has started by running `brew services` again.
+   1. Use mysql 5.7, even though its an older version:
+        ```
+        brew link mysql@5.7 --force
+        ```
+   2. Start mysql server:
+        ```
+        brew services start mysql@5.7
+        ```
+   3. Confirm that MySQL has started by running:
+        ```
+        brew services    # should show: "started"
+        ```
+
+      If the status is "stopped", you may need initialize your mysql database:
+        ```
+        brew services stop mysql@5.7
+        mysqld --initialize-insecure  # this will leave the root password blank, which is required
+        brew services start mysql@5.7
+        brew services   # should show: "started"
+        ```
 
 1.  Install **Ruby**
-    1. Configure zsh to load rbenv: 
+    1. Configure zsh to load rbenv (for [other shells](https://github.com/rbenv/rbenv#basic-git-checkoutshells)): 
         ```
         echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc
         ```
-       - For other shells, see: https://github.com/rbenv/rbenv#basic-git-checkoutshells.
     2. Install ruby:
         ```
         rbenv install --skip-existing`    # run from the project root directory
