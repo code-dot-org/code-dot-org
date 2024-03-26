@@ -1037,7 +1037,7 @@ FactoryBot.define do
     factory :new_featured_project do
       project_id {456}
     end
-  
+
     factory :active_featured_project do
       project_id {777}
       after(:create) do |active_featured_project|
