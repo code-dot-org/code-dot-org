@@ -194,12 +194,7 @@ function TeacherDashboard({
         )}
         <Route
           path={TeacherDashboardPath.progress}
-          component={props => (
-            <SectionProgressSelector
-              studentCount={studentCount}
-              sectionId={sectionId}
-            />
-          )}
+          component={props => <SectionProgressSelector />}
         />
         <Route
           path={TeacherDashboardPath.textResponses}
