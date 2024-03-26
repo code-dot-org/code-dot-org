@@ -374,8 +374,9 @@ class Section < ApplicationRecord
   end
 
   # Provides some information about a section. This provides a more concise set of information than
-  # 'summarize' and is used for the list of sections in the teacher dashboard. The teacher dashboard
-  # selected section still returns `summarize` to provide more information.
+  # 'summarize' and is used for the list of sections in the teacher dashboard. This should reduce the amount of
+  # data loaded and sent to the client than returning `summarize` for each section.
+  # This is placed into the redux store as `teacherSections.sections` for all sections a teacher has access to.
   def concise_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
@@ -411,8 +412,9 @@ class Section < ApplicationRecord
     end
   end
 
-  # Provides some information about a section. This only provides information (other than name and id) that
-  # cannot be found in `concise_summarize`. This is only needed for the teacher dashboard selected section.
+  # Provides additional information about a selected section.
+  # This only additional information from `concise_summarize`, 'name' and 'id' are the only overlapping fields.
+  # This is only needed for the teacher dashboard SELECTED section.
   def selected_section_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
       login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
@@ -439,7 +441,8 @@ class Section < ApplicationRecord
   end
 
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
-  # React component on the teacher homepage and student homepage
+  # React component on the student homepage.
+  # This provides all information in `selected_section_summarize` and `concise_summarize` as well as additional fields.
   def summarize(include_students: true)
     ActiveRecord::Base.connected_to(role: :reading) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
