@@ -8,26 +8,24 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 ## Overview
 
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
-    <details> 
-      <summary>Troubleshoot: wrong version of ruby</summary>
-      If you run into issues with your ruby version during this step, you may need to complete the OS-specific  prerequisites below before proceeding. 
-      </details>
+
+1. Clone the repo:
+    - Via SSH (simpler): `git clone git@github.com:code-dot-org/code-dot-org.git`
+    - OR via HTTP (faster): `git clone https://github.com/code-dot-org/code-dot-org.git`.
+        - Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with: `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
+
+1. `cd code-dot-org`
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
-   - *Important*: When done, check for correct versions of these dependencies:
+    - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
+    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
      ruby --version  # --> ruby 3.0.5
      node --version  # --> v18.16.0
      ```
 
-1. Clone the repo, which also may take a while.
-    - Note you should have `git lfs --version` >= 3.0 installed prior to cloning, see OS-specific install steps referenced above.
-    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
-    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
-
-1. `cd code-dot-org`
+1. `git lfs pull`
 
 1. `gem install bundler -v 2.3.22 && rbenv rehash`
 
@@ -35,11 +33,6 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
 1. `bundle exec rake install:hooks`
-    <details>
-      <summary>Troubleshoot: `rake aborted! Gem::LoadError: You have already activated...` </summary>
-
-      - If you have issue `"rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0."`, make sure you add `bundle exec` in front of the `rake install:hooks` command
-    </details>
     <details>
       <summary>Troubleshoot: wrong version of rake </summary>
 
@@ -64,7 +57,16 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     </details>
 
 1. `bundle exec rake install`
-    - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
+    <details>
+        <summary>This will take 30 minutes, or more</summary>
+        The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
+    </details>
+    <details>
+        <summary>If `bundle exec rake install` is interrupted before finishing...</summary>
+        If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
+        cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again.
+        `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
+    </details>
 
 1. fix your database charset and collation to match our servers
     - `bin/mysql-client-admin`
@@ -72,16 +74,13 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
 1. `bundle exec rake build`
-    - This may fail if you are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
 1. Run the website `bin/dashboard-server`
 
 1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
 
-1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
-
-After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## Configure AWS Access or Secrets
 
@@ -102,24 +101,24 @@ External contributors can supply alternate placeholder values for secrets normal
 
 ### macOS
 
-These steps are for Apple devices running **macOS Ventura and Sonoma**, including those running on [Apple Silicon (M1|M2|M3)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
+These steps are for Apple devices running **macOS Ventura and Sonoma**, including those running on [Apple Silicon](https://en.wikipedia.org/wiki/Apple_silicon#M_series) and Intel x86.
 
 Setup steps for macOS:
 
-1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
+1. Open a Terminal.
 
 1. Install **Xcode Command Line Tools**: `xcode-select --install`
 
-1. Install **homebrew & packages**:
-   1. Install [brew](https://brew.sh/): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-   2. Install packages: `brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java`
+1. Install **[brew](https://brew.sh/)**: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+1. Install **brew packages**: `brew install rbenv ruby-build nvm mysql@5.7 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java`
 
 1. Initialize **Git LFS**: `git lfs install --skip-repo`
 
-1. Setup your local [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) server
+1. Setup your local **[MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) server**
    1. Force link 5.7 version via `brew link mysql@5.7 --force`
    2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
-   3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
+   3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first:
        1. `brew services stop mysql@5.7`
        2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
        3. `brew services start mysql@5.7`
@@ -144,7 +143,7 @@ Setup steps for macOS:
     rm ./pdftk.rb
     ```
 
-1. Return to the [Overview](#overview) to clone the code-dot-org repo and continue installation.
+1. Return to the [Overview](#overview) to continue setup.
 
 ### Ubuntu 20.04
 [Ubuntu 20.04 iso download][ubuntu-iso-url]
@@ -203,11 +202,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         1. `export CHROME_BIN=$(which chromium-browser)`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
     1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
-1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
-    1. If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
-       cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
-    1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
-    1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
+1. Return to the [overview](#overview) and continue setup.
 
 ### Windows
 
