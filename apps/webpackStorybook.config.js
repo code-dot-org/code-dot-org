@@ -1,11 +1,9 @@
+import path from 'path';
 import webpack from 'webpack';
 
-import path from 'path';
-
 import {webpack as DynamicStoryPlugin} from './.storybook/unplugin';
-
-import {WEBPACK_BASE_CONFIG} from './webpack.config';
 import envConstants from './envConstants';
+import {WEBPACK_BASE_CONFIG} from './webpack.config';
 
 // Customize webpack config for storybook.
 // @param {Object} sbConfig - Webpack configuration from storybook library.

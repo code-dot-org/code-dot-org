@@ -602,7 +602,8 @@ Dashboard::Application.routes.draw do
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
-    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+    match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
+    get '/lti/v1/iframe', to: 'lti_v1#iframe'
     match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
     post '/lti/v1/integrations', to: 'lti_v1#create_integration'
     get '/lti/v1/integrations', to: 'lti_v1#new_integration'
@@ -926,7 +927,7 @@ Dashboard::Application.routes.draw do
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
-        get 'projects/gallery/public/:project_type/:limit(/:published_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
+        get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
@@ -1071,6 +1072,7 @@ Dashboard::Application.routes.draw do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
+        get 'get_teacher_evaluations_for_all'
         get 'ai_evaluation_status_for_user'
         get 'ai_evaluation_status_for_all'
         post 'run_ai_evaluations_for_user'
@@ -1118,5 +1120,55 @@ Dashboard::Application.routes.draw do
       'policy_compliance#child_account_consent'
     post '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent_request'
+
+    # DatablockStorageController powers the data features of applab,
+    # and the key/value pair store feature of gamelab
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+      collection do
+        # Datablock Storage: Key-Value-Pair API
+        post :set_key_value
+        get :get_key_value
+        delete :delete_key_value
+        get :get_key_values
+        put :populate_key_values
+
+        # Datablock Storage: Table API
+        post :create_table
+        post :add_shared_table
+        post :import_csv
+        get :export_csv
+        delete :clear_table
+        delete :delete_table
+        get :get_table_names
+        put :populate_tables
+
+        # Datablock Storage: Table Column API
+        post :add_column
+        put :rename_column
+        put :coerce_column
+        delete :delete_column
+        get :get_column
+        get :get_columns_for_table
+
+        # Datablock Storage: Table Record API
+        post :create_record
+        get :read_records
+        put :update_record
+        delete :delete_record
+
+        # Datablock Storage: Library Manifest API (=shared table metadata)
+        get :get_library_manifest
+        put :set_library_manifest
+
+        # Datablock Storage: Project API
+        get :project_has_data
+        delete :clear_all_data
+
+        # TODO: post-firebase-cleanup, remove
+        # Project Use Datablock Storage API
+        put :use_datablock_storage
+        put :use_firebase_storage
+      end
+    end
   end
 end

@@ -16,6 +16,8 @@ import {
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
 import {defaultImageSrc} from './curriculumCatalogConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const ExpandedCurriculumCatalogCard = ({
   courseKey,
@@ -82,6 +84,14 @@ const ExpandedCurriculumCatalogCard = ({
   const recommendedSimilarCurriculum =
     getRecommendedSimilarCurriculum(courseKey);
 
+  const handleClickRecommendedSimilarCurriculum = () => {
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_CLICKED, {
+      current_curriculum_offering: courseKey,
+      recommended_curriculum_offering: recommendedSimilarCurriculum.key,
+    });
+    setExpandedCardKey(recommendedSimilarCurriculum.key);
+  };
+
   useEffect(() => {
     const yOffset =
       expandedCardRef.current.getBoundingClientRect().top +
@@ -103,9 +113,7 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <Heading3 style={{marginBottom: '8px'}}>
-                {courseDisplayName}
-              </Heading3>
+              <Heading3>{courseDisplayName}</Heading3>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="user" className="fa-solid" />
@@ -126,9 +134,7 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionVideoContainer}>
                   <div className={style.descriptionContainer}>
-                    <BodyTwoText className={style.descriptionText}>
-                      {description}
-                    </BodyTwoText>
+                    <BodyTwoText>{description}</BodyTwoText>
                   </div>
                   <div className={style.mediaContainer}>
                     {video ? (
@@ -288,6 +294,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </Heading4>
                 <hr className={style.thickDivider} />
                 <img
+                  id="similarCurriculumImage"
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
                   style={{height: '100%'}}
                   alt={recommendedSimilarCurriculum.display_name}
@@ -299,9 +306,7 @@ const ExpandedCurriculumCatalogCard = ({
                   styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedSimilarCurriculum.display_name}
-                  onClick={() =>
-                    setExpandedCardKey(recommendedSimilarCurriculum.key)
-                  }
+                  onClick={handleClickRecommendedSimilarCurriculum}
                 />
               </div>
             </div>

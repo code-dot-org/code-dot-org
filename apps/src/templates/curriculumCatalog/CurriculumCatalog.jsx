@@ -13,6 +13,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {getSimilarRecommendations} from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -76,12 +77,36 @@ const CurriculumCatalog = ({
   // Get the top recommended similar curriculum based on the curriculum with the given
   // curriculumKey
   const getRecommendedSimilarCurriculum = curriculumKey => {
+    // Check if Similar Curriculum Recommender has already been run with this curriculumKey and cached in sessionStorage
+    const similarRecommenderResults =
+      JSON.parse(tryGetSessionStorage('similarRecommenderResults', '{}')) || {};
+    const similarRecommenderCurrKeyResult =
+      similarRecommenderResults[curriculumKey];
+    if (similarRecommenderCurrKeyResult) {
+      return similarRecommenderCurrKeyResult;
+    }
+
+    // Get top recommended similar curriculum
     const recommendations = getSimilarRecommendations(
       curriculaData,
       curriculumKey,
       curriculaTaught
     );
-    return recommendations[0];
+    const recommendedCurriculum = recommendations[0];
+
+    // Update sessionStorage with new recommendation result
+    similarRecommenderResults[curriculumKey] = recommendedCurriculum;
+    trySetSessionStorage(
+      'similarRecommenderResults',
+      JSON.stringify(similarRecommenderResults)
+    );
+
+    analyticsReporter.sendEvent(EVENTS.RECOMMENDED_SIMILAR_CURRICULUM_SHOWN, {
+      current_curriculum_offering: curriculumKey,
+      recommended_curriculum_offering: recommendedCurriculum.key,
+    });
+
+    return recommendedCurriculum;
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -169,17 +194,9 @@ const CurriculumCatalog = ({
     } else {
       return (
         <div className={style.catalogContentNoResults}>
-          <img
-            className={style.noResultsImage}
-            src={CourseCatalogNoSearchResultPenguin}
-            alt=""
-          />
-          <Heading5 className={style.noResultsHeading}>
-            {i18n.noCurriculumSearchResultsHeader()}
-          </Heading5>
-          <BodyTwoText className={style.noResultsBody}>
-            {i18n.noCurriculumSearchResultsBody()}
-          </BodyTwoText>
+          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
+          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
+          <BodyTwoText>{i18n.noCurriculumSearchResultsBody()}</BodyTwoText>
         </div>
       );
     }
@@ -196,9 +213,7 @@ const CurriculumCatalog = ({
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
-            <BodyTwoText className={style.assignSuccessMessage}>
-              {assignSuccessMessage}
-            </BodyTwoText>
+            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
             <button
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}

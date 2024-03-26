@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
+import i18n from '@cdo/locale';
 import classnames from 'classnames';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -12,14 +13,11 @@ import {
 import RubricContent from './RubricContent';
 import RubricSettings from './RubricSettings';
 import RubricTabButtons from './RubricTabButtons';
+import RubricSubmitFooter from './RubricSubmitFooter';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
 import Draggable from 'react-draggable';
-
-const TAB_NAMES = {
-  RUBRIC: 'rubric',
-  SETTINGS: 'settings',
-};
+import {TAB_NAMES} from './rubricHelpers';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 export default function RubricContainer({
   rubric,
@@ -40,6 +38,8 @@ export default function RubricContainer({
       TAB_NAMES.RUBRIC
   );
   const [aiEvaluations, setAiEvaluations] = useState(null);
+
+  const [feedbackAdded, setFeedbackAdded] = useState(false);
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -94,8 +94,12 @@ export default function RubricContainer({
       >
         <div className={style.rubricHeaderRedesign}>
           <div className={style.rubricHeaderLeftSide}>
-            <FontAwesome icon="house" />
-            {i18n.rubricAiHeaderText()}
+            <img
+              src={aiBotOutlineIcon}
+              className={style.aiBotOutlineIcon}
+              alt={i18n.rubricAiHeaderText()}
+            />
+            <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
             <button
@@ -131,6 +135,9 @@ export default function RubricContainer({
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
             aiEvaluations={aiEvaluations}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
+            sectionId={sectionId}
           />
           {showSettings && (
             <RubricSettings
@@ -138,9 +145,20 @@ export default function RubricContainer({
               refreshAiEvaluations={fetchAiEvaluations}
               rubric={rubric}
               sectionId={sectionId}
+              tabSelectCallback={tabSelectCallback}
             />
           )}
         </div>
+        {canProvideFeedback && (
+          <RubricSubmitFooter
+            open={open}
+            rubric={rubric}
+            reportingData={reportingData}
+            studentLevelInfo={studentLevelInfo}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
+          />
+        )}
       </div>
     </Draggable>
   );
